@@ -1,4 +1,4 @@
-/* styles.css — StudyMate shared stylesheet */
+/* styles.css — Atlas shared stylesheet */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
@@ -8,7 +8,7 @@
 
   --blue:      #185fa5;
   --green:     #3f6f00;
-  --amber:     #ba7517;
+  --amber:     #c9a020;
   --red:       #993c1d;
   --darkgreen: #2d5016;
 
@@ -108,12 +108,11 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   color: white;
-  font-size: 1.1rem;
-  font-weight: 800;
+  font-size: 1.25rem;
   flex-shrink: 0;
 }
 .sidebar-logo-text { font-size: 1.0625rem; font-weight: 800; color: var(--text); }
-.sidebar-logo-text span { color: var(--blue); }
+.sidebar-logo-text span { color: var(--amber); }
 
 .sidebar-nav { padding: 16px 12px; flex: 1; }
 .nav-item {
@@ -776,6 +775,7 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   color: white;
 }
 .auth-brand-name { font-size: 1.25rem; font-weight: 800; color: white; }
+.auth-brand-name span { color: var(--amber); }
 .auth-brand h1 { color: white; font-size: 2rem; margin-bottom: 16px; position: relative; z-index: 1; }
 .auth-brand p { color: rgba(255,255,255,.8); font-size: 1rem; max-width: 340px; position: relative; z-index: 1; }
 .auth-brand-features { margin-top: 40px; display: flex; flex-direction: column; gap: 16px; position: relative; z-index: 1; }
