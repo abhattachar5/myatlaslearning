@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMate — Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── Profile Modal ──────────────────────────────────────────────────────── -->
+<div class="modal-overlay" id="profile-modal" onclick="closeProfileModal(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>My Profile</h3>
+      <button class="modal-close" onclick="closeProfileModal()">✕</button>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Name</label>
+      <input class="form-input" id="edit-name" type="text">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Year group</label>
+      <select class="form-input form-select" id="edit-year">
+        <option value="Year 7">Year 7</option>
+        <option value="Year 8">Year 8</option>
+        <option value="Year 9">Year 9</option>
+        <option value="Year 10">Year 10</option>
+        <option value="Year 11">Year 11</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">School</label>
+      <input class="form-input" id="edit-school" type="text">
+    </div>
+    <div style="display:flex;gap:10px;margin-top:8px">
+      <button class="btn btn-primary" style="flex:1" onclick="saveProfile()">Save changes</button>
+      <button class="btn btn-secondary" onclick="confirmReset()">Reset progress</button>
+    </div>
+    <div class="divider"></div>
+    <button class="btn btn-secondary" style="width:100%" onclick="logout()">Sign out</button>
+  </div>
+</div>
+
+<div class="app-layout">
+
+  <!-- ── Sidebar ──────────────────────────────────────────────────────────── -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-mark">S</div>
+      <span class="sidebar-logo-text">Study<span>Mate</span></span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <p class="section-heading" style="padding:0 12px;margin-bottom:8px">Navigation</p>
+      <div class="nav-item active">
+        <span class="nav-icon">🏠</span> Dashboard
+      </div>
+      <div class="nav-item" onclick="openProfileModal()">
+        <span class="nav-icon">👤</span> My Profile
+      </div>
+    </nav>
+
+    <div class="sidebar-user">
+      <div class="user-card">
+        <div class="user-name" id="sidebar-name">—</div>
+        <div class="user-level" id="sidebar-level">Level 1 · Beginner</div>
+        <div class="xp-bar-wrap">
+          <div class="xp-bar-track">
+            <div class="xp-bar-fill" id="sidebar-xp-fill" style="width:0%"></div>
+          </div>
+          <div class="xp-label">
+            <span id="sidebar-xp">0 XP</span>
+            <span id="sidebar-xp-next">100 XP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="streak-badge" id="streak-display">🔥 0 day streak</div>
+      <button class="theme-toggle" id="theme-btn" onclick="handleThemeToggle()" title="Toggle theme">🌙</button>
+    </div>
+  </aside>
+
+  <!-- ── Main ─────────────────────────────────────────────────────────────── -->
+  <main class="main-content">
+
+    <div class="page-header">
+      <h1 id="welcome-msg">Good morning! 👋</h1>
+      <p id="welcome-sub">Pick an island to continue your studies.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value text-blue" id="stat-started">0</div>
+        <div class="stat-label">Topics started</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" style="color:#22c55e" id="stat-mastered">0</div>
+        <div class="stat-label">Topics mastered</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value text-amber" id="stat-xp">0</div>
+        <div class="stat-label">Total XP</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" style="color:#f97316" id="stat-streak">0</div>
+        <div class="stat-label">Day streak 🔥</div>
+      </div>
+    </div>
+
+    <!-- Subject filters (rendered dynamically by renderFilters()) -->
+    <div class="filter-row" id="filter-row"></div>
+
+    <!-- Island grid -->
+    <div class="island-grid" id="island-grid"></div>
+
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="math-data.js"></script>
+<script src="math-content-1.js"></script>
+<script src="math-content-2.js"></script>
+<script src="math-content-3.js"></script>
+<script src="math-content-4.js"></script>
+<script src="math-content-5.js"></script>
+<script src="math-content-6.js"></script>
+<script src="math-content-7.js"></script>
+<script src="lessons.js"></script>
+<script src="math-lessons-1.js"></script>
+<script src="math-lessons-2.js"></script>
+<script src="math-lessons-3.js"></script>
+<script src="math-lessons-4.js"></script>
+<script src="math-lessons-5.js"></script>
+<script src="math-lessons-6.js"></script>
+<script src="math-lessons-7.js"></script>
+<script src="app.js"></script>
+<script>
+// ── Bootstrap ───────────────────────────────────────────────────────────────
+let user = requireAuth();
+let currentFilter = 'math';
+
+(function init() {
+  initTheme();
+  updateThemeBtn();
+  user = requireAuth();
+  touchStreak();
+  renderSidebar();
+  renderStats();
+  renderFilters();
+  renderGrid();
+  setWelcome();
+})();
+
+// ── Welcome ──────────────────────────────────────────────────────────────────
+function setWelcome() {
+  const h = new Date().getHours();
+  const greet = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
+  document.getElementById('welcome-msg').textContent = `${greet}, ${user.name.split(' ')[0]}! 👋`;
+  const stats = getGlobalStats();
+  const pct = Math.round((stats.mastered / stats.total) * 100);
+  document.getElementById('welcome-sub').textContent =
+    stats.mastered === 0
+      ? 'Pick an island below to start your GCSE journey.'
+      : `You've mastered ${stats.mastered} of ${stats.total} topics (${pct}%). Keep going!`;
+}
+
+// ── Sidebar ──────────────────────────────────────────────────────────────────
+function renderSidebar() {
+  const xp = getTotalXP();
+  const lvl = getUserLevel(xp);
+  const pct = getLevelProgress(xp);
+  const nextXP = lvl.maxXP === Infinity ? '∞' : lvl.maxXP + 1;
+  document.getElementById('sidebar-name').textContent = user.name;
+  document.getElementById('sidebar-level').textContent = `Level ${lvl.level} · ${lvl.title}`;
+  document.getElementById('sidebar-xp').textContent = xp + ' XP';
+  document.getElementById('sidebar-xp-next').textContent = nextXP + ' XP';
+  document.getElementById('sidebar-xp-fill').style.width = pct + '%';
+  const streak = getStreak();
+  document.getElementById('streak-display').textContent = `🔥 ${streak} day${streak !== 1 ? 's' : ''}`;
+}
+
+// ── Stats ────────────────────────────────────────────────────────────────────
+function renderStats() {
+  const stats = getGlobalStats();
+  document.getElementById('stat-started').textContent = stats.started;
+  document.getElementById('stat-mastered').textContent = stats.mastered;
+  document.getElementById('stat-xp').textContent = stats.xp;
+  document.getElementById('stat-streak').textContent = stats.streak;
+}
+
+// ── Filters ──────────────────────────────────────────────────────────────────
+function renderFilters() {
+  const ORDER = ['math', 'english', 'science', 'history', 'geography', 'all'];
+  const subjectMap = { all: { id: 'all', label: 'All', emoji: '' } };
+  CURRICULUM.forEach(island => {
+    if (!subjectMap[island.subjectId]) {
+      subjectMap[island.subjectId] = { id: island.subjectId, label: island.subject, emoji: island.emoji, color: island.color };
+    }
+  });
+  const subjects = ORDER.map(id => subjectMap[id]).filter(Boolean);
+
+  const row = document.getElementById('filter-row');
+  row.innerHTML = subjects.map(s => {
+    let count;
+    if (s.id === 'all') {
+      count = (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.length : 0) +
+               CURRICULUM.filter(i => i.subjectId !== 'math').length;
+    } else if (s.id === 'math') {
+      count = typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.length : 0;
+    } else {
+      count = CURRICULUM.filter(i => i.subjectId === s.id).length;
+    }
+    const isAll = s.id === 'all';
+    const active = currentFilter === s.id;
+    return `<button class="filter-btn${active ? ' active' : ''}" data-filter="${s.id}"
+        onclick="setFilter('${s.id}')"
+        ${s.color ? `style="--fc:${s.color}"` : ''}>
+        ${s.emoji ? s.emoji + ' ' : ''}${s.label}
+        <span class="filter-count"${active && isAll ? ' style="background:rgba(255,255,255,.2)"' : ''}>${count}</span>
+      </button>`;
+  }).join('');
+
+  // Apply active styling to the current filter button
+  applyFilterStyle();
+}
+
+function applyFilterStyle() {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    const active = btn.dataset.filter === currentFilter;
+    btn.classList.toggle('active', active);
+    if (active) {
+      const fc = btn.style.getPropertyValue('--fc');
+      btn.style.background = fc || 'var(--text)';
+      btn.style.color = 'white';
+      btn.style.borderColor = 'transparent';
+    } else {
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.style.borderColor = '';
+    }
+  });
+}
+
+function setFilter(filter) {
+  currentFilter = filter;
+  applyFilterStyle();
+  renderGrid();
+}
+
+// ── Grid ─────────────────────────────────────────────────────────────────────
+function renderGrid() {
+  const grid = document.getElementById('island-grid');
+  const allProgress = getAllProgress();
+
+  // Mathematics: show topic tiles instead of individual islands
+  if (currentFilter === 'math') {
+    renderMathTopics(grid);
+    return;
+  }
+
+  // All filter: show math topic tiles + individual islands for other subjects
+  if (currentFilter === 'all') {
+    const nonMathIslands = CURRICULUM.filter(i => i.subjectId !== 'math');
+    const mathSection = typeof MATH_TOPICS !== 'undefined' && MATH_TOPICS.length > 0
+      ? renderMathTopicCards() : '';
+    const islandCards = nonMathIslands.map(island => renderIslandCard(island, allProgress)).join('');
+    grid.innerHTML = mathSection + islandCards;
+    return;
+  }
+
+  // Other subject filters: show individual island cards
+  const islands = CURRICULUM.filter(i => i.subjectId === currentFilter);
+  if (islands.length === 0) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">🔍</div><p>No topics found.</p></div>';
+    return;
+  }
+  grid.innerHTML = islands.map(island => renderIslandCard(island, allProgress)).join('');
+}
+
+function renderMathTopics(grid) {
+  if (typeof MATH_TOPICS === 'undefined' || !MATH_TOPICS.length) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">🔍</div><p>No maths topics found.</p></div>';
+    return;
+  }
+  grid.innerHTML = renderMathTopicCards();
+}
+
+function renderMathTopicCards() {
+  return MATH_TOPICS.map(topic => {
+    const topicIslands = CURRICULUM.filter(i => i.topicId === topic.id);
+    let mastered = 0, started = 0;
+    topicIslands.forEach(island => {
+      const s = getIslandStatus(island.id);
+      if (s > 0) started++;
+      if (s === 4) mastered++;
+    });
+    const totalIslands = topicIslands.length;
+    const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
+    const hasContent = topic.hasContent !== false;
+
+    return `<div class="island-card" style="border-top-color:#3f6f00;cursor:pointer"
+        onclick="goToTopic('${topic.id}')"
+        title="${topic.name}">
+      <div class="island-card-top">
+        <div class="island-emoji">${topic.emoji}</div>
+        ${createProgressRing(progress, '#3f6f00', 52)}
+      </div>
+      <div style="margin-bottom:6px">
+        <span class="subject-pill" style="background:#3f6f00">Mathematics</span>
+        ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
+      </div>
+      <div class="island-name">${topic.name}</div>
+      <div class="island-meta">${totalIslands} island${totalIslands !== 1 ? 's' : ''} · IXL ${topic.ixlSection}</div>
+      <div class="status-chip">
+        <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
+        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderIslandCard(island, allProgress) {
+  const unlocked = isIslandUnlocked(island, allProgress);
+  const progress = calcIslandProgress(island.id);
+  const statusIdx = getIslandStatus(island.id);
+  const statusLabel = STATUS_LABELS[statusIdx];
+  const statusColor = STATUS_COLORS[statusIdx];
+  const cardCount = FLASHCARDS.filter(f => f.islandId === island.id).length;
+
+  return `<div class="island-card${unlocked ? '' : ' locked'}"
+      style="border-top-color:${island.color}"
+      onclick="${unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`}"
+      title="${unlocked ? island.name : 'Complete prerequisites first'}">
+    <div class="island-card-top">
+      <div class="island-emoji">${island.emoji}</div>
+      ${createProgressRing(progress, island.color, 52)}
+    </div>
+    <div style="margin-bottom:6px">
+      <span class="subject-pill" style="background:${island.color}">${island.subject}</span>
+    </div>
+    <div class="island-name">${island.name}</div>
+    <div class="island-meta">⏱ ${island.estimatedHours}h · ${cardCount} flashcards</div>
+    <div class="status-chip">
+      <span class="status-dot" style="background:${statusColor}"></span>
+      <span style="color:${statusColor}">${statusLabel}</span>
+    </div>
+    ${!unlocked ? '<div class="lock-overlay" style="background:rgba(var(--bg-rgb),.4)">🔒</div>' : ''}
+  </div>`;
+}
+
+function goToIsland(id) {
+  window.location.href = `island.html?id=${id}`;
+}
+
+function goToTopic(id) {
+  window.location.href = `topic.html?id=${id}`;
+}
+
+function showLockedMsg(id) {
+  const island = CURRICULUM.find(i => i.id === id);
+  if (!island || !island.prerequisites.length) return;
+  const prereqNames = island.prerequisites.map(pid => {
+    const p = CURRICULUM.find(c => c.id === pid);
+    return p ? p.name : pid;
+  }).join(', ');
+  showToast(`🔒 Complete ${prereqNames} first`, 'error');
+}
+
+// ── Profile Modal ─────────────────────────────────────────────────────────────
+function openProfileModal() {
+  document.getElementById('edit-name').value = user.name;
+  document.getElementById('edit-year').value = user.year || 'Year 10';
+  document.getElementById('edit-school').value = user.school || '';
+  document.getElementById('profile-modal').classList.add('show');
+}
+function closeProfileModal(e) {
+  if (e && e.target !== document.getElementById('profile-modal')) return;
+  document.getElementById('profile-modal').classList.remove('show');
+}
+function saveProfile() {
+  const name   = document.getElementById('edit-name').value.trim();
+  const year   = document.getElementById('edit-year').value;
+  const school = document.getElementById('edit-school').value.trim();
+  if (!name) return;
+  // Update current profile
+  user.name = name; user.year = year; user.school = school;
+  setUser(user);
+  // Update in profiles list
+  const profiles = JSON.parse(localStorage.getItem('sm_profiles') || '[]');
+  const idx = profiles.findIndex(p => p.joinDate === user.joinDate);
+  if (idx !== -1) { profiles[idx] = user; localStorage.setItem('sm_profiles', JSON.stringify(profiles)); }
+  document.getElementById('profile-modal').classList.remove('show');
+  renderSidebar();
+  setWelcome();
+  showToast('Profile updated', 'success');
+}
+function confirmReset() {
+  if (!confirm('Reset ALL your progress? This cannot be undone.')) return;
+  saveAllProgress({});
+  user.xp = 0;
+  setUser(user);
+  document.getElementById('profile-modal').classList.remove('show');
+  renderSidebar();
+  renderStats();
+  renderGrid();
+  setWelcome();
+  showToast('Progress reset', 'success');
+}
+
+// ── Theme ────────────────────────────────────────────────────────────────────
+function handleThemeToggle() {
+  const next = toggleTheme();
+  updateThemeBtn();
+}
+function updateThemeBtn() {
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
+}
+
+// ── Keyboard ─────────────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.getElementById('profile-modal').classList.remove('show');
+});
+</script>
+</body>
+</html>

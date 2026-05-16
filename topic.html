@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMate — Topic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── Topic Header ───────────────────────────────────────────────────────── -->
+<header class="island-header" id="topic-header" style="background:var(--surface)">
+  <a href="dashboard.html" class="island-header-back" title="Back to dashboard">←</a>
+  <div class="island-header-emoji" id="hdr-emoji">—</div>
+  <div class="island-header-info">
+    <h2 id="hdr-name">Loading…</h2>
+    <div class="island-header-meta">
+      <span class="subject-pill" id="hdr-subject" style="font-size:.6875rem;padding:2px 8px">Mathematics</span>
+      <span class="badge" id="hdr-count">—</span>
+      <span class="badge" id="hdr-progress">—</span>
+    </div>
+  </div>
+  <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" title="Toggle theme">🌙</button>
+</header>
+
+<!-- ── Main ──────────────────────────────────────────────────────────────── -->
+<main style="max-width:1100px;margin:0 auto;padding:28px 24px 64px">
+
+  <!-- Topic description -->
+  <div id="topic-desc-wrap" style="margin-bottom:24px;display:none">
+    <div class="overview-box">
+      <p id="topic-desc" style="margin:0;font-size:.9375rem;color:var(--text-2)"></p>
+    </div>
+  </div>
+
+  <!-- Progress bar -->
+  <div id="topic-progress-wrap" style="margin-bottom:28px;display:none">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+      <span style="font-size:.8125rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted)">Topic progress</span>
+      <span id="topic-progress-label" style="font-size:.875rem;font-weight:700;color:var(--text)">0 / 0 islands mastered</span>
+    </div>
+    <div style="height:8px;background:var(--ring-track);border-radius:4px;overflow:hidden">
+      <div id="topic-progress-bar" style="height:100%;background:#3f6f00;border-radius:4px;transition:width .4s ease;width:0%"></div>
+    </div>
+  </div>
+
+  <!-- Island grid -->
+  <div class="island-grid" id="island-grid"></div>
+
+</main>
+
+<script src="data.js"></script>
+<script src="math-data.js"></script>
+<script src="math-content-1.js"></script>
+<script src="math-content-2.js"></script>
+<script src="math-content-3.js"></script>
+<script src="math-content-4.js"></script>
+<script src="math-content-5.js"></script>
+<script src="math-content-6.js"></script>
+<script src="math-content-7.js"></script>
+<script src="lessons.js"></script>
+<script src="math-lessons-1.js"></script>
+<script src="math-lessons-2.js"></script>
+<script src="math-lessons-3.js"></script>
+<script src="math-lessons-4.js"></script>
+<script src="math-lessons-5.js"></script>
+<script src="math-lessons-6.js"></script>
+<script src="math-lessons-7.js"></script>
+<script src="app.js"></script>
+<script>
+// ── Init ──────────────────────────────────────────────────────────────────
+let user = requireAuth();
+const params = new URLSearchParams(location.search);
+const topicId = params.get('id');
+const topic = typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id === topicId) : null;
+
+if (!topic) {
+  alert('Topic not found');
+  window.location.href = 'dashboard.html';
+}
+
+// Islands belonging to this topic
+const topicIslands = CURRICULUM.filter(i => i.topicId === topicId);
+
+(function init() {
+  initTheme();
+  updateThemeBtn();
+  document.title = `StudyMate — ${topic.name}`;
+  renderHeader();
+  renderProgress();
+  renderGrid();
+  touchStreak();
+})();
+
+// ── Theme ─────────────────────────────────────────────────────────────────
+function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
+function updateThemeBtn() {
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
+}
+
+// ── Header ────────────────────────────────────────────────────────────────
+function renderHeader() {
+  document.getElementById('hdr-emoji').textContent = topic.emoji;
+  document.getElementById('hdr-name').textContent = topic.name;
+  const subPill = document.getElementById('hdr-subject');
+  subPill.style.background = '#3f6f00';
+  subPill.style.color = 'white';
+  document.getElementById('hdr-count').textContent = `${topicIslands.length} islands`;
+}
+
+// ── Progress ──────────────────────────────────────────────────────────────
+function renderProgress() {
+  if (topicIslands.length === 0) return;
+
+  let mastered = 0, started = 0;
+  topicIslands.forEach(island => {
+    const s = getIslandStatus(island.id);
+    if (s > 0) started++;
+    if (s === 4) mastered++;
+  });
+
+  const pct = Math.round((mastered / topicIslands.length) * 100);
+  document.getElementById('hdr-progress').textContent = `${mastered} / ${topicIslands.length} mastered`;
+
+  const wrap = document.getElementById('topic-progress-wrap');
+  wrap.style.display = '';
+  document.getElementById('topic-progress-label').textContent = `${mastered} / ${topicIslands.length} islands mastered`;
+  document.getElementById('topic-progress-bar').style.width = pct + '%';
+
+  if (topic.description) {
+    document.getElementById('topic-desc').textContent = topic.description;
+    document.getElementById('topic-desc-wrap').style.display = '';
+  }
+}
+
+// ── Grid ──────────────────────────────────────────────────────────────────
+function renderGrid() {
+  const grid = document.getElementById('island-grid');
+  const allProgress = getAllProgress();
+
+  if (topicIslands.length === 0) {
+    grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
+      <div class="empty-state-icon">🚧</div>
+      <p>Islands for this topic are coming soon!</p>
+    </div>`;
+    return;
+  }
+
+  grid.innerHTML = topicIslands.map(island => {
+    const unlocked = isIslandUnlocked(island, allProgress);
+    const progress = calcIslandProgress(island.id);
+    const statusIdx = getIslandStatus(island.id);
+    const statusLabel = STATUS_LABELS[statusIdx];
+    const statusColor = STATUS_COLORS[statusIdx];
+    const cardCount = FLASHCARDS.filter(f => f.islandId === island.id).length;
+    const qCount = (QUESTIONS[island.id] || []).length;
+
+    return `<div class="island-card${unlocked ? '' : ' locked'}"
+        style="border-top-color:#3f6f00"
+        onclick="${unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`}"
+        title="${unlocked ? island.name : 'Complete prerequisites first'}">
+      <div class="island-card-top">
+        <div class="island-emoji">${island.emoji}</div>
+        ${createProgressRing(progress, '#3f6f00', 52)}
+      </div>
+      <div style="margin-bottom:6px">
+        <span class="subject-pill" style="background:#3f6f00">${island.difficulty === 1 ? 'Foundation' : island.difficulty === 2 ? 'Higher' : 'Challenge'}</span>
+      </div>
+      <div class="island-name">${island.name}</div>
+      <div class="island-meta">⏱ ${island.estimatedHours}h · ${cardCount} cards · ${qCount} questions</div>
+      <div class="status-chip">
+        <span class="status-dot" style="background:${statusColor}"></span>
+        <span style="color:${statusColor}">${statusLabel}</span>
+      </div>
+      ${!unlocked ? '<div class="lock-overlay" style="background:rgba(var(--bg-rgb),.4)">🔒</div>' : ''}
+    </div>`;
+  }).join('');
+}
+
+function goToIsland(id) {
+  window.location.href = `island.html?id=${id}&from=topic&topicId=${topicId}`;
+}
+
+function showLockedMsg(id) {
+  const island = CURRICULUM.find(i => i.id === id);
+  if (!island || !island.prerequisites.length) return;
+  const prereqNames = island.prerequisites.map(pid => {
+    const p = CURRICULUM.find(c => c.id === pid);
+    return p ? p.name : pid;
+  }).join(', ');
+  showToast(`🔒 Complete ${prereqNames} first`, 'error');
+}
+
+// ── Keyboard ──────────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') window.location.href = 'dashboard.html';
+});
+</script>
+</body>
+</html>

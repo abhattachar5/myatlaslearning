@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMate — Topic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── Island Header ─────────────────────────────────────────────────────── -->
+<header class="island-header" id="island-header" style="background:var(--surface)">
+  <a id="back-btn" href="dashboard.html" class="island-header-back" title="Back">←</a>
+  <div class="island-header-emoji" id="hdr-emoji">—</div>
+  <div class="island-header-info">
+    <h2 id="hdr-name">Loading…</h2>
+    <div class="island-header-meta">
+      <span class="subject-pill" id="hdr-subject" style="font-size:.6875rem;padding:2px 8px">—</span>
+      <span class="badge" id="hdr-hours">—</span>
+      <span class="badge" id="hdr-status">—</span>
+    </div>
+  </div>
+  <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" title="Toggle theme">🌙</button>
+</header>
+
+<!-- ── Main ──────────────────────────────────────────────────────────────── -->
+<main style="max-width:760px;margin:0 auto;padding:28px 24px 64px">
+
+  <!-- Tab bar -->
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="overview"  onclick="switchTab('overview')">🗺️ Overview</button>
+    <button class="tab-btn"        data-tab="lesson"    onclick="switchTab('lesson')">📖 Lesson</button>
+    <button class="tab-btn"        data-tab="flashcards" onclick="switchTab('flashcards')">🃏 Flashcards</button>
+    <button class="tab-btn"        data-tab="practice"  onclick="switchTab('practice')">✏️ Practice</button>
+  </div>
+
+  <!-- ── OVERVIEW TAB ────────────────────────────────────────────────────── -->
+  <div class="tab-panel active" id="tab-overview">
+
+    <div class="progress-overview-card">
+      <div id="overview-ring"></div>
+      <div style="flex:1">
+        <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:4px">Your progress</div>
+        <div style="font-size:1.5rem;font-weight:800;margin-bottom:2px" id="overview-pct">0%</div>
+        <div style="font-size:.875rem;color:var(--text-2)" id="overview-status">Not Started</div>
+      </div>
+    </div>
+
+    <!-- Progress steps breakdown -->
+    <div id="progress-steps" style="display:flex;flex-direction:column;gap:6px;margin-bottom:20px">
+      <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:4px">How to reach 100%</div>
+      <div class="progress-step" id="step-lesson">
+        <span class="step-check" id="step-lesson-check">⬜</span>
+        <span class="step-label">Read the lesson</span>
+        <span class="step-pts">+25%</span>
+      </div>
+      <div class="progress-step" id="step-cards">
+        <span class="step-check" id="step-cards-check">⬜</span>
+        <span class="step-label" id="step-cards-label">Learn all flashcards (0 / 0)</span>
+        <span class="step-pts">+25%</span>
+      </div>
+      <div class="progress-step" id="step-quiz-try">
+        <span class="step-check" id="step-quiz-try-check">⬜</span>
+        <span class="step-label">Attempt the quiz</span>
+        <span class="step-pts">+25%</span>
+      </div>
+      <div class="progress-step" id="step-quiz-pass">
+        <span class="step-check" id="step-quiz-pass-check">⬜</span>
+        <span class="step-label" id="step-quiz-pass-label">Pass the quiz (≥ 7 / 10)</span>
+        <span class="step-pts">+25%</span>
+      </div>
+    </div>
+
+    <div class="overview-grid">
+      <div class="overview-box">
+        <h4>Learning outcomes</h4>
+        <ul class="overview-list" id="overview-outcomes"></ul>
+      </div>
+      <div class="overview-box">
+        <h4>Topics covered</h4>
+        <div class="topic-tags" id="overview-topics"></div>
+      </div>
+    </div>
+
+    <div class="overview-box" style="margin-bottom:24px">
+      <h4 style="margin-bottom:4px" id="overview-desc-title">About this island</h4>
+      <p id="overview-desc" style="margin-top:8px;font-size:.9375rem"></p>
+    </div>
+
+    <h4 style="margin-bottom:12px">Start learning</h4>
+    <div class="activity-cta">
+      <div class="activity-btn" onclick="switchTab('lesson')">
+        <div class="activity-btn-icon">📖</div>
+        <div class="activity-btn-label">View Lesson</div>
+        <div class="activity-btn-sub">Read the lesson</div>
+      </div>
+      <div class="activity-btn" onclick="switchTab('flashcards')">
+        <div class="activity-btn-icon">🃏</div>
+        <div class="activity-btn-label">Flashcards</div>
+        <div class="activity-btn-sub" id="cta-cards-sub">—</div>
+      </div>
+      <div class="activity-btn" onclick="switchTab('practice')">
+        <div class="activity-btn-icon">✏️</div>
+        <div class="activity-btn-label">Practice Quiz</div>
+        <div class="activity-btn-sub" id="cta-quiz-sub">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LESSON TAB ──────────────────────────────────────────────────────── -->
+  <div class="tab-panel" id="tab-lesson">
+    <div class="lesson-content-area" id="lesson-content" style="display:none"></div>
+    <div id="lesson-done-cta" style="display:none;margin-top:32px">
+      <div class="divider"></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <div style="font-weight:700;margin-bottom:2px">Ready to test yourself?</div>
+          <div style="font-size:.875rem;color:var(--text-muted)">Try the flashcards to practise recall.</div>
+        </div>
+        <button class="btn btn-primary" onclick="switchTab('flashcards')">🃏 Start Flashcards →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FLASHCARDS TAB ─────────────────────────────────────────────────── -->
+  <div class="tab-panel" id="tab-flashcards">
+    <div id="fc-session">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+        <div>
+          <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:2px">Flashcards</div>
+          <div id="fc-counter" style="font-size:1rem;font-weight:700">Card 1 of 3</div>
+        </div>
+        <button class="btn btn-sm btn-secondary" onclick="resetCards()">↺ Reset</button>
+      </div>
+
+      <!-- Dots -->
+      <div class="card-progress-dots" id="fc-dots" style="justify-content:center;margin-bottom:20px"></div>
+
+      <!-- Card -->
+      <div class="flashcard-viewport">
+        <div class="flashcard-scene" id="fc-scene" onclick="flipCard()">
+          <div class="flashcard-face">
+            <div class="flashcard-label">Question — click to reveal answer</div>
+            <div class="flashcard-text" id="fc-front-text"></div>
+            <div class="flashcard-hint" id="fc-difficulty"></div>
+          </div>
+          <div class="flashcard-face flashcard-back-face">
+            <div class="flashcard-label">Answer</div>
+            <div class="flashcard-answer" id="fc-back-text"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="flashcard-actions" id="fc-actions" style="display:none">
+        <button class="btn btn-warning" onclick="markCard('review')">🔄 Still Learning</button>
+        <button class="btn btn-success" onclick="markCard('learned')">✓ Got It!</button>
+      </div>
+      <div class="card-nav">
+        <button class="btn btn-secondary btn-sm" id="fc-prev" onclick="prevCard()">← Prev</button>
+        <span id="fc-counter-small" style="font-size:.8125rem;color:var(--text-muted);min-width:60px;text-align:center">1 / 3</span>
+        <button class="btn btn-secondary btn-sm" id="fc-next" onclick="nextCard()">Next →</button>
+      </div>
+    </div>
+
+    <!-- Session done screen -->
+    <div id="fc-done-screen" style="display:none;text-align:center;padding:40px 20px">
+      <div style="font-size:3.5rem;margin-bottom:16px">🎉</div>
+      <h2 style="margin-bottom:8px">Session complete!</h2>
+      <p style="margin-bottom:28px" id="fc-done-msg">You reviewed all the cards.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-secondary" onclick="restartCards()">↺ Review Again</button>
+        <button class="btn btn-primary" onclick="switchTab('practice')">✏️ Take the Quiz →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PRACTICE TAB ───────────────────────────────────────────────────── -->
+  <div class="tab-panel" id="tab-practice">
+    <div id="quiz-area">
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div>
+      </div>
+      <div class="quiz-question-num" id="quiz-num">Question 1 of 3</div>
+      <div class="quiz-question-text" id="quiz-q"></div>
+      <div class="quiz-options" id="quiz-opts"></div>
+      <div class="quiz-explanation" id="quiz-explanation"></div>
+      <div style="display:flex;justify-content:flex-end">
+        <button class="btn btn-primary" id="quiz-next-btn" onclick="nextQuestion()" style="display:none">Next question →</button>
+      </div>
+    </div>
+
+    <!-- Score screen -->
+    <div class="quiz-score-screen" id="quiz-score-screen">
+      <div class="score-emoji" id="score-emoji">🏆</div>
+      <div class="score-fraction" id="score-fraction">0/3</div>
+      <div class="score-label" id="score-label">Great effort!</div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-secondary" onclick="restartQuiz()">↺ Try Again</button>
+        <button class="btn btn-primary" onclick="window.location.href='dashboard.html'">← Back to Dashboard</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="data.js"></script>
+<script src="math-data.js"></script>
+<script src="math-content-1.js"></script>
+<script src="math-content-2.js"></script>
+<script src="math-content-3.js"></script>
+<script src="math-content-4.js"></script>
+<script src="math-content-5.js"></script>
+<script src="math-content-6.js"></script>
+<script src="math-content-7.js"></script>
+<script src="lessons.js"></script>
+<script src="math-lessons-1.js"></script>
+<script src="math-lessons-2.js"></script>
+<script src="math-lessons-3.js"></script>
+<script src="math-lessons-4.js"></script>
+<script src="math-lessons-5.js"></script>
+<script src="math-lessons-6.js"></script>
+<script src="math-lessons-7.js"></script>
+<script src="app.js"></script>
+<script>
+// ── Init ──────────────────────────────────────────────────────────────────
+let user = requireAuth();
+const params = new URLSearchParams(location.search);
+const islandId = params.get('id') || 'island-1';
+const island = CURRICULUM.find(i => i.id === islandId);
+if (!island) { alert('Island not found'); history.back(); }
+
+const cards = FLASHCARDS.filter(f => f.islandId === islandId);
+
+// Raw question list — may contain fixed objects OR {gen:fn} generative questions.
+// We store the raw array and resolve it fresh each quiz session so retakes get new values.
+const rawQuestions = QUESTIONS[islandId] || [];
+
+// ── Generative-question helpers (available to gen() functions in content files) ──
+// randInt(2,9) → integer in [2,9]
+function randInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+// pickFrom([a,b,c]) → random element
+function pickFrom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+// buildOpts(correct, [wrong, wrong, wrong]) → de-duped array of ≤4 string options
+// The correct answer is always the first element so the caller can rely on index 0,
+// then the shuffle step in initQuiz() scrambles the order.
+function buildOpts(correct, wrongs) {
+  var cs = String(correct);
+  var seen = [cs], opts = [cs];
+  for (var i = 0; i < wrongs.length && opts.length < 4; i++) {
+    var ws = String(wrongs[i]);
+    if (seen.indexOf(ws) === -1) { seen.push(ws); opts.push(ws); }
+  }
+  // Pad to 4 with distinct fallbacks if needed
+  var pad = 1;
+  while (opts.length < 4) {
+    var fb = String(correct + pad * 3);
+    if (seen.indexOf(fb) === -1) { seen.push(fb); opts.push(fb); }
+    pad++;
+  }
+  return opts;
+}
+// Normalise a fixed question object: unify content-1/2/3 {q,opts,c,e} and
+// content-4/5/6/7 {question,options,answer,explanation} to the short form.
+function normaliseQ(raw) {
+  return {
+    q:    raw.q    !== undefined ? raw.q    : (raw.question    || ''),
+    opts: raw.opts !== undefined ? raw.opts : (raw.options     || []),
+    c:    raw.c    !== undefined ? raw.c    : (raw.answer      !== undefined ? raw.answer : 0),
+    e:    raw.e    !== undefined ? raw.e    : (raw.explanation || '')
+  };
+}
+
+let fcIndex = 0;
+let fcFlipped = false;
+let cardStates = {}; // id → 'learned' | 'review' | null
+
+let qIndex = 0;
+let qScore = 0;
+let qAnswered = false;
+let shuffledQuestions = []; // per-session, generated + shuffled
+
+
+(function init() {
+  initTheme();
+  updateThemeBtn();
+  document.title = `StudyMate — ${island.name}`;
+  // Set back button destination
+  const backBtn = document.getElementById('back-btn');
+  if (island.topicId) {
+    backBtn.href = `topic.html?id=${island.topicId}`;
+    backBtn.title = 'Back to topic';
+  }
+  renderHeader();
+  renderOverview();
+  initFlashcards();
+  initQuiz();
+  checkLessonCache();
+  touchStreak();
+})();
+
+// ── Theme ─────────────────────────────────────────────────────────────────
+function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
+function updateThemeBtn() {
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
+}
+
+// ── Tab switching ─────────────────────────────────────────────────────────
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
+  if (name === 'overview') refreshOverviewProgress();
+  if (name === 'lesson') checkLessonCache();
+}
+
+// ── Header ────────────────────────────────────────────────────────────────
+function renderHeader() {
+  document.getElementById('hdr-emoji').textContent = island.emoji;
+  document.getElementById('hdr-name').textContent = island.name;
+  const subPill = document.getElementById('hdr-subject');
+  subPill.textContent = island.subject;
+  subPill.style.background = island.color;
+  subPill.style.color = 'white';
+  document.getElementById('hdr-hours').textContent = `⏱ ${island.estimatedHours}h`;
+  refreshHeaderStatus();
+}
+function refreshHeaderStatus() {
+  const si = getIslandStatus(islandId);
+  const statusEl = document.getElementById('hdr-status');
+  statusEl.textContent = STATUS_LABELS[si];
+  statusEl.style.color = STATUS_COLORS[si];
+}
+
+// ── Overview ──────────────────────────────────────────────────────────────
+function renderOverview() {
+  document.getElementById('overview-desc').textContent = island.description;
+  const outcomes = document.getElementById('overview-outcomes');
+  outcomes.innerHTML = island.learningOutcomes.map(o => `<li>${o}</li>`).join('');
+  const topics = document.getElementById('overview-topics');
+  topics.innerHTML = island.topics.map(t => `<span class="topic-tag">${t}</span>`).join('');
+  document.getElementById('cta-cards-sub').textContent = `${cards.length} cards`;
+  document.getElementById('cta-quiz-sub').textContent = `${rawQuestions.length} questions`;
+  refreshOverviewProgress();
+}
+function refreshOverviewProgress() {
+  const progress = calcIslandProgress(islandId);
+  const si = getIslandStatus(islandId);
+  const p = getIslandProgress(islandId);
+  const learnedCount = cards.filter(c => p.flashcardsLearned.includes(c.id)).length;
+  const passMark = rawQuestions.length > 0 ? Math.ceil(rawQuestions.length * 0.7) : 0;
+  const quizAttempted = p.quizBestScore >= 0;
+  const quizPassed = quizAttempted && p.quizBestScore >= passMark;
+
+  // Ring & headline
+  document.getElementById('overview-pct').textContent = Math.round(progress) + '%';
+  document.getElementById('overview-status').textContent = STATUS_LABELS[si];
+  document.getElementById('overview-status').style.color = STATUS_COLORS[si];
+  document.getElementById('overview-ring').innerHTML = createProgressRing(progress, island.color, 72);
+
+  // Step checklist
+  function setStep(id, done) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = done ? '✅' : '⬜';
+  }
+  setStep('step-lesson-check',    p.lessonViewed);
+  setStep('step-cards-check',     learnedCount >= cards.length && cards.length > 0);
+  setStep('step-quiz-try-check',  quizAttempted);
+  setStep('step-quiz-pass-check', quizPassed);
+
+  // Dynamic labels
+  const cardsLabel = document.getElementById('step-cards-label');
+  if (cardsLabel) cardsLabel.textContent = `Learn all flashcards (${learnedCount} / ${cards.length})`;
+
+  const passLabel = document.getElementById('step-quiz-pass-label');
+  if (passLabel) {
+    passLabel.textContent = quizAttempted
+      ? `Pass the quiz — best: ${p.quizBestScore} / ${rawQuestions.length} (need ${passMark})`
+      : `Pass the quiz (need ${passMark} / ${rawQuestions.length})`;
+  }
+}
+
+// ── Lesson ────────────────────────────────────────────────────────────────
+
+function checkLessonCache() {
+  const el = document.getElementById('lesson-content');
+  const cta = document.getElementById('lesson-done-cta');
+
+  // Already rendered — don't re-render
+  if (el.dataset.loaded === '1') return;
+
+  const lesson = LESSONS[islandId];
+  let html = '';
+
+  if (typeof lesson === 'string' && lesson.trim()) {
+    // Legacy format — raw HTML string (Topics 1-13)
+    html = lesson;
+  } else if (lesson && lesson.sections && lesson.sections.length) {
+    // Object format — { title, sections: [{heading, content}] } (Topics 14-28)
+    html = '<h2>' + lesson.title + '</h2>' +
+      lesson.sections.map(function(s) {
+        return '<h3>' + s.heading + '</h3>' + s.content;
+      }).join('');
+  }
+
+  if (html) {
+    el.innerHTML = html;
+    el.style.display = 'block';
+    el.dataset.loaded = '1';
+    if (cta) cta.style.display = 'block';
+    awardLessonXP();
+  } else {
+    // No lesson found — show a friendly placeholder
+    el.innerHTML = '<p style="color:var(--text-muted);padding:1em 0">Lesson content coming soon for this island.</p>';
+    el.style.display = 'block';
+  }
+}
+
+function awardLessonXP() {
+  const p = getIslandProgress(islandId);
+  if (!p.lessonViewed) {
+    p.lessonViewed = true;
+    if (!p.xpAwarded) p.xpAwarded = [];
+    if (!p.xpAwarded.includes('lesson')) {
+      p.xpAwarded.push('lesson');
+      saveIslandProgress(islandId, p);
+      const xp = addXP(10, 'Lesson completed');
+      syncUserXP(xp);
+    } else {
+      saveIslandProgress(islandId, p);
+    }
+    refreshHeaderStatus();
+    refreshOverviewProgress();
+  }
+}
+
+// ── Flashcards ────────────────────────────────────────────────────────────
+function initFlashcards() {
+  const p = getIslandProgress(islandId);
+  cards.forEach(c => {
+    cardStates[c.id] = p.flashcardsLearned.includes(c.id) ? 'learned' : null;
+  });
+  fcIndex = 0;
+  renderCard();
+}
+
+function renderCard() {
+  if (!cards.length) {
+    document.getElementById('fc-session').innerHTML = '<p class="text-muted" style="text-align:center;padding:40px">No flashcards for this topic yet.</p>';
+    return;
+  }
+  const card = cards[fcIndex];
+  fcFlipped = false;
+  document.getElementById('fc-scene').classList.remove('flipped');
+  document.getElementById('fc-front-text').textContent = card.front;
+  document.getElementById('fc-back-text').textContent = card.back;
+  document.getElementById('fc-counter').textContent = `Card ${fcIndex + 1} of ${cards.length}`;
+  document.getElementById('fc-counter-small').textContent = `${fcIndex + 1} / ${cards.length}`;
+  document.getElementById('fc-difficulty').textContent = getDifficultyLabel(card.difficulty);
+  document.getElementById('fc-actions').style.display = 'none';
+  document.getElementById('fc-prev').disabled = fcIndex === 0;
+  document.getElementById('fc-next').disabled = fcIndex === cards.length - 1;
+  renderDots();
+}
+
+function renderDots() {
+  const dots = document.getElementById('fc-dots');
+  dots.innerHTML = cards.map((c, i) => {
+    const state = cardStates[c.id];
+    let cls = 'card-dot';
+    if (i === fcIndex) cls += ' current';
+    else if (state === 'learned') cls += ' learned';
+    else if (state === 'review')  cls += ' review';
+    return `<span class="${cls}" onclick="goToCard(${i})"></span>`;
+  }).join('');
+}
+
+function goToCard(i) { fcIndex = i; renderCard(); }
+function prevCard() { if (fcIndex > 0) { fcIndex--; renderCard(); } }
+function nextCard() { if (fcIndex < cards.length - 1) { fcIndex++; renderCard(); } }
+
+function flipCard() {
+  fcFlipped = !fcFlipped;
+  document.getElementById('fc-scene').classList.toggle('flipped', fcFlipped);
+  document.getElementById('fc-actions').style.display = fcFlipped ? 'flex' : 'none';
+}
+
+function markCard(state) {
+  const card = cards[fcIndex];
+  cardStates[card.id] = state;
+  // Save to progress
+  const p = getIslandProgress(islandId);
+  if (state === 'learned') {
+    if (!p.flashcardsLearned.includes(card.id)) p.flashcardsLearned.push(card.id);
+  } else {
+    p.flashcardsLearned = p.flashcardsLearned.filter(id => id !== card.id);
+  }
+  saveIslandProgress(islandId, p);
+
+  // Check if all done
+  const allReviewed = cards.every(c => cardStates[c.id] !== null);
+  if (allReviewed || fcIndex === cards.length - 1) {
+    checkCardCompletion(p);
+  }
+
+  // Advance to next unreviewed or next card
+  const nextUnreviewed = cards.findIndex((c, i) => i > fcIndex && cardStates[c.id] === null);
+  if (nextUnreviewed !== -1) {
+    fcIndex = nextUnreviewed;
+    renderCard();
+  } else {
+    const allDone = cards.every(c => cardStates[c.id] !== null);
+    if (allDone) showCardsDone(p);
+    else { fcIndex = Math.min(fcIndex + 1, cards.length - 1); renderCard(); }
+  }
+  refreshHeaderStatus();
+  refreshOverviewProgress();
+}
+
+function checkCardCompletion(p) {
+  const allLearned = cards.every(c => p.flashcardsLearned.includes(c.id));
+  if (!p.xpAwarded) p.xpAwarded = [];
+  if (allLearned && !p.xpAwarded.includes('cards-complete')) {
+    p.xpAwarded.push('cards-complete');
+    saveIslandProgress(islandId, p);
+    const xp = addXP(20, 'All flashcards mastered');
+    syncUserXP(xp);
+  } else if (p.flashcardsLearned.length > 0 && !p.xpAwarded.includes('cards-started')) {
+    p.xpAwarded.push('cards-started');
+    saveIslandProgress(islandId, p);
+    const xp = addXP(10, 'Flashcards started');
+    syncUserXP(xp);
+  }
+}
+
+function showCardsDone(p) {
+  const learnedCount = cards.filter(c => p.flashcardsLearned.includes(c.id)).length;
+  document.getElementById('fc-session').style.display = 'none';
+  document.getElementById('fc-done-screen').style.display = '';
+  document.getElementById('fc-done-msg').textContent =
+    learnedCount === cards.length
+      ? `You got all ${cards.length} cards! 🌟 Ready for the quiz?`
+      : `You marked ${learnedCount} of ${cards.length} cards as learned. Review again to improve.`;
+}
+
+function resetCards() {
+  document.getElementById('fc-session').style.display = '';
+  document.getElementById('fc-done-screen').style.display = 'none';
+  cards.forEach(c => { cardStates[c.id] = null; });
+  fcIndex = 0;
+  renderCard();
+}
+function restartCards() {
+  document.getElementById('fc-session').style.display = '';
+  document.getElementById('fc-done-screen').style.display = 'none';
+  fcIndex = 0;
+  renderCard();
+}
+
+// ── Quiz ──────────────────────────────────────────────────────────────────
+function initQuiz() {
+  if (!rawQuestions.length) {
+    document.getElementById('quiz-area').innerHTML =
+      '<p class="text-muted" style="text-align:center;padding:40px">No practice questions for this topic yet.</p>';
+    return;
+  }
+  // Step 1: Resolve each question (fixed → normalise; generative → call gen()).
+  var resolved = rawQuestions.map(function(raw) {
+    return (typeof raw.gen === 'function') ? raw.gen() : normaliseQ(raw);
+  });
+
+  // Step 2: Shuffle question ORDER so every retake sees a different sequence.
+  resolved = shuffle(resolved);
+
+  // Step 3: Shuffle OPTIONS within each question so the correct answer isn't always option A.
+  shuffledQuestions = resolved.map(function(q) {
+    var opts = q.opts.slice();
+    var correctText = opts[q.c];
+    for (var i = opts.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = opts[i]; opts[i] = opts[j]; opts[j] = tmp;
+    }
+    return { q: q.q, opts: opts, c: opts.indexOf(correctText), e: q.e };
+  });
+
+  qIndex = 0; qScore = 0; qAnswered = false;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = shuffledQuestions[qIndex];
+  const total = shuffledQuestions.length;
+  document.getElementById('quiz-bar').style.width = `${(qIndex / total) * 100}%`;
+  document.getElementById('quiz-num').textContent = `Question ${qIndex + 1} of ${total}`;
+  document.getElementById('quiz-q').textContent = q.q;
+  document.getElementById('quiz-explanation').classList.remove('show');
+  document.getElementById('quiz-next-btn').style.display = 'none';
+  qAnswered = false;
+
+  const letters = ['A', 'B', 'C', 'D'];
+  document.getElementById('quiz-opts').innerHTML = q.opts.map((opt, i) =>
+    `<button class="quiz-option" onclick="selectAnswer(${i})">
+      <span class="option-letter">${letters[i]}</span>
+      ${opt}
+    </button>`
+  ).join('');
+}
+
+function selectAnswer(idx) {
+  if (qAnswered) return;
+  qAnswered = true;
+  const q = shuffledQuestions[qIndex];
+  const options = document.querySelectorAll('.quiz-option');
+  options.forEach((opt, i) => {
+    opt.classList.add('answered');
+    if (i === q.c) opt.classList.add('correct');
+    else if (i === idx && i !== q.c) opt.classList.add('wrong');
+  });
+  if (idx === q.c) qScore++;
+
+  const expEl = document.getElementById('quiz-explanation');
+  expEl.textContent = q.e;
+  expEl.classList.add('show');
+
+  const nextBtn = document.getElementById('quiz-next-btn');
+  nextBtn.style.display = '';
+  nextBtn.textContent = qIndex < shuffledQuestions.length - 1 ? 'Next question →' : 'See results →';
+}
+
+function nextQuestion() {
+  if (qIndex < shuffledQuestions.length - 1) {
+    qIndex++;
+    renderQuestion();
+  } else {
+    showQuizScore();
+  }
+}
+
+function showQuizScore() {
+  document.getElementById('quiz-area').style.display = 'none';
+  const scoreScreen = document.getElementById('quiz-score-screen');
+  scoreScreen.classList.add('show');
+  const total = shuffledQuestions.length;
+  const pct = Math.round((qScore / total) * 100);
+  document.getElementById('score-fraction').textContent = `${qScore} / ${total}`;
+
+  let emoji, label;
+  if (pct === 100)      { emoji = '🏆'; label = 'Perfect score! Absolutely brilliant!'; }
+  else if (pct >= 80)   { emoji = '🌟'; label = 'Outstanding! You\'ve mastered this topic.'; }
+  else if (pct >= 60)   { emoji = '👍'; label = 'Great effort! A little more practice and you\'ll nail it.'; }
+  else if (pct >= 40)   { emoji = '📚'; label = 'Good try. Review the flashcards and try again.'; }
+  else                  { emoji = '💪'; label = 'Keep going — revision takes time. You\'ve got this!'; }
+
+  document.getElementById('score-emoji').textContent = emoji;
+  document.getElementById('score-label').textContent = label;
+
+  // Save score & XP
+  const p = getIslandProgress(islandId);
+  const prev = p.quizBestScore;
+  p.quizBestScore = Math.max(prev, qScore);
+  p.quizAttempts = (p.quizAttempts || 0) + 1;
+  if (!p.xpAwarded) p.xpAwarded = [];
+  saveIslandProgress(islandId, p);
+
+  // Award XP based on score
+  const xpKey = `quiz-${qScore}`;
+  if (!p.xpAwarded.includes(xpKey) || qScore > prev) {
+    if (!p.xpAwarded.includes(xpKey)) p.xpAwarded.push(xpKey);
+    const xpEarned = Math.round((qScore / total) * 50);
+    if (xpEarned > 0) {
+      saveIslandProgress(islandId, p);
+      const newXP = addXP(xpEarned, `Quiz: ${qScore}/${total} correct`);
+      syncUserXP(newXP);
+    }
+  }
+  refreshHeaderStatus();
+  refreshOverviewProgress();
+}
+
+function restartQuiz() {
+  document.getElementById('quiz-area').style.display = '';
+  document.getElementById('quiz-score-screen').classList.remove('show');
+  initQuiz();
+}
+
+// ── Sync user XP back to profiles ────────────────────────────────────────
+function syncUserXP(xp) {
+  user = getUser();
+  const profiles = JSON.parse(localStorage.getItem('sm_profiles') || '[]');
+  const idx = profiles.findIndex(p => p.joinDate === user.joinDate);
+  if (idx !== -1) { profiles[idx].xp = xp; localStorage.setItem('sm_profiles', JSON.stringify(profiles)); }
+}
+
+// ── Keyboard nav ──────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  const fc = document.getElementById('tab-flashcards');
+  if (!fc.classList.contains('active')) return;
+  if (e.key === 'ArrowLeft')  prevCard();
+  if (e.key === 'ArrowRight') nextCard();
+  if (e.key === ' ')          { e.preventDefault(); flipCard(); }
+});
+</script>
+</body>
+</html>
