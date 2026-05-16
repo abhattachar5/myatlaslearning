@@ -311,7 +311,7 @@ function switchTab(name) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
   if (name === 'overview') refreshOverviewProgress();
-  if (name === 'lesson') checkLessonCache();
+  if (name === 'lesson') checkLessonCache(true);
 }
 
 // ── Header ────────────────────────────────────────────────────────────────
@@ -382,12 +382,15 @@ function refreshOverviewProgress() {
 
 // ── Lesson ────────────────────────────────────────────────────────────────
 
-function checkLessonCache() {
+function checkLessonCache(awardXP) {
   const el = document.getElementById('lesson-content');
   const cta = document.getElementById('lesson-done-cta');
 
   // Already rendered — don't re-render
-  if (el.dataset.loaded === '1') return;
+  if (el.dataset.loaded === '1') {
+    if (awardXP) awardLessonXP();
+    return;
+  }
 
   const lesson = LESSONS[islandId];
   let html = '';
@@ -408,7 +411,7 @@ function checkLessonCache() {
     el.style.display = 'block';
     el.dataset.loaded = '1';
     if (cta) cta.style.display = 'block';
-    awardLessonXP();
+    if (awardXP) awardLessonXP();
   } else {
     // No lesson found — show a friendly placeholder
     el.innerHTML = '<p style="color:var(--text-muted);padding:1em 0">Lesson content coming soon for this island.</p>';
