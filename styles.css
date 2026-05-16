@@ -102,6 +102,11 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   gap: 10px;
   border-bottom: 1px solid var(--border);
 }
+.sidebar-logo-img {
+  height: 112px;
+  width: auto;
+  display: block;
+}
 .sidebar-logo-mark {
   width: 36px; height: 36px;
   background: var(--blue);
@@ -759,6 +764,13 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   border-radius: 50%;
   background: rgba(255,255,255,.05);
 }
+.auth-logo-img {
+  height: 176px;
+  width: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
 .auth-brand-logo {
   display: flex; align-items: center; gap: 12px;
   margin-bottom: 48px;
@@ -776,6 +788,14 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 }
 .auth-brand-name { font-size: 1.25rem; font-weight: 800; color: white; }
 .auth-brand-name span { color: var(--amber); }
+.brand-atl { color: #14213d; font-weight: 800; }
+.brand-as  { color: #c9a020; font-weight: 800; }
+.welcome-atlas-text {
+  height: 4.8em;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
 .auth-brand h1 { color: white; font-size: 2rem; margin-bottom: 16px; position: relative; z-index: 1; }
 .auth-brand p { color: rgba(255,255,255,.8); font-size: 1rem; max-width: 340px; position: relative; z-index: 1; }
 .auth-brand-features { margin-top: 40px; display: flex; flex-direction: column; gap: 16px; position: relative; z-index: 1; }
