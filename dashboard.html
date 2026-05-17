@@ -132,10 +132,6 @@
 
     <!-- Subject filters -->
     <div class="filter-row" id="filter-row">
-      <button class="filter-btn active" data-filter="all" onclick="setFilter('all')"
-        style="background:var(--text);color:var(--surface);border-color:transparent">
-        All <span class="filter-count" style="background:rgba(255,255,255,.2)">23</span>
-      </button>
       <button class="filter-btn" data-filter="math" onclick="setFilter('math')"
         style="--fc:#3f6f00">
         🔢 Maths <span class="filter-count">5</span>
@@ -148,13 +144,17 @@
         style="--fc:#185fa5">
         🔬 Science <span class="filter-count">5</span>
       </button>
+      <button class="filter-btn" data-filter="geography" onclick="setFilter('geography')"
+        style="--fc:#0891b2">
+        🗺️ Geography <span class="filter-count">4</span>
+      </button>
       <button class="filter-btn" data-filter="history" onclick="setFilter('history')"
         style="--fc:#6d28d9">
         ⚔️ History <span class="filter-count">4</span>
       </button>
-      <button class="filter-btn" data-filter="geography" onclick="setFilter('geography')"
-        style="--fc:#0891b2">
-        🗺️ Geography <span class="filter-count">4</span>
+      <button class="filter-btn" data-filter="all" onclick="setFilter('all')"
+        style="--fc:var(--text)">
+        All <span class="filter-count">23</span>
       </button>
     </div>
 
@@ -169,7 +169,7 @@
 <script>
 // ── Bootstrap ───────────────────────────────────────────────────────────────
 let user = requireAuth();
-let currentFilter = 'all';
+let currentFilter = 'math';
 
 (function init() {
   initTheme();
@@ -178,7 +178,7 @@ let currentFilter = 'all';
   touchStreak();
   renderSidebar();
   renderStats();
-  renderGrid();
+  setFilter('math');
   setWelcome();
   initSidebar();
 })();
