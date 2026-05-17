@@ -1127,7 +1127,7 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 
 /* Mobile (≤600px) */
 @media (max-width: 600px) {
-  .page-main { padding: 20px 16px 48px; }
+  .page-main { padding: 20px 16px calc(72px + env(safe-area-inset-bottom)); }
   .island-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .stats-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .stat-card { padding: 14px 16px; }
