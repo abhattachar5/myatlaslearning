@@ -79,26 +79,55 @@ function getLevelProgress(xp) {
   return Math.min(100, Math.round((earned / range) * 100));
 }
 
+// ── Flashcard ID normalisation ────────────────────────────────────────────────
+// Cards in older content files have explicit IDs; newer files may omit them.
+// Ensure every card has a stable derived ID before any progress code runs.
+(function normaliseFlashcardIds() {
+  if (typeof FLASHCARDS === 'undefined') return;
+  var counts = {};
+  FLASHCARDS.forEach(function(c) {
+    if (!c.id) {
+      counts[c.islandId] = (counts[c.islandId] || 0) + 1;
+      c.id = c.islandId + '-fc-' + counts[c.islandId];
+    }
+  });
+})();
+
 // ── Island Progress Calculations ─────────────────────────────────────────────
+//
+// Progress is built from four equal 25-point steps so 100% is always reachable:
+//   Step 1 — Lesson viewed         → +25
+//   Step 2 — All flashcards seen   → +25 (proportional to cards marked learned)
+//   Step 3 — Quiz attempted        → +25 (any score, just try it)
+//   Step 4 — Quiz passed (≥ 70%)   → +25
+//
 function calcIslandProgress(islandId) {
   const p = getIslandProgress(islandId);
   const cards = typeof FLASHCARDS !== 'undefined'
-    ? FLASHCARDS.filter(f => f.islandId === islandId) : [];
+    ? FLASHCARDS.filter(function(f) { return f.islandId === islandId; }) : [];
   const qs = typeof QUESTIONS !== 'undefined'
     ? (QUESTIONS[islandId] || []) : [];
 
-  let score = 0;
-  // Lesson: 25 pts
+  var score = 0;
+
+  // Step 1 — Lesson viewed (25 pts, binary)
   if (p.lessonViewed) score += 25;
-  // Flashcards: 50 pts proportional
+
+  // Step 2 — Flashcards (25 pts, proportional to cards marked learned)
   if (cards.length > 0) {
-    const learned = p.flashcardsLearned.filter(id => cards.some(c => c.id === id)).length;
-    score += Math.round((learned / cards.length) * 50);
+    var learned = cards.filter(function(c) {
+      return p.flashcardsLearned.includes(c.id);
+    }).length;
+    score += Math.round((learned / cards.length) * 25);
   }
-  // Quiz: 25 pts proportional
-  if (qs.length > 0 && p.quizBestScore >= 0) {
-    score += Math.round((p.quizBestScore / qs.length) * 25);
-  }
+
+  // Step 3 — Quiz attempted (25 pts, binary — just try it)
+  if (qs.length > 0 && p.quizBestScore >= 0) score += 25;
+
+  // Step 4 — Quiz passed: ≥ 70% correct (25 pts, binary)
+  var passMark = qs.length > 0 ? Math.ceil(qs.length * 0.7) : 0;
+  if (qs.length > 0 && p.quizBestScore >= passMark) score += 25;
+
   return Math.min(100, score);
 }
 
@@ -111,7 +140,7 @@ function getIslandStatus(islandId) {
 
   const allCardsLearned = cards.length > 0 &&
     cards.every(c => p.flashcardsLearned.includes(c.id));
-  const quizPassed = qs.length > 0 && p.quizBestScore >= Math.ceil(qs.length * 0.67);
+  const quizPassed = qs.length > 0 && p.quizBestScore >= Math.ceil(qs.length * 0.7);
 
   if (quizPassed && allCardsLearned) return 4;      // Mastered
   if (allCardsLearned) return 3;                    // Proficient

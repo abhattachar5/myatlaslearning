@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudyMate — Topic</title>
+  <title>Atlas — Topic</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a href="#island-main" class="skip-link">Skip to main content</a>
 
 <!-- ── Island Header ─────────────────────────────────────────────────────── -->
 <header class="island-header" id="island-header" style="background:var(--surface)">
-  <a href="dashboard.html" class="island-header-back" aria-label="Back to dashboard">←</a>
+  <a id="back-btn" href="dashboard.html" class="island-header-back" title="Back">←</a>
   <div class="island-header-emoji" id="hdr-emoji">—</div>
   <div class="island-header-info">
     <h2 id="hdr-name">Loading…</h2>
@@ -21,22 +20,22 @@
       <span class="badge" id="hdr-status">—</span>
     </div>
   </div>
-  <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" aria-label="Switch to dark mode" title="Toggle theme">🌙</button>
+  <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" title="Toggle theme">🌙</button>
 </header>
 
 <!-- ── Main ──────────────────────────────────────────────────────────────── -->
-<main id="island-main" style="max-width:760px;margin:0 auto;padding:28px 24px 64px">
+<main class="page-main island-main">
 
   <!-- Tab bar -->
-  <div class="tab-bar" role="tablist" aria-label="Topic activities">
-    <button class="tab-btn active" role="tab" aria-selected="true"  aria-controls="tab-overview"   id="tab-btn-overview"   data-tab="overview"   onclick="switchTab('overview')"><span aria-hidden="true">🗺️</span> Overview</button>
-    <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-lesson"     id="tab-btn-lesson"     data-tab="lesson"     onclick="switchTab('lesson')"><span aria-hidden="true">📖</span> Lesson</button>
-    <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-flashcards" id="tab-btn-flashcards" data-tab="flashcards" onclick="switchTab('flashcards')"><span aria-hidden="true">🃏</span> Flashcards</button>
-    <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-practice"   id="tab-btn-practice"   data-tab="practice"   onclick="switchTab('practice')"><span aria-hidden="true">✏️</span> Practice</button>
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="overview"  onclick="switchTab('overview')">🗺️ Overview</button>
+    <button class="tab-btn"        data-tab="lesson"    onclick="switchTab('lesson')">📖 Lesson</button>
+    <button class="tab-btn"        data-tab="flashcards" onclick="switchTab('flashcards')">🃏 Flashcards</button>
+    <button class="tab-btn"        data-tab="practice"  onclick="switchTab('practice')">✏️ Practice</button>
   </div>
 
   <!-- ── OVERVIEW TAB ────────────────────────────────────────────────────── -->
-  <div class="tab-panel active" id="tab-overview" role="tabpanel" aria-labelledby="tab-btn-overview" tabindex="0">
+  <div class="tab-panel active" id="tab-overview">
 
     <div class="progress-overview-card">
       <div id="overview-ring"></div>
@@ -45,9 +44,30 @@
         <div style="font-size:1.5rem;font-weight:800;margin-bottom:2px" id="overview-pct">0%</div>
         <div style="font-size:.875rem;color:var(--text-2)" id="overview-status">Not Started</div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
-        <div style="font-size:.8125rem;color:var(--text-muted)" id="overview-cards-done">0 / 0 flashcards</div>
-        <div style="font-size:.8125rem;color:var(--text-muted)" id="overview-quiz-score">Quiz: not attempted</div>
+    </div>
+
+    <!-- Progress steps breakdown -->
+    <div id="progress-steps" style="display:flex;flex-direction:column;gap:6px;margin-bottom:20px">
+      <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:4px">How to reach 100%</div>
+      <div class="progress-step" id="step-lesson">
+        <span class="step-check" id="step-lesson-check">⬜</span>
+        <span class="step-label">Read the lesson</span>
+        <span class="step-pts">+25%</span>
+      </div>
+      <div class="progress-step" id="step-cards">
+        <span class="step-check" id="step-cards-check">⬜</span>
+        <span class="step-label" id="step-cards-label">Learn all flashcards (0 / 0)</span>
+        <span class="step-pts">+25%</span>
+      </div>
+      <div class="progress-step" id="step-quiz-try">
+        <span class="step-check" id="step-quiz-try-check">⬜</span>
+        <span class="step-label">Attempt the quiz</span>
+        <span class="step-pts">+25%</span>
+      </div>
+      <div class="progress-step" id="step-quiz-pass">
+        <span class="step-check" id="step-quiz-pass-check">⬜</span>
+        <span class="step-label" id="step-quiz-pass-label">Pass the quiz (≥ 7 / 10)</span>
+        <span class="step-pts">+25%</span>
       </div>
     </div>
 
@@ -69,38 +89,26 @@
 
     <h4 style="margin-bottom:12px">Start learning</h4>
     <div class="activity-cta">
-      <button class="activity-btn" onclick="switchTab('lesson')">
-        <div class="activity-btn-icon" aria-hidden="true">📖</div>
+      <div class="activity-btn" onclick="switchTab('lesson')">
+        <div class="activity-btn-icon">📖</div>
         <div class="activity-btn-label">View Lesson</div>
-        <div class="activity-btn-sub">AI-generated content</div>
-      </button>
-      <button class="activity-btn" onclick="switchTab('flashcards')">
-        <div class="activity-btn-icon" aria-hidden="true">🃏</div>
+        <div class="activity-btn-sub">Read the lesson</div>
+      </div>
+      <div class="activity-btn" onclick="switchTab('flashcards')">
+        <div class="activity-btn-icon">🃏</div>
         <div class="activity-btn-label">Flashcards</div>
         <div class="activity-btn-sub" id="cta-cards-sub">—</div>
-      </button>
-      <button class="activity-btn" onclick="switchTab('practice')">
-        <div class="activity-btn-icon" aria-hidden="true">✏️</div>
+      </div>
+      <div class="activity-btn" onclick="switchTab('practice')">
+        <div class="activity-btn-icon">✏️</div>
         <div class="activity-btn-label">Practice Quiz</div>
         <div class="activity-btn-sub" id="cta-quiz-sub">—</div>
-      </button>
+      </div>
     </div>
   </div>
 
   <!-- ── LESSON TAB ──────────────────────────────────────────────────────── -->
-  <div class="tab-panel" id="tab-lesson" role="tabpanel" aria-labelledby="tab-btn-lesson" tabindex="0">
-    <div id="lesson-generate-area" class="lesson-generate-area">
-      <div class="lesson-generate-icon">🤖</div>
-      <h3 style="margin-bottom:8px">AI-Generated Lesson</h3>
-      <p style="margin-bottom:24px;max-width:380px;margin-left:auto;margin-right:auto">
-        Your personal AI tutor will create a tailored GCSE lesson for this topic — including key points, worked examples, vocabulary and common mistakes.
-      </p>
-      <button class="btn btn-primary btn-lg" onclick="generateLesson()">✨ Generate My Lesson</button>
-    </div>
-    <div id="lesson-loading" class="lesson-loading" style="display:none">
-      <div class="spinner"></div>
-      Generating your lesson… this takes about 10 seconds
-    </div>
+  <div class="tab-panel" id="tab-lesson">
     <div class="lesson-content-area" id="lesson-content" style="display:none"></div>
     <div id="lesson-done-cta" style="display:none;margin-top:32px">
       <div class="divider"></div>
@@ -115,9 +123,9 @@
   </div>
 
   <!-- ── FLASHCARDS TAB ─────────────────────────────────────────────────── -->
-  <div class="tab-panel" id="tab-flashcards" role="tabpanel" aria-labelledby="tab-btn-flashcards" tabindex="0">
+  <div class="tab-panel" id="tab-flashcards">
     <div id="fc-session">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+      <div class="fc-header">
         <div>
           <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:2px">Flashcards</div>
           <div id="fc-counter" style="font-size:1rem;font-weight:700">Card 1 of 3</div>
@@ -128,15 +136,9 @@
       <!-- Dots -->
       <div class="card-progress-dots" id="fc-dots" style="justify-content:center;margin-bottom:20px"></div>
 
-      <div class="sr-only" aria-live="polite" aria-atomic="true" id="fc-announcement"></div>
-
       <!-- Card -->
       <div class="flashcard-viewport">
-        <div class="flashcard-scene" id="fc-scene"
-          role="button" tabindex="0"
-          aria-label="Flashcard — press Space or Enter to flip"
-          onclick="flipCard()"
-          onkeydown="if(event.key===' '||event.key==='Enter'){event.preventDefault();flipCard()}">
+        <div class="flashcard-scene" id="fc-scene" onclick="flipCard()">
           <div class="flashcard-face">
             <div class="flashcard-label">Question — click to reveal answer</div>
             <div class="flashcard-text" id="fc-front-text"></div>
@@ -174,7 +176,7 @@
   </div>
 
   <!-- ── PRACTICE TAB ───────────────────────────────────────────────────── -->
-  <div class="tab-panel" id="tab-practice" role="tabpanel" aria-labelledby="tab-btn-practice" tabindex="0">
+  <div class="tab-panel" id="tab-practice">
     <div id="quiz-area">
       <div class="quiz-progress-bar">
         <div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div>
@@ -203,6 +205,22 @@
 </main>
 
 <script src="data.js"></script>
+<script src="math-data.js"></script>
+<script src="math-content-1.js"></script>
+<script src="math-content-2.js"></script>
+<script src="math-content-3.js"></script>
+<script src="math-content-4.js"></script>
+<script src="math-content-5.js"></script>
+<script src="math-content-6.js"></script>
+<script src="math-content-7.js"></script>
+<script src="lessons.js"></script>
+<script src="math-lessons-1.js"></script>
+<script src="math-lessons-2.js"></script>
+<script src="math-lessons-3.js"></script>
+<script src="math-lessons-4.js"></script>
+<script src="math-lessons-5.js"></script>
+<script src="math-lessons-6.js"></script>
+<script src="math-lessons-7.js"></script>
 <script src="app.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
@@ -213,7 +231,45 @@ const island = CURRICULUM.find(i => i.id === islandId);
 if (!island) { alert('Island not found'); history.back(); }
 
 const cards = FLASHCARDS.filter(f => f.islandId === islandId);
-const questions = QUESTIONS[islandId] || [];
+
+// Raw question list — may contain fixed objects OR {gen:fn} generative questions.
+// We store the raw array and resolve it fresh each quiz session so retakes get new values.
+const rawQuestions = QUESTIONS[islandId] || [];
+
+// ── Generative-question helpers (available to gen() functions in content files) ──
+// randInt(2,9) → integer in [2,9]
+function randInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+// pickFrom([a,b,c]) → random element
+function pickFrom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+// buildOpts(correct, [wrong, wrong, wrong]) → de-duped array of ≤4 string options
+// The correct answer is always the first element so the caller can rely on index 0,
+// then the shuffle step in initQuiz() scrambles the order.
+function buildOpts(correct, wrongs) {
+  var cs = String(correct);
+  var seen = [cs], opts = [cs];
+  for (var i = 0; i < wrongs.length && opts.length < 4; i++) {
+    var ws = String(wrongs[i]);
+    if (seen.indexOf(ws) === -1) { seen.push(ws); opts.push(ws); }
+  }
+  // Pad to 4 with distinct fallbacks if needed
+  var pad = 1;
+  while (opts.length < 4) {
+    var fb = String(correct + pad * 3);
+    if (seen.indexOf(fb) === -1) { seen.push(fb); opts.push(fb); }
+    pad++;
+  }
+  return opts;
+}
+// Normalise a fixed question object: unify content-1/2/3 {q,opts,c,e} and
+// content-4/5/6/7 {question,options,answer,explanation} to the short form.
+function normaliseQ(raw) {
+  return {
+    q:    raw.q    !== undefined ? raw.q    : (raw.question    || ''),
+    opts: raw.opts !== undefined ? raw.opts : (raw.options     || []),
+    c:    raw.c    !== undefined ? raw.c    : (raw.answer      !== undefined ? raw.answer : 0),
+    e:    raw.e    !== undefined ? raw.e    : (raw.explanation || '')
+  };
+}
 
 let fcIndex = 0;
 let fcFlipped = false;
@@ -222,11 +278,19 @@ let cardStates = {}; // id → 'learned' | 'review' | null
 let qIndex = 0;
 let qScore = 0;
 let qAnswered = false;
+let shuffledQuestions = []; // per-session, generated + shuffled
+
 
 (function init() {
   initTheme();
   updateThemeBtn();
-  document.title = `StudyMate — ${island.name}`;
+  document.title = `Atlas — ${island.name}`;
+  // Set back button destination
+  const backBtn = document.getElementById('back-btn');
+  if (island.topicId) {
+    backBtn.href = `topic.html?id=${island.topicId}`;
+    backBtn.title = 'Back to topic';
+  }
   renderHeader();
   renderOverview();
   initFlashcards();
@@ -239,41 +303,16 @@ let qAnswered = false;
 function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
 function updateThemeBtn() {
   const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-  const btn = document.getElementById('theme-btn');
-  btn.textContent = dark ? '☀️' : '🌙';
-  btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
 }
 
 // ── Tab switching ─────────────────────────────────────────────────────────
 function switchTab(name) {
-  document.querySelectorAll('[role="tab"]').forEach(b => {
-    const active = b.dataset.tab === name;
-    b.classList.toggle('active', active);
-    b.setAttribute('aria-selected', active ? 'true' : 'false');
-  });
-  document.querySelectorAll('.tab-panel').forEach(p => {
-    const active = p.id === 'tab-' + name;
-    p.classList.toggle('active', active);
-    p.setAttribute('tabindex', active ? '0' : '-1');
-  });
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
   if (name === 'overview') refreshOverviewProgress();
+  if (name === 'lesson') checkLessonCache(true);
 }
-
-// Arrow-key nav on tab bar
-document.querySelector('[role="tablist"]').addEventListener('keydown', function(e) {
-  const tabs = [...this.querySelectorAll('[role="tab"]')];
-  const idx = tabs.indexOf(document.activeElement);
-  if (idx === -1) return;
-  let next = idx;
-  if (e.key === 'ArrowRight') next = (idx + 1) % tabs.length;
-  else if (e.key === 'ArrowLeft') next = (idx - 1 + tabs.length) % tabs.length;
-  else if (e.key === 'Home') next = 0;
-  else if (e.key === 'End') next = tabs.length - 1;
-  else return;
-  e.preventDefault();
-  tabs[next].focus();
-  switchTab(tabs[next].dataset.tab);
-});
 
 // ── Header ────────────────────────────────────────────────────────────────
 function renderHeader() {
@@ -301,7 +340,7 @@ function renderOverview() {
   const topics = document.getElementById('overview-topics');
   topics.innerHTML = island.topics.map(t => `<span class="topic-tag">${t}</span>`).join('');
   document.getElementById('cta-cards-sub').textContent = `${cards.length} cards`;
-  document.getElementById('cta-quiz-sub').textContent = `${questions.length} questions`;
+  document.getElementById('cta-quiz-sub').textContent = `${rawQuestions.length} questions`;
   refreshOverviewProgress();
 }
 function refreshOverviewProgress() {
@@ -309,92 +348,74 @@ function refreshOverviewProgress() {
   const si = getIslandStatus(islandId);
   const p = getIslandProgress(islandId);
   const learnedCount = cards.filter(c => p.flashcardsLearned.includes(c.id)).length;
+  const passMark = rawQuestions.length > 0 ? Math.ceil(rawQuestions.length * 0.7) : 0;
+  const quizAttempted = p.quizBestScore >= 0;
+  const quizPassed = quizAttempted && p.quizBestScore >= passMark;
+
+  // Ring & headline
   document.getElementById('overview-pct').textContent = Math.round(progress) + '%';
   document.getElementById('overview-status').textContent = STATUS_LABELS[si];
   document.getElementById('overview-status').style.color = STATUS_COLORS[si];
   document.getElementById('overview-ring').innerHTML = createProgressRing(progress, island.color, 72);
-  document.getElementById('overview-cards-done').textContent = `${learnedCount} / ${cards.length} flashcards`;
-  const qs = p.quizBestScore;
-  document.getElementById('overview-quiz-score').textContent = qs >= 0
-    ? `Quiz best: ${qs} / ${questions.length}` : 'Quiz: not attempted';
+
+  // Step checklist
+  function setStep(id, done) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = done ? '✅' : '⬜';
+  }
+  setStep('step-lesson-check',    p.lessonViewed);
+  setStep('step-cards-check',     learnedCount >= cards.length && cards.length > 0);
+  setStep('step-quiz-try-check',  quizAttempted);
+  setStep('step-quiz-pass-check', quizPassed);
+
+  // Dynamic labels
+  const cardsLabel = document.getElementById('step-cards-label');
+  if (cardsLabel) cardsLabel.textContent = `Learn all flashcards (${learnedCount} / ${cards.length})`;
+
+  const passLabel = document.getElementById('step-quiz-pass-label');
+  if (passLabel) {
+    passLabel.textContent = quizAttempted
+      ? `Pass the quiz — best: ${p.quizBestScore} / ${rawQuestions.length} (need ${passMark})`
+      : `Pass the quiz (need ${passMark} / ${rawQuestions.length})`;
+  }
 }
 
 // ── Lesson ────────────────────────────────────────────────────────────────
-const LESSON_VERSION = 'y7-v1'; // bump this to invalidate all cached lessons
 
-function checkLessonCache() {
-  // Invalidate lessons cached under a different version
-  const cachedVer = localStorage.getItem(`lesson-ver-${islandId}`);
-  if (cachedVer !== LESSON_VERSION) {
-    localStorage.removeItem(`lesson-${islandId}`);
-    localStorage.removeItem(`lesson-ver-${islandId}`);
+function checkLessonCache(awardXP) {
+  const el = document.getElementById('lesson-content');
+  const cta = document.getElementById('lesson-done-cta');
+
+  // Already rendered — don't re-render
+  if (el.dataset.loaded === '1') {
+    if (awardXP) awardLessonXP();
+    return;
   }
-  const cached = localStorage.getItem(`lesson-${islandId}`);
-  if (cached) {
-    document.getElementById('lesson-generate-area').style.display = 'none';
-    document.getElementById('lesson-content').style.display = '';
-    document.getElementById('lesson-content').innerHTML = cached;
-    document.getElementById('lesson-done-cta').style.display = '';
+
+  const lesson = LESSONS[islandId];
+  let html = '';
+
+  if (typeof lesson === 'string' && lesson.trim()) {
+    // Legacy format — raw HTML string (Topics 1-13)
+    html = lesson;
+  } else if (lesson && lesson.sections && lesson.sections.length) {
+    // Object format — { title, sections: [{heading, content}] } (Topics 14-28)
+    html = '<h2>' + lesson.title + '</h2>' +
+      lesson.sections.map(function(s) {
+        return '<h3>' + s.heading + '</h3>' + s.content;
+      }).join('');
   }
-}
 
-async function generateLesson() {
-  const btn = document.querySelector('#lesson-generate-area button');
-  btn.disabled = true;
-  btn.textContent = '✨ Generating…';
-  document.getElementById('lesson-loading').style.display = 'flex';
-
-  const prompt = `You are a friendly, encouraging teacher creating a lesson for Year 7 students (age 11–12) in England.
-
-Topic: ${island.name}
-Subject: ${island.subject}
-Topics covered: ${island.topics.join(', ')}
-Learning outcomes: ${island.learningOutcomes.join('. ')}
-
-Write a clear, well-structured lesson using ONLY these HTML sections in order (no extra wrappers or markdown):
-
-<h4>Introduction</h4>
-<p>2–3 sentences introducing the topic in plain, accessible language. Include a real-world hook to make it relevant and interesting to an 11-year-old.</p>
-
-<h4>📌 Key Points</h4>
-<ul>
-<li>Write 4–5 key facts or concepts. Each point should be one clear sentence. Use bold for important terms.</li>
-</ul>
-
-<h4>✏️ Worked Example</h4>
-<div class="example-box">
-<p><strong>Example:</strong> [a clear, age-appropriate question or scenario]</p>
-<p><strong>Solution:</strong> [step-by-step working or explanation, broken into numbered steps if helpful]</p>
-</div>
-
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Term</dt><dd>A clear, simple definition in one sentence that an 11-year-old can understand.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
-<ul>
-<li>❌ Mistake: [what Year 7 students typically get wrong] — ✅ Correct: [what to do instead]</li>
-</ul>
-
-Rules: use simple, friendly language appropriate for age 11–12; avoid jargon unless you define it; do not use markdown; return ONLY the HTML sections above, nothing else.`;
-
-  try {
-    const html = await window.claude.complete(prompt);
-    localStorage.setItem(`lesson-${islandId}`, html);
-    localStorage.setItem(`lesson-ver-${islandId}`, LESSON_VERSION);
-    document.getElementById('lesson-generate-area').style.display = 'none';
-    document.getElementById('lesson-loading').style.display = 'none';
-    document.getElementById('lesson-content').style.display = '';
-    document.getElementById('lesson-content').innerHTML = html;
-    document.getElementById('lesson-done-cta').style.display = '';
-    // Award XP for first lesson view
-    awardLessonXP();
-  } catch (err) {
-    document.getElementById('lesson-loading').style.display = 'none';
-    btn.disabled = false;
-    btn.textContent = '✨ Generate My Lesson';
-    showToast('Could not generate lesson — please try again.', 'error');
+  if (html) {
+    el.innerHTML = html;
+    el.style.display = 'block';
+    el.dataset.loaded = '1';
+    if (cta) cta.style.display = 'block';
+    if (awardXP) awardLessonXP();
+  } else {
+    // No lesson found — show a friendly placeholder
+    el.innerHTML = '<p style="color:var(--text-muted);padding:1em 0">Lesson content coming soon for this island.</p>';
+    el.style.display = 'block';
   }
 }
 
@@ -433,9 +454,7 @@ function renderCard() {
   }
   const card = cards[fcIndex];
   fcFlipped = false;
-  const scene = document.getElementById('fc-scene');
-  scene.classList.remove('flipped');
-  scene.setAttribute('aria-label', `Flashcard ${fcIndex + 1} of ${cards.length} — press Space or Enter to flip`);
+  document.getElementById('fc-scene').classList.remove('flipped');
   document.getElementById('fc-front-text').textContent = card.front;
   document.getElementById('fc-back-text').textContent = card.back;
   document.getElementById('fc-counter').textContent = `Card ${fcIndex + 1} of ${cards.length}`;
@@ -444,8 +463,6 @@ function renderCard() {
   document.getElementById('fc-actions').style.display = 'none';
   document.getElementById('fc-prev').disabled = fcIndex === 0;
   document.getElementById('fc-next').disabled = fcIndex === cards.length - 1;
-  // Announce card to screen readers
-  document.getElementById('fc-announcement').textContent = `Card ${fcIndex + 1} of ${cards.length}: ${card.front}`;
   renderDots();
 }
 
@@ -467,13 +484,8 @@ function nextCard() { if (fcIndex < cards.length - 1) { fcIndex++; renderCard();
 
 function flipCard() {
   fcFlipped = !fcFlipped;
-  const scene = document.getElementById('fc-scene');
-  scene.classList.toggle('flipped', fcFlipped);
+  document.getElementById('fc-scene').classList.toggle('flipped', fcFlipped);
   document.getElementById('fc-actions').style.display = fcFlipped ? 'flex' : 'none';
-  if (fcFlipped) {
-    const card = cards[fcIndex];
-    document.getElementById('fc-announcement').textContent = `Answer: ${card.back}`;
-  }
 }
 
 function markCard(state) {
@@ -550,18 +562,37 @@ function restartCards() {
 
 // ── Quiz ──────────────────────────────────────────────────────────────────
 function initQuiz() {
-  if (!questions.length) {
+  if (!rawQuestions.length) {
     document.getElementById('quiz-area').innerHTML =
       '<p class="text-muted" style="text-align:center;padding:40px">No practice questions for this topic yet.</p>';
     return;
   }
+  // Step 1: Resolve each question (fixed → normalise; generative → call gen()).
+  var resolved = rawQuestions.map(function(raw) {
+    return (typeof raw.gen === 'function') ? raw.gen() : normaliseQ(raw);
+  });
+
+  // Step 2: Shuffle question ORDER so every retake sees a different sequence.
+  resolved = shuffle(resolved);
+
+  // Step 3: Shuffle OPTIONS within each question so the correct answer isn't always option A.
+  shuffledQuestions = resolved.map(function(q) {
+    var opts = q.opts.slice();
+    var correctText = opts[q.c];
+    for (var i = opts.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = opts[i]; opts[i] = opts[j]; opts[j] = tmp;
+    }
+    return { q: q.q, opts: opts, c: opts.indexOf(correctText), e: q.e };
+  });
+
   qIndex = 0; qScore = 0; qAnswered = false;
   renderQuestion();
 }
 
 function renderQuestion() {
-  const q = questions[qIndex];
-  const total = questions.length;
+  const q = shuffledQuestions[qIndex];
+  const total = shuffledQuestions.length;
   document.getElementById('quiz-bar').style.width = `${(qIndex / total) * 100}%`;
   document.getElementById('quiz-num').textContent = `Question ${qIndex + 1} of ${total}`;
   document.getElementById('quiz-q').textContent = q.q;
@@ -581,7 +612,7 @@ function renderQuestion() {
 function selectAnswer(idx) {
   if (qAnswered) return;
   qAnswered = true;
-  const q = questions[qIndex];
+  const q = shuffledQuestions[qIndex];
   const options = document.querySelectorAll('.quiz-option');
   options.forEach((opt, i) => {
     opt.classList.add('answered');
@@ -596,11 +627,11 @@ function selectAnswer(idx) {
 
   const nextBtn = document.getElementById('quiz-next-btn');
   nextBtn.style.display = '';
-  nextBtn.textContent = qIndex < questions.length - 1 ? 'Next question →' : 'See results →';
+  nextBtn.textContent = qIndex < shuffledQuestions.length - 1 ? 'Next question →' : 'See results →';
 }
 
 function nextQuestion() {
-  if (qIndex < questions.length - 1) {
+  if (qIndex < shuffledQuestions.length - 1) {
     qIndex++;
     renderQuestion();
   } else {
@@ -612,7 +643,7 @@ function showQuizScore() {
   document.getElementById('quiz-area').style.display = 'none';
   const scoreScreen = document.getElementById('quiz-score-screen');
   scoreScreen.classList.add('show');
-  const total = questions.length;
+  const total = shuffledQuestions.length;
   const pct = Math.round((qScore / total) * 100);
   document.getElementById('score-fraction').textContent = `${qScore} / ${total}`;
 
@@ -665,14 +696,11 @@ function syncUserXP(xp) {
 
 // ── Keyboard nav ──────────────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
-  // Only apply arrow/space shortcuts when focus is NOT on the tablist or a button
   const fc = document.getElementById('tab-flashcards');
   if (!fc.classList.contains('active')) return;
-  if (document.activeElement.matches('[role="tab"], button:not(.btn-sm), select, input')) return;
-  if (e.key === 'ArrowLeft')  { e.preventDefault(); prevCard(); }
-  if (e.key === 'ArrowRight') { e.preventDefault(); nextCard(); }
+  if (e.key === 'ArrowLeft')  prevCard();
+  if (e.key === 'ArrowRight') nextCard();
   if (e.key === ' ')          { e.preventDefault(); flipCard(); }
-  if (e.key === 'Enter')      { e.preventDefault(); flipCard(); }
 });
 </script>
 </body>
