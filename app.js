@@ -209,6 +209,9 @@ function toggleTheme() {
 function showXPToast(amount, reason = '') {
   const toast = document.createElement('div');
   toast.className = 'xp-toast';
+  toast.setAttribute('role', 'status');
+  toast.setAttribute('aria-live', 'polite');
+  toast.setAttribute('aria-atomic', 'true');
   toast.innerHTML = `<span class="xp-toast-amount">+${amount} XP</span>${reason ? `<span class="xp-toast-reason">${reason}</span>` : ''}`;
   document.body.appendChild(toast);
   requestAnimationFrame(() => toast.classList.add('xp-toast--show'));
@@ -220,6 +223,9 @@ function showXPToast(amount, reason = '') {
 function showToast(message, type = 'info') {
   const toast = document.createElement('div');
   toast.className = `toast toast--${type}`;
+  toast.setAttribute('role', 'status');
+  toast.setAttribute('aria-live', 'polite');
+  toast.setAttribute('aria-atomic', 'true');
   toast.textContent = message;
   document.body.appendChild(toast);
   requestAnimationFrame(() => toast.classList.add('toast--show'));

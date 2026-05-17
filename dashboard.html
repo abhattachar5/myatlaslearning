@@ -8,19 +8,21 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <!-- ── Profile Modal ──────────────────────────────────────────────────────── -->
-<div class="modal-overlay" id="profile-modal" onclick="closeProfileModal(event)">
+<div class="modal-overlay" id="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title" onclick="closeProfileModal(event)">
   <div class="modal">
     <div class="modal-header">
-      <h3>My Profile</h3>
-      <button class="modal-close" onclick="closeProfileModal()">✕</button>
+      <h3 id="profile-modal-title">My Profile</h3>
+      <button class="modal-close" onclick="closeProfileModal()" aria-label="Close profile modal">✕</button>
     </div>
     <div class="form-group">
-      <label class="form-label">Name</label>
+      <label class="form-label" for="edit-name">Name</label>
       <input class="form-input" id="edit-name" type="text">
     </div>
     <div class="form-group">
-      <label class="form-label">Year group</label>
+      <label class="form-label" for="edit-year">Year group</label>
       <select class="form-input form-select" id="edit-year">
         <option value="Year 7">Year 7</option>
         <option value="Year 8">Year 8</option>
@@ -30,7 +32,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label class="form-label">School</label>
+      <label class="form-label" for="edit-school">School</label>
       <input class="form-input" id="edit-school" type="text">
     </div>
     <div style="display:flex;gap:10px;margin-top:8px">
@@ -44,29 +46,45 @@
 
 <!-- ── Mobile Header (≤900px only) ────────────────────────────────────────── -->
 <div class="mobile-header">
+  <button class="hamburger-btn" id="hamburger-btn"
+          onclick="toggleSidebar()"
+          aria-expanded="false"
+          aria-controls="main-sidebar"
+          aria-label="Open navigation menu">
+    <span class="hamburger-line" aria-hidden="true"></span>
+    <span class="hamburger-line" aria-hidden="true"></span>
+    <span class="hamburger-line" aria-hidden="true"></span>
+  </button>
   <img src="atlas-logo.png" alt="Atlas" class="mobile-header-logo">
   <div class="mobile-header-actions">
-    <button class="theme-toggle" id="mobile-theme-btn" onclick="handleThemeToggle()" title="Toggle theme">🌙</button>
-    <button class="theme-toggle" onclick="openProfileModal()" title="My Profile">👤</button>
+    <button class="theme-toggle" id="mobile-theme-btn" onclick="handleThemeToggle()" aria-label="Toggle colour theme">🌙</button>
+    <button class="theme-toggle" onclick="openProfileModal()" aria-label="My Profile">👤</button>
   </div>
 </div>
+
+<!-- ── Sidebar backdrop (mobile) ──────────────────────────────────────────── -->
+<div class="sidebar-backdrop" id="sidebar-backdrop" onclick="closeSidebar()"></div>
 
 <div class="app-layout">
 
   <!-- ── Sidebar ──────────────────────────────────────────────────────────── -->
-  <aside class="sidebar">
+  <aside class="sidebar" id="main-sidebar">
+    <!-- Close button — visible on mobile only -->
+    <div class="sidebar-close-row">
+      <button class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Close navigation menu">✕</button>
+    </div>
     <div class="sidebar-logo">
       <img src="atlas-logo.png" alt="Atlas" class="sidebar-logo-img">
     </div>
 
-    <nav class="sidebar-nav">
-      <p class="section-heading" style="padding:0 12px;margin-bottom:8px">Navigation</p>
-      <div class="nav-item active">
-        <span class="nav-icon">🏠</span> Dashboard
-      </div>
-      <div class="nav-item" onclick="openProfileModal()">
-        <span class="nav-icon">👤</span> My Profile
-      </div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <p class="section-heading" style="padding:0 12px;margin-bottom:8px" aria-hidden="true">Navigation</p>
+      <button class="nav-item active" aria-current="page">
+        <span class="nav-icon" aria-hidden="true">🏠</span> Dashboard
+      </button>
+      <button class="nav-item" onclick="openProfileModal(); closeSidebar()">
+        <span class="nav-icon" aria-hidden="true">👤</span> My Profile
+      </button>
     </nav>
 
     <div class="sidebar-user">
@@ -87,12 +105,12 @@
 
     <div class="sidebar-footer">
       <div class="streak-badge" id="streak-display">🔥 0 day streak</div>
-      <button class="theme-toggle" id="theme-btn" onclick="handleThemeToggle()" title="Toggle theme">🌙</button>
+      <button class="theme-toggle" id="theme-btn" onclick="handleThemeToggle()" aria-label="Toggle colour theme">🌙</button>
     </div>
   </aside>
 
   <!-- ── Main ─────────────────────────────────────────────────────────────── -->
-  <main class="main-content">
+  <main class="main-content" id="main-content">
 
     <div class="page-header">
       <h1 id="welcome-msg">Good morning! 👋</h1>
@@ -244,9 +262,10 @@ function renderFilters() {
     const active = currentFilter === s.id;
     return `<button class="filter-btn${active ? ' active' : ''}" data-filter="${s.id}"
         onclick="setFilter('${s.id}')"
+        aria-pressed="${active}"
         ${s.color ? `style="--fc:${s.color}"` : ''}>
-        ${s.emoji ? s.emoji + ' ' : ''}${s.label}
-        <span class="filter-count"${active && isAll ? ' style="background:rgba(255,255,255,.2)"' : ''}>${count}</span>
+        <span aria-hidden="true">${s.emoji ? s.emoji + ' ' : ''}</span>${s.label}
+        <span class="filter-count" aria-label="${count} topics"${active && isAll ? ' style="background:rgba(255,255,255,.2)"' : ''}>${count}</span>
       </button>`;
   }).join('');
 
@@ -258,6 +277,7 @@ function applyFilterStyle() {
   document.querySelectorAll('.filter-btn').forEach(btn => {
     const active = btn.dataset.filter === currentFilter;
     btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', active);
     if (active) {
       const fc = btn.style.getPropertyValue('--fc');
       btn.style.background = fc || 'var(--text)';
@@ -330,7 +350,10 @@ function renderMathTopicCards() {
 
     return `<div class="island-card" style="border-top-color:#3f6f00;cursor:pointer"
         onclick="goToTopic('${topic.id}')"
-        title="${topic.name}">
+        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
+        role="link"
+        tabindex="0"
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands mastered">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, '#3f6f00', 52)}
@@ -357,12 +380,18 @@ function renderIslandCard(island, allProgress) {
   const statusColor = STATUS_COLORS[statusIdx];
   const cardCount = FLASHCARDS.filter(f => f.islandId === island.id).length;
 
+  const ariaLabel = unlocked
+    ? `${island.name}, ${island.subject}, ${statusLabel}`
+    : `${island.name} — locked, complete prerequisites first`;
   return `<div class="island-card${unlocked ? '' : ' locked'}"
       style="border-top-color:${island.color}"
       onclick="${unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`}"
-      title="${unlocked ? island.name : 'Complete prerequisites first'}">
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();${unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`}}"
+      role="${unlocked ? 'link' : 'button'}"
+      tabindex="0"
+      aria-label="${ariaLabel}">
     <div class="island-card-top">
-      <div class="island-emoji">${island.emoji}</div>
+      <div class="island-emoji" aria-hidden="true">${island.emoji}</div>
       ${createProgressRing(progress, island.color, 52)}
     </div>
     <div style="margin-bottom:6px">
@@ -397,16 +426,36 @@ function showLockedMsg(id) {
 }
 
 // ── Profile Modal ─────────────────────────────────────────────────────────────
+let _modalTrigger = null;
 function openProfileModal() {
+  _modalTrigger = document.activeElement;
   document.getElementById('edit-name').value = user.name;
   document.getElementById('edit-year').value = user.year || 'Year 10';
   document.getElementById('edit-school').value = user.school || '';
   document.getElementById('profile-modal').classList.add('show');
+  setTimeout(() => document.getElementById('edit-name').focus(), 50);
 }
 function closeProfileModal(e) {
   if (e && e.target !== document.getElementById('profile-modal')) return;
   document.getElementById('profile-modal').classList.remove('show');
+  if (_modalTrigger) { _modalTrigger.focus(); _modalTrigger = null; }
 }
+
+// Focus trap for profile modal
+document.getElementById('profile-modal').addEventListener('keydown', function(e) {
+  if (!this.classList.contains('show')) return;
+  if (e.key !== 'Tab') return;
+  const focusable = this.querySelector('.modal').querySelectorAll(
+    'button:not([disabled]), input, select, [tabindex]:not([tabindex="-1"])'
+  );
+  const first = focusable[0];
+  const last  = focusable[focusable.length - 1];
+  if (e.shiftKey) {
+    if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+  } else {
+    if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+  }
+});
 function saveProfile() {
   const name   = document.getElementById('edit-name').value.trim();
   const year   = document.getElementById('edit-year').value;
@@ -450,9 +499,36 @@ function updateThemeBtn() {
   if (mobileBtn) mobileBtn.textContent = icon;
 }
 
+// ── Sidebar (mobile drawer) ───────────────────────────────────────────────────
+function openSidebar() {
+  document.getElementById('main-sidebar').classList.add('open');
+  document.getElementById('sidebar-backdrop').classList.add('show');
+  document.body.style.overflow = 'hidden';
+  const btn = document.getElementById('hamburger-btn');
+  btn.setAttribute('aria-expanded', 'true');
+  btn.setAttribute('aria-label', 'Close navigation menu');
+}
+function closeSidebar() {
+  document.getElementById('main-sidebar').classList.remove('open');
+  document.getElementById('sidebar-backdrop').classList.remove('show');
+  document.body.style.overflow = '';
+  const btn = document.getElementById('hamburger-btn');
+  if (btn) {
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open navigation menu');
+  }
+}
+function toggleSidebar() {
+  document.getElementById('main-sidebar').classList.contains('open')
+    ? closeSidebar() : openSidebar();
+}
+
 // ── Keyboard ─────────────────────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') document.getElementById('profile-modal').classList.remove('show');
+  if (e.key === 'Escape') {
+    document.getElementById('profile-modal').classList.remove('show');
+    closeSidebar();
+  }
 });
 </script>
 </body>

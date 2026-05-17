@@ -8,9 +8,11 @@
 </head>
 <body>
 
+<a class="skip-link" href="#topic-main">Skip to content</a>
+
 <!-- ── Topic Header ───────────────────────────────────────────────────────── -->
 <header class="island-header" id="topic-header" style="background:var(--surface)">
-  <a href="dashboard.html" class="island-header-back" title="Back to dashboard">←</a>
+  <a href="dashboard.html" class="island-header-back" aria-label="Back to dashboard">←</a>
   <div class="island-header-emoji" id="hdr-emoji">—</div>
   <div class="island-header-info">
     <h2 id="hdr-name">Loading…</h2>
@@ -20,11 +22,11 @@
       <span class="badge" id="hdr-progress">—</span>
     </div>
   </div>
-  <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" title="Toggle theme">🌙</button>
+  <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" aria-label="Toggle colour theme">🌙</button>
 </header>
 
 <!-- ── Main ──────────────────────────────────────────────────────────────── -->
-<main class="page-main topic-main">
+<main class="page-main topic-main" id="topic-main">
 
   <!-- Topic description -->
   <div id="topic-desc-wrap" style="margin-bottom:24px;display:none">

@@ -8,9 +8,11 @@
 </head>
 <body>
 
+<a class="skip-link" href="#island-main">Skip to content</a>
+
 <!-- ── Island Header ─────────────────────────────────────────────────────── -->
 <header class="island-header" id="island-header" style="background:var(--surface)">
-  <a id="back-btn" href="dashboard.html" class="island-header-back" title="Back">←</a>
+  <a id="back-btn" href="dashboard.html" class="island-header-back" aria-label="Back to dashboard">←</a>
   <div class="island-header-emoji" id="hdr-emoji">—</div>
   <div class="island-header-info">
     <h2 id="hdr-name">Loading…</h2>
@@ -20,22 +22,22 @@
       <span class="badge" id="hdr-status">—</span>
     </div>
   </div>
-  <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" title="Toggle theme">🌙</button>
+  <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" aria-label="Toggle colour theme">🌙</button>
 </header>
 
 <!-- ── Main ──────────────────────────────────────────────────────────────── -->
-<main class="page-main island-main">
+<main class="page-main island-main" id="island-main">
 
   <!-- Tab bar -->
-  <div class="tab-bar">
-    <button class="tab-btn active" data-tab="overview"  onclick="switchTab('overview')">🗺️ Overview</button>
-    <button class="tab-btn"        data-tab="lesson"    onclick="switchTab('lesson')">📖 Lesson</button>
-    <button class="tab-btn"        data-tab="flashcards" onclick="switchTab('flashcards')">🃏 Flashcards</button>
-    <button class="tab-btn"        data-tab="practice"  onclick="switchTab('practice')">✏️ Practice</button>
+  <div class="tab-bar" role="tablist" aria-label="Island sections">
+    <button class="tab-btn active" role="tab" id="tab-btn-overview"   data-tab="overview"   aria-selected="true"  aria-controls="tab-overview"   tabindex="0"  onclick="switchTab('overview')"><span aria-hidden="true">🗺️</span> Overview</button>
+    <button class="tab-btn"        role="tab" id="tab-btn-lesson"     data-tab="lesson"     aria-selected="false" aria-controls="tab-lesson"     tabindex="-1" onclick="switchTab('lesson')"><span aria-hidden="true">📖</span> Lesson</button>
+    <button class="tab-btn"        role="tab" id="tab-btn-flashcards" data-tab="flashcards" aria-selected="false" aria-controls="tab-flashcards" tabindex="-1" onclick="switchTab('flashcards')"><span aria-hidden="true">🃏</span> Flashcards</button>
+    <button class="tab-btn"        role="tab" id="tab-btn-practice"   data-tab="practice"   aria-selected="false" aria-controls="tab-practice"   tabindex="-1" onclick="switchTab('practice')"><span aria-hidden="true">✏️</span> Practice</button>
   </div>
 
   <!-- ── OVERVIEW TAB ────────────────────────────────────────────────────── -->
-  <div class="tab-panel active" id="tab-overview">
+  <div class="tab-panel active" id="tab-overview" role="tabpanel" aria-labelledby="tab-btn-overview">
 
     <div class="progress-overview-card">
       <div id="overview-ring"></div>
@@ -108,7 +110,7 @@
   </div>
 
   <!-- ── LESSON TAB ──────────────────────────────────────────────────────── -->
-  <div class="tab-panel" id="tab-lesson">
+  <div class="tab-panel" id="tab-lesson" role="tabpanel" aria-labelledby="tab-btn-lesson">
     <div class="lesson-content-area" id="lesson-content" style="display:none"></div>
     <div id="lesson-done-cta" style="display:none;margin-top:32px">
       <div class="divider"></div>
@@ -123,7 +125,7 @@
   </div>
 
   <!-- ── FLASHCARDS TAB ─────────────────────────────────────────────────── -->
-  <div class="tab-panel" id="tab-flashcards">
+  <div class="tab-panel" id="tab-flashcards" role="tabpanel" aria-labelledby="tab-btn-flashcards">
     <div id="fc-session">
       <div class="fc-header">
         <div>
@@ -140,13 +142,13 @@
       <div class="flashcard-viewport">
         <div class="flashcard-scene" id="fc-scene" onclick="flipCard()">
           <div class="flashcard-face">
-            <div class="flashcard-label">Question — click to reveal answer</div>
-            <div class="flashcard-text" id="fc-front-text"></div>
-            <div class="flashcard-hint" id="fc-difficulty"></div>
+            <div class="flashcard-label" aria-hidden="true">Question — click to reveal answer</div>
+            <div class="flashcard-text" id="fc-front-text" aria-live="polite"></div>
+            <div class="flashcard-hint" id="fc-difficulty" aria-live="polite"></div>
           </div>
           <div class="flashcard-face flashcard-back-face">
-            <div class="flashcard-label">Answer</div>
-            <div class="flashcard-answer" id="fc-back-text"></div>
+            <div class="flashcard-label" aria-hidden="true">Answer</div>
+            <div class="flashcard-answer" id="fc-back-text" aria-live="polite"></div>
           </div>
         </div>
       </div>
@@ -176,12 +178,12 @@
   </div>
 
   <!-- ── PRACTICE TAB ───────────────────────────────────────────────────── -->
-  <div class="tab-panel" id="tab-practice">
+  <div class="tab-panel" id="tab-practice" role="tabpanel" aria-labelledby="tab-btn-practice">
     <div id="quiz-area">
-      <div class="quiz-progress-bar">
+      <div class="quiz-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Quiz progress" id="quiz-progress-container">
         <div class="quiz-progress-fill" id="quiz-bar" style="width:0%"></div>
       </div>
-      <div class="quiz-question-num" id="quiz-num">Question 1 of 3</div>
+      <div class="quiz-question-num" id="quiz-num" aria-live="polite">Question 1 of 3</div>
       <div class="quiz-question-text" id="quiz-q"></div>
       <div class="quiz-options" id="quiz-opts"></div>
       <div class="quiz-explanation" id="quiz-explanation"></div>
@@ -308,11 +310,31 @@ function updateThemeBtn() {
 
 // ── Tab switching ─────────────────────────────────────────────────────────
 function switchTab(name) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    const active = b.dataset.tab === name;
+    b.classList.toggle('active', active);
+    b.setAttribute('aria-selected', active);
+    b.setAttribute('tabindex', active ? '0' : '-1');
+  });
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
   if (name === 'overview') refreshOverviewProgress();
   if (name === 'lesson') checkLessonCache(true);
 }
+
+// Tab bar arrow-key navigation (WCAG 2.1 — roving tabindex pattern)
+document.querySelector('.tab-bar').addEventListener('keydown', function(e) {
+  const tabs = [...this.querySelectorAll('[role="tab"]')];
+  const cur  = tabs.findIndex(t => t.getAttribute('aria-selected') === 'true');
+  let next = cur;
+  if (e.key === 'ArrowRight') next = (cur + 1) % tabs.length;
+  else if (e.key === 'ArrowLeft') next = (cur - 1 + tabs.length) % tabs.length;
+  else if (e.key === 'Home') next = 0;
+  else if (e.key === 'End')  next = tabs.length - 1;
+  else return;
+  e.preventDefault();
+  tabs[next].click();
+  tabs[next].focus();
+});
 
 // ── Header ────────────────────────────────────────────────────────────────
 function renderHeader() {
@@ -593,7 +615,9 @@ function initQuiz() {
 function renderQuestion() {
   const q = shuffledQuestions[qIndex];
   const total = shuffledQuestions.length;
-  document.getElementById('quiz-bar').style.width = `${(qIndex / total) * 100}%`;
+  const pct = Math.round((qIndex / total) * 100);
+  document.getElementById('quiz-bar').style.width = `${pct}%`;
+  document.getElementById('quiz-progress-container').setAttribute('aria-valuenow', pct);
   document.getElementById('quiz-num').textContent = `Question ${qIndex + 1} of ${total}`;
   document.getElementById('quiz-q').textContent = q.q;
   document.getElementById('quiz-explanation').classList.remove('show');
