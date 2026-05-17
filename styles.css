@@ -1097,7 +1097,7 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   transition: background .25s, border-color .25s;
 }
 .mobile-header-logo {
-  height: 40px;
+  height: 120px;
   width: auto;
 }
 .mobile-header-actions {
