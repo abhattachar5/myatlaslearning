@@ -393,6 +393,24 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
+/* ── Flashcard Header ──────────────────────────────────────────────────────── */
+.fc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* ── Topic Progress Header ─────────────────────────────────────────────────── */
+.topic-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
 /* ── Flashcard ─────────────────────────────────────────────────────────────── */
 .flashcard-viewport {
   perspective: 1200px;
@@ -697,6 +715,11 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* ── Page Main (island.html & topic.html) ──────────────────────────────────── */
+.page-main { margin: 0 auto; padding: 28px 24px 64px; }
+.island-main { max-width: 760px; }
+.topic-main  { max-width: 1100px; }
+
 /* ── Island Detail Header ──────────────────────────────────────────────────── */
 .island-header {
   background: var(--surface);
@@ -974,26 +997,154 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 .modal-close:hover { background: var(--border); }
 
 /* ── Responsive ────────────────────────────────────────────────────────────── */
+
+/* Tablet & Mobile (≤900px) */
 @media (max-width: 900px) {
   .sidebar { display: none; }
-  .main-content { margin-left: 0; padding: 20px 16px; }
+  .mobile-header { display: flex; }
+  .mobile-nav { display: flex; }
+  .main-content {
+    margin-left: 0;
+    padding: 20px 16px calc(72px + env(safe-area-inset-bottom));
+  }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .overview-grid { grid-template-columns: 1fr; }
-  .activity-cta { grid-template-columns: 1fr; }
-  .island-header { padding: 16px; }
-  .auth-brand { display: none; }
-  .auth-form-panel { width: 100%; padding: 40px 24px; }
+  .activity-cta { grid-template-columns: repeat(3, 1fr); }
+  .island-header { padding: 12px 16px; gap: 12px; }
+  .island-header-emoji { width: 44px; height: 44px; font-size: 1.75rem; border-radius: 10px; }
+  .island-header-info h2 { font-size: 1.05rem; }
+
+  /* Auth: show compact logo banner instead of hiding branding entirely */
+  .auth-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 14px 20px;
+    min-height: auto;
+    flex: none;
+    gap: 12px;
+    overflow: hidden;
+  }
+  .auth-brand h1,
+  .auth-brand > p,
+  .auth-brand-features { display: none; }
+  .auth-brand-logo { margin-bottom: 0; }
+  .auth-logo-img { height: 38px; }
+  .auth-form-panel { width: 100%; padding: 28px 20px 40px; }
+  .auth-page { flex-direction: column; }
 }
+
+/* Mobile (≤600px) */
 @media (max-width: 600px) {
-  .island-grid { grid-template-columns: repeat(2, 1fr); }
+  .page-main { padding: 20px 16px 48px; }
+  .island-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .stats-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .filter-row { gap: 6px; }
+  .stat-card { padding: 14px 16px; }
+  .stat-value { font-size: 1.5rem; }
+  .page-header { margin-bottom: 20px; }
+  .page-header h1 { font-size: 1.375rem; }
+
+  /* Filter row: horizontal scroll so filters stay on one line */
+  .filter-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    gap: 6px;
+  }
+  .filter-row::-webkit-scrollbar { display: none; }
+
+  /* Tab bar: scroll horizontally on very small screens */
+  .tab-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    gap: 2px;
+  }
+  .tab-bar::-webkit-scrollbar { display: none; }
+  .tab-btn { flex: none; white-space: nowrap; font-size: .75rem; padding: 8px 10px; }
+
   .flashcard-face { padding: 20px; }
-  .tab-btn { font-size: .75rem; padding: 8px 10px; }
+  .flashcard-text { font-size: .9375rem; }
+  .flashcard-viewport { max-width: 100%; }
+
+  .progress-overview-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .activity-cta { grid-template-columns: 1fr; gap: 8px; }
+  .island-header-meta { flex-wrap: wrap; gap: 4px; }
 }
+
+/* Small Mobile (≤400px) */
 @media (max-width: 400px) {
   .island-grid { grid-template-columns: 1fr; }
+  .island-card { padding: 14px; }
+  .mobile-nav-item { padding: 6px 16px; }
 }
+
+/* ── Mobile Header ─────────────────────────────────────────────────────────── */
+.mobile-header {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 16px;
+  align-items: center;
+  justify-content: space-between;
+  transition: background .25s, border-color .25s;
+}
+.mobile-header-logo {
+  height: 40px;
+  width: auto;
+}
+.mobile-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Mobile Bottom Nav ─────────────────────────────────────────────────────── */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 6px 0 calc(6px + env(safe-area-inset-bottom));
+  z-index: 100;
+  justify-content: space-around;
+  align-items: center;
+  transition: background .25s, border-color .25s;
+}
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 24px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: .6875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color .15s;
+  background: none;
+  border: none;
+  font-family: var(--font);
+}
+.mobile-nav-item.active { color: var(--blue); }
+.mobile-nav-icon { font-size: 1.375rem; line-height: 1; }
 
 /* ── Misc ──────────────────────────────────────────────────────────────────── */
 .empty-state {

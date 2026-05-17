@@ -42,6 +42,15 @@
   </div>
 </div>
 
+<!-- ── Mobile Header (≤900px only) ────────────────────────────────────────── -->
+<div class="mobile-header">
+  <img src="atlas-logo.png" alt="Atlas" class="mobile-header-logo">
+  <div class="mobile-header-actions">
+    <button class="theme-toggle" id="mobile-theme-btn" onclick="handleThemeToggle()" title="Toggle theme">🌙</button>
+    <button class="theme-toggle" onclick="openProfileModal()" title="My Profile">👤</button>
+  </div>
+</div>
+
 <div class="app-layout">
 
   <!-- ── Sidebar ──────────────────────────────────────────────────────────── -->
@@ -119,6 +128,22 @@
   </main>
 </div>
 
+<!-- ── Mobile Bottom Nav (≤900px only) ────────────────────────────────────── -->
+<nav class="mobile-nav">
+  <button class="mobile-nav-item active" onclick="window.scrollTo(0,0)">
+    <span class="mobile-nav-icon">🏠</span>
+    Dashboard
+  </button>
+  <button class="mobile-nav-item" onclick="openProfileModal()">
+    <span class="mobile-nav-icon">👤</span>
+    Profile
+  </button>
+  <button class="mobile-nav-item" id="mobile-streak-btn">
+    <span class="mobile-nav-icon">🔥</span>
+    <span id="mobile-streak-label">0 days</span>
+  </button>
+</nav>
+
 <script src="data.js"></script>
 <script src="math-data.js"></script>
 <script src="math-content-1.js"></script>
@@ -180,6 +205,8 @@ function renderSidebar() {
   document.getElementById('sidebar-xp-fill').style.width = pct + '%';
   const streak = getStreak();
   document.getElementById('streak-display').textContent = `🔥 ${streak} day${streak !== 1 ? 's' : ''}`;
+  const mobileStreak = document.getElementById('mobile-streak-label');
+  if (mobileStreak) mobileStreak.textContent = `${streak} day${streak !== 1 ? 's' : ''}`;
 }
 
 // ── Stats ────────────────────────────────────────────────────────────────────
@@ -417,7 +444,10 @@ function handleThemeToggle() {
 }
 function updateThemeBtn() {
   const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
+  const icon = dark ? '☀️' : '🌙';
+  document.getElementById('theme-btn').textContent = icon;
+  const mobileBtn = document.getElementById('mobile-theme-btn');
+  if (mobileBtn) mobileBtn.textContent = icon;
 }
 
 // ── Keyboard ─────────────────────────────────────────────────────────────────
