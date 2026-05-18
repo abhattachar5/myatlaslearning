@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas — Topic Test</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .test-container { max-width: 780px; margin: 0 auto; padding: 24px 16px; }
+    .test-setup { text-align: center; padding: 48px 20px; }
+    .test-setup h2 { margin-bottom: 8px; font-size: 1.5rem; }
+    .test-setup p { color: var(--text-2); margin-bottom: 28px; }
+    .test-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 32px; text-align: left; }
+    .test-info-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px; }
+    .test-info-card .label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 4px; }
+    .test-info-card .value { font-size: 1.125rem; font-weight: 700; }
+
+    .timer-setup { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 24px; text-align: left; }
+    .timer-setup h4 { margin-bottom: 12px; }
+    .timer-toggle { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .timer-toggle label { font-weight: 600; }
+    .toggle-switch { position: relative; width: 48px; height: 26px; }
+    .toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider { position: absolute; inset: 0; background: var(--border); border-radius: 13px; cursor: pointer; transition: background .2s; }
+    .toggle-slider::before { content: ''; position: absolute; width: 20px; height: 20px; left: 3px; top: 3px; background: white; border-radius: 50%; transition: transform .2s; }
+    .toggle-switch input:checked + .toggle-slider { background: var(--green); }
+    .toggle-switch input:checked + .toggle-slider::before { transform: translateX(22px); }
+    .time-select { display: none; align-items: center; gap: 12px; margin-top: 12px; }
+    .time-select.visible { display: flex; }
+    .time-select label { font-size: .875rem; color: var(--text-2); }
+    .time-select input[type="range"] { flex: 1; accent-color: var(--green); }
+    .time-display { font-weight: 700; min-width: 60px; text-align: center; }
+
+    .test-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+    .test-timer { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 14px; font-weight: 700; font-size: .9375rem; }
+    .test-timer.warning { color: var(--red); border-color: var(--red); animation: pulse 1s infinite; }
+    @keyframes pulse { 50% { opacity: .7; } }
+    .test-progress-text { font-size: .875rem; color: var(--text-muted); font-weight: 600; }
+
+    .test-progress-bar { height: 6px; background: var(--ring-track); border-radius: 3px; overflow: hidden; margin-bottom: 24px; }
+    .test-progress-fill { height: 100%; background: var(--green); border-radius: 3px; transition: width .3s ease; }
+
+    .test-question { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; }
+    .test-q-num { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 8px; }
+    .test-q-difficulty { display: inline-block; font-size: .6875rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 8px; }
+    .test-q-difficulty.medium { background: #fef3c7; color: #92400e; }
+    .test-q-difficulty.greater-depth { background: #fce7f3; color: #9d174d; }
+    .test-q-text { font-size: 1.0625rem; font-weight: 600; margin-bottom: 16px; line-height: 1.5; }
+    .test-options { display: flex; flex-direction: column; gap: 8px; }
+    .test-option { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--surface2); border: 2px solid var(--border); border-radius: var(--radius-sm); cursor: pointer; transition: border-color .15s, background .15s; font-size: .9375rem; }
+    .test-option:hover { border-color: var(--green); background: rgba(63,111,0,.04); }
+    .test-option.selected { border-color: var(--green); background: rgba(63,111,0,.08); }
+    .test-option .radio { width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: border-color .15s; }
+    .test-option.selected .radio { border-color: var(--green); }
+    .test-option.selected .radio::after { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--green); }
+
+    .test-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+    .test-nav-dots { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; }
+    .test-nav-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ring-track); border: none; cursor: pointer; transition: background .15s; }
+    .test-nav-dot.answered { background: var(--green); }
+    .test-nav-dot.current { box-shadow: 0 0 0 2px var(--green); }
+    .test-nav-dot.flagged { background: var(--amber); }
+
+    .test-results { text-align: center; padding: 48px 20px; }
+    .test-results h2 { margin-bottom: 8px; }
+    .results-score { font-size: 3rem; font-weight: 800; color: var(--green); margin: 16px 0; }
+    .results-score.low { color: var(--red); }
+    .results-score.medium { color: var(--amber); }
+    .results-breakdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 24px 0; text-align: center; }
+    .results-breakdown .stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px; }
+    .results-breakdown .stat-val { font-size: 1.5rem; font-weight: 800; }
+    .results-breakdown .stat-label { font-size: .75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; margin-top: 4px; }
+
+    .review-section { text-align: left; margin-top: 32px; }
+    .review-section h3 { margin-bottom: 16px; }
+    .review-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 12px; }
+    .review-item.correct { border-left: 4px solid var(--green); }
+    .review-item.incorrect { border-left: 4px solid var(--red); }
+    .review-q { font-weight: 600; margin-bottom: 8px; }
+    .review-answer { font-size: .875rem; color: var(--text-2); }
+    .review-answer .correct-ans { color: var(--green); font-weight: 600; }
+    .review-answer .wrong-ans { color: var(--red); text-decoration: line-through; }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#test-main">Skip to content</a>
+
+<header class="island-header" style="background:var(--surface)">
+  <a id="back-btn" href="topic.html" class="island-header-back" aria-label="Back to topic">←</a>
+  <div class="island-header-emoji" id="hdr-emoji">📝</div>
+  <div class="island-header-info">
+    <h2 id="hdr-name">Topic Test</h2>
+    <div class="island-header-meta">
+      <span class="subject-pill" style="font-size:.6875rem;padding:2px 8px;background:#3f6f00;color:white">Mathematics</span>
+      <span class="badge" id="hdr-count">—</span>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:6px">
+    <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" aria-label="Toggle colour theme">🌙</button>
+  </div>
+</header>
+
+<main class="page-main" id="test-main">
+  <div class="test-container">
+
+    <!-- SETUP SCREEN -->
+    <div id="test-setup" class="test-setup">
+      <h2 id="setup-title">Topic Test</h2>
+      <p id="setup-desc">Test your knowledge across all topics in this tile. Questions are generated fresh each time.</p>
+
+      <div class="test-info-grid" id="setup-info" style="justify-items:center;max-width:200px;margin:0 auto 32px"></div>
+
+      <div class="timer-setup">
+        <h4>Test Settings</h4>
+        <div class="timer-toggle">
+          <label for="timed-toggle">Timed test</label>
+          <div class="toggle-switch">
+            <input type="checkbox" id="timed-toggle" onchange="toggleTimerSetup()">
+            <span class="toggle-slider"></span>
+          </div>
+        </div>
+        <div class="time-select" id="time-select">
+          <label for="time-slider">Duration:</label>
+          <input type="range" id="time-slider" min="5" max="60" step="5" value="30" oninput="updateTimeDisplay()">
+          <span class="time-display" id="time-display">30 min</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" style="font-size:1rem;padding:14px 32px" onclick="startTest()">Start Test</button>
+    </div>
+
+    <!-- TEST IN PROGRESS -->
+    <div id="test-active" style="display:none">
+      <div class="test-header">
+        <div class="test-progress-text" id="test-progress-text">Question 1 of 20</div>
+        <div class="test-timer" id="test-timer" style="display:none">
+          <span>⏱</span> <span id="timer-value">30:00</span>
+        </div>
+      </div>
+      <div class="test-progress-bar">
+        <div class="test-progress-fill" id="test-bar"></div>
+      </div>
+
+      <div id="question-area"></div>
+
+      <div class="test-nav">
+        <button class="btn btn-secondary btn-sm" id="prev-btn" onclick="prevQuestion()">← Previous</button>
+        <div class="test-nav-dots" id="nav-dots"></div>
+        <button class="btn btn-primary btn-sm" id="next-btn" onclick="nextQuestion()">Next →</button>
+      </div>
+
+      <div style="text-align:center;margin-top:24px">
+        <button class="btn btn-primary" id="submit-btn" onclick="submitTest()" style="display:none">Submit Test</button>
+      </div>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div id="test-results" style="display:none" class="test-results"></div>
+
+  </div>
+</main>
+
+<script src="data.js"></script>
+<script src="math-data.js"></script>
+<script src="math-content-1.js"></script>
+<script src="math-content-2.js"></script>
+<script src="math-content-3.js"></script>
+<script src="math-content-4.js"></script>
+<script src="math-content-5.js"></script>
+<script src="math-content-6.js"></script>
+<script src="math-content-7.js"></script>
+<script src="app.js"></script>
+<script src="test-generator.js"></script>
+<script>
+// ── Init ──────────────────────────────────────────────────────────────────
+let user = requireAuth();
+const params = new URLSearchParams(location.search);
+const topicId = params.get('id');
+const topic = typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id === topicId) : null;
+
+if (!topic) {
+  alert('Topic not found');
+  window.location.href = 'dashboard.html';
+}
+
+const topicIslands = CURRICULUM.filter(i => i.topicId === topicId);
+
+document.getElementById('back-btn').href = 'topic.html?id=' + topicId;
+document.getElementById('hdr-name').textContent = topic.name + ' — Test';
+document.getElementById('hdr-emoji').textContent = topic.emoji;
+document.getElementById('hdr-count').textContent = topicIslands.length + ' subtopics';
+document.getElementById('setup-title').textContent = topic.name + ' Test';
+
+// Show info cards
+const infoGrid = document.getElementById('setup-info');
+infoGrid.innerHTML =
+  '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + (topicIslands.length * 5) + '</div></div>';
+
+// Theme
+(function() { initTheme(); updateThemeBtn(); })();
+function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
+function updateThemeBtn() {
+  var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
+}
+
+// ── Timer setup ──────────────────────────────────────────────────────────
+function toggleTimerSetup() {
+  var checked = document.getElementById('timed-toggle').checked;
+  document.getElementById('time-select').classList.toggle('visible', checked);
+}
+function updateTimeDisplay() {
+  var val = document.getElementById('time-slider').value;
+  document.getElementById('time-display').textContent = val + ' min';
+}
+
+// ── Test state ────────────��──────────────────────────────────────────────
+let testQuestions = [];
+let answers = [];
+let currentQ = 0;
+let timerInterval = null;
+let timeRemaining = 0;
+let isTimed = false;
+
+function startTest() {
+  isTimed = document.getElementById('timed-toggle').checked;
+  var timeMins = parseInt(document.getElementById('time-slider').value);
+
+  testQuestions = generateTopicTest(topicId, topicIslands);
+  answers = new Array(testQuestions.length).fill(-1);
+  currentQ = 0;
+
+  document.getElementById('test-setup').style.display = 'none';
+  document.getElementById('test-active').style.display = '';
+
+  if (isTimed) {
+    timeRemaining = timeMins * 60;
+    document.getElementById('test-timer').style.display = '';
+    updateTimerDisplay();
+    timerInterval = setInterval(tickTimer, 1000);
+  }
+
+  renderNavDots();
+  renderQuestion();
+}
+
+function tickTimer() {
+  timeRemaining--;
+  updateTimerDisplay();
+  if (timeRemaining <= 0) {
+    clearInterval(timerInterval);
+    submitTest();
+  }
+}
+
+function updateTimerDisplay() {
+  var mins = Math.floor(timeRemaining / 60);
+  var secs = timeRemaining % 60;
+  var display = mins + ':' + (secs < 10 ? '0' : '') + secs;
+  document.getElementById('timer-value').textContent = display;
+  var timerEl = document.getElementById('test-timer');
+  if (timeRemaining <= 60) {
+    timerEl.classList.add('warning');
+  } else {
+    timerEl.classList.remove('warning');
+  }
+}
+
+function renderQuestion() {
+  var q = testQuestions[currentQ];
+  var total = testQuestions.length;
+  document.getElementById('test-progress-text').textContent = 'Question ' + (currentQ + 1) + ' of ' + total;
+  document.getElementById('test-bar').style.width = ((currentQ + 1) / total * 100) + '%';
+
+  var html = '<div class="test-question">';
+  html += '<div class="test-q-num">Question ' + (currentQ + 1) + '</div>';
+  html += '<div class="test-q-text">' + q.q + '</div>';
+  html += '<div class="test-options">';
+  for (var i = 0; i < q.opts.length; i++) {
+    var selected = answers[currentQ] === i ? ' selected' : '';
+    html += '<div class="test-option' + selected + '" onclick="selectAnswer(' + i + ')">';
+    html += '<div class="radio"></div>';
+    html += '<span>' + q.opts[i] + '</span>';
+    html += '</div>';
+  }
+  html += '</div></div>';
+  document.getElementById('question-area').innerHTML = html;
+
+  // Nav buttons
+  document.getElementById('prev-btn').style.visibility = currentQ === 0 ? 'hidden' : 'visible';
+  document.getElementById('next-btn').textContent = currentQ === total - 1 ? 'Review' : 'Next →';
+  document.getElementById('submit-btn').style.display = currentQ === total - 1 ? '' : 'none';
+
+  updateNavDots();
+}
+
+function selectAnswer(idx) {
+  answers[currentQ] = idx;
+  renderQuestion();
+}
+
+function nextQuestion() {
+  if (currentQ < testQuestions.length - 1) {
+    currentQ++;
+    renderQuestion();
+  }
+}
+
+function prevQuestion() {
+  if (currentQ > 0) {
+    currentQ--;
+    renderQuestion();
+  }
+}
+
+function renderNavDots() {
+  var html = '';
+  for (var i = 0; i < testQuestions.length; i++) {
+    html += '<button class="test-nav-dot" onclick="goToQuestion(' + i + ')" title="Question ' + (i + 1) + '"></button>';
+  }
+  document.getElementById('nav-dots').innerHTML = html;
+}
+
+function updateNavDots() {
+  var dots = document.querySelectorAll('.test-nav-dot');
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].classList.toggle('answered', answers[i] !== -1);
+    dots[i].classList.toggle('current', i === currentQ);
+  }
+}
+
+function goToQuestion(idx) {
+  currentQ = idx;
+  renderQuestion();
+}
+
+function submitTest() {
+  if (timerInterval) clearInterval(timerInterval);
+
+  var correct = 0;
+  var medCorrect = 0, medTotal = 0, gdCorrect = 0, gdTotal = 0;
+  var reviewItems = [];
+
+  for (var i = 0; i < testQuestions.length; i++) {
+    var q = testQuestions[i];
+    var isCorrect = answers[i] === q.c;
+    if (isCorrect) correct++;
+
+    if (q.depth === 'greater-depth') {
+      gdTotal++;
+      if (isCorrect) gdCorrect++;
+    } else {
+      medTotal++;
+      if (isCorrect) medCorrect++;
+    }
+
+    reviewItems.push({
+      q: q.q,
+      correct: isCorrect,
+      userAnswer: answers[i] >= 0 ? q.opts[answers[i]] : 'Not answered',
+      correctAnswer: q.opts[q.c],
+      explanation: q.e || ''
+    });
+  }
+
+  var pct = Math.round((correct / testQuestions.length) * 100);
+  var scoreClass = pct >= 70 ? '' : pct >= 50 ? ' medium' : ' low';
+  var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '🌟' : pct >= 50 ? '👍' : '📚';
+
+  var timeTaken = '';
+  if (isTimed) {
+    var totalTime = parseInt(document.getElementById('time-slider').value) * 60;
+    var used = totalTime - timeRemaining;
+    var usedMins = Math.floor(used / 60);
+    var usedSecs = used % 60;
+    timeTaken = usedMins + 'm ' + usedSecs + 's';
+  }
+
+  var html = '<div style="font-size:3.5rem;margin-bottom:16px">' + emoji + '</div>';
+  html += '<h2>Test Complete!</h2>';
+  html += '<div class="results-score' + scoreClass + '">' + pct + '%</div>';
+  html += '<p style="color:var(--text-2);margin-bottom:8px">' + correct + ' out of ' + testQuestions.length + ' correct</p>';
+
+  var medPct = medTotal > 0 ? Math.round((medCorrect / medTotal) * 100) : 0;
+  var gdPct = gdTotal > 0 ? Math.round((gdCorrect / gdTotal) * 100) : 0;
+
+  html += '<div class="results-breakdown">';
+  html += '<div class="stat"><div class="stat-val">' + correct + '/' + testQuestions.length + '</div><div class="stat-label">Total Score</div></div>';
+  html += '<div class="stat"><div class="stat-val">' + medCorrect + '/' + medTotal + '</div><div class="stat-label">Medium-High (' + medPct + '%)</div></div>';
+  html += '<div class="stat"><div class="stat-val">' + gdCorrect + '/' + gdTotal + '</div><div class="stat-label">Greater Depth (' + gdPct + '%)</div></div>';
+  if (timeTaken) html += '<div class="stat"><div class="stat-val">' + timeTaken + '</div><div class="stat-label">Time Taken</div></div>';
+  html += '</div>';
+
+  // Performance by difficulty bar visual
+  html += '<div style="margin-top:20px;text-align:left;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px">';
+  html += '<div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:12px">Performance by Difficulty</div>';
+  html += '<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:4px"><span>Medium-High</span><span style="font-weight:700">' + medPct + '%</span></div>';
+  html += '<div style="height:8px;background:var(--ring-track);border-radius:4px;overflow:hidden"><div style="height:100%;width:' + medPct + '%;background:var(--green);border-radius:4px"></div></div></div>';
+  html += '<div><div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:4px"><span>Greater Depth</span><span style="font-weight:700">' + gdPct + '%</span></div>';
+  html += '<div style="height:8px;background:var(--ring-track);border-radius:4px;overflow:hidden"><div style="height:100%;width:' + gdPct + '%;background:#6d28d9;border-radius:4px"></div></div></div>';
+  html += '</div>';
+
+  html += '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px">';
+  html += '<button class="btn btn-secondary" onclick="retakeTest()">↺ Retake Test</button>';
+  html += '<button class="btn btn-primary" onclick="window.location.href=\'topic.html?id=' + topicId + '\'">← Back to Topic</button>';
+  html += '</div>';
+
+  // Review section
+  html += '<div class="review-section"><h3>Review Answers</h3>';
+  for (var i = 0; i < reviewItems.length; i++) {
+    var r = reviewItems[i];
+    html += '<div class="review-item ' + (r.correct ? 'correct' : 'incorrect') + '">';
+    html += '<div class="review-q">' + (i + 1) + '. ' + r.q + '</div>';
+    html += '<div class="review-answer">';
+    if (r.correct) {
+      html += '<span class="correct-ans">✓ ' + r.correctAnswer + '</span>';
+    } else {
+      html += '<span class="wrong-ans">' + r.userAnswer + '</span> → <span class="correct-ans">' + r.correctAnswer + '</span>';
+    }
+    if (r.explanation) html += '<div style="margin-top:6px;font-size:.8125rem;color:var(--text-muted)">' + r.explanation + '</div>';
+    html += '</div></div>';
+  }
+  html += '</div>';
+
+  document.getElementById('test-active').style.display = 'none';
+  document.getElementById('test-results').style.display = '';
+  document.getElementById('test-results').innerHTML = html;
+
+  // Save test result
+  saveTestResult(topicId, { score: correct, total: testQuestions.length, pct: pct, date: new Date().toISOString() });
+}
+
+function retakeTest() {
+  document.getElementById('test-results').style.display = 'none';
+  document.getElementById('test-setup').style.display = '';
+}
+
+function saveTestResult(topicId, result) {
+  var key = 'sm_test_results';
+  var all = JSON.parse(localStorage.getItem(key) || '{}');
+  if (!all[topicId]) all[topicId] = [];
+  all[topicId].push(result);
+  localStorage.setItem(key, JSON.stringify(all));
+}
+</script>
+</body>
+</html>

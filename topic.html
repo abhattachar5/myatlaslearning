@@ -42,7 +42,7 @@
   <div id="topic-progress-wrap" style="margin-bottom:28px;display:none">
     <div class="topic-progress-header">
       <span style="font-size:.8125rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted)">Topic progress</span>
-      <span id="topic-progress-label" style="font-size:.875rem;font-weight:700;color:var(--text)">0 / 0 islands mastered</span>
+      <span id="topic-progress-label" style="font-size:.875rem;font-weight:700;color:var(--text)">0 / 0 topics mastered</span>
     </div>
     <div style="height:8px;background:var(--ring-track);border-radius:4px;overflow:hidden">
       <div id="topic-progress-bar" style="height:100%;background:#3f6f00;border-radius:4px;transition:width .4s ease;width:0%"></div>
@@ -51,6 +51,17 @@
 
   <!-- Island grid -->
   <div class="island-grid" id="island-grid"></div>
+
+  <!-- Topic Test CTA (below cards) -->
+  <div id="topic-test-cta" style="margin-top:32px;display:none">
+    <div id="test-cta-box" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div>
+        <div style="font-weight:700;margin-bottom:2px">📝 Topic Test</div>
+        <div style="font-size:.875rem;color:var(--text-muted)" id="test-cta-desc">Test yourself across all subtopics — fresh questions every time.</div>
+      </div>
+      <button class="btn btn-primary" id="test-cta-btn" onclick="goToTest()">Take Test →</button>
+    </div>
+  </div>
 
 </main>
 
@@ -111,7 +122,7 @@ function renderHeader() {
   const subPill = document.getElementById('hdr-subject');
   subPill.style.background = '#3f6f00';
   subPill.style.color = 'white';
-  document.getElementById('hdr-count').textContent = `${topicIslands.length} islands`;
+  document.getElementById('hdr-count').textContent = `${topicIslands.length} topics`;
 }
 
 // ── Progress ──────────────────────────────────────────────────────────────
@@ -130,7 +141,7 @@ function renderProgress() {
 
   const wrap = document.getElementById('topic-progress-wrap');
   wrap.style.display = '';
-  document.getElementById('topic-progress-label').textContent = `${mastered} / ${topicIslands.length} islands mastered`;
+  document.getElementById('topic-progress-label').textContent = `${mastered} / ${topicIslands.length} topics mastered`;
   document.getElementById('topic-progress-bar').style.width = pct + '%';
 
   if (topic.description) {
@@ -147,7 +158,7 @@ function renderGrid() {
   if (topicIslands.length === 0) {
     grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
       <div class="empty-state-icon">🚧</div>
-      <p>Islands for this topic are coming soon!</p>
+      <p>Topics for this topic are coming soon!</p>
     </div>`;
     return;
   }
@@ -185,6 +196,43 @@ function renderGrid() {
 
 function goToIsland(id) {
   window.location.href = `island.html?id=${id}&from=topic&topicId=${topicId}`;
+}
+
+function goToTest() {
+  if (document.getElementById('test-cta-btn').disabled) return;
+  window.location.href = 'test.html?id=' + topicId;
+}
+
+// Show test CTA if topic has test generators; lock until all topics covered
+(function showTestCTA() {
+  var cta = document.getElementById('topic-test-cta');
+  if (['mt-01','mt-02','mt-03','mt-04','mt-05','mt-06','mt-07','mt-08','mt-09','mt-10','mt-11','mt-12','mt-13','mt-14','mt-15','mt-16','mt-17','mt-18','mt-19','mt-20','mt-21','mt-22','mt-23','mt-24','mt-25','mt-26','mt-27','mt-28'].indexOf(topicId) !== -1) {
+    cta.style.display = '';
+    updateTestLock();
+  }
+})();
+
+function updateTestLock() {
+  var allCovered = topicIslands.length > 0 && topicIslands.every(function(island) {
+    return getIslandStatus(island.id) >= 3;
+  });
+  var btn = document.getElementById('test-cta-btn');
+  var desc = document.getElementById('test-cta-desc');
+  var box = document.getElementById('test-cta-box');
+  if (allCovered) {
+    btn.disabled = false;
+    btn.style.opacity = '';
+    btn.style.cursor = '';
+    desc.textContent = 'Test yourself across all subtopics — fresh questions every time.';
+    box.style.opacity = '';
+  } else {
+    btn.disabled = true;
+    btn.style.opacity = '0.5';
+    btn.style.cursor = 'not-allowed';
+    var covered = topicIslands.filter(function(i) { return getIslandStatus(i.id) >= 3; }).length;
+    desc.textContent = 'Complete all subtopics to unlock (' + covered + '/' + topicIslands.length + ' covered).';
+    box.style.opacity = '0.7';
+  }
 }
 
 function showLockedMsg(id) {
