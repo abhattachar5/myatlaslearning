@@ -152,6 +152,52 @@ Object.assign(LESSONS, {
   <span style="font-size:0.85em;color:#555">More workers → fewer days (inverse).</span>
 </div>`,
 
+// ── mi-09-5: Bar Diagram Ratio Problems ─────────────────────────────────────
+'mi-09-5': `<h2>Bar Diagram Ratio Problems</h2>
+
+<h3>What Is a Bar Diagram?</h3>
+<p>A bar diagram (also called a <strong>tape diagram</strong>) uses equal-sized bars to represent ratio parts visually. Each bar represents one "part" of the ratio.</p>
+
+<div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Ratio 3 : 2</strong><br><br>
+  Quantity A: <span style="display:inline-block;width:40px;height:20px;background:#42a5f5;border:1px solid #1976d2;margin:0 2px"></span><span style="display:inline-block;width:40px;height:20px;background:#42a5f5;border:1px solid #1976d2;margin:0 2px"></span><span style="display:inline-block;width:40px;height:20px;background:#42a5f5;border:1px solid #1976d2;margin:0 2px"></span> (3 bars)<br>
+  Quantity B: <span style="display:inline-block;width:40px;height:20px;background:#ef5350;border:1px solid #c62828;margin:0 2px"></span><span style="display:inline-block;width:40px;height:20px;background:#ef5350;border:1px solid #c62828;margin:0 2px"></span> (2 bars)<br><br>
+  Total = 5 bars. Each bar has the <strong>same value</strong>.
+</div>
+
+<h3>Finding Shares From a Total</h3>
+<div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Share £35 in ratio 3 : 2<br><br>
+  Step 1: Total parts = 3 + 2 = 5<br>
+  Step 2: Value of 1 bar = £35 ÷ 5 = £7<br>
+  Step 3: First share = 3 × £7 = <strong>£21</strong><br>
+  Step 4: Second share = 2 × £7 = <strong>£14</strong><br>
+  Check: £21 + £14 = £35 ✓
+</div>
+
+<h3>Using the Difference</h3>
+<p>Sometimes you know the <strong>difference</strong> between the two shares instead of the total.</p>
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Ratio 5 : 2. The larger share exceeds the smaller by 18.<br><br>
+  Difference in bars = 5 − 2 = 3 bars<br>
+  3 bars = 18 → 1 bar = 6<br>
+  Larger share = 5 × 6 = <strong>30</strong><br>
+  Smaller share = 2 × 6 = <strong>12</strong><br>
+  Check: 30 − 12 = 18 ✓
+</div>
+
+<h3>Three-Part Ratios</h3>
+<div style="background:#f3e5f5;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Share 60 sweets in ratio 1 : 2 : 3<br><br>
+  Total bars = 1 + 2 + 3 = 6<br>
+  1 bar = 60 ÷ 6 = 10<br>
+  Shares: 10, 20, 30. Check: 10 + 20 + 30 = 60 ✓
+</div>
+
+<div style="background:#fce4ec;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>⚠️ Top tip:</strong> Always draw the bars to help you see the problem. Label each bar with its value once you calculate it. Check that your shares add up to the total (or match the given difference).
+</div>`,
+
 // ── mi-10-1: Convert Between %, Fractions & Decimals ──────────────────────────
 'mi-10-1': `
 <h2>Convert Between %, Fractions &amp; Decimals</h2>
@@ -280,6 +326,54 @@ Object.assign(LESSONS, {
   Year 1: £200,000 × 1.10 = £220,000<br>
   Year 2: £220,000 × 1.10 = <strong>£242,000</strong><br>
   <span style="font-size:0.85em;color:#555">Note: NOT £200,000 + 20% = £240,000 — the second year's 10% is applied to £220,000, not £200,000.</span>
+</div>`,
+
+// ── mi-10-5: Percent Models & Estimation ────────────────────────────────────
+'mi-10-5': `<h2>Percent Models &amp; Estimation</h2>
+
+<h3>Grid Models (10×10 Grids)</h3>
+<p>A 10×10 grid has <strong>100 small squares</strong>. Each square represents <strong>1%</strong>.</p>
+
+<div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Shade 35% on a grid<br><br>
+  Shade 35 out of 100 squares — that's 3 full rows (30 squares) plus 5 more squares.<br><br>
+  Unshaded = 100 − 35 = <strong>65%</strong>
+</div>
+
+<h3>Bar Models for Percentages</h3>
+<p>Draw a bar representing the whole amount, then divide it into sections to find the percent you need.</p>
+
+<div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Find 30% of 80<br><br>
+  Step 1: Draw a bar for 80. Divide into 10 equal parts.<br>
+  Step 2: Each part = 80 ÷ 10 = 8 (this is 10%).<br>
+  Step 3: 30% = 3 parts = 3 × 8 = <strong>24</strong>
+</div>
+
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Splitting strategy:</strong> Find 35% of 120<br><br>
+  Split: 35% = 25% + 10%<br>
+  25% of 120 = 120 ÷ 4 = 30<br>
+  10% of 120 = 12<br>
+  35% = 30 + 12 = <strong>42</strong>
+</div>
+
+<h3>Estimating Percentages</h3>
+<p>Use <strong>benchmark percentages</strong> (10%, 25%, 50%, 1%) to estimate quickly.</p>
+
+<div style="background:#f3e5f5;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Estimate 48% of 210<br><br>
+  48% ≈ 50% (half)<br>
+  50% of 210 = 105<br>
+  So 48% of 210 ≈ <strong>105</strong><br><br>
+  For a closer estimate: 48% = 50% − 2%<br>
+  2% of 210 = 4.2<br>
+  48% ≈ 105 − 4.2 = <strong>100.8</strong>
+</div>
+
+<div style="background:#fce4ec;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Key benchmarks to memorise:</strong><br>
+  50% = ½ &nbsp;|&nbsp; 25% = ¼ &nbsp;|&nbsp; 10% = ÷10 &nbsp;|&nbsp; 1% = ÷100 &nbsp;|&nbsp; 75% = ¾ &nbsp;|&nbsp; 33⅓% ≈ ⅓
 </div>`,
 
 // ── mi-11-1: Write & Evaluate Expressions ────────────────────────────────────
@@ -435,6 +529,43 @@ Object.assign(LESSONS, {
   = <strong>5ab(3a − 2b)</strong>
 </div>`,
 
+// ── mi-11-5: Properties of Operations ────────────────────────────────────────
+'mi-11-5': `<h2>Properties of Operations</h2>
+
+<h3>Commutative Property</h3>
+<p>The <strong>order</strong> of numbers can be swapped without changing the result.</p>
+<div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Addition:</strong> a + b = b + a &nbsp;&nbsp; Example: 3 + 7 = 7 + 3 = 10<br>
+  <strong>Multiplication:</strong> a × b = b × a &nbsp;&nbsp; Example: 4 × 5 = 5 × 4 = 20<br><br>
+  ⚠️ Subtraction and division are <strong>NOT</strong> commutative: 5 − 3 ≠ 3 − 5
+</div>
+
+<h3>Associative Property</h3>
+<p>The <strong>grouping</strong> of numbers can change without affecting the result.</p>
+<div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Addition:</strong> (a + b) + c = a + (b + c)<br>
+  Example: (2 + 3) + 4 = 2 + (3 + 4) = 9<br><br>
+  <strong>Multiplication:</strong> (a × b) × c = a × (b × c)<br>
+  Example: (2 × 5) × 3 = 2 × (5 × 3) = 30<br><br>
+  <strong>Useful for mental maths:</strong> 4 × 7 × 25 → 4 × 25 × 7 = 100 × 7 = 700
+</div>
+
+<h3>Identity & Zero Properties</h3>
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Additive identity:</strong> a + 0 = a (adding 0 changes nothing)<br>
+  <strong>Multiplicative identity:</strong> a × 1 = a (multiplying by 1 changes nothing)<br>
+  <strong>Zero property:</strong> a × 0 = 0 (anything times zero is zero)
+</div>
+
+<h3>Writing Equivalent Expressions</h3>
+<p>Use these properties to rewrite expressions in easier or equivalent forms.</p>
+<div style="background:#f3e5f5;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Rewrite 3 × 17 × 2 for easier mental maths:<br>
+  = 3 × 2 × 17 (commutative) = 6 × 17 = <strong>102</strong><br><br>
+  <strong>Example:</strong> If n × 8 = 56, find n:<br>
+  n = 56 ÷ 8 = <strong>7</strong> (using the multiplicative inverse)
+</div>`,
+
 // ── mi-12-1: Number Sequences ────────────────────────────────────────────────
 'mi-12-1': `
 <h2>Number Sequences</h2>
@@ -583,6 +714,51 @@ Object.assign(LESSONS, {
   </div>
 </div>`,
 
+// ── mi-12-5: Expressions vs Equations & Tiles ───────────────────────────────
+'mi-12-5': `<h2>Expressions vs Equations &amp; Algebra Tiles</h2>
+
+<h3>Expression vs Equation</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1em 0">
+  <div style="background:#e3f2fd;padding:1em;border-radius:8px">
+    <strong>Expression</strong><br>
+    No equals sign.<br>
+    Can be evaluated or simplified.<br>
+    Examples: 3x + 5, &nbsp; 2a − b
+  </div>
+  <div style="background:#e8f5e9;padding:1em;border-radius:8px">
+    <strong>Equation</strong><br>
+    Has an equals sign.<br>
+    Can be solved for the unknown.<br>
+    Examples: 3x + 5 = 20, &nbsp; y = 2x
+  </div>
+</div>
+
+<h3>Algebra Tiles</h3>
+<p>Algebra tiles are a visual way to model equations. There are two types of tile:</p>
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
+  <span style="display:inline-block;width:40px;height:20px;background:#42a5f5;border:1px solid #1976d2;text-align:center;line-height:20px;color:white;font-weight:bold;font-size:12px">x</span> = one x-tile (unknown)<br>
+  <span style="display:inline-block;width:20px;height:20px;background:#ffb74d;border:1px solid #f57c00;text-align:center;line-height:20px;font-weight:bold;font-size:12px">1</span> = one unit tile (value of 1)
+</div>
+
+<h3>Solving With Tiles</h3>
+<div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> x + 3 = 7<br><br>
+  Left side: 1 x-tile + 3 unit tiles<br>
+  Right side: 7 unit tiles<br><br>
+  Remove 3 unit tiles from <strong>both</strong> sides:<br>
+  Left: 1 x-tile &nbsp;&nbsp; Right: 4 unit tiles<br>
+  So <strong>x = 4</strong>
+</div>
+
+<h3>Matching Word Problems to Equations</h3>
+<div style="background:#f3e5f5;padding:1em;border-radius:8px;margin:1em 0">
+  "A number doubled, plus 3, equals 15"<br>
+  → 2x + 3 = 15<br><br>
+  "Three identical bags weigh 24 kg"<br>
+  → 3x = 24<br><br>
+  <strong>Tip:</strong> Underline the key words (doubled → ×2, plus → +, equals → =).
+</div>`,
+
 // ── mi-13-1: Mean, Median, Mode & Range ──────────────────────────────────────
 'mi-13-1': `
 <h2>Mean, Median, Mode &amp; Range</h2>
@@ -727,6 +903,142 @@ Object.assign(LESSONS, {
 <div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
   Rolling a 2 or a 5 on a fair six-sided die:<br>
   P(2 or 5) = 1/6 + 1/6 = 2/6 = <strong>1/3</strong>
+</div>`,
+
+// ── mi-13-5: Data Displays & Graph Types ──────────────────────────────────
+'mi-13-5': `<h2>Data Displays &amp; Graph Types</h2>
+
+<h3>Pictograms</h3>
+<p>A <strong>pictogram</strong> uses pictures or symbols to represent data. Every pictogram needs a <strong>key</strong> that tells the reader what each symbol stands for.</p>
+<div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Key: ★ = 4 books<br>
+  Monday: ★★★ = 12 books<br>
+  Tuesday: ★★½ = 10 books<br>
+  Half a symbol = half the key value.
+</div>
+
+<h3>Line Plots</h3>
+<p>A <strong>line plot</strong> (dot plot) uses a number line with Xs or dots stacked above each value. Great for small data sets — you can see the mode and spread at a glance.</p>
+<div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:1em 0">
+  Data: 2, 3, 3, 4, 4, 4, 5<br>
+  Plot an X above each value on the number line. The tallest stack (three Xs above 4) is the mode.
+</div>
+
+<h3>Frequency Tables</h3>
+<p>A <strong>frequency table</strong> records how often each value (or group of values) occurs. Grouped frequency tables use <strong>class intervals</strong> like 0–9, 10–19, 20–29.</p>
+<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
+  <table style="border-collapse:collapse;width:100%;font-size:0.9em">
+    <tr style="background:#c8e6c9"><th style="padding:6px;border:1px solid #ccc">Score</th><th style="padding:6px;border:1px solid #ccc">Tally</th><th style="padding:6px;border:1px solid #ccc">Frequency</th></tr>
+    <tr><td style="padding:6px;border:1px solid #ccc">0–9</td><td style="padding:6px;border:1px solid #ccc">||||</td><td style="padding:6px;border:1px solid #ccc">4</td></tr>
+    <tr style="background:#f9f9f9"><td style="padding:6px;border:1px solid #ccc">10–19</td><td style="padding:6px;border:1px solid #ccc">|||| ||</td><td style="padding:6px;border:1px solid #ccc">7</td></tr>
+    <tr><td style="padding:6px;border:1px solid #ccc">20–29</td><td style="padding:6px;border:1px solid #ccc">|||</td><td style="padding:6px;border:1px solid #ccc">3</td></tr>
+  </table>
+  Total frequency = 4 + 7 + 3 = 14
+</div>
+
+<h3>Double Bar &amp; Double Line Graphs</h3>
+<p>A <strong>double bar graph</strong> places two sets of bars side by side for easy comparison. A <strong>double line graph</strong> plots two data sets on the same axes to compare trends over time.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1em 0">
+  <div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Double bar graph</strong><br>Compare amounts (e.g. boys vs girls in each sport)</div>
+  <div style="background:#e3f2fd;padding:10px;border-radius:8px"><strong>Double line graph</strong><br>Compare trends (e.g. two cities' temperatures over months)</div>
+</div>
+
+<h3>Choosing the Right Graph</h3>
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
+  <ul style="margin:0;padding-left:1.3em">
+    <li><strong>Categories:</strong> bar chart or pictogram</li>
+    <li><strong>Change over time:</strong> line graph</li>
+    <li><strong>Proportions of a whole:</strong> pie chart</li>
+    <li><strong>Two-variable relationship:</strong> scatter graph</li>
+    <li><strong>Comparing two groups:</strong> double bar or double line graph</li>
+    <li><strong>Spread of data:</strong> stem-and-leaf or box plot</li>
+  </ul>
+</div>`,
+
+// ── mi-13-6: Sampling, Bias & Distributions ───────────────────────────────
+'mi-13-6': `<h2>Sampling, Bias &amp; Distributions</h2>
+
+<h3>Statistical vs Non-Statistical Questions</h3>
+<p>A <strong>statistical question</strong> is one where the answers vary — you expect different data from different sources.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1em 0">
+  <div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Statistical</strong><br>"How many siblings do Year 7 students have?" (answers vary)</div>
+  <div style="background:#fce4ec;padding:10px;border-radius:8px"><strong>Not statistical</strong><br>"How many days are in June?" (one fixed answer: 30)</div>
+</div>
+
+<h3>Populations &amp; Samples</h3>
+<p>The <strong>population</strong> is the entire group you want information about. A <strong>sample</strong> is a smaller subset chosen from the population.</p>
+<div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Why sample?</strong> It is often too expensive or impractical to survey the whole population. A well-chosen sample lets you draw conclusions about the population.
+</div>
+
+<h3>Bias in Samples</h3>
+<p>A sample is <strong>biased</strong> if it does not fairly represent the population. Bias leads to conclusions that may be wrong.</p>
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Common sources of bias:</strong>
+  <ul style="margin:0.5em 0 0;padding-left:1.3em">
+    <li>Convenience sampling (only surveying people nearby)</li>
+    <li>Voluntary response (only keen people reply)</li>
+    <li>Leading questions that push towards a particular answer</li>
+    <li>Excluding groups (e.g. surveying only one gender)</li>
+  </ul>
+</div>
+<p>The best way to reduce bias is <strong>random sampling</strong> — every member of the population has an equal chance of being selected.</p>
+
+<h3>Outliers</h3>
+<p>An <strong>outlier</strong> is a value that is much higher or lower than the rest of the data.</p>
+<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
+  Data: 3, 4, 5, 5, 6, 6, 7, <strong>25</strong><br>
+  25 is an outlier — it pulls the <strong>mean</strong> upward and increases the <strong>range</strong>.<br>
+  The <strong>median</strong> and <strong>mode</strong> are less affected by outliers.
+</div>
+
+<h3>Data Distributions</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:1em 0;text-align:center;font-size:0.9em">
+  <div style="background:#e8f5e9;padding:8px;border-radius:8px"><strong>Symmetric</strong><br>Data is balanced around the centre</div>
+  <div style="background:#e3f2fd;padding:8px;border-radius:8px"><strong>Skewed left</strong><br>Tail stretches to the left (few low values)</div>
+  <div style="background:#fff3e0;padding:8px;border-radius:8px"><strong>Skewed right</strong><br>Tail stretches to the right (few high values)</div>
+</div>`,
+
+// ── mi-13-7: Combined & Predicted Probability ─────────────────────────────
+'mi-13-7': `<h2>Combined &amp; Predicted Probability</h2>
+
+<h3>Mutually Exclusive Events</h3>
+<p>Events are <strong>mutually exclusive</strong> if they cannot happen at the same time. For mutually exclusive events A and B:</p>
+<div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>P(A or B) = P(A) + P(B)</strong>
+</div>
+<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> Rolling a 2 or a 5 on a fair die:<br>
+  P(2 or 5) = 1/6 + 1/6 = 2/6 = <strong>1/3</strong>
+</div>
+
+<h3>Overlapping Events</h3>
+<p>Events <strong>overlap</strong> if they can happen at the same time. You must subtract the overlap to avoid double-counting:</p>
+<div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>P(A or B) = P(A) + P(B) − P(A and B)</strong>
+</div>
+<div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> From a deck of 52 cards: P(red) = 26/52, P(king) = 4/52, P(red king) = 2/52.<br>
+  P(red or king) = 26/52 + 4/52 − 2/52 = <strong>28/52 = 7/13</strong>
+</div>
+
+<h3>Predictions from Theoretical Probability</h3>
+<p>If you know the theoretical probability, multiply by the number of trials to predict outcomes:</p>
+<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Expected outcomes = P(event) × number of trials</strong><br><br>
+  P(heads) = 0.5. Flip 200 times → expect about <strong>100 heads</strong>.<br>
+  P(rolling a 3) = 1/6. Roll 60 times → expect about <strong>10 threes</strong>.
+</div>
+
+<h3>Experimental Probability</h3>
+<p><strong>Experimental probability</strong> is based on actual results:</p>
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>P(event) = times event occurred ÷ total trials</strong>
+</div>
+<p>With more trials, experimental probability gets closer to theoretical probability — this is the <strong>Law of Large Numbers</strong>.</p>
+<div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:0.5em 0">
+  A coin is flipped 1,000 times and lands heads 520 times.<br>
+  Experimental P(heads) = 520/1000 = 0.52 — close to the theoretical 0.5.
 </div>`
 
 });

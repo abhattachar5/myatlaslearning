@@ -23,7 +23,12 @@ FLASHCARDS.push(
   // mi-09-4: Ratio Problem Solving
   { islandId:'mi-09-4', front:'Tom and Sam share sweets in ratio 4:1. Tom gets 28. How many does Sam get?', back:'1 part = 28÷4 = 7. Sam gets 7 sweets.' },
   { islandId:'mi-09-4', front:'What does "direct proportion" mean?', back:'Two quantities are in direct proportion if they increase/decrease at the same rate.' },
-  { islandId:'mi-09-4', front:'If 5 pens cost £3.50, how much do 8 pens cost?', back:'Cost per pen = £3.50÷5 = £0.70. 8 pens = 8×£0.70 = £5.60.' }
+  { islandId:'mi-09-4', front:'If 5 pens cost £3.50, how much do 8 pens cost?', back:'Cost per pen = £3.50÷5 = £0.70. 8 pens = 8×£0.70 = £5.60.' },
+
+  // mi-09-5: Bar Diagram Ratio Problems
+  { islandId:'mi-09-5', front:'What is a bar diagram (tape diagram) for ratios?', back:'A visual model where bars of equal size represent ratio parts.\n\nFor ratio 3:2, draw 3 equal bars for one quantity and 2 for the other.\n\nTotal = 5 bars. Each bar = Total ÷ 5.' },
+  { islandId:'mi-09-5', front:'Ratio 2:5. Total = 35. Use a bar diagram to find each share.', back:'Draw 2 bars + 5 bars = 7 bars total.\nEach bar = 35 ÷ 7 = 5.\nFirst share = 2 × 5 = 10.\nSecond share = 5 × 5 = 25.\nCheck: 10 + 25 = 35 ✓' },
+  { islandId:'mi-09-5', front:'Ratio 4:1. The difference is 24. Find each amount.', back:'Draw 4 bars vs 1 bar. Difference = 4 − 1 = 3 bars.\n3 bars = 24, so 1 bar = 8.\nLarger = 4 × 8 = 32.\nSmaller = 1 × 8 = 8.\nCheck: 32 − 8 = 24 ✓' }
 );
 
 // ─── TOPIC 10: PERCENTAGES ───────────────────────────────────────────────────
@@ -47,7 +52,12 @@ FLASHCARDS.push(
   // mi-10-4: Reverse Percentages & Comparison
   { islandId:'mi-10-4', front:'After 25% increase, price is £125. What was the original?', back:'125% → £125. 1% → £1. 100% → £100.' },
   { islandId:'mi-10-4', front:'Which is larger: 3/8 or 37%?', back:'3/8 = 37.5%. So 3/8 > 37%.' },
-  { islandId:'mi-10-4', front:'Express £18 as a % of £72', back:'(18÷72) × 100 = 25%' }
+  { islandId:'mi-10-4', front:'Express £18 as a % of £72', back:'(18÷72) × 100 = 25%' },
+
+  // mi-10-5: Percent Models & Estimation
+  { islandId:'mi-10-5', front:'How does a 10×10 grid model represent percentages?', back:'A 10×10 grid has 100 small squares. Each square = 1%.\n\nShade 35 squares → 35%.\nShade 100 squares → 100% (the whole grid).\n\nUseful for visualising what a percentage looks like.' },
+  { islandId:'mi-10-5', front:'How do you use a bar model to find 30% of 80?', back:'Draw a bar for 80. Divide into 10 equal sections (each = 10% = 8).\n\n30% = 3 sections = 3 × 8 = 24.\n\nBar models make it easy to see the relationship between part and whole.' },
+  { islandId:'mi-10-5', front:'Estimate 48% of 210.', back:'48% ≈ 50% (half).\n50% of 210 = 105.\n\nSo 48% of 210 ≈ 105.\n\nBenchmarks: 10%=21, 50%=105, 25%=52.5, 1%=2.1.\nExact: 48% = 50% − 2% = 105 − 4.2 = 100.8' }
 );
 
 // ─── TOPIC 11: ALGEBRA EXPRESSIONS ──────────────────────────────────────────
@@ -71,7 +81,12 @@ FLASHCARDS.push(
   // mi-11-4: Writing & Using Expressions
   { islandId:'mi-11-4', front:'Write an expression: "5 more than triple y"', back:'3y + 5' },
   { islandId:'mi-11-4', front:'A rectangle has length (2x+3) and width 4. Write an expression for its perimeter.', back:'P = 2(2x+3+4) = 2(2x+7) = 4x+14' },
-  { islandId:'mi-11-4', front:'Simplify: 2x² + 5x − x² + 3x', back:'(2x²−x²) + (5x+3x) = x² + 8x' }
+  { islandId:'mi-11-4', front:'Simplify: 2x² + 5x − x² + 3x', back:'(2x²−x²) + (5x+3x) = x² + 8x' },
+
+  // mi-11-5: Properties of Operations
+  { islandId:'mi-11-5', front:'What are the commutative properties?', back:'Addition: a + b = b + a (order doesn\'t matter)\nMultiplication: a × b = b × a\n\nExamples: 3 + 7 = 7 + 3 = 10\n4 × 5 = 5 × 4 = 20\n\n⚠️ Subtraction and division are NOT commutative.' },
+  { islandId:'mi-11-5', front:'What are the associative properties?', back:'Addition: (a + b) + c = a + (b + c) (grouping doesn\'t matter)\nMultiplication: (a × b) × c = a × (b × c)\n\nExample: (2 + 3) + 4 = 2 + (3 + 4) = 9\n(2 × 3) × 4 = 2 × (3 × 4) = 24' },
+  { islandId:'mi-11-5', front:'What are the identity and zero properties?', back:'Additive identity: a + 0 = a (adding 0 changes nothing)\nMultiplicative identity: a × 1 = a (multiplying by 1 changes nothing)\nZero property: a × 0 = 0 (anything times 0 is 0)' }
 );
 
 // ─── TOPIC 12: ALGEBRA EQUATIONS & SEQUENCES ────────────────────────────────
@@ -95,7 +110,12 @@ FLASHCARDS.push(
   // mi-12-4: Formulae & Function Machines
   { islandId:'mi-12-4', front:'Using F=ma, find F when m=5 and a=3', back:'F = 5×3 = 15 (Newtons)' },
   { islandId:'mi-12-4', front:'Rearrange y = 3x − 2 to make x the subject', back:'y+2 = 3x → x = (y+2)/3' },
-  { islandId:'mi-12-4', front:'A function machine: input → ×3 → −5 → output. Input=4, find output.', back:'4×3=12. 12−5=7. Output = 7.' }
+  { islandId:'mi-12-4', front:'A function machine: input → ×3 → −5 → output. Input=4, find output.', back:'4×3=12. 12−5=7. Output = 7.' },
+
+  // mi-12-5: Expressions vs Equations & Tiles
+  { islandId:'mi-12-5', front:'What is the difference between an expression and an equation?', back:'Expression: a mathematical phrase with numbers, variables, and operations (no equals sign).\nExample: 3x + 5\n\nEquation: a statement that two expressions are equal (HAS an equals sign).\nExample: 3x + 5 = 20' },
+  { islandId:'mi-12-5', front:'How do algebra tiles represent x + 3 = 7?', back:'Left side: 1 x-tile + 3 unit tiles.\nRight side: 7 unit tiles.\n\nTo solve: remove 3 unit tiles from both sides.\nLeft: 1 x-tile. Right: 4 unit tiles.\nSo x = 4.' },
+  { islandId:'mi-12-5', front:'"Tom is 5 years older than Sam. Tom is 17." Write an equation.', back:'Let Sam\'s age = x.\nTom is 5 years older: x + 5.\nTom is 17: x + 5 = 17.\n\nSolve: x = 17 − 5 = 12. Sam is 12.' }
 );
 
 // ─── TOPIC 13: STATISTICS & PROBABILITY ─────────────────────────────────────
@@ -119,7 +139,22 @@ FLASHCARDS.push(
   // mi-13-4: Data Analysis & Interpretation
   { islandId:'mi-13-4', front:'What is the difference between primary and secondary data?', back:'Primary: collected by you (survey). Secondary: collected by others (census data).' },
   { islandId:'mi-13-4', front:'What does an outlier do to the mean?', back:'An outlier pulls the mean towards it, making it less representative of the data.' },
-  { islandId:'mi-13-4', front:'What is a two-way table used for?', back:'Organising and comparing data across two variables at once.' }
+  { islandId:'mi-13-4', front:'What is a two-way table used for?', back:'Organising and comparing data across two variables at once.' },
+
+  // mi-13-5: Data Displays & Graph Types
+  { islandId:'mi-13-5', front:'What must a pictogram always include?', back:'A key showing what each symbol represents (e.g. ★ = 4 items). Half symbols represent half the key value.' },
+  { islandId:'mi-13-5', front:'When should you use a double bar graph?', back:'When comparing the same categories across two groups or time periods (e.g. boys vs girls in each sport).' },
+  { islandId:'mi-13-5', front:'What is the class width in a grouped frequency table?', back:'The range of values each group covers. For 0–9, 10–19, 20–29 the class width is 10.' },
+
+  // mi-13-6: Sampling, Bias & Distributions
+  { islandId:'mi-13-6', front:'What is the difference between a statistical and a non-statistical question?', back:'A statistical question expects variability in the answers (e.g. "How tall are Year 7 students?"). A non-statistical question has one fixed answer (e.g. "How tall is the Eiffel Tower?").' },
+  { islandId:'mi-13-6', front:'What makes a sample biased?', back:'A sample is biased if it does not fairly represent the whole population — e.g. surveying only your friends about a school policy.' },
+  { islandId:'mi-13-6', front:'What is an outlier?', back:'A value that is much higher or much lower than the rest of the data. Outliers can distort the mean and increase the range.' },
+
+  // mi-13-7: Combined & Predicted Probability
+  { islandId:'mi-13-7', front:'What are mutually exclusive events?', back:'Events that cannot happen at the same time. P(A or B) = P(A) + P(B). Example: rolling a 2 or a 5 on one die.' },
+  { islandId:'mi-13-7', front:'How do you make a prediction using theoretical probability?', back:'Multiply the probability by the number of trials. E.g. P(heads) = 0.5, flip 200 times → expect about 100 heads.' },
+  { islandId:'mi-13-7', front:'What is experimental probability?', back:'Probability based on actual results: P(event) = number of times event occurred ÷ total trials. It approaches theoretical probability with more trials.' }
 );
 
 // ─── QUESTIONS ────────────────────────────────────────────────────────────────
@@ -247,6 +282,71 @@ Object.assign(QUESTIONS, {
     { question:'Two metals are alloyed in ratio 5:3. The alloy weighs 400g. How much of the heavier metal?', options:['150g','200g','250g','300g'], answer:2, explanation:'8 parts=400g. 1 part=50g. Heavier (5 parts)=250g.' },
     { question:'A car uses 6 litres of fuel per 100km. At this rate, how many litres for 350km?', options:['18L','19L','21L','24L'], answer:2, explanation:'6/100 × 350 = 21 litres.' },
     { question:'Three taps can fill a pool in 4 hours. At the same rate, how long would 6 taps take?', options:['1h','2h','3h','8h'], answer:1, explanation:'Inverse proportion. 3×4=6×t. t=12/6=2 hours.' }
+  ],
+
+  // ── mi-09-5: Bar Diagram Ratio Problems ───────────────────────────────────
+  'mi-09-5': [
+    { gen: function() {
+        var a = randInt(2,5), b = randInt(1,4);
+        while(a===b) b=randInt(1,4);
+        var parts = a + b;
+        var bar = randInt(3,8);
+        var total = parts * bar;
+        var shareA = a * bar, shareB = b * bar;
+        var opts = buildOpts(shareA + ' and ' + shareB, [shareB + ' and ' + shareA, (shareA+1) + ' and ' + (shareB-1), total + ' and ' + bar]);
+        return { q: 'Share ' + total + ' in the ratio ' + a + ':' + b + ' using a bar diagram. What are the two shares?',
+                 opts: opts, c: 0,
+                 e: 'Total parts = ' + a + '+' + b + ' = ' + parts + '. One bar = ' + total + '÷' + parts + ' = ' + bar + '. Shares: ' + a + '×' + bar + '=' + shareA + ' and ' + b + '×' + bar + '=' + shareB + '.' };
+    }},
+    { gen: function() {
+        var a = randInt(3,6), b = randInt(1,a-1);
+        var diff = a - b;
+        var bar = randInt(2,8);
+        var diffVal = diff * bar;
+        var ans = a * bar;
+        var opts = buildOpts(ans, [b*bar, (a+b)*bar, diffVal]);
+        return { q: 'Two amounts are in ratio ' + a + ':' + b + '. The difference between them is ' + diffVal + '. Use a bar diagram to find the larger amount.',
+                 opts: opts, c: 0,
+                 e: 'Difference = ' + a + '−' + b + ' = ' + diff + ' parts. 1 part = ' + diffVal + '÷' + diff + ' = ' + bar + '. Larger = ' + a + '×' + bar + ' = ' + ans + '.' };
+    }},
+    { gen: function() {
+        var a = randInt(2,5), b = randInt(1,4);
+        while(a===b) b=randInt(1,4);
+        var bar = randInt(4,10);
+        var total = (a+b)*bar;
+        var ans = b * bar;
+        var opts = buildOpts(ans, [a*bar, total, bar]);
+        return { q: 'A bar diagram shows ' + a + ' bars for red beads and ' + b + ' bars for blue beads. There are ' + total + ' beads in total. How many blue beads?',
+                 opts: opts, c: 0,
+                 e: 'Total bars = ' + (a+b) + '. Each bar = ' + total + '÷' + (a+b) + ' = ' + bar + '. Blue = ' + b + '×' + bar + ' = ' + ans + '.' };
+    }},
+    { gen: function() {
+        var a = randInt(2,4), b = randInt(1,3), c = randInt(1,3);
+        var parts = a + b + c;
+        var bar = randInt(2,6);
+        var total = parts * bar;
+        var largest = Math.max(a,b,c) * bar;
+        var opts = buildOpts(largest, [(a+1)*bar, parts*bar, bar]);
+        return { q: 'Three friends share £' + total + ' in ratio ' + a + ':' + b + ':' + c + '. Draw a bar diagram. What is the largest share?',
+                 opts: opts, c: 0,
+                 e: 'Total parts = ' + parts + '. 1 part = £' + total + '÷' + parts + ' = £' + bar + '. Largest ratio part = ' + Math.max(a,b,c) + '. Largest share = ' + Math.max(a,b,c) + '×£' + bar + ' = £' + largest + '.' };
+    }},
+    { gen: function() {
+        var a = randInt(2,5), b = randInt(1,4);
+        while(a===b) b=randInt(1,4);
+        var bar = randInt(5,10);
+        var shareA = a * bar;
+        var ans = (a+b)*bar;
+        var opts = buildOpts(ans, [shareA + b*bar + bar, a*b*bar, shareA]);
+        return { q: 'In a bar diagram, the first quantity has ' + a + ' bars and equals ' + shareA + '. The ratio is ' + a + ':' + b + '. What is the total?',
+                 opts: opts, c: 0,
+                 e: '1 bar = ' + shareA + '÷' + a + ' = ' + bar + '. Second quantity = ' + b + '×' + bar + ' = ' + b*bar + '. Total = ' + shareA + '+' + b*bar + ' = ' + ans + '.' };
+    }},
+    { question:'A bar diagram shows ratio 3:7. The smaller part is 15. What is the total?', options:['35','50','70','105'], answer:1, explanation:'3 parts = 15. 1 part = 5. Total = 10 parts = 50.' },
+    { question:'Ratio of boys to girls is 5:3. There are 40 students. A bar diagram has 8 bars total. How many girls?', options:['15','20','24','25'], answer:0, explanation:'8 bars = 40 students. 1 bar = 5. Girls = 3 bars = 15.' },
+    { question:'A bar diagram for ratio 2:5 shows the difference is 12. What is the total?', options:['20','24','28','36'], answer:2, explanation:'Difference = 5−2 = 3 parts = 12. 1 part = 4. Total = 7 parts = 28.' },
+    { question:'Juice and water mixed in ratio 1:4. Total = 500 ml. How much water?', options:['100 ml','125 ml','375 ml','400 ml'], answer:3, explanation:'5 bars = 500 ml. 1 bar = 100 ml. Water = 4 bars = 400 ml.' },
+    { question:'A bar diagram has 6 equal bars for cats and 2 for dogs. There are 24 cats. How many dogs?', options:['4','6','8','12'], answer:2, explanation:'6 bars = 24 cats. 1 bar = 4. Dogs = 2 bars = 8.' }
   ],
 
   // ── mi-10-1: Understanding Percentages ─────────────────────────────────────
@@ -529,6 +629,61 @@ Object.assign(QUESTIONS, {
     { question:'Shop A offers "buy 3 get 1 free" on £4 items. Shop B offers 25% off everything. Which is better for buying 4 items?', options:['Shop A','Shop B','Same price','Depends'], answer:2, explanation:'Shop A: pay 3×£4=£12 for 4. Shop B: 4×£4×0.75=£12. Same price!' }
   ],
 
+  // ── mi-10-5: Percent Models & Estimation ──────────────────────────────────
+  'mi-10-5': [
+    { gen: function() {
+        var pct = pickFrom([15,20,25,30,35,40,45,55,60,65,70,75,80,85]);
+        var opts = buildOpts(pct, [100-pct, pct+10, pct-10]);
+        return { q: 'On a 10×10 grid, ' + pct + ' squares are shaded. What percentage is shaded?',
+                 opts: opts, c: 0,
+                 e: 'A 10×10 grid has 100 squares. ' + pct + ' shaded out of 100 = ' + pct + '%.' };
+    }},
+    { gen: function() {
+        var whole = pickFrom([40,50,60,80,100,120,150,200]);
+        var pct = pickFrom([10,20,25,30,40,50,75]);
+        var ans = whole * pct / 100;
+        var opts = buildOpts(ans, [whole - ans, ans + whole/10, pct]);
+        return { q: 'Use a bar model: find ' + pct + '% of ' + whole + '.',
+                 opts: opts, c: 0,
+                 e: '10% of ' + whole + ' = ' + (whole/10) + '. ' + pct + '% = ' + (pct/10) + ' × ' + (whole/10) + ' = ' + ans + '.' };
+    }},
+    { gen: function() {
+        var whole = pickFrom([198,302,405,497,601,798,1003]);
+        var nearWhole = Math.round(whole/10)*10;
+        var tenPct = nearWhole / 10;
+        var ans = tenPct * 5;
+        var opts = buildOpts('≈ ' + ans, ['≈ ' + (ans+10), '≈ ' + (ans-10), '≈ ' + whole]);
+        return { q: 'Estimate 50% of ' + whole + '.',
+                 opts: opts, c: 0,
+                 e: whole + ' ≈ ' + nearWhole + '. 50% of ' + nearWhole + ' = ' + ans + '.' };
+    }},
+    { gen: function() {
+        var whole = pickFrom([60,80,100,120,150,200,240,300]);
+        var pct = pickFrom([10,20,25,50]);
+        var shaded = whole * pct / 100;
+        var sections = 100 / pct;
+        var opts = buildOpts(pct + '%', [(pct+10)+'%', (pct-5)+'%', (100-pct)+'%']);
+        return { q: 'A bar model of ' + whole + ' is divided into ' + sections + ' equal sections. One section = ' + shaded + '. What percent is one section?',
+                 opts: opts, c: 0,
+                 e: sections + ' equal sections means each = 100%÷' + sections + ' = ' + pct + '%. Check: ' + pct + '% of ' + whole + ' = ' + shaded + ' ✓.' };
+    }},
+    { gen: function() {
+        var whole = pickFrom([40,50,80,100,120,200]);
+        var pctA = 25, pctB = 10;
+        var ansA = whole * pctA / 100, ansB = whole * pctB / 100;
+        var ans = ansA + ansB;
+        var opts = buildOpts(ans, [ansA, ansB, whole - ans]);
+        return { q: 'Using a bar model, find 35% of ' + whole + ' by splitting into 25% + 10%.',
+                 opts: opts, c: 0,
+                 e: '25% of ' + whole + ' = ' + ansA + '. 10% of ' + whole + ' = ' + ansB + '. 35% = ' + ansA + ' + ' + ansB + ' = ' + ans + '.' };
+    }},
+    { question:'A 10×10 grid has 73 squares shaded. What percentage is NOT shaded?', options:['27%','73%','37%','23%'], answer:0, explanation:'100 − 73 = 27 squares unshaded = 27%.' },
+    { question:'Estimate 9% of 400.', options:['≈ 36','≈ 40','≈ 90','≈ 360'], answer:0, explanation:'9% ≈ 10% = 40. But 9% is slightly less, so ≈ 36. Exact: 0.09 × 400 = 36.' },
+    { question:'A bar is divided into 4 equal parts. 3 parts are shaded. What percent is shaded?', options:['75%','60%','25%','34%'], answer:0, explanation:'Each part = 25%. 3 parts = 75%.' },
+    { question:'Estimate 26% of 80.', options:['≈ 20','≈ 26','≈ 8','≈ 32'], answer:0, explanation:'26% ≈ 25% = ¼. ¼ of 80 = 20.' },
+    { question:'On a grid model, you shade 1 full row. What percentage is that?', options:['10%','1%','20%','100%'], answer:0, explanation:'1 row = 10 squares out of 100 = 10%.' }
+  ],
+
   // ── mi-11-1: Algebraic Notation ────────────────────────────────────────────
   'mi-11-1': [
     { question:'What does the coefficient mean in the term 7x?', options:['The variable','The value of x','The number multiplying x','The power of x'], answer:2, explanation:'The coefficient is the number in front of the variable. Here it is 7.' },
@@ -689,6 +844,34 @@ Object.assign(QUESTIONS, {
     { question:'A square has perimeter (12x + 20). Write an expression for one side.', options:['3x + 5','6x + 10','4x + 5','3x + 20'], answer:0, explanation:'Side = perimeter÷4 = (12x+20)÷4 = 3x+5.' },
     { question:'Two consecutive even numbers sum to 4n+2. What are they?', options:['2n and 2n+2','2n and 4n+2','n and 3n+2','4n and 2'], answer:0, explanation:'2n + (2n+2) = 4n+2. The numbers are 2n and 2n+2.' },
     { question:'Prove that the sum of any three consecutive integers is divisible by 3.', options:['n+(n+1)+(n+2)=3n+3=3(n+1) ✓','n+(n+2)+(n+4)=3n+6 ✓','3n is always divisible by 3 ✓','Cannot be proven with algebra'], answer:0, explanation:'n+(n+1)+(n+2)=3n+3=3(n+1), which is always divisible by 3.' }
+  ],
+
+  // ── mi-11-5: Properties of Operations ─────────────────────────────────────
+  'mi-11-5': [
+    { question:'Which property does 7 + 3 = 3 + 7 demonstrate?', options:['Commutative property of addition','Associative property of addition','Identity property','Distributive property'], answer:0, explanation:'Changing the order of addends: a + b = b + a. This is the commutative property of addition.' },
+    { question:'Which property does (2 × 5) × 3 = 2 × (5 × 3) demonstrate?', options:['Associative property of multiplication','Commutative property','Distributive property','Identity property'], answer:0, explanation:'Changing the grouping: (a × b) × c = a × (b × c). This is the associative property of multiplication.' },
+    { question:'n × 1 = n. Which property is this?', options:['Multiplicative identity','Additive identity','Zero property','Commutative property'], answer:0, explanation:'Multiplying by 1 gives the same number. This is the multiplicative identity property.' },
+    { question:'Which expression is equivalent to 4 × (6 + 3) using the distributive property?', options:['4 × 6 + 4 × 3','4 × 6 + 3','4 + 6 × 3','(4 × 6) + 3'], answer:0, explanation:'Distributive: a(b + c) = ab + ac. So 4(6+3) = 4×6 + 4×3 = 24 + 12 = 36.' },
+    { gen: function() {
+        var a = randInt(2, 9), b = randInt(2, 9), c = randInt(2, 9);
+        var ans = a * (b + c);
+        var opts = buildOpts(ans, [a * b + c, a + b * c, a * b * c]);
+        return { q: 'Use the distributive property to find ' + a + ' × (' + b + ' + ' + c + ').',
+                 opts: opts, c: 0,
+                 e: a + ' × ' + b + ' + ' + a + ' × ' + c + ' = ' + (a*b) + ' + ' + (a*c) + ' = ' + ans + '.' };
+    }},
+    { question:'Which property explains why 0 × 458 = 0?', options:['Zero property of multiplication','Identity property','Commutative property','Associative property'], answer:0, explanation:'Any number multiplied by 0 equals 0. This is the zero property.' },
+    { question:'Rewrite 3 × 8 × 5 to make it easier to calculate mentally.', options:['3 × 5 × 8 = 15 × 8 = 120','8 × 5 × 3 = 40 × 3 = 120','Both A and B','Neither'], answer:2, explanation:'Both use the commutative property to reorder. Grouping 3×5=15 or 5×8=40 first makes the mental maths easier.' },
+    { question:'If a × b = 0 and a ≠ 0, what must b equal?', options:['0','1','a','Cannot tell'], answer:0, explanation:'By the zero property, if a product is 0 and one factor is not 0, the other must be 0.' },
+    { gen: function() {
+        var a = randInt(2, 8), b = randInt(2, 8);
+        var product = a * b;
+        var opts = buildOpts(a, [b, product, a + b]);
+        return { q: 'If n × ' + b + ' = ' + product + ', what is n? (Use the multiplicative inverse.)',
+                 opts: opts, c: 0,
+                 e: 'n = ' + product + ' ÷ ' + b + ' = ' + a + '.' };
+    }},
+    { question:'Which is NOT a valid use of properties? (A) 5+0=5 (B) 3×4=4×3 (C) 8−3=3−8 (D) (2+6)+4=2+(6+4)', options:['C: subtraction is not commutative','A: identity property is wrong','B: commutative is wrong','D: associative is wrong'], answer:0, explanation:'8 − 3 = 5 but 3 − 8 = −5. Subtraction is NOT commutative.' }
   ],
 
   // ── mi-12-1: Solving One-Step Equations ────────────────────────────────────
@@ -926,6 +1109,34 @@ Object.assign(QUESTIONS, {
     { question:'A machine converts Celsius to Fahrenheit: F = 9C/5 + 32. Body temperature is 37°C. What is this in °F?', options:['95°F','98.6°F','100°F','104°F'], answer:1, explanation:'F = 9(37)/5 + 32 = 333/5 + 32 = 66.6+32 = 98.6°F.' }
   ],
 
+  // ── mi-12-5: Expressions vs Equations & Tiles ─────────────────────────────
+  'mi-12-5': [
+    { question:'Which of these is an equation?', options:['2x + 5 = 13','3y − 7','4a + 2b','x² + 1'], answer:0, explanation:'Only 2x + 5 = 13 has an equals sign, making it an equation. The others are expressions.' },
+    { question:'Which is an expression (not an equation)?', options:['7n − 3','x = 5','2y + 1 = 9','a + b = c'], answer:0, explanation:'7n − 3 has no equals sign — it is an expression.' },
+    { question:'Algebra tiles show: 2 x-tiles + 5 unit tiles = 11 unit tiles. What is x?', options:['3','5','6','8'], answer:0, explanation:'Remove 5 from both sides: 2x = 6. Divide by 2: x = 3.' },
+    { question:'"A number doubled, plus 3, equals 15." Which equation matches?', options:['2x + 3 = 15','2(x + 3) = 15','x + 6 = 15','3x + 2 = 15'], answer:0, explanation:'Doubled: 2x. Plus 3: 2x + 3. Equals 15: 2x + 3 = 15.' },
+    { question:'"I think of a number, subtract 4, and get 9." Which equation matches?', options:['x − 4 = 9','4 − x = 9','x + 4 = 9','x ÷ 4 = 9'], answer:0, explanation:'Number minus 4 equals 9: x − 4 = 9. So x = 13.' },
+    { gen: function() {
+        var a = randInt(2, 6), b = randInt(1, 8), x = randInt(2, 8);
+        var rhs = a * x + b;
+        var opts = buildOpts(x, [x + 1, x - 1, rhs]);
+        return { q: 'Algebra tiles model: ' + a + ' x-tiles + ' + b + ' unit tiles = ' + rhs + ' unit tiles. Find x.',
+                 opts: opts, c: 0,
+                 e: 'Remove ' + b + ' from both sides: ' + a + 'x = ' + (rhs-b) + '. Divide: x = ' + x + '.' };
+    }},
+    { gen: function() {
+        var x = randInt(2, 10), add = randInt(1, 8);
+        var total = x + add;
+        var opts = buildOpts('x + ' + add + ' = ' + total, ['x − ' + add + ' = ' + total, add + 'x = ' + total, 'x + ' + total + ' = ' + add]);
+        return { q: '"A number plus ' + add + ' equals ' + total + '." Write the equation.',
+                 opts: opts, c: 0,
+                 e: 'x + ' + add + ' = ' + total + '. Solve: x = ' + x + '.' };
+    }},
+    { question:'Which word problem matches the equation 3x = 24?', options:['Three identical bags weigh 24 kg total. Find the weight of one bag.','A bag weighs 3 kg more than 24 kg.','Three bags each weigh 24 kg.','24 bags each weigh 3 kg.'], answer:0, explanation:'3 bags × weight per bag = 24. So 3x = 24, x = 8 kg.' },
+    { question:'Is "5x − 2" an expression or an equation?', options:['Expression','Equation','Neither','Both'], answer:0, explanation:'No equals sign → expression. An equation would be 5x − 2 = something.' },
+    { question:'Model with tiles: x + 4 = 10. Remove 4 unit tiles from both sides. What remains?', options:['x = 6','x = 14','x = 4','2x = 6'], answer:0, explanation:'x + 4 − 4 = 10 − 4. Left: x. Right: 6. So x = 6.' }
+  ],
+
   // ── mi-13-1: Averages & Range ──────────────────────────────────────────────
   'mi-13-1': [
     { gen: function() {
@@ -1109,6 +1320,122 @@ Object.assign(QUESTIONS, {
                  e: pct+'% of '+surveyed+' = '+pct+'/100 × '+surveyed+' = '+ans+'.' };
     }},
     { question:'A frequency polygon is drawn by plotting points at the midpoint of class intervals. Why midpoints?', options:['To make the line straight','To represent the whole class interval fairly','To find the mode','Because the data is continuous'], answer:1, explanation:'The midpoint represents the class interval as a whole — we assume data is evenly spread within each class.' }
+  ],
+
+  // ── mi-13-5: Data Displays & Graph Types ────────────────────────────────
+  'mi-13-5': [
+    { question:'A pictogram uses ★ = 4 books. If 14 books were read, how many symbols should be drawn?', options:['3 and a half','3','4','14'], answer:0, explanation:'14 ÷ 4 = 3.5 symbols (3 full stars and a half star).' },
+    { question:'Which graph is best for comparing the same data from two different years?', options:['Double bar graph','Single pie chart','Pictogram','Scatter graph'], answer:0, explanation:'Double bar graphs place bars side by side so you can compare two data sets easily.' },
+    { question:'What is the advantage of a double line graph over two separate line graphs?', options:['Easier to compare trends on the same axes','Uses less ink','Always more accurate','Shows individual values better'], answer:0, explanation:'Plotting both lines on the same axes makes it easy to see how the two data sets compare over time.' },
+    { gen: function() {
+        var key = pickFrom([2, 4, 5, 10]);
+        var value = key * randInt(3, 8);
+        var symbols = value / key;
+        var opts = buildOpts(symbols + ' symbols', [(symbols + 1) + ' symbols', value + ' symbols', (key) + ' symbols']);
+        return { q: 'A pictogram uses one icon = ' + key + ' items. How many icons represent ' + value + ' items?',
+                 opts: opts, c: 0,
+                 e: value + ' ÷ ' + key + ' = ' + symbols + ' icons.' };
+    }},
+    { gen: function() {
+        var vals = [randInt(2, 15), randInt(2, 15), randInt(2, 15), randInt(2, 15)];
+        var total = vals[0] + vals[1] + vals[2] + vals[3];
+        var opts = buildOpts(total, [total + vals[0], total - vals[0], vals[0] * 4]);
+        return { q: 'A frequency table shows: Cat=' + vals[0] + ', Dog=' + vals[1] + ', Fish=' + vals[2] + ', Bird=' + vals[3] + '. What is the total frequency?',
+                 opts: opts, c: 0,
+                 e: vals[0] + '+' + vals[1] + '+' + vals[2] + '+' + vals[3] + '=' + total + '.' };
+    }},
+    { question:'A line plot shows 5 Xs above 3, 2 Xs above 5, and 1 X above 7. How many data points are there?', options:['8','3','15','5'], answer:0, explanation:'Count all Xs: 5+2+1=8 data points.' },
+    { question:'Which type of graph would be most appropriate to display how temperature changes over a week?', options:['Line graph','Bar chart','Pie chart','Pictogram'], answer:0, explanation:'Line graphs are ideal for showing change over time — each point is plotted and connected.' },
+    { question:'A frequency table groups data into classes 0–9, 10–19, 20–29. What is the class width?', options:['10','9','20','5'], answer:0, explanation:'Each class covers 10 values (e.g. 0,1,2,...,9), so the class width is 10.' },
+    { gen: function() {
+        var a = randInt(10, 30), b = randInt(10, 30);
+        var diff = Math.abs(a - b);
+        var opts = buildOpts(diff, [a + b, Math.max(a, b), Math.min(a, b)]);
+        return { q: 'A double bar graph shows Year A: ' + a + ' and Year B: ' + b + ' for maths scores. What is the difference?',
+                 opts: opts, c: 0,
+                 e: '|' + a + '−' + b + '| = ' + diff + '.' };
+    }},
+    { question:'Why might a pictogram be misleading if the key is not shown?', options:['You cannot tell how many items each symbol represents','The shapes look different','It has too many colours','It only works for small data sets'], answer:0, explanation:'Without a key, readers may assume each symbol = 1, leading to incorrect readings.' }
+  ],
+
+  // ── mi-13-6: Sampling, Bias & Distributions ────────────────────────────────
+  'mi-13-6': [
+    { question:'Which is a statistical question?', options:['How many pets do students in our class have?','How many legs does a spider have?','What is the capital of France?','What year is it?'], answer:0, explanation:'A statistical question expects a variety of answers from different people — the pet question has variability.' },
+    { question:'A school has 800 students. A researcher surveys 50. What is the population?', options:['All 800 students','The 50 surveyed','The researcher','The school building'], answer:0, explanation:'The population is the entire group you want to learn about — all 800 students.' },
+    { question:'A survey about school lunches is given only to students who buy hot meals. Is this biased?', options:['Yes — it excludes students who bring packed lunches','No — hot-meal students eat at school','No — all students were invited','Yes — but only slightly'], answer:0, explanation:'The sample is biased because it only captures one group\'s views, ignoring packed-lunch students.' },
+    { question:'Data set: 3, 4, 5, 5, 6, 6, 7, 25. Which value is an outlier?', options:['25','7','3','6'], answer:0, explanation:'25 is much larger than the rest of the data, making it an outlier.' },
+    { question:'What effect does removing an outlier typically have on the mean?', options:['The mean moves closer to the median','The mean stays the same','The mean doubles','The median changes dramatically'], answer:0, explanation:'An outlier pulls the mean away from the centre; removing it brings the mean closer to the median.' },
+    { gen: function() {
+        var n = pickFrom([50, 100, 200, 500]);
+        var sample = pickFrom([10, 20, 25, 50]);
+        var opts = buildOpts(sample + ' out of ' + n, [n + ' out of ' + sample, sample + ' out of ' + sample, n + ' out of ' + n]);
+        return { q: 'A town has ' + n + ' households. ' + sample + ' are randomly selected for a survey. What is the sample size?',
+                 opts: opts, c: 0,
+                 e: 'The sample is the ' + sample + ' households selected. The population is all ' + n + '.' };
+    }},
+    { question:'Which sampling method is most likely to be unbiased?', options:['Randomly selecting names from the full school register','Asking volunteers','Surveying your friends','Picking people at the bus stop'], answer:0, explanation:'Random selection from the full population gives every member an equal chance of being chosen — reducing bias.' },
+    { question:'A data set is described as "skewed right." What does this mean?', options:['Most data is on the left, with a tail stretching right','Most data is on the right','Data is evenly spread','All values are the same'], answer:0, explanation:'Right-skewed (positively skewed) means a long tail extends to the right — most values cluster on the left.' },
+    { gen: function() {
+        var vals = [2, 3, 4, 4, 5, 5, 5, 6, 6, pickFrom([20, 25, 30])];
+        var outlier = vals[vals.length - 1];
+        var sum = 0; for(var i=0;i<vals.length;i++) sum+=vals[i];
+        var mean = Math.round(sum/vals.length*10)/10;
+        var opts = buildOpts(outlier, [vals[0], mean, 5]);
+        return { q: 'Data: 2, 3, 4, 4, 5, 5, 5, 6, 6, ' + outlier + '. Which value is the outlier?',
+                 opts: opts, c: 0,
+                 e: outlier + ' is much larger than the rest, which cluster around 4–6.' };
+    }},
+    { question:'Why is a larger sample generally better than a smaller one?', options:['It is more likely to represent the population accurately','It is cheaper','It always eliminates bias','It is faster to collect'], answer:0, explanation:'Larger samples reduce the effect of unusual values and give a more reliable picture of the population.' }
+  ],
+
+  // ── mi-13-7: Combined & Predicted Probability ──────────────────────────────
+  'mi-13-7': [
+    { question:'Rolling a die: are "rolling a 2" and "rolling a 5" mutually exclusive?', options:['Yes — you cannot roll both at once','No — they can happen together','Only if the die is fair','It depends on the number of rolls'], answer:0, explanation:'On a single roll you get one outcome, so rolling 2 and rolling 5 cannot both happen — they are mutually exclusive.' },
+    { question:'P(A)=1/4, P(B)=1/3, A and B are mutually exclusive. What is P(A or B)?', options:['7/12','1/12','1/7','1/2'], answer:0, explanation:'P(A or B) = P(A) + P(B) = 1/4 + 1/3 = 3/12 + 4/12 = 7/12.' },
+    { question:'Are "drawing a red card" and "drawing a king" from a standard deck mutually exclusive?', options:['No — the king of hearts and king of diamonds are both red and kings','Yes — a card is either red or a king','Only with jokers removed','It depends on the suit'], answer:0, explanation:'These events overlap because the king of hearts and king of diamonds are both red AND kings.' },
+    { gen: function() {
+        var p = pickFrom([0.1, 0.2, 0.25, 0.5, 0.75]);
+        var trials = pickFrom([40, 60, 80, 100, 200]);
+        var expected = p * trials;
+        var opts = buildOpts(expected, [trials, p * 10, expected + trials]);
+        return { q: 'The probability of winning a game is ' + p + '. If you play ' + trials + ' times, how many wins do you expect?',
+                 opts: opts, c: 0,
+                 e: 'Expected wins = ' + p + ' × ' + trials + ' = ' + expected + '.' };
+    }},
+    { gen: function() {
+        var total = pickFrom([50, 100, 200]);
+        var successes = pickFrom([10, 20, 25, 30, 40, 50]);
+        while (successes >= total) successes = pickFrom([10, 20, 25, 30]);
+        var ep = successes + '/' + total;
+        function gcd(a,b){return b?gcd(b,a%b):a;}
+        var g = gcd(successes, total);
+        var simplified = (successes/g) + '/' + (total/g);
+        var opts = buildOpts(simplified, [(total - successes) + '/' + total, successes + '/' + (total * 2), '1/' + total]);
+        return { q: 'In ' + total + ' trials, an event occurred ' + successes + ' times. What is the experimental probability?',
+                 opts: opts, c: 0,
+                 e: 'P = ' + successes + '/' + total + ' = ' + simplified + '.' };
+    }},
+    { gen: function() {
+        var sides = pickFrom([6, 8, 10, 12]);
+        var target = randInt(1, sides);
+        var opts = buildOpts('1/' + sides, ['1/' + (sides - 1), target + '/' + sides, '1/' + (sides + 1)]);
+        return { q: 'A fair ' + sides + '-sided die is rolled. What is P(rolling a ' + target + ')?',
+                 opts: opts, c: 0,
+                 e: 'Each face is equally likely: P = 1/' + sides + '.' };
+    }},
+    { question:'A spinner has P(red)=0.3 and P(blue)=0.5. If red and blue are mutually exclusive, what is P(red or blue)?', options:['0.8','0.15','0.2','1.0'], answer:0, explanation:'P(red or blue) = 0.3 + 0.5 = 0.8.' },
+    { gen: function() {
+        var p = pickFrom([0.2, 0.25, 0.3, 0.4, 0.5]);
+        var trials = pickFrom([100, 200, 500]);
+        var expected = p * trials;
+        var notExpected = trials - expected;
+        var opts = buildOpts(notExpected, [expected, trials, p * trials * 2]);
+        return { q: 'P(rain) = ' + p + '. In ' + trials + ' days, how many dry days do you expect?',
+                 opts: opts, c: 0,
+                 e: 'P(no rain) = 1 − ' + p + ' = ' + (1-p) + '. Expected dry days = ' + (1-p) + ' × ' + trials + ' = ' + notExpected + '.' };
+    }},
+    { question:'After 1,000 coin flips you got 520 heads. Is the experimental probability close to the theoretical?', options:['Yes — 520/1000 = 0.52, close to 0.5','No — it should be exactly 500','No — 20 extra heads proves bias','Cannot tell without more flips'], answer:0, explanation:'0.52 is very close to the theoretical 0.5 — small deviations are normal with large samples.' },
+    { question:'P(A)=0.4, P(B)=0.3, P(A and B)=0.1. What is P(A or B)?', options:['0.6','0.7','0.1','1.0'], answer:0, explanation:'P(A or B) = P(A) + P(B) − P(A and B) = 0.4 + 0.3 − 0.1 = 0.6 (inclusion-exclusion for overlapping events).' }
   ]
 
 });

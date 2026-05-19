@@ -185,6 +185,70 @@ Object.assign(LESSONS, {
   <div style="background:#e8f5e9;padding:8px;border-radius:8px">÷ 0.5 = × 2</div>
 </div>`,
 
+// ── mi-05-5: Advanced Decimal Operations ─────────────────────────────────────
+'mi-05-5': `
+<h2>Advanced Decimal Operations</h2>
+
+<h3>Multiplying a Decimal by a Decimal</h3>
+<p>Use the <strong>Ignore → Multiply → Replace</strong> method:</p>
+<ol>
+  <li><strong>Ignore</strong> all decimal points and multiply as whole numbers.</li>
+  <li><strong>Count</strong> the total number of decimal places in both original numbers.</li>
+  <li><strong>Place</strong> the decimal point that many places from the right.</li>
+</ol>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> 0.3 × 0.7<br>
+  Step 1: 3 × 7 = 21<br>
+  Step 2: 0.3 has 1 d.p. + 0.7 has 1 d.p. = 2 d.p. total<br>
+  Step 3: 21 → 0.21<br>
+  <strong>Answer: 0.21</strong>
+</div>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> 2.5 × 0.4<br>
+  Step 1: 25 × 4 = 100<br>
+  Step 2: 1 d.p. + 1 d.p. = 2 d.p.<br>
+  Step 3: 100 → 1.00 = <strong>1</strong>
+</div>
+
+<h3>Dividing by a Decimal Divisor</h3>
+<p>Convert to a <strong>whole-number divisor</strong> by multiplying both numbers by the same power of 10.</p>
+
+<div style="background:#e3f2fd;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>Key idea:</strong> a ÷ b = (a × 10) ÷ (b × 10) — the answer stays the same!
+</div>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> 4.8 ÷ 0.6<br>
+  Multiply both by 10: 48 ÷ 6 = <strong>8</strong><br>
+  Check: 8 × 0.6 = 4.8 ✓
+</div>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> 3.6 ÷ 0.04<br>
+  Multiply both by 100: 360 ÷ 4 = <strong>90</strong><br>
+  Check: 90 × 0.04 = 3.6 ✓
+</div>
+
+<h3>Inequalities with Decimal Operations</h3>
+<p>Useful rules for comparing without calculating:</p>
+<ul>
+  <li>Multiplying by a number <strong>less than 1</strong> makes the result <strong>smaller</strong>.</li>
+  <li>Multiplying by a number <strong>greater than 1</strong> makes the result <strong>larger</strong>.</li>
+  <li>Dividing by a number <strong>less than 1</strong> makes the result <strong>larger</strong>.</li>
+</ul>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> Without calculating, compare 5 × 0.3 and 5 × 0.7.<br>
+  Since 0.3 < 0.7, we know 5 × 0.3 < 5 × 0.7.<br>
+  (1.5 < 3.5 ✓)
+</div>
+
+<div style="background:#e8f5e9;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>Top tip:</strong> Always check by reversing — if 4.8 ÷ 0.6 = 8, then 8 × 0.6 should equal 4.8.
+</div>`,
+
 // ── mi-06-1: Equivalent Fractions & Simplifying ──────────────────────────────
 'mi-06-1': `
 <h2>Equivalent Fractions &amp; Simplifying</h2>
@@ -354,6 +418,104 @@ Object.assign(LESSONS, {
   <strong>Tip:</strong> Always convert to improper fractions before operating — trying to add or subtract the whole number and fractional parts separately can lead to errors when borrowing is needed.
 </div>`,
 
+// ── mi-06-5: Recurring Decimals & Fractions as Division ──────────────────────
+'mi-06-5': `
+<h2>Recurring Decimals &amp; Fractions as Division</h2>
+
+<h3>Terminating vs Recurring Decimals</h3>
+<p>When you divide the numerator by the denominator:</p>
+<ul>
+  <li><strong>Terminating</strong> — the division ends: 1/4 = 0.25</li>
+  <li><strong>Recurring</strong> — one or more digits repeat forever: 1/3 = 0.333...</li>
+</ul>
+
+<div style="background:#e3f2fd;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>Quick test:</strong> A fraction (in simplest form) gives a terminating decimal only if the denominator has no prime factors other than <strong>2</strong> and <strong>5</strong>.
+</div>
+
+<h3>Dot Notation</h3>
+<p>Place a dot over the <strong>first and last</strong> digit of the repeating block:</p>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+<tr style="background:#e8f5e9"><th style="padding:8px;border:1px solid #ccc">Fraction</th><th style="padding:8px;border:1px solid #ccc">Decimal</th><th style="padding:8px;border:1px solid #ccc">Dot notation</th></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">1/3</td><td style="padding:8px;border:1px solid #ccc">0.333...</td><td style="padding:8px;border:1px solid #ccc">0.3̇</td></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">2/3</td><td style="padding:8px;border:1px solid #ccc">0.666...</td><td style="padding:8px;border:1px solid #ccc">0.6̇</td></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">1/6</td><td style="padding:8px;border:1px solid #ccc">0.1666...</td><td style="padding:8px;border:1px solid #ccc">0.16̇</td></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">2/11</td><td style="padding:8px;border:1px solid #ccc">0.181818...</td><td style="padding:8px;border:1px solid #ccc">0.1̇8̇</td></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">1/7</td><td style="padding:8px;border:1px solid #ccc">0.142857142857...</td><td style="padding:8px;border:1px solid #ccc">0.1̇42857̇</td></tr>
+</table>
+
+<h3>Fractions as Division</h3>
+<p>Every fraction <strong>is</strong> a division. The fraction a/b means "a divided by b".</p>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> 3 pizzas shared among 7 people.<br>
+  Each person gets 3 ÷ 7 = <strong>3/7</strong> of a pizza.
+</div>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> 5 bars of chocolate shared among 4 children.<br>
+  Each child gets 5 ÷ 4 = 5/4 = <strong>1 1/4</strong> bars.
+</div>
+
+<h3>Reading Fractions from Graphs and Tables</h3>
+<p>To find a fraction from data, write <strong>part / total</strong> and simplify:</p>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> A bar chart shows 12 out of 30 students chose football.<br>
+  Fraction = 12/30 = <strong>2/5</strong> (÷ HCF of 6).
+</div>
+
+<div style="background:#e8f5e9;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>Remember:</strong> A pie chart angle of 90° out of 360° = 90/360 = <strong>1/4</strong>.
+</div>`,
+
+// ── mi-06-6: Fraction Inequalities ───────────────────────────────────────────
+'mi-06-6': `
+<h2>Fraction Inequalities</h2>
+<p>An inequality compares two values using <strong>&lt;</strong> (less than), <strong>&gt;</strong> (greater than) or <strong>=</strong> (equals). You can compare fraction sums and differences the same way you compare individual fractions — convert to a <strong>common denominator</strong>.</p>
+
+<h3>Method</h3>
+<ol>
+  <li><strong>Calculate</strong> both sides (or just the side that needs work).</li>
+  <li><strong>Convert</strong> to the same denominator.</li>
+  <li><strong>Compare</strong> the numerators.</li>
+</ol>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example 1:</strong> Is 1/4 + 1/3 greater than 1/2?<br>
+  LCD = 12: &nbsp; 3/12 + 4/12 = 7/12<br>
+  1/2 = 6/12<br>
+  7/12 &gt; 6/12 → <strong>1/4 + 1/3 &gt; 1/2</strong> ✓
+</div>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example 2:</strong> Insert &lt;, &gt; or =: &nbsp; 3/4 − 1/3 ___ 1/2<br>
+  LCD = 12: &nbsp; 9/12 − 4/12 = 5/12<br>
+  1/2 = 6/12<br>
+  5/12 &lt; 6/12 → <strong>3/4 − 1/3 &lt; 1/2</strong>
+</div>
+
+<h3>With Mixed Numbers</h3>
+<p>The same method works — convert to improper fractions or work with whole and fractional parts separately.</p>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example 3:</strong> Is 2 1/3 + 1 1/4 greater than 3 1/2?<br>
+  Whole parts: 2 + 1 = 3<br>
+  Fractional parts: 1/3 + 1/4 = 4/12 + 3/12 = 7/12<br>
+  Total = 3 7/12<br>
+  3 1/2 = 3 6/12<br>
+  3 7/12 &gt; 3 6/12 → <strong>2 1/3 + 1 1/4 &gt; 3 1/2</strong> ✓
+</div>
+
+<div style="background:#e3f2fd;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>Quick check:</strong> If both fractions are less than 1/2, their sum is less than 1.<br>
+  If both fractions are greater than 1/2, their sum is greater than 1.
+</div>
+
+<div style="background:#e8f5e9;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>Top tip:</strong> You don't always need to calculate exactly — estimating by comparing to benchmark fractions (0, 1/4, 1/2, 3/4, 1) is often enough.
+</div>`,
+
 // ── mi-07-1: Multiply Fractions by Whole Numbers ─────────────────────────────
 'mi-07-1': `
 <h2>Multiply Fractions by Whole Numbers</h2>
@@ -507,6 +669,58 @@ Object.assign(LESSONS, {
 
 <div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Always convert to improper fractions first</strong> — operating directly on the whole number and fractional parts separately is error-prone and only works reliably for addition.
+</div>`,
+
+// ── mi-07-5: Scaling & Estimating with Fractions ─────────────────────────────
+'mi-07-5': `
+<h2>Scaling &amp; Estimating with Fractions</h2>
+
+<h3>Scaling by a Fraction</h3>
+<p>When you multiply a number by a fraction, you are <strong>scaling</strong> it:</p>
+
+<div style="background:#e3f2fd;padding:0.75em 1em;border-radius:8px;margin:1em 0">
+  <ul style="margin:0">
+    <li>Multiply by a fraction <strong>less than 1</strong> → result is <strong>smaller</strong> than the original.</li>
+    <li>Multiply by a fraction <strong>equal to 1</strong> → result is the <strong>same</strong>.</li>
+    <li>Multiply by a fraction <strong>greater than 1</strong> → result is <strong>larger</strong> than the original.</li>
+  </ul>
+</div>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example 1:</strong> 3/4 × 20<br>
+  3/4 &lt; 1, so the answer must be less than 20.<br>
+  3/4 × 20 = 15 ✓ (15 &lt; 20)
+</div>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example 2:</strong> 5/3 × 12<br>
+  5/3 &gt; 1 (it equals 1⅔), so the answer must be more than 12.<br>
+  5/3 × 12 = 20 ✓ (20 &gt; 12)
+</div>
+
+<h3>Estimating Products</h3>
+<p>To estimate a fraction × a number:</p>
+<ol>
+  <li><strong>Round</strong> the number to a nearby "friendly" number (one that divides easily by the denominator).</li>
+  <li><strong>Calculate</strong> the fraction of the friendly number.</li>
+</ol>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example 3:</strong> Estimate 2/5 × 47.<br>
+  Round 47 to 50 (friendly for fifths).<br>
+  2/5 × 50 = 20. Good estimate: <strong>about 20</strong>.
+</div>
+
+<h3>Estimating with Mixed Numbers</h3>
+<p>Round the mixed number to the nearest whole number, then multiply.</p>
+
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example 4:</strong> Estimate 2 3/4 × 3 1/5.<br>
+  Round: 3 × 3 = 9. Exact: 8.8. Estimate is close!
+</div>
+
+<div style="background:#e8f5e9;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>Benchmark fractions:</strong> Use 1/4 ≈ 0.25, 1/3 ≈ 0.33, 1/2 = 0.5, 2/3 ≈ 0.67, 3/4 = 0.75 to quickly check if your answer is in the right ballpark.
 </div>`,
 
 // ── mi-08-1: Understanding Integers ──────────────────────────────────────────
@@ -665,6 +879,47 @@ Object.assign(LESSONS, {
 
 <div style="background:#fce4ec;padding:1em;border-radius:8px;margin:1em 0">
   <strong>⚠️ Watch out:</strong> −3² = −9 (NOT +9) because the square applies to 3, then the minus sign is placed in front. Only (−3)² = +9.
+</div>`,
+
+// ── mi-08-5: Integer Input/Output Tables ────────────────────────────────
+'mi-08-5': `<h2>Integer Input/Output Tables</h2>
+
+<h3>What Is an Input/Output Table?</h3>
+<p>An input/output table applies a <strong>rule</strong> to each input value to produce an output value. When working with integers, the rules involve adding or subtracting positive and negative numbers.</p>
+
+<div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example — Rule: add −4</strong><br><br>
+  <table style="border-collapse:collapse;width:100%">
+    <tr><th style="border:1px solid #90caf9;padding:8px;background:#bbdefb">Input</th><td style="border:1px solid #90caf9;padding:8px;text-align:center">5</td><td style="border:1px solid #90caf9;padding:8px;text-align:center">−2</td><td style="border:1px solid #90caf9;padding:8px;text-align:center">0</td><td style="border:1px solid #90caf9;padding:8px;text-align:center">−7</td></tr>
+    <tr><th style="border:1px solid #90caf9;padding:8px;background:#bbdefb">Output</th><td style="border:1px solid #90caf9;padding:8px;text-align:center">1</td><td style="border:1px solid #90caf9;padding:8px;text-align:center">−6</td><td style="border:1px solid #90caf9;padding:8px;text-align:center">−4</td><td style="border:1px solid #90caf9;padding:8px;text-align:center">−11</td></tr>
+  </table>
+  <br>Each output = input + (−4) = input − 4
+</div>
+
+<h3>Finding the Rule</h3>
+<p>To find the rule, calculate <strong>Output − Input</strong> for any pair. The result tells you what was added.</p>
+
+<div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Input 3 → Output −2<br>
+  Output − Input = −2 − 3 = −5<br>
+  Rule: <strong>add −5</strong> (same as subtract 5)<br><br>
+  Check with another pair: Input −1 → Output should be −1 + (−5) = −6 ✓
+</div>
+
+<h3>Finding a Missing Input</h3>
+<p>If you know the rule and the output, work backwards:</p>
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
+  Rule: add 7. Output = 3. What was the input?<br>
+  Input + 7 = 3<br>
+  Input = 3 − 7 = <strong>−4</strong>
+</div>
+
+<h3>Tips</h3>
+<div style="background:#fce4ec;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>⚠️ Common mistakes:</strong><br>
+  • Forgetting sign rules when subtracting negatives: −3 − (−5) = −3 + 5 = 2<br>
+  • Mixing up the direction: Output − Input gives the rule, NOT Input − Output<br>
+  • Always check your rule with at least two pairs from the table
 </div>`
 
 });

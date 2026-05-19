@@ -150,11 +150,7 @@ function getIslandStatus(islandId) {
 }
 
 function isIslandUnlocked(island, allProgress) {
-  if (!island.prerequisites || island.prerequisites.length === 0) return true;
-  return island.prerequisites.every(prereqId => {
-    const prog = allProgress[prereqId];
-    return prog && (prog.lessonViewed || (prog.flashcardsLearned && prog.flashcardsLearned.length > 0));
-  });
+  return true; // TEMP: prerequisites check disabled for testing
 }
 
 // ── Progress Ring SVG ─────────────────────────────────────────────────────────

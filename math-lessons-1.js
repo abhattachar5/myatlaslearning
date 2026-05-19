@@ -877,6 +877,54 @@ Object.assign(LESSONS, {
 <div style="background:#e8f5e9;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
   <strong>Useful check:</strong> HCF(a, b) × LCM(a, b) = a × b<br>
   HCF(12, 18) × LCM(12, 18) = 6 × 36 = 216 = 12 × 18 ✓
+</div>`,
+
+// ── mi-04-5: Multiplicative Inverses ──────────────────────────────────────
+'mi-04-5': `
+<h2>Multiplicative Inverses (Reciprocals)</h2>
+<p>The <strong>multiplicative inverse</strong> of a number is the value you multiply it by to get <strong>1</strong>. It is also called the <strong>reciprocal</strong>.</p>
+
+<div style="background:#e3f2fd;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center;font-size:1.1em">
+  <strong>Key rule:</strong> n × 1/n = 1
+</div>
+
+<h3>Finding the Reciprocal</h3>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+<tr style="background:#e8f5e9"><th style="padding:8px;border:1px solid #ccc">Number type</th><th style="padding:8px;border:1px solid #ccc">Number</th><th style="padding:8px;border:1px solid #ccc">Reciprocal</th><th style="padding:8px;border:1px solid #ccc">Check</th></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">Whole number</td><td style="padding:8px;border:1px solid #ccc">5</td><td style="padding:8px;border:1px solid #ccc">1/5</td><td style="padding:8px;border:1px solid #ccc">5 × 1/5 = 1 ✓</td></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">Fraction</td><td style="padding:8px;border:1px solid #ccc">3/4</td><td style="padding:8px;border:1px solid #ccc">4/3</td><td style="padding:8px;border:1px solid #ccc">3/4 × 4/3 = 12/12 = 1 ✓</td></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">Mixed number</td><td style="padding:8px;border:1px solid #ccc">2½ = 5/2</td><td style="padding:8px;border:1px solid #ccc">2/5</td><td style="padding:8px;border:1px solid #ccc">5/2 × 2/5 = 10/10 = 1 ✓</td></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">Decimal</td><td style="padding:8px;border:1px solid #ccc">0.25 = 1/4</td><td style="padding:8px;border:1px solid #ccc">4</td><td style="padding:8px;border:1px solid #ccc">0.25 × 4 = 1 ✓</td></tr>
+</table>
+
+<h3>Quick Method</h3>
+<ul>
+  <li><strong>Whole number n</strong> → reciprocal is <strong>1/n</strong></li>
+  <li><strong>Fraction a/b</strong> → flip it to <strong>b/a</strong></li>
+  <li><strong>Decimal</strong> → convert to a fraction first, then flip</li>
+  <li><strong>Mixed number</strong> → convert to improper fraction, then flip</li>
+</ul>
+
+<h3>Worked Examples</h3>
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example 1:</strong> Find the reciprocal of 7.<br>
+  Reciprocal = 1/7. Check: 7 × 1/7 = 1 ✓
+</div>
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example 2:</strong> Find the reciprocal of 0.2.<br>
+  0.2 = 1/5 → reciprocal = 5/1 = 5. Check: 0.2 × 5 = 1 ✓
+</div>
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example 3:</strong> Find the reciprocal of 1¾.<br>
+  1¾ = 7/4 → reciprocal = 4/7. Check: 7/4 × 4/7 = 28/28 = 1 ✓
+</div>
+
+<div style="background:#ffebee;padding:0.75em 1em;border-radius:8px;margin:1em 0">
+  <strong>⚠ Special case:</strong> 0 has <strong>no reciprocal</strong>. There is no number that multiplied by 0 gives 1, because 0 × anything = 0. Division by zero is undefined.
+</div>
+
+<div style="background:#e8f5e9;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>Remember:</strong> The reciprocal of 1 is 1 (since 1 × 1 = 1), and the reciprocal of −1 is −1 (since −1 × −1 = 1).
 </div>`
 
 });

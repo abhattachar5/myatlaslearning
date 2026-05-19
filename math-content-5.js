@@ -18,7 +18,12 @@ FLASHCARDS.push(
   // mi-18-3: VAT & Tips
   { islandId:'mi-18-3', front:'What is VAT and what is the standard UK rate?', back:'VAT (Value Added Tax) is a tax added to goods and services. The standard rate in the UK is 20%.' },
   { islandId:'mi-18-3', front:'A meal costs £40 before VAT. What is the total with 20% VAT?', back:'VAT = 20% of £40 = £8. Total = £40 + £8 = £48. Or £40 × 1.2 = £48.' },
-  { islandId:'mi-18-3', front:'A restaurant bill is £55. You leave a 15% tip. How much is the tip?', back:'Tip = 15% of £55 = 0.15 × £55 = £8.25.' }
+  { islandId:'mi-18-3', front:'A restaurant bill is £55. You leave a 15% tip. How much is the tip?', back:'Tip = 15% of £55 = 0.15 × £55 = £8.25.' },
+
+  // mi-18-4: Multiply & Divide Money & Coins
+  { islandId:'mi-18-4', front:'What is £3.45 × 6?', back:'£3.45 × 6:\n345p × 6 = 2,070p = £20.70\n\nOr: £3 × 6 = £18, 45p × 6 = £2.70.\n£18 + £2.70 = £20.70' },
+  { islandId:'mi-18-4', front:'Share £15.60 equally among 4 people.', back:'£15.60 ÷ 4 = £3.90 each.\n\n1,560p ÷ 4 = 390p = £3.90.\n\nCheck: £3.90 × 4 = £15.60 ✓' },
+  { islandId:'mi-18-4', front:'You have 50p, 20p and 10p coins. How can you make exactly 80p?', back:'Several ways:\n• 1×50p + 1×20p + 1×10p = 80p\n• 4×20p = 80p\n• 1×50p + 3×10p = 80p\n• 2×20p + 4×10p = 80p\n\nAlways check the total matches.' }
 );
 
 // ─── TOPIC 19: TIME ───────────────────────────────────────────────────────────
@@ -342,6 +347,64 @@ Object.assign(QUESTIONS, {
                  e: 'VAT=£' + vat.toFixed(2) + '. Total=£' + rate + '+£' + vat.toFixed(2) + '=£' + total.toFixed(2) + '.' };
     }},
     { question:'Which item has a higher VAT amount: a £300 camera or a £250 watch, both at 20% VAT?', options:['Camera (£60 VAT)','Watch (£50 VAT)','Same','Cannot tell'], answer:0, explanation:'Camera: 20%×£300=£60. Watch: 20%×£250=£50. Camera has higher VAT.' }
+  ],
+
+  // ── mi-18-4: Multiply & Divide Money & Coins ──────────────────────────────
+  'mi-18-4': [
+    { gen: function() {
+        var pounds = randInt(1, 9);
+        var pence = pickFrom([10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 75, 80, 95]);
+        var qty = randInt(2, 8);
+        var totalPence = (pounds * 100 + pence) * qty;
+        var ans = (totalPence / 100).toFixed(2);
+        var opts = buildOpts('£' + ans, ['£' + (parseFloat(ans) + 1).toFixed(2), '£' + (parseFloat(ans) - 1).toFixed(2), '£' + (pounds * qty) + '.00']);
+        return { q: 'A notebook costs £' + pounds + '.' + (pence < 10 ? '0' : '') + pence + '. How much do ' + qty + ' cost?',
+                 opts: opts, c: 0,
+                 e: '£' + pounds + '.' + (pence < 10 ? '0' : '') + pence + ' × ' + qty + ' = £' + ans + '.' };
+    }},
+    { gen: function() {
+        var people = pickFrom([2, 3, 4, 5, 6, 8]);
+        var each = pickFrom([2.50, 3.25, 4.50, 5.75, 6.25, 7.50, 8.50]);
+        var total = (each * people).toFixed(2);
+        var opts = buildOpts('£' + each.toFixed(2), ['£' + (each + 1).toFixed(2), '£' + (each - 0.5).toFixed(2), '£' + total]);
+        return { q: people + ' friends share a bill of £' + total + ' equally. How much does each pay?',
+                 opts: opts, c: 0,
+                 e: '£' + total + ' ÷ ' + people + ' = £' + each.toFixed(2) + ' each.' };
+    }},
+    { gen: function() {
+        var n50 = randInt(1, 4), n20 = randInt(1, 5), n10 = randInt(0, 3);
+        var total = n50 * 50 + n20 * 20 + n10 * 10;
+        var totalStr = total >= 100 ? '£' + (total/100).toFixed(2) : total + 'p';
+        var opts = buildOpts(totalStr, [(total + 10) + 'p', (total - 10) + 'p', (n50 + n20 + n10) + 'p']);
+        return { q: 'You have ' + n50 + ' × 50p coins, ' + n20 + ' × 20p coins and ' + n10 + ' × 10p coins. What is the total?',
+                 opts: opts, c: 0,
+                 e: n50 + '×50p=' + (n50*50) + 'p + ' + n20 + '×20p=' + (n20*20) + 'p + ' + n10 + '×10p=' + (n10*10) + 'p = ' + total + 'p.' };
+    }},
+    { gen: function() {
+        var price = pickFrom([1.99, 2.49, 2.99, 3.49, 3.99, 4.99]);
+        var qty = randInt(3, 7);
+        var totalPence = Math.round(price * 100) * qty;
+        var ans = (totalPence / 100).toFixed(2);
+        var opts = buildOpts('£' + ans, ['£' + (parseFloat(ans) + 1).toFixed(2), '£' + (parseFloat(ans) - 1).toFixed(2), '£' + (Math.ceil(price) * qty).toFixed(2)]);
+        return { q: 'Pens cost £' + price.toFixed(2) + ' each. What is the total for ' + qty + ' pens?',
+                 opts: opts, c: 0,
+                 e: '£' + price.toFixed(2) + ' × ' + qty + ' = £' + ans + '.' };
+    }},
+    { gen: function() {
+        var total = pickFrom([10, 15, 20, 24, 30, 36, 42]);
+        var divisor = pickFrom([3, 4, 5, 6]);
+        while (total % divisor !== 0) divisor = pickFrom([2, 3, 4, 5, 6]);
+        var each = total / divisor;
+        var opts = buildOpts('£' + each.toFixed(2), ['£' + (each + 1).toFixed(2), '£' + (each - 1).toFixed(2), '£' + total.toFixed(2)]);
+        return { q: '£' + total + ' is shared equally among ' + divisor + ' children. How much does each get?',
+                 opts: opts, c: 0,
+                 e: '£' + total + ' ÷ ' + divisor + ' = £' + each.toFixed(2) + '.' };
+    }},
+    { question:'Sam has only 20p coins. He needs exactly £1.40. How many 20p coins does he need?', options:['7','6','8','14'], answer:0, explanation:'£1.40 = 140p. 140 ÷ 20 = 7 coins.' },
+    { question:'A bag of 8 apples costs £2.40. What is the cost per apple?', options:['30p','£0.30','Both A and B','24p'], answer:2, explanation:'£2.40 ÷ 8 = £0.30 = 30p.' },
+    { question:'You buy 5 items at £2.75 each and pay with a £20 note. What change do you get?', options:['£6.25','£7.25','£5.75','£6.75'], answer:0, explanation:'Total = 5 × £2.75 = £13.75. Change = £20 − £13.75 = £6.25.' },
+    { question:'Which combination makes exactly £1? (A) 2×50p (B) 5×20p (C) 10×10p (D) All of these', options:['All of these','Only A','Only B','Only C'], answer:0, explanation:'A: 2×50=100p ✓. B: 5×20=100p ✓. C: 10×10=100p ✓.' },
+    { question:'£27.50 is divided equally among 5 people. How much each?', options:['£5.50','£5.00','£6.50','£4.50'], answer:0, explanation:'£27.50 ÷ 5 = £5.50.' }
   ],
 
   // ── mi-19-1: Elapsed Time ──────────────────────────────────────────────────

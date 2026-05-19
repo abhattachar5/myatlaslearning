@@ -163,6 +163,25 @@ Object.assign(LESSONS, {
   ]
 },
 
+// ── mi-16-4: Extra/Missing Info & Direction ──────────────────────────────
+'mi-16-4': {
+  title: 'Extra/Missing Information & Direction',
+  sections: [
+    {
+      heading: 'Extra Information',
+      content: '<p>Some word problems include data you do <strong>not need</strong> to solve them. This extra information can distract you if you don\'t read the question carefully.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example:</strong> "A shop sells apples for 40p and bananas for 25p. Mia buys 6 apples. How much does she spend?"<br><br>Extra info: <span style="text-decoration:line-through">bananas for 25p</span> — not needed!<br>Answer: 6 × 40p = <strong>£2.40</strong></div><p><strong>Strategy:</strong> Underline what the question asks. Then identify which numbers relate to that question. Cross out anything else.</p>'
+    },
+    {
+      heading: 'Missing Information',
+      content: '<p>Some problems don\'t give you enough data to find the answer. You need to identify <strong>what is missing</strong>.</p><div style="background:#fff3e0;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example:</strong> "Pencils cost 30p each. How much does Sam spend?"<br><br>Missing: <strong>how many pencils Sam buys</strong>.<br>Without this, we cannot calculate the total cost.</div><div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:0.75em 0"><strong>How to spot missing info:</strong><br>• Write out the calculation you would need<br>• Check if every value in that calculation is given<br>• Name the missing piece</div>'
+    },
+    {
+      heading: 'Distance & Direction to Starting Point',
+      content: '<p>These problems ask you to track movement along a line and find the <strong>net displacement</strong> — how far (and which direction) from the start you end up.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example:</strong> Walk 8 km east, then 3 km west, then 2 km east.<br><br>East: 8 + 2 = 10 km<br>West: 3 km<br>Net: 10 − 3 = <strong>7 km east</strong> of start<br>To return: walk <strong>7 km west</strong></div><div style="background:#f3e5f5;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Method:</strong><br>1. Add up all movements in one direction<br>2. Add up all movements in the opposite direction<br>3. Find the difference = net displacement<br>4. To return, travel the net distance in the <strong>opposite</strong> direction</div>'
+    }
+  ]
+},
+
 'mi-17-1': {
   title: 'Metric Units',
   sections: [
@@ -213,6 +232,29 @@ Object.assign(LESSONS, {
     {
       heading: 'Converting in Both Directions',
       content: '<p>The key is to reason about whether the answer should be bigger or smaller than the starting value.</p><div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Tip:</strong> Kilometres are smaller than miles (1 mile = 1.6 km), so a distance in km will always be a <em>larger</em> number than the same distance in miles.<br>80 km &gt; 50 miles — both are the same distance, but 80 &gt; 50 because km are shorter.</div><div style="background:#fff3e0;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Check your direction:</strong> Converting 5 miles to km — km are smaller, so you expect <em>more</em> of them. 5 × 1.6 = 8. ✓ (8 &gt; 5 ✓)</div>'
+    }
+  ]
+},
+
+// ── mi-17-4: Area/Volume Units & Temperature ──────────────────────────────
+'mi-17-4': {
+  title: 'Area/Volume Units & Temperature',
+  sections: [
+    {
+      heading: 'Square Unit Conversions',
+      content: '<p>When converting area units, you must square the conversion factor because area has <strong>two dimensions</strong>.</p><table style="border-collapse:collapse;width:100%;margin:0.75em 0;font-size:0.9em"><tr style="background:#e8f5e9"><th style="border:1px solid #ccc;padding:8px">Conversion</th><th style="border:1px solid #ccc;padding:8px">Factor</th><th style="border:1px solid #ccc;padding:8px">Why</th></tr><tr><td style="border:1px solid #ccc;padding:8px">m² → cm²</td><td style="border:1px solid #ccc;padding:8px;text-align:center">× 10,000</td><td style="border:1px solid #ccc;padding:8px">100 × 100 = 10,000</td></tr><tr style="background:#f9f9f9"><td style="border:1px solid #ccc;padding:8px">cm² → mm²</td><td style="border:1px solid #ccc;padding:8px;text-align:center">× 100</td><td style="border:1px solid #ccc;padding:8px">10 × 10 = 100</td></tr></table><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example:</strong> 3 m² = 3 × 10,000 = <strong>30,000 cm²</strong></div>'
+    },
+    {
+      heading: 'Cubic Units & Capacity',
+      content: '<p>For volume, you <strong>cube</strong> the conversion factor (three dimensions).</p><div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Key facts:</strong><br>1 cm³ = 1 ml (exactly)<br>1,000 cm³ = 1 litre<br>1 m³ = 1,000,000 cm³ = <strong>1,000 litres</strong></div><div style="background:#fff3e0;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example:</strong> A tank is 40 cm × 25 cm × 20 cm.<br>Volume = 20,000 cm³ = 20,000 ml = <strong>20 litres</strong></div>'
+    },
+    {
+      heading: 'Comparing Temperatures',
+      content: '<p>Temperatures below zero are negative. The closer to zero, the <strong>warmer</strong> the temperature.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0">−2°C is warmer than −7°C<br>−7°C is warmer than −15°C<br><br><strong>Temperature rise</strong> from −5°C to 3°C:<br>−5 to 0 = 5 degrees, then 0 to 3 = 3 degrees.<br>Total rise = <strong>8°C</strong></div>'
+    },
+    {
+      heading: 'Precision in Measurement',
+      content: '<p><strong>Precision</strong> means how exact a measurement is. Choose units that match what you are measuring.</p><div style="background:#f3e5f5;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Guidelines:</strong><br>• Length of a pencil → mm or cm (precise)<br>• Distance between cities → km (no need for cm!)<br>• Mass of a letter → grams (not kg)<br>• A measurement of 4.7 cm means the real value is between 4.65 cm and 4.75 cm</div>'
     }
   ]
 }

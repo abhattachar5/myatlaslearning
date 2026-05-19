@@ -37,7 +37,12 @@ FLASHCARDS.push(
   // mi-27-3: Volume of Cubes & Cuboids
   { islandId:'mi-27-3', front:'What is the formula for the volume of a cuboid?', back:'Volume = length × width × height (V = l × w × h). Measured in cubic units (cm³, m³).' },
   { islandId:'mi-27-3', front:'A cuboid is 5 cm × 4 cm × 3 cm. What is its volume?', back:'V = 5×4×3 = 60 cm³.' },
-  { islandId:'mi-27-3', front:'How many cm³ are in 1 litre?', back:'1 litre = 1,000 cm³. So 2.5 litres = 2,500 cm³.' }
+  { islandId:'mi-27-3', front:'How many cm³ are in 1 litre?', back:'1 litre = 1,000 cm³. So 2.5 litres = 2,500 cm³.' },
+
+  // mi-27-4: Compare Area & Perimeter
+  { islandId:'mi-27-4', front:'Can two rectangles have the same perimeter but different areas?', back:'Yes! Example with perimeter 20 cm:\n• 1 × 9: P=20, Area=9 cm²\n• 2 × 8: P=20, Area=16 cm²\n• 5 × 5: P=20, Area=25 cm²\n\nThe closer to a square, the larger the area.' },
+  { islandId:'mi-27-4', front:'Can two rectangles have the same area but different perimeters?', back:'Yes! Example with area 12 cm²:\n• 1 × 12: P=26 cm\n• 2 × 6: P=16 cm\n• 3 × 4: P=14 cm\n\nThe closer to a square, the smaller the perimeter.' },
+  { islandId:'mi-27-4', front:'Which rectangle has the largest area for a given perimeter?', back:'A square.\n\nFor perimeter 24 cm, the square is 6×6 = 36 cm².\nNo other 24 cm-perimeter rectangle has a larger area.' }
 );
 
 // ─── TOPIC 28: FINANCIAL LITERACY ────────────────────────────────────────────
@@ -392,7 +397,64 @@ Object.assign(QUESTIONS, {
             e: 'V=' + l + '×' + w + '×' + h + '=' + vol + ' cm³=' + litres + ' litres.'
         };
     }},
-    { question:'Two cuboids: A is 4×3×5 cm, B is 6×2×5 cm. Which has the greater volume?', options:['B (60 cm³)','A (60 cm³)','Same volume','Cannot tell'], answer:2, explanation:'A: 4×3×5=60 cm³. B: 6×2×5=60 cm³. They are equal.' },
+    { question:'Two cuboids: A is 4×3×5 cm, B is 6×2×5 cm. Which has the greater volume?', options:['B (60 cm³)','A (60 cm³)','Same volume','Cannot tell'], answer:2, explanation:'A: 4×3×5=60 cm³. B: 6×2×5=60 cm³. They are equal.' }
+  ],
+
+  // ── mi-27-4: Compare Area & Perimeter ─────────────────────────────────────
+  'mi-27-4': [
+    { gen: function() {
+        var l1 = randInt(2, 8), w1 = randInt(2, 8);
+        var l2 = randInt(2, 8), w2 = randInt(2, 8);
+        while (l1 === l2 && w1 === w2) { l2 = randInt(2, 8); w2 = randInt(2, 8); }
+        var a1 = l1 * w1, a2 = l2 * w2;
+        var larger = a1 >= a2 ? 'A' : 'B';
+        var opts = buildOpts(larger + ' (' + Math.max(a1,a2) + ' cm²)', [
+          (larger==='A'?'B':'A') + ' (' + Math.min(a1,a2) + ' cm²)',
+          'Same area',
+          'Cannot tell'
+        ]);
+        return { q: 'Rectangle A: ' + l1 + '×' + w1 + ' cm. Rectangle B: ' + l2 + '×' + w2 + ' cm. Which has more area?',
+                 opts: opts, c: 0,
+                 e: 'A = ' + a1 + ' cm². B = ' + a2 + ' cm². ' + larger + ' is larger.' };
+    }},
+    { gen: function() {
+        var l1 = randInt(2, 8), w1 = randInt(2, 8);
+        var l2 = randInt(2, 8), w2 = randInt(2, 8);
+        while (l1 === l2 && w1 === w2) { l2 = randInt(2, 8); w2 = randInt(2, 8); }
+        var p1 = 2*(l1+w1), p2 = 2*(l2+w2);
+        var larger = p1 >= p2 ? 'A' : 'B';
+        var opts = buildOpts(larger + ' (' + Math.max(p1,p2) + ' cm)', [
+          (larger==='A'?'B':'A') + ' (' + Math.min(p1,p2) + ' cm)',
+          'Same perimeter',
+          'Cannot tell'
+        ]);
+        return { q: 'Rectangle A: ' + l1 + '×' + w1 + ' cm. Rectangle B: ' + l2 + '×' + w2 + ' cm. Which has the greater perimeter?',
+                 opts: opts, c: 0,
+                 e: 'A perimeter = ' + p1 + ' cm. B perimeter = ' + p2 + ' cm.' };
+    }},
+    { question:'Two rectangles both have perimeter 16 cm. A is 2×6 and B is 4×4. Which has more area?', options:['B (16 cm²)','A (12 cm²)','Same area','Cannot tell'], answer:0, explanation:'A: 2×6=12 cm². B: 4×4=16 cm². The square has more area.' },
+    { question:'Two rectangles both have area 24 cm². A is 3×8 and B is 4×6. Which has the smaller perimeter?', options:['B (20 cm)','A (22 cm)','Same perimeter','Cannot tell'], answer:0, explanation:'A: P=2(3+8)=22 cm. B: P=2(4+6)=20 cm. B (closer to square) has smaller perimeter.' },
+    { gen: function() {
+        var perim = pickFrom([12, 16, 20, 24, 28]);
+        var halfP = perim / 2;
+        var side = halfP / 2;
+        var area = side * side;
+        var opts = buildOpts(area + ' cm²', [(area + 1) + ' cm²', (perim * perim) + ' cm²', (halfP * halfP) + ' cm²']);
+        return { q: 'A rectangle with perimeter ' + perim + ' cm has the largest possible area when it is a square. What is that area?',
+                 opts: opts, c: 0,
+                 e: 'Square side = ' + perim + '÷4 = ' + side + '. Area = ' + side + '² = ' + area + ' cm².' };
+    }},
+    { gen: function() {
+        var l = randInt(3, 10), w = randInt(1, l-1);
+        var a = l * w, p = 2*(l+w);
+        var opts = buildOpts('Area=' + a + ' cm², Perimeter=' + p + ' cm', ['Area=' + p + ' cm², Perimeter=' + a + ' cm', 'Area=' + (a+p) + ' cm²', 'Area=' + (l+w) + ' cm²']);
+        return { q: 'Find both area and perimeter of a ' + l + '×' + w + ' cm rectangle.',
+                 opts: opts, c: 0,
+                 e: 'Area = ' + l + '×' + w + ' = ' + a + ' cm². Perimeter = 2(' + l + '+' + w + ') = ' + p + ' cm.' };
+    }},
+    { question:'Increasing the length of a rectangle while keeping the width the same will:', options:['Increase both area and perimeter','Increase area only','Increase perimeter only','Decrease both'], answer:0, explanation:'Longer rectangle → more area (l×w increases) AND more perimeter (2l+2w increases).' },
+    { question:'A rectangle has area 36 cm². Which dimensions give the smallest perimeter?', options:['6×6','4×9','3×12','2×18'], answer:0, explanation:'6×6: P=24. 4×9: P=26. 3×12: P=30. 2×18: P=40. The square (6×6) wins.' },
+    { question:'Rectangle A (5×3) and Rectangle B (1×7). Which has more area? Which has more perimeter?', options:['A has more area (15>7), B has more perimeter (16>16) — same perimeter actually','A has more area AND more perimeter','B has more area AND more perimeter','Same area, different perimeters'], answer:0, explanation:'A: area=15, P=16. B: area=7, P=16. A has more area, perimeters are equal.' },
     { gen: function() {
         var l = pickFrom([20, 25, 30, 50]);
         var w = pickFrom([8, 10, 12, 15]);

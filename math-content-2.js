@@ -33,6 +33,14 @@ FLASHCARDS.push(
   {id:"mfc-05-4-3",islandId:"mi-05-4",front:"What is 7.2 ÷ 0.9?",
    back:"8\n\nConvert to a whole number division:\n7.2 ÷ 0.9 = 72 ÷ 9 = 8\n\n(Multiply both by 10 to eliminate the decimal divisor)\n\nCheck: 8 × 0.9 = 7.2 ✓",difficulty:2,category:"calculation"},
 
+  // ── Topic 5, Island 5: Advanced Decimal Operations ──────────────────
+  {id:"mfc-05-5-1",islandId:"mi-05-5",front:"Calculate 0.3 × 0.7. Explain the method.",
+   back:"0.21\n\nStep 1: Ignore decimals → 3 × 7 = 21\nStep 2: Count decimal places → 0.3 (1 d.p.) + 0.7 (1 d.p.) = 2 d.p.\nStep 3: Place the point → 0.21\n\nCheck: 3/10 × 7/10 = 21/100 = 0.21 ✓",difficulty:1,category:"calculation"},
+  {id:"mfc-05-5-2",islandId:"mi-05-5",front:"Calculate 4.56 ÷ 0.6. Show the conversion method.",
+   back:"7.6\n\nConvert to whole-number divisor:\nMultiply both by 10 → 45.6 ÷ 6 = 7.6\n\nCheck: 7.6 × 0.6 = 4.56 ✓\n\nAlways multiply dividend AND divisor by the same power of 10.",difficulty:2,category:"calculation"},
+  {id:"mfc-05-5-3",islandId:"mi-05-5",front:"Is 0.4 × 0.8 greater than, less than, or equal to 0.5? How can you tell without calculating?",
+   back:"Less than 0.5\n\n0.4 × 0.8 = 0.32\n\nQuick reasoning: 0.4 × 0.8 < 0.5 × 1.0 = 0.5\nMultiplying by a number less than 1 makes the result smaller than the original.",difficulty:2,category:"concept"},
+
   // ── Topic 6: Fractions ───────────────────────────────────────────────
   {id:"mfc-06-1-1",islandId:"mi-06-1",front:"How do you simplify 18/24 to its lowest terms?",
    back:"3/4\n\nFind HCF(18, 24) = 6\nDivide top and bottom by 6:\n18÷6 = 3\n24÷6 = 4\n\nSimplest form: 3/4\n\nCheck: 3 and 4 share no common factors ✓",difficulty:1,category:"calculation"},
@@ -61,6 +69,22 @@ FLASHCARDS.push(
    back:"1 8/15\n\n3 1/5 − 1 2/3\nLCD = 15\n3 3/15 − 1 10/15\nBorrow: 2 18/15 − 1 10/15 = 1 8/15",difficulty:2,category:"calculation"},
   {id:"mfc-06-4-3",islandId:"mi-06-4",front:"A plank is 4 2/3 m long. A piece of 1 5/6 m is cut off. How long is the remaining piece?",
    back:"2 5/6 m\n\n4 2/3 − 1 5/6\nLCD = 6\n4 4/6 − 1 5/6\nBorrow: 3 10/6 − 1 5/6 = 2 5/6 m",difficulty:2,category:"application"},
+
+  // ── Topic 6, Island 5: Recurring Decimals & Fractions as Division ────
+  {id:"mfc-06-5-1",islandId:"mi-06-5",front:"Convert 1/3 to a decimal. Is it terminating or recurring?",
+   back:"0.333... = 0.3̇ (recurring)\n\n1 ÷ 3 = 0.3333...\nThe digit 3 repeats forever.\n\nDot notation: place a dot over the repeating digit → 0.3̇\n\nA fraction gives a terminating decimal only if the denominator (in simplest form) has no prime factors other than 2 and 5.",difficulty:1,category:"concept"},
+  {id:"mfc-06-5-2",islandId:"mi-06-5",front:"Convert 2/11 to a recurring decimal.",
+   back:"0.181818... = 0.1̇8̇\n\n2 ÷ 11 = 0.181818...\nThe block '18' repeats.\n\nDot notation: place dots over the first AND last digits of the repeating block → 0.1̇8̇",difficulty:2,category:"calculation"},
+  {id:"mfc-06-5-3",islandId:"mi-06-5",front:"If 3 pizzas are shared equally among 7 friends, what fraction does each person get? Write as a division.",
+   back:"3/7 each\n\n3 ÷ 7 = 3/7\n\nA fraction IS a division: the numerator is divided by the denominator.\n3 pizzas ÷ 7 friends = 3/7 of a pizza per person.",difficulty:1,category:"application"},
+
+  // ── Topic 6, Island 6: Fraction Inequalities ─────────────────────────
+  {id:"mfc-06-6-1",islandId:"mi-06-6",front:"Is 1/4 + 1/3 greater than, less than, or equal to 1/2?",
+   back:"Greater than 1/2\n\n1/4 + 1/3 = 3/12 + 4/12 = 7/12\n1/2 = 6/12\n\n7/12 > 6/12 ✓\n\nSo 1/4 + 1/3 > 1/2",difficulty:1,category:"calculation"},
+  {id:"mfc-06-6-2",islandId:"mi-06-6",front:"Insert <, > or =: 3/4 − 1/3 ___ 1/2",
+   back:"3/4 − 1/3 < 1/2\n\n3/4 − 1/3 = 9/12 − 4/12 = 5/12\n1/2 = 6/12\n\n5/12 < 6/12",difficulty:2,category:"calculation"},
+  {id:"mfc-06-6-3",islandId:"mi-06-6",front:"Is 2 1/3 + 1 1/4 greater than 3 1/2?",
+   back:"Yes — greater than 3 1/2\n\n2 1/3 + 1 1/4\n= 2 4/12 + 1 3/12 = 3 7/12\n\n3 7/12 vs 3 6/12 (= 3 1/2)\n\n3 7/12 > 3 6/12 ✓",difficulty:2,category:"calculation"},
 
   // ── Topic 7: Multiply & Divide Fractions ─────────────────────────────
   {id:"mfc-07-1-1",islandId:"mi-07-1",front:"What is 3/4 × 8?",
@@ -91,6 +115,14 @@ FLASHCARDS.push(
   {id:"mfc-07-4-3",islandId:"mi-07-4",front:"A ribbon 3 3/4 m long is cut into pieces each 3/4 m long. How many pieces are made?",
    back:"5 pieces\n\n3 3/4 ÷ 3/4\nConvert: 15/4 ÷ 3/4 = 15/4 × 4/3 = 60/12 = 5",difficulty:2,category:"application"},
 
+  // ── Topic 7, Island 5: Scaling & Estimating with Fractions ───────────
+  {id:"mfc-07-5-1",islandId:"mi-07-5",front:"Without calculating, will 3/4 × 20 be greater than, less than, or equal to 20?",
+   back:"Less than 20\n\nMultiplying by a fraction less than 1 shrinks the number.\n3/4 < 1, so 3/4 × 20 < 20.\n\nActual answer: 3/4 × 20 = 15.",difficulty:1,category:"concept"},
+  {id:"mfc-07-5-2",islandId:"mi-07-5",front:"Estimate 5/8 × 47. Is the answer closer to 25 or 30?",
+   back:"Closer to 30\n\n5/8 is a bit more than 1/2.\n1/2 × 47 = 23.5\n\nBut 5/8 > 1/2, so the answer is more than 23.5.\n5/8 × 47 = 29.375 → closer to 30.\n\nRounding: 5/8 × 48 = 30 (use a 'friendly' number).",difficulty:2,category:"calculation"},
+  {id:"mfc-07-5-3",islandId:"mi-07-5",front:"Will 5/3 × 12 be greater than, less than, or equal to 12? Why?",
+   back:"Greater than 12\n\n5/3 > 1 (it's an improper fraction, equal to 1 2/3).\nMultiplying by a number greater than 1 makes the result larger.\n\n5/3 × 12 = 60/3 = 20. Indeed 20 > 12.",difficulty:2,category:"concept"},
+
   // ── Topic 8: Integers ────────────────────────────────────────────────
   {id:"mfc-08-1-1",islandId:"mi-08-1",front:"Which is colder: −8°C or −3°C?",
    back:"−8°C is colder.\n\nOn a number line, −8 is further LEFT than −3.\n−8 < −3\n\nThe more negative a number, the smaller (colder) it is.",difficulty:1,category:"application"},
@@ -118,7 +150,15 @@ FLASHCARDS.push(
   {id:"mfc-08-4-2",islandId:"mi-08-4",front:"What is −5 × −8?",
    back:"40\n\nNegative × Negative = Positive\n5 × 8 = 40\nSo −5 × −8 = +40",difficulty:1,category:"calculation"},
   {id:"mfc-08-4-3",islandId:"mi-08-4",front:"What is −72 ÷ (−9)?",
-   back:"8\n\nNegative ÷ Negative = Positive\n72 ÷ 9 = 8\nSo −72 ÷ −9 = +8\n\nCheck: 8 × −9 = −72 ✓",difficulty:1,category:"calculation"}
+   back:"8\n\nNegative ÷ Negative = Positive\n72 ÷ 9 = 8\nSo −72 ÷ −9 = +8\n\nCheck: 8 × −9 = −72 ✓",difficulty:1,category:"calculation"},
+
+  // ── mi-08-5: Integer Input/Output Tables ──────────────────────────────
+  {id:"mfc-08-5-1",islandId:"mi-08-5",front:"What is an input/output table?",
+   back:"A table with two rows (or columns): INPUT and OUTPUT.\n\nA rule is applied to each input to produce the output.\n\nExample rule: add −3\nInput:  5  →  Output: 2\nInput: −1  →  Output: −4\n\nYour job: find the rule or complete missing values.",difficulty:1,category:"definition"},
+  {id:"mfc-08-5-2",islandId:"mi-08-5",front:"Input → Output: 4→−2, 7→1, −3→−9. What is the rule?",
+   back:"Subtract 6 (or add −6)\n\n4 − 6 = −2 ✓\n7 − 6 = 1 ✓\n−3 − 6 = −9 ✓\n\nTo find the rule: Output − Input = −2 − 4 = −6, so the rule is 'add −6' (same as 'subtract 6').",difficulty:2,category:"application"},
+  {id:"mfc-08-5-3",islandId:"mi-08-5",front:"Rule: add −5. Input = −8. What is the output?",
+   back:"−13\n\n−8 + (−5) = −8 − 5 = −13\n\nWhen adding a negative, move LEFT on the number line.",difficulty:1,category:"calculation"}
 );
 
 // ── QUESTIONS ─────────────────────────────────────────────────────────────
@@ -417,6 +457,103 @@ Object.assign(QUESTIONS, {
              opts: opts, c: 0,
              e: '£' + total.toFixed(2) + ' ÷ ' + count + ' = £' + price.toFixed(2) + '. Check: ' + price.toFixed(2) + ' × ' + count + ' = ' + total.toFixed(2) + ' ✓.' };
   }}
+],
+
+// ══════════════════════════════════════════════════════════════════════════
+// TOPIC 5, Island 5 — ADVANCED DECIMAL OPERATIONS
+// ══════════════════════════════════════════════════════════════════════════
+
+"mi-05-5": [
+  // Easy (Q1–3): Decimal × decimal basics
+  { gen: function() {
+    var a = pickFrom([0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]);
+    var b = pickFrom([0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]);
+    var ans = parseFloat((a * b).toFixed(2));
+    var opts = buildOpts(ans, [parseFloat((a + b).toFixed(2)), parseFloat((a * b * 10).toFixed(2)), parseFloat(Math.abs(a - b).toFixed(2))]);
+    return { q: 'Calculate ' + a.toFixed(1) + ' × ' + b.toFixed(1) + '.',
+             opts: opts, c: 0,
+             e: 'Multiply without decimals: ' + Math.round(a*10) + ' × ' + Math.round(b*10) + ' = ' + (Math.round(a*10)*Math.round(b*10)) + '. Total decimal places = 2. Answer: ' + ans + '.' };
+  }},
+  { gen: function() {
+    var a = pickFrom([1.2, 1.5, 2.3, 2.4, 3.1, 3.5, 4.2]);
+    var b = pickFrom([0.2, 0.3, 0.4, 0.5]);
+    var ans = parseFloat((a * b).toFixed(2));
+    var opts = buildOpts(ans, [parseFloat((a + b).toFixed(2)), parseFloat((ans + 0.1).toFixed(2)), parseFloat((a * Math.round(b)).toFixed(2) || 0.1)]);
+    return { q: 'Calculate ' + a.toFixed(1) + ' × ' + b.toFixed(1) + '.',
+             opts: opts, c: 0,
+             e: 'Ignore decimals: ' + Math.round(a*10) + ' × ' + Math.round(b*10) + ' = ' + (Math.round(a*10)*Math.round(b*10)) + '. Two d.p. → ' + ans + '.' };
+  }},
+  { gen: function() {
+    var a = pickFrom([0.12, 0.15, 0.25, 0.35, 0.45]);
+    var b = pickFrom([0.2, 0.3, 0.4, 0.5]);
+    var ans = parseFloat((a * b).toFixed(3));
+    var opts = buildOpts(ans, [parseFloat((a + b).toFixed(3)), parseFloat((ans * 10).toFixed(3)), parseFloat((a * 10 * b).toFixed(3))]);
+    return { q: 'Calculate ' + a + ' × ' + b.toFixed(1) + '.',
+             opts: opts, c: 0,
+             e: a + ' has 2 d.p. and ' + b.toFixed(1) + ' has 1 d.p. = 3 d.p. total. Answer: ' + ans + '.' };
+  }},
+  // Medium (Q4–7): Decimal divisors and inequalities
+  { gen: function() {
+    var divisor = pickFrom([0.2, 0.3, 0.4, 0.5, 0.6, 0.8]);
+    var quotient = pickFrom([3, 4, 5, 6, 7, 8, 9]);
+    var dividend = parseFloat((quotient * divisor).toFixed(2));
+    var opts = buildOpts(quotient, [quotient + 1, parseFloat((dividend * divisor).toFixed(2)), quotient - 1]);
+    return { q: 'Calculate ' + dividend + ' ÷ ' + divisor + '.',
+             opts: opts, c: 0,
+             e: 'Multiply both by ' + Math.round(1/divisor*dividend/dividend*10) + ' to remove the decimal divisor: ' + (dividend * 10) + ' ÷ ' + (divisor * 10) + ' = ' + quotient + '.' };
+  }},
+  { gen: function() {
+    var divisor = pickFrom([0.4, 0.5, 0.6, 0.8]);
+    var quotient = pickFrom([1.2, 1.5, 2.4, 2.5, 3.5]);
+    var dividend = parseFloat((quotient * divisor).toFixed(2));
+    var opts = buildOpts(quotient, [parseFloat((quotient + 0.1).toFixed(1)), parseFloat((dividend + divisor).toFixed(2)), parseFloat((quotient * 2).toFixed(1))]);
+    return { q: 'Calculate ' + dividend + ' ÷ ' + divisor + '.',
+             opts: opts, c: 0,
+             e: 'Multiply both by 10: ' + parseFloat((dividend*10).toFixed(1)) + ' ÷ ' + (divisor*10) + ' = ' + quotient + '.' };
+  }},
+  { gen: function() {
+    var a = pickFrom([0.3, 0.4, 0.5, 0.6, 0.7]);
+    var b = pickFrom([0.3, 0.4, 0.5, 0.6, 0.7]);
+    var product = parseFloat((a * b).toFixed(2));
+    var threshold = parseFloat((product + 0.05).toFixed(2));
+    var correct = product + ' < ' + threshold;
+    var opts = buildOpts(correct, [product + ' > ' + threshold, product + ' = ' + threshold, threshold + ' < ' + product]);
+    return { q: a.toFixed(1) + ' × ' + b.toFixed(1) + ' = ' + product + '. Which inequality is correct?',
+             opts: opts, c: 0,
+             e: a.toFixed(1) + ' × ' + b.toFixed(1) + ' = ' + product + ', and ' + product + ' < ' + threshold + '.' };
+  }},
+  { gen: function() {
+    var a = pickFrom([0.3, 0.4, 0.5, 0.6]);
+    var b = pickFrom([0.3, 0.4, 0.5, 0.6]);
+    while (a === b) b = pickFrom([0.3, 0.4, 0.5, 0.6]);
+    var p1 = parseFloat((a * b).toFixed(2));
+    var p2 = parseFloat((a * a).toFixed(2));
+    var sym = p1 < p2 ? '<' : '>';
+    var correct = a.toFixed(1) + ' × ' + b.toFixed(1) + ' ' + sym + ' ' + a.toFixed(1) + ' × ' + a.toFixed(1);
+    var wrong1 = a.toFixed(1) + ' × ' + b.toFixed(1) + ' ' + (sym === '<' ? '>' : '<') + ' ' + a.toFixed(1) + ' × ' + a.toFixed(1);
+    var wrong2 = a.toFixed(1) + ' × ' + b.toFixed(1) + ' = ' + a.toFixed(1) + ' × ' + a.toFixed(1);
+    var opts = buildOpts(correct, [wrong1, wrong2, p1 + ' = ' + p2]);
+    return { q: 'Compare: ' + a.toFixed(1) + ' × ' + b.toFixed(1) + ' and ' + a.toFixed(1) + ' × ' + a.toFixed(1) + '. Which inequality is correct?',
+             opts: opts, c: 0,
+             e: a.toFixed(1) + ' × ' + b.toFixed(1) + ' = ' + p1 + ' and ' + a.toFixed(1) + ' × ' + a.toFixed(1) + ' = ' + p2 + '. So ' + correct + '.' };
+  }},
+  // Greater Depth (Q8–10)
+  { gen: function() {
+    var divisor = pickFrom([0.04, 0.05, 0.25]);
+    var multiplier = Math.round(1 / divisor);
+    var dividend = pickFrom([1.2, 2.4, 3.6, 4.8, 5.0]);
+    var ans = parseFloat((dividend / divisor).toFixed(2));
+    var opts = buildOpts(ans, [parseFloat((dividend * divisor).toFixed(2)), ans / 10, ans + 1]);
+    return { q: 'Calculate ' + dividend + ' ÷ ' + divisor + '.',
+             opts: opts, c: 0,
+             e: 'Multiply both by ' + multiplier + ': ' + (dividend * multiplier) + ' ÷ ' + (divisor * multiplier) + ' = ' + ans + '.' };
+  }},
+  {q:"A 2.4 m plank is cut into pieces each 0.15 m long. How many pieces are there?",
+   opts:["16","15","24","12"],c:0,
+   e:"2.4 ÷ 0.15: multiply both by 100 → 240 ÷ 15 = 16 pieces. Check: 16 × 0.15 = 2.4 ✓."},
+  {q:"Without calculating, decide: is 0.9 × 0.9 greater than, less than, or equal to 0.9?",
+   opts:["Less than 0.9","Greater than 0.9","Equal to 0.9","Cannot tell"],c:0,
+   e:"Multiplying any positive number by a value less than 1 makes it smaller. 0.9 × 0.9 = 0.81, which is less than 0.9."}
 ],
 
 // ══════════════════════════════════════════════════════════════════════════
@@ -788,6 +925,193 @@ Object.assign(QUESTIONS, {
   }},
   {q:"Which missing number makes this true? 3 1/3 + ? = 5 5/6",opts:["2 1/2","2 1/6","2 5/6","1 1/2"],c:0,
    e:"? = 5 5/6 − 3 1/3. LCD=6. 5 5/6 − 3 2/6 = 2 3/6 = 2 1/2."}
+],
+
+// ══════════════════════════════════════════════════════════════════════════
+// TOPIC 6, Island 5 — RECURRING DECIMALS & FRACTIONS AS DIVISION
+// ══════════════════════════════════════════════════════════════════════════
+
+"mi-06-5": [
+  // Easy (Q1–3): Recurring decimals basics
+  { gen: function() {
+    var fracs = [{n:1,d:3,dec:'0.3̇',type:'recurring'},{n:1,d:4,dec:'0.25',type:'terminating'},{n:1,d:6,dec:'0.16̇',type:'recurring'},{n:1,d:5,dec:'0.2',type:'terminating'},{n:1,d:9,dec:'0.1̇',type:'recurring'},{n:1,d:8,dec:'0.125',type:'terminating'}];
+    var f = pickFrom(fracs);
+    var opts = buildOpts(f.type.charAt(0).toUpperCase()+f.type.slice(1), [f.type==='recurring'?'Terminating':'Recurring', 'Neither', 'Undefined']);
+    return { q: f.n + '/' + f.d + ' = ' + f.dec + '. Is this a terminating or recurring decimal?',
+             opts: opts, c: 0,
+             e: f.n + '/' + f.d + ' = ' + f.dec + '. This is ' + f.type + '. A fraction terminates only when the denominator (in simplest form) has only factors of 2 and 5.' };
+  }},
+  { gen: function() {
+    var fracs = [{n:1,d:3,dec:'0.3̇'},{n:2,d:3,dec:'0.6̇'},{n:1,d:6,dec:'0.16̇'},{n:5,d:6,dec:'0.83̇'},{n:1,d:9,dec:'0.1̇'},{n:4,d:9,dec:'0.4̇'}];
+    var f = pickFrom(fracs);
+    var opts = buildOpts(f.dec, ['0.'+f.n+f.d, '0.'+f.n+'0', f.n+'.'+f.d]);
+    return { q: 'Convert ' + f.n + '/' + f.d + ' to a decimal using dot notation.',
+             opts: opts, c: 0,
+             e: f.n + ' ÷ ' + f.d + ' = ' + f.dec + '. Place a dot above each repeating digit.' };
+  }},
+  { gen: function() {
+    var items = pickFrom([3,4,5,7,8,9]);
+    var total = pickFrom([2,3,5,6]);
+    while (total >= items) total = pickFrom([2,3,5]);
+    var opts = buildOpts(total + '/' + items, [items + '/' + total, '1/' + items, total + '/' + (items+1)]);
+    return { q: total + ' cakes are shared equally among ' + items + ' people. What fraction does each person get?',
+             opts: opts, c: 0,
+             e: total + ' ÷ ' + items + ' = ' + total + '/' + items + '. A fraction IS a division: numerator ÷ denominator.' };
+  }},
+  // Medium (Q4–7): Recurring patterns, graphs/tables
+  { gen: function() {
+    var fracs = [{n:1,d:7,dec:'0.1̇42857̇',block:'142857'},{n:2,d:11,dec:'0.1̇8̇',block:'18'},{n:5,d:11,dec:'0.4̇5̇',block:'45'},{n:1,d:11,dec:'0.0̇9̇',block:'09'}];
+    var f = pickFrom(fracs);
+    var len = f.block.length;
+    var opts = buildOpts(len, [1, len+1, len-1>0?len-1:3]);
+    return { q: f.n + '/' + f.d + ' = ' + f.dec + '. How many digits are in the repeating block?',
+             opts: opts, c: 0,
+             e: 'The repeating block is "' + f.block + '" which has ' + len + ' digits. Dots are placed over the first and last digits of the block.' };
+  }},
+  { gen: function() {
+    var total = pickFrom([20,24,30,36,40]);
+    var part = pickFrom([5,6,8,10,12]);
+    while (part > total/2) part = pickFrom([5,6,8,10]);
+    var g = function(a,b){while(b){var t=b;b=a%b;a=t;}return a;}(part,total);
+    var sn = part/g, sd = total/g;
+    var opts = buildOpts(sn+'/'+sd, [part+'/'+total+'0', sd+'/'+sn, '1/'+sd]);
+    return { q: 'A bar chart shows that ' + part + ' out of ' + total + ' students chose football. What fraction chose football? Give your answer in simplest form.',
+             opts: opts, c: 0,
+             e: part + '/' + total + ' = ' + sn + '/' + sd + ' (divided by HCF ' + g + ').' };
+  }},
+  { gen: function() {
+    var fracs = [{n:5,d:12,dec:'0.416̇'},{n:7,d:12,dec:'0.583̇'},{n:5,d:9,dec:'0.5̇'},{n:7,d:9,dec:'0.7̇'}];
+    var f = pickFrom(fracs);
+    var opts = buildOpts(f.dec, ['0.'+f.n+f.d, f.n+'.'+f.d, '0.'+f.n+'0']);
+    return { q: 'Express ' + f.n + '/' + f.d + ' as a decimal. Use dot notation for any recurring digits.',
+             opts: opts, c: 0,
+             e: f.n + ' ÷ ' + f.d + ' = ' + f.dec + '. The dot(s) show which digit(s) repeat.' };
+  }},
+  { gen: function() {
+    var problems = [
+      {q:'A table shows 3 out of every 5 cars are silver. What fraction of cars are NOT silver?',a:'2/5',w:['3/5','1/5','2/3']},
+      {q:'A pictogram shows 12 rainy days out of 30 in June. What fraction of days were rainy? Simplify.',a:'2/5',w:['12/30','1/3','2/3']},
+      {q:'A pie chart shows 90° out of 360° for Maths. What fraction of students chose Maths?',a:'1/4',w:['90/360','1/3','1/2']}
+    ];
+    var p = pickFrom(problems);
+    var opts = buildOpts(p.a, p.w);
+    return { q: p.q, opts: opts, c: 0,
+             e: 'Answer: ' + p.a + '. Simplify by dividing numerator and denominator by their HCF.' };
+  }},
+  // Greater Depth (Q8–10)
+  {q:"Which of these fractions gives a terminating decimal? 1/6, 3/8, 2/7, 5/12",
+   opts:["3/8","1/6","2/7","5/12"],c:0,
+   e:"A fraction terminates iff the denominator (in simplest form) has only 2 and 5 as prime factors. 8 = 2³ → terminates. 6 = 2×3 ✗, 7 is prime ✗, 12 = 2²×3 ✗."},
+  {q:"24 students took a test. A graph shows 3/8 scored A*, 1/4 scored A, and the rest scored B or below. How many scored B or below?",
+   opts:["9","15","12","6"],c:0,
+   e:"A* = 3/8 × 24 = 9. A = 1/4 × 24 = 6. B or below = 24 − 9 − 6 = 9."},
+  { gen: function() {
+    var fracs = [{n:1,d:3,dec:'0.333...'},{n:2,d:3,dec:'0.666...'},{n:1,d:7,dec:'0.142857...'},{n:1,d:11,dec:'0.0909...'}];
+    var f = pickFrom(fracs);
+    var opts = buildOpts(f.n+'/'+f.d, [(f.n+1)+'/'+f.d, f.n+'/'+(f.d+1), f.d+'/'+f.n]);
+    return { q: 'A decimal is ' + f.dec + ' (repeating). Write it as a fraction in simplest form.',
+             opts: opts, c: 0,
+             e: f.dec + ' = ' + f.n + '/' + f.d + '.' };
+  }}
+],
+
+// ══════════════════════════════════════════════════════════════════════════
+// TOPIC 6, Island 6 — FRACTION INEQUALITIES
+// ══════════════════════════════════════════════════════════════════════════
+
+"mi-06-6": [
+  // Easy (Q1–3)
+  { gen: function() {
+    var d = pickFrom([4,6,8,10,12]);
+    var n1 = randInt(1, d/2);
+    var n2 = randInt(1, d/2);
+    while (n1+n2 >= d) { n2 = randInt(1, d/2-1); }
+    var sum = n1+n2;
+    var half = d/2;
+    var sym = sum > half ? '>' : (sum < half ? '<' : '=');
+    var correct = n1+'/'+d+' + '+n2+'/'+d+' '+sym+' 1/2';
+    var wrong1 = n1+'/'+d+' + '+n2+'/'+d+' '+(sym==='>'?'<':'>')+' 1/2';
+    var wrong2 = n1+'/'+d+' + '+n2+'/'+d+' = 1/2';
+    var opts = buildOpts(correct, [wrong1, sum===half?wrong1:wrong2, n2+'/'+d+' + '+n1+'/'+d+' '+(sym==='>'?'<':'>')+' 1/2']);
+    return { q: 'Insert <, > or =: '+n1+'/'+d+' + '+n2+'/'+d+' ___ 1/2',
+             opts: opts, c: 0,
+             e: n1+'/'+d+' + '+n2+'/'+d+' = '+sum+'/'+d+'. And 1/2 = '+half+'/'+d+'. '+sum+'/'+d+' '+sym+' '+half+'/'+d+'.' };
+  }},
+  { gen: function() {
+    var d = pickFrom([6,8,10,12]);
+    var n1 = randInt(Math.floor(d/2)+1, d-1);
+    var n2 = randInt(1, Math.floor(d/3));
+    var diff = n1-n2;
+    var half = d/2;
+    var sym = diff > half ? '>' : (diff < half ? '<' : '=');
+    var correct = n1+'/'+d+' − '+n2+'/'+d+' '+sym+' 1/2';
+    var wrong1 = n1+'/'+d+' − '+n2+'/'+d+' '+(sym==='>'?'<':'>')+' 1/2';
+    var opts = buildOpts(correct, [wrong1, n1+'/'+d+' − '+n2+'/'+d+' = 1/2', n2+'/'+d+' − '+n1+'/'+d+' '+sym+' 1/2']);
+    return { q: 'Insert <, > or =: '+n1+'/'+d+' − '+n2+'/'+d+' ___ 1/2',
+             opts: opts, c: 0,
+             e: n1+'/'+d+' − '+n2+'/'+d+' = '+diff+'/'+d+'. And 1/2 = '+half+'/'+d+'. '+diff+'/'+d+' '+sym+' '+half+'/'+d+'.' };
+  }},
+  { gen: function() {
+    var pairs = [{a:'1/3',b:'1/4',s:'7/12',h:'6/12',sym:'>'},{a:'1/5',b:'1/4',s:'9/20',h:'10/20',sym:'<'},{a:'1/3',b:'1/6',s:'3/6',h:'3/6',sym:'='},{a:'1/4',b:'1/6',s:'5/12',h:'6/12',sym:'<'}];
+    var p = pickFrom(pairs);
+    var correct = p.a+' + '+p.b+' '+p.sym+' 1/2';
+    var wrong1 = p.a+' + '+p.b+' '+(p.sym==='>'?'<':(p.sym==='<'?'>':'>'))+' 1/2';
+    var opts = buildOpts(correct, [wrong1, p.a+' + '+p.b+' '+(p.sym==='='?'>':'=')+' 1/2', p.b+' + '+p.a+' '+(p.sym==='>'?'<':'>')+' 1/2']);
+    return { q: 'Insert <, > or =: '+p.a+' + '+p.b+' ___ 1/2',
+             opts: opts, c: 0,
+             e: p.a+' + '+p.b+' = '+p.s+'. Compare with 1/2 = '+p.h+'. So '+correct+'.' };
+  }},
+  // Medium (Q4–7): different denominators, mixed numbers
+  { gen: function() {
+    var sets = [{a:'2/3',b:'1/4',s:'11/12',comp:'3/4',sym:'>'},{a:'3/4',b:'1/6',s:'11/12',comp:'3/4',sym:'>'},{a:'1/3',b:'1/5',s:'8/15',comp:'7/15',sym:'>'},{a:'2/5',b:'1/3',s:'11/15',comp:'10/15',sym:'>'}];
+    var p = pickFrom(sets);
+    var correct = p.a+' + '+p.b+' '+p.sym+' '+p.comp;
+    var wrong = p.a+' + '+p.b+' '+(p.sym==='>'?'<':'>')+' '+p.comp;
+    var opts = buildOpts(correct, [wrong, p.a+' + '+p.b+' = '+p.comp, p.comp+' '+p.sym+' '+p.a+' + '+p.b]);
+    return { q: 'Which is correct? '+p.a+' + '+p.b+' compared with '+p.comp,
+             opts: opts, c: 0,
+             e: p.a+' + '+p.b+' = '+p.s+'. So '+correct+'.' };
+  }},
+  { gen: function() {
+    var sets = [{a:'5/6',b:'1/3',d:'3/6',comp:'1/2',sym:'>'},{a:'3/4',b:'1/3',d:'5/12',comp:'1/2',sym:'<'},{a:'7/8',b:'1/4',d:'5/8',comp:'1/2',sym:'>'},{a:'5/6',b:'1/2',d:'2/6',comp:'1/3',sym:'='}];
+    var p = pickFrom(sets);
+    var correct = p.a+' − '+p.b+' '+p.sym+' '+p.comp;
+    var wrong = p.a+' − '+p.b+' '+(p.sym==='>'?'<':(p.sym==='<'?'>':'>'))+' '+p.comp;
+    var opts = buildOpts(correct, [wrong, p.a+' − '+p.b+' '+(p.sym==='='?'>':'=')+' '+p.comp, p.b+' − '+p.a+' '+p.sym+' '+p.comp]);
+    return { q: 'Insert <, > or =: '+p.a+' − '+p.b+' ___ '+p.comp,
+             opts: opts, c: 0,
+             e: p.a+' − '+p.b+' = '+p.d+'. So '+correct+'.' };
+  }},
+  { gen: function() {
+    var sets = [{a:'2 1/3',b:'1 1/4',s:'3 7/12',comp:'3 1/2',sym:'>'},{a:'1 1/4',b:'1 1/3',s:'2 7/12',comp:'2 1/2',sym:'>'},{a:'1 1/5',b:'1 1/4',s:'2 9/20',comp:'2 1/2',sym:'<'}];
+    var p = pickFrom(sets);
+    var correct = p.a+' + '+p.b+' '+p.sym+' '+p.comp;
+    var wrong = p.a+' + '+p.b+' '+(p.sym==='>'?'<':'>')+' '+p.comp;
+    var opts = buildOpts(correct, [wrong, p.a+' + '+p.b+' = '+p.comp, p.comp+' '+p.sym+' '+p.a+' + '+p.b]);
+    return { q: 'Which is correct? '+p.a+' + '+p.b+' compared with '+p.comp,
+             opts: opts, c: 0,
+             e: p.a+' + '+p.b+' = '+p.s+'. So '+correct+'.' };
+  }},
+  { gen: function() {
+    var sets = [{a:'3 3/4',b:'1 1/3',d:'2 5/12',comp:'2 1/2',sym:'<'},{a:'4 5/6',b:'2 1/4',d:'2 7/12',comp:'2 1/2',sym:'>'},{a:'5 1/3',b:'2 5/6',d:'2 1/2',comp:'2 1/2',sym:'='}];
+    var p = pickFrom(sets);
+    var correct = p.a+' − '+p.b+' '+p.sym+' '+p.comp;
+    var wrong = p.a+' − '+p.b+' '+(p.sym==='>'?'<':(p.sym==='<'?'>':'>'))+' '+p.comp;
+    var opts = buildOpts(correct, [wrong, p.a+' − '+p.b+' '+(p.sym==='='?'>':'=')+' '+p.comp, p.b+' − '+p.a+' '+p.sym+' '+p.comp]);
+    return { q: 'Insert <, > or =: '+p.a+' − '+p.b+' ___ '+p.comp,
+             opts: opts, c: 0,
+             e: p.a+' − '+p.b+' = '+p.d+'. So '+correct+'.' };
+  }},
+  // Greater Depth (Q8–10)
+  {q:"Without calculating, which is greater: 3/4 + 2/3 or 1 1/3?",
+   opts:["3/4 + 2/3 is greater","1 1/3 is greater","They are equal","Cannot tell"],c:0,
+   e:"3/4 + 2/3 = 9/12 + 8/12 = 17/12 = 1 5/12. And 1 1/3 = 1 4/12. Since 1 5/12 > 1 4/12, the sum is greater."},
+  {q:"Find the missing symbol: 2 2/3 + 1 3/4 ___ 4 1/2",
+   opts:["<",">","=","Cannot tell"],c:0,
+   e:"2 2/3 + 1 3/4 = 2 8/12 + 1 9/12 = 3 17/12 = 4 5/12. And 4 1/2 = 4 6/12. 4 5/12 < 4 6/12. Answer: <."},
+  {q:"Insert <, > or =: 5 1/6 − 2 3/4 ___ 2 1/3",
+   opts:[">","<","=","Cannot tell"],c:0,
+   e:"5 1/6 − 2 3/4: LCD=12. 5 2/12 − 2 9/12 = 4 14/12 − 2 9/12 = 2 5/12. And 2 1/3 = 2 4/12. 2 5/12 > 2 4/12. Answer: >."}
 ],
 
 // ══════════════════════════════════════════════════════════════════════════
@@ -1194,6 +1518,88 @@ Object.assign(QUESTIONS, {
 ],
 
 // ══════════════════════════════════════════════════════════════════════════
+// TOPIC 7, Island 5 — SCALING & ESTIMATING WITH FRACTIONS
+// ══════════════════════════════════════════════════════════════════════════
+
+"mi-07-5": [
+  // Easy (Q1–3): Scaling direction
+  { gen: function() {
+    var fracs = [{f:'1/2',lt:true},{f:'3/4',lt:true},{f:'2/3',lt:true},{f:'1/5',lt:true},{f:'7/8',lt:true}];
+    var fr = pickFrom(fracs);
+    var n = pickFrom([10,12,16,20,24,30,40]);
+    var opts = buildOpts('Less than '+n, ['Greater than '+n, 'Equal to '+n, 'Cannot tell']);
+    return { q: 'Without calculating, will '+fr.f+' × '+n+' be greater than, less than, or equal to '+n+'?',
+             opts: opts, c: 0,
+             e: fr.f+' < 1, so multiplying '+n+' by '+fr.f+' gives a result smaller than '+n+'.' };
+  }},
+  { gen: function() {
+    var fracs = [{f:'5/4',gt:true},{f:'3/2',gt:true},{f:'7/5',gt:true},{f:'4/3',gt:true}];
+    var fr = pickFrom(fracs);
+    var n = pickFrom([10,12,15,18,20,24]);
+    var opts = buildOpts('Greater than '+n, ['Less than '+n, 'Equal to '+n, 'Cannot tell']);
+    return { q: 'Without calculating, will '+fr.f+' × '+n+' be greater than, less than, or equal to '+n+'?',
+             opts: opts, c: 0,
+             e: fr.f+' > 1 (improper fraction), so multiplying '+n+' by '+fr.f+' gives a result larger than '+n+'.' };
+  }},
+  { gen: function() {
+    var sets = [{f:'2/3',n:24,ans:16},{f:'3/4',n:20,ans:15},{f:'1/5',n:30,ans:6},{f:'5/8',n:16,ans:10},{f:'4/5',n:25,ans:20}];
+    var s = pickFrom(sets);
+    var opts = buildOpts(s.ans, [s.n, s.ans+1, s.ans-1]);
+    return { q: 'A shirt costs £'+s.n+'. It is reduced by '+s.f+' of its price. What is the reduction?',
+             opts: opts, c: 0,
+             e: s.f+' × '+s.n+' = '+s.ans+'. Since '+s.f+' < 1, the reduction (£'+s.ans+') is less than £'+s.n+'.' };
+  }},
+  // Medium (Q4–7): Estimation
+  { gen: function() {
+    var n = pickFrom([23,37,41,49,53,61,79]);
+    var half = Math.round(n/2);
+    var opts = buildOpts('About '+half, ['About '+n, 'About '+(n*2), 'About '+(half+n)]);
+    return { q: 'Estimate 1/2 × '+n+'.',
+             opts: opts, c: 0,
+             e: '1/2 × '+n+' = '+n+'/2 = '+(n/2)+'. Rounded: about '+half+'.' };
+  }},
+  { gen: function() {
+    var sets = [{f:'3/4',n:40,est:30,exact:30},{f:'2/3',n:30,est:20,exact:20},{f:'3/8',n:24,est:9,exact:9},{f:'5/6',n:18,est:15,exact:15}];
+    var s = pickFrom(sets);
+    var opts = buildOpts('About '+s.est, ['About '+s.n, 'About '+(s.est*2), 'About '+(s.est-5>0?s.est-5:1)]);
+    return { q: 'Estimate '+s.f+' × '+s.n+'.',
+             opts: opts, c: 0,
+             e: s.f+' × '+s.n+' = '+s.exact+'. A good estimate is about '+s.est+'.' };
+  }},
+  { gen: function() {
+    var sets = [{f:'2/5',n:47,round:50,est:20},{f:'3/4',n:33,round:32,est:24},{f:'1/3',n:61,round:60,est:20},{f:'5/8',n:25,round:24,est:15}];
+    var s = pickFrom(sets);
+    var opts = buildOpts('About '+s.est, ['About '+s.n, 'About '+(s.est+s.round), 'About '+(s.est*3)]);
+    return { q: 'Estimate '+s.f+' × '+s.n+'. (Hint: round '+s.n+' to a friendly number.)',
+             opts: opts, c: 0,
+             e: 'Round '+s.n+' to '+s.round+'. Then '+s.f+' × '+s.round+' = '+s.est+'. Good estimate: about '+s.est+'.' };
+  }},
+  { gen: function() {
+    var sets = [{m:'2 1/2',n:9,est:22,exact:'22 1/2'},{m:'1 1/3',n:12,est:16,exact:'16'},{m:'3 1/4',n:8,est:26,exact:'26'},{m:'1 3/4',n:10,est:18,exact:'17 1/2'}];
+    var s = pickFrom(sets);
+    var opts = buildOpts('About '+s.est, ['About '+s.n, 'About '+(s.est*2), 'About '+(s.est-10>0?s.est-10:2)]);
+    return { q: 'Estimate '+s.m+' × '+s.n+'.',
+             opts: opts, c: 0,
+             e: s.m+' × '+s.n+' = '+s.exact+'. Since '+s.m+' > 1, the product is greater than '+s.n+'. Estimate: about '+s.est+'.' };
+  }},
+  // Greater Depth (Q8–10)
+  {q:"Tom says '2/3 × 18 is about 18.' Is he correct? Justify your answer.",
+   opts:["No — it is about 12, since 2/3 < 1 shrinks the number","Yes — 2/3 is close to 1","No — it is about 6","Yes — fractions always give the same number"],c:0,
+   e:"2/3 × 18 = 12. Since 2/3 < 1, multiplying by it makes the result smaller than 18. Tom is incorrect."},
+  { gen: function() {
+    var sets = [{f:'3/5',n:40,ans:24,bigger:40},{f:'7/8',n:32,ans:28,bigger:32},{f:'2/9',n:45,ans:10,bigger:45}];
+    var s = pickFrom(sets);
+    var opts = buildOpts(s.n+' is larger because '+s.f+' < 1', [s.f+' × '+s.n+' is larger', 'They are equal', 'Cannot tell without calculating']);
+    return { q: 'Which is larger: '+s.f+' × '+s.n+' or '+s.n+'? Explain without calculating.',
+             opts: opts, c: 0,
+             e: s.f+' < 1, so '+s.f+' × '+s.n+' = '+s.ans+' < '+s.n+'. Multiplying by a fraction less than 1 always shrinks the number.' };
+  }},
+  {q:"Estimate 2 3/4 × 3 1/5. Is the answer closer to 8 or 9?",
+   opts:["Closer to 9","Closer to 8","Exactly 8","Exactly 9"],c:0,
+   e:"Round: 3 × 3 = 9. More precisely: 2 3/4 × 3 1/5 = 11/4 × 16/5 = 176/20 = 8.8, which is closer to 9."}
+],
+
+// ══════════════════════════════════════════════════════════════════════════
 // TOPIC 8 — INTEGERS
 // ══════════════════════════════════════════════════════════════════════════
 
@@ -1453,6 +1859,95 @@ Object.assign(QUESTIONS, {
   }},
   {q:"Which of the following is always negative?",opts:["A negative number raised to an ODD power","A negative number raised to an EVEN power","The product of two negative numbers","The sum of two negative numbers squared"],c:0,
    e:"Negative base to an ODD power always gives a negative result (e.g. (−2)³=−8). Even power gives positive (e.g. (−2)²=4). Sum of two negatives squared = positive."}
+],
+
+// ── mi-08-5: Integer Input/Output Tables ────────────────────────────────
+"mi-08-5": [
+  { gen: function() {
+    var rule = randInt(2,9);
+    var inp = -randInt(1,12);
+    var ans = inp + rule;
+    var opts = buildOpts(ans, [inp - rule, inp * rule, -ans]);
+    return { q: 'Rule: add ' + rule + '. Input = ' + inp + '. What is the output?',
+             opts: opts, c: 0,
+             e: inp + ' + ' + rule + ' = ' + ans + '.' };
+  }},
+  { gen: function() {
+    var rule = -randInt(2,9);
+    var inp = randInt(1,12);
+    var ans = inp + rule;
+    var opts = buildOpts(ans, [inp - rule, -inp + rule, -ans]);
+    return { q: 'Rule: add ' + rule + '. Input = ' + inp + '. What is the output?',
+             opts: opts, c: 0,
+             e: inp + ' + (' + rule + ') = ' + inp + ' − ' + Math.abs(rule) + ' = ' + ans + '.' };
+  }},
+  { gen: function() {
+    var rule = randInt(2,9);
+    var inp = -randInt(1,12);
+    var ans = inp - rule;
+    var opts = buildOpts(ans, [inp + rule, -inp - rule, -ans]);
+    return { q: 'Rule: subtract ' + rule + '. Input = ' + inp + '. What is the output?',
+             opts: opts, c: 0,
+             e: inp + ' − ' + rule + ' = ' + ans + '.' };
+  }},
+  { gen: function() {
+    var rule = randInt(3,8);
+    var inp1 = randInt(1,6), out1 = inp1 + rule;
+    var inp2 = -randInt(1,6), out2 = inp2 + rule;
+    var inp3 = -randInt(7,12);
+    var ans = inp3 + rule;
+    var opts = buildOpts(ans, [inp3 - rule, -ans, inp3]);
+    return { q: 'Input → Output: ' + inp1 + '→' + out1 + ', ' + inp2 + '→' + out2 + '. What output does ' + inp3 + ' give?',
+             opts: opts, c: 0,
+             e: 'Rule is add ' + rule + ' (check: ' + inp1 + '+' + rule + '=' + out1 + ', ' + inp2 + '+' + rule + '=' + out2 + '). So ' + inp3 + '+' + rule + '=' + ans + '.' };
+  }},
+  { gen: function() {
+    var rule = -randInt(3,8);
+    var inp1 = randInt(5,12), out1 = inp1 + rule;
+    var inp2 = randInt(1,4), out2 = inp2 + rule;
+    var inp3 = -randInt(1,6);
+    var ans = inp3 + rule;
+    var opts = buildOpts(ans, [inp3 - rule, -ans, inp3 + Math.abs(rule)]);
+    return { q: 'Input → Output: ' + inp1 + '→' + out1 + ', ' + inp2 + '→' + out2 + '. What output does ' + inp3 + ' give?',
+             opts: opts, c: 0,
+             e: 'Rule is add ' + rule + ' (subtract ' + Math.abs(rule) + '). ' + inp3 + ' + (' + rule + ') = ' + ans + '.' };
+  }},
+  { gen: function() {
+    var rule = randInt(2,7);
+    var out = -randInt(1,10);
+    var ans = out - rule;
+    var opts = buildOpts(ans, [out + rule, -out - rule, -ans]);
+    return { q: 'Rule: add ' + rule + '. Output = ' + out + '. What was the input?',
+             opts: opts, c: 0,
+             e: 'Input + ' + rule + ' = ' + out + ', so Input = ' + out + ' − ' + rule + ' = ' + ans + '.' };
+  }},
+  { gen: function() {
+    var rule = randInt(3,9);
+    var inp1 = randInt(2,8), out1 = inp1 - rule;
+    var inp2 = -randInt(1,5), out2 = inp2 - rule;
+    var opts = buildOpts('Subtract ' + rule, ['Add ' + rule, 'Subtract ' + (rule+1), 'Add ' + (rule-1)]);
+    return { q: 'Input → Output: ' + inp1 + '→' + out1 + ', ' + inp2 + '→' + out2 + ', 0→' + (-rule) + '. What is the rule?',
+             opts: opts, c: 0,
+             e: 'Output − Input = ' + out1 + ' − ' + inp1 + ' = −' + rule + '. The rule is subtract ' + rule + '.' };
+  }},
+  { gen: function() {
+    var rule = -randInt(2,8);
+    var pairs = [];
+    for (var i = 0; i < 3; i++) {
+      var inp = randInt(-6, 6);
+      pairs.push(inp + '→' + (inp + rule));
+    }
+    var test = randInt(-8, -1);
+    var ans = test + rule;
+    var opts = buildOpts(ans, [test - rule, -ans, test]);
+    return { q: 'A table has rule "add ' + rule + '". Pairs shown: ' + pairs.join(', ') + '. Find the output for input ' + test + '.',
+             opts: opts, c: 0,
+             e: test + ' + (' + rule + ') = ' + test + ' − ' + Math.abs(rule) + ' = ' + ans + '.' };
+  }},
+  {q:"An input/output table uses the rule 'subtract 5'. Which input gives an output of −3?",opts:["2","−8","8","−2"],c:0,
+   e:"Input − 5 = −3, so Input = −3 + 5 = 2. Check: 2 − 5 = −3 ✓."},
+  {q:"A table shows: −4→1, −1→4, 3→8. What is the rule?",opts:["Add 5","Subtract 5","Add 4","Subtract 3"],c:0,
+   e:"Output − Input = 1 − (−4) = 5. Rule is add 5. Check: −1+5=4 ✓, 3+5=8 ✓."}
 ]
 
 }); // end Object.assign

@@ -13,62 +13,62 @@
 // ── MATH TOPICS (28 main tiles on dashboard) ─────────────────────────────
 const MATH_TOPICS = [
   // ── Full content ─────────────────────────────────────────────────────
-  {id:"mt-01",name:"Whole Numbers",emoji:"🔢",ixlSection:"A",hasContent:true,
+  {id:"mt-01",name:"Whole Numbers",emoji:"🔢",hasContent:true,
    description:"Understand place value, round whole numbers, read word names and Roman numerals, and add and subtract large numbers confidently."},
-  {id:"mt-02",name:"Multiplication & Division",emoji:"✖️",ixlSection:"B–C",hasContent:true,
+  {id:"mt-02",name:"Multiplication & Division",emoji:"✖️",hasContent:true,
    description:"Multiply and divide whole numbers using formal written methods, apply divisibility rules, and estimate products and quotients."},
-  {id:"mt-03",name:"Powers & Roots",emoji:"⚡",ixlSection:"D",hasContent:true,
+  {id:"mt-03",name:"Powers & Roots",emoji:"⚡",hasContent:true,
    description:"Write products using index notation, evaluate powers and roots, and explore the relationship between squares and square roots."},
-  {id:"mt-04",name:"Number Theory",emoji:"🔍",ixlSection:"E",hasContent:true,
-   description:"Identify prime and composite numbers, use factor trees for prime factorisation, and find highest common factors and lowest common multiples."},
-  {id:"mt-05",name:"Decimals",emoji:"🔟",ixlSection:"F–H",hasContent:true,
-   description:"Understand decimal place value, round decimals, and confidently add, subtract, multiply and divide with decimal numbers."},
-  {id:"mt-06",name:"Fractions",emoji:"½",ixlSection:"I–J",hasContent:true,
-   description:"Simplify and compare fractions, find equivalent fractions, add and subtract fractions with different denominators, and work with mixed numbers."},
-  {id:"mt-07",name:"Multiply & Divide Fractions",emoji:"✕",ixlSection:"K–L",hasContent:true,
-   description:"Multiply fractions by whole numbers and by other fractions, divide fractions, and carry out mixed number calculations."},
-  {id:"mt-08",name:"Integers",emoji:"➖",ixlSection:"M–O",hasContent:true,
-   description:"Understand positive and negative integers, place them on number lines, and add, subtract, multiply and divide with negative numbers."},
-  {id:"mt-09",name:"Ratio & Rates",emoji:"⚖️",ixlSection:"S",hasContent:true,
-   description:"Write and simplify ratios, find equivalent ratios, calculate unit rates, solve proportions, and apply ratio to scale drawings."},
-  {id:"mt-10",name:"Percentages",emoji:"💯",ixlSection:"T",hasContent:true,
-   description:"Convert fluently between percentages, fractions and decimals, find percentages of amounts, and solve percentage increase and decrease problems."},
-  {id:"mt-11",name:"Algebra: Expressions",emoji:"📝",ixlSection:"AA",hasContent:true,
-   description:"Write and evaluate variable expressions, collect like terms, apply the distributive property, and factorise simple linear expressions."},
-  {id:"mt-12",name:"Algebra: Equations & Sequences",emoji:"🔄",ixlSection:"BB–Z",hasContent:true,
-   description:"Identify arithmetic and geometric sequences, solve one-step and two-step equations, and write and solve simple inequalities."},
-  {id:"mt-13",name:"Statistics & Probability",emoji:"📊",ixlSection:"II–KK",hasContent:true,
-   description:"Calculate mean, median, mode and range, read and draw statistical graphs, and find the probability of simple and combined events."},
+  {id:"mt-04",name:"Number Theory",emoji:"🔍",hasContent:true,
+   description:"Identify prime and composite numbers, use factor trees for prime factorisation, find highest common factors and lowest common multiples, and understand multiplicative inverses."},
+  {id:"mt-05",name:"Decimals",emoji:"🔟",hasContent:true,
+   description:"Understand decimal place value, round decimals, add, subtract, multiply and divide decimals — including decimal-by-decimal multiplication and division with decimal divisors."},
+  {id:"mt-06",name:"Fractions",emoji:"½",hasContent:true,
+   description:"Simplify and compare fractions, add and subtract fractions with different denominators, convert to recurring decimals, understand fractions as division, and work with fraction inequalities."},
+  {id:"mt-07",name:"Multiply & Divide Fractions",emoji:"✕",hasContent:true,
+   description:"Multiply fractions by whole numbers and by other fractions, divide fractions, carry out mixed number calculations, and estimate and scale with fractions."},
+  {id:"mt-08",name:"Integers",emoji:"➖",hasContent:true,
+   description:"Understand positive and negative integers, place them on number lines, add, subtract, multiply and divide with negative numbers, and complete integer input/output tables."},
+  {id:"mt-09",name:"Ratio & Rates",emoji:"⚖️",hasContent:true,
+   description:"Write and simplify ratios, find equivalent ratios, calculate unit rates, solve proportions, apply ratio to scale drawings, and use bar diagrams to solve ratio word problems."},
+  {id:"mt-10",name:"Percentages",emoji:"💯",hasContent:true,
+   description:"Convert fluently between percentages, fractions and decimals, find percentages of amounts, solve percentage increase and decrease problems, and use grid/bar models to estimate percents."},
+  {id:"mt-11",name:"Algebra: Expressions",emoji:"📝",hasContent:true,
+   description:"Write and evaluate variable expressions, collect like terms, apply the distributive property, factorise simple linear expressions, and use properties of addition and multiplication to write equivalent expressions."},
+  {id:"mt-12",name:"Algebra: Equations & Sequences",emoji:"🔄",hasContent:true,
+   description:"Identify arithmetic and geometric sequences, solve one-step and two-step equations, write and solve simple inequalities, distinguish expressions from equations, and model equations with algebra tiles."},
+  {id:"mt-13",name:"Statistics & Probability",emoji:"📊",hasContent:true,
+   description:"Calculate mean, median, mode and range, read and draw statistical graphs including pictograms and double bar/line graphs, understand sampling and bias, identify outliers and distributions, and find probability of simple, combined, mutually exclusive and overlapping events."},
   // ── Coming soon ──────────────────────────────────────────────────────
-  {id:"mt-14",name:"Order of Operations",emoji:"📋",ixlSection:"P",hasContent:true,
+  {id:"mt-14",name:"Order of Operations",emoji:"📋",hasContent:true,
    description:"Apply BODMAS/BIDMAS rules to evaluate numerical expressions involving whole numbers, decimals, fractions and integers."},
-  {id:"mt-15",name:"Rational Numbers",emoji:"🔢",ixlSection:"Q",hasContent:true,
+  {id:"mt-15",name:"Rational Numbers",emoji:"🔢",hasContent:true,
    description:"Place rational numbers on number lines, compare and order them, and explore the sign of rational number expressions."},
-  {id:"mt-16",name:"Problem Solving & Estimation",emoji:"🧩",ixlSection:"R",hasContent:true,
-   description:"Use estimation, logical reasoning and multi-step strategies to solve real-world word problems."},
-  {id:"mt-17",name:"Units of Measurement",emoji:"📏",ixlSection:"U",hasContent:true,
-   description:"Convert between metric and imperial units of length, mass, volume and area, and solve multi-step measurement problems."},
-  {id:"mt-18",name:"Money & Consumer Maths",emoji:"💷",ixlSection:"V–W",hasContent:true,
-   description:"Add, subtract, multiply and divide money amounts; calculate sale prices, unit prices, VAT and tips."},
-  {id:"mt-19",name:"Time",emoji:"🕐",ixlSection:"X",hasContent:true,
+  {id:"mt-16",name:"Problem Solving & Estimation",emoji:"🧩",hasContent:true,
+   description:"Use estimation, logical reasoning and multi-step strategies to solve real-world word problems, identify extra or missing information, and find distance/direction to a starting point."},
+  {id:"mt-17",name:"Units of Measurement",emoji:"📏",hasContent:true,
+   description:"Convert between metric and imperial units of length, mass, volume and area, convert square and cubic units, compare temperatures above and below zero, and understand precision."},
+  {id:"mt-18",name:"Money & Consumer Maths",emoji:"💷",hasContent:true,
+   description:"Add, subtract, multiply and divide money amounts; calculate sale prices, unit prices, VAT and tips; find combinations of coins; and solve money multiplication and division problems."},
+  {id:"mt-19",name:"Time",emoji:"🕐",hasContent:true,
    description:"Calculate elapsed time, convert between 12-hour and 24-hour time, read timetables, and work with time zones."},
-  {id:"mt-20",name:"Coordinate Plane",emoji:"📍",ixlSection:"Y",hasContent:true,
+  {id:"mt-20",name:"Coordinate Plane",emoji:"📍",hasContent:true,
    description:"Plot and read points in all four quadrants, identify quadrant positions, and use coordinates to describe maps and paths."},
-  {id:"mt-21",name:"Number Sequences",emoji:"🔢",ixlSection:"Z",hasContent:true,
+  {id:"mt-21",name:"Number Sequences",emoji:"🔢",hasContent:true,
    description:"Identify and continue arithmetic and geometric sequences, find the nth term, and write variable expressions for sequences."},
-  {id:"mt-22",name:"Algebra: Inequalities",emoji:"↔️",ixlSection:"CC",hasContent:true,
+  {id:"mt-22",name:"Algebra: Inequalities",emoji:"↔️",hasContent:true,
    description:"Write, graph and solve one-step inequalities, interpret solutions on a number line, and apply inequalities to word problems."},
-  {id:"mt-23",name:"Two-Variable Equations",emoji:"📈",ixlSection:"DD",hasContent:true,
+  {id:"mt-23",name:"Two-Variable Equations",emoji:"📈",hasContent:true,
    description:"Find values using two-variable equations, complete tables of values, and graph linear relationships on a coordinate plane."},
-  {id:"mt-24",name:"2D Shapes & Angles",emoji:"📐",ixlSection:"EE",hasContent:true,
-   description:"Classify triangles and quadrilaterals, measure and estimate angles, find missing angles using parallel line rules."},
-  {id:"mt-25",name:"Symmetry & Transformations",emoji:"🔀",ixlSection:"FF",hasContent:true,
+  {id:"mt-24",name:"2D Shapes & Angles",emoji:"📐",hasContent:true,
+   description:"Classify triangles and quadrilaterals, measure and estimate angles, find missing angles using parallel line rules, identify vertical and supplementary angles, name angles, understand lines/segments/rays, and explore parts of circles."},
+  {id:"mt-25",name:"Symmetry & Transformations",emoji:"🔀",hasContent:true,
    description:"Identify line and rotational symmetry, perform reflections and translations, and recognise congruent figures."},
-  {id:"mt-26",name:"3D Figures",emoji:"📦",ixlSection:"GG",hasContent:true,
+  {id:"mt-26",name:"3D Figures",emoji:"📦",hasContent:true,
    description:"Name and describe 3D shapes, draw and identify nets, and interpret front, side and top views of solids."},
-  {id:"mt-27",name:"Area, Perimeter & Volume",emoji:"📏",ixlSection:"HH",hasContent:true,
+  {id:"mt-27",name:"Area, Perimeter & Volume",emoji:"📏",hasContent:true,
    description:"Find areas of triangles, parallelograms, trapeziums and compound figures, solve perimeter problems, and calculate volumes of cuboids."},
-  {id:"mt-28",name:"Financial Literacy",emoji:"💳",ixlSection:"LL",hasContent:true,
+  {id:"mt-28",name:"Financial Literacy",emoji:"💳",hasContent:true,
    description:"Balance and adjust a budget, understand how debit and credit cards work, and make informed financial decisions."}
 ];
 
@@ -199,6 +199,13 @@ CURRICULUM.push(
    prerequisites:["mi-04-1"],
    topics:["Listing multiples","Common multiples","LCM using prime factorisation","Real-life LCM problems"]},
 
+  {id:"mi-04-5",subject:"Mathematics",subjectId:"math",topicId:"mt-04",
+   name:"Multiplicative Inverses",emoji:"🔄",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Understand that the multiplicative inverse (reciprocal) of a number n is 1/n, and that their product is always 1.",
+   learningOutcomes:["Define multiplicative inverse (reciprocal)","Find the reciprocal of whole numbers, fractions and decimals","Verify inverses by checking the product equals 1"],
+   prerequisites:["mi-04-1"],
+   topics:["Reciprocal of a whole number","Reciprocal of a fraction","Reciprocal of a decimal","Product of a number and its inverse = 1"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 5 — DECIMALS (mt-05)
   // ══════════════════════════════════════════════════════════════════════
@@ -229,6 +236,13 @@ CURRICULUM.push(
    learningOutcomes:["Multiply a decimal by a whole number","Divide a decimal by a whole number","Multiply and divide by powers of 10"],
    prerequisites:["mi-05-1","mi-02-1"],
    topics:["Decimal × whole number","Decimal ÷ whole number","× and ÷ by 10, 100, 1000","Decimal word problems"]},
+
+  {id:"mi-05-5",subject:"Mathematics",subjectId:"math",topicId:"mt-05",
+   name:"Advanced Decimal Operations",emoji:"🔬",difficulty:3,estimatedHours:2,color:"#3f6f00",
+   description:"Multiply two decimals together, divide by a decimal divisor, and solve inequalities involving decimal operations.",
+   learningOutcomes:["Multiply a decimal by another decimal using the place-value method","Divide by a decimal divisor by converting to whole-number division","Write and evaluate inequalities involving decimal multiplication and division"],
+   prerequisites:["mi-05-4"],
+   topics:["Decimal × decimal","Division with decimal divisors","Inequalities with decimal multiplication","Inequalities with decimal division"]},
 
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 6 — FRACTIONS (mt-06)
@@ -261,6 +275,20 @@ CURRICULUM.push(
    prerequisites:["mi-06-3"],
    topics:["Improper fraction conversions","Adding mixed numbers","Subtracting mixed numbers","Word problems with mixed numbers"]},
 
+  {id:"mi-06-5",subject:"Mathematics",subjectId:"math",topicId:"mt-06",
+   name:"Recurring Decimals & Fractions as Division",emoji:"🔁",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Convert fractions to recurring decimals, understand fractions as division, and read fraction information from graphs and tables.",
+   learningOutcomes:["Convert fractions to recurring (repeating) decimals using dot notation","Interpret a fraction as a division and solve word problems","Read and interpret fractions from graphs and tables"],
+   prerequisites:["mi-06-2"],
+   topics:["Terminating vs recurring decimals","Dot notation for recurring decimals","Fractions as division word problems","Fractions from graphs and tables"]},
+
+  {id:"mi-06-6",subject:"Mathematics",subjectId:"math",topicId:"mt-06",
+   name:"Fraction Inequalities",emoji:"⚖️",difficulty:3,estimatedHours:2,color:"#3f6f00",
+   description:"Write and evaluate inequalities involving the addition and subtraction of fractions and mixed numbers.",
+   learningOutcomes:["Compare sums and differences of fractions using inequality symbols","Determine whether a fraction addition or subtraction statement is true using <, > or =","Apply fraction inequality reasoning to mixed numbers"],
+   prerequisites:["mi-06-3","mi-06-4"],
+   topics:["Inequalities with fraction addition","Inequalities with fraction subtraction","Inequalities with mixed number addition","Inequalities with mixed number subtraction"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 7 — MULTIPLY & DIVIDE FRACTIONS (mt-07)
   // ══════════════════════════════════════════════════════════════════════
@@ -291,6 +319,13 @@ CURRICULUM.push(
    learningOutcomes:["Multiply mixed numbers by converting to improper fractions","Divide mixed numbers","Solve multi-step problems with fraction operations"],
    prerequisites:["mi-07-2","mi-07-3"],
    topics:["Mixed number × fraction","Mixed number ÷ fraction","Multi-step fraction problems","Real-life contexts"]},
+
+  {id:"mi-07-5",subject:"Mathematics",subjectId:"math",topicId:"mt-07",
+   name:"Scaling & Estimating with Fractions",emoji:"📊",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Scale whole numbers by fractions to predict whether a product is larger or smaller, and estimate products of fractions, whole numbers and mixed numbers.",
+   learningOutcomes:["Predict whether scaling by a fraction makes a number larger or smaller","Estimate products of fractions and whole numbers using benchmarks","Estimate products involving mixed numbers"],
+   prerequisites:["mi-07-1"],
+   topics:["Scaling by fractions less than 1","Scaling by fractions greater than 1","Estimating fraction × whole number","Estimating with mixed numbers"]},
 
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 8 — INTEGERS (mt-08)
@@ -323,6 +358,13 @@ CURRICULUM.push(
    prerequisites:["mi-08-1"],
    topics:["Positive × positive","Negative × positive","Negative × negative","Division sign rules"]},
 
+  {id:"mi-08-5",subject:"Mathematics",subjectId:"math",topicId:"mt-08",
+   name:"Integer Input/Output Tables",emoji:"📊",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Add and subtract integers using input/output tables to discover rules and patterns.",
+   learningOutcomes:["Complete input/output tables involving integer addition","Complete input/output tables involving integer subtraction","Determine the rule from a partially completed integer table"],
+   prerequisites:["mi-08-2","mi-08-3"],
+   topics:["Addition input/output tables","Subtraction input/output tables","Finding the rule","Mixed operation tables"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 9 — RATIO & RATES (mt-09)
   // ══════════════════════════════════════════════════════════════════════
@@ -353,6 +395,13 @@ CURRICULUM.push(
    learningOutcomes:["Solve a proportion by cross-multiplication","Interpret and create scale drawings","Calculate real distances from scale diagrams"],
    prerequisites:["mi-09-2"],
    topics:["Setting up proportions","Cross-multiplication","Scale factors","Map and model problems"]},
+
+  {id:"mi-09-5",subject:"Mathematics",subjectId:"math",topicId:"mt-09",
+   name:"Bar Diagram Ratio Problems",emoji:"📊",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Use bar diagrams (tape diagrams) to model and solve ratio word problems visually.",
+   learningOutcomes:["Draw a bar diagram to represent a given ratio","Use bar diagrams to find unknown quantities in ratio problems","Solve multi-step ratio word problems using bar models"],
+   prerequisites:["mi-09-1","mi-09-2"],
+   topics:["Drawing bar models for ratios","Finding totals from bar diagrams","Finding differences from bar diagrams","Multi-step bar diagram problems"]},
 
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 10 — PERCENTAGES (mt-10)
@@ -385,6 +434,13 @@ CURRICULUM.push(
    prerequisites:["mi-10-2","mi-10-3"],
    topics:["% increase and decrease","VAT (20%)","Discounts and sale prices","Reverse percentage"]},
 
+  {id:"mi-10-5",subject:"Mathematics",subjectId:"math",topicId:"mt-10",
+   name:"Percent Models & Estimation",emoji:"📐",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Use grid models and bar models to visualise and solve percent problems, and estimate percents of numbers mentally.",
+   learningOutcomes:["Shade a 10×10 grid to represent a percentage","Use a bar model to find a percent of an amount","Estimate percentages of numbers using benchmarks"],
+   prerequisites:["mi-10-1","mi-10-2"],
+   topics:["Grid models for percentages","Bar models for percentages","Estimating percents using benchmarks","Visual percent problem solving"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 11 — ALGEBRA: EXPRESSIONS (mt-11)
   // ══════════════════════════════════════════════════════════════════════
@@ -415,6 +471,13 @@ CURRICULUM.push(
    learningOutcomes:["Find the HCF of terms in an expression","Write a factorised expression","Verify factorisation by expanding"],
    prerequisites:["mi-11-3","mi-04-3"],
    topics:["HCF of algebraic terms","Factorising single bracket","Checking by expanding","Factorising with negative signs"]},
+
+  {id:"mi-11-5",subject:"Mathematics",subjectId:"math",topicId:"mt-11",
+   name:"Properties of Operations",emoji:"🔗",difficulty:1,estimatedHours:2,color:"#3f6f00",
+   description:"Identify and apply the commutative, associative, identity, and distributive properties to write equivalent expressions.",
+   learningOutcomes:["Name and apply commutative, associative and identity properties","Use properties to rewrite and simplify expressions","Solve for a variable using properties of multiplication"],
+   prerequisites:["mi-11-1"],
+   topics:["Commutative property","Associative property","Identity and zero properties","Writing equivalent expressions"]},
 
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 12 — ALGEBRA: EQUATIONS & SEQUENCES (mt-12)
@@ -447,6 +510,13 @@ CURRICULUM.push(
    prerequisites:["mi-12-2"],
    topics:["Inequality symbols (<, >, ≤, ≥)","Graphing inequalities","Solving one-step inequalities","Inequality word problems"]},
 
+  {id:"mi-12-5",subject:"Mathematics",subjectId:"math",topicId:"mt-12",
+   name:"Expressions vs Equations & Tiles",emoji:"🧱",difficulty:1,estimatedHours:2,color:"#3f6f00",
+   description:"Distinguish between expressions and equations, model and solve equations using algebra tiles, and match word problems to equations.",
+   learningOutcomes:["Tell the difference between an expression and an equation","Use algebra tiles to model and solve a simple equation","Match a word problem to the correct equation"],
+   prerequisites:["mi-11-1"],
+   topics:["Expression vs equation","Modelling with algebra tiles","Solving with tiles","Word problem to equation matching"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 13 — STATISTICS & PROBABILITY (mt-13)
   // ══════════════════════════════════════════════════════════════════════
@@ -477,6 +547,27 @@ CURRICULUM.push(
    learningOutcomes:["Express probability as a fraction between 0 and 1","Find the probability of a complementary event","Use experimental data to estimate probability"],
    prerequisites:[],
    topics:["Probability scale (0 to 1)","Equally likely outcomes","Complementary events (P + P' = 1)","Experimental probability"]},
+
+  {id:"mi-13-5",subject:"Mathematics",subjectId:"math",topicId:"mt-13",
+   name:"Data Displays & Graph Types",emoji:"📊",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Read and create pictograms, line plots, frequency tables, double bar graphs and double line graphs; choose the best graph for the data.",
+   learningOutcomes:["Read and draw pictograms with a key","Create and interpret frequency tables","Compare data sets using double bar and double line graphs","Choose the most appropriate graph type for a data set"],
+   prerequisites:["mi-13-1","mi-13-2"],
+   topics:["Pictograms and keys","Line plots","Frequency tables","Double bar graphs","Double line graphs","Choosing graph types"]},
+
+  {id:"mi-13-6",subject:"Mathematics",subjectId:"math",topicId:"mt-13",
+   name:"Sampling, Bias & Distributions",emoji:"🔍",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Identify statistical questions, understand populations vs samples, recognise biased samples, find outliers, and describe data distributions.",
+   learningOutcomes:["Distinguish statistical from non-statistical questions","Explain the difference between a population and a sample","Identify sources of bias in sampling","Recognise outliers and describe the shape of a distribution"],
+   prerequisites:["mi-13-1","mi-13-4"],
+   topics:["Statistical vs non-statistical questions","Populations and samples","Biased and unbiased samples","Outliers","Data distributions"]},
+
+  {id:"mi-13-7",subject:"Mathematics",subjectId:"math",topicId:"mt-13",
+   name:"Combined & Predicted Probability",emoji:"🎯",difficulty:3,estimatedHours:2,color:"#3f6f00",
+   description:"Identify mutually exclusive and overlapping events, make predictions using theoretical and experimental probability.",
+   learningOutcomes:["Distinguish mutually exclusive from overlapping events","Calculate P(A or B) for mutually exclusive events","Use theoretical probability to make predictions","Use experimental probability to estimate outcomes"],
+   prerequisites:["mi-13-4"],
+   topics:["Mutually exclusive events","Overlapping events","Predictions from theoretical probability","Predictions from experimental probability"]},
 
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 14 — ORDER OF OPERATIONS (mt-14) — coming soon
@@ -541,6 +632,13 @@ CURRICULUM.push(
    learningOutcomes:["Use process of elimination","Work backwards from a solution","Apply logical reasoning to number problems"],
    prerequisites:[],topics:["Guess and check","Working backwards","Logical elimination","Ordering problems"]},
 
+  {id:"mi-16-4",subject:"Mathematics",subjectId:"math",topicId:"mt-16",
+   name:"Extra/Missing Info & Direction",emoji:"🔍",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Identify extra or missing information in word problems and determine distance/direction back to a starting point.",
+   learningOutcomes:["Identify extra (unnecessary) information in a word problem","Determine when a problem has missing information","Calculate distance and direction to return to a starting point"],
+   prerequisites:["mi-16-1"],
+   topics:["Spotting extra information","Identifying missing information","Direction to starting point","Distance and displacement problems"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 17 — MEASUREMENT (mt-17) — coming soon
   // ══════════════════════════════════════════════════════════════════════
@@ -562,6 +660,13 @@ CURRICULUM.push(
    learningOutcomes:["Use given conversion facts to switch between systems","Apply conversions to real-world problems","Compare metric and imperial measurements"],
    prerequisites:["mi-17-1","mi-17-2"],topics:["km ↔ miles","kg ↔ pounds","Litres ↔ pints","Conversion word problems"]},
 
+  {id:"mi-17-4",subject:"Mathematics",subjectId:"math",topicId:"mt-17",
+   name:"Area/Volume Units & Temperature",emoji:"🌡️",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Convert square and cubic units, link cubic centimetres to millilitres and cubic metres to litres, compare temperatures, and understand precision in measurement.",
+   learningOutcomes:["Convert between cm² and m², and between cm³ and m³","Know that 1 cm³ = 1 ml and 1000 cm³ = 1 litre","Compare temperatures above and below zero","Understand precision and appropriate units"],
+   prerequisites:["mi-17-1"],
+   topics:["Square unit conversions","Cubic unit conversions","cm³ ↔ ml and m³ ↔ litres","Temperature comparison","Precision"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 18 — MONEY & CONSUMER MATHS (mt-18) — coming soon
   // ══════════════════════════════════════════════════════════════════════
@@ -582,6 +687,13 @@ CURRICULUM.push(
    description:"Calculate VAT (20%), tips and mark-ups in consumer contexts.",
    learningOutcomes:["Add VAT to a price","Calculate a tip percentage","Find total cost including extra charges"],
    prerequisites:["mi-10-2"],topics:["VAT at 20%","Tip calculations","Mark-ups","Total cost problems"]},
+
+  {id:"mi-18-4",subject:"Mathematics",subjectId:"math",topicId:"mt-18",
+   name:"Multiply & Divide Money & Coins",emoji:"🪙",difficulty:1,estimatedHours:2,color:"#3f6f00",
+   description:"Multiply and divide money amounts, and find the number of each type of coin to make a given total.",
+   learningOutcomes:["Multiply a money amount by a whole number","Divide a money amount equally","Find combinations of coins that make a given total"],
+   prerequisites:["mi-18-1"],
+   topics:["Multiplying money","Dividing money equally","Coin combinations","Money word problems"]},
 
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 19 — TIME (mt-19) — coming soon
@@ -709,6 +821,13 @@ CURRICULUM.push(
    learningOutcomes:["Identify corresponding, alternate and co-interior angles","Apply angle relationships to find missing angles","Justify answers using geometric reasoning"],
    prerequisites:["mi-24-2"],topics:["Corresponding angles","Alternate angles","Co-interior angles","Geometric reasoning"]},
 
+  {id:"mi-24-4",subject:"Mathematics",subjectId:"math",topicId:"mt-24",
+   name:"Angles, Lines & Circles",emoji:"⭕",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Identify vertical and supplementary angles, understand lines, segments and rays, name angles, bisect segments and angles, and know the parts of a circle.",
+   learningOutcomes:["Find vertical and supplementary angle measures","Distinguish between lines, segments and rays","Name parts of a circle (radius, diameter, chord, arc, sector, tangent)"],
+   prerequisites:["mi-24-1"],
+   topics:["Vertical angles","Supplementary angles","Lines, segments and rays","Naming angles","Bisectors","Parts of a circle"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 25 — SYMMETRY & TRANSFORMATIONS (mt-25) — coming soon
   // ══════════════════════════════════════════════════════════════════════
@@ -771,6 +890,13 @@ CURRICULUM.push(
    description:"Calculate the volume of cubes and cuboids and solve real-world volume problems.",
    learningOutcomes:["Use V = l × w × h to find volume","Convert between cm³ and litres","Solve volume word problems"],
    prerequisites:["mi-27-1"],topics:["Volume formula","Cubic units","Cm³ and litres","Volume word problems"]},
+
+  {id:"mi-27-4",subject:"Mathematics",subjectId:"math",topicId:"mt-27",
+   name:"Compare Area & Perimeter",emoji:"🔲",difficulty:2,estimatedHours:1,color:"#3f6f00",
+   description:"Explore the relationship between area and perimeter of rectangles, and compare the area and perimeter of two figures.",
+   learningOutcomes:["Understand that same perimeter can give different areas","Understand that same area can give different perimeters","Compare area and perimeter of two given figures"],
+   prerequisites:["mi-27-1"],
+   topics:["Same perimeter different areas","Same area different perimeters","Comparing two rectangles","Maximising area for given perimeter"]},
 
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 28 — FINANCIAL LITERACY (mt-28) — coming soon

@@ -213,26 +213,15 @@ function goToTest() {
 })();
 
 function updateTestLock() {
-  var allCovered = topicIslands.length > 0 && topicIslands.every(function(island) {
-    return getIslandStatus(island.id) >= 3;
-  });
+  // TEMP: lock check disabled for testing
   var btn = document.getElementById('test-cta-btn');
   var desc = document.getElementById('test-cta-desc');
   var box = document.getElementById('test-cta-box');
-  if (allCovered) {
-    btn.disabled = false;
-    btn.style.opacity = '';
-    btn.style.cursor = '';
-    desc.textContent = 'Test yourself across all subtopics — fresh questions every time.';
-    box.style.opacity = '';
-  } else {
-    btn.disabled = true;
-    btn.style.opacity = '0.5';
-    btn.style.cursor = 'not-allowed';
-    var covered = topicIslands.filter(function(i) { return getIslandStatus(i.id) >= 3; }).length;
-    desc.textContent = 'Complete all subtopics to unlock (' + covered + '/' + topicIslands.length + ' covered).';
-    box.style.opacity = '0.7';
-  }
+  btn.disabled = false;
+  btn.style.opacity = '';
+  btn.style.cursor = '';
+  desc.textContent = 'Test yourself across all subtopics — fresh questions every time.';
+  box.style.opacity = '';
 }
 
 function showLockedMsg(id) {

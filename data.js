@@ -10,6 +10,10 @@ const CURRICULUM = [
    description:"Convert between fractions, decimals and percentages and use them in calculations.",
    learningOutcomes:["Convert between fractions, decimals and percentages","Find percentages of amounts","Order FDP from smallest to largest"],
    prerequisites:["island-1"],topics:["Equivalent fractions","FDP conversions","Finding percentages","Comparing FDP","Fraction operations"]},
+  {id:"island-24",subject:"Mathematics",subjectId:"math",name:"Ratio, Proportion & Rates",emoji:"⚖️",difficulty:2,estimatedHours:6,color:"#3f6f00",
+   description:"Write and simplify ratios, divide quantities in a given ratio, use the unitary method and solve speed, distance, time problems.",
+   learningOutcomes:["Write and simplify ratios","Divide a quantity in a given ratio","Use the unitary method to solve direct proportion problems","Apply the speed = distance ÷ time formula"],
+   prerequisites:["island-2"],topics:["Writing and simplifying ratios","Dividing in a ratio","Unitary method","Direct proportion","Speed, distance and time","Scale drawings and maps"]},
   {id:"island-3",subject:"Mathematics",subjectId:"math",name:"Algebra Foundations",emoji:"📊",difficulty:2,estimatedHours:6,color:"#3f6f00",
    description:"Use letters to represent unknowns, form sequences and solve simple equations.",
    learningOutcomes:["Substitute values into expressions","Find the nth term of a linear sequence","Solve one-step and two-step equations"],
@@ -102,12 +106,6 @@ const CURRICULUM = [
    description:"Explore where and why people settle, population density and the difference between urban and rural areas.",
    learningOutcomes:["Calculate and compare population density","Explain physical and human factors affecting settlement","Distinguish urban from rural areas and describe urbanisation"],
    prerequisites:["island-20"],topics:["Population density","Factors affecting settlement","Urban and rural areas","Urbanisation","Push and pull factors","Settlement hierarchy"]},
-
-  // ── MATHEMATICS (continued) ───────────────────────────────────────────────
-  {id:"island-24",subject:"Mathematics",subjectId:"math",name:"Ratio, Proportion & Rates",emoji:"⚖️",difficulty:2,estimatedHours:6,color:"#3f6f00",
-   description:"Write and simplify ratios, divide quantities in a given ratio, use the unitary method and solve speed, distance, time problems.",
-   learningOutcomes:["Write and simplify ratios","Divide a quantity in a given ratio","Use the unitary method to solve direct proportion problems","Apply the speed = distance ÷ time formula"],
-   prerequisites:["island-2"],topics:["Writing and simplifying ratios","Dividing in a ratio","Unitary method","Direct proportion","Speed, distance and time","Scale drawings and maps"]},
 
   // ── ENGLISH (continued) ───────────────────────────────────────────────────
   {id:"island-25",subject:"English",subjectId:"english",name:"Shakespeare",emoji:"🎭",difficulty:2,estimatedHours:6,color:"#ba7517",

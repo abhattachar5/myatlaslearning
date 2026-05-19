@@ -163,6 +163,29 @@ Object.assign(LESSONS, {
   ]
 },
 
+// ── mi-24-4: Angles, Lines & Circles ──────────────────────────────────────
+'mi-24-4': {
+  title: 'Angles, Lines & Circles',
+  sections: [
+    {
+      heading: 'Vertical & Supplementary Angles',
+      content: '<p>When two straight lines cross, they form two pairs of <strong>vertically opposite angles</strong>. Each pair is equal.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Vertically opposite:</strong> angles across from each other = equal<br><strong>Supplementary:</strong> angles next to each other on a straight line = 180°<br><br>If one angle = 65°, then:<br>Vertically opposite = 65°<br>Adjacent = 180° − 65° = 115°</div>'
+    },
+    {
+      heading: 'Lines, Segments & Rays',
+      content: '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px;text-align:center"><strong>Line</strong><br>←————→<br>Extends infinitely both ways</div><div style="background:#fff3e0;padding:10px;border-radius:8px;text-align:center"><strong>Segment</strong><br>•————•<br>Two endpoints, finite length</div><div style="background:#f3e5f5;padding:10px;border-radius:8px;text-align:center"><strong>Ray</strong><br>•————→<br>One endpoint, infinite in one direction</div></div><p><strong>Naming:</strong> Line AB (↔), Segment AB (endpoints A and B), Ray AB (starts at A, passes through B).</p>'
+    },
+    {
+      heading: 'Bisectors',
+      content: '<p>A <strong>bisector</strong> divides something into two equal parts.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Segment bisector:</strong> cuts a line segment into two equal halves.<br>A 10 cm segment bisected → two 5 cm pieces.<br><br><strong>Angle bisector:</strong> divides an angle into two equal angles.<br>An 80° angle bisected → two 40° angles.</div>'
+    },
+    {
+      heading: 'Parts of a Circle',
+      content: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Radius</strong> — centre to edge<br><strong>Diameter</strong> — edge to edge through centre (= 2r)<br><strong>Chord</strong> — line joining two points on the edge</div><div style="background:#fff3e0;padding:10px;border-radius:8px"><strong>Arc</strong> — part of the circumference<br><strong>Sector</strong> — "pizza slice" (2 radii + arc)<br><strong>Tangent</strong> — touches circle at exactly one point</div></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Central angle:</strong> An angle at the centre of a circle. A 90° central angle = ¼ of the circle (90/360).</div>'
+    }
+  ]
+},
+
 'mi-25-1': {
   title: 'Line & Rotational Symmetry',
   sections: [

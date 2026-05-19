@@ -56,7 +56,12 @@ FLASHCARDS.push(
   // mi-16-3: Logical Reasoning Problems
   { islandId:'mi-16-3', front:'What is a counter-example?', back:'A single example that disproves a general statement. E.g. "all primes are odd" â€" counter-example: 2 is prime and even.' },
   { islandId:'mi-16-3', front:'Sam thinks of a number, doubles it, adds 6, and gets 18. What is the number?', back:'Work backwards: 18âˆ'6=12, 12Ã·2=6. The number is 6.' },
-  { islandId:'mi-16-3', front:'What is a Venn diagram used for in problem solving?', back:'Organising information about overlapping groups or sets to avoid double-counting.' }
+  { islandId:'mi-16-3', front:'What is a Venn diagram used for in problem solving?', back:'Organising information about overlapping groups or sets to avoid double-counting.' },
+
+  // mi-16-4: Extra/Missing Info & Direction
+  { islandId:'mi-16-4', front:'What is "extra information" in a word problem?', back:'Data given in the problem that is NOT needed to find the answer.\n\nExample: "Sam has 5 red and 3 blue balls. He buys 2 more red. How many red does he have now?"\nExtra info: 3 blue balls (not needed).\nAnswer: 5 + 2 = 7 red.' },
+  { islandId:'mi-16-4', front:'What is "missing information" in a word problem?', back:'When a problem does not give you enough data to find the answer.\n\nExample: "A shop sells pencils for 30p each. How much does Sarah spend?"\nMissing: how many pencils Sarah buys.\n\nYou must identify WHAT is missing and explain why you cannot solve without it.' },
+  { islandId:'mi-16-4', front:'How do you find the distance and direction back to a starting point?', back:'Track each leg of the journey on a number line or grid.\n\nExample: Walk 5 km east, then 3 km west.\nNet displacement = 5 − 3 = 2 km east.\nTo return: walk 2 km WEST.\n\nAlways find the NET displacement, then reverse the direction.' }
 );
 
 // â"€â"€â"€ TOPIC 17: UNITS OF MEASUREMENT â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
@@ -75,7 +80,12 @@ FLASHCARDS.push(
   // mi-17-3: Convert Metric & Imperial
   { islandId:'mi-17-3', front:'Approximate: 1 kg â‰ˆ ? pounds', back:'1 kg â‰ˆ 2.2 pounds.' },
   { islandId:'mi-17-3', front:'Approximate: 1 mile â‰ˆ ? km', back:'1 mile â‰ˆ 1.6 km.' },
-  { islandId:'mi-17-3', front:'Convert 5 miles to km (use 1 mile â‰ˆ 1.6 km).', back:'5 Ã— 1.6 = 8 km.' }
+  { islandId:'mi-17-3', front:'Convert 5 miles to km (use 1 mile â‰ˆ 1.6 km).', back:'5 Ã— 1.6 = 8 km.' },
+
+  // mi-17-4: Area/Volume Units & Temperature
+  { islandId:'mi-17-4', front:'How do you convert cm² to m²?', back:'1 m = 100 cm, so 1 m² = 100 × 100 = 10,000 cm².\n\nTo convert cm² → m²: divide by 10,000.\nTo convert m² → cm²: multiply by 10,000.\n\nExample: 50,000 cm² = 50,000 ÷ 10,000 = 5 m²' },
+  { islandId:'mi-17-4', front:'What is the link between cm³ and ml?', back:'1 cm³ = 1 ml (exactly).\n1,000 cm³ = 1 litre.\n1 m³ = 1,000,000 cm³ = 1,000 litres.\n\nSo a cube 10 cm × 10 cm × 10 cm = 1,000 cm³ = 1 litre.' },
+  { islandId:'mi-17-4', front:'Which is warmer: −3°C or −8°C?', back:'−3°C is warmer.\n\nOn a number line, −3 is to the RIGHT of −8.\n−8 < −3, so −8°C is colder.\n\nThink: −3°C is only 3 degrees below zero, but −8°C is 8 degrees below.' }
 );
 
 // â"€â"€â"€ QUESTIONS â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
@@ -744,6 +754,57 @@ Object.assign(QUESTIONS, {
     { question:'Show 5 consecutive integers always sum to a multiple of 5. Which algebra proves it?', options:['n+(n+1)+(n+2)+(n+3)+(n+4)=5n+10=5(n+2)','5n=5n','5+10+15+20+25=75','Cannot be proved algebraically'], answer:0, explanation:'Sum = 5n+10 = 5(n+2), which is always divisible by 5.' }
   ],
 
+  // ── mi-16-4: Extra/Missing Info & Direction ──────────────────────────────
+  'mi-16-4': [
+    { question:'A farmer has 12 cows, 8 sheep and 5 pigs. He sells 3 cows. How many cows are left? Which information is extra?', options:['8 sheep and 5 pigs','12 cows','3 cows','None — all needed'], answer:0, explanation:'You only need 12 cows and 3 sold. The sheep and pigs are extra information. 12 − 3 = 9 cows.' },
+    { question:'Ella walks 4 km north, then 7 km south. How far is she from the start and in which direction?', options:['3 km south','3 km north','11 km south','11 km north'], answer:0, explanation:'Net: 4 − 7 = −3 km (south). She is 3 km south of the start.' },
+    { question:'"Tickets cost £8. A family buys some tickets. How much do they spend?" What is missing?', options:['The number of tickets','The price per ticket','The type of event','Nothing is missing'], answer:0, explanation:'We know the price per ticket but not how many were bought. Without that, we cannot calculate the total.' },
+    { gen: function() {
+        var east = randInt(3,12), west = randInt(1, east-1);
+        var net = east - west;
+        var opts = buildOpts(net + ' km west', [net + ' km east', (east+west) + ' km west', (east+west) + ' km east']);
+        return { q: 'A drone flies ' + east + ' km east then ' + west + ' km west. To return to the start it must fly:',
+                 opts: opts, c: 0,
+                 e: 'Net displacement = ' + east + ' − ' + west + ' = ' + net + ' km east. To return, fly ' + net + ' km west.' };
+    }},
+    { gen: function() {
+        var north = randInt(5,15), south = randInt(1, north-1);
+        var net = north - south;
+        var opts = buildOpts(net + ' km south', [net + ' km north', (north+south) + ' km south', north + ' km south']);
+        return { q: 'A hiker walks ' + north + ' km north then ' + south + ' km south. How far and in what direction must she walk to get back?',
+                 opts: opts, c: 0,
+                 e: 'Net = ' + north + ' − ' + south + ' = ' + net + ' km north of start. Walk ' + net + ' km south to return.' };
+    }},
+    { gen: function() {
+        var price = randInt(2,10), qty = randInt(3,8), extra = randInt(10,30);
+        var total = price * qty;
+        var opts = buildOpts('£' + extra + ' budget', ['£' + price + ' per item', qty + ' items', '£' + total + ' total']);
+        return { q: 'Tom has a budget of £' + extra + '. He buys ' + qty + ' books at £' + price + ' each, spending £' + total + '. Which piece of information is extra?',
+                 opts: opts, c: 0,
+                 e: 'To find total cost we need price (£' + price + ') and quantity (' + qty + '). The budget of £' + extra + ' is extra information.' };
+    }},
+    { question:'"A rectangle has a perimeter of 28 cm. Find its area." Can this be solved?', options:['No — we need both length and width','Yes — area = 28 ÷ 2','Yes — area = 28²','Yes — area = 14'], answer:0, explanation:'Perimeter gives length + width = 14, but without knowing the individual dimensions, area cannot be determined.' },
+    { gen: function() {
+        var leg1 = randInt(2,8), leg2 = randInt(2,8);
+        var net = leg1 - leg2;
+        var dir = net > 0 ? 'east' : 'west';
+        var retDir = net > 0 ? 'west' : 'east';
+        var absNet = Math.abs(net);
+        if(net === 0) { dir = 'at the start'; retDir = 'nowhere'; }
+        var opts;
+        if(net === 0) {
+          opts = buildOpts('0 km — already at start', [leg1 + ' km east', leg1 + ' km west', (leg1+leg2) + ' km east']);
+        } else {
+          opts = buildOpts(absNet + ' km ' + retDir, [absNet + ' km ' + dir, (leg1+leg2) + ' km ' + retDir, leg1 + ' km ' + retDir]);
+        }
+        return { q: 'A boat sails ' + leg1 + ' km east then ' + leg2 + ' km west. What journey returns it to the start?',
+                 opts: opts, c: 0,
+                 e: 'Net displacement = ' + leg1 + ' − ' + leg2 + ' = ' + net + ' km. ' + (net===0 ? 'Already at start.' : 'Return: ' + absNet + ' km ' + retDir + '.') };
+    }},
+    { question:'"Sam scored 85% on his test. His friend scored 72%. How many marks did Sam get?" What is missing?', options:['The total marks available','The difference in scores','The pass mark','Nothing is missing'], answer:0, explanation:'85% of what? We need the total marks to calculate Sam\'s actual score. 85% of 40 = 34, but 85% of 100 = 85.' },
+    { question:'A robot moves: 6 m north, 2 m south, 5 m north, 4 m south. How far north of the start is it?', options:['5 m','6 m','17 m','11 m'], answer:0, explanation:'North: 6+5=11 m. South: 2+4=6 m. Net = 11−6 = 5 m north.' }
+  ],
+
   // â"€â"€ mi-17-1: Metric Units â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
   'mi-17-1': [
     { gen: function() {
@@ -1014,6 +1075,51 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: km + ' ÷ 1.6 ≈ ' + miles + ' miles.' };
     }}
+  ],
+
+  // ── mi-17-4: Area/Volume Units & Temperature ─────────────────────────────
+  'mi-17-4': [
+    { gen: function() {
+        var m2 = randInt(2, 10);
+        var ans = m2 * 10000;
+        var opts = buildOpts(ans + ' cm²', [(m2 * 100) + ' cm²', (m2 * 1000) + ' cm²', m2 + ' cm²']);
+        return { q: 'Convert ' + m2 + ' m² to cm².', opts: opts, c: 0,
+                 e: '1 m² = 10,000 cm². ' + m2 + ' × 10,000 = ' + ans + ' cm².' };
+    }},
+    { gen: function() {
+        var cm3 = pickFrom([500, 750, 1000, 1500, 2000, 2500, 3000]);
+        var litres = cm3 / 1000;
+        var opts = buildOpts(litres + ' litres', [(cm3/100) + ' litres', (cm3/10) + ' litres', cm3 + ' litres']);
+        return { q: cm3 + ' cm³ = how many litres?', opts: opts, c: 0,
+                 e: '1,000 cm³ = 1 litre. ' + cm3 + ' ÷ 1,000 = ' + litres + ' litres.' };
+    }},
+    { gen: function() {
+        var a = -randInt(1, 15), b = -randInt(1, 15);
+        while (a === b) b = -randInt(1, 15);
+        var warmer = Math.max(a, b), colder = Math.min(a, b);
+        var opts = buildOpts(warmer + '°C', [colder + '°C', '0°C', (a + b) + '°C']);
+        return { q: 'Which is warmer: ' + a + '°C or ' + b + '°C?', opts: opts, c: 0,
+                 e: warmer + ' > ' + colder + ' (closer to 0), so ' + warmer + '°C is warmer.' };
+    }},
+    { gen: function() {
+        var cm2 = pickFrom([20000, 30000, 50000, 80000, 100000]);
+        var ans = cm2 / 10000;
+        var opts = buildOpts(ans + ' m²', [(cm2/100) + ' m²', (cm2/1000) + ' m²', cm2 + ' m²']);
+        return { q: 'Convert ' + cm2.toLocaleString() + ' cm² to m².', opts: opts, c: 0,
+                 e: '÷ 10,000. ' + cm2.toLocaleString() + ' ÷ 10,000 = ' + ans + ' m².' };
+    }},
+    { gen: function() {
+        var litres = randInt(1, 8);
+        var ans = litres * 1000;
+        var opts = buildOpts(ans + ' cm³', [(litres * 100) + ' cm³', (litres * 10) + ' cm³', litres + ' cm³']);
+        return { q: litres + ' litres = how many cm³?', opts: opts, c: 0,
+                 e: '1 litre = 1,000 cm³. ' + litres + ' × 1,000 = ' + ans + ' cm³.' };
+    }},
+    { question:'A measurement is recorded as 4.7 cm. To the nearest mm, this could be from:', options:['4.65 cm to 4.75 cm','4.6 cm to 4.8 cm','4.0 cm to 5.0 cm','4.70 cm to 4.79 cm'], answer:0, explanation:'Rounded to 1 d.p., the true value is between 4.65 and 4.75 cm.' },
+    { question:'1 m³ = how many litres?', options:['1,000 litres','100 litres','10 litres','10,000 litres'], answer:0, explanation:'1 m³ = 1,000,000 cm³. 1,000,000 ÷ 1,000 = 1,000 litres.' },
+    { question:'The temperature rises from −5°C to 3°C. What is the rise?', options:['8°C','2°C','−2°C','3°C'], answer:0, explanation:'From −5 to 0 is 5°C, then 0 to 3 is 3°C. Total rise = 5 + 3 = 8°C.' },
+    { question:'Which unit is most precise for measuring the length of a pencil?', options:['mm','cm','m','km'], answer:0, explanation:'mm gives the most precise measurement for a small object like a pencil.' },
+    { question:'A fish tank is 50 cm × 30 cm × 20 cm. What is its capacity in litres?', options:['30 litres','300 litres','3 litres','3000 litres'], answer:0, explanation:'Volume = 50 × 30 × 20 = 30,000 cm³. 30,000 ÷ 1,000 = 30 litres.' }
   ]
 
 });

@@ -1006,7 +1006,7 @@ TEST_GENERATORS["mi-03-4"] = [
 ];
 
 // ══════════════════════════════════════════════════════════════════════════
-// NUMBER THEORY (mt-04) — 4 subtopics
+// NUMBER THEORY (mt-04) — 5 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-04-1: Prime & Composite Numbers ───────────────────────────────────
@@ -1324,8 +1324,71 @@ TEST_GENERATORS["mi-04-4"] = [
   }}
 ];
 
+// ── mi-04-5: Multiplicative Inverses ─────────────────────────────────
+TEST_GENERATORS["mi-04-5"] = [
+  // MEDIUM-HIGH
+  { depth: 'medium', gen: function() {
+    var n = _randInt(2, 12);
+    var opts = _buildOpts('1/' + n, ['1/' + (n + 1), n + '/1', '1/' + (n - 1 || 2)]);
+    return { q: 'What is the multiplicative inverse of ' + n + '?', opts: opts, c: 0,
+             e: 'The reciprocal of ' + n + ' is 1/' + n + '. Check: ' + n + ' × 1/' + n + ' = 1.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var fracs = [{n:1,d:3,rn:3,rd:1},{n:1,d:4,rn:4,rd:1},{n:1,d:5,rn:5,rd:1},{n:1,d:6,rn:6,rd:1},{n:1,d:8,rn:8,rd:1}];
+    var f = _pickFrom(fracs);
+    var opts = _buildOpts('' + f.rn, ['1/' + f.d, '' + f.d + '/' + f.d, '' + (f.rn + 1)]);
+    return { q: 'What is the reciprocal of 1/' + f.d + '?', opts: opts, c: 0,
+             e: 'Flip the fraction: 1/' + f.d + ' → ' + f.d + '/1 = ' + f.rn + '. Check: 1/' + f.d + ' × ' + f.rn + ' = 1.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var fracs = [{n:2,d:3,rn:3,rd:2},{n:3,d:4,rn:4,rd:3},{n:2,d:5,rn:5,rd:2},{n:3,d:7,rn:7,rd:3},{n:5,d:6,rn:6,rd:5},{n:4,d:9,rn:9,rd:4}];
+    var f = _pickFrom(fracs);
+    var opts = _buildOpts(f.rn + '/' + f.rd, [f.n + '/' + f.d, f.rd + '/' + f.rn, '1/' + f.d]);
+    return { q: 'What is the reciprocal of ' + f.n + '/' + f.d + '?', opts: opts, c: 0,
+             e: 'Flip the fraction: ' + f.n + '/' + f.d + ' → ' + f.rn + '/' + f.rd + '. Check: ' + f.n + '/' + f.d + ' × ' + f.rn + '/' + f.rd + ' = 1.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var pairs = [{d:0.5,r:'2'},{d:0.25,r:'4'},{d:0.2,r:'5'},{d:0.1,r:'10'},{d:0.125,r:'8'}];
+    var p = _pickFrom(pairs);
+    var opts = _buildOpts(p.r, ['' + p.d, '1/' + p.r, '' + (parseFloat(p.r) + 1)]);
+    return { q: 'What is the reciprocal of ' + p.d + '?', opts: opts, c: 0,
+             e: p.d + ' as a fraction is 1/' + p.r + '. Flip: reciprocal = ' + p.r + '. Check: ' + p.d + ' × ' + p.r + ' = 1.' };
+  }},
+  // GREATER DEPTH
+  { depth: 'greater-depth', gen: function() {
+    var mixed = [{m:'1½',n:3,d:2,rs:'2/3'},{m:'1⅓',n:4,d:3,rs:'3/4'},{m:'2½',n:5,d:2,rs:'2/5'},{m:'1¼',n:5,d:4,rs:'4/5'},{m:'1⅕',n:6,d:5,rs:'5/6'}];
+    var f = _pickFrom(mixed);
+    var opts = _buildOpts(f.rs, [f.n + '/' + f.d, '1/' + f.n, '' + f.d]);
+    return { q: 'What is the reciprocal of ' + f.m + '?', opts: opts, c: 0,
+             e: 'Convert: ' + f.m + ' = ' + f.n + '/' + f.d + '. Flip: ' + f.rs + '. Check: ' + f.n + '/' + f.d + ' × ' + f.rs + ' = 1.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var fracs = [{n:3,d:8},{n:5,d:7},{n:2,d:9},{n:4,d:5}];
+    var f = _pickFrom(fracs);
+    var opts = _buildOpts('1', [f.n + '/' + f.d, '' + (f.n + f.d), '0']);
+    return { q: f.n + '/' + f.d + ' × ' + f.d + '/' + f.n + ' = ?', opts: opts, c: 0,
+             e: 'A number times its reciprocal always equals 1. ' + f.n + '/' + f.d + ' × ' + f.d + '/' + f.n + ' = ' + (f.n * f.d) + '/' + (f.d * f.n) + ' = 1.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var a = _randInt(2, 6);
+    var b = _randInt(2, 6);
+    while (a === b) b = _randInt(2, 6);
+    var prod = a * b;
+    var opts = _buildOpts('1/' + prod, ['1/' + a + ' × 1/' + b, '' + prod, '1/' + (a + b)]);
+    return { q: 'What is the reciprocal of ' + a + ' × ' + b + ' (= ' + prod + ')?', opts: opts, c: 0,
+             e: a + ' × ' + b + ' = ' + prod + '. Reciprocal = 1/' + prod + '. Check: ' + prod + ' × 1/' + prod + ' = 1.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var fracs = [{n:5,d:8},{n:7,d:3},{n:9,d:4},{n:3,d:10}];
+    var f = _pickFrom(fracs);
+    var opts = _buildOpts(f.d + '/' + f.n, [f.n + '/' + f.d, '1/' + f.n, '' + f.d]);
+    return { q: 'If the reciprocal of a number is ' + f.n + '/' + f.d + ', what is the number?', opts: opts, c: 0,
+             e: 'If the reciprocal is ' + f.n + '/' + f.d + ', the number is ' + f.d + '/' + f.n + '. Check: ' + f.d + '/' + f.n + ' × ' + f.n + '/' + f.d + ' = 1.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// DECIMALS (mt-05) — 4 subtopics
+// DECIMALS (mt-05) — 5 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-05-1: Decimal Place Values & Ordering ─────────────────────────────
@@ -1607,8 +1670,87 @@ TEST_GENERATORS["mi-05-4"] = [
   }}
 ];
 
+// ── mi-05-5: Advanced Decimal Operations ─────────────────────────────
+TEST_GENERATORS["mi-05-5"] = [
+  // MEDIUM-HIGH
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 9) / 10;
+    var b = _randInt(2, 9) / 10;
+    var ans = parseFloat((a * b).toFixed(2));
+    var opts = _buildOpts(ans, [parseFloat((a + b).toFixed(2)), parseFloat((ans * 10).toFixed(2)), parseFloat(Math.abs(a - b).toFixed(2))]);
+    return { q: 'Calculate ' + a.toFixed(1) + ' × ' + b.toFixed(1) + '.', opts: opts, c: 0,
+             e: 'Multiply as whole numbers: ' + Math.round(a*10) + ' × ' + Math.round(b*10) + ' = ' + (Math.round(a*10)*Math.round(b*10)) + '. Two d.p. → ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(11, 35) / 10;
+    var b = _randInt(2, 5) / 10;
+    var ans = parseFloat((a * b).toFixed(2));
+    var opts = _buildOpts(ans, [parseFloat((a + b).toFixed(2)), parseFloat((ans + 0.1).toFixed(2)), parseFloat((a * 1).toFixed(2))]);
+    return { q: 'Calculate ' + a.toFixed(1) + ' × ' + b.toFixed(1) + '.', opts: opts, c: 0,
+             e: Math.round(a*10) + ' × ' + Math.round(b*10) + ' = ' + (Math.round(a*10)*Math.round(b*10)) + '. Two d.p. → ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var divisors = [0.2, 0.3, 0.4, 0.5, 0.6, 0.8];
+    var d = _pickFrom(divisors);
+    var quotient = _randInt(3, 9);
+    var dividend = parseFloat((quotient * d).toFixed(2));
+    var opts = _buildOpts(quotient, [quotient + 1, parseFloat((dividend + d).toFixed(2)), quotient - 1]);
+    return { q: 'Calculate ' + dividend + ' ÷ ' + d + '.', opts: opts, c: 0,
+             e: 'Multiply both by 10: ' + parseFloat((dividend*10).toFixed(1)) + ' ÷ ' + (d*10) + ' = ' + quotient + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var divisors = [0.4, 0.5, 0.6, 0.8];
+    var d = _pickFrom(divisors);
+    var quotient = _randInt(11, 25) / 10;
+    var dividend = parseFloat((quotient * d).toFixed(2));
+    var opts = _buildOpts(quotient, [parseFloat((quotient + 0.1).toFixed(1)), parseFloat((dividend * d).toFixed(2)), parseFloat((quotient * 2).toFixed(1))]);
+    return { q: 'Calculate ' + dividend + ' ÷ ' + d + '.', opts: opts, c: 0,
+             e: 'Multiply both by 10: ' + parseFloat((dividend*10).toFixed(1)) + ' ÷ ' + (d*10) + ' = ' + quotient + '.' };
+  }},
+  // GREATER DEPTH
+  { depth: 'greater-depth', gen: function() {
+    var divisors = [0.04, 0.05, 0.25];
+    var d = _pickFrom(divisors);
+    var mult = Math.round(1 / d);
+    var dividend = _pickFrom([1.2, 2.4, 3.6, 4.8, 5.0]);
+    var ans = parseFloat((dividend / d).toFixed(2));
+    var opts = _buildOpts(ans, [parseFloat((dividend * d).toFixed(2)), ans / 10, ans + 1]);
+    return { q: 'Calculate ' + dividend + ' ÷ ' + d + '.', opts: opts, c: 0,
+             e: 'Multiply both by ' + mult + ': ' + (dividend * mult) + ' ÷ ' + (d * mult) + ' = ' + ans + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var a = _randInt(2, 8) / 10;
+    var b = _randInt(2, 8) / 10;
+    while (a === b) b = _randInt(2, 8) / 10;
+    var p1 = parseFloat((a * b).toFixed(2));
+    var p2 = parseFloat((a * a).toFixed(2));
+    var sym = p1 < p2 ? '<' : '>';
+    var correct = a.toFixed(1) + '×' + b.toFixed(1) + ' ' + sym + ' ' + a.toFixed(1) + '×' + a.toFixed(1);
+    var wrong = a.toFixed(1) + '×' + b.toFixed(1) + ' ' + (sym === '<' ? '>' : '<') + ' ' + a.toFixed(1) + '×' + a.toFixed(1);
+    var opts = _buildOpts(correct, [wrong, p1 + ' = ' + p2, a.toFixed(1) + '×' + b.toFixed(1) + ' = ' + a.toFixed(1) + '×' + a.toFixed(1)]);
+    return { q: 'Which is correct: ' + a.toFixed(1) + ' × ' + b.toFixed(1) + ' compared with ' + a.toFixed(1) + ' × ' + a.toFixed(1) + '?', opts: opts, c: 0,
+             e: a.toFixed(1) + '×' + b.toFixed(1) + ' = ' + p1 + ' and ' + a.toFixed(1) + '×' + a.toFixed(1) + ' = ' + p2 + '. So ' + correct + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var length = _pickFrom([2.4, 3.6, 4.5, 6.0, 7.2]);
+    var piece = _pickFrom([0.15, 0.2, 0.25, 0.3]);
+    var ans = Math.round(length / piece);
+    var opts = _buildOpts(ans, [ans + 1, ans - 1, parseFloat((length * piece).toFixed(2))]);
+    return { q: 'A rope ' + length + ' m long is cut into pieces ' + piece + ' m each. How many pieces?', opts: opts, c: 0,
+             e: length + ' ÷ ' + piece + ' = ' + ans + '. Multiply both by ' + Math.round(1/piece) + ' to remove the decimal divisor.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var n = _pickFrom([0.6, 0.7, 0.8, 0.9]);
+    var sq = parseFloat((n * n).toFixed(2));
+    var correct = 'Less than ' + n;
+    var opts = _buildOpts(correct, ['Greater than ' + n, 'Equal to ' + n, 'Greater than 1']);
+    return { q: 'Without calculating the exact answer, is ' + n + ' × ' + n + ' greater than, less than, or equal to ' + n + '?', opts: opts, c: 0,
+             e: 'Multiplying by a number less than 1 gives a smaller result. ' + n + ' × ' + n + ' = ' + sq + ', which is less than ' + n + '.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// FRACTIONS (mt-06) — 4 subtopics
+// FRACTIONS (mt-06) — 6 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // Helper: GCD for fraction simplification
@@ -1985,8 +2127,153 @@ TEST_GENERATORS["mi-06-4"] = [
   }}
 ];
 
+// ── mi-06-5: Recurring Decimals & Fractions as Division ──────────────
+TEST_GENERATORS["mi-06-5"] = [
+  // MEDIUM-HIGH
+  { depth: 'medium', gen: function() {
+    var fracs = [{n:1,d:3,dec:'0.3̇',type:'Recurring'},{n:1,d:4,dec:'0.25',type:'Terminating'},{n:1,d:6,dec:'0.16̇',type:'Recurring'},{n:1,d:5,dec:'0.2',type:'Terminating'},{n:1,d:9,dec:'0.1̇',type:'Recurring'},{n:3,d:8,dec:'0.375',type:'Terminating'}];
+    var f = _pickFrom(fracs);
+    var opts = _buildOpts(f.type, [f.type==='Recurring'?'Terminating':'Recurring', 'Neither', 'Undefined']);
+    return { q: 'Is ' + f.n + '/' + f.d + ' a terminating or recurring decimal?', opts: opts, c: 0,
+             e: f.n + '/' + f.d + ' = ' + f.dec + ' → ' + f.type + '. A fraction terminates only if the denominator (simplified) has factors of only 2 and 5.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var fracs = [{n:1,d:3,dec:'0.3̇'},{n:2,d:3,dec:'0.6̇'},{n:1,d:6,dec:'0.16̇'},{n:5,d:6,dec:'0.83̇'},{n:4,d:9,dec:'0.4̇'},{n:7,d:9,dec:'0.7̇'}];
+    var f = _pickFrom(fracs);
+    var opts = _buildOpts(f.dec, ['0.'+f.n+f.d, '0.'+f.n+'0', f.n+'.'+f.d]);
+    return { q: 'Convert ' + f.n + '/' + f.d + ' to a decimal. Use dot notation.', opts: opts, c: 0,
+             e: f.n + ' ÷ ' + f.d + ' = ' + f.dec + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var items = _randInt(4, 9);
+    var total = _randInt(2, items - 1);
+    var g = _gcd(total, items);
+    var sn = total / g, sd = items / g;
+    var opts = _buildOpts(sn + '/' + sd, [items + '/' + total, '1/' + items, (sn+1) + '/' + sd]);
+    return { q: total + ' cakes are shared equally among ' + items + ' people. What fraction does each person get?', opts: opts, c: 0,
+             e: total + ' ÷ ' + items + ' = ' + total + '/' + items + (g > 1 ? ' = ' + sn + '/' + sd : '') + '. A fraction IS a division.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var total = _pickFrom([20, 24, 30, 36, 40]);
+    var part = _randInt(Math.floor(total/5), Math.floor(total/2));
+    var g = _gcd(part, total);
+    var sn = part / g, sd = total / g;
+    var opts = _buildOpts(sn + '/' + sd, [part + '/' + (total * 2), sd + '/' + sn, '1/' + sd]);
+    return { q: 'A bar chart shows ' + part + ' out of ' + total + ' students chose art. What simplified fraction is that?', opts: opts, c: 0,
+             e: part + '/' + total + ' = ' + sn + '/' + sd + ' (divide by HCF = ' + g + ').' };
+  }},
+  // GREATER DEPTH
+  { depth: 'greater-depth', gen: function() {
+    var fracs = [{n:3,d:8,t:true},{n:5,d:12,t:false},{n:7,d:16,t:true},{n:2,d:7,t:false},{n:3,d:20,t:true},{n:5,d:9,t:false}];
+    var f = _pickFrom(fracs);
+    var ans = f.t ? 'Terminating' : 'Recurring';
+    var opts = _buildOpts(ans, [f.t ? 'Recurring' : 'Terminating', 'Neither', 'Cannot tell']);
+    return { q: 'Without dividing, decide: is ' + f.n + '/' + f.d + ' terminating or recurring?', opts: opts, c: 0,
+             e: f.d + ' in simplest form has prime factors: ' + (f.t ? 'only 2s and 5s → terminating.' : 'factors other than 2 and 5 → recurring.') };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var fracs = [{n:2,d:11,dec:'0.1̇8̇',block:'18',len:2},{n:5,d:11,dec:'0.4̇5̇',block:'45',len:2},{n:1,d:7,dec:'0.1̇42857̇',block:'142857',len:6}];
+    var f = _pickFrom(fracs);
+    var opts = _buildOpts(f.len, [1, f.len + 1, f.len - 1 > 0 ? f.len - 1 : 3]);
+    return { q: f.n + '/' + f.d + ' = ' + f.dec + '. How many digits are in the repeating block?', opts: opts, c: 0,
+             e: 'The repeating block is "' + f.block + '" with ' + f.len + ' digits.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var total = _pickFrom([24, 30, 36]);
+    var a = _randInt(Math.floor(total/4), Math.floor(total/3));
+    var b = _randInt(Math.floor(total/5), Math.floor(total/4));
+    var rest = total - a - b;
+    var opts = _buildOpts(rest, [total - a, total - b, a + b]);
+    return { q: total + ' students took a test. ' + a + ' scored A, ' + b + ' scored B. How many scored C or below?', opts: opts, c: 0,
+             e: total + ' − ' + a + ' − ' + b + ' = ' + rest + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var fracs = [{n:1,d:3,dec:'0.333...'},{n:2,d:3,dec:'0.666...'},{n:1,d:9,dec:'0.111...'},{n:4,d:9,dec:'0.444...'}];
+    var f = _pickFrom(fracs);
+    var opts = _buildOpts(f.n + '/' + f.d, [(f.n + 1) + '/' + f.d, f.n + '/' + (f.d + 1), f.d + '/' + f.n]);
+    return { q: 'A repeating decimal is ' + f.dec + '. Write it as a fraction in simplest form.', opts: opts, c: 0,
+             e: f.dec + ' = ' + f.n + '/' + f.d + '.' };
+  }}
+];
+
+// ── mi-06-6: Fraction Inequalities ──────────────────────────────────────
+TEST_GENERATORS["mi-06-6"] = [
+  // MEDIUM-HIGH
+  { depth: 'medium', gen: function() {
+    var d = _pickFrom([4, 6, 8, 10, 12]);
+    var n1 = _randInt(1, Math.floor(d/3));
+    var n2 = _randInt(1, Math.floor(d/3));
+    var sum = n1 + n2;
+    var half = d / 2;
+    var sym = sum > half ? '>' : (sum < half ? '<' : '=');
+    var correct = _frac(n1, d) + ' + ' + _frac(n2, d) + ' ' + sym + ' 1/2';
+    var wrong = _frac(n1, d) + ' + ' + _frac(n2, d) + ' ' + (sym === '>' ? '<' : '>') + ' 1/2';
+    var opts = _buildOpts(correct, [wrong, _frac(n1,d)+' + '+_frac(n2,d)+' = 1/2', _frac(n2,d)+' + '+_frac(n1,d)+' '+(sym==='>'?'<':'>')+' 1/2']);
+    return { q: 'Insert <, > or =: ' + _frac(n1,d) + ' + ' + _frac(n2,d) + ' ___ 1/2', opts: opts, c: 0,
+             e: _frac(n1,d) + ' + ' + _frac(n2,d) + ' = ' + sum + '/' + d + '. And 1/2 = ' + half + '/' + d + '. So ' + correct + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var pairs = [{a:'1/3',b:'1/4',s:'7/12',h:'6/12',sym:'>'},{a:'1/5',b:'1/4',s:'9/20',h:'10/20',sym:'<'},{a:'1/3',b:'1/6',s:'3/6',h:'3/6',sym:'='},{a:'1/4',b:'1/6',s:'5/12',h:'6/12',sym:'<'}];
+    var p = _pickFrom(pairs);
+    var correct = p.a + ' + ' + p.b + ' ' + p.sym + ' 1/2';
+    var wrong = p.a + ' + ' + p.b + ' ' + (p.sym === '>' ? '<' : (p.sym === '<' ? '>' : '>')) + ' 1/2';
+    var opts = _buildOpts(correct, [wrong, p.a+' + '+p.b+' '+(p.sym==='='?'>':'=')+' 1/2', '1/2 '+p.sym+' '+p.a+' + '+p.b]);
+    return { q: 'Insert <, > or =: ' + p.a + ' + ' + p.b + ' ___ 1/2', opts: opts, c: 0,
+             e: p.a + ' + ' + p.b + ' = ' + p.s + '. 1/2 = ' + p.h + '. So ' + correct + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var sets = [{a:'5/6',b:'1/3',d:'3/6',comp:'1/2',sym:'>'},{a:'3/4',b:'1/3',d:'5/12',comp:'1/2',sym:'<'},{a:'7/8',b:'1/4',d:'5/8',comp:'1/2',sym:'>'}];
+    var p = _pickFrom(sets);
+    var correct = p.a + ' − ' + p.b + ' ' + p.sym + ' ' + p.comp;
+    var wrong = p.a + ' − ' + p.b + ' ' + (p.sym === '>' ? '<' : '>') + ' ' + p.comp;
+    var opts = _buildOpts(correct, [wrong, p.a+' − '+p.b+' = '+p.comp, p.b+' − '+p.a+' '+p.sym+' '+p.comp]);
+    return { q: 'Insert <, > or =: ' + p.a + ' − ' + p.b + ' ___ ' + p.comp, opts: opts, c: 0,
+             e: p.a + ' − ' + p.b + ' = ' + p.d + '. So ' + correct + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var sets = [{a:'2/3',b:'1/4',s:'11/12',comp:'3/4',sym:'>'},{a:'3/4',b:'1/6',s:'11/12',comp:'3/4',sym:'>'},{a:'1/3',b:'1/5',s:'8/15',comp:'1/2',sym:'>'}];
+    var p = _pickFrom(sets);
+    var correct = p.a + ' + ' + p.b + ' ' + p.sym + ' ' + p.comp;
+    var wrong = p.a + ' + ' + p.b + ' ' + (p.sym === '>' ? '<' : '>') + ' ' + p.comp;
+    var opts = _buildOpts(correct, [wrong, p.a+' + '+p.b+' = '+p.comp, p.comp+' '+p.sym+' '+p.a+' + '+p.b]);
+    return { q: 'Which is correct? ' + p.a + ' + ' + p.b + ' compared with ' + p.comp, opts: opts, c: 0,
+             e: p.a + ' + ' + p.b + ' = ' + p.s + '. So ' + correct + '.' };
+  }},
+  // GREATER DEPTH
+  { depth: 'greater-depth', gen: function() {
+    var sets = [{a:'2 1/3',b:'1 1/4',s:'3 7/12',comp:'3 1/2',sym:'>'},{a:'1 1/4',b:'1 1/3',s:'2 7/12',comp:'2 1/2',sym:'>'},{a:'1 1/5',b:'1 1/4',s:'2 9/20',comp:'2 1/2',sym:'<'}];
+    var p = _pickFrom(sets);
+    var correct = p.a + ' + ' + p.b + ' ' + p.sym + ' ' + p.comp;
+    var wrong = p.a + ' + ' + p.b + ' ' + (p.sym === '>' ? '<' : '>') + ' ' + p.comp;
+    var opts = _buildOpts(correct, [wrong, p.a+' + '+p.b+' = '+p.comp, p.comp+' '+p.sym+' '+p.a+' + '+p.b]);
+    return { q: 'Which is correct? ' + p.a + ' + ' + p.b + ' compared with ' + p.comp, opts: opts, c: 0,
+             e: p.a + ' + ' + p.b + ' = ' + p.s + '. So ' + correct + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var sets = [{a:'3 3/4',b:'1 1/3',d:'2 5/12',comp:'2 1/2',sym:'<'},{a:'4 5/6',b:'2 1/4',d:'2 7/12',comp:'2 1/2',sym:'>'},{a:'5 1/3',b:'2 5/6',d:'2 1/2',comp:'2 1/2',sym:'='}];
+    var p = _pickFrom(sets);
+    var correct = p.a + ' − ' + p.b + ' ' + p.sym + ' ' + p.comp;
+    var wrong = p.a + ' − ' + p.b + ' ' + (p.sym === '>' ? '<' : (p.sym === '<' ? '>' : '>')) + ' ' + p.comp;
+    var opts = _buildOpts(correct, [wrong, p.a+' − '+p.b+' '+(p.sym==='='?'>':'=')+' '+p.comp, p.b+' − '+p.a+' '+p.sym+' '+p.comp]);
+    return { q: 'Insert <, > or =: ' + p.a + ' − ' + p.b + ' ___ ' + p.comp, opts: opts, c: 0,
+             e: p.a + ' − ' + p.b + ' = ' + p.d + '. So ' + correct + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var correct = '3/4 + 2/3 > 1 1/3';
+    var opts = _buildOpts(correct, ['3/4 + 2/3 < 1 1/3', '3/4 + 2/3 = 1 1/3', '1 1/3 > 3/4 + 2/3']);
+    return { q: 'Without a full calculation, compare: 3/4 + 2/3 vs 1 1/3.', opts: opts, c: 0,
+             e: '3/4 + 2/3 = 9/12 + 8/12 = 17/12 = 1 5/12. And 1 1/3 = 1 4/12. So 1 5/12 > 1 4/12.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var correct = '<';
+    var opts = _buildOpts('<', ['>', '=', 'Cannot tell']);
+    return { q: 'Insert <, > or =: 2 2/3 + 1 3/4 ___ 4 1/2', opts: opts, c: 0,
+             e: '2 2/3 + 1 3/4 = 2 8/12 + 1 9/12 = 3 17/12 = 4 5/12. And 4 1/2 = 4 6/12. 4 5/12 < 4 6/12.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// MULTIPLY & DIVIDE FRACTIONS (mt-07) — 4 subtopics
+// MULTIPLY & DIVIDE FRACTIONS (mt-07) — 5 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-07-1: Multiply Fractions by Whole Numbers ─────────────────────────
@@ -2338,8 +2625,69 @@ TEST_GENERATORS["mi-07-4"] = [
   }}
 ];
 
+// ── mi-07-5: Scaling & Estimating with Fractions ────────────────────────
+TEST_GENERATORS["mi-07-5"] = [
+  // MEDIUM-HIGH
+  { depth: 'medium', gen: function() {
+    var fracs = ['1/2','2/3','3/4','1/5','3/8','5/8','7/8','4/5'];
+    var f = _pickFrom(fracs);
+    var n = _randInt(10, 50);
+    var opts = _buildOpts('Less than ' + n, ['Greater than ' + n, 'Equal to ' + n, 'Cannot tell']);
+    return { q: 'Without calculating, will ' + f + ' × ' + n + ' be greater than, less than, or equal to ' + n + '?', opts: opts, c: 0,
+             e: f + ' < 1, so multiplying by it makes the result smaller than ' + n + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var fracs = ['5/4','3/2','7/5','4/3','5/3','9/8'];
+    var f = _pickFrom(fracs);
+    var n = _randInt(8, 30);
+    var opts = _buildOpts('Greater than ' + n, ['Less than ' + n, 'Equal to ' + n, 'Cannot tell']);
+    return { q: 'Without calculating, will ' + f + ' × ' + n + ' be greater than, less than, or equal to ' + n + '?', opts: opts, c: 0,
+             e: f + ' > 1 (improper fraction), so multiplying by it makes the result larger than ' + n + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var sets = [{f:'1/2',n:47,round:48,est:24},{f:'1/3',n:31,round:30,est:10},{f:'2/5',n:47,round:50,est:20},{f:'3/4',n:33,round:32,est:24},{f:'5/8',n:25,round:24,est:15}];
+    var s = _pickFrom(sets);
+    var opts = _buildOpts('About ' + s.est, ['About ' + s.n, 'About ' + (s.est * 3), 'About ' + Math.round(s.est / 2)]);
+    return { q: 'Estimate ' + s.f + ' × ' + s.n + '. (Hint: round to a friendly number.)', opts: opts, c: 0,
+             e: 'Round ' + s.n + ' to ' + s.round + '. Then ' + s.f + ' × ' + s.round + ' ≈ ' + s.est + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var sets = [{f:'2/3',n:24,ans:16},{f:'3/4',n:20,ans:15},{f:'1/5',n:30,ans:6},{f:'5/8',n:16,ans:10},{f:'4/5',n:25,ans:20}];
+    var s = _pickFrom(sets);
+    var opts = _buildOpts('£' + s.ans, ['£' + s.n, '£' + (s.ans + 1), '£' + (s.ans - 1)]);
+    return { q: 'A jacket costs £' + s.n + ' and is reduced by ' + s.f + '. How much is the reduction?', opts: opts, c: 0,
+             e: s.f + ' × ' + s.n + ' = ' + s.ans + '. Since ' + s.f + ' < 1, the reduction (£' + s.ans + ') is less than £' + s.n + '.' };
+  }},
+  // GREATER DEPTH
+  { depth: 'greater-depth', gen: function() {
+    var sets = [{m:'2 1/2',n:9,est:23,label:'about 22-23'},{m:'1 1/3',n:12,est:16,label:'about 16'},{m:'3 1/4',n:8,est:26,label:'about 26'},{m:'1 3/4',n:10,est:18,label:'about 17-18'}];
+    var s = _pickFrom(sets);
+    var opts = _buildOpts(s.label, ['About ' + s.n, 'About ' + (s.est * 2), 'About ' + Math.round(s.est / 2)]);
+    return { q: 'Estimate ' + s.m + ' × ' + s.n + '.', opts: opts, c: 0,
+             e: s.m + ' > 1, so the product is greater than ' + s.n + '. Estimate: ' + s.label + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var f = _pickFrom(['3/5','7/8','2/9','5/6']);
+    var n = _randInt(20, 50);
+    var correct = n + ' is larger because ' + f + ' < 1';
+    var opts = _buildOpts(correct, [f + ' × ' + n + ' is larger', 'They are equal', 'Cannot tell']);
+    return { q: 'Without calculating: which is larger, ' + f + ' × ' + n + ' or ' + n + '?', opts: opts, c: 0,
+             e: f + ' < 1, so ' + f + ' × ' + n + ' < ' + n + '. Multiplying by a fraction less than 1 always shrinks the number.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var opts = _buildOpts('Closer to 9', ['Closer to 8', 'Exactly 8', 'Exactly 9']);
+    return { q: 'Estimate 2 3/4 × 3 1/5. Is the answer closer to 8 or 9?', opts: opts, c: 0,
+             e: 'Round: 3 × 3 = 9. Exact: 11/4 × 16/5 = 176/20 = 8.8. Closer to 9.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var opts = _buildOpts('No — it is about 12', ['Yes — 2/3 is close to 1', 'No — it is about 6', 'Yes — always gives the same']);
+    return { q: 'Tom says "2/3 × 18 is about 18." Is he correct?', opts: opts, c: 0,
+             e: '2/3 × 18 = 12. Since 2/3 < 1, the product is smaller than 18. Tom is incorrect.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// INTEGERS (mt-08) — 4 subtopics
+// INTEGERS (mt-08) — 5 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-08-1: Understanding Integers ──────────────────────────────────────
@@ -2586,8 +2934,82 @@ TEST_GENERATORS["mi-08-4"] = [
   }}
 ];
 
+// ── mi-08-5: Integer Input/Output Tables ─────────────────────────────────
+TEST_GENERATORS["mi-08-5"] = [
+  { depth: 'medium', gen: function() {
+    var rule = _randInt(2, 9);
+    var inp = -_randInt(1, 10);
+    var ans = inp + rule;
+    var opts = _buildOpts(ans, [inp - rule, -ans, inp]);
+    return { q: 'Rule: add ' + rule + '. Input = ' + inp + '. Output = ?', opts: opts, c: 0,
+             e: inp + ' + ' + rule + ' = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var rule = -_randInt(2, 9);
+    var inp = _randInt(1, 10);
+    var ans = inp + rule;
+    var opts = _buildOpts(ans, [inp - rule, -ans, inp]);
+    return { q: 'Rule: add ' + rule + '. Input = ' + inp + '. Output = ?', opts: opts, c: 0,
+             e: inp + ' + (' + rule + ') = ' + inp + ' − ' + Math.abs(rule) + ' = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var rule = _randInt(3, 8);
+    var inp1 = _randInt(1, 6), out1 = inp1 + rule;
+    var inp2 = -_randInt(1, 6), out2 = inp2 + rule;
+    var inp3 = -_randInt(7, 12);
+    var ans = inp3 + rule;
+    var opts = _buildOpts(ans, [inp3 - rule, -ans, inp3]);
+    return { q: 'Input → Output: ' + inp1 + '→' + out1 + ', ' + inp2 + '→' + out2 + '. Find the output for input ' + inp3 + '.', opts: opts, c: 0,
+             e: 'Rule is add ' + rule + '. ' + inp3 + ' + ' + rule + ' = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var rule = _randInt(2, 8);
+    var out = -_randInt(1, 10);
+    var ans = out - rule;
+    var opts = _buildOpts(ans, [out + rule, -ans, out]);
+    return { q: 'Rule: add ' + rule + '. Output = ' + out + '. What was the input?', opts: opts, c: 0,
+             e: 'Input + ' + rule + ' = ' + out + '. Input = ' + out + ' − ' + rule + ' = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var rule = _randInt(3, 9);
+    var inp1 = _randInt(2, 8), out1 = inp1 - rule;
+    var inp2 = -_randInt(1, 5), out2 = inp2 - rule;
+    var opts = _buildOpts('Subtract ' + rule, ['Add ' + rule, 'Subtract ' + (rule + 1), 'Add ' + (rule - 1)]);
+    return { q: 'Input → Output: ' + inp1 + '→' + out1 + ', ' + inp2 + '→' + out2 + ', 0→' + (-rule) + '. What is the rule?', opts: opts, c: 0,
+             e: 'Output − Input = ' + out1 + ' − ' + inp1 + ' = −' + rule + '. Rule: subtract ' + rule + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var rule = -_randInt(2, 7);
+    var inp = -_randInt(3, 10);
+    var ans = inp + rule;
+    var opts = _buildOpts(ans, [inp - rule, -ans, inp]);
+    return { q: 'Rule: add ' + rule + '. Input = ' + inp + '. Output = ?', opts: opts, c: 0,
+             e: inp + ' + (' + rule + ') = ' + inp + ' − ' + Math.abs(rule) + ' = ' + ans + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var rule = -_randInt(3, 8);
+    var inp1 = _randInt(5, 12), out1 = inp1 + rule;
+    var inp2 = -_randInt(1, 5), out2 = inp2 + rule;
+    var missingInp = _randInt(1, 10);
+    var missingOut = missingInp + rule;
+    var opts = _buildOpts('Rule: add ' + rule + ', missing output = ' + missingOut, ['Rule: add ' + Math.abs(rule) + ', missing output = ' + (missingInp + Math.abs(rule)), 'Rule: subtract ' + Math.abs(rule) + ', missing output = ' + (missingInp - Math.abs(rule)), 'Rule: add ' + (rule - 1) + ', missing output = ' + (missingInp + rule - 1)]);
+    return { q: 'Table: ' + inp1 + '→' + out1 + ', ' + inp2 + '→' + out2 + ', ' + missingInp + '→?. Find the rule and the missing output.', opts: opts, c: 0,
+             e: 'Output − Input = ' + out1 + ' − ' + inp1 + ' = ' + rule + '. Rule: add ' + rule + '. Missing: ' + missingInp + ' + (' + rule + ') = ' + missingOut + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var rule = _randInt(4, 10);
+    var out1 = -_randInt(1, 8), inp1 = out1 - rule;
+    var out2 = _randInt(1, 8), inp2 = out2 - rule;
+    var out3 = -_randInt(9, 15);
+    var ans = out3 - rule;
+    var opts = _buildOpts(ans, [out3 + rule, -ans, out3]);
+    return { q: 'Rule: subtract ' + rule + '. Pairs: ?→' + out1 + ', ?→' + out2 + '. If the output is ' + out3 + ', what was the input?', opts: opts, c: 0,
+             e: 'Input − ' + rule + ' = ' + out3 + '. Input = ' + out3 + ' + ' + rule + ' = ' + ans + '. Check: ' + ans + ' − ' + rule + ' = ' + out3 + ' ✓.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// RATIO & RATES (mt-09) — 4 subtopics
+// RATIO & RATES (mt-09) — 5 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-09-1: Write & Simplify Ratios ─────────────────────────────────────
@@ -2874,8 +3296,93 @@ TEST_GENERATORS["mi-09-4"] = [
   }}
 ];
 
+// ── mi-09-5: Bar Diagram Ratio Problems ─────────────────────────────────
+TEST_GENERATORS["mi-09-5"] = [
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 5), b = _randInt(1, 4);
+    while (a === b) b = _randInt(1, 4);
+    var bar = _randInt(3, 8);
+    var total = (a + b) * bar;
+    var shareA = a * bar, shareB = b * bar;
+    var opts = _buildOpts(shareA, [shareB, total, bar]);
+    return { q: 'Share ' + total + ' in ratio ' + a + ':' + b + '. What is the larger share?', opts: opts, c: 0,
+             e: 'Total parts = ' + (a+b) + '. 1 part = ' + total + '÷' + (a+b) + ' = ' + bar + '. Larger = ' + a + '×' + bar + ' = ' + shareA + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(3, 6), b = _randInt(1, a - 1);
+    var bar = _randInt(2, 7);
+    var diff = (a - b) * bar;
+    var ans = a * bar;
+    var opts = _buildOpts(ans, [b * bar, (a + b) * bar, diff]);
+    return { q: 'Ratio ' + a + ':' + b + '. Difference = ' + diff + '. Find the larger amount.', opts: opts, c: 0,
+             e: 'Diff parts = ' + (a-b) + '. 1 part = ' + diff + '÷' + (a-b) + ' = ' + bar + '. Larger = ' + a + '×' + bar + ' = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 5), b = _randInt(1, 4);
+    while (a === b) b = _randInt(1, 4);
+    var bar = _randInt(4, 9);
+    var total = (a + b) * bar;
+    var ans = b * bar;
+    var opts = _buildOpts(ans, [a * bar, total, bar]);
+    return { q: 'A bar diagram shows ratio ' + a + ':' + b + '. Total = ' + total + '. How many in the smaller group?', opts: opts, c: 0,
+             e: (a+b) + ' parts = ' + total + '. 1 part = ' + bar + '. Smaller = ' + b + '×' + bar + ' = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 5), b = _randInt(1, 4);
+    while (a === b) b = _randInt(1, 4);
+    var bar = _randInt(5, 10);
+    var knownShare = a * bar;
+    var ans = (a + b) * bar;
+    var opts = _buildOpts(ans, [knownShare + bar, a * b * bar, b * bar]);
+    return { q: 'Ratio ' + a + ':' + b + '. The first part = ' + knownShare + '. What is the total?', opts: opts, c: 0,
+             e: '1 part = ' + knownShare + '÷' + a + ' = ' + bar + '. Total = ' + (a+b) + '×' + bar + ' = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(1, 3), b = _randInt(1, 3), c = _randInt(1, 3);
+    var parts = a + b + c;
+    var bar = _randInt(3, 7);
+    var total = parts * bar;
+    var largest = Math.max(a, b, c) * bar;
+    var opts = _buildOpts(largest, [(a + 1) * bar, parts * bar, bar]);
+    return { q: 'Share £' + total + ' in ratio ' + a + ':' + b + ':' + c + '. What is the largest share?', opts: opts, c: 0,
+             e: parts + ' parts = £' + total + '. 1 part = £' + bar + '. Largest = ' + Math.max(a,b,c) + '×£' + bar + ' = £' + largest + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 6), b = _randInt(1, 4);
+    while (a === b) b = _randInt(1, 4);
+    var bar = _randInt(3, 8);
+    var total = (a + b) * bar;
+    var shareA = a * bar;
+    var opts = _buildOpts(shareA + ' and ' + (b*bar), [(b*bar) + ' and ' + shareA, (shareA+1) + ' and ' + (b*bar-1), total + ' and 0']);
+    return { q: 'Draw a bar diagram for ratio ' + a + ':' + b + ' with total ' + total + '. What are the two shares?', opts: opts, c: 0,
+             e: '1 bar = ' + total + '÷' + (a+b) + ' = ' + bar + '. Shares: ' + shareA + ' and ' + (b*bar) + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var a = _randInt(3, 6), b = _randInt(1, a - 1);
+    var bar = _randInt(5, 12);
+    var shareA = a * bar;
+    var diff = (a - b) * bar;
+    var total = (a + b) * bar;
+    var opts = _buildOpts(total, [shareA + diff, a * b * bar, shareA]);
+    return { q: 'Two amounts in ratio ' + a + ':' + b + '. The larger exceeds the smaller by ' + diff + '. Find the total.', opts: opts, c: 0,
+             e: 'Diff = ' + (a-b) + ' parts = ' + diff + '. 1 part = ' + bar + '. Total = ' + (a+b) + '×' + bar + ' = ' + total + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var a = _randInt(2, 4), b = _randInt(1, 3), c = _randInt(1, 3);
+    var parts = a + b + c;
+    var bar = _randInt(4, 8);
+    var total = parts * bar;
+    var smallest = Math.min(a, b, c) * bar;
+    var largest = Math.max(a, b, c) * bar;
+    var diff = largest - smallest;
+    var opts = _buildOpts(diff, [largest, smallest, bar]);
+    return { q: 'Share ' + total + ' in ratio ' + a + ':' + b + ':' + c + '. What is the difference between the largest and smallest shares?', opts: opts, c: 0,
+             e: '1 part = ' + bar + '. Largest = ' + Math.max(a,b,c) + '×' + bar + '=' + largest + '. Smallest = ' + Math.min(a,b,c) + '×' + bar + '=' + smallest + '. Diff = ' + diff + '.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// PERCENTAGES (mt-10) — 4 subtopics
+// PERCENTAGES (mt-10) — 5 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-10-1: Convert Between %, Fractions & Decimals ─────────────────────
@@ -3145,8 +3652,78 @@ TEST_GENERATORS["mi-10-4"] = [
   }}
 ];
 
+// ── mi-10-5: Percent Models & Estimation ─────────────────────────────────
+TEST_GENERATORS["mi-10-5"] = [
+  { depth: 'medium', gen: function() {
+    var pct = _randInt(1, 9) * 10 + _randInt(1, 9);
+    var opts = _buildOpts(pct + '%', [(100 - pct) + '%', (pct + 10) + '%', (pct - 5) + '%']);
+    return { q: 'On a 10×10 grid, ' + pct + ' squares are shaded. What percentage is shaded?', opts: opts, c: 0,
+             e: pct + ' out of 100 squares = ' + pct + '%.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var whole = _pickFrom([40, 60, 80, 100, 120, 200]);
+    var pct = _pickFrom([10, 20, 25, 30, 50, 75]);
+    var ans = whole * pct / 100;
+    var opts = _buildOpts(ans, [whole - ans, ans + 10, pct]);
+    return { q: 'A bar model shows ' + whole + '. Find ' + pct + '% of it.', opts: opts, c: 0,
+             e: '10% of ' + whole + ' = ' + (whole / 10) + '. ' + pct + '% = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var pct = _randInt(1, 9) * 10 + _randInt(1, 9);
+    var unshaded = 100 - pct;
+    var opts = _buildOpts(unshaded + '%', [pct + '%', (unshaded + 5) + '%', (unshaded - 5) + '%']);
+    return { q: pct + ' squares on a 10×10 grid are shaded. What percentage is NOT shaded?', opts: opts, c: 0,
+             e: '100 − ' + pct + ' = ' + unshaded + '%.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var whole = _pickFrom([40, 50, 80, 100, 120, 200]);
+    var pctA = 25, pctB = 10;
+    var ansA = whole * pctA / 100, ansB = whole * pctB / 100;
+    var ans = ansA + ansB;
+    var opts = _buildOpts(ans, [ansA, ansB, whole - ans]);
+    return { q: 'Find 35% of ' + whole + ' by splitting into 25% + 10%.', opts: opts, c: 0,
+             e: '25% of ' + whole + ' = ' + ansA + '. 10% = ' + ansB + '. Total: ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var sections = _pickFrom([4, 5, 10, 20]);
+    var pctEach = 100 / sections;
+    var shaded = _randInt(1, sections - 1);
+    var ans = shaded * pctEach;
+    var opts = _buildOpts(ans + '%', [(100 - ans) + '%', shaded + '%', pctEach + '%']);
+    return { q: 'A bar is divided into ' + sections + ' equal parts. ' + shaded + ' parts are shaded. What percent is shaded?', opts: opts, c: 0,
+             e: 'Each part = ' + pctEach + '%. ' + shaded + ' parts = ' + shaded + ' × ' + pctEach + '% = ' + ans + '%.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var whole = _pickFrom([198, 302, 399, 502, 798, 1001]);
+    var nearWhole = Math.round(whole / 100) * 100;
+    var tenPct = nearWhole / 10;
+    var opts = _buildOpts('≈ ' + tenPct, ['≈ ' + (tenPct + 10), '≈ ' + (tenPct - 10), '≈ ' + whole]);
+    return { q: 'Estimate 10% of ' + whole + '.', opts: opts, c: 0,
+             e: whole + ' ≈ ' + nearWhole + '. 10% of ' + nearWhole + ' = ' + tenPct + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var whole = _pickFrom([80, 120, 160, 200, 240, 400]);
+    var pct = _pickFrom([15, 35, 45, 65, 85]);
+    var ans = whole * pct / 100;
+    var splitA = Math.floor(pct / 10) * 10;
+    var splitB = pct - splitA;
+    var partA = whole * splitA / 100, partB = whole * splitB / 100;
+    var opts = _buildOpts(ans, [whole - ans, ans + whole / 10, partA]);
+    return { q: 'Using a bar model, find ' + pct + '% of ' + whole + '.', opts: opts, c: 0,
+             e: 'Split: ' + splitA + '% + ' + splitB + '%. ' + splitA + '% of ' + whole + ' = ' + partA + '. ' + splitB + '% = ' + partB + '. Total: ' + ans + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var whole = _pickFrom([78, 203, 398, 502, 995]);
+    var nearWhole = Math.round(whole / 10) * 10;
+    var quarter = nearWhole / 4;
+    var opts = _buildOpts('≈ ' + quarter, ['≈ ' + (quarter + 5), '≈ ' + (quarter - 5), '≈ ' + nearWhole]);
+    return { q: 'Estimate 25% of ' + whole + '.', opts: opts, c: 0,
+             e: whole + ' ≈ ' + nearWhole + '. 25% = ¼ of ' + nearWhole + ' = ' + quarter + '.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// ALGEBRA: EXPRESSIONS (mt-11) — 4 subtopics
+// ALGEBRA: EXPRESSIONS (mt-11) — 5 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-11-1: Write & Evaluate Expressions ────────────────────────────────
@@ -3408,8 +3985,68 @@ TEST_GENERATORS["mi-11-4"] = [
   }}
 ];
 
+// ── mi-11-5: Properties of Operations ─────────────────────────────────────
+TEST_GENERATORS["mi-11-5"] = [
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 9), b = _randInt(2, 9);
+    var opts = _buildOpts(b + ' + ' + a, [a + ' − ' + b, b + ' − ' + a, a + ' × ' + b]);
+    return { q: 'Rewrite ' + a + ' + ' + b + ' using the commutative property.', opts: opts, c: 0,
+             e: 'Commutative property of addition: a + b = b + a. So ' + a + '+' + b + ' = ' + b + '+' + a + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 6), b = _randInt(2, 6), c = _randInt(2, 6);
+    var ans = a * (b * c);
+    var opts = _buildOpts(ans, [a + b + c, a * b + c, (a + b) * c]);
+    return { q: 'Use the associative property: (' + a + ' × ' + b + ') × ' + c + ' = ' + a + ' × (' + b + ' × ' + c + ') = ?', opts: opts, c: 0,
+             e: a + ' × ' + (b*c) + ' = ' + ans + '. (Same as ' + (a*b) + ' × ' + c + ' = ' + ans + '.)' };
+  }},
+  { depth: 'medium', gen: function() {
+    var n = _randInt(5, 50);
+    var props = ['Additive identity', 'Multiplicative identity', 'Zero property', 'Commutative property'];
+    var opts = [props[0], props[1], props[2], props[3]];
+    return { q: 'Which property does ' + n + ' + 0 = ' + n + ' demonstrate?', opts: opts, c: 0,
+             e: 'Adding 0 to any number gives the same number. This is the additive identity property.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 9), b = _randInt(2, 9), c = _randInt(2, 9);
+    var ans = a * b + a * c;
+    var opts = _buildOpts(ans, [a * (b + c + 1), a + b * c, a * b * c]);
+    return { q: 'Use the distributive property: ' + a + '(' + b + ' + ' + c + ') = ?', opts: opts, c: 0,
+             e: a + '×' + b + ' + ' + a + '×' + c + ' = ' + (a*b) + ' + ' + (a*c) + ' = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 9), b = _randInt(2, 9);
+    var opts = _buildOpts(b + ' × ' + a, [a + ' + ' + b, b + ' ÷ ' + a, a + ' − ' + b]);
+    return { q: 'Rewrite ' + a + ' × ' + b + ' using the commutative property of multiplication.', opts: opts, c: 0,
+             e: 'a × b = b × a. So ' + a + '×' + b + ' = ' + b + '×' + a + ' = ' + (a*b) + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var n = _randInt(10, 99);
+    var opts = _buildOpts('0', [n.toString(), '1', 'undefined']);
+    return { q: n + ' × 0 = ?', opts: opts, c: 0,
+             e: 'Zero property: any number × 0 = 0.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var a = _randInt(2, 5), b = _randInt(10, 25), c = _randInt(2, 5);
+    var reordered = a + ' × ' + c + ' × ' + b;
+    var easy = (a * c) + ' × ' + b;
+    var ans = a * b * c;
+    var opts = _buildOpts(ans, [a + b + c, a * b + c, (a + c) * b]);
+    return { q: 'Calculate ' + a + ' × ' + b + ' × ' + c + ' by reordering for easier mental maths.', opts: opts, c: 0,
+             e: 'Reorder: ' + a + '×' + c + '=' + (a*c) + ', then ' + (a*c) + '×' + b + '=' + ans + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var b = _randInt(3, 9);
+    var n = _randInt(2, 8);
+    var product = b * n;
+    var opts = _buildOpts(n, [b, product, n + b]);
+    return { q: 'If n × ' + b + ' = ' + product + ', find n using the multiplicative inverse.', opts: opts, c: 0,
+             e: 'n = ' + product + ' ÷ ' + b + ' = ' + n + '. Check: ' + n + '×' + b + '=' + product + ' ✓.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// ALGEBRA: EQUATIONS & SEQUENCES (mt-12) — 4 subtopics
+// ALGEBRA: EQUATIONS & SEQUENCES (mt-12) — 5 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-12-1: Number Sequences ────────────────────────────────────────────
@@ -3678,8 +4315,69 @@ TEST_GENERATORS["mi-12-4"] = [
   }}
 ];
 
+// ── mi-12-5: Expressions vs Equations & Tiles ────────────────────────────
+TEST_GENERATORS["mi-12-5"] = [
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 6), b = _randInt(1, 8);
+    var exprs = [a + 'x + ' + b, a + 'x + ' + b + ' = ' + (a*3+b), a + 'x − ' + b, (a+1) + 'y'];
+    var opts = [exprs[1], exprs[0], exprs[2], exprs[3]];
+    return { q: 'Which of these is an equation?', opts: opts, c: 0,
+             e: 'Only ' + exprs[1] + ' has an equals sign, making it an equation.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 5), b = _randInt(1, 8), x = _randInt(2, 7);
+    var rhs = a * x + b;
+    var opts = _buildOpts(x, [x + 1, x - 1, rhs]);
+    return { q: 'Algebra tiles: ' + a + ' x-tiles + ' + b + ' unit tiles = ' + rhs + ' unit tiles. Find x.', opts: opts, c: 0,
+             e: 'Remove ' + b + ': ' + a + 'x = ' + (rhs - b) + '. Divide by ' + a + ': x = ' + x + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var x = _randInt(2, 10), add = _randInt(1, 9);
+    var total = x + add;
+    var eq = 'x + ' + add + ' = ' + total;
+    var opts = _buildOpts(eq, ['x − ' + add + ' = ' + total, add + 'x = ' + total, 'x + ' + total + ' = ' + add]);
+    return { q: '"A number plus ' + add + ' equals ' + total + '." Write the equation.', opts: opts, c: 0,
+             e: eq + '. Solve: x = ' + x + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var mult = _randInt(2, 6), x = _randInt(2, 8);
+    var product = mult * x;
+    var opts = _buildOpts(mult + 'x = ' + product, ['x + ' + mult + ' = ' + product, 'x − ' + mult + ' = ' + product, mult + ' + x = ' + product]);
+    return { q: '"' + mult + ' identical items cost £' + product + ' total." Which equation models this?', opts: opts, c: 0,
+             e: mult + ' items × price = total. ' + mult + 'x = ' + product + '. x = £' + x + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var b = _randInt(2, 8), x = _randInt(2, 8);
+    var rhs = x + b;
+    var opts = _buildOpts(x, [rhs, b, x + 1]);
+    return { q: 'Tiles: 1 x-tile + ' + b + ' unit tiles = ' + rhs + ' unit tiles. Remove ' + b + ' from each side. x = ?', opts: opts, c: 0,
+             e: 'x + ' + b + ' − ' + b + ' = ' + rhs + ' − ' + b + '. x = ' + x + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(2, 6), b = _randInt(1, 9);
+    var expr = a + 'n − ' + b;
+    var opts = ['Expression', 'Equation', 'Neither', 'Both'];
+    return { q: 'Is "' + expr + '" an expression or an equation?', opts: opts, c: 0,
+             e: 'No equals sign → expression.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var x = _randInt(3, 9), sub = _randInt(1, x - 1);
+    var result = x - sub;
+    var opts = _buildOpts('x − ' + sub + ' = ' + result, ['x + ' + sub + ' = ' + result, sub + ' − x = ' + result, sub + 'x = ' + result]);
+    return { q: '"I think of a number, subtract ' + sub + ', and get ' + result + '." Which equation matches?', opts: opts, c: 0,
+             e: 'x − ' + sub + ' = ' + result + '. x = ' + x + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var a = _randInt(2, 4), b = _randInt(1, 5), x = _randInt(2, 6);
+    var rhs = a * x + b;
+    var opts = _buildOpts(x, [x + 1, rhs - b, a]);
+    return { q: 'Use tiles to solve: ' + a + 'x + ' + b + ' = ' + rhs + '. First remove ' + b + ' unit tiles from each side, then divide into ' + a + ' equal groups.', opts: opts, c: 0,
+             e: a + 'x = ' + (rhs-b) + '. x = ' + (rhs-b) + '÷' + a + ' = ' + x + '.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// STATISTICS & PROBABILITY (mt-13) — 4 subtopics
+// STATISTICS & PROBABILITY (mt-13) — 7 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-13-1: Mean, Median, Mode & Range ──────────────────────────────────
@@ -3958,6 +4656,233 @@ TEST_GENERATORS["mi-13-4"] = [
     var opts = [ans, ways + '/12', '1/6', ways + '/36'];
     return { q: 'Two dice are rolled. What is P(total = ' + target + ')?', opts: opts, c: 0,
              e: 'There are ' + ways + ' ways to make ' + target + ' from two dice. P = ' + ways + '/36 = ' + ans + '.' };
+  }}
+];
+
+// ── mi-13-5: Data Displays & Graph Types ─────────────────────────────────
+TEST_GENERATORS["mi-13-5"] = [
+  { depth: 'medium', gen: function() {
+    var key = _pickFrom([2, 4, 5, 10]);
+    var count = key * _randInt(3, 8);
+    var symbols = count / key;
+    var opts = _buildOpts(symbols + ' symbols', [(symbols + 1) + ' symbols', count + ' symbols', key + ' symbols']);
+    return { q: 'A pictogram uses one icon = ' + key + ' items. How many icons are needed for ' + count + ' items?', opts: opts, c: 0,
+             e: count + ' ÷ ' + key + ' = ' + symbols + ' icons.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(3, 12), b = _randInt(3, 12), c = _randInt(3, 12), d = _randInt(3, 12);
+    var total = a + b + c + d;
+    var opts = _buildOpts(total, [total + a, total - a, a * 4]);
+    return { q: 'A frequency table: Mon=' + a + ', Tue=' + b + ', Wed=' + c + ', Thu=' + d + '. Total frequency?', opts: opts, c: 0,
+             e: a + '+' + b + '+' + c + '+' + d + ' = ' + total + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = _randInt(10, 30), b = _randInt(10, 30);
+    var diff = Math.abs(a - b);
+    var opts = _buildOpts(diff, [a + b, Math.max(a, b), Math.min(a, b)]);
+    return { q: 'A double bar graph shows Team A scored ' + a + ' and Team B scored ' + b + '. What is the difference?', opts: opts, c: 0,
+             e: '|' + a + ' − ' + b + '| = ' + diff + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var key = _pickFrom([2, 4, 5]);
+    var half = key / 2;
+    var full = _randInt(2, 5);
+    var total = full * key + half;
+    var opts = _buildOpts(total, [full * key, (full + 1) * key, full + half]);
+    return { q: 'A pictogram key: ○ = ' + key + '. A row shows ' + full + ' full circles and a half circle. How many items?', opts: opts, c: 0,
+             e: full + '×' + key + ' + ' + half + ' = ' + total + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var types = ['bar chart', 'line graph', 'pie chart', 'scatter graph'];
+    var idx = _randInt(0, 3);
+    var purposes = ['comparing amounts in different categories', 'showing change over time', 'showing proportions of a whole', 'showing a relationship between two variables'];
+    var opts = _buildOpts(types[idx], [types[(idx+1)%4], types[(idx+2)%4], types[(idx+3)%4]]);
+    return { q: 'Which graph type is best for ' + purposes[idx] + '?', opts: opts, c: 0,
+             e: types[idx] + ' is the most appropriate for ' + purposes[idx] + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var low = _pickFrom([0, 10, 20]);
+    var width = _pickFrom([5, 10]);
+    var high = low + width - 1;
+    var opts = _buildOpts(width, [width - 1, width + 1, high]);
+    return { q: 'A grouped frequency table has classes ' + low + '–' + high + ', ' + (high+1) + '–' + (high+width) + ', ... What is the class width?', opts: opts, c: 0,
+             e: 'Each class covers ' + width + ' values (e.g. ' + low + ' to ' + high + ').' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var key = _pickFrom([4, 5, 8, 10]);
+    var count = key * _randInt(2, 6) + key / 2;
+    var full = Math.floor(count / key);
+    var opts = _buildOpts(full + '½ symbols', [(full + 1) + ' symbols', full + ' symbols', count + ' symbols']);
+    return { q: 'A pictogram uses ★ = ' + key + '. How many symbols represent ' + count + ' items?', opts: opts, c: 0,
+             e: count + ' ÷ ' + key + ' = ' + full + '.5 → ' + full + ' full symbols and a half symbol.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var a1 = _randInt(10, 25), a2 = _randInt(10, 25), b1 = _randInt(10, 25), b2 = _randInt(10, 25);
+    var incA = a2 - a1, incB = b2 - b1;
+    var faster = incA > incB ? 'A' : 'B';
+    var opts = _buildOpts(faster + ' (changed by ' + Math.max(incA, incB) + ')', [
+      (faster === 'A' ? 'B' : 'A') + ' (changed by ' + Math.min(incA, incB) + ')',
+      'Same increase',
+      'Cannot tell'
+    ]);
+    return { q: 'A double line graph shows: A goes from ' + a1 + ' to ' + a2 + '; B goes from ' + b1 + ' to ' + b2 + '. Which increased more?', opts: opts, c: 0,
+             e: 'A increased by ' + incA + '. B increased by ' + incB + '. ' + faster + ' increased more.' };
+  }}
+];
+
+// ── mi-13-6: Sampling, Bias & Distributions ──────────────────────────────
+TEST_GENERATORS["mi-13-6"] = [
+  { depth: 'medium', gen: function() {
+    var stat = _pickFrom([
+      ['How many hours do students sleep?', true],
+      ['What is 7 × 8?', false],
+      ['How tall are Year 7 students?', true],
+      ['How many days in a week?', false]
+    ]);
+    var ans = stat[1] ? 'Yes' : 'No';
+    var opts = _buildOpts(ans, [stat[1] ? 'No' : 'Yes', 'Sometimes', 'Cannot tell']);
+    return { q: 'Is this a statistical question: "' + stat[0] + '"?', opts: opts, c: 0,
+             e: stat[1] ? 'Answers vary between people — it is statistical.' : 'There is one fixed answer — it is not statistical.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var pop = _pickFrom([200, 500, 1000, 2000]);
+    var samp = _pickFrom([20, 30, 50, 100]);
+    var opts = _buildOpts(pop, [samp, pop + samp, pop - samp]);
+    return { q: 'A city has ' + pop + ' households. ' + samp + ' are surveyed. What is the population size?', opts: opts, c: 0,
+             e: 'The population is all ' + pop + ' households. The sample is the ' + samp + ' surveyed.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var methods = [
+      ['Asking only boys about PE preferences', 'Biased — excludes girls'],
+      ['Drawing names randomly from a hat', 'Unbiased — random selection'],
+      ['Surveying volunteers only', 'Biased — self-selected group'],
+      ['Selecting every 10th name from the register', 'Unbiased — systematic random']
+    ];
+    var m = _pickFrom(methods);
+    var biased = m[1].indexOf('Biased') === 0;
+    var opts = _buildOpts(biased ? 'Biased' : 'Unbiased', [biased ? 'Unbiased' : 'Biased', 'Cannot tell', 'Partially biased']);
+    return { q: 'Method: ' + m[0] + '. Biased or unbiased?', opts: opts, c: 0, e: m[1] + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var base = _randInt(3, 8);
+    var data = [base, base+1, base+1, base+2, base+2, base+2, base+3, base+3, base+4];
+    var outlier = base + _pickFrom([15, 20, 25]);
+    data.push(outlier);
+    var opts = _buildOpts(outlier, [data[0], data[4], base + 2]);
+    return { q: 'Data: ' + data.join(', ') + '. Which value is the outlier?', opts: opts, c: 0,
+             e: outlier + ' is far from the main cluster (' + base + '–' + (base+4) + ').' };
+  }},
+  { depth: 'medium', gen: function() {
+    var shapes = [
+      ['Symmetric', 'balanced around the centre with equal tails'],
+      ['Skewed right', 'most data on the left, long tail to the right'],
+      ['Skewed left', 'most data on the right, long tail to the left']
+    ];
+    var s = _pickFrom(shapes);
+    var opts = _buildOpts(s[0], [shapes[(shapes.indexOf(s)+1)%3][0], shapes[(shapes.indexOf(s)+2)%3][0], 'Uniform']);
+    return { q: 'A distribution is described as "' + s[1] + '." What is this shape called?', opts: opts, c: 0,
+             e: 'This describes a ' + s[0].toLowerCase() + ' distribution.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var n = _pickFrom([50, 100, 200]);
+    var sample = _pickFrom([10, 20, 25]);
+    var opts = _buildOpts('Increase the sample size', ['Use a smaller sample', 'Only survey friends', 'Ignore outliers']);
+    return { q: 'A survey of ' + sample + ' people out of ' + n + ' gave unexpected results. What is the best way to improve reliability?', opts: opts, c: 0,
+             e: 'Larger samples better represent the population and reduce the effect of unusual values.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var vals = [_randInt(2,6), _randInt(2,6), _randInt(2,6), _randInt(2,6), _randInt(2,6)];
+    var outlier = _randInt(25, 40);
+    var allVals = vals.concat([outlier]);
+    var sumWith = 0; for(var i=0;i<allVals.length;i++) sumWith += allVals[i];
+    var sumWithout = sumWith - outlier;
+    var meanWith = Math.round(sumWith / allVals.length * 10) / 10;
+    var meanWithout = Math.round(sumWithout / vals.length * 10) / 10;
+    var opts = _buildOpts('From ' + meanWith + ' to ' + meanWithout, ['No change', 'Mean increases', 'Mean doubles']);
+    return { q: 'Data: ' + allVals.join(', ') + '. How does removing ' + outlier + ' change the mean?', opts: opts, c: 0,
+             e: 'With outlier: mean = ' + meanWith + '. Without: mean = ' + meanWithout + '. Mean decreases towards the centre.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var pop = _pickFrom([500, 1000, 2000]);
+    var samp = _pickFrom([50, 100]);
+    var pct = _randInt(20, 60);
+    var inSample = Math.round(samp * pct / 100);
+    var predicted = Math.round(pop * pct / 100);
+    var opts = _buildOpts('About ' + predicted, [inSample, pop, samp]);
+    return { q: samp + ' people surveyed from ' + pop + '. ' + inSample + ' prefer bus travel (' + pct + '%). Predict how many in the whole population prefer the bus.', opts: opts, c: 0,
+             e: pct + '% of ' + pop + ' = ' + predicted + '. We scale the sample proportion to the population.' };
+  }}
+];
+
+// ── mi-13-7: Combined & Predicted Probability ────────────────────────────
+TEST_GENERATORS["mi-13-7"] = [
+  { depth: 'medium', gen: function() {
+    var a = _randInt(1, 5), b = a + _randInt(1, 3);
+    var opts = _buildOpts('Yes', ['No', 'Sometimes', 'Only with 2 dice']);
+    return { q: 'On a single die roll, are "rolling ' + a + '" and "rolling ' + b + '" mutually exclusive?', opts: opts, c: 0,
+             e: 'You can only get one number per roll, so they cannot happen together — mutually exclusive.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var pA_n = _randInt(1, 4), pA_d = _pickFrom([6, 8, 10]);
+    var pB_n = _randInt(1, 3), pB_d = pA_d;
+    while (pA_n + pB_n > pA_d) { pB_n = _randInt(1, 2); }
+    var sum_n = pA_n + pB_n;
+    var g = _gcd(sum_n, pA_d);
+    var ans = (sum_n/g) + '/' + (pA_d/g);
+    var opts = _buildOpts(ans, [(pA_n * pB_n) + '/' + (pA_d * pA_d), pA_n + '/' + pA_d, '1/' + pA_d]);
+    return { q: 'P(A) = ' + pA_n + '/' + pA_d + ', P(B) = ' + pB_n + '/' + pA_d + '. A and B are mutually exclusive. P(A or B)?', opts: opts, c: 0,
+             e: 'P(A or B) = ' + pA_n + '/' + pA_d + ' + ' + pB_n + '/' + pA_d + ' = ' + sum_n + '/' + pA_d + ' = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var p = _pickFrom([0.1, 0.2, 0.25, 0.5]);
+    var trials = _pickFrom([40, 60, 80, 100, 200]);
+    var expected = p * trials;
+    var opts = _buildOpts(expected, [trials, p * 10, expected * 2]);
+    return { q: 'P(event) = ' + p + '. In ' + trials + ' trials, how many times do you expect the event?', opts: opts, c: 0,
+             e: 'Expected = ' + p + ' × ' + trials + ' = ' + expected + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var total = _pickFrom([50, 100, 200]);
+    var succ = _randInt(5, Math.floor(total / 2));
+    var g = _gcd(succ, total);
+    var simplified = (succ/g) + '/' + (total/g);
+    var opts = _buildOpts(simplified, [(total - succ) + '/' + total, '1/' + total, succ + '/' + (total * 2)]);
+    return { q: 'An event happened ' + succ + ' times in ' + total + ' trials. Experimental probability?', opts: opts, c: 0,
+             e: succ + '/' + total + ' = ' + simplified + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var sides = _pickFrom([6, 8, 10]);
+    var trials = _pickFrom([60, 80, 100, 120]);
+    var expected = trials / sides;
+    var opts = _buildOpts(expected, [trials, sides, expected * 2]);
+    return { q: 'A fair ' + sides + '-sided die is rolled ' + trials + ' times. How many times do you expect to roll a 1?', opts: opts, c: 0,
+             e: 'P(1) = 1/' + sides + '. Expected = ' + trials + '/' + sides + ' = ' + expected + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var pA = _pickFrom([0.3, 0.4, 0.5]);
+    var pB = _pickFrom([0.2, 0.3, 0.4]);
+    var comp = 1 - pA;
+    var opts = _buildOpts(comp, [pA, pA + pB, 1]);
+    return { q: 'P(rain) = ' + pA + '. What is P(no rain)?', opts: opts, c: 0,
+             e: 'Complementary: P(no rain) = 1 − ' + pA + ' = ' + comp + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var pA = _pickFrom([0.3, 0.4, 0.5]);
+    var pB = _pickFrom([0.2, 0.3, 0.4]);
+    var pAB = Math.round(pA * pB * 10) / 10;
+    var pAorB = Math.round((pA + pB - pAB) * 10) / 10;
+    var opts = _buildOpts(pAorB, [pA + pB, pAB, Math.round((pA * pB) * 10) / 10]);
+    return { q: 'P(A) = ' + pA + ', P(B) = ' + pB + ', P(A and B) = ' + pAB + '. Find P(A or B).', opts: opts, c: 0,
+             e: 'P(A or B) = P(A) + P(B) − P(A and B) = ' + pA + ' + ' + pB + ' − ' + pAB + ' = ' + pAorB + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var p = _pickFrom([0.2, 0.25, 0.3, 0.4]);
+    var trials = _pickFrom([100, 200, 500]);
+    var expected = p * trials;
+    var notExpected = trials - expected;
+    var opts = _buildOpts(notExpected, [expected, trials, expected * 2]);
+    return { q: 'P(win) = ' + p + '. In ' + trials + ' games, how many losses do you predict?', opts: opts, c: 0,
+             e: 'P(lose) = 1 − ' + p + ' = ' + (1 - p) + '. Expected losses = ' + (1 - p) + ' × ' + trials + ' = ' + notExpected + '.' };
   }}
 ];
 
@@ -4411,7 +5336,7 @@ TEST_GENERATORS["mi-15-3"] = [
 ];
 
 // ══════════════════════════════════════════════════════════════════════════
-// PROBLEM SOLVING & ESTIMATION (mt-16) — 3 subtopics
+// PROBLEM SOLVING & ESTIMATION (mt-16) — 4 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-16-1: Multi-Step Word Problems ────────────────────────────────────
@@ -4621,8 +5546,82 @@ TEST_GENERATORS["mi-16-3"] = [
   }}
 ];
 
+// ── mi-16-4: Extra/Missing Info & Direction ──────────────────────────────
+TEST_GENERATORS["mi-16-4"] = [
+  { depth: 'medium', gen: function() {
+    var price = _randInt(2, 8), qty = _randInt(3, 9), extra = _randInt(10, 50);
+    var total = price * qty;
+    var opts = _buildOpts('£' + extra + ' budget', ['£' + price + ' per item', qty + ' items', '£' + total + ' total']);
+    return { q: 'Jake has £' + extra + '. He buys ' + qty + ' pencils at £' + price + ' each, spending £' + total + '. Which information is extra?', opts: opts, c: 0,
+             e: 'To find total cost we need price and quantity. The £' + extra + ' budget is extra — not needed for the calculation.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var east = _randInt(3, 12), west = _randInt(1, east - 1);
+    var net = east - west;
+    var opts = _buildOpts(net + ' km west', [net + ' km east', (east + west) + ' km west', east + ' km west']);
+    return { q: 'A cyclist rides ' + east + ' km east then ' + west + ' km west. To return to the start she must ride:', opts: opts, c: 0,
+             e: 'Net = ' + east + ' − ' + west + ' = ' + net + ' km east. Return: ' + net + ' km west.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var items = ['apples','oranges','bananas','notebooks','pens'];
+    var item = _pickFrom(items);
+    var price = _randInt(1, 5);
+    var opts = _buildOpts('How many ' + item + ' were bought', ['The price per ' + item[0], 'The type of item', 'Nothing is missing']);
+    return { q: '"' + item.charAt(0).toUpperCase() + item.slice(1) + ' cost £' + price + ' each. How much was spent?" What information is missing?', opts: opts, c: 0,
+             e: 'We know the price but not the quantity purchased.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var north = _randInt(4, 15), south = _randInt(1, north - 1);
+    var net = north - south;
+    var opts = _buildOpts(net + ' km south', [net + ' km north', (north + south) + ' km south', north + ' km south']);
+    return { q: 'A walker goes ' + north + ' km north then ' + south + ' km south. How far and which direction to return?', opts: opts, c: 0,
+             e: 'Net = ' + north + ' − ' + south + ' = ' + net + ' km north. Return: ' + net + ' km south.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var weight = _randInt(2, 8), count = _randInt(3, 7), colour = _pickFrom(['red','blue','green','yellow']);
+    var total = weight * count;
+    var opts = _buildOpts('The colour (' + colour + ')', ['The weight (' + weight + ' kg)', 'The number (' + count + ')', 'The total (' + total + ' kg)']);
+    return { q: count + ' ' + colour + ' boxes each weigh ' + weight + ' kg. Total weight is ' + total + ' kg. Which info is extra?', opts: opts, c: 0,
+             e: 'The colour is irrelevant to calculating total weight.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var leg1 = _randInt(3, 10), leg2 = _randInt(3, 10), leg3 = _randInt(1, 5);
+    var netEast = leg1 + leg3 - leg2;
+    var dir, retDir;
+    if (netEast > 0) { dir = 'east'; retDir = 'west'; }
+    else if (netEast < 0) { dir = 'west'; retDir = 'east'; netEast = -netEast; }
+    else { dir = 'at start'; retDir = 'none'; }
+    var opts;
+    if (netEast === 0) {
+      opts = _buildOpts('Already at start', [leg3 + ' km east', leg3 + ' km west', (leg1+leg2+leg3) + ' km']);
+    } else {
+      opts = _buildOpts(netEast + ' km ' + retDir, [netEast + ' km ' + dir, (leg1+leg2+leg3) + ' km ' + retDir, leg1 + ' km ' + retDir]);
+    }
+    return { q: 'A drone flies ' + leg1 + ' km east, ' + leg2 + ' km west, ' + leg3 + ' km east. Journey home?', opts: opts, c: 0,
+             e: 'East: ' + leg1 + '+' + leg3 + '=' + (leg1+leg3) + '. West: ' + leg2 + '. Net: ' + (leg1+leg3) + '−' + leg2 + '=' + (leg1+leg3-leg2) + '. Return: ' + netEast + ' km ' + retDir + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var age = _randInt(10, 14), height = _randInt(140, 170), dist = _randInt(2, 8), speed = _randInt(3, 6);
+    var time = dist / speed;
+    var timeStr = (time === Math.floor(time)) ? time + '' : time.toFixed(1);
+    var opts = _buildOpts('Age (' + age + ') and height (' + height + ' cm)', ['Distance (' + dist + ' km)', 'Speed (' + speed + ' km/h)', 'Nothing — all needed']);
+    return { q: 'Amy is ' + age + ' years old and ' + height + ' cm tall. She walks ' + dist + ' km at ' + speed + ' km/h. What info is extra if asked how long the walk takes?', opts: opts, c: 0,
+             e: 'Time = distance ÷ speed. Age and height are irrelevant.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var n1 = _randInt(3, 8), n2 = _randInt(3, 8), s1 = _randInt(1, n1 - 1), s2 = _randInt(1, n2 - 1);
+    var netN = n1 + n2 - s1 - s2;
+    var dir = netN > 0 ? 'north' : 'south';
+    var retDir = netN > 0 ? 'south' : 'north';
+    var absNet = Math.abs(netN);
+    var opts = _buildOpts(absNet + ' km ' + retDir, [absNet + ' km ' + dir, (n1+n2+s1+s2) + ' km ' + retDir, (n1+n2) + ' km ' + retDir]);
+    return { q: 'A robot moves: ' + n1 + ' km north, ' + s1 + ' km south, ' + n2 + ' km north, ' + s2 + ' km south. How far and which direction to return?', opts: opts, c: 0,
+             e: 'North: ' + (n1+n2) + '. South: ' + (s1+s2) + '. Net: ' + netN + ' km ' + dir + '. Return: ' + absNet + ' km ' + retDir + '.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// MEASUREMENT (mt-17) — 3 subtopics
+// MEASUREMENT (mt-17) — 4 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-17-1: Metric Units ────────────────────────────────────────────────
@@ -4800,8 +5799,70 @@ TEST_GENERATORS["mi-17-3"] = [
   }}
 ];
 
+// ── mi-17-4: Area/Volume Units & Temperature ─────────────────────────────
+TEST_GENERATORS["mi-17-4"] = [
+  { depth: 'medium', gen: function() {
+    var m2 = _randInt(2, 9);
+    var ans = m2 * 10000;
+    var opts = _buildOpts(ans + ' cm²', [(m2 * 100) + ' cm²', (m2 * 1000) + ' cm²', m2 + ' cm²']);
+    return { q: 'Convert ' + m2 + ' m² to cm².', opts: opts, c: 0,
+             e: '1 m² = 10,000 cm². ' + m2 + ' × 10,000 = ' + ans + ' cm².' };
+  }},
+  { depth: 'medium', gen: function() {
+    var cm3 = _pickFrom([500, 750, 1000, 1500, 2000, 2500, 3000, 4000, 5000]);
+    var litres = cm3 / 1000;
+    var opts = _buildOpts(litres + ' litres', [(cm3 / 100) + ' litres', (cm3 / 10) + ' litres', cm3 + ' litres']);
+    return { q: cm3 + ' cm³ = how many litres?', opts: opts, c: 0,
+             e: '1,000 cm³ = 1 litre. ' + cm3 + ' ÷ 1,000 = ' + litres + ' litres.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var a = -_randInt(1, 15), b = -_randInt(1, 15);
+    while (a === b) b = -_randInt(1, 15);
+    var warmer = Math.max(a, b), colder = Math.min(a, b);
+    var opts = _buildOpts(warmer + '°C', [colder + '°C', '0°C', (a + b) + '°C']);
+    return { q: 'Which is warmer: ' + a + '°C or ' + b + '°C?', opts: opts, c: 0,
+             e: warmer + ' > ' + colder + ', so ' + warmer + '°C is warmer.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var litres = _randInt(1, 10);
+    var ans = litres * 1000;
+    var opts = _buildOpts(ans + ' cm³', [(litres * 100) + ' cm³', litres + ' cm³', (litres * 10) + ' cm³']);
+    return { q: litres + ' litres = how many cm³?', opts: opts, c: 0,
+             e: '1 litre = 1,000 cm³. ' + litres + ' × 1,000 = ' + ans + ' cm³.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var start = -_randInt(3, 12), rise = _randInt(5, 20);
+    var end = start + rise;
+    var opts = _buildOpts(rise + '°C', [end + '°C', Math.abs(start) + '°C', (rise - 2) + '°C']);
+    return { q: 'Temperature rises from ' + start + '°C to ' + end + '°C. What is the rise?', opts: opts, c: 0,
+             e: end + ' − (' + start + ') = ' + end + ' + ' + Math.abs(start) + ' = ' + rise + '°C.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var cm2 = _pickFrom([20000, 30000, 50000, 70000, 100000]);
+    var ans = cm2 / 10000;
+    var opts = _buildOpts(ans + ' m²', [(cm2 / 100) + ' m²', (cm2 / 1000) + ' m²', cm2 + ' m²']);
+    return { q: 'Convert ' + cm2.toLocaleString() + ' cm² to m².', opts: opts, c: 0,
+             e: '÷ 10,000. ' + ans + ' m².' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var l = _randInt(20, 50), w = _randInt(20, 40), h = _randInt(10, 30);
+    var vol = l * w * h;
+    var litres = vol / 1000;
+    var opts = _buildOpts(litres + ' litres', [(vol / 100) + ' litres', vol + ' litres', (litres * 10) + ' litres']);
+    return { q: 'A box is ' + l + ' cm × ' + w + ' cm × ' + h + ' cm. What is its capacity in litres?', opts: opts, c: 0,
+             e: 'Volume = ' + vol + ' cm³. ÷ 1,000 = ' + litres + ' litres.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var start = -_randInt(5, 15), drop = _randInt(3, 10);
+    var end = start - drop;
+    var opts = _buildOpts(end + '°C', [(start + drop) + '°C', -end + '°C', drop + '°C']);
+    return { q: 'The temperature is ' + start + '°C and drops by ' + drop + '°C. What is the new temperature?', opts: opts, c: 0,
+             e: start + ' − ' + drop + ' = ' + end + '°C.' };
+  }}
+];
+
 // ══════════════════════════════════════════════════════════════════════════
-// MONEY & CONSUMER MATHS (mt-18) — 3 subtopics
+// MONEY & CONSUMER MATHS (mt-18) — 4 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-18-1: Add & Subtract Money ────────────────────────────────────────
@@ -5009,6 +6070,79 @@ TEST_GENERATORS["mi-18-3"] = [
     var opts = _buildOpts('£' + grand.toFixed(2), ['£' + withVat.toFixed(2), '£' + (base + tipAmt).toFixed(2), '£' + (grand + 10).toFixed(2)]);
     return { q: 'A bill is £' + base + ' + 20% VAT. You then add a ' + tip + '% tip on the VAT-inclusive total. Grand total?', opts: opts, c: 0,
              e: 'With VAT: £' + withVat + '. Tip: £' + tipAmt.toFixed(2) + '. Grand total: £' + grand.toFixed(2) + '.' };
+  }}
+];
+
+// ── mi-18-4: Multiply & Divide Money & Coins ─────────────────────────────
+TEST_GENERATORS["mi-18-4"] = [
+  { depth: 'medium', gen: function() {
+    var pounds = _randInt(1, 8);
+    var pence = _pickFrom([10, 15, 20, 25, 30, 40, 50, 60, 75, 80, 95]);
+    var qty = _randInt(2, 7);
+    var totalPence = (pounds * 100 + pence) * qty;
+    var ans = (totalPence / 100).toFixed(2);
+    var opts = _buildOpts('£' + ans, ['£' + (parseFloat(ans) + 1).toFixed(2), '£' + (parseFloat(ans) - 1).toFixed(2), '£' + (pounds * qty) + '.00']);
+    return { q: 'Bottles cost £' + pounds + '.' + (pence < 10 ? '0' : '') + pence + ' each. What do ' + qty + ' cost?', opts: opts, c: 0,
+             e: '£' + pounds + '.' + (pence < 10 ? '0' : '') + pence + ' × ' + qty + ' = £' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var divisor = _pickFrom([2, 3, 4, 5, 6, 8]);
+    var each = _pickFrom([2.50, 3.25, 4.50, 5.75, 6.25, 7.50]);
+    var total = (each * divisor).toFixed(2);
+    var opts = _buildOpts('£' + each.toFixed(2), ['£' + (each + 0.50).toFixed(2), '£' + (each - 0.50).toFixed(2), '£' + total]);
+    return { q: '£' + total + ' is shared equally among ' + divisor + ' people. How much each?', opts: opts, c: 0,
+             e: '£' + total + ' ÷ ' + divisor + ' = £' + each.toFixed(2) + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var n50 = _randInt(1, 4), n20 = _randInt(1, 5), n10 = _randInt(0, 4);
+    var total = n50 * 50 + n20 * 20 + n10 * 10;
+    var ans = total >= 100 ? '£' + (total / 100).toFixed(2) : total + 'p';
+    var opts = _buildOpts(ans, [(total + 10) + 'p', (total - 10) + 'p', (n50 + n20 + n10) + 'p']);
+    return { q: 'You have ' + n50 + '×50p, ' + n20 + '×20p and ' + n10 + '×10p coins. Total?', opts: opts, c: 0,
+             e: n50 + '×50=' + (n50*50) + 'p + ' + n20 + '×20=' + (n20*20) + 'p + ' + n10 + '×10=' + (n10*10) + 'p = ' + total + 'p = ' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var coin = _pickFrom([20, 50]);
+    var target = _randInt(2, 8) * coin;
+    var ans = target / coin;
+    var opts = _buildOpts(ans, [ans + 1, ans - 1, target]);
+    return { q: 'How many ' + coin + 'p coins make £' + (target / 100).toFixed(2) + '?', opts: opts, c: 0,
+             e: target + 'p ÷ ' + coin + 'p = ' + ans + ' coins.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var price = _pickFrom([1.99, 2.49, 2.99, 3.49, 3.99]);
+    var qty = _randInt(3, 6);
+    var totalPence = Math.round(price * 100) * qty;
+    var ans = (totalPence / 100).toFixed(2);
+    var opts = _buildOpts('£' + ans, ['£' + (parseFloat(ans) + 1).toFixed(2), '£' + (parseFloat(ans) - 0.50).toFixed(2), '£' + (Math.ceil(price) * qty).toFixed(2)]);
+    return { q: qty + ' items at £' + price.toFixed(2) + ' each. Total cost?', opts: opts, c: 0,
+             e: '£' + price.toFixed(2) + ' × ' + qty + ' = £' + ans + '.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var qty = _randInt(3, 8);
+    var price = _pickFrom([2.50, 3.50, 4.25, 5.50, 6.75]);
+    var total = price * qty;
+    var paid = Math.ceil(total / 10) * 10;
+    var change = (paid - total).toFixed(2);
+    var opts = _buildOpts('£' + change, ['£' + (parseFloat(change) + 1).toFixed(2), '£' + (parseFloat(change) - 1).toFixed(2), '£' + total.toFixed(2)]);
+    return { q: 'You buy ' + qty + ' items at £' + price.toFixed(2) + ' each and pay with £' + paid + '. Change?', opts: opts, c: 0,
+             e: 'Total = £' + total.toFixed(2) + '. Change = £' + paid + ' − £' + total.toFixed(2) + ' = £' + change + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var pricePer = _pickFrom([0.35, 0.45, 0.55, 0.65, 0.85, 0.95]);
+    var budget = _pickFrom([3, 4, 5, 6, 7, 8]);
+    var maxItems = Math.floor(budget / pricePer);
+    var opts = _buildOpts(maxItems, [maxItems + 1, maxItems - 1, budget]);
+    return { q: 'Stamps cost £' + pricePer.toFixed(2) + ' each. How many can you buy with £' + budget + '.00?', opts: opts, c: 0,
+             e: '£' + budget + ' ÷ £' + pricePer.toFixed(2) + ' = ' + (budget / pricePer).toFixed(1) + '. Floor → ' + maxItems + ' stamps.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var n2 = _randInt(1, 3), n1 = _randInt(1, 4), n50 = _randInt(1, 3), n20 = _randInt(1, 5);
+    var total = n2 * 200 + n1 * 100 + n50 * 50 + n20 * 20;
+    var ans = (total / 100).toFixed(2);
+    var opts = _buildOpts('£' + ans, ['£' + (parseFloat(ans) + 1).toFixed(2), '£' + (parseFloat(ans) - 1).toFixed(2), (n2+n1+n50+n20) + ' coins']);
+    return { q: 'A purse has ' + n2 + '×£2, ' + n1 + '×£1, ' + n50 + '×50p and ' + n20 + '×20p coins. Total?', opts: opts, c: 0,
+             e: n2 + '×£2=£' + (n2*2) + ' + ' + n1 + '×£1=£' + n1 + ' + ' + n50 + '×50p=£' + (n50*0.5).toFixed(2) + ' + ' + n20 + '×20p=£' + (n20*0.2).toFixed(2) + ' = £' + ans + '.' };
   }}
 ];
 
@@ -6075,7 +7209,7 @@ TEST_GENERATORS["mi-23-3"] = [
 ];
 
 // ══════════════════════════════════════════════════════════════════════════
-// 2D SHAPES & ANGLES (mt-24) — 3 subtopics
+// 2D SHAPES & ANGLES (mt-24) — 4 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-24-1: Classify Polygons & Angles ──────────────────────────────────
@@ -6266,6 +7400,73 @@ TEST_GENERATORS["mi-24-3"] = [
 ];
 
 // ══════════════════════════════════════════════════════════════════════════
+// ── mi-24-4: Angles, Lines & Circles ─────────────────────────────────────
+TEST_GENERATORS["mi-24-4"] = [
+  { depth: 'medium', gen: function() {
+    var ang = _randInt(30, 80);
+    var opts = _buildOpts(ang + '°', [(180 - ang) + '°', (90 - ang) + '°', (360 - ang) + '°']);
+    return { q: 'Two lines cross. One angle is ' + ang + '°. The vertically opposite angle is:', opts: opts, c: 0,
+             e: 'Vertically opposite angles are equal: ' + ang + '°.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var ang = _randInt(35, 85);
+    var supp = 180 - ang;
+    var opts = _buildOpts(supp + '°', [ang + '°', (90 - ang) + '°', (360 - ang) + '°']);
+    return { q: 'Angles on a straight line. One = ' + ang + '°. Find the other.', opts: opts, c: 0,
+             e: 'Supplementary: 180° − ' + ang + '° = ' + supp + '°.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var d = _randInt(4, 20);
+    var r = d / 2;
+    var opts = _buildOpts(r + ' cm', [d + ' cm', (d * 2) + ' cm', (r / 2) + ' cm']);
+    return { q: 'A circle has diameter ' + d + ' cm. What is the radius?', opts: opts, c: 0,
+             e: 'Radius = diameter ÷ 2 = ' + r + ' cm.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var seg = _randInt(4, 16) * 2;
+    var half = seg / 2;
+    var opts = _buildOpts(half + ' cm', [seg + ' cm', (seg * 2) + ' cm', (half + 1) + ' cm']);
+    return { q: 'A ' + seg + ' cm line segment is bisected. Each piece is:', opts: opts, c: 0,
+             e: seg + ' ÷ 2 = ' + half + ' cm.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var ang = _randInt(20, 80) * 2;
+    var half = ang / 2;
+    var opts = _buildOpts(half + '°', [ang + '°', (180 - ang) + '°', (half + 1) + '°']);
+    return { q: 'An angle of ' + ang + '° is bisected. Each half =', opts: opts, c: 0,
+             e: ang + ' ÷ 2 = ' + half + '°.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var parts = ['Radius', 'Diameter', 'Chord', 'Arc', 'Sector', 'Tangent'];
+    var defs = ['Centre to circumference', 'Across through centre (2r)', 'Line joining two points on circumference', 'Part of the circumference', 'Region between two radii and an arc', 'Line touching circle at one point'];
+    var i = _randInt(0, parts.length - 1);
+    var wrong1 = (i + 1) % parts.length, wrong2 = (i + 2) % parts.length, wrong3 = (i + 3) % parts.length;
+    var opts = [parts[i], parts[wrong1], parts[wrong2], parts[wrong3]];
+    return { q: 'Which part of a circle is: "' + defs[i] + '"?', opts: opts, c: 0,
+             e: defs[i] + ' = ' + parts[i] + '.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var ang = _randInt(25, 75);
+    var adj = 180 - ang;
+    var opts = _buildOpts(ang + '°, ' + adj + '°, ' + ang + '°, ' + adj + '°', [ang + '°, ' + ang + '°, ' + adj + '°, ' + adj + '°', '90°, 90°, 90°, 90°', ang + '°, ' + (360-ang) + '°']);
+    return { q: 'Two lines cross forming ' + ang + '°. List all four angles in order around the point.', opts: opts, c: 0,
+             e: 'Angles alternate: ' + ang + '°, ' + adj + '°, ' + ang + '°, ' + adj + '°. Sum = 360°.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var centralAng = _pickFrom([60, 72, 90, 120, 180]);
+    var fraction = centralAng + '/360';
+    var simplified;
+    if (centralAng === 60) simplified = '1/6';
+    else if (centralAng === 72) simplified = '1/5';
+    else if (centralAng === 90) simplified = '1/4';
+    else if (centralAng === 120) simplified = '1/3';
+    else simplified = '1/2';
+    var opts = _buildOpts(simplified, ['1/' + (360/centralAng + 1), centralAng + '/100', '1/' + (centralAng)]);
+    return { q: 'A sector has a central angle of ' + centralAng + '°. What fraction of the circle is it?', opts: opts, c: 0,
+             e: centralAng + '/360 = ' + simplified + '.' };
+  }}
+];
+
 // SYMMETRY & TRANSFORMATIONS (mt-25) — 3 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
@@ -6653,7 +7854,7 @@ TEST_GENERATORS["mi-26-3"] = [
 ];
 
 // ══════════════════════════════════════════════════════════════════════════
-// AREA, PERIMETER & VOLUME (mt-27) — 3 subtopics
+// AREA, PERIMETER & VOLUME (mt-27) — 4 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-27-1: Perimeter & Area of Polygons ────────────────────────────────
@@ -6833,6 +8034,81 @@ TEST_GENERATORS["mi-27-3"] = [
     var opts = _buildOpts(ratio + ' times', [(s2 / s1) + ' times', (ratio + 1) + ' times', '4 times']);
     return { q: 'Cube A has side ' + s1 + ' cm, Cube B has side ' + s2 + ' cm. How many times bigger is B\'s volume?', opts: opts, c: 0,
              e: 'A: ' + vol1 + ' cm³. B: ' + vol2 + ' cm³. Ratio = ' + ratio + ' times (2³ = 8).' };
+  }}
+];
+
+// ── mi-27-4: Compare Area & Perimeter ────────────────────────────────────
+TEST_GENERATORS["mi-27-4"] = [
+  { depth: 'medium', gen: function() {
+    var l1 = _randInt(2, 8), w1 = _randInt(2, 8);
+    var l2 = _randInt(2, 8), w2 = _randInt(2, 8);
+    while (l1 === l2 && w1 === w2) { l2 = _randInt(2, 8); }
+    var a1 = l1 * w1, a2 = l2 * w2;
+    var bigger = a1 >= a2 ? 'A' : 'B';
+    var opts = _buildOpts(bigger, [bigger === 'A' ? 'B' : 'A', 'Same area', 'Cannot tell']);
+    return { q: 'Rectangle A: ' + l1 + '×' + w1 + ' cm. Rectangle B: ' + l2 + '×' + w2 + ' cm. Which has more area?', opts: opts, c: 0,
+             e: 'A = ' + a1 + ' cm². B = ' + a2 + ' cm². ' + bigger + ' has more area.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var l1 = _randInt(2, 8), w1 = _randInt(2, 8);
+    var l2 = _randInt(2, 8), w2 = _randInt(2, 8);
+    while (l1 === l2 && w1 === w2) { l2 = _randInt(2, 8); }
+    var p1 = 2*(l1+w1), p2 = 2*(l2+w2);
+    var bigger = p1 >= p2 ? 'A' : 'B';
+    var opts = _buildOpts(bigger, [bigger === 'A' ? 'B' : 'A', 'Same perimeter', 'Cannot tell']);
+    return { q: 'Rectangle A: ' + l1 + '×' + w1 + ' cm. Rectangle B: ' + l2 + '×' + w2 + ' cm. Which has the greater perimeter?', opts: opts, c: 0,
+             e: 'P(A) = ' + p1 + ' cm. P(B) = ' + p2 + ' cm.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var perim = _pickFrom([12, 16, 20, 24, 28]);
+    var side = perim / 4;
+    var area = side * side;
+    var opts = _buildOpts(area + ' cm²', [(area + 4) + ' cm²', (perim) + ' cm²', (side * perim) + ' cm²']);
+    return { q: 'A rectangle with perimeter ' + perim + ' cm has the largest possible area when it is a square. What is that maximum area?', opts: opts, c: 0,
+             e: 'Square side = ' + perim + ' ÷ 4 = ' + side + '. Area = ' + side + '² = ' + area + ' cm².' };
+  }},
+  { depth: 'medium', gen: function() {
+    var l = _randInt(3, 10), w = _randInt(1, l - 1);
+    var a = l * w, p = 2*(l + w);
+    var opts = _buildOpts('Area=' + a + ' cm², P=' + p + ' cm', ['Area=' + p + ', P=' + a, 'Area=' + (a+p) + ' cm²', 'Area=' + (l+w) + ' cm²']);
+    return { q: 'Find both area and perimeter of a ' + l + ' × ' + w + ' cm rectangle.', opts: opts, c: 0,
+             e: 'Area = ' + l + '×' + w + ' = ' + a + ' cm². Perimeter = 2(' + l + '+' + w + ') = ' + p + ' cm.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var areas = [[2,18,40],[3,12,30],[4,9,26],[6,6,24]];
+    var pair = _pickFrom(areas);
+    var l = pair[0], w = pair[1], p = pair[2];
+    var opts = _buildOpts(l + '×' + w + ' (P=' + p + ' cm)', [(l+1) + '×' + (w-1) + ' (P=' + (2*(l+w)) + ' cm)', '1×' + (l*w) + ' (P=' + (2*(1+l*w)) + ' cm)', 'All same perimeter']);
+    return { q: 'Of all rectangles with area ' + (l*w) + ' cm², which has the smallest perimeter?', opts: opts, c: 0,
+             e: 'The closer to a square, the smaller the perimeter. ' + l + '×' + w + ' gives P = ' + p + ' cm.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var l = _randInt(3, 8), w = _randInt(2, 6);
+    var a1 = l * w, p1 = 2*(l+w);
+    var a2 = (2*l) * (2*w), p2 = 2*(2*l + 2*w);
+    var opts = _buildOpts('Area ×4, Perimeter ×2', ['Area ×2, Perimeter ×2', 'Area ×2, Perimeter ×4', 'Both ×4']);
+    return { q: 'A ' + l + '×' + w + ' cm rectangle is enlarged to ' + (2*l) + '×' + (2*w) + ' cm. How do area and perimeter change?', opts: opts, c: 0,
+             e: 'Old: A=' + a1 + ', P=' + p1 + '. New: A=' + a2 + ' (×4), P=' + p2 + ' (×2). Doubling dimensions quadruples area.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var target = _pickFrom([20, 24, 28, 32]);
+    var halfP = target / 2;
+    var results = [];
+    for (var l = 1; l < halfP; l++) { var w = halfP - l; if (l <= w) results.push({l:l, w:w, a:l*w}); }
+    results.sort(function(a,b){return b.a - a.a;});
+    var best = results[0], worst = results[results.length - 1];
+    var opts = _buildOpts(best.l + '×' + best.w + ' (area ' + best.a + ' cm²)', [worst.l + '×' + worst.w + ' (area ' + worst.a + ' cm²)', best.l + '×' + worst.w, 'All give equal area']);
+    return { q: 'Which rectangle with perimeter ' + target + ' cm has the greatest area?', opts: opts, c: 0,
+             e: 'Half perimeter = ' + halfP + '. Square ' + best.l + '×' + best.w + ' gives area ' + best.a + ' cm² — the maximum.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var s = _randInt(2, 6);
+    var a1 = s * s, p1 = 4 * s;
+    var factor = _pickFrom([2, 3]);
+    var a2 = a1 * factor * factor, p2 = p1 * factor;
+    var opts = _buildOpts('Area ×' + (factor*factor) + ', Perimeter ×' + factor, ['Both ×' + factor, 'Both ×' + (factor*factor), 'Area ×' + factor + ', Perimeter ×' + (factor*factor)]);
+    return { q: 'A square of side ' + s + ' cm is enlarged by scale factor ' + factor + '. How do area and perimeter change?', opts: opts, c: 0,
+             e: 'Side ' + s + '→' + (s*factor) + '. Area ' + a1 + '→' + a2 + ' (×' + (factor*factor) + '). Perimeter ' + p1 + '→' + p2 + ' (×' + factor + ').' };
   }}
 ];
 

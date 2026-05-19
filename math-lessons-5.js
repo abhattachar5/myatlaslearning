@@ -55,6 +55,25 @@ Object.assign(LESSONS, {
   ]
 },
 
+// ── mi-18-4: Multiply & Divide Money & Coins ──────────────────────────────
+'mi-18-4': {
+  title: 'Multiply & Divide Money & Coins',
+  sections: [
+    {
+      heading: 'Multiplying Money',
+      content: '<p>To multiply a money amount by a whole number, convert to pence first (avoids decimal errors), multiply, then convert back.</p><div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example:</strong> £3.45 × 6<br>345p × 6 = 2,070p = <strong>£20.70</strong></div><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Alternative:</strong> Split into pounds and pence:<br>£3 × 6 = £18 &nbsp;|&nbsp; 45p × 6 = 270p = £2.70<br>Total = £18 + £2.70 = <strong>£20.70</strong></div>'
+    },
+    {
+      heading: 'Dividing Money',
+      content: '<p>To divide money equally, again convert to pence, divide, then convert back.</p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example:</strong> Share £15.60 among 4 people<br>1,560p ÷ 4 = 390p = <strong>£3.90 each</strong><br>Check: £3.90 × 4 = £15.60 ✓</div><p>If it doesn\'t divide evenly, round to the nearest penny and note the remainder.</p>'
+    },
+    {
+      heading: 'Coin Combinations',
+      content: '<p>Some problems ask you to find how many coins of each type make a total. Work systematically, starting with the largest coin.</p><div style="background:#fff3e0;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example:</strong> Make 80p using 50p, 20p and 10p coins<br>• 1×50p + 1×20p + 1×10p = 80p ✓<br>• 4×20p = 80p ✓<br>• 1×50p + 3×10p = 80p ✓</div><div style="background:#fce4ec;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Tip:</strong> If the question says "only 20p coins", divide: 140p ÷ 20p = 7 coins.</div>'
+    }
+  ]
+},
+
 'mi-19-1': {
   title: 'Elapsed Time',
   sections: [

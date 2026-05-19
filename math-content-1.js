@@ -118,7 +118,15 @@ FLASHCARDS.push(
   {id:"mfc-04-4-2",islandId:"mi-04-4",front:"Use prime factorisation to find LCM(12, 18).",
    back:"LCM = 36\n\n12 = 2² × 3\n18 = 2 × 3²\n\nLCM = take the HIGHEST power of ALL primes:\n2² × 3² = 4 × 9 = 36",difficulty:2,category:"calculation"},
   {id:"mfc-04-4-3",islandId:"mi-04-4",front:"Bus A runs every 8 minutes. Bus B runs every 12 minutes. They both leave at 9:00am. When do they next leave together?",
-   back:"9:24am\n\nLCM(8, 12) = 24 minutes\n\n8 = 2³\n12 = 2² × 3\nLCM = 2³ × 3 = 24\n\n9:00am + 24 minutes = 9:24am",difficulty:2,category:"application"}
+   back:"9:24am\n\nLCM(8, 12) = 24 minutes\n\n8 = 2³\n12 = 2² × 3\nLCM = 2³ × 3 = 24\n\n9:00am + 24 minutes = 9:24am",difficulty:2,category:"application"},
+
+  // ── Topic 4, Island 5: Multiplicative Inverses ──────────────────────
+  {id:"mfc-04-5-1",islandId:"mi-04-5",front:"What is the multiplicative inverse (reciprocal) of 5?",
+   back:"1/5\n\nThe multiplicative inverse of any whole number n is 1/n.\n\nCheck: 5 × 1/5 = 1 ✓\n\nThe product of a number and its reciprocal is always 1.",difficulty:1,category:"definition"},
+  {id:"mfc-04-5-2",islandId:"mi-04-5",front:"What is the reciprocal of 3/4?",
+   back:"4/3 (or 1⅓)\n\nTo find the reciprocal of a fraction, flip the numerator and denominator.\n\nCheck: 3/4 × 4/3 = 12/12 = 1 ✓",difficulty:1,category:"calculation"},
+  {id:"mfc-04-5-3",islandId:"mi-04-5",front:"What is the reciprocal of 0.25? Why does 0 have no reciprocal?",
+   back:"Reciprocal of 0.25 = 4\n\n0.25 = 1/4, so its reciprocal = 4/1 = 4.\nCheck: 0.25 × 4 = 1 ✓\n\n0 has no reciprocal because no number multiplied by 0 gives 1 (0 × anything = 0).",difficulty:2,category:"concept"}
 );
 
 // ── QUESTIONS ─────────────────────────────────────────────────────────────
@@ -1055,6 +1063,87 @@ Object.assign(QUESTIONS, {
   {q:"Three runners complete laps in 6, 8 and 10 minutes. If they start together, after how many minutes will all three be at the start together again?",
    opts:["120 minutes","60 minutes","240 minutes","48 minutes"],c:0,
    e:"LCM(6,8,10): 6=2×3; 8=2³; 10=2×5. LCM=2³×3×5=120. After 120 minutes."}
+],
+
+// ══════════════════════════════════════════════════════════════════════════
+// TOPIC 4, Island 5 — MULTIPLICATIVE INVERSES
+// ══════════════════════════════════════════════════════════════════════════
+
+"mi-04-5": [
+  // Easy (Q1–3)
+  { gen: function() {
+    var n = pickFrom([2,3,4,5,6,7,8,9,10]);
+    var opts = buildOpts('1/' + n, ['1/' + (n+1), n + '/1', '1/' + (n-1)]);
+    return { q: 'What is the multiplicative inverse (reciprocal) of ' + n + '?',
+             opts: opts, c: 0,
+             e: 'The reciprocal of ' + n + ' is 1/' + n + '. Check: ' + n + ' × 1/' + n + ' = 1.' };
+  }},
+  { gen: function() {
+    var nums = [{n:2,d:3,rn:3,rd:2},{n:1,d:4,rn:4,rd:1},{n:3,d:5,rn:5,rd:3},{n:2,d:7,rn:7,rd:2},{n:5,d:6,rn:6,rd:5},{n:3,d:8,rn:8,rd:3}];
+    var f = pickFrom(nums);
+    var opts = buildOpts(f.rn + '/' + f.rd, [f.n + '/' + f.d, f.rd + '/' + f.rn, '1/' + f.d]);
+    return { q: 'What is the reciprocal of ' + f.n + '/' + f.d + '?',
+             opts: opts, c: 0,
+             e: 'Flip the fraction: reciprocal of ' + f.n + '/' + f.d + ' = ' + f.rn + '/' + f.rd + '. Check: ' + f.n + '/' + f.d + ' × ' + f.rn + '/' + f.rd + ' = 1.' };
+  }},
+  { gen: function() {
+    var n = pickFrom([2,3,4,5,8,10]);
+    var opts = buildOpts('1', ['' + n, '0', '1/' + n]);
+    return { q: 'What is ' + n + ' × 1/' + n + '?',
+             opts: opts, c: 0,
+             e: 'A number times its reciprocal always equals 1. ' + n + ' × 1/' + n + ' = ' + n + '/' + n + ' = 1.' };
+  }},
+  // Medium (Q4–7)
+  { gen: function() {
+    var pairs = [{d:0.5,r:'2'},{d:0.25,r:'4'},{d:0.2,r:'5'},{d:0.1,r:'10'},{d:0.125,r:'8'}];
+    var p = pickFrom(pairs);
+    var opts = buildOpts(p.r, ['' + p.d, '1/' + p.r, '' + (1/p.d + 1)]);
+    return { q: 'What is the reciprocal of ' + p.d + '?',
+             opts: opts, c: 0,
+             e: p.d + ' = 1/' + p.r + ', so the reciprocal is ' + p.r + '/1 = ' + p.r + '. Check: ' + p.d + ' × ' + p.r + ' = 1.' };
+  }},
+  { gen: function() {
+    var pairs = [{n:1,d:3,w:3},{n:1,d:5,w:5},{n:1,d:8,w:8},{n:1,d:6,w:6},{n:1,d:7,w:7}];
+    var p = pickFrom(pairs);
+    var opts = buildOpts('' + p.w, ['1/' + p.w, '' + p.d, '' + (p.w+1)]);
+    return { q: 'Find the reciprocal of 1/' + p.d + '.',
+             opts: opts, c: 0,
+             e: 'Flip the fraction: reciprocal of 1/' + p.d + ' = ' + p.d + '/1 = ' + p.w + '. Check: 1/' + p.d + ' × ' + p.w + ' = 1.' };
+  }},
+  { gen: function() {
+    var nums = [{n:2,d:3,rn:3,rd:2},{n:3,d:4,rn:4,rd:3},{n:5,d:7,rn:7,rd:5},{n:4,d:9,rn:9,rd:4}];
+    var f = pickFrom(nums);
+    var product = f.n * f.rn;
+    var denom = f.d * f.rd;
+    var opts = buildOpts('1', [f.n + '/' + f.d, '' + product + '/' + denom, '0']);
+    return { q: 'Calculate ' + f.n + '/' + f.d + ' × ' + f.rn + '/' + f.rd + '.',
+             opts: opts, c: 0,
+             e: f.n + '/' + f.d + ' × ' + f.rn + '/' + f.rd + ' = ' + product + '/' + denom + ' = 1. These are reciprocals of each other.' };
+  }},
+  { gen: function() {
+    var nums = [{m:'1⅓',n:4,d:3,rn:3,rd:4,rs:'3/4'},{m:'1½',n:3,d:2,rn:2,rd:3,rs:'2/3'},{m:'2½',n:5,d:2,rn:2,rd:5,rs:'2/5'},{m:'1¼',n:5,d:4,rn:4,rd:5,rs:'4/5'}];
+    var f = pickFrom(nums);
+    var opts = buildOpts(f.rs, [f.n + '/' + f.d, '1/' + f.n, '' + f.d]);
+    return { q: 'What is the reciprocal of ' + f.m + '?',
+             opts: opts, c: 0,
+             e: 'Convert to improper fraction: ' + f.m + ' = ' + f.n + '/' + f.d + '. Flip: reciprocal = ' + f.rs + '. Check: ' + f.n + '/' + f.d + ' × ' + f.rs + ' = 1.' };
+  }},
+  // Greater Depth (Q8–10)
+  {q:"Why does 0 have no multiplicative inverse?",
+   opts:["Because 0 × anything = 0, never 1","Because 0 is not a real number","Because 1/0 = 0","Because 0 is negative"],c:0,
+   e:"The multiplicative inverse of n must satisfy n × (1/n) = 1. Since 0 × anything = 0, no number can be multiplied by 0 to give 1. Division by 0 is undefined."},
+  { gen: function() {
+    var pairs = [{a:6,b:8,h:2,rn:1,rd:24},{a:4,b:9,h:1,rn:1,rd:36},{a:3,b:10,h:1,rn:1,rd:30}];
+    var p = pickFrom(pairs);
+    var prod = p.a * p.b;
+    var opts = buildOpts('1/' + prod, ['1/' + p.a, '1/' + p.b, '' + prod]);
+    return { q: 'What is the reciprocal of ' + p.a + ' × ' + p.b + '?',
+             opts: opts, c: 0,
+             e: p.a + ' × ' + p.b + ' = ' + prod + '. Reciprocal of ' + prod + ' = 1/' + prod + '. Check: ' + prod + ' × 1/' + prod + ' = 1.' };
+  }},
+  {q:"If the reciprocal of a number is 5/8, what is the number?",
+   opts:["8/5 (or 1.6)","5/8","3/8","8/3"],c:0,
+   e:"If the reciprocal is 5/8, the original number is the reciprocal of 5/8, which is 8/5. Check: 8/5 × 5/8 = 40/40 = 1 ✓."}
 ]
 
 }); // end Object.assign(QUESTIONS, ...)

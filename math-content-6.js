@@ -56,7 +56,12 @@ FLASHCARDS.push(
   // mi-24-3: Parallel Lines & Transversals
   { islandId:'mi-24-3', front:'What are corresponding angles?', back:'Corresponding angles are in the same position at each intersection when a transversal crosses parallel lines. They are equal (often called F-angles).' },
   { islandId:'mi-24-3', front:'Alternate angles between parallel lines are...?', back:'Equal. Alternate angles (Z-angles) are on opposite sides of the transversal between two parallel lines.' },
-  { islandId:'mi-24-3', front:'Co-interior (same-side interior) angles between parallel lines sum to...?', back:'180°. Co-interior angles (C-angles) are on the same side of the transversal, between the parallel lines.' }
+  { islandId:'mi-24-3', front:'Co-interior (same-side interior) angles between parallel lines sum to...?', back:'180°. Co-interior angles (C-angles) are on the same side of the transversal, between the parallel lines.' },
+
+  // mi-24-4: Angles, Lines & Circles
+  { islandId:'mi-24-4', front:'What are vertical angles (vertically opposite angles)?', back:'When two lines cross, the angles opposite each other are equal.\n\nIf one angle is 70°, the vertically opposite angle is also 70°.\nThe adjacent angles are supplementary (add to 180°): 110°.' },
+  { islandId:'mi-24-4', front:'What is the difference between a line, a line segment, and a ray?', back:'Line: extends infinitely in both directions (←→).\nLine segment: has two endpoints (—).\nRay: has one endpoint and extends infinitely in one direction (→).\n\nA segment has a measurable length; a line and ray do not.' },
+  { islandId:'mi-24-4', front:'Name the parts of a circle.', back:'Radius: centre to circumference.\nDiameter: across the circle through the centre (= 2 × radius).\nChord: line segment joining two points on the circumference.\nArc: part of the circumference.\nSector: "pizza slice" (two radii + arc).\nTangent: line that touches the circle at exactly one point.' }
 );
 
 // ─── TOPIC 25: SYMMETRY & TRANSFORMATIONS ────────────────────────────────────
@@ -568,6 +573,56 @@ Object.assign(QUESTIONS, {
         };
     }},
     { question:'Which statement is TRUE about parallel lines cut by a transversal?', options:['Alternate angles are equal','Co-interior angles are equal','Corresponding angles are supplementary','All angles are equal'], answer:0, explanation:'Alternate angles are equal. Co-interior angles are supplementary. Corresponding angles are equal (not supplementary).' }
+  ],
+
+  // ── mi-24-4: Angles, Lines & Circles ──────────────────────────────────────
+  'mi-24-4': [
+    { gen: function() {
+        var ang = randInt(30, 85);
+        var vert = ang;
+        var opts = buildOpts(vert + '°', [(180 - ang) + '°', (90 - ang) + '°', (360 - ang) + '°']);
+        return { q: 'Two lines cross. One angle is ' + ang + '°. What is the vertically opposite angle?',
+                 opts: opts, c: 0,
+                 e: 'Vertically opposite angles are equal: ' + vert + '°.' };
+    }},
+    { gen: function() {
+        var ang = randInt(40, 80);
+        var supp = 180 - ang;
+        var opts = buildOpts(supp + '°', [ang + '°', (90 - ang) + '°', (360 - ang) + '°']);
+        return { q: 'Two angles on a straight line. One is ' + ang + '°. Find the other.',
+                 opts: opts, c: 0,
+                 e: 'Supplementary angles sum to 180°. ' + 180 + ' − ' + ang + ' = ' + supp + '°.' };
+    }},
+    { question:'What is a ray?', options:['A line with one endpoint extending in one direction','A line with two endpoints','A line extending infinitely in both directions','A curved line'], answer:0, explanation:'A ray has one endpoint and extends infinitely in one direction.' },
+    { question:'The diameter of a circle is 14 cm. What is the radius?', options:['7 cm','28 cm','14 cm','3.5 cm'], answer:0, explanation:'Radius = diameter ÷ 2 = 14 ÷ 2 = 7 cm.' },
+    { gen: function() {
+        var ang = randInt(50, 85);
+        var adj = 180 - ang;
+        var vert = ang;
+        var opts = buildOpts(adj + '° and ' + vert + '°', [ang + '° and ' + ang + '°', (90-ang) + '° and ' + (90+ang) + '°', adj + '° and ' + adj + '°']);
+        return { q: 'Two lines cross forming a ' + ang + '° angle. What are the other two distinct angle sizes?',
+                 opts: opts, c: 0,
+                 e: 'Vertical opp = ' + vert + '°. Adjacent (supplementary) = 180−' + ang + ' = ' + adj + '°.' };
+    }},
+    { question:'Which is NOT a part of a circle?', options:['Vertex','Radius','Chord','Arc'], answer:0, explanation:'A circle does not have a vertex. Vertex belongs to polygons and angles.' },
+    { question:'A chord passes through the centre of a circle. What is it called?', options:['A diameter','A radius','A tangent','A secant'], answer:0, explanation:'A chord through the centre is the diameter — the longest possible chord.' },
+    { gen: function() {
+        var line = randInt(4, 12) * 2;
+        var half = line / 2;
+        var opts = buildOpts(half, [line, line * 2, half + 1]);
+        return { q: 'A line segment is ' + line + ' cm. A bisector cuts it in half. How long is each piece?',
+                 opts: opts, c: 0,
+                 e: 'Bisect = cut in two equal parts. ' + line + ' ÷ 2 = ' + half + ' cm.' };
+    }},
+    { gen: function() {
+        var ang = randInt(20, 80) * 2;
+        var half = ang / 2;
+        var opts = buildOpts(half + '°', [ang + '°', (180 - ang) + '°', (ang + half) + '°']);
+        return { q: 'An angle of ' + ang + '° is bisected. What is each half?',
+                 opts: opts, c: 0,
+                 e: 'Bisect = divide into two equal angles. ' + ang + ' ÷ 2 = ' + half + '°.' };
+    }},
+    { question:'A sector of a circle has a central angle of 90°. What fraction of the circle is it?', options:['¼','½','⅓','⅛'], answer:0, explanation:'90° out of 360° = 90/360 = ¼.' }
   ],
 
   // ── mi-25-1: Line & Rotational Symmetry ───────────────────────────────────

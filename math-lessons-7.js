@@ -109,6 +109,28 @@ Object.assign(LESSONS, {
   ]
 },
 
+'mi-27-4': {
+  title: 'Compare Area & Perimeter',
+  sections: [
+    {
+      heading: 'Area vs Perimeter — What Are They?',
+      content: '<p><strong>Area</strong> measures the surface inside a shape (in cm², m², etc.). <strong>Perimeter</strong> measures the total distance around the outside (in cm, m, etc.).</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px;text-align:center"><strong>Area</strong><br>Rectangle: A = l × w<br>Measured in <strong>square</strong> units</div><div style="background:#e3f2fd;padding:10px;border-radius:8px;text-align:center"><strong>Perimeter</strong><br>Rectangle: P = 2(l + w)<br>Measured in <strong>linear</strong> units</div></div><p>Two shapes can have the same area but different perimeters — or the same perimeter but different areas.</p>'
+    },
+    {
+      heading: 'Same Perimeter, Different Area',
+      content: '<p>Shapes that share the same perimeter do not always enclose the same area. Among all rectangles with a fixed perimeter, the <strong>square</strong> always has the largest area.</p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example — Perimeter 20 cm</strong><table style="border-collapse:collapse;width:100%;font-size:0.9em;margin:0.5em 0"><tr style="background:#c8e6c9"><th style="padding:6px;border:1px solid #ccc">Dimensions</th><th style="padding:6px;border:1px solid #ccc">Perimeter</th><th style="padding:6px;border:1px solid #ccc">Area</th></tr><tr><td style="padding:6px;border:1px solid #ccc">1 × 9</td><td style="padding:6px;border:1px solid #ccc">20 cm</td><td style="padding:6px;border:1px solid #ccc">9 cm²</td></tr><tr style="background:#f9f9f9"><td style="padding:6px;border:1px solid #ccc">3 × 7</td><td style="padding:6px;border:1px solid #ccc">20 cm</td><td style="padding:6px;border:1px solid #ccc">21 cm²</td></tr><tr><td style="padding:6px;border:1px solid #ccc">5 × 5</td><td style="padding:6px;border:1px solid #ccc">20 cm</td><td style="padding:6px;border:1px solid #ccc"><strong>25 cm²</strong> (max)</td></tr></table></div>'
+    },
+    {
+      heading: 'Same Area, Different Perimeter',
+      content: '<p>Two rectangles can share the same area yet have very different perimeters. Among all rectangles with a fixed area, the <strong>square</strong> (or shape closest to a square) has the smallest perimeter.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example — Area 36 cm²</strong><table style="border-collapse:collapse;width:100%;font-size:0.9em;margin:0.5em 0"><tr style="background:#bbdefb"><th style="padding:6px;border:1px solid #ccc">Dimensions</th><th style="padding:6px;border:1px solid #ccc">Area</th><th style="padding:6px;border:1px solid #ccc">Perimeter</th></tr><tr><td style="padding:6px;border:1px solid #ccc">2 × 18</td><td style="padding:6px;border:1px solid #ccc">36 cm²</td><td style="padding:6px;border:1px solid #ccc">40 cm</td></tr><tr style="background:#f9f9f9"><td style="padding:6px;border:1px solid #ccc">4 × 9</td><td style="padding:6px;border:1px solid #ccc">36 cm²</td><td style="padding:6px;border:1px solid #ccc">26 cm</td></tr><tr><td style="padding:6px;border:1px solid #ccc">6 × 6</td><td style="padding:6px;border:1px solid #ccc">36 cm²</td><td style="padding:6px;border:1px solid #ccc"><strong>24 cm</strong> (min)</td></tr></table></div>'
+    },
+    {
+      heading: 'Changing Dimensions',
+      content: '<p>Understanding how area and perimeter respond when you change one dimension:</p><div style="background:#fff3e0;padding:1em;border-radius:8px;margin:0.5em 0"><ul style="margin:0;padding-left:1.3em"><li><strong>Increase length, keep width fixed:</strong> both area and perimeter increase.</li><li><strong>Double both dimensions:</strong> perimeter doubles, but area quadruples (×4).</li><li><strong>Triple all sides:</strong> perimeter triples (×3), area × 9.</li></ul></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example:</strong> A 3 × 4 rectangle has area 12 and perimeter 14.<br>Doubled to 6 × 8: area = 48 (×4), perimeter = 28 (×2).</div>'
+    }
+  ]
+},
+
 'mi-28-1': {
   title: 'Balance a Budget',
   sections: [
