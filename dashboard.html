@@ -171,6 +171,13 @@
 <script src="math-content-5.js"></script>
 <script src="math-content-6.js"></script>
 <script src="math-content-7.js"></script>
+<script src="english-data.js"></script>
+<script src="english-content-1.js"></script>
+<script src="english-content-2.js"></script>
+<script src="english-content-3.js"></script>
+<script src="english-content-5.js"></script>
+<script src="english-content-7.js"></script>
+<script src="english-content-8.js"></script>
 <script src="lessons.js"></script>
 <script src="math-lessons-1.js"></script>
 <script src="math-lessons-2.js"></script>
@@ -179,11 +186,17 @@
 <script src="math-lessons-5.js"></script>
 <script src="math-lessons-6.js"></script>
 <script src="math-lessons-7.js"></script>
+<script src="english-lessons-1.js"></script>
+<script src="english-lessons-2.js"></script>
+<script src="english-lessons-3.js"></script>
+<script src="english-lessons-5.js"></script>
+<script src="english-lessons-7.js"></script>
+<script src="english-lessons-8.js"></script>
 <script src="app.js"></script>
 <script>
 // ── Bootstrap ───────────────────────────────────────────────────────────────
 let user = requireAuth();
-let currentFilter = 'math';
+let currentFilter = new URLSearchParams(location.search).get('subject') || 'math';
 
 (function init() {
   initTheme();
@@ -252,9 +265,12 @@ function renderFilters() {
     let count;
     if (s.id === 'all') {
       count = (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.length : 0) +
-               CURRICULUM.filter(i => i.subjectId !== 'math').length;
+              (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS.length : 0) +
+              CURRICULUM.filter(i => i.subjectId !== 'math' && i.subjectId !== 'english').length;
     } else if (s.id === 'math') {
       count = typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.length : 0;
+    } else if (s.id === 'english') {
+      count = typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS.length : 0;
     } else {
       count = CURRICULUM.filter(i => i.subjectId === s.id).length;
     }
@@ -308,13 +324,21 @@ function renderGrid() {
     return;
   }
 
-  // All filter: show math topic tiles + individual islands for other subjects
+  // English: show topic tiles instead of individual islands
+  if (currentFilter === 'english') {
+    renderEnglishTopics(grid);
+    return;
+  }
+
+  // All filter: show math topic tiles + english topic tiles + individual islands for other subjects
   if (currentFilter === 'all') {
-    const nonMathIslands = CURRICULUM.filter(i => i.subjectId !== 'math');
+    const nonMathEnglishIslands = CURRICULUM.filter(i => i.subjectId !== 'math' && i.subjectId !== 'english');
     const mathSection = typeof MATH_TOPICS !== 'undefined' && MATH_TOPICS.length > 0
       ? renderMathTopicCards() : '';
-    const islandCards = nonMathIslands.map(island => renderIslandCard(island, allProgress)).join('');
-    grid.innerHTML = mathSection + islandCards;
+    const englishSection = typeof ENGLISH_TOPICS !== 'undefined' && ENGLISH_TOPICS.length > 0
+      ? renderEnglishTopicCards() : '';
+    const islandCards = nonMathEnglishIslands.map(island => renderIslandCard(island, allProgress)).join('');
+    grid.innerHTML = mathSection + englishSection + islandCards;
     return;
   }
 
@@ -364,6 +388,51 @@ function renderMathTopicCards() {
       </div>
       <div class="island-name">${topic.name}</div>
       <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
+      <div class="status-chip">
+        <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
+        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderEnglishTopics(grid) {
+  if (typeof ENGLISH_TOPICS === 'undefined' || !ENGLISH_TOPICS.length) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">🔍</div><p>No English topics found.</p></div>';
+    return;
+  }
+  grid.innerHTML = renderEnglishTopicCards();
+}
+
+function renderEnglishTopicCards() {
+  return ENGLISH_TOPICS.map(topic => {
+    const topicIslands = CURRICULUM.filter(i => i.topicId === topic.id);
+    let mastered = 0, started = 0;
+    topicIslands.forEach(island => {
+      const s = getIslandStatus(island.id);
+      if (s > 0) started++;
+      if (s === 4) mastered++;
+    });
+    const totalIslands = topicIslands.length;
+    const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
+    const hasContent = topic.hasContent !== false;
+
+    return `<div class="island-card" style="border-top-color:#ba7517;cursor:pointer"
+        onclick="goToTopic('${topic.id}')"
+        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
+        role="link"
+        tabindex="0"
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands mastered">
+      <div class="island-card-top">
+        <div class="island-emoji">${topic.emoji}</div>
+        ${createProgressRing(progress, '#ba7517', 52)}
+      </div>
+      <div style="margin-bottom:6px">
+        <span class="subject-pill" style="background:#ba7517">English</span>
+        ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
+      </div>
+      <div class="island-name">${topic.name}</div>
+      <div class="island-meta">${totalIslands > 0 ? totalIslands + ' topic' + (totalIslands !== 1 ? 's' : '') : 'Coming soon'}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
         <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>

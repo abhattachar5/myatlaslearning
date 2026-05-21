@@ -202,7 +202,7 @@
       <div class="score-label" id="score-label">Great effort!</div>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
         <button class="btn btn-secondary" onclick="restartQuiz()">↺ Try Again</button>
-        <button class="btn btn-primary" onclick="window.location.href='dashboard.html'">← Back to Dashboard</button>
+        <button class="btn btn-primary" onclick="window.location.href=dashboardUrl">← Back to Dashboard</button>
       </div>
     </div>
   </div>
@@ -218,6 +218,13 @@
 <script src="math-content-5.js"></script>
 <script src="math-content-6.js"></script>
 <script src="math-content-7.js"></script>
+<script src="english-data.js"></script>
+<script src="english-content-1.js"></script>
+<script src="english-content-2.js"></script>
+<script src="english-content-3.js"></script>
+<script src="english-content-5.js"></script>
+<script src="english-content-7.js"></script>
+<script src="english-content-8.js"></script>
 <script src="lessons.js"></script>
 <script src="math-lessons-1.js"></script>
 <script src="math-lessons-2.js"></script>
@@ -226,6 +233,12 @@
 <script src="math-lessons-5.js"></script>
 <script src="math-lessons-6.js"></script>
 <script src="math-lessons-7.js"></script>
+<script src="english-lessons-1.js"></script>
+<script src="english-lessons-2.js"></script>
+<script src="english-lessons-3.js"></script>
+<script src="english-lessons-5.js"></script>
+<script src="english-lessons-7.js"></script>
+<script src="english-lessons-8.js"></script>
 <script src="app.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
@@ -234,6 +247,7 @@ const params = new URLSearchParams(location.search);
 const islandId = params.get('id') || 'island-1';
 const island = CURRICULUM.find(i => i.id === islandId);
 if (!island) { alert('Island not found'); history.back(); }
+const dashboardUrl = 'dashboard.html?subject=' + (island ? island.subjectId : 'math');
 
 const cards = FLASHCARDS.filter(f => f.islandId === islandId);
 
@@ -295,6 +309,8 @@ let shuffledQuestions = []; // per-session, generated + shuffled
   if (island.topicId) {
     backBtn.href = `topic.html?id=${island.topicId}`;
     backBtn.title = 'Back to topic';
+  } else {
+    backBtn.href = dashboardUrl;
   }
   renderHeader();
   renderOverview();
@@ -767,7 +783,7 @@ document.addEventListener('keydown', e => {
 
 <!-- ── Mobile Bottom Nav (≤900px only) ────────────────────────────────────── -->
 <nav class="mobile-nav">
-  <button class="mobile-nav-item" onclick="window.location.href='dashboard.html'">
+  <button class="mobile-nav-item" onclick="window.location.href=dashboardUrl">
     <span class="mobile-nav-icon">🏠</span>
     Dashboard
   </button>

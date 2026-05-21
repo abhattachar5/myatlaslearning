@@ -74,6 +74,13 @@
 <script src="math-content-5.js"></script>
 <script src="math-content-6.js"></script>
 <script src="math-content-7.js"></script>
+<script src="english-data.js"></script>
+<script src="english-content-1.js"></script>
+<script src="english-content-2.js"></script>
+<script src="english-content-3.js"></script>
+<script src="english-content-5.js"></script>
+<script src="english-content-7.js"></script>
+<script src="english-content-8.js"></script>
 <script src="lessons.js"></script>
 <script src="math-lessons-1.js"></script>
 <script src="math-lessons-2.js"></script>
@@ -82,17 +89,33 @@
 <script src="math-lessons-5.js"></script>
 <script src="math-lessons-6.js"></script>
 <script src="math-lessons-7.js"></script>
+<script src="english-lessons-1.js"></script>
+<script src="english-lessons-2.js"></script>
+<script src="english-lessons-3.js"></script>
+<script src="english-lessons-5.js"></script>
+<script src="english-lessons-7.js"></script>
+<script src="english-lessons-8.js"></script>
 <script src="app.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
 let user = requireAuth();
 const params = new URLSearchParams(location.search);
 const topicId = params.get('id');
-const topic = typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id === topicId) : null;
+let topic = (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id === topicId) : null)
+         || (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS.find(t => t.id === topicId) : null);
+const topicColor = (topic && topic.id && topic.id.startsWith('et-')) ? '#ba7517' : '#3f6f00';
+const topicSubject = (topic && topic.id && topic.id.startsWith('et-')) ? 'English' : 'Mathematics';
+const subjectId = (topic && topic.id && topic.id.startsWith('et-')) ? 'english' : 'math';
+const dashboardUrl = 'dashboard.html?subject=' + subjectId;
 
 if (!topic) {
   alert('Topic not found');
-  window.location.href = 'dashboard.html';
+  window.location.href = dashboardUrl;
+}
+
+// Comprehension has its own dedicated page
+if (topicId === 'et-04') {
+  window.location.href = 'comprehension.html';
 }
 
 // Islands belonging to this topic
@@ -102,6 +125,9 @@ const topicIslands = CURRICULUM.filter(i => i.topicId === topicId);
   initTheme();
   updateThemeBtn();
   document.title = `Atlas — ${topic.name}`;
+  document.querySelector('.island-header-back').href = dashboardUrl;
+  var dashBtn = document.getElementById('mobile-dash-btn');
+  if (dashBtn) dashBtn.onclick = function() { window.location.href = dashboardUrl; };
   renderHeader();
   renderProgress();
   renderGrid();
@@ -120,8 +146,9 @@ function renderHeader() {
   document.getElementById('hdr-emoji').textContent = topic.emoji;
   document.getElementById('hdr-name').textContent = topic.name;
   const subPill = document.getElementById('hdr-subject');
-  subPill.style.background = '#3f6f00';
+  subPill.style.background = topicColor;
   subPill.style.color = 'white';
+  subPill.textContent = topicSubject;
   document.getElementById('hdr-count').textContent = `${topicIslands.length} topics`;
 }
 
@@ -143,6 +170,7 @@ function renderProgress() {
   wrap.style.display = '';
   document.getElementById('topic-progress-label').textContent = `${mastered} / ${topicIslands.length} topics mastered`;
   document.getElementById('topic-progress-bar').style.width = pct + '%';
+  document.getElementById('topic-progress-bar').style.background = topicColor;
 
   if (topic.description) {
     document.getElementById('topic-desc').textContent = topic.description;
@@ -173,15 +201,15 @@ function renderGrid() {
     const qCount = (QUESTIONS[island.id] || []).length;
 
     return `<div class="island-card${unlocked ? '' : ' locked'}"
-        style="border-top-color:#3f6f00"
+        style="border-top-color:${island.color || topicColor}"
         onclick="${unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`}"
         title="${unlocked ? island.name : 'Complete prerequisites first'}">
       <div class="island-card-top">
         <div class="island-emoji">${island.emoji}</div>
-        ${createProgressRing(progress, '#3f6f00', 52)}
+        ${createProgressRing(progress, (island.color || topicColor), 52)}
       </div>
       <div style="margin-bottom:6px">
-        <span class="subject-pill" style="background:#3f6f00">${island.difficulty === 1 ? 'Foundation' : island.difficulty === 2 ? 'Higher' : 'Challenge'}</span>
+        <span class="subject-pill" style="background:${island.color || topicColor}">${island.difficulty === 1 ? 'Foundation' : island.difficulty === 2 ? 'Higher' : 'Challenge'}</span>
       </div>
       <div class="island-name">${island.name}</div>
       <div class="island-meta">⏱ ${island.estimatedHours}h · ${cardCount} cards · ${qCount} questions</div>
@@ -206,7 +234,8 @@ function goToTest() {
 // Show test CTA if topic has test generators; lock until all topics covered
 (function showTestCTA() {
   var cta = document.getElementById('topic-test-cta');
-  if (['mt-01','mt-02','mt-03','mt-04','mt-05','mt-06','mt-07','mt-08','mt-09','mt-10','mt-11','mt-12','mt-13','mt-14','mt-15','mt-16','mt-17','mt-18','mt-19','mt-20','mt-21','mt-22','mt-23','mt-24','mt-25','mt-26','mt-27','mt-28'].indexOf(topicId) !== -1) {
+  const testableTopics = ['mt-01','mt-02','mt-03','mt-04','mt-05','mt-06','mt-07','mt-08','mt-09','mt-10','mt-11','mt-12','mt-13','mt-14','mt-15','mt-16','mt-17','mt-18','mt-19','mt-20','mt-21','mt-22','mt-23','mt-24','mt-25','mt-26','mt-27','mt-28','et-01','et-02','et-03','et-05','et-07','et-08'];
+  if (testableTopics.indexOf(topicId) !== -1) {
     cta.style.display = '';
     updateTestLock();
   }
@@ -236,7 +265,7 @@ function showLockedMsg(id) {
 
 // ── Keyboard ──────────────────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') window.location.href = 'dashboard.html';
+  if (e.key === 'Escape') window.location.href = dashboardUrl;
 });
 </script>
 
@@ -276,7 +305,7 @@ document.addEventListener('keydown', e => {
 
 <!-- ── Mobile Bottom Nav (≤900px only) ────────────────────────────────────── -->
 <nav class="mobile-nav">
-  <button class="mobile-nav-item" onclick="window.location.href='dashboard.html'">
+  <button class="mobile-nav-item" id="mobile-dash-btn">
     <span class="mobile-nav-icon">🏠</span>
     Dashboard
   </button>
