@@ -546,6 +546,39 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   white-space: pre-wrap;
 }
 .flashcard-answer { font-size: .9375rem; font-weight: 500; line-height: 1.7; white-space: pre-wrap; }
+.fc-diagram-badge { display: none; position: absolute; bottom: 12px; right: 12px; font-size: .7rem; color: #185fa5; background: rgba(24,95,165,.08); border: 1px solid rgba(24,95,165,.2); border-radius: 6px; padding: 3px 8px; pointer-events: none; }
+.fc-text-col { display: flex; flex-direction: column; flex: 1 1 0; overflow-y: auto; min-width: 0; }
+.fc-diagram { display: none; flex: 0 0 46%; align-items: center; justify-content: center; }
+.fc-diagram svg { width: 100%; height: auto; max-height: 188px; }
+.flashcard-back-face.has-diagram { flex-direction: row; gap: 16px; padding: 18px 22px; }
+.flashcard-back-face.has-diagram .flashcard-answer { font-size: .8125rem; }
+.flashcard-back-face.has-diagram .fc-diagram { display: flex; }
+@media (max-width: 600px) {
+  .flashcard-back-face.has-diagram { flex-direction: column; gap: 8px; padding: 14px; }
+  .flashcard-back-face.has-diagram .fc-diagram { flex: none; }
+  .fc-diagram svg { max-height: 120px; }
+}
+
+/* Lesson diagrams */
+.lesson-diagram { margin: 20px 0; text-align: center; }
+.lesson-diagram-inner { display: inline-block; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; cursor: pointer; transition: box-shadow .2s, transform .15s; max-width: 100%; }
+.lesson-diagram-inner:hover { box-shadow: 0 4px 16px rgba(0,0,0,.12); transform: scale(1.02); }
+.lesson-diagram-inner svg { width: 100%; height: auto; max-height: 240px; display: block; }
+.lesson-diagram .diagram-caption { font-size: .75rem; color: var(--text-muted); margin-top: 8px; font-style: italic; }
+.lesson-diagram .diagram-expand-hint { font-size: .65rem; color: var(--text-muted); margin-top: 4px; opacity: .7; }
+
+/* Diagram zoom modal */
+.diagram-modal-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,.75); align-items: center; justify-content: center; padding: 20px; }
+.diagram-modal-overlay.show { display: flex; }
+.diagram-modal { position: relative; background: var(--surface); border-radius: 16px; padding: 48px 40px 40px; width: 85vw; max-width: 800px; max-height: 88vh; overflow: auto; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+.diagram-modal-close { position: absolute; top: 12px; right: 16px; font-size: 1.75rem; background: none; border: none; color: var(--text-muted); cursor: pointer; line-height: 1; padding: 4px 10px; border-radius: 6px; }
+.diagram-modal-close:hover { background: var(--hover); color: var(--text); }
+.diagram-modal-content { display: flex; align-items: center; justify-content: center; min-height: 300px; }
+.diagram-modal-content svg { width: 100%; height: auto; max-height: 75vh; display: block; }
+@media (max-width: 600px) {
+  .diagram-modal { padding: 40px 16px 24px; width: 96vw; }
+}
+
 .flashcard-hint {
   font-size: .75rem;
   color: var(--text-muted);

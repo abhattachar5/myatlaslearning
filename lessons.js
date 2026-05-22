@@ -474,6 +474,7 @@ Techniques used:<br>
 <li>Organisation: Cell → Tissue → Organ → Organ System → Organism.</li>
 <li><strong>Specialised cells</strong> have adaptations for their function: red blood cells have no nucleus (more room for haemoglobin); root hair cells have a large surface area for absorbing water.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="cell-comparison"><p class="diagram-caption">Comparing animal and plant cell structures</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> Explain two ways a plant cell differs from an animal cell and why each difference matters.</p>
@@ -505,6 +506,7 @@ Techniques used:<br>
 <li><strong>Adaptations</strong> are inherited features that help an organism survive and reproduce in its environment.</li>
 <li>Energy is <strong>lost at each stage</strong> of a food chain — that is why food chains rarely have more than 4–5 levels.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="food-chain"><p class="diagram-caption">Energy flow through a food chain</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> In the food chain: Grass → Rabbit → Fox → Eagle — what would happen if the rabbit population suddenly dropped by 80%?</p>
@@ -538,6 +540,7 @@ This shows how a change in one species ripples through the entire food web.</p>
 <li><strong>Changes of state</strong>: melting (solid → liquid), evaporation (liquid → gas), condensation (gas → liquid), freezing (liquid → solid). All are reversible physical changes.</li>
 <li><strong>Diffusion</strong>: particles spread from areas of high concentration to low concentration until evenly spread.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="particle-states"><p class="diagram-caption">Particle arrangement in solids, liquids and gases</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> Explain, using particle theory, what happens when ice is heated until it becomes steam.</p>
@@ -570,6 +573,7 @@ This shows how a change in one species ripples through the entire food web.</p>
 <li><strong>Mass</strong> (kg) = amount of matter — never changes. <strong>Weight</strong> (N) = gravitational force on that mass — changes with gravity. Weight = mass × gravitational field strength (W = mg).</li>
 <li><strong>Speed = Distance ÷ Time</strong>. On Earth, g = 10 N/kg; on the Moon, g = 1.6 N/kg.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="force-arrows"><p class="diagram-caption">Balanced vs unbalanced forces on an object</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> A 5 kg object sits on a table. What is its weight on Earth? Are the forces on it balanced?</p>
@@ -603,6 +607,7 @@ On the Moon: Weight = 5 × 1.6 = <strong>8 N</strong> — but the mass is still 
 <li><strong>Sound</strong> is a longitudinal wave caused by vibrations. It needs a medium (solid, liquid or gas) and <strong>cannot travel through a vacuum</strong>.</li>
 <li>Sound travels faster through solids than liquids, faster through liquids than gases. Speed in air ≈ 340 m/s.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="law-of-reflection"><p class="diagram-caption">The law of reflection: angle of incidence = angle of reflection</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> A ray of light hits a flat mirror. The angle between the ray and the mirror surface is 35°. Find the angle of reflection.</p>
@@ -668,6 +673,36 @@ Key principle: the <strong>method of pollination drives the flower's design</str
 <li>The <strong>Periodic Table</strong>: elements arranged by atomic number. Groups (columns) = similar properties. Periods (rows) = new electron shell.</li>
 <li>Separation techniques: filtration, evaporation, distillation, chromatography — choose based on what you're separating.</li>
 </ul>
+<h4>🔤 Common Element Symbols</h4>
+<p>Every element has a <strong>chemical symbol</strong> — one or two letters. The first letter is always a <strong>capital</strong>; the second (if there is one) is always <strong>lowercase</strong>.</p>
+<table style="border-collapse:collapse;width:100%;font-size:.85rem;margin:10px 0;">
+<tr style="background:var(--surface);"><th style="padding:6px 10px;border:1px solid var(--border);text-align:left;">Element</th><th style="padding:6px 10px;border:1px solid var(--border);text-align:center;">Symbol</th><th style="padding:6px 10px;border:1px solid var(--border);text-align:left;">Note</th></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Hydrogen</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>H</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">Lightest element</td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Carbon</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>C</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">In all living things</td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Nitrogen</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>N</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">78% of air</td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Oxygen</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>O</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">21% of air; we breathe it</td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Sulfur</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>S</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">Yellow solid, rotten-egg smell</td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Chlorine</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>Cl</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">Two letters! (C alone = carbon)</td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Sodium</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>Na</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">From Latin <em>natrium</em></td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Iron</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>Fe</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">From Latin <em>ferrum</em></td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Copper</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>Cu</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">From Latin <em>cuprum</em></td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Magnesium</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>Mg</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">Burns with bright white flame</td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Calcium</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>Ca</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">In bones and teeth</td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Aluminium</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>Al</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">Lightweight metal</td></tr>
+<tr><td style="padding:5px 10px;border:1px solid var(--border);">Potassium</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>K</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">From Latin <em>kalium</em></td></tr>
+</table>
+<p><strong>Tricky ones to remember:</strong> Na, Fe, Cu, and K don't match their English names — they come from Latin!</p>
+<h4>🧪 Reading Chemical Formulae</h4>
+<p>A <strong>chemical formula</strong> tells you which elements are in a substance and <strong>how many atoms</strong> of each. The small number written below and to the right (a <em>subscript</em>) tells you the count. No number means just 1.</p>
+<ul>
+<li><strong>O₂</strong> — two oxygen atoms bonded together. This is oxygen gas (the gas we breathe).</li>
+<li><strong>H₂O</strong> — two hydrogen atoms + one oxygen atom = <strong>water</strong>.</li>
+<li><strong>CO₂</strong> — one carbon atom + two oxygen atoms = <strong>carbon dioxide</strong> (the gas we breathe out).</li>
+<li><strong>NaCl</strong> — one sodium + one chlorine = <strong>sodium chloride</strong> (table salt).</li>
+<li><strong>MgO</strong> — one magnesium + one oxygen = <strong>magnesium oxide</strong>.</li>
+<li><strong>HCl</strong> — one hydrogen + one chlorine = <strong>hydrochloric acid</strong>.</li>
+</ul>
+<p><strong>Tip:</strong> Some elements naturally exist in pairs — H₂, O₂, N₂, Cl₂. These are called <em>diatomic</em> molecules.</p>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> Write a word equation for the reaction between magnesium and oxygen. Is this a physical or chemical change?</p>
@@ -684,6 +719,9 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <dt>Atom</dt><dd>The smallest particle of an element that retains the chemical properties of that element.</dd>
 <dt>Compound</dt><dd>A substance formed when two or more elements are chemically bonded in fixed proportions.</dd>
 <dt>Periodic Table</dt><dd>A table of all known elements arranged in order of atomic number, revealing patterns in properties.</dd>
+<dt>Chemical symbol</dt><dd>A one- or two-letter shorthand for an element (e.g. O = oxygen, Fe = iron). The first letter is always a capital.</dd>
+<dt>Chemical formula</dt><dd>A combination of symbols and subscript numbers that shows which elements are in a substance and how many atoms of each (e.g. CO₂ = 1 carbon + 2 oxygens).</dd>
+<dt>Diatomic molecule</dt><dd>A molecule made of exactly two atoms bonded together. Some elements naturally exist as pairs: H₂, O₂, N₂, Cl₂.</dd>
 <dt>Chromatography</dt><dd>A separation technique that uses a solvent to separate dissolved substances by how far they travel up paper.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
@@ -1216,6 +1254,371 @@ Each bounce is lower — total energy is <strong>conserved</strong> but some is 
 <li>❌ Saying energy "disappears" or is "used up" — ✅ Correct: energy is always <strong>transferred</strong> — it never vanishes, it just moves to a less useful store.</li>
 <li>❌ Confusing heat transfer methods — ✅ Correct: conduction needs a <strong>solid</strong>; convection needs a <strong>fluid</strong>; radiation needs <strong>nothing</strong>.</li>
 <li>❌ Thinking a more powerful device is more efficient — ✅ Correct: efficiency is about the <strong>proportion</strong> of useful output energy, not the total power.</li>
+</ul>`,
+
+"island-38": `<h4>Introduction</h4>
+<p>Science is not just a body of facts — it is a method of finding things out. Scientific enquiry uses careful observation, measurement and testing to build reliable explanations. Before you can draw meaningful conclusions, you need to know how to plan a fair test, identify variables, and record results properly.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li>Every experiment has three types of variable: <strong>independent</strong> (what you change), <strong>dependent</strong> (what you measure), and <strong>control</strong> (what you keep the same).</li>
+<li>A <strong>fair test</strong> changes only ONE independent variable at a time — everything else must stay the same.</li>
+<li>A <strong>hypothesis</strong> is a testable prediction that explains WHY you expect a particular outcome.</li>
+<li><strong>Repeating</strong> measurements and calculating a <strong>mean</strong> makes results more reliable. Discard obvious anomalies first.</li>
+<li>Results can be <strong>displayed</strong> in tables, bar charts (categoric data) or line graphs (continuous data). Choose the graph type that matches your data.</li>
+<li>Key lab safety rules: wear goggles for chemicals, tie back hair, never run, report spills, know where the fire extinguisher is.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="variables-diagram"><p class="diagram-caption">The three types of variable in an experiment</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A student investigates how temperature affects how quickly sugar dissolves. Identify the three types of variable.</p>
+<p><strong>Solution:</strong><br>
+Independent variable (what you change): <strong>temperature of the water</strong> (e.g. 20 °C, 40 °C, 60 °C, 80 °C).<br>
+Dependent variable (what you measure): <strong>time taken for sugar to dissolve</strong> (in seconds).<br>
+Control variables (keep the same): volume of water, amount of sugar, stirring speed, type of sugar.<br>
+This makes it a fair test — any change in dissolving time must be due to temperature.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Independent variable</dt><dd>The variable you deliberately change in an experiment.</dd>
+<dt>Dependent variable</dt><dd>The variable you observe or measure — it depends on the independent variable.</dd>
+<dt>Control variable</dt><dd>A variable kept constant to ensure the test is fair.</dd>
+<dt>Hypothesis</dt><dd>A testable, reasoned prediction (not just a guess) that can be supported or disproved by data.</dd>
+<dt>Anomaly</dt><dd>A result that does not fit the overall pattern and may be due to error.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Changing more than one variable at once — ✅ Correct: change ONLY the independent variable so you know what caused the effect.</li>
+<li>❌ Writing a hypothesis with no explanation — ✅ Correct: include a reason ("I predict X because…").</li>
+<li>❌ Drawing a line of best fit through every point including anomalies — ✅ Correct: ignore outliers and draw the line through the general trend.</li>
+</ul>`,
+
+"island-39": `<h4>Introduction</h4>
+<p>Electricity powers almost everything in modern life, and magnetism is closely linked to it. Understanding how current flows in circuits, how components affect that flow, and how magnets create invisible fields gives you the tools to explain everything from a torch to a maglev train.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Current</strong> (I) is the flow of charge, measured in Amps (A). <strong>Voltage</strong> (V) is the push from the battery, measured in Volts (V). <strong>Resistance</strong> (R) opposes current, measured in Ohms (Ω).</li>
+<li><strong>Ohm's Law</strong>: V = I × R — if voltage increases (and resistance stays the same), current increases.</li>
+<li>In a <strong>series circuit</strong>: one loop, same current everywhere, voltage is shared between components.</li>
+<li>In a <strong>parallel circuit</strong>: multiple branches, voltage the same across each branch, current splits between branches.</li>
+<li><strong>Magnets</strong> have north and south poles. Like poles repel, opposite poles attract. A magnetic field is strongest at the poles.</li>
+<li>An <strong>electromagnet</strong> is made by wrapping wire around an iron core and passing current through it — it can be switched on and off.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="circuit-comparison"><p class="diagram-caption">Series vs parallel circuit layout</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A 6 V battery is connected to a bulb with a resistance of 3 Ω. Calculate the current flowing.</p>
+<p><strong>Solution:</strong><br>
+V = I × R → rearrange → I = V ÷ R<br>
+I = 6 V ÷ 3 Ω = <strong>2 A</strong><br>
+A current of 2 Amps flows through the bulb.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Current (I)</dt><dd>The rate of flow of electric charge around a circuit. Measured in Amperes (A) using an ammeter in series.</dd>
+<dt>Voltage (V)</dt><dd>The energy given to each unit of charge by the power source. Measured in Volts (V) using a voltmeter in parallel.</dd>
+<dt>Resistance (R)</dt><dd>A measure of how much a component opposes the flow of current. Measured in Ohms (Ω).</dd>
+<dt>Electromagnet</dt><dd>A temporary magnet made by passing current through a coil of wire around an iron core.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking current is "used up" by bulbs — ✅ Correct: current is the SAME everywhere in a series circuit; energy is transferred, not current.</li>
+<li>❌ Connecting a voltmeter in series — ✅ Correct: voltmeters go in <strong>parallel</strong> across a component; ammeters go in <strong>series</strong>.</li>
+<li>❌ Thinking all metals are magnetic — ✅ Correct: only iron, cobalt, nickel (and steel, which contains iron) are magnetic.</li>
+</ul>`,
+
+"island-40": `<h4>Introduction</h4>
+<p>Waves transfer energy from one place to another without transferring matter. They are everywhere — from the sound of your voice to the light from the Sun. The electromagnetic (EM) spectrum organises all types of EM radiation by frequency and wavelength, from radio waves to deadly gamma rays.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Transverse waves</strong>: vibrations are perpendicular to the direction of travel (e.g. light, water waves). <strong>Longitudinal waves</strong>: vibrations are parallel (e.g. sound).</li>
+<li><strong>Amplitude</strong> = height from rest to peak (relates to loudness/brightness). <strong>Wavelength</strong> = distance from one peak to the next. <strong>Frequency</strong> = number of waves per second (Hz).</li>
+<li>Wave speed equation: <strong>v = f × λ</strong> (speed = frequency × wavelength).</li>
+<li>The EM spectrum in order of increasing frequency: <strong>Radio → Microwave → Infrared → Visible → Ultraviolet → X-rays → Gamma rays</strong>.</li>
+<li>All EM waves travel at the <strong>speed of light</strong> (3 × 10⁸ m/s) in a vacuum and do NOT need a medium.</li>
+<li>Higher frequency = shorter wavelength = more energy = more dangerous.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="wave-properties"><p class="diagram-caption">Transverse wave: amplitude, wavelength and frequency</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="em-spectrum"><p class="diagram-caption">The electromagnetic spectrum in order</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A wave has a frequency of 500 Hz and a wavelength of 0.6 m. Calculate the wave speed.</p>
+<p><strong>Solution:</strong><br>
+v = f × λ<br>
+v = 500 Hz × 0.6 m = <strong>300 m/s</strong><br>
+The wave travels at 300 metres per second.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Amplitude</dt><dd>The maximum displacement from the rest position — determines how much energy the wave carries.</dd>
+<dt>Frequency</dt><dd>The number of complete waves passing a point per second. Measured in Hertz (Hz).</dd>
+<dt>Wavelength (λ)</dt><dd>The distance from one point on a wave to the same point on the next wave (e.g. peak to peak).</dd>
+<dt>Electromagnetic spectrum</dt><dd>The complete range of EM waves arranged by frequency/wavelength, from radio waves to gamma rays.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Measuring amplitude from peak to trough — ✅ Correct: amplitude is from the <strong>rest position to ONE peak</strong> (half of peak-to-trough).</li>
+<li>❌ Thinking sound is an EM wave — ✅ Correct: sound is a <strong>longitudinal mechanical wave</strong> — it needs a medium and travels much slower than light.</li>
+<li>❌ Getting the EM spectrum order wrong — ✅ Remember: "Really Mighty Insects Vex Ugly X-ray Guns" (Radio, Micro, IR, Visible, UV, X, Gamma).</li>
+</ul>`,
+
+"island-41": `<h4>Introduction</h4>
+<p>With millions of species on Earth, scientists need a system to organise and name them. Classification groups organisms by shared characteristics — from broad kingdoms down to individual species. This system, pioneered by Carl Linnaeus, allows scientists worldwide to communicate clearly about living things.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li>The <strong>five kingdoms</strong>: Animals, Plants, Fungi, Protists, Prokaryotes (bacteria).</li>
+<li>The classification hierarchy: <strong>Kingdom → Phylum → Class → Order → Family → Genus → Species</strong>. Memory aid: "King Philip Came Over For Good Soup."</li>
+<li><strong>Vertebrates</strong> (animals with backbones) are divided into: Fish, Amphibians, Reptiles, Birds, Mammals.</li>
+<li><strong>Invertebrates</strong> (no backbone) include: insects, arachnids, molluscs, crustaceans, worms.</li>
+<li><strong>Binomial nomenclature</strong>: every species has a two-part Latin name — Genus (capital) + species (lowercase), always italicised. Example: <em>Homo sapiens</em>.</li>
+<li>A <strong>dichotomous key</strong> uses a series of yes/no questions to identify an unknown organism step by step.</li>
+</ul>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Use this simple key to identify an organism:<br>
+1. Does it have a backbone? → Yes: go to 2 / No: Invertebrate<br>
+2. Is it warm-blooded? → Yes: go to 3 / No: Fish, Amphibian or Reptile<br>
+3. Does it have feathers? → Yes: Bird / No: Mammal</p>
+<p><strong>Solution:</strong> An animal that has a backbone, is warm-blooded, and has no feathers → <strong>Mammal</strong>.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Species</dt><dd>A group of organisms that can reproduce together to produce fertile offspring.</dd>
+<dt>Vertebrate</dt><dd>An animal with an internal backbone (spinal column).</dd>
+<dt>Binomial nomenclature</dt><dd>The two-part naming system: Genus + species (e.g. <em>Canis lupus</em> = wolf).</dd>
+<dt>Dichotomous key</dt><dd>A branching identification tool where each step has exactly two choices.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Calling all small creatures "insects" — ✅ Correct: insects have exactly <strong>6 legs</strong>. Spiders (8 legs) are arachnids, woodlice (14 legs) are crustaceans.</li>
+<li>❌ Writing binomial names without italics or with both words capitalised — ✅ Correct: <em>Homo sapiens</em> (italics, genus capitalised, species lowercase).</li>
+<li>❌ Thinking fungi are plants — ✅ Correct: fungi have NO chlorophyll and cannot photosynthesise. They feed by decomposing dead organisms.</li>
+</ul>`,
+
+"island-42": `<h4>Introduction</h4>
+<p>Your body is a remarkable machine made of organ systems that work together to keep you alive. The circulatory system transports blood, the digestive system breaks down food, the respiratory system handles gas exchange, and the nervous system coordinates everything. Understanding these systems helps you make sense of your own health.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li>The <strong>heart</strong> is a double pump: the RIGHT side pumps blood to the lungs (pulmonary circuit); the LEFT side pumps oxygenated blood to the body (systemic circuit).</li>
+<li>Blood vessels: <strong>arteries</strong> (thick walls, away from heart), <strong>veins</strong> (thin walls + valves, towards heart), <strong>capillaries</strong> (one-cell thick, site of exchange).</li>
+<li>The <strong>digestive system</strong> path: Mouth → Oesophagus → Stomach → Small intestine (absorption) → Large intestine (water absorption) → Rectum.</li>
+<li>In the <strong>lungs</strong>, oxygen diffuses from alveoli into the blood, and CO₂ diffuses out — this is gas exchange.</li>
+<li>The <strong>nervous system</strong>: stimulus → receptor → sensory neurone → CNS (brain/spinal cord) → motor neurone → effector (muscle/gland) → response.</li>
+<li><strong>Reflex actions</strong> bypass the brain for speed — e.g. pulling your hand from a flame.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="heart-diagram"><p class="diagram-caption">The structure of the heart and blood flow</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Trace the path of blood from the body, through the heart and lungs, and back to the body.</p>
+<p><strong>Solution:</strong><br>
+1. Deoxygenated blood from the body enters the <strong>right atrium</strong> via the vena cava.<br>
+2. Flows through the tricuspid valve into the <strong>right ventricle</strong>.<br>
+3. Pumped to the <strong>lungs</strong> via the pulmonary artery (picks up O₂, drops off CO₂).<br>
+4. Oxygenated blood returns to the <strong>left atrium</strong> via the pulmonary vein.<br>
+5. Flows through the bicuspid valve into the <strong>left ventricle</strong>.<br>
+6. Pumped to the <strong>body</strong> via the aorta — delivers oxygen to cells.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Artery</dt><dd>A blood vessel carrying blood AWAY from the heart, with thick elastic walls to withstand high pressure.</dd>
+<dt>Alveoli</dt><dd>Tiny air sacs in the lungs where gas exchange occurs. Large surface area, thin walls, rich blood supply.</dd>
+<dt>Enzyme</dt><dd>A biological catalyst that speeds up digestion by breaking down large food molecules (e.g. amylase breaks starch into sugars).</dd>
+<dt>Reflex arc</dt><dd>The nerve pathway for an automatic response: receptor → sensory neurone → relay neurone → motor neurone → effector.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking arteries always carry oxygenated blood — ✅ Correct: the <strong>pulmonary artery</strong> carries deoxygenated blood to the lungs (arteries = AWAY from heart).</li>
+<li>❌ Confusing absorption with digestion — ✅ Correct: digestion <strong>breaks down</strong> food; absorption is where nutrients <strong>pass into the blood</strong> (mostly in the small intestine).</li>
+<li>❌ Saying the brain controls reflexes — ✅ Correct: reflexes use the <strong>spinal cord</strong> as the relay centre to save time.</li>
+</ul>`,
+
+"island-43": `<h4>Introduction</h4>
+<p>Genetics explains how characteristics are passed from parents to offspring through DNA. Genes are instructions for making proteins, and different versions of a gene (alleles) create variation. Natural selection then acts on this variation — organisms best suited to their environment survive and reproduce more, gradually changing populations over time.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>DNA</strong> is found in the nucleus, organised into <strong>chromosomes</strong>. Humans have 46 chromosomes (23 pairs). A <strong>gene</strong> is a section of DNA that codes for a protein.</li>
+<li><strong>Alleles</strong> are different versions of the same gene. You inherit one allele from each parent.</li>
+<li><strong>Dominant</strong> alleles (capital letter, e.g. B) show their effect even if only one copy is present. <strong>Recessive</strong> alleles (lowercase, e.g. b) only show when two copies are present (bb).</li>
+<li><strong>Genotype</strong> = the alleles you have (e.g. Bb). <strong>Phenotype</strong> = the physical characteristic you display (e.g. brown eyes).</li>
+<li>A <strong>Punnett square</strong> predicts the probability of offspring genotypes by crossing parent alleles.</li>
+<li><strong>Natural selection</strong>: variation → competition → survival of the fittest → reproduction → beneficial traits passed on → population changes over time.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="punnett-square"><p class="diagram-caption">Using a Punnett square to predict offspring genotypes</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Brown eyes (B) are dominant over blue eyes (b). Both parents are heterozygous (Bb). What are the possible offspring genotypes?</p>
+<p><strong>Solution:</strong><br>
+Punnett square:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;b<br>
+B&nbsp;&nbsp;BB&nbsp;&nbsp;Bb<br>
+b&nbsp;&nbsp;Bb&nbsp;&nbsp;bb<br><br>
+Offspring: 1 BB : 2 Bb : 1 bb<br>
+Phenotype ratio: <strong>3 brown eyes : 1 blue eyes</strong> (75% brown, 25% blue)</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Gene</dt><dd>A short section of DNA on a chromosome that codes for a specific protein or characteristic.</dd>
+<dt>Allele</dt><dd>A version of a gene. Different alleles produce different variations of a characteristic.</dd>
+<dt>Homozygous</dt><dd>Having two identical alleles for a gene (BB or bb).</dd>
+<dt>Heterozygous</dt><dd>Having two different alleles for a gene (Bb). The dominant allele determines the phenotype.</dd>
+<dt>Natural selection</dt><dd>The process by which organisms with advantageous traits survive and reproduce more, passing those traits to the next generation.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Confusing genotype and phenotype — ✅ Correct: genotype is the <strong>alleles</strong> (letters); phenotype is the <strong>physical feature</strong> you can observe.</li>
+<li>❌ Thinking evolution happens to individuals — ✅ Correct: individuals do not evolve; <strong>populations</strong> change over many generations through natural selection.</li>
+<li>❌ Saying "survival of the fittest" means strongest — ✅ Correct: "fittest" means <strong>best adapted to the environment</strong>, not physically strongest.</li>
+</ul>`,
+
+"island-44": `<h4>Introduction</h4>
+<p>Photosynthesis and respiration are two of the most important chemical processes in biology. Plants use photosynthesis to convert light energy into glucose (food), and all living things use respiration to release energy from that glucose. Together they form a cycle — each process uses the other's waste products.</p>
+<div class="example-box" style="background:#f0f9ff;border-left:4px solid #3b82f6;">
+<p><strong>🔤 Quick formula reminder</strong><br>
+This topic uses chemical formulae — here's what the symbols mean:<br>
+<strong>CO₂</strong> = carbon dioxide (1 carbon + 2 oxygen atoms) — the gas we breathe out<br>
+<strong>H₂O</strong> = water (2 hydrogen + 1 oxygen)<br>
+<strong>O₂</strong> = oxygen gas (2 oxygen atoms bonded) — the gas we breathe in<br>
+<strong>C₆H₁₂O₆</strong> = glucose (a sugar — 6 carbon, 12 hydrogen, 6 oxygen atoms)<br>
+The small numbers (subscripts) tell you how many atoms of each element are present.</p>
+</div>
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Photosynthesis equation</strong>: Carbon dioxide + Water → (light energy, chlorophyll) → Glucose + Oxygen<br>6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</li>
+<li>Photosynthesis happens in <strong>chloroplasts</strong> (which contain green chlorophyll) in leaf cells.</li>
+<li>Three factors affect rate: <strong>light intensity</strong>, <strong>CO₂ concentration</strong>, and <strong>temperature</strong>. Each can be a limiting factor.</li>
+<li><strong>Aerobic respiration</strong>: Glucose + Oxygen → Carbon dioxide + Water + ENERGY<br>C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy</li>
+<li><strong>Anaerobic respiration</strong> (without oxygen): Glucose → Lactic acid + some energy (in animals) or Glucose → Ethanol + CO₂ + some energy (in yeast).</li>
+<li>Aerobic releases <strong>much more energy</strong> than anaerobic. All living cells respire 24/7 — it never stops.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="photosynthesis-diagram"><p class="diagram-caption">Photosynthesis: inputs and outputs</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A student increases light intensity on a plant and measures the rate of photosynthesis. At first it rises, then it levels off. Explain why.</p>
+<p><strong>Solution:</strong><br>
+1. At low light, light is the <strong>limiting factor</strong> — increasing it speeds up photosynthesis.<br>
+2. As light increases, the rate rises proportionally.<br>
+3. Eventually the rate <strong>plateaus</strong> because another factor (e.g. CO₂ or temperature) becomes the new limiting factor.<br>
+4. The plant cannot photosynthesise faster until THAT factor is also increased.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Photosynthesis</dt><dd>The process by which plants convert light energy, CO₂ and water into glucose and oxygen in chloroplasts.</dd>
+<dt>Chlorophyll</dt><dd>The green pigment in chloroplasts that absorbs light energy for photosynthesis.</dd>
+<dt>Aerobic respiration</dt><dd>Releasing energy from glucose using oxygen — happens in mitochondria, produces CO₂ + water + lots of energy.</dd>
+<dt>Limiting factor</dt><dd>The factor in shortest supply that restricts the rate of a process (e.g. light intensity limiting photosynthesis).</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking plants only photosynthesise (not respire) — ✅ Correct: plants do <strong>both</strong>. They respire all the time; they photosynthesise only in light.</li>
+<li>❌ Saying photosynthesis is the reverse of respiration — ✅ Correct: the equations look opposite, but they are completely different processes in different organelles.</li>
+<li>❌ Thinking anaerobic respiration only happens during exercise — ✅ Correct: it happens whenever cells <strong>lack sufficient oxygen</strong>, e.g. waterlogged roots, yeast in bread dough.</li>
+</ul>`,
+
+"island-45": `<h4>Introduction</h4>
+<p>Beneath your feet lies a dynamic planet. The Earth is made of layers — from a thin rocky crust to a super-hot iron core. Rocks are constantly being formed, broken down and reformed in the rock cycle. Understanding rock types and Earth's structure helps explain volcanoes, earthquakes, and the landscapes around us.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li>Earth's four layers (outside to inside): <strong>Crust</strong> (thin, rocky, 5–70 km), <strong>Mantle</strong> (thick, semi-molten, convection currents), <strong>Outer core</strong> (liquid iron/nickel), <strong>Inner core</strong> (solid iron/nickel, ~5,500 °C).</li>
+<li><strong>Igneous rocks</strong> form when magma or lava cools and solidifies. Intrusive (slow cooling underground → large crystals, e.g. granite). Extrusive (fast cooling on surface → small crystals, e.g. basalt).</li>
+<li><strong>Sedimentary rocks</strong> form when layers of sediment are deposited, compacted and cemented over millions of years (e.g. sandstone, limestone). May contain fossils.</li>
+<li><strong>Metamorphic rocks</strong> form when existing rocks are changed by extreme heat and/or pressure (e.g. marble from limestone, slate from mudstone).</li>
+<li>The <strong>rock cycle</strong> shows how any rock type can become any other over geological time through weathering, erosion, deposition, heat, pressure, melting, and cooling.</li>
+<li><strong>Fossils</strong> form when dead organisms are buried in sediment before they decay — they provide evidence of past life and evolution.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="earth-layers"><p class="diagram-caption">The four layers of the Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="rock-cycle"><p class="diagram-caption">The rock cycle: how rocks transform between types</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Explain how a piece of granite (igneous rock) could eventually become marble (metamorphic rock).</p>
+<p><strong>Solution:</strong><br>
+1. Granite is <strong>weathered and eroded</strong> into small fragments.<br>
+2. Fragments are <strong>transported</strong> (by rivers/wind) and <strong>deposited</strong> as sediment.<br>
+3. Layers build up; weight <strong>compacts and cements</strong> the sediment into limestone (sedimentary rock).<br>
+4. Tectonic forces push the limestone deep underground where <strong>intense heat and pressure</strong> change its structure → it becomes <strong>marble</strong> (metamorphic rock).</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Igneous</dt><dd>Rock formed from cooled magma or lava. "Igneous" comes from the Latin word for fire.</dd>
+<dt>Sedimentary</dt><dd>Rock formed from compressed layers of sediment, often containing fossils.</dd>
+<dt>Metamorphic</dt><dd>Rock that has been transformed by heat and/or pressure without melting completely.</dd>
+<dt>Rock cycle</dt><dd>The continuous process by which rocks are created, broken down, and transformed between the three rock types.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking metamorphic rock involves melting — ✅ Correct: metamorphic rock changes structure under heat/pressure <strong>without fully melting</strong>. If it melts, it becomes magma → igneous.</li>
+<li>❌ Confusing weathering and erosion — ✅ Correct: weathering = <strong>breaking down</strong> in place; erosion = <strong>transporting</strong> the broken pieces away.</li>
+<li>❌ Thinking the rock cycle is one-directional — ✅ Correct: any rock type can become <strong>any other</strong> type — the cycle has multiple paths.</li>
+</ul>`,
+
+"island-46": `<h4>Introduction</h4>
+<p>Earth's natural cycles — particularly the water cycle and carbon cycle — keep our planet habitable. Water circulates between oceans, atmosphere and land; carbon moves between living things, atmosphere, oceans and rocks. Human activities are now disrupting the carbon cycle, leading to the enhanced greenhouse effect and climate change.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li>The <strong>water cycle</strong>: Evaporation (liquid → gas) → Condensation (forms clouds) → Precipitation (rain/snow) → Collection (rivers/groundwater) → back to evaporation. Transpiration from plants also adds water vapour.</li>
+<li>The <strong>carbon cycle</strong>: Carbon moves via photosynthesis (removes CO₂), respiration (releases CO₂), combustion (burning fossil fuels), decomposition, and dissolving in oceans.</li>
+<li>The <strong>greenhouse effect</strong> is natural and essential — greenhouse gases (CO₂, methane, water vapour) trap heat and keep Earth warm enough for life.</li>
+<li>The <strong>enhanced greenhouse effect</strong>: humans are burning fossil fuels and deforesting → extra CO₂ → more heat trapped → global temperatures rising = <strong>climate change</strong>.</li>
+<li>Evidence for climate change: rising global temperatures, melting ice caps, rising sea levels, more extreme weather events, shifting ecosystems.</li>
+<li>Reducing climate change: use renewable energy, reduce fossil fuel use, plant trees, reduce meat consumption, improve energy efficiency.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="water-cycle"><p class="diagram-caption">The water cycle: evaporation, condensation and precipitation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Explain how cutting down and burning a forest increases the greenhouse effect.</p>
+<p><strong>Solution:</strong><br>
+1. Burning the trees releases <strong>stored carbon</strong> as CO₂ into the atmosphere (combustion).<br>
+2. Fewer trees means <strong>less photosynthesis</strong> — so less CO₂ is removed from the atmosphere.<br>
+3. More CO₂ in the atmosphere → more thermal energy (heat) is <strong>trapped</strong> by greenhouse gases → temperatures rise.<br>
+Both effects combine: more CO₂ released AND less CO₂ absorbed = <strong>double impact</strong>.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Evaporation</dt><dd>Liquid water gaining energy and becoming water vapour (gas) — happens at the surface, below boiling point.</dd>
+<dt>Condensation</dt><dd>Water vapour cooling and turning back into liquid water droplets — forms clouds.</dd>
+<dt>Greenhouse gas</dt><dd>A gas that traps thermal energy in the atmosphere (e.g. CO₂, methane, water vapour).</dd>
+<dt>Climate change</dt><dd>Long-term shifts in global temperatures and weather patterns, largely driven by increased greenhouse gas emissions from human activity.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Saying the greenhouse effect is bad — ✅ Correct: the NATURAL greenhouse effect is essential for life. It's the <strong>enhanced</strong> (extra) greenhouse effect that causes problems.</li>
+<li>❌ Confusing weather and climate — ✅ Correct: weather is short-term (today's conditions); climate is the <strong>long-term average</strong> over 30+ years.</li>
+<li>❌ Thinking only CO₂ is a greenhouse gas — ✅ Correct: methane, water vapour, and nitrous oxide are also greenhouse gases. Methane is actually more potent than CO₂ per molecule.</li>
+</ul>`,
+
+"island-47": `<h4>Introduction</h4>
+<p>Our place in space is both humbling and fascinating. Earth is one of eight planets orbiting the Sun in our Solar System. Understanding why we have day and night, why the Moon changes shape, and why seasons exist comes down to how the Earth spins, tilts, and orbits — simple motions with profound effects.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li>The eight planets in order from the Sun: <strong>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</strong>. Memory aid: "My Very Excited Mother Just Served Us Nachos."</li>
+<li><strong>Day and night</strong> are caused by Earth rotating on its axis once every 24 hours — the side facing the Sun has daytime.</li>
+<li><strong>Seasons</strong> are caused by Earth's <strong>axial tilt</strong> (23.5°). When the northern hemisphere tilts towards the Sun, it receives more direct sunlight → summer. When it tilts away → winter.</li>
+<li>The <strong>Moon's phases</strong> occur because we see different amounts of the Moon's sunlit side as it orbits Earth (about 28 days for a full cycle): New Moon → Crescent → Quarter → Gibbous → Full Moon → back again.</li>
+<li>A <strong>solar eclipse</strong> occurs when the Moon passes between Earth and Sun, blocking sunlight. A <strong>lunar eclipse</strong> occurs when Earth is between Sun and Moon, casting a shadow on the Moon.</li>
+<li><strong>Gravity</strong> keeps planets in orbit around the Sun and the Moon in orbit around Earth. Larger mass = stronger gravitational pull.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="solar-system"><p class="diagram-caption">The eight planets of the Solar System in order</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="moon-phases"><p class="diagram-caption">The phases of the Moon</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> In June, the UK has long days and warm weather. In December, days are short and cold. Explain why.</p>
+<p><strong>Solution:</strong><br>
+1. In June, Earth's axial tilt means the <strong>northern hemisphere leans TOWARDS</strong> the Sun.<br>
+2. Sunlight hits the UK at a more <strong>direct angle</strong> → more energy per unit area → warmer.<br>
+3. The Sun is above the horizon for <strong>longer</strong> each day → more hours of heating.<br>
+4. In December, the northern hemisphere tilts <strong>AWAY</strong> → sunlight is spread over a larger area (less intense) and days are shorter → colder.<br>
+It is NOT because Earth is closer to the Sun in summer — Earth's orbit is nearly circular.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Orbit</dt><dd>The curved path one object takes around another due to gravity (e.g. Earth orbits the Sun in about 365.25 days).</dd>
+<dt>Axis</dt><dd>An imaginary line through Earth from North Pole to South Pole, around which it rotates once per day.</dd>
+<dt>Axial tilt</dt><dd>Earth's axis is tilted at 23.5° from vertical — this causes the seasons.</dd>
+<dt>Solar eclipse</dt><dd>When the Moon passes directly between Earth and Sun, blocking sunlight from reaching part of Earth's surface.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking summer happens because Earth is closer to the Sun — ✅ Correct: seasons are caused by Earth's <strong>axial tilt</strong>, not distance. (Australia has summer when we have winter!)</li>
+<li>❌ Thinking the Moon produces its own light — ✅ Correct: the Moon <strong>reflects sunlight</strong>. Phases occur because we see different portions of its lit side.</li>
+<li>❌ Confusing rotation and revolution — ✅ Correct: Earth <strong>rotates</strong> on its axis (causes day/night); it <strong>revolves</strong> (orbits) around the Sun (causes years).</li>
 </ul>`
 
 };

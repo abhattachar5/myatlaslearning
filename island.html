@@ -148,10 +148,14 @@
             <div class="flashcard-label" aria-hidden="true">Question — click to reveal answer</div>
             <div class="flashcard-text" id="fc-front-text" aria-live="polite"></div>
             <div class="flashcard-hint" id="fc-difficulty" aria-live="polite"></div>
+            <div class="fc-diagram-badge" id="fc-diagram-badge" aria-label="This card has a diagram on the back">📊 Flip for diagram</div>
           </div>
-          <div class="flashcard-face flashcard-back-face">
-            <div class="flashcard-label" aria-hidden="true">Answer</div>
-            <div class="flashcard-answer" id="fc-back-text" aria-live="polite"></div>
+          <div class="flashcard-face flashcard-back-face" id="fc-back-face">
+            <div class="fc-text-col">
+              <div class="flashcard-label" aria-hidden="true">Answer</div>
+              <div class="flashcard-answer" id="fc-back-text" aria-live="polite"></div>
+            </div>
+            <div class="fc-diagram" id="fc-diagram"></div>
           </div>
         </div>
       </div>
@@ -209,6 +213,14 @@
 
 </main>
 
+<!-- Diagram Zoom Modal -->
+<div class="diagram-modal-overlay" id="diagram-modal" onclick="closeDiagramModal(event)">
+  <div class="diagram-modal">
+    <button class="diagram-modal-close" onclick="closeDiagramModal()" aria-label="Close diagram">&times;</button>
+    <div class="diagram-modal-content" id="diagram-modal-content"></div>
+  </div>
+</div>
+
 <script src="data.js"></script>
 <script src="math-data.js"></script>
 <script src="math-content-1.js"></script>
@@ -240,6 +252,7 @@
 <script src="english-lessons-5.js"></script>
 <script src="english-lessons-7.js"></script>
 <script src="english-lessons-8.js"></script>
+<script src="science-diagrams.js"></script>
 <script src="app.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
@@ -450,6 +463,7 @@ function checkLessonCache(awardXP) {
 
   if (html) {
     el.innerHTML = html;
+    injectLessonDiagrams(el);
     el.style.display = 'block';
     el.dataset.loaded = '1';
     if (cta) cta.style.display = 'block';
@@ -460,6 +474,41 @@ function checkLessonCache(awardXP) {
     el.style.display = 'block';
   }
 }
+
+function injectLessonDiagrams(container) {
+  if (typeof DIAGRAMS === 'undefined') return;
+  container.querySelectorAll('.lesson-diagram[data-diagram]').forEach(function(el) {
+    var key = el.dataset.diagram;
+    if (DIAGRAMS[key]) {
+      var wrapper = document.createElement('div');
+      wrapper.className = 'lesson-diagram-inner';
+      wrapper.innerHTML = DIAGRAMS[key];
+      wrapper.title = 'Click to enlarge';
+      wrapper.onclick = function() { openDiagramModal(key); };
+      el.insertBefore(wrapper, el.firstChild);
+    }
+  });
+}
+
+function openDiagramModal(key) {
+  var modal = document.getElementById('diagram-modal');
+  var content = document.getElementById('diagram-modal-content');
+  if (DIAGRAMS[key]) {
+    content.innerHTML = DIAGRAMS[key];
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeDiagramModal(e) {
+  if (e && e.target !== document.getElementById('diagram-modal')) return;
+  document.getElementById('diagram-modal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && document.getElementById('diagram-modal').classList.contains('show')) {
+    closeDiagramModal();
+  }
+});
 
 function awardLessonXP() {
   const p = getIslandProgress(islandId);
@@ -499,6 +548,18 @@ function renderCard() {
   document.getElementById('fc-scene').classList.remove('flipped');
   document.getElementById('fc-front-text').textContent = card.front;
   document.getElementById('fc-back-text').textContent = card.back;
+  const diagramEl = document.getElementById('fc-diagram');
+  const backFace  = document.getElementById('fc-back-face');
+  const badge = document.getElementById('fc-diagram-badge');
+  if (card.image && typeof DIAGRAMS !== 'undefined' && DIAGRAMS[card.image]) {
+    diagramEl.innerHTML = DIAGRAMS[card.image];
+    backFace.classList.add('has-diagram');
+    badge.style.display = 'block';
+  } else {
+    diagramEl.innerHTML = '';
+    backFace.classList.remove('has-diagram');
+    badge.style.display = 'none';
+  }
   document.getElementById('fc-counter').textContent = `Card ${fcIndex + 1} of ${cards.length}`;
   document.getElementById('fc-counter-small').textContent = `${fcIndex + 1} / ${cards.length}`;
   document.getElementById('fc-difficulty').textContent = getDifficultyLabel(card.difficulty);
