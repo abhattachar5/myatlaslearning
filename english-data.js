@@ -22,7 +22,7 @@ const ENGLISH_TOPICS = [
    description:"Read fiction, non-fiction, poetry and drama passages and answer retrieval, inference and analysis questions — practising the skills tested in exams."},
   {id:"et-05",name:"Reading Strategies",emoji:"🔍",hasContent:true,
    description:"Analyse author's purpose and tone, identify text structures, interpret literary devices and figurative language, and compare texts across different genres."},
-  {id:"et-06",name:"Writing Strategies",emoji:"✍️",hasContent:false,
+  {id:"et-06",name:"Writing Strategies",emoji:"✍️",hasContent:true,
    description:"Organise writing effectively, develop and support arguments, use creative techniques, edit and revise your work, and understand research and plagiarism."},
   {id:"et-07",name:"Poetry",emoji:"🌟",hasContent:true,
    description:"Explore poetic devices, form and structure, learn how to analyse an unseen poem and write your own poetry using a range of techniques."},
@@ -579,6 +579,105 @@ CURRICULUM.push(
       "Writing a comparative response"
     ],
     prerequisites:["ei-05-1","ei-05-2"]
+  }
+);
+
+// et-06 Writing Strategies
+CURRICULUM.push(
+  {
+    id:"ei-06-1",name:"Planning & Organisation",emoji:"📋",subject:"English",subjectId:"english",color:"#ba7517",
+    topicId:"et-06",difficulty:1,estimatedHours:2,
+    description:"Plan writing effectively using essay structures, paragraph organisation, topic sentences and linking words.",
+    learningOutcomes:[
+      "Create a plan for a piece of writing using bullet points, mind maps or numbered lists",
+      "Write clear topic sentences and organise paragraphs around a single main idea",
+      "Use linking words and transition phrases to connect ideas within and between paragraphs"
+    ],
+    topics:[
+      "Planning methods (mind maps, bullet points, numbered plans)",
+      "Essay structure: introduction, body and conclusion",
+      "Writing effective topic sentences",
+      "One idea per paragraph",
+      "Linking words and transition phrases",
+      "Ordering paragraphs logically"
+    ],
+    prerequisites:[]
+  },
+  {
+    id:"ei-06-2",name:"Argumentative Writing",emoji:"⚔️",subject:"English",subjectId:"english",color:"#ba7517",
+    topicId:"et-06",difficulty:2,estimatedHours:2,
+    description:"Develop and support arguments, address counter-arguments, and use persuasive and rhetorical techniques effectively.",
+    learningOutcomes:[
+      "Develop a clear argument supported by evidence, examples and reasoning",
+      "Identify and address counter-arguments to strengthen a position",
+      "Use rhetorical devices (rhetorical questions, rule of three, emotive language) to persuade"
+    ],
+    topics:[
+      "Forming a clear thesis or argument",
+      "Supporting arguments with evidence and examples",
+      "Addressing counter-arguments and rebuttals",
+      "Rhetorical questions and the rule of three",
+      "Emotive language and persuasive vocabulary",
+      "Structuring a persuasive or discursive essay"
+    ],
+    prerequisites:["ei-06-1"]
+  },
+  {
+    id:"ei-06-3",name:"Creative Writing Techniques",emoji:"🎨",subject:"English",subjectId:"english",color:"#ba7517",
+    topicId:"et-06",difficulty:2,estimatedHours:2,
+    description:"Use creative techniques including show don't tell, sensory language, dialogue, narrative voice and descriptive writing.",
+    learningOutcomes:[
+      "Use 'show don't tell' to convey emotions and atmosphere through actions and details",
+      "Write vivid descriptions using sensory language and imagery",
+      "Use dialogue and narrative voice effectively to develop character and advance a story"
+    ],
+    topics:[
+      "Show don't tell",
+      "Sensory language (sight, sound, touch, taste, smell)",
+      "Writing effective dialogue",
+      "Narrative voice (first person, third person, omniscient)",
+      "Descriptive writing: setting and atmosphere",
+      "Varying sentence length for effect"
+    ],
+    prerequisites:["ei-06-1"]
+  },
+  {
+    id:"ei-06-4",name:"Editing & Proofreading",emoji:"🔧",subject:"English",subjectId:"english",color:"#ba7517",
+    topicId:"et-06",difficulty:1,estimatedHours:2,
+    description:"Revise drafts for clarity and impact, correct common errors, improve sentence variety and proofread accurately.",
+    learningOutcomes:[
+      "Revise a draft to improve clarity, sentence variety and word choice",
+      "Identify and correct common spelling, punctuation and grammar errors",
+      "Use proofreading strategies to check work systematically before submitting"
+    ],
+    topics:[
+      "Revising for clarity and conciseness",
+      "Improving word choice (replacing weak or repeated words)",
+      "Varying sentence structure and length",
+      "Common spelling and grammar errors to check",
+      "Proofreading strategies (reading aloud, backwards reading, checklists)",
+      "Peer feedback: giving and using constructive criticism"
+    ],
+    prerequisites:["ei-06-1"]
+  },
+  {
+    id:"ei-06-5",name:"Research & Referencing",emoji:"📚",subject:"English",subjectId:"english",color:"#ba7517",
+    topicId:"et-06",difficulty:2,estimatedHours:2,
+    description:"Find and evaluate sources, paraphrase information in your own words, avoid plagiarism and reference sources correctly.",
+    learningOutcomes:[
+      "Find relevant sources and evaluate their reliability and bias",
+      "Paraphrase information accurately in your own words without copying",
+      "Understand what plagiarism is and how to avoid it by citing sources correctly"
+    ],
+    topics:[
+      "Finding sources (books, websites, databases)",
+      "Evaluating source reliability and bias",
+      "Paraphrasing vs copying",
+      "What is plagiarism and why it matters",
+      "Citing sources in your writing",
+      "Creating a simple bibliography"
+    ],
+    prerequisites:["ei-06-1"]
   }
 );
 
