@@ -1013,6 +1013,10 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   background-position: right 12px center;
   padding-right: 36px;
 }
+.form-select option:disabled {
+  color: #9ca3af;
+  font-style: italic;
+}
 .form-error {
   font-size: .8125rem;
   color: #ef4444;
