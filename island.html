@@ -194,7 +194,7 @@
       <div class="quiz-question-text" id="quiz-q"></div>
       <div class="quiz-options" id="quiz-opts"></div>
       <div class="quiz-explanation" id="quiz-explanation"></div>
-      <div style="display:flex;justify-content:flex-end">
+      <div class="quiz-next-wrap">
         <button class="btn btn-primary" id="quiz-next-btn" onclick="nextQuestion()" style="display:none">Next question →</button>
       </div>
     </div>
@@ -230,6 +230,12 @@
 <script src="math-content-5.js"></script>
 <script src="math-content-6.js"></script>
 <script src="math-content-7.js"></script>
+<script src="math-data-y8.js"></script>
+<script src="english-data-y8.js"></script>
+<script src="science-data-y7.js"></script>
+<script src="science-data-y8.js"></script>
+<script src="history-data-y8.js"></script>
+<script src="geography-data-y8.js"></script>
 <script src="english-data.js"></script>
 <script src="english-content-1.js"></script>
 <script src="english-content-2.js"></script>
@@ -733,6 +739,14 @@ function selectAnswer(idx) {
   const nextBtn = document.getElementById('quiz-next-btn');
   nextBtn.style.display = '';
   nextBtn.textContent = qIndex < shuffledQuestions.length - 1 ? 'Next question →' : 'See results →';
+  // Scroll so the Next button clears the fixed mobile nav bar
+  setTimeout(() => {
+    const nav = document.querySelector('.mobile-nav');
+    const navH = (nav && getComputedStyle(nav).display !== 'none') ? nav.offsetHeight : 0;
+    const rect = nextBtn.getBoundingClientRect();
+    const overlap = rect.bottom + 12 - (window.innerHeight - navH);
+    if (overlap > 0) window.scrollBy({ top: overlap, behavior: 'smooth' });
+  }, 60);
 }
 
 function nextQuestion() {

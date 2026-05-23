@@ -678,10 +678,25 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   padding: 14px 16px;
   font-size: .875rem;
   color: var(--text-2);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   display: none;
 }
 .quiz-explanation.show { display: block; }
+.quiz-next-wrap {
+  position: sticky;
+  bottom: 16px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0 8px;
+  /* fade the page background up so scrolled content doesn't hard-clip behind the button */
+  background: linear-gradient(to bottom, transparent, var(--bg) 40%);
+  pointer-events: none; /* let clicks pass through the gradient area */
+}
+.quiz-next-wrap .btn { pointer-events: all; }
+@media (max-width: 900px) {
+  /* on mobile the fixed nav bar is ~60 px tall — keep the button above it */
+  .quiz-next-wrap { bottom: 76px; }
+}
 .quiz-score-screen {
   text-align: center;
   padding: 40px 20px;

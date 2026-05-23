@@ -92,7 +92,7 @@
   <div class="island-header-info">
     <h2 id="hdr-name">Topic Test</h2>
     <div class="island-header-meta">
-      <span class="subject-pill" style="font-size:.6875rem;padding:2px 8px;background:#3f6f00;color:white">Mathematics</span>
+      <span class="subject-pill" id="hdr-subject" style="font-size:.6875rem;padding:2px 8px;color:white">Mathematics</span>
       <span class="badge" id="hdr-count">—</span>
     </div>
   </div>
@@ -170,14 +170,29 @@
 <script src="math-content-5.js"></script>
 <script src="math-content-6.js"></script>
 <script src="math-content-7.js"></script>
+<script src="math-data-y8.js"></script>
+<script src="english-data-y8.js"></script>
+<script src="science-data-y7.js"></script>
+<script src="science-data-y8.js"></script>
+<script src="history-data-y8.js"></script>
+<script src="geography-data-y8.js"></script>
 <script src="app.js"></script>
 <script src="test-generator.js"></script>
+<script src="science-test-generators-y7.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
 let user = requireAuth();
 const params = new URLSearchParams(location.search);
 const topicId = params.get('id');
-const topic = typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id === topicId) : null;
+const topic = (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id === topicId) : null)
+           || (typeof MATH_TOPICS_Y8 !== 'undefined' ? MATH_TOPICS_Y8.find(t => t.id === topicId) : null)
+           || (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS.find(t => t.id === topicId) : null)
+           || (typeof ENGLISH_TOPICS_Y8 !== 'undefined' ? ENGLISH_TOPICS_Y8.find(t => t.id === topicId) : null)
+           || (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS.find(t => t.id === topicId) : null);
+const isScienceTopic = topicId && topicId.startsWith('st7-');
+const isEnglishTopic = topicId && (topicId.startsWith('et-') || topicId.startsWith('e8t-'));
+const topicColor = isScienceTopic ? '#185fa5' : isEnglishTopic ? '#ba7517' : '#3f6f00';
+const topicSubjectLabel = isScienceTopic ? 'Science' : isEnglishTopic ? 'English' : 'Mathematics';
 
 if (!topic) {
   alert('Topic not found');
@@ -191,6 +206,10 @@ document.getElementById('hdr-name').textContent = topic.name + ' — Test';
 document.getElementById('hdr-emoji').textContent = topic.emoji;
 document.getElementById('hdr-count').textContent = topicIslands.length + ' subtopics';
 document.getElementById('setup-title').textContent = topic.name + ' Test';
+var subjectPill = document.getElementById('hdr-subject');
+subjectPill.textContent = topicSubjectLabel;
+subjectPill.style.background = topicColor;
+document.querySelector('.test-progress-fill').style.background = topicColor;
 
 // Show info cards
 const infoGrid = document.getElementById('setup-info');
