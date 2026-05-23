@@ -8313,3 +8313,1701 @@ TEST_GENERATORS["mi-28-3"] = [
              e: '50% needs = £' + rule50 + '. 30% wants = £' + rule30 + '. 20% savings = £' + rule20 + '.' };
   }}
 ];
+
+// ══════════════════════════════════════════════════════════════════════════
+// HISTORY — island-16 to island-19, island-31 to island-34, island-53 to island-59
+// ══════════════════════════════════════════════════════════════════════════
+
+// ── island-16: The Norman Conquest ──────────────────────────────────────
+TEST_GENERATORS["island-16"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'In what year did the Battle of Hastings take place?', opts:['1066','1086','1016','1166'], c:0, e:'The Battle of Hastings was fought on 14 October 1066 between Harold Godwinson and William of Normandy.' },
+      { q:'Who won the Battle of Hastings in 1066?', opts:['William of Normandy','Harold Godwinson','Harald Hardrada','Edgar Atheling'], c:0, e:'William, Duke of Normandy, defeated Harold Godwinson and became King of England.' },
+      { q:'Which English king was killed at the Battle of Hastings?', opts:['Harold Godwinson','Edward the Confessor','Edgar Atheling','Harold Hardrada'], c:0, e:'Harold Godwinson, the last Anglo-Saxon king, was killed at the Battle of Hastings in 1066.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was the Domesday Book?', opts:['A survey of land and property in England','A book of laws','A religious text','A record of battles'], c:0, e:'The Domesday Book (1086) was a great survey ordered by William I to record who owned land and resources across England.' },
+      { q:'In what year was the Domesday Book completed?', opts:['1086','1066','1100','1076'], c:0, e:'The Domesday Book was completed in 1086, twenty years after the Norman Conquest.' },
+      { q:'Who ordered the creation of the Domesday Book?', opts:['William I','Harold Godwinson','Henry I','Edward the Confessor'], c:0, e:'William I (William the Conqueror) ordered the Domesday Book in 1085 to survey all the land and resources in England.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What type of castles did the Normans first build in England?', opts:['Motte-and-bailey castles','Stone keeps','Concentric castles','Hill forts'], c:0, e:'The Normans quickly built motte-and-bailey castles using earth and timber to control the conquered population.' },
+      { q:'How many claimants were there to the English throne in 1066?', opts:['Three','Two','Four','Five'], c:0, e:'There were three main claimants: Harold Godwinson, William of Normandy, and Harald Hardrada of Norway.' },
+      { q:'What battle took place just before Hastings in September 1066?', opts:['Battle of Stamford Bridge','Battle of Fulford','Battle of Hastings','Battle of Towton'], c:0, e:'Harold Godwinson defeated Harald Hardrada at the Battle of Stamford Bridge on 25 September 1066, just weeks before Hastings.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Which country did William the Conqueror come from?', opts:['Normandy (France)','Norway','Denmark','Scotland'], c:0, e:'William was the Duke of Normandy, a region in northern France.' },
+      { q:'What famous tapestry tells the story of the Norman Conquest?', opts:['The Bayeux Tapestry','The Domesday Tapestry','The Canterbury Tapestry','The Westminster Tapestry'], c:0, e:'The Bayeux Tapestry is an embroidered cloth nearly 70 metres long depicting the events leading up to and including the Battle of Hastings.' },
+      { q:'What did the Normans replace many Anglo-Saxon churches with?', opts:['Large stone cathedrals and churches','Wooden chapels','Mosques','Open-air temples'], c:0, e:'The Normans rebuilt many churches and cathedrals in stone using the Romanesque style, replacing smaller Anglo-Saxon structures.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who was the English king who died in January 1066, sparking the succession crisis?', opts:['Edward the Confessor','Harold Godwinson','Edgar Atheling','Canute'], c:0, e:'Edward the Confessor died on 5 January 1066 without a clear heir, leading to rival claims to the throne.' },
+      { q:'What did William I use castles for after 1066?', opts:['To control the English population','To house monks','To store food for winter','To hold Parliament'], c:0, e:'William built castles across England to control the population and stamp out rebellions against Norman rule.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why was Harold Godwinson at a disadvantage at the Battle of Hastings?', opts:['His army was tired from marching south after Stamford Bridge','He had fewer soldiers than William','He did not know William was coming','He had no cavalry'], c:0, e:'Harold force-marched his army 250 miles south from Stamford Bridge to Hastings, meaning his troops were exhausted before the battle even began.' },
+      { q:'How did the Domesday Book help William control England?', opts:['It told him exactly what taxes he could collect from every area','It listed all the rebels in England','It recorded the names of all Norman soldiers','It identified the best places to build churches'], c:0, e:'The Domesday Book gave William detailed knowledge of every landholding and its value, allowing him to set and enforce taxes efficiently.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why did William introduce the feudal system to England after 1066?', opts:['To reward his followers with land and ensure their loyalty','To give land back to Anglo-Saxon nobles','To let peasants own their own farms','To create a democratic government'], c:0, e:'The feudal system allowed William to distribute land to his loyal Norman barons in exchange for military service, creating a chain of loyalty and control.' },
+      { q:'Which factor was most important in William\'s victory at Hastings?', opts:['It was a combination of factors including luck, tactics, and Harold\'s tiredness','William had more soldiers','Harold chose a bad location','The weather favoured the Normans'], c:0, e:'Historians debate this, but key factors include Harold\'s exhaustion from Stamford Bridge, William\'s cavalry tactics, and the feigned retreat that broke the English shield wall.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'What was the long-term significance of the Norman Conquest for England?', opts:['It transformed England\'s language, laws, architecture, and social structure','It only changed who was king','It had no lasting impact on ordinary people','It mainly affected religion'], c:0, e:'The Norman Conquest had profound long-term effects: French words entered English, feudalism replaced Anglo-Saxon society, stone castles and cathedrals were built, and new laws and customs were introduced.' },
+      { q:'Why might the Bayeux Tapestry be considered a biased source about the events of 1066?', opts:['It was made for the Normans and shows their version of events','It was made by Harold\'s family','It was created 500 years later','It only shows the Battle of Hastings'], c:0, e:'The Bayeux Tapestry was likely commissioned by William\'s half-brother Bishop Odo, so it presents the Norman perspective and justifies William\'s claim to the throne.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-17: Medieval Society & Feudalism ─────────────────────────────
+TEST_GENERATORS["island-17"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'In the feudal system, who was at the top of the social pyramid?', opts:['The King','Barons','Knights','Peasants'], c:0, e:'The King was at the top of the feudal pyramid. He owned all the land and granted it to barons in exchange for loyalty and military service.' },
+      { q:'What was the correct order of the feudal pyramid from top to bottom?', opts:['King, Barons, Knights, Peasants','Barons, King, Knights, Peasants','King, Knights, Barons, Peasants','Peasants, Knights, Barons, King'], c:0, e:'The feudal pyramid ran: King at the top, then Barons (lords), then Knights, then Peasants (villeins/serfs) at the bottom.' },
+      { q:'What did barons receive from the king in exchange for loyalty and military service?', opts:['Land','Money','Weapons','Titles only'], c:0, e:'Barons received large areas of land (fiefs) from the king. In return, they provided knights and soldiers when the king needed them.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was a villein in medieval England?', opts:['A peasant who was tied to the lord\'s land','A type of knight','A merchant in a town','A religious leader'], c:0, e:'A villein was an unfree peasant who had to work on the lord\'s land and could not leave the manor without permission.' },
+      { q:'What was a tithe in medieval England?', opts:['A tax of one-tenth of produce given to the Church','A type of weapon','A festival held every year','A gift from the king'], c:0, e:'A tithe was one-tenth of everything a peasant produced (crops, animals), which had to be given to the local parish church.' },
+      { q:'What was the open field system?', opts:['A farming system where village land was divided into large shared fields','A type of castle defence','A method of choosing the king','A way of training knights'], c:0, e:'In the open field system, the land around a village was divided into two or three large fields, with each peasant farming scattered strips within them.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was a motte-and-bailey castle?', opts:['A castle with an earth mound (motte) and an enclosed courtyard (bailey)','A castle made entirely of stone','A castle surrounded by water','A castle built underground'], c:0, e:'A motte-and-bailey castle had an artificial earth mound (motte) topped with a wooden tower, and an enclosed yard (bailey) below it.' },
+      { q:'What material were early Norman castles mainly built from?', opts:['Wood and earth','Stone and iron','Brick and mortar','Glass and metal'], c:0, e:'The first Norman castles were motte-and-bailey structures built quickly from wood and earth to establish control after 1066.' },
+      { q:'What replaced motte-and-bailey castles over time?', opts:['Stone keeps and castle walls','Wooden forts','Open villages','Underground tunnels'], c:0, e:'Motte-and-bailey castles were gradually replaced by stronger stone keeps, which were more durable and harder to attack.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was the main job of peasants in medieval village life?', opts:['Farming the land','Fighting wars','Building castles','Trading goods abroad'], c:0, e:'Most medieval peasants spent their lives farming the land, growing crops like wheat and barley, and raising animals.' },
+      { q:'Who owned the land that peasants worked on in the feudal system?', opts:['The lord of the manor','The peasants themselves','The Church only','The merchants'], c:0, e:'In the feudal system, the lord of the manor owned the land. Peasants worked strips of land but did not own it.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What did knights provide to their lord in the feudal system?', opts:['Military service and protection','Money and taxes','Food and clothing','Religious guidance'], c:0, e:'Knights were granted land by barons and in return owed military service, typically 40 days per year of fighting when called upon.' },
+      { q:'What was a serf in medieval England?', opts:['A peasant with even fewer rights than a villein, virtually bound to the land','A type of lord','A church official','A travelling merchant'], c:0, e:'Serfs were the lowest class of peasant. They were bound to the land, could not leave, and had to work for the lord without payment.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why was the feudal system effective at keeping order in medieval England?', opts:['Everyone had clear duties and obligations that linked them together','Everyone was equal under the law','Peasants could vote for their lord','The king ruled without any help'], c:0, e:'The feudal system created a chain of duty: the king gave land to barons, barons to knights, knights protected peasants. Each level depended on the others, maintaining social order.' },
+      { q:'What was the biggest disadvantage of the feudal system for peasants?', opts:['They had little freedom and could not leave their lord\'s land','They had to fight in wars','They could not attend church','They were not allowed to marry'], c:0, e:'Peasants, especially villeins and serfs, were tied to the land and had to work for their lord. They had very limited freedom and could not move away without permission.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did the feudal system benefit the king?', opts:['It provided him with a loyal army and taxes without having to manage everything directly','It made him popular with peasants','It allowed him to avoid making any decisions','It gave all the power to the barons'], c:0, e:'The feudal system meant the king could raise an army through his barons without maintaining a standing army, and collect taxes through the manorial system without managing every village.' },
+      { q:'Why might a historian say the feudal system was unfair?', opts:['Power and wealth were based on birth, not ability, and peasants had almost no chance to improve their lives','Everyone had equal opportunities','The king had no power','Barons were treated badly'], c:0, e:'The feudal system was based on inherited status. Peasants born into poverty had almost no way to improve their position, while lords gained wealth simply by being born into noble families.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Which group had the most influence over daily peasant life: the king, the baron, or the local lord of the manor?', opts:['The local lord of the manor','The king','The baron','The Pope'], c:0, e:'Although the king was the ultimate ruler, it was the local lord of the manor who most directly affected peasants\' daily lives by setting work duties, administering justice in the manor court, and controlling the land they farmed.' },
+      { q:'How did the Church fit into the feudal system?', opts:['It was a powerful landholder that supported the feudal order and taught people to accept their place','It opposed the feudal system','It had no role in medieval society','It only helped the king'], c:0, e:'The Church was one of the largest landholders in medieval England. It taught that God had chosen each person\'s place in society, which helped maintain the feudal order.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-18: The Black Death ──────────────────────────────────────────
+TEST_GENERATORS["island-18"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was the Black Death?', opts:['A devastating plague that killed millions across Europe','A war between England and France','A famine caused by bad harvests','A volcanic eruption'], c:0, e:'The Black Death was a bubonic plague pandemic caused by the bacterium Yersinia pestis that devastated Europe between 1347 and 1351.' },
+      { q:'Approximately what fraction of Europe\'s population died from the Black Death?', opts:['About one-third','About one-tenth','About one-half','About three-quarters'], c:0, e:'The Black Death killed approximately one-third (around 25 million) of Europe\'s population between 1347 and 1351.' },
+      { q:'When did the Black Death first reach England?', opts:['1348','1066','1215','1400'], c:0, e:'The Black Death arrived in England in June 1348, first appearing at the port of Melcombe Regis (Weymouth) in Dorset.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How was the Black Death mainly spread?', opts:['By fleas living on rats','By drinking dirty water','By eating bad food','By touching gold coins'], c:0, e:'The plague was carried by fleas that lived on black rats. The fleas transmitted the Yersinia pestis bacterium when they bit humans.' },
+      { q:'What were buboes, a key symptom of the Black Death?', opts:['Painful swellings in the groin, armpits, or neck','Spots on the hands','Loss of hair','Blindness'], c:0, e:'Buboes were large, painful swellings (up to the size of an egg) that appeared in the lymph nodes of the groin, armpits, or neck. They gave the disease its name: bubonic plague.' },
+      { q:'What bacterium causes bubonic plague?', opts:['Yersinia pestis','Salmonella','E. coli','Staphylococcus'], c:0, e:'The Black Death was caused by the bacterium Yersinia pestis, which was transmitted to humans through infected flea bites.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Which of these was a medieval treatment for the Black Death?', opts:['Carrying sweet-smelling flowers or herbs','Taking antibiotics','Having surgery','Drinking clean water'], c:0, e:'Medieval people believed bad smells (miasma) caused disease, so they carried posies of flowers and herbs to ward off the plague. This was ineffective.' },
+      { q:'Who were the flagellants during the Black Death?', opts:['People who whipped themselves to ask God for forgiveness','Doctors who treated plague victims','Monks who prayed for the sick','Soldiers who guarded towns'], c:0, e:'Flagellants were groups of people who travelled from town to town whipping themselves, believing the plague was God\'s punishment and that self-punishment would bring forgiveness.' },
+      { q:'Which animals helped spread the Black Death across Europe?', opts:['Black rats','Dogs','Horses','Cows'], c:0, e:'Black rats carried the fleas infected with Yersinia pestis. As rats travelled on ships and through towns, they spread the plague across Europe.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What did many medieval people believe caused the Black Death?', opts:['God\'s punishment for sin or bad air (miasma)','Bacteria carried by fleas','Contaminated water','Witchcraft only'], c:0, e:'Medieval people did not know about germs. Many believed the plague was God\'s punishment for sin, or that it was caused by bad-smelling air (miasma).' },
+      { q:'From which direction did the Black Death spread into Europe?', opts:['From the East, arriving via trade routes from Asia','From the West, arriving from the Americas','From the North, arriving from Scandinavia','From Africa'], c:0, e:'The Black Death originated in Central Asia and spread westward along trade routes, arriving in Europe via merchant ships from the East in 1347.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was one immediate effect of the Black Death on villages?', opts:['Many villages were abandoned as so many people died','Villages grew larger','More food was available for everyone','The king raised taxes'], c:0, e:'So many people died that some villages were completely abandoned, becoming what historians call deserted medieval villages.' },
+      { q:'Over what period did the main outbreak of the Black Death occur in Europe?', opts:['1347-1351','1066-1070','1200-1210','1400-1410'], c:0, e:'The main outbreak of the Black Death in Europe lasted from 1347 to 1351, though smaller outbreaks continued for centuries.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did the Black Death change the balance of power between peasants and lords?', opts:['Peasants could demand higher wages because there were fewer workers','Lords gained even more power over peasants','Nothing changed for peasants','Peasants were forced to work for free'], c:0, e:'The massive death toll created a severe labour shortage. Surviving peasants could demand higher wages and better conditions because lords desperately needed workers, weakening the feudal system.' },
+      { q:'Why did the Statute of Labourers (1351) fail to control wages after the Black Death?', opts:['There were too few workers, so lords had to offer higher wages anyway to attract labour','Peasants did not know about the law','The king cancelled the law','Lords agreed with higher wages'], c:0, e:'Despite the law trying to freeze wages at pre-plague levels, the severe labour shortage meant lords had to offer higher pay to attract workers, or their land would go unfarmed.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is the Black Death considered a turning point in medieval history?', opts:['It weakened feudalism, changed labour relations, and led to social unrest','It only affected the rich','It strengthened the feudal system','It had no lasting effects'], c:0, e:'The Black Death was a turning point because the labour shortage it caused gave peasants more bargaining power, helped weaken feudalism, and contributed to events like the Peasants\' Revolt of 1381.' },
+      { q:'Why were medieval doctors unable to prevent or cure the Black Death?', opts:['They did not understand that germs caused disease and relied on incorrect theories like miasma','They had the right medicines but not enough of them','They knew about bacteria but could not make antibiotics','They refused to treat plague victims'], c:0, e:'Medieval medicine was based on theories like the four humours and miasma (bad air). Without understanding that bacteria caused disease, treatments like bloodletting and carrying flowers were ineffective.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Some historians argue the Black Death had positive long-term consequences. Which of these supports that view?', opts:['Surviving peasants gained better wages, more freedom, and feudalism declined','More people died so there was less conflict','The Church became more powerful','Kings became weaker and could not rule'], c:0, e:'While devastating, the long-term effects included higher wages for surviving workers, greater social mobility, the decline of serfdom, and challenges to the feudal system that eventually led to more personal freedom.' },
+      { q:'How reliable are medieval sources about the Black Death, and why should historians be cautious?', opts:['Many accounts exaggerated death tolls and were written by monks with limited knowledge of medicine','They are completely reliable because they were written at the time','Only foreign sources are unreliable','Medieval sources are always accurate about numbers'], c:0, e:'Medieval sources are valuable but must be treated with caution. Many were written by monks who may have exaggerated, had religious biases, and lacked medical understanding. Death toll figures are often estimates.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-19: Magna Carta & Parliament ─────────────────────────────────
+TEST_GENERATORS["island-19"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'In what year was the Magna Carta signed?', opts:['1215','1066','1348','1485'], c:0, e:'The Magna Carta was sealed (not technically signed) by King John at Runnymede on 15 June 1215.' },
+      { q:'Which king was forced to agree to the Magna Carta?', opts:['King John','King Henry II','King Richard I','King William I'], c:0, e:'King John was forced by rebellious barons to agree to the Magna Carta in 1215 at Runnymede.' },
+      { q:'Where was the Magna Carta agreed?', opts:['Runnymede','London','Canterbury','York'], c:0, e:'The Magna Carta was agreed at Runnymede, a meadow by the River Thames in Surrey, on 15 June 1215.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who forced King John to agree to the Magna Carta?', opts:['His barons','The Pope','The French king','The peasants'], c:0, e:'A group of rebellious barons, unhappy with John\'s heavy taxes and abuse of power, forced him to agree to the Magna Carta.' },
+      { q:'What key principle did the Magna Carta establish?', opts:['That even the king must obey the law','That peasants could vote','That the Church should rule England','That barons could be king'], c:0, e:'The Magna Carta established the principle of the rule of law: that the king was not above the law and must govern according to agreed rules.' },
+      { q:'What does "Magna Carta" mean in English?', opts:['Great Charter','Royal Law','King\'s Promise','People\'s Rights'], c:0, e:'Magna Carta is Latin for "Great Charter". It was a document setting out rights and limits on royal power.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who called the first Parliament that included ordinary people (commoners) in 1265?', opts:['Simon de Montfort','King John','King Henry III','William the Conqueror'], c:0, e:'Simon de Montfort, Earl of Leicester, called a Parliament in 1265 that for the first time included commoners (knights and burgesses) alongside barons and bishops.' },
+      { q:'What was the Model Parliament of 1295?', opts:['A Parliament called by Edward I that set the pattern for future Parliaments','A French parliament','A meeting of the Church','A type of court'], c:0, e:'The Model Parliament of 1295, called by Edward I, is considered the first representative English Parliament because it included lords, clergy, knights, and burgesses.' },
+      { q:'What is the principle of habeas corpus?', opts:['That no one can be imprisoned without a fair trial','That the king can arrest anyone','That barons are above the law','That taxes must be paid immediately'], c:0, e:'Habeas corpus (meaning "you may have the body") is the principle that no person can be held in prison without being brought before a court to hear the charges against them.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was a jury trial?', opts:['A trial where a group of local people decided guilt or innocence','A trial by combat','A trial decided by the king alone','A trial by ordeal'], c:0, e:'The Magna Carta helped establish the right to trial by jury, where a group of ordinary people (the jury) would listen to evidence and decide whether someone was guilty or innocent.' },
+      { q:'Why were the barons angry with King John before 1215?', opts:['He raised heavy taxes and abused his power','He refused to go on Crusade','He gave too much land to peasants','He abolished the feudal system'], c:0, e:'The barons were angry because King John raised very heavy taxes, demanded excessive feudal payments, and punished barons unfairly without proper trials.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What does the word "Parliament" come from?', opts:['The French word "parler" meaning to talk','The Latin word for law','The English word for power','The German word for king'], c:0, e:'Parliament comes from the French word "parler" meaning to speak or discuss. Parliament was originally a place where the king discussed matters with his advisors.' },
+      { q:'What did the Magna Carta say about taxes?', opts:['The king could not raise new taxes without the agreement of the barons','The king could raise any tax he wanted','Peasants did not have to pay taxes','Only the Church paid taxes'], c:0, e:'One of the key clauses of the Magna Carta stated that no new taxes could be levied without the common consent of the barons, limiting the king\'s power to tax.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is the Magna Carta still considered important today, even though most of its clauses are no longer in force?', opts:['It established the principle that rulers must obey the law, which underpins modern democracy','It is still used as the basis for all UK laws','It gave everyone equal rights immediately','It created the modern Parliament'], c:0, e:'Although only a few clauses remain in law, the Magna Carta\'s principle that even the monarch is subject to the law became a foundation for constitutional government, human rights, and democracy worldwide.' },
+      { q:'How did Simon de Montfort\'s Parliament of 1265 differ from earlier councils?', opts:['It included commoners (knights and burgesses) for the first time, not just lords and clergy','It was held in France','It excluded all barons','It gave power only to the king'], c:0, e:'De Montfort\'s Parliament was revolutionary because it included elected representatives from towns (burgesses) and counties (knights), not just powerful nobles and bishops. This set a precedent for representative government.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why did King John agree to the Magna Carta even though he did not want to?', opts:['The barons had captured London and he had no choice but to negotiate','The Pope told him to','He believed in fairness','His advisors convinced him it was a good idea'], c:0, e:'By June 1215, the rebellious barons had captured London and John was militarily weak. He agreed to the Magna Carta to avoid civil war, though he later asked the Pope to annul it.' },
+      { q:'To what extent did the Magna Carta benefit ordinary people in 1215?', opts:['Very little — it mainly protected the rights of barons, not common people','It gave everyone equal rights','It freed all serfs immediately','It gave peasants the right to vote'], c:0, e:'In 1215, the Magna Carta mainly protected the interests of wealthy barons. Ordinary peasants gained very little directly. However, the principles it established eventually benefited everyone over centuries.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did the development of Parliament gradually reduce the power of the monarchy?', opts:['Parliament gained control over taxation and law-making, limiting what the king could do alone','Parliament immediately took all power from the king','The king voluntarily gave up power','Parliament only discussed religious matters'], c:0, e:'Over centuries, Parliament gradually gained the power to approve taxes, pass laws, and hold the monarch accountable. This slow process transformed England from an absolute monarchy towards constitutional government.' },
+      { q:'Why do some historians argue the Magna Carta was a failure in the short term but a success in the long term?', opts:['John ignored it almost immediately, but its principles inspired future laws and rights','It was perfectly enforced from the start','It was forgotten after 1215','It only mattered to the Church'], c:0, e:'King John got the Pope to annul it within weeks, and civil war followed. However, it was reissued multiple times and its principles of rule of law and due process became cornerstones of English and global legal tradition.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-31: The Crusades ─────────────────────────────────────────────
+TEST_GENERATORS["island-31"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who called the First Crusade in 1095?', opts:['Pope Urban II','King Richard I','Saladin','William the Conqueror'], c:0, e:'Pope Urban II called the First Crusade at the Council of Clermont in 1095, urging Christians to recapture the Holy Land from Muslim control.' },
+      { q:'What was the main goal of the Crusades?', opts:['To recapture Jerusalem and the Holy Land from Muslim control','To conquer France','To defeat the Vikings','To spread trade across Europe'], c:0, e:'The Crusades were military campaigns launched by Christian Europeans to recapture Jerusalem and the Holy Land, which were sacred to Christians, Muslims, and Jews.' },
+      { q:'In what year did the First Crusade capture Jerusalem?', opts:['1099','1095','1187','1215'], c:0, e:'The First Crusade successfully captured Jerusalem in 1099, establishing several Crusader states in the Middle East.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who was Saladin?', opts:['The Muslim leader who recaptured Jerusalem in 1187','A Crusader knight','The Pope who started the Crusades','A Byzantine emperor'], c:0, e:'Saladin (Salah ad-Din) was the Muslim sultan who united Muslim forces and recaptured Jerusalem from the Crusaders in 1187.' },
+      { q:'Which English king led the Third Crusade?', opts:['Richard I (the Lionheart)','Henry II','John','Edward I'], c:0, e:'Richard I, known as the Lionheart for his bravery, led the English forces in the Third Crusade (1189-1192) but failed to recapture Jerusalem.' },
+      { q:'What were the Knights Templar?', opts:['A military religious order that protected Christian pilgrims in the Holy Land','A group of Muslim warriors','French merchants','English barons'], c:0, e:'The Knights Templar were a Catholic military order founded around 1119 to protect Christian pilgrims travelling to the Holy Land. They became powerful and wealthy.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What did Crusaders receive from the Pope for going on Crusade?', opts:['Forgiveness of their sins (an indulgence)','Money and gold','Land in England','A title of nobility'], c:0, e:'Pope Urban II promised Crusaders a plenary indulgence, meaning all their sins would be forgiven. This was a powerful motivation in a deeply religious age.' },
+      { q:'How many major Crusades were there?', opts:['At least nine major Crusades','Only one','Exactly three','Over fifty'], c:0, e:'There were at least nine major Crusades between 1096 and 1291, though only the First Crusade was truly successful in capturing Jerusalem.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was one important consequence of the Crusades for trade between Europe and the Middle East?', opts:['Trade in spices, silk, and other goods increased significantly','All trade stopped completely','Only weapons were traded','Trade decreased'], c:0, e:'The Crusades opened up trade routes between Europe and the Middle East, introducing Europeans to new goods such as spices, sugar, silk, and cotton.' },
+      { q:'What did the Crusaders call the territories they established in the Middle East?', opts:['Crusader states (or Outremer)','Colonies','Provinces','Shires'], c:0, e:'The Crusaders established several states known collectively as Outremer (French for "overseas"), including the Kingdom of Jerusalem, the County of Tripoli, and others.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Why was Jerusalem important to Christians, Muslims, and Jews?', opts:['It contained holy sites sacred to all three religions','It was the richest city in the world','It was the capital of the Roman Empire','It had the best farmland'], c:0, e:'Jerusalem was sacred to Christians (site of Jesus\'s crucifixion), Muslims (site of Muhammad\'s Night Journey), and Jews (location of the Temple). This made it deeply contested.' },
+      { q:'What happened when the Crusaders captured Jerusalem in 1099?', opts:['They massacred many of the city\'s Muslim and Jewish inhabitants','They peacefully took control','They left immediately','They converted to Islam'], c:0, e:'The capture of Jerusalem in 1099 was accompanied by a terrible massacre of many Muslim and Jewish inhabitants, an event that remains controversial.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why might a historian argue the Crusades had positive cultural consequences despite the violence?', opts:['They increased cultural exchange, bringing new knowledge, ideas, and goods to Europe','They had no positive effects at all','They only benefited Muslim societies','They ended all conflict between religions'], c:0, e:'Despite the violence, the Crusades led to significant cultural exchange. Europeans encountered advanced Muslim scholarship in mathematics, medicine, and science, and new trade goods transformed European life.' },
+      { q:'Why did later Crusades fail to permanently hold Jerusalem?', opts:['Crusader states were far from Europe, poorly supplied, and faced united Muslim opposition under leaders like Saladin','The weather was too hot','The Crusaders ran out of weapons','The Pope stopped supporting them'], c:0, e:'Later Crusades failed because Crusader states were thousands of miles from reinforcements, Crusader leaders often quarrelled, and Muslim forces became united under strong leaders like Saladin.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did Muslim and Christian accounts of the Crusades differ?', opts:['Christians saw them as holy wars to reclaim sacred land; Muslims saw them as unprovoked invasions by barbarians','Both sides agreed the Crusades were justified','Neither side wrote about the Crusades','Muslims welcomed the Crusaders'], c:0, e:'Christian writers portrayed the Crusades as righteous holy wars. Muslim historians described the Crusaders as barbaric invaders (Franks). These differing perspectives show how the same events can be interpreted very differently.' },
+      { q:'To what extent were the Crusades motivated by religious belief versus other factors?', opts:['Both religious belief and worldly motives like land, wealth, and adventure played important roles','Only religious belief mattered','Only greed motivated Crusaders','Political power was the sole reason'], c:0, e:'While genuine religious devotion motivated many Crusaders, historians also identify other motives: younger sons seeking land, merchants seeking trade, and kings seeking political prestige. The reality was a mix of motivations.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'What was the long-term impact of the Crusades on Christian-Muslim relations?', opts:['They created lasting mistrust and hostility between the two religions that echoes through history','They brought lasting peace','They had no long-term impact on relations','They made both religions identical'], c:0, e:'The Crusades created deep-seated mistrust between Christians and Muslims. The violence and conquest left a lasting legacy of suspicion that has influenced relations between the two faiths for centuries.' },
+      { q:'Why is it important for historians to study both Christian and Muslim sources about the Crusades?', opts:['To get a balanced understanding, since each side has its own bias and perspective','Because Christian sources are always wrong','Because Muslim sources are always wrong','Because there is only one correct version of events'], c:0, e:'Using sources from both sides helps historians build a more complete and balanced picture. Each side had biases: Christian writers justified the Crusades while Muslim writers condemned them. Comparing both reveals a fuller truth.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-32: The Renaissance & Reformation ────────────────────────────
+TEST_GENERATORS["island-32"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'In which country did the Renaissance begin?', opts:['Italy','England','France','Germany'], c:0, e:'The Renaissance began in Italy in the 14th century, particularly in wealthy city-states like Florence, Venice, and Rome.' },
+      { q:'What does the word "Renaissance" mean?', opts:['Rebirth','Revolution','Religion','Reformation'], c:0, e:'Renaissance comes from the French word meaning "rebirth". It refers to the revival of interest in the art, learning, and culture of ancient Greece and Rome.' },
+      { q:'Which city was the main centre of the Italian Renaissance?', opts:['Florence','London','Paris','Berlin'], c:0, e:'Florence, ruled by the wealthy Medici family, was the main centre of the Renaissance. Many great artists and thinkers worked there.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who painted the Mona Lisa and designed flying machines?', opts:['Leonardo da Vinci','Michelangelo','Raphael','Galileo'], c:0, e:'Leonardo da Vinci (1452-1519) was a true Renaissance polymath: painter of the Mona Lisa, inventor, scientist, and engineer who designed flying machines centuries ahead of his time.' },
+      { q:'Who painted the ceiling of the Sistine Chapel?', opts:['Michelangelo','Leonardo da Vinci','Raphael','Donatello'], c:0, e:'Michelangelo painted the ceiling of the Sistine Chapel in Rome between 1508 and 1512. The famous scene shows God reaching out to touch Adam\'s finger.' },
+      { q:'What idea was central to Renaissance thinking?', opts:['Humanism — the belief in human potential and achievement','That only God mattered','That learning was sinful','That art should be banned'], c:0, e:'Humanism was the central philosophy of the Renaissance. It emphasised the value and potential of human beings and encouraged the study of classical Greek and Roman texts.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who invented the printing press using movable type around 1440?', opts:['Johannes Gutenberg','Martin Luther','Leonardo da Vinci','William Caxton'], c:0, e:'Johannes Gutenberg of Mainz, Germany, invented the printing press with movable metal type around 1440, revolutionising the spread of knowledge across Europe.' },
+      { q:'Who nailed 95 Theses to a church door in Wittenberg in 1517?', opts:['Martin Luther','Henry VIII','Pope Leo X','John Calvin'], c:0, e:'Martin Luther, a German monk, posted his 95 Theses on the door of All Saints\' Church in Wittenberg in 1517, criticising the Catholic Church\'s sale of indulgences and sparking the Reformation.' },
+      { q:'What was the Reformation?', opts:['A movement to reform the Catholic Church, leading to the creation of Protestant churches','A type of Renaissance art','A war between England and France','A new farming method'], c:0, e:'The Reformation was a 16th-century movement led by figures like Martin Luther that challenged Catholic Church practices and led to the creation of Protestant denominations.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What did Henry VIII do with the Act of Supremacy in 1534?', opts:['Made himself Head of the Church of England, breaking from the Pope','Declared war on France','Abolished Parliament','Banned the printing press'], c:0, e:'The Act of Supremacy (1534) made Henry VIII the Supreme Head of the Church of England, breaking England\'s ties with the Pope and the Catholic Church in Rome.' },
+      { q:'Why did Henry VIII break with the Catholic Church?', opts:['The Pope refused to annul his marriage to Catherine of Aragon','He disagreed with all Catholic beliefs','He wanted to become Pope himself','The barons forced him to'], c:0, e:'Henry VIII wanted to divorce Catherine of Aragon to marry Anne Boleyn, hoping for a male heir. When the Pope refused to grant an annulment, Henry broke away from Rome.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How did the printing press change society?', opts:['It made books cheaper and more widely available, spreading knowledge and new ideas','It had no effect on society','It was only used for religious texts','It replaced all handwriting'], c:0, e:'Before the printing press, books were hand-copied and very expensive. Gutenberg\'s press made books affordable, increased literacy, and allowed new ideas (including Luther\'s) to spread rapidly across Europe.' },
+      { q:'What were indulgences that Martin Luther criticised?', opts:['Payments to the Church that were said to reduce time in purgatory','Free gifts from the Pope','Types of prayers','Church holidays'], c:0, e:'Indulgences were payments made to the Catholic Church that supposedly reduced the time a soul spent in purgatory. Luther argued this was corrupt and not supported by the Bible.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why did the Renaissance begin in Italy rather than elsewhere in Europe?', opts:['Italy had wealthy city-states, a classical Roman heritage, and strong trade links','Italy had the largest army','Italy was the most religious country','Italy had the best climate for art'], c:0, e:'Italy was ideally placed: wealthy city-states like Florence funded artists, Roman ruins inspired classical learning, and trade with the East brought new ideas and wealth. These conditions created the perfect environment for cultural rebirth.' },
+      { q:'How did the printing press contribute to the Reformation?', opts:['It allowed Luther\'s ideas to spread rapidly across Europe, reaching millions','It had no effect on the Reformation','Luther banned the printing press','Only the Pope used the printing press'], c:0, e:'The printing press was crucial to the Reformation. Luther\'s 95 Theses and other writings were printed and distributed rapidly across Europe, reaching a far wider audience than hand-copied texts ever could.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'To what extent was Henry VIII\'s break with Rome motivated by genuine religious belief?', opts:['It was mainly political and personal — he wanted a divorce and control over Church wealth — rather than deeply religious','He was a devout Protestant from childhood','He was forced by Parliament','He followed Martin Luther\'s teachings exactly'], c:0, e:'Henry VIII\'s break with Rome was driven more by personal desire (a male heir) and political ambition (control of Church wealth and power) than by genuine Protestant conviction. He continued to hold many Catholic beliefs.' },
+      { q:'Why is the Renaissance considered a turning point in European history?', opts:['It shifted focus from purely religious thinking to human potential, science, and classical learning','It only affected artists','It had no lasting impact','It was exactly the same as the medieval period'], c:0, e:'The Renaissance marked a shift from medieval religious focus to humanism, scientific inquiry, and individual achievement. This new way of thinking laid the foundations for the modern world, including the Scientific Revolution and Enlightenment.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did the Reformation change the relationship between rulers and the Church in Europe?', opts:['Many rulers broke free from papal authority and gained control over religion in their own countries','The Pope gained more power over rulers','Nothing changed between rulers and the Church','All rulers became Catholic again'], c:0, e:'The Reformation allowed rulers like Henry VIII to break from papal authority, seize Church lands, and control religion in their countries. This was a fundamental shift in the balance of power between Church and state across Europe.' },
+      { q:'What might a historian learn about Renaissance values by studying Leonardo da Vinci\'s work?', opts:['That the Renaissance valued curiosity, observation, combining art with science, and pushing human boundaries','That the Renaissance only valued religious art','That people were not interested in science','That only painting mattered'], c:0, e:'Leonardo\'s work — from anatomical drawings to flying machine designs to the Mona Lisa — perfectly embodies Renaissance humanism: boundless curiosity, careful observation, the blending of art and science, and belief in limitless human potential.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-33: The Tudors & Elizabethan England ─────────────────────────
+TEST_GENERATORS["island-33"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How many wives did Henry VIII have?', opts:['Six','Four','Five','Eight'], c:0, e:'Henry VIII had six wives: Catherine of Aragon, Anne Boleyn, Jane Seymour, Anne of Cleves, Catherine Howard, and Catherine Parr.' },
+      { q:'Which of Henry VIII\'s wives gave him a son (Edward VI)?', opts:['Jane Seymour','Anne Boleyn','Catherine of Aragon','Catherine Parr'], c:0, e:'Jane Seymour, Henry VIII\'s third wife, gave birth to his only surviving son, Edward, in 1537. She died shortly after childbirth.' },
+      { q:'Who was the first Tudor monarch?', opts:['Henry VII','Henry VIII','Elizabeth I','Edward VI'], c:0, e:'Henry VII became the first Tudor monarch after defeating Richard III at the Battle of Bosworth in 1485, ending the Wars of the Roses.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Why was Mary I given the nickname "Bloody Mary"?', opts:['She had around 300 Protestants burned at the stake','She fought many bloody battles','She wore red clothes','She was cruel to her servants'], c:0, e:'Mary I (reigned 1553-1558) restored Catholicism and had approximately 300 Protestants burned at the stake for heresy, earning her the nickname "Bloody Mary".' },
+      { q:'Which queen defeated the Spanish Armada in 1588?', opts:['Elizabeth I','Mary I','Mary Queen of Scots','Jane Grey'], c:0, e:'Elizabeth I was queen when England defeated the Spanish Armada in 1588. The victory established England as a major naval power.' },
+      { q:'What was Elizabeth I\'s religious settlement called?', opts:['The Middle Way (via media)','The Great Reform','The Catholic Revival','The Protestant Revolution'], c:0, e:'Elizabeth I\'s religious settlement was called the Middle Way (via media) because it tried to find a compromise between Catholicism and Protestantism that most people could accept.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What happened to the Spanish Armada in 1588?', opts:['It was defeated by the English navy and bad weather','It conquered England','It never left Spain','It was welcomed peacefully'], c:0, e:'The Spanish Armada of 130 ships was sent by Philip II of Spain to invade England in 1588. It was defeated by the English navy\'s tactics and scattered by storms.' },
+      { q:'Who was the last Tudor monarch?', opts:['Elizabeth I','Henry VIII','Mary I','Edward VI'], c:0, e:'Elizabeth I (reigned 1558-1603) was the last Tudor monarch. She never married and died without an heir, ending the Tudor dynasty.' },
+      { q:'Why is the reign of Elizabeth I sometimes called a "Golden Age"?', opts:['England flourished in exploration, arts (especially theatre), and trade','Everyone became wealthy','There were no problems during her reign','Gold was discovered in England'], c:0, e:'Elizabeth I\'s reign is called a Golden Age because of achievements in literature (Shakespeare, Marlowe), exploration (Drake, Raleigh), music, and growing national confidence after defeating the Armada.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What happened to Anne Boleyn, Henry VIII\'s second wife?', opts:['She was executed (beheaded) in 1536','She died of old age','She was sent to France','She became a nun'], c:0, e:'Anne Boleyn was accused of treason, adultery, and other charges. She was beheaded at the Tower of London on 19 May 1536.' },
+      { q:'How old was Edward VI when he became king?', opts:['Nine years old','Eighteen years old','Five years old','Twenty-one years old'], c:0, e:'Edward VI became king at the age of nine when Henry VIII died in 1547. He was a sickly child and died aged just fifteen in 1553.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Which famous playwright wrote during Elizabeth I\'s reign?', opts:['William Shakespeare','Charles Dickens','Geoffrey Chaucer','Christopher Wren'], c:0, e:'William Shakespeare (1564-1616) wrote most of his famous plays during Elizabeth I\'s reign and the early years of James I. He is considered the greatest English playwright.' },
+      { q:'What was the main reason Henry VIII wanted to divorce Catherine of Aragon?', opts:['She did not produce a male heir to the throne','She was too old','She was French','She refused to be queen'], c:0, e:'Henry VIII desperately wanted a male heir to secure the Tudor dynasty. Catherine of Aragon had only produced a daughter (Mary), so Henry sought an annulment to marry Anne Boleyn.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why was Elizabeth I\'s religious settlement considered a clever political move?', opts:['It avoided the extremes of both Catholicism and Protestantism, reducing the risk of religious civil war','It made everyone Catholic','It banned all religion','It copied the French system exactly'], c:0, e:'Elizabeth\'s Middle Way was politically astute: the Church of England kept some Catholic traditions (bishops, church structure) while adopting Protestant beliefs (English Bible, no Pope). This compromise prevented the religious wars that devastated other European countries.' },
+      { q:'How did Elizabeth I use the image of the "Virgin Queen" to strengthen her power?', opts:['By remaining unmarried, she kept her independence and could use marriage negotiations as a diplomatic tool','She wore all white clothing','She never appeared in public','She pretended to be a man'], c:0, e:'Elizabeth cultivated the image of the Virgin Queen married to England. Her unmarried status kept her independent from any husband\'s influence and allowed her to use potential marriage as a diplomatic bargaining tool with foreign powers.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why did Philip II of Spain send the Armada against England in 1588?', opts:['A combination of religious, political, and personal reasons including England\'s Protestantism and attacks on Spanish ships','He wanted to visit England','Elizabeth asked him to invade','He wanted English wool'], c:0, e:'Philip II had multiple motives: England\'s Protestantism offended Catholic Spain, English privateers like Drake attacked Spanish treasure ships, and Elizabeth had supported Dutch Protestant rebels against Spain.' },
+      { q:'To what extent were the Tudors successful monarchs?', opts:['They brought stability and cultural achievement but also religious turmoil and authoritarian rule','They were complete failures','They were all perfect rulers','They had no impact on England'], c:0, e:'The Tudors brought political stability after the Wars of the Roses and a cultural Golden Age, but also religious upheaval, executions, and heavy taxation. Their success depends on which aspects of their rule are examined.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did Henry VIII\'s break with Rome change English society beyond religion?', opts:['It gave the Crown enormous wealth from dissolved monasteries and changed landownership across England','It only affected the Church','It had no effect on ordinary people','It made England poorer'], c:0, e:'The dissolution of the monasteries (1536-41) transferred vast Church wealth and land to the Crown and those who bought it. This transformed landownership, destroyed centres of learning and charity, and enriched a new class of landowners.' },
+      { q:'Why might historians disagree about whether Mary I deserves the nickname "Bloody Mary"?', opts:['Other Tudor monarchs also executed people for religious reasons, and Mary genuinely believed she was saving souls','Because she never executed anyone','Because the nickname was given by her friends','Because she was actually very kind'], c:0, e:'Historians debate this because burning heretics was common practice across Europe, other Tudor monarchs also killed for religion (Henry VIII executed Catholics and Protestants), and Mary believed she was saving England\'s soul. The nickname reflects Protestant bias in later historical writing.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-34: The Transatlantic Slave Trade ────────────────────────────
+TEST_GENERATORS["island-34"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was the triangular trade?', opts:['A three-legged trade route between Britain, Africa, and the Americas','A trade route shaped like a triangle within Europe','A route between three cities in Africa','A type of bartering system'], c:0, e:'The triangular trade was a three-stage trade route: goods went from Britain to Africa, enslaved people from Africa to the Americas (the Middle Passage), and raw materials from the Americas back to Britain.' },
+      { q:'What was the Middle Passage?', opts:['The journey of enslaved Africans across the Atlantic Ocean to the Americas','A trade route through the Mediterranean','A passage through the middle of Africa','A canal in Britain'], c:0, e:'The Middle Passage was the horrific sea voyage from Africa to the Americas. Enslaved people were packed into ships in terrible conditions, and many died during the journey.' },
+      { q:'In what year was the slave trade abolished in the British Empire?', opts:['1807','1833','1776','1865'], c:0, e:'The Slave Trade Act of 1807 abolished the buying and selling of enslaved people throughout the British Empire, though slavery itself continued until 1833.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who was Olaudah Equiano?', opts:['A formerly enslaved man who wrote an autobiography about his experiences','A slave trader','A British politician','A plantation owner'], c:0, e:'Olaudah Equiano was a formerly enslaved man who wrote "The Interesting Narrative of the Life of Olaudah Equiano" (1789), describing the horrors of slavery and helping the abolitionist cause.' },
+      { q:'Who led the campaign to abolish the slave trade in Parliament?', opts:['William Wilberforce','Olaudah Equiano','King George III','William Pitt'], c:0, e:'William Wilberforce was the MP who led the parliamentary campaign against the slave trade for over 20 years, finally achieving its abolition in 1807.' },
+      { q:'What year was slavery itself finally abolished in the British Empire?', opts:['1833','1807','1776','1900'], c:0, e:'The Slavery Abolition Act of 1833 abolished slavery itself throughout most of the British Empire, going beyond the 1807 act which had only banned the trade.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What goods were taken from Britain to Africa as part of the triangular trade?', opts:['Manufactured goods such as guns, cloth, and alcohol','Enslaved people','Sugar and tobacco','Gold and silver'], c:0, e:'British ships carried manufactured goods like textiles, guns, iron, and alcohol to Africa, where they were traded for enslaved people.' },
+      { q:'What were enslaved people forced to do on plantations in the Americas?', opts:['Work growing crops like sugar, tobacco, and cotton','Attend school','Build churches','Trade with local people'], c:0, e:'Enslaved people were forced to work extremely long hours on plantations growing cash crops like sugar cane, tobacco, cotton, and coffee in brutal conditions.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What conditions did enslaved Africans face during the Middle Passage?', opts:['Terrible overcrowding, disease, chains, and many died during the voyage','Comfortable cabins and good food','Freedom to move around the ship','The same conditions as the crew'], c:0, e:'Conditions on the Middle Passage were horrific: enslaved people were chained together in cramped spaces below deck, with little food or water. Disease was rampant and many died during the crossing.' },
+      { q:'Which crop was most commonly grown on Caribbean plantations using enslaved labour?', opts:['Sugar cane','Wheat','Potatoes','Rice'], c:0, e:'Sugar cane was the most profitable crop grown on Caribbean plantations. The work was extremely dangerous and exhausting, involving cutting cane and processing it in boiling houses.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How did the slave trade make British cities like Liverpool and Bristol wealthy?', opts:['Profits from trading enslaved people and slave-produced goods funded building, industry, and banking','They had nothing to do with the slave trade','They traded only within Europe','They were already wealthy before the slave trade'], c:0, e:'Cities like Liverpool and Bristol grew rich from the slave trade. Merchants profited from selling enslaved people and importing slave-produced goods like sugar. This wealth funded grand buildings, banks, and industrial development.' },
+      { q:'What was an abolitionist?', opts:['Someone who campaigned to end slavery and the slave trade','A plantation owner','A slave trader','A type of slave'], c:0, e:'An abolitionist was a person who campaigned to abolish (end) slavery and the slave trade. Key abolitionists included William Wilberforce, Thomas Clarkson, and Olaudah Equiano.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why was Olaudah Equiano\'s autobiography so important in the fight against slavery?', opts:['It gave a first-hand account of the horrors of slavery that moved public opinion and influenced Parliament','It was just an interesting story','It was only read by enslaved people','It supported slavery'], c:0, e:'Equiano\'s autobiography was powerful because it provided a first-person account of the horrors of capture, the Middle Passage, and enslavement. It humanised enslaved people for a British audience and became a key text in the abolitionist campaign.' },
+      { q:'Why did it take so long to abolish slavery even after the slave trade was banned in 1807?', opts:['Plantation owners were powerful, profitable, and had political influence in Parliament','Everyone agreed slavery should end quickly','There were no more enslaved people after 1807','The king refused to sign any law'], c:0, e:'Wealthy plantation owners had significant political power and argued that abolition would ruin the economy. It took another 26 years of campaigning, slave resistance, and political pressure before slavery itself was abolished in 1833.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did enslaved people resist their enslavement?', opts:['Through rebellions, running away, maintaining cultural traditions, working slowly, and sabotage','They never resisted','They only used violence','They wrote letters to Parliament'], c:0, e:'Enslaved people resisted in many ways: armed rebellions (e.g., Haiti 1791), running away, preserving African languages and customs, working slowly, breaking tools, and even refusing to eat. Resistance was constant and took many forms.' },
+      { q:'Why is it important to study the slave trade as part of British history?', opts:['Because Britain played a major role in the slave trade and it shaped British wealth, society, and its legacy of racism','Because Britain had nothing to do with it','Because it only affected Africa','Because it happened too long ago to matter'], c:0, e:'Britain was one of the largest slave-trading nations, and the profits of the slave trade shaped British cities, industry, and wealth. Understanding this history helps explain racial inequalities that persist today and Britain\'s global connections.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Should William Wilberforce receive the main credit for abolishing the slave trade, or were other factors more important?', opts:['While Wilberforce was important, the resistance of enslaved people, economic changes, and wider campaigning were equally or more significant','Wilberforce did everything alone','Only economic factors mattered','Parliament decided without any outside pressure'], c:0, e:'Historians increasingly recognise that while Wilberforce was important, enslaved people\'s own resistance (like the Haitian Revolution), the work of campaigners like Thomas Clarkson, changing economic conditions, and public petitions all played crucial roles.' },
+      { q:'What is the legacy of the transatlantic slave trade in modern Britain?', opts:['It contributed to systemic racism, wealth inequality, and cultural diversity that still shape British society today','It has no lasting effects','It only affected the Americas','It was too long ago to have any impact'], c:0, e:'The legacy includes the wealth that funded Britain\'s Industrial Revolution, systemic racism and inequality, the diverse population resulting from later migration from former colonies, and ongoing debates about reparations and how to commemorate this history.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-53: Pre-1066 Britain: Anglo-Saxons & Vikings ─────────────────
+TEST_GENERATORS["island-53"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Approximately when did Roman rule in Britain end?', opts:['Around 410 AD','In 1066','In 793 AD','In 55 BC'], c:0, e:'The Romans withdrew from Britain around 410 AD, leaving the country vulnerable to invasion by groups like the Angles, Saxons, and Jutes.' },
+      { q:'Which three Germanic groups settled in Britain after the Romans left?', opts:['Angles, Saxons, and Jutes','Franks, Goths, and Vandals','Vikings, Normans, and Celts','Romans, Greeks, and Persians'], c:0, e:'After the Roman withdrawal, the Angles (from modern Denmark/Germany), Saxons (from northern Germany), and Jutes (from Jutland/Denmark) migrated to and settled in Britain.' },
+      { q:'What name did the Angles give to the country, which we still use today?', opts:['England (Angle-land)','Britain','Saxony','Jutland'], c:0, e:'The word "England" comes from "Angle-land", meaning the land of the Angles. The Angles were one of the main Germanic groups that settled in Britain.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What happened at Lindisfarne in 793 AD?', opts:['Vikings attacked the monastery in the first major Viking raid on Britain','The Romans arrived in Britain','The Battle of Hastings took place','The Magna Carta was signed'], c:0, e:'In 793 AD, Vikings from Scandinavia attacked the wealthy monastery at Lindisfarne (Holy Island) off the coast of Northumbria. This is considered the start of the Viking Age in Britain.' },
+      { q:'What was the Danelaw?', opts:['The area of England controlled by the Vikings (Danes)','A type of Viking ship','A set of Danish laws about farming','The Viking king\'s palace'], c:0, e:'The Danelaw was the area of England under Viking (Danish) control, roughly covering the north and east of the country. It had its own laws and customs different from Anglo-Saxon England.' },
+      { q:'Which Anglo-Saxon king is famous for defending England against the Vikings?', opts:['Alfred the Great','Edward the Confessor','Harold Godwinson','Canute'], c:0, e:'Alfred the Great, King of Wessex (871-899), successfully defended his kingdom against Viking invasion, created a navy, established fortified towns (burhs), and promoted learning and literacy.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Name three of the main Anglo-Saxon kingdoms.', opts:['Wessex, Mercia, and Northumbria','London, York, and Canterbury','England, Scotland, and Wales','Cornwall, Devon, and Somerset'], c:0, e:'The main Anglo-Saxon kingdoms included Wessex (south-west), Mercia (midlands), Northumbria (north), East Anglia (east), Essex, Sussex, and Kent.' },
+      { q:'Who was the last Anglo-Saxon king of England?', opts:['Harold Godwinson','Edward the Confessor','Alfred the Great','Canute'], c:0, e:'Harold Godwinson was the last Anglo-Saxon king. He was crowned in January 1066 and killed at the Battle of Hastings in October 1066.' },
+      { q:'Who was Edward the Confessor?', opts:['The Anglo-Saxon king whose death in 1066 triggered the succession crisis','A Viking warrior','A Norman duke','A Roman emperor'], c:0, e:'Edward the Confessor was the Anglo-Saxon king of England from 1042 to 1066. His death without a clear heir in January 1066 led to rival claims to the throne and the Norman Conquest.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was the Great Heathen Army?', opts:['A large Viking invasion force that arrived in England in 865 AD','An Anglo-Saxon army','A Roman legion','A group of monks'], c:0, e:'The Great Heathen Army was a large coalition of Viking warriors from Scandinavia that invaded England in 865 AD. They conquered most of the Anglo-Saxon kingdoms except Wessex.' },
+      { q:'What is Beowulf?', opts:['The oldest surviving epic poem in Old English, about a hero fighting monsters','A Viking king','An Anglo-Saxon law code','A type of weapon'], c:0, e:'Beowulf is the oldest surviving long poem in Old English. It tells the story of a Scandinavian hero who fights the monster Grendel, Grendel\'s mother, and a dragon.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Where did the Vikings originally come from?', opts:['Scandinavia (modern Norway, Sweden, and Denmark)','France','Spain','Italy'], c:0, e:'The Vikings came from Scandinavia — modern-day Norway, Sweden, and Denmark. They were skilled sailors and warriors who raided, traded, and settled across Europe.' },
+      { q:'What were Viking longships designed for?', opts:['Fast travel across seas and up rivers, able to land on beaches','Carrying heavy cargo only','Underwater travel','Staying in one place'], c:0, e:'Viking longships were light, fast, and flexible. Their shallow draft allowed them to sail up rivers and land directly on beaches, making surprise raids possible.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why was Alfred the Great considered "great" compared to other Anglo-Saxon kings?', opts:['He defended Wessex from the Vikings, promoted education, created a navy, and established a legal code','He conquered all of Europe','He was the richest king','He had the largest family'], c:0, e:'Alfred earned the title "Great" because he prevented Viking conquest of all England, built a network of fortified towns (burhs), created a navy, promoted literacy and learning, and established a written law code. He is the only English monarch called "Great".' },
+      { q:'How did the Anglo-Saxons and Vikings influence modern English language and place names?', opts:['Many everyday English words come from Old English (Anglo-Saxon) and Old Norse (Viking), and place-name endings reveal their origins','They had no influence on modern English','Only Latin influenced English','English came entirely from French'], c:0, e:'Anglo-Saxon gave us words like "house", "bread", and "child". Old Norse gave us "sky", "egg", and "window". Place names ending in -ton, -ham, -bury are Anglo-Saxon; those ending in -by, -thorpe, -thwaite are Viking.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Were the Vikings only violent raiders, or is this view too simple?', opts:['It is too simple — Vikings were also traders, settlers, farmers, and craftspeople who made lasting cultural contributions','They were only raiders and warriors','They never raided anyone','They were only interested in gold'], c:0, e:'The image of Vikings as only violent raiders is a stereotype. While raiding was important, Vikings were also skilled traders (reaching Constantinople and Baghdad), farmers who settled permanently, skilled metalworkers, and storytellers. Many peacefully integrated into local populations.' },
+      { q:'Why is our understanding of Anglo-Saxon and Viking Britain limited?', opts:['Few written sources survive from this period, and much evidence comes from archaeology which can be hard to interpret','We have complete written records','Everything was perfectly documented','Historians are not interested in this period'], c:0, e:'This period has limited written sources (mostly from monks with their own biases). Much knowledge comes from archaeological evidence like burial sites, coins, and artefacts, which require careful interpretation and can be incomplete.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did the Viking invasions ultimately help to unify England?', opts:['The threat of Viking attack forced Anglo-Saxon kingdoms to unite under Wessex, eventually creating a single English kingdom','Vikings divided England permanently','Vikings had no effect on English unity','England was already unified before the Vikings'], c:0, e:'Before the Vikings, England was divided into rival kingdoms. The Viking threat forced these kingdoms to cooperate under Wessex\'s leadership (Alfred, then his successors), ultimately leading to the unification of England under one king by the 10th century.' },
+      { q:'What can the poem Beowulf tell us about Anglo-Saxon values and beliefs?', opts:['It reveals values like bravery, loyalty to one\'s lord, generosity, fame, and the importance of kinship','It tells us nothing about Anglo-Saxon life','It is entirely fictional with no historical value','It only describes Viking culture'], c:0, e:'Beowulf reveals key Anglo-Saxon values: courage in battle, loyalty between a lord and his warriors, the importance of reputation and fame, generosity (gift-giving), and the tension between Christian and older pagan beliefs.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-54: The Peasants' Revolt (1381) ──────────────────────────────
+TEST_GENERATORS["island-54"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'In what year did the Peasants\' Revolt take place?', opts:['1381','1348','1066','1215'], c:0, e:'The Peasants\' Revolt took place in 1381, when thousands of peasants marched on London to protest against unfair taxes and working conditions.' },
+      { q:'Who was the leader of the Peasants\' Revolt?', opts:['Wat Tyler','John Ball','Richard II','Simon de Montfort'], c:0, e:'Wat Tyler was the main leader of the Peasants\' Revolt of 1381. He led the rebels from Kent to London to confront the young King Richard II.' },
+      { q:'What tax triggered the Peasants\' Revolt?', opts:['The Poll Tax','Income tax','A tax on bread','Church tithes'], c:0, e:'The immediate trigger for the revolt was the Poll Tax of 1380-81, which required every adult to pay the same amount regardless of wealth. This was the third poll tax in four years.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who was the radical priest who preached equality during the Peasants\' Revolt?', opts:['John Ball','Wat Tyler','Richard II','Thomas Becket'], c:0, e:'John Ball was a radical priest who preached that all people were equal. He is remembered for his famous question: "When Adam delved and Eve span, who was then the gentleman?"' },
+      { q:'Which king met the rebels during the Peasants\' Revolt?', opts:['Richard II','Henry II','Edward III','John'], c:0, e:'The young King Richard II, only fourteen years old, met the rebels at Mile End and Smithfield in London during the Peasants\' Revolt of 1381.' },
+      { q:'What happened to Wat Tyler at Smithfield?', opts:['He was stabbed and killed by the Lord Mayor of London','He escaped to France','He was made a lord','He became an advisor to the king'], c:0, e:'At the meeting at Smithfield, Wat Tyler was stabbed and killed by William Walworth, the Lord Mayor of London. Richard II then faced the crowd and promised to address their demands.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was the Statute of Labourers (1351)?', opts:['A law that tried to keep wages low after the Black Death','A law freeing all serfs','A law raising wages','A law about building churches'], c:0, e:'The Statute of Labourers (1351) was passed after the Black Death to prevent peasants demanding higher wages. It tried to fix wages at pre-plague levels, angering peasants who knew their labour was valuable.' },
+      { q:'How did the Black Death contribute to the Peasants\' Revolt?', opts:['It created a labour shortage that made peasants demand better conditions, but laws tried to prevent this','It killed all the peasants so they could not revolt','It made everyone richer','It had no connection to the revolt'], c:0, e:'The Black Death (1348-51) killed so many people that surviving peasants could demand higher wages. When laws like the Statute of Labourers tried to keep wages low, it fuelled resentment that eventually exploded in the 1381 revolt.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Where did the peasants march to during the revolt?', opts:['London','York','Canterbury','Oxford'], c:0, e:'The peasants marched from Kent and Essex to London, where they demanded to meet King Richard II and presented their grievances.' },
+      { q:'What did the rebels demand during the Peasants\' Revolt?', opts:['An end to serfdom, lower taxes, and the right to fair wages','More land for the lords','Higher taxes','A new king'], c:0, e:'The rebels demanded an end to serfdom (unfree labour), the abolition of the poll tax, fair rents, and the right to work for wages. They wanted greater freedom and justice.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What promises did Richard II make to the rebels?', opts:['He promised to end serfdom and grant pardons, but later broke these promises','He promised them gold','He refused to speak to them','He gave them land immediately'], c:0, e:'Richard II promised at Mile End to abolish serfdom and grant pardons to the rebels. However, after the revolt was crushed, he broke all his promises and punished the rebel leaders.' },
+      { q:'What happened after the Peasants\' Revolt was crushed?', opts:['The leaders were executed and the king broke his promises, but serfdom did gradually decline','All peasants were freed immediately','Nothing changed at all','The king was overthrown'], c:0, e:'After the revolt, leaders like John Ball were executed and Richard II withdrew his promises. However, the poll tax was never used again, and serfdom gradually declined over the following decades.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Was the Peasants\' Revolt a failure or a success? Which view has the strongest evidence?', opts:['It was a short-term failure (leaders killed, promises broken) but a long-term success (poll tax dropped, serfdom declined)','It was a complete failure with no lasting effects','It achieved everything immediately','It only benefited the king'], c:0, e:'The revolt failed in its immediate aims — leaders were executed and promises broken. But it showed the ruling class that peasants could be a powerful force. The poll tax was never levied again, and serfdom gradually disappeared, suggesting long-term success.' },
+      { q:'Why was Richard II able to break his promises to the rebels after the revolt?', opts:['Once the rebels dispersed, the king had military power to arrest leaders and withdraw concessions','The rebels agreed he should break them','Parliament forced him to keep them','He was too young to understand'], c:0, e:'Richard II made promises under duress while surrounded by thousands of angry rebels. Once the crowd dispersed and Wat Tyler was dead, the king had the military upper hand and could retract his promises and punish the leaders.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did John Ball\'s ideas challenge medieval society?', opts:['His belief that all people were created equal directly challenged the feudal system\'s hierarchy based on birth','He supported the feudal system','He only wanted lower taxes','His ideas were popular with the king'], c:0, e:'John Ball preached radical equality: that God made all people equal and that the feudal hierarchy was unjust. This directly challenged the fundamental basis of medieval society, where your position was determined by birth.' },
+      { q:'What does the Peasants\' Revolt tell historians about the lives of ordinary people in medieval England?', opts:['That ordinary people were aware of their rights, could organise collectively, and were willing to challenge authority','That peasants were content with their lives','That only nobles had political ideas','That medieval people could not organise'], c:0, e:'The Peasants\' Revolt shows that ordinary people had political awareness, could organise effectively across counties, had clear grievances and demands, and were willing to challenge even the king. This challenges the idea that medieval peasants were passive and ignorant.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How reliable are the sources we have about the Peasants\' Revolt, and why?', opts:['Most were written by monks and nobles hostile to the rebels, so they may exaggerate violence and dismiss peasant grievances','They are completely unbiased','Peasants wrote most of the accounts','All sources agree with each other'], c:0, e:'Most surviving accounts were written by chroniclers from the ruling class (monks, nobles) who opposed the revolt. They tend to portray the rebels as a violent mob rather than presenting their legitimate grievances. Historians must read these sources critically.' },
+      { q:'Compare the causes of the Peasants\' Revolt with the causes of the Magna Carta. What do they have in common?', opts:['Both were caused by unfair taxation and abuse of royal power, showing that people will resist when pushed too far','They have nothing in common','Both were caused by foreign invasion','Both were only about religion'], c:0, e:'Both the Magna Carta (1215) and the Peasants\' Revolt (1381) were triggered by excessive taxation and abuse of power. In both cases, people (barons in 1215, peasants in 1381) organised to resist a king they felt was governing unjustly.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-55: The Medieval Church & Religion ───────────────────────────
+TEST_GENERATORS["island-55"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who was at the head of the medieval Church?', opts:['The Pope in Rome','The King of England','The Archbishop of Canterbury','The local priest'], c:0, e:'The Pope in Rome was the head of the entire Catholic Church in medieval Europe. He had authority over all bishops, priests, and monasteries.' },
+      { q:'What was the correct hierarchy of the medieval Church?', opts:['Pope, Archbishops, Bishops, Priests','King, Barons, Knights, Priests','Priests, Bishops, Archbishops, Pope','Pope, Priests, Bishops, Archbishops'], c:0, e:'The medieval Church hierarchy ran from the Pope at the top, then Archbishops, then Bishops, then parish Priests at the local level.' },
+      { q:'What was a tithe?', opts:['A tax of one-tenth of what you produced, paid to the Church','A type of prayer','A religious holiday','A church building'], c:0, e:'A tithe was one-tenth of everything a person produced — crops, animals, eggs — which had to be given to the parish church. It was compulsory and helped fund the Church.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was a medieval monastery?', opts:['A religious community where monks lived, prayed, and worked according to strict rules','A type of castle','A market town','A school for knights'], c:0, e:'A monastery was a religious house where monks lived a life of prayer, work, and study under strict rules (like the Rule of St Benedict). They were important centres of learning, charity, and farming.' },
+      { q:'What was a pilgrimage in medieval times?', opts:['A journey to a holy place to pray, seek healing, or show devotion','A type of war','A farming method','A legal trial'], c:0, e:'A pilgrimage was a religious journey to a sacred place, such as Canterbury, Rome, or Jerusalem. People went to pray at holy sites, seek healing from relics, or do penance for sins.' },
+      { q:'What were relics?', opts:['Objects believed to be remains of saints or holy items with miraculous powers','Types of weapons','Legal documents','Church decorations with no special meaning'], c:0, e:'Relics were objects believed to be the physical remains of saints (bones, hair) or items associated with holy figures. Medieval people believed they had miraculous healing powers.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who was Thomas Becket?', opts:['The Archbishop of Canterbury who was murdered in Canterbury Cathedral in 1170','A medieval king','A Viking warrior','A monk who wrote books'], c:0, e:'Thomas Becket was the Archbishop of Canterbury who was murdered by four knights in Canterbury Cathedral in 1170, after clashing with King Henry II over the rights of the Church.' },
+      { q:'Which king clashed with Thomas Becket?', opts:['Henry II','Henry VIII','William I','Richard I'], c:0, e:'Henry II clashed with Thomas Becket over whether the Church or the Crown had authority over clergy who committed crimes. Henry\'s angry words led four knights to murder Becket in the cathedral.' },
+      { q:'What happened to Canterbury Cathedral after Becket\'s murder?', opts:['It became one of the most important pilgrimage sites in Europe','It was destroyed','It was abandoned','It was converted into a castle'], c:0, e:'After Becket\'s murder, Canterbury Cathedral became one of the most popular pilgrimage destinations in Europe. Becket was declared a saint, and pilgrims came from across Europe to visit his shrine.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was excommunication?', opts:['Being banned from the Church and its sacraments — the most feared punishment','A type of prayer','A church tax','A religious festival'], c:0, e:'Excommunication meant being expelled from the Church. The excommunicated person could not receive sacraments, which medieval people believed meant they would go to hell. Even kings feared excommunication.' },
+      { q:'What role did the parish church play in village life?', opts:['It was the centre of the community — used for worship, social gatherings, and education','It was only used on Sundays','It was only for the wealthy','It had no role in daily life'], c:0, e:'The parish church was the heart of village life. It was used for daily worship, baptisms, weddings, and funerals. It also served as a meeting place, social centre, and sometimes the only stone building in the village.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What did monks do in medieval monasteries?', opts:['They prayed, copied manuscripts, farmed, and provided charity to the poor and sick','They only prayed','They fought in battles','They ran shops and markets'], c:0, e:'Medieval monks followed a daily routine of prayer (eight services a day), but also copied manuscripts by hand, farmed the monastery lands, cared for the sick, educated children, and gave alms to the poor.' },
+      { q:'Why was the Church so powerful in medieval England?', opts:['It controlled education, owned vast land, collected tithes, and taught that it held the key to salvation','It had a large army','The king worked for the Pope','It had no power at all'], c:0, e:'The medieval Church was enormously powerful: it owned about one-third of all land, collected tithes from everyone, controlled education, ran hospitals, and most importantly, people believed only the Church could save their souls from hell.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why did Henry II\'s conflict with Thomas Becket matter for the relationship between Church and State?', opts:['It raised the fundamental question of whether the king or the Church had ultimate authority in England','It was just a personal argument','It only affected Canterbury','It had no lasting significance'], c:0, e:'The Becket conflict was about a fundamental constitutional question: who had supreme authority — the king or the Church? Becket\'s murder and subsequent sainthood actually strengthened the Church\'s position, showing that challenging Church authority had severe consequences.' },
+      { q:'How did the Church use the fear of hell to control medieval people?', opts:['By teaching that only through the Church\'s sacraments could people avoid eternal damnation, making obedience to the Church essential','It never mentioned hell','People did not believe in hell','The Church encouraged people to think for themselves'], c:0, e:'The Church taught that everyone was a sinner who deserved hell, and that only through the Church\'s sacraments (baptism, communion, confession) could souls be saved. This gave the Church enormous power over people\'s behaviour and beliefs.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Were monasteries always the centres of learning and charity they claimed to be?', opts:['Not always — some monasteries became wealthy and corrupt, with monks living in luxury rather than poverty','They were always perfect','They had no wealth at all','They were all exactly the same'], c:0, e:'While many monasteries were genuine centres of learning and charity, some became very wealthy and their monks lived in relative luxury, far from the ideals of poverty and simplicity. This corruption later became a justification for Henry VIII\'s dissolution of the monasteries.' },
+      { q:'Why might some historians question the reliability of miracle stories associated with medieval saints and relics?', opts:['Many miracles were reported to attract pilgrims and donations, and the Church had a financial motive to promote them','All miracle stories are completely true','Historians cannot question religious claims','Medieval people never believed in miracles'], c:0, e:'Historians note that popular saints\' shrines attracted wealthy pilgrims, making miracle claims financially beneficial. While not dismissing medieval faith, historians recognise that the Church had economic motives to promote miracle stories and authenticate relics.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did the power of the medieval Church compare to the power of the king?', opts:['They were rival powers — the Church had spiritual authority, vast wealth, and international reach that sometimes exceeded the king\'s power','The king always had more power','The Church had no political power','They never came into conflict'], c:0, e:'The medieval Church rivalled the king in power: it owned a third of England\'s land, had its own courts and taxes, owed allegiance to the Pope (a foreign power), and claimed authority over spiritual matters affecting everyone. This led to frequent clashes.' },
+      { q:'How did pilgrimage benefit both the pilgrim and the Church?', opts:['Pilgrims believed they gained spiritual merit; the Church gained income from donations and increased its influence','Pilgrimage only benefited merchants','Neither side benefited','Pilgrimage was banned by the Church'], c:0, e:'Pilgrimage was mutually beneficial: pilgrims believed visiting holy sites would cure illness, forgive sins, or earn favour with God. The Church benefited from donations left at shrines, increased religious devotion, and the enhanced prestige of its holy sites.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-56: The Wars of the Roses & Henry VII ────────────────────────
+TEST_GENERATORS["island-56"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Which two families fought in the Wars of the Roses?', opts:['Lancaster (red rose) and York (white rose)','Tudor and Stuart','Norman and Saxon','Plantagenet and Angevin'], c:0, e:'The Wars of the Roses (1455-1487) were a series of civil wars between the House of Lancaster (represented by a red rose) and the House of York (represented by a white rose) for the English throne.' },
+      { q:'What was the symbol of the House of Lancaster?', opts:['A red rose','A white rose','A golden lion','A silver eagle'], c:0, e:'The House of Lancaster was represented by a red rose. Their rivals, the House of York, used a white rose. This is why the conflict is called the Wars of the Roses.' },
+      { q:'What was the symbol of the House of York?', opts:['A white rose','A red rose','A golden crown','A black raven'], c:0, e:'The House of York was represented by a white rose. They fought against the House of Lancaster (red rose) for control of the English throne.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who was the Lancastrian king during the early Wars of the Roses?', opts:['Henry VI','Edward IV','Richard III','Henry VII'], c:0, e:'Henry VI was the Lancastrian king. He was a weak ruler who suffered from periods of mental illness, which allowed the Yorkists to challenge his right to the throne.' },
+      { q:'Which Yorkist king took the throne in 1461?', opts:['Edward IV','Richard III','Henry VII','Henry VI'], c:0, e:'Edward IV became king after the Battle of Towton in 1461, one of the bloodiest battles ever fought on English soil. He was the first Yorkist king.' },
+      { q:'What was the Battle of Towton (1461)?', opts:['One of the bloodiest battles in English history, won by the Yorkists','A small skirmish','A naval battle','A battle against France'], c:0, e:'The Battle of Towton (1461) was fought in a snowstorm in Yorkshire. It was one of the bloodiest battles in English history, with possibly 28,000 dead, and secured the throne for Edward IV.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who was known as the "Kingmaker" during the Wars of the Roses?', opts:['The Earl of Warwick (Richard Neville)','Henry VII','Edward IV','Richard III'], c:0, e:'Richard Neville, Earl of Warwick, was called the "Kingmaker" because he was so powerful that he helped put both Edward IV and briefly Henry VI on the throne.' },
+      { q:'Who were the "Princes in the Tower"?', opts:['Edward V and his brother Richard, who disappeared in the Tower of London in 1483','Two French princes','Richard III\'s sons','Henry VII\'s brothers'], c:0, e:'The Princes in the Tower were the young Edward V (aged 12) and his brother Richard (aged 9), who were placed in the Tower of London by their uncle Richard III in 1483 and were never seen again.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who defeated Richard III at the Battle of Bosworth in 1485?', opts:['Henry Tudor (Henry VII)','Edward IV','The Earl of Warwick','Henry VI'], c:0, e:'Henry Tudor defeated Richard III at the Battle of Bosworth Field on 22 August 1485. Richard III was killed in battle, and Henry became King Henry VII, founding the Tudor dynasty.' },
+      { q:'How did Henry VII unite the two rival houses after Bosworth?', opts:['He married Elizabeth of York, uniting Lancaster and York','He executed all Yorkists','He became a monk','He left England'], c:0, e:'Henry VII married Elizabeth of York (daughter of Edward IV) in 1486, uniting the red and white roses. The Tudor rose, combining red and white, symbolised this union.' },
+      { q:'What was the Tudor rose?', opts:['A symbol combining the red and white roses to show the union of Lancaster and York','A type of flower','A painting','A castle'], c:0, e:'The Tudor rose combined the red rose of Lancaster with the white rose of York, symbolising Henry VII\'s marriage to Elizabeth of York and the end of the Wars of the Roses.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Which king died at the Battle of Bosworth Field?', opts:['Richard III','Henry VII','Edward IV','Henry VI'], c:0, e:'Richard III was the last English king to die in battle, killed at the Battle of Bosworth Field in 1485. His body was recently discovered under a car park in Leicester in 2012.' },
+      { q:'What dynasty did Henry VII found?', opts:['The Tudor dynasty','The Stuart dynasty','The Plantagenet dynasty','The Norman dynasty'], c:0, e:'Henry VII founded the Tudor dynasty, which ruled England from 1485 to 1603. Tudor monarchs included Henry VIII, Edward VI, Mary I, and Elizabeth I.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is it difficult for historians to know what happened to the Princes in the Tower?', opts:['There is no definitive evidence — suspects include Richard III, Henry VII, and the Duke of Buckingham','Everyone knows exactly what happened','Richard III confessed','The princes escaped and lived long lives'], c:0, e:'The fate of the Princes remains one of history\'s greatest mysteries. Richard III had motive and opportunity, but so did Henry VII. Bones found in 1674 may be theirs but are inconclusive. The lack of definitive evidence makes this a genuinely unsolved case.' },
+      { q:'How did the Wars of the Roses weaken the English nobility?', opts:['Many noble families were killed or ruined, reducing their power and allowing Henry VII to strengthen royal authority','The nobility became stronger','No nobles were affected','Only peasants suffered'], c:0, e:'The wars killed many leading nobles on both sides (over 50 noble families were affected). This destruction of the old nobility allowed Henry VII to reduce noble power, rely on new advisors, and strengthen the Crown\'s authority.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why was Henry VII\'s claim to the throne relatively weak, and how did he strengthen it?', opts:['His claim came through his mother\'s line and was distant; he strengthened it through military victory, marriage, and propaganda','He had the strongest claim of anyone','Nobody questioned his right','He inherited it directly from his father'], c:0, e:'Henry VII\'s claim to the throne was weak — it came through his mother Margaret Beaufort\'s descent from John of Gaunt. He strengthened it by winning at Bosworth, marrying Elizabeth of York, and using propaganda like the Tudor rose to legitimise his rule.' },
+      { q:'What were the main causes of the Wars of the Roses?', opts:['Weak kingship under Henry VI, rival claims to the throne, powerful nobles competing for influence, and economic problems','Only one cause — rivalry between two families','The Hundred Years War','Bad harvests'], c:0, e:'The wars had multiple causes: Henry VI\'s mental illness and weak rule created a power vacuum; both Lancaster and York had legitimate claims to the throne; powerful nobles like Warwick could kingmake; and defeat in France and economic problems increased instability.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did Henry VII ensure the Tudor dynasty would survive after the instability of the Wars of the Roses?', opts:['He reduced noble power, controlled finances carefully, avoided expensive wars, and eliminated rival claimants','He started another civil war','He gave all power to the barons','He did nothing to secure the dynasty'], c:0, e:'Henry VII learned from the Wars of the Roses: he kept nobles weak by banning private armies, built up the Crown\'s wealth through careful taxation, avoided costly wars, imprisoned or executed rival claimants, and used marriage alliances to secure his position.' },
+      { q:'Why do some historians argue the Wars of the Roses have been exaggerated in their impact on ordinary people?', opts:['The fighting mainly involved nobles and their followers; most of England was unaffected and daily life continued','The wars destroyed all of England','Every person in England was involved','Historians agree the wars affected everyone equally'], c:0, e:'While dramatic, the Wars of the Roses mainly involved relatively small armies of nobles and their retainers. Battles were brief and concentrated in specific areas. Most ordinary people continued their daily lives largely unaffected, though economic disruption did occur in areas of fighting.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-57: English Campaigns: Wales & Scotland ──────────────────────
+TEST_GENERATORS["island-57"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Which English king conquered Wales in 1277-1283?', opts:['Edward I','Henry II','William I','Richard I'], c:0, e:'Edward I launched two military campaigns against Wales in 1277 and 1282-83, defeating the last independent Welsh prince and bringing Wales under English control.' },
+      { q:'Who was the last native Prince of Wales?', opts:['Llywelyn ap Gruffudd','Owain Glyndwr','David ap Gruffudd','Rhys ap Thomas'], c:0, e:'Llywelyn ap Gruffudd was the last native-born Prince of Wales. He was killed in 1282 during Edward I\'s conquest of Wales.' },
+      { q:'What did Edward I build in Wales to maintain control?', opts:['A ring of massive stone castles','Wooden forts','Churches','Roads only'], c:0, e:'Edward I built a ring of imposing stone castles including Caernarfon, Conwy, Harlech, and Beaumaris to control the conquered Welsh population. They were some of the most advanced castles in Europe.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Name two of Edward I\'s famous castles in Wales.', opts:['Caernarfon and Conwy','London and Windsor','Edinburgh and Stirling','Dover and Canterbury'], c:0, e:'Edward I built several massive castles in Wales including Caernarfon, Conwy, Harlech, and Beaumaris. They were designed by the master architect James of St George.' },
+      { q:'Who was William Wallace?', opts:['A Scottish leader who fought against English rule','An English king','A Welsh prince','A French knight'], c:0, e:'William Wallace was a Scottish knight who led resistance against English rule. He won a famous victory at the Battle of Stirling Bridge in 1297 but was later captured and executed.' },
+      { q:'What happened at the Battle of Stirling Bridge in 1297?', opts:['William Wallace defeated a larger English army','The English conquered Scotland','The Scots surrendered','It was a draw'], c:0, e:'At the Battle of Stirling Bridge in 1297, William Wallace and Andrew Moray defeated a larger English army by trapping them as they crossed a narrow bridge, a brilliant tactical victory.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who was Robert the Bruce?', opts:['The Scottish king who defeated the English at Bannockburn in 1314','An English knight','A Welsh rebel','A French king'], c:0, e:'Robert the Bruce became King of Scotland and led the Scots to a famous victory over Edward II at the Battle of Bannockburn in 1314, securing Scottish independence.' },
+      { q:'What happened at the Battle of Bannockburn in 1314?', opts:['The Scots under Robert the Bruce defeated a much larger English army','The English conquered Scotland','The battle was a draw','The Welsh won'], c:0, e:'At the Battle of Bannockburn in 1314, Robert the Bruce\'s Scottish army defeated a much larger English force under Edward II, securing Scottish independence for centuries.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was the Declaration of Arbroath (1320)?', opts:['A letter to the Pope asserting Scotland\'s independence from England','A peace treaty between England and Wales','A trade agreement','A declaration of war on France'], c:0, e:'The Declaration of Arbroath (1320) was a letter sent by Scottish nobles to the Pope, asserting Scotland\'s right to be an independent kingdom free from English control.' },
+      { q:'Why did Edward I want to conquer Scotland?', opts:['He wanted to bring all of Britain under English control and extend his power','Scotland had attacked England','He wanted Scottish gold','The Pope told him to'], c:0, e:'Edward I aimed to extend English authority over the whole of Britain. He used a Scottish succession dispute as an opportunity to claim overlordship of Scotland and attempted to conquer it.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What happened to William Wallace after he was captured by the English?', opts:['He was executed in London in 1305 by being hanged, drawn, and quartered','He was released','He escaped to France','He became an English lord'], c:0, e:'William Wallace was captured in 1305, taken to London, and executed by being hanged, drawn, and quartered — a brutal punishment for treason. He became a Scottish national hero.' },
+      { q:'Which castle is considered Edward I\'s greatest castle in Wales?', opts:['Caernarfon Castle','The Tower of London','Windsor Castle','Warwick Castle'], c:0, e:'Caernarfon Castle is often considered Edward I\'s greatest Welsh castle. Its design, with polygonal towers and banded masonry, was deliberately modelled on the walls of Constantinople to project imperial power.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why were Edward I\'s castles in Wales so effective at controlling the Welsh?', opts:['They were positioned strategically, supplied by sea, and their massive size intimidated the population','They were hidden from view','They were made of wood','They were only decorative'], c:0, e:'Edward\'s castles were military masterpieces: placed at strategic points controlling routes and harbours, supplied by sea so they could withstand sieges, and their enormous size served as a constant visual reminder of English power and the futility of rebellion.' },
+      { q:'How did the Welsh and Scots respond differently to English attempts at conquest?', opts:['Wales was eventually conquered and absorbed; Scotland successfully maintained independence through military victories and diplomacy','Both were easily conquered','Neither resisted','Both became part of England immediately'], c:0, e:'Wales was conquered by 1283 and integrated into England with English laws and castles. Scotland, however, maintained independence through military victories (Bannockburn) and diplomatic efforts (Declaration of Arbroath), remaining a separate kingdom.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is the Declaration of Arbroath considered historically significant?', opts:['It expressed the idea that the people, not just the king, had a say in who ruled — an early statement of national sovereignty','It was just a letter to the Pope with no lasting importance','It was a trade agreement','It was written by the English'], c:0, e:'The Declaration of Arbroath is significant because it asserted that kingship depended on serving the people — if the king failed, they could choose another. This idea of popular sovereignty and national self-determination was remarkably advanced for 1320.' },
+      { q:'Was Edward I justified in his attempts to conquer Wales and Scotland?', opts:['This is debatable — he claimed legal rights but used extreme military force against independent peoples who resisted','He was completely justified','He had no reasons at all','Everyone agreed he should conquer them'], c:0, e:'Historians debate this. Edward could point to feudal claims and legal disputes, but his methods — massive military campaigns, castle-building programmes, and harsh treatment of captives like Wallace — suggest conquest and domination rather than legitimate authority.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'What can Edward I\'s castles in Wales tell us about medieval power and authority?', opts:['They show that power was projected through architecture — massive buildings designed to intimidate and control conquered peoples','Castles were just places to live','They were built for decoration only','They show the Welsh were happy to be conquered'], c:0, e:'Edward\'s Welsh castles demonstrate that medieval rulers used architecture as a tool of power. Their enormous scale, strategic positioning, and deliberate imperial styling (like Caernarfon\'s Constantinople-inspired design) were designed to project authority and crush resistance through visual domination.' },
+      { q:'Why did Scotland succeed in maintaining independence while Wales did not?', opts:['Scotland was larger, further from London, had stronger leadership (Bruce), and English campaigns there were less sustained','Wales was richer','Scotland was closer to London','The Welsh fought harder'], c:0, e:'Several factors helped Scotland: its greater size and distance from London made conquest harder; Robert the Bruce provided strong leadership; the terrain favoured defenders; and after Bannockburn, England lacked the resources to mount sustained campaigns against a determined Scottish resistance.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-58: Medieval Towns, Trade & Economy ──────────────────────────
+TEST_GENERATORS["island-58"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was a town charter in medieval England?', opts:['A document from the king granting a town special rights and freedoms','A type of building','A religious text','A map of the town'], c:0, e:'A town charter was a legal document granted by the king or a lord that gave a town special privileges such as the right to hold markets, collect taxes, and govern itself.' },
+      { q:'What was a burgess in a medieval town?', opts:['A freeman who lived in a town and had the right to trade','A type of knight','A church official','A peasant farmer'], c:0, e:'A burgess was a free citizen of a medieval town who had the right to trade, vote in town affairs, and enjoy the town\'s privileges. They were often merchants or master craftsmen.' },
+      { q:'How long was a typical medieval apprenticeship?', opts:['Seven years','One year','Three years','Twelve years'], c:0, e:'A typical medieval apprenticeship lasted seven years. A young person would learn a trade from a master craftsman, living in the master\'s house and working without pay while learning their craft.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was the role of craft guilds in medieval towns?', opts:['They controlled the quality and price of goods and regulated who could practise a trade','They were military organisations','They were religious groups only','They were entertainment groups'], c:0, e:'Craft guilds controlled trade in medieval towns. They set quality standards, fixed prices, regulated who could practise the trade, trained apprentices, and supported members who fell on hard times.' },
+      { q:'What was England\'s most important export in the medieval period?', opts:['Wool','Iron','Gold','Spices'], c:0, e:'Wool was England\'s most important export in the medieval period. English wool was highly prized across Europe, particularly in Flanders (modern Belgium) where it was woven into fine cloth.' },
+      { q:'What was a medieval fair?', opts:['A large trading event held once or twice a year, attracting merchants from far and wide','A daily market','A type of court','A religious ceremony'], c:0, e:'Medieval fairs were large trading events, often lasting several days, held annually at important towns. They attracted merchants from across Europe and were vital for long-distance trade in goods like wool, wine, and spices.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was a merchant guild?', opts:['An organisation of traders that controlled all trade in a town','A group of knights','A type of monastery','A farming cooperative'], c:0, e:'A merchant guild was a powerful association of traders that controlled all buying and selling in a town. They regulated trade, set prices, and protected their members from outside competition.' },
+      { q:'What was one major problem with sanitation in medieval towns?', opts:['Waste was thrown into streets and rivers, causing disease and terrible smells','Towns were very clean','There were no problems with waste','Only rich people had sanitation issues'], c:0, e:'Medieval towns had terrible sanitation. Human and animal waste was thrown into streets and rivers, there were no sewers, and overcrowding made disease spread quickly. This contributed to outbreaks like the Black Death.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What was a market town?', opts:['A town with the legal right to hold a regular market for buying and selling goods','Any large city','A town with a castle','A town near the coast'], c:0, e:'A market town was a settlement that had been granted the right (usually by royal charter) to hold a regular market, typically weekly. This was an important privilege that attracted trade and helped the town grow.' },
+      { q:'How did medieval towns differ from villages?', opts:['Towns had more people, more trades, and greater freedoms than villages','They were identical','Towns were smaller than villages','Towns had no markets'], c:0, e:'Medieval towns were larger than villages, had diverse trades and crafts rather than just farming, and their inhabitants often had more legal freedoms — including the right to trade and self-govern through town charters.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What stages did someone go through to become a master craftsman?', opts:['Apprentice (7 years), then journeyman, then master','They were born a master','They only needed one year of training','They were appointed by the king'], c:0, e:'To become a master craftsman, a person first served a seven-year apprenticeship, then became a journeyman (working for wages), and finally could apply to become a master by producing a "masterpiece" judged by the guild.' },
+      { q:'Why did towns grow during the medieval period?', opts:['Increased trade, growing population, and the demand for goods and services','Towns shrank during this period','Only wars caused towns to grow','Towns were built by the Romans'], c:0, e:'Medieval towns grew due to increasing trade (especially wool), rising population, the granting of town charters, and growing demand for crafts and services that villages could not provide.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did the growth of towns help to weaken the feudal system?', opts:['Towns offered peasants freedom from feudal obligations — the saying was "town air makes you free" after a year and a day','Towns had no effect on feudalism','Towns strengthened feudalism','Only kings benefited from towns'], c:0, e:'If a serf could escape to a town and live there for a year and a day, they became legally free. Towns offered an alternative to feudal life, with wages, trade, and personal freedom, gradually undermining the feudal system.' },
+      { q:'Why were guilds both beneficial and restrictive for medieval tradespeople?', opts:['They protected quality and supported members, but also prevented competition and innovation','They were entirely beneficial','They were entirely harmful','They had no real effect'], c:0, e:'Guilds provided quality control, training, and social support for members. However, they also restricted competition by limiting who could trade, fixed prices (preventing cheaper alternatives), and resisted new methods, potentially stifling innovation.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did the wool trade shape England\'s economy and international relationships in the medieval period?', opts:['Wool exports made England wealthy, created trade links with Flanders, and gave the king a major source of tax revenue','Wool had no economic importance','Only farmers benefited from wool','Wool was only traded within England'], c:0, e:'The wool trade was central to medieval England\'s economy: it made landowners and merchants wealthy, funded the Crown through export taxes, created vital trade links with Flanders and Italy, and influenced foreign policy (the king needed Flemish goodwill for trade).' },
+      { q:'What does the state of sanitation in medieval towns reveal about the limits of medieval government?', opts:['That despite charters and guilds, towns lacked the technology and organisation to manage public health effectively','That medieval towns were perfectly clean','That sanitation was not a problem','That only modern cities have health issues'], c:0, e:'Poor sanitation reveals the limits of medieval urban government: despite regulations, towns lacked sewers, clean water supplies, and effective waste removal. This shows that medieval authorities understood the problem but lacked the technology and infrastructure to solve it.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How did the decline of feudalism connect to the growth of towns and trade?', opts:['They were closely linked — towns offered freedom and wages that attracted peasants away from feudal obligations, while trade created a new merchant class','They were completely unrelated','Feudalism strengthened as towns grew','Towns appeared after feudalism ended'], c:0, e:'The growth of towns and trade was both a cause and consequence of feudalism\'s decline. Towns attracted peasants with freedom and wages, the Black Death empowered workers, and a rising merchant class challenged the old feudal hierarchy based on land ownership.' },
+      { q:'Why is it difficult for historians to know exactly what life was like in medieval towns?', opts:['Most surviving records were written by the wealthy or the Church, and ordinary townspeople left few written accounts','We have complete records of every medieval town','Historians are not interested in towns','Medieval towns were well documented by everyone'], c:0, e:'Historical evidence about medieval towns is biased towards the literate and powerful. Tax records, guild documents, and chronicles survive, but ordinary people\'s experiences are harder to reconstruct. Archaeological evidence helps but is incomplete.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-59: The Islamic Golden Age ───────────────────────────────────
+TEST_GENERATORS["island-59"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Approximately when was the Islamic Golden Age?', opts:['c.750-1258 AD','c.400-600 AD','c.1400-1600 AD','c.100-300 AD'], c:0, e:'The Islamic Golden Age lasted from approximately 750 to 1258 AD, a period of extraordinary scientific, cultural, and intellectual achievement in the Islamic world.' },
+      { q:'Which city was the main centre of learning during the Islamic Golden Age?', opts:['Baghdad','London','Rome','Athens'], c:0, e:'Baghdad, capital of the Abbasid Caliphate, was the main centre of learning. Its House of Wisdom attracted scholars from across the world.' },
+      { q:'What was the House of Wisdom?', opts:['A major centre of learning and translation in Baghdad','A type of mosque','A palace for the caliph','A market for selling books'], c:0, e:'The House of Wisdom (Bayt al-Hikma) in Baghdad was a major intellectual centre where scholars translated Greek, Persian, and Indian texts into Arabic and made their own groundbreaking discoveries.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Who was Al-Khwarizmi and what is he famous for?', opts:['A mathematician who developed algebra','A famous poet','A military leader','A religious scholar only'], c:0, e:'Al-Khwarizmi (c.780-850) was a mathematician and astronomer. He wrote the book that gave algebra its name and developed methods that are the basis of the word "algorithm".' },
+      { q:'Who was Ibn Sina (Avicenna)?', opts:['A physician who wrote the Canon of Medicine, used in Europe for centuries','A poet','A warrior','An architect'], c:0, e:'Ibn Sina (Avicenna, 980-1037) wrote the Canon of Medicine, a medical encyclopaedia that was used as a standard medical textbook in European universities for over 500 years.' },
+      { q:'What number system did Islamic scholars help spread to Europe?', opts:['Arabic numerals (0-9), including the concept of zero','Roman numerals','Chinese characters','Egyptian hieroglyphics'], c:0, e:'Islamic scholars adopted the Hindu-Arabic numeral system (0-9) from India and spread it to Europe. The concept of zero was particularly revolutionary and transformed mathematics.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What contribution did Al-Idrisi make?', opts:['He created some of the most accurate maps of the medieval world','He invented the telescope','He discovered America','He built the House of Wisdom'], c:0, e:'Al-Idrisi (1100-1165) was a geographer who created remarkably accurate world maps and wrote a comprehensive geography book, far more advanced than anything produced in medieval Europe at the time.' },
+      { q:'What did Islamic scholars contribute to the field of optics?', opts:['They made major advances in understanding how light and vision work','They invented the lightbulb','They had no interest in optics','They only studied astronomy'], c:0, e:'Islamic scholars, particularly Ibn al-Haytham (Alhazen), made major contributions to optics. He correctly explained that vision works by light entering the eye (not rays leaving it) and developed early ideas about the scientific method.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What were hospitals like in the Islamic Golden Age?', opts:['Advanced institutions with separate wards, pharmacies, and trained physicians — far ahead of Europe','They did not exist','They were the same as European hospitals','They only treated rich people'], c:0, e:'Islamic hospitals (bimaristans) were remarkably advanced. They had separate wards for different conditions, pharmacies, trained staff, and treated patients regardless of wealth or religion — far more sophisticated than anything in medieval Europe.' },
+      { q:'How did the Islamic world help preserve ancient Greek and Roman knowledge?', opts:['Scholars translated Greek and Roman texts into Arabic, preserving them when they were lost in Europe','They destroyed all Greek texts','They had no interest in Greek knowledge','Greek texts were never lost'], c:0, e:'During the Islamic Golden Age, scholars at the House of Wisdom and elsewhere translated works by Aristotle, Plato, Galen, and others into Arabic. These translations later helped reintroduce classical knowledge to Europe during the Renaissance.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What brought the Islamic Golden Age to an end?', opts:['The Mongol invasion and sack of Baghdad in 1258','A natural disaster','The Crusades alone','A plague'], c:0, e:'The Islamic Golden Age is often considered to have ended with the Mongol invasion. In 1258, the Mongols sacked Baghdad, destroying the House of Wisdom and its library, killing the caliph, and devastating the city.' },
+      { q:'In what field did the word "algebra" originate from Islamic scholarship?', opts:['Mathematics','Medicine','Geography','Astronomy'], c:0, e:'The word "algebra" comes from the Arabic word "al-jabr" in the title of Al-Khwarizmi\'s mathematical text. This field of mathematics was significantly advanced by Islamic scholars.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why was the Islamic world more advanced than medieval Europe in science and medicine during this period?', opts:['Islamic culture encouraged learning, translation of ancient texts, and scientific inquiry, while medieval Europe was more focused on religious matters','Europe was more advanced','They were equally advanced','Islamic scholars copied everything from Europe'], c:0, e:'Islamic civilisation valued knowledge-seeking (encouraged by the Quran), invested in institutions like the House of Wisdom, translated and built upon Greek, Persian, and Indian learning, and had wealthy patrons who funded scholarship — while medieval Europe was more focused on religious matters and had fewer centres of learning.' },
+      { q:'How did Islamic scholarship influence the European Renaissance?', opts:['Translated Arabic texts reintroduced classical knowledge to Europe and Islamic advances in science, mathematics, and medicine informed European thinkers','It had no influence on Europe','Europe developed independently','Islamic scholars prevented European learning'], c:0, e:'Islamic scholarship was crucial to the Renaissance. Arabic translations of Greek texts were re-translated into Latin, bringing Aristotle, Plato, and others back to Europe. Islamic advances in mathematics (algebra, algorithms), medicine, and optics directly influenced European scholars like Roger Bacon and Copernicus.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'What does the Islamic Golden Age tell us about the conditions needed for intellectual and scientific progress?', opts:['That progress requires political stability, investment in education, openness to different cultures, and willingness to build on others\' knowledge','That only one culture can be advanced at a time','That progress happens by accident','That isolation helps scientific progress'], c:0, e:'The Islamic Golden Age shows that intellectual progress flourishes when there is political stability, wealthy patrons investing in learning, openness to knowledge from different cultures (Greek, Indian, Persian), institutions dedicated to scholarship, and a culture that values inquiry.' },
+      { q:'Why might it be important for European students to learn about the Islamic Golden Age?', opts:['To understand that many ideas Europeans take for granted (algebra, algorithms, medical knowledge) originated in or were preserved by Islamic civilisation','It has no relevance to European history','Only Islamic students need to know about it','European civilisation developed independently'], c:0, e:'Learning about the Islamic Golden Age helps students understand that civilisations are interconnected. Many "European" ideas in science, mathematics, and medicine originated in or were transmitted through Islamic scholarship. Understanding this challenges Eurocentric views of history and promotes respect for diverse cultures.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How does comparing medieval Europe with the Islamic world during the same period challenge common assumptions?', opts:['It shows that while Europe was in its "Dark Ages", the Islamic world was experiencing a golden age of learning — challenging the idea that Europe was always the most advanced civilisation','Europe was always more advanced','The comparison is not valid','Both civilisations were identical'], c:0, e:'Comparing the two reveals that during Europe\'s so-called Dark Ages, the Islamic world was far more advanced in science, medicine, and learning. This challenges the Eurocentric assumption that European civilisation has always led the world and shows that different civilisations lead at different times.' },
+      { q:'To what extent was the Islamic Golden Age dependent on ideas from other civilisations?', opts:['It built heavily on Greek, Persian, and Indian knowledge but also made original contributions — showing that great civilisations build on others\' work','It was entirely original','It only copied others without adding anything','It had no contact with other civilisations'], c:0, e:'The Islamic Golden Age exemplifies how civilisations build on each other. Scholars translated and preserved Greek philosophy, adopted Indian numerals, and learned from Persian administration — but also made major original contributions in algebra, optics, and medicine. No civilisation advances in isolation.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ══════════════════════════════════════════════════════════════════════════
+// GEOGRAPHY — island-20 to island-23, island-35 to island-37, island-48 to island-52
+// ══════════════════════════════════════════════════════════════════════════
+
+// ── island-20: Map Skills & Navigation ──────────────────────────────────
+TEST_GENERATORS["island-20"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How many figures does a six-figure grid reference have?', opts:['Six','Four','Eight','Two'], c:0, e:'A six-figure grid reference has six digits — three for the easting (across) and three for the northing (up). It is more precise than a four-figure grid reference.' },
+      { q:'In a grid reference, which direction do you read first?', opts:['Along the corridor (eastings), then up the stairs (northings)','Up first, then along','Northings, then eastings','It does not matter'], c:0, e:'You always read eastings first (along the corridor) and then northings (up the stairs). Remember: "Along the corridor and up the stairs."' },
+      { q:'What is a four-figure grid reference used for?', opts:['To identify a specific grid square on a map','To pinpoint an exact location within a square','To measure the height of a hill','To show the direction of north'], c:0, e:'A four-figure grid reference identifies a specific grid square on a map (1km x 1km on a 1:25,000 map). For more precise locations, a six-figure grid reference is used.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What do contour lines on a map show?', opts:['The height and shape of the land (relief)','Rivers and lakes','Roads and paths','Town boundaries'], c:0, e:'Contour lines are brown lines on an OS map that join points of equal height above sea level. They show the shape and steepness of the land (relief).' },
+      { q:'When contour lines are close together, what does this indicate?', opts:['A steep slope','A flat area','A valley','A lake'], c:0, e:'Closely spaced contour lines indicate a steep slope because the height changes rapidly over a short horizontal distance. Widely spaced contour lines indicate a gentle slope or flat ground.' },
+      { q:'What is the scale 1:25,000 on an OS map mean?', opts:['1 cm on the map represents 25,000 cm (250 m) in real life','1 cm represents 25 km','The map is 25,000 cm wide','There are 25,000 grid squares'], c:0, e:'A scale of 1:25,000 means that 1 cm on the map represents 25,000 cm (or 250 metres) in real life. This is the scale used for OS Explorer maps, ideal for walking.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How many points are there on a standard compass used in geography?', opts:['Eight (N, NE, E, SE, S, SW, W, NW)','Four','Sixteen','Two'], c:0, e:'A standard eight-point compass includes: North, North-East, East, South-East, South, South-West, West, and North-West.' },
+      { q:'What is the OS map symbol for a church with a tower?', opts:['A square with a cross on top','A circle','A triangle','A star'], c:0, e:'On an Ordnance Survey map, a church with a tower is shown as a small square with a cross on top. A church with a spire has a different symbol (a circle with a cross).' },
+      { q:'What does a blue line on an OS map usually represent?', opts:['A river or stream','A road','A footpath','A railway'], c:0, e:'Blue lines on an Ordnance Survey map represent water features such as rivers, streams, and canals. Blue areas represent lakes, reservoirs, and the sea.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What scale are OS Landranger maps?', opts:['1:50,000','1:25,000','1:10,000','1:100,000'], c:0, e:'OS Landranger maps have a scale of 1:50,000, meaning 1 cm on the map represents 500 metres in real life. They cover larger areas than the more detailed 1:25,000 Explorer maps.' },
+      { q:'What is a cross-section in map skills?', opts:['A side view of the landscape showing its height profile along a line','A bird\'s eye view','A map of roads','A type of grid reference'], c:0, e:'A cross-section (or transect) shows the landscape from the side, as if you sliced through the terrain along a line. It is drawn using contour lines to show the height profile of the land.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What does "relief" mean in geography?', opts:['The height and shape of the land','The weather','The population of an area','The type of soil'], c:0, e:'Relief refers to the height and shape of the land surface, including features like hills, valleys, mountains, and plains. It is shown on maps using contour lines.' },
+      { q:'Which direction is always at the top of an OS map?', opts:['North','South','East','West'], c:0, e:'North is always at the top of an Ordnance Survey map. Grid lines run north-south and east-west, with grid numbers increasing towards the north and east.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why might a six-figure grid reference be more useful than a four-figure one for an emergency rescue team?', opts:['It pinpoints a location to within 100m rather than a 1km square, making rescue faster and more accurate','It is easier to remember','It looks more professional','There is no difference in accuracy'], c:0, e:'A four-figure grid reference identifies only a 1km x 1km square, while a six-figure reference narrows the location to approximately 100m x 100m. In an emergency, this much greater precision can save critical time in locating a casualty.' },
+      { q:'How can you use contour lines to identify different landforms like valleys and spurs?', opts:['V-shaped contours pointing uphill indicate a valley; V-shaped contours pointing downhill indicate a spur','Contour lines cannot show these features','Valleys have no contour lines','Spurs are shown in blue'], c:0, e:'When contour V-shapes point to higher ground, it indicates a valley (water flows down the V). When they point to lower ground, it indicates a spur (a ridge extending from higher ground). Understanding this helps you "read" the 3D landscape from a 2D map.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is understanding map scale important when planning a walk in the countryside?', opts:['It allows you to calculate real distances, estimate walking time, and plan routes accurately','Scale is not important for walking','You can estimate distances by eye','Maps are always the same size'], c:0, e:'Understanding scale is essential for route planning. On a 1:25,000 map, 4 cm = 1 km. Knowing this allows walkers to calculate distances, estimate journey times (typically 4-5 km/hour on flat ground), and plan stops, which is crucial for safety in remote areas.' },
+      { q:'What are the limitations of using a map rather than visiting a place in person?', opts:['Maps cannot show everything — they use symbols, are snapshots in time, and cannot convey sounds, smells, or atmosphere','Maps show everything perfectly','Maps are always up to date','There are no limitations'], c:0, e:'Maps are selective representations: they show some features using symbols while omitting others, become outdated as landscapes change, cannot capture the experience of a place, and require the user to interpret symbols and contour patterns — which takes skill.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How might a geographer use both a map and an aerial photograph to study an area?', opts:['A map shows precise measurements and symbols while a photograph shows the real appearance — using both gives a fuller picture','Only maps are useful','Photographs replace maps completely','They show exactly the same information'], c:0, e:'Maps and aerial photos complement each other. Maps provide precise measurements, grid references, and standardised symbols, while photos show the actual appearance of features, land use changes, and details that maps might not include. Together they provide a more complete geographical understanding.' },
+      { q:'Why do different map scales exist, and when would you choose each one?', opts:['Different scales serve different purposes: 1:25,000 for detailed walking, 1:50,000 for driving/cycling, smaller scales for regional planning','Only one scale is needed','Bigger scales are always better','Scale does not matter'], c:0, e:'Map scales are chosen based on purpose. 1:25,000 (Explorer) shows field boundaries and individual buildings — ideal for walkers. 1:50,000 (Landranger) covers more area — suitable for cycling and driving. Smaller scales show entire regions or countries for strategic planning.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-21: Weather & Climate ────────────────────────────────────────
+TEST_GENERATORS["island-21"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the difference between weather and climate?', opts:['Weather is day-to-day conditions; climate is the average weather over 30+ years','They are the same thing','Climate changes daily','Weather is measured over decades'], c:0, e:'Weather describes short-term atmospheric conditions (today\'s temperature, rainfall). Climate is the average pattern of weather conditions measured over at least 30 years for a particular region.' },
+      { q:'Which instrument measures temperature?', opts:['A thermometer','A barometer','An anemometer','A rain gauge'], c:0, e:'A thermometer measures temperature, usually in degrees Celsius (degC) in the UK. Maximum and minimum thermometers record the highest and lowest temperatures in a 24-hour period.' },
+      { q:'What does a barometer measure?', opts:['Air (atmospheric) pressure','Wind speed','Rainfall','Temperature'], c:0, e:'A barometer measures atmospheric (air) pressure, recorded in millibars (mb). High pressure usually brings dry, settled weather; low pressure usually brings wet, windy weather.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What instrument is used to measure wind speed?', opts:['An anemometer','A barometer','A thermometer','A rain gauge'], c:0, e:'An anemometer measures wind speed. It typically has cups that spin in the wind — the faster the cups spin, the higher the wind speed, measured in km/h or knots.' },
+      { q:'What does a rain gauge measure?', opts:['The amount of rainfall over a period of time','Wind direction','Cloud cover','Temperature'], c:0, e:'A rain gauge measures precipitation (rainfall). It collects rainwater over a set period, and the amount is measured in millimetres (mm). It is placed in an open area, away from buildings.' },
+      { q:'What is the prevailing wind direction in the UK?', opts:['South-westerly','North-easterly','Easterly','Northerly'], c:0, e:'The UK\'s prevailing (most common) wind direction is south-westerly. These winds travel across the Atlantic Ocean, picking up moisture and bringing the mild, wet weather typical of the UK.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the North Atlantic Drift?', opts:['A warm ocean current that keeps the UK mild for its latitude','A cold wind from the north','A type of rainfall','A weather instrument'], c:0, e:'The North Atlantic Drift is a warm ocean current that flows from the Gulf of Mexico across the Atlantic to the UK. It keeps the UK significantly warmer than other places at the same latitude, like Labrador in Canada.' },
+      { q:'What type of climate does the UK have?', opts:['A temperate maritime climate — mild, wet, and changeable','A tropical climate','A continental climate','An arid climate'], c:0, e:'The UK has a temperate maritime climate. "Temperate" means mild (no extreme heat or cold). "Maritime" means influenced by the sea, bringing mild temperatures and frequent rainfall throughout the year.' },
+      { q:'What are the three main types of rainfall?', opts:['Relief (orographic), convectional, and frontal','Rain, snow, and hail','Light, moderate, and heavy','Morning, afternoon, and evening'], c:0, e:'The three main types of rainfall are: relief (orographic) — caused by air rising over mountains; convectional — caused by the sun heating the ground; and frontal — caused by warm and cold air masses meeting.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is an air mass?', opts:['A large body of air with similar temperature and moisture characteristics','A type of cloud','A wind instrument','A measurement of air pollution'], c:0, e:'An air mass is a large body of air that has roughly uniform temperature and humidity throughout. The UK is affected by five main air masses from different directions, each bringing different weather.' },
+      { q:'Name the three main cloud types.', opts:['Cumulus, stratus, and cirrus','Rain, snow, and fog','High, medium, and low','White, grey, and black'], c:0, e:'The three main cloud types are: cumulus (fluffy, heaped clouds), stratus (flat, layered clouds that can bring drizzle), and cirrus (high, wispy, ice-crystal clouds that indicate fair weather).' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Why does the west of the UK receive more rainfall than the east?', opts:['Prevailing south-westerly winds bring moist air that rises over western mountains, causing relief rainfall','The east has more clouds','Western rivers produce rain','Eastern winds block the rain'], c:0, e:'The prevailing south-westerly winds carry moist air from the Atlantic. When this air hits the mountains of Wales, the Lake District, and Scotland, it is forced upward, cools, and condenses to form rain. The east is in a "rain shadow" and receives less.' },
+      { q:'What type of weather does high atmospheric pressure usually bring to the UK?', opts:['Dry, settled, and clear weather','Wet and windy weather','Thunderstorms','Fog only'], c:0, e:'High pressure (an anticyclone) usually brings dry, settled weather. In summer this means hot, sunny days; in winter it can bring cold, clear, frosty weather. Air sinks in high-pressure systems, preventing cloud formation.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How does the UK\'s latitude and position between the Atlantic Ocean and the European continent affect its weather?', opts:['It creates changeable weather because the UK lies where warm maritime air from the Atlantic meets cold continental air from Europe','It makes the weather always the same','It only affects wind speed','The UK is not affected by the Atlantic'], c:0, e:'The UK sits at the boundary between warm, moist Atlantic air masses and cold, dry continental air masses. This position means weather fronts frequently pass over the UK, creating the characteristically changeable weather — rain one day, sunshine the next.' },
+      { q:'Why might climate data collected at a weather station in central London differ from a rural station in Norfolk at the same latitude?', opts:['The urban heat island effect makes cities warmer, and buildings affect wind patterns and rainfall','There would be no difference','Rural areas are always warmer','London has more rain because it has more people'], c:0, e:'Cities like London experience the urban heat island effect: buildings and roads absorb and re-radiate heat, raising temperatures 1-3 degC above surrounding countryside. Buildings also create wind tunnels and can affect local rainfall patterns through convection and air pollution.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How might climate change affect the UK\'s weather patterns in the future?', opts:['Predictions include hotter, drier summers, warmer, wetter winters, more extreme weather events, and rising sea levels','The UK\'s weather will stay exactly the same','Climate change only affects tropical countries','Winters will get much colder'], c:0, e:'Climate scientists predict that the UK will experience hotter, drier summers, warmer, wetter winters, more frequent extreme weather events (flooding, heatwaves), and rising sea levels threatening coastal areas. These changes pose significant challenges for agriculture, infrastructure, and public health.' },
+      { q:'Why is it important to collect weather data over at least 30 years before making claims about climate?', opts:['Short-term data can be misleading — one hot summer does not prove climate change, and long-term patterns show genuine trends','30 years is just a tradition','One year of data is enough','Climate never changes so data is unnecessary'], c:0, e:'Weather varies naturally from year to year. Collecting data over 30+ years allows scientists to identify genuine long-term trends rather than being misled by short-term variation. This is why one cold winter does not disprove global warming — climate is about long-term averages.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Explain why the west coast of Scotland receives over 3000mm of rain per year while parts of East Anglia receive less than 600mm.', opts:['Prevailing winds bring moist air that rises over western mountains (relief rainfall), but by the time it reaches the east, the air is much drier (rain shadow effect)','East Anglia has no clouds','Scotland is closer to the sea','The east has more mountains'], c:0, e:'Moist south-westerly winds from the Atlantic hit the Scottish Highlands, are forced to rise (orographic uplift), cool, condense, and produce heavy relief rainfall. As the air descends on the eastern side, it warms and dries, creating a rain shadow. East Anglia sits in this rain shadow.' },
+      { q:'How do weather forecasts and climate data serve different purposes?', opts:['Weather forecasts help short-term decisions (what to wear today); climate data helps long-term planning (flood defences, building design)','They serve the same purpose','Only weather forecasts are useful','Climate data is never used for planning'], c:0, e:'Weather forecasts are short-term (hours/days) and help daily decisions. Climate data shows long-term patterns and is used for infrastructure planning (building flood defences), agriculture (choosing crops), urban planning (managing heat), and understanding environmental change.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-22: Rivers & Landscapes ──────────────────────────────────────
+TEST_GENERATORS["island-22"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are the four types of river erosion?', opts:['Hydraulic action, abrasion, attrition, and solution','Flooding, drought, erosion, and deposition','Meander, oxbow, delta, and flood','Upper, middle, lower, and mouth'], c:0, e:'The four types of river erosion are: hydraulic action (force of water), abrasion (rocks scraping the bed/banks), attrition (rocks hitting each other and getting smaller), and solution (rock dissolving in acidic water).' },
+      { q:'What is hydraulic action?', opts:['The force of water hitting the river banks and bed, breaking them apart','Rocks scraping the river bed','Rocks hitting each other','Rock dissolving in water'], c:0, e:'Hydraulic action is the sheer force of water hitting against the river banks and bed. The pressure of the water forces air into cracks in the rock, gradually breaking it apart.' },
+      { q:'What is abrasion in river erosion?', opts:['Rocks and sediment carried by the river scraping against the bed and banks','The force of water alone','Rocks bumping into each other','Chemicals dissolving rock'], c:0, e:'Abrasion (also called corrasion) occurs when rocks and sediment carried by the river scrape against the bed and banks like sandpaper, wearing them away.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is a meander?', opts:['A bend or curve in a river','A waterfall','A type of lake','A straight section of river'], c:0, e:'A meander is a bend or curve in a river, typically found in the middle and lower course. The water flows faster on the outside of the bend (eroding it) and slower on the inside (depositing sediment).' },
+      { q:'How does an oxbow lake form?', opts:['A meander gets cut off from the main river when the neck of the bend is eroded through','A lake forms behind a dam','Rain collects in a hollow','A river floods permanently'], c:0, e:'An oxbow lake forms when erosion narrows the neck of a meander until the river breaks through, taking a shorter, straighter path. The old meander loop is cut off and becomes a horseshoe-shaped oxbow lake.' },
+      { q:'What is deposition in a river?', opts:['When a river drops the sediment it is carrying','When a river picks up new rocks','When water evaporates','When a river floods'], c:0, e:'Deposition occurs when a river loses energy (e.g., when it slows down) and can no longer carry its load of sediment. It drops (deposits) the material, building up features like floodplains and deltas.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What shape is a valley in the upper course of a river?', opts:['V-shaped','U-shaped','Flat','Circular'], c:0, e:'In the upper course, the river cuts downward through vertical erosion, creating a steep-sided V-shaped valley. The valley sides are weathered and eroded, contributing to the V-shape.' },
+      { q:'How does a waterfall form?', opts:['When a river flows over a band of hard rock above softer rock, the soft rock erodes faster, creating a step','When it rains very heavily','When a dam is built','When the river reaches the sea'], c:0, e:'A waterfall forms where a river flows over a layer of hard rock above softer rock. The softer rock erodes faster (by hydraulic action and abrasion), undercutting the hard rock and creating an overhang that eventually collapses.' },
+      { q:'What is a floodplain?', opts:['The flat area of land on either side of a river that floods when the river overflows','A type of mountain','The source of a river','A deep river channel'], c:0, e:'A floodplain is the wide, flat area of land on either side of a river in its lower course. It is formed by repeated flooding, which deposits layers of fertile sediment (alluvium) across the plain.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are the three courses of a river?', opts:['Upper course, middle course, and lower course','Beginning, middle, and end','Fast, medium, and slow','Mountain, valley, and plain'], c:0, e:'A river has three courses: the upper course (near the source, steep gradient, V-shaped valley), the middle course (meanders begin, wider valley), and the lower course (near the mouth, wide floodplain, slow-flowing).' },
+      { q:'What is attrition?', opts:['When rocks carried by the river bump into each other and break into smaller, rounder pieces','The force of water on banks','Rocks scraping the river bed','Rock dissolving in water'], c:0, e:'Attrition occurs when rocks and pebbles carried by the river collide with each other. Over time, they break into smaller, smoother, rounder pieces. This is why pebbles near the sea tend to be smooth and round.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are the four types of river transportation?', opts:['Traction, saltation, suspension, and solution','Carrying, pushing, floating, and sinking','Fast, slow, medium, and stopped','Erosion, deposition, flooding, and drying'], c:0, e:'Rivers transport material in four ways: traction (large rocks rolling along the bed), saltation (pebbles bouncing along the bed), suspension (fine particles carried in the water), and solution (dissolved minerals carried invisibly).' },
+      { q:'What is the source of a river?', opts:['The place where a river begins, usually in hills or mountains','Where a river meets the sea','The widest part of a river','A lake in the middle of a river'], c:0, e:'The source is where a river begins. It is usually found in upland areas (hills or mountains) and may be a spring, marsh, or area of rainfall/snowmelt.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why does a river\'s velocity vary across a meander cross-section?', opts:['Water flows fastest on the outside of the bend (deeper, less friction) and slowest on the inside (shallower, more friction)','Water flows at the same speed everywhere','The inside is always faster','Velocity does not change in meanders'], c:0, e:'In a meander, centrifugal force pushes water towards the outer bank, making it deeper with faster flow (causing erosion into a river cliff). The inner bank has shallower, slower water, causing deposition and forming a slip-off slope (point bar).' },
+      { q:'How might building on a floodplain increase the risk of flooding?', opts:['Impermeable surfaces (concrete, tarmac) prevent rainwater soaking into the ground, increasing surface runoff into the river','Building reduces flood risk','Concrete absorbs water','Buildings block the rain'], c:0, e:'Building on floodplains replaces permeable soil with impermeable concrete and tarmac. Rainwater cannot infiltrate the ground, so it runs off the surface directly into rivers much faster, increasing peak discharge and flood risk. Urbanisation also removes vegetation that would intercept rainfall.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Compare hard engineering and soft engineering approaches to flood management. Why might soft engineering be more sustainable?', opts:['Hard engineering (dams, walls) is expensive and disrupts nature; soft engineering (flood warnings, afforestation) works with nature and is cheaper long-term','Hard engineering is always better','Soft engineering does not work','There is no difference'], c:0, e:'Hard engineering (flood walls, dams, channel straightening) is expensive, disrupts ecosystems, and may move the flood problem downstream. Soft engineering (planting trees, flood warnings, wetland restoration) works with natural processes, is cheaper, and provides additional environmental benefits — making it more sustainable.' },
+      { q:'Why does the character of a river change from source to mouth?', opts:['Gradient decreases, volume increases, and energy shifts from vertical erosion to lateral erosion and deposition','The river stays the same throughout','Only the depth changes','Rivers get smaller towards the mouth'], c:0, e:'From source to mouth: gradient decreases (the land flattens), tributaries add water (volume increases), the channel gets wider and deeper, velocity generally increases despite appearances, and the dominant process shifts from erosion (upper course) to deposition (lower course).' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How can studying river processes help in planning for climate change?', opts:['Understanding erosion, flooding patterns, and river behaviour helps plan for increased rainfall, more extreme floods, and changing landscapes','River processes will not change with climate change','Climate change only affects oceans','Studying rivers is not useful for climate planning'], c:0, e:'Climate change is predicted to bring more intense rainfall events, increasing flood risk and erosion. Understanding river processes helps planners design better flood defences, manage drainage, protect vulnerable communities, and make informed decisions about where and how to build.' },
+      { q:'Explain why a waterfall gradually retreats upstream over time.', opts:['The plunge pool undercuts the hard rock overhang, which collapses, moving the waterfall position upstream and creating a gorge','Waterfalls move downstream','They stay in the same place forever','The river pushes the waterfall back'], c:0, e:'Water erodes the soft rock beneath the hard cap rock through hydraulic action and abrasion. This creates an overhang of hard rock and a deep plunge pool. Eventually the unsupported overhang collapses, and the process repeats, causing the waterfall to retreat upstream, leaving a steep gorge behind.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-23: Population & Settlement ──────────────────────────────────
+TEST_GENERATORS["island-23"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the formula for population density?', opts:['Total population divided by total area','Total area divided by total population','Birth rate minus death rate','Number of houses times average family size'], c:0, e:'Population density = total population / total area (usually in people per km squared). It tells you how crowded an area is. For example, England has a much higher population density than Scotland.' },
+      { q:'What is urbanisation?', opts:['The growth of towns and cities as people move from rural to urban areas','People moving from cities to the countryside','Building more farms','Destroying forests'], c:0, e:'Urbanisation is the process by which an increasing proportion of a country\'s population lives in towns and cities rather than in the countryside. It is driven by rural-to-urban migration.' },
+      { q:'What are push factors in migration?', opts:['Reasons that make people want to leave a place (e.g., poverty, lack of jobs, natural disasters)','Reasons that attract people to a new place','Factors that prevent migration','Types of transport'], c:0, e:'Push factors are negative conditions that push people away from where they live, such as poverty, unemployment, war, natural disasters, lack of services, or poor farming land.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are pull factors in migration?', opts:['Reasons that attract people to a new place (e.g., jobs, better services, safety)','Reasons people leave a place','Factors that stop people moving','Things that push people away'], c:0, e:'Pull factors are positive conditions that attract people to a new destination, such as job opportunities, higher wages, better healthcare and education, safety, and a better quality of life.' },
+      { q:'What is a settlement hierarchy?', opts:['A ranking of settlements by size and services, from hamlet to city','A list of the oldest towns','A map of all settlements','A type of government'], c:0, e:'A settlement hierarchy ranks settlements by size and the range of services they offer: hamlet (smallest), village, town, city, conurbation (largest). Larger settlements have more services and a bigger sphere of influence.' },
+      { q:'What is a census?', opts:['An official count of a country\'s population, usually done every 10 years','A type of map','A weather measurement','A farming method'], c:0, e:'A census is an official survey that counts every person in a country and collects data about age, occupation, housing, and ethnicity. In the UK, a census has been conducted every 10 years since 1801 (except 1941).' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Which factors affect where settlements are located?', opts:['Water supply, flat land, defence, fertile soil, transport links, and resources','Only weather','Only population size','Only the views'], c:0, e:'Settlements historically developed where there was a reliable water supply, flat land for building, good defence positions, fertile soil for farming, natural resources, and good communication/transport links.' },
+      { q:'What is rural-to-urban migration?', opts:['The movement of people from the countryside to towns and cities','People moving from cities to farms','International migration','Moving between two cities'], c:0, e:'Rural-to-urban migration is when people move from the countryside (rural areas) to towns and cities (urban areas), usually seeking better jobs, education, healthcare, and opportunities. This is the main driver of urbanisation.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the difference between a village and a town in the settlement hierarchy?', opts:['A town is larger with more services (shops, schools, doctors); a village is smaller with fewer services','They are the same size','Villages are always bigger','Towns have fewer people'], c:0, e:'In the settlement hierarchy, a town is larger than a village and offers more services such as secondary schools, supermarkets, hospitals, and leisure facilities. A village is smaller with basic services like a primary school and perhaps a shop or pub.' },
+      { q:'What is meant by "population distribution"?', opts:['How people are spread out across an area — where they live and in what concentrations','The total number of people in a country','How quickly the population is growing','The age of the population'], c:0, e:'Population distribution describes how people are spread across a geographical area. It shows where people are concentrated (densely populated areas) and where few people live (sparsely populated areas).' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Why do some areas have high population density while others have low population density?', opts:['Factors like climate, relief, resources, jobs, and transport links make some places more attractive to live','Population density is random','All areas have the same density','Only rich areas have high density'], c:0, e:'Population density is influenced by physical factors (flat land, mild climate, fertile soil, water supply) and human factors (jobs, transport, services, history). London is densely populated because of jobs and services; the Scottish Highlands are sparse because of rugged terrain and limited employment.' },
+      { q:'What is a conurbation?', opts:['A large urban area formed when several towns and cities merge together','A single small village','A type of farm','A rural area'], c:0, e:'A conurbation is a very large urban area formed when neighbouring towns and cities expand and merge together. Examples include Greater Manchester, the West Midlands (Birmingham area), and Greater London.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is urbanisation happening fastest in developing countries?', opts:['Rapid industrialisation creates urban jobs while rural poverty and lack of services push people to cities','Developing countries have fewer cities','People prefer rural areas in developing countries','Urbanisation only happens in rich countries'], c:0, e:'Developing countries are experiencing rapid urbanisation because industrialisation creates manufacturing and service jobs in cities (pull), while rural poverty, lack of education and healthcare, and mechanisation of farming (push) drive people to migrate. This mirrors what happened in Europe during the Industrial Revolution.' },
+      { q:'What problems can rapid urbanisation cause in developing countries?', opts:['Overcrowding, slum growth, inadequate sanitation, traffic congestion, pollution, and strain on services','No problems at all','Only positive effects','Problems only in the countryside'], c:0, e:'Rapid urbanisation can overwhelm cities: housing shortages lead to slum growth, sanitation and clean water infrastructure cannot keep up, traffic congestion worsens, air and water pollution increases, and services like schools and hospitals become overcrowded.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How might the factors that influence settlement location have changed from medieval times to today?', opts:['Defence and water supply mattered most historically; today transport links, services, and employment are more important','The same factors apply now as in medieval times','Location does not matter anymore','Only climate matters today'], c:0, e:'Medieval settlements prioritised defence (hilltops, river bends), water supply, and fertile farmland. Modern settlements grow based on transport links (motorways, railways), employment opportunities, services (schools, hospitals), and quality of life. Piped water means rivers are less critical for water supply.' },
+      { q:'Why might population density data alone give a misleading picture of how people actually live in an area?', opts:['It gives an average that hides variation — a region might have one dense city and vast empty areas, but the average looks moderate','Population density is always accurate','Averages never mislead','Only total population matters'], c:0, e:'Population density is an average that can mask enormous local variations. A county might have a moderate overall density but contain one crowded city and large empty rural areas. Data at different scales (national, regional, local) can tell very different stories about population distribution.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Evaluate whether urbanisation is mainly positive or negative for a country\'s development.', opts:['It is both — cities drive economic growth and innovation, but rapid urbanisation can cause environmental damage, inequality, and health problems','It is entirely positive','It is entirely negative','It has no effect on development'], c:0, e:'Urbanisation has both benefits (concentrated economic activity, innovation, efficient services, cultural diversity) and costs (pollution, congestion, housing shortages, loss of farmland, inequality). Whether it is mainly positive or negative depends on how well it is managed and planned.' },
+      { q:'Why is the concept of "counter-urbanisation" important in understanding UK population changes?', opts:['It explains why some people are leaving cities for the countryside, reversing the traditional pattern of rural-to-urban migration','Counter-urbanisation does not happen in the UK','Everyone wants to live in cities','Only retired people leave cities'], c:0, e:'Counter-urbanisation — people moving from cities to rural areas — is significant in the UK because improved transport and remote working allow people to seek cheaper housing and a better quality of life in the countryside while still working, changing the character of rural villages and commuter towns.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-35: Biomes & Climate Zones ───────────────────────────────────
+TEST_GENERATORS["island-35"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is a biome?', opts:['A large-scale ecosystem defined by its climate, vegetation, and animal life','A type of weather','A continent','A type of soil'], c:0, e:'A biome is a large-scale ecosystem or community of plants and animals that occupies a major habitat, defined primarily by its climate. Examples include tropical rainforest, hot desert, tundra, and grassland.' },
+      { q:'Where are tropical rainforests mainly found?', opts:['Near the Equator between the Tropics of Cancer and Capricorn','Near the North Pole','In deserts','Only in South America'], c:0, e:'Tropical rainforests are found near the Equator (between roughly 23.5 degrees N and 23.5 degrees S) where temperatures are high and rainfall is heavy year-round. Major areas include the Amazon, Congo Basin, and Southeast Asia.' },
+      { q:'What is the main characteristic of a hot desert biome?', opts:['Very low rainfall (under 250mm per year) and extreme temperatures','Heavy rainfall all year','Cold temperatures','Thick forests'], c:0, e:'Hot deserts receive very little rainfall (typically under 250mm per year), have extreme temperature ranges (very hot days, cold nights), and sparse vegetation adapted to drought conditions.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the tundra biome?', opts:['A cold, treeless biome found near the Arctic with permafrost and low-growing plants','A hot, dry desert','A tropical forest','A grassland in Africa'], c:0, e:'The tundra is a cold biome found in Arctic regions. It has permafrost (permanently frozen ground), very low temperatures, short growing seasons, and vegetation limited to mosses, lichens, and low shrubs.' },
+      { q:'What is the difference between deciduous and coniferous forests?', opts:['Deciduous trees lose their leaves in autumn; coniferous trees are evergreen with needle-like leaves','They are identical','Deciduous trees are always taller','Coniferous trees lose their leaves'], c:0, e:'Deciduous forests contain broadleaf trees (oak, beech, birch) that drop their leaves in autumn to conserve water in winter. Coniferous forests (taiga) contain evergreen trees (pine, spruce, fir) with needle-like leaves adapted to cold climates.' },
+      { q:'What is a grassland biome?', opts:['A biome dominated by grasses with few trees, found in areas with moderate rainfall','A forest biome','A desert biome','A coastal biome'], c:0, e:'Grassland biomes are dominated by grasses rather than trees, found in areas with moderate rainfall that is too low to support forests but enough to prevent desert. Examples include the African savanna and North American prairies.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How do cacti adapt to survive in hot desert conditions?', opts:['They store water in thick stems, have spines instead of leaves to reduce water loss, and have long roots','They need lots of rain','They have large leaves','They grow very tall to reach rain clouds'], c:0, e:'Cacti have several adaptations for desert survival: thick fleshy stems store water, spines (instead of leaves) reduce water loss from transpiration, wide shallow roots collect surface water quickly, and waxy coatings reduce evaporation.' },
+      { q:'How does latitude affect which biome is found in an area?', opts:['Areas near the Equator (low latitude) are hot with rainforests; areas near the poles (high latitude) are cold with tundra','Latitude has no effect on biomes','The poles are the hottest','The Equator is the coldest'], c:0, e:'Latitude determines how much solar energy an area receives. Near the Equator (0 degrees), intense sunlight creates hot conditions for rainforests. As latitude increases towards the poles, temperatures decrease, creating different biomes: grasslands, deciduous forests, coniferous forests, and finally tundra.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are the main causes of tropical deforestation?', opts:['Logging, cattle ranching, farming, mining, and road building','Tsunamis','Volcanic eruptions','Too much rainfall'], c:0, e:'Tropical deforestation is caused mainly by human activities: commercial logging for timber, clearing land for cattle ranching and soya farming, subsistence farming, mining for minerals, and building roads and settlements.' },
+      { q:'Name one effect of tropical deforestation.', opts:['Loss of biodiversity, increased carbon dioxide, soil erosion, and disrupted water cycles','More animals','Cooler temperatures','Increased rainfall'], c:0, e:'Deforestation has many negative effects: loss of biodiversity (species extinction), increased atmospheric CO2 (trees no longer absorb it), soil erosion (tree roots no longer hold soil), disrupted water cycles, and loss of indigenous peoples\' homes.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How are animals in the tundra adapted to survive extreme cold?', opts:['Thick fur or blubber for insulation, white camouflage in winter, and hibernation or migration','They are not adapted','They live underground permanently','They only eat fish'], c:0, e:'Tundra animals have adaptations including: thick fur/blubber (polar bears, Arctic foxes) for insulation, white winter coats for camouflage, migration (caribou) to find food, hibernation, and compact body shapes to reduce heat loss.' },
+      { q:'What is the main biome found in the UK?', opts:['Temperate deciduous forest','Tropical rainforest','Hot desert','Tundra'], c:0, e:'The UK\'s natural biome is temperate deciduous forest. The mild, wet climate supports broadleaf trees like oak, beech, and ash, though much of the original forest has been cleared for farming and settlement.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why are tropical rainforests sometimes called "the lungs of the Earth", and is this description accurate?', opts:['They absorb CO2 and release O2, but "lungs" is misleading since they also consume O2 and their main climate role is as a carbon store','It is completely accurate','Rainforests produce no oxygen','They are called lungs because of their shape'], c:0, e:'Rainforests absorb vast amounts of CO2 through photosynthesis and release oxygen, earning the "lungs" label. However, this is an oversimplification: mature rainforests consume almost as much O2 through respiration as they produce. Their main climate value is as a carbon store — when destroyed, that stored carbon is released.' },
+      { q:'Why is it difficult to solve the problem of tropical deforestation?', opts:['Economic pressures (poverty, demand for resources, national development) conflict with environmental protection','It is easy to solve','Nobody wants to stop it','Only governments can help'], c:0, e:'Deforestation is driven by powerful economic forces: farmers need land for food, governments want development, companies profit from logging and mining, and global demand for beef, soya, and palm oil creates market incentives. Balancing these economic needs with environmental protection requires complex international cooperation.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How do human activities threaten the balance of biomes worldwide?', opts:['Through deforestation, climate change, pollution, and overgrazing, which alter habitats faster than species can adapt','Human activities have no effect on biomes','Biomes cannot be changed','Only natural events affect biomes'], c:0, e:'Human activities are disrupting biomes globally: deforestation destroys habitats, climate change shifts temperature and rainfall patterns faster than species can migrate or adapt, pollution degrades ecosystems, and overgrazing turns grasslands into deserts (desertification). These interconnected threats require global action.' },
+      { q:'Compare the strategies needed to sustainably manage a tropical rainforest versus a hot desert. Why do they differ?', opts:['Rainforests need protection from exploitation while deserts need careful water management — different resources face different threats','The same strategy works for both','Neither needs management','Only deserts need management'], c:0, e:'Rainforest management focuses on preventing deforestation (selective logging, national parks, ecotourism) because the main threat is resource extraction. Desert management focuses on preventing desertification and conserving water because scarcity and overuse are the main threats. Different environments require different sustainable approaches.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'To what extent is climate change the biggest threat to global biomes?', opts:['Climate change is a major threat but interacts with other pressures like deforestation and pollution — the combination of threats is most dangerous','Climate change is the only threat','Climate change has no effect on biomes','Only pollution matters'], c:0, e:'Climate change is a serious threat (shifting temperature zones, sea level rise, extreme weather), but it interacts with and amplifies other threats. Deforestation accelerates climate change while climate change stresses remaining forests. The combined effect of multiple pressures — not any single one — is the greatest danger to global biomes.' },
+      { q:'Why should people in the UK care about the destruction of tropical rainforests thousands of miles away?', opts:['Because rainforest destruction affects global climate, biodiversity, and medicine — and UK consumption drives some deforestation','It has no effect on the UK','Only tropical countries should care','The UK has no connection to rainforests'], c:0, e:'UK citizens should care because: rainforest destruction accelerates global climate change affecting everyone, many medicines come from rainforest species, biodiversity loss impoverishes the whole planet, and UK demand for products like soya, palm oil, and beef drives some deforestation — making it a shared responsibility.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-36: Restless Earth & Tectonics ───────────────────────────────
+TEST_GENERATORS["island-36"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are tectonic plates?', opts:['Large pieces of the Earth\'s crust that float on the mantle and move slowly','Types of rocks','Layers of the atmosphere','Underground rivers'], c:0, e:'Tectonic plates are large rigid sections of the Earth\'s crust (lithosphere) that float on the semi-molten mantle below. They move very slowly (a few centimetres per year) due to convection currents in the mantle.' },
+      { q:'What causes tectonic plates to move?', opts:['Convection currents in the mantle driven by heat from the Earth\'s core','Wind on the surface','Ocean waves','The Moon\'s gravity'], c:0, e:'Convection currents in the mantle cause plate movement. Heat from the Earth\'s core causes the semi-molten rock in the mantle to rise, spread sideways, cool, and sink, creating circular currents that drag the plates along.' },
+      { q:'What happens at a constructive (divergent) plate boundary?', opts:['Two plates move apart and new crust is formed from rising magma','Two plates collide','Two plates slide past each other','Plates do not move'], c:0, e:'At a constructive boundary, two tectonic plates move apart. Magma rises from the mantle to fill the gap, creating new crust. This can form mid-ocean ridges (like the Mid-Atlantic Ridge) and volcanic activity.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What happens at a destructive (convergent) plate boundary?', opts:['Two plates move towards each other; one is forced under the other (subduction)','Two plates move apart','Plates slide past each other','New crust is created'], c:0, e:'At a destructive boundary, two plates collide. The denser oceanic plate is forced under the lighter continental plate (subduction). The subducting plate melts, creating magma that can erupt as volcanoes. Earthquakes are common.' },
+      { q:'What happens at a conservative (transform) plate boundary?', opts:['Two plates slide past each other, causing earthquakes but no volcanic activity','Plates move apart','Plates collide','New crust is formed'], c:0, e:'At a conservative boundary, two plates slide past each other in opposite directions or at different speeds. Friction builds up and is released as earthquakes. No crust is created or destroyed, so there is no volcanic activity.' },
+      { q:'What is an earthquake?', opts:['A sudden shaking of the ground caused by the release of energy along a fault line','A volcanic eruption','A type of storm','A flood'], c:0, e:'An earthquake is a sudden violent shaking of the ground caused by the release of stored energy when tectonic plates move. The energy is released as seismic waves that travel through the Earth.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the Richter scale?', opts:['A scale used to measure the magnitude (energy released) of an earthquake','A scale for measuring volcano height','A type of thermometer','A scale for wind speed'], c:0, e:'The Richter scale measures the magnitude (amount of energy released) by an earthquake. It is logarithmic, meaning each whole number increase represents roughly 32 times more energy. A magnitude 7 earthquake releases far more energy than a magnitude 6.' },
+      { q:'What is the difference between the focus and epicentre of an earthquake?', opts:['The focus is the point underground where the earthquake starts; the epicentre is the point on the surface directly above it','They are the same thing','The epicentre is underground','The focus is on the surface'], c:0, e:'The focus is the point underground where the earthquake originates (where rocks first fracture). The epicentre is the point on the Earth\'s surface directly above the focus. Damage is usually greatest at the epicentre.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Why do volcanoes and earthquakes often occur at plate boundaries?', opts:['Because the forces of plates moving cause pressure, friction, and magma movement at their edges','They happen randomly across the Earth','Only on islands','Only in Europe'], c:0, e:'Most volcanic and earthquake activity occurs at plate boundaries because this is where the forces of plate movement are greatest. Collisions, separations, and friction between plates create the conditions for earthquakes and volcanic eruptions.' },
+      { q:'What is a volcano?', opts:['An opening in the Earth\'s crust where magma, gas, and ash escape from below','A type of mountain with snow','A deep valley','An underground lake'], c:0, e:'A volcano is an opening (vent) in the Earth\'s crust through which magma (molten rock), volcanic ash, and gases erupt from the magma chamber below. When magma reaches the surface, it is called lava.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How can people prepare for earthquakes?', opts:['Earthquake-resistant buildings, emergency kits, education, and evacuation drills','There is no way to prepare','Only by building underground','By moving to another country'], c:0, e:'Preparation includes: constructing earthquake-resistant buildings (flexible frames, deep foundations), preparing emergency kits (water, food, first aid), educating people about what to do during an earthquake, conducting regular drills, and having emergency response plans.' },
+      { q:'Can scientists accurately predict when an earthquake will happen?', opts:['No — scientists can identify high-risk areas but cannot predict exactly when an earthquake will occur','Yes, they can predict the exact time','They can predict within one hour','Earthquakes follow a regular pattern'], c:0, e:'Despite advances in seismology, scientists cannot accurately predict the exact time, location, and magnitude of earthquakes. They can identify areas at high risk (near plate boundaries) and monitor warning signs, but precise prediction remains impossible.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why do people continue to live in areas at high risk from earthquakes and volcanoes?', opts:['Fertile volcanic soil, geothermal energy, jobs, cultural ties, and lack of alternatives often outweigh the risks','People do not know about the risks','There are no risks in these areas','Governments force them to stay'], c:0, e:'People live near volcanoes and fault lines for many reasons: volcanic soil is extremely fertile for farming, geothermal energy provides cheap power, jobs and community ties bind people to an area, poverty limits options to move, and major events may be rare — so the daily benefits outweigh the occasional risks.' },
+      { q:'Why do earthquakes of similar magnitude cause more deaths in developing countries than in developed countries?', opts:['Poorer building standards, less emergency preparedness, weaker infrastructure, and limited healthcare increase vulnerability','The earthquakes are stronger in poor countries','Developing countries have more earthquakes','There is no difference'], c:0, e:'Developing countries suffer more because buildings are often not earthquake-resistant, emergency services are less well-equipped, infrastructure (roads, hospitals) is weaker, early warning systems may not exist, and poverty means less preparedness. Development level is a key factor in earthquake vulnerability.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How does plate tectonics theory explain the distribution of volcanoes and earthquakes around the world?', opts:['They concentrate along plate boundaries in predictable patterns, like the Pacific Ring of Fire, because that is where plates interact','They are randomly distributed','They only occur on continents','Plate tectonics does not explain their distribution'], c:0, e:'Plate tectonics explains why volcanic and earthquake activity is concentrated along plate boundaries. The Pacific Ring of Fire follows destructive boundaries around the Pacific plate. The Mid-Atlantic Ridge follows a constructive boundary. This predictable pattern directly results from plate interactions.' },
+      { q:'Evaluate the benefits and risks of living near an active volcano.', opts:['Benefits include fertile soil, geothermal energy, tourism, and minerals; risks include eruptions, lahars, ash clouds, and pyroclastic flows','There are only risks','There are only benefits','Volcanoes have no impact on nearby communities'], c:0, e:'Living near volcanoes offers genuine benefits: highly fertile soil for agriculture, geothermal energy, tourist income, and mineral resources. However, risks include destructive eruptions, pyroclastic flows, lahars (mudflows), ashfall damaging crops and health, and the unpredictability of volcanic activity. The balance depends on the specific volcano and community preparedness.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is the theory of plate tectonics now widely accepted even though it was rejected when first proposed?', opts:['New evidence from sea-floor spreading, fossil distribution, and GPS measurements eventually proved the theory correct','Scientists never changed their minds','It was accepted immediately','There is still no evidence for it'], c:0, e:'When Alfred Wegener proposed continental drift in 1912, it was rejected because he could not explain how continents moved. Later discoveries — sea-floor spreading, magnetic striping on the ocean floor, matching fossils across continents, and GPS measurements of plate movement — provided the evidence needed, and the theory was accepted by the 1960s.' },
+      { q:'Compare the effectiveness of earthquake prediction versus earthquake preparation. Which saves more lives?', opts:['Preparation saves far more lives because prediction remains unreliable, while earthquake-resistant buildings and emergency plans have proven effective','Prediction is more effective','Neither saves lives','They are equally effective'], c:0, e:'Earthquake prediction remains unreliable — no scientist can say exactly when and where a quake will strike. In contrast, preparation — earthquake-resistant buildings, early warning systems, emergency drills, and public education — has been proven to save thousands of lives. Japan\'s extensive preparation, for example, greatly reduces casualties.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-37: Africa: Development & Diversity ──────────────────────────
+TEST_GENERATORS["island-37"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How many countries are there in Africa?', opts:['54','30','75','100'], c:0, e:'Africa has 54 recognised countries, making it the continent with the second-highest number of countries after Asia. It is the second-largest continent by both area and population.' },
+      { q:'What does HDI stand for?', opts:['Human Development Index','High Development Indicator','Housing and Development Index','Health Data Information'], c:0, e:'HDI stands for Human Development Index. It measures a country\'s development using three factors: life expectancy, education (years of schooling), and income per person (GNI per capita).' },
+      { q:'What does GDP stand for?', opts:['Gross Domestic Product','General Development Programme','Global Data Percentage','Growth and Development Plan'], c:0, e:'GDP stands for Gross Domestic Product. It is the total value of all goods and services produced in a country in one year. GDP per capita (per person) is used to compare wealth between countries.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is a development indicator?', opts:['A measure used to show how developed a country is (e.g., life expectancy, literacy rate, GDP per capita)','A type of map','A weather measurement','A population count'], c:0, e:'Development indicators are statistics used to measure how developed a country is. They include economic measures (GDP per capita), social measures (life expectancy, literacy rate, access to clean water), and composite measures (HDI).' },
+      { q:'What is Fairtrade?', opts:['A system that ensures producers in developing countries receive a fair price for their goods','A type of free trade agreement','A charity that gives food','A trading company'], c:0, e:'Fairtrade is a movement that ensures farmers and workers in developing countries receive a fair minimum price for their products (like coffee, cocoa, bananas), better working conditions, and a premium for community investment.' },
+      { q:'What is meant by "bilateral aid"?', opts:['Aid given directly from one country to another','Aid given by charities','Aid given through the United Nations','Aid given by businesses'], c:0, e:'Bilateral aid is government-to-government aid, given directly from one country to another. It can come with conditions (tied aid), such as the requirement to buy goods from the donor country.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is multilateral aid?', opts:['Aid given through international organisations like the United Nations or World Bank','Aid from one country to another','Aid from charities only','Private donations'], c:0, e:'Multilateral aid is money given by governments to international organisations (like the UN, World Bank, or WHO), which then distribute it to countries in need. It is less likely to come with political conditions than bilateral aid.' },
+      { q:'How did colonialism affect African countries?', opts:['European powers drew borders ignoring ethnic groups, extracted resources, and left many countries with weak economies','It had no effect','It only helped African countries develop','Africa was never colonised'], c:0, e:'European colonisation (mainly 19th-20th century) had lasting effects: artificial borders divided ethnic groups, economies were structured to export raw materials rather than develop manufacturing, and political systems were disrupted. Many of these effects continue to influence African development.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is tourism leakage?', opts:['When money spent by tourists leaves the country rather than benefiting the local economy','When tourists leave litter','When hotels leak water','When tourists avoid an area'], c:0, e:'Tourism leakage occurs when the money tourists spend does not stay in the local economy. For example, if tourists stay in foreign-owned hotels, eat imported food, or book through foreign companies, much of the revenue goes back to wealthy countries rather than benefiting local people.' },
+      { q:'What is sustainable development?', opts:['Development that meets present needs without compromising the ability of future generations to meet their own needs','Building as much as possible','Stopping all development','Only using renewable energy'], c:0, e:'Sustainable development means improving people\'s quality of life now while protecting the environment and resources so that future generations can also meet their needs. It balances economic growth with social well-being and environmental protection.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Why is it misleading to describe Africa as a single, uniform continent?', opts:['Africa is incredibly diverse with 54 countries, thousands of languages, varied climates, and different levels of development','All African countries are the same','Africa has only one climate','Africa is a small continent'], c:0, e:'Africa is enormously diverse: it has 54 countries with different cultures, over 2,000 languages, climates ranging from rainforest to desert, and levels of development from very low to upper-middle income. Treating it as a single entity is inaccurate and simplistic.' },
+      { q:'What is one economic measure used to compare development between countries?', opts:['GDP per capita (Gross Domestic Product per person)','Temperature','Population density','Land area'], c:0, e:'GDP per capita is a key economic development indicator. It divides the total value of goods and services produced by a country by its population, giving an average income per person that can be compared internationally.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why might GDP per capita be a misleading indicator of development?', opts:['It is an average that hides inequality — a country might have a high GDP per capita but huge gaps between rich and poor','GDP per capita is always accurate','It measures everything about development','It never misleads'], c:0, e:'GDP per capita is an average that can mask extreme inequality: a few very wealthy people can raise the average while most people live in poverty. It also does not measure quality of life factors like education, healthcare, freedom, or environmental sustainability, making it an incomplete picture of development.' },
+      { q:'To what extent is foreign aid effective in promoting development in Africa?', opts:['It can help in emergencies and fund infrastructure, but it can also create dependency, corruption, and may come with conditions that benefit the donor','Aid is always effective','Aid never works','Only bilateral aid works'], c:0, e:'Aid is a complex issue: emergency aid saves lives, and development aid can fund schools, hospitals, and infrastructure. However, critics argue that aid can create dependency, fuel corruption, come with conditions that benefit donors (tied aid), and may not address root causes of poverty like unfair trade rules.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How has colonial history contributed to current development challenges in Africa?', opts:['Colonial borders, resource extraction economies, disrupted political systems, and unequal trade patterns created structural problems that persist today','Colonialism had no lasting effects','Africa\'s challenges are entirely modern','Colonial history only affected politics'], c:0, e:'Colonialism created lasting structural challenges: artificial borders divided communities and grouped rival groups, economies were designed for raw material export (not manufacturing), political systems were disrupted, and unequal trade relationships were established — all contributing to ongoing development challenges.' },
+      { q:'Why might Fairtrade be more effective than traditional aid in promoting sustainable development?', opts:['Fairtrade empowers producers through fair wages and trade rather than creating dependency — it addresses the cause (unfair trade) rather than the symptom (poverty)','Fairtrade and aid are identical','Fairtrade does not help producers','Aid is always better than trade'], c:0, e:'Fairtrade addresses structural inequality by ensuring producers receive fair prices, improving their self-sufficiency. Unlike aid, which can create dependency, Fairtrade empowers people through commerce. However, Fairtrade reaches only a small proportion of producers and cannot solve all development challenges alone.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Evaluate whether tourism is a good strategy for economic development in African countries.', opts:['Tourism can bring income and jobs but also causes leakage, environmental damage, and cultural disruption — its value depends on how well it is managed','Tourism is always positive','Tourism never helps developing countries','Tourism only benefits hotels'], c:0, e:'Tourism can bring significant income, create jobs, and fund conservation. However, tourism leakage means profits often go to foreign companies, environmental damage (pollution, habitat destruction) can occur, and cultural commodification can be harmful. Success depends on local ownership, sustainable practices, and fair distribution of benefits.' },
+      { q:'Why is HDI considered a better measure of development than GDP per capita alone?', opts:['HDI combines income with education and health measures, giving a more rounded picture of people\'s quality of life','HDI only measures income','GDP per capita is always better','HDI and GDP are the same thing'], c:0, e:'HDI combines three dimensions — income (GNI per capita), education (mean and expected years of schooling), and health (life expectancy at birth). This gives a more comprehensive picture than GDP alone because a country could be wealthy but have poor health or education systems. HDI captures quality of life, not just economic output.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-48: Introduction to Geography ────────────────────────────────
+TEST_GENERATORS["island-48"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the difference between physical and human geography?', opts:['Physical geography studies natural features (rivers, mountains); human geography studies people and settlements','They are the same thing','Physical geography studies people','Human geography studies weather'], c:0, e:'Physical geography studies the natural world: landforms, rivers, weather, climate, ecosystems. Human geography studies people and their activities: population, settlements, migration, economic activity, and cultural patterns.' },
+      { q:'How many continents are there?', opts:['Seven','Five','Six','Eight'], c:0, e:'There are seven continents: Africa, Antarctica, Asia, Australia/Oceania, Europe, North America, and South America. Asia is the largest by both area and population.' },
+      { q:'How many oceans are there?', opts:['Five','Three','Four','Seven'], c:0, e:'There are five oceans: the Pacific (largest), Atlantic, Indian, Southern (Antarctic), and Arctic (smallest). Together they cover about 71% of the Earth\'s surface.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are the four countries that make up the United Kingdom?', opts:['England, Scotland, Wales, and Northern Ireland','England, Scotland, Ireland, and Wales','England, France, Wales, and Scotland','England, Scotland, Wales, and Cornwall'], c:0, e:'The United Kingdom consists of four countries: England (capital: London), Scotland (capital: Edinburgh), Wales (capital: Cardiff), and Northern Ireland (capital: Belfast).' },
+      { q:'What is the capital city of Scotland?', opts:['Edinburgh','Glasgow','Aberdeen','Dundee'], c:0, e:'Edinburgh is the capital city of Scotland. Glasgow is Scotland\'s largest city by population, but Edinburgh is the capital and the seat of the Scottish Parliament.' },
+      { q:'What is the capital city of Wales?', opts:['Cardiff','Swansea','Newport','Bangor'], c:0, e:'Cardiff is the capital city of Wales. It is located in the south of Wales and is the largest city in the country.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the Equator?', opts:['An imaginary line around the middle of the Earth at 0 degrees latitude','A line of longitude','The North Pole','A type of weather system'], c:0, e:'The Equator is an imaginary line that circles the Earth at 0 degrees latitude, dividing it into the Northern and Southern Hemispheres. It is the hottest part of the Earth because it receives the most direct sunlight.' },
+      { q:'What is latitude?', opts:['Imaginary lines running east-west that measure distance north or south of the Equator','Lines running north-south','The height of mountains','A type of climate'], c:0, e:'Lines of latitude are imaginary horizontal lines that run east-west around the Earth. They measure how far north or south a place is from the Equator (0 degrees). The North Pole is 90 degrees N and the South Pole is 90 degrees S.' },
+      { q:'What is longitude?', opts:['Imaginary lines running north-south that measure distance east or west of the Prime Meridian','Lines running east-west','The width of oceans','A type of biome'], c:0, e:'Lines of longitude are imaginary vertical lines that run north-south from pole to pole. They measure how far east or west a place is from the Prime Meridian (0 degrees) at Greenwich, London.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Where is the Tropic of Cancer?', opts:['23.5 degrees N — the most northerly latitude where the sun can be directly overhead','23.5 degrees S','66.5 degrees N','0 degrees'], c:0, e:'The Tropic of Cancer is at 23.5 degrees North latitude. It marks the most northerly point where the sun can be directly overhead (on the summer solstice, around 21 June). It passes through Mexico, North Africa, and India.' },
+      { q:'Where is the Tropic of Capricorn?', opts:['23.5 degrees S — the most southerly latitude where the sun can be directly overhead','23.5 degrees N','66.5 degrees S','90 degrees S'], c:0, e:'The Tropic of Capricorn is at 23.5 degrees South latitude. It marks the most southerly point where the sun can be directly overhead (on the December solstice). It passes through South America, southern Africa, and Australia.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the largest continent by area?', opts:['Asia','Africa','North America','Europe'], c:0, e:'Asia is the largest continent by both area (approximately 44.6 million km squared) and population (approximately 4.7 billion people). It includes countries from Turkey and Russia to Japan and Indonesia.' },
+      { q:'Which ocean is the largest?', opts:['The Pacific Ocean','The Atlantic Ocean','The Indian Ocean','The Arctic Ocean'], c:0, e:'The Pacific Ocean is the largest ocean, covering approximately 165 million km squared — more than all the land on Earth combined. It stretches from Asia and Australia in the west to the Americas in the east.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is it important to study both physical and human geography together rather than separately?', opts:['Because physical and human geography are interconnected — people affect the environment and the environment affects people','They have nothing to do with each other','Only physical geography matters','Only human geography is useful'], c:0, e:'Physical and human geography are deeply connected. For example, river flooding (physical) affects settlements (human), while deforestation (human) causes soil erosion (physical). Understanding these connections is essential for solving real-world problems like climate change, natural disasters, and sustainable development.' },
+      { q:'Why might two places at the same latitude have very different climates?', opts:['Other factors like altitude, ocean currents, distance from the sea, and prevailing winds also affect climate','Latitude determines everything about climate','They would have identical climates','Only longitude matters for climate'], c:0, e:'While latitude is the main factor affecting temperature (through solar angle), other factors modify climate: altitude (higher = colder), ocean currents (warm currents warm nearby coasts), distance from the sea (maritime vs continental), and prevailing winds. This is why London and Moscow are at similar latitudes but have very different winters.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'What does the concept of "scale" mean in geography, and why does it matter?', opts:['Scale means studying things at different levels (local, regional, national, global) — different patterns and issues appear at different scales','Scale only refers to map scale','Scale is not important in geography','It only matters for measuring distances'], c:0, e:'Geographical scale refers to the level at which we study something — from local (your neighbourhood) to global (the whole planet). Different patterns emerge at different scales: a local flood is a local issue, but global warming is a global one. Understanding scale helps geographers connect local actions to global consequences.' },
+      { q:'How do the Tropics of Cancer and Capricorn help geographers understand global patterns?', opts:['They define the tropics — the zone receiving the most direct sunlight — which determines climate zones, biomes, and human activity patterns','They are just lines on a map with no significance','They mark where it snows','They separate the oceans'], c:0, e:'The area between the Tropics of Cancer and Capricorn (the tropics) receives the most intense sunlight. This creates the hottest climates, supports tropical biomes (rainforests, deserts), influences agriculture, and affects patterns of human settlement, disease, and development. These lines help explain global geographical patterns.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is the concept of "place" important in geography beyond just knowing where things are on a map?', opts:['Places have unique identities shaped by physical features, history, culture, and people\'s perceptions — understanding place helps explain why different areas are the way they are','Place just means location','Geography is only about maps','Places are all the same'], c:0, e:'In geography, "place" goes beyond location to include what makes somewhere unique: its physical landscape, climate, history, culture, economy, and how people perceive it. Understanding place helps explain why areas differ, how people relate to their environment, and why some places change while others do not.' },
+      { q:'How might studying geography help solve real-world problems?', opts:['Geography connects physical and human understanding, helping address challenges like climate change, natural disasters, inequality, and urban planning','Geography is only about memorising capitals','It cannot solve any problems','Only science can solve real-world problems'], c:0, e:'Geography uniquely connects physical and human understanding. Geographers study climate change (physical processes + human causes), plan cities (population + land use), manage flood risk (rivers + settlement), and analyse inequality (development + trade). This integrated approach is essential for tackling complex, interconnected global challenges.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-49: UK Geography: Exploring Britain ──────────────────────────
+TEST_GENERATORS["island-49"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are the Pennines?', opts:['A chain of hills and mountains running down the centre of northern England, often called the "backbone of England"','A river in Scotland','A city in Wales','An island off the coast'], c:0, e:'The Pennines are a chain of hills and mountains stretching from the Peak District in the Midlands to the Scottish border. They are often called the "backbone of England" because they run down the centre of the country.' },
+      { q:'What is the longest river in the UK?', opts:['The River Severn','The River Thames','The River Trent','The River Mersey'], c:0, e:'The River Severn is the longest river in the UK at 354 km. It flows from its source in the Cambrian Mountains of Wales through Shrewsbury, Worcester, and Gloucester before entering the Bristol Channel.' },
+      { q:'Which river flows through London?', opts:['The River Thames','The River Severn','The River Tyne','The River Mersey'], c:0, e:'The River Thames flows through London. It is 346 km long and is the second-longest river in the UK. It has been central to London\'s development as a trading city for centuries.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Where is the Lake District?', opts:['In Cumbria, north-west England','In Scotland','In Wales','In south-east England'], c:0, e:'The Lake District is in Cumbria, north-west England. It is a mountainous area famous for its lakes, valleys, and peaks, including Scafell Pike (the highest mountain in England at 978m). It became a National Park in 1951.' },
+      { q:'What is a National Park?', opts:['An area of countryside protected for its natural beauty, wildlife, and cultural heritage','A park in a city','A theme park','A car park run by the government'], c:0, e:'A National Park is an area of the countryside that is protected by law because of its outstanding natural beauty, wildlife, and cultural heritage. The UK has 15 National Parks, including the Lake District, Snowdonia, and the Peak District.' },
+      { q:'What is the North-South divide in the UK?', opts:['The economic and social differences between the wealthier south-east and the less prosperous north','A physical divide created by a wall','A river dividing England in half','A political boundary'], c:0, e:'The North-South divide refers to the economic and social differences between the generally wealthier and more prosperous south-east of England and the relatively less prosperous north. Southern areas tend to have higher wages, house prices, and life expectancy.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the highest mountain in the UK?', opts:['Ben Nevis in Scotland (1,345m)','Scafell Pike in England','Snowdon in Wales','Pen y Fan in Wales'], c:0, e:'Ben Nevis in the Scottish Highlands is the highest mountain in the UK at 1,345 metres. Scafell Pike (978m) is the highest in England and Snowdon (1,085m) is the highest in Wales.' },
+      { q:'What type of landscape is found in the Scottish Highlands?', opts:['Rugged mountains, deep valleys (glens), and lakes (lochs)','Flat farmland','Sandy deserts','Dense tropical forest'], c:0, e:'The Scottish Highlands have a rugged landscape of mountains, deep U-shaped valleys (glens), and lakes (lochs). The area is sparsely populated due to its remote and mountainous terrain.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are the Lowlands of Scotland?', opts:['The flatter, more fertile area between the Highlands and the Southern Uplands, containing most of Scotland\'s cities','Mountains in southern Scotland','Islands off the coast','Desert regions'], c:0, e:'The Scottish Lowlands (Central Lowlands) lie between the Highlands and the Southern Uplands. This flatter, more fertile area contains most of Scotland\'s population and its major cities, including Edinburgh and Glasgow.' },
+      { q:'What is the River Trent known for?', opts:['It is the third-longest river in the UK and flows through the English Midlands','It is in Scotland','It is the shortest river','It flows through London'], c:0, e:'The River Trent is the third-longest river in the UK at 298 km. It flows through the Midlands (Stoke-on-Trent, Nottingham) and is important for industry, agriculture, and wildlife habitat.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What type of coastline does the UK have?', opts:['A diverse coastline with cliffs, beaches, estuaries, and spits — over 31,000 km long','A completely flat coastline','No coastline','Only rocky cliffs'], c:0, e:'The UK has an incredibly diverse coastline stretching over 31,000 km. It includes chalk cliffs (Dover), sandy beaches (Cornwall, Norfolk), rocky shores (Scotland), estuaries (Thames, Severn), sand dunes, and coastal spits.' },
+      { q:'Name two major cities in northern England.', opts:['Manchester and Leeds','London and Brighton','Cardiff and Swansea','Edinburgh and Glasgow'], c:0, e:'Major cities in northern England include Manchester, Leeds, Liverpool, Newcastle, Sheffield, and Bradford. These cities grew during the Industrial Revolution and remain important economic and cultural centres.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why does the North-South divide exist in the UK, and what are its causes?', opts:['Historical industrialisation in the north declined while the south\'s service economy grew; government spending and investment also favoured the south-east','It is caused by weather differences','It does not really exist','It is only about house prices'], c:0, e:'The North-South divide has deep historical roots: northern cities thrived during industrialisation but declined as manufacturing moved overseas. The south-east benefits from London\'s global financial centre, government investment, transport links, and service-sector growth. Regional inequality in wages, health, education, and life expectancy persists.' },
+      { q:'How have the UK\'s physical landscapes influenced patterns of settlement and economic activity?', opts:['Flat, fertile lowlands attracted farming and cities; mountainous uplands remained sparsely populated with pastoral farming and tourism','Physical geography has no effect on settlement','Mountains attracted more people','All of the UK is flat'], c:0, e:'The UK\'s physical geography strongly influenced settlement patterns. Flat, fertile lowlands (South-East, Midlands) attracted dense settlement and arable farming. Upland areas (Highlands, Pennines, Lake District) remain sparsely populated due to poor soil, harsh weather, and difficult terrain — though tourism and pastoral farming provide livelihoods.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How have National Parks in the UK created conflicts between conservation and economic development?', opts:['Protecting landscapes can restrict farming, housing, and industry, creating tension between conservation and the needs of local communities','There are no conflicts','National Parks prevent all economic activity','Only tourists cause problems'], c:0, e:'National Parks must balance conservation with the needs of people who live and work in them. Restrictions on building and development can limit housing and employment opportunities, farmers may be constrained in land use, and tourism can cause erosion, traffic congestion, and litter while also providing vital income for local businesses.' },
+      { q:'Why is the UK\'s coastline both an economic asset and a vulnerability?', opts:['Coasts support tourism, ports, and fishing but are threatened by erosion, flooding, and sea level rise from climate change','The coastline has no economic value','Coasts are only vulnerable, never an asset','Climate change does not affect UK coasts'], c:0, e:'The UK coastline supports major economic activities: tourism (seaside resorts), ports and shipping (London, Southampton, Felixstowe), fishing, and energy (offshore wind). However, it is vulnerable to coastal erosion, storm surges, flooding, and rising sea levels due to climate change — requiring expensive coastal management.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'To what extent should the UK government try to reduce the North-South divide?', opts:['Arguments exist on both sides: reducing inequality is fair and efficient, but concentrating investment in London generates wealth for the whole country','The divide should not be addressed','Only the south matters','The north does not need investment'], c:0, e:'Reducing the divide promotes fairness and taps into underused potential in northern cities. Investment in transport (HS2), devolution, and the "levelling up" agenda aim to rebalance the economy. However, some argue London\'s global role benefits the whole UK, and spreading investment too thinly could reduce overall competitiveness.' },
+      { q:'How does studying the geography of the UK help us understand issues like flooding, housing, and inequality?', opts:['Physical geography explains flood risk, land use affects housing supply, and regional economic differences create inequality — geography connects these issues','Geography has nothing to do with these issues','Only economists study inequality','Flooding is not a geographical issue'], c:0, e:'Geography uniquely connects these issues: understanding river systems and floodplains explains flood risk, land use patterns affect where housing can be built, physical landscapes influence regional economies, and the spatial distribution of wealth and services creates inequality. Geographical thinking helps plan solutions that account for these interconnections.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-50: Rocks, Weathering & Soils ────────────────────────────────
+TEST_GENERATORS["island-50"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are the three main types of rock?', opts:['Igneous, sedimentary, and metamorphic','Hard, soft, and medium','Large, small, and tiny','Volcanic, river, and mountain'], c:0, e:'The three main rock types are: igneous (formed from cooled magma/lava), sedimentary (formed from layers of compressed sediment), and metamorphic (formed when existing rocks are changed by heat and pressure).' },
+      { q:'How are igneous rocks formed?', opts:['When magma or lava cools and solidifies','When layers of sediment are compressed','When rocks are changed by heat and pressure','When rocks are eroded by water'], c:0, e:'Igneous rocks form when hot molten rock (magma underground or lava on the surface) cools and solidifies. Examples include granite (cooled slowly underground, large crystals) and basalt (cooled quickly on the surface, small crystals).' },
+      { q:'How are sedimentary rocks formed?', opts:['When layers of sediment are deposited, compressed, and cemented together over millions of years','When lava cools','When rocks are heated','When ice melts'], c:0, e:'Sedimentary rocks form when layers of sediment (sand, mud, shells, remains of organisms) are deposited on top of each other. Over millions of years, the weight of upper layers compresses and cements them into rock. Examples include sandstone, limestone, and chalk.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How are metamorphic rocks formed?', opts:['When existing rocks are changed by extreme heat and/or pressure','When lava cools on the surface','When sediment builds up','When rocks dissolve in water'], c:0, e:'Metamorphic rocks form when existing rocks (igneous or sedimentary) are transformed by extreme heat and/or pressure without melting. Examples: limestone becomes marble, mudstone/shale becomes slate.' },
+      { q:'What is the rock cycle?', opts:['The continuous process by which rocks are created, changed, and recycled between the three rock types','A type of bicycle made from rock','A circle of rocks','A geological period'], c:0, e:'The rock cycle is the ongoing process by which rocks change from one type to another over millions of years. For example, igneous rock can be weathered into sediment, compressed into sedimentary rock, then transformed by heat into metamorphic rock, then melted into magma that forms new igneous rock.' },
+      { q:'Give an example of a sedimentary rock.', opts:['Limestone','Granite','Marble','Basalt'], c:0, e:'Limestone is a sedimentary rock formed from the compressed shells and skeletons of marine organisms. Other examples include sandstone (from compressed sand), chalk, and mudstone.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is freeze-thaw weathering?', opts:['Water enters cracks in rock, freezes and expands, widening the crack until pieces break off','Wind blowing sand against rock','Acid rain dissolving rock','Plant roots growing into rock'], c:0, e:'Freeze-thaw weathering occurs when water enters cracks in rock, freezes overnight (expanding by 9%), puts pressure on the rock, and then thaws during the day. Repeated cycles gradually widen the crack until pieces of rock break off.' },
+      { q:'What is chemical weathering?', opts:['When rainwater (slightly acidic) reacts with minerals in rock, dissolving or weakening it','When ice breaks rock apart','When wind erodes rock','When animals dig into rock'], c:0, e:'Chemical weathering occurs when slightly acidic rainwater (containing dissolved CO2) reacts chemically with minerals in rock, dissolving or weakening them. Acid rain (from pollution) accelerates this process, particularly affecting limestone and marble buildings.' },
+      { q:'What is biological weathering?', opts:['When plant roots, burrowing animals, or organisms break down rock','When chemicals dissolve rock','When ice freezes in cracks','When wind blows away rock'], c:0, e:'Biological weathering occurs when living things break down rock. Plant roots grow into cracks and widen them as they grow, burrowing animals disturb rock, and organisms like lichens produce acids that slowly dissolve rock surfaces.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What type of rock is granite?', opts:['Igneous','Sedimentary','Metamorphic','Mineral'], c:0, e:'Granite is an intrusive igneous rock formed when magma cooled slowly deep underground. It has large crystals (because it cooled slowly), is very hard and durable, and is often used in construction.' },
+      { q:'What type of rock is marble?', opts:['Metamorphic','Igneous','Sedimentary','Volcanic'], c:0, e:'Marble is a metamorphic rock formed when limestone is subjected to extreme heat and pressure. It has a crystalline texture and is prized for sculpture and building because of its beauty when polished.' },
+      { q:'What type of rock is slate?', opts:['Metamorphic','Igneous','Sedimentary','Mineral'], c:0, e:'Slate is a metamorphic rock formed from mudstone or shale that has been compressed by heat and pressure. It splits easily into thin, flat sheets and has traditionally been used for roof tiles.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How is soil formed?', opts:['From the weathering of rock mixed with decomposed organic matter (humus) over thousands of years','Instantly by volcanic eruptions','From water only','By human construction'], c:0, e:'Soil forms very slowly over thousands of years as rocks are weathered into small particles. These mineral particles mix with decomposed organic matter (humus from dead plants and animals), water, and air to create soil.' },
+      { q:'What is basalt?', opts:['An extrusive igneous rock formed when lava cools quickly on the Earth\'s surface','A sedimentary rock','A metamorphic rock','A type of soil'], c:0, e:'Basalt is an extrusive igneous rock formed when lava erupts onto the Earth\'s surface and cools quickly. It has small crystals (because it cooled rapidly), is dark-coloured, and forms features like the Giant\'s Causeway in Northern Ireland.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why does granite have larger crystals than basalt even though both are igneous rocks?', opts:['Granite cooled slowly underground giving crystals time to grow; basalt cooled quickly on the surface so crystals stayed small','Granite is older','Basalt is made from different chemicals','Crystal size is random'], c:0, e:'The key factor is cooling rate. Granite (intrusive) formed deep underground where magma cooled very slowly over thousands of years, allowing large crystals to develop. Basalt (extrusive) formed on the surface where lava cooled rapidly, only allowing tiny crystals to form. Same process, different conditions, different results.' },
+      { q:'How does the type of underlying rock affect the landscape and human activity in an area?', opts:['Rock type determines landforms, soil fertility, water drainage, building materials, and even settlement patterns','Rock type has no effect on landscape','Only climate affects landscape','Rocks do not affect human activity'], c:0, e:'Rock type profoundly affects geography: limestone creates karst landscapes (caves, gorges) with well-drained soils; clay creates flat, poorly drained lowlands; granite creates upland moors. This influences farming (soil fertility), water supply (permeability), building materials (local stone), and where people settle.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is the rock cycle described as a "cycle" even though individual processes take millions of years?', opts:['Because materials are continuously recycled between rock types — no rock is permanent, and the same atoms can appear in different rock types over geological time','Rocks never change','The cycle happens quickly','It is not really a cycle'], c:0, e:'The rock cycle is a cycle because rock materials are endlessly recycled. Today\'s mountain granite will eventually be weathered into sediment, compressed into sandstone, perhaps metamorphosed into quartzite, then melted and reformed. No rock type is permanent — they all transform over geological time spans.' },
+      { q:'How might different types of weathering work together to break down rock more effectively?', opts:['They often work in combination — freeze-thaw creates cracks that chemical weathering widens, while biological weathering adds to both processes','Only one type acts at a time','They cancel each other out','Weathering types never interact'], c:0, e:'Weathering types reinforce each other. Freeze-thaw creates initial cracks, chemical weathering (acid rain) dissolves minerals and widens those cracks, plant roots (biological) grow into the gaps and force them wider, and water penetrating deeper cracks enables further freeze-thaw. The combined effect is far greater than any single process.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why is understanding rocks and weathering important for construction and engineering?', opts:['Engineers need to know rock strength, weathering rates, and soil properties to build safe structures — choosing the wrong rock or location can be dangerous','Rocks are not important for building','All rocks are equally strong','Weathering does not affect buildings'], c:0, e:'Engineers must understand geology: building on clay (which swells when wet) requires different foundations than building on granite. Limestone buildings are vulnerable to acid rain. Road cuttings through unstable rock can cause landslides. Understanding weathering processes helps predict how materials and landscapes will change over time.' },
+      { q:'How does human activity accelerate weathering processes?', opts:['Pollution increases acid rain (chemical weathering), construction exposes rock to freeze-thaw, and removal of vegetation allows roots to stop binding soil','Human activity has no effect on weathering','Only natural processes cause weathering','Humans slow down weathering'], c:0, e:'Human activity accelerates weathering in several ways: burning fossil fuels creates acid rain that speeds chemical weathering of buildings and rocks, construction and quarrying expose fresh rock surfaces to freeze-thaw, deforestation removes roots that bind soil, and changes to drainage patterns can increase water penetration into cracks.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-51: Geographical Skills & Fieldwork ──────────────────────────
+TEST_GENERATORS["island-51"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What does GIS stand for?', opts:['Geographical Information Systems','General Information Science','Global Internet Services','Geographical Internet Systems'], c:0, e:'GIS stands for Geographical Information Systems. It is computer software that stores, analyses, and displays geographical data in layers, allowing geographers to see patterns and make decisions.' },
+      { q:'What is a choropleth map?', opts:['A map that uses different shades of colour to show variations in data across areas','A map showing roads','A physical relief map','A weather map'], c:0, e:'A choropleth map uses different colours or shades to represent different values of data across geographical areas. For example, darker shades might show higher population density. They are useful for showing spatial patterns.' },
+      { q:'What is the difference between mean, median, and mode?', opts:['Mean is the average, median is the middle value, mode is the most common value','They are all the same','Mean is the highest value','Median is the lowest value'], c:0, e:'Mean = sum of all values divided by the number of values (the average). Median = the middle value when data is arranged in order. Mode = the most frequently occurring value. Each measure of central tendency tells us different things about the data.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is the range in a set of data?', opts:['The difference between the highest and lowest values','The most common value','The middle value','The average'], c:0, e:'The range is calculated by subtracting the smallest value from the largest value in a data set. It tells you how spread out the data is. A large range means the data is widely spread; a small range means it is clustered.' },
+      { q:'When would you use a bar chart to present geographical data?', opts:['When comparing discrete categories of data (e.g., land use types, favourite subjects)','When showing change over time','When showing parts of a whole','When showing correlation between two variables'], c:0, e:'Bar charts are ideal for comparing discrete (separate) categories of data, such as the number of shops of different types in a town, or rainfall totals for different months. Each bar represents a separate category.' },
+      { q:'When would you use a line graph to present geographical data?', opts:['When showing how data changes continuously over time (e.g., temperature over a year)','When comparing categories','When showing parts of a whole','When showing data on a map'], c:0, e:'Line graphs are best for showing continuous data that changes over time, such as temperature changes during a day, river discharge over a year, or population growth over decades. The line connecting points shows the trend.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is a pie chart used for in geography?', opts:['Showing proportions or percentages of a whole (e.g., land use breakdown in an area)','Showing change over time','Comparing two sets of data','Showing location on a map'], c:0, e:'Pie charts show how a total is divided into proportions. Each slice represents a percentage of the whole. They are useful in geography for showing things like land use breakdown, employment types, or energy sources.' },
+      { q:'What is random sampling in fieldwork?', opts:['Selecting data collection points by chance (e.g., using random numbers) to avoid bias','Choosing the most convenient locations','Only collecting data from one place','Asking people to volunteer'], c:0, e:'Random sampling means selecting sample points by chance (e.g., using random number generators to choose grid references). This avoids bias because every location has an equal chance of being selected, making the results more representative and reliable.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'Why is it important to present data using appropriate graphs and charts?', opts:['The right type of graph helps communicate patterns clearly; the wrong type can be misleading','It does not matter which graph you use','Only tables should be used','Graphs are not useful in geography'], c:0, e:'Choosing the right graph is essential for clear communication. Bar charts compare categories, line graphs show trends over time, pie charts show proportions, and scatter graphs show relationships. Using the wrong type can obscure patterns or mislead the reader.' },
+      { q:'What is a questionnaire used for in geographical fieldwork?', opts:['To collect people\'s opinions, experiences, or data through structured questions','To measure wind speed','To draw maps','To measure rainfall'], c:0, e:'Questionnaires are used in human geography fieldwork to collect primary data from people. They can gather opinions (about a new shopping centre), behaviours (how people travel to work), or factual information (age, occupation) through structured questions.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is primary data in geographical fieldwork?', opts:['Data you collect yourself first-hand in the field','Data from books or the internet','Data collected by someone else','Government statistics'], c:0, e:'Primary data is information collected first-hand by the researcher through fieldwork. Examples include temperature readings, pedestrian counts, river measurements, questionnaire responses, and field sketches.' },
+      { q:'What is secondary data?', opts:['Data collected by someone else that you use in your study (e.g., census data, maps, online statistics)','Data you collect yourself','Data from experiments','Data that is always unreliable'], c:0, e:'Secondary data is information that was collected by someone else for a different purpose. Examples include census data, Ordnance Survey maps, satellite images, climate records, and published statistics. It is useful for comparison and background research.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why might a geographer use both primary and secondary data in a fieldwork investigation?', opts:['Primary data gives specific, current information about the study area while secondary data provides context, comparison, and background — together they give a fuller picture','Only one type is ever needed','Secondary data is always better','Primary data is not reliable'], c:0, e:'Using both types strengthens an investigation. Primary data (e.g., your own river measurements) is specific to your study but limited in time and scope. Secondary data (e.g., Environment Agency records) provides long-term context and comparison. Together, they allow deeper analysis and more valid conclusions.' },
+      { q:'How might sampling method affect the reliability of geographical fieldwork conclusions?', opts:['Biased sampling (e.g., only asking friends, only measuring easy locations) can produce unrepresentative data and lead to wrong conclusions','Sampling method does not matter','All sampling methods give the same results','Only random sampling works'], c:0, e:'Sampling method is crucial for reliability. Random sampling reduces bias but may miss key features. Systematic sampling (regular intervals) ensures good coverage but may miss patterns. Stratified sampling targets specific areas. Convenience sampling is easy but biased. The wrong method can produce misleading data and invalid conclusions.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'What are the limitations of using GIS compared to traditional fieldwork?', opts:['GIS is excellent for analysing large datasets and spotting patterns but cannot capture the experience, atmosphere, or unexpected findings of being in the field','GIS has no limitations','GIS replaces all fieldwork','Fieldwork is always better than GIS'], c:0, e:'GIS is powerful for storing, analysing, and visualising large geographical datasets and identifying spatial patterns. However, it relies on existing data (which may be outdated or incomplete), cannot capture qualitative information (sounds, smells, atmosphere), and may miss unexpected findings that alert fieldworkers notice. Both approaches complement each other.' },
+      { q:'Why is it important to evaluate the reliability and accuracy of your data after completing fieldwork?', opts:['Because errors in measurement, sampling bias, small sample sizes, and weather conditions can all affect how valid your conclusions are','Data is always perfectly accurate','Evaluation is not necessary','Only teachers evaluate data'], c:0, e:'Data evaluation is essential because fieldwork always has limitations: equipment errors, human measurement mistakes, weather affecting results, small sample sizes reducing representativeness, and sampling bias. Acknowledging these limitations makes conclusions more honest and scientifically rigorous, and suggests how the investigation could be improved.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'How can geographical data be misleading, and what skills do you need to critically evaluate it?', opts:['Graphs can use misleading scales, averages can hide extremes, maps can distort patterns, and correlation does not prove causation — critical thinking is essential','Data never misleads','Only wrong data misleads','You cannot evaluate data'], c:0, e:'Geographical data can mislead in many ways: truncated axes on graphs exaggerate trends, averages hide extremes, choropleth maps can show different patterns depending on boundary choices, and finding a correlation between two variables does not mean one causes the other. Critical geographical thinking means questioning sources, methods, and interpretations.' },
+      { q:'Design a simple fieldwork investigation to test whether environmental quality changes with distance from a city centre.', opts:['Use an Environmental Quality Index (EQI) scored at regular intervals along a transect from city centre to suburbs, with systematic sampling','Just ask people what they think','Take one measurement in the centre','Only use secondary data'], c:0, e:'A good investigation would: create an EQI scoring factors like litter, noise, green space, air quality, and building condition; sample systematically at regular intervals (every 500m) along a transect from centre to suburbs; repeat at multiple transects to check reliability; and present results as a line graph showing how EQI changes with distance.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];
+
+// ── island-52: Globalisation & the UK's Global Connections ──────────────
+TEST_GENERATORS["island-52"] = [
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is globalisation?', opts:['The increasing interconnection and interdependence of countries through trade, communication, and cultural exchange','A type of government','A weather pattern','A geographical feature'], c:0, e:'Globalisation is the process by which the world is becoming increasingly interconnected through trade, technology, communication, travel, and cultural exchange. It means events in one part of the world can quickly affect people everywhere.' },
+      { q:'What is a TNC (Transnational Corporation)?', opts:['A large company that operates in more than one country','A local business','A government department','A charity'], c:0, e:'A Transnational Corporation (TNC) is a large company that operates in multiple countries, typically with headquarters in one country and factories, offices, or stores in many others. Examples include Apple, Nike, and Unilever.' },
+      { q:'What are food miles?', opts:['The distance food travels from where it is produced to where it is consumed','The number of miles you walk to buy food','A type of measurement','The weight of food in miles'], c:0, e:'Food miles measure the distance food travels from where it is produced to where it is consumed. For example, green beans flown from Kenya to UK supermarkets have very high food miles, contributing to carbon emissions from transport.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What are two causes of globalisation?', opts:['Improvements in transport (container ships, air travel) and communication (internet, mobile phones)','Bad weather and wars','Mountains and rivers','Only the internet'], c:0, e:'Key causes of globalisation include: improvements in transport (container ships, jet aircraft) making global trade faster and cheaper, and advances in communication (internet, smartphones, social media) allowing instant worldwide connection.' },
+      { q:'What is a supply chain?', opts:['The network of steps involved in making and delivering a product, from raw materials to the consumer','A type of shop','A chain-link fence','A delivery van'], c:0, e:'A supply chain is the entire process of making and delivering a product: from extracting raw materials, to manufacturing components, to assembling the final product, to transporting it to shops, to selling it to consumers. In a globalised world, these steps often occur in different countries.' },
+      { q:'What does the UK mainly export?', opts:['Services (financial, insurance), manufactured goods, cars, pharmaceuticals, and technology','Only tea','Only wool','Only fish'], c:0, e:'The UK\'s main exports include financial and business services, manufactured goods (cars, aerospace equipment), pharmaceuticals, technology, whisky, and creative industries. Services make up a large proportion of UK exports.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How has migration contributed to the UK\'s global connections?', opts:['People from many countries have settled in the UK, creating cultural diversity and links to countries worldwide','Migration has no effect on connections','Only British people live in the UK','Migration only affects language'], c:0, e:'Migration has made the UK culturally diverse. Communities from the Caribbean, South Asia, Eastern Europe, and elsewhere maintain links with their countries of origin through family ties, trade, culture, and remittances, strengthening the UK\'s global connections.' },
+      { q:'What does the UK mainly import?', opts:['Manufactured goods, food, fuel, raw materials, and clothing','Nothing','Only luxury goods','Only technology'], c:0, e:'The UK imports a wide range of goods including manufactured products (electronics, machinery), food (about 40% of food consumed is imported), fuel and energy resources, raw materials, clothing, and consumer goods.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'What is one benefit of globalisation?', opts:['Consumers get access to a wider variety of cheaper goods from around the world','It makes everything more expensive','It isolates countries','It stops trade'], c:0, e:'Benefits of globalisation include: access to a wider variety of cheaper goods, economic growth through trade, cultural exchange and understanding, technological innovation spread, and job creation in developing countries through foreign investment.' },
+      { q:'What is one disadvantage of globalisation?', opts:['Jobs can be lost when companies move production to countries with lower wages','There are no disadvantages','It makes all countries equally wealthy','It stops cultural exchange'], c:0, e:'Disadvantages of globalisation include: job losses in developed countries as manufacturing moves to cheaper locations, exploitation of workers in developing countries, environmental damage from increased transport, loss of local cultures, and growing inequality between rich and poor.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'medium', gen: function() {
+    var qs = [
+      { q:'How has the internet contributed to globalisation?', opts:['It allows instant worldwide communication, online shopping, information sharing, and remote working','The internet is not connected to globalisation','It only affects gaming','It has slowed globalisation'], c:0, e:'The internet has been a major driver of globalisation by enabling instant worldwide communication (email, video calls), global e-commerce (online shopping from anywhere), the sharing of knowledge and culture across borders, and remote working across time zones.' },
+      { q:'What are cultural connections between the UK and the rest of the world?', opts:['Shared language (English), music, food, sport, film, and fashion that cross national boundaries','The UK has no cultural connections','Only food connects cultures','Culture is not affected by globalisation'], c:0, e:'The UK has extensive cultural connections worldwide: the English language is spoken globally, British music and film have worldwide audiences, diverse food reflects migration patterns (curry, pizza, sushi are now British staples), and sports like football connect people across borders.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why might globalisation increase inequality both within and between countries?', opts:['TNCs may exploit cheap labour in poor countries while profits go to wealthy shareholders; within countries, skilled workers benefit more than unskilled ones','Globalisation makes everyone equal','It only reduces inequality','Inequality is not related to globalisation'], c:0, e:'Globalisation can increase inequality: between countries, because TNCs may exploit cheap labour while profits flow to wealthy nations; within countries, because skilled workers and business owners benefit from global opportunities while unskilled workers face job losses from competition. The gap between richest and poorest can widen.' },
+      { q:'How does the concept of food miles oversimplify the environmental impact of food production?', opts:['Transport distance is just one factor — production methods, storage, and how consumers travel to shops also matter; sometimes imported food has a lower total carbon footprint','Food miles tell the whole story','Distance is the only factor','Imported food is always worse for the environment'], c:0, e:'Food miles only measure transport distance, ignoring other important factors. Tomatoes grown in heated greenhouses in the UK may have a higher carbon footprint than those grown naturally in Spain and transported by efficient lorry. Consumer car journeys to shops can produce more emissions than shipping. A full lifecycle analysis is needed.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'To what extent has globalisation been beneficial for developing countries?', opts:['It brings investment and jobs but can also lead to exploitation, environmental damage, and dependency on foreign companies — the effects are mixed','It is entirely beneficial','It has no effect on developing countries','It only causes harm'], c:0, e:'Globalisation brings investment, jobs, technology transfer, and export opportunities to developing countries. However, it can also mean low wages, poor working conditions, environmental degradation, profits flowing to foreign shareholders, and dependency on volatile global markets. The balance depends on governance, regulation, and workers\' rights.' },
+      { q:'How might the UK\'s global connections change in the future, and what factors could drive this change?', opts:['Climate change policies may reduce food miles, technology may increase digital connections, geopolitical shifts may change trade patterns, and migration patterns may evolve','Nothing will change','Only technology matters','Global connections will disappear'], c:0, e:'Future changes could include: climate change policies driving local food production (reducing food miles), automation changing which countries manufacture goods, new technologies deepening digital connections, geopolitical changes (like Brexit) reshaping trade relationships, and shifting migration patterns altering cultural connections. The UK\'s global role will continue to evolve.' }
+    ];
+    return _pickFrom(qs);
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var qs = [
+      { q:'Why might a geographer argue that globalisation makes the study of geography more important, not less?', opts:['Because globalisation creates complex interconnections between places that require geographical understanding of both local and global scales','Geography is less important now','Globalisation has nothing to do with geography','Only economists study globalisation'], c:0, e:'Globalisation creates complex spatial relationships that require geographical analysis: understanding supply chains across continents, how local decisions have global consequences, why some places benefit while others suffer, and how environmental, economic, and social issues are interconnected across scales. Geography\'s integrative approach is essential for understanding our globalised world.' },
+      { q:'Evaluate whether buying locally produced food is always better than buying imported food.', opts:['Not necessarily — local food reduces transport emissions but may require more energy to produce; imported food supports developing economies; the answer depends on the specific product and circumstances','Local is always better','Imported is always better','It makes no difference'], c:0, e:'The answer is nuanced. Local food reduces transport emissions and supports local farmers, but heated greenhouses or cold storage can offset those gains. Imported food may support developing-country economies (Fairtrade), use less energy to grow naturally, and provide nutrition not available locally. The environmental and ethical calculus depends on the specific food, production method, and season.' }
+    ];
+    return _pickFrom(qs);
+  }}
+];

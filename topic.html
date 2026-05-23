@@ -78,6 +78,8 @@
 <script src="english-data-y8.js"></script>
 <script src="science-data-y7.js"></script>
 <script src="science-data-y8.js"></script>
+<script src="history-data.js"></script>
+<script src="geography-data.js"></script>
 <script src="history-data-y8.js"></script>
 <script src="geography-data-y8.js"></script>
 <script src="english-data.js"></script>
@@ -112,12 +114,18 @@ let topic = (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id ===
          || (typeof MATH_TOPICS_Y8 !== 'undefined' ? MATH_TOPICS_Y8.find(t => t.id === topicId) : null)
          || (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS.find(t => t.id === topicId) : null)
          || (typeof ENGLISH_TOPICS_Y8 !== 'undefined' ? ENGLISH_TOPICS_Y8.find(t => t.id === topicId) : null)
-         || (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS.find(t => t.id === topicId) : null);
+         || (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS.find(t => t.id === topicId) : null)
+         || (typeof HISTORY_TOPICS !== 'undefined' ? HISTORY_TOPICS.find(t => t.id === topicId) : null)
+         || (typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8.find(t => t.id === topicId) : null)
+         || (typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS.find(t => t.id === topicId) : null)
+         || (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8.find(t => t.id === topicId) : null);
 const isEnglishTopic = topic && topic.id && (topic.id.startsWith('et-') || topic.id.startsWith('e8t-'));
 const isScienceTopic = topic && topic.id && topic.id.startsWith('st7-');
-const topicColor = isEnglishTopic ? '#ba7517' : isScienceTopic ? '#185fa5' : '#3f6f00';
-const topicSubject = isEnglishTopic ? 'English' : isScienceTopic ? 'Science' : 'Mathematics';
-const subjectId = isEnglishTopic ? 'english' : isScienceTopic ? 'science' : 'math';
+const isHistoryTopic = topic && topic.id && (topic.id.startsWith('ht-') || topic.id.startsWith('h8t-'));
+const isGeographyTopic = topic && topic.id && (topic.id.startsWith('gt-') || topic.id.startsWith('g8t-'));
+const topicColor = isEnglishTopic ? '#ba7517' : isScienceTopic ? '#185fa5' : isHistoryTopic ? '#6d28d9' : isGeographyTopic ? '#0891b2' : '#3f6f00';
+const topicSubject = isEnglishTopic ? 'English' : isScienceTopic ? 'Science' : isHistoryTopic ? 'History' : isGeographyTopic ? 'Geography' : 'Mathematics';
+const subjectId = isEnglishTopic ? 'english' : isScienceTopic ? 'science' : isHistoryTopic ? 'history' : isGeographyTopic ? 'geography' : 'math';
 const dashboardUrl = 'dashboard.html?subject=' + subjectId;
 
 if (!topic) {
@@ -246,7 +254,7 @@ function goToTest() {
 // Show test CTA if topic has test generators; lock until all topics covered
 (function showTestCTA() {
   var cta = document.getElementById('topic-test-cta');
-  const testableTopics = ['mt-01','mt-02','mt-03','mt-04','mt-05','mt-06','mt-07','mt-08','mt-09','mt-10','mt-11','mt-12','mt-13','mt-14','mt-15','mt-16','mt-17','mt-18','mt-19','mt-20','mt-21','mt-22','mt-23','mt-24','mt-25','mt-26','mt-27','mt-28','et-01','et-02','et-03','et-05','et-07','et-08','st7-01','st7-02','st7-03','st7-04','st7-05','st7-06','st7-07'];
+  const testableTopics = ['mt-01','mt-02','mt-03','mt-04','mt-05','mt-06','mt-07','mt-08','mt-09','mt-10','mt-11','mt-12','mt-13','mt-14','mt-15','mt-16','mt-17','mt-18','mt-19','mt-20','mt-21','mt-22','mt-23','mt-24','mt-25','mt-26','mt-27','mt-28','et-01','et-02','et-03','et-05','et-07','et-08','st7-01','st7-02','st7-03','st7-04','st7-05','st7-06','st7-07','ht-01','ht-02','ht-03','ht-04','ht-05','ht-06','gt-01','gt-02','gt-03','gt-04','gt-05','gt-06'];
   if (testableTopics.indexOf(topicId) !== -1) {
     cta.style.display = '';
     updateTestLock();

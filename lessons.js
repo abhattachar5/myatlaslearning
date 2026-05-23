@@ -732,46 +732,56 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 </ul>`,
 
 "island-16": `<h4>Introduction</h4>
-<p>The Norman Conquest of 1066 was one of the most dramatic turning points in English history. Within a single year, England had three different kings and was transformed by a foreign ruling class. The effects on language, culture and power lasted for centuries.</p>
+<p>The Norman Conquest of 1066 was one of the most dramatic turning points in English history. Within a single year, England had three different kings and was transformed by a foreign ruling class. The effects on language, culture, law and power lasted for centuries — and are still visible in England today.</p>
 <h4>📌 Key Points</h4>
 <ul>
-<li>When Edward the Confessor died in January 1066, three men claimed the throne: <strong>Harold Godwinson</strong>, <strong>William of Normandy</strong> and <strong>Harald Hardrada</strong>.</li>
-<li>Harold was crowned immediately but faced two invasions. He defeated Hardrada at Stamford Bridge (Sept 1066) then rushed south to meet William.</li>
-<li>At the <strong>Battle of Hastings</strong> (14 Oct 1066): the Norman feigned retreat broke the English shield wall. Harold was killed.</li>
-<li>William used <strong>castles</strong> to control the population — motte-and-bailey designs were quick to build across England.</li>
+<li>When Edward the Confessor died in January 1066, three men claimed the throne: <strong>Harold Godwinson</strong> (English earl, claimed Edward promised him the throne), <strong>William of Normandy</strong> (claimed Edward and Harold both promised him the throne) and <strong>Harald Hardrada</strong> (King of Norway, claimed the throne through a previous agreement).</li>
+<li><strong>Battle of Stamford Bridge</strong> (25 Sept 1066): Harold marched his army 300 km north in just 4 days to surprise Hardrada's Viking force near York. The Vikings were completely defeated and Hardrada was killed. This was a stunning victory — but it left Harold's army exhausted and far from the south coast.</li>
+<li>At the <strong>Battle of Hastings</strong> (14 Oct 1066): Harold rushed south to meet William's invading Norman army. The English held the high ground at Senlac Hill with their shield wall, but the Norman feigned retreat tricked English soldiers into breaking formation. Norman cavalry and archers then overwhelmed them. Harold was killed.</li>
+<li><strong>The Harrying of the North (1069–70)</strong>: after repeated Anglo-Saxon rebellions in the north, William ordered the systematic destruction of villages, crops, livestock and farmland across Yorkshire and the north of England. Thousands died from starvation. It was a deliberately brutal act of punishment that left the region devastated for years — and is one of the key reasons some historians view William as a tyrant.</li>
+<li>William used <strong>castles</strong> to control the population — motte-and-bailey designs were quick to build and were constructed across England (over 500 by 1086). Key examples include the Tower of London, Windsor Castle and Warwick Castle. They served as military bases, administrative centres and symbols of Norman dominance.</li>
 <li>The <strong>Domesday Book</strong> (1086) surveyed all land and wealth in England for taxation — and proved William owned everything.</li>
+<li><strong>Impact on language and culture</strong>: the Normans spoke French, and hundreds of French words entered English (e.g. "castle", "government", "justice", "parliament", "beef", "pork"). Latin became the language of the Church and law. English remained the language of ordinary people — modern English is a blend of Anglo-Saxon and Norman French.</li>
+<li><strong>Historical interpretations</strong>: was William a great king or a tyrant? Some historians emphasise his effective government, legal reforms and the Domesday Book. Others focus on the Harrying of the North, the crushing of rebellions, and the replacement of the entire Anglo-Saxon ruling class with Normans. Evaluating different interpretations is a key historical skill.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> "The Battle of Hastings was won mainly because of Harold's mistakes." How far do you agree?</p>
 <p><strong>Solution (how to structure your argument):</strong><br>
-<strong>Evidence for:</strong> Harold's army was exhausted after Stamford Bridge; he didn't wait to rest. Breaking formation to chase the Normans showed poor discipline.<br>
-<strong>Evidence against:</strong> William's tactical brilliance — the feigned retreat was a deliberate, skilled manoeuvre. Norman cavalry and archers gave a clear tactical advantage.<br>
-<strong>Conclusion:</strong> Both sides' actions mattered. William's tactics were decisive, but Harold's tired army and poor positioning at Senlac Hill made his defeat more likely.</p>
+<strong>Evidence for:</strong> Harold's army was exhausted after marching 300 km to Stamford Bridge and immediately marching back south — he didn't wait for reinforcements or rest. Breaking formation to chase the Normans during the feigned retreat showed poor discipline and cost the English their strongest defensive position.<br>
+<strong>Evidence against:</strong> William's tactical brilliance — the feigned retreat was a deliberate, skilled manoeuvre that exploited English discipline. Norman cavalry and archers gave a clear tactical advantage that Harold's infantry-heavy army could not match. William had also prepared carefully with papal support and a purpose-built fleet.<br>
+<strong>Conclusion:</strong> Both sides' actions mattered. William's tactics were decisive, but Harold's tired army, lack of archers and poor positioning at Senlac Hill made his defeat more likely. The battle could have gone either way — it was close.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
 <dt>Conquest</dt><dd>The taking of a territory by military force.</dd>
 <dt>Shield wall</dt><dd>The Anglo-Saxon defensive tactic of soldiers standing shoulder-to-shoulder with overlapping shields.</dd>
+<dt>Harrying of the North</dt><dd>William's deliberate destruction of the north of England (1069–70) to crush rebellion — villages burned, crops destroyed, thousands died of starvation.</dd>
 <dt>Domesday Book</dt><dd>William's survey of England (1086) recording land ownership, value and resources for taxation.</dd>
 <dt>Motte-and-bailey</dt><dd>An early Norman castle: a wooden tower (keep) on a raised mound (motte) next to an enclosed courtyard (bailey).</dd>
+<dt>Feigned retreat</dt><dd>A deliberate military tactic where troops pretend to flee to draw the enemy out of position, then turn and attack.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Thinking William had an immediate, easy conquest — ✅ Correct: there were rebellions for years after 1066; William used the <strong>Harrying of the North</strong> (1069–70) to crush resistance brutally.</li>
 <li>❌ Saying Harold was definitely killed by an arrow to the eye — ✅ Correct: the Bayeux Tapestry is ambiguous — historians <strong>debate</strong> exactly how Harold died.</li>
 <li>❌ Confusing the Domesday Book with a census — ✅ Correct: it recorded <strong>land and wealth</strong> for taxation, not just population numbers.</li>
+<li>❌ Forgetting the Battle of Stamford Bridge — ✅ Correct: Harold fought <strong>two battles</strong> in quick succession. His victory at Stamford Bridge was impressive but left his army exhausted for Hastings.</li>
+<li>❌ Thinking the Normans replaced English entirely — ✅ Correct: French became the language of the ruling class, but ordinary people kept speaking English. <strong>Modern English is a blend</strong> of both.</li>
 </ul>`,
 
 "island-17": `<h4>Introduction</h4>
-<p>After 1066, William needed to control England with a small Norman ruling class over a large English population. The feudal system provided the structure — a strict hierarchy of loyalty, land and obligation. The Catholic Church reinforced this order with spiritual as well as earthly power.</p>
+<p>After 1066, William needed to control England with a small Norman ruling class over a large English population. The feudal system provided the structure — a strict hierarchy of loyalty, land and obligation. The Catholic Church reinforced this order with spiritual as well as earthly power. Understanding medieval life means looking beyond kings and lords to everyday farming, the role of women, and how castles evolved over time.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li>The <strong>feudal pyramid</strong> (top to bottom): King → Lords/Barons/Church → Knights → Peasants/Serfs. Everyone owed loyalty and service upward.</li>
 <li>The King owned all land — lords held it in exchange for military service; knights held it from lords in exchange for fighting.</li>
 <li><strong>Peasants</strong> (villagers/serfs) worked the land in exchange for protection and a small strip to farm. They could not leave without permission.</li>
 <li>The <strong>Catholic Church</strong> collected tithes (10% of income), ran hospitals and schools, and could excommunicate even kings.</li>
-<li><strong>Stone castles</strong> (replacing wooden motte-and-bailey) became permanent symbols of Norman power from the late 11th century.</li>
+<li><strong>Castle evolution</strong>: early Norman castles were <strong>motte-and-bailey</strong> (wooden tower on a mound, quick to build). From the late 11th century, these were replaced by <strong>stone keeps</strong> (e.g. the Tower of London) — stronger and more permanent. By the 13th century, <strong>concentric castles</strong> (castle within a castle, e.g. Caernarfon) with multiple rings of walls represented the most advanced medieval military engineering.</li>
+<li><strong>The open field system</strong>: most medieval villages used three large open fields, farmed in rotation. Each peasant had several narrow strips scattered across the fields. One field grew wheat, one grew barley or oats, and one lay fallow (resting) each year. This rotation prevented the soil from becoming exhausted. Farming was communal — villagers shared ploughs, oxen and labour.</li>
+<li><strong>The role of women</strong>: medieval women's lives varied by social class. Peasant women worked in the fields alongside men, brewed ale, raised children and managed the household. Noble women managed estates when their husbands were away at war, arranged marriages and could wield significant influence. However, women had few legal rights — they could not vote, hold most official positions or inherit land equally. Some women gained power through the Church as abbesses of convents.</li>
+<li><strong>Comparison with non-European societies</strong>: while feudal Europe was dominated by the Church and rigid hierarchy, the Islamic world (the "Golden Age" of Islam, ~8th–14th century) was far more advanced in science, medicine, mathematics and scholarship. Cities like Baghdad and Córdoba had universities, hospitals and libraries when most European towns had none. This comparison helps avoid a Eurocentric view of the medieval period.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
@@ -780,7 +790,8 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 1. <strong>Military control</strong>: lords provided knights when needed → William always had an army without paying for one permanently.<br>
 2. <strong>Local control</strong>: each lord managed their own estate → Norman power reached every corner of England.<br>
 3. <strong>Loyalty enforced</strong>: breaking feudal obligations meant losing land — the greatest punishment possible.<br>
-4. <strong>Church support</strong>: the Church taught that the social order was God's will → rebellion was a <strong>sin</strong>, not just a crime.</p>
+4. <strong>Church support</strong>: the Church taught that the social order was God's will → rebellion was a <strong>sin</strong>, not just a crime.<br>
+5. <strong>Castle network</strong>: over 500 castles built by 1086 gave Normans fortified bases in every region — a constant physical reminder of who held power.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
@@ -788,69 +799,88 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <dt>Tithe</dt><dd>A compulsory tax of one-tenth of annual income or produce, paid to the local church.</dd>
 <dt>Serf</dt><dd>A peasant bound to work a lord's land; could not leave without the lord's permission.</dd>
 <dt>Excommunication</dt><dd>Being expelled from the Catholic Church — cutting a person off from all religious sacraments and, it was believed, from God and heaven.</dd>
+<dt>Open field system</dt><dd>The medieval farming method where villagers worked strips of land across shared open fields, with one field left fallow each year.</dd>
+<dt>Fallow</dt><dd>A field left unplanted for a season to allow the soil to recover its fertility.</dd>
+<dt>Concentric castle</dt><dd>A castle design with multiple rings of defensive walls — a castle within a castle — representing the peak of medieval military architecture.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Thinking all peasants were equally poor and powerless — ✅ Correct: there were different levels of peasant; some <strong>villeins</strong> had land and relative security.</li>
 <li>❌ Thinking the feudal system only existed in England — ✅ Correct: feudalism existed across <strong>most of medieval Europe</strong>.</li>
 <li>❌ Underestimating the Church's power — ✅ Correct: the Church was arguably <strong>more powerful</strong> than many kings — it controlled education, charity, and people's belief in salvation.</li>
+<li>❌ Thinking medieval women had no role beyond the home — ✅ Correct: peasant women worked in the fields; noble women <strong>managed estates</strong>; some women held power as abbesses.</li>
+<li>❌ Assuming medieval Europe was the most advanced civilisation — ✅ Correct: the <strong>Islamic world</strong> was far ahead in science, medicine and learning during this period.</li>
 </ul>`,
 
 "island-18": `<h4>Introduction</h4>
-<p>The Black Death arrived in England in 1348 and killed roughly one third of the population within two years. No event in medieval history was more devastating — or more transformative. Its long-term effects cracked the foundations of the feudal system itself.</p>
+<p>The Black Death arrived in England in 1348 and killed roughly one third of the population within two years. No event in medieval history was more devastating — or more transformative. Its long-term effects cracked the foundations of the feudal system itself and set in motion social changes that culminated in the Peasants' Revolt of 1381.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li>Caused by the bacterium <em>Yersinia pestis</em> — spread mainly by fleas on black rats biting humans. Medieval people had no idea of this.</li>
 <li>Arrived in England via trade ships landing in Dorset in 1348, having swept from Central Asia through Europe since 1347.</li>
 <li><strong>Symptoms</strong>: buboes (painful swellings in armpits/groin/neck), black skin patches, fever, vomiting blood. Most died within 1–5 days.</li>
 <li>Medieval explanations: God's punishment for sin, bad air (miasma), planetary alignment — all wrong.</li>
-<li><strong>Long-term effects</strong>: labour shortage → peasants could demand wages → weakened serfdom → contributed to the Peasants' Revolt (1381).</li>
+<li><strong>Flagellants</strong>: groups of people who publicly whipped themselves in the streets, believing that self-inflicted pain would persuade God to end the plague. They travelled from town to town, attracting crowds. The Pope eventually condemned the movement, but it showed the depth of religious desperation.</li>
+<li><strong>Jewish persecution and scapegoating</strong>: in many parts of Europe, Jewish communities were blamed for the plague — accused of poisoning wells. Thousands were attacked and killed, particularly in Germany, France and Spain. This persecution was driven by existing prejudice and the desperate need to find someone to blame. It is an important early example of scapegoating during a crisis.</li>
+<li><strong>Long-term effects and the road to the Peasants' Revolt</strong>: the labour shortage after the Black Death gave surviving peasants bargaining power for the first time — they could demand higher wages. The government responded with the <strong>Statute of Labourers (1351)</strong>, which tried to fix wages at pre-plague levels and prevent peasants from moving. This was deeply resented. When a <strong>poll tax</strong> (a flat tax on every adult) was introduced in 1380, it was the final provocation — the <strong>Peasants' Revolt of 1381</strong> erupted, led by Wat Tyler and John Ball, who marched on London demanding an end to serfdom.</li>
+<li><strong>Comparison with other pandemics</strong>: the Black Death killed ~30–60% of Europe's population. Compare with: the Spanish Flu (1918–19, ~50 million deaths worldwide), or the COVID-19 pandemic (2020–23). In each case, pandemics exposed social inequalities, changed working patterns, and had lasting economic effects. The key difference is that medieval people had no understanding of germ theory.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> "The Black Death was the most important cause of the decline of the feudal system." How far do you agree?</p>
 <p><strong>Solution (structured argument):</strong><br>
-<strong>For:</strong> The labour shortage gave surviving peasants bargaining power for the first time. Lords had to pay wages or risk losing their workers entirely. This directly challenged the economic foundation of feudalism.<br>
-<strong>Against:</strong> The feudal system was already under strain from Magna Carta (1215) and growing trade. The Black Death <strong>accelerated</strong> change rather than causing it from scratch.<br>
-<strong>Judgement:</strong> The Black Death was the <strong>most dramatic single cause</strong>, but it worked alongside long-term trends already weakening the system.</p>
+<strong>For:</strong> The labour shortage gave surviving peasants bargaining power for the first time. Lords had to pay wages or risk losing their workers entirely. This directly challenged the economic foundation of feudalism. The government's attempt to suppress these changes (Statute of Labourers) led directly to the Peasants' Revolt.<br>
+<strong>Against:</strong> The feudal system was already under strain from Magna Carta (1215) and growing trade. The Black Death <strong>accelerated</strong> change rather than causing it from scratch. Serfdom didn't end immediately after the Revolt — it took many more decades.<br>
+<strong>Judgement:</strong> The Black Death was the <strong>most dramatic single cause</strong>, but it worked alongside long-term trends already weakening the system. Without the plague, feudalism would still have declined — but much more slowly.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
 <dt>Bubonic plague</dt><dd>The most common form of plague, causing swollen lymph nodes (buboes); spread by flea bites.</dd>
 <dt>Miasma theory</dt><dd>The medieval belief that disease was caused by "bad air" from rotting matter — incorrect, but widely held until germ theory in the 19th century.</dd>
+<dt>Flagellants</dt><dd>Groups of people who publicly whipped themselves as penance, believing self-punishment would persuade God to end the plague.</dd>
+<dt>Scapegoating</dt><dd>Blaming an innocent group for a crisis — during the Black Death, Jewish communities were falsely accused of causing the plague.</dd>
+<dt>Statute of Labourers (1351)</dt><dd>A law attempting to fix wages at pre-plague levels and prevent peasants from moving — a direct response to the labour shortage after the Black Death.</dd>
 <dt>Labour shortage</dt><dd>A lack of workers — after the Black Death, so many people had died that the survivors had more economic power.</dd>
-<dt>Peasants' Revolt (1381)</dt><dd>An uprising by English peasants against continued serfdom and high taxes — partly a consequence of the Black Death's social changes.</dd>
+<dt>Peasants' Revolt (1381)</dt><dd>An uprising by English peasants against continued serfdom, the Statute of Labourers and the poll tax — directly connected to the social upheaval caused by the Black Death.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Saying medieval people "ignored" the plague — ✅ Correct: they took it extremely seriously but used <strong>incorrect theories</strong> because germ theory didn't exist yet.</li>
 <li>❌ Thinking the plague only affected poor people — ✅ Correct: the plague killed across <strong>all social classes</strong> — even clergy and nobility died in large numbers.</li>
 <li>❌ Saying the plague "ended" feudalism overnight — ✅ Correct: the process was gradual and took <strong>over a century</strong> to fully transform medieval society.</li>
+<li>❌ Treating scapegoating as an isolated medieval event — ✅ Correct: scapegoating has occurred in <strong>many crises</strong> throughout history. Recognising the pattern helps us guard against it.</li>
 </ul>`,
 
 "island-19": `<h4>Introduction</h4>
-<p>Magna Carta — the "Great Charter" — was signed by King John in 1215 and is one of the most important documents in world history. For the first time, a king was made legally subject to the rule of law. Its principles influenced democratic constitutions across the globe, including the United States.</p>
+<p>Magna Carta — the "Great Charter" — was signed by King John in 1215 and is one of the most important documents in world history. For the first time, a king was made legally subject to the rule of law. Its principles — including habeas corpus and trial by jury — influenced the development of Parliament, the US Constitution and modern human rights.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li>King John was deeply unpopular: he lost Normandy (1204), taxed barons heavily, quarrelled with the Pope, and ignored traditional rights.</li>
 <li>In 1215, barons marched on London and forced John to negotiate at <strong>Runnymede</strong>. He signed Magna Carta on 15 June 1215.</li>
 <li>Key principles: no imprisonment without fair trial (<strong>habeas corpus</strong>), the king must obey the law, taxes require baronial consent.</li>
-<li><strong>Simon de Montfort's Parliament</strong> (1265) expanded representation beyond barons to include knights and town representatives — a crucial step.</li>
-<li>Magna Carta established that <strong>no one is above the law</strong> — the foundation of constitutional government.</li>
+<li><strong>Trial by jury</strong>: Magna Carta helped establish the principle that a person should be judged by their peers, not solely by the king or his officers. This became the foundation of the jury system still used in English and American courts today.</li>
+<li><strong>Henry III and the Provisions of Oxford (1258)</strong>: John's son Henry III also clashed with his barons over heavy taxation and foreign favourites. The barons, led by <strong>Simon de Montfort</strong>, forced Henry to accept the Provisions of Oxford — a set of reforms requiring the king to consult a council of barons on major decisions. Henry later rejected these, leading to civil war.</li>
+<li><strong>Simon de Montfort's Parliament (1265)</strong>: after defeating Henry III in battle, de Montfort summoned a Parliament that included not just barons but also <strong>knights from each county</strong> and <strong>burgesses (representatives) from each town</strong>. This was the first time ordinary people beyond the nobility were represented — a crucial step towards the representative Parliament we know today. De Montfort was killed later that year, but his model of Parliament survived.</li>
+<li><strong>How Parliament evolved</strong>: from a feudal council advising the king → de Montfort's model of broader representation → under Edward I, Parliament became a regular institution → over centuries, it gradually gained more power, eventually becoming the sovereign body it is today.</li>
+<li><strong>Magna Carta's lasting significance</strong>: the principle that no one — not even the king — is above the law. It influenced the English Bill of Rights (1689), the US Constitution and Bill of Rights (1787/1791), and the Universal Declaration of Human Rights (1948). Today, copies of Magna Carta are displayed in the British Library and the US National Archives.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> How significant was Magna Carta? Consider its short-term and long-term impact.</p>
 <p><strong>Solution:</strong><br>
-<strong>Short-term (1215):</strong> Limited immediate impact — John died in 1216, and the charter was often ignored or reissued in modified form. It was primarily a document protecting <strong>barons' rights</strong>, not ordinary people.<br>
-<strong>Long-term:</strong> Hugely significant. The principle that the king must obey the law became the foundation of the English constitution. It influenced the US Bill of Rights (1791) and the Universal Declaration of Human Rights (1948).<br>
-<strong>Judgement:</strong> More significant <strong>in retrospect</strong> than at the time — later generations gave it its legendary status.</p>
+<strong>Short-term (1215):</strong> Limited immediate impact — John died in 1216, and the charter was often ignored or reissued in modified form. It was primarily a document protecting <strong>barons' rights</strong>, not ordinary people. John tried to get the Pope to annul it within weeks of signing.<br>
+<strong>Medium-term (13th century):</strong> Its principles were repeatedly invoked by barons challenging royal authority — the Provisions of Oxford (1258) and de Montfort's Parliament (1265) built directly on Magna Carta's foundations.<br>
+<strong>Long-term:</strong> Hugely significant. The principle that the king must obey the law became the foundation of the English constitution. It influenced the US Bill of Rights (1791) and the Universal Declaration of Human Rights (1948). The concept of habeas corpus and trial by jury remain cornerstones of legal systems worldwide.<br>
+<strong>Judgement:</strong> More significant <strong>in retrospect</strong> than at the time — later generations gave it its legendary status. But the principles it established were genuinely revolutionary.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
 <dt>Magna Carta</dt><dd>Latin for "Great Charter" — the 1215 document limiting royal power and establishing that the king must obey the law.</dd>
 <dt>Habeas corpus</dt><dd>The right not to be imprisoned without a fair trial — one of the key principles established by Magna Carta.</dd>
+<dt>Trial by jury</dt><dd>The right to be judged by a group of one's peers rather than by a single authority — rooted in Magna Carta's principles.</dd>
+<dt>Provisions of Oxford</dt><dd>Reforms imposed on Henry III in 1258 requiring him to consult a council of barons — led by Simon de Montfort.</dd>
 <dt>Parliament</dt><dd>A body of representatives that advises and later controls the king — began developing in the 13th century.</dd>
+<dt>Burgess</dt><dd>A representative of a town or borough in Parliament — their inclusion by de Montfort in 1265 was a turning point.</dd>
 <dt>Constitutional government</dt><dd>A system where a ruler's power is limited and defined by laws or a constitution.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
@@ -858,25 +888,29 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <li>❌ Thinking Magna Carta was democratic — ✅ Correct: it protected <strong>barons' rights</strong>, not ordinary people's. Democracy developed much later.</li>
 <li>❌ Saying John willingly signed Magna Carta — ✅ Correct: he was <strong>forced</strong> to sign under military pressure and tried to get the Pope to annul it almost immediately.</li>
 <li>❌ Confusing Magna Carta with Parliament — ✅ Correct: Magna Carta was a <strong>document</strong>; Parliament was a separate institution that developed gradually afterwards.</li>
+<li>❌ Thinking Simon de Montfort created modern democracy — ✅ Correct: his Parliament was a <strong>step towards</strong> representation, but full democracy took centuries more to develop.</li>
 </ul>`,
 
 "island-31": `<h4>Introduction</h4>
-<p>The Crusades were a series of religious wars launched by Christian Europe to capture and defend the Holy Land. They lasted nearly 200 years, involved kings, knights and ordinary pilgrims, and had lasting consequences for relations between Christianity and Islam — consequences still felt today.</p>
+<p>The Crusades were a series of religious wars launched by Christian Europe to capture and defend the Holy Land. They lasted nearly 200 years, involved kings, knights and ordinary pilgrims, and had lasting consequences for relations between Christianity and Islam. Understanding the Crusades requires looking at both sides — the Islamic world was far more sophisticated than medieval Europe in many respects.</p>
 <h4>📌 Key Points</h4>
 <ul>
-<li>Pope Urban II called the First Crusade in <strong>1095</strong>, promising forgiveness of sins to those who fought. Jerusalem was captured in 1099.</li>
+<li>Pope Urban II called the First Crusade in <strong>1095</strong>, promising forgiveness of sins to those who fought. Jerusalem was captured in 1099 — accompanied by a notorious massacre of the city's Muslim and Jewish inhabitants.</li>
 <li>Crusaders were motivated by <strong>religion</strong> (spiritual rewards), <strong>politics</strong> (land and power) and <strong>adventure</strong> — rarely just one motive.</li>
-<li><strong>Saladin</strong> recaptured Jerusalem in 1187. He was respected for his military skill and relatively merciful treatment of Christian civilians.</li>
-<li><strong>Richard I</strong> led the Third Crusade (1189–92), won battles but couldn't retake Jerusalem. Negotiated a treaty allowing Christian pilgrims access.</li>
-<li>Long-term legacy: increased Christian-Muslim hostility, but also expanded <strong>trade</strong> and transferred Islamic learning (maths, medicine, astronomy) to Europe.</li>
+<li><strong>The Islamic perspective</strong>: the Islamic world at this time was far more advanced than Europe in science, medicine, mathematics, architecture and philosophy. Cities like Baghdad, Cairo and Córdoba had hospitals, universities and libraries with hundreds of thousands of books. Muslim scholars preserved and extended the knowledge of ancient Greece and Rome. To the Islamic world, the Crusaders were often seen as brutal and uncivilised invaders.</li>
+<li><strong>Saladin</strong> recaptured Jerusalem in 1187. He was respected for his military skill and relatively merciful treatment of Christian civilians — in sharp contrast to the Crusader massacre of 1099.</li>
+<li><strong>The Third Crusade (1189–92)</strong>: led by Richard I of England, Philip II of France and Frederick Barbarossa. Richard won the Battle of Arsuf against Saladin and negotiated a treaty allowing Christian pilgrims access to Jerusalem — but the city itself remained under Muslim control. The mutual respect between Richard and Saladin became legendary.</li>
+<li><strong>The Children's Crusade (1212)</strong>: thousands of young people, mostly from France and Germany, set out to recapture the Holy Land believing their innocence would succeed where armies had failed. Most never reached the Holy Land — many died of hunger, disease or were sold into slavery. It illustrates the extraordinary power of religious fervour in the medieval period.</li>
+<li><strong>Cultural exchange</strong>: despite the violence, the Crusades brought European contact with Islamic civilisation. Europe gained: Arabic numerals (0–9, far easier than Roman numerals), advances in medicine and surgery, algebra and astronomy, new foods (sugar, spices, citrus fruits), architectural techniques (pointed arches, domes), and superior textiles (silk, cotton). This cultural transfer helped spark the later Renaissance.</li>
+<li><strong>How the Crusades are interpreted today</strong>: Western historians have traditionally presented the Crusades as heroic Christian adventures. Islamic historians see them as aggressive invasions. Modern historians try to consider both perspectives. The Crusades remain a sensitive topic in Christian-Muslim relations — understanding multiple interpretations is essential.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> Were the Crusades primarily motivated by religion? Explain your answer.</p>
 <p><strong>Solution:</strong><br>
-<strong>Religious motives:</strong> Pope's promise of indulgence (forgiveness of sins); Jerusalem was the holiest city in Christianity; many believed they were doing God's will.<br>
-<strong>Non-religious motives:</strong> Younger sons of nobles had no land to inherit — the Crusades offered wealth and territory. Kings used Crusades to rid themselves of troublesome knights. Italian merchants profited from supplying Crusader armies.<br>
-<strong>Conclusion:</strong> Religion was the <strong>stated</strong> motive, but political and economic interests were often equally powerful — especially for leaders.</p>
+<strong>Religious motives:</strong> Pope's promise of indulgence (forgiveness of sins); Jerusalem was the holiest city in Christianity; many genuinely believed they were doing God's will; the Children's Crusade shows how deep religious conviction ran.<br>
+<strong>Non-religious motives:</strong> Younger sons of nobles had no land to inherit — the Crusades offered wealth and territory. Kings used Crusades to rid themselves of troublesome knights. Italian merchants profited enormously from supplying Crusader armies and establishing trade routes.<br>
+<strong>Conclusion:</strong> Religion was the <strong>stated</strong> motive, but political and economic interests were often equally powerful — especially for leaders. For ordinary people, religious conviction was probably more genuine.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
@@ -884,32 +918,37 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <dt>Indulgence</dt><dd>A pardon granted by the Pope, reducing punishment for sins — offered to Crusaders as a spiritual reward.</dd>
 <dt>Holy Land</dt><dd>The region around Jerusalem, sacred to Christians, Muslims and Jews — the destination of the Crusades.</dd>
 <dt>Jihad</dt><dd>An Arabic term meaning "struggle" — in the context of the Crusades, the Muslim effort to defend or recapture the Holy Land.</dd>
+<dt>Cultural exchange</dt><dd>The transfer of ideas, knowledge, technology and goods between civilisations — the Crusades brought European contact with far more advanced Islamic learning.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Thinking Crusaders were entirely motivated by religion — ✅ Correct: motives were <strong>mixed</strong> — land, wealth, adventure and status all played a role.</li>
 <li>❌ Thinking the Crusades were a clear Christian victory — ✅ Correct: the Crusades ultimately <strong>failed</strong> — Jerusalem was in Muslim hands by 1244 and never returned to Christian control.</li>
 <li>❌ Seeing Saladin as a villain — ✅ Correct: Saladin was widely respected even by his Christian enemies for his military genius and <strong>relatively merciful</strong> conduct.</li>
+<li>❌ Ignoring the Islamic perspective — ✅ Correct: the Crusaders were seen by the Islamic world as <strong>invaders</strong>. Good history considers <strong>multiple perspectives</strong>.</li>
+<li>❌ Thinking the Crusades only caused conflict — ✅ Correct: they also led to significant <strong>cultural exchange</strong> that enriched European knowledge of science, medicine and mathematics.</li>
 </ul>`,
 
 "island-32": `<h4>Introduction</h4>
-<p>The Renaissance and Reformation transformed Europe between the 14th and 17th centuries. New ideas about human potential challenged the Church's authority; the Printing Press spread these ideas rapidly; and the religious unity of Western Christianity was permanently broken. England's Reformation was driven as much by royal politics as by theology.</p>
+<p>The Renaissance and Reformation transformed Europe between the 14th and 17th centuries. New ideas about human potential challenged the Church's authority; the Printing Press spread these ideas rapidly; and the religious unity of Western Christianity was permanently broken. England's Reformation was driven as much by royal politics as by theology — and the Catholic Church fought back with its own Counter-Reformation.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li>The <strong>Renaissance</strong> (meaning "rebirth") began in Italy — a revival of ancient Greek and Roman learning, focusing on human potential (<strong>humanism</strong>).</li>
-<li>The <strong>Printing Press</strong> (Gutenberg, c.1450) spread ideas across Europe for the first time — essential for the Reformation.</li>
+<li><strong>Key Renaissance figures</strong>: <strong>Leonardo da Vinci</strong> (artist, inventor, anatomist — the "Renaissance man"); <strong>Michelangelo</strong> (painter of the Sistine Chapel ceiling, sculptor of David); <strong>Copernicus</strong> (proposed the sun, not the Earth, was at the centre of the solar system — challenging Church teaching); <strong>Galileo</strong> (used a telescope to support Copernicus, was put on trial by the Church). These figures show the Renaissance spirit of questioning, observation and human achievement.</li>
+<li>The <strong>Printing Press</strong> (Gutenberg, c.1450) was one of the most transformative inventions in history. Before printing, books were hand-copied by monks — expensive and rare. The press made books affordable, spread literacy, and allowed new ideas (including Luther's) to reach millions. It was essential for both the Renaissance and the Reformation — and linked to later changes in education, science and democracy.</li>
 <li><strong>Martin Luther</strong> (1517): nailed his 95 Theses to a church door in Wittenberg, attacking the sale of indulgences and papal authority.</li>
 <li><strong>Henry VIII</strong> wanted to divorce Catherine of Aragon. The Pope refused. Henry broke from Rome, made himself Head of the Church of England (Act of Supremacy, 1534).</li>
-<li><strong>Dissolution of the Monasteries</strong> (1536–41): Henry seized Church lands and wealth — politically and financially motivated.</li>
+<li><strong>Dissolution of the Monasteries (1536–41)</strong>: Henry closed over 800 monasteries, priories and convents across England and seized their land and wealth. Social and economic impact was enormous: monks and nuns lost their homes and livelihoods; the poor lost access to charity, hospitals and education that monasteries had provided; monastery land was sold to loyal nobles, creating a new class of wealthy Protestant landowners with a stake in the Reformation's permanence; some of England's finest medieval buildings were demolished or fell into ruin.</li>
+<li><strong>The Counter-Reformation</strong>: the Catholic Church's response to the Protestant Reformation. The <strong>Council of Trent</strong> (1545–63) clarified Catholic doctrine, banned the sale of indulgences, improved training of priests, and established new religious orders like the Jesuits. The Counter-Reformation aimed to reform the Church from within and win back areas that had turned Protestant. It was partly successful — southern Europe remained Catholic.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> Compare Luther's and Henry VIII's reasons for breaking with Rome. Were they similar?</p>
 <p><strong>Solution:</strong><br>
 <strong>Luther:</strong> Driven by genuine theological conviction — salvation through faith alone (sola fide), not payments; the Bible should be available in everyday language; the Pope had too much worldly power.<br>
-<strong>Henry:</strong> Driven primarily by personal and political need — he wanted a divorce Catherine couldn't give him a male heir. He also wanted the Church's wealth.<br>
-<strong>Similarity:</strong> Both challenged papal authority.<br>
-<strong>Difference:</strong> Luther was a <strong>theological reformer</strong>; Henry was a <strong>political opportunist</strong> who remained Catholic in doctrine.</p>
+<strong>Henry:</strong> Driven primarily by personal and political need — he wanted a divorce because Catherine couldn't give him a male heir. He also wanted the Church's enormous wealth (Dissolution of the Monasteries).<br>
+<strong>Similarity:</strong> Both challenged papal authority and created permanent breaks from Rome.<br>
+<strong>Difference:</strong> Luther was a <strong>theological reformer</strong>; Henry was a <strong>political opportunist</strong> who remained Catholic in doctrine. Henry even executed Protestants who went too far in reforming.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
@@ -917,64 +956,78 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <dt>Reformation</dt><dd>The 16th-century religious movement that challenged the Catholic Church and led to the creation of Protestant Christianity.</dd>
 <dt>Indulgence</dt><dd>A payment to the Church to reduce punishment for sins — Luther's central target in his 95 Theses.</dd>
 <dt>Act of Supremacy (1534)</dt><dd>The law making Henry VIII Supreme Head of the Church of England, replacing the Pope's authority.</dd>
+<dt>Dissolution of the Monasteries</dt><dd>Henry VIII's closure and seizure of over 800 monasteries (1536–41) — transferring enormous wealth from the Church to the Crown and loyal nobles.</dd>
+<dt>Counter-Reformation</dt><dd>The Catholic Church's response to Protestantism — including the Council of Trent, reformed practices and new religious orders like the Jesuits.</dd>
+<dt>Council of Trent</dt><dd>A series of Catholic Church meetings (1545–63) that clarified doctrine, banned indulgence sales and reformed priestly training.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Confusing Luther and Henry VIII as having the same reasons — ✅ Correct: Luther's break was <strong>theological</strong>; Henry's was primarily <strong>political and personal</strong>.</li>
 <li>❌ Thinking the Printing Press "caused" the Reformation — ✅ Correct: it was a crucial <strong>enabler</strong> that spread ideas — without it, Luther's Theses may not have spread beyond Wittenberg.</li>
 <li>❌ Saying Henry VIII became Protestant — ✅ Correct: Henry kept most Catholic practices — he just rejected <strong>papal authority</strong>, not Catholic theology.</li>
+<li>❌ Thinking the Catholic Church did nothing in response — ✅ Correct: the <strong>Counter-Reformation</strong> was a significant effort to reform, clarify and fight back against Protestantism.</li>
 </ul>`,
 
 "island-33": `<h4>Introduction</h4>
-<p>The Tudor dynasty produced some of England's most dramatic monarchs. Religious upheaval, political intrigue, a famous naval victory and one of England's greatest reigns all unfolded within a single family across little more than a century. Elizabeth I's reign in particular defined England's emerging national identity.</p>
+<p>The Tudor dynasty produced some of England's most dramatic monarchs. Religious upheaval, political intrigue, a famous naval victory and one of England's greatest reigns all unfolded within a single family across little more than a century. Elizabeth I's reign saw a cultural golden age of theatre, exploration and growing global ambition.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li>After Henry VIII: <strong>Edward VI</strong> (Protestant, simplified Church) → <strong>Mary I</strong> (Catholic, burned ~300 Protestants) → <strong>Elizabeth I</strong> (Protestant "middle way").</li>
+<li><strong>The "Bloody Mary" debate</strong>: Mary I earned her nickname by burning approximately 300 Protestants at the stake. But was she really worse than other Tudor monarchs? Henry VIII executed far more people; Elizabeth I had over 100 Catholics executed. Mary was trying to restore what she believed was the true faith after her father's break from Rome. Her reputation was largely shaped by <strong>Protestant propaganda</strong> — particularly John Foxe's "Book of Martyrs." Considering different interpretations is a key historical skill.</li>
 <li>Elizabeth's <strong>religious settlement</strong> was deliberately moderate — Protestant in theology but retaining some Catholic ceremony to keep broad support.</li>
 <li>The <strong>Spanish Armada</strong> (1588): Philip II of Spain sent 130 ships to invade. English fireships at Gravelines and violent storms destroyed the fleet.</li>
-<li>Elizabethan England saw a cultural golden age: Shakespeare, theatre, exploration (Drake's circumnavigation 1577–80).</li>
-<li>Elizabeth never married or named an heir — the <strong>succession question</strong> was a major weakness of her otherwise stable reign.</li>
+<li><strong>Elizabethan Poor Laws</strong>: poverty was a major issue in Elizabethan England (rising population, inflation, enclosure of common land). The Poor Laws (1598 and 1601) distinguished between the "deserving poor" (sick, elderly, orphans — given relief) and the "undeserving poor" (able-bodied beggars — punished). Vagrants could be whipped, branded or imprisoned. The Poor Laws were the first systematic attempt by government to manage poverty — their principles lasted until the 19th century.</li>
+<li><strong>Shakespeare and Elizabethan theatre</strong>: William Shakespeare (1564–1616) was the greatest playwright of the age. The Globe Theatre (built 1599) was open to all social classes — groundlings stood in the yard for a penny, while the wealthy sat in the galleries. Theatre became a central part of English culture and entertainment. Shakespeare's plays explored themes still relevant today: power, love, ambition, justice and revenge.</li>
+<li><strong>Exploration and early colonisation</strong>: Sir Francis Drake circumnavigated the globe (1577–80), raiding Spanish ships along the way. Sir Walter Raleigh attempted to establish England's first colony in North America (Roanoke, 1585 — it failed). These voyages were driven by trade, national rivalry with Spain, and the beginnings of imperial ambition. They laid the foundations for the later British Empire.</li>
+<li><strong>The Gunpowder Plot (1605)</strong>: after Elizabeth's death, James I (a Stuart) became king. Catholic frustrations continued — a group led by Robert Catesby and including Guy Fawkes planned to blow up Parliament. The plot was discovered and the conspirators executed. It shows that religious tensions did not end with Elizabeth — and serves as a transition topic into the Stuart period.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> "Elizabeth I was the greatest Tudor monarch." How far do you agree?</p>
 <p><strong>Solution:</strong><br>
-<strong>For:</strong> 45-year reign brought stability after decades of religious upheaval. Defeat of the Armada enhanced national confidence. Arts flourished. England became a significant naval power.<br>
-<strong>Against:</strong> She never resolved the succession — causing a crisis at her death. Poverty and failed harvests caused significant suffering. The Irish rebellion was suppressed brutally.<br>
-<strong>Judgement:</strong> Elizabeth's achievements in stability and culture were remarkable, but her failure to provide an heir was a serious weakness. Her <strong>long-term legacy</strong> was largely positive for England's development.</p>
+<strong>For:</strong> 45-year reign brought stability after decades of religious upheaval. Defeat of the Armada enhanced national confidence. Arts flourished — Shakespeare, Marlowe. England became a significant naval power. Drake's circumnavigation and early colonisation marked England's emergence as a global force.<br>
+<strong>Against:</strong> She never resolved the succession — causing a crisis at her death. Poverty and failed harvests caused significant suffering despite the Poor Laws. The Irish rebellion was suppressed brutally. Religious tensions were managed, not solved — the Gunpowder Plot came just two years after her death.<br>
+<strong>Judgement:</strong> Elizabeth's achievements in stability, culture and national identity were remarkable, but her failure to provide an heir was a serious weakness. Her <strong>long-term legacy</strong> was largely positive for England's development.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
 <dt>Religious settlement</dt><dd>Elizabeth's compromise religious policy — Protestant but moderate enough to include most English people.</dd>
 <dt>Armada</dt><dd>The Spanish fleet of 130 ships sent to invade England in 1588, defeated by a combination of English tactics and violent storms.</dd>
+<dt>Poor Laws</dt><dd>Elizabethan legislation (1598/1601) creating the first systematic approach to managing poverty — distinguishing "deserving" from "undeserving" poor.</dd>
+<dt>Vagrant</dt><dd>A person without a home or job who wandered from place to place — treated harshly under Elizabethan law.</dd>
 <dt>Succession</dt><dd>The process of determining who will inherit a throne — Elizabeth's lack of an heir made this a political crisis.</dd>
-<dt>Reformation</dt><dd>The break from the Catholic Church and establishment of Protestant Christianity in England.</dd>
+<dt>Gunpowder Plot</dt><dd>A 1605 Catholic conspiracy to blow up Parliament and kill James I — led by Robert Catesby with Guy Fawkes as the explosives expert.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Getting the order of monarchs wrong — ✅ Correct: Henry VIII → Edward VI → Mary I → Elizabeth I. Learn this sequence.</li>
 <li>❌ Saying England won the Armada purely through military skill — ✅ Correct: the <strong>storms</strong> were crucial — many historians argue England could not have won without them.</li>
 <li>❌ Thinking Elizabeth's reign was entirely peaceful — ✅ Correct: there were plots against her life, ongoing religious tension and brutal colonial violence in Ireland.</li>
+<li>❌ Accepting "Bloody Mary" without question — ✅ Correct: Mary's reputation was largely shaped by <strong>Protestant propaganda</strong>. Other Tudor monarchs also executed large numbers of people.</li>
 </ul>`,
 
 "island-34": `<h4>Introduction</h4>
-<p>The Transatlantic Slave Trade was one of history's greatest crimes — a commercially organised system that enslaved an estimated 12 million Africans over 400 years. Britain was central to it. Understanding its operation, its human cost and the struggle for abolition is essential to understanding the modern world.</p>
+<p>The Transatlantic Slave Trade was one of history's greatest crimes — a commercially organised system that enslaved an estimated 12 million Africans over 400 years. Britain was central to it. Understanding Africa before European contact, the operation of the trade, the resistance of enslaved people and slavery's lasting legacy is essential to understanding the modern world.</p>
 <h4>📌 Key Points</h4>
 <ul>
+<li><strong>Africa before the slave trade</strong>: Africa was home to thriving kingdoms and civilisations long before European contact. The Kingdom of Mali (13th–16th century) was one of the wealthiest empires in the world — Mansa Musa's pilgrimage to Mecca (1324) was legendary for its extraordinary display of gold. The Kingdom of Benin (13th–19th century) was famous for its bronze sculptures, sophisticated governance and walled city. Great Zimbabwe was a major trading centre in southern Africa. Challenging the narrative that Africa had "no history" before Europeans is essential — it was used to justify enslavement.</li>
 <li>The <strong>triangular trade</strong>: Britain → West Africa (goods exchanged for enslaved people) → Americas (enslaved people sold, plantation goods bought) → Britain (sugar, tobacco, cotton sold for profit).</li>
 <li>The <strong>Middle Passage</strong>: the crossing from Africa to the Americas. Enslaved people were chained below decks in horrific conditions. Up to 20% died during the crossing.</li>
-<li>Cities including Bristol and Liverpool grew wealthy from the trade — profits funded banks, businesses and buildings still standing today.</li>
-<li>Enslaved people resisted in many ways: work slowdowns, escape, revolt (e.g. the Haitian Revolution, 1791–1804).</li>
+<li><strong>The economic scale of slavery</strong>: the slave trade and plantation economy generated enormous wealth for Britain. Sugar from the Caribbean was the most profitable commodity in the world. Cotton from enslaved labour in America fuelled the Industrial Revolution in Lancashire. Cities including Bristol, Liverpool and Glasgow grew wealthy from the trade — profits funded banks (e.g. Barclays, Lloyds), insurance companies, stately homes and public buildings still standing today. When slavery was abolished in 1833, the British government paid £20 million in compensation — to the slaveholders, not the enslaved. This debt was not fully repaid until 2015.</li>
+<li>Enslaved people resisted in many ways: work slowdowns, escape, maintaining cultural practices, revolt. Key resistance figures include: <strong>Toussaint Louverture</strong> (led the Haitian Revolution, 1791–1804 — the only successful slave revolt to create an independent nation); <strong>Nanny of the Maroons</strong> (Jamaican freedom fighter who led a community of escaped enslaved people in the mountains, using guerrilla tactics against the British); <strong>Olaudah Equiano</strong> (formerly enslaved man who bought his freedom and wrote a powerful autobiography used in the abolition campaign).</li>
 <li><strong>Abolition</strong>: 1807 — Slave Trade Act (trade abolished); 1833 — Slavery Abolition Act (enslaved people freed in British territories). Slaveholders were compensated; enslaved people were not.</li>
+<li><strong>Legacy in modern Britain</strong>: slavery's history continues to affect communities today. Debates about statues (e.g. the Edward Colston statue in Bristol, toppled in 2020), calls for reparations, racial inequality, and the representation of Black history in the curriculum all connect to this history. Understanding the legacy helps explain ongoing social issues.</li>
+<li><strong>The development of racism as an ideology</strong>: racial prejudice existed before the slave trade, but the trade systematised and intensified it. To justify enslaving millions of people, Europeans developed pseudo-scientific theories claiming African people were inherently inferior. These ideas became deeply embedded in European culture and were used to justify not just slavery but also colonialism. Understanding that racism was <strong>constructed to justify exploitation</strong> — not a natural or inevitable belief — is crucial.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> Why did abolition take so long despite widespread knowledge of conditions on the Middle Passage?</p>
 <p><strong>Solution:</strong><br>
-1. <strong>Economic interests</strong>: the trade was enormously profitable. Plantation owners, merchants and MPs had financial stakes in its continuation.<br>
-2. <strong>Political power</strong>: slaveholders and their supporters had significant influence in Parliament.<br>
+1. <strong>Economic interests</strong>: the trade was enormously profitable. Plantation owners, merchants and MPs had financial stakes in its continuation. Sugar alone was worth more than all of Britain's other imports combined.<br>
+2. <strong>Political power</strong>: slaveholders and their supporters had significant influence in Parliament — the "West India lobby" was one of the most powerful pressure groups.<br>
 3. <strong>Racism</strong>: many people used racial arguments to justify the system — dehumanising enslaved people made it easier to ignore their suffering.<br>
-4. <strong>Gradual change</strong>: public opinion shifted slowly through the work of abolitionists like Wilberforce and Equiano — change required sustained campaigning over decades.</p>
+4. <strong>Gradual change</strong>: public opinion shifted slowly through the work of abolitionists like Wilberforce and Equiano, sugar boycotts organised by women, and petitions signed by hundreds of thousands — change required sustained campaigning over decades.<br>
+5. <strong>Enslaved people's resistance</strong>: the Haitian Revolution (1791–1804) showed that enslaved people would fight for freedom, making the continuation of slavery increasingly dangerous and unstable.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
@@ -982,16 +1035,20 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <dt>Middle Passage</dt><dd>The sea crossing from West Africa to the Americas where enslaved Africans were transported in appalling conditions.</dd>
 <dt>Abolitionist</dt><dd>Someone who campaigned for the ending of slavery — key figures include William Wilberforce and Olaudah Equiano.</dd>
 <dt>Emancipation</dt><dd>The act of freeing enslaved people — achieved in British territories by the Slavery Abolition Act of 1833.</dd>
+<dt>Maroons</dt><dd>Communities of escaped enslaved people who established free settlements, often in mountainous or remote areas — fought for their independence using guerrilla warfare.</dd>
+<dt>Reparations</dt><dd>Compensation or payments made to address historical injustice — an ongoing debate about whether descendants of enslaved people should receive financial reparations.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Thinking abolition was easy or quick — ✅ Correct: it took over <strong>20 years</strong> of sustained campaigning by abolitionists against powerful economic and political opposition.</li>
 <li>❌ Forgetting enslaved people's own resistance — ✅ Correct: enslaved people were <strong>active agents</strong> in their own liberation — revolts and resistance were constant.</li>
 <li>❌ Thinking the 1807 Act ended slavery — ✅ Correct: 1807 ended the <strong>trade</strong>; slavery itself continued until <strong>1833</strong> in British territories.</li>
+<li>❌ Assuming Africa had no civilisation before European contact — ✅ Correct: Africa had <strong>wealthy, sophisticated kingdoms</strong> (Mali, Benin, Great Zimbabwe) long before the slave trade. This myth was used to justify enslavement.</li>
+<li>❌ Thinking racism is natural or inevitable — ✅ Correct: racism as an ideology was <strong>constructed to justify slavery and colonialism</strong> — it is a product of history, not biology.</li>
 </ul>`,
 
 "island-20": `<h4>Introduction</h4>
-<p>Maps are geographers' most powerful tool — they communicate enormous amounts of information in a compact, visual form. Being able to read grid references, interpret contour lines and use map scale are skills you'll use in geography exams, fieldwork and everyday navigation.</p>
+<p>Maps are geographers' most powerful tool — they communicate enormous amounts of information in a compact, visual form. Being able to read grid references, interpret contour lines, use map scale, analyse aerial photographs and understand GIS are skills you'll use in geography exams, fieldwork and everyday navigation.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li><strong>4-figure grid reference</strong>: go along the eastings first, then up the northings. Memory aid: "along the corridor and up the stairs."</li>
@@ -999,13 +1056,28 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <li><strong>Contour lines</strong> join points of equal height. Close together = steep slope. Far apart = gentle slope. Circles closing in = hilltop.</li>
 <li><strong>Map scale</strong>: 1:25,000 means 1 cm on map = 25,000 cm = 250 m in real life. 1:50,000 means 1 cm = 500 m.</li>
 <li><strong>Large scale</strong> maps show small areas in great detail. <strong>Small scale</strong> maps show large areas with little detail.</li>
+<li><strong>Aerial photographs</strong> show the landscape from above — either vertical (directly overhead) or oblique (taken at an angle). Compare them with OS maps to identify features like settlements, roads, rivers and land use.</li>
+<li><strong>GIS (Geographical Information Systems)</strong>: computer software that layers different types of geographical data on a digital map — used for planning, flood risk mapping, transport routes and environmental monitoring.</li>
+<li><strong>Cross-sections</strong>: a side-on view of the landscape drawn from contour lines. Plot the height at each contour where it crosses a straight line between two points, then join the dots to reveal the shape of the land.</li>
+<li><strong>Field sketches</strong>: quick, labelled drawings made in the field to record key features of a landscape. They should include a title, labels, direction and key features annotated.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="grid-reference"><p class="diagram-caption">How to read 4-figure and 6-figure grid references</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="contour-cross-section"><p class="diagram-caption">Contour lines and how to draw a cross-section</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
-<p><strong>Example:</strong> On a 1:50,000 map, two points are 6 cm apart. What is the real-life distance? What does it mean if the contour lines between them are very close together?</p>
+<p><strong>Example 1:</strong> On a 1:50,000 map, two points are 6 cm apart. What is the real-life distance? What does it mean if the contour lines between them are very close together?</p>
 <p><strong>Solution:</strong><br>
 Real-life distance: 1 cm = 50,000 cm = 500 m, so 6 cm = 6 × 500 m = <strong>3,000 m = 3 km</strong>.<br>
 Close contour lines between the two points indicate a <strong>steep slope</strong> — the route would involve significant climbing or descending.</p>
+</div>
+<div class="example-box">
+<p><strong>Example 2:</strong> You are given an aerial photograph showing a river with a large bend, surrounded by flat green fields, with a town on one bank. How would you use an OS map alongside this photograph?</p>
+<p><strong>Solution:</strong><br>
+1. Identify the <strong>meander</strong> (river bend) on both the photo and the OS map — match the shape of the bend.<br>
+2. Use the OS map's <strong>grid references</strong> to give a precise location for the features visible in the photograph.<br>
+3. The flat green fields are the <strong>floodplain</strong> — contour lines on the OS map will be widely spaced here, confirming flat land.<br>
+4. The town can be identified on the OS map by its <strong>settlement symbols</strong> (roads, buildings, churches).<br>
+Combining aerial photos with OS maps gives both a <strong>visual overview</strong> and <strong>precise locational data</strong>.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
@@ -1013,32 +1085,53 @@ Close contour lines between the two points indicate a <strong>steep slope</stron
 <dt>Northing</dt><dd>The horizontal grid lines on a map — numbered bottom to top. Read second in a grid reference.</dd>
 <dt>Contour line</dt><dd>A line on a map connecting all points of equal height above sea level.</dd>
 <dt>Map scale</dt><dd>The ratio between a distance on a map and the corresponding real-life distance.</dd>
+<dt>GIS</dt><dd>Geographical Information Systems — computer software that stores, analyses and displays layers of geographical data on digital maps.</dd>
+<dt>Cross-section</dt><dd>A side-on diagram showing the shape of the land between two points, drawn using contour line data from a map.</dd>
+<dt>Aerial photograph</dt><dd>A photograph taken from above — vertical (straight down) or oblique (at an angle) — used alongside maps to interpret landscape features.</dd>
+<dt>Field sketch</dt><dd>A labelled drawing made during fieldwork to record key landscape features from a particular viewpoint.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Reading northings before eastings — ✅ Correct: <strong>eastings first</strong> (left-right), then northings (up-down). "Along the corridor, then up the stairs."</li>
 <li>❌ Thinking close contours mean a valley — ✅ Correct: close contours mean a <strong>steep slope</strong> — they could be a hill or a valley; look at the numbers to tell which way the ground rises.</li>
 <li>❌ Confusing large scale with showing a large area — ✅ Correct: large scale = <strong>zoomed in</strong>, lots of detail, small area. Small scale = zoomed out, large area, less detail.</li>
+<li>❌ Thinking GIS is just a digital map — ✅ Correct: GIS <strong>layers multiple datasets</strong> (population, flood risk, land use) together for analysis, not just navigation.</li>
+<li>❌ Drawing a cross-section without checking contour heights — ✅ Correct: always read the <strong>exact height value</strong> of each contour line; don't assume equal spacing means equal height change.</li>
 </ul>`,
 
 "island-21": `<h4>Introduction</h4>
-<p>Weather affects our daily lives, but climate shapes civilisations. The UK's temperate maritime climate — mild, wet and changeable — is the result of its island location, prevailing winds and warm ocean currents. Understanding these factors helps explain not just British weather but climate patterns worldwide.</p>
+<p>Weather affects our daily lives, but climate shapes civilisations. The UK's temperate maritime climate — mild, wet and changeable — is the result of its island location, prevailing winds and warm ocean currents. But climate is not fixed: it has changed dramatically over thousands of years, from the Ice Age to the present, and human activity is now accelerating that change.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li><strong>Weather</strong>: short-term atmospheric conditions (today's temperature, rain). <strong>Climate</strong>: average weather over 30+ years for a region.</li>
 <li>Key weather instruments: thermometer (temperature), rain gauge (rainfall/mm), anemometer (wind speed), barometer (air pressure), wind vane (wind direction).</li>
 <li>The UK's climate is shaped by: <strong>prevailing south-westerly winds</strong> from the Atlantic; the <strong>North Atlantic Drift</strong> (warm ocean current); island location; relief (western uplands cause relief rainfall).</li>
 <li><strong>Relief rainfall</strong>: moist air rises over hills → cools → condenses → rains. Western UK is wetter than the east.</li>
-<li><strong>Climate change</strong>: enhanced greenhouse effect is causing global temperatures to rise, leading to more extreme weather events.</li>
+<li><strong>Climate change since the Ice Age</strong>: the last glacial period ended ~11,700 years ago. Temperatures have fluctuated since — the Medieval Warm Period (~900–1300 AD) allowed vineyards in England, while the Little Ice Age (~1300–1850 AD) froze the Thames. Current warming is far more rapid than any natural cycle.</li>
+<li><strong>Evidence for past climate change</strong>: ice cores (trapped air bubbles show CO₂ levels and temperature over 800,000 years); tree rings (wider rings = warmer, wetter years); historical records (harvest dates, paintings of frozen rivers); fossils and pollen analysis.</li>
+<li><strong>The enhanced greenhouse effect</strong>: burning fossil fuels increases CO₂ and methane in the atmosphere → these gases trap more heat → global temperatures rise. This is different from the natural greenhouse effect which keeps Earth habitable.</li>
+<li><strong>Microclimates</strong>: small-scale variations in climate within a local area. Caused by shelter, aspect (direction a slope faces), surface type (tarmac absorbs heat) and proximity to water. Urban areas are often warmer than surrounding countryside (the urban heat island effect).</li>
+<li><strong>Extreme weather in the UK</strong>: heatwaves, storms, flooding and cold snaps are becoming more frequent and intense. Examples include the 2022 UK heatwave (40°C recorded for the first time) and increased winter flooding.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="relief-rainfall"><p class="diagram-caption">How relief rainfall forms — windward rain and leeward rain shadow</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="greenhouse-effect"><p class="diagram-caption">The enhanced greenhouse effect — how trapped heat warms the Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
-<p><strong>Example:</strong> Why is Manchester wetter than London, even though both are in England?</p>
+<p><strong>Example 1:</strong> Why is Manchester wetter than London, even though both are in England?</p>
 <p><strong>Solution:</strong><br>
 1. Prevailing winds blow from the <strong>south-west</strong> — picking up moisture over the Atlantic Ocean.<br>
 2. These moist air masses hit the <strong>Pennines</strong> (hills west of Manchester) — air is forced to rise.<br>
 3. Rising air <strong>cools and condenses</strong> → rain falls on the western (windward) side — <strong>relief rainfall</strong>.<br>
 4. By the time air descends on the eastern (leeward) side, it has lost much of its moisture — the <strong>rain shadow</strong> effect makes London drier.</p>
+</div>
+<div class="example-box">
+<p><strong>Example 2:</strong> How do ice cores provide evidence for past climate change?</p>
+<p><strong>Solution:</strong><br>
+1. Scientists drill deep into ice sheets in Antarctica and Greenland, extracting long cylinders (cores) of ice.<br>
+2. Each layer of ice represents one year of snowfall — deeper layers are older.<br>
+3. Tiny <strong>air bubbles</strong> trapped in the ice contain samples of the atmosphere from the time the ice formed.<br>
+4. By analysing these bubbles, scientists can measure <strong>CO₂ levels and temperature</strong> going back over 800,000 years.<br>
+5. The data shows a clear correlation: when CO₂ levels were high, temperatures were high — and current CO₂ levels are <strong>far higher</strong> than at any point in this record.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
@@ -1046,27 +1139,42 @@ Close contour lines between the two points indicate a <strong>steep slope</stron
 <dt>North Atlantic Drift</dt><dd>A warm ocean current from the Gulf of Mexico that keeps the UK warmer than its latitude would suggest.</dd>
 <dt>Relief rainfall</dt><dd>Rain caused when moist air is forced to rise over hills, cools and condenses.</dd>
 <dt>Rain shadow</dt><dd>The dry area on the leeward (sheltered) side of a hill or mountain range.</dd>
+<dt>Ice core</dt><dd>A cylinder of ice drilled from an ice sheet, containing trapped air bubbles that reveal past atmospheric conditions over hundreds of thousands of years.</dd>
+<dt>Enhanced greenhouse effect</dt><dd>The additional warming caused by human-produced greenhouse gases (CO₂, methane) trapping extra heat in the atmosphere beyond the natural level.</dd>
+<dt>Microclimate</dt><dd>A small area where the climate differs from the surrounding region — caused by shelter, aspect, surface type or proximity to water.</dd>
+<dt>Urban heat island</dt><dd>The phenomenon where urban areas are warmer than surrounding rural areas due to heat-absorbing surfaces, less vegetation and waste heat from buildings and vehicles.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Saying "weather and climate are the same thing" — ✅ Correct: weather is <strong>day-to-day</strong>; climate is the <strong>long-term average</strong> (30+ years).</li>
 <li>❌ Thinking the UK is warm because it's close to the equator — ✅ Correct: the UK is at ~50–60°N; it's warm for its latitude thanks to the <strong>North Atlantic Drift</strong>.</li>
 <li>❌ Confusing rain gauge and barometer — ✅ Correct: rain gauge measures <strong>rainfall (mm)</strong>; barometer measures <strong>air pressure (millibars)</strong>.</li>
+<li>❌ Saying "climate has always changed so current change is natural" — ✅ Correct: climate has changed naturally, but current warming is <strong>far faster</strong> than any natural cycle and is driven by <strong>human CO₂ emissions</strong>.</li>
+<li>❌ Confusing the greenhouse effect with the enhanced greenhouse effect — ✅ Correct: the natural greenhouse effect keeps Earth warm enough for life; the <strong>enhanced</strong> effect is the extra warming from human-added gases.</li>
 </ul>`,
 
 "island-22": `<h4>Introduction</h4>
-<p>Rivers are among the most powerful forces shaping the landscape. From the steep, fast-flowing upper course to the wide, meandering lower course, rivers constantly erode, transport and deposit material — creating distinctive landforms at each stage of their journey.</p>
+<p>Rivers are among the most powerful forces shaping the landscape. They are part of the water cycle — the continuous movement of water between the atmosphere, land and sea. From the steep, fast-flowing upper course to the wide, meandering lower course, rivers constantly erode, transport and deposit material — creating distinctive landforms at each stage of their journey.</p>
 <h4>📌 Key Points</h4>
 <ul>
+<li><strong>The water cycle (hydrological cycle)</strong>: evaporation (water turns to vapour) → condensation (vapour cools into clouds) → precipitation (rain, snow, hail falls) → collection (water gathers in rivers, lakes, oceans) → the cycle repeats. Also includes infiltration (water soaking into soil) and transpiration (water released by plants).</li>
+<li><strong>Drainage basin</strong>: the area of land drained by a river and its tributaries. The boundary is called the <strong>watershed</strong> — a ridge of high land separating one drainage basin from another. Water within the basin flows into the main river via tributaries, surface runoff, throughflow and groundwater flow.</li>
 <li><strong>Three river processes</strong>: Erosion (wearing away), Transportation (carrying material), Deposition (dropping material when energy decreases).</li>
 <li>Types of erosion: hydraulic action (force of water), abrasion (sediment scraping), solution (dissolving rock), attrition (particles wearing each other down).</li>
 <li>Upper course: steep, fast, narrow — dominant erosion. <strong>V-shaped valleys</strong> and waterfalls.</li>
 <li>Middle/lower course: gentle gradient, wide — dominant deposition. <strong>Meanders</strong>, floodplains, oxbow lakes.</li>
 <li><strong>Meander formation</strong>: faster water on outside of bend erodes (river cliff); slower water inside deposits (slip-off slope). Over time the loop is cut off → oxbow lake.</li>
+<li><strong>Flooding</strong>: caused by prolonged rainfall, rapid snowmelt, impermeable rock, urbanisation (less infiltration), or deforestation (less interception). Effects include damage to property, loss of life, disruption to transport, and loss of farmland.</li>
+<li><strong>Hard engineering</strong>: man-made structures to control flooding — e.g. dams and reservoirs, embankments (levees), channel straightening, flood walls. Effective but expensive and can cause problems downstream.</li>
+<li><strong>Soft engineering</strong>: working with natural processes — e.g. flood plain zoning (not building on floodplains), afforestation (planting trees to slow runoff), managed flooding, river restoration. Cheaper and more sustainable but may not prevent major floods.</li>
+<li><strong>Case study — River Tees</strong>: rises in the Pennines (upper course — High Force waterfall, V-shaped valley at Teesdale); middle course shows clear meanders near Yarm; lower course — wide floodplain at the mouth near Middlesbrough. The Tees Barrage controls flooding and water levels in the lower course.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="drainage-basin"><p class="diagram-caption">A drainage basin — source, tributaries, confluence, watershed and mouth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="river-long-profile"><p class="diagram-caption">River long profile and cross-sections: upper, middle and lower course</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="meander-formation"><p class="diagram-caption">How a meander develops into an oxbow lake — four stages</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
-<p><strong>Example:</strong> Describe how an oxbow lake forms from a meander.</p>
+<p><strong>Example 1:</strong> Describe how an oxbow lake forms from a meander.</p>
 <p><strong>Solution:</strong><br>
 1. Water flows faster on the <strong>outside</strong> of a meander bend → lateral erosion undercuts the bank → <strong>river cliff</strong> forms.<br>
 2. Water flows slower on the <strong>inside</strong> → deposition builds up → <strong>slip-off slope</strong> (beach-like) forms.<br>
@@ -1074,22 +1182,38 @@ Close contour lines between the two points indicate a <strong>steep slope</stron
 4. During a flood, the river cuts across the narrow neck — taking the <strong>shorter route</strong>.<br>
 5. Deposition seals off the old meander loop → isolated as an <strong>oxbow lake</strong>.</p>
 </div>
+<div class="example-box">
+<p><strong>Example 2:</strong> Compare one hard and one soft engineering method for managing flooding.</p>
+<p><strong>Solution:</strong><br>
+<strong>Hard: Embankments (levees)</strong><br>
+Raised banks built along the river channel to contain higher water levels. They protect settlements behind them but are expensive to maintain, can give a false sense of security, and if breached, flooding is sudden and severe.<br><br>
+<strong>Soft: Afforestation</strong><br>
+Planting trees in the upper catchment area. Tree roots increase infiltration (water soaks into soil instead of running off), and leaves intercept rainfall, slowing the water's journey to the river. This is cheaper, creates wildlife habitats and is sustainable — but it takes years for trees to mature and may not prevent major floods.<br><br>
+<strong>Judgement:</strong> Most flood management schemes use a <strong>combination</strong> of hard and soft engineering for the best balance of cost, effectiveness and environmental impact.</p>
+</div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
+<dt>Water cycle</dt><dd>The continuous movement of water between the atmosphere, land and oceans through evaporation, condensation, precipitation and collection.</dd>
+<dt>Drainage basin</dt><dd>The area of land drained by a river and all its tributaries — bounded by the watershed.</dd>
+<dt>Watershed</dt><dd>The ridge of high land forming the boundary between two adjacent drainage basins.</dd>
 <dt>Erosion</dt><dd>The wearing away and removal of material by the river — greatest in the upper course where the river has most energy.</dd>
 <dt>Deposition</dt><dd>The dropping of material when a river loses energy — greatest in the lower course on flat land.</dd>
 <dt>Meander</dt><dd>A large bend in a river, formed by differential erosion and deposition on opposite banks.</dd>
 <dt>Oxbow lake</dt><dd>A curved lake formed when a meander loop is cut off from the main river channel.</dd>
+<dt>Hard engineering</dt><dd>Man-made structures used to control natural processes — e.g. dams, embankments, flood walls.</dd>
+<dt>Soft engineering</dt><dd>Approaches that work with natural processes to reduce flood risk — e.g. afforestation, flood plain zoning.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Saying erosion happens on the inside of a meander — ✅ Correct: erosion (and river cliffs) form on the <strong>outside</strong>; deposition on the <strong>inside</strong>.</li>
 <li>❌ Thinking rivers always flow straight — ✅ Correct: rivers naturally develop meanders due to variations in <strong>flow speed and erosion</strong>.</li>
 <li>❌ Confusing transportation and deposition — ✅ Correct: transportation is <strong>carrying</strong> material; deposition is <strong>dropping</strong> it when the river slows down.</li>
+<li>❌ Thinking hard engineering is always better because it's stronger — ✅ Correct: hard engineering is expensive and can cause problems elsewhere; <strong>soft engineering</strong> is often more sustainable and cost-effective.</li>
+<li>❌ Forgetting the water cycle when explaining rivers — ✅ Correct: rivers are part of the <strong>hydrological cycle</strong> — precipitation, infiltration, runoff and evaporation all feed into how rivers behave.</li>
 </ul>`,
 
 "island-23": `<h4>Introduction</h4>
-<p>Where people choose to live is not random — it is shaped by physical geography, economic opportunity and historical patterns. Today, over half the world's population lives in urban areas, and this proportion is growing rapidly. Understanding why people settle and migrate helps explain the human geography of the entire planet.</p>
+<p>Where people choose to live is not random — it is shaped by physical geography, economic opportunity and historical patterns. Today, over half the world's population lives in urban areas, and this proportion is growing rapidly. Understanding population structure, migration and the growth of megacities helps explain the human geography of the entire planet.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li><strong>Population density</strong> = total population ÷ area (km²). High density = many people per km²; low density = few people per km².</li>
@@ -1097,14 +1221,31 @@ Close contour lines between the two points indicate a <strong>steep slope</stron
 <li><strong>Human factors</strong>: transport links, employment, existing services (schools, hospitals), trade routes.</li>
 <li><strong>Urbanisation</strong> = increasing proportion of population living in cities. Driven by pull factors (jobs, services) and push factors (rural poverty, mechanisation of farming).</li>
 <li><strong>Settlement hierarchy</strong>: hamlet → village → town → city → conurbation. Higher up = more services, larger population, greater sphere of influence.</li>
+<li><strong>Population pyramids</strong>: bar charts showing the age and sex structure of a population. Wide base = high birth rate (typical of LICs). Narrow base with wider top = ageing population (typical of HICs). Comparing pyramids reveals a country's stage of development.</li>
+<li><strong>The Demographic Transition Model (DTM)</strong>: a five-stage model showing how population changes as a country develops.<br>
+Stage 1: High birth rate, high death rate → low population. Stage 2: Death rate falls (better healthcare/sanitation) → rapid growth. Stage 3: Birth rate falls (contraception, education, urbanisation) → growth slows. Stage 4: Low birth rate, low death rate → stable/high population. Stage 5: Birth rate below death rate → population decline (e.g. Japan, Germany).</li>
+<li><strong>Migration</strong>: the movement of people from one place to another. Types include rural-to-urban (within a country), international (between countries), voluntary (by choice) and forced (refugees, conflict). Push factors drive people away; pull factors attract them to a new location.</li>
+<li><strong>Megacity case study — Lagos, Nigeria</strong>: population ~21 million and growing rapidly. Opportunities: employment in industry and services, better healthcare and education, cultural diversity. Challenges: rapid growth of informal settlements (slums like Makoko), traffic congestion, pollution, strain on water supply and sanitation, waste management issues.</li>
+<li><strong>Land-use patterns (Burgess model)</strong>: a simple model of urban land use — CBD (Central Business District) at the centre, surrounded by rings of inner city, inner suburbs, outer suburbs and rural-urban fringe. In reality, cities are more complex but the model helps explain general patterns.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="population-pyramid"><p class="diagram-caption">Population pyramids — comparing HIC (UK) and LIC (Nigeria) shapes</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="dtm-model"><p class="diagram-caption">The Demographic Transition Model — five stages of population change</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
-<p><strong>Example:</strong> Country A has a population of 8,000,000 and an area of 400 km². Country B has a population of 2,000,000 and an area of 500 km². Which is more densely populated?</p>
+<p><strong>Example 1:</strong> Country A has a population of 8,000,000 and an area of 400 km². Country B has a population of 2,000,000 and an area of 500 km². Which is more densely populated?</p>
 <p><strong>Solution:</strong><br>
 Country A: 8,000,000 ÷ 400 = <strong>20,000 people/km²</strong><br>
 Country B: 2,000,000 ÷ 500 = <strong>4,000 people/km²</strong><br>
 Country A is <strong>5 times</strong> more densely populated. Despite having fewer total people, Country B's much larger area means people are more spread out.</p>
+</div>
+<div class="example-box">
+<p><strong>Example 2:</strong> A population pyramid for Country X shows a very wide base (ages 0–14) and a very narrow top (ages 65+). What does this suggest about the country?</p>
+<p><strong>Solution:</strong><br>
+1. The wide base indicates a <strong>high birth rate</strong> — many children are being born.<br>
+2. The narrow top suggests <strong>low life expectancy</strong> — few people survive to old age.<br>
+3. This shape is typical of a <strong>Stage 2 country</strong> on the DTM — a low-income country (LIC) with improving death rates but still high birth rates.<br>
+4. The country likely faces challenges such as <strong>providing education, healthcare and jobs</strong> for a young, rapidly growing population.<br>
+5. Compare with a Stage 4 country (e.g. UK): narrow base, wider top — low birth rate, ageing population, different challenges (pensions, elderly care).</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
@@ -1112,30 +1253,53 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 <dt>Urbanisation</dt><dd>The process by which an increasing proportion of a country's population lives in urban (city/town) areas.</dd>
 <dt>Push factors</dt><dd>Reasons that drive people away from an area — e.g. lack of jobs, poverty, natural disasters.</dd>
 <dt>Pull factors</dt><dd>Reasons that attract people to an area — e.g. employment, better services, higher wages.</dd>
+<dt>Population pyramid</dt><dd>A bar chart showing the age and sex distribution of a country's population — its shape reveals birth rate, death rate and life expectancy.</dd>
+<dt>Demographic Transition Model</dt><dd>A five-stage model showing how birth rates, death rates and total population change as a country develops economically.</dd>
+<dt>Migration</dt><dd>The movement of people from one place to another — can be voluntary or forced, internal or international.</dd>
+<dt>Megacity</dt><dd>A city with a population of over 10 million people — e.g. Lagos, Mumbai, Tokyo, São Paulo.</dd>
+<dt>CBD</dt><dd>Central Business District — the commercial and business centre of a city, typically with the tallest buildings and highest land values.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Dividing area by population — ✅ Correct: population density = <strong>population ÷ area</strong>, not the other way round.</li>
 <li>❌ Thinking high population density always means a city — ✅ Correct: some <strong>rural</strong> areas (e.g. river deltas used for farming) can have very high density.</li>
 <li>❌ Confusing urbanisation with urban growth — ✅ Correct: urbanisation is about the <strong>proportion</strong> living in cities; urban growth is about the <strong>size</strong> of cities growing.</li>
+<li>❌ Reading a population pyramid the wrong way — ✅ Correct: the <strong>base</strong> shows the youngest (0–4); the <strong>top</strong> shows the oldest. Males are usually on the left, females on the right.</li>
+<li>❌ Thinking the DTM predicts the future — ✅ Correct: the DTM is a <strong>model based on past patterns</strong> (mainly European). Not all countries follow the same path.</li>
 </ul>`,
 
 "island-35": `<h4>Introduction</h4>
-<p>Biomes are the world's major ecosystems, each defined by its climate, vegetation and wildlife. From the dense tropical rainforest to the parched Sahara, biomes follow predictable patterns across the globe — and human activity is threatening many of them at an alarming rate.</p>
+<p>Biomes are the world's major ecosystems, each defined by its climate, vegetation and wildlife. From the dense tropical rainforest to the parched Sahara to the frozen Arctic tundra, biomes follow predictable patterns across the globe — and human activity is threatening many of them at an alarming rate.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li>A <strong>biome</strong> is a large-scale ecosystem defined by climate and dominant vegetation type. Distribution follows latitude and climate zones.</li>
 <li><strong>Tropical rainforest</strong>: near the Equator; hot (~27°C) and wet (2,000mm+ rainfall/year) all year. Four layers: emergent, canopy, understorey, forest floor.</li>
+<li><strong>Nutrient cycling in the rainforest (Gersmehl model)</strong>: most nutrients are stored in the <strong>biomass</strong> (living plants), not the soil. Rapid decomposition returns nutrients to the soil, but they are immediately taken up by plant roots. If trees are removed, the nutrient cycle breaks — rain washes nutrients away, leaving infertile soil. This is why deforested rainforest land quickly becomes unproductive.</li>
+<li><strong>Indigenous peoples</strong>: groups such as the Yanomami (Amazon) have lived sustainably in the rainforest for thousands of years. They use shifting cultivation (clearing small areas, farming briefly, then moving on to let forest regrow), hunt sustainably, and have deep knowledge of medicinal plants. Deforestation threatens their land, culture and survival.</li>
+<li><strong>Case study — the Amazon rainforest</strong>: the world's largest tropical rainforest, covering ~5.5 million km² across nine countries. Contains roughly 10% of all species on Earth. Deforestation rate has increased dramatically — driven by cattle ranching (80% of cleared land), soy farming, logging and mining. Brazil's deforestation policies have fluctuated between enforcement and relaxation.</li>
 <li><strong>Hot desert</strong>: very hot days, cold nights; minimal rainfall (&lt;250mm/year); found 20–30° north and south of Equator.</li>
-<li><strong>Deforestation</strong> causes: logging, cattle ranching, palm oil, mining, population pressure. Effects: biodiversity loss, climate change, soil erosion, disrupted water cycle.</li>
+<li><strong>Polar regions and cold environments</strong>: the Arctic (north) and Antarctic (south) have extremely cold temperatures (−30°C to −50°C in winter), low precipitation and continuous daylight or darkness depending on season. Vegetation is limited to mosses, lichens and tough grasses (tundra). Animals adapt with thick fur/blubber (polar bears, seals), migration and hibernation. Polar ice is melting due to climate change, threatening habitats and raising sea levels globally.</li>
+<li><strong>Coral reefs</strong>: found in warm, shallow, clear tropical oceans (typically 25–29°C). Often called the "rainforests of the sea" due to their extraordinary biodiversity. Threatened by coral bleaching (caused by rising sea temperatures), ocean acidification, pollution and overfishing.</li>
 <li>Adaptations are critical — every organism in a biome has specific features allowing it to survive the local conditions.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="rainforest-layers"><p class="diagram-caption">The four layers of the tropical rainforest — emergent, canopy, under-storey and forest floor</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="gersmehl-model"><p class="diagram-caption">The Gersmehl nutrient cycle — how nutrients flow between biomass, litter and soil</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
-<p><strong>Example:</strong> Explain how the drip-tip leaf and buttress roots are adaptations to the tropical rainforest.</p>
+<p><strong>Example 1:</strong> Explain how the drip-tip leaf and buttress roots are adaptations to the tropical rainforest.</p>
 <p><strong>Solution:</strong><br>
 <strong>Drip-tip leaves:</strong> The rainforest receives heavy, frequent rainfall. Leaves with pointed tips allow water to run off quickly, preventing the growth of algae and fungi that would block sunlight and damage the leaf. This <strong>adaptation responds to the excessive rainfall</strong> of the biome.<br><br>
 <strong>Buttress roots:</strong> The soil is thin (nutrients quickly washed away by rain). Large, wide roots spreading out from the base of tall trees provide stability and increase the surface area for absorbing nutrients. This <strong>adaptation responds to shallow, nutrient-poor soil</strong>.</p>
+</div>
+<div class="example-box">
+<p><strong>Example 2:</strong> Using the Gersmehl model, explain why deforested rainforest land quickly becomes infertile.</p>
+<p><strong>Solution:</strong><br>
+1. In an intact rainforest, most nutrients are stored in the <strong>biomass</strong> (the trees and plants themselves), not in the soil.<br>
+2. Dead leaves and organisms decompose rapidly in the warm, wet conditions → nutrients return to the thin topsoil.<br>
+3. These nutrients are <strong>immediately absorbed</strong> by tree roots before they can be washed away — a rapid, efficient cycle.<br>
+4. When trees are <strong>removed</strong> (deforestation), there is no biomass to store nutrients and no root network to absorb them.<br>
+5. Heavy tropical rainfall <strong>leaches</strong> (washes away) nutrients from the exposed soil within just a few years.<br>
+6. Result: the land becomes <strong>infertile</strong> — farmers move on and clear more forest, creating a destructive cycle.</p>
 </div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
@@ -1143,49 +1307,79 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 <dt>Biodiversity</dt><dd>The variety of living species in an area — the tropical rainforest has the highest biodiversity on Earth.</dd>
 <dt>Deforestation</dt><dd>The large-scale clearing of forest, typically for agriculture, logging or development.</dd>
 <dt>Adaptation</dt><dd>An inherited feature that helps an organism survive in its specific environment.</dd>
+<dt>Gersmehl model</dt><dd>A diagram showing how nutrients cycle between biomass, litter and soil in an ecosystem — in the rainforest, the largest store is the biomass.</dd>
+<dt>Biomass</dt><dd>The total mass of living organisms in an area — in the rainforest, the trees and plants store the majority of nutrients.</dd>
+<dt>Tundra</dt><dd>A cold, treeless biome found in polar regions, characterised by permafrost, mosses, lichens and low temperatures.</dd>
+<dt>Coral bleaching</dt><dd>The loss of colour in corals caused by stress (usually rising sea temperatures), which expels the algae living inside them and can lead to coral death.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Thinking all of Africa is hot desert — ✅ Correct: Africa contains <strong>multiple biomes</strong> — rainforest, savanna, desert, Mediterranean and more.</li>
 <li>❌ Saying deforestation only affects local wildlife — ✅ Correct: deforestation releases stored carbon, contributing to <strong>global</strong> climate change.</li>
 <li>❌ Confusing climate zone with biome — ✅ Correct: climate zone refers to temperature and rainfall patterns; biome includes the <strong>living organisms</strong> adapted to those conditions.</li>
+<li>❌ Thinking rainforest soil is rich and fertile — ✅ Correct: most nutrients are in the <strong>biomass</strong>, not the soil. Without trees, the thin soil loses fertility rapidly (Gersmehl model).</li>
+<li>❌ Forgetting polar regions when listing biomes — ✅ Correct: polar/tundra is a <strong>major global biome</strong> covering large areas and is specifically required by the curriculum.</li>
 </ul>`,
 
 "island-36": `<h4>Introduction</h4>
-<p>The ground beneath your feet is constantly moving — just too slowly to notice. The Earth's tectonic plates shift on convection currents in the mantle, and where they meet, they produce the planet's most dramatic and dangerous events: volcanoes and earthquakes. Understanding plate boundaries saves lives.</p>
+<p>The ground beneath your feet is constantly moving — just too slowly to notice. The Earth's tectonic plates shift on convection currents in the mantle, and where they meet, they produce the planet's most dramatic and dangerous events: volcanoes, earthquakes and tsunamis. These processes have shaped the Earth over billions of years of geological time.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li><strong>Earth's structure</strong> (outside → in): crust → mantle → outer core (liquid) → inner core (solid).</li>
-<li><strong>Convection currents</strong> in the mantle drive plate movement — hot rock rises, spreads, cools and sinks, dragging plates above.</li>
-<li><strong>Constructive boundary</strong>: plates move apart → magma rises → new crust → volcanoes and rift valleys (e.g. Iceland).</li>
-<li><strong>Destructive boundary</strong>: oceanic plate subducts under continental → melts → volcanoes and fold mountains → earthquakes (e.g. Japan, Andes).</li>
-<li><strong>Conservative boundary</strong>: plates slide past each other → no volcanoes → massive earthquakes (e.g. San Andreas Fault).</li>
+<li><strong>Convection currents</strong> in the mantle are the driving mechanism for plate movement. Radioactive decay in the core heats the mantle → hot, semi-molten rock rises → spreads out near the crust, dragging tectonic plates with it → cools → sinks back down → cycle repeats. These slow circular currents are why plates move a few centimetres per year.</li>
+<li><strong>Constructive boundary</strong>: plates move apart → magma rises → new crust → volcanoes and rift valleys (e.g. Iceland on the Mid-Atlantic Ridge).</li>
+<li><strong>Destructive boundary</strong>: oceanic plate subducts under continental → melts → volcanoes and fold mountains → earthquakes (e.g. Japan, Andes). Where two continental plates collide, fold mountains form without volcanic activity (e.g. the Himalayas).</li>
+<li><strong>Conservative boundary</strong>: plates slide past each other → no volcanoes → massive earthquakes (e.g. San Andreas Fault, California).</li>
+<li><strong>Tsunamis</strong>: formed when an earthquake or volcanic eruption occurs under the ocean, displacing a massive volume of water. The wave is barely noticeable in deep water but as it reaches shallow coastal areas it slows, builds in height and can devastate coastlines. The 2004 Indian Ocean tsunami killed over 230,000 people across 14 countries.</li>
+<li><strong>Geological timescales</strong>: the Earth is approximately 4.6 billion years old. Geologists divide this into eons, eras and periods. The movement of tectonic plates has completely rearranged continents over hundreds of millions of years — e.g. the supercontinent Pangaea began breaking apart ~200 million years ago. Human existence represents a tiny fraction of geological time.</li>
+<li><strong>HIC vs LIC response</strong>: the same magnitude earthquake causes very different impacts depending on a country's wealth. HICs (e.g. Japan) have earthquake-proof buildings, early warning systems, trained emergency services, and insurance. LICs (e.g. Nepal, Haiti) often have weaker infrastructure, limited emergency response, and less access to aid — leading to far higher death tolls and slower recovery.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="earth-structure-geo"><p class="diagram-caption">The layers of the Earth — from the thin crust to the solid inner core</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="plate-boundaries"><p class="diagram-caption">The three types of plate boundary: constructive, destructive and conservative</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="volcano-cross-section"><p class="diagram-caption">Cross-section of a volcano showing magma chamber, vent and crater</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
-<p><strong>Example:</strong> Japan experiences frequent earthquakes and volcanic eruptions. Using plate tectonics, explain why.</p>
+<p><strong>Example 1:</strong> Japan experiences frequent earthquakes and volcanic eruptions. Using plate tectonics, explain why.</p>
 <p><strong>Solution:</strong><br>
 Japan sits on a <strong>destructive plate boundary</strong> where the Pacific Plate (oceanic, denser) is forced under the Eurasian Plate (continental) — a process called <strong>subduction</strong>.<br><br>
 <strong>Earthquakes:</strong> As the plates grind together, enormous friction builds up. When this is suddenly released, the energy travels as seismic waves → earthquake.<br>
 <strong>Volcanoes:</strong> The subducting plate melts as it descends into the mantle, forming magma. This forces its way up through weaknesses in the continental crust → volcanic eruption.<br>
 Japan's location above this boundary makes both hazards <strong>frequent and severe</strong>.</p>
 </div>
+<div class="example-box">
+<p><strong>Example 2:</strong> Compare the impact of earthquakes in Japan (HIC) and Nepal (LIC).</p>
+<p><strong>Solution:</strong><br>
+<strong>Japan — 2011 Tōhoku earthquake (magnitude 9.0):</strong><br>
+• ~18,000 deaths — low for such a powerful quake, thanks to earthquake-proof buildings, tsunami warning systems and disaster preparedness drills.<br>
+• Economic damage was enormous (~$235 billion) but Japan had the wealth and infrastructure to rebuild.<br>
+• Triggered the Fukushima nuclear disaster — a secondary effect.<br><br>
+<strong>Nepal — 2015 Gorkha earthquake (magnitude 7.8):</strong><br>
+• ~9,000 deaths from a smaller earthquake — many buildings were not earthquake-resistant.<br>
+• Remote mountain villages were cut off; rescue was slow and difficult.<br>
+• Nepal relied heavily on international aid — limited domestic resources for recovery.<br><br>
+<strong>Key insight:</strong> Wealth and preparation significantly affect the <strong>impact</strong> of a natural hazard. The hazard itself is natural; the <strong>disaster</strong> is often shaped by human factors.</p>
+</div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
 <dt>Tectonic plate</dt><dd>A large, rigid segment of the Earth's crust and upper mantle that moves on convection currents in the mantle.</dd>
+<dt>Convection current</dt><dd>A circular movement of heat in the mantle — hot rock rises, spreads, cools and sinks — driving tectonic plate movement.</dd>
 <dt>Subduction</dt><dd>The process where a denser oceanic plate is forced under a lighter continental plate at a destructive boundary.</dd>
 <dt>Epicentre</dt><dd>The point on the Earth's surface directly above the focus (origin) of an earthquake — usually where shaking is most intense.</dd>
 <dt>Richter scale</dt><dd>A logarithmic scale measuring earthquake magnitude — each step represents 10 times more energy released.</dd>
+<dt>Tsunami</dt><dd>A series of massive ocean waves caused by an underwater earthquake or volcanic eruption displacing water.</dd>
+<dt>Geological timescale</dt><dd>The division of Earth's 4.6-billion-year history into eons, eras and periods based on major geological and biological events.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Saying volcanoes form at all plate boundaries — ✅ Correct: <strong>no volcanoes</strong> form at conservative boundaries — only earthquakes.</li>
 <li>❌ Confusing focus and epicentre — ✅ Correct: the <strong>focus</strong> is underground where the earthquake originates; the <strong>epicentre</strong> is on the surface above it.</li>
 <li>❌ Thinking the Richter scale is linear — ✅ Correct: it is <strong>logarithmic</strong> — a magnitude 7 earthquake releases 10× more energy than a magnitude 6.</li>
+<li>❌ Assuming higher magnitude always means more deaths — ✅ Correct: the <strong>impact</strong> depends on population density, building quality, warning systems and wealth — not just magnitude.</li>
+<li>❌ Thinking tectonic plates move quickly — ✅ Correct: plates move only a few <strong>centimetres per year</strong> — continental rearrangement takes hundreds of millions of years.</li>
 </ul>`,
 
 "island-37": `<h4>Introduction</h4>
-<p>Africa is not a country — it is a vast, diverse continent of 54 nations, thousands of languages and extraordinary geographical variety. Challenging misconceptions about Africa is an important geographical skill, as is understanding development indicators and the complex impact of tourism on African economies and environments.</p>
+<p>Africa is not a country — it is a vast, diverse continent of 54 nations, thousands of languages and extraordinary geographical variety. Understanding development, the legacy of colonialism, the role of aid and Fairtrade, and how different regions compare helps build a nuanced picture far removed from common stereotypes.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li>Africa has 54 countries, over 2,000 languages, and contains every type of landscape: desert, rainforest, savanna, mountains and coastlines.</li>
@@ -1193,10 +1387,15 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 <li>Africa's development varies enormously: some countries (e.g. Seychelles, South Africa) have high HDI; others (e.g. Niger, South Sudan) face severe challenges.</li>
 <li><strong>Tourism</strong> brings foreign exchange, jobs and conservation funding — but can also cause "leakage" (profits leaving the local economy), environmental damage and cultural erosion.</li>
 <li><strong>Sustainable development</strong>: meeting present needs without compromising future generations' ability to meet theirs — tourism and resource use must balance economic, social and environmental goals.</li>
+<li><strong>Fairtrade</strong>: a system that guarantees farmers and producers in developing countries a fair minimum price for their goods (e.g. coffee, cocoa, bananas). It also provides a Fairtrade Premium — extra money invested in community projects like schools, wells or healthcare. Critics argue it only helps a small number of farmers and that the premium doesn't always reach those who need it most.</li>
+<li><strong>Types of aid</strong>: <strong>Bilateral</strong> (government to government — e.g. UK to Kenya); <strong>Multilateral</strong> (through organisations like the World Bank or UN); <strong>Short-term/emergency</strong> (immediate disaster relief — food, water, shelter); <strong>Long-term/development</strong> (building infrastructure, education, training). Arguments for aid: saves lives, builds capacity. Arguments against: can create dependency, may be tied to political conditions, corruption can divert funds.</li>
+<li><strong>Colonial history and the development gap</strong>: European countries colonised most of Africa from the late 19th century, extracting resources (minerals, crops, people through slavery) and creating borders that ignored ethnic and cultural groups. When countries gained independence (mostly 1950s–1960s), they inherited weak institutions, economies dependent on exporting raw materials, and ethnic divisions. This history is a significant factor in understanding current development challenges — though Africa's story is also one of resilience, growth and innovation.</li>
+<li><strong>Comparative place study</strong>: the curriculum requires comparing regions within Africa. For example, comparing Lagos (Nigeria's commercial capital — rapid urbanisation, emerging tech industry, but severe inequality and infrastructure strain) with a rural area in sub-Saharan Africa (e.g. rural Kenya — subsistence farming, limited services, but strong community structures and growing mobile banking via M-Pesa).</li>
 </ul>
+<div class="lesson-diagram" data-diagram="types-of-aid"><p class="diagram-caption">Types of international aid — bilateral, multilateral, short-term and long-term</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
-<p><strong>Example:</strong> Assess the benefits and costs of tourism in Kenya.</p>
+<p><strong>Example 1:</strong> Assess the benefits and costs of tourism in Kenya.</p>
 <p><strong>Solution:</strong><br>
 <strong>Benefits:</strong><br>
 • Economic: tourism is Kenya's largest foreign exchange earner; supports ~10% of employment directly and indirectly.<br>
@@ -1208,18 +1407,38 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 • Cultural: commodification — traditions performed for tourists can lose authentic meaning.<br><br>
 <strong>Conclusion:</strong> Tourism can bring significant benefits if managed sustainably and profits kept locally.</p>
 </div>
+<div class="example-box">
+<p><strong>Example 2:</strong> Evaluate whether aid is the best way to promote development in African countries.</p>
+<p><strong>Solution:</strong><br>
+<strong>Arguments for aid:</strong><br>
+• Emergency aid saves lives immediately after disasters (e.g. drought, flooding).<br>
+• Long-term aid builds infrastructure — roads, schools, hospitals — that governments cannot yet afford.<br>
+• Multilateral aid through the UN avoids political strings attached by individual donor countries.<br><br>
+<strong>Arguments against aid:</strong><br>
+• Can create <strong>dependency</strong> — countries may rely on aid rather than developing their own economies.<br>
+• <strong>Tied aid</strong> requires recipient countries to buy goods from the donor — not always what's needed locally.<br>
+• Corruption — aid doesn't always reach the people it's intended for.<br><br>
+<strong>Alternatives:</strong> Fairtrade, investment in local businesses, debt relief, improving governance.<br>
+<strong>Judgement:</strong> Aid is most effective when it is <strong>long-term, locally led</strong> and combined with trade and investment — not as a replacement for them.</p>
+</div>
 <h4>📖 Key Vocabulary</h4>
 <dl>
 <dt>HDI</dt><dd>Human Development Index — a composite score (0–1) measuring a country's development through life expectancy, education and income.</dd>
 <dt>Leakage</dt><dd>The proportion of tourism income that flows out of the local economy to foreign companies or imported goods.</dd>
 <dt>Sustainable development</dt><dd>Development that meets present needs without compromising the ability of future generations to meet theirs.</dd>
 <dt>GNI per capita</dt><dd>Gross National Income per person — a measure of average income used in the HDI calculation.</dd>
+<dt>Fairtrade</dt><dd>A certification system guaranteeing producers in developing countries a fair minimum price and a social premium for community investment.</dd>
+<dt>Bilateral aid</dt><dd>Aid given directly from one government to another — may come with conditions or political expectations.</dd>
+<dt>Tied aid</dt><dd>Aid that requires the recipient to spend the money on goods or services from the donor country.</dd>
+<dt>Colonialism</dt><dd>The practice of one country taking political and economic control of another territory — European colonialism in Africa lasted from the late 19th century to the mid-20th century.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Treating Africa as one country with one culture — ✅ Correct: Africa is a <strong>continent of 54 diverse nations</strong>. Generalisations are almost always wrong.</li>
 <li>❌ Saying tourism is always good for development — ✅ Correct: without careful management, leakage means most profit <strong>leaves</strong> the local economy.</li>
 <li>❌ Confusing GDP and HDI — ✅ Correct: GDP measures only <strong>economic output</strong>; HDI measures health and education <strong>as well as</strong> income.</li>
+<li>❌ Thinking aid is always helpful — ✅ Correct: aid can create <strong>dependency</strong> and may come with political strings. It works best when <strong>long-term and locally led</strong>.</li>
+<li>❌ Ignoring colonial history when discussing development — ✅ Correct: colonialism extracted resources, created artificial borders and left weak institutions — it is a <strong>significant historical factor</strong> in today's development gap.</li>
 </ul>`,
 
 "island-30": `<h4>Introduction</h4>
@@ -1619,6 +1838,557 @@ It is NOT because Earth is closer to the Sun in summer — Earth's orbit is near
 <li>❌ Thinking summer happens because Earth is closer to the Sun — ✅ Correct: seasons are caused by Earth's <strong>axial tilt</strong>, not distance. (Australia has summer when we have winter!)</li>
 <li>❌ Thinking the Moon produces its own light — ✅ Correct: the Moon <strong>reflects sunlight</strong>. Phases occur because we see different portions of its lit side.</li>
 <li>❌ Confusing rotation and revolution — ✅ Correct: Earth <strong>rotates</strong> on its axis (causes day/night); it <strong>revolves</strong> (orbits) around the Sun (causes years).</li>
+</ul>`,
+
+"island-48": `<h4>Introduction</h4>
+<p>Geography is the study of the world around us — its landscapes, people, places and environments. It asks big questions like "Why do people live where they do?" and "How is our planet changing?" Geography is split into two main branches: <strong>physical geography</strong> (natural features like rivers, mountains and weather) and <strong>human geography</strong> (people, cities, trade and culture). Understanding geography helps you make sense of the news, the environment and your own neighbourhood.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Physical geography</strong> studies natural features and processes — rivers, volcanoes, weather, ecosystems, rocks and coasts.</li>
+<li><strong>Human geography</strong> studies people and how they interact with the world — cities, migration, trade, culture and development.</li>
+<li><strong>Place</strong> refers to a specific location and the characteristics that make it unique (e.g. London is a capital city on the River Thames).</li>
+<li><strong>Space</strong> describes the gap or area between places and how things are distributed across the Earth's surface.</li>
+<li><strong>Scale</strong> means studying geography at different levels — local (your town), national (the UK), or global (the whole world).</li>
+<li>The UK is made up of four countries: <strong>England</strong> (London), <strong>Scotland</strong> (Edinburgh), <strong>Wales</strong> (Cardiff) and <strong>Northern Ireland</strong> (Belfast).</li>
+<li>There are <strong>7 continents</strong> (Africa, Antarctica, Asia, Australia/Oceania, Europe, North America, South America) and <strong>5 oceans</strong> (Atlantic, Pacific, Indian, Southern, Arctic).</li>
+<li><strong>Latitude</strong> lines run east–west and measure how far north or south of the Equator you are. <strong>Longitude</strong> lines run north–south and measure how far east or west of the Prime Meridian you are.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="lat-long-globe"><p class="diagram-caption">Lines of latitude and longitude on a globe — the grid system for locating any point on Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A student says "Geography is just about colouring in maps." Explain why this view is wrong, using examples from physical and human geography.</p>
+<p><strong>Solution:</strong><br>
+1. Geography involves much more than maps — it studies <strong>why</strong> things happen and <strong>how</strong> the world works.<br>
+2. <strong>Physical geography example:</strong> Geographers study why some places flood more than others, looking at rainfall, river shape and land use.<br>
+3. <strong>Human geography example:</strong> Geographers investigate why people migrate from one country to another, considering jobs, conflict and family ties.<br>
+4. Maps are <strong>one tool</strong> geographers use, but so are satellite images, data analysis, fieldwork and interviews.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Geography</dt><dd>The study of the Earth's landscapes, environments, places and the relationship between people and their surroundings.</dd>
+<dt>Physical geography</dt><dd>The branch of geography that studies natural features and processes such as rivers, weather, rocks and ecosystems.</dd>
+<dt>Human geography</dt><dd>The branch of geography that studies people, settlements, trade, migration and culture.</dd>
+<dt>Latitude</dt><dd>Imaginary lines running east–west around the Earth, measuring distance north or south of the Equator (0°). Measured in degrees up to 90°N or 90°S.</dd>
+<dt>Longitude</dt><dd>Imaginary lines running north–south, measuring distance east or west of the Prime Meridian (0°). Measured in degrees up to 180°E or 180°W.</dd>
+<dt>Equator</dt><dd>The imaginary line at 0° latitude that divides the Earth into the Northern and Southern Hemispheres.</dd>
+<dt>Tropics</dt><dd>The Tropic of Cancer (23.5°N) and Tropic of Capricorn (23.5°S) — the boundaries of the tropical zone where the Sun can be directly overhead.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking geography is only about maps — ✅ Correct: geography uses maps as one tool, but it studies <strong>processes, patterns and people</strong> too.</li>
+<li>❌ Mixing up latitude and longitude — ✅ Correct: <strong>lat</strong>itude is <strong>flat</strong> (runs east–west); longitude runs north–south.</li>
+<li>❌ Forgetting Northern Ireland is part of the UK — ✅ Correct: the UK has <strong>four</strong> countries: England, Scotland, Wales and Northern Ireland.</li>
+<li>❌ Saying there are 4 oceans — ✅ Correct: there are <strong>5 oceans</strong> (the Southern Ocean around Antarctica is the fifth).</li>
+</ul>`,
+
+"island-49": `<h4>Introduction</h4>
+<p>The United Kingdom may be a small island nation, but its geography is remarkably varied. From the rugged Scottish Highlands to the flat Fens of East Anglia, and from dramatic coastlines to bustling cities, Britain packs an incredible range of landscapes into a compact space. Understanding UK geography means knowing its physical features — mountains, rivers and coasts — as well as how people have shaped the land through farming, industry and settlement.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li>The UK's physical landscape is broadly divided into <strong>uplands</strong> (north and west — older, harder rocks) and <strong>lowlands</strong> (south and east — younger, softer rocks).</li>
+<li>Key upland areas include the <strong>Scottish Highlands</strong> (Ben Nevis, 1,345 m — the UK's highest peak), the <strong>Lake District</strong>, the <strong>Pennines</strong> (the "backbone of England") and <strong>Snowdonia</strong> in Wales.</li>
+<li>Major rivers: the <strong>Severn</strong> (longest, 354 km), the <strong>Thames</strong> (flows through London), the <strong>Trent</strong> (drains the Midlands) and the <strong>Tyne</strong> (flows through Newcastle).</li>
+<li>The UK has over <strong>19,000 miles of coastline</strong>, with features such as cliffs (e.g. White Cliffs of Dover), beaches, estuaries and spits.</li>
+<li>Major cities include London (capital, 9 million+), Birmingham, Manchester, Leeds, Glasgow and Edinburgh, mostly located near rivers or coasts.</li>
+<li>The <strong>North-South divide</strong> describes economic differences — the South East tends to be wealthier with more service-sector jobs, while parts of the North have faced decline in traditional industries like mining and steel.</li>
+<li><strong>Rural areas</strong> have lower population density, more farming and often fewer services. <strong>Urban areas</strong> are built-up, densely populated and have more jobs and facilities.</li>
+<li>The UK has <strong>15 National Parks</strong> (e.g. Lake District, Peak District, Snowdonia) — protected areas valued for their landscape, wildlife and recreation.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="uk-physical-regions"><p class="diagram-caption">The UK's physical regions — uplands in the north and west, lowlands in the south and east</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Using your knowledge of UK geography, explain why most major cities in the UK are located near rivers.</p>
+<p><strong>Solution:</strong><br>
+1. Rivers provided <strong>fresh water</strong> for drinking, cooking and farming — essential for early settlements.<br>
+2. Rivers were used for <strong>transport and trade</strong> — boats could carry heavy goods more easily than roads (e.g. the Thames helped London grow as a trading port).<br>
+3. Flat <strong>floodplains</strong> near rivers offered fertile land for growing food to feed growing populations.<br>
+4. During the Industrial Revolution, rivers provided <strong>water power</strong> for mills and factories, attracting workers to river towns.<br>
+Therefore, rivers offered water, food, transport and power — the key ingredients for city growth.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Uplands</dt><dd>Higher ground with rugged terrain, usually found in the north and west of the UK, made of older, harder rocks (e.g. Scottish Highlands, Pennines).</dd>
+<dt>Lowlands</dt><dd>Flatter, lower-lying areas mainly in the south and east of the UK, made of younger, softer rocks (e.g. the Fens, Thames Valley).</dd>
+<dt>Floodplain</dt><dd>The flat area of land on either side of a river that is naturally prone to flooding, often used for farming due to its fertile soil.</dd>
+<dt>Estuary</dt><dd>The wide mouth of a river where it meets the sea, where freshwater and saltwater mix (e.g. the Thames Estuary).</dd>
+<dt>National Park</dt><dd>A protected area of countryside valued for its landscape, wildlife and recreation. Planning rules limit development to preserve the environment.</dd>
+<dt>North-South divide</dt><dd>The economic and social differences between the wealthier South East of England and the relatively less prosperous North and Midlands.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Saying Ben Nevis is in England — ✅ Correct: Ben Nevis (1,345 m) is in <strong>Scotland</strong> and is the UK's highest mountain.</li>
+<li>❌ Thinking the Thames is the UK's longest river — ✅ Correct: the <strong>Severn</strong> (354 km) is the longest; the Thames (346 km) is the second longest.</li>
+<li>❌ Confusing "Great Britain" with "the United Kingdom" — ✅ Correct: Great Britain = England + Scotland + Wales. The UK also includes <strong>Northern Ireland</strong>.</li>
+<li>❌ Thinking all of northern England is poor and all of southern England is rich — ✅ Correct: the North-South divide is a <strong>general trend</strong>, not a rule — there is poverty in London and wealth in the North.</li>
+</ul>`,
+
+"island-50": `<h4>Introduction</h4>
+<p>The ground beneath your feet tells a story millions — even billions — of years old. Rocks are the solid building blocks of the Earth and they are constantly being formed, broken down and reformed in a never-ending process called the <strong>rock cycle</strong>. Understanding rocks, weathering and soils helps geographers explain landscapes: why some hills are jagged and some are smooth, why caves form in limestone, and why soil is different from place to place.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Igneous rocks</strong> form when hot magma or lava cools and solidifies. Examples: <strong>granite</strong> (cooled slowly underground — large crystals) and <strong>basalt</strong> (cooled quickly on the surface — small crystals).</li>
+<li><strong>Sedimentary rocks</strong> form when layers of sediment (sand, mud, shells) are compacted and cemented over millions of years. Examples: <strong>limestone</strong> (made from shells/skeletons) and <strong>sandstone</strong> (made from sand grains).</li>
+<li><strong>Metamorphic rocks</strong> form when existing rocks are changed by extreme heat and/or pressure deep underground. Examples: <strong>marble</strong> (from limestone) and <strong>slate</strong> (from mudstone/shale).</li>
+<li>The <strong>rock cycle</strong> shows how rocks are continuously transformed: igneous → weathered into sediment → sedimentary → heated/pressured into metamorphic → melted back into magma → igneous again.</li>
+<li><strong>Freeze-thaw weathering</strong> (physical): water enters cracks in rock, freezes and expands by about 9%, widening the crack. Repeated cycles break the rock apart.</li>
+<li><strong>Chemical weathering</strong>: slightly acidic rainwater (containing dissolved CO₂) reacts with minerals in rock, dissolving them. This is especially effective on limestone (forming caves and pavements).</li>
+<li><strong>Biological weathering</strong>: plant roots grow into cracks and widen them; burrowing animals disturb rock; lichens produce acids that attack rock surfaces.</li>
+<li><strong>Soil</strong> forms from weathered rock mixed with decomposed organic matter (humus), water and air. It takes hundreds of years to form just a few centimetres of soil.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="rock-cycle"><p class="diagram-caption">The rock cycle — showing how igneous, sedimentary and metamorphic rocks transform into each other</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Explain how freeze-thaw weathering can break apart a rock face in a mountainous area like the Lake District.</p>
+<p><strong>Solution:</strong><br>
+1. During the day, rainwater or snowmelt seeps into <strong>cracks</strong> and joints in the rock face.<br>
+2. At night, temperatures drop <strong>below 0 °C</strong> and the water freezes, expanding by about 9%.<br>
+3. This expansion puts <strong>pressure</strong> on the walls of the crack, pushing them apart.<br>
+4. When the ice melts during the day, more water can enter the now-wider crack.<br>
+5. This freeze-thaw cycle <strong>repeats</strong> many times, gradually widening the crack until pieces of rock break off.<br>
+6. Broken fragments collect at the base of the rock face, forming a <strong>scree slope</strong>.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Igneous rock</dt><dd>Rock formed from cooled magma or lava. "Igneous" comes from the Latin word for fire.</dd>
+<dt>Sedimentary rock</dt><dd>Rock formed from layers of sediment (fragments of other rocks, shells, or organic material) compacted and cemented together over time.</dd>
+<dt>Metamorphic rock</dt><dd>Rock that has been changed from its original form by intense heat and/or pressure without melting completely.</dd>
+<dt>Rock cycle</dt><dd>The continuous process by which rocks are created, broken down, and reformed into different types over millions of years.</dd>
+<dt>Weathering</dt><dd>The breakdown of rocks in situ (in their original position) by physical, chemical or biological processes. Unlike erosion, weathering does not involve movement.</dd>
+<dt>Scree</dt><dd>A slope of loose, angular rock fragments that have collected at the base of a cliff or mountain face, usually produced by freeze-thaw weathering.</dd>
+<dt>Humus</dt><dd>Dark, nutrient-rich organic material in soil, formed from the decomposition of dead plants and animals.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Confusing weathering and erosion — ✅ Correct: <strong>weathering</strong> breaks rock down in place; <strong>erosion</strong> involves the movement of broken material by water, wind or ice.</li>
+<li>❌ Thinking metamorphic rocks have melted — ✅ Correct: metamorphic rocks are changed by heat and pressure but do <strong>not fully melt</strong>. If they melted, they would form igneous rock.</li>
+<li>❌ Saying granite has small crystals — ✅ Correct: granite cooled <strong>slowly underground</strong>, so its crystals had time to grow large. Basalt cooled quickly and has small crystals.</li>
+<li>❌ Thinking the rock cycle has a fixed starting point — ✅ Correct: the rock cycle is <strong>continuous</strong> with no set beginning or end; any rock type can become any other.</li>
+</ul>`,
+
+"island-51": `<h4>Introduction</h4>
+<p>Geographers don't just learn facts about places — they go out and <strong>investigate</strong> the world using a range of practical skills. From reading maps and using GIS (Geographical Information Systems) to collecting data in the field and presenting it in graphs and charts, geographical skills help you answer real questions about the world. These skills are essential for fieldwork — and for your exams!</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>GIS</strong> (Geographical Information Systems) are computer systems that collect, store, analyse and display geographical data on digital maps. Examples: Google Earth, flood-risk mapping by the Environment Agency.</li>
+<li><strong>Satellite imagery</strong> shows large-scale features (land use, deforestation, urban growth) while <strong>aerial photographs</strong> give more detail of smaller areas.</li>
+<li>Data can be collected using <strong>questionnaires</strong> (asking people), <strong>sampling</strong> (random, systematic or stratified) and <strong>measurements</strong> (river width, temperature, pedestrian counts).</li>
+<li><strong>Bar charts</strong> compare categories; <strong>line graphs</strong> show change over time; <strong>pie charts</strong> show proportions of a whole; <strong>choropleth maps</strong> use shading to show values across areas.</li>
+<li><strong>Mean</strong> = total ÷ number of values; <strong>median</strong> = middle value when ordered; <strong>mode</strong> = most common value; <strong>range</strong> = highest − lowest.</li>
+<li>Good fieldwork follows a clear process: <strong>question → hypothesis → method → data collection → presentation → analysis → conclusion → evaluation</strong>.</li>
+<li>When drawing conclusions, link your findings back to your original <strong>question or hypothesis</strong> and use data as evidence.</li>
+<li>When evaluating, consider <strong>reliability</strong> (would you get similar results if you repeated it?), <strong>accuracy</strong> (how close to the true value?) and <strong>limitations</strong> (what could be improved?).</li>
+</ul>
+<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">The geographical enquiry process — from question to evaluation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A student counted pedestrians at five locations along a high street and recorded: 12, 8, 15, 8, 22. Calculate the mean, median, mode and range.</p>
+<p><strong>Solution:</strong><br>
+<strong>Mean</strong> = (12 + 8 + 15 + 8 + 22) ÷ 5 = 65 ÷ 5 = <strong>13</strong><br>
+<strong>Median</strong>: Put in order → 8, 8, 12, 15, 22 → the middle value is <strong>12</strong><br>
+<strong>Mode</strong>: The most common value is <strong>8</strong> (appears twice)<br>
+<strong>Range</strong> = 22 − 8 = <strong>14</strong></p>
+</div>
+
+<div class="example-box">
+<p><strong>Example:</strong> Explain one advantage of using stratified sampling when investigating environmental quality in a town.</p>
+<p><strong>Solution:</strong><br>
+1. In stratified sampling, the area is divided into <strong>sub-groups</strong> (e.g. residential zone, commercial zone, industrial zone).<br>
+2. Samples are then taken from <strong>each sub-group</strong> in proportion to its size.<br>
+3. This ensures that all <strong>different parts</strong> of the town are represented in the data, making the results more <strong>representative</strong> of the whole town than random sampling alone.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>GIS</dt><dd>Geographical Information Systems — computer software that layers different types of geographical data onto maps for analysis and display.</dd>
+<dt>Choropleth map</dt><dd>A map that uses different shades of colour to represent different values across areas (e.g. darker shading = higher population density).</dd>
+<dt>Sampling</dt><dd>Selecting a smaller group to represent a larger population. Types include random (chance), systematic (regular intervals) and stratified (proportional sub-groups).</dd>
+<dt>Hypothesis</dt><dd>A testable prediction or statement that can be investigated through fieldwork (e.g. "Environmental quality decreases with distance from the town centre").</dd>
+<dt>Reliability</dt><dd>How consistent results are — if the investigation were repeated, would similar results be obtained?</dd>
+<dt>Mean</dt><dd>The average: the total of all values divided by the number of values.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Confusing mean and median — ✅ Correct: the <strong>mean</strong> is the total divided by the count; the <strong>median</strong> is the middle value when data is in order.</li>
+<li>❌ Using a pie chart when you should use a bar chart — ✅ Correct: use pie charts for <strong>proportions of a whole</strong>; use bar charts to <strong>compare different categories</strong>.</li>
+<li>❌ Writing a conclusion without using data — ✅ Correct: always <strong>quote specific figures</strong> from your results to support your conclusion.</li>
+<li>❌ Thinking one survey is enough to be reliable — ✅ Correct: reliability improves with <strong>larger sample sizes</strong> and <strong>repeated measurements</strong>.</li>
+</ul>`,
+
+"island-52": `<h4>Introduction</h4>
+<p><strong>Globalisation</strong> is the process by which the world is becoming more interconnected through trade, travel, communication and culture. Thanks to faster transport, the internet and multinational companies, goods, people and ideas now flow across borders more quickly than ever. The UK is one of the most globally connected countries in the world — the food you eat, the clothes you wear and the entertainment you enjoy are all shaped by globalisation.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Globalisation</strong> means the growing interconnection of the world's economies, cultures and populations, driven by trade, technology, transport and migration.</li>
+<li>Key causes include: <strong>cheaper, faster transport</strong> (container ships, air freight), <strong>improved communication</strong> (internet, smartphones) and the growth of <strong>TNCs</strong> (transnational corporations like Apple, Unilever, Nike).</li>
+<li>The UK <strong>imports</strong> many goods (electronics from China, fruit from Spain, oil from Norway) and <strong>exports</strong> services (finance, insurance), machinery, cars and pharmaceuticals.</li>
+<li><strong>Migration</strong> has shaped the UK — people have moved to the UK for work, study and safety, bringing skills, culture and diversity (e.g. NHS workers, tech professionals, cuisine).</li>
+<li><strong>Cultural globalisation</strong> means ideas, music, food and fashion spread worldwide — UK culture goes global (e.g. Premier League, BBC) while global culture comes to the UK (e.g. sushi, K-pop, Bollywood).</li>
+<li><strong>Food miles</strong> = the distance food travels from farm to plate. High food miles mean more transport emissions, but importing food can support farmers in developing countries.</li>
+<li><strong>Supply chains</strong> are the networks of people, businesses and countries involved in making and delivering a product. A single smartphone may involve materials and labour from 30+ countries.</li>
+<li>Globalisation has <strong>benefits</strong> (more choice, lower prices, economic growth, cultural exchange) and <strong>costs</strong> (job losses in some sectors, environmental damage, exploitation of workers, loss of local culture).</li>
+</ul>
+<div class="lesson-diagram" data-diagram="supply-chain-map"><p class="diagram-caption">A global supply chain — how a single product involves multiple countries</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A cotton T-shirt is designed in the UK, made from cotton grown in India, sewn in Bangladesh and sold in shops across Europe. Explain how this shows globalisation.</p>
+<p><strong>Solution:</strong><br>
+1. The T-shirt involves <strong>multiple countries</strong> — UK (design), India (raw material), Bangladesh (manufacturing) and Europe (sales) — showing an international <strong>supply chain</strong>.<br>
+2. <strong>Cheaper transport</strong> (container shipping) makes it affordable to move the cotton and finished T-shirts across the world.<br>
+3. The company locates manufacturing in Bangladesh because <strong>labour costs are lower</strong>, which is a key feature of globalisation.<br>
+4. <strong>Communication technology</strong> (email, video calls) allows the UK designers to coordinate with factories in Asia.<br>
+5. This example shows both benefits (jobs in Bangladesh, cheap clothes for consumers) and costs (low wages for garment workers, high food miles/carbon emissions).</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Globalisation</dt><dd>The process by which the world's economies, cultures and populations are becoming increasingly interconnected and interdependent.</dd>
+<dt>TNC</dt><dd>Transnational Corporation — a large company that operates in more than one country (e.g. Nike designs in the USA but manufactures in Vietnam).</dd>
+<dt>Imports</dt><dd>Goods or services bought from another country and brought into the UK.</dd>
+<dt>Exports</dt><dd>Goods or services produced in the UK and sold to another country.</dd>
+<dt>Food miles</dt><dd>The distance food travels from where it is produced to where it is consumed. Higher food miles generally mean greater carbon emissions from transport.</dd>
+<dt>Supply chain</dt><dd>The network of organisations, people, activities and resources involved in creating and delivering a product from raw material to the consumer.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking globalisation is only about trade — ✅ Correct: globalisation also involves <strong>migration, culture, technology and communication</strong>.</li>
+<li>❌ Saying globalisation is entirely good or entirely bad — ✅ Correct: it has both <strong>benefits and costs</strong>, and these are experienced differently by different people and countries.</li>
+<li>❌ Confusing imports and exports — ✅ Correct: <strong>imports</strong> come IN to a country; <strong>exports</strong> go OUT of a country.</li>
+<li>❌ Thinking food miles are the only environmental issue — ✅ Correct: food grown locally in heated greenhouses may produce <strong>more</strong> emissions than food imported from a warmer climate.</li>
+</ul>`,
+
+"island-53": `<h4>Introduction</h4>
+<p>After the Romans left Britain around AD 410, the island entered a dramatic new era. <strong>Anglo-Saxon</strong> tribes from northern Europe settled across England, creating kingdoms, laws and a culture that still shapes our country today. From the 8th century, <strong>Viking</strong> raiders from Scandinavia attacked, traded and eventually settled in large parts of England. The struggle between Anglo-Saxons and Vikings defined early medieval Britain — and the crisis of 1066 would change England forever.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li>After Rome withdrew (c. AD 410), <strong>Anglo-Saxon</strong> tribes (Angles, Saxons, Jutes) migrated from northern Germany and Denmark, establishing kingdoms across England.</li>
+<li>The main Anglo-Saxon kingdoms were <strong>Wessex</strong> (south), <strong>Mercia</strong> (midlands), <strong>Northumbria</strong> (north) and <strong>East Anglia</strong> (east) — together known as the Heptarchy.</li>
+<li>Anglo-Saxon society was hierarchical: the <strong>king</strong> at the top, then <strong>thegns</strong> (nobles/warriors who held land), <strong>ceorls</strong> (free peasant farmers) and <strong>thralls</strong> (enslaved people).</li>
+<li><strong>Christianity</strong> spread through Anglo-Saxon England from AD 597 when Pope Gregory I sent Augustine to convert King Æthelberht of Kent. Monasteries became centres of learning.</li>
+<li><strong>Viking raids</strong> began in AD 793 with the attack on Lindisfarne monastery. Vikings came from Norway, Denmark and Sweden seeking wealth, land and trade.</li>
+<li>In AD 865, the <strong>Great Heathen Army</strong> invaded and conquered much of eastern and northern England, establishing the <strong>Danelaw</strong> — the area under Viking law and control.</li>
+<li><strong>Alfred the Great</strong> (King of Wessex, 871–899) resisted the Vikings, defeated them at the Battle of Edington (878) and agreed the boundary of the Danelaw. He also promoted education, law and literacy.</li>
+<li>After <strong>Edward the Confessor</strong> died in January 1066 without a clear heir, a <strong>succession crisis</strong> erupted — Harold Godwinson, Harald Hardrada and William of Normandy all claimed the English throne.</li>
+</ul>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Why is Alfred the Great considered one of the most important Anglo-Saxon kings? Explain at least three reasons.</p>
+<p><strong>Solution:</strong><br>
+1. <strong>Military leadership:</strong> Alfred defeated the Vikings at the Battle of Edington in 878, preventing them from conquering all of England and securing Wessex's survival.<br>
+2. <strong>The Danelaw agreement:</strong> He negotiated a boundary with the Viking leader Guthrum, bringing a period of relative peace and allowing English territories to recover.<br>
+3. <strong>Education and learning:</strong> Alfred founded schools, translated important Latin texts into English and began the <strong>Anglo-Saxon Chronicle</strong> — a record of English history.<br>
+4. <strong>Defence:</strong> He built a network of fortified towns called <strong>burhs</strong> across Wessex to defend against future Viking attacks.<br>
+Therefore, Alfred is remembered for saving England from total Viking conquest and promoting learning, law and defence.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Anglo-Saxons</dt><dd>Germanic tribes (Angles, Saxons, Jutes) who migrated to and settled in Britain from the 5th century, establishing kingdoms that became England.</dd>
+<dt>Thegn</dt><dd>An Anglo-Saxon nobleman who held land granted by the king in return for military service and loyalty.</dd>
+<dt>Danelaw</dt><dd>The area of England (mainly the north and east) controlled by the Vikings after the treaties with Alfred, where Danish laws and customs applied.</dd>
+<dt>Viking</dt><dd>Norse seafarers from Scandinavia (Denmark, Norway, Sweden) who raided, traded and settled across Europe from the 8th to 11th centuries.</dd>
+<dt>Heptarchy</dt><dd>The name given to the seven main Anglo-Saxon kingdoms of England (Wessex, Mercia, Northumbria, East Anglia, Essex, Sussex, Kent).</dd>
+<dt>Succession crisis</dt><dd>A dispute over who should become the next ruler, usually caused by the death of a king without a clear or agreed heir.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking the Anglo-Saxons invaded an empty land — ✅ Correct: <strong>Romano-British people</strong> already lived in Britain; the Anglo-Saxons settled alongside and sometimes displaced them.</li>
+<li>❌ Thinking all Vikings were just violent raiders — ✅ Correct: Vikings were also <strong>traders, farmers, craftspeople and settlers</strong> who established towns like York (Jorvik).</li>
+<li>❌ Saying Alfred the Great ruled all of England — ✅ Correct: Alfred was King of <strong>Wessex</strong>; it was his grandson Æthelstan who first united England in AD 927.</li>
+<li>❌ Confusing the 1066 succession crisis claimants — ✅ Correct: there were <strong>three main claimants</strong>: Harold Godwinson (English), Harald Hardrada (Norwegian) and William of Normandy (Norman/French).</li>
+</ul>`,
+
+"island-54": `<h4>Introduction</h4>
+<p>In June 1381, thousands of ordinary English peasants marched on London in one of the most dramatic uprisings in English history — the <strong>Peasants' Revolt</strong>. Angry about unfair taxes, harsh labour laws and years of exploitation, they demanded freedom and fairness from the young King Richard II. Although the revolt was crushed and its leaders killed, it sent shockwaves through medieval society and helped speed up the end of <strong>feudalism</strong> in England.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Long-term cause — the Black Death (1348–49):</strong> Killed about one-third of England's population, creating a severe <strong>labour shortage</strong>. Surviving peasants could demand higher wages because workers were scarce.</li>
+<li><strong>The Statute of Labourers (1351):</strong> Parliament froze wages at pre-plague levels and made it illegal for peasants to leave their manor to find better-paid work. Peasants saw this as deeply unfair.</li>
+<li><strong>Short-term cause — the Poll Tax (1380):</strong> A flat tax of 1 shilling per person (rich and poor paid the same amount). This was the <strong>third poll tax in four years</strong> and was seen as unjust.</li>
+<li><strong>Wat Tyler</strong> (from Kent) emerged as the main leader of the revolt. <strong>John Ball</strong>, a radical priest, inspired the rebels with ideas of equality.</li>
+<li>In June 1381, rebels from Kent and Essex <strong>marched on London</strong>, burning tax records, opening prisons and killing the Archbishop of Canterbury and the Lord Treasurer.</li>
+<li>At <strong>Smithfield</strong>, the 14-year-old King Richard II met the rebels. During the meeting, Wat Tyler was <strong>killed</strong> by the Mayor of London. Richard calmed the crowd by promising to meet their demands.</li>
+<li>Richard II <strong>broke his promises</strong> — the charters of freedom were cancelled, rebel leaders were hunted down and executed, and the king declared "serfs you are and serfs you shall remain."</li>
+<li><strong>Consequences:</strong> No more poll taxes were introduced; wages gradually rose; serfdom slowly declined over the following century. Historians debate whether the revolt was a <strong>failure</strong> (immediate demands rejected) or a <strong>success</strong> (helped end feudalism in the long term).</li>
+</ul>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> "The Peasants' Revolt of 1381 was a complete failure." How far do you agree with this statement?</p>
+<p><strong>Solution:</strong><br>
+<strong>Arguments it was a failure:</strong><br>
+1. The rebels' leader Wat Tyler was <strong>killed</strong> and the revolt was crushed.<br>
+2. Richard II <strong>broke all his promises</strong> — charters of freedom were cancelled.<br>
+3. Rebel leaders were <strong>executed</strong> and the feudal system continued in the short term.<br>
+<strong>Arguments it was a success:</strong><br>
+1. The government <strong>never introduced another poll tax</strong> — showing they feared another uprising.<br>
+2. <strong>Wages gradually rose</strong> over the following decades as lords competed for scarce workers.<br>
+3. <strong>Serfdom slowly died out</strong> over the next century, partly because the revolt showed peasants' power.<br>
+<strong>Conclusion:</strong> In the short term the revolt failed — its leaders were killed and promises broken. However, in the long term it helped <strong>accelerate the decline of feudalism</strong> and showed that ordinary people could challenge authority.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Feudalism</dt><dd>The medieval social system in which peasants worked the land for a lord in exchange for protection and a place to live. The lord owed loyalty to the king.</dd>
+<dt>Poll Tax</dt><dd>A flat-rate tax charged per person (per "head"), regardless of wealth. The 1380 poll tax of 1 shilling per person was the trigger for the revolt.</dd>
+<dt>Statute of Labourers</dt><dd>A law passed in 1351 that froze wages at pre-Black Death levels and prevented peasants from leaving their manor to seek higher wages elsewhere.</dd>
+<dt>Serf / Villein</dt><dd>An unfree peasant tied to the land of a lord, required to work on the lord's land for a set number of days per week.</dd>
+<dt>Black Death</dt><dd>A devastating plague (1348–49) that killed roughly one-third of England's population, causing a labour shortage that changed the balance of power between lords and peasants.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking the Poll Tax was the only cause — ✅ Correct: the Poll Tax was the <strong>trigger</strong>, but long-term causes (Black Death, Statute of Labourers, resentment of feudalism) were equally important.</li>
+<li>❌ Saying the revolt immediately ended feudalism — ✅ Correct: feudalism declined <strong>gradually over the next century</strong>; the revolt accelerated the process but did not end it overnight.</li>
+<li>❌ Thinking Richard II was a powerful adult king — ✅ Correct: Richard was only <strong>14 years old</strong> in 1381 and was heavily influenced by his advisors.</li>
+<li>❌ Forgetting John Ball's role — ✅ Correct: John Ball was a key <strong>ideological leader</strong> who preached that all people were equal and inspired the rebels with radical ideas.</li>
+</ul>`,
+
+"island-55": `<h4>Introduction</h4>
+<p>In medieval England, the <strong>Church</strong> was not just a place of worship — it was the most powerful institution in the country, shaping every aspect of daily life from birth to death. The Pope in Rome was head of the entire Western Church, and local parish churches were the heart of every village. The Church controlled education, provided healthcare, collected taxes (tithes) and could even challenge kings. Understanding the medieval Church is key to understanding medieval society.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li>The <strong>parish church</strong> was the centre of village life — used for worship, baptisms, weddings, funerals and community gatherings. It was often the only stone building in the village.</li>
+<li>The Church had a clear <strong>hierarchy</strong>: the <strong>Pope</strong> (head of the Church in Rome) → <strong>archbishops</strong> → <strong>bishops</strong> → <strong>priests</strong> (who served local parishes).</li>
+<li>Everyone was expected to pay a <strong>tithe</strong> — one-tenth of their income or produce — to the Church. This made the Church extremely wealthy, owning about one-third of all land in England.</li>
+<li><strong>Monasteries and abbeys</strong> were communities of monks or nuns who devoted their lives to prayer, work and study. They ran hospitals, schools and provided charity to the poor.</li>
+<li><strong>Pilgrimages</strong> were journeys to holy sites (e.g. Canterbury Cathedral, the shrine of Thomas Becket) to seek forgiveness, healing or spiritual merit. <strong>Relics</strong> (bones, possessions of saints) were believed to have miraculous powers.</li>
+<li>The Pope had immense power: he could <strong>excommunicate</strong> individuals (ban them from the Church and, they believed, from Heaven) or place an <strong>interdict</strong> on an entire country (banning all Church services).</li>
+<li><strong>Thomas Becket</strong>, Archbishop of Canterbury, was murdered in 1170 by four of Henry II's knights after a dispute over Church vs royal power. Becket became a saint and Canterbury a major pilgrimage site.</li>
+<li>The Church controlled <strong>education</strong> (monasteries were the only schools) and <strong>medicine</strong> (illness was often seen as God's punishment; prayer and pilgrimages were common treatments).</li>
+</ul>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Explain why the medieval Church was so powerful in England. Give at least three reasons.</p>
+<p><strong>Solution:</strong><br>
+1. <strong>Wealth:</strong> The Church collected tithes from everyone and owned about one-third of all land in England, making it richer than many lords and sometimes richer than the king.<br>
+2. <strong>Spiritual authority:</strong> People genuinely believed the Church controlled their path to <strong>Heaven or Hell</strong>. The threat of excommunication terrified people because they believed it meant eternal damnation.<br>
+3. <strong>Education and knowledge:</strong> Monks and priests were often the only people who could <strong>read and write</strong>. The Church controlled schools, record-keeping and the spread of ideas.<br>
+4. <strong>Daily life:</strong> The Church was involved in every major life event — birth (baptism), marriage (wedding) and death (funeral and burial). People attended church every Sunday and on holy days.<br>
+Therefore, the Church's combination of wealth, spiritual fear, knowledge and daily presence made it the most powerful institution in medieval England.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Tithe</dt><dd>A tax of one-tenth of a person's income or produce, paid to the Church. Tithes were compulsory and made the Church very wealthy.</dd>
+<dt>Excommunication</dt><dd>The most severe Church punishment — banning a person from all Church services and sacraments. Medieval people believed this meant being sent to Hell.</dd>
+<dt>Interdict</dt><dd>A papal punishment placed on an entire country, banning all Church services (no marriages, baptisms or burials). Used to pressure kings into obedience.</dd>
+<dt>Pilgrimage</dt><dd>A journey to a holy place (such as Canterbury, Jerusalem or Rome) to show devotion, seek forgiveness or ask for healing.</dd>
+<dt>Relic</dt><dd>A physical object associated with a saint (e.g. bones, clothing), believed to have healing or miraculous powers.</dd>
+<dt>Monastery</dt><dd>A religious community where monks lived, worked and prayed according to a strict daily routine (the Rule of St Benedict).</dd>
+<dt>Parish</dt><dd>The local area served by a single church and priest. Every person in England belonged to a parish.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking medieval people could choose not to go to church — ✅ Correct: church attendance was <strong>expected of everyone</strong>; refusing could lead to punishment or social exclusion.</li>
+<li>❌ Saying the king was always more powerful than the Pope — ✅ Correct: the Pope could <strong>excommunicate kings</strong> and place interdicts on countries, giving him enormous leverage over rulers.</li>
+<li>❌ Thinking monasteries were only about prayer — ✅ Correct: monasteries also ran <strong>schools, hospitals, farms and libraries</strong> and were major economic and cultural centres.</li>
+<li>❌ Confusing tithes with ordinary taxes — ✅ Correct: tithes were paid <strong>to the Church</strong> (one-tenth of income); taxes were paid to the <strong>king or lord</strong>. People had to pay both.</li>
+</ul>`,
+
+"island-56": `<h4>Introduction</h4>
+<p>The <strong>Wars of the Roses</strong> (1455–1487) were a series of bloody civil wars fought between two rival branches of the royal Plantagenet family for control of the English throne: the <strong>House of Lancaster</strong> (red rose) and the <strong>House of York</strong> (white rose). These wars brought decades of instability, betrayal and dramatic battles — and ended with the surprise victory of Henry Tudor at Bosworth in 1485, founding the <strong>Tudor dynasty</strong> that would transform England.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li>The wars were caused by: the <strong>weak rule of Henry VI</strong> (Lancastrian), who suffered mental illness; rival claims to the throne; powerful nobles competing for influence; and defeat in the Hundred Years' War with France.</li>
+<li>The <strong>House of Lancaster</strong> (red rose) included Henry VI and later Henry VII. The <strong>House of York</strong> (white rose) included Edward IV and Richard III.</li>
+<li><strong>Henry VI</strong> (Lancaster) was a weak, pious king whose mental breakdowns allowed powerful nobles like Richard, Duke of York, to challenge for power.</li>
+<li><strong>Richard Neville, Earl of Warwick</strong> ("the Kingmaker") was the most powerful noble in England. He helped put <strong>Edward IV</strong> (York) on the throne in 1461 but later switched sides to Lancaster.</li>
+<li>The <strong>Battle of Towton (1461)</strong> was the bloodiest battle ever fought on English soil — an estimated 28,000 died. Edward IV won and became king.</li>
+<li><strong>Richard III</strong> (York) took the throne in 1483 after the death of Edward IV. The <strong>Princes in the Tower</strong> (Edward V and his brother) disappeared — many believe Richard had them murdered, though this remains debated.</li>
+<li>At the <strong>Battle of Bosworth (1485)</strong>, Henry Tudor (a distant Lancastrian claimant) defeated and killed Richard III. Henry became <strong>Henry VII</strong>, the first Tudor king.</li>
+<li>Henry VII united the houses by marrying <strong>Elizabeth of York</strong> and combining the red and white roses into the <strong>Tudor rose</strong>, ending the Wars of the Roses and beginning the Tudor dynasty.</li>
+</ul>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> "Richard III was a villain who murdered his way to the throne." How far do you agree?</p>
+<p><strong>Solution:</strong><br>
+<strong>Arguments Richard was a villain:</strong><br>
+1. He took the throne from his 12-year-old nephew <strong>Edward V</strong>, who had a stronger claim.<br>
+2. The <strong>Princes in the Tower</strong> (Edward V and Richard of York) disappeared while in Richard's care — many historians believe he ordered their murder.<br>
+3. Tudor propaganda (especially Shakespeare's play) portrayed him as a scheming, deformed tyrant.<br>
+<strong>Arguments Richard was not a villain:</strong><br>
+1. He may have genuinely believed the princes were <strong>illegitimate</strong> (as declared by Parliament) and that he was the rightful king.<br>
+2. There is <strong>no definitive proof</strong> that Richard ordered the princes' deaths — others (like Henry VII) also had motives.<br>
+3. As king, Richard introduced <strong>positive reforms</strong> including the Court of Requests (helping poor people access justice) and bail for accused people.<br>
+<strong>Conclusion:</strong> Much of the "villain" image comes from <strong>Tudor propaganda</strong>. While his seizure of the throne was ruthless, the truth about the Princes in the Tower remains uncertain.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Wars of the Roses</dt><dd>A series of civil wars (1455–1487) between the House of Lancaster (red rose) and the House of York (white rose) over the English throne.</dd>
+<dt>Plantagenet</dt><dd>The royal dynasty that ruled England from 1154 to 1485. Both Lancaster and York were branches of the Plantagenet family.</dd>
+<dt>Kingmaker</dt><dd>The nickname for Richard Neville, Earl of Warwick, who was so powerful he could decide who became king — first supporting Edward IV, then switching to Henry VI.</dd>
+<dt>Princes in the Tower</dt><dd>Edward V (aged 12) and his brother Richard (aged 9), who were placed in the Tower of London in 1483 and never seen again. Their fate remains one of history's greatest mysteries.</dd>
+<dt>Tudor dynasty</dt><dd>The royal family founded by Henry VII after the Battle of Bosworth (1485), which ruled England until 1603 (Henry VII → Henry VIII → Edward VI → Mary I → Elizabeth I).</dd>
+<dt>Tudor rose</dt><dd>The symbol combining the red rose of Lancaster and white rose of York, representing the unity of the two houses under Henry VII.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking the wars were between two completely separate families — ✅ Correct: Lancaster and York were both branches of the same <strong>Plantagenet</strong> royal family.</li>
+<li>❌ Believing Shakespeare's Richard III is historically accurate — ✅ Correct: Shakespeare wrote under the <strong>Tudors</strong>, so his play is heavily biased propaganda designed to justify Henry VII's claim.</li>
+<li>❌ Mixing up which rose belongs to which house — ✅ Correct: <strong>Lancaster = red rose</strong>; <strong>York = white rose</strong>.</li>
+<li>❌ Thinking Bosworth ended all conflict — ✅ Correct: there were further <strong>Yorkist rebellions</strong> after 1485 (e.g. Lambert Simnel in 1487), and it took Henry VII years to secure his position.</li>
+</ul>`,
+
+"island-57": `<h4>Introduction</h4>
+<p>In the late 13th and early 14th centuries, English kings — especially <strong>Edward I</strong> — launched military campaigns to bring Wales and Scotland under English control. Edward conquered Wales and built a ring of massive castles to enforce his rule, but Scotland proved far harder to subdue. Scottish heroes like <strong>William Wallace</strong> and <strong>Robert the Bruce</strong> fought back fiercely, and the Scottish victory at <strong>Bannockburn (1314)</strong> secured Scotland's independence for centuries. These campaigns shaped the identities of all three nations.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Edward I</strong> (reigned 1272–1307) was a powerful warrior king nicknamed the "Hammer of the Scots." He aimed to bring both Wales and Scotland under direct English control.</li>
+<li><strong>Conquest of Wales (1277–1283):</strong> Edward invaded Wales twice. The Welsh prince <strong>Llywelyn ap Gruffudd</strong> was killed in 1282, and by 1283 Welsh resistance had been crushed.</li>
+<li>Edward built a ring of enormous <strong>castles</strong> across north Wales — including <strong>Caernarfon, Conwy, Harlech and Beaumaris</strong> — to intimidate the Welsh and enforce English rule. These are among the finest medieval castles in Europe.</li>
+<li>In Scotland, a succession crisis in 1290 led Edward I to intervene. He chose John Balliol as king but treated him as a puppet, leading to Scottish rebellion.</li>
+<li><strong>William Wallace</strong> led Scottish resistance and won a stunning victory at the <strong>Battle of Stirling Bridge (1297)</strong>, using the narrow bridge to defeat a much larger English army.</li>
+<li>Wallace was eventually captured, taken to London, and <strong>executed</strong> in 1305 by being hanged, drawn and quartered — the punishment for treason.</li>
+<li><strong>Robert the Bruce</strong> crowned himself King of Scotland in 1306 and defeated Edward II's army at the <strong>Battle of Bannockburn (1314)</strong>, the most important Scottish military victory.</li>
+<li>The <strong>Declaration of Arbroath (1320)</strong> was a letter from Scottish nobles to the Pope asserting Scotland's right to independence and the Scots' freedom to choose their own king.</li>
+</ul>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Why did Edward I build castles in Wales? Explain at least three reasons.</p>
+<p><strong>Solution:</strong><br>
+1. <strong>Military control:</strong> The castles were strategically placed to control key routes, river crossings and coastline, making it difficult for the Welsh to organise rebellion.<br>
+2. <strong>Intimidation:</strong> The sheer size and strength of castles like Caernarfon (with its eagle towers and coloured stonework) were designed to <strong>impress and frighten</strong> the Welsh population into submission.<br>
+3. <strong>English settlement:</strong> Many castles had attached <strong>towns</strong> (boroughs) where English settlers lived, traded and governed — displacing Welsh people and establishing English law and customs.<br>
+4. <strong>Symbol of authority:</strong> Caernarfon Castle was deliberately built to echo the walls of Constantinople, signalling that Edward saw himself as an <strong>imperial ruler</strong>.<br>
+Therefore, the castles served military, psychological, economic and symbolic purposes — they were tools of <strong>conquest and colonisation</strong>.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Concentric castle</dt><dd>A castle with two or more rings of walls, one inside the other (e.g. Beaumaris). Attackers who breached the outer wall still faced the higher inner wall.</dd>
+<dt>Garrison</dt><dd>A group of soldiers stationed in a castle or fort to defend it and control the surrounding area.</dd>
+<dt>Succession crisis</dt><dd>A dispute over who should become the next king, often caused by the death of a ruler without a clear heir (Scotland had one in 1290).</dd>
+<dt>Bannockburn</dt><dd>The battle in 1314 where Robert the Bruce's Scottish army defeated the much larger English army of Edward II, securing Scottish independence.</dd>
+<dt>Declaration of Arbroath</dt><dd>A letter written in 1320 by Scottish nobles to the Pope, asserting Scotland's independence and the right of the Scottish people to choose their own king.</dd>
+<dt>Treason</dt><dd>The crime of betraying one's king or country, punished in medieval England by hanging, drawing and quartering.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking Edward I conquered Scotland — ✅ Correct: Edward conquered <strong>Wales</strong> but ultimately <strong>failed to conquer Scotland</strong>, which remained independent after Bannockburn.</li>
+<li>❌ Confusing William Wallace and Robert the Bruce — ✅ Correct: <strong>Wallace</strong> won at Stirling Bridge (1297) but was executed in 1305; <strong>Bruce</strong> won at Bannockburn (1314) and became king.</li>
+<li>❌ Saying Bannockburn ended all conflict between England and Scotland — ✅ Correct: wars continued for years; Scottish independence was only formally recognised by England in the <strong>Treaty of Edinburgh-Northampton (1328)</strong>.</li>
+<li>❌ Thinking the Welsh accepted English rule peacefully — ✅ Correct: there were <strong>several Welsh rebellions</strong> after 1283, including the major revolt of Owain Glyndŵr in 1400.</li>
+</ul>`,
+
+"island-58": `<h4>Introduction</h4>
+<p>Medieval towns were noisy, crowded, smelly — and full of opportunity. As England's population grew and trade expanded from the 11th century onwards, towns became increasingly important centres of <strong>commerce, craft and culture</strong>. Merchants and craftspeople organised themselves into powerful <strong>guilds</strong>, markets attracted traders from across Europe, and the wool trade made England rich. Towns also gave people a chance to escape the feudal system — a serf who lived in a town for a year and a day could become free.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li>Medieval towns grew as <strong>trade increased</strong> after the Norman Conquest. Lords granted <strong>town charters</strong> giving towns the right to hold markets, collect tolls and govern themselves.</li>
+<li><strong>Burgesses</strong> were townspeople who held special rights (voting, trading) granted by the charter. They paid rent to the lord rather than performing feudal labour.</li>
+<li><strong>Guilds</strong> were powerful organisations that controlled trade and craft in towns. <strong>Merchant guilds</strong> regulated buying and selling; <strong>craft guilds</strong> (e.g. weavers, blacksmiths, bakers) controlled the quality, price and production of goods.</li>
+<li>Young people learned trades through <strong>apprenticeships</strong> — typically lasting 7 years, during which an apprentice lived with a master craftsman, learned the trade, and eventually became a journeyman and then (if skilled enough) a master.</li>
+<li>The <strong>wool trade</strong> was medieval England's most important industry. English wool was exported across Europe, especially to Flanders (modern Belgium). Wool made towns like Norwich, York and Bristol wealthy.</li>
+<li><strong>Fairs</strong> (like the great Stourbridge Fair near Cambridge) were large annual trading events attracting merchants from across Europe, trading in wool, cloth, spices, wine and luxury goods.</li>
+<li>Conditions in medieval towns were often <strong>poor</strong>: overcrowding, lack of clean water, open sewers, animal waste in streets, and the constant risk of fire (most buildings were wooden). Disease spread easily.</li>
+<li>Towns played a key role in the <strong>decline of feudalism</strong>: they offered an alternative to serfdom, created a new <strong>middle class</strong> of merchants, and generated wealth independent of land ownership.</li>
+</ul>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Explain how the guild system controlled the quality of goods in a medieval town.</p>
+<p><strong>Solution:</strong><br>
+1. Each craft guild set strict <strong>rules and standards</strong> for the quality of goods produced — for example, a bakers' guild would specify the weight and ingredients of a loaf of bread.<br>
+2. Guild officials called <strong>wardens</strong> inspected workshops and products to check they met these standards. Goods that failed inspection could be <strong>confiscated or destroyed</strong>.<br>
+3. Only guild members were allowed to <strong>sell their goods</strong> in the town — outsiders or non-members were banned or fined, preventing competition from lower-quality producers.<br>
+4. The <strong>apprenticeship system</strong> ensured that all craftspeople were properly trained over 7 years before they could sell their own goods, maintaining a high skill level.<br>
+Therefore, guilds acted as a form of <strong>quality control and regulation</strong>, protecting both consumers and the reputation of the town's craftspeople.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Charter</dt><dd>An official document from the king or lord granting a town special rights, such as holding a market, collecting tolls and self-governance.</dd>
+<dt>Burgess</dt><dd>A freeman of a town who had special rights (including trading and voting) granted by the town's charter.</dd>
+<dt>Guild</dt><dd>An association of merchants or craftspeople that controlled trade, set prices, maintained quality standards and protected its members' interests.</dd>
+<dt>Apprentice</dt><dd>A young person (usually starting at age 12–14) who lived with a master craftsman for about 7 years, learning a trade in exchange for food, lodging and training.</dd>
+<dt>Journeyman</dt><dd>A trained craftsman who had completed an apprenticeship but was not yet a master. Journeymen were paid daily wages (from the French "journée" — day).</dd>
+<dt>Wool trade</dt><dd>Medieval England's most valuable export industry. Raw wool and finished cloth were shipped to Europe, especially Flanders, making many English towns wealthy.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking medieval towns were clean and pleasant — ✅ Correct: they were often <strong>dirty, overcrowded and smelly</strong>, with open sewers, animal waste and a constant risk of fire and disease.</li>
+<li>❌ Saying anyone could trade freely in a medieval town — ✅ Correct: <strong>guilds strictly controlled</strong> who could trade and what they could sell; non-members were banned or fined.</li>
+<li>❌ Thinking apprentices were paid — ✅ Correct: apprentices received <strong>no wages</strong>; they worked in exchange for training, food and lodging from their master.</li>
+<li>❌ Forgetting that towns helped end feudalism — ✅ Correct: towns created <strong>alternatives to serfdom</strong> — a serf who lived in a town for a year and a day could become legally free.</li>
+</ul>`,
+
+"island-59": `<h4>Introduction</h4>
+<p>While medieval Europe was often struggling through the "Dark Ages," the <strong>Islamic world</strong> was experiencing a golden age of learning, science and culture (roughly AD 750–1258). Centred on great cities like <strong>Baghdad</strong>, scholars in the Islamic world preserved ancient Greek and Roman knowledge, made groundbreaking discoveries of their own, and laid foundations in mathematics, medicine and science that we still use today. Without the Islamic Golden Age, much of the knowledge that fuelled Europe's later Renaissance might have been lost forever.</p>
+
+<h4>📌 Key Points</h4>
+<ul>
+<li>The <strong>Islamic Golden Age</strong> (c. 750–1258) was a period of extraordinary achievement in science, medicine, mathematics, art and culture across the Islamic world, from Spain to Central Asia.</li>
+<li><strong>Baghdad</strong> was the centre of learning. The <strong>House of Wisdom</strong> (Bayt al-Hikma) was a great library and translation centre where scholars translated Greek, Persian and Indian texts into Arabic, preserving and building on ancient knowledge.</li>
+<li><strong>Al-Khwarizmi</strong> (c. 780–850) developed <strong>algebra</strong> (the word comes from his book "al-jabr") and helped introduce the Hindu-Arabic numeral system (1, 2, 3…) and the concept of <strong>zero</strong> to the wider world.</li>
+<li><strong>Ibn Sina</strong> (Avicenna, 980–1037) wrote the <strong>Canon of Medicine</strong>, a medical encyclopaedia used in European universities for over 500 years. He described contagious diseases, quarantine procedures and hundreds of drugs.</li>
+<li><strong>Al-Idrisi</strong> (1100–1165) created one of the most advanced world maps of the medieval period, combining knowledge from Greek, Arab and travellers' sources.</li>
+<li>Achievements in <strong>science</strong> included Ibn al-Haytham's work on <strong>optics</strong> (how the eye sees light), advanced <strong>astronomy</strong> (star catalogues, astrolabes) and early <strong>chemistry</strong> (distillation, acids).</li>
+<li>Achievements in <strong>medicine</strong> included the establishment of <strong>hospitals</strong> (bimaristans) with separate wards for different illnesses, and the development of <strong>surgical instruments</strong> by Al-Zahrawi (the "father of surgery").</li>
+<li>Compared with medieval Europe, the Islamic world was <strong>far more advanced</strong> in science, medicine and mathematics during this period. Islamic scholarship later helped spark the European <strong>Renaissance</strong> when translated texts reached Western Europe.</li>
+</ul>
+
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Explain how Islamic scholars contributed to the development of modern medicine. Give at least three examples.</p>
+<p><strong>Solution:</strong><br>
+1. <strong>Ibn Sina's Canon of Medicine:</strong> This encyclopaedia systematically described diseases, symptoms and treatments. It was so comprehensive that European universities used it as a <strong>textbook for over 500 years</strong>.<br>
+2. <strong>Hospitals (bimaristans):</strong> The Islamic world built the first true hospitals — with <strong>separate wards</strong> for different conditions, trained physicians, pharmacies and medical records. This was centuries ahead of European practice.<br>
+3. <strong>Al-Zahrawi's surgical instruments:</strong> He designed over <strong>200 surgical tools</strong> (including scalpels, forceps and surgical needles), many of which are still recognisable in modern surgery.<br>
+4. <strong>Understanding of contagion:</strong> Islamic scholars recognised that some diseases could <strong>spread from person to person</strong> and recommended quarantine — an idea not widely accepted in Europe for centuries.<br>
+Therefore, Islamic scholars advanced medicine through systematic study, practical hospital care, surgical innovation and early ideas about disease transmission.</p>
+</div>
+
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Islamic Golden Age</dt><dd>The period from roughly AD 750 to 1258 when the Islamic world led the world in science, medicine, mathematics, art and culture.</dd>
+<dt>House of Wisdom</dt><dd>A major intellectual centre in Baghdad where scholars translated, studied and expanded upon Greek, Persian and Indian texts. It was a library, academy and translation centre.</dd>
+<dt>Algebra</dt><dd>A branch of mathematics dealing with equations and unknown values, developed by Al-Khwarizmi. The word comes from the Arabic "al-jabr" (meaning "reunion of broken parts").</dd>
+<dt>Canon of Medicine</dt><dd>A vast medical encyclopaedia written by Ibn Sina (Avicenna), covering diseases, anatomy, treatments and drugs. Used in Europe for over 500 years.</dd>
+<dt>Bimaristan</dt><dd>An Islamic hospital — far more advanced than anything in medieval Europe, with trained doctors, separate wards, pharmacies and medical training facilities.</dd>
+<dt>Renaissance</dt><dd>The European "rebirth" of learning (14th–17th centuries), heavily influenced by the rediscovery of ancient texts preserved and expanded by Islamic scholars.</dd>
+<dt>Astrolabe</dt><dd>A sophisticated astronomical instrument used by Islamic scholars to observe and calculate the positions of stars, determine direction (qibla) and tell the time.</dd>
+</dl>
+
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking Islamic scholars only copied Greek knowledge — ✅ Correct: they <strong>preserved, corrected and significantly expanded</strong> upon Greek, Persian and Indian knowledge, making many original discoveries.</li>
+<li>❌ Saying medieval Europe was more advanced than the Islamic world — ✅ Correct: during this period (750–1258), the Islamic world was <strong>far ahead</strong> of Europe in science, medicine and mathematics.</li>
+<li>❌ Thinking the Islamic Golden Age only affected the Middle East — ✅ Correct: the Islamic world stretched from <strong>Spain to Central Asia</strong>, and its knowledge eventually reached Europe, helping spark the Renaissance.</li>
+<li>❌ Confusing Al-Khwarizmi with other scholars — ✅ Correct: <strong>Al-Khwarizmi</strong> = algebra and numerals; <strong>Ibn Sina</strong> = medicine; <strong>Al-Zahrawi</strong> = surgery; <strong>Ibn al-Haytham</strong> = optics.</li>
 </ul>`
 
 };

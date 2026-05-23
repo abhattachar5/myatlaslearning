@@ -175,6 +175,8 @@
 <script src="english-data-y8.js"></script>
 <script src="science-data-y7.js"></script>
 <script src="science-data-y8.js"></script>
+<script src="history-data.js"></script>
+<script src="geography-data.js"></script>
 <script src="history-data-y8.js"></script>
 <script src="geography-data-y8.js"></script>
 <script src="english-data.js"></script>
@@ -228,6 +230,18 @@ function getYearScienceTopics() {
   const year = getUserYear();
   if (year === 'Year 7') return typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS : [];
   return [];
+}
+
+function getYearHistoryTopics() {
+  const year = getUserYear();
+  if (year === 'Year 8') return typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8 : [];
+  return typeof HISTORY_TOPICS !== 'undefined' ? HISTORY_TOPICS : [];
+}
+
+function getYearGeographyTopics() {
+  const year = getUserYear();
+  if (year === 'Year 8') return typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8 : [];
+  return typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS : [];
 }
 
 (function init() {
@@ -308,19 +322,27 @@ function renderFilters() {
   const yearScienceTopics = getYearScienceTopics();
   const row = document.getElementById('filter-row');
   row.innerHTML = subjects.map(s => {
+    const yearHistoryTopics = getYearHistoryTopics();
+    const yearGeographyTopics = getYearGeographyTopics();
     let count;
     if (s.id === 'all') {
       const sciCount = yearScienceTopics.length > 0 ? yearScienceTopics.length : yearCurriculum.filter(i => i.subjectId === 'science').length;
+      const hisCount = yearHistoryTopics.length > 0 ? yearHistoryTopics.length : yearCurriculum.filter(i => i.subjectId === 'history').length;
+      const geoCount = yearGeographyTopics.length > 0 ? yearGeographyTopics.length : yearCurriculum.filter(i => i.subjectId === 'geography').length;
       count = yearMathTopics.length +
               yearEnglishTopics.length +
-              sciCount +
-              yearCurriculum.filter(i => i.subjectId !== 'math' && i.subjectId !== 'english' && i.subjectId !== 'science').length;
+              sciCount + hisCount + geoCount +
+              yearCurriculum.filter(i => i.subjectId !== 'math' && i.subjectId !== 'english' && i.subjectId !== 'science' && i.subjectId !== 'history' && i.subjectId !== 'geography').length;
     } else if (s.id === 'math') {
       count = yearMathTopics.length;
     } else if (s.id === 'english') {
       count = yearEnglishTopics.length;
     } else if (s.id === 'science') {
       count = yearScienceTopics.length > 0 ? yearScienceTopics.length : yearCurriculum.filter(i => i.subjectId === 'science').length;
+    } else if (s.id === 'history') {
+      count = yearHistoryTopics.length > 0 ? yearHistoryTopics.length : yearCurriculum.filter(i => i.subjectId === 'history').length;
+    } else if (s.id === 'geography') {
+      count = yearGeographyTopics.length > 0 ? yearGeographyTopics.length : yearCurriculum.filter(i => i.subjectId === 'geography').length;
     } else {
       count = yearCurriculum.filter(i => i.subjectId === s.id).length;
     }
@@ -389,23 +411,49 @@ function renderGrid() {
     }
   }
 
-  // All filter: show math + english + science topic tiles + individual islands for other subjects
+  // History: show topic tiles
+  if (currentFilter === 'history') {
+    const yhTopics = getYearHistoryTopics();
+    if (yhTopics.length > 0) {
+      renderHistoryTopics(grid);
+      return;
+    }
+  }
+
+  // Geography: show topic tiles
+  if (currentFilter === 'geography') {
+    const ygTopics = getYearGeographyTopics();
+    if (ygTopics.length > 0) {
+      renderGeographyTopics(grid);
+      return;
+    }
+  }
+
+  // All filter: show topic tiles for all grouped subjects + individual islands for ungrouped
   if (currentFilter === 'all') {
     const yc = getYearCurriculum();
     const ymTopics = getYearMathTopics();
     const yeTopics = getYearEnglishTopics();
     const ysTopics = getYearScienceTopics();
+    const yhTopics = getYearHistoryTopics();
+    const ygTopics = getYearGeographyTopics();
     const hasScienceTopics = ysTopics.length > 0;
+    const hasHistoryTopics = yhTopics.length > 0;
+    const hasGeographyTopics = ygTopics.length > 0;
     const nonGroupedIslands = yc.filter(i =>
       i.subjectId !== 'math' &&
       i.subjectId !== 'english' &&
-      !(hasScienceTopics && i.subjectId === 'science')
+      !(hasScienceTopics && i.subjectId === 'science') &&
+      !(hasHistoryTopics && i.subjectId === 'history') &&
+      !(hasGeographyTopics && i.subjectId === 'geography')
     );
     const mathSection = ymTopics.length > 0 ? renderMathTopicCards() : '';
     const englishSection = yeTopics.length > 0 ? renderEnglishTopicCards() : '';
     const scienceSection = hasScienceTopics ? renderScienceTopicCards() : '';
+    const historySection = hasHistoryTopics ? renderHistoryTopicCards() : '';
+    const geographySection = hasGeographyTopics ? renderGeographyTopicCards() : '';
     const islandCards = nonGroupedIslands.map(island => renderIslandCard(island, allProgress)).join('');
-    grid.innerHTML = mathSection + englishSection + scienceSection + islandCards;
+    grid.innerHTML = mathSection + englishSection + scienceSection + historySection + geographySection + islandCards;
     return;
   }
 
@@ -545,6 +593,100 @@ function renderScienceTopicCards() {
       </div>
       <div style="margin-bottom:6px">
         <span class="subject-pill" style="background:${sciColor}">Science</span>
+        ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
+      </div>
+      <div class="island-name">${topic.name}</div>
+      <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
+      <div class="status-chip">
+        <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
+        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderHistoryTopics(grid) {
+  const topics = getYearHistoryTopics();
+  if (!topics.length) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">🔍</div><p>No History topics found for ' + getUserYear() + '.</p></div>';
+    return;
+  }
+  grid.innerHTML = renderHistoryTopicCards();
+}
+
+function renderHistoryTopicCards() {
+  const hisColor = '#6d28d9';
+  return getYearHistoryTopics().map(topic => {
+    const topicIslands = CURRICULUM.filter(i => i.topicId === topic.id);
+    let mastered = 0, started = 0;
+    topicIslands.forEach(island => {
+      const s = getIslandStatus(island.id);
+      if (s > 0) started++;
+      if (s === 4) mastered++;
+    });
+    const totalIslands = topicIslands.length;
+    const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
+    const hasContent = topic.hasContent !== false;
+
+    return `<div class="island-card" style="border-top-color:${hisColor};cursor:pointer"
+        onclick="goToTopic('${topic.id}')"
+        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
+        role="link"
+        tabindex="0"
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered">
+      <div class="island-card-top">
+        <div class="island-emoji">${topic.emoji}</div>
+        ${createProgressRing(progress, hisColor, 52)}
+      </div>
+      <div style="margin-bottom:6px">
+        <span class="subject-pill" style="background:${hisColor}">History</span>
+        ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
+      </div>
+      <div class="island-name">${topic.name}</div>
+      <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
+      <div class="status-chip">
+        <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
+        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderGeographyTopics(grid) {
+  const topics = getYearGeographyTopics();
+  if (!topics.length) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon">🔍</div><p>No Geography topics found for ' + getUserYear() + '.</p></div>';
+    return;
+  }
+  grid.innerHTML = renderGeographyTopicCards();
+}
+
+function renderGeographyTopicCards() {
+  const geoColor = '#0891b2';
+  return getYearGeographyTopics().map(topic => {
+    const topicIslands = CURRICULUM.filter(i => i.topicId === topic.id);
+    let mastered = 0, started = 0;
+    topicIslands.forEach(island => {
+      const s = getIslandStatus(island.id);
+      if (s > 0) started++;
+      if (s === 4) mastered++;
+    });
+    const totalIslands = topicIslands.length;
+    const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
+    const hasContent = topic.hasContent !== false;
+
+    return `<div class="island-card" style="border-top-color:${geoColor};cursor:pointer"
+        onclick="goToTopic('${topic.id}')"
+        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
+        role="link"
+        tabindex="0"
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered">
+      <div class="island-card-top">
+        <div class="island-emoji">${topic.emoji}</div>
+        ${createProgressRing(progress, geoColor, 52)}
+      </div>
+      <div style="margin-bottom:6px">
+        <span class="subject-pill" style="background:${geoColor}">Geography</span>
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>

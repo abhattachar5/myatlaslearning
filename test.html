@@ -174,6 +174,8 @@
 <script src="english-data-y8.js"></script>
 <script src="science-data-y7.js"></script>
 <script src="science-data-y8.js"></script>
+<script src="history-data.js"></script>
+<script src="geography-data.js"></script>
 <script src="history-data-y8.js"></script>
 <script src="geography-data-y8.js"></script>
 <script src="app.js"></script>
@@ -188,11 +190,17 @@ const topic = (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id =
            || (typeof MATH_TOPICS_Y8 !== 'undefined' ? MATH_TOPICS_Y8.find(t => t.id === topicId) : null)
            || (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS.find(t => t.id === topicId) : null)
            || (typeof ENGLISH_TOPICS_Y8 !== 'undefined' ? ENGLISH_TOPICS_Y8.find(t => t.id === topicId) : null)
-           || (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS.find(t => t.id === topicId) : null);
+           || (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS.find(t => t.id === topicId) : null)
+           || (typeof HISTORY_TOPICS !== 'undefined' ? HISTORY_TOPICS.find(t => t.id === topicId) : null)
+           || (typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8.find(t => t.id === topicId) : null)
+           || (typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS.find(t => t.id === topicId) : null)
+           || (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8.find(t => t.id === topicId) : null);
 const isScienceTopic = topicId && topicId.startsWith('st7-');
 const isEnglishTopic = topicId && (topicId.startsWith('et-') || topicId.startsWith('e8t-'));
-const topicColor = isScienceTopic ? '#185fa5' : isEnglishTopic ? '#ba7517' : '#3f6f00';
-const topicSubjectLabel = isScienceTopic ? 'Science' : isEnglishTopic ? 'English' : 'Mathematics';
+const isHistoryTopic = topicId && (topicId.startsWith('ht-') || topicId.startsWith('h8t-'));
+const isGeographyTopic = topicId && (topicId.startsWith('gt-') || topicId.startsWith('g8t-'));
+const topicColor = isScienceTopic ? '#185fa5' : isEnglishTopic ? '#ba7517' : isHistoryTopic ? '#6d28d9' : isGeographyTopic ? '#0891b2' : '#3f6f00';
+const topicSubjectLabel = isScienceTopic ? 'Science' : isEnglishTopic ? 'English' : isHistoryTopic ? 'History' : isGeographyTopic ? 'Geography' : 'Mathematics';
 
 if (!topic) {
   alert('Topic not found');
