@@ -812,6 +812,7 @@ function renderQuestion() {
       ${opt}
     </button>`
   ).join('');
+  pushQuizContextToTutor();
 }
 
 function selectAnswer(idx) {
@@ -825,6 +826,7 @@ function selectAnswer(idx) {
     else if (i === idx && i !== q.c) opt.classList.add('wrong');
   });
   if (idx === q.c) qScore++;
+  pushQuizContextToTutor();
 
   const expEl = document.getElementById('quiz-explanation');
   expEl.textContent = q.e;
@@ -905,6 +907,38 @@ function syncUserXP(xp) {
   const profiles = JSON.parse(localStorage.getItem('sm_profiles') || '[]');
   const idx = profiles.findIndex(p => p.joinDate === user.joinDate);
   if (idx !== -1) { profiles[idx].xp = xp; localStorage.setItem('sm_profiles', JSON.stringify(profiles)); }
+}
+
+// ── Quiz context for voice tutor ─────────────────────────────────────────
+function getQuizContext() {
+  if (!shuffledQuestions || !shuffledQuestions.length || typeof qIndex === 'undefined') {
+    return 'The student is not currently doing practice questions.';
+  }
+  var q = shuffledQuestions[qIndex];
+  var total = shuffledQuestions.length;
+  var letters = ['A', 'B', 'C', 'D'];
+  var lines = [];
+  lines.push('The student is doing practice questions (' + (qIndex + 1) + ' of ' + total + ').');
+  lines.push('Current score so far: ' + qScore + '/' + (qIndex + (qAnswered ? 1 : 0)) + ' correct.');
+  lines.push('Current question: ' + q.q);
+  lines.push('Options: ' + q.opts.map(function(o, i) { return letters[i] + ') ' + o; }).join(' | '));
+  if (qAnswered) {
+    var correctLetter = letters[q.c];
+    var correctText = q.opts[q.c];
+    lines.push('The student has answered this question.');
+    lines.push('Correct answer: ' + correctLetter + ') ' + correctText);
+    if (q.e) lines.push('Explanation: ' + q.e);
+  } else {
+    lines.push('The student has NOT answered yet — they may be stuck.');
+  }
+  return lines.join('\n');
+}
+
+function pushQuizContextToTutor() {
+  // Delegates to the module-scoped implementation (set by the tutor module)
+  if (typeof window._pushQuizContextToTutor === 'function') {
+    window._pushQuizContextToTutor();
+  }
 }
 
 // ── Keyboard nav ──────────────────────────────────────────────────────────
@@ -1130,9 +1164,22 @@ function getLessonContext() {
     topic_name: island.name,
     island_id: islandId,
     lesson_content: lessonText,
-    learning_outcomes: island.learningOutcomes ? island.learningOutcomes.join('\n') : ''
+    learning_outcomes: island.learningOutcomes ? island.learningOutcomes.join('\n') : '',
+    practice_context: getQuizContext()
   };
 }
+
+// Expose the tutor context-push so the global quiz code can call it
+window._pushQuizContextToTutor = function() {
+  if (!isConnected()) return;
+  var ctx = getQuizContext();  // calls the global-scope getQuizContext()
+  if (voiceConversation && typeof voiceConversation.sendContextualUpdate === 'function') {
+    voiceConversation.sendContextualUpdate(ctx);
+  }
+  if (chatSocket && chatSocket.readyState === WebSocket.OPEN) {
+    chatSocket.send(JSON.stringify({ type: 'contextual_update', text: ctx }));
+  }
+};
 
 function resetTutorUI() {
   document.getElementById('tutor-start').style.display = '';
