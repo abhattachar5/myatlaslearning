@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas — Study Plan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ── Mobile Header ─────────────────────────────────────────────────────── -->
+<div class="mobile-header">
+  <button class="hamburger-btn" id="hamburger-btn"
+          onclick="toggleSidebar()" aria-expanded="false"
+          aria-controls="main-sidebar" aria-label="Open navigation menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+  <img src="atlas-logo.png" alt="Atlas" class="mobile-header-logo">
+  <div class="mobile-header-actions">
+    <button class="theme-toggle" id="mobile-theme-btn" onclick="handleThemeToggle()" aria-label="Toggle colour theme">🌙</button>
+  </div>
+</div>
+
+<!-- ── Sidebar backdrop (mobile) ─────────────────────────────────────────── -->
+<div class="sidebar-backdrop" id="sidebar-backdrop" onclick="closeSidebar()"></div>
+
+<div class="app-layout">
+
+  <!-- ── Sidebar ───────────────────────────────────────────────────────────── -->
+  <aside class="sidebar" id="main-sidebar">
+    <div class="sidebar-close-row">
+      <button class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Close navigation menu">✕</button>
+    </div>
+    <div class="sidebar-logo">
+      <img src="atlas-logo.png" alt="Atlas" class="sidebar-logo-img">
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <p class="section-heading" style="padding:0 12px;margin-bottom:8px">Navigation</p>
+      <button class="nav-item" onclick="window.location.href='dashboard.html'">
+        <span class="nav-icon">🏠</span> Dashboard
+      </button>
+      <button class="nav-item active" aria-current="page">
+        <span class="nav-icon">📅</span> Study Plan
+      </button>
+      <button class="nav-item" onclick="window.location.href='dashboard.html'">
+        <span class="nav-icon">👤</span> My Profile
+      </button>
+    </nav>
+
+    <div class="sidebar-user">
+      <div class="user-card">
+        <div class="user-name" id="sidebar-name">—</div>
+        <div class="user-level" id="sidebar-level">Level 1 · Beginner</div>
+        <div class="xp-bar-wrap">
+          <div class="xp-bar-track">
+            <div class="xp-bar-fill" id="sidebar-xp-fill" style="width:0%"></div>
+          </div>
+          <div class="xp-label">
+            <span id="sidebar-xp">0 XP</span>
+            <span id="sidebar-xp-next">100 XP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="streak-badge" id="streak-display">🔥 0 day streak</div>
+      <button class="theme-toggle" id="theme-btn" onclick="handleThemeToggle()" aria-label="Toggle colour theme">🌙</button>
+    </div>
+  </aside>
+
+  <!-- ── Main ──────────────────────────────────────────────────────────────── -->
+  <main class="main-content" id="main-content">
+
+    <div class="page-header">
+      <h1>📅 Study Plan</h1>
+      <p id="plan-subtitle">Your personalised study schedule</p>
+    </div>
+
+    <!-- ── Section A: Progress Overview ─────────────────────────────────────── -->
+    <div class="planner-progress" id="planner-progress"></div>
+
+    <!-- ── Section B: This Week ─────────────────────────────────────────────── -->
+    <div class="planner-week" id="planner-week"></div>
+
+    <!-- ── Section C: Month Calendar ────────────────────────────────────────── -->
+    <div class="planner-calendar" id="planner-calendar"></div>
+
+    <!-- ── Export/Import ────────────────────────────────────────────────────── -->
+    <div class="planner-actions" id="planner-actions">
+      <button class="btn btn-secondary" onclick="StudyPlanner.downloadExport()">💾 Export Progress</button>
+      <button class="btn btn-secondary" onclick="StudyPlanner.triggerImport()">📂 Import Progress</button>
+      <button class="btn btn-secondary" onclick="resetPlan()" style="color:var(--red)">🗑️ Reset Plan</button>
+    </div>
+
+  </main>
+</div>
+
+<!-- ── Mobile Bottom Nav ──────────────────────────────────────────────────── -->
+<nav class="mobile-nav">
+  <button class="mobile-nav-item" onclick="window.location.href='dashboard.html'">
+    <span class="mobile-nav-icon">🏠</span>
+    Home
+  </button>
+  <button class="mobile-nav-item active">
+    <span class="mobile-nav-icon">📅</span>
+    Plan
+  </button>
+  <button class="mobile-nav-item" onclick="window.location.href='dashboard.html'">
+    <span class="mobile-nav-icon">👤</span>
+    Profile
+  </button>
+  <button class="mobile-nav-item" id="mobile-streak-btn">
+    <span class="mobile-nav-icon">🔥</span>
+    <span id="mobile-streak-label">0 days</span>
+  </button>
+</nav>
+
+<script src="data.js"></script>
+<script src="math-data.js"></script>
+<script src="math-content-1.js"></script>
+<script src="math-content-2.js"></script>
+<script src="math-content-3.js"></script>
+<script src="math-content-4.js"></script>
+<script src="math-content-5.js"></script>
+<script src="math-content-6.js"></script>
+<script src="math-content-7.js"></script>
+<script src="math-data-y8.js"></script>
+<script src="english-data-y8.js"></script>
+<script src="science-data-y7.js"></script>
+<script src="science-data-y8.js"></script>
+<script src="history-data.js"></script>
+<script src="geography-data.js"></script>
+<script src="history-data-y8.js"></script>
+<script src="geography-data-y8.js"></script>
+<script src="english-data.js"></script>
+<script src="english-content-1.js"></script>
+<script src="english-content-2.js"></script>
+<script src="english-content-3.js"></script>
+<script src="english-content-5.js"></script>
+<script src="english-content-6.js"></script>
+<script src="english-content-7.js"></script>
+<script src="english-content-8.js"></script>
+<script src="lessons.js"></script>
+<script src="math-lessons-1.js"></script>
+<script src="math-lessons-2.js"></script>
+<script src="math-lessons-3.js"></script>
+<script src="math-lessons-4.js"></script>
+<script src="math-lessons-5.js"></script>
+<script src="math-lessons-6.js"></script>
+<script src="math-lessons-7.js"></script>
+<script src="english-lessons-1.js"></script>
+<script src="english-lessons-2.js"></script>
+<script src="english-lessons-3.js"></script>
+<script src="english-lessons-5.js"></script>
+<script src="english-lessons-7.js"></script>
+<script src="english-lessons-8.js"></script>
+<script src="app.js"></script>
+<script src="planner.js"></script>
+<script>
+// ── Bootstrap ───────────────────────────────────────────────────────────────
+const user = requireAuth();
+let currentWeek = 0; // 0 = auto (current week)
+let currentMonth = new Date().getMonth();
+let currentYear = new Date().getFullYear();
+
+(function init() {
+  initTheme();
+  updateThemeBtn();
+  touchStreak();
+  renderSidebar();
+
+  const plan = StudyPlanner.getStudyPlan();
+  if (!plan) {
+    window.location.href = 'dashboard.html';
+    return;
+  }
+
+  const summary = StudyPlanner.getProgressSummary();
+  currentWeek = summary.weekNumber;
+
+  document.getElementById('plan-subtitle').textContent =
+    summary.startDate.split('-').reverse().join('/') + ' → ' + summary.targetMonth +
+    ' · Week ' + summary.weekNumber + ' of ~' + summary.totalWeeks;
+
+  renderProgress(summary);
+  renderWeek(currentWeek);
+  renderCalendar(currentYear, currentMonth);
+})();
+
+// ── Sidebar ─────────────────────────────────────────────────────────────────
+function renderSidebar() {
+  const xp = getTotalXP();
+  const lvl = getUserLevel(xp);
+  const pct = getLevelProgress(xp);
+  const nextXP = lvl.maxXP === Infinity ? '∞' : lvl.maxXP + 1;
+  document.getElementById('sidebar-name').textContent = user.name;
+  document.getElementById('sidebar-level').textContent = 'Level ' + lvl.level + ' · ' + lvl.title;
+  document.getElementById('sidebar-xp').textContent = xp + ' XP';
+  document.getElementById('sidebar-xp-next').textContent = nextXP + ' XP';
+  document.getElementById('sidebar-xp-fill').style.width = pct + '%';
+  const streak = getStreak();
+  document.getElementById('streak-display').textContent = '🔥 ' + streak + ' day' + (streak !== 1 ? 's' : '');
+  const ms = document.getElementById('mobile-streak-label');
+  if (ms) ms.textContent = streak + ' day' + (streak !== 1 ? 's' : '');
+}
+
+// ── Section A: Progress Overview ────────────────────────────────────────────
+function renderProgress(summary) {
+  const el = document.getElementById('planner-progress');
+  const paceColors = { ahead: '#22c55e', ontrack: '#3b82f6', behind: '#f59e0b' };
+  const paceIcons = { ahead: '🟢', ontrack: '🟢', behind: '🟡' };
+
+  let html = '<div class="planner-card">';
+  html += '<div class="planner-card-header">';
+  html += '<h2 class="planner-card-title">📊 Overall Progress</h2>';
+  html += '<span class="planner-card-badge">Week ' + summary.weekNumber + ' of ~' + summary.totalWeeks + '</span>';
+  html += '</div>';
+
+  // Subject bars
+  StudyPlanner.SUBJECT_IDS.forEach(function (sid) {
+    var s = summary.subjects[sid];
+    html += '<div class="planner-subj-row">';
+    html += '<span class="planner-subj-label">' + s.emoji + ' ' + s.name + '</span>';
+    html += '<div class="planner-subj-bar-track">';
+    html += '<div class="planner-subj-bar-fill" style="width:' + s.percent + '%;background:' + s.color + '"></div>';
+    html += '</div>';
+    html += '<span class="planner-subj-stat">' + s.completed + '/' + s.total + '</span>';
+    html += '<span class="planner-subj-pct">' + s.percent + '%</span>';
+    html += '</div>';
+  });
+
+  // Overall
+  html += '<div class="planner-overall">';
+  html += '<div class="planner-subj-bar-track" style="height:10px">';
+  html += '<div class="planner-subj-bar-fill" style="width:' + summary.totalPercent + '%;background:var(--blue);height:100%"></div>';
+  html += '</div>';
+  html += '<div class="planner-overall-text">';
+  html += '<strong>Overall: ' + summary.totalCompleted + '/' + summary.totalIslands + ' (' + summary.totalPercent + '%)</strong>';
+  html += '<span style="color:' + paceColors[summary.paceStatus] + '">' + paceIcons[summary.paceStatus] + ' ' + summary.paceMessage + '</span>';
+  html += '</div>';
+  html += '</div>';
+
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+// ── Section B: This Week ────────────────────────────────────────────────────
+function renderWeek(weekNum) {
+  var el = document.getElementById('planner-week');
+  var week = StudyPlanner.getWeekSchedule(weekNum);
+  if (!week) { el.innerHTML = ''; return; }
+
+  var html = '<div class="planner-card">';
+  html += '<div class="planner-card-header">';
+  html += '<h2 class="planner-card-title">📅 This Week</h2>';
+  html += '<div class="planner-week-nav">';
+  html += '<button class="planner-nav-btn" onclick="changeWeek(-1)">◀</button>';
+  html += '<span class="planner-week-label">Week ' + weekNum + '</span>';
+  html += '<button class="planner-nav-btn" onclick="changeWeek(1)">▶</button>';
+  html += '</div>';
+  html += '</div>';
+
+  week.days.forEach(function (day) {
+    var todayClass = day.isToday ? ' planner-day--today' : '';
+    var pastClass = day.isPast ? ' planner-day--past' : '';
+
+    html += '<div class="planner-day' + todayClass + pastClass + '">';
+    html += '<div class="planner-day-header">';
+    html += '<span class="planner-day-name">' + day.dayName + ' ' + day.dayNumber + ' ' + day.monthName + '</span>';
+    if (day.isToday) html += '<span class="planner-day-today-badge">TODAY</span>';
+    if (!day.isStudyDay) html += '<span class="planner-day-off-badge">Day off</span>';
+    html += '</div>';
+
+    if (day.isStudyDay && day.subjects.length > 0) {
+      day.subjects.forEach(function (s) {
+        var isDone = s.complete;
+        html += '<div class="planner-day-task' + (isDone ? ' done' : '') + '">';
+        html += '<span class="planner-day-check">' + (isDone ? '✓' : '○') + '</span>';
+        html += '<span class="planner-day-subj" style="color:' + s.subjectColor + '">' + s.subjectEmoji + '</span>';
+        html += '<span class="planner-day-island">' + s.islandName + '</span>';
+        html += '<span class="planner-day-action">(' + (StudyPlanner.TASK_LABELS[s.task] || s.task) + ')</span>';
+        html += '</div>';
+      });
+    }
+
+    html += '</div>';
+  });
+
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+function changeWeek(delta) {
+  currentWeek += delta;
+  if (currentWeek < 1) currentWeek = 1;
+  renderWeek(currentWeek);
+}
+
+// ── Section C: Month Calendar ───────────────────────────────────────────────
+function renderCalendar(year, month) {
+  var el = document.getElementById('planner-calendar');
+  var cal = StudyPlanner.getMonthCalendar(year, month);
+  if (!cal) { el.innerHTML = ''; return; }
+
+  var html = '<div class="planner-card">';
+  html += '<div class="planner-card-header">';
+  html += '<h2 class="planner-card-title">📆 ' + cal.monthName + ' ' + cal.year + '</h2>';
+  html += '<div class="planner-week-nav">';
+  html += '<button class="planner-nav-btn" onclick="changeMonth(-1)">◀</button>';
+  html += '<button class="planner-nav-btn" onclick="changeMonth(1)">▶</button>';
+  html += '</div>';
+  html += '</div>';
+
+  html += '<div class="planner-cal-grid">';
+  // Weekday headers
+  ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach(function (d) {
+    html += '<div class="planner-cal-hdr">' + d + '</div>';
+  });
+
+  // Empty cells before first day (adjust for Monday start)
+  var startOff = cal.startDayOfWeek === 0 ? 6 : cal.startDayOfWeek - 1;
+  for (var e = 0; e < startOff; e++) {
+    html += '<div class="planner-cal-cell planner-cal-empty"></div>';
+  }
+
+  // Day cells
+  cal.days.forEach(function (day) {
+    var cls = 'planner-cal-cell';
+    if (day.isToday) cls += ' planner-cal-today';
+    if (!day.isStudyDay) cls += ' planner-cal-off';
+    if (day.isPast && day.isStudyDay) cls += ' planner-cal-past';
+    if (day.isFuture) cls += ' planner-cal-future';
+
+    html += '<div class="' + cls + '">';
+    html += '<span class="planner-cal-num">' + day.day + '</span>';
+    html += '</div>';
+  });
+
+  html += '</div>'; // grid
+
+  // Legend
+  html += '<div class="planner-cal-legend">';
+  html += '<span><span class="planner-cal-dot" style="background:var(--blue)"></span> Today</span>';
+  html += '<span><span class="planner-cal-dot" style="background:var(--text-muted)"></span> Study day</span>';
+  html += '<span><span class="planner-cal-dot" style="background:var(--surface2);border:1px solid var(--border)"></span> Day off</span>';
+  html += '</div>';
+
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+function changeMonth(delta) {
+  currentMonth += delta;
+  if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+  if (currentMonth < 0)  { currentMonth = 11; currentYear--; }
+  renderCalendar(currentYear, currentMonth);
+}
+
+// ── Reset Plan ──────────────────────────────────────────────────────────────
+function resetPlan() {
+  if (!confirm('Reset your study plan? Your progress will be kept, but the schedule will be removed.')) return;
+  StudyPlanner.deleteStudyPlan();
+  showToast('Study plan reset', 'success');
+  setTimeout(function () { window.location.href = 'dashboard.html'; }, 800);
+}
+
+// ── Theme ───────────────────────────────────────────────────────────────────
+function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
+function updateThemeBtn() {
+  var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  var icon = dark ? '☀️' : '🌙';
+  document.getElementById('theme-btn').textContent = icon;
+  var mb = document.getElementById('mobile-theme-btn');
+  if (mb) mb.textContent = icon;
+}
+
+// ── Sidebar drawer ──────────────────────────────────────────────────────────
+function openSidebar() {
+  document.getElementById('main-sidebar').classList.add('open');
+  document.getElementById('sidebar-backdrop').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeSidebar() {
+  document.getElementById('main-sidebar').classList.remove('open');
+  document.getElementById('sidebar-backdrop').classList.remove('show');
+  document.body.style.overflow = '';
+}
+function toggleSidebar() {
+  document.getElementById('main-sidebar').classList.contains('open') ? closeSidebar() : openSidebar();
+}
+
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSidebar(); });
+</script>
+</body>
+</html>

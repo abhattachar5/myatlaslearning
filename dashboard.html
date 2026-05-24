@@ -82,6 +82,9 @@
       <button class="nav-item active" aria-current="page">
         <span class="nav-icon" aria-hidden="true">🏠</span> Dashboard
       </button>
+      <button class="nav-item" onclick="window.location.href='planner.html'">
+        <span class="nav-icon" aria-hidden="true">📅</span> Study Plan
+      </button>
       <button class="nav-item" onclick="openProfileModal(); closeSidebar()">
         <span class="nav-icon" aria-hidden="true">👤</span> My Profile
       </button>
@@ -117,6 +120,70 @@
       <p id="welcome-sub">Pick a topic to continue your studies.</p>
     </div>
 
+    <!-- ── Study Plan Setup Banner (first visit only) ──────────────────────── -->
+    <div class="plan-setup-banner" id="plan-setup-banner" style="display:none">
+      <div class="plan-setup-header">
+        <span class="plan-setup-icon">📅</span>
+        <h2 class="plan-setup-title">Your Study Plan is Ready!</h2>
+      </div>
+      <p class="plan-setup-desc">
+        We have built a plan to cover all Year 7 topics.
+        Maths &amp; English every day, Science 3&times;/week,
+        History &amp; Geography alternating 2–3&times;/week.
+      </p>
+      <div class="plan-setup-dates">
+        <div class="plan-setup-date">
+          <span class="plan-setup-date-label">Start</span>
+          <span class="plan-setup-date-value" id="plan-start-date">—</span>
+        </div>
+        <div class="plan-setup-date">
+          <span class="plan-setup-date-label">Target</span>
+          <span class="plan-setup-date-value" id="plan-target-date">—</span>
+        </div>
+      </div>
+      <div class="plan-setup-days">
+        <span class="plan-setup-days-label">Study days</span>
+        <div class="plan-day-toggles" id="plan-day-toggles">
+          <button class="plan-day-btn active" data-day="1">Mon</button>
+          <button class="plan-day-btn active" data-day="2">Tue</button>
+          <button class="plan-day-btn active" data-day="3">Wed</button>
+          <button class="plan-day-btn active" data-day="4">Thu</button>
+          <button class="plan-day-btn active" data-day="5">Fri</button>
+          <button class="plan-day-btn" data-day="6">Sat</button>
+          <button class="plan-day-btn" data-day="0">Sun</button>
+        </div>
+      </div>
+      <button class="btn btn-primary plan-setup-go" onclick="activateStudyPlan()">
+        Start My Plan ✓
+      </button>
+    </div>
+
+    <!-- ── Today's Plan Card (shown when plan is active) ───────────────────── -->
+    <div class="todays-plan" id="todays-plan" style="display:none">
+      <div class="todays-plan-header">
+        <div>
+          <span class="todays-plan-icon">📋</span>
+          <strong>Today's Plan</strong>
+          <span class="todays-plan-date" id="todays-plan-date"></span>
+        </div>
+        <span class="todays-plan-week" id="todays-plan-week"></span>
+      </div>
+      <div class="todays-plan-tasks" id="todays-plan-tasks"></div>
+      <div class="todays-plan-progress">
+        <div class="todays-plan-bar-track">
+          <div class="todays-plan-bar-fill" id="todays-plan-bar"></div>
+        </div>
+        <span class="todays-plan-count" id="todays-plan-count"></span>
+      </div>
+      <div class="todays-plan-footer">
+        <a href="planner.html" class="todays-plan-link">View Full Plan →</a>
+        <div class="todays-plan-actions">
+          <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.downloadExport()" title="Export progress">💾 Export</button>
+          <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.triggerImport()" title="Import progress">📂 Import</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Stats -->
     <div class="stats-row">
       <div class="stat-card">
@@ -150,7 +217,11 @@
 <nav class="mobile-nav">
   <button class="mobile-nav-item active" onclick="window.scrollTo(0,0)">
     <span class="mobile-nav-icon">🏠</span>
-    Dashboard
+    Home
+  </button>
+  <button class="mobile-nav-item" onclick="window.location.href='planner.html'">
+    <span class="mobile-nav-icon">📅</span>
+    Plan
   </button>
   <button class="mobile-nav-item" onclick="openProfileModal()">
     <span class="mobile-nav-icon">👤</span>
@@ -202,6 +273,7 @@
 <script src="english-lessons-7.js"></script>
 <script src="english-lessons-8.js"></script>
 <script src="app.js"></script>
+<script src="planner.js"></script>
 <script>
 // ── Bootstrap ───────────────────────────────────────────────────────────────
 let user = requireAuth();
@@ -250,6 +322,7 @@ function getYearGeographyTopics() {
   user = requireAuth();
   touchStreak();
   renderSidebar();
+  renderStudyPlan();
   renderStats();
   renderFilters();
   renderGrid();
@@ -267,6 +340,100 @@ function setWelcome() {
     stats.mastered === 0
       ? 'Pick a topic below to start your ' + getUserYear() + ' journey.'
       : `You've mastered ${stats.mastered} of ${stats.total} topics (${pct}%). Keep going!`;
+}
+
+// ── Study Plan (banner or today's card) ──────────────────────────────────────
+function renderStudyPlan() {
+  const plan = StudyPlanner.getStudyPlan();
+  const banner = document.getElementById('plan-setup-banner');
+  const card = document.getElementById('todays-plan');
+
+  if (!plan) {
+    // No plan yet — show setup banner
+    const today = new Date();
+    const targetYear = today.getFullYear() + 1;
+    document.getElementById('plan-start-date').textContent =
+      today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    document.getElementById('plan-target-date').textContent = 'May ' + targetYear;
+
+    // Wire up day toggle buttons
+    document.querySelectorAll('.plan-day-btn').forEach(btn => {
+      btn.addEventListener('click', function () { this.classList.toggle('active'); });
+    });
+
+    banner.style.display = '';
+    card.style.display = 'none';
+    return;
+  }
+
+  // Plan exists — show Today's Plan
+  banner.style.display = 'none';
+  const data = StudyPlanner.getTodaysTasks();
+  if (!data) { card.style.display = 'none'; return; }
+
+  card.style.display = '';
+
+  // Header
+  const today = new Date();
+  const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  document.getElementById('todays-plan-date').textContent =
+    '— ' + dayNames[today.getDay()] + ', ' +
+    today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
+  document.getElementById('todays-plan-week').textContent = 'W' + data.weekNumber;
+
+  const taskEl = document.getElementById('todays-plan-tasks');
+
+  if (!data.isStudyDay) {
+    taskEl.innerHTML =
+      '<div class="todays-plan-dayoff">' +
+        '<div class="todays-plan-dayoff-icon">😌</div>' +
+        '<div class="todays-plan-dayoff-msg">No study planned for today — enjoy your break!</div>' +
+      '</div>';
+    document.getElementById('todays-plan-bar').style.width = '0%';
+    document.getElementById('todays-plan-count').textContent = 'Day off';
+    return;
+  }
+
+  // Render task rows
+  const tasks = data.tasks;
+  let doneCount = 0;
+  taskEl.innerHTML = tasks.map(t => {
+    const isDone = t.complete;
+    if (isDone) doneCount++;
+    const tab = t.task === 'lesson' ? 'lesson' : t.task === 'flashcards' ? 'flashcards' : t.task === 'quiz' ? 'practice' : '';
+    const href = t.islandId ? `island.html?id=${t.islandId}${tab ? '&tab=' + tab : ''}` : '#';
+    return `<div class="plan-task${isDone ? ' complete' : ''}">
+      <div class="plan-task-check">${isDone ? '✓' : ''}</div>
+      <span class="plan-task-subject" style="color:${t.subjectColor}">${t.subjectEmoji} ${t.subjectName}</span>
+      <div class="plan-task-info">
+        <div class="plan-task-island">${t.islandName}</div>
+        <div class="plan-task-action">${t.taskLabel}</div>
+      </div>
+      ${!isDone && t.islandId ? `<a href="${href}" class="plan-task-go">Start →</a>` : ''}
+    </div>`;
+  }).join('');
+
+  // Progress bar
+  const total = tasks.length;
+  const pct = total > 0 ? Math.round((doneCount / total) * 100) : 0;
+  document.getElementById('todays-plan-bar').style.width = pct + '%';
+  document.getElementById('todays-plan-count').textContent =
+    doneCount === total ? '🎉 All done for today!' : doneCount + ' of ' + total + ' done';
+}
+
+function activateStudyPlan() {
+  // Read selected study days from the toggle buttons
+  const days = [];
+  document.querySelectorAll('.plan-day-btn.active').forEach(btn => {
+    days.push(parseInt(btn.dataset.day, 10));
+  });
+  if (days.length === 0) {
+    showToast('Please select at least one study day', 'error');
+    return;
+  }
+  StudyPlanner.createStudyPlan(days);
+  showToast('📅 Study plan activated!', 'success');
+  renderStudyPlan();
 }
 
 // ── Sidebar ──────────────────────────────────────────────────────────────────
