@@ -213,6 +213,84 @@
 
 </main>
 
+<!-- ── Ask a Tutor FAB ──────────────────────────────────────────────────── -->
+<button class="tutor-fab" id="tutor-fab" aria-label="Ask a Tutor">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+    <line x1="12" y1="19" x2="12" y2="23"/>
+    <line x1="8" y1="23" x2="16" y2="23"/>
+  </svg>
+  <span class="tutor-fab-label">Ask a Tutor</span>
+</button>
+
+<!-- Tutor panel -->
+<div class="tutor-panel" id="tutor-panel">
+  <div class="tutor-panel-header">
+    <span class="tutor-panel-title">Atlas Tutor</span>
+    <div class="tutor-header-right">
+      <span class="tutor-status" id="tutor-status"></span>
+      <button class="tutor-panel-close" id="tutor-close-btn" aria-label="Close tutor">&times;</button>
+    </div>
+  </div>
+
+  <!-- Mode toggle — always visible -->
+  <div class="tutor-mode-bar">
+    <button class="tutor-mode-btn active" id="tutor-mode-voice">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+      Voice
+    </button>
+    <button class="tutor-mode-btn" id="tutor-mode-chat">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Chat
+    </button>
+  </div>
+
+  <div class="tutor-panel-body" id="tutor-panel-body">
+
+    <!-- Start screen -->
+    <div class="tutor-start" id="tutor-start">
+      <button class="tutor-start-btn" id="tutor-start-btn">
+        <div class="tutor-start-icon" id="tutor-start-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8" y1="23" x2="16" y2="23"/>
+          </svg>
+        </div>
+        <span class="tutor-start-label">Ask a Tutor</span>
+        <span class="tutor-start-sub" id="tutor-start-sub">Tap to start a voice conversation</span>
+      </button>
+    </div>
+
+    <!-- Active conversation -->
+    <div class="tutor-active" id="tutor-active" style="display:none">
+      <div class="tutor-transcript" id="tutor-transcript" role="log" aria-live="polite" aria-label="Tutor conversation"></div>
+      <div class="tutor-reconnect-bar" id="tutor-reconnect-bar" style="display:none">
+        <span>Session ended.</span>
+        <button class="tutor-reconnect-btn" id="tutor-reconnect-btn">Reconnect</button>
+      </div>
+      <div class="tutor-input-bar" id="tutor-input-bar">
+        <input type="text" class="tutor-text-input" id="tutor-text-input"
+               placeholder="Type a question..." />
+        <button class="tutor-send-btn" id="tutor-send-btn" aria-label="Send message" style="display:none">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+        <button class="tutor-mic-btn" id="tutor-mic-btn" aria-label="Toggle microphone">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8" y1="23" x2="16" y2="23"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- Diagram Zoom Modal -->
 <div class="diagram-modal-overlay" id="diagram-modal" onclick="closeDiagramModal(event)">
   <div class="diagram-modal">
@@ -518,6 +596,19 @@ document.addEventListener('keydown', function(e) {
     closeDiagramModal();
   }
 });
+
+function downloadPeriodicTablePDF() {
+  var w = window.open('', '_blank', 'width=1200,height=800');
+  w.document.write('<!DOCTYPE html><html><head><title>Periodic Table of Elements — StudyMate</title>');
+  w.document.write('<style>@page{size:landscape;margin:1cm}body{margin:0;padding:20px;font-family:system-ui,sans-serif;background:#fff;text-align:center}h1{font-size:1.4em;color:#1e293b;margin-bottom:0.5em}svg{width:100%;height:auto;max-width:1100px}.footer{margin-top:1em;font-size:0.85em;color:#64748b}.print-btn{margin-top:1em;padding:0.6em 1.4em;font-size:1em;font-weight:600;color:#fff;background:linear-gradient(135deg,#6366f1,#8b5cf6);border:none;border-radius:8px;cursor:pointer}@media print{.print-btn{display:none}}</style></head><body>');
+  w.document.write('<h1>Periodic Table of Elements</h1>');
+  w.document.write('<div>' + DIAGRAMS["periodic-table"] + '</div>');
+  w.document.write('<p class="footer">StudyMate — Year 7 Science</p>');
+  w.document.write('<button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>');
+  w.document.write('</body></html>');
+  w.document.close();
+  setTimeout(function() { w.focus(); }, 300);
+}
 
 function awardLessonXP() {
   const p = getIslandProgress(islandId);
@@ -957,6 +1048,454 @@ function showToast(msg, type) {
   requestAnimationFrame(() => t.classList.add('show'));
   setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 300); }, 2500);
 }
+</script>
+
+<!-- ElevenLabs Conversational AI SDK -->
+<script type="module">
+import { Conversation } from 'https://cdn.jsdelivr.net/npm/@11labs/client@latest/+esm';
+
+const AGENT_ID = 'agent_5301ksb9cnt1fqm80rmrax73w3b0';
+
+let voiceConversation = null; // SDK Conversation object (voice mode)
+let chatSocket = null;        // Raw WebSocket (chat mode)
+let tutorMode = 'voice';
+let isMuted = false;
+
+function isConnected() {
+  return !!(voiceConversation || (chatSocket && chatSocket.readyState === WebSocket.OPEN));
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────
+
+function escapeHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function addBubbleEl(source, message) {
+  var area = document.getElementById('tutor-transcript');
+  removeTypingIndicator();
+  var bubble = document.createElement('div');
+  bubble.className = 'tutor-bubble tutor-bubble-' + (source === 'user' ? 'user' : source === 'system' ? 'system' : 'agent');
+  var label = document.createElement('span');
+  label.className = 'tutor-bubble-label';
+  label.textContent = source === 'user' ? 'You' : source === 'system' ? '' : 'Atlas';
+  var text = document.createElement('span');
+  text.className = 'tutor-bubble-text';
+  text.innerHTML = escapeHtml(message).replace(/\n/g, '<br>');
+  bubble.appendChild(label);
+  bubble.appendChild(text);
+  area.appendChild(bubble);
+  area.scrollTop = area.scrollHeight;
+  return bubble;
+}
+
+function showTypingIndicator() {
+  var area = document.getElementById('tutor-transcript');
+  if (document.getElementById('tutor-typing')) return;
+  var bubble = document.createElement('div');
+  bubble.className = 'tutor-bubble tutor-bubble-agent';
+  bubble.id = 'tutor-typing';
+  bubble.innerHTML = '<span class="tutor-bubble-label">Atlas</span><span class="tutor-bubble-text tutor-typing-dots"><span></span><span></span><span></span></span>';
+  area.appendChild(bubble);
+  area.scrollTop = area.scrollHeight;
+}
+
+function removeTypingIndicator() {
+  var el = document.getElementById('tutor-typing');
+  if (el) el.remove();
+}
+
+function addBubble(source, message) {
+  addBubbleEl(source, message);
+}
+
+function stripHtml(html) {
+  var tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || '';
+}
+
+function getLessonContext() {
+  var rawLesson = typeof LESSONS !== 'undefined' ? LESSONS[islandId] : '';
+  var lessonText = '';
+  if (typeof rawLesson === 'string') {
+    lessonText = stripHtml(rawLesson).slice(0, 4000);
+  } else if (rawLesson && rawLesson.sections) {
+    lessonText = rawLesson.sections.map(function(s) {
+      return s.heading + ': ' + stripHtml(s.content);
+    }).join('\n').slice(0, 4000);
+  }
+  return {
+    subject: island.subject,
+    topic_name: island.name,
+    island_id: islandId,
+    lesson_content: lessonText,
+    learning_outcomes: island.learningOutcomes ? island.learningOutcomes.join('\n') : ''
+  };
+}
+
+function resetTutorUI() {
+  document.getElementById('tutor-start').style.display = '';
+  document.getElementById('tutor-active').style.display = 'none';
+  document.getElementById('tutor-transcript').innerHTML = '';
+  document.getElementById('tutor-reconnect-bar').style.display = 'none';
+  document.getElementById('tutor-input-bar').style.display = '';
+  var btn = document.getElementById('tutor-start-btn');
+  btn.querySelector('.tutor-start-label').textContent = 'Ask a Tutor';
+  btn.disabled = false;
+  document.getElementById('tutor-status').textContent = '';
+  document.getElementById('tutor-status').className = 'tutor-status';
+  isMuted = false;
+}
+
+function showConnected() {
+  document.getElementById('tutor-start').style.display = 'none';
+  document.getElementById('tutor-active').style.display = 'flex';
+  document.getElementById('tutor-reconnect-bar').style.display = 'none';
+  document.getElementById('tutor-input-bar').style.display = '';
+  document.getElementById('tutor-status').textContent = 'Connected';
+  document.getElementById('tutor-status').className = 'tutor-status tutor-status-on';
+}
+
+function showDisconnected(reason) {
+  removeTypingIndicator();
+  document.getElementById('tutor-status').textContent = 'Ended';
+  document.getElementById('tutor-status').className = 'tutor-status';
+  document.getElementById('tutor-input-bar').style.display = 'none';
+  var bar = document.getElementById('tutor-reconnect-bar');
+  bar.querySelector('span').textContent = reason || 'Session ended.';
+  bar.style.display = '';
+}
+
+function applyModeUI() {
+  var isVoice = tutorMode === 'voice';
+  document.getElementById('tutor-mode-voice').classList.toggle('active', isVoice);
+  document.getElementById('tutor-mode-chat').classList.toggle('active', !isVoice);
+  document.getElementById('tutor-start-sub').textContent =
+    isVoice ? 'Tap to start a voice conversation' : 'Tap to start a text conversation';
+  document.getElementById('tutor-start-icon').innerHTML = isVoice
+    ? '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>'
+    : '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
+  document.getElementById('tutor-mic-btn').style.display = isVoice ? '' : 'none';
+  document.getElementById('tutor-send-btn').style.display = isVoice ? 'none' : '';
+  document.getElementById('tutor-text-input').placeholder =
+    isVoice ? 'Or type a question...' : 'Type your question...';
+}
+
+// ── End any active session ──────────────────────────────────────────────
+
+function endCurrentSession() {
+  if (voiceConversation) {
+    voiceConversation.endSession();
+    voiceConversation = null;
+  }
+  if (chatSocket) {
+    chatSocket.close();
+    chatSocket = null;
+  }
+}
+
+// ── Voice mode: SDK session ─────────────────────────────────────────────
+
+async function startVoiceSession() {
+  var ctx = getLessonContext();
+  console.log('[Tutor] Starting voice session...');
+
+  voiceConversation = await Conversation.startSession({
+    agentId: AGENT_ID,
+    dynamicVariables: ctx,
+    onConnect: function() {
+      console.log('[Tutor] Voice connected');
+      showConnected();
+    },
+    onDisconnect: function() {
+      console.log('[Tutor] Voice disconnected');
+      document.getElementById('tutor-mic-btn').classList.remove('listening', 'speaking');
+      voiceConversation = null;
+      showDisconnected('Voice session ended.');
+    },
+    onMessage: function(props) {
+      addBubble(props.source, props.message);
+    },
+    onModeChange: function(props) {
+      var mic = document.getElementById('tutor-mic-btn');
+      mic.classList.toggle('listening', props.mode === 'listening');
+      mic.classList.toggle('speaking', props.mode === 'speaking');
+      document.getElementById('tutor-status').textContent =
+        props.mode === 'listening' ? 'Listening...' : 'Speaking...';
+    },
+    onError: function(msg) {
+      console.error('[Tutor] Voice error:', msg);
+      addBubble('system', 'Something went wrong. Please try again.');
+    }
+  });
+}
+
+// ── Chat mode: direct WebSocket (no audio) ──────────────────────────────
+
+async function startChatSession() {
+  var ctx = getLessonContext();
+  console.log('[Tutor] Starting chat session via WebSocket...');
+
+  var signedUrl = 'wss://api.elevenlabs.io/v1/convai/conversation?agent_id=' + AGENT_ID;
+
+  return new Promise(function(resolve, reject) {
+    var ws = new WebSocket(signedUrl);
+    var connected = false;
+
+    ws.onopen = function() {
+      console.log('[Tutor] WebSocket open, sending init...');
+      ws.send(JSON.stringify({
+        type: 'conversation_initiation_client_data',
+        conversation_config_override: {
+          conversation: { text_only: true }
+        },
+        dynamic_variables: ctx
+      }));
+    };
+
+    var agentBubbleEl = null; // current streaming bubble element
+    var agentTextSoFar = '';
+
+    ws.onmessage = function(evt) {
+      var msg;
+      try { msg = JSON.parse(evt.data); } catch (e) { return; }
+
+      // Debug: log full structure for non-ping messages
+      if (msg.type !== 'ping') {
+        console.log('[Tutor] WS recv:', msg.type, JSON.stringify(msg).slice(0, 500));
+      }
+
+      switch (msg.type) {
+        case 'conversation_initiation_metadata':
+          connected = true;
+          chatSocket = ws;
+          showConnected();
+          document.getElementById('tutor-text-input').focus();
+          resolve();
+          break;
+
+        case 'agent_chat_response_part': {
+          var part = msg.text_response_part || {};
+          if (part.type === 'start') { removeTypingIndicator(); break; }
+          var chunk = part.text || part.text_part || part.content || '';
+          if (!chunk && typeof part === 'string') chunk = part;
+          if (chunk) {
+            agentTextSoFar += chunk;
+            if (!agentBubbleEl) {
+              agentBubbleEl = addBubbleEl('agent', agentTextSoFar);
+            } else {
+              agentBubbleEl.querySelector('.tutor-bubble-text').innerHTML = escapeHtml(agentTextSoFar).replace(/\n/g, '<br>');
+              var area = document.getElementById('tutor-transcript');
+              area.scrollTop = area.scrollHeight;
+            }
+          }
+          break;
+        }
+
+        case 'agent_response': {
+          var ev = msg.agent_response_event || {};
+          var fullText = ev.agent_response || ev.text || ev.content || msg.agent_response || '';
+          if (fullText && agentBubbleEl) {
+            agentBubbleEl.querySelector('.tutor-bubble-text').innerHTML = escapeHtml(fullText).replace(/\n/g, '<br>');
+          } else if (fullText) {
+            addBubble('agent', fullText);
+          }
+          agentBubbleEl = null;
+          agentTextSoFar = '';
+          break;
+        }
+
+        case 'user_transcript': {
+          var ue = msg.user_transcript_event || {};
+          var ut = ue.user_transcript || ue.text || msg.user_transcript || '';
+          if (ut) addBubble('user', ut);
+          break;
+        }
+
+        case 'ping':
+          if (msg.ping_event && msg.ping_event.event_id) {
+            ws.send(JSON.stringify({
+              type: 'pong',
+              event_id: msg.ping_event.event_id
+            }));
+          }
+          break;
+
+        case 'error':
+          console.error('[Tutor] WS error event:', msg);
+          addBubble('system', 'Something went wrong. Please try again.');
+          break;
+      }
+    };
+
+    ws.onerror = function(err) {
+      console.error('[Tutor] WebSocket error:', err);
+      if (!connected) reject(new Error('WebSocket connection failed'));
+    };
+
+    ws.onclose = function(evt) {
+      console.log('[Tutor] WebSocket closed:', evt.code, evt.reason);
+      chatSocket = null;
+      var reason = evt.reason && evt.reason.toLowerCase().indexOf('duration') !== -1
+        ? 'Session time limit reached.'
+        : 'Chat session ended.';
+      showDisconnected(reason);
+    };
+  });
+}
+
+// ── Mode switching ───────────────────────────────────────────────────────
+
+function setTutorMode(mode) {
+  if (mode === tutorMode) return;
+  var wasConnected = isConnected();
+  tutorMode = mode;
+  applyModeUI();
+  if (wasConnected) {
+    addBubble('system', 'Switched to ' + mode + ' mode');
+    endCurrentSession();
+    doStartSession();
+  }
+}
+
+// ── Start / stop session ─────────────────────────────────────────────────
+
+async function doStartSession() {
+  if (tutorMode === 'voice') {
+    await startVoiceSession();
+  } else {
+    await startChatSession();
+  }
+}
+
+async function startTutor() {
+  var btn = document.getElementById('tutor-start-btn');
+  btn.querySelector('.tutor-start-label').textContent = 'Connecting...';
+  btn.disabled = true;
+
+  try {
+    await doStartSession();
+  } catch (err) {
+    console.error('[Tutor] Start failed:', err);
+    btn.querySelector('.tutor-start-label').textContent = 'Ask a Tutor';
+    btn.disabled = false;
+    if (err.name === 'NotAllowedError') {
+      alert('Microphone access is needed for voice mode. Please allow it and try again, or switch to Chat mode.');
+    } else {
+      alert('Could not connect to the tutor: ' + (err.message || 'Unknown error'));
+    }
+  }
+}
+
+// ── Mic mute toggle (voice mode only) ────────────────────────────────────
+
+function toggleMute() {
+  if (!voiceConversation) return;
+  isMuted = !isMuted;
+  var mic = document.getElementById('tutor-mic-btn');
+  if (isMuted) {
+    if (typeof voiceConversation.setMicMuted === 'function') {
+      voiceConversation.setMicMuted(true);
+    } else if (typeof voiceConversation.setVolume === 'function') {
+      voiceConversation.setVolume({ volume: 0 });
+    }
+  } else {
+    if (typeof voiceConversation.setMicMuted === 'function') {
+      voiceConversation.setMicMuted(false);
+    } else if (typeof voiceConversation.setVolume === 'function') {
+      voiceConversation.setVolume({ volume: 1 });
+    }
+  }
+  mic.classList.toggle('muted', isMuted);
+}
+
+// ── Send text ────────────────────────────────────────────────────────────
+
+function sendTutorText() {
+  var input = document.getElementById('tutor-text-input');
+  var text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+
+  // Chat mode: send via WebSocket
+  if (chatSocket && chatSocket.readyState === WebSocket.OPEN) {
+    addBubble('user', text);
+    showTypingIndicator();
+    var payload = JSON.stringify({ type: 'user_message', text: text });
+    console.log('[Tutor] Sending:', payload);
+    chatSocket.send(payload);
+    return;
+  }
+
+  // Voice mode: send via SDK
+  if (voiceConversation) {
+    addBubble('user', text);
+    var sent = false;
+    ['sendUserInput', 'sendMessage', 'sendText', 'send'].forEach(function(m) {
+      if (!sent && typeof voiceConversation[m] === 'function') {
+        voiceConversation[m](text);
+        sent = true;
+      }
+    });
+    if (!sent) {
+      addBubble('system', 'Text input is not supported in voice mode.');
+    }
+    return;
+  }
+
+  addBubble('system', 'Not connected. Please start a session first.');
+}
+
+// ── Panel open/close ─────────────────────────────────────────────────────
+
+function toggleTutor() {
+  var panel = document.getElementById('tutor-panel');
+  var fab = document.getElementById('tutor-fab');
+  var isOpen = panel.classList.contains('open');
+
+  // Closing while connected — confirm first
+  if (isOpen && isConnected()) {
+    if (!confirm('This will end your tutor session. Close anyway?')) return;
+  }
+
+  var nowOpen = panel.classList.toggle('open');
+  fab.classList.toggle('hidden', nowOpen);
+  if (!nowOpen) {
+    endCurrentSession();
+    resetTutorUI();
+  }
+}
+
+async function reconnectTutor() {
+  document.getElementById('tutor-reconnect-bar').style.display = 'none';
+  document.getElementById('tutor-input-bar').style.display = '';
+  document.getElementById('tutor-status').textContent = 'Reconnecting...';
+  document.getElementById('tutor-status').className = 'tutor-status';
+  try {
+    await doStartSession();
+  } catch (err) {
+    console.error('[Tutor] Reconnect failed:', err);
+    showDisconnected('Could not reconnect.');
+  }
+}
+
+// ── Bind events ──────────────────────────────────────────────────────────
+document.getElementById('tutor-fab').addEventListener('click', toggleTutor);
+document.getElementById('tutor-close-btn').addEventListener('click', toggleTutor);
+document.getElementById('tutor-start-btn').addEventListener('click', startTutor);
+document.getElementById('tutor-mode-voice').addEventListener('click', function() { setTutorMode('voice'); });
+document.getElementById('tutor-mode-chat').addEventListener('click', function() { setTutorMode('chat'); });
+document.getElementById('tutor-mic-btn').addEventListener('click', toggleMute);
+document.getElementById('tutor-send-btn').addEventListener('click', sendTutorText);
+document.getElementById('tutor-reconnect-btn').addEventListener('click', reconnectTutor);
+document.getElementById('tutor-text-input').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') sendTutorText();
+});
+
+// ── Init ─────────────────────────────────────────────────────────────────
+applyModeUI();
+console.log('[Tutor] Module loaded, dual-mode (voice SDK + chat WebSocket) ready');
 </script>
 </body>
 </html>

@@ -61,7 +61,27 @@ FLASHCARDS.push(
   // mi-28-3: Adjust a Budget
   { islandId:'mi-28-3', front:'What is the difference between essential and non-essential spending?', back:'Essential: rent, food, utilities — things you need to survive. Non-essential: entertainment, eating out, subscriptions — wants rather than needs.' },
   { islandId:'mi-28-3', front:'How do you adjust a budget to eliminate a deficit?', back:'Either increase income or reduce expenditure (especially non-essential spending) until income ≥ expenditure.' },
-  { islandId:'mi-28-3', front:'A person wants to save £600 in 6 months. How much must they save each month?', back:'£600 ÷ 6 = £100 per month.' }
+  { islandId:'mi-28-3', front:'A person wants to save £600 in 6 months. How much must they save each month?', back:'£600 ÷ 6 = £100 per month.' },
+
+  // mi-27-5: Circles — Area & Circumference
+  { islandId:'mi-27-5', front:'What are the two formulas for circumference?', back:'C = πd (pi × diameter)\nor\nC = 2πr (2 × pi × radius)\n\nBoth give the same answer because d = 2r.' },
+  { islandId:'mi-27-5', front:'What is the formula for the area of a circle?', back:'A = πr²\n\nAlways use the RADIUS, not the diameter.\nIf given the diameter, halve it first.\n\nExample: r = 5 → A = π × 25 = 25π ≈ 78.5' },
+  { islandId:'mi-27-5', front:'How do you find the area of a semicircle with radius 6 cm?', back:'Area of full circle = π × 6² = 36π\nSemicircle = 36π ÷ 2 = 18π ≈ 56.5 cm²\n\nPerimeter = πr + 2r = 6π + 12 ≈ 30.8 cm' },
+
+  // mi-29-1: Identify Right Triangles & the Hypotenuse
+  { islandId:'mi-29-1', front:'What is the hypotenuse?', back:'The hypotenuse is the longest side of a right-angled triangle. It is always opposite the right angle.' },
+  { islandId:'mi-29-1', front:'How can you identify a right-angled triangle?', back:'Look for the small square symbol (⊾) in one corner, which shows a 90° angle. The side opposite this angle is the hypotenuse.' },
+  { islandId:'mi-29-1', front:'In a right-angled triangle, sides are 5, 12 and 13. Which is the hypotenuse?', back:'13 is the hypotenuse — it is the longest side.\n\nCheck: it is opposite the right angle.\nVerify: 5² + 12² = 25 + 144 = 169 = 13² ✓' },
+
+  // mi-29-2: Calculate the Hypotenuse
+  { islandId:'mi-29-2', front:'State Pythagoras\' theorem.', back:'In a right-angled triangle:\na² + b² = c²\n\nwhere c is the hypotenuse (longest side) and a, b are the two shorter sides.' },
+  { islandId:'mi-29-2', front:'Find the hypotenuse when a = 6 and b = 8.', back:'c² = 6² + 8² = 36 + 64 = 100\nc = √100 = 10\n\nThis is a 3-4-5 triple × 2.' },
+  { islandId:'mi-29-2', front:'Name three common Pythagorean triples.', back:'3, 4, 5 (9+16=25)\n5, 12, 13 (25+144=169)\n8, 15, 17 (64+225=289)\n\nMultiples also work: 6, 8, 10 is 3-4-5 × 2.' },
+
+  // mi-29-3: Calculate a Shorter Side
+  { islandId:'mi-29-3', front:'How do you find a shorter side using Pythagoras\' theorem?', back:'Rearrange: a² = c² − b²\n\nSubtract the square of the known short side from the square of the hypotenuse, then square root.\n\nExample: c=13, b=5 → a² = 169−25 = 144 → a = 12' },
+  { islandId:'mi-29-3', front:'The hypotenuse is 10 and one side is 6. Find the other side.', back:'a² = c² − b² = 10² − 6² = 100 − 36 = 64\na = √64 = 8\n\nCheck: 6² + 8² = 36 + 64 = 100 = 10² ✓' },
+  { islandId:'mi-29-3', front:'How do you know whether to ADD or SUBTRACT the squares?', back:'Finding the hypotenuse? → ADD (c² = a² + b²)\nFinding a shorter side? → SUBTRACT (a² = c² − b²)\n\nThe hypotenuse is always the largest value.' }
 );
 
 // ─── QUESTIONS ────────────────────────────────────────────────────────────────
@@ -714,6 +734,66 @@ Object.assign(QUESTIONS, {
             e: 'Need £' + goal + '÷' + months + '=£' + needed + '/month. Already saving £' + current + '. Extra needed = £' + needed + '−£' + current + '=£' + extra + '.'
         };
     }}
+  ],
+
+  // ── mi-27-5: Circles — Area & Circumference ──────────────────────────────
+  'mi-27-5': [
+    // Easy (Q1–3)
+    { question:'What is the circumference of a circle with diameter 10 cm? (Use π ≈ 3.14)', options:['31.4 cm','62.8 cm','78.5 cm','15.7 cm'], answer:0, explanation:'C = πd = 3.14 × 10 = 31.4 cm.' },
+    { question:'What is the area of a circle with radius 3 cm? Give your answer in terms of π.', options:['9π cm²','6π cm²','3π cm²','27π cm²'], answer:0, explanation:'A = πr² = π × 3² = 9π cm².' },
+    { question:'A circle has radius 7 cm. What is its diameter?', options:['14 cm','3.5 cm','7 cm','49 cm'], answer:0, explanation:'Diameter = 2 × radius = 2 × 7 = 14 cm.' },
+    // Medium (Q4–6)
+    { question:'A circle has diameter 12 cm. What is its area? (Use π ≈ 3.14)', options:['113.04 cm²','452.16 cm²','37.68 cm²','75.36 cm²'], answer:0, explanation:'r = 12 ÷ 2 = 6 cm. A = πr² = 3.14 × 36 = 113.04 cm².' },
+    { question:'Find the circumference of a circle with radius 5 cm. Give your answer in terms of π.', options:['10π cm','5π cm','25π cm','20π cm'], answer:0, explanation:'C = 2πr = 2 × π × 5 = 10π cm.' },
+    { question:'What is the area of a semicircle with radius 4 cm? (Use π ≈ 3.14)', options:['25.12 cm²','50.24 cm²','12.56 cm²','100.48 cm²'], answer:0, explanation:'Full circle area = π × 4² = 50.24 cm². Semicircle = 50.24 ÷ 2 = 25.12 cm².' },
+    // Greater Depth (Q7–8)
+    { question:'Find the perimeter of a semicircle with diameter 10 cm. (Use π ≈ 3.14)', options:['25.7 cm','15.7 cm','31.4 cm','20.7 cm'], answer:0, explanation:'Curved part = half circumference = πd/2 = 3.14×10/2 = 15.7 cm. Straight edge = 10 cm. Total perimeter = 15.7 + 10 = 25.7 cm.' },
+    { question:'A quarter circle has radius 8 cm. What is its area in terms of π?', options:['16π cm²','64π cm²','32π cm²','8π cm²'], answer:0, explanation:'Full circle area = π × 8² = 64π cm². Quarter = 64π ÷ 4 = 16π cm².' }
+  ],
+
+  // ── mi-29-1: Identify Right Triangles & the Hypotenuse ───────────────────
+  'mi-29-1': [
+    // Easy (Q1–3)
+    { question:'What is the hypotenuse of a right-angled triangle?', options:['The longest side, opposite the right angle','The shortest side','The side next to the right angle','Any side of the triangle'], answer:0, explanation:'The hypotenuse is always the longest side and is always opposite the right angle.' },
+    { question:'In a right-angled triangle with sides 5 cm, 12 cm and 13 cm, which is the hypotenuse?', options:['13 cm','12 cm','5 cm','Cannot tell'], answer:0, explanation:'The hypotenuse is the longest side: 13 cm.' },
+    { question:'What symbol shows that a triangle has a right angle?', options:['A small square in the corner','An arc in the corner','A dot on the side','A tick on the side'], answer:0, explanation:'A small square symbol (⊾) in the corner indicates a 90° right angle.' },
+    // Medium (Q4–6)
+    { question:'A triangle has angles 40°, 50° and 90°. Is it a right-angled triangle?', options:['Yes — it has a 90° angle','No — the angles are all different','No — it does not add to 180°','Cannot tell'], answer:0, explanation:'Any triangle with a 90° angle is a right-angled triangle. 40° + 50° + 90° = 180° ✓' },
+    { question:'Which of these triangles is right-angled?', options:['A triangle with sides 3, 4, 5','A triangle with sides 3, 4, 6','A triangle with sides 2, 3, 4','A triangle with sides 5, 5, 5'], answer:0, explanation:'Check: 3² + 4² = 9 + 16 = 25 = 5². This satisfies Pythagoras\' theorem, so it is right-angled.' },
+    { question:'In a right-angled triangle, the two shorter sides are called:', options:['The legs','The bases','The hypotenuses','The diagonals'], answer:0, explanation:'The two shorter sides of a right-angled triangle are called the legs. The longest side is the hypotenuse.' },
+    // Greater Depth (Q7–8)
+    { question:'Can the hypotenuse ever be the same length as one of the other sides?', options:['No — it must always be the longest side','Yes — in an isosceles triangle','Yes — in an equilateral triangle','Only in special cases'], answer:0, explanation:'The hypotenuse is always strictly longer than either of the other two sides in a right-angled triangle.' },
+    { question:'A triangle has sides 7, 24 and 25. Is it right-angled?', options:['Yes — 7² + 24² = 625 = 25²','No — the numbers are too big','No — 7 + 24 ≠ 25','Cannot tell without angles'], answer:0, explanation:'7² + 24² = 49 + 576 = 625 = 25². Since a² + b² = c², it IS a right-angled triangle.' }
+  ],
+
+  // ── mi-29-2: Calculate the Hypotenuse ─────────────────────────────────────
+  'mi-29-2': [
+    // Easy (Q1–3)
+    { question:'A right-angled triangle has shorter sides 3 cm and 4 cm. Find the hypotenuse.', options:['5 cm','7 cm','12 cm','25 cm'], answer:0, explanation:'c² = 3² + 4² = 9 + 16 = 25. c = √25 = 5 cm.' },
+    { question:'A right-angled triangle has shorter sides 6 cm and 8 cm. Find the hypotenuse.', options:['10 cm','14 cm','100 cm','48 cm'], answer:0, explanation:'c² = 6² + 8² = 36 + 64 = 100. c = √100 = 10 cm.' },
+    { question:'What is the first step when finding the hypotenuse using Pythagoras\' theorem?', options:['Square both shorter sides and add them','Add the two shorter sides','Subtract the shorter sides','Multiply the shorter sides'], answer:0, explanation:'First square each shorter side, then add: c² = a² + b². Finally, square root to find c.' },
+    // Medium (Q4–6)
+    { question:'A right-angled triangle has legs of 5 cm and 12 cm. Find the hypotenuse.', options:['13 cm','17 cm','169 cm','60 cm'], answer:0, explanation:'c² = 5² + 12² = 25 + 144 = 169. c = √169 = 13 cm.' },
+    { question:'A right-angled triangle has legs of 8 cm and 15 cm. Find the hypotenuse.', options:['17 cm','23 cm','289 cm','120 cm'], answer:0, explanation:'c² = 8² + 15² = 64 + 225 = 289. c = √289 = 17 cm.' },
+    { question:'Which of these is a Pythagorean triple?', options:['5, 12, 13','4, 5, 6','6, 7, 8','3, 5, 7'], answer:0, explanation:'5² + 12² = 25 + 144 = 169 = 13². The other sets do not satisfy a² + b² = c².' },
+    // Greater Depth (Q7–8)
+    { question:'A ladder leans against a wall. The foot is 6 m from the wall and the top reaches 8 m up. How long is the ladder?', options:['10 m','14 m','48 m','100 m'], answer:0, explanation:'The ladder is the hypotenuse. c² = 6² + 8² = 36 + 64 = 100. c = √100 = 10 m.' },
+    { question:'If 3-4-5 is a Pythagorean triple, what is the triple when multiplied by 4?', options:['12, 16, 20','7, 8, 9','3, 4, 20','12, 12, 12'], answer:0, explanation:'Multiply each number by 4: 3×4=12, 4×4=16, 5×4=20. Check: 144+256=400=20² ✓' }
+  ],
+
+  // ── mi-29-3: Calculate a Shorter Side ─────────────────────────────────────
+  'mi-29-3': [
+    // Easy (Q1–3)
+    { question:'A right-angled triangle has hypotenuse 5 cm and one side 3 cm. Find the other side.', options:['4 cm','2 cm','8 cm','16 cm'], answer:0, explanation:'a² = 5² − 3² = 25 − 9 = 16. a = √16 = 4 cm.' },
+    { question:'When finding a shorter side, do you ADD or SUBTRACT the squares?', options:['Subtract — a² = c² − b²','Add — a² = c² + b²','Multiply — a² = c² × b²','Divide — a² = c² ÷ b²'], answer:0, explanation:'To find a shorter side, subtract: a² = c² − b². You only add when finding the hypotenuse.' },
+    { question:'A right-angled triangle has hypotenuse 10 cm and one side 6 cm. Find the other side.', options:['8 cm','4 cm','16 cm','64 cm'], answer:0, explanation:'a² = 10² − 6² = 100 − 36 = 64. a = √64 = 8 cm.' },
+    // Medium (Q4–6)
+    { question:'A right-angled triangle has hypotenuse 13 cm and one side 5 cm. Find the other side.', options:['12 cm','8 cm','18 cm','144 cm'], answer:0, explanation:'a² = 13² − 5² = 169 − 25 = 144. a = √144 = 12 cm.' },
+    { question:'A right-angled triangle has hypotenuse 17 cm and one side 8 cm. Find the other side.', options:['15 cm','9 cm','25 cm','225 cm'], answer:0, explanation:'a² = 17² − 8² = 289 − 64 = 225. a = √225 = 15 cm.' },
+    { question:'A 10 m ladder reaches 8 m up a wall. How far is the base from the wall?', options:['6 m','2 m','4 m','18 m'], answer:0, explanation:'The ladder is the hypotenuse (10 m), the wall is 8 m. a² = 10² − 8² = 100 − 64 = 36. a = √36 = 6 m.' },
+    // Greater Depth (Q7–8)
+    { question:'A rectangle has a diagonal of 13 cm and a width of 5 cm. What is the length?', options:['12 cm','8 cm','18 cm','169 cm'], answer:0, explanation:'The diagonal forms a right-angled triangle. length² = 13² − 5² = 169 − 25 = 144. length = √144 = 12 cm.' },
+    { question:'A right-angled triangle has hypotenuse 25 cm and one side 7 cm. Find the other side.', options:['24 cm','18 cm','32 cm','576 cm'], answer:0, explanation:'a² = 25² − 7² = 625 − 49 = 576. a = √576 = 24 cm. (7, 24, 25 is a Pythagorean triple.)' }
   ]
 
 });

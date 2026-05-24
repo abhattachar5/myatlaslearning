@@ -1,5 +1,5 @@
 // english-lessons-1.js — Lesson HTML for English Topic 1: Vocabulary
-// Islands: ei-01-1 through ei-01-8
+// Islands: ei-01-1 through ei-01-9
 
 Object.assign(LESSONS, {
 
@@ -710,6 +710,103 @@ Object.assign(LESSONS, {
 
 <div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Remember:</strong> A thesaurus is a starting point, not a final answer. Always verify a synonym&rsquo;s precise meaning in a dictionary before using it &mdash; choosing the wrong synonym can change your meaning completely.
-</div>`
+</div>`,
+
+// ── ei-01-9: Multiple-Meaning Words ─────────────────────────────────────────
+'ei-01-9': `
+<h2>Multiple-Meaning Words</h2>
+<p>Many English words have <strong>more than one meaning</strong>. These are called <strong>multiple-meaning words</strong> (or <strong>homonyms</strong>). The word &ldquo;bank&rdquo;, for example, can mean a place where you keep money <em>or</em> the side of a river. The only way to know which meaning is intended is to look at the <strong>context</strong> &mdash; the words and sentences around it.</p>
+
+<h3>What Are Multiple-Meaning Words?</h3>
+<p>A multiple-meaning word is a single word that has two or more different definitions. Sometimes the meanings are closely related; sometimes they are completely different. Here are some common examples:</p>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#fff3e0">
+    <th style="padding:8px;border:1px solid #ccc;text-align:left">Word</th>
+    <th style="padding:8px;border:1px solid #ccc;text-align:left">Meaning 1</th>
+    <th style="padding:8px;border:1px solid #ccc;text-align:left">Meaning 2</th>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc"><strong>bank</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">A place that looks after money</td>
+    <td style="padding:8px;border:1px solid #ccc">The edge of a river</td>
+  </tr>
+  <tr style="background:#fafafa">
+    <td style="padding:8px;border:1px solid #ccc"><strong>bat</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">A piece of equipment used in cricket</td>
+    <td style="padding:8px;border:1px solid #ccc">A flying mammal that comes out at night</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc"><strong>ring</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">A piece of jewellery worn on the finger</td>
+    <td style="padding:8px;border:1px solid #ccc">To phone someone; the sound a phone makes</td>
+  </tr>
+  <tr style="background:#fafafa">
+    <td style="padding:8px;border:1px solid #ccc"><strong>light</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">Brightness; the opposite of dark</td>
+    <td style="padding:8px;border:1px solid #ccc">Not heavy</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc"><strong>fair</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">Just and equal</td>
+    <td style="padding:8px;border:1px solid #ccc">A funfair with rides and stalls</td>
+  </tr>
+  <tr style="background:#fafafa">
+    <td style="padding:8px;border:1px solid #ccc"><strong>match</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">A sports game or contest</td>
+    <td style="padding:8px;border:1px solid #ccc">A small stick used to start a fire</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc"><strong>trunk</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">The main stem of a tree</td>
+    <td style="padding:8px;border:1px solid #ccc">An elephant&rsquo;s long nose; the boot of a car</td>
+  </tr>
+  <tr style="background:#fafafa">
+    <td style="padding:8px;border:1px solid #ccc"><strong>change</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">To make something different; to alter</td>
+    <td style="padding:8px;border:1px solid #ccc">Coins; money returned after a purchase</td>
+  </tr>
+</table>
+
+<h3>Using Context to Find the Right Meaning</h3>
+<p>When you meet a multiple-meaning word, follow these steps:</p>
+<ol>
+  <li><strong>Read the whole sentence</strong> (and the sentences around it).</li>
+  <li><strong>Look for clues</strong> &mdash; other words in the sentence that point towards one meaning.</li>
+  <li><strong>Try each meaning</strong> in the sentence and see which one makes sense.</li>
+  <li><strong>Check the part of speech</strong> &mdash; is the word being used as a noun, verb, or adjective? This often narrows it down.</li>
+</ol>
+
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> &ldquo;We sat on the <em>bank</em> and watched the ducks swim past.&rdquo;<br>
+  Context clues: &ldquo;sat on&rdquo;, &ldquo;ducks swim past&rdquo; &mdash; this is clearly about a river, not money.<br>
+  <strong>bank</strong> = the edge of a river &check;
+</div>
+
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> &ldquo;The suitcase was so <em>light</em> that she could carry it with one hand.&rdquo;<br>
+  Context clues: &ldquo;carry it with one hand&rdquo; &mdash; this is about weight, not brightness.<br>
+  <strong>light</strong> = not heavy &check;
+</div>
+
+<h3>Multiple-Meaning Words as Different Parts of Speech</h3>
+<p>Sometimes a word changes its meaning when it changes its <strong>part of speech</strong>. For example:</p>
+<ul>
+  <li><strong>match</strong> (noun) = a sports game &rarr; <strong>match</strong> (verb) = to pair things that go together</li>
+  <li><strong>ring</strong> (noun) = jewellery &rarr; <strong>ring</strong> (verb) = to phone someone</li>
+  <li><strong>change</strong> (noun) = coins &rarr; <strong>change</strong> (verb) = to alter or make different</li>
+</ul>
+<p>Identifying the part of speech helps you work out which meaning is intended.</p>
+
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+  <strong>Tip:</strong> In a dictionary, different meanings of the same word are listed as numbered definitions. If a word can be more than one part of speech, each part of speech is listed separately. Learning to navigate these entries is a useful skill.
+</div>
+
+<h3>Common Mistakes</h3>
+<p>&cross; Assuming a word always means the same thing in every sentence.<br>
+&check; Always check the context before deciding on the meaning.</p>
+<p>&cross; Ignoring the part of speech and picking the first definition you know.<br>
+&check; Ask yourself: is this word a noun, verb, or adjective here? Then choose the matching definition.</p>
+<p>&cross; Confusing multiple-meaning words with homophones (words that sound the same but are spelt differently, e.g. <em>their / there / they&rsquo;re</em>).<br>
+&check; Multiple-meaning words are the <strong>same word</strong> with different definitions. Homophones are <strong>different words</strong> that happen to sound alike.</p>`
 
 }); // end Object.assign(LESSONS)

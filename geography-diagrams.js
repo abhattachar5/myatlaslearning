@@ -748,6 +748,179 @@ DIAGRAMS["contour-cross-section"] = `<svg viewBox="0 0 280 175" xmlns="http://ww
   <text x="165" y="162" font-size="6.5" fill="#475569">  between lines</text>
 </svg>`;
 
+// ── WEATHER FRONTS & DEPRESSION ─────────────────────────────────────────────
+DIAGRAMS["weather-fronts-depression"] = `<svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="160" y="13" text-anchor="middle" font-size="9" font-weight="700" fill="#1e293b">Cross-Section of a Depression</text>
+
+  <!-- ground line -->
+  <line x1="10" y1="145" x2="310" y2="145" stroke="#64748b" stroke-width="1"/>
+  <text x="160" y="156" text-anchor="middle" font-size="6" fill="#64748b">ground level</text>
+
+  <!-- cold air LEFT -->
+  <rect x="10" y="85" width="75" height="60" rx="3" fill="#dbeafe" fill-opacity="0.5"/>
+  <text x="48" y="120" text-anchor="middle" font-size="7" font-weight="600" fill="#1d4ed8">Cold air</text>
+
+  <!-- warm sector MIDDLE -->
+  <rect x="85" y="95" width="120" height="50" rx="3" fill="#fee2e2" fill-opacity="0.5"/>
+  <text x="145" y="125" text-anchor="middle" font-size="7" font-weight="600" fill="#dc2626">Warm air</text>
+
+  <!-- cold air RIGHT -->
+  <rect x="205" y="80" width="105" height="65" rx="3" fill="#dbeafe" fill-opacity="0.5"/>
+  <text x="258" y="120" text-anchor="middle" font-size="7" font-weight="600" fill="#1d4ed8">Cold air</text>
+
+  <!-- WARM FRONT: warm air rising gently over cold -->
+  <path d="M85 95 Q100 60 160 40" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <!-- warm front semicircles -->
+  <circle cx="100" cy="82" r="3" fill="#dc2626"/>
+  <circle cx="115" cy="68" r="3" fill="#dc2626"/>
+  <circle cx="130" cy="56" r="3" fill="#dc2626"/>
+  <text x="75" y="55" font-size="6.5" fill="#dc2626" font-weight="600">Warm front</text>
+  <!-- rain under warm front -->
+  <text x="60" y="80" font-size="7" fill="#3b82f6">∕∕∕</text>
+  <text x="50" y="78" font-size="5" fill="#3b82f6">steady rain</text>
+
+  <!-- COLD FRONT: cold air undercutting warm -->
+  <path d="M205 95 Q195 50 180 35" fill="none" stroke="#1d4ed8" stroke-width="2"/>
+  <!-- cold front triangles -->
+  <polygon points="200,83 203,77 197,77" fill="#1d4ed8"/>
+  <polygon points="196,68 199,62 193,62" fill="#1d4ed8"/>
+  <polygon points="192,53 195,47 189,47" fill="#1d4ed8"/>
+  <text x="220" y="50" font-size="6.5" fill="#1d4ed8" font-weight="600">Cold front</text>
+  <!-- heavy rain under cold front -->
+  <text x="205" y="80" font-size="7" fill="#3b82f6">∕∕∕∕</text>
+  <text x="205" y="73" font-size="5" fill="#3b82f6">heavy rain</text>
+
+  <!-- rising air arrow at centre -->
+  <line x1="145" y1="90" x2="145" y2="30" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <polygon points="142,32 148,32 145,25" fill="#94a3b8"/>
+  <text x="145" y="22" text-anchor="middle" font-size="5.5" fill="#64748b">air rises</text>
+
+  <!-- LOW label -->
+  <text x="145" y="105" text-anchor="middle" font-size="8" font-weight="700" fill="#7c3aed">LOW</text>
+
+  <!-- direction of travel -->
+  <line x1="25" y1="165" x2="85" y2="165" stroke="#475569" stroke-width="1.2" marker-end="url(#wfArr)"/>
+  <text x="55" y="175" text-anchor="middle" font-size="6" fill="#475569">direction of travel</text>
+
+  <!-- key panel -->
+  <rect x="230" y="2" width="85" height="75" rx="4" fill="#f8fafc" stroke="#d1d5db" stroke-width="0.8"/>
+  <text x="272" y="14" text-anchor="middle" font-size="6.5" font-weight="700" fill="#1e293b">Key</text>
+  <circle cx="240" cy="25" r="3" fill="#dc2626"/>
+  <text x="248" y="28" font-size="5.5" fill="#475569">Warm front</text>
+  <text x="248" y="36" font-size="5" fill="#64748b">(steady rain)</text>
+  <polygon points="237,46 243,46 240,40" fill="#1d4ed8"/>
+  <text x="248" y="46" font-size="5.5" fill="#475569">Cold front</text>
+  <text x="248" y="54" font-size="5" fill="#64748b">(heavy rain)</text>
+  <text x="240" y="67" font-size="5" fill="#7c3aed" font-weight="600">LOW = depression</text>
+  <text x="240" y="75" font-size="4.5" fill="#64748b">air rises → cloud + rain</text>
+
+  <defs>
+    <marker id="wfArr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto"><path d="M0,0 L6,2 L0,4" fill="#475569"/></marker>
+  </defs>
+</svg>`;
+
+// ── CONTOUR PATTERNS: VALLEY vs SPUR ────────────────────────────────────────
+DIAGRAMS["contour-valley-spur"] = `<svg viewBox="0 0 300 175" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <!-- LEFT: Valley -->
+  <text x="70" y="13" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1e293b">Valley</text>
+  <rect x="5" y="18" width="130" height="105" rx="4" fill="#f0fdf4" stroke="#d1d5db" stroke-width="0.8"/>
+  <!-- contour lines bending into V pointing uphill -->
+  <path d="M10 95 Q70 95 130 95" fill="none" stroke="#a3765c" stroke-width="1.2"/>
+  <text x="133" y="97" font-size="5.5" fill="#a3765c">100m</text>
+  <path d="M10 82 Q40 82 70 60 Q100 82 130 82" fill="none" stroke="#a3765c" stroke-width="1.2"/>
+  <text x="133" y="84" font-size="5.5" fill="#a3765c">200m</text>
+  <path d="M10 69 Q40 69 70 42 Q100 69 130 69" fill="none" stroke="#a3765c" stroke-width="1.2"/>
+  <text x="133" y="71" font-size="5.5" fill="#a3765c">300m</text>
+  <path d="M10 56 Q40 56 70 28 Q100 56 130 56" fill="none" stroke="#a3765c" stroke-width="1.2"/>
+  <text x="133" y="58" font-size="5.5" fill="#a3765c">400m</text>
+  <!-- river in valley -->
+  <line x1="70" y1="25" x2="70" y2="98" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="70" y="108" text-anchor="middle" font-size="5.5" fill="#3b82f6" font-weight="600">river</text>
+  <!-- V arrow pointing uphill -->
+  <path d="M50 100 L70 85 L90 100" fill="none" stroke="#dc2626" stroke-width="1.5" marker-end="url(#vsArr)"/>
+  <text x="70" y="120" text-anchor="middle" font-size="6" fill="#dc2626" font-weight="600">V points UPHILL</text>
+  <text x="70" y="128" text-anchor="middle" font-size="5.5" fill="#64748b">(towards higher numbers)</text>
+
+  <!-- RIGHT: Spur -->
+  <text x="230" y="13" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1e293b">Spur</text>
+  <rect x="165" y="18" width="130" height="105" rx="4" fill="#fef9ee" stroke="#d1d5db" stroke-width="0.8"/>
+  <!-- contour lines bending into V pointing downhill -->
+  <path d="M170 35 Q230 35 290 35" fill="none" stroke="#a3765c" stroke-width="1.2"/>
+  <text x="168" y="33" font-size="5.5" fill="#a3765c" text-anchor="end">400m</text>
+  <path d="M170 48 Q200 48 230 70 Q260 48 290 48" fill="none" stroke="#a3765c" stroke-width="1.2"/>
+  <text x="168" y="46" font-size="5.5" fill="#a3765c" text-anchor="end">300m</text>
+  <path d="M170 61 Q200 61 230 88 Q260 61 290 61" fill="none" stroke="#a3765c" stroke-width="1.2"/>
+  <text x="168" y="59" font-size="5.5" fill="#a3765c" text-anchor="end">200m</text>
+  <path d="M170 74 Q200 74 230 102 Q260 74 290 74" fill="none" stroke="#a3765c" stroke-width="1.2"/>
+  <text x="168" y="72" font-size="5.5" fill="#a3765c" text-anchor="end">100m</text>
+  <!-- spur ridge line -->
+  <line x1="230" y1="32" x2="230" y2="105" stroke="#92400e" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="230" y="114" text-anchor="middle" font-size="5.5" fill="#92400e" font-weight="600">ridge</text>
+  <!-- V arrow pointing downhill -->
+  <path d="M210 30 L230 45 L250 30" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="230" y="120" text-anchor="middle" font-size="6" fill="#dc2626" font-weight="600">V points DOWNHILL</text>
+  <text x="230" y="128" text-anchor="middle" font-size="5.5" fill="#64748b">(towards lower numbers)</text>
+
+  <!-- bottom summary -->
+  <rect x="25" y="137" width="250" height="32" rx="5" fill="#f8fafc" stroke="#d1d5db" stroke-width="0.8"/>
+  <text x="150" y="150" text-anchor="middle" font-size="6.5" font-weight="600" fill="#1e293b">Remember: "V points to the source"</text>
+  <text x="150" y="161" text-anchor="middle" font-size="6" fill="#64748b">Valley V → uphill (river flows down)  |  Spur V → downhill (ridge juts out)</text>
+
+  <defs>
+    <marker id="vsArr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto"><path d="M0,0 L6,2 L0,4" fill="#dc2626"/></marker>
+  </defs>
+</svg>`;
+
+// ── COMPASS ROSE ────────────────────────────────────────────────────────────
+DIAGRAMS["compass-rose"] = `<svg viewBox="0 0 280 175" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="95" y="13" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1e293b">Eight-Point Compass</text>
+  <!-- outer circle -->
+  <circle cx="95" cy="95" r="70" fill="#f0f9ff" stroke="#d1d5db" stroke-width="1"/>
+  <!-- inner circle -->
+  <circle cx="95" cy="95" r="50" fill="#e0f2fe" stroke="#bfdbfe" stroke-width="0.8"/>
+  <!-- cross lines (cardinal) -->
+  <line x1="95" y1="25" x2="95" y2="165" stroke="#1e40af" stroke-width="1.5"/>
+  <line x1="25" y1="95" x2="165" y2="95" stroke="#1e40af" stroke-width="1.5"/>
+  <!-- diagonal lines (intercardinal) -->
+  <line x1="45" y1="45" x2="145" y2="145" stroke="#60a5fa" stroke-width="1"/>
+  <line x1="145" y1="45" x2="45" y2="145" stroke="#60a5fa" stroke-width="1"/>
+  <!-- centre dot -->
+  <circle cx="95" cy="95" r="3" fill="#1e40af"/>
+  <!-- cardinal labels -->
+  <text x="95" y="20" text-anchor="middle" font-size="10" font-weight="700" fill="#dc2626">N</text>
+  <text x="95" y="177" text-anchor="middle" font-size="10" font-weight="700" fill="#1e40af">S</text>
+  <text x="172" y="99" text-anchor="start" font-size="10" font-weight="700" fill="#1e40af">E</text>
+  <text x="18" y="99" text-anchor="end" font-size="10" font-weight="700" fill="#1e40af">W</text>
+  <!-- intercardinal labels -->
+  <text x="148" y="42" font-size="8" font-weight="600" fill="#3b82f6">NE</text>
+  <text x="148" y="155" font-size="8" font-weight="600" fill="#3b82f6">SE</text>
+  <text x="30" y="155" font-size="8" font-weight="600" fill="#3b82f6">SW</text>
+  <text x="30" y="42" font-size="8" font-weight="600" fill="#3b82f6">NW</text>
+  <!-- bearing degrees -->
+  <text x="103" y="32" font-size="5.5" fill="#64748b">0°/360°</text>
+  <text x="155" y="57" font-size="5.5" fill="#64748b">045°</text>
+  <text x="155" y="100" font-size="5.5" fill="#64748b">090°</text>
+  <text x="155" y="145" font-size="5.5" fill="#64748b">135°</text>
+  <text x="95" y="172" text-anchor="middle" font-size="5.5" fill="#64748b">180°</text>
+  <text x="32" y="145" font-size="5.5" fill="#64748b">225°</text>
+  <text x="32" y="100" font-size="5.5" fill="#64748b">270°</text>
+  <text x="32" y="57" font-size="5.5" fill="#64748b">315°</text>
+
+  <!-- explanation panel on right -->
+  <rect x="180" y="22" width="95" height="148" rx="5" fill="#f8fafc" stroke="#d1d5db" stroke-width="0.8"/>
+  <text x="227" y="38" text-anchor="middle" font-size="7.5" font-weight="700" fill="#1e293b">Key Facts</text>
+  <text x="188" y="54" font-size="6" fill="#475569">• 4 cardinal points:</text>
+  <text x="193" y="64" font-size="6" fill="#1e40af" font-weight="600">N, E, S, W</text>
+  <text x="188" y="80" font-size="6" fill="#475569">• 4 intercardinal:</text>
+  <text x="193" y="90" font-size="6" fill="#3b82f6" font-weight="600">NE, SE, SW, NW</text>
+  <text x="188" y="106" font-size="6" fill="#475569">• Bearings measured</text>
+  <text x="193" y="116" font-size="6" fill="#475569">clockwise from N</text>
+  <text x="188" y="132" font-size="6" fill="#475569">• Always 3 digits:</text>
+  <text x="193" y="142" font-size="6" fill="#475569">045° not 45°</text>
+  <text x="188" y="158" font-size="6" fill="#475569">• N is always at</text>
+  <text x="193" y="168" font-size="6" fill="#475569">top of OS map</text>
+</svg>`;
+
 // ── INTRO: LATITUDE & LONGITUDE ─────────────────────────────────────────────
 DIAGRAMS["lat-long-globe"] = `<svg viewBox="0 0 280 170" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
   <!-- globe outline -->
@@ -1107,4 +1280,128 @@ DIAGRAMS["fieldwork-enquiry"] = `<svg viewBox="0 0 340 160" xmlns="http://www.w3
     <marker id="fwArrow" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto"><path d="M0,0 L6,2 L0,4" fill="#64748b"/></marker>
     <marker id="fwArrowL" markerWidth="6" markerHeight="4" refX="1" refY="2" orient="auto"><path d="M6,0 L0,2 L6,4" fill="#64748b"/></marker>
   </defs>
+</svg>`;
+
+DIAGRAMS["igneous-comparison"] = `<svg viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="150" y="14" text-anchor="middle" font-size="9" font-weight="700" fill="#1e293b">Intrusive vs Extrusive Igneous Rock</text>
+
+  <!-- Intrusive side -->
+  <rect x="10" y="24" width="130" height="100" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="75" y="38" text-anchor="middle" font-size="7.5" font-weight="700" fill="#92400e">INTRUSIVE (Granite)</text>
+  <text x="75" y="48" text-anchor="middle" font-size="5.5" fill="#78350f">Cooled SLOWLY underground</text>
+
+  <!-- Large crystal depiction -->
+  <rect x="30" y="55" width="90" height="50" rx="4" fill="#fefce8" stroke="#d97706" stroke-width="0.8"/>
+  <polygon points="45,60 65,58 70,72 55,80 38,75" fill="#d4a574" stroke="#92400e" stroke-width="0.6"/>
+  <polygon points="65,58 90,62 95,78 70,72" fill="#e8c9a0" stroke="#92400e" stroke-width="0.6"/>
+  <polygon points="55,80 70,72 95,78 85,95 60,98" fill="#c9a06c" stroke="#92400e" stroke-width="0.6"/>
+  <polygon points="38,75 55,80 60,98 35,92" fill="#ddb88a" stroke="#92400e" stroke-width="0.6"/>
+  <polygon points="85,95 95,78 110,85 108,100" fill="#d4a574" stroke="#92400e" stroke-width="0.6"/>
+  <polygon points="60,98 85,95 108,100 100,102 65,103" fill="#e8c9a0" stroke="#92400e" stroke-width="0.6"/>
+  <text x="75" y="115" text-anchor="middle" font-size="5.5" font-weight="600" fill="#92400e">Large, visible crystals</text>
+
+  <!-- Extrusive side -->
+  <rect x="160" y="24" width="130" height="100" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="225" y="38" text-anchor="middle" font-size="7.5" font-weight="700" fill="#1e3a5f">EXTRUSIVE (Basalt)</text>
+  <text x="225" y="48" text-anchor="middle" font-size="5.5" fill="#1e3a5f">Cooled QUICKLY on surface</text>
+
+  <!-- Small crystal depiction — dense fine-grained texture -->
+  <rect x="180" y="55" width="90" height="50" rx="4" fill="#334155" stroke="#1e293b" stroke-width="0.8"/>
+  <!-- fine grain dots pattern -->
+  <circle cx="190" cy="62" r="1.2" fill="#475569"/><circle cx="195" cy="65" r="1" fill="#4b5563"/><circle cx="200" cy="61" r="1.1" fill="#475569"/>
+  <circle cx="205" cy="64" r="1" fill="#4b5563"/><circle cx="210" cy="60" r="1.2" fill="#475569"/><circle cx="215" cy="63" r="1" fill="#4b5563"/>
+  <circle cx="220" cy="61" r="1.1" fill="#475569"/><circle cx="225" cy="65" r="1" fill="#4b5563"/><circle cx="230" cy="62" r="1.2" fill="#475569"/>
+  <circle cx="235" cy="64" r="1" fill="#4b5563"/><circle cx="240" cy="60" r="1.1" fill="#475569"/><circle cx="245" cy="63" r="1" fill="#4b5563"/>
+  <circle cx="250" cy="61" r="1.2" fill="#475569"/><circle cx="255" cy="65" r="1" fill="#4b5563"/><circle cx="260" cy="62" r="1.1" fill="#475569"/>
+  <circle cx="190" cy="70" r="1" fill="#4b5563"/><circle cx="195" cy="73" r="1.2" fill="#475569"/><circle cx="200" cy="69" r="1" fill="#4b5563"/>
+  <circle cx="205" cy="72" r="1.1" fill="#475569"/><circle cx="210" cy="68" r="1" fill="#4b5563"/><circle cx="215" cy="71" r="1.2" fill="#475569"/>
+  <circle cx="220" cy="69" r="1" fill="#4b5563"/><circle cx="225" cy="73" r="1.1" fill="#475569"/><circle cx="230" cy="70" r="1" fill="#4b5563"/>
+  <circle cx="235" cy="72" r="1.2" fill="#475569"/><circle cx="240" cy="68" r="1" fill="#4b5563"/><circle cx="245" cy="71" r="1.1" fill="#475569"/>
+  <circle cx="250" cy="69" r="1" fill="#4b5563"/><circle cx="255" cy="73" r="1.2" fill="#475569"/><circle cx="260" cy="70" r="1" fill="#4b5563"/>
+  <circle cx="190" cy="78" r="1.1" fill="#475569"/><circle cx="195" cy="81" r="1" fill="#4b5563"/><circle cx="200" cy="77" r="1.2" fill="#475569"/>
+  <circle cx="205" cy="80" r="1" fill="#4b5563"/><circle cx="210" cy="76" r="1.1" fill="#475569"/><circle cx="215" cy="79" r="1" fill="#4b5563"/>
+  <circle cx="220" cy="77" r="1.2" fill="#475569"/><circle cx="225" cy="81" r="1" fill="#4b5563"/><circle cx="230" cy="78" r="1.1" fill="#475569"/>
+  <circle cx="235" cy="80" r="1" fill="#4b5563"/><circle cx="240" cy="76" r="1.2" fill="#475569"/><circle cx="245" cy="79" r="1" fill="#4b5563"/>
+  <circle cx="250" cy="77" r="1.1" fill="#475569"/><circle cx="255" cy="81" r="1" fill="#4b5563"/><circle cx="260" cy="78" r="1.2" fill="#475569"/>
+  <circle cx="190" cy="86" r="1" fill="#4b5563"/><circle cx="195" cy="89" r="1.1" fill="#475569"/><circle cx="200" cy="85" r="1" fill="#4b5563"/>
+  <circle cx="205" cy="88" r="1.2" fill="#475569"/><circle cx="210" cy="84" r="1" fill="#4b5563"/><circle cx="215" cy="87" r="1.1" fill="#475569"/>
+  <circle cx="220" cy="85" r="1" fill="#4b5563"/><circle cx="225" cy="89" r="1.2" fill="#475569"/><circle cx="230" cy="86" r="1" fill="#4b5563"/>
+  <circle cx="235" cy="88" r="1.1" fill="#475569"/><circle cx="240" cy="84" r="1" fill="#4b5563"/><circle cx="245" cy="87" r="1.2" fill="#475569"/>
+  <circle cx="250" cy="85" r="1" fill="#4b5563"/><circle cx="255" cy="89" r="1.1" fill="#475569"/><circle cx="260" cy="86" r="1" fill="#4b5563"/>
+  <circle cx="190" cy="94" r="1.2" fill="#475569"/><circle cx="195" cy="97" r="1" fill="#4b5563"/><circle cx="200" cy="93" r="1.1" fill="#475569"/>
+  <circle cx="205" cy="96" r="1" fill="#4b5563"/><circle cx="210" cy="92" r="1.2" fill="#475569"/><circle cx="215" cy="95" r="1" fill="#4b5563"/>
+  <circle cx="220" cy="93" r="1.1" fill="#475569"/><circle cx="225" cy="97" r="1" fill="#4b5563"/><circle cx="230" cy="94" r="1.2" fill="#475569"/>
+  <circle cx="235" cy="96" r="1" fill="#4b5563"/><circle cx="240" cy="92" r="1.1" fill="#475569"/><circle cx="245" cy="95" r="1" fill="#4b5563"/>
+  <circle cx="250" cy="93" r="1.2" fill="#475569"/><circle cx="255" cy="97" r="1" fill="#4b5563"/><circle cx="260" cy="94" r="1.1" fill="#475569"/>
+  <text x="225" y="115" text-anchor="middle" font-size="5.5" font-weight="600" fill="#1e3a5f">Tiny / no visible crystals</text>
+
+  <!-- Key facts -->
+  <rect x="10" y="130" width="280" height="34" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="0.8"/>
+  <text x="150" y="143" text-anchor="middle" font-size="6" font-weight="700" fill="#334155">Key Fact</text>
+  <text x="150" y="153" text-anchor="middle" font-size="5.5" fill="#475569">Slow cooling = large crystals | Fast cooling = small crystals</text>
+  <text x="150" y="160" text-anchor="middle" font-size="5" fill="#64748b">Same process, different conditions → different textures</text>
+</svg>`;
+
+DIAGRAMS["correlation-types"] = `<svg viewBox="0 0 320 170" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="160" y="14" text-anchor="middle" font-size="9" font-weight="700" fill="#1e293b">Types of Correlation on Scatter Graphs</text>
+
+  <!-- Positive correlation -->
+  <rect x="8" y="22" width="95" height="105" rx="5" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="55" y="34" text-anchor="middle" font-size="6.5" font-weight="700" fill="#166534">Positive</text>
+  <!-- Axes -->
+  <line x1="22" y1="110" x2="22" y2="42" stroke="#334155" stroke-width="0.8"/>
+  <line x1="22" y1="110" x2="92" y2="110" stroke="#334155" stroke-width="0.8"/>
+  <text x="12" y="76" text-anchor="middle" font-size="4" fill="#64748b" transform="rotate(-90,12,76)">Variable Y</text>
+  <text x="57" y="118" text-anchor="middle" font-size="4" fill="#64748b">Variable X</text>
+  <!-- Dots trending up -->
+  <circle cx="28" cy="105" r="2" fill="#22c55e"/><circle cx="33" cy="100" r="2" fill="#22c55e"/>
+  <circle cx="37" cy="96" r="2" fill="#22c55e"/><circle cx="42" cy="90" r="2" fill="#22c55e"/>
+  <circle cx="45" cy="88" r="2" fill="#22c55e"/><circle cx="50" cy="82" r="2" fill="#22c55e"/>
+  <circle cx="55" cy="78" r="2" fill="#22c55e"/><circle cx="60" cy="72" r="2" fill="#22c55e"/>
+  <circle cx="65" cy="66" r="2" fill="#22c55e"/><circle cx="70" cy="62" r="2" fill="#22c55e"/>
+  <circle cx="75" cy="55" r="2" fill="#22c55e"/><circle cx="80" cy="50" r="2" fill="#22c55e"/>
+  <circle cx="85" cy="46" r="2" fill="#22c55e"/>
+  <!-- Best fit line -->
+  <line x1="25" y1="107" x2="88" y2="44" stroke="#16a34a" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Negative correlation -->
+  <rect x="113" y="22" width="95" height="105" rx="5" fill="#fef2f2" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="160" y="34" text-anchor="middle" font-size="6.5" font-weight="700" fill="#991b1b">Negative</text>
+  <!-- Axes -->
+  <line x1="127" y1="110" x2="127" y2="42" stroke="#334155" stroke-width="0.8"/>
+  <line x1="127" y1="110" x2="197" y2="110" stroke="#334155" stroke-width="0.8"/>
+  <text x="117" y="76" text-anchor="middle" font-size="4" fill="#64748b" transform="rotate(-90,117,76)">Variable Y</text>
+  <text x="162" y="118" text-anchor="middle" font-size="4" fill="#64748b">Variable X</text>
+  <!-- Dots trending down -->
+  <circle cx="133" cy="46" r="2" fill="#ef4444"/><circle cx="138" cy="50" r="2" fill="#ef4444"/>
+  <circle cx="142" cy="55" r="2" fill="#ef4444"/><circle cx="147" cy="60" r="2" fill="#ef4444"/>
+  <circle cx="152" cy="66" r="2" fill="#ef4444"/><circle cx="157" cy="72" r="2" fill="#ef4444"/>
+  <circle cx="162" cy="76" r="2" fill="#ef4444"/><circle cx="167" cy="82" r="2" fill="#ef4444"/>
+  <circle cx="170" cy="86" r="2" fill="#ef4444"/><circle cx="175" cy="90" r="2" fill="#ef4444"/>
+  <circle cx="180" cy="95" r="2" fill="#ef4444"/><circle cx="185" cy="100" r="2" fill="#ef4444"/>
+  <circle cx="190" cy="105" r="2" fill="#ef4444"/>
+  <!-- Best fit line -->
+  <line x1="130" y1="44" x2="193" y2="107" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- No correlation -->
+  <rect x="218" y="22" width="95" height="105" rx="5" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.2"/>
+  <text x="265" y="34" text-anchor="middle" font-size="6.5" font-weight="700" fill="#5b21b6">No Correlation</text>
+  <!-- Axes -->
+  <line x1="232" y1="110" x2="232" y2="42" stroke="#334155" stroke-width="0.8"/>
+  <line x1="232" y1="110" x2="302" y2="110" stroke="#334155" stroke-width="0.8"/>
+  <text x="222" y="76" text-anchor="middle" font-size="4" fill="#64748b" transform="rotate(-90,222,76)">Variable Y</text>
+  <text x="267" y="118" text-anchor="middle" font-size="4" fill="#64748b">Variable X</text>
+  <!-- Random dots -->
+  <circle cx="240" cy="65" r="2" fill="#8b5cf6"/><circle cx="250" cy="95" r="2" fill="#8b5cf6"/>
+  <circle cx="245" cy="48" r="2" fill="#8b5cf6"/><circle cx="260" cy="80" r="2" fill="#8b5cf6"/>
+  <circle cx="255" cy="55" r="2" fill="#8b5cf6"/><circle cx="270" cy="100" r="2" fill="#8b5cf6"/>
+  <circle cx="265" cy="50" r="2" fill="#8b5cf6"/><circle cx="280" cy="70" r="2" fill="#8b5cf6"/>
+  <circle cx="275" cy="90" r="2" fill="#8b5cf6"/><circle cx="290" cy="58" r="2" fill="#8b5cf6"/>
+  <circle cx="285" cy="105" r="2" fill="#8b5cf6"/><circle cx="295" cy="75" r="2" fill="#8b5cf6"/>
+  <circle cx="238" cy="88" r="2" fill="#8b5cf6"/>
+
+  <!-- Key -->
+  <rect x="8" y="132" width="305" height="32" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="0.8"/>
+  <text x="160" y="145" text-anchor="middle" font-size="6" font-weight="700" fill="#334155">Remember</text>
+  <text x="160" y="155" text-anchor="middle" font-size="5.5" fill="#475569">Correlation does NOT prove causation — both variables may be affected by a third factor</text>
 </svg>`;

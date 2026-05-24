@@ -1,5 +1,5 @@
 // english-content-1.js — Flashcards & Questions for English Topic 1: Vocabulary
-// Islands: ei-01-1 through ei-01-8
+// Islands: ei-01-1 through ei-01-9
 
 // ── FLASHCARDS ────────────────────────────────────────────────────────────
 FLASHCARDS.push(
@@ -65,7 +65,17 @@ FLASHCARDS.push(
   {id:"efc-01-8-2",islandId:"ei-01-8",front:"What does a thesaurus entry show? When would you use a thesaurus rather than a dictionary?",
    back:"A thesaurus entry shows:\n• The headword (the word you looked up)\n• A list of synonyms — words with similar meanings\n• Sometimes antonyms — words with opposite meanings\n• Sometimes the synonyms are grouped by nuance or context\n\nUse a DICTIONARY when you need to know what a word means.\nUse a THESAURUS when you already know what you want to say but want to find a more precise, varied, or interesting word.\n\nExample: if you keep writing 'said', a thesaurus offers: replied, whispered, announced, insisted.",difficulty:1,category:"definition"},
   {id:"efc-01-8-3",islandId:"ei-01-8",front:"A dictionary page has guide words 'planet' and 'please'. Which of these words appear on the page: play, plant, plead, plum?",
-   back:"The words on the page are: plant, plead, and play.\n\nTo check, compare alphabetically between 'planet' and 'please':\n• planet → p-l-a-n-e-t\n• plant → p-l-a-n-t (comes after planet ✓, before please ✓) ON PAGE\n• plead → p-l-e-a-d (comes after planet ✓, before please ✓) ON PAGE\n• play → p-l-a-y (comes after planet ✓, before please ✓) ON PAGE\n• plum → p-l-u (u comes after e in 'please') → NOT on this page\n\nRemember to compare letter by letter from left to right.",difficulty:2,category:"application"}
+   back:"The words on the page are: plant, plead, and play.\n\nTo check, compare alphabetically between 'planet' and 'please':\n• planet → p-l-a-n-e-t\n• plant → p-l-a-n-t (comes after planet ✓, before please ✓) ON PAGE\n• plead → p-l-e-a-d (comes after planet ✓, before please ✓) ON PAGE\n• play → p-l-a-y (comes after planet ✓, before please ✓) ON PAGE\n• plum → p-l-u (u comes after e in 'please') → NOT on this page\n\nRemember to compare letter by letter from left to right.",difficulty:2,category:"application"},
+
+  // ── ei-01-9: Multiple-Meaning Words ────────────────────────────────────
+  {id:"efc-01-9-1",islandId:"ei-01-9",front:"What are multiple-meaning words? Give two examples.",
+   back:"Multiple-meaning words (also called homonyms) are words that have more than one definition. They are spelt and pronounced the same way, but their meaning changes depending on context.\n\nExamples:\n• bank — a place that looks after money OR the edge of a river\n• bat — a piece of cricket equipment OR a flying mammal\n• light — brightness OR not heavy\n\nYou must read the surrounding words to work out which meaning is being used.",difficulty:1,category:"definition"},
+  {id:"efc-01-9-2",islandId:"ei-01-9",front:"How do you work out which meaning of a multiple-meaning word is being used in a sentence?",
+   back:"Use these four steps:\n\n1. Read the whole sentence (and the sentences around it).\n2. Look for context clues — other words that point towards one meaning.\n3. Try each meaning in the sentence and see which one makes sense.\n4. Check the part of speech — is the word a noun, verb, or adjective? This often narrows it down.\n\nExample: 'She picked up the bat and walked to the crease.'\nContext clues: 'crease' is a cricket term → bat = cricket bat, not an animal.",difficulty:1,category:"concept"},
+  {id:"efc-01-9-3",islandId:"ei-01-9",front:"What is the difference between multiple-meaning words and homophones?",
+   back:"Multiple-meaning words (homonyms) are the SAME word with different definitions.\n• 'fair' (adjective: just) and 'fair' (noun: funfair) — same spelling, same pronunciation.\n\nHomophones are DIFFERENT words that sound the same but are spelt differently.\n• 'their' / 'there' / 'they're' — different spellings and meanings.\n• 'flour' / 'flower' — different spellings and meanings.\n\nKey distinction: multiple-meaning words share the same spelling; homophones do not.",difficulty:2,category:"concept"},
+  {id:"efc-01-9-4",islandId:"ei-01-9",front:"In the sentence 'The trunk was too heavy to lift', how do you decide which meaning of 'trunk' is intended?",
+   back:"On its own, this sentence is ambiguous — 'trunk' could mean:\n• the main stem of a tree\n• a large storage box or suitcase\n• the boot of a car\n• an elephant's nose\n\nYou would need MORE context to be certain. For example:\n• 'The trunk was too heavy to lift onto the luggage rack.' → a large box/suitcase\n• 'The trunk was too heavy to lift — years of growth had made the oak enormous.' → tree trunk\n\nThis shows why context is essential. Without it, the meaning remains unclear.",difficulty:2,category:"application"}
 );
 
 // ── QUESTIONS ─────────────────────────────────────────────────────────────
@@ -313,6 +323,36 @@ Object.assign(QUESTIONS, {
   {q:"Which statement best describes the difference between using a dictionary and a thesaurus effectively?",
    opts:["Use a dictionary to understand meaning; use a thesaurus to find alternative words — but always check the dictionary meaning of any thesaurus suggestion before using it","A thesaurus is more useful than a dictionary for all writing tasks","A dictionary and a thesaurus provide identical information in different formats","You should only use a thesaurus if you cannot find the word in a dictionary"],c:0,
    e:"The best writers use both tools together: find a synonym in the thesaurus, then check its precise definition in the dictionary before using it. Synonyms are not perfectly interchangeable — 'domicile' and 'home' are synonyms, but using 'domicile' in casual conversation would sound wrong. Always verify a thesaurus find with a dictionary check."}
+],
+
+"ei-01-9": [
+  // Easy (Q1–3)
+  {q:"The word 'bat' has more than one meaning. Which sentence uses 'bat' to mean a piece of sports equipment?",
+   opts:["He picked up his bat and walked out to the pitch.","A bat flew out of the old barn at sunset.","She didn't bat an eyelid at the news.","The bat hung upside down from the cave ceiling."],c:0,
+   e:"'Picked up his bat' and 'walked out to the pitch' are cricket-related context clues. A pitch is a cricket ground, and you pick up a bat to play — so 'bat' here means a piece of sports equipment. In the other sentences, 'bat' refers to the animal or to the phrase 'bat an eyelid' (meaning to show surprise)."},
+  {q:"What is a multiple-meaning word?",
+   opts:["A word that has more than one definition","A word that is difficult to spell","A word borrowed from another language","A word that sounds like another word but is spelt differently"],c:0,
+   e:"A multiple-meaning word (homonym) is a single word that has two or more different definitions. For example, 'ring' can mean a piece of jewellery or the act of phoning someone. The correct meaning depends on context."},
+  {q:"In the sentence 'Please put your change in the jar', what does 'change' mean?",
+   opts:["Coins or money received back after a purchase","To alter or make different","A transformation","An exchange"],c:0,
+   e:"The context clue 'put ... in the jar' tells us this is a physical object that can be placed somewhere. 'Change' here means coins — the money you receive back after paying for something. If it meant 'to alter', the sentence would not make sense."},
+  // Medium (Q4–6)
+  {q:"Which pair of sentences uses the word 'fair' with two different meanings?",
+   opts:["'The teacher made a fair decision.' / 'We went on the rides at the fair.'","'The test was fair.' / 'The judgement was fair.'","'She has fair hair.' / 'She has light hair.'","'That's not fair!' / 'It seems unfair.'"],c:0,
+   e:"In the first sentence, 'fair' means just or reasonable (adjective). In the second, 'fair' means a funfair or carnival (noun). These are two completely different meanings of the same word. The other options use 'fair' with the same or very similar meanings each time."},
+  {q:"Read: 'The match was cancelled because of the rain.' Which meaning of 'match' is used here?",
+   opts:["A sports game or contest","A small stick used to start a fire","Something that goes well with something else","To be equal to"],c:0,
+   e:"The context clues are 'cancelled' and 'because of the rain'. Events like sports games get cancelled due to bad weather. A small fire-lighting stick would not be 'cancelled'. Therefore, 'match' here means a sports game or contest."},
+  {q:"The word 'light' is used in two sentences below. In which sentence does it mean 'not heavy'? A: 'The room was filled with natural light.' B: 'This bag is really light — I can carry it easily.'",
+   opts:["Sentence B","Sentence A","Both sentences","Neither sentence"],c:0,
+   e:"In sentence B, the clue 'I can carry it easily' tells us the bag has little weight — 'light' means not heavy. In sentence A, 'natural light' refers to brightness from the sun. The context clues around each use of 'light' make the meaning clear."},
+  // Harder (Q7–8)
+  {q:"In which sentence is the word 'trunk' used as a verb?",
+   opts:["None of the other options use 'trunk' as a verb — 'trunk' is almost always a noun","The elephant raised its trunk to reach the leaves.","She packed the trunk with her belongings.","The trunk of the old oak was covered in moss."],c:0,
+   e:"'Trunk' is used as a noun in all three example sentences (elephant's trunk, a storage trunk, a tree trunk). Unlike many multiple-meaning words, 'trunk' does not commonly function as a verb. Recognising that a word may only be used as certain parts of speech is an important skill when navigating multiple meanings."},
+  {q:"A student reads this sentence: 'The bank issued a statement about the flood damage to properties along the bank.' How many different meanings of 'bank' appear in this sentence?",
+   opts:["Two — 'bank' first means a financial institution, then means the edge of a river","One — both uses mean the same thing","Two — but both mean the edge of a river","Three — financial institution, river edge, and a verb meaning to tilt"],c:0,
+   e:"The first 'bank' issued a statement — only a financial institution does that. The second 'bank' is described as being alongside properties and affected by flood damage — this is the edge of a river. The same word appears twice in one sentence with two completely different meanings, and only context tells you which is which."}
 ]
 
 }); // end Object.assign(QUESTIONS)

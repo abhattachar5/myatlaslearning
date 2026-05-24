@@ -1199,3 +1199,120 @@ DIAGRAMS["sankey-diagram"] = `<svg viewBox="0 0 280 130" xmlns="http://www.w3.or
   <rect x="50" y="108" width="180" height="18" rx="4" fill="#f0f9ff" stroke="#185fa5" stroke-width="1"/>
   <text x="140" y="120" text-anchor="middle" font-size="7.5" font-weight="600" fill="#185fa5">Efficiency = useful out &#xF7; total in = 20/100 = 20%</text>
 </svg>`;
+
+// ── PERIODIC TABLE ──────────────────────────────────────────────────────────
+DIAGRAMS["periodic-table"] = (function() {
+  var els = [
+    [1,"H",1,1,"nm"],[2,"He",1,18,"ng"],
+    [3,"Li",2,1,"am"],[4,"Be",2,2,"ae"],
+    [5,"B",2,13,"ml"],[6,"C",2,14,"nm"],[7,"N",2,15,"nm"],[8,"O",2,16,"nm"],[9,"F",2,17,"ha"],[10,"Ne",2,18,"ng"],
+    [11,"Na",3,1,"am"],[12,"Mg",3,2,"ae"],
+    [13,"Al",3,13,"pt"],[14,"Si",3,14,"ml"],[15,"P",3,15,"nm"],[16,"S",3,16,"nm"],[17,"Cl",3,17,"ha"],[18,"Ar",3,18,"ng"],
+    [19,"K",4,1,"am"],[20,"Ca",4,2,"ae"],
+    [21,"Sc",4,3,"tm"],[22,"Ti",4,4,"tm"],[23,"V",4,5,"tm"],[24,"Cr",4,6,"tm"],[25,"Mn",4,7,"tm"],
+    [26,"Fe",4,8,"tm"],[27,"Co",4,9,"tm"],[28,"Ni",4,10,"tm"],[29,"Cu",4,11,"tm"],[30,"Zn",4,12,"tm"],
+    [31,"Ga",4,13,"pt"],[32,"Ge",4,14,"ml"],[33,"As",4,15,"ml"],[34,"Se",4,16,"nm"],[35,"Br",4,17,"ha"],[36,"Kr",4,18,"ng"],
+    [37,"Rb",5,1,"am"],[38,"Sr",5,2,"ae"],
+    [39,"Y",5,3,"tm"],[40,"Zr",5,4,"tm"],[41,"Nb",5,5,"tm"],[42,"Mo",5,6,"tm"],[43,"Tc",5,7,"tm"],
+    [44,"Ru",5,8,"tm"],[45,"Rh",5,9,"tm"],[46,"Pd",5,10,"tm"],[47,"Ag",5,11,"tm"],[48,"Cd",5,12,"tm"],
+    [49,"In",5,13,"pt"],[50,"Sn",5,14,"pt"],[51,"Sb",5,15,"ml"],[52,"Te",5,16,"ml"],[53,"I",5,17,"ha"],[54,"Xe",5,18,"ng"],
+    [55,"Cs",6,1,"am"],[56,"Ba",6,2,"ae"],
+    [72,"Hf",6,4,"tm"],[73,"Ta",6,5,"tm"],[74,"W",6,6,"tm"],[75,"Re",6,7,"tm"],
+    [76,"Os",6,8,"tm"],[77,"Ir",6,9,"tm"],[78,"Pt",6,10,"tm"],[79,"Au",6,11,"tm"],[80,"Hg",6,12,"tm"],
+    [81,"Tl",6,13,"pt"],[82,"Pb",6,14,"pt"],[83,"Bi",6,15,"pt"],[84,"Po",6,16,"pt"],[85,"At",6,17,"ha"],[86,"Rn",6,18,"ng"],
+    [87,"Fr",7,1,"am"],[88,"Ra",7,2,"ae"],
+    [104,"Rf",7,4,"tm"],[105,"Db",7,5,"tm"],[106,"Sg",7,6,"tm"],[107,"Bh",7,7,"tm"],
+    [108,"Hs",7,8,"tm"],[109,"Mt",7,9,"uk"],[110,"Ds",7,10,"uk"],[111,"Rg",7,11,"uk"],[112,"Cn",7,12,"tm"],
+    [113,"Nh",7,13,"uk"],[114,"Fl",7,14,"pt"],[115,"Mc",7,15,"uk"],[116,"Lv",7,16,"uk"],[117,"Ts",7,17,"ha"],[118,"Og",7,18,"ng"],
+    [57,"La",9,4,"la"],[58,"Ce",9,5,"la"],[59,"Pr",9,6,"la"],[60,"Nd",9,7,"la"],
+    [61,"Pm",9,8,"la"],[62,"Sm",9,9,"la"],[63,"Eu",9,10,"la"],[64,"Gd",9,11,"la"],
+    [65,"Tb",9,12,"la"],[66,"Dy",9,13,"la"],[67,"Ho",9,14,"la"],[68,"Er",9,15,"la"],
+    [69,"Tm",9,16,"la"],[70,"Yb",9,17,"la"],[71,"Lu",9,18,"la"],
+    [89,"Ac",10,4,"ac"],[90,"Th",10,5,"ac"],[91,"Pa",10,6,"ac"],[92,"U",10,7,"ac"],
+    [93,"Np",10,8,"ac"],[94,"Pu",10,9,"ac"],[95,"Am",10,10,"ac"],[96,"Cm",10,11,"ac"],
+    [97,"Bk",10,12,"ac"],[98,"Cf",10,13,"ac"],[99,"Es",10,14,"ac"],[100,"Fm",10,15,"ac"],
+    [101,"Md",10,16,"ac"],[102,"No",10,17,"ac"],[103,"Lr",10,18,"ac"]
+  ];
+
+  var colors = {
+    am:"#f4c2c2", ae:"#f6dfc8", tm:"#fdedb0", pt:"#c8e6c9",
+    ml:"#b2dfdb", nm:"#bbdefb", ha:"#d1c4e9", ng:"#e8c9df",
+    la:"#f8d0c8", ac:"#cce8d0", uk:"#e0e0e0"
+  };
+  var textColors = {
+    am:"#5a1a1a", ae:"#5c3a1a", tm:"#5a4b0e", pt:"#1b5e20",
+    ml:"#004d40", nm:"#0d47a1", ha:"#311b92", ng:"#6a1b5a",
+    la:"#5d2018", ac:"#1b5e30", uk:"#424242"
+  };
+  var catNames = {
+    am:"Alkali metals", ae:"Alkaline earth metals", tm:"Transition metals",
+    pt:"Post-transition metals", ml:"Metalloids", nm:"Non-metals",
+    ha:"Halogens", ng:"Noble gases", la:"Lanthanides", ac:"Actinides", uk:"Unknown"
+  };
+
+  var cellW = 48, cellH = 52, gap = 1;
+  var offsetX = 40, offsetY = 50;
+  var svgW = offsetX + 18 * (cellW + gap) + 10;
+  var svgH = 630;
+
+  function cellX(col) { return offsetX + (col - 1) * (cellW + gap); }
+  function cellY(row) {
+    if (row <= 7) return offsetY + (row - 1) * (cellH + gap);
+    // Lanthanides/actinides: row 9 and 10 with extra gap
+    return offsetY + 7.5 * (cellH + gap) + (row - 9) * (cellH + gap);
+  }
+
+  var svg = '<svg viewBox="0 0 ' + svgW + ' ' + svgH + '" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif" style="background:#fff">';
+
+  // Title
+  svg += '<text x="' + (svgW / 2) + '" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#1e293b">The Periodic Table of Elements</text>';
+
+  // Group headers (1-18)
+  for (var g = 1; g <= 18; g++) {
+    svg += '<text x="' + (cellX(g) + cellW / 2) + '" y="' + (offsetY - 5) + '" text-anchor="middle" font-size="9" fill="#64748b">' + g + '</text>';
+  }
+
+  // Period labels (1-7)
+  for (var p = 1; p <= 7; p++) {
+    svg += '<text x="' + (offsetX - 12) + '" y="' + (cellY(p) + cellH / 2 + 3) + '" text-anchor="middle" font-size="9" fill="#64748b">' + p + '</text>';
+  }
+
+  // Lanthanide/actinide indicators at (6,3) and (7,3)
+  var indX = cellX(3), indY6 = cellY(6), indY7 = cellY(7);
+  svg += '<rect x="' + indX + '" y="' + indY6 + '" width="' + cellW + '" height="' + cellH + '" rx="4" fill="' + colors.la + '" stroke="#e8b0a8" stroke-width="1"/>';
+  svg += '<text x="' + (indX + cellW / 2) + '" y="' + (indY6 + cellH / 2 - 4) + '" text-anchor="middle" font-size="8" fill="' + textColors.la + '">57-71</text>';
+  svg += '<text x="' + (indX + cellW / 2) + '" y="' + (indY6 + cellH / 2 + 8) + '" text-anchor="middle" font-size="7" fill="' + textColors.la + '">La-Lu</text>';
+
+  svg += '<rect x="' + indX + '" y="' + indY7 + '" width="' + cellW + '" height="' + cellH + '" rx="4" fill="' + colors.ac + '" stroke="#a8d4ab" stroke-width="1"/>';
+  svg += '<text x="' + (indX + cellW / 2) + '" y="' + (indY7 + cellH / 2 - 4) + '" text-anchor="middle" font-size="8" fill="' + textColors.ac + '">89-103</text>';
+  svg += '<text x="' + (indX + cellW / 2) + '" y="' + (indY7 + cellH / 2 + 8) + '" text-anchor="middle" font-size="7" fill="' + textColors.ac + '">Ac-Lr</text>';
+
+  // Draw all element cells
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    var num = el[0], sym = el[1], row = el[2], col = el[3], cat = el[4];
+    var x = cellX(col), y = cellY(row);
+    var bg = colors[cat], tc = textColors[cat];
+
+    svg += '<rect x="' + x + '" y="' + y + '" width="' + cellW + '" height="' + cellH + '" rx="4" fill="' + bg + '" stroke="#c8c8c8" stroke-width="0.5"/>';
+    svg += '<text x="' + (x + 4) + '" y="' + (y + 11) + '" font-size="7.5" fill="' + tc + '">' + num + '</text>';
+    svg += '<text x="' + (x + cellW / 2) + '" y="' + (y + cellH / 2 + 5) + '" text-anchor="middle" font-size="14" font-weight="700" fill="' + tc + '">' + sym + '</text>';
+  }
+
+  // Legend
+  var legendY = svgH - 40;
+  var catKeys = ["am","ae","tm","pt","ml","nm","ha","ng","la","ac","uk"];
+  var legendX = 40;
+  svg += '<text x="' + legendX + '" y="' + (legendY - 12) + '" font-size="9" font-weight="700" fill="#1e293b">Legend:</text>';
+  for (var k = 0; k < catKeys.length; k++) {
+    var lx = legendX + k * 82;
+    if (k >= 6) { lx = legendX + (k - 6) * 82; legendY = svgH - 18; }
+    if (k === 6) { legendY = svgH - 18; }
+    var ly = (k < 6) ? svgH - 40 : svgH - 18;
+    svg += '<rect x="' + lx + '" y="' + (ly) + '" width="10" height="10" rx="2" fill="' + colors[catKeys[k]] + '"/>';
+    svg += '<text x="' + (lx + 14) + '" y="' + (ly + 9) + '" font-size="7.5" fill="#334155">' + catNames[catKeys[k]] + '</text>';
+  }
+
+  svg += '</svg>';
+  return svg;
+})();

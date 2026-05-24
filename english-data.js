@@ -184,6 +184,25 @@ CURRICULUM.push(
       "Choosing between synonyms using a thesaurus"
     ],
     prerequisites:[]
+  },
+  {
+    id:"ei-01-9",name:"Multiple-Meaning Words",emoji:"🔀",subject:"English",subjectId:"english",color:"#ba7517",
+    topicId:"et-01",difficulty:1,estimatedHours:2,
+    description:"Identify and distinguish between different meanings of words that have more than one definition, using context to determine the correct meaning.",
+    learningOutcomes:[
+      "Match definitions to the correct meaning of a word in context",
+      "Determine which meaning of a word is used in a given sentence",
+      "Understand how multiple-meaning words change depending on context"
+    ],
+    topics:[
+      "What are multiple-meaning words (homonyms)",
+      "Using context clues to choose the right meaning",
+      "Multiple-meaning words as different parts of speech",
+      "Common multiple-meaning words in everyday English",
+      "Multiple meanings in subject-specific vocabulary",
+      "Avoiding confusion with multiple-meaning words in writing"
+    ],
+    prerequisites:[]
   }
 );
 
@@ -676,6 +695,25 @@ CURRICULUM.push(
       "What is plagiarism and why it matters",
       "Citing sources in your writing",
       "Creating a simple bibliography"
+    ],
+    prerequisites:["ei-06-1"]
+  },
+  {
+    id:"ei-06-6",name:"Transitions & Conjunctive Adverbs",emoji:"🔗",subject:"English",subjectId:"english",color:"#ba7517",
+    topicId:"et-06",difficulty:1,estimatedHours:2,
+    description:"Use conjunctive adverbs and transition words to connect ideas clearly, and punctuate them correctly.",
+    learningOutcomes:[
+      "Use conjunctive adverbs (however, therefore, furthermore, consequently, nevertheless, moreover, meanwhile) to connect ideas",
+      "Punctuate sentences with conjunctive adverbs correctly (semicolon before, comma after)",
+      "Choose appropriate transition words to show addition, contrast, cause/effect, time"
+    ],
+    topics:[
+      "What are conjunctive adverbs and how they differ from coordinating conjunctions",
+      "Conjunctive adverbs for contrast (however, nevertheless, on the other hand)",
+      "Conjunctive adverbs for cause and effect (therefore, consequently, as a result)",
+      "Conjunctive adverbs for addition (furthermore, moreover, in addition)",
+      "Conjunctive adverbs for time (meanwhile, subsequently, eventually)",
+      "Punctuating conjunctive adverbs with semicolons and commas"
     ],
     prerequisites:["ei-06-1"]
   }

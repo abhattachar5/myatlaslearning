@@ -154,7 +154,17 @@ FLASHCARDS.push(
   // mi-13-7: Combined & Predicted Probability
   { islandId:'mi-13-7', front:'What are mutually exclusive events?', back:'Events that cannot happen at the same time. P(A or B) = P(A) + P(B). Example: rolling a 2 or a 5 on one die.' },
   { islandId:'mi-13-7', front:'How do you make a prediction using theoretical probability?', back:'Multiply the probability by the number of trials. E.g. P(heads) = 0.5, flip 200 times → expect about 100 heads.' },
-  { islandId:'mi-13-7', front:'What is experimental probability?', back:'Probability based on actual results: P(event) = number of times event occurred ÷ total trials. It approaches theoretical probability with more trials.' }
+  { islandId:'mi-13-7', front:'What is experimental probability?', back:'Probability based on actual results: P(event) = number of times event occurred ÷ total trials. It approaches theoretical probability with more trials.' },
+
+  // mi-13-8: Scatter Graphs & Bivariate Data
+  { islandId:'mi-13-8', front:'What is a scatter graph used for?', back:'A scatter graph shows the relationship between two variables. Each data point is plotted as a cross or dot. It helps identify correlation (positive, negative, or none).' },
+  { islandId:'mi-13-8', front:'Describe the three types of correlation.', back:'Positive: as one variable increases, so does the other (points slope upwards).\nNegative: as one variable increases, the other decreases (points slope downwards).\nNone: no clear pattern between the variables.' },
+  { islandId:'mi-13-8', front:'What is a line of best fit?', back:'A straight line drawn through the middle of the data points on a scatter graph. It should have roughly equal numbers of points above and below. Used to estimate (interpolate or extrapolate) values.' },
+
+  // mi-13-9: Venn Diagrams for Probability
+  { islandId:'mi-13-9', front:'What does the intersection (A ∩ B) mean on a Venn diagram?', back:'The overlap region — elements that are in BOTH set A AND set B.' },
+  { islandId:'mi-13-9', front:'What does the union (A ∪ B) mean?', back:'Everything in set A OR set B OR both. It is the entire area covered by both circles on the Venn diagram.' },
+  { islandId:'mi-13-9', front:'30 students: 18 play football, 10 play tennis, 5 play both. How many play neither?', back:'Football only = 18 − 5 = 13\nTennis only = 10 − 5 = 5\nBoth = 5\nTotal playing = 13 + 5 + 5 = 23\nNeither = 30 − 23 = 7' }
 );
 
 // ─── QUESTIONS ────────────────────────────────────────────────────────────────
@@ -1436,6 +1446,36 @@ Object.assign(QUESTIONS, {
     }},
     { question:'After 1,000 coin flips you got 520 heads. Is the experimental probability close to the theoretical?', options:['Yes — 520/1000 = 0.52, close to 0.5','No — it should be exactly 500','No — 20 extra heads proves bias','Cannot tell without more flips'], answer:0, explanation:'0.52 is very close to the theoretical 0.5 — small deviations are normal with large samples.' },
     { question:'P(A)=0.4, P(B)=0.3, P(A and B)=0.1. What is P(A or B)?', options:['0.6','0.7','0.1','1.0'], answer:0, explanation:'P(A or B) = P(A) + P(B) − P(A and B) = 0.4 + 0.3 − 0.1 = 0.6 (inclusion-exclusion for overlapping events).' }
+  ],
+
+  // ── mi-13-8: Scatter Graphs & Bivariate Data ──────────────────────────────
+  'mi-13-8': [
+    // Easy (Q1–3)
+    { question:'What type of graph shows the relationship between two variables using plotted points?', options:['Scatter graph','Bar chart','Pie chart','Line graph'], answer:0, explanation:'A scatter graph plots individual data points to show the relationship between two variables.' },
+    { question:'As temperature increases, ice cream sales increase. What type of correlation is this?', options:['Positive correlation','Negative correlation','No correlation','Inverse correlation'], answer:0, explanation:'Both variables increase together — this is positive correlation.' },
+    { question:'As the age of a car increases, its value decreases. What type of correlation is this?', options:['Negative correlation','Positive correlation','No correlation','Perfect correlation'], answer:0, explanation:'One variable increases while the other decreases — this is negative correlation.' },
+    // Medium (Q4–6)
+    { question:'What should a line of best fit do?', options:['Pass through the middle of the data with roughly equal points above and below','Pass through the first and last points','Pass through every data point','Always pass through the origin'], answer:0, explanation:'A line of best fit should follow the trend and have approximately equal numbers of points on each side.' },
+    { question:'A scatter graph shows no clear pattern. How would you describe the correlation?', options:['No correlation','Weak positive correlation','Strong negative correlation','Perfect correlation'], answer:0, explanation:'When points are scattered randomly with no clear direction, there is no correlation between the variables.' },
+    { question:'Using a line of best fit to estimate a value within the range of the data is called:', options:['Interpolation','Extrapolation','Correlation','Estimation'], answer:0, explanation:'Interpolation means estimating within the range of the data. Extrapolation means estimating beyond the range (less reliable).' },
+    // Greater Depth (Q7–8)
+    { question:'A student says "The scatter graph proves that eating breakfast causes better test scores." Is this correct?', options:['No — correlation does not prove causation','Yes — the positive correlation proves it','Yes — scatter graphs always show causes','No — you need a pie chart to prove causation'], answer:0, explanation:'Correlation does not prove causation. There may be other factors (confounding variables) involved.' },
+    { question:'Why is extrapolation less reliable than interpolation?', options:['The pattern may not continue beyond the data range','Because the line of best fit is inaccurate','Because you use a different formula','Extrapolation is actually more reliable'], answer:0, explanation:'The trend observed in the data may not continue outside the range. The further you extrapolate, the less reliable the estimate.' }
+  ],
+
+  // ── mi-13-9: Venn Diagrams for Probability ────────────────────────────────
+  'mi-13-9': [
+    // Easy (Q1–3)
+    { question:'On a Venn diagram, what does the overlapping region of two circles represent?', options:['Elements in both sets (intersection)','Elements in neither set','The universal set','Elements in only one set'], answer:0, explanation:'The overlap shows elements that belong to both sets — the intersection (A ∩ B).' },
+    { question:'What does the rectangle around the circles on a Venn diagram represent?', options:['The universal set','The intersection','The union','The complement'], answer:0, explanation:'The rectangle represents the universal set — all possible elements being considered.' },
+    { question:'In a class of 25, 15 like maths and 10 like science. 6 like both. How many like maths only?', options:['9','15','6','19'], answer:0, explanation:'Maths only = total maths − both = 15 − 6 = 9.' },
+    // Medium (Q4–6)
+    { question:'40 people were surveyed. 22 own a cat, 17 own a dog, 8 own both. How many own neither?', options:['9','15','31','3'], answer:0, explanation:'Cat only = 22−8=14. Dog only = 17−8=9. Both = 8. Total with pets = 14+9+8=31. Neither = 40−31 = 9.' },
+    { question:'Using the previous Venn diagram (40 people, 22 cat, 17 dog, 8 both), what is P(cat or dog)?', options:['31/40','22/40','8/40','9/40'], answer:0, explanation:'People with cat or dog or both = 14+9+8 = 31. P(cat or dog) = 31/40.' },
+    { question:'What is the complement of set A (written A′)?', options:['Everything NOT in set A','Everything in set A','The intersection of A and B','The universal set'], answer:0, explanation:'The complement A′ contains all elements in the universal set that are NOT in A.' },
+    // Greater Depth (Q7–8)
+    { question:'50 students: 30 study French, 25 study Spanish, 10 study both. What is P(neither)?', options:['5/50 = 1/10','10/50','15/50','45/50'], answer:0, explanation:'French only = 30−10=20. Spanish only = 25−10=15. Both = 10. Total studying = 20+15+10=45. Neither = 50−45=5. P = 5/50 = 1/10.' },
+    { question:'In a Venn diagram, if A∩B = ∅ (empty set), what does this tell you about events A and B?', options:['They are mutually exclusive','They are certain','They are complementary','They always happen together'], answer:0, explanation:'If the intersection is empty, the events cannot happen at the same time — they are mutually exclusive.' }
   ]
 
 });

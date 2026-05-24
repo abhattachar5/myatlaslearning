@@ -1039,6 +1039,92 @@ Object.assign(LESSONS, {
 <div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:0.5em 0">
   A coin is flipped 1,000 times and lands heads 520 times.<br>
   Experimental P(heads) = 520/1000 = 0.52 — close to the theoretical 0.5.
-</div>`
+</div>`,
+
+// ── mi-13-8: Scatter Graphs & Bivariate Data ─────────────────────────────────
+'mi-13-8': `<h2>Scatter Graphs &amp; Bivariate Data</h2>
+
+<h3>What is a Scatter Graph?</h3>
+<p>A <strong>scatter graph</strong> (scatter plot) shows the relationship between two variables. Each point represents one data item with an x-value and a y-value.</p>
+
+<h3>Types of Correlation</h3>
+<svg width="100%" height="120" viewBox="0 0 480 120" style="max-width:480px;display:block;margin:0.75em 0">
+  <rect x="0" y="0" width="150" height="115" rx="8" fill="#e8f5e9"/>
+  <rect x="165" y="0" width="150" height="115" rx="8" fill="#fce4ec"/>
+  <rect x="330" y="0" width="150" height="115" rx="8" fill="#e3f2fd"/>
+  <text x="75" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Positive correlation</text>
+  <circle cx="20" cy="95" r="3" fill="#2e7d32"/><circle cx="35" cy="85" r="3" fill="#2e7d32"/>
+  <circle cx="55" cy="70" r="3" fill="#2e7d32"/><circle cx="75" cy="60" r="3" fill="#2e7d32"/>
+  <circle cx="95" cy="45" r="3" fill="#2e7d32"/><circle cx="115" cy="35" r="3" fill="#2e7d32"/>
+  <circle cx="130" cy="30" r="3" fill="#2e7d32"/>
+  <text x="75" y="112" text-anchor="middle" font-size="9" fill="#555">As x increases, y increases</text>
+  <text x="240" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Negative correlation</text>
+  <circle cx="185" cy="35" r="3" fill="#c62828"/><circle cx="200" cy="40" r="3" fill="#c62828"/>
+  <circle cx="215" cy="55" r="3" fill="#c62828"/><circle cx="235" cy="65" r="3" fill="#c62828"/>
+  <circle cx="255" cy="75" r="3" fill="#c62828"/><circle cx="275" cy="85" r="3" fill="#c62828"/>
+  <circle cx="290" cy="95" r="3" fill="#c62828"/>
+  <text x="240" y="112" text-anchor="middle" font-size="9" fill="#555">As x increases, y decreases</text>
+  <text x="405" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">No correlation</text>
+  <circle cx="350" cy="50" r="3" fill="#1565c0"/><circle cx="370" cy="85" r="3" fill="#1565c0"/>
+  <circle cx="390" cy="40" r="3" fill="#1565c0"/><circle cx="410" cy="70" r="3" fill="#1565c0"/>
+  <circle cx="430" cy="35" r="3" fill="#1565c0"/><circle cx="450" cy="90" r="3" fill="#1565c0"/>
+  <circle cx="460" cy="55" r="3" fill="#1565c0"/>
+  <text x="405" y="112" text-anchor="middle" font-size="9" fill="#555">No clear pattern</text>
+</svg>
+
+<h3>Line of Best Fit</h3>
+<p>A <strong>line of best fit</strong> is a straight line drawn through the middle of the data points on a scatter graph. It should:</p>
+<ul>
+  <li>Follow the general trend of the data</li>
+  <li>Have roughly equal numbers of points above and below</li>
+  <li>Pass through the mean point (x̄, ȳ) if possible</li>
+</ul>
+
+<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Using the line of best fit:</strong> You can <strong>interpolate</strong> (estimate within the data range) or <strong>extrapolate</strong> (estimate beyond the data range — less reliable) by reading values from the line.
+</div>
+
+<h3>Common Mistakes</h3>
+<p>❌ Drawing the line through the first and last points — ✅ Draw through the middle of the cloud of points</p>
+<p>❌ Saying "no correlation" when there is a weak correlation — ✅ Describe strength: strong, moderate or weak</p>`,
+
+// ── mi-13-9: Venn Diagrams for Probability ───────────────────────────────────
+'mi-13-9': `<h2>Venn Diagrams for Probability</h2>
+
+<h3>What is a Venn Diagram?</h3>
+<p>A <strong>Venn diagram</strong> uses overlapping circles inside a rectangle to show how items belong to different sets. The rectangle represents the <strong>universal set</strong> (all items).</p>
+
+<svg width="100%" height="160" viewBox="0 0 340 160" style="max-width:340px;display:block;margin:0.75em 0">
+  <rect x="0" y="0" width="340" height="160" rx="8" fill="#f5f5f5" stroke="#999"/>
+  <text x="320" y="15" text-anchor="end" font-size="11" fill="#555">ξ</text>
+  <circle cx="120" cy="85" r="60" fill="rgba(33,150,243,0.2)" stroke="#1565c0" stroke-width="1.5"/>
+  <circle cx="210" cy="85" r="60" fill="rgba(76,175,80,0.2)" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="90" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">A</text>
+  <text x="240" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">B</text>
+  <text x="85" y="90" text-anchor="middle" font-size="13" fill="#1565c0">A only</text>
+  <text x="165" y="90" text-anchor="middle" font-size="13" fill="#6a1b9a">A ∩ B</text>
+  <text x="245" y="90" text-anchor="middle" font-size="13" fill="#2e7d32">B only</text>
+  <text x="305" y="145" text-anchor="middle" font-size="11" fill="#555">Neither</text>
+</svg>
+
+<h3>Set Notation</h3>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#e8f5e9"><th style="padding:8px;border:1px solid #ccc">Symbol</th><th style="padding:8px;border:1px solid #ccc">Meaning</th><th style="padding:8px;border:1px solid #ccc">Region</th></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc;text-align:centre">A ∩ B</td><td style="padding:8px;border:1px solid #ccc">Intersection — in both A and B</td><td style="padding:8px;border:1px solid #ccc">Overlap</td></tr>
+  <tr style="background:#f9f9f9"><td style="padding:8px;border:1px solid #ccc;text-align:centre">A ∪ B</td><td style="padding:8px;border:1px solid #ccc">Union — in A or B or both</td><td style="padding:8px;border:1px solid #ccc">Both circles combined</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc;text-align:centre">A'</td><td style="padding:8px;border:1px solid #ccc">Complement — not in A</td><td style="padding:8px;border:1px solid #ccc">Everything outside circle A</td></tr>
+</table>
+
+<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Worked Example:</strong> 30 pupils were asked about pets. 18 have a cat, 12 have a dog, 7 have both.<br>
+  Cat only = 18 − 7 = 11 &nbsp;|&nbsp; Dog only = 12 − 7 = 5 &nbsp;|&nbsp; Both = 7<br>
+  Neither = 30 − 11 − 7 − 5 = <strong>7</strong><br><br>
+  P(cat or dog) = (11 + 7 + 5) ÷ 30 = 23/30<br>
+  P(neither) = 7/30
+</div>
+
+<h3>Common Mistakes</h3>
+<p>❌ Forgetting to subtract the intersection from each circle — ✅ Always fill in the overlap first, then subtract</p>
+<p>❌ Adding all the numbers without checking the total — ✅ All four regions must add up to the universal set</p>`
 
 });

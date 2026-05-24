@@ -183,6 +183,94 @@ Object.assign(LESSONS, {
       content: '<p>Once a budget is balanced, surplus income can be directed towards a savings goal. Calculate the monthly saving required and check whether the current surplus covers it.</p><p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px;text-align:center"><strong>Monthly saving needed = Total goal ÷ Number of months</strong></p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example:</strong> Save £600 in 6 months.<br>Monthly saving = £600 ÷ 6 = <strong>£100 per month</strong><br>If current surplus = £60, need to cut a further £40/month from spending.</div><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Priority order for savings:</strong><ol style="margin:0.3em 0;padding-left:1.3em;font-size:0.9em"><li>Emergency fund (3–6 months of expenses)</li><li>Short-term goals (holiday, new phone)</li><li>Long-term savings (investment account, pension)</li></ol></div>'
     }
   ]
+},
+
+'mi-27-5': {
+  title: 'Circles — Area & Circumference',
+  sections: [
+    {
+      heading: 'Key Circle Vocabulary',
+      content: '<p>Before calculating, make sure you know these terms:</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Radius (r)</strong> — distance from centre to edge</div><div style="background:#e3f2fd;padding:10px;border-radius:8px"><strong>Diameter (d)</strong> — distance across through the centre<br>d = 2r</div></div><p><strong>π (pi)</strong> ≈ 3.14159... It is the ratio of every circle\'s circumference to its diameter. Use π ≈ 3.14 or the π button on your calculator.</p>'
+    },
+    {
+      heading: 'Circumference',
+      content: '<p>The <strong>circumference</strong> is the distance around the outside of a circle.</p><p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px;text-align:center;font-size:1.1em"><strong>C = πd</strong> &nbsp; or equivalently &nbsp; <strong>C = 2πr</strong></p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example:</strong> A circle has diameter 10 cm.<br>C = π × 10 = 10π ≈ <strong>31.4 cm</strong></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example:</strong> A circle has radius 7 cm.<br>C = 2 × π × 7 = 14π ≈ <strong>44.0 cm</strong> (1 d.p.)</div>'
+    },
+    {
+      heading: 'Area',
+      content: '<p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px;text-align:center;font-size:1.1em"><strong>A = πr²</strong></p><p>Always use the <strong>radius</strong>, not the diameter. If given the diameter, halve it first.</p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example:</strong> A circle has radius 5 cm.<br>A = π × 5² = 25π ≈ <strong>78.5 cm²</strong></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example:</strong> A circle has diameter 12 cm. Find the area.<br>r = 12 ÷ 2 = 6 cm<br>A = π × 6² = 36π ≈ <strong>113.1 cm²</strong></div>'
+    },
+    {
+      heading: 'Semicircles & Quarter Circles',
+      content: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e3f2fd;padding:10px;border-radius:8px"><strong>Semicircle</strong><br>Area = πr² ÷ 2<br>Perimeter = πr + 2r<br><span style="font-size:0.85em;color:#555">(half circumference + diameter)</span></div><div style="background:#fff3e0;padding:10px;border-radius:8px"><strong>Quarter circle</strong><br>Area = πr² ÷ 4<br>Perimeter = ½πr + 2r<br><span style="font-size:0.85em;color:#555">(quarter circumference + 2 radii)</span></div></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example:</strong> Find the area of a semicircle with diameter 8 cm.<br>r = 4 cm<br>Area = π × 4² ÷ 2 = 16π ÷ 2 = 8π ≈ <strong>25.1 cm²</strong></div>'
+    },
+    {
+      heading: 'Common Mistakes',
+      content: '<p>❌ Using the diameter in A = πr² — ✅ Always halve the diameter to get the radius first</p><p>❌ Forgetting the straight edge when finding the perimeter of a semicircle — ✅ Add the diameter to the curved part</p>'
+    }
+  ]
+},
+
+'mi-29-1': {
+  title: 'Identify Right Triangles & the Hypotenuse',
+  sections: [
+    {
+      heading: 'Right-Angled Triangles',
+      content: '<p>A <strong>right-angled triangle</strong> has one angle that is exactly 90°. The small square symbol in the corner shows the right angle.</p><svg width="100%" height="140" viewBox="0 0 200 140" style="max-width:200px;display:block;margin:0.75em 0"><polygon points="20,120 180,120 20,20" fill="none" stroke="#333" stroke-width="2"/><rect x="20" y="100" width="20" height="20" fill="none" stroke="#1565c0" stroke-width="1.5"/><text x="95" y="135" text-anchor="middle" font-size="11">a</text><text x="8" y="75" text-anchor="middle" font-size="11">b</text><line x1="20" y1="20" x2="180" y2="120" stroke="#c62828" stroke-width="2.5"/><text x="110" y="60" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">c (hypotenuse)</text></svg>'
+    },
+    {
+      heading: 'The Hypotenuse',
+      content: '<p>The <strong>hypotenuse</strong> is the <strong>longest side</strong> of a right-angled triangle. It is always the side <strong>opposite</strong> the right angle.</p><div style="background:#e8f5e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>How to spot the hypotenuse:</strong><ul style="margin:0.4em 0;padding-left:1.2em"><li>Look for the right angle (the small square)</li><li>The side directly opposite it is the hypotenuse</li><li>It is always the longest of the three sides</li></ul></div>'
+    },
+    {
+      heading: 'Labelling Sides',
+      content: '<p>In Pythagoras\' theorem, we usually label the sides as:</p><table style="border-collapse:collapse;width:100%;margin:0.75em 0;font-size:0.9em"><tr style="background:#e8f5e9"><th style="padding:7px;border:1px solid #ccc">Label</th><th style="padding:7px;border:1px solid #ccc">Meaning</th></tr><tr><td style="padding:7px;border:1px solid #ccc;font-weight:bold;color:#c62828">c</td><td style="padding:7px;border:1px solid #ccc">The hypotenuse (longest side, opposite the right angle)</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc;font-weight:bold">a and b</td><td style="padding:7px;border:1px solid #ccc">The two shorter sides (the legs)</td></tr></table><p>It does not matter which shorter side is a and which is b — the formula works either way.</p>'
+    }
+  ]
+},
+
+'mi-29-2': {
+  title: 'Calculate the Hypotenuse',
+  sections: [
+    {
+      heading: 'Pythagoras\' Theorem',
+      content: '<p>For any right-angled triangle with hypotenuse c and shorter sides a and b:</p><p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px;text-align:center;font-size:1.2em"><strong>a² + b² = c²</strong></p><p>To find the hypotenuse: square both shorter sides, add them, then take the square root.</p>'
+    },
+    {
+      heading: 'Worked Examples',
+      content: '<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example 1:</strong> a = 3, b = 4. Find c.<br>c² = 3² + 4² = 9 + 16 = 25<br>c = √25 = <strong>5</strong></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example 2:</strong> a = 5, b = 12. Find c.<br>c² = 5² + 12² = 25 + 144 = 169<br>c = √169 = <strong>13</strong></div><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example 3:</strong> a = 6, b = 8. Find c.<br>c² = 6² + 8² = 36 + 64 = 100<br>c = √100 = <strong>10</strong></div>'
+    },
+    {
+      heading: 'Pythagorean Triples',
+      content: '<p>A <strong>Pythagorean triple</strong> is a set of three whole numbers that satisfy a² + b² = c². Learn these common ones:</p><table style="border-collapse:collapse;width:100%;margin:0.75em 0;font-size:0.9em"><tr style="background:#e8f5e9"><th style="padding:7px;border:1px solid #ccc">Triple</th><th style="padding:7px;border:1px solid #ccc">Check</th></tr><tr><td style="padding:7px;border:1px solid #ccc">3, 4, 5</td><td style="padding:7px;border:1px solid #ccc">9 + 16 = 25 ✓</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">5, 12, 13</td><td style="padding:7px;border:1px solid #ccc">25 + 144 = 169 ✓</td></tr><tr><td style="padding:7px;border:1px solid #ccc">8, 15, 17</td><td style="padding:7px;border:1px solid #ccc">64 + 225 = 289 ✓</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">6, 8, 10</td><td style="padding:7px;border:1px solid #ccc">36 + 64 = 100 ✓ (3-4-5 × 2)</td></tr></table><p>Multiplying any triple by the same number gives another valid triple (e.g. 3-4-5 × 3 = 9-12-15).</p>'
+    },
+    {
+      heading: 'Common Mistakes',
+      content: '<p>❌ Forgetting to square root at the end — c² = 25 does not mean c = 25 → ✅ c = √25 = 5</p><p>❌ Adding before squaring — a + b ≠ √(a² + b²) → ✅ Always square each side first, then add</p>'
+    }
+  ]
+},
+
+'mi-29-3': {
+  title: 'Calculate a Shorter Side',
+  sections: [
+    {
+      heading: 'Rearranging the Formula',
+      content: '<p>When you know the hypotenuse and one shorter side, rearrange Pythagoras\' theorem:</p><p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px;text-align:center;font-size:1.1em"><strong>a² = c² − b²</strong> &nbsp; or &nbsp; <strong>b² = c² − a²</strong></p><p>This time you <strong>subtract</strong> the square of the known shorter side from the square of the hypotenuse.</p>'
+    },
+    {
+      heading: 'Worked Examples',
+      content: '<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example 1:</strong> c = 13, b = 5. Find a.<br>a² = 13² − 5² = 169 − 25 = 144<br>a = √144 = <strong>12</strong></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example 2:</strong> c = 10, a = 6. Find b.<br>b² = 10² − 6² = 100 − 36 = 64<br>b = √64 = <strong>8</strong></div><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example 3:</strong> c = 17, a = 8. Find b.<br>b² = 17² − 8² = 289 − 64 = 225<br>b = √225 = <strong>15</strong></div>'
+    },
+    {
+      heading: 'How to Tell Which Formula to Use',
+      content: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Finding the hypotenuse?</strong><br>ADD the squares<br>c² = a² + b²</div><div style="background:#fce4ec;padding:10px;border-radius:8px"><strong>Finding a shorter side?</strong><br>SUBTRACT the squares<br>a² = c² − b²</div></div><p><strong>Tip:</strong> If the unknown side is the longest side (hypotenuse), you add. If the unknown is a shorter side, you subtract.</p>'
+    },
+    {
+      heading: 'Common Mistakes',
+      content: '<p>❌ Subtracting the wrong way round (a² − c²) — ✅ Always put the hypotenuse square first: c² − b²</p><p>❌ Confusing which side is the hypotenuse — ✅ The hypotenuse is always opposite the right angle and always the longest side</p>'
+    }
+  ]
 }
 
 });

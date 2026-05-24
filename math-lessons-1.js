@@ -648,6 +648,55 @@ Object.assign(LESSONS, {
 <h3>Standard Form Preview</h3>
 <p>Powers of 10 let us write very large or very small numbers compactly.<br>3,400,000 = 3.4 × 10⁶ &nbsp;|&nbsp; 0.000052 = 5.2 × 10⁻⁵</p>`,
 
+// ── mi-03-5: Standard Form (A × 10ⁿ) ────────────────────────────────────────
+'mi-03-5': `
+<h2>Standard Form (A × 10<sup>n</sup>)</h2>
+<p><strong>Standard form</strong> is a way of writing very large or very small numbers neatly. A number in standard form looks like:</p>
+<p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px;text-align:center;font-size:1.1em"><strong>A × 10<sup>n</sup></strong> &nbsp; where &nbsp; <strong>1 ≤ A < 10</strong> &nbsp; and &nbsp; <strong>n is an integer</strong></p>
+
+<h3>Large Numbers (positive powers)</h3>
+<p>Move the decimal point <strong>left</strong> until you have a number between 1 and 10. The number of places you moved becomes the positive power of 10.</p>
+<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Write 4,500,000 in standard form.<br>
+  4,500,000 → 4.5 (moved 6 places left)<br>
+  = <strong>4.5 × 10⁶</strong>
+</div>
+
+<h3>Small Numbers (negative powers)</h3>
+<p>Move the decimal point <strong>right</strong> until you have a number between 1 and 10. The number of places you moved becomes the negative power of 10.</p>
+<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Write 0.00032 in standard form.<br>
+  0.00032 → 3.2 (moved 4 places right)<br>
+  = <strong>3.2 × 10⁻⁴</strong>
+</div>
+
+<h3>Converting Back to Ordinary Numbers</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1em 0">
+  <div style="background:#e3f2fd;padding:10px;border-radius:8px">
+    <strong>Positive power → move right</strong><br>
+    6.1 × 10³ = 6,100<br>
+    <span style="font-size:0.85em;color:#555">Move decimal 3 places right</span>
+  </div>
+  <div style="background:#fff3e0;padding:10px;border-radius:8px">
+    <strong>Negative power → move left</strong><br>
+    7.04 × 10⁻² = 0.0704<br>
+    <span style="font-size:0.85em;color:#555">Move decimal 2 places left</span>
+  </div>
+</div>
+
+<h3>Ordering Numbers in Standard Form</h3>
+<p>Compare the <strong>powers of 10 first</strong> — a larger power means a larger number. If the powers are the same, compare the values of A.</p>
+<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Example:</strong> Order these from smallest to largest:<br>
+  3.1 × 10⁴, &nbsp; 8.2 × 10³, &nbsp; 1.5 × 10⁴<br><br>
+  8.2 × 10³ = 8,200 &nbsp;|&nbsp; 1.5 × 10⁴ = 15,000 &nbsp;|&nbsp; 3.1 × 10⁴ = 31,000<br>
+  Answer: <strong>8.2 × 10³, 1.5 × 10⁴, 3.1 × 10⁴</strong>
+</div>
+
+<h3>Common Mistakes</h3>
+<p>❌ Writing 45 × 10³ — A must be between 1 and 10 → ✅ 4.5 × 10⁴</p>
+<p>❌ Writing 0.3 × 10⁵ — A must be at least 1 → ✅ 3 × 10⁴</p>`,
+
 // ── mi-04-1: Prime & Composite Numbers ───────────────────────────────────────
 'mi-04-1': `
 <h2>Prime &amp; Composite Numbers</h2>

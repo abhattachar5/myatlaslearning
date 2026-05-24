@@ -236,6 +236,7 @@ Notice: no adjective tells us it's scary — the details create the feeling. Sho
 <p>Grammar and punctuation are the technical tools of writing — they signal meaning, control pace and show the examiner that you have precise control over language. Mastering clauses, apostrophes and advanced punctuation marks like the semicolon will lift your grade significantly.</p>
 <h4>📌 Key Points</h4>
 <ul>
+<li>Every sentence must start with a <strong>capital letter</strong> and end with a <strong>full stop</strong>, question mark or exclamation mark.</li>
 <li>A <strong>clause</strong> contains a subject and a verb and can stand alone: "She ran." A <strong>phrase</strong> has no complete verb: "through the dark forest".</li>
 <li><strong>Apostrophe for contraction</strong>: marks a missing letter — it's = it is; don't = do not.</li>
 <li><strong>Apostrophe for possession</strong>: the dog's lead (one dog). The dogs' leads (multiple dogs — apostrophe after the s).</li>
@@ -472,7 +473,10 @@ Techniques used:<br>
 <li><strong>Plant cells</strong> have everything animal cells have, PLUS: cell wall (cellulose), chloroplasts, large permanent vacuole.</li>
 <li><strong>MRS GREN</strong> — the 7 life processes all living things must carry out: Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, Nutrition.</li>
 <li>Organisation: Cell → Tissue → Organ → Organ System → Organism.</li>
-<li><strong>Specialised cells</strong> have adaptations for their function: red blood cells have no nucleus (more room for haemoglobin); root hair cells have a large surface area for absorbing water.</li>
+<li><strong>Ribosomes</strong> are tiny structures in all cells where <strong>proteins are made</strong> (protein synthesis).</li>
+<li><strong>Specialised cells</strong> have adaptations for their function: <strong>red blood cells</strong> have no nucleus and a biconcave disc shape (more room for haemoglobin, larger surface area for gas exchange); <strong>root hair cells</strong> have a long hair-like extension giving a large surface area for absorbing water.</li>
+<li><strong>Diffusion</strong> is the net movement of particles from an area of <strong>high concentration</strong> to an area of <strong>low concentration</strong> (down the concentration gradient). It is a passive process — no energy is needed.</li>
+<li><strong>Excretion</strong> is the removal of waste products made by chemical reactions in cells (e.g. CO₂ from the lungs, urea from the kidneys). Do not confuse with <strong>egestion</strong> — the removal of undigested food from the body.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="cell-comparison"><p class="diagram-caption">Comparing animal and plant cell structures</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
@@ -488,6 +492,9 @@ Techniques used:<br>
 <dt>Mitochondria</dt><dd>Organelles where aerobic respiration occurs — releasing energy from glucose for the cell to use.</dd>
 <dt>Chloroplast</dt><dd>Organelle in plant cells containing chlorophyll; the site of photosynthesis.</dd>
 <dt>MRS GREN</dt><dd>Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, Nutrition — the 7 characteristics of living things.</dd>
+<dt>Diffusion</dt><dd>The net movement of particles from an area of high concentration to low concentration — a passive process requiring no energy.</dd>
+<dt>Ribosome</dt><dd>A tiny organelle found in all cells where proteins are assembled (protein synthesis).</dd>
+<dt>Excretion</dt><dd>Removal of metabolic waste products (e.g. CO₂ via the lungs, urea via the kidneys). Not the same as egestion (removing undigested food).</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -503,8 +510,11 @@ Techniques used:<br>
 <li><strong>Producers</strong> make their own food via photosynthesis (plants, algae). They always start a food chain.</li>
 <li>The <strong>arrow in a food chain</strong> shows the direction of energy transfer — it points FROM what is eaten TO what eats it.</li>
 <li><strong>Primary consumers</strong> eat producers (herbivores). <strong>Secondary consumers</strong> eat primary consumers. <strong>Tertiary consumers</strong> eat secondary consumers.</li>
+<li><strong>Decomposers</strong> (bacteria and fungi) break down dead organisms and waste, recycling nutrients back into the soil so producers can use them again.</li>
 <li><strong>Adaptations</strong> are inherited features that help an organism survive and reproduce in its environment.</li>
-<li>Energy is <strong>lost at each stage</strong> of a food chain — that is why food chains rarely have more than 4–5 levels.</li>
+<li>Energy is <strong>lost at each stage</strong> of a food chain (used for movement, respiration, heat) — only about <strong>10 %</strong> is passed to the next level. This is why food chains rarely have more than 4–5 levels.</li>
+<li>A <strong>pyramid of biomass</strong> shows the total mass of living organisms at each trophic level — it is widest at the bottom (producers) and narrows upwards.</li>
+<li>Key terms: a <strong>population</strong> is all organisms of one species in an area; a <strong>community</strong> is all species in that area; an <strong>ecosystem</strong> is the community plus its physical environment; a <strong>habitat</strong> is the place where an organism lives.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="food-chain"><p class="diagram-caption">Energy flow through a food chain</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
@@ -522,6 +532,9 @@ This shows how a change in one species ripples through the entire food web.</p>
 <dt>Consumer</dt><dd>An organism that obtains energy by eating other organisms.</dd>
 <dt>Adaptation</dt><dd>An inherited feature that improves an organism's ability to survive and reproduce in its environment.</dd>
 <dt>Food web</dt><dd>A diagram showing the feeding relationships between multiple species in an ecosystem.</dd>
+<dt>Decomposer</dt><dd>An organism (bacterium or fungus) that breaks down dead material and recycles nutrients back into the soil.</dd>
+<dt>Population</dt><dd>All organisms of the same species living in the same area at the same time.</dd>
+<dt>Pyramid of biomass</dt><dd>A diagram showing the total mass of organisms at each level of a food chain — widest at the base (producers).</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -537,8 +550,11 @@ This shows how a change in one species ripples through the entire food web.</p>
 <li><strong>Solid</strong>: particles close together in a fixed, regular arrangement — vibrate in place only. Definite shape and volume.</li>
 <li><strong>Liquid</strong>: particles close together but can slide past each other. Definite volume, no fixed shape.</li>
 <li><strong>Gas</strong>: particles far apart, moving quickly in all directions. No fixed shape or volume — fills any container.</li>
-<li><strong>Changes of state</strong>: melting (solid → liquid), evaporation (liquid → gas), condensation (gas → liquid), freezing (liquid → solid). All are reversible physical changes.</li>
-<li><strong>Diffusion</strong>: particles spread from areas of high concentration to low concentration until evenly spread.</li>
+<li><strong>Changes of state</strong>: melting (solid → liquid), evaporation (liquid → gas), condensation (gas → liquid), freezing (liquid → solid), <strong>sublimation</strong> (solid → gas directly, e.g. dry ice). All are reversible physical changes.</li>
+<li><strong>Evaporation vs boiling</strong>: evaporation happens at the <strong>surface</strong> of a liquid at any temperature; boiling happens <strong>throughout</strong> the liquid at a fixed boiling point (e.g. 100 °C for water).</li>
+<li>A <strong>pure substance</strong> has a single, sharp melting and boiling point. <strong>Impurities</strong> lower the melting point and broaden the range — useful for testing purity.</li>
+<li>Gases can be <strong>compressed</strong> because there are large spaces between the particles; solids and liquids cannot because their particles are already tightly packed.</li>
+<li><strong>Diffusion</strong>: particles spread from areas of high concentration to low concentration until evenly spread (e.g. a smell spreading through a room).</li>
 </ul>
 <div class="lesson-diagram" data-diagram="particle-states"><p class="diagram-caption">Particle arrangement in solids, liquids and gases</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
@@ -555,6 +571,8 @@ This shows how a change in one species ripples through the entire food web.</p>
 <dt>Diffusion</dt><dd>The net movement of particles from a region of high concentration to low concentration.</dd>
 <dt>Change of state</dt><dd>A physical change between solid, liquid and gas — reversible, with no new substance formed.</dd>
 <dt>Kinetic energy</dt><dd>The energy of movement. Heating particles gives them more kinetic energy, making them move faster.</dd>
+<dt>Sublimation</dt><dd>A change of state directly from solid to gas without passing through the liquid state (e.g. dry ice). The reverse is called deposition.</dd>
+<dt>Pure substance</dt><dd>A substance made of only one element or compound, with a single sharp melting point and boiling point.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -570,8 +588,12 @@ This shows how a change in one species ripples through the entire food web.</p>
 <li>Forces are measured in <strong>Newtons (N)</strong>. They have both size and direction.</li>
 <li><strong>Balanced forces</strong> (net force = 0) → no change in motion. Object stays still or moves at constant speed.</li>
 <li><strong>Unbalanced forces</strong> (net force ≠ 0) → object speeds up, slows down, or changes direction.</li>
-<li><strong>Mass</strong> (kg) = amount of matter — never changes. <strong>Weight</strong> (N) = gravitational force on that mass — changes with gravity. Weight = mass × gravitational field strength (W = mg).</li>
-<li><strong>Speed = Distance ÷ Time</strong>. On Earth, g = 10 N/kg; on the Moon, g = 1.6 N/kg.</li>
+<li><strong>Newton's First Law</strong> (Law of Inertia): an object stays still or moves at constant speed in a straight line unless an unbalanced force acts on it.</li>
+<li>Forces can be <strong>contact</strong> (friction, air resistance, tension — objects touching) or <strong>non-contact</strong> (gravity, magnetism — act at a distance).</li>
+<li><strong>Mass</strong> (kg) = amount of matter — never changes. <strong>Weight</strong> (N) = gravitational force on that mass — changes with gravity. Weight = mass × gravitational field strength (W = mg). On Earth, g = 10 N/kg; on the Moon, g = 1.6 N/kg.</li>
+<li><strong>Speed = Distance ÷ Time</strong> (S = D ÷ T). If distance is in metres and time in seconds, speed is in m/s.</li>
+<li><strong>Air resistance</strong> increases as an object moves faster. A falling skydiver reaches <strong>terminal velocity</strong> when air resistance equals weight — the forces are balanced and speed becomes constant.</li>
+<li><strong>Pressure = Force ÷ Area</strong> (measured in Pascals, Pa). A larger area means lower pressure for the same force.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="force-arrows"><p class="diagram-caption">Balanced vs unbalanced forces on an object</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
@@ -589,6 +611,8 @@ On the Moon: Weight = 5 × 1.6 = <strong>8 N</strong> — but the mass is still 
 <dt>Friction</dt><dd>A force opposing motion between two surfaces in contact. Can be useful (grip) or unhelpful (energy loss).</dd>
 <dt>Mass</dt><dd>The amount of matter in an object, measured in kg. Constant everywhere in the universe.</dd>
 <dt>Weight</dt><dd>The gravitational force on an object, measured in Newtons. Depends on local gravitational field strength.</dd>
+<dt>Terminal velocity</dt><dd>The constant maximum speed reached when air resistance equals weight — the net force is zero and the object stops accelerating.</dd>
+<dt>Newton's First Law</dt><dd>An object remains at rest or moves at constant speed in a straight line unless acted on by an unbalanced force.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -604,8 +628,11 @@ On the Moon: Weight = 5 × 1.6 = <strong>8 N</strong> — but the mass is still 
 <li>Light travels in <strong>straight lines</strong> (rectilinear propagation) at 300,000 km/s — the fastest speed in the universe.</li>
 <li><strong>Law of reflection</strong>: angle of incidence = angle of reflection (both measured from the <em>normal</em> — a line at 90° to the surface).</li>
 <li>Light does <strong>not</strong> need a medium — it travels through a vacuum (this is how sunlight reaches Earth).</li>
-<li><strong>Sound</strong> is a longitudinal wave caused by vibrations. It needs a medium (solid, liquid or gas) and <strong>cannot travel through a vacuum</strong>.</li>
+<li><strong>Refraction</strong> is the bending of light as it crosses a boundary between two different materials (e.g. air to glass). The change in speed causes the direction to change — this is why objects look bent when partly submerged in water.</li>
+<li>Objects appear coloured because they <strong>reflect</strong> certain wavelengths of light and <strong>absorb</strong> the rest. A blue object reflects blue light; a white object reflects all colours; a black object absorbs all.</li>
+<li><strong>Sound</strong> is a longitudinal wave caused by vibrating objects. It creates <strong>compressions</strong> and <strong>rarefactions</strong> in the medium. Sound needs a medium (solid, liquid or gas) and <strong>cannot travel through a vacuum</strong>.</li>
 <li>Sound travels faster through solids than liquids, faster through liquids than gases. Speed in air ≈ 340 m/s.</li>
+<li><strong>Pitch</strong> depends on <strong>frequency</strong> (vibrations per second, measured in Hz) — high frequency = high pitch. <strong>Loudness</strong> depends on <strong>amplitude</strong> — bigger vibrations = louder sound.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="law-of-reflection"><p class="diagram-caption">The law of reflection: angle of incidence = angle of reflection</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
@@ -623,6 +650,9 @@ Law of reflection: angle of reflection = angle of incidence = <strong>55°</stro
 <dt>Angle of incidence</dt><dd>The angle between the incoming ray of light and the normal.</dd>
 <dt>Vacuum</dt><dd>A space containing no matter (particles). Light can travel through it; sound cannot.</dd>
 <dt>Longitudinal wave</dt><dd>A wave where the vibrations are parallel to the direction of travel — sound is a longitudinal wave.</dd>
+<dt>Refraction</dt><dd>The bending of light when it passes from one material to another (e.g. air to glass), caused by a change in speed.</dd>
+<dt>Frequency</dt><dd>The number of vibrations (waves) per second, measured in Hertz (Hz). Higher frequency = higher pitch.</dd>
+<dt>Amplitude</dt><dd>The size of a vibration — larger amplitude means a louder sound or a brighter light.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -638,7 +668,10 @@ Law of reflection: angle of reflection = angle of incidence = <strong>55°</stro
 <li><strong>Sexual reproduction</strong>: two parents, gametes (sex cells) join at fertilisation → genetically unique offspring.</li>
 <li><strong>Asexual reproduction</strong>: one parent, no gametes → genetically identical offspring (clones). Examples: runners, bulbs, binary fission in bacteria.</li>
 <li><strong>Pollination</strong>: transfer of pollen from anther to stigma. Insect-pollinated flowers are bright with nectar; wind-pollinated flowers are small and dull with light pollen.</li>
-<li>After pollination, a pollen tube grows to the ovule — <strong>fertilisation</strong> occurs when the male gamete fuses with the female gamete (ovum).</li>
+<li>After pollination, a pollen tube grows to the ovule — <strong>fertilisation</strong> occurs when the male gamete fuses with the female gamete (ovum). The ovule then develops into a <strong>seed</strong> and the ovary becomes the <strong>fruit</strong>.</li>
+<li><strong>Seed dispersal</strong> spreads seeds away from the parent plant, reducing competition. Methods: <strong>wind</strong> (dandelion, sycamore), <strong>animal</strong> (berries, burrs), <strong>water</strong> (coconut), <strong>explosive</strong> (pea pods).</li>
+<li>In humans, fertilisation occurs in the <strong>oviduct</strong> (fallopian tube). The fertilised egg (zygote) then travels to the uterus and implants in the lining to develop.</li>
+<li>The <strong>menstrual cycle</strong> lasts about 28 days. <strong>Ovulation</strong> (release of a mature egg from the ovary) occurs around day 14. If the egg is not fertilised, the uterus lining breaks down — this is menstruation.</li>
 <li><strong>Puberty</strong> is triggered by hormones: oestrogen (females) and testosterone (males), causing physical and emotional changes.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
@@ -655,6 +688,8 @@ Key principle: the <strong>method of pollination drives the flower's design</str
 <dt>Fertilisation</dt><dd>The fusion of male and female gametes to form a zygote — the first cell of a new organism.</dd>
 <dt>Pollination</dt><dd>The transfer of pollen from the anther to the stigma of a flower — necessary before fertilisation can occur.</dd>
 <dt>Clone</dt><dd>A genetically identical copy of a parent organism, produced by asexual reproduction.</dd>
+<dt>Ovulation</dt><dd>The release of a mature egg from the ovary — occurs around day 14 of the menstrual cycle.</dd>
+<dt>Seed dispersal</dt><dd>The spreading of seeds away from the parent plant by wind, animals, water or explosive mechanisms to reduce competition.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -670,8 +705,9 @@ Key principle: the <strong>method of pollination drives the flower's design</str
 <li><strong>Element</strong>: one type of atom only. Cannot be broken down by chemical means. Found in the Periodic Table (e.g. O, Fe, Cu).</li>
 <li><strong>Compound</strong>: two or more different elements <em>chemically</em> bonded together (e.g. H₂O, NaCl). Has different properties from its elements.</li>
 <li><strong>Mixture</strong>: substances physically combined — not chemically bonded. Each keeps its own properties. Separable by physical means.</li>
-<li>The <strong>Periodic Table</strong>: elements arranged by atomic number. Groups (columns) = similar properties. Periods (rows) = new electron shell.</li>
-<li>Separation techniques: filtration, evaporation, distillation, chromatography — choose based on what you're separating.</li>
+<li>The <strong>Periodic Table</strong>: elements arranged by atomic number. Groups (columns) = similar properties (same number of outer-shell electrons). Periods (rows) = new electron shell. <strong>Metals</strong> are on the left and centre; <strong>non-metals</strong> are on the right.</li>
+<li>In a chemical reaction, <strong>reactants</strong> (on the left of the arrow) change into <strong>products</strong> (on the right). A <strong>chemical change</strong> produces new substances and is hard to reverse (e.g. burning). A <strong>physical change</strong> (e.g. dissolving, melting) is reversible and no new substance is formed.</li>
+<li>Separation techniques: filtration (insoluble solids), evaporation (dissolved solids), distillation (liquids), chromatography (dissolved dyes) — choose based on what you're separating.</li>
 </ul>
 <h4>🔤 Common Element Symbols</h4>
 <p>Every element has a <strong>chemical symbol</strong> — one or two letters. The first letter is always a <strong>capital</strong>; the second (if there is one) is always <strong>lowercase</strong>.</p>
@@ -723,6 +759,8 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <dt>Chemical formula</dt><dd>A combination of symbols and subscript numbers that shows which elements are in a substance and how many atoms of each (e.g. CO₂ = 1 carbon + 2 oxygens).</dd>
 <dt>Diatomic molecule</dt><dd>A molecule made of exactly two atoms bonded together. Some elements naturally exist as pairs: H₂, O₂, N₂, Cl₂.</dd>
 <dt>Chromatography</dt><dd>A separation technique that uses a solvent to separate dissolved substances by how far they travel up paper.</dd>
+<dt>Reactant</dt><dd>A substance that takes part in a chemical reaction — written on the left side of a word equation.</dd>
+<dt>Product</dt><dd>A new substance formed during a chemical reaction — written on the right side of a word equation.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -741,6 +779,8 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <li><strong>The Harrying of the North (1069–70)</strong>: after repeated Anglo-Saxon rebellions in the north, William ordered the systematic destruction of villages, crops, livestock and farmland across Yorkshire and the north of England. Thousands died from starvation. It was a deliberately brutal act of punishment that left the region devastated for years — and is one of the key reasons some historians view William as a tyrant.</li>
 <li>William used <strong>castles</strong> to control the population — motte-and-bailey designs were quick to build and were constructed across England (over 500 by 1086). Key examples include the Tower of London, Windsor Castle and Warwick Castle. They served as military bases, administrative centres and symbols of Norman dominance.</li>
 <li>The <strong>Domesday Book</strong> (1086) surveyed all land and wealth in England for taxation — and proved William owned everything.</li>
+<li>William rewarded his followers by granting them <strong>large estates of English land</strong>. By 1086, only about 5% of land was still held by English owners — a massive transfer of wealth.</li>
+<li>The <strong>Bayeux Tapestry</strong> is an embroidered cloth (~70 m long) depicting events from 1064 to the Battle of Hastings. It is a key <strong>primary source</strong>, though it tells the Norman version of events.</li>
 <li><strong>Impact on language and culture</strong>: the Normans spoke French, and hundreds of French words entered English (e.g. "castle", "government", "justice", "parliament", "beef", "pork"). Latin became the language of the Church and law. English remained the language of ordinary people — modern English is a blend of Anglo-Saxon and Norman French.</li>
 <li><strong>Historical interpretations</strong>: was William a great king or a tyrant? Some historians emphasise his effective government, legal reforms and the Domesday Book. Others focus on the Harrying of the North, the crushing of rebellions, and the replacement of the entire Anglo-Saxon ruling class with Normans. Evaluating different interpretations is a key historical skill.</li>
 </ul>
@@ -776,8 +816,8 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <ul>
 <li>The <strong>feudal pyramid</strong> (top to bottom): King → Lords/Barons/Church → Knights → Peasants/Serfs. Everyone owed loyalty and service upward.</li>
 <li>The King owned all land — lords held it in exchange for military service; knights held it from lords in exchange for fighting.</li>
-<li><strong>Peasants</strong> (villagers/serfs) worked the land in exchange for protection and a small strip to farm. They could not leave without permission.</li>
-<li>The <strong>Catholic Church</strong> collected tithes (10% of income), ran hospitals and schools, and could excommunicate even kings.</li>
+<li><strong>Peasants</strong> (villagers/serfs) worked the land in exchange for protection and a small strip to farm. They could not leave without permission. <strong>Villeins</strong> were unfree peasants legally tied to the lord's manor, working his land several days a week.</li>
+<li>The <strong>Catholic Church</strong> collected tithes (10% of income), ran hospitals and schools, and could excommunicate even kings. The local <strong>parish priest</strong> led worship, performed baptisms, marriages and burials — the Church touched every aspect of life from birth to death.</li>
 <li><strong>Castle evolution</strong>: early Norman castles were <strong>motte-and-bailey</strong> (wooden tower on a mound, quick to build). From the late 11th century, these were replaced by <strong>stone keeps</strong> (e.g. the Tower of London) — stronger and more permanent. By the 13th century, <strong>concentric castles</strong> (castle within a castle, e.g. Caernarfon) with multiple rings of walls represented the most advanced medieval military engineering.</li>
 <li><strong>The open field system</strong>: most medieval villages used three large open fields, farmed in rotation. Each peasant had several narrow strips scattered across the fields. One field grew wheat, one grew barley or oats, and one lay fallow (resting) each year. This rotation prevented the soil from becoming exhausted. Farming was communal — villagers shared ploughs, oxen and labour.</li>
 <li><strong>The role of women</strong>: medieval women's lives varied by social class. Peasant women worked in the fields alongside men, brewed ale, raised children and managed the household. Noble women managed estates when their husbands were away at war, arranged marriages and could wield significant influence. However, women had few legal rights — they could not vote, hold most official positions or inherit land equally. Some women gained power through the Church as abbesses of convents.</li>
@@ -798,6 +838,7 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <dt>Feudalism</dt><dd>A hierarchical system where land is exchanged for loyalty and military service.</dd>
 <dt>Tithe</dt><dd>A compulsory tax of one-tenth of annual income or produce, paid to the local church.</dd>
 <dt>Serf</dt><dd>A peasant bound to work a lord's land; could not leave without the lord's permission.</dd>
+<dt>Villein</dt><dd>An unfree peasant legally tied to the land they worked on — could not leave without the lord's permission and owed labour services.</dd>
 <dt>Excommunication</dt><dd>Being expelled from the Catholic Church — cutting a person off from all religious sacraments and, it was believed, from God and heaven.</dd>
 <dt>Open field system</dt><dd>The medieval farming method where villagers worked strips of land across shared open fields, with one field left fallow each year.</dd>
 <dt>Fallow</dt><dd>A field left unplanted for a season to allow the soil to recover its fertility.</dd>
@@ -821,6 +862,8 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <li><strong>Symptoms</strong>: buboes (painful swellings in armpits/groin/neck), black skin patches, fever, vomiting blood. Most died within 1–5 days.</li>
 <li>Medieval explanations: God's punishment for sin, bad air (miasma), planetary alignment — all wrong.</li>
 <li><strong>Flagellants</strong>: groups of people who publicly whipped themselves in the streets, believing that self-inflicted pain would persuade God to end the plague. They travelled from town to town, attracting crowds. The Pope eventually condemned the movement, but it showed the depth of religious desperation.</li>
+<li>The plague spread rapidly in <strong>medieval towns</strong> because they were overcrowded with poor sanitation — rubbish and sewage filled the streets, attracting rats whose fleas carried the disease.</li>
+<li>The <strong>Church's authority was weakened</strong>: it could not explain or cure the plague. Many priests who stayed to tend the sick died; some fled their parishes. People's faith was shaken.</li>
 <li><strong>Jewish persecution and scapegoating</strong>: in many parts of Europe, Jewish communities were blamed for the plague — accused of poisoning wells. Thousands were attacked and killed, particularly in Germany, France and Spain. This persecution was driven by existing prejudice and the desperate need to find someone to blame. It is an important early example of scapegoating during a crisis.</li>
 <li><strong>Long-term effects and the road to the Peasants' Revolt</strong>: the labour shortage after the Black Death gave surviving peasants bargaining power for the first time — they could demand higher wages. The government responded with the <strong>Statute of Labourers (1351)</strong>, which tried to fix wages at pre-plague levels and prevent peasants from moving. This was deeply resented. When a <strong>poll tax</strong> (a flat tax on every adult) was introduced in 1380, it was the final provocation — the <strong>Peasants' Revolt of 1381</strong> erupted, led by Wat Tyler and John Ball, who marched on London demanding an end to serfdom.</li>
 <li><strong>Comparison with other pandemics</strong>: the Black Death killed ~30–60% of Europe's population. Compare with: the Spanish Flu (1918–19, ~50 million deaths worldwide), or the COVID-19 pandemic (2020–23). In each case, pandemics exposed social inequalities, changed working patterns, and had lasting economic effects. The key difference is that medieval people had no understanding of germ theory.</li>
@@ -861,7 +904,8 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <li><strong>Trial by jury</strong>: Magna Carta helped establish the principle that a person should be judged by their peers, not solely by the king or his officers. This became the foundation of the jury system still used in English and American courts today.</li>
 <li><strong>Henry III and the Provisions of Oxford (1258)</strong>: John's son Henry III also clashed with his barons over heavy taxation and foreign favourites. The barons, led by <strong>Simon de Montfort</strong>, forced Henry to accept the Provisions of Oxford — a set of reforms requiring the king to consult a council of barons on major decisions. Henry later rejected these, leading to civil war.</li>
 <li><strong>Simon de Montfort's Parliament (1265)</strong>: after defeating Henry III in battle, de Montfort summoned a Parliament that included not just barons but also <strong>knights from each county</strong> and <strong>burgesses (representatives) from each town</strong>. This was the first time ordinary people beyond the nobility were represented — a crucial step towards the representative Parliament we know today. De Montfort was killed later that year, but his model of Parliament survived.</li>
-<li><strong>How Parliament evolved</strong>: from a feudal council advising the king → de Montfort's model of broader representation → under Edward I, Parliament became a regular institution → over centuries, it gradually gained more power, eventually becoming the sovereign body it is today.</li>
+<li><strong>How Parliament evolved</strong>: from a feudal council advising the king → de Montfort's model of broader representation → the <strong>Model Parliament of 1295</strong> (Edward I summoned lords, clergy, knights and burgesses — the template for future parliaments) → over centuries, Parliament gradually gained more power.</li>
+<li>Magna Carta originally protected only <strong>barons and free men</strong> — villeins (unfree peasants) and women had no direct protection. Over centuries, its principles were reinterpreted to apply to everyone.</li>
 <li><strong>Magna Carta's lasting significance</strong>: the principle that no one — not even the king — is above the law. It influenced the English Bill of Rights (1689), the US Constitution and Bill of Rights (1787/1791), and the Universal Declaration of Human Rights (1948). Today, copies of Magna Carta are displayed in the British Library and the US National Archives.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
@@ -901,6 +945,8 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <li><strong>Saladin</strong> recaptured Jerusalem in 1187. He was respected for his military skill and relatively merciful treatment of Christian civilians — in sharp contrast to the Crusader massacre of 1099.</li>
 <li><strong>The Third Crusade (1189–92)</strong>: led by Richard I of England, Philip II of France and Frederick Barbarossa. Richard won the Battle of Arsuf against Saladin and negotiated a treaty allowing Christian pilgrims access to Jerusalem — but the city itself remained under Muslim control. The mutual respect between Richard and Saladin became legendary.</li>
 <li><strong>The Children's Crusade (1212)</strong>: thousands of young people, mostly from France and Germany, set out to recapture the Holy Land believing their innocence would succeed where armies had failed. Most never reached the Holy Land — many died of hunger, disease or were sold into slavery. It illustrates the extraordinary power of religious fervour in the medieval period.</li>
+<li>The <strong>Knights Templar</strong> were a powerful military religious order (founded ~1119) that protected Christian pilgrims travelling to the Holy Land. They became enormously wealthy and influential before being suppressed in 1312.</li>
+<li>Later Crusades mostly <strong>failed</strong> because Muslim forces became more united under leaders like Saladin, Crusader states quarrelled among themselves, and supply lines from Europe were long. The last Crusader stronghold, <strong>Acre, fell in 1291</strong>.</li>
 <li><strong>Cultural exchange</strong>: despite the violence, the Crusades brought European contact with Islamic civilisation. Europe gained: Arabic numerals (0–9, far easier than Roman numerals), advances in medicine and surgery, algebra and astronomy, new foods (sugar, spices, citrus fruits), architectural techniques (pointed arches, domes), and superior textiles (silk, cotton). This cultural transfer helped spark the later Renaissance.</li>
 <li><strong>How the Crusades are interpreted today</strong>: Western historians have traditionally presented the Crusades as heroic Christian adventures. Islamic historians see them as aggressive invasions. Modern historians try to consider both perspectives. The Crusades remain a sensitive topic in Christian-Muslim relations — understanding multiple interpretations is essential.</li>
 </ul>
@@ -972,9 +1018,10 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <p>The Tudor dynasty produced some of England's most dramatic monarchs. Religious upheaval, political intrigue, a famous naval victory and one of England's greatest reigns all unfolded within a single family across little more than a century. Elizabeth I's reign saw a cultural golden age of theatre, exploration and growing global ambition.</p>
 <h4>📌 Key Points</h4>
 <ul>
+<li><strong>Henry VIII</strong> had six wives: Catherine of Aragon, Anne Boleyn, Jane Seymour, Anne of Cleves, Catherine Howard, Catherine Parr. His desire for a male heir drove the English Reformation.</li>
 <li>After Henry VIII: <strong>Edward VI</strong> (Protestant, simplified Church) → <strong>Mary I</strong> (Catholic, burned ~300 Protestants) → <strong>Elizabeth I</strong> (Protestant "middle way").</li>
 <li><strong>The "Bloody Mary" debate</strong>: Mary I earned her nickname by burning approximately 300 Protestants at the stake. But was she really worse than other Tudor monarchs? Henry VIII executed far more people; Elizabeth I had over 100 Catholics executed. Mary was trying to restore what she believed was the true faith after her father's break from Rome. Her reputation was largely shaped by <strong>Protestant propaganda</strong> — particularly John Foxe's "Book of Martyrs." Considering different interpretations is a key historical skill.</li>
-<li>Elizabeth's <strong>religious settlement</strong> was deliberately moderate — Protestant in theology but retaining some Catholic ceremony to keep broad support.</li>
+<li>Elizabeth's <strong>religious settlement</strong> was deliberately moderate — Protestant in theology but retaining some Catholic ceremony to keep broad support. The <strong>Act of Uniformity (1559)</strong> made the Book of Common Prayer standard in all churches and required everyone to attend church on Sundays.</li>
 <li>The <strong>Spanish Armada</strong> (1588): Philip II of Spain sent 130 ships to invade. English fireships at Gravelines and violent storms destroyed the fleet.</li>
 <li><strong>Elizabethan Poor Laws</strong>: poverty was a major issue in Elizabethan England (rising population, inflation, enclosure of common land). The Poor Laws (1598 and 1601) distinguished between the "deserving poor" (sick, elderly, orphans — given relief) and the "undeserving poor" (able-bodied beggars — punished). Vagrants could be whipped, branded or imprisoned. The Poor Laws were the first systematic attempt by government to manage poverty — their principles lasted until the 19th century.</li>
 <li><strong>Shakespeare and Elizabethan theatre</strong>: William Shakespeare (1564–1616) was the greatest playwright of the age. The Globe Theatre (built 1599) was open to all social classes — groundlings stood in the yard for a penny, while the wealthy sat in the galleries. Theatre became a central part of English culture and entertainment. Shakespeare's plays explored themes still relevant today: power, love, ambition, justice and revenge.</li>
@@ -1014,6 +1061,8 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <li>The <strong>triangular trade</strong>: Britain → West Africa (goods exchanged for enslaved people) → Americas (enslaved people sold, plantation goods bought) → Britain (sugar, tobacco, cotton sold for profit).</li>
 <li>The <strong>Middle Passage</strong>: the crossing from Africa to the Americas. Enslaved people were chained below decks in horrific conditions. Up to 20% died during the crossing.</li>
 <li><strong>The economic scale of slavery</strong>: the slave trade and plantation economy generated enormous wealth for Britain. Sugar from the Caribbean was the most profitable commodity in the world. Cotton from enslaved labour in America fuelled the Industrial Revolution in Lancashire. Cities including Bristol, Liverpool and Glasgow grew wealthy from the trade — profits funded banks (e.g. Barclays, Lloyds), insurance companies, stately homes and public buildings still standing today. When slavery was abolished in 1833, the British government paid £20 million in compensation — to the slaveholders, not the enslaved. This debt was not fully repaid until 2015.</li>
+<li>Life on <strong>plantations</strong> was brutal: enslaved people worked 18+ hours a day, faced violent punishments, could be separated from their families at any time, and were treated as property with no legal rights.</li>
+<li><strong>William Wilberforce</strong>, an MP, campaigned tirelessly in Parliament for nearly 20 years — introducing bill after bill — until the 1807 Slave Trade Act was finally passed.</li>
 <li>Enslaved people resisted in many ways: work slowdowns, escape, maintaining cultural practices, revolt. Key resistance figures include: <strong>Toussaint Louverture</strong> (led the Haitian Revolution, 1791–1804 — the only successful slave revolt to create an independent nation); <strong>Nanny of the Maroons</strong> (Jamaican freedom fighter who led a community of escaped enslaved people in the mountains, using guerrilla tactics against the British); <strong>Olaudah Equiano</strong> (formerly enslaved man who bought his freedom and wrote a powerful autobiography used in the abolition campaign).</li>
 <li><strong>Abolition</strong>: 1807 — Slave Trade Act (trade abolished); 1833 — Slavery Abolition Act (enslaved people freed in British territories). Slaveholders were compensated; enslaved people were not.</li>
 <li><strong>Legacy in modern Britain</strong>: slavery's history continues to affect communities today. Debates about statues (e.g. the Edward Colston statue in Bristol, toppled in 2020), calls for reparations, racial inequality, and the representation of Black history in the curriculum all connect to this history. Understanding the legacy helps explain ongoing social issues.</li>
@@ -1054,7 +1103,10 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 <li><strong>4-figure grid reference</strong>: go along the eastings first, then up the northings. Memory aid: "along the corridor and up the stairs."</li>
 <li><strong>6-figure grid reference</strong>: more precise — estimate tenths within each grid square (e.g. 273456).</li>
 <li><strong>Contour lines</strong> join points of equal height. Close together = steep slope. Far apart = gentle slope. Circles closing in = hilltop.</li>
-<li><strong>Map scale</strong>: 1:25,000 means 1 cm on map = 25,000 cm = 250 m in real life. 1:50,000 means 1 cm = 500 m.</li>
+<li><strong>Contour patterns for landforms</strong>: V-shaped contours pointing <em>uphill</em> (towards higher numbers) indicate a <strong>valley</strong> — rivers flow down the centre of the V. V-shaped contours pointing <em>downhill</em> (towards lower numbers) indicate a <strong>spur</strong> — a ridge of high ground jutting out from a hill. Remember: "V points to the source."</li>
+<li><strong>Compass directions</strong>: there are eight main compass points — <strong>N, NE, E, SE, S, SW, W, NW</strong>. North = 0° (or 360°), East = 90°, South = 180°, West = 270°. The four cardinal points (N, E, S, W) are joined by four intercardinal points (NE, SE, SW, NW). Compass bearings are always measured clockwise from North.</li>
+<li><strong>Common OS map symbols</strong>: blue lines = rivers/streams; blue 'P' in a box = parking; cross on a square = church with a tower; cross on a circle = church with a spire; green dashed line = footpath; tent symbol = campsite; 'PH' = public house. Learning these symbols is essential for map reading and fieldwork.</li>
+<li><strong>Map scale</strong>: 1:25,000 means 1 cm on map = 25,000 cm = 250 m in real life. 1:50,000 means 1 cm = 500 m. <strong>OS Explorer</strong> maps use 1:25,000 scale (ideal for walking — show field boundaries and individual buildings). <strong>OS Landranger</strong> maps use 1:50,000 scale (better for driving/cycling — cover larger areas with less detail).</li>
 <li><strong>Large scale</strong> maps show small areas in great detail. <strong>Small scale</strong> maps show large areas with little detail.</li>
 <li><strong>Aerial photographs</strong> show the landscape from above — either vertical (directly overhead) or oblique (taken at an angle). Compare them with OS maps to identify features like settlements, roads, rivers and land use.</li>
 <li><strong>GIS (Geographical Information Systems)</strong>: computer software that layers different types of geographical data on a digital map — used for planning, flood risk mapping, transport routes and environmental monitoring.</li>
@@ -1063,6 +1115,8 @@ Compare with melting ice (physical change) — no new substance, fully reversibl
 </ul>
 <div class="lesson-diagram" data-diagram="grid-reference"><p class="diagram-caption">How to read 4-figure and 6-figure grid references</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="contour-cross-section"><p class="diagram-caption">Contour lines and how to draw a cross-section</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="contour-valley-spur"><p class="diagram-caption">How contour patterns show valleys and spurs</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="compass-rose"><p class="diagram-caption">The eight-point compass and bearings</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example 1:</strong> On a 1:50,000 map, two points are 6 cm apart. What is the real-life distance? What does it mean if the contour lines between them are very close together?</p>
@@ -1104,9 +1158,13 @@ Combining aerial photos with OS maps gives both a <strong>visual overview</stron
 <h4>📌 Key Points</h4>
 <ul>
 <li><strong>Weather</strong>: short-term atmospheric conditions (today's temperature, rain). <strong>Climate</strong>: average weather over 30+ years for a region.</li>
-<li>Key weather instruments: thermometer (temperature), rain gauge (rainfall/mm), anemometer (wind speed), barometer (air pressure), wind vane (wind direction).</li>
+<li>Key weather instruments: thermometer (temperature), rain gauge (rainfall/mm), anemometer (wind speed), barometer (air pressure), wind vane (wind direction). <strong>Cloud cover</strong> is measured in <strong>oktas</strong> — eighths of the sky covered by cloud. 0 oktas = clear sky, 4 = half covered, 8 = completely overcast.</li>
+<li><strong>Three main cloud types</strong>: <strong>cumulus</strong> — fluffy, heaped clouds (fair weather, but can grow into cumulonimbus thunderstorm clouds); <strong>stratus</strong> — flat, grey, layered clouds that can bring drizzle or light rain; <strong>cirrus</strong> — high, thin, wispy clouds made of ice crystals, usually indicating fair weather.</li>
 <li>The UK's climate is shaped by: <strong>prevailing south-westerly winds</strong> from the Atlantic; the <strong>North Atlantic Drift</strong> (warm ocean current); island location; relief (western uplands cause relief rainfall).</li>
-<li><strong>Relief rainfall</strong>: moist air rises over hills → cools → condenses → rains. Western UK is wetter than the east.</li>
+<li><strong>Air masses</strong>: large bodies of air with uniform temperature and moisture. Five main air masses affect the UK — <strong>Tropical Maritime</strong> (warm, wet — from the Atlantic), <strong>Tropical Continental</strong> (hot, dry — from North Africa/southern Europe), <strong>Polar Maritime</strong> (cold, wet — from the north-west Atlantic), <strong>Polar Continental</strong> (cold, dry — from Scandinavia/Russia), and <strong>Arctic Maritime</strong> (very cold — from the Arctic). The type arriving determines our weather.</li>
+<li><strong>Air pressure and weather systems</strong>: <strong>high pressure (anticyclone)</strong> — air sinks, preventing cloud formation → brings dry, settled weather (hot and sunny in summer; cold, clear and frosty in winter). <strong>Low pressure (depression)</strong> — air rises, cools and condenses → brings cloud, wind and rain. Depressions are responsible for the UK's typical unsettled weather.</li>
+<li><strong>Weather fronts</strong>: the boundary where two different air masses meet. A <strong>warm front</strong> (shown on maps with red semicircles) occurs when warm air rises gently over cold air → wide band of cloud and steady rain. A <strong>cold front</strong> (blue triangles) occurs when cold air undercuts warm air, pushing it up sharply → heavy rain and cumulonimbus clouds, followed by clearer skies.</li>
+<li><strong>Three types of rainfall</strong>: <strong>Relief (orographic)</strong> — moist air is forced to rise over hills → cools → condenses → rains on the windward side; the leeward side gets a rain shadow. <strong>Convectional</strong> — the sun heats the ground → warm air rises rapidly → cools and condenses → produces heavy showers and thunderstorms (common in summer). <strong>Frontal</strong> — warm and cold air masses meet at a front → warm air is forced upward → cools and condenses → prolonged rain.</li>
 <li><strong>Climate change since the Ice Age</strong>: the last glacial period ended ~11,700 years ago. Temperatures have fluctuated since — the Medieval Warm Period (~900–1300 AD) allowed vineyards in England, while the Little Ice Age (~1300–1850 AD) froze the Thames. Current warming is far more rapid than any natural cycle.</li>
 <li><strong>Evidence for past climate change</strong>: ice cores (trapped air bubbles show CO₂ levels and temperature over 800,000 years); tree rings (wider rings = warmer, wetter years); historical records (harvest dates, paintings of frozen rivers); fossils and pollen analysis.</li>
 <li><strong>The enhanced greenhouse effect</strong>: burning fossil fuels increases CO₂ and methane in the atmosphere → these gases trap more heat → global temperatures rise. This is different from the natural greenhouse effect which keeps Earth habitable.</li>
@@ -1114,6 +1172,7 @@ Combining aerial photos with OS maps gives both a <strong>visual overview</stron
 <li><strong>Extreme weather in the UK</strong>: heatwaves, storms, flooding and cold snaps are becoming more frequent and intense. Examples include the 2022 UK heatwave (40°C recorded for the first time) and increased winter flooding.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="relief-rainfall"><p class="diagram-caption">How relief rainfall forms — windward rain and leeward rain shadow</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="weather-fronts-depression"><p class="diagram-caption">Depression cross-section — warm and cold fronts</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="greenhouse-effect"><p class="diagram-caption">The enhanced greenhouse effect — how trapped heat warms the Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
@@ -1143,12 +1202,21 @@ Combining aerial photos with OS maps gives both a <strong>visual overview</stron
 <dt>Enhanced greenhouse effect</dt><dd>The additional warming caused by human-produced greenhouse gases (CO₂, methane) trapping extra heat in the atmosphere beyond the natural level.</dd>
 <dt>Microclimate</dt><dd>A small area where the climate differs from the surrounding region — caused by shelter, aspect, surface type or proximity to water.</dd>
 <dt>Urban heat island</dt><dd>The phenomenon where urban areas are warmer than surrounding rural areas due to heat-absorbing surfaces, less vegetation and waste heat from buildings and vehicles.</dd>
+<dt>Okta</dt><dd>A unit for measuring cloud cover — one okta equals one-eighth of the sky covered by cloud. Measured on a scale of 0 (clear) to 8 (overcast).</dd>
+<dt>Air mass</dt><dd>A large body of air with roughly uniform temperature and humidity, formed over a particular region (e.g. ocean or continent) and carrying that region's characteristics.</dd>
+<dt>Depression</dt><dd>A low-pressure weather system where air rises, cools, and condenses — bringing cloud, wind and rain. Common across the UK, especially in autumn and winter.</dd>
+<dt>Anticyclone</dt><dd>A high-pressure weather system where air sinks — bringing dry, settled weather. Sunny in summer; cold and frosty in winter.</dd>
+<dt>Weather front</dt><dd>The boundary where two air masses of different temperatures meet. Warm fronts bring steady rain; cold fronts bring heavier, shorter bursts of rain.</dd>
+<dt>Convectional rainfall</dt><dd>Rain caused when the sun heats the ground, warm air rises rapidly, cools and condenses — producing heavy showers and thunderstorms.</dd>
+<dt>Frontal rainfall</dt><dd>Rain caused when warm and cold air masses meet at a front — warm air is forced upward over the denser cold air, cools and condenses.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Saying "weather and climate are the same thing" — ✅ Correct: weather is <strong>day-to-day</strong>; climate is the <strong>long-term average</strong> (30+ years).</li>
 <li>❌ Thinking the UK is warm because it's close to the equator — ✅ Correct: the UK is at ~50–60°N; it's warm for its latitude thanks to the <strong>North Atlantic Drift</strong>.</li>
 <li>❌ Confusing rain gauge and barometer — ✅ Correct: rain gauge measures <strong>rainfall (mm)</strong>; barometer measures <strong>air pressure (millibars)</strong>.</li>
+<li>❌ Confusing high and low pressure — ✅ Correct: <strong>high pressure (anticyclone)</strong> = dry, settled; <strong>low pressure (depression)</strong> = cloud, wind, rain.</li>
+<li>❌ Thinking all rainfall is the same — ✅ Correct: there are three types — <strong>relief</strong> (hills), <strong>convectional</strong> (sun heating ground), <strong>frontal</strong> (air masses meeting).</li>
 <li>❌ Saying "climate has always changed so current change is natural" — ✅ Correct: climate has changed naturally, but current warming is <strong>far faster</strong> than any natural cycle and is driven by <strong>human CO₂ emissions</strong>.</li>
 <li>❌ Confusing the greenhouse effect with the enhanced greenhouse effect — ✅ Correct: the natural greenhouse effect keeps Earth warm enough for life; the <strong>enhanced</strong> effect is the extra warming from human-added gases.</li>
 </ul>`,
@@ -1159,9 +1227,11 @@ Combining aerial photos with OS maps gives both a <strong>visual overview</stron
 <ul>
 <li><strong>The water cycle (hydrological cycle)</strong>: evaporation (water turns to vapour) → condensation (vapour cools into clouds) → precipitation (rain, snow, hail falls) → collection (water gathers in rivers, lakes, oceans) → the cycle repeats. Also includes infiltration (water soaking into soil) and transpiration (water released by plants).</li>
 <li><strong>Drainage basin</strong>: the area of land drained by a river and its tributaries. The boundary is called the <strong>watershed</strong> — a ridge of high land separating one drainage basin from another. Water within the basin flows into the main river via tributaries, surface runoff, throughflow and groundwater flow.</li>
+<li><strong>River source and mouth</strong>: the <strong>source</strong> is where a river begins — usually a spring, marsh or area of rainfall in upland hills or mountains. The <strong>mouth</strong> is where it flows into the sea or a lake.</li>
 <li><strong>Three river processes</strong>: Erosion (wearing away), Transportation (carrying material), Deposition (dropping material when energy decreases).</li>
 <li>Types of erosion: hydraulic action (force of water), abrasion (sediment scraping), solution (dissolving rock), attrition (particles wearing each other down).</li>
-<li>Upper course: steep, fast, narrow — dominant erosion. <strong>V-shaped valleys</strong> and waterfalls.</li>
+<li><strong>Four types of river transportation</strong>: <strong>Traction</strong> — large boulders rolling along the river bed; <strong>Saltation</strong> — smaller pebbles bouncing along the bed; <strong>Suspension</strong> — fine particles (silt, clay) carried within the water, making it look brown; <strong>Solution</strong> — dissolved minerals carried invisibly in the water (especially from limestone).</li>
+<li>Upper course: steep, fast, narrow — dominant erosion. <strong>V-shaped valleys</strong> and waterfalls. A waterfall retreats upstream over time as the soft rock beneath the hard cap rock is eroded, creating an overhang that collapses — leaving a steep-sided <strong>gorge</strong> behind.</li>
 <li>Middle/lower course: gentle gradient, wide — dominant deposition. <strong>Meanders</strong>, floodplains, oxbow lakes.</li>
 <li><strong>Meander formation</strong>: faster water on outside of bend erodes (river cliff); slower water inside deposits (slip-off slope). Over time the loop is cut off → oxbow lake.</li>
 <li><strong>Flooding</strong>: caused by prolonged rainfall, rapid snowmelt, impermeable rock, urbanisation (less infiltration), or deforestation (less interception). Effects include damage to property, loss of life, disruption to transport, and loss of farmland.</li>
@@ -1202,6 +1272,11 @@ Planting trees in the upper catchment area. Tree roots increase infiltration (wa
 <dt>Oxbow lake</dt><dd>A curved lake formed when a meander loop is cut off from the main river channel.</dd>
 <dt>Hard engineering</dt><dd>Man-made structures used to control natural processes — e.g. dams, embankments, flood walls.</dd>
 <dt>Soft engineering</dt><dd>Approaches that work with natural processes to reduce flood risk — e.g. afforestation, flood plain zoning.</dd>
+<dt>Traction</dt><dd>Large boulders and rocks rolling along the river bed — the heaviest form of transportation, found mainly in the upper course.</dd>
+<dt>Saltation</dt><dd>Smaller pebbles bouncing along the river bed in a hopping motion — common in the middle course.</dd>
+<dt>Suspension</dt><dd>Fine particles of silt and clay carried within the water itself — gives rivers their brown, murky appearance.</dd>
+<dt>Gorge</dt><dd>A narrow, steep-sided valley left behind as a waterfall retreats upstream over time.</dd>
+<dt>Source</dt><dd>The starting point of a river — usually a spring, marsh, or area of high rainfall in upland hills or mountains.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -1217,10 +1292,13 @@ Planting trees in the upper catchment area. Tree roots increase infiltration (wa
 <h4>📌 Key Points</h4>
 <ul>
 <li><strong>Population density</strong> = total population ÷ area (km²). High density = many people per km²; low density = few people per km².</li>
+<li><strong>Population distribution</strong>: describes how people are spread across an area — where they are concentrated (densely populated) and where few people live (sparsely populated). Population distribution is uneven — influenced by climate, relief, resources, jobs and transport links. Population density data can be misleading because it gives an average that hides local variation.</li>
+<li><strong>Census</strong>: an official count of a country's population, usually conducted every 10 years. In the UK, a census has been held every decade since 1801 (except 1941 during WWII). It collects data on age, occupation, housing, ethnicity and more — essential for planning services like schools, hospitals and transport.</li>
 <li><strong>Physical factors</strong> encouraging settlement: flat land, fertile soil, near fresh water, sheltered from wind, mild climate.</li>
 <li><strong>Human factors</strong>: transport links, employment, existing services (schools, hospitals), trade routes.</li>
 <li><strong>Urbanisation</strong> = increasing proportion of population living in cities. Driven by pull factors (jobs, services) and push factors (rural poverty, mechanisation of farming).</li>
-<li><strong>Settlement hierarchy</strong>: hamlet → village → town → city → conurbation. Higher up = more services, larger population, greater sphere of influence.</li>
+<li><strong>Settlement hierarchy</strong>: hamlet → village → town → city → conurbation (a large urban area formed when neighbouring towns and cities merge, e.g. Greater Manchester). Higher up = more services, larger population, greater sphere of influence.</li>
+<li><strong>Counter-urbanisation</strong>: the movement of people from cities back to rural areas or small towns. Driven by cheaper housing, less congestion, a quieter lifestyle, and improved transport/remote working. This reverses the traditional rural-to-urban pattern and can change the character of rural villages (rising house prices, more commuters).</li>
 <li><strong>Population pyramids</strong>: bar charts showing the age and sex structure of a population. Wide base = high birth rate (typical of LICs). Narrow base with wider top = ageing population (typical of HICs). Comparing pyramids reveals a country's stage of development.</li>
 <li><strong>The Demographic Transition Model (DTM)</strong>: a five-stage model showing how population changes as a country develops.<br>
 Stage 1: High birth rate, high death rate → low population. Stage 2: Death rate falls (better healthcare/sanitation) → rapid growth. Stage 3: Birth rate falls (contraception, education, urbanisation) → growth slows. Stage 4: Low birth rate, low death rate → stable/high population. Stage 5: Birth rate below death rate → population decline (e.g. Japan, Germany).</li>
@@ -1258,12 +1336,17 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 <dt>Migration</dt><dd>The movement of people from one place to another — can be voluntary or forced, internal or international.</dd>
 <dt>Megacity</dt><dd>A city with a population of over 10 million people — e.g. Lagos, Mumbai, Tokyo, São Paulo.</dd>
 <dt>CBD</dt><dd>Central Business District — the commercial and business centre of a city, typically with the tallest buildings and highest land values.</dd>
+<dt>Census</dt><dd>An official count and survey of a country's entire population, conducted every 10 years in the UK — collects data on age, occupation, housing and ethnicity.</dd>
+<dt>Population distribution</dt><dd>The pattern of where people live across an area — showing areas of dense and sparse population.</dd>
+<dt>Counter-urbanisation</dt><dd>The movement of people from cities to rural areas or small towns — the reverse of urbanisation.</dd>
+<dt>Conurbation</dt><dd>A large continuous urban area formed when several towns and cities expand and merge together — e.g. Greater Manchester, West Midlands.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Dividing area by population — ✅ Correct: population density = <strong>population ÷ area</strong>, not the other way round.</li>
 <li>❌ Thinking high population density always means a city — ✅ Correct: some <strong>rural</strong> areas (e.g. river deltas used for farming) can have very high density.</li>
 <li>❌ Confusing urbanisation with urban growth — ✅ Correct: urbanisation is about the <strong>proportion</strong> living in cities; urban growth is about the <strong>size</strong> of cities growing.</li>
+<li>❌ Confusing urbanisation with counter-urbanisation — ✅ Correct: urbanisation = people moving <strong>to</strong> cities; counter-urbanisation = people moving <strong>away</strong> from cities to rural areas.</li>
 <li>❌ Reading a population pyramid the wrong way — ✅ Correct: the <strong>base</strong> shows the youngest (0–4); the <strong>top</strong> shows the oldest. Males are usually on the left, females on the right.</li>
 <li>❌ Thinking the DTM predicts the future — ✅ Correct: the DTM is a <strong>model based on past patterns</strong> (mainly European). Not all countries follow the same path.</li>
 </ul>`,
@@ -1277,8 +1360,12 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 <li><strong>Nutrient cycling in the rainforest (Gersmehl model)</strong>: most nutrients are stored in the <strong>biomass</strong> (living plants), not the soil. Rapid decomposition returns nutrients to the soil, but they are immediately taken up by plant roots. If trees are removed, the nutrient cycle breaks — rain washes nutrients away, leaving infertile soil. This is why deforested rainforest land quickly becomes unproductive.</li>
 <li><strong>Indigenous peoples</strong>: groups such as the Yanomami (Amazon) have lived sustainably in the rainforest for thousands of years. They use shifting cultivation (clearing small areas, farming briefly, then moving on to let forest regrow), hunt sustainably, and have deep knowledge of medicinal plants. Deforestation threatens their land, culture and survival.</li>
 <li><strong>Case study — the Amazon rainforest</strong>: the world's largest tropical rainforest, covering ~5.5 million km² across nine countries. Contains roughly 10% of all species on Earth. Deforestation rate has increased dramatically — driven by cattle ranching (80% of cleared land), soy farming, logging and mining. Brazil's deforestation policies have fluctuated between enforcement and relaxation.</li>
-<li><strong>Hot desert</strong>: very hot days, cold nights; minimal rainfall (&lt;250mm/year); found 20–30° north and south of Equator.</li>
-<li><strong>Polar regions and cold environments</strong>: the Arctic (north) and Antarctic (south) have extremely cold temperatures (−30°C to −50°C in winter), low precipitation and continuous daylight or darkness depending on season. Vegetation is limited to mosses, lichens and tough grasses (tundra). Animals adapt with thick fur/blubber (polar bears, seals), migration and hibernation. Polar ice is melting due to climate change, threatening habitats and raising sea levels globally.</li>
+<li><strong>Latitude and biome distribution</strong>: biomes follow a pattern linked to latitude. Near the Equator (low latitude) — intense direct sunlight → hot → tropical rainforest. Moving towards the poles — less direct sunlight → cooler → savanna grassland → deciduous forest → coniferous forest (taiga) → tundra → ice cap. Altitude has a similar effect — higher mountains are colder.</li>
+<li><strong>Temperate deciduous forest</strong>: the UK's natural biome. Found in mid-latitudes with mild, wet climates and four distinct seasons. Trees include oak, beech, ash and birch — they lose their leaves in autumn to conserve water during winter (<em>deciduous</em> = leaf-shedding). Rich biodiversity but much of the original forest has been cleared for farming and settlement.</li>
+<li><strong>Coniferous forest (taiga/boreal forest)</strong>: the largest land biome on Earth, stretching across northern Russia, Scandinavia and Canada (~50–70°N). Evergreen conifers (pine, spruce, fir) have needle-like leaves to reduce water loss and a conical shape to shed snow. Cold, long winters and short summers. Soil is acidic and thin.</li>
+<li><strong>Grassland (savanna and temperate prairie)</strong>: biomes dominated by grasses with few or no trees, found where rainfall is too low to support forest but enough to prevent desert. <strong>Tropical savanna</strong> (e.g. African Serengeti) has distinct wet and dry seasons. <strong>Temperate grassland</strong> (e.g. North American prairie) has hot summers and cold winters.</li>
+<li><strong>Hot desert</strong>: very hot days, cold nights; minimal rainfall (&lt;250mm/year); found 20–30° north and south of Equator. <strong>Desert adaptations</strong>: cacti store water in thick fleshy stems, have spines instead of leaves to reduce water loss, and long/shallow roots to collect water quickly. Camels store fat (not water) in their humps for energy, have wide feet for walking on sand, and thick eyelashes to keep out sand.</li>
+<li><strong>Polar regions and cold environments</strong>: the Arctic (north) and Antarctic (south) have extremely cold temperatures (−30°C to −50°C in winter), low precipitation and continuous daylight or darkness depending on season. Vegetation is limited to mosses, lichens and tough grasses (tundra). Animals adapt with thick fur/blubber (polar bears, seals), white camouflage, compact body shapes to reduce heat loss, and migration or hibernation. Polar ice is melting due to climate change, threatening habitats and raising sea levels globally.</li>
 <li><strong>Coral reefs</strong>: found in warm, shallow, clear tropical oceans (typically 25–29°C). Often called the "rainforests of the sea" due to their extraordinary biodiversity. Threatened by coral bleaching (caused by rising sea temperatures), ocean acidification, pollution and overfishing.</li>
 <li>Adaptations are critical — every organism in a biome has specific features allowing it to survive the local conditions.</li>
 </ul>
@@ -1310,6 +1397,9 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 <dt>Gersmehl model</dt><dd>A diagram showing how nutrients cycle between biomass, litter and soil in an ecosystem — in the rainforest, the largest store is the biomass.</dd>
 <dt>Biomass</dt><dd>The total mass of living organisms in an area — in the rainforest, the trees and plants store the majority of nutrients.</dd>
 <dt>Tundra</dt><dd>A cold, treeless biome found in polar regions, characterised by permafrost, mosses, lichens and low temperatures.</dd>
+<dt>Deciduous</dt><dd>Trees that shed their leaves in autumn to conserve water during winter — e.g. oak, beech, birch. The UK's natural biome is temperate deciduous forest.</dd>
+<dt>Coniferous (taiga)</dt><dd>Evergreen trees with needle-like leaves and conical shapes, found in the boreal forest biome across northern latitudes — e.g. pine, spruce, fir.</dd>
+<dt>Savanna</dt><dd>A tropical grassland biome with distinct wet and dry seasons, scattered trees, and large herds of grazing animals — e.g. the African Serengeti.</dd>
 <dt>Coral bleaching</dt><dd>The loss of colour in corals caused by stress (usually rising sea temperatures), which expels the algae living inside them and can lead to coral death.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
@@ -1330,6 +1420,9 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 <li><strong>Constructive boundary</strong>: plates move apart → magma rises → new crust → volcanoes and rift valleys (e.g. Iceland on the Mid-Atlantic Ridge).</li>
 <li><strong>Destructive boundary</strong>: oceanic plate subducts under continental → melts → volcanoes and fold mountains → earthquakes (e.g. Japan, Andes). Where two continental plates collide, fold mountains form without volcanic activity (e.g. the Himalayas).</li>
 <li><strong>Conservative boundary</strong>: plates slide past each other → no volcanoes → massive earthquakes (e.g. San Andreas Fault, California).</li>
+<li><strong>Earthquakes</strong>: caused by sudden release of stored energy when tectonic plates move. The <strong>focus</strong> (hypocentre) is the point underground where the rock fractures. The <strong>epicentre</strong> is the point on the surface directly above the focus — usually where shaking is most intense. The <strong>Richter scale</strong> measures earthquake magnitude (energy released) — it is logarithmic: each whole number increase = ~32 times more energy. Shallow-focus earthquakes (less than 70 km deep) cause the most surface damage.</li>
+<li><strong>Earthquake preparation</strong>: scientists cannot predict exactly when an earthquake will strike — they can only identify high-risk areas near plate boundaries. Preparation saves far more lives than prediction: earthquake-resistant buildings (flexible steel frames, deep foundations), emergency kits, evacuation drills, early warning systems, and public education.</li>
+<li><strong>Why people live near volcanoes</strong>: volcanic soil is extremely fertile for farming; volcanoes provide geothermal energy (cheap electricity); tourism creates jobs; minerals and building materials are available. Cultural ties, poverty, and the rarity of major eruptions mean daily benefits often outweigh occasional risks.</li>
 <li><strong>Tsunamis</strong>: formed when an earthquake or volcanic eruption occurs under the ocean, displacing a massive volume of water. The wave is barely noticeable in deep water but as it reaches shallow coastal areas it slows, builds in height and can devastate coastlines. The 2004 Indian Ocean tsunami killed over 230,000 people across 14 countries.</li>
 <li><strong>Geological timescales</strong>: the Earth is approximately 4.6 billion years old. Geologists divide this into eons, eras and periods. The movement of tectonic plates has completely rearranged continents over hundreds of millions of years — e.g. the supercontinent Pangaea began breaking apart ~200 million years ago. Human existence represents a tiny fraction of geological time.</li>
 <li><strong>HIC vs LIC response</strong>: the same magnitude earthquake causes very different impacts depending on a country's wealth. HICs (e.g. Japan) have earthquake-proof buildings, early warning systems, trained emergency services, and insurance. LICs (e.g. Nepal, Haiti) often have weaker infrastructure, limited emergency response, and less access to aid — leading to far higher death tolls and slower recovery.</li>
@@ -1364,8 +1457,10 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 <dt>Tectonic plate</dt><dd>A large, rigid segment of the Earth's crust and upper mantle that moves on convection currents in the mantle.</dd>
 <dt>Convection current</dt><dd>A circular movement of heat in the mantle — hot rock rises, spreads, cools and sinks — driving tectonic plate movement.</dd>
 <dt>Subduction</dt><dd>The process where a denser oceanic plate is forced under a lighter continental plate at a destructive boundary.</dd>
+<dt>Focus</dt><dd>The point underground where an earthquake's energy is first released — also called the hypocentre. Shallow-focus earthquakes cause the most surface damage.</dd>
 <dt>Epicentre</dt><dd>The point on the Earth's surface directly above the focus (origin) of an earthquake — usually where shaking is most intense.</dd>
-<dt>Richter scale</dt><dd>A logarithmic scale measuring earthquake magnitude — each step represents 10 times more energy released.</dd>
+<dt>Richter scale</dt><dd>A logarithmic scale measuring earthquake magnitude — each step represents roughly 32 times more energy released.</dd>
+<dt>Seismic waves</dt><dd>Waves of energy released by an earthquake that travel through the Earth, causing the ground to shake.</dd>
 <dt>Tsunami</dt><dd>A series of massive ocean waves caused by an underwater earthquake or volcanic eruption displacing water.</dd>
 <dt>Geological timescale</dt><dd>The division of Earth's 4.6-billion-year history into eons, eras and periods based on major geological and biological events.</dd>
 </dl>
@@ -1383,12 +1478,14 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 <h4>📌 Key Points</h4>
 <ul>
 <li>Africa has 54 countries, over 2,000 languages, and contains every type of landscape: desert, rainforest, savanna, mountains and coastlines.</li>
-<li><strong>HDI (Human Development Index)</strong> measures development using three indicators: life expectancy, education, and income per person (GNI per capita).</li>
+<li><strong>GDP (Gross Domestic Product)</strong>: the total value of all goods and services produced in a country in one year. GDP per capita (per person) is a common economic indicator — but it is an average that hides inequality (a few wealthy people can raise it while most remain poor).</li>
+<li><strong>HDI (Human Development Index)</strong> measures development using three indicators: life expectancy, education, and income per person (GNI per capita). HDI gives a more complete picture than GDP alone because it includes health and education, not just wealth.</li>
+<li><strong>Development indicators</strong>: <em>economic</em> indicators include GDP per capita, employment rates, and trade balance. <em>Social</em> indicators include literacy rate, life expectancy, infant mortality, access to clean water, and doctors per 1,000 people. Using multiple indicators gives a more accurate picture of development.</li>
 <li>Africa's development varies enormously: some countries (e.g. Seychelles, South Africa) have high HDI; others (e.g. Niger, South Sudan) face severe challenges.</li>
 <li><strong>Tourism</strong> brings foreign exchange, jobs and conservation funding — but can also cause "leakage" (profits leaving the local economy), environmental damage and cultural erosion.</li>
 <li><strong>Sustainable development</strong>: meeting present needs without compromising future generations' ability to meet theirs — tourism and resource use must balance economic, social and environmental goals.</li>
 <li><strong>Fairtrade</strong>: a system that guarantees farmers and producers in developing countries a fair minimum price for their goods (e.g. coffee, cocoa, bananas). It also provides a Fairtrade Premium — extra money invested in community projects like schools, wells or healthcare. Critics argue it only helps a small number of farmers and that the premium doesn't always reach those who need it most.</li>
-<li><strong>Types of aid</strong>: <strong>Bilateral</strong> (government to government — e.g. UK to Kenya); <strong>Multilateral</strong> (through organisations like the World Bank or UN); <strong>Short-term/emergency</strong> (immediate disaster relief — food, water, shelter); <strong>Long-term/development</strong> (building infrastructure, education, training). Arguments for aid: saves lives, builds capacity. Arguments against: can create dependency, may be tied to political conditions, corruption can divert funds.</li>
+<li><strong>Types of aid</strong>: <strong>Bilateral</strong> (government to government — e.g. UK to Kenya); <strong>Multilateral</strong> (through organisations like the World Bank or UN); <strong>Short-term/emergency</strong> (immediate disaster relief — food, water, shelter); <strong>Long-term/development</strong> (building infrastructure, education, training). <strong>Tied aid</strong> = aid with conditions requiring the receiving country to spend money on goods/services from the donor country — critics argue this benefits the donor more than the recipient. Arguments for aid: saves lives, builds capacity. Arguments against: can create dependency, may be tied to political conditions, corruption can divert funds.</li>
 <li><strong>Colonial history and the development gap</strong>: European countries colonised most of Africa from the late 19th century, extracting resources (minerals, crops, people through slavery) and creating borders that ignored ethnic and cultural groups. When countries gained independence (mostly 1950s–1960s), they inherited weak institutions, economies dependent on exporting raw materials, and ethnic divisions. This history is a significant factor in understanding current development challenges — though Africa's story is also one of resilience, growth and innovation.</li>
 <li><strong>Comparative place study</strong>: the curriculum requires comparing regions within Africa. For example, comparing Lagos (Nigeria's commercial capital — rapid urbanisation, emerging tech industry, but severe inequality and infrastructure strain) with a rural area in sub-Saharan Africa (e.g. rural Kenya — subsistence farming, limited services, but strong community structures and growing mobile banking via M-Pesa).</li>
 </ul>
@@ -1448,8 +1545,11 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 <li>Key energy stores: <strong>kinetic</strong> (moving), <strong>thermal</strong> (heat), <strong>chemical</strong> (food/fuel), <strong>gravitational potential</strong> (height), <strong>elastic potential</strong> (stretched/compressed), <strong>nuclear</strong>.</li>
 <li><strong>Law of Conservation of Energy</strong>: energy cannot be created or destroyed — only transferred from one store to another.</li>
 <li>Energy is transferred by: <strong>heating</strong>, <strong>forces doing work</strong>, <strong>electricity</strong>, and <strong>waves</strong> (light, sound).</li>
-<li><strong>Conduction</strong> (solids), <strong>convection</strong> (fluids) and <strong>radiation</strong> (no medium needed) are the three methods of heat transfer.</li>
-<li>No device is 100% efficient — some energy is always "wasted" as thermal energy (heat) in the surroundings.</li>
+<li>Energy is measured in <strong>Joules (J)</strong>. Power (energy transferred per second) is measured in <strong>Watts (W)</strong>. 1 W = 1 J/s.</li>
+<li><strong>Conduction</strong> (solids — vibrating particles), <strong>convection</strong> (fluids — hot fluid rises, cool sinks) and <strong>radiation</strong> (infrared electromagnetic waves — no medium needed, travels through a vacuum) are the three methods of heat transfer.</li>
+<li><strong>GPE = mass × g × height</strong> (gravitational potential energy formula). On Earth, g = 10 N/kg.</li>
+<li><strong>Efficiency</strong> = (useful energy output ÷ total energy input) × 100 %. No device is 100 % efficient — some energy is always "wasted" as heat.</li>
+<li>A <strong>Sankey diagram</strong> uses arrows whose width represents energy — showing how input energy splits into useful output and wasted energy.</li>
 </ul>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
@@ -1467,6 +1567,9 @@ Each bounce is lower — total energy is <strong>conserved</strong> but some is 
 <dt>Conservation of energy</dt><dd>The principle that the total energy in a closed system remains constant — energy is never created or destroyed.</dd>
 <dt>Conduction</dt><dd>Heat transfer through a solid by vibrating particles passing energy along the material.</dd>
 <dt>Convection</dt><dd>Heat transfer in a fluid (liquid or gas) by the movement of currents — hot fluid rises, cool fluid sinks.</dd>
+<dt>Radiation</dt><dd>Heat transfer by infrared electromagnetic waves — requires no medium and can travel through a vacuum.</dd>
+<dt>Efficiency</dt><dd>The proportion of input energy that is usefully transferred: (useful output ÷ total input) × 100 %.</dd>
+<dt>Sankey diagram</dt><dd>A branching arrow diagram whose widths show how energy is split between useful output and waste — wider = more energy.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -1483,7 +1586,9 @@ Each bounce is lower — total energy is <strong>conserved</strong> but some is 
 <li>A <strong>fair test</strong> changes only ONE independent variable at a time — everything else must stay the same.</li>
 <li>A <strong>hypothesis</strong> is a testable prediction that explains WHY you expect a particular outcome.</li>
 <li><strong>Repeating</strong> measurements and calculating a <strong>mean</strong> makes results more reliable. Discard obvious anomalies first.</li>
-<li>Results can be <strong>displayed</strong> in tables, bar charts (categoric data) or line graphs (continuous data). Choose the graph type that matches your data.</li>
+<li>Results can be <strong>displayed</strong> in tables, bar charts (categoric data) or line graphs (continuous data). On a graph, plot the <strong>independent variable on the x-axis</strong> and the <strong>dependent variable on the y-axis</strong>. Always label axes with name and units.</li>
+<li><strong>Accuracy</strong> = how close a measurement is to the true value. <strong>Precision</strong> = how consistent repeated measurements are. You can be precise but inaccurate (consistent but wrong).</li>
+<li><strong>Hazard symbols</strong> warn about dangers: 🔥 flame = flammable, ☠ skull = toxic, ⚗ corrosion symbol = corrosive (damages skin), ⚠ exclamation mark = harmful/irritant.</li>
 <li>Key lab safety rules: wear goggles for chemicals, tie back hair, never run, report spills, know where the fire extinguisher is.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="variables-diagram"><p class="diagram-caption">The three types of variable in an experiment</p><p class="diagram-expand-hint">Click to enlarge</p></div>
@@ -1503,6 +1608,8 @@ This makes it a fair test — any change in dissolving time must be due to tempe
 <dt>Control variable</dt><dd>A variable kept constant to ensure the test is fair.</dd>
 <dt>Hypothesis</dt><dd>A testable, reasoned prediction (not just a guess) that can be supported or disproved by data.</dd>
 <dt>Anomaly</dt><dd>A result that does not fit the overall pattern and may be due to error.</dd>
+<dt>Accuracy</dt><dd>How close a measurement is to the true or accepted value.</dd>
+<dt>Precision</dt><dd>How consistent or close together repeated measurements are to each other.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -1519,8 +1626,9 @@ This makes it a fair test — any change in dissolving time must be due to tempe
 <li><strong>Ohm's Law</strong>: V = I × R — if voltage increases (and resistance stays the same), current increases.</li>
 <li>In a <strong>series circuit</strong>: one loop, same current everywhere, voltage is shared between components.</li>
 <li>In a <strong>parallel circuit</strong>: multiple branches, voltage the same across each branch, current splits between branches.</li>
-<li><strong>Magnets</strong> have north and south poles. Like poles repel, opposite poles attract. A magnetic field is strongest at the poles.</li>
-<li>An <strong>electromagnet</strong> is made by wrapping wire around an iron core and passing current through it — it can be switched on and off.</li>
+<li><strong>Magnets</strong> have north and south poles. Like poles repel, opposite poles attract. <strong>Magnetic field lines</strong> run from the north pole to the south pole and are closest together where the field is strongest (at the poles).</li>
+<li>Only certain materials are magnetic: <strong>iron</strong>, <strong>steel</strong>, <strong>nickel</strong> and <strong>cobalt</strong>. Most metals (copper, aluminium, gold) are NOT magnetic.</li>
+<li>An <strong>electromagnet</strong> is made by wrapping wire around an iron core and passing current through it — it can be switched on and off. Increase its strength by: increasing the <strong>current</strong>, adding more <strong>coils</strong> of wire, or using an <strong>iron core</strong>.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="circuit-comparison"><p class="diagram-caption">Series vs parallel circuit layout</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
@@ -1554,7 +1662,8 @@ A current of 2 Amps flows through the bulb.</p>
 <li>Wave speed equation: <strong>v = f × λ</strong> (speed = frequency × wavelength).</li>
 <li>The EM spectrum in order of increasing frequency: <strong>Radio → Microwave → Infrared → Visible → Ultraviolet → X-rays → Gamma rays</strong>.</li>
 <li>All EM waves travel at the <strong>speed of light</strong> (3 × 10⁸ m/s) in a vacuum and do NOT need a medium.</li>
-<li>Higher frequency = shorter wavelength = more energy = more dangerous.</li>
+<li>Higher frequency = shorter wavelength = more energy = more dangerous. UV, X-rays and gamma rays are <strong>ionising</strong> — they can remove electrons from atoms and damage DNA, potentially causing cancer.</li>
+<li>Uses of EM waves: <strong>radio</strong> (TV, radio), <strong>microwaves</strong> (mobile phones, cooking), <strong>infrared</strong> (remote controls, thermal imaging), <strong>visible</strong> (seeing!), <strong>UV</strong> (sterilising, detecting forgeries), <strong>X-rays</strong> (medical imaging of bones), <strong>gamma</strong> (radiotherapy, sterilising food).</li>
 </ul>
 <div class="lesson-diagram" data-diagram="wave-properties"><p class="diagram-caption">Transverse wave: amplitude, wavelength and frequency</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="em-spectrum"><p class="diagram-caption">The electromagnetic spectrum in order</p><p class="diagram-expand-hint">Click to enlarge</p></div>
@@ -1584,10 +1693,12 @@ The wave travels at 300 metres per second.</p>
 <p>With millions of species on Earth, scientists need a system to organise and name them. Classification groups organisms by shared characteristics — from broad kingdoms down to individual species. This system, pioneered by Carl Linnaeus, allows scientists worldwide to communicate clearly about living things.</p>
 <h4>📌 Key Points</h4>
 <ul>
-<li>The <strong>five kingdoms</strong>: Animals, Plants, Fungi, Protists, Prokaryotes (bacteria).</li>
+<li>The <strong>five kingdoms</strong>: <strong>Animals</strong> (no cell wall, feed on other organisms), <strong>Plants</strong> (cell wall of cellulose, photosynthesise), <strong>Fungi</strong> (cell wall of chitin, feed by external digestion), <strong>Protists</strong> (mostly single-celled eukaryotes), <strong>Prokaryotes</strong> (bacteria — no membrane-bound nucleus, DNA floats in cytoplasm).</li>
+<li><strong>Prokaryotic</strong> cells (bacteria) have no nucleus — their DNA is free in the cytoplasm. <strong>Eukaryotic</strong> cells (animals, plants, fungi) have a true nucleus enclosed by a membrane.</li>
+<li><strong>Viruses</strong> are not classified as living organisms because they cannot reproduce on their own — they must invade a host cell and hijack its machinery.</li>
 <li>The classification hierarchy: <strong>Kingdom → Phylum → Class → Order → Family → Genus → Species</strong>. Memory aid: "King Philip Came Over For Good Soup."</li>
-<li><strong>Vertebrates</strong> (animals with backbones) are divided into: Fish, Amphibians, Reptiles, Birds, Mammals.</li>
-<li><strong>Invertebrates</strong> (no backbone) include: insects, arachnids, molluscs, crustaceans, worms.</li>
+<li><strong>Vertebrates</strong> (animals with backbones) are divided into: Fish, Amphibians, Reptiles, Birds, <strong>Mammals</strong> (warm-blooded, hair/fur, feed young on milk).</li>
+<li><strong>Invertebrates</strong> (no backbone) include <strong>arthropods</strong> (exoskeleton, jointed legs, segmented body) — such as insects (6 legs), arachnids (8 legs), crustaceans — plus molluscs and worms.</li>
 <li><strong>Binomial nomenclature</strong>: every species has a two-part Latin name — Genus (capital) + species (lowercase), always italicised. Example: <em>Homo sapiens</em>.</li>
 <li>A <strong>dichotomous key</strong> uses a series of yes/no questions to identify an unknown organism step by step.</li>
 </ul>
@@ -1605,6 +1716,8 @@ The wave travels at 300 metres per second.</p>
 <dt>Vertebrate</dt><dd>An animal with an internal backbone (spinal column).</dd>
 <dt>Binomial nomenclature</dt><dd>The two-part naming system: Genus + species (e.g. <em>Canis lupus</em> = wolf).</dd>
 <dt>Dichotomous key</dt><dd>A branching identification tool where each step has exactly two choices.</dd>
+<dt>Arthropod</dt><dd>An invertebrate with an exoskeleton, jointed legs and a segmented body — includes insects, arachnids and crustaceans.</dd>
+<dt>Prokaryote</dt><dd>A single-celled organism (bacterium) with no membrane-bound nucleus — DNA floats freely in the cytoplasm.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -1623,6 +1736,12 @@ The wave travels at 300 metres per second.</p>
 <li>In the <strong>lungs</strong>, oxygen diffuses from alveoli into the blood, and CO₂ diffuses out — this is gas exchange.</li>
 <li>The <strong>nervous system</strong>: stimulus → receptor → sensory neurone → CNS (brain/spinal cord) → motor neurone → effector (muscle/gland) → response.</li>
 <li><strong>Reflex actions</strong> bypass the brain for speed — e.g. pulling your hand from a flame.</li>
+<li><strong>Red blood cells</strong> contain <strong>haemoglobin</strong> (binds oxygen), have no nucleus (more room for haemoglobin) and a <strong>biconcave shape</strong> (increases surface area for gas exchange).</li>
+<li>The small intestine lining is covered in <strong>villi</strong> — tiny finger-like projections that massively increase surface area for nutrient absorption into the blood.</li>
+<li><strong>Platelets</strong> are cell fragments that clump at wound sites, triggering a clotting cascade that forms a scab to prevent blood loss and infection.</li>
+<li>The <strong>skeleton</strong> provides: support &amp; shape, protection of organs (skull → brain, ribcage → heart/lungs), movement (with muscles), blood cell production (bone marrow), and mineral storage (calcium, phosphorus).</li>
+<li>Key digestive <strong>enzymes</strong>: <strong>amylase</strong> (starch → sugars, made in salivary glands &amp; pancreas), <strong>protease</strong> (proteins → amino acids), <strong>lipase</strong> (fats → fatty acids + glycerol). <strong>Bile</strong> (made in liver, stored in gall bladder) emulsifies fats but is NOT an enzyme.</li>
+<li>The <strong>hormonal (endocrine) system</strong> uses chemical messengers carried in the blood — slower but longer-lasting than the nervous system's fast electrical impulses.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="heart-diagram"><p class="diagram-caption">The structure of the heart and blood flow</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
@@ -1642,12 +1761,18 @@ The wave travels at 300 metres per second.</p>
 <dt>Alveoli</dt><dd>Tiny air sacs in the lungs where gas exchange occurs. Large surface area, thin walls, rich blood supply.</dd>
 <dt>Enzyme</dt><dd>A biological catalyst that speeds up digestion by breaking down large food molecules (e.g. amylase breaks starch into sugars).</dd>
 <dt>Reflex arc</dt><dd>The nerve pathway for an automatic response: receptor → sensory neurone → relay neurone → motor neurone → effector.</dd>
+<dt>Haemoglobin</dt><dd>The iron-containing protein in red blood cells that binds to oxygen in the lungs and releases it in body tissues.</dd>
+<dt>Villi</dt><dd>Tiny finger-like projections lining the small intestine that increase surface area for absorbing digested nutrients into the blood.</dd>
+<dt>Platelets</dt><dd>Small cell fragments in the blood that clump together at wound sites to form clots, preventing blood loss.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Thinking arteries always carry oxygenated blood — ✅ Correct: the <strong>pulmonary artery</strong> carries deoxygenated blood to the lungs (arteries = AWAY from heart).</li>
 <li>❌ Confusing absorption with digestion — ✅ Correct: digestion <strong>breaks down</strong> food; absorption is where nutrients <strong>pass into the blood</strong> (mostly in the small intestine).</li>
 <li>❌ Saying the brain controls reflexes — ✅ Correct: reflexes use the <strong>spinal cord</strong> as the relay centre to save time.</li>
+<li>❌ Confusing platelets with white blood cells — ✅ Correct: <strong>platelets</strong> form clots; <strong>white blood cells</strong> fight infection.</li>
+<li>❌ Calling bile an enzyme — ✅ Correct: bile <strong>emulsifies</strong> (breaks into droplets) fat to increase surface area for lipase, but is NOT an enzyme itself.</li>
+<li>❌ Thinking the skeleton only supports the body — ✅ Correct: it also <strong>protects organs</strong>, produces blood cells in <strong>bone marrow</strong>, and stores minerals.</li>
 </ul>`,
 
 "island-43": `<h4>Introduction</h4>
@@ -1660,6 +1785,10 @@ The wave travels at 300 metres per second.</p>
 <li><strong>Genotype</strong> = the alleles you have (e.g. Bb). <strong>Phenotype</strong> = the physical characteristic you display (e.g. brown eyes).</li>
 <li>A <strong>Punnett square</strong> predicts the probability of offspring genotypes by crossing parent alleles.</li>
 <li><strong>Natural selection</strong>: variation → competition → survival of the fittest → reproduction → beneficial traits passed on → population changes over time.</li>
+<li><strong>Variation</strong> can be <strong>continuous</strong> (smooth range, e.g. height, mass) or <strong>discontinuous</strong> (distinct categories, e.g. blood group, tongue rolling).</li>
+<li>A <strong>mutation</strong> is a random change in the DNA sequence. Most are neutral or harmful; occasionally one is beneficial and may be favoured by natural selection.</li>
+<li><strong>Sex determination</strong>: females are XX, males are XY. All eggs carry X; sperm carry either X or Y — so the <strong>sperm determines biological sex</strong>.</li>
+<li>Evidence for evolution includes the <strong>fossil record</strong> (gradual change over time), DNA similarities between species, comparative anatomy (e.g. pentadactyl limb), and observed antibiotic resistance.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="punnett-square"><p class="diagram-caption">Using a Punnett square to predict offspring genotypes</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
@@ -1680,12 +1809,16 @@ Phenotype ratio: <strong>3 brown eyes : 1 blue eyes</strong> (75% brown, 25% blu
 <dt>Homozygous</dt><dd>Having two identical alleles for a gene (BB or bb).</dd>
 <dt>Heterozygous</dt><dd>Having two different alleles for a gene (Bb). The dominant allele determines the phenotype.</dd>
 <dt>Natural selection</dt><dd>The process by which organisms with advantageous traits survive and reproduce more, passing those traits to the next generation.</dd>
+<dt>Mutation</dt><dd>A random change in the DNA nucleotide sequence of a gene, which may alter the protein produced.</dd>
+<dt>Continuous variation</dt><dd>Features that show a smooth range of values (e.g. height, mass) — influenced by many genes and the environment.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Confusing genotype and phenotype — ✅ Correct: genotype is the <strong>alleles</strong> (letters); phenotype is the <strong>physical feature</strong> you can observe.</li>
 <li>❌ Thinking evolution happens to individuals — ✅ Correct: individuals do not evolve; <strong>populations</strong> change over many generations through natural selection.</li>
 <li>❌ Saying "survival of the fittest" means strongest — ✅ Correct: "fittest" means <strong>best adapted to the environment</strong>, not physically strongest.</li>
+<li>❌ Thinking all mutations are harmful — ✅ Correct: most are <strong>neutral</strong>; some are harmful, and rarely one is <strong>beneficial</strong> and can drive evolution.</li>
+<li>❌ Saying the mother determines the baby's sex — ✅ Correct: all eggs are X; the <strong>father's sperm</strong> (X or Y) determines sex.</li>
 </ul>`,
 
 "island-44": `<h4>Introduction</h4>
@@ -1707,6 +1840,10 @@ The small numbers (subscripts) tell you how many atoms of each element are prese
 <li><strong>Aerobic respiration</strong>: Glucose + Oxygen → Carbon dioxide + Water + ENERGY<br>C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy</li>
 <li><strong>Anaerobic respiration</strong> (without oxygen): Glucose → Lactic acid + some energy (in animals) or Glucose → Ethanol + CO₂ + some energy (in yeast).</li>
 <li>Aerobic releases <strong>much more energy</strong> than anaerobic. All living cells respire 24/7 — it never stops.</li>
+<li>Enzymes control photosynthesis and respiration rates. Above about <strong>40 °C</strong>, enzymes <strong>denature</strong> (lose their shape) and the reaction rate drops sharply.</li>
+<li>Plants convert soluble glucose into <strong>insoluble starch</strong> for storage — because starch does not dissolve, it won't affect <strong>osmosis</strong> in cells.</li>
+<li>To test a leaf for starch: boil → remove chlorophyll in ethanol → rinse → add <strong>iodine solution</strong>. Blue-black = starch present (photosynthesis occurred). Yellow-brown = no starch.</li>
+<li>A leaf kept in the <strong>dark for 48 hours</strong> becomes de-starched — without light, photosynthesis stops and existing starch is used up by respiration.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="photosynthesis-diagram"><p class="diagram-caption">Photosynthesis: inputs and outputs</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
@@ -1724,12 +1861,15 @@ The small numbers (subscripts) tell you how many atoms of each element are prese
 <dt>Chlorophyll</dt><dd>The green pigment in chloroplasts that absorbs light energy for photosynthesis.</dd>
 <dt>Aerobic respiration</dt><dd>Releasing energy from glucose using oxygen — happens in mitochondria, produces CO₂ + water + lots of energy.</dd>
 <dt>Limiting factor</dt><dd>The factor in shortest supply that restricts the rate of a process (e.g. light intensity limiting photosynthesis).</dd>
+<dt>Starch</dt><dd>An insoluble storage molecule made from glucose. Plants store glucose as starch so it does not affect osmosis.</dd>
+<dt>Denature</dt><dd>When an enzyme's shape is permanently altered (e.g. by high temperature), so the substrate can no longer fit — the reaction stops.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Thinking plants only photosynthesise (not respire) — ✅ Correct: plants do <strong>both</strong>. They respire all the time; they photosynthesise only in light.</li>
 <li>❌ Saying photosynthesis is the reverse of respiration — ✅ Correct: the equations look opposite, but they are completely different processes in different organelles.</li>
 <li>❌ Thinking anaerobic respiration only happens during exercise — ✅ Correct: it happens whenever cells <strong>lack sufficient oxygen</strong>, e.g. waterlogged roots, yeast in bread dough.</li>
+<li>❌ Forgetting the iodine test — ✅ Correct: <strong>iodine solution</strong> turns blue-black with starch. Remove chlorophyll first (ethanol) or you won't see the colour change.</li>
 </ul>`,
 
 "island-45": `<h4>Introduction</h4>
@@ -1742,6 +1882,8 @@ The small numbers (subscripts) tell you how many atoms of each element are prese
 <li><strong>Metamorphic rocks</strong> form when existing rocks are changed by extreme heat and/or pressure (e.g. marble from limestone, slate from mudstone).</li>
 <li>The <strong>rock cycle</strong> shows how any rock type can become any other over geological time through weathering, erosion, deposition, heat, pressure, melting, and cooling.</li>
 <li><strong>Fossils</strong> form when dead organisms are buried in sediment before they decay — they provide evidence of past life and evolution.</li>
+<li><strong>Freeze-thaw weathering</strong> (physical): water enters cracks → freezes → expands (~9%) → widens the crack → thaws → repeats many cycles → rock fragments break off.</li>
+<li><strong>Oceanic crust</strong> is thin (~5–10 km), dense, and made mainly of basalt. <strong>Continental crust</strong> is thick (~30–70 km), less dense, and made mainly of granite. At destructive boundaries, denser oceanic crust <strong>subducts</strong> beneath lighter continental crust.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="earth-layers"><p class="diagram-caption">The four layers of the Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="rock-cycle"><p class="diagram-caption">The rock cycle: how rocks transform between types</p><p class="diagram-expand-hint">Click to enlarge</p></div>
@@ -1760,6 +1902,7 @@ The small numbers (subscripts) tell you how many atoms of each element are prese
 <dt>Sedimentary</dt><dd>Rock formed from compressed layers of sediment, often containing fossils.</dd>
 <dt>Metamorphic</dt><dd>Rock that has been transformed by heat and/or pressure without melting completely.</dd>
 <dt>Rock cycle</dt><dd>The continuous process by which rocks are created, broken down, and transformed between the three rock types.</dd>
+<dt>Freeze-thaw weathering</dt><dd>Physical weathering where water in rock cracks repeatedly freezes and expands, breaking the rock apart over time.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -1778,6 +1921,9 @@ The small numbers (subscripts) tell you how many atoms of each element are prese
 <li>The <strong>enhanced greenhouse effect</strong>: humans are burning fossil fuels and deforesting → extra CO₂ → more heat trapped → global temperatures rising = <strong>climate change</strong>.</li>
 <li>Evidence for climate change: rising global temperatures, melting ice caps, rising sea levels, more extreme weather events, shifting ecosystems.</li>
 <li>Reducing climate change: use renewable energy, reduce fossil fuel use, plant trees, reduce meat consumption, improve energy efficiency.</li>
+<li>Earth's atmosphere composition: ~<strong>78% nitrogen</strong>, ~<strong>21% oxygen</strong>, ~1% argon, ~0.04% CO₂ and trace gases.</li>
+<li><strong>Transpiration</strong>: plants release water vapour through tiny pores called <strong>stomata</strong> on their leaves — this contributes significantly to the water cycle.</li>
+<li><strong>Acid rain</strong> forms when <strong>sulfur dioxide (SO₂)</strong> and <strong>nitrogen oxides (NOₓ)</strong> from burning fossil fuels dissolve in atmospheric water → sulfuric acid and nitric acid. Damages trees, lakes, and stone buildings.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="water-cycle"><p class="diagram-caption">The water cycle: evaporation, condensation and precipitation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
@@ -1795,6 +1941,8 @@ Both effects combine: more CO₂ released AND less CO₂ absorbed = <strong>doub
 <dt>Condensation</dt><dd>Water vapour cooling and turning back into liquid water droplets — forms clouds.</dd>
 <dt>Greenhouse gas</dt><dd>A gas that traps thermal energy in the atmosphere (e.g. CO₂, methane, water vapour).</dd>
 <dt>Climate change</dt><dd>Long-term shifts in global temperatures and weather patterns, largely driven by increased greenhouse gas emissions from human activity.</dd>
+<dt>Transpiration</dt><dd>The loss of water vapour from plant leaves through stomata — drives water uptake from roots and contributes to the water cycle.</dd>
+<dt>Acid rain</dt><dd>Rain made acidic (pH below 5.6) by dissolved SO₂ and NOₓ from fossil fuel combustion, forming sulfuric and nitric acids.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
@@ -1812,7 +1960,10 @@ Both effects combine: more CO₂ released AND less CO₂ absorbed = <strong>doub
 <li><strong>Seasons</strong> are caused by Earth's <strong>axial tilt</strong> (23.5°). When the northern hemisphere tilts towards the Sun, it receives more direct sunlight → summer. When it tilts away → winter.</li>
 <li>The <strong>Moon's phases</strong> occur because we see different amounts of the Moon's sunlit side as it orbits Earth (about 28 days for a full cycle): New Moon → Crescent → Quarter → Gibbous → Full Moon → back again.</li>
 <li>A <strong>solar eclipse</strong> occurs when the Moon passes between Earth and Sun, blocking sunlight. A <strong>lunar eclipse</strong> occurs when Earth is between Sun and Moon, casting a shadow on the Moon.</li>
-<li><strong>Gravity</strong> keeps planets in orbit around the Sun and the Moon in orbit around Earth. Larger mass = stronger gravitational pull.</li>
+<li><strong>Gravity</strong> keeps planets in orbit around the Sun and the Moon in orbit around Earth. Larger mass = stronger gravitational pull. Gravity acts as a <strong>centripetal force</strong>, continuously curving the planet's path inward.</li>
+<li>The <strong>Sun</strong> is a <strong>star</strong> — a massive ball of hot plasma (mainly hydrogen and helium) that generates energy by <strong>nuclear fusion</strong> in its core.</li>
+<li>A <strong>galaxy</strong> is a vast collection of billions of stars, gas, dust and dark matter held together by gravity. Our Solar System is in the <strong>Milky Way</strong> galaxy (~200 billion stars).</li>
+<li>A <strong>light year</strong> is a unit of <strong>distance</strong> (not time) — the distance light travels in one year (~9.5 trillion km). The nearest star (Proxima Centauri) is ~4.2 light years away.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="solar-system"><p class="diagram-caption">The eight planets of the Solar System in order</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="moon-phases"><p class="diagram-caption">The phases of the Moon</p><p class="diagram-expand-hint">Click to enlarge</p></div>
@@ -1832,12 +1983,298 @@ It is NOT because Earth is closer to the Sun in summer — Earth's orbit is near
 <dt>Axis</dt><dd>An imaginary line through Earth from North Pole to South Pole, around which it rotates once per day.</dd>
 <dt>Axial tilt</dt><dd>Earth's axis is tilted at 23.5° from vertical — this causes the seasons.</dd>
 <dt>Solar eclipse</dt><dd>When the Moon passes directly between Earth and Sun, blocking sunlight from reaching part of Earth's surface.</dd>
+<dt>Light year</dt><dd>A unit of distance equal to how far light travels in one year (~9.5 trillion km). Used for measuring vast astronomical distances.</dd>
+<dt>Galaxy</dt><dd>A vast system of billions of stars, gas, dust and dark matter bound together by gravity. Our galaxy is the Milky Way.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
 <li>❌ Thinking summer happens because Earth is closer to the Sun — ✅ Correct: seasons are caused by Earth's <strong>axial tilt</strong>, not distance. (Australia has summer when we have winter!)</li>
 <li>❌ Thinking the Moon produces its own light — ✅ Correct: the Moon <strong>reflects sunlight</strong>. Phases occur because we see different portions of its lit side.</li>
 <li>❌ Confusing rotation and revolution — ✅ Correct: Earth <strong>rotates</strong> on its axis (causes day/night); it <strong>revolves</strong> (orbits) around the Sun (causes years).</li>
+<li>❌ Thinking a light year is a unit of time — ✅ Correct: a light year is a unit of <strong>distance</strong>.</li>
+</ul>`,
+
+"island-60": `<h4>Introduction</h4>
+<p>Every cell in your body needs nutrients to function, grow and repair itself. A <strong>balanced diet</strong> provides the right amounts of seven essential nutrient groups — carbohydrates, lipids, proteins, vitamins, minerals, fibre and water. Understanding what these nutrients do and how the digestive system breaks food down is key to understanding human health.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Carbohydrates</strong> are the body's main source of energy. Found in bread, pasta, rice and potatoes, they are broken down into <strong>glucose</strong> during digestion.</li>
+<li><strong>Lipids</strong> (fats and oils) provide a concentrated energy store — more energy per gram than carbohydrates. They also insulate the body and protect organs.</li>
+<li><strong>Proteins</strong> are needed for <strong>growth and repair</strong> of cells and tissues. Good sources include meat, fish, eggs, beans and dairy.</li>
+<li><strong>Vitamins</strong> are needed in small amounts for specific functions. Vitamin C prevents scurvy; vitamin D helps absorb calcium for healthy bones.</li>
+<li><strong>Minerals</strong> are also needed in small amounts. Iron is needed for haemoglobin in red blood cells; calcium builds strong bones and teeth.</li>
+<li><strong>Fibre</strong> (roughage) keeps the digestive system healthy and prevents constipation. It cannot be digested but helps food move through the gut.</li>
+<li><strong>Water</strong> is essential for chemical reactions, transporting substances and regulating body temperature.</li>
+<li><strong>Obesity</strong> results from consuming more energy than the body uses over time. <strong>Starvation</strong> occurs when the body receives too little energy. <strong>Deficiency diseases</strong> result from lacking specific nutrients (e.g. scurvy from lack of vitamin C, rickets from lack of vitamin D).</li>
+<li>The <strong>digestive system</strong> breaks down large, insoluble food molecules into small, soluble ones that can be absorbed into the blood. The main organs are: <strong>mouth → oesophagus → stomach → small intestine → large intestine</strong>.</li>
+<li><strong>Enzymes</strong> are biological catalysts that speed up the chemical breakdown of food. Different enzymes work on different nutrients (e.g. amylase breaks down starch, protease breaks down proteins, lipase breaks down fats).</li>
+<li><strong>Bacteria</strong> in the large intestine help break down remaining food and produce some vitamins (e.g. vitamin K).</li>
+</ul>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A student's daily diet contains 10,500 kJ of energy, but their body only uses 8,400 kJ. Over several months, what is likely to happen and why?</p>
+<p><strong>Solution:</strong><br>
+1. The student is consuming <strong>more energy</strong> than their body uses each day (10,500 − 8,400 = 2,100 kJ excess).<br>
+2. The excess energy will be stored as <strong>fat</strong> in the body.<br>
+3. Over time, this will lead to <strong>weight gain</strong> and potentially <strong>obesity</strong>.<br>
+4. To balance their diet, the student could either <strong>reduce energy intake</strong> (eat less high-energy food) or <strong>increase energy use</strong> (exercise more).</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Balanced diet</dt><dd>A diet that contains all seven nutrient groups in the correct proportions for the body's needs.</dd>
+<dt>Enzyme</dt><dd>A biological catalyst that speeds up chemical reactions in the body, such as breaking down food molecules during digestion.</dd>
+<dt>Deficiency disease</dt><dd>An illness caused by a lack of a particular nutrient in the diet (e.g. scurvy from lack of vitamin C).</dd>
+<dt>Peristalsis</dt><dd>The wave-like muscle contractions that push food through the digestive system.</dd>
+<dt>Villi</dt><dd>Tiny finger-like projections lining the small intestine that increase the surface area for absorbing nutrients into the blood.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking fats are always bad — ✅ Correct: lipids are an <strong>essential</strong> part of a balanced diet. They provide energy, insulation and protect organs.</li>
+<li>❌ Saying digestion only happens in the stomach — ✅ Correct: digestion begins in the <strong>mouth</strong> (teeth and amylase) and continues through the stomach and <strong>small intestine</strong>.</li>
+<li>❌ Confusing absorption and digestion — ✅ Correct: <strong>digestion</strong> breaks food down; <strong>absorption</strong> is when nutrients pass into the blood (mainly in the small intestine).</li>
+<li>❌ Thinking fibre provides energy — ✅ Correct: fibre <strong>cannot be digested</strong> but it is essential for keeping the digestive system moving.</li>
+</ul>`,
+
+"island-61": `<h4>Introduction</h4>
+<p>Pressure is all about how a force is spread over an area. A small force on a tiny area (like the point of a drawing pin) creates enormous pressure, while a large force spread over a big area (like a snowshoe) creates very little pressure. Understanding pressure helps explain everything from why knives cut to why deep-sea creatures need special adaptations.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Pressure = force ÷ area</strong> (P = F/A). Pressure is measured in <strong>Pascals (Pa)</strong>, where 1 Pa = 1 N/m².</li>
+<li>The <strong>same force</strong> over a <strong>smaller area</strong> creates <strong>greater pressure</strong> (e.g. a sharp knife cuts better than a blunt one).</li>
+<li>The <strong>same force</strong> over a <strong>larger area</strong> creates <strong>less pressure</strong> (e.g. snowshoes stop you sinking into snow).</li>
+<li><strong>Atmospheric pressure</strong> is caused by the weight of air above a surface. At sea level it is about 101 kPa. It <strong>decreases</strong> with altitude because there is less air above.</li>
+<li><strong>Pressure in liquids</strong> increases with <strong>depth</strong> because there is more liquid above pushing down. It acts in <strong>all directions</strong> at any point.</li>
+<li><strong>Upthrust</strong> is the upward force a liquid exerts on an object placed in it. It is caused by the difference in pressure between the top and bottom of the object.</li>
+<li>An object <strong>floats</strong> when upthrust equals its weight. It <strong>sinks</strong> when its weight is greater than the upthrust.</li>
+</ul>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A box weighs 900 N and rests on the ground. The base of the box has an area of 3 m². Calculate the pressure the box exerts on the ground.</p>
+<p><strong>Solution:</strong><br>
+P = F ÷ A<br>
+P = 900 ÷ 3<br>
+P = <strong>300 Pa</strong><br>
+The box exerts a pressure of 300 Pascals (300 N/m²) on the ground.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Pressure</dt><dd>The force acting per unit area, measured in Pascals (Pa). P = F ÷ A.</dd>
+<dt>Pascal (Pa)</dt><dd>The SI unit of pressure. 1 Pa = 1 N/m² (one Newton per square metre).</dd>
+<dt>Atmospheric pressure</dt><dd>The pressure exerted by the weight of the atmosphere on a surface. It is about 101 kPa at sea level and decreases with altitude.</dd>
+<dt>Upthrust</dt><dd>The upward force exerted by a fluid on an object placed in it, caused by the pressure difference between the top and bottom of the object.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking a heavier object always exerts more pressure — ✅ Correct: pressure depends on <strong>both</strong> force and area. A lighter object with a tiny area can exert more pressure than a heavy one with a large area.</li>
+<li>❌ Forgetting the units — ✅ Correct: force must be in <strong>Newtons</strong>, area in <strong>m²</strong>, and pressure in <strong>Pascals (N/m²)</strong>.</li>
+<li>❌ Thinking atmospheric pressure only pushes downwards — ✅ Correct: atmospheric pressure acts in <strong>all directions</strong>.</li>
+<li>❌ Saying an object floats because it is light — ✅ Correct: an object floats when the <strong>upthrust equals its weight</strong>. A heavy steel ship floats because its shape displaces enough water.</li>
+</ul>`,
+
+"island-62": `<h4>Introduction</h4>
+<p>The Periodic Table is one of the most important tools in science — a single chart that organises all known elements and reveals patterns in their properties. Dmitri Mendeleev first arranged elements so that those with similar properties fell into the same columns, and he was so confident in the pattern that he left gaps for elements that had not yet been discovered. Modern science has confirmed his brilliance.</p>
+<div class="lesson-diagram" data-diagram="periodic-table"><p class="diagram-caption">The Periodic Table of Elements — click to enlarge</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div style="text-align:center;margin:1em 0">
+  <button onclick="downloadPeriodicTablePDF()" style="padding:0.6em 1.4em;font-size:0.95em;font-weight:600;color:#fff;background:linear-gradient(135deg,#6366f1,#8b5cf6);border:none;border-radius:8px;cursor:pointer;box-shadow:0 2px 8px rgba(99,102,241,0.25)">&#x1F4E5; Download Periodic Table as PDF</button>
+</div>
+<h4>📌 Key Points</h4>
+<ul>
+<li>The Periodic Table arranges elements in order of increasing <strong>atomic number</strong> (the number of protons).</li>
+<li><strong>Periods</strong> are horizontal rows. Elements in the same period have the same number of <strong>electron shells</strong>.</li>
+<li><strong>Groups</strong> are vertical columns. Elements in the same group have the same number of <strong>outer-shell electrons</strong>, giving them <strong>similar chemical properties</strong>.</li>
+<li><strong>Group 1 — Alkali metals</strong> (lithium, sodium, potassium): very reactive metals that react vigorously with water. Reactivity <strong>increases</strong> going down the group.</li>
+<li><strong>Group 7 — Halogens</strong> (fluorine, chlorine, bromine, iodine): reactive non-metals that form salts with metals. Reactivity <strong>decreases</strong> going down the group.</li>
+<li><strong>Group 0 — Noble gases</strong> (helium, neon, argon): very unreactive because they have a <strong>full outer electron shell</strong>.</li>
+<li><strong>Metals</strong> are found on the left and centre of the table. They are shiny, good conductors, malleable and ductile.</li>
+<li><strong>Non-metals</strong> are found on the right. They are dull, poor conductors and brittle when solid.</li>
+<li><strong>Mendeleev</strong> (1869) arranged elements by atomic mass and left gaps for undiscovered elements. He predicted their properties — and was proved right when gallium and germanium were discovered.</li>
+</ul>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> Lithium reacts gently with water. Sodium reacts more vigorously. Potassium reacts violently with a lilac flame. These are all in Group 1. Explain the pattern.</p>
+<p><strong>Solution:</strong><br>
+1. Lithium, sodium and potassium are all in <strong>Group 1</strong> (alkali metals), so they all have <strong>one electron</strong> in their outer shell.<br>
+2. Going down the group, atoms get <strong>larger</strong> — the outer electron is further from the nucleus.<br>
+3. The further the outer electron is from the nucleus, the <strong>easier it is to lose</strong>.<br>
+4. Losing the outer electron more easily means the metal reacts <strong>more vigorously</strong>.<br>
+Therefore, reactivity <strong>increases</strong> going down Group 1.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Atomic number</dt><dd>The number of protons in the nucleus of an atom. Elements in the Periodic Table are arranged in order of increasing atomic number.</dd>
+<dt>Period</dt><dd>A horizontal row in the Periodic Table. Elements in the same period have the same number of electron shells.</dd>
+<dt>Group</dt><dd>A vertical column in the Periodic Table. Elements in the same group have the same number of outer-shell electrons and similar chemical properties.</dd>
+<dt>Alkali metals</dt><dd>The elements in Group 1 (lithium, sodium, potassium, etc.). Very reactive metals that react with water to produce hydrogen gas and an alkaline solution.</dd>
+<dt>Halogens</dt><dd>The elements in Group 7 (fluorine, chlorine, bromine, iodine). Reactive non-metals that form salts when they react with metals.</dd>
+<dt>Noble gases</dt><dd>The elements in Group 0 (helium, neon, argon, etc.). Very unreactive because they have a full outer electron shell.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Confusing groups and periods — ✅ Correct: <strong>groups</strong> are vertical columns (similar properties); <strong>periods</strong> are horizontal rows (same number of shells).</li>
+<li>❌ Thinking all elements are metals — ✅ Correct: about 80% are metals, but <strong>non-metals</strong> (on the right) and noble gases are equally important.</li>
+<li>❌ Thinking reactivity always increases going down a group — ✅ Correct: reactivity increases down Group 1 (metals lose electrons more easily), but <strong>decreases</strong> down Group 7 (non-metals gain electrons less easily).</li>
+<li>❌ Saying noble gases have no electrons — ✅ Correct: noble gases have electrons, but their outer shell is <strong>full</strong>, making them very stable and unreactive.</li>
+</ul>`,
+
+"island-63": `<h4>Introduction</h4>
+<p>Not all metals are the same — some react violently with water while others barely react at all. The <strong>reactivity series</strong> ranks metals from most to least reactive, and this ranking determines how metals are extracted from their ores. Meanwhile, modern materials such as ceramics, polymers and composites have been developed to meet specific needs that metals alone cannot fulfil.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li>The <strong>reactivity series</strong> ranks metals from most reactive (potassium) to least reactive (platinum): K, Na, Ca, Mg, Al, <em>C</em>, Zn, Fe, Cu, Ag, Au, Pt.</li>
+<li>A <strong>more reactive</strong> metal can <strong>displace</strong> a less reactive metal from its compound. For example: zinc + copper sulfate → zinc sulfate + copper.</li>
+<li><strong>Carbon</strong> is placed in the reactivity series (between aluminium and zinc). Metals <strong>below</strong> carbon can be extracted by heating their ores with carbon (e.g. iron from iron oxide in a blast furnace).</li>
+<li>Metals <strong>above</strong> carbon (e.g. aluminium) must be extracted by <strong>electrolysis</strong>, which is more expensive.</li>
+<li>Very unreactive metals (gold, silver, platinum) are found <strong>native</strong> (as pure metal) in the ground because they do not easily form compounds.</li>
+<li><strong>Ceramics</strong> (e.g. clay, glass, porcelain) are hard, brittle, heat-resistant and electrically insulating.</li>
+<li><strong>Polymers</strong> (e.g. polythene, PVC, nylon) are long-chain molecules that are lightweight, flexible and good electrical insulators.</li>
+<li><strong>Composites</strong> (e.g. fibreglass, reinforced concrete, carbon fibre) combine two or more materials to get properties better than either alone.</li>
+<li>The choice of material for a specific purpose depends on properties such as <strong>strength, weight, cost, flexibility, conductivity</strong> and resistance to corrosion.</li>
+</ul>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A student places a piece of iron into copper sulfate solution. The iron becomes coated in a reddish-brown layer. Explain what has happened.</p>
+<p><strong>Solution:</strong><br>
+1. Iron is <strong>more reactive</strong> than copper in the reactivity series.<br>
+2. Iron <strong>displaces</strong> copper from the copper sulfate solution.<br>
+3. The iron dissolves into the solution (forming iron sulfate), and the copper comes out of solution and is deposited on the iron as a reddish-brown coating.<br>
+4. Word equation: iron + copper sulfate → iron sulfate + copper.<br>
+This is a <strong>displacement reaction</strong> — the more reactive metal takes the place of the less reactive one.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Reactivity series</dt><dd>A list of metals ranked in order of their reactivity, from most reactive (potassium) to least reactive (platinum).</dd>
+<dt>Displacement reaction</dt><dd>A reaction in which a more reactive element takes the place of a less reactive element in a compound.</dd>
+<dt>Ore</dt><dd>A rock that contains enough metal or metal compound to make it worthwhile to extract the metal.</dd>
+<dt>Ceramic</dt><dd>A hard, brittle, heat-resistant material made by heating natural substances (e.g. clay) to high temperatures.</dd>
+<dt>Polymer</dt><dd>A very long molecule made of many small repeating units (monomers) joined together. Plastics are examples of polymers.</dd>
+<dt>Composite</dt><dd>A material made by combining two or more different materials to produce improved properties.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking carbon is a metal — ✅ Correct: carbon is a <strong>non-metal</strong>, but it is placed in the reactivity series because it is used to extract metals from their ores.</li>
+<li>❌ Saying all metals are extracted using carbon — ✅ Correct: only metals <strong>below carbon</strong> in the reactivity series can be extracted this way. Metals above carbon require <strong>electrolysis</strong>.</li>
+<li>❌ Confusing composite and compound — ✅ Correct: a <strong>composite</strong> is a physical combination of materials (not chemically bonded); a <strong>compound</strong> is a chemical combination of elements.</li>
+<li>❌ Thinking a displacement reaction can happen either way — ✅ Correct: only the <strong>more reactive</strong> metal can displace the less reactive one, never the other way round.</li>
+</ul>`,
+
+"island-64": `<h4>Introduction</h4>
+<p>Springs are everywhere — in mattresses, car suspensions, trampolines and pens. Robert Hooke discovered that when you stretch a spring with a force, the amount it extends is directly proportional to the force — as long as you do not stretch it too far. This beautifully simple relationship is known as <strong>Hooke's Law</strong>.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li><strong>Hooke's Law:</strong> F = k × e, where F is the force applied (N), k is the spring constant (N/m), and e is the extension (m).</li>
+<li><strong>Extension</strong> = stretched length − original (natural) length.</li>
+<li>The <strong>spring constant (k)</strong> measures stiffness. A higher k means a stiffer spring that needs more force to stretch it.</li>
+<li>On a <strong>force–extension graph</strong>, Hooke's Law produces a <strong>straight line through the origin</strong>. The gradient equals the spring constant (k).</li>
+<li>The <strong>limit of proportionality</strong> is the point beyond which force and extension are no longer directly proportional — the graph starts to curve.</li>
+<li><strong>Elastic deformation</strong>: the object returns to its original shape when the force is removed (like gently stretching an elastic band).</li>
+<li><strong>Plastic deformation</strong>: the object is permanently deformed and does not return to its original shape (like bending a paperclip).</li>
+<li>If you <strong>double the force</strong> (within the limit of proportionality), the extension <strong>doubles</strong> — this is what "directly proportional" means.</li>
+</ul>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A spring has a natural length of 12 cm. When a force of 10 N is applied, it stretches to 16 cm. Calculate the spring constant.</p>
+<p><strong>Solution:</strong><br>
+Step 1 — Find the extension: e = 16 − 12 = 4 cm = 0.04 m<br>
+Step 2 — Rearrange Hooke's Law: k = F ÷ e<br>
+Step 3 — Substitute: k = 10 ÷ 0.04 = <strong>250 N/m</strong><br>
+The spring constant is 250 N/m, meaning the spring needs 250 N of force for every 1 m of extension.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Hooke's Law</dt><dd>The extension of a spring is directly proportional to the force applied, provided the limit of proportionality is not exceeded. F = k × e.</dd>
+<dt>Spring constant (k)</dt><dd>A measure of the stiffness of a spring, in N/m. Higher k = stiffer spring.</dd>
+<dt>Extension (e)</dt><dd>The amount a spring has been stretched beyond its natural (unstretched) length, in metres.</dd>
+<dt>Limit of proportionality</dt><dd>The point beyond which the relationship between force and extension is no longer linear (Hooke's Law stops applying).</dd>
+<dt>Elastic deformation</dt><dd>Deformation that is reversed when the force is removed — the object returns to its original shape.</dd>
+<dt>Plastic deformation</dt><dd>Permanent deformation — the object does not return to its original shape when the force is removed.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Using the total length instead of the extension — ✅ Correct: extension = stretched length − <strong>original length</strong>. Always subtract the natural length first.</li>
+<li>❌ Forgetting to convert cm to m — ✅ Correct: the equation F = k × e requires extension in <strong>metres</strong>. 4 cm = 0.04 m.</li>
+<li>❌ Thinking Hooke's Law always applies — ✅ Correct: Hooke's Law only works up to the <strong>limit of proportionality</strong>. Beyond that, the spring may deform permanently.</li>
+<li>❌ Confusing the limit of proportionality with breaking — ✅ Correct: the limit of proportionality is where the graph <strong>curves</strong> — the spring has not broken, but the relationship is no longer linear.</li>
+</ul>`,
+
+"island-65": `<h4>Introduction</h4>
+<p>A <strong>drug</strong> is any substance that changes the way the body or mind works. Some drugs are medicines that save lives, but others — including legal drugs like alcohol and tobacco — can cause serious harm to health. Understanding how drugs affect the body helps you make informed decisions and understand why substance misuse is dangerous.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li>A <strong>drug</strong> is any substance that changes how the body or mind works. This includes medicines (painkillers, antibiotics) and recreational drugs.</li>
+<li><strong>Legal recreational drugs</strong> include alcohol, tobacco and caffeine. <strong>Illegal recreational drugs</strong> include cannabis, cocaine and ecstasy. Legal does not mean safe.</li>
+<li><strong>Alcohol</strong> is a <strong>depressant</strong> — it slows down brain activity and the nervous system, leading to slower reactions, impaired judgement and loss of coordination.</li>
+<li>Long-term alcohol misuse damages the <strong>liver</strong> (cirrhosis), brain, heart and stomach.</li>
+<li><strong>Tobacco</strong> contains <strong>nicotine</strong> (highly addictive stimulant), <strong>tar</strong> (damages lungs and causes cancer) and <strong>carbon monoxide</strong> (reduces oxygen-carrying capacity of blood).</li>
+<li>Smoking increases the risk of <strong>lung cancer, heart disease, bronchitis and emphysema</strong>.</li>
+<li><strong>Passive smoking</strong> (breathing in other people's smoke) is also harmful to health.</li>
+<li><strong>Tolerance</strong> develops when the body adapts to a drug, so more is needed to get the same effect — this increases the risk of overdose.</li>
+<li><strong>Dependence</strong> (addiction) occurs when a person feels unable to function without a drug and experiences <strong>withdrawal symptoms</strong> when they stop.</li>
+<li>Substance misuse is especially dangerous for young people because the brain is still developing until the mid-20s, making it more vulnerable to lasting damage.</li>
+</ul>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A student says: "Caffeine cannot be a drug because you can buy it in any shop." Explain why this statement is incorrect.</p>
+<p><strong>Solution:</strong><br>
+1. A drug is defined as any substance that <strong>changes how the body or mind works</strong>.<br>
+2. Caffeine is a <strong>stimulant</strong> — it speeds up brain activity and increases alertness.<br>
+3. Since caffeine changes how the nervous system works, it <strong>is a drug</strong> by definition.<br>
+4. Whether a drug is <strong>legal or illegal</strong> does not change whether it is a drug — it only affects whether you are allowed to buy it.<br>
+Therefore the student is wrong: caffeine is a legal drug.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Drug</dt><dd>Any substance that changes the way the body or mind works.</dd>
+<dt>Depressant</dt><dd>A drug that slows down brain activity and the nervous system (e.g. alcohol).</dd>
+<dt>Stimulant</dt><dd>A drug that speeds up brain activity and the nervous system (e.g. caffeine, nicotine).</dd>
+<dt>Tolerance</dt><dd>When the body adapts to a drug so that a larger dose is needed to produce the same effect.</dd>
+<dt>Dependence (addiction)</dt><dd>When a person feels unable to function normally without a drug and experiences withdrawal symptoms without it.</dd>
+<dt>Withdrawal symptoms</dt><dd>Unpleasant physical and psychological effects experienced when a person stops taking a drug they are dependent on (e.g. anxiety, shaking, nausea).</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Thinking legal drugs are always safe — ✅ Correct: <strong>alcohol and tobacco</strong> cause more health damage in the UK than many illegal drugs. Legal does not mean harmless.</li>
+<li>❌ Saying only illegal substances are drugs — ✅ Correct: a drug is <strong>any substance that changes how the body works</strong>. Caffeine, alcohol and paracetamol are all drugs.</li>
+<li>❌ Confusing tolerance and dependence — ✅ Correct: <strong>tolerance</strong> means needing more to get the same effect; <strong>dependence</strong> means feeling unable to cope without the drug.</li>
+<li>❌ Thinking addiction is just a choice — ✅ Correct: dependence involves <strong>physical and chemical changes</strong> in the brain that make stopping extremely difficult. It is a medical condition, not simply a lack of willpower.</li>
+</ul>`,
+
+"island-66": `<h4>Introduction</h4>
+<p>A <strong>distance–time graph</strong> is one of the most useful tools in physics for describing motion. By looking at the shape of the line, you can tell whether an object is stationary, moving at a constant speed, speeding up or slowing down — and by calculating the gradient, you can work out exactly how fast it is going.</p>
+<h4>📌 Key Points</h4>
+<ul>
+<li>On a distance–time graph, the <strong>x-axis</strong> shows time and the <strong>y-axis</strong> shows the distance from the starting point.</li>
+<li>A <strong>horizontal (flat) line</strong> means the object is <strong>stationary</strong> — time passes but the distance does not change.</li>
+<li>A <strong>straight diagonal line</strong> going upwards means the object is moving at <strong>constant speed</strong>.</li>
+<li>The <strong>steeper</strong> the line, the <strong>faster</strong> the object is moving (more distance covered per unit time).</li>
+<li><strong>Speed = gradient</strong> of the line = distance ÷ time.</li>
+<li>A <strong>curve getting steeper</strong> means the object is <strong>accelerating</strong> (speeding up). A curve getting shallower means it is <strong>decelerating</strong> (slowing down).</li>
+<li>To compare journeys, look at the <strong>gradient</strong> of each section — a steeper section represents a faster speed.</li>
+<li><strong>Average speed</strong> for a whole journey = total distance ÷ total time.</li>
+</ul>
+<h4>✏️ Worked Example</h4>
+<div class="example-box">
+<p><strong>Example:</strong> A distance–time graph shows a straight line from (0 s, 0 m) to (20 s, 80 m), then a flat line from (20 s, 80 m) to (30 s, 80 m). Describe the journey and calculate the speed during the first section.</p>
+<p><strong>Solution:</strong><br>
+1. <strong>Section 1 (0–20 s):</strong> a straight diagonal line means the object is moving at <strong>constant speed</strong>.<br>
+   Speed = distance ÷ time = 80 ÷ 20 = <strong>4 m/s</strong>.<br>
+2. <strong>Section 2 (20–30 s):</strong> a flat line means the object is <strong>stationary</strong> for 10 seconds.<br>
+3. The object travelled 80 m at 4 m/s, then stopped for 10 seconds.<br>
+4. Average speed for the whole journey = total distance ÷ total time = 80 ÷ 30 = <strong>2.67 m/s</strong>.</p>
+</div>
+<h4>📖 Key Vocabulary</h4>
+<dl>
+<dt>Distance–time graph</dt><dd>A graph that shows how the distance of an object from a starting point changes over time. Time is on the x-axis; distance on the y-axis.</dd>
+<dt>Gradient</dt><dd>The steepness of a line on a graph. On a distance–time graph, the gradient equals the speed.</dd>
+<dt>Constant speed</dt><dd>Moving at the same speed throughout — shown by a straight diagonal line on a distance–time graph.</dd>
+<dt>Stationary</dt><dd>Not moving — shown by a horizontal (flat) line on a distance–time graph.</dd>
+<dt>Average speed</dt><dd>The total distance travelled divided by the total time taken for the whole journey.</dd>
+</dl>
+<h4>⚠️ Common Mistakes to Avoid</h4>
+<ul>
+<li>❌ Confusing a flat line with constant speed — ✅ Correct: a <strong>flat line</strong> means the object is <strong>stationary</strong> (not moving). A <strong>diagonal</strong> line means constant speed.</li>
+<li>❌ Forgetting that the gradient gives speed — ✅ Correct: speed = <strong>distance ÷ time</strong> = the gradient of the line. Steeper = faster.</li>
+<li>❌ Reading off total distance instead of calculating each section separately — ✅ Correct: for a journey with different sections, calculate the <strong>speed of each section</strong> using that section's distance and time.</li>
+<li>❌ Confusing distance–time graphs with speed–time graphs — ✅ Correct: on a distance–time graph, the gradient gives <strong>speed</strong>. On a speed–time graph, the gradient gives <strong>acceleration</strong> (a different concept).</li>
 </ul>`,
 
 "island-48": `<h4>Introduction</h4>
@@ -1849,10 +2286,11 @@ It is NOT because Earth is closer to the Sun in summer — Earth's orbit is near
 <li><strong>Human geography</strong> studies people and how they interact with the world — cities, migration, trade, culture and development.</li>
 <li><strong>Place</strong> refers to a specific location and the characteristics that make it unique (e.g. London is a capital city on the River Thames).</li>
 <li><strong>Space</strong> describes the gap or area between places and how things are distributed across the Earth's surface.</li>
-<li><strong>Scale</strong> means studying geography at different levels — local (your town), national (the UK), or global (the whole world).</li>
+<li><strong>Scale</strong> means studying geography at different levels — local (your town), national (the UK), or global (the whole world). On a map, <strong>map scale</strong> shows the relationship between distance on the map and real distance on the ground (e.g. 1:25,000 means 1 cm on the map = 250 m in reality).</li>
 <li>The UK is made up of four countries: <strong>England</strong> (London), <strong>Scotland</strong> (Edinburgh), <strong>Wales</strong> (Cardiff) and <strong>Northern Ireland</strong> (Belfast).</li>
-<li>There are <strong>7 continents</strong> (Africa, Antarctica, Asia, Australia/Oceania, Europe, North America, South America) and <strong>5 oceans</strong> (Atlantic, Pacific, Indian, Southern, Arctic).</li>
+<li>There are <strong>7 continents</strong> (Africa, Antarctica, Asia, Australia/Oceania, Europe, North America, South America) and <strong>5 oceans</strong> (Atlantic, Pacific, Indian, Southern, Arctic). <strong>Asia</strong> is the largest continent by area and population; the <strong>Pacific</strong> is the largest ocean.</li>
 <li><strong>Latitude</strong> lines run east–west and measure how far north or south of the Equator you are. <strong>Longitude</strong> lines run north–south and measure how far east or west of the Prime Meridian you are.</li>
+<li>Latitude is the main factor affecting temperature, but <strong>altitude</strong> (higher = colder), <strong>ocean currents</strong>, <strong>distance from the sea</strong> and <strong>prevailing winds</strong> also affect climate — so two places at the same latitude can have very different weather.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="lat-long-globe"><p class="diagram-caption">Lines of latitude and longitude on a globe — the grid system for locating any point on Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
@@ -1875,6 +2313,8 @@ It is NOT because Earth is closer to the Sun in summer — Earth's orbit is near
 <dt>Longitude</dt><dd>Imaginary lines running north–south, measuring distance east or west of the Prime Meridian (0°). Measured in degrees up to 180°E or 180°W.</dd>
 <dt>Equator</dt><dd>The imaginary line at 0° latitude that divides the Earth into the Northern and Southern Hemispheres.</dd>
 <dt>Tropics</dt><dd>The Tropic of Cancer (23.5°N) and Tropic of Capricorn (23.5°S) — the boundaries of the tropical zone where the Sun can be directly overhead.</dd>
+<dt>Map scale</dt><dd>The ratio between a distance on a map and the corresponding real-world distance (e.g. 1:25,000 means 1 cm on the map equals 25,000 cm or 250 m on the ground).</dd>
+<dt>Hemisphere</dt><dd>Half of the Earth. The Equator divides the globe into Northern and Southern Hemispheres; the Prime Meridian divides it into Eastern and Western Hemispheres.</dd>
 </dl>
 
 <h4>⚠️ Common Mistakes to Avoid</h4>
@@ -1891,10 +2331,11 @@ It is NOT because Earth is closer to the Sun in summer — Earth's orbit is near
 <h4>📌 Key Points</h4>
 <ul>
 <li>The UK's physical landscape is broadly divided into <strong>uplands</strong> (north and west — older, harder rocks) and <strong>lowlands</strong> (south and east — younger, softer rocks).</li>
-<li>Key upland areas include the <strong>Scottish Highlands</strong> (Ben Nevis, 1,345 m — the UK's highest peak), the <strong>Lake District</strong>, the <strong>Pennines</strong> (the "backbone of England") and <strong>Snowdonia</strong> in Wales.</li>
+<li>Key upland areas include the <strong>Scottish Highlands</strong> (Ben Nevis, 1,345 m — the UK's highest peak), the <strong>Lake District</strong> (Scafell Pike, 978 m — England's highest), the <strong>Pennines</strong> (the "backbone of England") and <strong>Snowdonia</strong> in Wales (Snowdon, 1,085 m). The <strong>Central Lowlands</strong> of Scotland lie between the Highlands and Southern Uplands — a flatter, more fertile region containing Edinburgh and Glasgow.</li>
 <li>Major rivers: the <strong>Severn</strong> (longest, 354 km), the <strong>Thames</strong> (flows through London), the <strong>Trent</strong> (drains the Midlands) and the <strong>Tyne</strong> (flows through Newcastle).</li>
-<li>The UK has over <strong>19,000 miles of coastline</strong>, with features such as cliffs (e.g. White Cliffs of Dover), beaches, estuaries and spits.</li>
+<li>The UK has over <strong>19,000 miles of coastline</strong>, with features such as cliffs (e.g. White Cliffs of Dover), beaches, estuaries and spits. The <strong>Holderness Coast</strong> in East Yorkshire is one of Europe's fastest-eroding coastlines (up to 2 m/year) because its soft boulder clay cliffs are easily worn away by waves.</li>
 <li>Major cities include London (capital, 9 million+), Birmingham, Manchester, Leeds, Glasgow and Edinburgh, mostly located near rivers or coasts.</li>
+<li>The UK economy is dominated by the <strong>tertiary (service) sector</strong> (retail, education, healthcare — about 80 % of jobs). The <strong>primary sector</strong> (farming, fishing, mining), <strong>secondary sector</strong> (manufacturing) and growing <strong>quaternary sector</strong> (research, IT) make up the rest.</li>
 <li>The <strong>North-South divide</strong> describes economic differences — the South East tends to be wealthier with more service-sector jobs, while parts of the North have faced decline in traditional industries like mining and steel.</li>
 <li><strong>Rural areas</strong> have lower population density, more farming and often fewer services. <strong>Urban areas</strong> are built-up, densely populated and have more jobs and facilities.</li>
 <li>The UK has <strong>15 National Parks</strong> (e.g. Lake District, Peak District, Snowdonia) — protected areas valued for their landscape, wildlife and recreation.</li>
@@ -1920,6 +2361,8 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 <dt>Estuary</dt><dd>The wide mouth of a river where it meets the sea, where freshwater and saltwater mix (e.g. the Thames Estuary).</dd>
 <dt>National Park</dt><dd>A protected area of countryside valued for its landscape, wildlife and recreation. Planning rules limit development to preserve the environment.</dd>
 <dt>North-South divide</dt><dd>The economic and social differences between the wealthier South East of England and the relatively less prosperous North and Midlands.</dd>
+<dt>Coastal erosion</dt><dd>The wearing away of land by the sea through wave action, especially on soft-rock coastlines such as the Holderness Coast.</dd>
+<dt>Tertiary sector</dt><dd>The service sector of the economy — jobs in retail, education, healthcare, finance and tourism. It employs about 80 % of UK workers.</dd>
 </dl>
 
 <h4>⚠️ Common Mistakes to Avoid</h4>
@@ -1935,16 +2378,19 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 
 <h4>📌 Key Points</h4>
 <ul>
-<li><strong>Igneous rocks</strong> form when hot magma or lava cools and solidifies. Examples: <strong>granite</strong> (cooled slowly underground — large crystals) and <strong>basalt</strong> (cooled quickly on the surface — small crystals).</li>
-<li><strong>Sedimentary rocks</strong> form when layers of sediment (sand, mud, shells) are compacted and cemented over millions of years. Examples: <strong>limestone</strong> (made from shells/skeletons) and <strong>sandstone</strong> (made from sand grains).</li>
+<li><strong>Igneous rocks</strong> form when hot magma or lava cools and solidifies. <strong>Intrusive</strong> igneous rocks (e.g. <strong>granite</strong>) cool slowly underground and have large crystals. <strong>Extrusive</strong> igneous rocks (e.g. <strong>basalt</strong>) cool quickly on the surface and have small crystals.</li>
+<li><strong>Sedimentary rocks</strong> form when layers of sediment (sand, mud, shells) are compacted and cemented over millions of years. Examples: <strong>limestone</strong> (made from shells/skeletons), <strong>sandstone</strong> (made from sand grains) and <strong>chalk</strong>. Sedimentary rocks are the only type likely to contain <strong>fossils</strong> because organisms are buried in sediment before it hardens.</li>
 <li><strong>Metamorphic rocks</strong> form when existing rocks are changed by extreme heat and/or pressure deep underground. Examples: <strong>marble</strong> (from limestone) and <strong>slate</strong> (from mudstone/shale).</li>
 <li>The <strong>rock cycle</strong> shows how rocks are continuously transformed: igneous → weathered into sediment → sedimentary → heated/pressured into metamorphic → melted back into magma → igneous again.</li>
 <li><strong>Freeze-thaw weathering</strong> (physical): water enters cracks in rock, freezes and expands by about 9%, widening the crack. Repeated cycles break the rock apart.</li>
 <li><strong>Chemical weathering</strong>: slightly acidic rainwater (containing dissolved CO₂) reacts with minerals in rock, dissolving them. This is especially effective on limestone (forming caves and pavements).</li>
 <li><strong>Biological weathering</strong>: plant roots grow into cracks and widen them; burrowing animals disturb rock; lichens produce acids that attack rock surfaces.</li>
 <li><strong>Soil</strong> forms from weathered rock mixed with decomposed organic matter (humus), water and air. It takes hundreds of years to form just a few centimetres of soil.</li>
+<li>The type of underlying rock shapes the landscape: <strong>limestone</strong> creates karst features (caves, gorges, pavements); <strong>clay</strong> produces flat, poorly drained lowlands; <strong>granite</strong> forms rugged upland moors.</li>
+<li>Human activity can accelerate weathering — burning fossil fuels creates <strong>acid rain</strong> that speeds chemical weathering of buildings and rocks; construction and quarrying expose fresh rock to freeze-thaw; deforestation removes roots that bind soil.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="rock-cycle"><p class="diagram-caption">The rock cycle — showing how igneous, sedimentary and metamorphic rocks transform into each other</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="igneous-comparison"><p class="diagram-caption">Intrusive vs extrusive igneous rock — how cooling speed affects crystal size</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
@@ -1967,6 +2413,9 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 <dt>Weathering</dt><dd>The breakdown of rocks in situ (in their original position) by physical, chemical or biological processes. Unlike erosion, weathering does not involve movement.</dd>
 <dt>Scree</dt><dd>A slope of loose, angular rock fragments that have collected at the base of a cliff or mountain face, usually produced by freeze-thaw weathering.</dd>
 <dt>Humus</dt><dd>Dark, nutrient-rich organic material in soil, formed from the decomposition of dead plants and animals.</dd>
+<dt>Intrusive igneous rock</dt><dd>Igneous rock (e.g. granite) that cooled slowly from magma deep underground, producing large crystals.</dd>
+<dt>Extrusive igneous rock</dt><dd>Igneous rock (e.g. basalt) that cooled quickly from lava on the Earth's surface, producing small crystals.</dd>
+<dt>Fossil</dt><dd>The preserved remains or traces of a once-living organism, found almost exclusively in sedimentary rocks.</dd>
 </dl>
 
 <h4>⚠️ Common Mistakes to Avoid</h4>
@@ -1984,14 +2433,17 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 <ul>
 <li><strong>GIS</strong> (Geographical Information Systems) are computer systems that collect, store, analyse and display geographical data on digital maps. Examples: Google Earth, flood-risk mapping by the Environment Agency.</li>
 <li><strong>Satellite imagery</strong> shows large-scale features (land use, deforestation, urban growth) while <strong>aerial photographs</strong> give more detail of smaller areas.</li>
-<li>Data can be collected using <strong>questionnaires</strong> (asking people), <strong>sampling</strong> (random, systematic or stratified) and <strong>measurements</strong> (river width, temperature, pedestrian counts).</li>
-<li><strong>Bar charts</strong> compare categories; <strong>line graphs</strong> show change over time; <strong>pie charts</strong> show proportions of a whole; <strong>choropleth maps</strong> use shading to show values across areas.</li>
+<li><strong>Primary data</strong> is information you collect yourself first-hand through fieldwork (e.g. temperature readings, pedestrian counts, questionnaire responses). <strong>Secondary data</strong> is information collected by someone else (e.g. census data, OS maps, climate records) — useful for context and comparison.</li>
+<li>Data can be collected using <strong>questionnaires</strong> (asking people), <strong>sampling</strong> (random, systematic or stratified) and <strong>measurements</strong> (river width, temperature, pedestrian counts). A <strong>transect</strong> is a line along which data is collected at regular intervals.</li>
+<li><strong>Bar charts</strong> compare categories; <strong>line graphs</strong> show change over time; <strong>pie charts</strong> show proportions of a whole; <strong>scatter graphs</strong> show the relationship (<strong>correlation</strong>) between two variables; <strong>choropleth maps</strong> use shading to show values across areas.</li>
+<li>An <strong>Environmental Quality Index (EQI)</strong> is a scoring system used to measure the quality of a place by rating factors like litter, noise, green space and building condition.</li>
 <li><strong>Mean</strong> = total ÷ number of values; <strong>median</strong> = middle value when ordered; <strong>mode</strong> = most common value; <strong>range</strong> = highest − lowest.</li>
 <li>Good fieldwork follows a clear process: <strong>question → hypothesis → method → data collection → presentation → analysis → conclusion → evaluation</strong>.</li>
 <li>When drawing conclusions, link your findings back to your original <strong>question or hypothesis</strong> and use data as evidence.</li>
 <li>When evaluating, consider <strong>reliability</strong> (would you get similar results if you repeated it?), <strong>accuracy</strong> (how close to the true value?) and <strong>limitations</strong> (what could be improved?).</li>
 </ul>
 <div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">The geographical enquiry process — from question to evaluation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="correlation-types"><p class="diagram-caption">Types of correlation on scatter graphs — positive, negative and none</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
@@ -2019,6 +2471,11 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 <dt>Hypothesis</dt><dd>A testable prediction or statement that can be investigated through fieldwork (e.g. "Environmental quality decreases with distance from the town centre").</dd>
 <dt>Reliability</dt><dd>How consistent results are — if the investigation were repeated, would similar results be obtained?</dd>
 <dt>Mean</dt><dd>The average: the total of all values divided by the number of values.</dd>
+<dt>Primary data</dt><dd>Information collected first-hand by the researcher through fieldwork — e.g. measurements, questionnaire responses, field sketches.</dd>
+<dt>Secondary data</dt><dd>Information collected by someone else for a different purpose — e.g. census data, OS maps, published statistics, satellite images.</dd>
+<dt>Scatter graph</dt><dd>A graph that plots two variables against each other to reveal correlation — positive (both rise), negative (one rises as the other falls) or none.</dd>
+<dt>Correlation</dt><dd>A relationship between two variables. Correlation does not prove causation — just because two things change together does not mean one causes the other.</dd>
+<dt>Transect</dt><dd>A line along which data is collected at regular intervals, used to see how a variable changes across an area (e.g. from city centre to suburbs).</dd>
 </dl>
 
 <h4>⚠️ Common Mistakes to Avoid</h4>
@@ -2027,6 +2484,7 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 <li>❌ Using a pie chart when you should use a bar chart — ✅ Correct: use pie charts for <strong>proportions of a whole</strong>; use bar charts to <strong>compare different categories</strong>.</li>
 <li>❌ Writing a conclusion without using data — ✅ Correct: always <strong>quote specific figures</strong> from your results to support your conclusion.</li>
 <li>❌ Thinking one survey is enough to be reliable — ✅ Correct: reliability improves with <strong>larger sample sizes</strong> and <strong>repeated measurements</strong>.</li>
+<li>❌ Assuming correlation means causation — ✅ Correct: just because two variables change together does <strong>not</strong> prove one causes the other; there may be a third factor involved.</li>
 </ul>`,
 
 "island-52": `<h4>Introduction</h4>
@@ -2036,12 +2494,14 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 <ul>
 <li><strong>Globalisation</strong> means the growing interconnection of the world's economies, cultures and populations, driven by trade, technology, transport and migration.</li>
 <li>Key causes include: <strong>cheaper, faster transport</strong> (container ships, air freight), <strong>improved communication</strong> (internet, smartphones) and the growth of <strong>TNCs</strong> (transnational corporations like Apple, Unilever, Nike).</li>
-<li>The UK <strong>imports</strong> many goods (electronics from China, fruit from Spain, oil from Norway) and <strong>exports</strong> services (finance, insurance), machinery, cars and pharmaceuticals.</li>
-<li><strong>Migration</strong> has shaped the UK — people have moved to the UK for work, study and safety, bringing skills, culture and diversity (e.g. NHS workers, tech professionals, cuisine).</li>
-<li><strong>Cultural globalisation</strong> means ideas, music, food and fashion spread worldwide — UK culture goes global (e.g. Premier League, BBC) while global culture comes to the UK (e.g. sushi, K-pop, Bollywood).</li>
+<li>The UK <strong>imports</strong> many goods (electronics from China, fruit from Spain, oil from Norway) and <strong>exports</strong> services (finance, insurance), machinery, cars and pharmaceuticals. The UK's main trading partners are the <strong>EU</strong> (especially Germany, France, Netherlands), the <strong>USA</strong> and <strong>China</strong>.</li>
+<li><strong>Migration</strong> has shaped the UK — people have moved to the UK for work, study and safety, bringing skills, culture and diversity (e.g. NHS workers, tech professionals, cuisine). Migrants also send <strong>remittances</strong> (money) home, strengthening links between countries.</li>
+<li><strong>Cultural globalisation</strong> means ideas, music, food and fashion spread worldwide — UK culture goes global (e.g. Premier League, BBC) while global culture comes to the UK (e.g. sushi, K-pop, Bollywood). A risk is <strong>cultural homogenisation</strong> — global brands replacing local traditions.</li>
 <li><strong>Food miles</strong> = the distance food travels from farm to plate. High food miles mean more transport emissions, but importing food can support farmers in developing countries.</li>
 <li><strong>Supply chains</strong> are the networks of people, businesses and countries involved in making and delivering a product. A single smartphone may involve materials and labour from 30+ countries.</li>
 <li>Globalisation has <strong>benefits</strong> (more choice, lower prices, economic growth, cultural exchange) and <strong>costs</strong> (job losses in some sectors, environmental damage, exploitation of workers, loss of local culture).</li>
+<li>Countries are classified by wealth: <strong>HICs</strong> (High Income Countries, e.g. UK, USA), <strong>LICs</strong> (Low Income Countries, e.g. Mali) and <strong>NEEs</strong> (Newly Emerging Economies, e.g. China, India). Globalisation creates <strong>interdependence</strong> — countries relying on each other for goods, services and resources.</li>
+<li><strong>Fairtrade</strong> is a scheme that guarantees producers in developing countries a fair minimum price and better working conditions, helping reduce some of the negative effects of globalisation.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="supply-chain-map"><p class="diagram-caption">A global supply chain — how a single product involves multiple countries</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
@@ -2064,6 +2524,10 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 <dt>Exports</dt><dd>Goods or services produced in the UK and sold to another country.</dd>
 <dt>Food miles</dt><dd>The distance food travels from where it is produced to where it is consumed. Higher food miles generally mean greater carbon emissions from transport.</dd>
 <dt>Supply chain</dt><dd>The network of organisations, people, activities and resources involved in creating and delivering a product from raw material to the consumer.</dd>
+<dt>Interdependence</dt><dd>When countries depend on each other for goods, services, labour and resources — a disruption in one country can affect supply chains worldwide.</dd>
+<dt>HIC / LIC / NEE</dt><dd>High Income Country, Low Income Country, Newly Emerging Economy — categories used to classify countries by their level of economic development.</dd>
+<dt>Fairtrade</dt><dd>A certification scheme ensuring producers in developing countries receive a fair price and decent working conditions for their products.</dd>
+<dt>Remittances</dt><dd>Money sent home by migrants working in another country, providing income for families and contributing to the economy of their home country.</dd>
 </dl>
 
 <h4>⚠️ Common Mistakes to Avoid</h4>
@@ -2082,7 +2546,8 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 <li>After Rome withdrew (c. AD 410), <strong>Anglo-Saxon</strong> tribes (Angles, Saxons, Jutes) migrated from northern Germany and Denmark, establishing kingdoms across England.</li>
 <li>The main Anglo-Saxon kingdoms were <strong>Wessex</strong> (south), <strong>Mercia</strong> (midlands), <strong>Northumbria</strong> (north) and <strong>East Anglia</strong> (east) — together known as the Heptarchy.</li>
 <li>Anglo-Saxon society was hierarchical: the <strong>king</strong> at the top, then <strong>thegns</strong> (nobles/warriors who held land), <strong>ceorls</strong> (free peasant farmers) and <strong>thralls</strong> (enslaved people).</li>
-<li><strong>Christianity</strong> spread through Anglo-Saxon England from AD 597 when Pope Gregory I sent Augustine to convert King Æthelberht of Kent. Monasteries became centres of learning.</li>
+<li><strong>Christianity</strong> spread through Anglo-Saxon England from two directions: in AD 597, Pope Gregory I sent <strong>Augustine</strong> to convert King Æthelberht of Kent (from the south); meanwhile, <strong>Celtic monks</strong> from Iona (e.g. Aidan to Lindisfarne) converted the north.</li>
+<li><strong>Monasteries</strong> were the main centres of education, literacy and culture — monks hand-copied manuscripts, created illuminated texts like the <strong>Lindisfarne Gospels</strong>, and preserved knowledge.</li>
 <li><strong>Viking raids</strong> began in AD 793 with the attack on Lindisfarne monastery. Vikings came from Norway, Denmark and Sweden seeking wealth, land and trade.</li>
 <li>In AD 865, the <strong>Great Heathen Army</strong> invaded and conquered much of eastern and northern England, establishing the <strong>Danelaw</strong> — the area under Viking law and control.</li>
 <li><strong>Alfred the Great</strong> (King of Wessex, 871–899) resisted the Vikings, defeated them at the Battle of Edington (878) and agreed the boundary of the Danelaw. He also promoted education, law and literacy.</li>
@@ -2126,8 +2591,9 @@ Therefore, Alfred is remembered for saving England from total Viking conquest an
 <li><strong>Long-term cause — the Black Death (1348–49):</strong> Killed about one-third of England's population, creating a severe <strong>labour shortage</strong>. Surviving peasants could demand higher wages because workers were scarce.</li>
 <li><strong>The Statute of Labourers (1351):</strong> Parliament froze wages at pre-plague levels and made it illegal for peasants to leave their manor to find better-paid work. Peasants saw this as deeply unfair.</li>
 <li><strong>Short-term cause — the Poll Tax (1380):</strong> A flat tax of 1 shilling per person (rich and poor paid the same amount). This was the <strong>third poll tax in four years</strong> and was seen as unjust.</li>
-<li><strong>Wat Tyler</strong> (from Kent) emerged as the main leader of the revolt. <strong>John Ball</strong>, a radical priest, inspired the rebels with ideas of equality.</li>
-<li>In June 1381, rebels from Kent and Essex <strong>marched on London</strong>, burning tax records, opening prisons and killing the Archbishop of Canterbury and the Lord Treasurer.</li>
+<li>The <strong>immediate trigger</strong>: in May 1381, villagers in Essex attacked a tax collector enforcing the hated Poll Tax. The rebellion quickly spread to Kent.</li>
+<li><strong>Wat Tyler</strong> (from Kent) emerged as the main leader of the revolt. <strong>John Ball</strong>, a radical priest, inspired the rebels with ideas of equality — "When Adam delved and Eve span, who was then the gentleman?"</li>
+<li>In June 1381, rebels from Kent and Essex <strong>marched on London</strong>, burning <strong>John of Gaunt's Savoy Palace</strong>, opening prisons and killing the Archbishop of Canterbury and the Lord Treasurer.</li>
 <li>At <strong>Smithfield</strong>, the 14-year-old King Richard II met the rebels. During the meeting, Wat Tyler was <strong>killed</strong> by the Mayor of London. Richard calmed the crowd by promising to meet their demands.</li>
 <li>Richard II <strong>broke his promises</strong> — the charters of freedom were cancelled, rebel leaders were hunted down and executed, and the king declared "serfs you are and serfs you shall remain."</li>
 <li><strong>Consequences:</strong> No more poll taxes were introduced; wages gradually rose; serfdom slowly declined over the following century. Historians debate whether the revolt was a <strong>failure</strong> (immediate demands rejected) or a <strong>success</strong> (helped end feudalism in the long term).</li>
@@ -2359,6 +2825,7 @@ Therefore, guilds acted as a form of <strong>quality control and regulation</str
 <li>Achievements in <strong>science</strong> included Ibn al-Haytham's work on <strong>optics</strong> (how the eye sees light), advanced <strong>astronomy</strong> (star catalogues, astrolabes) and early <strong>chemistry</strong> (distillation, acids).</li>
 <li>Achievements in <strong>medicine</strong> included the establishment of <strong>hospitals</strong> (bimaristans) with separate wards for different illnesses, and the development of <strong>surgical instruments</strong> by Al-Zahrawi (the "father of surgery").</li>
 <li>Compared with medieval Europe, the Islamic world was <strong>far more advanced</strong> in science, medicine and mathematics during this period. Islamic scholarship later helped spark the European <strong>Renaissance</strong> when translated texts reached Western Europe.</li>
+<li>The Golden Age ended largely with the <strong>Mongol invasion of 1258</strong> — Hulagu Khan's army sacked Baghdad, destroyed the House of Wisdom, burned libraries and killed the caliph. While scholarship continued elsewhere, this was a devastating blow.</li>
 </ul>
 
 <h4>✏️ Worked Example</h4>

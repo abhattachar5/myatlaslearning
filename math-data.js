@@ -69,7 +69,9 @@ const MATH_TOPICS = [
   {id:"mt-27",name:"Area, Perimeter & Volume",emoji:"📏",hasContent:true,
    description:"Find areas of triangles, parallelograms, trapeziums and compound figures, solve perimeter problems, and calculate volumes of cuboids."},
   {id:"mt-28",name:"Financial Literacy",emoji:"💳",hasContent:true,
-   description:"Balance and adjust a budget, understand how debit and credit cards work, and make informed financial decisions."}
+   description:"Balance and adjust a budget, understand how debit and credit cards work, and make informed financial decisions."},
+  {id:"mt-29",name:"Pythagoras' Theorem",emoji:"📐",hasContent:true,
+   description:"Identify right-angled triangles and the hypotenuse, use a² + b² = c² to find missing sides, and apply the theorem to real-world problems."}
 ];
 
 // ── MATH ISLANDS → pushed into CURRICULUM ────────────────────────────────
@@ -167,6 +169,13 @@ CURRICULUM.push(
    learningOutcomes:["Apply BODMAS with powers and roots","Solve equations involving squares and square roots","Evaluate complex index expressions"],
    prerequisites:["mi-03-2","mi-03-3"],
    topics:["Order of operations with powers","Equations with squares","Combining roots and powers","Problem solving"]},
+
+  {id:"mi-03-5",subject:"Mathematics",subjectId:"math",topicId:"mt-03",
+   name:"Standard Form (A × 10ⁿ)",emoji:"🔬",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Write very large and very small numbers in standard form and convert between standard form and ordinary numbers.",
+   learningOutcomes:["Write numbers in standard form A × 10ⁿ where 1 ≤ A < 10","Convert from standard form to ordinary numbers","Compare and order numbers given in standard form"],
+   prerequisites:["mi-03-1"],
+   topics:["Standard form for large numbers","Standard form for small numbers","Converting to ordinary numbers","Ordering numbers in standard form"]},
 
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 4 — NUMBER THEORY (mt-04)
@@ -569,6 +578,20 @@ CURRICULUM.push(
    prerequisites:["mi-13-4"],
    topics:["Mutually exclusive events","Overlapping events","Predictions from theoretical probability","Predictions from experimental probability"]},
 
+  {id:"mi-13-8",subject:"Mathematics",subjectId:"math",topicId:"mt-13",
+   name:"Scatter Graphs & Bivariate Data",emoji:"📈",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Plot scatter graphs, identify types of correlation, and draw lines of best fit to make predictions.",
+   learningOutcomes:["Plot scatter graphs from two-variable data","Describe correlation as positive, negative or none","Draw and use a line of best fit to estimate values"],
+   prerequisites:["mi-13-1"],
+   topics:["Plotting scatter graphs","Positive and negative correlation","No correlation","Lines of best fit"]},
+
+  {id:"mi-13-9",subject:"Mathematics",subjectId:"math",topicId:"mt-13",
+   name:"Venn Diagrams for Probability",emoji:"⭕",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Draw and interpret Venn diagrams to sort data into sets and calculate probabilities.",
+   learningOutcomes:["Draw and label a Venn diagram with two sets","List elements in unions, intersections and complements","Use Venn diagrams to calculate probabilities"],
+   prerequisites:["mi-13-4"],
+   topics:["Drawing Venn diagrams","Intersection (A ∩ B)","Union (A ∪ B)","Complement and probability from Venn diagrams"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 14 — ORDER OF OPERATIONS (mt-14) — coming soon
   // ══════════════════════════════════════════════════════════════════════
@@ -828,6 +851,13 @@ CURRICULUM.push(
    prerequisites:["mi-24-1"],
    topics:["Vertical angles","Supplementary angles","Lines, segments and rays","Naming angles","Bisectors","Parts of a circle"]},
 
+  {id:"mi-24-5",subject:"Mathematics",subjectId:"math",topicId:"mt-24",
+   name:"Compass Constructions",emoji:"🧭",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Use a pair of compasses and a straight edge to construct perpendicular bisectors, angle bisectors, and find the shortest distance to a line.",
+   learningOutcomes:["Construct the perpendicular bisector of a line segment","Construct the bisector of an angle","Identify the shortest distance from a point to a line"],
+   prerequisites:["mi-24-1"],
+   topics:["Perpendicular bisectors","Angle bisectors","Shortest distance to a line","Loci from constructions"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 25 — SYMMETRY & TRANSFORMATIONS (mt-25) — coming soon
   // ══════════════════════════════════════════════════════════════════════
@@ -848,6 +878,13 @@ CURRICULUM.push(
    description:"Identify congruent figures and use congruence statements to match corresponding parts.",
    learningOutcomes:["Identify congruent shapes","Write congruence statements","Find missing side lengths and angles using congruence"],
    prerequisites:["mi-25-1"],topics:["Congruence","Corresponding parts","Congruence statements","Missing measurements"]},
+
+  {id:"mi-25-4",subject:"Mathematics",subjectId:"math",topicId:"mt-25",
+   name:"Rotations",emoji:"🔄",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Rotate shapes 90°, 180° and 270° about a given centre of rotation and describe rotations fully.",
+   learningOutcomes:["Rotate a shape about a given centre and angle","Describe a rotation giving centre, angle and direction","Identify the image of a point after rotation"],
+   prerequisites:["mi-25-2"],
+   topics:["Rotating 90° clockwise and anticlockwise","Rotating 180°","Centre of rotation","Describing rotations"]},
 
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 26 — 3D FIGURES (mt-26) — coming soon
@@ -898,6 +935,13 @@ CURRICULUM.push(
    prerequisites:["mi-27-1"],
    topics:["Same perimeter different areas","Same area different perimeters","Comparing two rectangles","Maximising area for given perimeter"]},
 
+  {id:"mi-27-5",subject:"Mathematics",subjectId:"math",topicId:"mt-27",
+   name:"Circles — Area & Circumference",emoji:"⭕",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Calculate the circumference and area of circles, semicircles and quarter circles using C = πd and A = πr².",
+   learningOutcomes:["Calculate the circumference of a circle using C = πd or C = 2πr","Calculate the area of a circle using A = πr²","Solve problems involving semicircles and quarter circles"],
+   prerequisites:["mi-27-1"],
+   topics:["Circumference (C = πd)","Area (A = πr²)","Semicircles and quarter circles","Problems in terms of π"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 28 — FINANCIAL LITERACY (mt-28) — coming soon
   // ══════════════════════════════════════════════════════════════════════
@@ -917,6 +961,30 @@ CURRICULUM.push(
    name:"Adjust a Budget",emoji:"📊",difficulty:2,estimatedHours:1,color:"#3f6f00",
    description:"Analyse and modify a budget to meet financial goals.",
    learningOutcomes:["Identify areas to reduce spending","Prioritise essential vs non-essential spending","Set and work towards a savings goal"],
-   prerequisites:["mi-28-1"],topics:["Essential vs non-essential","Reducing expenditure","Savings goals","Adjusted budget calculations"]}
+   prerequisites:["mi-28-1"],topics:["Essential vs non-essential","Reducing expenditure","Savings goals","Adjusted budget calculations"]},
+
+  // ══════════════════════════════════════════════════════════════════════
+  // TOPIC 29 — PYTHAGORAS' THEOREM (mt-29)
+  // ══════════════════════════════════════════════════════════════════════
+  {id:"mi-29-1",subject:"Mathematics",subjectId:"math",topicId:"mt-29",
+   name:"Identify Right Triangles & the Hypotenuse",emoji:"📐",difficulty:1,estimatedHours:1,color:"#3f6f00",
+   description:"Recognise right-angled triangles and identify the hypotenuse as the longest side opposite the right angle.",
+   learningOutcomes:["Identify right-angled triangles","Name the hypotenuse as the side opposite the right angle","Understand that the hypotenuse is always the longest side"],
+   prerequisites:["mi-24-1"],
+   topics:["Right-angled triangles","The hypotenuse","Labelling sides","Properties of right triangles"]},
+
+  {id:"mi-29-2",subject:"Mathematics",subjectId:"math",topicId:"mt-29",
+   name:"Calculate the Hypotenuse",emoji:"📏",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Use Pythagoras' theorem (a² + b² = c²) to calculate the length of the hypotenuse in a right-angled triangle.",
+   learningOutcomes:["State Pythagoras' theorem","Calculate the hypotenuse given two shorter sides","Apply the theorem to real-world problems"],
+   prerequisites:["mi-29-1","mi-03-3"],
+   topics:["Pythagoras' theorem (a² + b² = c²)","Finding the hypotenuse","Pythagorean triples","Real-world applications"]},
+
+  {id:"mi-29-3",subject:"Mathematics",subjectId:"math",topicId:"mt-29",
+   name:"Calculate a Shorter Side",emoji:"✂️",difficulty:2,estimatedHours:2,color:"#3f6f00",
+   description:"Rearrange Pythagoras' theorem to find a shorter side when the hypotenuse and one other side are known.",
+   learningOutcomes:["Rearrange the theorem to find a shorter side","Calculate a missing shorter side","Solve multi-step Pythagoras problems"],
+   prerequisites:["mi-29-2"],
+   topics:["Rearranging c² − b² = a²","Finding a shorter side","Multi-step problems","Checking answers with Pythagorean triples"]}
 
 ); // end CURRICULUM.push

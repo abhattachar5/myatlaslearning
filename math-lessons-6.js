@@ -238,6 +238,50 @@ Object.assign(LESSONS, {
       content: '<p>To prove two triangles are congruent, you need one of four conditions. Only three pieces of information are needed — but they must be the right three.</p><table style="border-collapse:collapse;width:100%;font-size:0.9em;margin:0.75em 0"><tr style="background:#e8f5e9"><th style="padding:7px;border:1px solid #ccc">Condition</th><th style="padding:7px;border:1px solid #ccc">What you need</th></tr><tr><td style="padding:7px;border:1px solid #ccc;font-weight:bold">SSS</td><td style="padding:7px;border:1px solid #ccc">All three pairs of sides equal</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc;font-weight:bold">SAS</td><td style="padding:7px;border:1px solid #ccc">Two sides and the <em>included</em> angle equal</td></tr><tr><td style="padding:7px;border:1px solid #ccc;font-weight:bold">ASA / AAS</td><td style="padding:7px;border:1px solid #ccc">Two angles and a corresponding side equal</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc;font-weight:bold">RHS</td><td style="padding:7px;border:1px solid #ccc">Right angle, hypotenuse, and one other side equal</td></tr></table><div style="background:#fce4ec;padding:0.75em 1em;border-radius:8px;margin:0.5em 0"><strong>⚠️ AAA is NOT sufficient</strong> — three equal angles only proves the triangles are similar (same shape), not congruent (same size). They could be different sizes.</div>'
     }
   ]
+},
+
+'mi-24-5': {
+  title: 'Compass Constructions',
+  sections: [
+    {
+      heading: 'Equipment Needed',
+      content: '<p>For all constructions you need a <strong>pair of compasses</strong> and a <strong>straight edge</strong> (ruler). You must not rub out your construction arcs — they are your evidence of method.</p>'
+    },
+    {
+      heading: 'Perpendicular Bisector',
+      content: '<p>The <strong>perpendicular bisector</strong> of a line segment cuts it exactly in half at a right angle (90°). Every point on the perpendicular bisector is equidistant from the two endpoints.</p><svg width="100%" height="140" viewBox="0 0 300 140" style="max-width:300px;display:block;margin:0.75em 0"><line x1="50" y1="70" x2="250" y2="70" stroke="#333" stroke-width="2"/><circle cx="50" cy="70" r="3" fill="#333"/><circle cx="250" cy="70" r="3" fill="#333"/><text x="45" y="90" text-anchor="middle" font-size="11">A</text><text x="255" y="90" text-anchor="middle" font-size="11">B</text><path d="M 150 10 L 150 130" stroke="#1565c0" stroke-width="2" stroke-dasharray="6,3"/><path d="M 50 70 Q 100 10 150 10 Q 200 10 250 70" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><path d="M 50 70 Q 100 130 150 130 Q 200 130 250 70" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><text x="150" y="8" text-anchor="middle" font-size="10" fill="#1565c0">Perpendicular bisector</text></svg><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Method:</strong><ol style="margin:0;padding-left:1.3em"><li>Open compasses to more than half the length of AB.</li><li>Draw arcs from A above and below the line.</li><li>Without changing the compass width, draw arcs from B above and below the line.</li><li>Join the two points where the arcs cross — this is the perpendicular bisector.</li></ol></div>'
+    },
+    {
+      heading: 'Angle Bisector',
+      content: '<p>An <strong>angle bisector</strong> divides an angle into two equal halves.</p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Method:</strong><ol style="margin:0;padding-left:1.3em"><li>Place the compass point at the vertex of the angle. Draw an arc that crosses both arms.</li><li>Place the compass on each crossing point in turn and draw two arcs that cross each other inside the angle.</li><li>Draw a straight line from the vertex through the point where the arcs cross — this bisects the angle.</li></ol></div>'
+    },
+    {
+      heading: 'Shortest Distance to a Line',
+      content: '<p>The <strong>shortest distance</strong> from a point to a line is always the perpendicular distance — the line drawn at 90° from the point to the line.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Key fact:</strong> Any other path from the point to the line is longer than the perpendicular distance. This is why we use perpendicular constructions to find shortest distances.</div>'
+    }
+  ]
+},
+
+'mi-25-4': {
+  title: 'Rotations',
+  sections: [
+    {
+      heading: 'What is a Rotation?',
+      content: '<p>A <strong>rotation</strong> turns a shape around a fixed point called the <strong>centre of rotation</strong>. To describe a rotation you must give three things:</p><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px;text-align:center"><strong>Centre</strong><br>The fixed point</div><div style="background:#e3f2fd;padding:10px;border-radius:8px;text-align:center"><strong>Angle</strong><br>90°, 180° or 270°</div><div style="background:#fff3e0;padding:10px;border-radius:8px;text-align:center"><strong>Direction</strong><br>Clockwise (CW) or<br>anticlockwise (ACW)</div></div>'
+    },
+    {
+      heading: 'Key Rotations',
+      content: '<table style="border-collapse:collapse;width:100%;margin:0.75em 0;font-size:0.9em"><tr style="background:#e8f5e9"><th style="padding:7px;border:1px solid #ccc">Rotation</th><th style="padding:7px;border:1px solid #ccc">About the origin</th><th style="padding:7px;border:1px solid #ccc">Effect on (x, y)</th></tr><tr><td style="padding:7px;border:1px solid #ccc">90° anticlockwise</td><td style="padding:7px;border:1px solid #ccc">Quarter turn left</td><td style="padding:7px;border:1px solid #ccc">(x, y) → (−y, x)</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">90° clockwise</td><td style="padding:7px;border:1px solid #ccc">Quarter turn right</td><td style="padding:7px;border:1px solid #ccc">(x, y) → (y, −x)</td></tr><tr><td style="padding:7px;border:1px solid #ccc">180°</td><td style="padding:7px;border:1px solid #ccc">Half turn</td><td style="padding:7px;border:1px solid #ccc">(x, y) → (−x, −y)</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">270° anticlockwise</td><td style="padding:7px;border:1px solid #ccc">Same as 90° CW</td><td style="padding:7px;border:1px solid #ccc">(x, y) → (y, −x)</td></tr></table><p><strong>Note:</strong> 90° clockwise is the same as 270° anticlockwise. Direction does not matter for 180°.</p>'
+    },
+    {
+      heading: 'Worked Example',
+      content: '<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Rotate triangle with vertices A(1, 2), B(4, 2), C(4, 5) by 90° clockwise about the origin.</strong><br><br>Apply (x, y) → (y, −x):<br>A(1, 2) → A\'(2, −1)<br>B(4, 2) → B\'(2, −4)<br>C(4, 5) → C\'(5, −4)<br><br>Plot the new vertices and join them to draw the image.</div>'
+    },
+    {
+      heading: 'Common Mistakes',
+      content: '<p>❌ Forgetting to state the direction — ✅ Always say clockwise or anticlockwise (unless 180°)</p><p>❌ Rotating about the wrong centre — ✅ Use tracing paper: place your pencil on the centre of rotation, then turn</p>'
+    }
+  ]
 }
 
 });

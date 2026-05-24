@@ -1,5 +1,5 @@
 // english-content-6.js — Flashcards & Questions for English Topic 6: Writing Strategies
-// Islands: ei-06-1 through ei-06-5
+// Islands: ei-06-1 through ei-06-6
 
 // ── FLASHCARDS ────────────────────────────────────────────────────────────
 FLASHCARDS.push(
@@ -41,7 +41,17 @@ FLASHCARDS.push(
   {id:"efc-06-5-2",islandId:"ei-06-5",front:"What is paraphrasing and how does it differ from quoting?",
    back:"Quoting: Using the exact words from a source, placed in quotation marks.\n\"Climate change is the defining crisis of our time\" (United Nations, 2021).\n\nParaphrasing: Rewriting the idea in your OWN words, keeping the meaning but changing the structure and vocabulary.\nThe UN has described climate change as the most critical challenge facing humanity today.\n\nParaphrasing rules:\n1. Change the sentence structure.\n2. Use different vocabulary (synonyms).\n3. Keep the original meaning accurate.\n4. Still credit the source — paraphrasing without a reference is plagiarism.\n\nUse paraphrasing more than quoting — it shows you understand the source material.",difficulty:2,category:"definition"},
   {id:"efc-06-5-3",islandId:"ei-06-5",front:"What is plagiarism and how can you avoid it?",
-   back:"Plagiarism is presenting someone else's words or ideas as your own. It is a serious academic offence.\n\nForms of plagiarism:\n- Copying text without quotation marks or a reference.\n- Paraphrasing without crediting the source.\n- Submitting someone else's work as your own.\n- Self-plagiarism: resubmitting your own previous work.\n\nHow to avoid it:\n1. Always record your sources as you research.\n2. Use quotation marks for exact words.\n3. Paraphrase in your own words AND cite the source.\n4. Use a bibliography or works cited list.\n5. When in doubt, add a reference.\n\nPlagiarism is about honesty — always give credit where it is due.",difficulty:2,category:"application"}
+   back:"Plagiarism is presenting someone else's words or ideas as your own. It is a serious academic offence.\n\nForms of plagiarism:\n- Copying text without quotation marks or a reference.\n- Paraphrasing without crediting the source.\n- Submitting someone else's work as your own.\n- Self-plagiarism: resubmitting your own previous work.\n\nHow to avoid it:\n1. Always record your sources as you research.\n2. Use quotation marks for exact words.\n3. Paraphrase in your own words AND cite the source.\n4. Use a bibliography or works cited list.\n5. When in doubt, add a reference.\n\nPlagiarism is about honesty — always give credit where it is due.",difficulty:2,category:"application"},
+
+  // ── ei-06-6: Transitions & Conjunctive Adverbs ────────────────────────────
+  {id:"efc-06-6-1",islandId:"ei-06-6",front:"What is a conjunctive adverb? How does it differ from a coordinating conjunction?",
+   back:"A conjunctive adverb is a transition word that connects two independent clauses (complete ideas) and shows the relationship between them.\n\nExamples: however, therefore, furthermore, consequently, nevertheless, moreover, meanwhile.\n\nKey difference from coordinating conjunctions (and, but, or, so):\n• Coordinating conjunctions use a comma before them: 'It rained, but we played.'\n• Conjunctive adverbs use a semicolon before and a comma after: 'It rained; however, we played.'\n\nConjunctive adverbs are more formal and precise than coordinating conjunctions.",difficulty:1,category:"definition"},
+  {id:"efc-06-6-2",islandId:"ei-06-6",front:"How do you punctuate a conjunctive adverb that joins two clauses?",
+   back:"Rule: semicolon BEFORE the conjunctive adverb, comma AFTER it.\n\nPattern: Independent clause; conjunctive adverb, independent clause.\n\nExamples:\n• The test was difficult; however, most students passed.\n• She trained every day; consequently, she won the race.\n• The food was delicious; moreover, it was healthy.\n\nYou can also start a new sentence with the conjunctive adverb, followed by a comma:\n• The test was difficult. However, most students passed.\n\nNEVER use just a comma before a conjunctive adverb — this creates a comma splice error.",difficulty:1,category:"rule"},
+  {id:"efc-06-6-3",islandId:"ei-06-6",front:"Name at least two conjunctive adverbs for each purpose: addition, contrast, and cause/effect.",
+   back:"Addition (adding more information):\n• furthermore, moreover, in addition, similarly\n\nContrast (showing a difference or surprise):\n• however, nevertheless, on the other hand, instead\n\nCause and effect (showing a result):\n• therefore, consequently, as a result\n\nTime (showing when):\n• meanwhile, subsequently, eventually\n\nChoosing the right category is essential — using 'meanwhile' when you mean 'therefore' will confuse your reader.",difficulty:1,category:"application"},
+  {id:"efc-06-6-4",islandId:"ei-06-6",front:"What is a comma splice, and how can conjunctive adverbs help you avoid one?",
+   back:"A comma splice is the error of joining two independent clauses with only a comma.\n\n✗ Comma splice: 'The bus was late, therefore we missed registration.'\n\nTo fix it, use proper conjunctive adverb punctuation:\n✓ 'The bus was late; therefore, we missed registration.'\n✓ 'The bus was late. Therefore, we missed registration.'\n\nRemember: a semicolon or full stop must come BEFORE the conjunctive adverb. A comma alone is never enough to join two complete sentences.",difficulty:2,category:"concept"}
 );
 
 // ── QUESTIONS ─────────────────────────────────────────────────────────────
@@ -175,6 +185,40 @@ Object.assign(QUESTIONS, {
    e:"Unsourced statistics cannot be verified and may be inaccurate or invented. A good researcher looks for the original study behind a claim. If you cannot find it, either find a verified alternative or note that the statistic is unverified."},
   {q:"A student's research uses five sources: their textbook, two Wikipedia articles, a celebrity's social media post, and a tabloid headline. How would you evaluate the quality of their research?",opts:["It is weak — they need more authoritative, varied sources such as academic articles, quality newspapers, or expert-authored reports","It is excellent because they used five different sources","It is fine because Wikipedia is always reliable","It does not matter where information comes from, only how it is written"],c:0,
    e:"Source quality matters more than quantity. Wikipedia can be a starting point but is not authoritative. Celebrity social media and tabloid headlines are unreliable. Strong research uses expert-authored, peer-reviewed, or well-established sources across a range of types."}
+],
+
+// ══════════════════════════════════════════════════════════════════════════
+// ei-06-6 — TRANSITIONS & CONJUNCTIVE ADVERBS
+// ══════════════════════════════════════════════════════════════════════════
+
+"ei-06-6": [
+  // Easy (Q1–3)
+  {q:"Which of the following is a conjunctive adverb?",
+   opts:["However","And","But","Or"],c:0,
+   e:"'However' is a conjunctive adverb — it connects two independent clauses and shows contrast. 'And', 'but', and 'or' are coordinating conjunctions. The key difference is punctuation: conjunctive adverbs need a semicolon before them and a comma after, while coordinating conjunctions use just a comma before."},
+  {q:"Which transition word would you use to add more information to a point you have already made?",
+   opts:["Furthermore","However","Consequently","Meanwhile"],c:0,
+   e:"'Furthermore' is used to add extra information that supports or extends your previous point. 'However' shows contrast, 'consequently' shows a result, and 'meanwhile' shows something happening at the same time. Choosing the right transition depends on the relationship between your ideas."},
+  {q:"What punctuation goes BEFORE a conjunctive adverb when it joins two clauses?",
+   opts:["A semicolon (;)","A comma (,)","A colon (:)","No punctuation is needed"],c:0,
+   e:"When a conjunctive adverb joins two independent clauses, you must place a semicolon (;) before it and a comma (,) after it. For example: 'It was raining; therefore, we stayed inside.' Using only a comma before a conjunctive adverb creates a comma splice — a common grammatical error."},
+  // Medium (Q4–6)
+  {q:"Which sentence is punctuated correctly?",
+   opts:["The library was closed; therefore, we studied at home.","The library was closed, therefore we studied at home.","The library was closed therefore, we studied at home.","The library was closed; therefore we studied at home."],c:0,
+   e:"The correct pattern is: semicolon BEFORE the conjunctive adverb, comma AFTER it. 'The library was closed; therefore, we studied at home.' The second option is a comma splice (comma instead of semicolon). The third has no punctuation before 'therefore'. The fourth is missing the comma after 'therefore'."},
+  {q:"Choose the best transition to complete this sentence: 'The team lost every match this season; ______ they never gave up.'",
+   opts:["nevertheless,","therefore,","furthermore,","meanwhile,"],c:0,
+   e:"'Nevertheless' means 'in spite of that' — it shows contrast between a negative situation (losing every match) and an unexpected positive response (never giving up). 'Therefore' would imply losing caused them to not give up (wrong logic). 'Furthermore' just adds information. 'Meanwhile' is for events happening at the same time."},
+  {q:"A student writes: 'Plastic pollution is destroying ocean habitats, moreover it is harming marine animals.' What is wrong with this sentence?",
+   opts:["It should have a semicolon before 'moreover' and a comma after it, not just a comma before it","There is nothing wrong — the sentence is correct","'Moreover' is the wrong transition word","The sentence needs a full stop instead of any linking word"],c:0,
+   e:"This is a comma splice. 'Moreover' is a conjunctive adverb, so it needs a semicolon before it: 'Plastic pollution is destroying ocean habitats; moreover, it is harming marine animals.' Alternatively, you could start a new sentence: 'Plastic pollution is destroying ocean habitats. Moreover, it is harming marine animals.'"},
+  // Harder (Q7–8)
+  {q:"Read this paragraph: 'Exercise improves physical health. Furthermore, it boosts mental wellbeing. However, many teenagers do not get enough exercise. Consequently, rates of obesity are rising.' Which conjunctive adverb is used to show cause and effect?",
+   opts:["Consequently","Furthermore","However","All three show cause and effect"],c:0,
+   e:"'Consequently' means 'as a result' — it shows that rising obesity rates are a consequence of teenagers not exercising enough. 'Furthermore' adds information (addition). 'However' introduces a contrast. Each conjunctive adverb has a specific purpose, and using the right one makes your argument clearer."},
+  {q:"Rewrite the following as one sentence using a conjunctive adverb: 'The school banned mobile phones. Students could focus better in lessons.' Which option is correct?",
+   opts:["The school banned mobile phones; consequently, students could focus better in lessons.","The school banned mobile phones, meanwhile students could focus better in lessons.","The school banned mobile phones however, students could focus better in lessons.","The school banned mobile phones; nevertheless, students could focus better in lessons."],c:0,
+   e:"The banning of phones CAUSED better focus — this is a cause and effect relationship. 'Consequently' (meaning 'as a result') is the correct choice, and it is properly punctuated with a semicolon before and a comma after. 'Meanwhile' suggests two things happening at the same time. 'Nevertheless' suggests contrast or surprise. The second option also has a comma splice."}
 ]
 
 });

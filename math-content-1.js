@@ -91,6 +91,13 @@ FLASHCARDS.push(
   {id:"mfc-03-4-3",islandId:"mi-03-4",front:"Find the side length of a square with area 169 cm².",
    back:"13 cm\n\nArea of a square = side²\nSo side = √area = √169 = 13 cm\n\nCheck: 13² = 169 ✓",difficulty:2,category:"application"},
 
+  {id:"mfc-03-5-1",islandId:"mi-03-5",front:"Write 4,500,000 in standard form.",
+   back:"4.5 × 10⁶\n\nMove the decimal point 6 places to the left:\n4,500,000 → 4.5\n\nA must be between 1 and 10, so 4.5 × 10⁶.",difficulty:1,category:"calculation"},
+  {id:"mfc-03-5-2",islandId:"mi-03-5",front:"Convert 3.2 × 10⁻⁴ to an ordinary number.",
+   back:"0.00032\n\nNegative power means move the decimal point LEFT.\nMove 4 places: 3.2 → 0.00032",difficulty:1,category:"calculation"},
+  {id:"mfc-03-5-3",islandId:"mi-03-5",front:"Why is 45 × 10³ NOT in standard form?",
+   back:"Because A = 45, which is NOT between 1 and 10.\n\nStandard form requires 1 ≤ A < 10.\n\nCorrect form: 4.5 × 10⁴\n(45 = 4.5 × 10, so 45 × 10³ = 4.5 × 10⁴)",difficulty:2,category:"concept"},
+
   // ── Topic 4: Number Theory ──────────────────────────────────────────
   {id:"mfc-04-1-1",islandId:"mi-04-1",front:"What is a prime number? Give 3 examples.",
    back:"A prime number has exactly TWO factors: 1 and itself.\n\nExamples: 2, 3, 5, 7, 11, 13, 17, 19, 23...\n\n⚠️ 1 is NOT prime (only one factor)\n2 is the ONLY even prime number",difficulty:1,category:"definition"},
@@ -1144,6 +1151,30 @@ Object.assign(QUESTIONS, {
   {q:"If the reciprocal of a number is 5/8, what is the number?",
    opts:["8/5 (or 1.6)","5/8","3/8","8/3"],c:0,
    e:"If the reciprocal is 5/8, the original number is the reciprocal of 5/8, which is 8/5. Check: 8/5 × 5/8 = 40/40 = 1 ✓."}
+],
+
+"mi-03-5": [
+  // Easy (Q1–3)
+  {q:"Write 6,000,000 in standard form.",opts:["6 × 10⁶","60 × 10⁵","6 × 10⁷","0.6 × 10⁷"],c:0,
+   e:"6,000,000 has 6 zeros after the 6. Move the decimal 6 places left: 6.0 × 10⁶."},
+  {q:"Write 0.005 in standard form.",opts:["5 × 10⁻³","5 × 10³","0.5 × 10⁻²","50 × 10⁻⁴"],c:0,
+   e:"Move the decimal 3 places right to get 5. Since we moved right, the power is negative: 5 × 10⁻³."},
+  {q:"Convert 2.7 × 10⁴ to an ordinary number.",opts:["27,000","2,700","270,000","2.7"],c:0,
+   e:"10⁴ = 10,000. Move decimal 4 places right: 2.7 → 27,000."},
+  // Medium (Q4–6)
+  {q:"Which of these is written in correct standard form?",opts:["3.6 × 10⁵","36 × 10⁴","0.36 × 10⁶","360 × 10³"],c:0,
+   e:"In standard form, A must be between 1 and 10. Only 3.6 satisfies 1 ≤ A < 10."},
+  {q:"Convert 8.04 × 10⁻² to an ordinary number.",opts:["0.0804","80.4","0.00804","804"],c:0,
+   e:"Negative power means move decimal left. 10⁻² means 2 places left: 8.04 → 0.0804."},
+  {q:"Write 0.00071 in standard form.",opts:["7.1 × 10⁻⁴","71 × 10⁻⁵","0.71 × 10⁻³","7.1 × 10⁴"],c:0,
+   e:"Move the decimal 4 places right: 0.00071 → 7.1. Power is negative: 7.1 × 10⁻⁴."},
+  // Greater Depth (Q7–8)
+  {q:"Place in order from smallest to largest: 4.2 × 10³, 1.8 × 10⁴, 9.1 × 10²",
+   opts:["9.1 × 10², 4.2 × 10³, 1.8 × 10⁴","4.2 × 10³, 9.1 × 10², 1.8 × 10⁴","1.8 × 10⁴, 4.2 × 10³, 9.1 × 10²","9.1 × 10², 1.8 × 10⁴, 4.2 × 10³"],c:0,
+   e:"Convert: 910, 4200, 18000. Order: 910 < 4200 < 18000, i.e. 9.1 × 10², 4.2 × 10³, 1.8 × 10⁴."},
+  {q:"The Earth is approximately 150,000,000 km from the Sun. Write this in standard form.",
+   opts:["1.5 × 10⁸","15 × 10⁷","1.5 × 10⁹","150 × 10⁶"],c:0,
+   e:"150,000,000 → 1.5 (moved 8 places). Answer: 1.5 × 10⁸ km."}
 ]
 
 }); // end Object.assign(QUESTIONS, ...)

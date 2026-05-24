@@ -80,7 +80,17 @@ FLASHCARDS.push(
   // mi-25-3: Congruent Figures
   { islandId:'mi-25-3', front:'What does it mean for two shapes to be congruent?', back:'Congruent shapes are identical in size and shape — all corresponding sides and angles are equal.' },
   { islandId:'mi-25-3', front:'If triangle ABC ≅ triangle DEF, which sides are corresponding?', back:'AB ↔ DE, BC ↔ EF, AC ↔ DF. The order of letters in the congruence statement tells you the correspondence.' },
-  { islandId:'mi-25-3', front:'Can two shapes be congruent if one is a reflection of the other?', back:'Yes. Reflections produce congruent shapes — the size and angles are preserved, just the orientation changes.' }
+  { islandId:'mi-25-3', front:'Can two shapes be congruent if one is a reflection of the other?', back:'Yes. Reflections produce congruent shapes — the size and angles are preserved, just the orientation changes.' },
+
+  // mi-24-5: Compass Constructions
+  { islandId:'mi-24-5', front:'What is a perpendicular bisector?', back:'A line that cuts a line segment exactly in half at a right angle (90°). Every point on it is equidistant from the two endpoints.' },
+  { islandId:'mi-24-5', front:'How do you construct an angle bisector?', back:'1. From the vertex, draw an arc crossing both arms.\n2. From each crossing point, draw arcs that intersect inside the angle.\n3. Draw a line from the vertex through the intersection point.' },
+  { islandId:'mi-24-5', front:'What is the shortest distance from a point to a line?', back:'The perpendicular distance — a line drawn at 90° from the point to the line. Any other path is longer.' },
+
+  // mi-25-4: Rotations
+  { islandId:'mi-25-4', front:'What three things must you state to describe a rotation?', back:'1. Centre of rotation (the fixed point)\n2. Angle of rotation (90°, 180° or 270°)\n3. Direction (clockwise or anticlockwise)' },
+  { islandId:'mi-25-4', front:'What happens to the point (3, 1) after a 90° clockwise rotation about the origin?', back:'(3, 1) → (1, −3)\n\nRule for 90° CW about origin: (x, y) → (y, −x)' },
+  { islandId:'mi-25-4', front:'What happens to the point (2, −4) after a 180° rotation about the origin?', back:'(2, −4) → (−2, 4)\n\nRule for 180° about origin: (x, y) → (−x, −y)\nBoth coordinates change sign.' }
 );
 
 // ─── QUESTIONS ────────────────────────────────────────────────────────────────
@@ -758,6 +768,36 @@ Object.assign(QUESTIONS, {
             e: 'M↔P, N↔Q, O↔R. So MN ↔ PQ. PQ = MN = ' + mn + ' cm.'
         };
     }}
+  ],
+
+  // ── mi-24-5: Compass Constructions ────────────────────────────────────────
+  'mi-24-5': [
+    // Easy (Q1–3)
+    { question:'What does a perpendicular bisector do to a line segment?', options:['Cuts it in half at 90°','Cuts it in half at 45°','Divides it into three equal parts','Draws a parallel line'], answer:0, explanation:'A perpendicular bisector divides a line segment into two equal halves at a right angle (90°).' },
+    { question:'What equipment do you need for a compass construction?', options:['A pair of compasses and a straight edge','A protractor and a ruler','A set square and a pencil','A calculator and a ruler'], answer:0, explanation:'Compass constructions use only a pair of compasses and a straight edge (ruler). No protractor is needed.' },
+    { question:'What is the shortest distance from a point to a line?', options:['The perpendicular distance','The diagonal distance','A line to the nearest endpoint','It depends on the angle'], answer:0, explanation:'The shortest distance from a point to a line is always the perpendicular (90°) distance.' },
+    // Medium (Q4–6)
+    { question:'When constructing a perpendicular bisector, why must the compass opening be more than half the line segment?', options:['So the arcs from each end can cross each other','To make the line look neat','Because the rules say so','To create a 45° angle'], answer:0, explanation:'If the opening is less than half, the arcs from each endpoint will not reach each other and cannot cross.' },
+    { question:'An angle bisector divides a 70° angle. What are the two resulting angles?', options:['35° and 35°','40° and 30°','70° and 70°','45° and 25°'], answer:0, explanation:'An angle bisector splits the angle into two equal halves: 70° ÷ 2 = 35° each.' },
+    { question:'Every point on a perpendicular bisector of AB is:', options:['Equidistant from A and B','Closer to A than B','Closer to B than A','On the line AB'], answer:0, explanation:'The perpendicular bisector is the locus of all points equidistant from A and B.' },
+    // Greater Depth (Q7–8)
+    { question:'Two mobile phone masts are 10 km apart. The boundary where signal strength is equal from both masts lies on:', options:['The perpendicular bisector of the line joining them','A circle around the first mast','A line parallel to the line joining them','A diagonal line'], answer:0, explanation:'Equal signal strength means equal distance from both masts — this is the perpendicular bisector.' },
+    { question:'Why should you NOT rub out your construction arcs in an exam?', options:['They show your method and are required for full marks','They make the diagram look better','They help you check your protractor','They are not important'], answer:0, explanation:'Construction arcs are evidence of your method. Without them, an examiner cannot verify you used the correct construction technique.' }
+  ],
+
+  // ── mi-25-4: Rotations ────────────────────────────────────────────────────
+  'mi-25-4': [
+    // Easy (Q1–3)
+    { question:'What three things do you need to describe a rotation?', options:['Centre, angle and direction','Centre, angle and size','Distance, angle and direction','Centre, scale factor and direction'], answer:0, explanation:'A full description of a rotation requires: the centre of rotation, the angle (90°, 180°, 270°) and the direction (clockwise or anticlockwise).' },
+    { question:'A shape is rotated 180° about the origin. What happens to the point (3, 2)?', options:['It moves to (−3, −2)','It moves to (3, −2)','It moves to (−3, 2)','It stays at (3, 2)'], answer:0, explanation:'180° rotation about the origin: (x, y) → (−x, −y). So (3, 2) → (−3, −2).' },
+    { question:'Is a 90° clockwise rotation the same as which anticlockwise rotation?', options:['270° anticlockwise','90° anticlockwise','180° anticlockwise','360° anticlockwise'], answer:0, explanation:'90° clockwise = 270° anticlockwise. They both end up in the same position.' },
+    // Medium (Q4–6)
+    { question:'The point (4, 1) is rotated 90° anticlockwise about the origin. What are the new coordinates?', options:['(−1, 4)','(1, −4)','(−4, −1)','(4, −1)'], answer:0, explanation:'90° anticlockwise about origin: (x, y) → (−y, x). So (4, 1) → (−1, 4).' },
+    { question:'A triangle is rotated 90° clockwise about the origin. The point (2, 5) becomes:', options:['(5, −2)','(−5, 2)','(−2, −5)','(2, −5)'], answer:0, explanation:'90° clockwise about origin: (x, y) → (y, −x). So (2, 5) → (5, −2).' },
+    { question:'After a 180° rotation, do you need to state the direction?', options:['No — 180° CW and ACW give the same result','Yes — it changes the answer','Only for some shapes','Only if the centre is the origin'], answer:0, explanation:'180° clockwise and 180° anticlockwise give exactly the same result, so direction is not needed for 180°.' },
+    // Greater Depth (Q7–8)
+    { question:'A shape at (1, 3) is rotated 90° clockwise about (1, 1). What are the new coordinates?', options:['(3, 1)','(−1, 1)','(1, −1)','(−1, 3)'], answer:0, explanation:'Translate so centre is origin: (1,3)→(0,2). Apply 90° CW: (0,2)→(2,0). Translate back: (2,0)+(1,1)=(3,1).' },
+    { question:'A point P is rotated 90° clockwise about the origin, then 90° clockwise again. This is equivalent to:', options:['A single 180° rotation about the origin','A 90° anticlockwise rotation','A translation','A reflection in the x-axis'], answer:0, explanation:'Two consecutive 90° clockwise rotations = 90° + 90° = 180° rotation about the same centre.' }
   ]
 
 });

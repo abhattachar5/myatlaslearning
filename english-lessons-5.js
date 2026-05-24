@@ -531,6 +531,81 @@ Object.assign(LESSONS, {
   <li>Cover both similarities <em>and</em> differences — do not just list what is different.</li>
   <li>Consider context: when, where, and why each text was written shapes its meaning.</li>
   <li>Link your comparisons back to purpose and audience for top marks.</li>
-</ul>`
+</ul>`,
+
+// ── ei-06-6: Transitions & Conjunctive Adverbs ─────────────────────────────
+'ei-06-6': `
+<h2>Transitions &amp; Conjunctive Adverbs</h2>
+<p>Good writers do not just list ideas &mdash; they <strong>connect</strong> them. <strong>Transition words</strong> and <strong>conjunctive adverbs</strong> are the glue that holds your writing together. They show the reader <em>how</em> one idea relates to the next: Does it add to it? Contrast with it? Result from it?</p>
+
+<h3>What Is a Conjunctive Adverb?</h3>
+<p>A <strong>conjunctive adverb</strong> is a word that joins two independent clauses (complete ideas) and shows the relationship between them. Unlike coordinating conjunctions (<em>and, but, or, so</em>), conjunctive adverbs need <strong>different punctuation</strong>.</p>
+
+<h3>Types of Transition</h3>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#fff3e0">
+    <th style="padding:8px;border:1px solid #ccc;text-align:left">Purpose</th>
+    <th style="padding:8px;border:1px solid #ccc;text-align:left">Conjunctive Adverbs</th>
+    <th style="padding:8px;border:1px solid #ccc;text-align:left">Example</th>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc"><strong>Addition</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">furthermore, moreover, in addition, similarly</td>
+    <td style="padding:8px;border:1px solid #ccc"><em>The school raised &pound;500; furthermore, local businesses donated prizes.</em></td>
+  </tr>
+  <tr style="background:#fafafa">
+    <td style="padding:8px;border:1px solid #ccc"><strong>Contrast</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">however, nevertheless, on the other hand, instead</td>
+    <td style="padding:8px;border:1px solid #ccc"><em>The weather was terrible; however, the match went ahead.</em></td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc"><strong>Cause &amp; Effect</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">therefore, consequently, as a result</td>
+    <td style="padding:8px;border:1px solid #ccc"><em>She revised every evening; consequently, she passed with top marks.</em></td>
+  </tr>
+  <tr style="background:#fafafa">
+    <td style="padding:8px;border:1px solid #ccc"><strong>Time</strong></td>
+    <td style="padding:8px;border:1px solid #ccc">meanwhile, subsequently, eventually</td>
+    <td style="padding:8px;border:1px solid #ccc"><em>The team trained hard; meanwhile, their rivals were struggling.</em></td>
+  </tr>
+</table>
+
+<h3>How to Punctuate Conjunctive Adverbs</h3>
+<p>This is where many students lose marks. The rule is straightforward:</p>
+<ol>
+  <li>Place a <strong>semicolon (;)</strong> before the conjunctive adverb.</li>
+  <li>Place a <strong>comma (,)</strong> after the conjunctive adverb.</li>
+</ol>
+
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Pattern:</strong> Independent clause<strong>;</strong> conjunctive adverb<strong>,</strong> independent clause.<br><br>
+  <em>The experiment failed<strong>;</strong> therefore<strong>,</strong> the scientists tried a new approach.</em><br>
+  <em>He wanted to go out<strong>;</strong> however<strong>,</strong> it was raining heavily.</em><br>
+  <em>The choir performed well<strong>;</strong> moreover<strong>,</strong> they received a standing ovation.</em>
+</div>
+
+<p>You can also start a <strong>new sentence</strong> with a conjunctive adverb, followed by a comma:</p>
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+  <em>The experiment failed. <strong>Therefore,</strong> the scientists tried a new approach.</em><br>
+  <em>He wanted to go out. <strong>However,</strong> it was raining heavily.</em>
+</div>
+
+<h3>Choosing the Right Transition</h3>
+<p>Before choosing a transition word, ask yourself: <strong>What is the relationship between these two ideas?</strong></p>
+<ul>
+  <li>Am I <strong>adding</strong> more information? &rarr; furthermore, moreover, in addition</li>
+  <li>Am I showing a <strong>contrast</strong> or surprise? &rarr; however, nevertheless, on the other hand</li>
+  <li>Am I explaining a <strong>cause or result</strong>? &rarr; therefore, consequently, as a result</li>
+  <li>Am I showing what happened at the <strong>same time</strong>? &rarr; meanwhile</li>
+  <li>Am I showing what happened <strong>next</strong>? &rarr; subsequently, eventually</li>
+</ul>
+
+<h3>Common Mistakes</h3>
+<p>&cross; Using a comma instead of a semicolon before a conjunctive adverb: <em>The bus was late, therefore we missed the lesson.</em><br>
+&check; Correct: <em>The bus was late<strong>;</strong> therefore, we missed the lesson.</em></p>
+<p>&cross; Forgetting the comma after the conjunctive adverb: <em>The bus was late; therefore we missed the lesson.</em><br>
+&check; Correct: <em>The bus was late; therefore<strong>,</strong> we missed the lesson.</em></p>
+<p>&cross; Using the wrong type of transition: <em>She studied hard; meanwhile, she got an A.</em> (This implies two things happening at the same time, not cause and effect.)<br>
+&check; Correct: <em>She studied hard; consequently, she got an A.</em></p>`
 
 }); // end Object.assign(LESSONS)
