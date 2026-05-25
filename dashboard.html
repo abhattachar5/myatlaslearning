@@ -82,9 +82,6 @@
       <button class="nav-item active" aria-current="page">
         <span class="nav-icon" aria-hidden="true">🏠</span> Dashboard
       </button>
-      <button class="nav-item" onclick="window.location.href='planner.html'">
-        <span class="nav-icon" aria-hidden="true">📅</span> Study Plan
-      </button>
       <button class="nav-item" onclick="openProfileModal(); closeSidebar()">
         <span class="nav-icon" aria-hidden="true">👤</span> My Profile
       </button>
@@ -128,8 +125,8 @@
       </div>
       <p class="plan-setup-desc">
         We have built a plan to cover all Year 7 topics.
-        Maths &amp; English every day, Science 3&times;/week,
-        History &amp; Geography alternating 2–3&times;/week.
+        Each week you'll get a checklist of topics across all five subjects.
+        Work through them at your own pace — any day, any order.
       </p>
       <div class="plan-setup-dates">
         <div class="plan-setup-date">
@@ -141,46 +138,45 @@
           <span class="plan-setup-date-value" id="plan-target-date">—</span>
         </div>
       </div>
-      <div class="plan-setup-days">
-        <span class="plan-setup-days-label">Study days</span>
-        <div class="plan-day-toggles" id="plan-day-toggles">
-          <button class="plan-day-btn active" data-day="1">Mon</button>
-          <button class="plan-day-btn active" data-day="2">Tue</button>
-          <button class="plan-day-btn active" data-day="3">Wed</button>
-          <button class="plan-day-btn active" data-day="4">Thu</button>
-          <button class="plan-day-btn active" data-day="5">Fri</button>
-          <button class="plan-day-btn" data-day="6">Sat</button>
-          <button class="plan-day-btn" data-day="0">Sun</button>
-        </div>
-      </div>
       <button class="btn btn-primary plan-setup-go" onclick="activateStudyPlan()">
         Start My Plan ✓
       </button>
     </div>
 
-    <!-- ── Today's Plan Card (shown when plan is active) ───────────────────── -->
-    <div class="todays-plan" id="todays-plan" style="display:none">
-      <div class="todays-plan-header">
-        <div>
-          <span class="todays-plan-icon">📋</span>
-          <strong>Today's Plan</strong>
-          <span class="todays-plan-date" id="todays-plan-date"></span>
-        </div>
-        <span class="todays-plan-week" id="todays-plan-week"></span>
+    <!-- ── Study Plan Card (shown when plan is active) ────────────────────── -->
+    <div class="week-plan" id="week-plan" style="display:none">
+      <!-- Tabs -->
+      <div class="wp-tabs">
+        <button class="wp-tab active" data-tab="thisweek" onclick="switchPlanTab('thisweek')">This Week</button>
+        <button class="wp-tab" data-tab="progress" onclick="switchPlanTab('progress')">My Progress</button>
       </div>
-      <div class="todays-plan-tasks" id="todays-plan-tasks"></div>
-      <div class="todays-plan-progress">
-        <div class="todays-plan-bar-track">
-          <div class="todays-plan-bar-fill" id="todays-plan-bar"></div>
+
+      <!-- Tab 1: This Week -->
+      <div class="wp-panel" id="wp-thisweek">
+        <div class="week-plan-header">
+          <div class="week-plan-title">
+            <strong>Week <span id="week-num">1</span> of <span id="week-total">40</span></strong>
+          </div>
+          <span class="week-plan-count" id="week-count">0 of 0 done</span>
         </div>
-        <span class="todays-plan-count" id="todays-plan-count"></span>
+        <div class="week-plan-bar-wrap">
+          <div class="week-plan-bar-track">
+            <div class="week-plan-bar-fill" id="week-bar"></div>
+          </div>
+        </div>
+        <div class="week-plan-list" id="week-list"></div>
       </div>
-      <div class="todays-plan-footer">
-        <a href="planner.html" class="todays-plan-link">View Full Plan →</a>
-        <div class="todays-plan-actions">
-          <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.downloadExport()" title="Export progress">💾 Export</button>
-          <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.triggerImport()" title="Import progress">📂 Import</button>
-        </div>
+
+      <!-- Tab 2: My Progress -->
+      <div class="wp-panel" id="wp-progress" style="display:none">
+        <div class="week-plan-progress" id="week-progress"></div>
+        <div class="wp-roadahead" id="wp-roadahead"></div>
+      </div>
+
+      <!-- Shared footer -->
+      <div class="week-plan-footer">
+        <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.downloadExport()" title="Export progress">💾 Export</button>
+        <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.triggerImport()" title="Import progress">📂 Import</button>
       </div>
     </div>
 
@@ -218,10 +214,6 @@
   <button class="mobile-nav-item active" onclick="window.scrollTo(0,0)">
     <span class="mobile-nav-icon">🏠</span>
     Home
-  </button>
-  <button class="mobile-nav-item" onclick="window.location.href='planner.html'">
-    <span class="mobile-nav-icon">📅</span>
-    Plan
   </button>
   <button class="mobile-nav-item" onclick="openProfileModal()">
     <span class="mobile-nav-icon">👤</span>
@@ -322,7 +314,7 @@ function getYearGeographyTopics() {
   user = requireAuth();
   touchStreak();
   renderSidebar();
-  renderStudyPlan();
+  renderWeekPlan();
   renderStats();
   renderFilters();
   renderGrid();
@@ -342,11 +334,11 @@ function setWelcome() {
       : `You've mastered ${stats.mastered} of ${stats.total} topics (${pct}%). Keep going!`;
 }
 
-// ── Study Plan (banner or today's card) ──────────────────────────────────────
-function renderStudyPlan() {
+// ── Study Plan (banner or weekly checklist) ──────────────────────────────────
+function renderWeekPlan() {
   const plan = StudyPlanner.getStudyPlan();
   const banner = document.getElementById('plan-setup-banner');
-  const card = document.getElementById('todays-plan');
+  const card = document.getElementById('week-plan');
 
   if (!plan) {
     // No plan yet — show setup banner
@@ -355,85 +347,171 @@ function renderStudyPlan() {
     document.getElementById('plan-start-date').textContent =
       today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
     document.getElementById('plan-target-date').textContent = 'May ' + targetYear;
-
-    // Wire up day toggle buttons
-    document.querySelectorAll('.plan-day-btn').forEach(btn => {
-      btn.addEventListener('click', function () { this.classList.toggle('active'); });
-    });
-
     banner.style.display = '';
     card.style.display = 'none';
     return;
   }
 
-  // Plan exists — show Today's Plan
+  // Plan exists — show card
   banner.style.display = 'none';
-  const data = StudyPlanner.getTodaysTasks();
-  if (!data) { card.style.display = 'none'; return; }
-
   card.style.display = '';
 
-  // Header
-  const today = new Date();
-  const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  document.getElementById('todays-plan-date').textContent =
-    '— ' + dayNames[today.getDay()] + ', ' +
-    today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' });
-  document.getElementById('todays-plan-week').textContent = 'W' + data.weekNumber;
+  renderThisWeekTab();
+  renderProgressTab();
+}
 
-  const taskEl = document.getElementById('todays-plan-tasks');
+// ── Tab switching ────────────────────────────────────────────────────────────
+function switchPlanTab(tab) {
+  document.querySelectorAll('.wp-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tab);
+  });
+  document.getElementById('wp-thisweek').style.display = tab === 'thisweek' ? '' : 'none';
+  document.getElementById('wp-progress').style.display = tab === 'progress' ? '' : 'none';
+}
 
-  if (!data.isStudyDay) {
-    taskEl.innerHTML =
-      '<div class="todays-plan-dayoff">' +
-        '<div class="todays-plan-dayoff-icon">😌</div>' +
-        '<div class="todays-plan-dayoff-msg">No study planned for today — enjoy your break!</div>' +
-      '</div>';
-    document.getElementById('todays-plan-bar').style.width = '0%';
-    document.getElementById('todays-plan-count').textContent = 'Day off';
+// ── Tab 1: This Week ────────────────────────────────────────────────────────
+function renderThisWeekTab() {
+  const weekNum = StudyPlanner.getCurrentWeekNumber();
+  const data = StudyPlanner.getWeekChecklist(weekNum);
+  if (!data) return;
+
+  document.getElementById('week-num').textContent = data.weekNumber;
+  document.getElementById('week-total').textContent = data.totalWeeks;
+
+  const pct = data.totalItems > 0 ? Math.round((data.doneItems / data.totalItems) * 100) : 0;
+  document.getElementById('week-bar').style.width = pct + '%';
+  document.getElementById('week-count').textContent =
+    data.allDone ? '🎉 All done this week!' : data.doneItems + ' of ' + data.totalItems + ' done';
+
+  const listEl = document.getElementById('week-list');
+
+  if (data.subjects.length === 0) {
+    listEl.innerHTML = '<div class="week-plan-empty">No topics scheduled this week.</div>';
     return;
   }
 
-  // Render task rows
-  const tasks = data.tasks;
-  let doneCount = 0;
-  taskEl.innerHTML = tasks.map(t => {
-    const isDone = t.complete;
-    if (isDone) doneCount++;
-    const tab = t.task === 'lesson' ? 'lesson' : t.task === 'flashcards' ? 'flashcards' : t.task === 'quiz' ? 'practice' : '';
-    const href = t.islandId ? `island.html?id=${t.islandId}${tab ? '&tab=' + tab : ''}` : '#';
-    return `<div class="plan-task${isDone ? ' complete' : ''}">
-      <div class="plan-task-check">${isDone ? '✓' : ''}</div>
-      <span class="plan-task-subject" style="color:${t.subjectColor}">${t.subjectEmoji} ${t.subjectName}</span>
-      <div class="plan-task-info">
-        <div class="plan-task-island">${t.islandName}</div>
-        <div class="plan-task-action">${t.taskLabel}</div>
-      </div>
-      ${!isDone && t.islandId ? `<a href="${href}" class="plan-task-go">Start →</a>` : ''}
-    </div>`;
-  }).join('');
+  let html = '';
+  data.subjects.forEach(subj => {
+    html += `<div class="week-plan-subject">
+      <div class="week-plan-subject-header" style="color:${subj.subjectColor}">
+        ${subj.subjectEmoji} ${subj.subjectName}
+      </div>`;
 
-  // Progress bar
-  const total = tasks.length;
-  const pct = total > 0 ? Math.round((doneCount / total) * 100) : 0;
-  document.getElementById('todays-plan-bar').style.width = pct + '%';
-  document.getElementById('todays-plan-count').textContent =
-    doneCount === total ? '🎉 All done for today!' : doneCount + ' of ' + total + ' done';
+    subj.topics.forEach(topic => {
+      const showTopic = topic.islands.length > 1 ||
+        (topic.topicName && topic.topicName !== topic.islands[0].islandName);
+      if (showTopic) {
+        html += `<div class="week-plan-topic">${topic.topicName}</div>`;
+      }
+
+      topic.islands.forEach(island => {
+        const dots = [];
+        for (let d = 0; d < 4; d++) {
+          dots.push(d < island.dots
+            ? `<span class="wp-dot filled" style="background:${subj.subjectColor}"></span>`
+            : '<span class="wp-dot empty"></span>');
+        }
+
+        let action = '';
+        if (island.complete) {
+          action = '<span class="week-plan-done">✓ Done</span>';
+        } else {
+          const label = island.dots === 0 ? 'Start →' : 'Continue →';
+          action = `<a href="island.html?id=${island.islandId}&tab=${island.nextTab}" class="week-plan-go">${label}</a>`;
+        }
+
+        html += `<div class="week-plan-item${island.complete ? ' complete' : ''}">
+          <span class="week-plan-dots">${dots.join('')}</span>
+          <span class="week-plan-name">${island.islandName}</span>
+          ${action}
+        </div>`;
+      });
+    });
+
+    html += '</div>';
+  });
+
+  listEl.innerHTML = html;
+}
+
+// ── Tab 2: My Progress + Road Ahead ─────────────────────────────────────────
+function renderProgressTab() {
+  // Topic-level progress bars
+  const tp = StudyPlanner.getTopicProgress();
+  const progEl = document.getElementById('week-progress');
+  const sids = ['math','english','science','history','geography'];
+  let progHtml = '<h3 class="wp-section-title">Topic Progress</h3>';
+  sids.forEach(sid => {
+    const s = tp.subjects[sid];
+    if (!s || s.total === 0) return;
+    progHtml += `<div class="wp-prog-row">
+      <span class="wp-prog-label" style="color:${s.color}">${s.emoji} ${s.name}</span>
+      <div class="wp-prog-bar-track">
+        <div class="wp-prog-bar-fill" style="width:${s.percent}%;background:${s.color}"></div>
+      </div>
+      <span class="wp-prog-stat">${s.completed}/${s.total}</span>
+    </div>`;
+  });
+  progHtml += `<div class="wp-prog-overall">Overall: ${tp.completed} of ${tp.total} topics (${tp.percent}%)</div>`;
+  progEl.innerHTML = progHtml;
+
+  // Weekly grid road ahead: weeks as rows, subjects as columns
+  const grid = StudyPlanner.getWeeklyGrid();
+  if (!grid) return;
+
+  const roadEl = document.getElementById('wp-roadahead');
+  const NAMES = StudyPlanner.SUBJECT_NAMES;
+  const EMOJIS = StudyPlanner.SUBJECT_EMOJIS;
+  const COLORS = StudyPlanner.SUBJECT_COLORS;
+  const sidsGrid = grid.subjectIds;
+
+  let roadHtml = '<h3 class="wp-section-title" style="margin-top:20px">Road Ahead</h3>';
+  roadHtml += '<div class="wp-grid-wrap"><table class="wp-grid">';
+
+  // Header row
+  roadHtml += '<thead><tr><th class="wp-grid-wk">Week</th>';
+  sidsGrid.forEach(sid => {
+    roadHtml += `<th style="color:${COLORS[sid]}">${EMOJIS[sid]} ${NAMES[sid]}</th>`;
+  });
+  roadHtml += '</tr></thead><tbody>';
+
+  // Data rows
+  grid.weeks.forEach(row => {
+    const cls = row.isCurrent ? ' class="wp-grid-current"' : row.isPast ? ' class="wp-grid-past"' : '';
+    roadHtml += `<tr${cls}>`;
+    roadHtml += `<td class="wp-grid-wk">W${row.week}</td>`;
+    sidsGrid.forEach(sid => {
+      const entries = row.subjects[sid];
+      if (entries.length === 0) {
+        roadHtml += '<td><span class="wp-grid-empty">—</span></td>';
+      } else {
+        // Group islands by topic name
+        const byTopic = {};
+        const topicOrder = [];
+        entries.forEach(e => {
+          if (!byTopic[e.topic]) { byTopic[e.topic] = []; topicOrder.push(e.topic); }
+          byTopic[e.topic].push(e.island);
+        });
+        const parts = topicOrder.map(t => {
+          const islands = byTopic[t];
+          // If only one island and its name matches the topic, show just the topic
+          if (islands.length === 1 && islands[0] === t) return t;
+          return '<span class="wp-grid-topic">' + t + '</span> — ' + islands.join(', ');
+        });
+        roadHtml += '<td>' + parts.join('<br>') + '</td>';
+      }
+    });
+    roadHtml += '</tr>';
+  });
+
+  roadHtml += '</tbody></table></div>';
+  roadEl.innerHTML = roadHtml;
 }
 
 function activateStudyPlan() {
-  // Read selected study days from the toggle buttons
-  const days = [];
-  document.querySelectorAll('.plan-day-btn.active').forEach(btn => {
-    days.push(parseInt(btn.dataset.day, 10));
-  });
-  if (days.length === 0) {
-    showToast('Please select at least one study day', 'error');
-    return;
-  }
-  StudyPlanner.createStudyPlan(days);
+  StudyPlanner.createStudyPlan();
   showToast('📅 Study plan activated!', 'success');
-  renderStudyPlan();
+  renderWeekPlan();
 }
 
 // ── Sidebar ──────────────────────────────────────────────────────────────────

@@ -1,6 +1,5 @@
-// planner.js — Study Plan engine: scheduling, progress tracking, export/import
+// planner.js — Study Plan engine: weekly checklist, progress tracking, export/import
 //
-// Item 1 of the Study Planner feature.
 // Provides: StudyPlanner global API
 // Depends on: app.js (progress helpers), data.js + *-data.js (CURRICULUM)
 
@@ -23,45 +22,6 @@
     history: 'History', geography: 'Geography'
   };
   var SUBJECT_IDS = ['math', 'english', 'science', 'history', 'geography'];
-
-  // ── Weekly Timetable ───────────────────────────────────────────────────────
-  // Core subjects (math, english) appear every study day.
-  // Rotating subjects alternate by odd/even week:
-  //   Odd  weeks → Science 3×, History 3×, Geography 2×
-  //   Even weeks → Science 3×, Geography 3×, History 2×
-  //
-  // dayOfWeek: 0=Sun 1=Mon 2=Tue 3=Wed 4=Thu 5=Fri 6=Sat
-  function getSubjectsForDay(dayOfWeek, weekNumber) {
-    var core = ['math', 'english'];
-    var isOdd = weekNumber % 2 === 1;
-
-    // Only add rotating subjects on weekdays (Mon-Fri / Sat-Sun if chosen)
-    var rotating = [];
-    switch (dayOfWeek) {
-      case 1: // Mon
-        rotating = ['science', isOdd ? 'history' : 'geography'];
-        break;
-      case 2: // Tue
-        rotating = ['science'];
-        break;
-      case 3: // Wed
-        rotating = [isOdd ? 'geography' : 'history', isOdd ? 'history' : 'geography'];
-        break;
-      case 4: // Thu
-        rotating = ['science'];
-        break;
-      case 5: // Fri
-        rotating = [isOdd ? 'geography' : 'history', isOdd ? 'history' : 'geography'];
-        break;
-      case 6: // Sat
-        rotating = ['science', isOdd ? 'history' : 'geography'];
-        break;
-      case 0: // Sun
-        rotating = ['science', isOdd ? 'geography' : 'history'];
-        break;
-    }
-    return core.concat(rotating);
-  }
 
   // ── Topological Sort (Kahn's algorithm) ────────────────────────────────────
   // Returns islands in prerequisite-safe order within a subject.
@@ -117,6 +77,57 @@
     return queues;
   }
 
+  // ── Balanced island-to-week assignment ───────────────────────────────────
+  // Math & English: distributed independently (enough for weekly coverage).
+  // Science: every other week (odd weeks — W1, W3, W5 …).
+  // History + Geography: both in even weeks (W2, W4, W6 …), packed so
+  // the first 12 even weeks have both subjects, then History alone
+  // until its 15 islands are placed.
+  function getIslandWeekMap(plan) {
+    if (!plan) plan = getStudyPlan();
+    if (!plan) return {};
+
+    var queues = buildSubjectQueues();
+    var totalWeeks = getTotalStudyWeeks(plan);
+    var weekMap = {};
+
+    // Math & English: even spread independently
+    ['math', 'english'].forEach(function (sid) {
+      var queue = queues[sid];
+      var n = queue.length;
+      for (var i = 0; i < n; i++) {
+        var w = Math.floor(i * totalWeeks / n) + 1;
+        if (w > totalWeeks) w = totalWeeks;
+        weekMap[queue[i]] = w;
+      }
+    });
+
+    // Science: odd weeks (W1, W3, W5, …)
+    var oddWeeks = [];
+    for (var w = 1; w <= totalWeeks; w += 2) oddWeeks.push(w);
+
+    var sciQ = queues.science;
+    for (var i = 0; i < sciQ.length; i++) {
+      weekMap[sciQ[i]] = oddWeeks[i];
+    }
+
+    // History + Geography: even weeks (W2, W4, W6, …)
+    var evenWeeks = [];
+    for (var w = 2; w <= totalWeeks; w += 2) evenWeeks.push(w);
+
+    var hisQ = queues.history;
+    for (var i = 0; i < hisQ.length; i++) {
+      weekMap[hisQ[i]] = evenWeeks[i];
+    }
+
+    var geoQ = queues.geography;
+    for (var i = 0; i < geoQ.length; i++) {
+      weekMap[geoQ[i]] = evenWeeks[i];
+    }
+
+    return weekMap;
+  }
+
   // ── Next task for an island ────────────────────────────────────────────────
   // lesson → flashcards → quiz → complete
   function getNextTask(islandId) {
@@ -143,23 +154,6 @@
     return 'complete';
   }
 
-  var TASK_LABELS = {
-    lesson: 'Complete lesson',
-    flashcards: 'Learn flashcards',
-    quiz: 'Take quiz',
-    complete: 'Completed',
-    review: 'Review completed topics'
-  };
-
-  // ── Current (next incomplete) island for a subject ─────────────────────────
-  function getCurrentIsland(subjectId, queues) {
-    var queue = queues[subjectId] || [];
-    for (var idx = 0; idx < queue.length; idx++) {
-      if (getIslandStatus(queue[idx]) < 4) return queue[idx];
-    }
-    return null; // subject fully mastered
-  }
-
   // ── Plan CRUD ──────────────────────────────────────────────────────────────
   function getStudyPlan() {
     return JSON.parse(localStorage.getItem(PLAN_KEY) || 'null');
@@ -172,25 +166,18 @@
   }
 
   // ── Create a new plan ──────────────────────────────────────────────────────
-  // For existing students the plan starts today but already-completed islands
-  // are skipped automatically by getCurrentIsland().
-  function createStudyPlan(studyDays) {
+  function createStudyPlan() {
     var user = getUser();
     var now = new Date();
-
-    // Use the user's join date as the logical start, but never earlier than today
     var joinDate = (user && user.joinDate) ? new Date(user.joinDate) : now;
     var startDate = joinDate > now ? joinDate : now;
 
     // Target: May of the next calendar year from start
     var targetYear = startDate.getFullYear() + 1;
-    // If start is already Jun–Dec, May of next year is < 12 months — still fine
-    // If start is Jan–May, May of next year is 12–16 months — also fine
 
     var plan = {
       startDate: _dateStr(startDate),
       targetMonth: 'May ' + targetYear,
-      studyDays: studyDays || [1, 2, 3, 4, 5], // Mon–Fri
       createdAt: now.toISOString()
     };
     saveStudyPlan(plan);
@@ -204,188 +191,321 @@
     return Math.max(1, Math.floor(diff / (7 * 24 * 60 * 60 * 1000)) + 1);
   }
 
-  // ── Study-day count from plan start to a given date ────────────────────────
-  function countStudyDays(startDateStr, endDate, studyDays) {
-    var d = new Date(startDateStr);
-    var count = 0;
-    while (d <= endDate) {
-      if (studyDays.indexOf(d.getDay()) !== -1) count++;
-      d.setDate(d.getDate() + 1);
-    }
-    return count;
+  function getCurrentWeekNumber() {
+    var plan = getStudyPlan();
+    if (!plan) return 1;
+    return getWeekNumber(new Date(), plan.startDate);
   }
 
-  // ── Today's tasks ──────────────────────────────────────────────────────────
-  function getTodaysTasks() {
-    var plan = getStudyPlan();
-    if (!plan) return null;
-
-    var today = new Date();
-    var dayOfWeek = today.getDay();
-    var weekNumber = getWeekNumber(today, plan.startDate);
-
-    if (plan.studyDays.indexOf(dayOfWeek) === -1) {
-      return { isStudyDay: false, tasks: [], dayOfWeek: dayOfWeek, weekNumber: weekNumber, date: _dateStr(today) };
-    }
-
-    var queues = buildSubjectQueues();
-    var subjects = getSubjectsForDay(dayOfWeek, weekNumber);
-    var tasks = [];
-
-    subjects.forEach(function (sid) {
-      var islandId = getCurrentIsland(sid, queues);
-      if (!islandId) {
-        tasks.push(_makeTask(sid, null, 'review'));
-        return;
-      }
-      var task = getNextTask(islandId);
-      tasks.push(_makeTask(sid, islandId, task));
-    });
-
-    return { isStudyDay: true, tasks: tasks, dayOfWeek: dayOfWeek, weekNumber: weekNumber, date: _dateStr(today) };
-  }
-
-  // ── Week schedule (for planner page) ───────────────────────────────────────
-  function getWeekSchedule(weekNumber) {
-    var plan = getStudyPlan();
-    if (!plan) return null;
-
-    // Find the Monday that starts the requested week
+  // ── Total study weeks from start to target ─────────────────────────────────
+  function getTotalStudyWeeks(plan) {
     var start = new Date(plan.startDate);
-    var monday = new Date(start);
-    monday.setDate(monday.getDate() + (weekNumber - 1) * 7);
-    // Align to Monday
-    var off = monday.getDay() === 0 ? -6 : 1 - monday.getDay();
-    monday.setDate(monday.getDate() + off);
+    var monthNames = ['January','February','March','April','May','June',
+                      'July','August','September','October','November','December'];
+    var parts = plan.targetMonth.split(' ');
+    var targetMonthIdx = monthNames.indexOf(parts[0]);
+    if (targetMonthIdx === -1) targetMonthIdx = 4; // default May
+    var targetYear = parseInt(parts[1], 10);
+    var end = new Date(targetYear, targetMonthIdx + 1, 0); // last day of target month
 
-    var queues = buildSubjectQueues();
-    var days = [];
-
-    for (var d = 0; d < 7; d++) {
-      var date = new Date(monday);
-      date.setDate(monday.getDate() + d);
-      var dow = date.getDay();
-      var isStudy = plan.studyDays.indexOf(dow) !== -1;
-      var today = new Date();
-
-      var dayInfo = {
-        date: _dateStr(date),
-        dayOfWeek: dow,
-        dayName: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][dow],
-        dayNumber: date.getDate(),
-        monthName: date.toLocaleDateString('en-GB', { month: 'short' }),
-        isStudyDay: isStudy,
-        isToday: date.toDateString() === today.toDateString(),
-        isPast: date < today && date.toDateString() !== today.toDateString(),
-        isFuture: date > today,
-        subjects: []
-      };
-
-      if (isStudy) {
-        var subjects = getSubjectsForDay(dow, weekNumber);
-        subjects.forEach(function (sid) {
-          var islandId = getCurrentIsland(sid, queues);
-          var task = islandId ? getNextTask(islandId) : 'review';
-          dayInfo.subjects.push(_makeTask(sid, islandId, task));
-        });
-      }
-
-      days.push(dayInfo);
-    }
-
-    return { weekNumber: weekNumber, days: days };
+    var diffMs = end.getTime() - start.getTime();
+    var weeks = Math.ceil(diffMs / (7 * 24 * 60 * 60 * 1000));
+    return Math.max(1, weeks);
   }
 
-  // ── Progress summary (for planner page header) ─────────────────────────────
-  function getProgressSummary() {
+  // ── Look up topic name for an island ───────────────────────────────────────
+  function getAllTopics() {
+    var topics = [];
+    if (typeof MATH_TOPICS !== 'undefined') topics = topics.concat(MATH_TOPICS);
+    if (typeof MATH_TOPICS_Y8 !== 'undefined') topics = topics.concat(MATH_TOPICS_Y8);
+    if (typeof ENGLISH_TOPICS !== 'undefined') topics = topics.concat(ENGLISH_TOPICS);
+    if (typeof ENGLISH_TOPICS_Y8 !== 'undefined') topics = topics.concat(ENGLISH_TOPICS_Y8);
+    if (typeof SCIENCE_Y7_TOPICS !== 'undefined') topics = topics.concat(SCIENCE_Y7_TOPICS);
+    if (typeof HISTORY_TOPICS !== 'undefined') topics = topics.concat(HISTORY_TOPICS);
+    if (typeof HISTORY_TOPICS_Y8 !== 'undefined') topics = topics.concat(HISTORY_TOPICS_Y8);
+    if (typeof GEOGRAPHY_TOPICS !== 'undefined') topics = topics.concat(GEOGRAPHY_TOPICS);
+    if (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined') topics = topics.concat(GEOGRAPHY_TOPICS_Y8);
+    return topics;
+  }
+
+  // ── Weekly checklist ───────────────────────────────────────────────────────
+  // Returns structured data for the current week's island list, grouped by
+  // subject → topic → islands with 4-step progress dots.
+  function getWeekChecklist(weekNumber) {
     var plan = getStudyPlan();
     if (!plan) return null;
 
-    var queues = buildSubjectQueues();
-    var subjects = {};
-    var totalIslands = 0;
-    var totalCompleted = 0;
+    var totalWeeks = getTotalStudyWeeks(plan);
+    var weekMap = getIslandWeekMap(plan);
+
+    if (weekNumber < 1) weekNumber = 1;
+    if (weekNumber > totalWeeks) weekNumber = totalWeeks;
+
+    // Build topic lookup
+    var allTopics = getAllTopics();
+    var topicMap = {};
+    allTopics.forEach(function (t) { topicMap[t.id] = t; });
+
+    var subjects = [];
+    var totalItems = 0;
+    var doneItems = 0;
 
     SUBJECT_IDS.forEach(function (sid) {
-      var queue = queues[sid] || [];
-      var done = 0;
-      queue.forEach(function (id) { if (getIslandStatus(id) === 4) done++; });
-      subjects[sid] = {
-        total: queue.length, completed: done,
-        percent: queue.length > 0 ? Math.round((done / queue.length) * 100) : 0,
-        name: SUBJECT_NAMES[sid], emoji: SUBJECT_EMOJIS[sid], color: SUBJECT_COLORS[sid]
-      };
-      totalIslands += queue.length;
-      totalCompleted += done;
+      var queue = buildSubjectQueues()[sid];
+      var n = queue.length;
+      if (n === 0) return;
+
+      // Find islands assigned to this week for this subject
+      var weekIslandIds = [];
+      for (var i = 0; i < n; i++) {
+        if (weekMap[queue[i]] === weekNumber) weekIslandIds.push(queue[i]);
+      }
+
+      if (weekIslandIds.length === 0) return;
+
+      // Group by topic
+      var topicGroups = {};
+      var topicOrder = [];
+
+      weekIslandIds.forEach(function (islandId) {
+        var island = CURRICULUM.find(function (c) { return c.id === islandId; });
+        if (!island) return;
+
+        var topicId = island.topicId || '_none_' + islandId;
+        if (!topicGroups[topicId]) {
+          var topic = topicMap[topicId];
+          topicGroups[topicId] = {
+            topicId: topicId,
+            topicName: topic ? topic.name : island.name,
+            islands: []
+          };
+          topicOrder.push(topicId);
+        }
+
+        var status = getIslandStatus(islandId);
+        var progress = calcIslandProgress(islandId);
+        var dots = Math.floor(progress / 25);
+        var nextTask = getNextTask(islandId);
+        var tab = nextTask === 'lesson' ? 'lesson'
+                : nextTask === 'flashcards' ? 'flashcards' : 'practice';
+        var complete = status === 4;
+
+        if (complete) doneItems++;
+        totalItems++;
+
+        topicGroups[topicId].islands.push({
+          islandId: islandId,
+          islandName: island.name,
+          dots: dots,
+          complete: complete,
+          nextTask: nextTask,
+          nextTab: tab
+        });
+      });
+
+      subjects.push({
+        subjectId: sid,
+        subjectName: SUBJECT_NAMES[sid],
+        subjectEmoji: SUBJECT_EMOJIS[sid],
+        subjectColor: SUBJECT_COLORS[sid],
+        topics: topicOrder.map(function (tid) { return topicGroups[tid]; }),
+        islandCount: weekIslandIds.length
+      });
     });
 
-    // Pace tracking
-    var startDate = new Date(plan.startDate);
-    var now = new Date();
-    var elapsedDays = Math.max(1, Math.floor((now - startDate) / 86400000));
-    var totalDays = 305; // ~10 months of calendar time
-    var expectedPct = Math.min(100, Math.round((elapsedDays / totalDays) * 100));
-    var actualPct = totalIslands > 0 ? Math.round((totalCompleted / totalIslands) * 100) : 0;
-
-    var diff = actualPct - expectedPct;
-    var paceStatus, paceMessage;
-    if (diff >= 3) {
-      paceStatus = 'ahead';
-      paceMessage = "You're ahead of schedule — great work!";
-    } else if (diff >= -5) {
-      paceStatus = 'ontrack';
-      paceMessage = "You're on track";
-    } else {
-      paceStatus = 'behind';
-      paceMessage = "You're a bit behind — let's catch up!";
-    }
-
     return {
+      weekNumber: weekNumber,
+      totalWeeks: totalWeeks,
       subjects: subjects,
-      totalIslands: totalIslands,
-      totalCompleted: totalCompleted,
-      totalPercent: actualPct,
-      weekNumber: getWeekNumber(now, plan.startDate),
-      totalWeeks: Math.ceil(totalDays / 7),
-      paceStatus: paceStatus,
-      paceMessage: paceMessage,
-      startDate: plan.startDate,
-      targetMonth: plan.targetMonth
+      totalItems: totalItems,
+      doneItems: doneItems,
+      allDone: totalItems > 0 && doneItems === totalItems
     };
   }
 
-  // ── Month calendar data ────────────────────────────────────────────────────
-  function getMonthCalendar(year, month) {
+  // ── Topic-level progress summary ─────────────────────────────────────────
+  // Groups curriculum islands by topicId per subject.
+  // A topic counts as complete when ALL its islands are mastered (status 4).
+  function getTopicProgress() {
+    var user = getUser();
+    var year = (user && user.year) ? user.year : 'Year 7';
+    var allTopics = getAllTopics();
+    var topicNameMap = {};
+    allTopics.forEach(function (t) { topicNameMap[t.id] = t.name; });
+
+    var subjects = {};
+    var grandTotal = 0;
+    var grandDone = 0;
+
+    SUBJECT_IDS.forEach(function (sid) {
+      var islands = CURRICULUM.filter(function (i) {
+        return i.subjectId === sid && (i.yearGroup || 'Year 7') === year;
+      });
+
+      // Group islands by topicId
+      var topicMap = {};
+      islands.forEach(function (i) {
+        var tid = i.topicId || '_solo_' + i.id;
+        if (!topicMap[tid]) topicMap[tid] = [];
+        topicMap[tid].push(i.id);
+      });
+
+      var topicIds = Object.keys(topicMap);
+      var completed = 0;
+      topicIds.forEach(function (tid) {
+        var allMastered = topicMap[tid].every(function (islandId) {
+          return getIslandStatus(islandId) === 4;
+        });
+        if (allMastered) completed++;
+      });
+
+      subjects[sid] = {
+        total: topicIds.length,
+        completed: completed,
+        percent: topicIds.length > 0 ? Math.round((completed / topicIds.length) * 100) : 0,
+        name: SUBJECT_NAMES[sid],
+        emoji: SUBJECT_EMOJIS[sid],
+        color: SUBJECT_COLORS[sid]
+      };
+      grandTotal += topicIds.length;
+      grandDone += completed;
+    });
+
+    return {
+      subjects: subjects,
+      total: grandTotal,
+      completed: grandDone,
+      percent: grandTotal > 0 ? Math.round((grandDone / grandTotal) * 100) : 0
+    };
+  }
+
+  // ── Subject-based roadmap ────────────────────────────────────────────────
+  // Returns the full plan organized by subject → topic → islands with week
+  // numbers. This is the view a parent uses to see the complete journey.
+  function getSubjectRoadmap() {
     var plan = getStudyPlan();
     if (!plan) return null;
 
-    var firstDay = new Date(year, month, 1);
-    var lastDay = new Date(year, month + 1, 0);
-    var today = new Date();
-    var days = [];
+    var queues = buildSubjectQueues();
+    var totalWeeks = getTotalStudyWeeks(plan);
+    var weekMap = getIslandWeekMap(plan);
+    var allTopics = getAllTopics();
+    var topicNameMap = {};
+    allTopics.forEach(function (t) { topicNameMap[t.id] = t; });
 
-    for (var d = 1; d <= lastDay.getDate(); d++) {
-      var date = new Date(year, month, d);
-      var dow = date.getDay();
-      var isStudy = plan.studyDays.indexOf(dow) !== -1;
+    var currentWeek = getCurrentWeekNumber();
+    var subjects = [];
 
-      days.push({
-        date: _dateStr(date),
-        day: d,
-        dayOfWeek: dow,
-        isStudyDay: isStudy,
-        isToday: date.toDateString() === today.toDateString(),
-        isPast: date < today && date.toDateString() !== today.toDateString(),
-        isFuture: date > today
+    SUBJECT_IDS.forEach(function (sid) {
+      var queue = queues[sid];
+      var n = queue.length;
+      if (n === 0) return;
+
+      var topicGroups = {};
+      var topicOrder = [];
+
+      for (var i = 0; i < n; i++) {
+        var islandId = queue[i];
+        var w = weekMap[islandId] || 1;
+        var island = CURRICULUM.find(function (c) { return c.id === islandId; });
+        if (!island) continue;
+
+        var topicId = island.topicId || '_solo_' + islandId;
+        if (!topicGroups[topicId]) {
+          var topic = topicNameMap[topicId];
+          topicGroups[topicId] = {
+            topicId: topicId,
+            topicName: topic ? topic.name : island.name,
+            islands: [],
+            weekStart: w,
+            weekEnd: w
+          };
+          topicOrder.push(topicId);
+        }
+
+        var grp = topicGroups[topicId];
+        if (w < grp.weekStart) grp.weekStart = w;
+        if (w > grp.weekEnd) grp.weekEnd = w;
+
+        grp.islands.push({
+          id: islandId,
+          name: island.name,
+          week: w,
+          mastered: getIslandStatus(islandId) === 4
+        });
+      }
+
+      subjects.push({
+        subjectId: sid,
+        name: SUBJECT_NAMES[sid],
+        emoji: SUBJECT_EMOJIS[sid],
+        color: SUBJECT_COLORS[sid],
+        topics: topicOrder.map(function (tid) { return topicGroups[tid]; })
+      });
+    });
+
+    return { subjects: subjects, totalWeeks: totalWeeks, currentWeek: currentWeek };
+  }
+
+  // ── Weekly grid: weeks as rows, subjects as columns ─────────────────────
+  // Returns a table-ready structure: each week gets one row with topic names
+  // listed per subject column.  Duplicate topic names within a week+subject
+  // are collapsed so the cell reads cleanly.
+  function getWeeklyGrid() {
+    var plan = getStudyPlan();
+    if (!plan) return null;
+
+    var queues = buildSubjectQueues();
+    var totalWeeks = getTotalStudyWeeks(plan);
+    var weekMap = getIslandWeekMap(plan);
+    var currentWeek = getCurrentWeekNumber();
+
+    var allTopics = getAllTopics();
+    var topicNameMap = {};
+    allTopics.forEach(function (t) { topicNameMap[t.id] = t.name; });
+
+    // Initialise empty grid: week → subject → []
+    var weekData = {};
+    for (var w = 1; w <= totalWeeks; w++) {
+      weekData[w] = {};
+      SUBJECT_IDS.forEach(function (sid) { weekData[w][sid] = []; });
+    }
+
+    SUBJECT_IDS.forEach(function (sid) {
+      var queue = queues[sid];
+      var n = queue.length;
+      for (var i = 0; i < n; i++) {
+        var islandId = queue[i];
+        var wk = weekMap[islandId] || 1;
+
+        var island = CURRICULUM.find(function (c) { return c.id === islandId; });
+        if (!island) continue;
+
+        var topicId = island.topicId || '_solo_' + islandId;
+        var topicName = topicNameMap[topicId] || island.name;
+
+        weekData[wk][sid].push({
+          topic: topicName,
+          island: island.name
+        });
+      }
+    });
+
+    var weeks = [];
+    for (var w = 1; w <= totalWeeks; w++) {
+      weeks.push({
+        week: w,
+        isCurrent: w === currentWeek,
+        isPast: w < currentWeek,
+        subjects: weekData[w]
       });
     }
 
     return {
-      year: year,
-      month: month,
-      monthName: firstDay.toLocaleDateString('en-GB', { month: 'long' }),
-      startDayOfWeek: firstDay.getDay(),
-      days: days
+      weeks: weeks,
+      totalWeeks: totalWeeks,
+      currentWeek: currentWeek,
+      subjectIds: SUBJECT_IDS
     };
   }
 
@@ -467,21 +587,6 @@
     return y + '-' + m + '-' + day;
   }
 
-  function _makeTask(subjectId, islandId, task) {
-    var island = islandId ? CURRICULUM.find(function (i) { return i.id === islandId; }) : null;
-    return {
-      subjectId: subjectId,
-      subjectName: SUBJECT_NAMES[subjectId],
-      subjectEmoji: SUBJECT_EMOJIS[subjectId],
-      subjectColor: SUBJECT_COLORS[subjectId],
-      islandId: islandId,
-      islandName: island ? island.name : (task === 'review' ? 'Review' : 'All done'),
-      task: task,
-      taskLabel: TASK_LABELS[task] || task,
-      complete: task === 'complete'
-    };
-  }
-
   // ── Public API ─────────────────────────────────────────────────────────────
   window.StudyPlanner = {
     // Plan management
@@ -490,19 +595,19 @@
     deleteStudyPlan: deleteStudyPlan,
     createStudyPlan: createStudyPlan,
 
-    // Daily / weekly / monthly views
-    getTodaysTasks: getTodaysTasks,
-    getWeekSchedule: getWeekSchedule,
-    getMonthCalendar: getMonthCalendar,
-    getProgressSummary: getProgressSummary,
+    // Weekly checklist
+    getWeekChecklist: getWeekChecklist,
+    getCurrentWeekNumber: getCurrentWeekNumber,
+    getTotalStudyWeeks: getTotalStudyWeeks,
+    getTopicProgress: getTopicProgress,
+    getSubjectRoadmap: getSubjectRoadmap,
+    getWeeklyGrid: getWeeklyGrid,
 
     // Building blocks
+    getIslandWeekMap: getIslandWeekMap,
     buildSubjectQueues: buildSubjectQueues,
     getNextTask: getNextTask,
-    getCurrentIsland: getCurrentIsland,
-    getSubjectsForDay: getSubjectsForDay,
     getWeekNumber: getWeekNumber,
-    countStudyDays: countStudyDays,
 
     // Export / import
     exportProgress: exportProgress,
@@ -514,8 +619,7 @@
     SUBJECT_COLORS: SUBJECT_COLORS,
     SUBJECT_EMOJIS: SUBJECT_EMOJIS,
     SUBJECT_NAMES: SUBJECT_NAMES,
-    SUBJECT_IDS: SUBJECT_IDS,
-    TASK_LABELS: TASK_LABELS
+    SUBJECT_IDS: SUBJECT_IDS
   };
 
 })();

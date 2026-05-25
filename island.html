@@ -33,87 +33,13 @@
 
   <!-- Tab bar -->
   <div class="tab-bar" role="tablist" aria-label="Island sections">
-    <button class="tab-btn active" role="tab" id="tab-btn-overview"   data-tab="overview"   aria-selected="true"  aria-controls="tab-overview"   tabindex="0"  onclick="switchTab('overview')"><span aria-hidden="true">🗺️</span> Overview</button>
-    <button class="tab-btn"        role="tab" id="tab-btn-lesson"     data-tab="lesson"     aria-selected="false" aria-controls="tab-lesson"     tabindex="-1" onclick="switchTab('lesson')"><span aria-hidden="true">📖</span> Lesson</button>
+    <button class="tab-btn active" role="tab" id="tab-btn-lesson"     data-tab="lesson"     aria-selected="true"  aria-controls="tab-lesson"     tabindex="0"  onclick="switchTab('lesson')"><span aria-hidden="true">📖</span> Lesson</button>
     <button class="tab-btn"        role="tab" id="tab-btn-flashcards" data-tab="flashcards" aria-selected="false" aria-controls="tab-flashcards" tabindex="-1" onclick="switchTab('flashcards')"><span aria-hidden="true">🃏</span> Flashcards</button>
     <button class="tab-btn"        role="tab" id="tab-btn-practice"   data-tab="practice"   aria-selected="false" aria-controls="tab-practice"   tabindex="-1" onclick="switchTab('practice')"><span aria-hidden="true">✏️</span> Practice</button>
   </div>
 
-  <!-- ── OVERVIEW TAB ────────────────────────────────────────────────────── -->
-  <div class="tab-panel active" id="tab-overview" role="tabpanel" aria-labelledby="tab-btn-overview">
-
-    <div class="progress-overview-card">
-      <div id="overview-ring"></div>
-      <div style="flex:1">
-        <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:4px">Your progress</div>
-        <div style="font-size:1.5rem;font-weight:800;margin-bottom:2px" id="overview-pct">0%</div>
-        <div style="font-size:.875rem;color:var(--text-2)" id="overview-status">Not Started</div>
-      </div>
-    </div>
-
-    <!-- Progress steps breakdown -->
-    <div id="progress-steps" style="display:flex;flex-direction:column;gap:6px;margin-bottom:20px">
-      <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:4px">How to reach 100%</div>
-      <div class="progress-step" id="step-lesson">
-        <span class="step-check" id="step-lesson-check">⬜</span>
-        <span class="step-label">Read the lesson</span>
-        <span class="step-pts">+25%</span>
-      </div>
-      <div class="progress-step" id="step-cards">
-        <span class="step-check" id="step-cards-check">⬜</span>
-        <span class="step-label" id="step-cards-label">Learn all flashcards (0 / 0)</span>
-        <span class="step-pts">+25%</span>
-      </div>
-      <div class="progress-step" id="step-quiz-try">
-        <span class="step-check" id="step-quiz-try-check">⬜</span>
-        <span class="step-label">Attempt the quiz</span>
-        <span class="step-pts">+25%</span>
-      </div>
-      <div class="progress-step" id="step-quiz-pass">
-        <span class="step-check" id="step-quiz-pass-check">⬜</span>
-        <span class="step-label" id="step-quiz-pass-label">Pass the quiz (≥ 7 / 10)</span>
-        <span class="step-pts">+25%</span>
-      </div>
-    </div>
-
-    <div class="overview-grid">
-      <div class="overview-box">
-        <h4>Learning outcomes</h4>
-        <ul class="overview-list" id="overview-outcomes"></ul>
-      </div>
-      <div class="overview-box">
-        <h4>Topics covered</h4>
-        <div class="topic-tags" id="overview-topics"></div>
-      </div>
-    </div>
-
-    <div class="overview-box" style="margin-bottom:24px">
-      <h4 style="margin-bottom:4px" id="overview-desc-title">About this island</h4>
-      <p id="overview-desc" style="margin-top:8px;font-size:.9375rem"></p>
-    </div>
-
-    <h4 style="margin-bottom:12px">Start learning</h4>
-    <div class="activity-cta">
-      <div class="activity-btn" onclick="switchTab('lesson')">
-        <div class="activity-btn-icon">📖</div>
-        <div class="activity-btn-label">View Lesson</div>
-        <div class="activity-btn-sub">Read the lesson</div>
-      </div>
-      <div class="activity-btn" onclick="switchTab('flashcards')">
-        <div class="activity-btn-icon">🃏</div>
-        <div class="activity-btn-label">Flashcards</div>
-        <div class="activity-btn-sub" id="cta-cards-sub">—</div>
-      </div>
-      <div class="activity-btn" onclick="switchTab('practice')">
-        <div class="activity-btn-icon">✏️</div>
-        <div class="activity-btn-label">Practice Quiz</div>
-        <div class="activity-btn-sub" id="cta-quiz-sub">—</div>
-      </div>
-    </div>
-  </div>
-
   <!-- ── LESSON TAB ──────────────────────────────────────────────────────── -->
-  <div class="tab-panel" id="tab-lesson" role="tabpanel" aria-labelledby="tab-btn-lesson">
+  <div class="tab-panel active" id="tab-lesson" role="tabpanel" aria-labelledby="tab-btn-lesson">
     <div class="lesson-content-area" id="lesson-content" style="display:none"></div>
     <div id="lesson-done-cta" style="display:none;margin-top:32px">
       <div class="divider"></div>
@@ -414,11 +340,16 @@ let shuffledQuestions = []; // per-session, generated + shuffled
     backBtn.href = dashboardUrl;
   }
   renderHeader();
-  renderOverview();
   initFlashcards();
   initQuiz();
   checkLessonCache();
   touchStreak();
+
+  // Deep-link: jump straight to the requested tab (lesson/flashcards/practice)
+  var startTab = params.get('tab');
+  if (startTab && ['lesson', 'flashcards', 'practice'].indexOf(startTab) !== -1) {
+    switchTab(startTab);
+  }
 })();
 
 // ── Theme ─────────────────────────────────────────────────────────────────
@@ -437,7 +368,6 @@ function switchTab(name) {
     b.setAttribute('tabindex', active ? '0' : '-1');
   });
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
-  if (name === 'overview') refreshOverviewProgress();
   if (name === 'lesson') checkLessonCache(true);
 }
 
@@ -472,54 +402,6 @@ function refreshHeaderStatus() {
   const statusEl = document.getElementById('hdr-status');
   statusEl.textContent = STATUS_LABELS[si];
   statusEl.style.color = STATUS_COLORS[si];
-}
-
-// ── Overview ──────────────────────────────────────────────────────────────
-function renderOverview() {
-  document.getElementById('overview-desc').textContent = island.description;
-  const outcomes = document.getElementById('overview-outcomes');
-  outcomes.innerHTML = island.learningOutcomes.map(o => `<li>${o}</li>`).join('');
-  const topics = document.getElementById('overview-topics');
-  topics.innerHTML = island.topics.map(t => `<span class="topic-tag">${t}</span>`).join('');
-  document.getElementById('cta-cards-sub').textContent = `${cards.length} cards`;
-  document.getElementById('cta-quiz-sub').textContent = `${rawQuestions.length} questions`;
-  refreshOverviewProgress();
-}
-function refreshOverviewProgress() {
-  const progress = calcIslandProgress(islandId);
-  const si = getIslandStatus(islandId);
-  const p = getIslandProgress(islandId);
-  const learnedCount = cards.filter(c => p.flashcardsLearned.includes(c.id)).length;
-  const passMark = rawQuestions.length > 0 ? Math.ceil(rawQuestions.length * 0.7) : 0;
-  const quizAttempted = p.quizBestScore >= 0;
-  const quizPassed = quizAttempted && p.quizBestScore >= passMark;
-
-  // Ring & headline
-  document.getElementById('overview-pct').textContent = Math.round(progress) + '%';
-  document.getElementById('overview-status').textContent = STATUS_LABELS[si];
-  document.getElementById('overview-status').style.color = STATUS_COLORS[si];
-  document.getElementById('overview-ring').innerHTML = createProgressRing(progress, island.color, 72);
-
-  // Step checklist
-  function setStep(id, done) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = done ? '✅' : '⬜';
-  }
-  setStep('step-lesson-check',    p.lessonViewed);
-  setStep('step-cards-check',     learnedCount >= cards.length && cards.length > 0);
-  setStep('step-quiz-try-check',  quizAttempted);
-  setStep('step-quiz-pass-check', quizPassed);
-
-  // Dynamic labels
-  const cardsLabel = document.getElementById('step-cards-label');
-  if (cardsLabel) cardsLabel.textContent = `Learn all flashcards (${learnedCount} / ${cards.length})`;
-
-  const passLabel = document.getElementById('step-quiz-pass-label');
-  if (passLabel) {
-    passLabel.textContent = quizAttempted
-      ? `Pass the quiz — best: ${p.quizBestScore} / ${rawQuestions.length} (need ${passMark})`
-      : `Pass the quiz (need ${passMark} / ${rawQuestions.length})`;
-  }
 }
 
 // ── Lesson ────────────────────────────────────────────────────────────────
@@ -624,7 +506,6 @@ function awardLessonXP() {
       saveIslandProgress(islandId, p);
     }
     refreshHeaderStatus();
-    refreshOverviewProgress();
   }
 }
 
@@ -720,7 +601,6 @@ function markCard(state) {
     else { fcIndex = Math.min(fcIndex + 1, cards.length - 1); renderCard(); }
   }
   refreshHeaderStatus();
-  refreshOverviewProgress();
 }
 
 function checkCardCompletion(p) {
@@ -892,7 +772,6 @@ function showQuizScore() {
     }
   }
   refreshHeaderStatus();
-  refreshOverviewProgress();
 }
 
 function restartQuiz() {
