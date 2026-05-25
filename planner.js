@@ -23,15 +23,23 @@
   };
   var SUBJECT_IDS = ['math', 'english', 'science', 'history', 'geography'];
 
-  // ── Topological Sort (Kahn's algorithm) ────────────────────────────────────
+  // ── Topological Sort (Kahn's algorithm, topic-clustered) ─────────────────
   // Returns islands in prerequisite-safe order within a subject.
+  // When choosing the next ready island, same-topic islands are preferred
+  // so that all sub-topics within a topic are grouped together rather than
+  // interleaved with other topics.
   function topoSortIslands(islands) {
     var idSet = {};
     islands.forEach(function (i) { idSet[i.id] = true; });
 
     var adj = {};   // adjacency list: prereq → [dependents]
     var inDeg = {};
-    islands.forEach(function (i) { adj[i.id] = []; inDeg[i.id] = 0; });
+    var topicOf = {};
+    islands.forEach(function (i) {
+      adj[i.id] = [];
+      inDeg[i.id] = 0;
+      topicOf[i.id] = i.topicId || '_solo_' + i.id;
+    });
 
     islands.forEach(function (i) {
       (i.prerequisites || []).forEach(function (preId) {
@@ -42,16 +50,29 @@
       });
     });
 
-    var queue = [];
-    islands.forEach(function (i) { if (inDeg[i.id] === 0) queue.push(i.id); });
+    var ready = [];
+    islands.forEach(function (i) { if (inDeg[i.id] === 0) ready.push(i.id); });
 
     var sorted = [];
-    while (queue.length > 0) {
-      var id = queue.shift();
+    var lastTopic = null;
+
+    while (ready.length > 0) {
+      // Prefer an island from the same topic as the last one sorted
+      var pick = -1;
+      if (lastTopic !== null) {
+        for (var r = 0; r < ready.length; r++) {
+          if (topicOf[ready[r]] === lastTopic) { pick = r; break; }
+        }
+      }
+      if (pick === -1) pick = 0;
+
+      var id = ready.splice(pick, 1)[0];
       sorted.push(id);
+      lastTopic = topicOf[id];
+
       (adj[id] || []).forEach(function (dep) {
         inDeg[dep]--;
-        if (inDeg[dep] === 0) queue.push(dep);
+        if (inDeg[dep] === 0) ready.push(dep);
       });
     }
 
@@ -688,22 +709,45 @@
     return { subjects: subjects, totalWeeks: totalWeeks, currentWeek: currentWeek };
   }
 
-  // ── Weekly grid: weeks as rows, subjects as columns ─────────────────────
-  // Returns a table-ready structure: each week gets one row with topic names
-  // listed per subject column.  Duplicate topic names within a week+subject
-  // are collapsed so the cell reads cleanly.
+  // ── Checkpoint splits for large topics ──────────────────────────────
+  // Topics with ≤5 islands: single final test.
+  // Larger topics: chunks of ~4-5 islands, each gets a checkpoint; final
+  // chunk gets the full topic test.  Returns array of cumulative counts,
+  // e.g. [5, 9] means checkpoint after island 5, topic test after island 9.
+  function _checkpointSplits(numIslands) {
+    if (numIslands <= 5) return [numIslands];
+    var numChunks = Math.ceil(numIslands / 5);
+    var chunkSize = Math.ceil(numIslands / numChunks);
+    var splits = [];
+    for (var i = chunkSize; i < numIslands; i += chunkSize) {
+      splits.push(i);
+    }
+    splits.push(numIslands);
+    return splits;
+  }
+
+  // ── Dynamic weekly grid: weeks as rows, subjects as columns ──────────
+  // Completed islands stay at their original scheduled week (with ✓).
+  // Remaining islands are projected from *currentWeek* forward, so a
+  // subject that falls behind automatically shifts its future content.
+  // Post-gate islands are tagged as locked (🔒).
+  // Topic-test milestones appear at the end of each topic's span.
+  // Weekly comprehension passages appear in the English column.
   function getWeeklyGrid() {
     var plan = getStudyPlan();
     if (!plan) return null;
 
     var queues = buildSubjectQueues();
     var totalWeeks = getTotalStudyWeeks(plan);
-    var weekMap = getIslandWeekMap(plan);
+    var originalWeekMap = getIslandWeekMap(plan);
     var currentWeek = getCurrentWeekNumber();
 
     var allTopics = getAllTopics();
     var topicNameMap = {};
     allTopics.forEach(function (t) { topicNameMap[t.id] = t.name; });
+
+    // Effective week per island (for placing test milestones)
+    var effectiveWeek = {};
 
     // Initialise empty grid: week → subject → []
     var weekData = {};
@@ -714,39 +758,133 @@
 
     SUBJECT_IDS.forEach(function (sid) {
       var queue = queues[sid];
-      var n = queue.length;
-      for (var i = 0; i < n; i++) {
-        var islandId = queue[i];
-        var wk = weekMap[islandId] || 1;
+      if (queue.length === 0) return;
 
+      var gate = getSubjectGateStatus(sid);
+      var topicOrder = getSubjectTopicOrder(sid);
+      var gateIdx = gate.isGated ? topicOrder.indexOf(gate.topicId) : -1;
+
+      // Split into mastered vs remaining (keep queue order)
+      var completed = [];
+      var remaining = [];
+      queue.forEach(function (islandId) {
+        if (getIslandStatus(islandId) === 4) completed.push(islandId);
+        else remaining.push(islandId);
+      });
+
+      // ── Completed islands: original week, marked mastered ──────────
+      completed.forEach(function (islandId) {
+        var wk = originalWeekMap[islandId] || 1;
+        effectiveWeek[islandId] = wk;
         var island = CURRICULUM.find(function (c) { return c.id === islandId; });
-        if (!island) continue;
-
-        var topicId = island.topicId || '_solo_' + islandId;
-        var topicName = topicNameMap[topicId] || island.name;
-
+        if (!island) return;
+        var tid = island.topicId || '_solo_' + island.id;
         weekData[wk][sid].push({
-          topic: topicName,
-          island: island.name
+          type: 'island', topic: topicNameMap[tid] || island.name,
+          island: island.name, islandId: islandId,
+          mastered: true, locked: false
+        });
+      });
+
+      // ── Remaining islands: project from currentWeek forward ────────
+      if (remaining.length > 0) {
+        // Available weeks for this subject from currentWeek onward
+        var slots = [];
+        for (var w = currentWeek; w <= totalWeeks; w++) {
+          if (sid === 'science' && w % 2 === 0) continue;       // odd weeks
+          if ((sid === 'history' || sid === 'geography') && w % 2 === 1) continue; // even weeks
+          slots.push(w);
+        }
+        if (slots.length === 0) slots = [totalWeeks]; // past end — pack into last week
+
+        remaining.forEach(function (islandId, i) {
+          var si = Math.floor(i * slots.length / remaining.length);
+          if (si >= slots.length) si = slots.length - 1;
+          var wk = slots[si];
+          effectiveWeek[islandId] = wk;
+
+          var island = CURRICULUM.find(function (c) { return c.id === islandId; });
+          if (!island) return;
+          var tid = island.topicId || '_solo_' + island.id;
+          var tidIdx = topicOrder.indexOf(tid);
+          var locked = gate.isGated && tidIdx > gateIdx;
+
+          weekData[wk][sid].push({
+            type: 'island', topic: topicNameMap[tid] || island.name,
+            island: island.name, islandId: islandId,
+            mastered: false, locked: locked
+          });
         });
       }
+
+      // ── Topic-test milestones + checkpoints for large topics ────
+      topicOrder.forEach(function (tid) {
+        if (tid === 'et-04') return;                    // comprehension — no test
+        if (tid.indexOf('_solo_') === 0) return;        // virtual solo topic
+
+        var topicIslands = queue.filter(function (id) {
+          var c = CURRICULUM.find(function (x) { return x.id === id; });
+          return c && c.topicId === tid;
+        });
+        if (topicIslands.length === 0) return;
+
+        var tidIdx = topicOrder.indexOf(tid);
+        var locked = gate.isGated && tidIdx > gateIdx;
+        var splits = _checkpointSplits(topicIslands.length);
+
+        for (var s = 0; s < splits.length; s++) {
+          var endIdx = splits[s] - 1;
+          var lastId = topicIslands[endIdx];
+          var testWk = effectiveWeek[lastId] || totalWeeks;
+          var isFinal = (s === splits.length - 1);
+
+          if (isFinal) {
+            // Full topic test (gating)
+            weekData[testWk][sid].push({
+              type: 'test', topicId: tid,
+              topicName: topicNameMap[tid] || tid,
+              passed: isTopicTestPassed(tid), locked: locked
+            });
+          } else {
+            // Non-gating checkpoint covering first N islands
+            var coveredIds = topicIslands.slice(0, splits[s]);
+            weekData[testWk][sid].push({
+              type: 'checkpoint', topicId: tid,
+              topicName: topicNameMap[tid] || tid,
+              checkpointNum: s + 1,
+              coveredIslandIds: coveredIds,
+              locked: locked
+            });
+          }
+        }
+      });
     });
 
+    // ── Comprehension in English column ─────────────────────────────────
+    var maxCompWeek = Math.min(40, totalWeeks);
+    for (var w = 1; w <= maxCompWeek; w++) {
+      var comp = getWeeklyComprehension(w);
+      if (comp) {
+        weekData[w].english.push({
+          type: 'comprehension', title: comp.title,
+          passageId: comp.passageId, typeLabel: comp.typeLabel,
+          complete: comp.complete
+        });
+      }
+    }
+
+    // ── Assemble rows ───────────────────────────────────────────────────
     var weeks = [];
     for (var w = 1; w <= totalWeeks; w++) {
       weeks.push({
-        week: w,
-        isCurrent: w === currentWeek,
-        isPast: w < currentWeek,
-        subjects: weekData[w]
+        week: w, isCurrent: w === currentWeek,
+        isPast: w < currentWeek, subjects: weekData[w]
       });
     }
 
     return {
-      weeks: weeks,
-      totalWeeks: totalWeeks,
-      currentWeek: currentWeek,
-      subjectIds: SUBJECT_IDS
+      weeks: weeks, totalWeeks: totalWeeks,
+      currentWeek: currentWeek, subjectIds: SUBJECT_IDS
     };
   }
 

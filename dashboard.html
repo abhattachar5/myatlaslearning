@@ -634,19 +634,65 @@ function renderProgressTab() {
       if (entries.length === 0) {
         roadHtml += '<td><span class="wp-grid-empty">—</span></td>';
       } else {
-        // Group islands by topic name
+        // Separate islands, tests, checkpoints, comprehension
         const byTopic = {};
         const topicOrder = [];
+        const tests = [];
+        const checkpoints = [];
+        const comps = [];
+
         entries.forEach(e => {
+          if (e.type === 'test') { tests.push(e); return; }
+          if (e.type === 'checkpoint') { checkpoints.push(e); return; }
+          if (e.type === 'comprehension') { comps.push(e); return; }
+          // island
           if (!byTopic[e.topic]) { byTopic[e.topic] = []; topicOrder.push(e.topic); }
-          byTopic[e.topic].push(e.island);
+          const icon = e.mastered ? '<span class="wp-grid-mastered">✓</span> '
+                     : e.locked  ? '<span class="wp-grid-locked">🔒</span> ' : '';
+          byTopic[e.topic].push(icon + e.island);
         });
-        const parts = topicOrder.map(t => {
+
+        const parts = [];
+        // Islands grouped by topic, with checkpoint/test right after its topic
+        topicOrder.forEach(t => {
           const islands = byTopic[t];
-          // If only one island and its name matches the topic, show just the topic
-          if (islands.length === 1 && islands[0] === t) return t;
-          return '<span class="wp-grid-topic">' + t + '</span> — ' + islands.join(', ');
+          if (islands.length === 1 && islands[0] === t) parts.push(t);
+          else parts.push('<span class="wp-grid-topic">' + t + '</span> — ' + islands.join(', '));
+          // Append checkpoint for this topic if present
+          const cpIdx = checkpoints.findIndex(cp => cp.topicName === t);
+          if (cpIdx !== -1) {
+            const cp = checkpoints.splice(cpIdx, 1)[0];
+            const cpIcon = cp.locked ? '<span class="wp-grid-locked">🔒</span> ' : '';
+            const cpUrl = `test.html?id=${cp.topicId}&cp=${cp.coveredIslandIds.join(',')}`;
+            parts.push(`<a href="${cpUrl}" class="wp-grid-checkpoint">${cpIcon}📋 <span class="wp-grid-topic">${cp.topicName}</span> — Checkpoint ${cp.checkpointNum}</a>`);
+          }
+          // Append test for this topic if present
+          const tIdx = tests.findIndex(tm => tm.topicName === t);
+          if (tIdx !== -1) {
+            const tm = tests.splice(tIdx, 1)[0];
+            const tIcon = tm.passed ? '<span class="wp-grid-mastered">✓</span> '
+                        : tm.locked ? '<span class="wp-grid-locked">🔒</span> ' : '';
+            parts.push(`<span class="wp-grid-test">${tIcon}📝 <span class="wp-grid-topic">${tm.topicName}</span> — Test</span>`);
+          }
         });
+        // Any remaining checkpoints (topic not in this week's islands)
+        checkpoints.forEach(cp => {
+          const cpIcon = cp.locked ? '<span class="wp-grid-locked">🔒</span> ' : '';
+          const cpUrl = `test.html?id=${cp.topicId}&cp=${cp.coveredIslandIds.join(',')}`;
+          parts.push(`<a href="${cpUrl}" class="wp-grid-checkpoint">${cpIcon}📋 <span class="wp-grid-topic">${cp.topicName}</span> — Checkpoint ${cp.checkpointNum}</a>`);
+        });
+        // Any remaining tests (topic not in this week's islands)
+        tests.forEach(tm => {
+          const tIcon = tm.passed ? '<span class="wp-grid-mastered">✓</span> '
+                      : tm.locked ? '<span class="wp-grid-locked">🔒</span> ' : '';
+          parts.push(`<span class="wp-grid-test">${tIcon}📝 <span class="wp-grid-topic">${tm.topicName}</span> — Test</span>`);
+        });
+        // Comprehension
+        comps.forEach(c => {
+          const cIcon = c.complete ? '<span class="wp-grid-mastered">✓</span> ' : '';
+          parts.push(`<span class="wp-grid-comp">${cIcon}<span class="wp-grid-topic">Comprehension (${c.typeLabel})</span> — ${c.title}</span>`);
+        });
+
         roadHtml += '<td>' + parts.join('<br>') + '</td>';
       }
     });

@@ -1815,7 +1815,7 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 }
 .wp-grid tbody td {
   color: var(--text-2);
-  line-height: 1.45;
+  line-height: 2.1;
 }
 .wp-grid-topic {
   font-weight: 600;
@@ -1839,6 +1839,39 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 /* Past weeks slightly muted */
 .wp-grid-past {
   opacity: .55;
+}
+/* Mastered tick — green */
+.wp-grid-mastered {
+  color: #16a34a;
+  font-weight: 700;
+}
+/* Locked icon — muted */
+.wp-grid-locked {
+  opacity: .6;
+  font-size: .7rem;
+}
+/* Test milestone */
+.wp-grid-test {
+  display: inline-block;
+}
+/* Checkpoint milestone */
+.wp-grid-checkpoint {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 600;
+  color: #0891b2;
+  text-decoration: none;
+  padding: 1px 0;
+}
+.wp-grid-checkpoint:hover {
+  text-decoration: underline;
+  color: #06708a;
+}
+[data-theme="dark"] .wp-grid-checkpoint { color: #22d3ee; }
+[data-theme="dark"] .wp-grid-checkpoint:hover { color: #67e8f9; }
+/* Comprehension entry */
+.wp-grid-comp {
+  display: inline-block;
 }
 
 /* Subject groups */

@@ -211,11 +211,24 @@ if (!topic) {
 
 const topicIslands = CURRICULUM.filter(i => i.topicId === topicId);
 
+// Checkpoint mode: ?cp=id1,id2,id3 — filter to those islands only
+const cpParam = params.get('cp');
+const isCheckpoint = !!cpParam;
+let checkpointIslandIds = null;
+let checkpointIslands = topicIslands;
+if (isCheckpoint) {
+  checkpointIslandIds = cpParam.split(',');
+  checkpointIslands = topicIslands.filter(i => checkpointIslandIds.includes(i.id));
+}
+const resultKey = isCheckpoint ? topicId + '_cp' : topicId;
+const testLabel = isCheckpoint ? topic.name + ' — Checkpoint' : topic.name + ' — Test';
+const setupLabel = isCheckpoint ? topic.name + ' Checkpoint' : topic.name + ' Test';
+
 document.getElementById('back-btn').href = 'topic.html?id=' + topicId;
-document.getElementById('hdr-name').textContent = topic.name + ' — Test';
+document.getElementById('hdr-name').textContent = testLabel;
 document.getElementById('hdr-emoji').textContent = topic.emoji;
-document.getElementById('hdr-count').textContent = topicIslands.length + ' subtopics';
-document.getElementById('setup-title').textContent = topic.name + ' Test';
+document.getElementById('hdr-count').textContent = (isCheckpoint ? checkpointIslands.length : topicIslands.length) + ' subtopics';
+document.getElementById('setup-title').textContent = setupLabel;
 var subjectPill = document.getElementById('hdr-subject');
 subjectPill.textContent = topicSubjectLabel;
 subjectPill.style.background = topicColor;
@@ -223,8 +236,9 @@ document.querySelector('.test-progress-fill').style.background = topicColor;
 
 // Show info cards
 const infoGrid = document.getElementById('setup-info');
+var qIslands = isCheckpoint ? checkpointIslands : topicIslands;
 infoGrid.innerHTML =
-  '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + Math.min(25, topicIslands.length * 5) + '</div></div>';
+  '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + Math.min(25, qIslands.length * 5) + '</div></div>';
 
 // Theme
 (function() { initTheme(); updateThemeBtn(); })();
@@ -256,7 +270,7 @@ function startTest() {
   isTimed = document.getElementById('timed-toggle').checked;
   var timeMins = parseInt(document.getElementById('time-slider').value);
 
-  testQuestions = generateTopicTest(topicId, topicIslands);
+  testQuestions = generateTopicTest(topicId, isCheckpoint ? checkpointIslands : topicIslands);
   answers = new Array(testQuestions.length).fill(-1);
   currentQ = 0;
 
@@ -465,17 +479,21 @@ function submitTest() {
   document.getElementById('test-results').innerHTML = html;
 
   // Save test result (includes per-subtopic scores for revision gating)
-  saveTestResult(topicId, {
+  saveTestResult(resultKey, {
     score: correct, total: testQuestions.length, pct: pct,
     subtopicScores: subtopicScores,
-    date: new Date().toISOString()
+    date: new Date().toISOString(),
+    isCheckpoint: isCheckpoint
   });
   // Clear any prior revision tracking for this topic (fresh after retake)
-  try {
-    var revDone = JSON.parse(localStorage.getItem('sm_revision_done') || '{}');
-    delete revDone[topicId];
-    localStorage.setItem('sm_revision_done', JSON.stringify(revDone));
-  } catch(e) {}
+  // Only for full topic tests, not checkpoints
+  if (!isCheckpoint) {
+    try {
+      var revDone = JSON.parse(localStorage.getItem('sm_revision_done') || '{}');
+      delete revDone[topicId];
+      localStorage.setItem('sm_revision_done', JSON.stringify(revDone));
+    } catch(e) {}
+  }
 }
 
 function retakeTest() {
