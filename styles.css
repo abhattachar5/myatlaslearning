@@ -1940,6 +1940,58 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   font-size: .9rem;
 }
 
+/* Comprehension & gate type label (replaces dots) */
+.wp-dot-label {
+  font-size: .75rem;
+  flex-shrink: 0;
+  min-width: 22px;
+  text-align: center;
+}
+
+/* Topic gate section */
+.week-plan-gate {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+.week-plan-item.revision .week-plan-name { color: var(--amber, #d97706); }
+.revision-score {
+  font-size: .75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.week-plan-item.gate-test .week-plan-name {
+  font-weight: 600;
+  font-size: .8125rem;
+}
+.week-plan-item.locked { opacity: .5; }
+.week-plan-locked {
+  font-size: .7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-style: italic;
+  white-space: nowrap;
+}
+.week-plan-locked-notice {
+  font-size: .75rem;
+  color: var(--text-muted);
+  padding: 6px 4px;
+  text-align: center;
+}
+
+/* Next week preview */
+.week-plan-next {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 2px solid var(--border);
+}
+.week-plan-next-header {
+  font-size: .875rem;
+  font-weight: 700;
+  color: var(--primary, #185fa5);
+  margin-bottom: 12px;
+}
+
 /* ── Responsive ──────────────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .plan-setup-banner { padding: 20px; }

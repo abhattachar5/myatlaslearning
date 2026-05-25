@@ -507,6 +507,20 @@ function awardLessonXP() {
     }
     refreshHeaderStatus();
   }
+  // Mark revision as done if this island is part of a revision loop
+  markRevisionDone(islandId);
+}
+
+function markRevisionDone(iId) {
+  try {
+    var isl = CURRICULUM.find(function(c) { return c.id === iId; });
+    if (!isl || !isl.topicId) return;
+    var revKey = 'sm_revision_done';
+    var rev = JSON.parse(localStorage.getItem(revKey) || '{}');
+    if (!rev[isl.topicId]) rev[isl.topicId] = {};
+    rev[isl.topicId][iId] = Date.now();
+    localStorage.setItem(revKey, JSON.stringify(rev));
+  } catch(e) {}
 }
 
 // ── Flashcards ────────────────────────────────────────────────────────────

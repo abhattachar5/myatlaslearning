@@ -657,6 +657,13 @@ var testSubmitted = false;
   renderCards();
   updateStats();
   initMobileStreak();
+
+  // Deep-link: auto-open a specific passage via ?id=F01
+  var params = new URLSearchParams(location.search);
+  var linkId = params.get('id');
+  if (linkId && passages.find(function(p) { return p.id === linkId; })) {
+    setTimeout(function() { openExpanded(linkId); }, 100);
+  }
 })();
 
 // ── Theme ─────────────────────────────────────────────────────────────────────

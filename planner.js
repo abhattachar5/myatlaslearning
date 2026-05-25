@@ -228,9 +228,201 @@
     return topics;
   }
 
+  // ── Topic gating helpers ──────────────────────────────────────────────────
+  // Determines which topic is the "current" topic per subject and whether
+  // it's fully complete (all islands mastered + topic test passed ≥70%).
+  var TEST_RESULTS_KEY = 'sm_test_results';
+  var REVISION_KEY = 'sm_revision_done';
+  var GATE_PASS_MARK = 0.7; // 70%
+
+  function getTestResults() {
+    try { return JSON.parse(localStorage.getItem(TEST_RESULTS_KEY) || '{}'); } catch(e) { return {}; }
+  }
+
+  function getTopicTestBest(topicId) {
+    var all = getTestResults();
+    var attempts = all[topicId];
+    if (!attempts || !attempts.length) return null;
+    var best = 0;
+    for (var i = 0; i < attempts.length; i++) {
+      if (attempts[i].pct > best) best = attempts[i].pct;
+    }
+    return best;
+  }
+
+  // Returns per-subtopic scores from the most recent test attempt
+  function getTopicTestSubtopicScores(topicId) {
+    var all = getTestResults();
+    var attempts = all[topicId];
+    if (!attempts || !attempts.length) return null;
+    var latest = attempts[attempts.length - 1];
+    return latest.subtopicScores || null;
+  }
+
+  function isTopicTestPassed(topicId) {
+    var best = getTopicTestBest(topicId);
+    return best !== null && best >= GATE_PASS_MARK * 100;
+  }
+
+  function getRevisionDone() {
+    try { return JSON.parse(localStorage.getItem(REVISION_KEY) || '{}'); } catch(e) { return {}; }
+  }
+
+  // Returns ordered list of topics for a subject based on island queue ordering
+  function getSubjectTopicOrder(sid) {
+    var queue = buildSubjectQueues()[sid];
+    var seen = {};
+    var order = [];
+    for (var i = 0; i < queue.length; i++) {
+      var island = CURRICULUM.find(function (c) { return c.id === queue[i]; });
+      if (!island) continue;
+      var tid = island.topicId || '_solo_' + island.id;
+      if (!seen[tid]) {
+        seen[tid] = true;
+        order.push(tid);
+      }
+    }
+    return order;
+  }
+
+  // For a subject, find the first topic that isn't fully complete
+  // (all islands mastered AND topic test passed).
+  // Returns { topicId, allMastered, testPassed, isGated, gateMessage,
+  //           weakSubtopics, revisionDone }
+  function getSubjectGateStatus(sid) {
+    var topicOrder = getSubjectTopicOrder(sid);
+    var allTopics = getAllTopics();
+    var topicNameMap = {};
+    allTopics.forEach(function (t) { topicNameMap[t.id] = t.name; });
+
+    for (var t = 0; t < topicOrder.length; t++) {
+      var tid = topicOrder[t];
+      var topicIslands = CURRICULUM.filter(function (c) { return c.topicId === tid; });
+      var allMastered = topicIslands.length > 0 && topicIslands.every(function (c) {
+        return getIslandStatus(c.id) === 4;
+      });
+
+      if (!allMastered) {
+        // This topic has incomplete islands — not gated yet (still working on it)
+        return { topicId: tid, allMastered: false, testPassed: false,
+                 isGated: false, gateMessage: null, weakSubtopics: null, revisionDone: false };
+      }
+
+      // All islands mastered — check topic test
+      var testPassed = isTopicTestPassed(tid);
+      if (testPassed) {
+        // This topic is fully complete — move to next
+        continue;
+      }
+
+      // All islands done but test not passed — this is the gate
+      var topicName = topicNameMap[tid] || tid;
+      var nextTid = topicOrder[t + 1];
+      var nextName = nextTid ? (topicNameMap[nextTid] || nextTid) : null;
+      var bestScore = getTopicTestBest(tid);
+
+      // Check for weak subtopics needing revision (from failed test)
+      var weakSubtopics = [];
+      var revDone = getRevisionDone();
+      var allRevisionDone = true;
+
+      if (bestScore !== null && bestScore < GATE_PASS_MARK * 100) {
+        // Failed test — identify weak subtopics
+        var subtopicScores = getTopicTestSubtopicScores(tid);
+        if (subtopicScores) {
+          for (var stId in subtopicScores) {
+            if (subtopicScores.hasOwnProperty(stId)) {
+              var st = subtopicScores[stId];
+              if (st.total > 0 && (st.score / st.total) < GATE_PASS_MARK) {
+                var stIsland = CURRICULUM.find(function (c) { return c.id === stId; });
+                var revised = revDone[tid] && revDone[tid][stId];
+                if (!revised) allRevisionDone = false;
+                weakSubtopics.push({
+                  islandId: stId,
+                  islandName: stIsland ? stIsland.name : stId,
+                  score: st.score,
+                  total: st.total,
+                  revised: !!revised
+                });
+              }
+            }
+          }
+        }
+        if (weakSubtopics.length === 0) allRevisionDone = true; // no weak subtopics identified
+      } else {
+        allRevisionDone = true; // no failed test yet
+      }
+
+      var gateMsg = bestScore === null
+        ? 'Take the ' + topicName + ' Test' + (nextName ? ' to unlock ' + nextName : '')
+        : 'Retake the ' + topicName + ' Test (best: ' + bestScore + '%)' + (nextName ? ' to unlock ' + nextName : '');
+
+      return {
+        topicId: tid,
+        topicName: topicName,
+        nextTopicName: nextName,
+        allMastered: true,
+        testPassed: false,
+        bestScore: bestScore,
+        isGated: true,
+        gateMessage: gateMsg,
+        weakSubtopics: weakSubtopics.length > 0 ? weakSubtopics : null,
+        revisionDone: allRevisionDone
+      };
+    }
+
+    // All topics complete
+    return { topicId: null, allMastered: true, testPassed: true,
+             isGated: false, gateMessage: null, weakSubtopics: null, revisionDone: true };
+  }
+
+  // ── Weekly comprehension assignment ─────────────────────────────────────
+  // Odd weeks → fiction, even weeks → non-fiction, 40 passages over 40 weeks
+  function getWeeklyComprehension(weekNumber) {
+    if (typeof COMPREHENSION_PASSAGES === 'undefined') return null;
+    if (weekNumber > 40) return null;
+
+    var fiction = [];
+    var nonfiction = [];
+    COMPREHENSION_PASSAGES.forEach(function (p) {
+      if (p.type === 'fiction') fiction.push(p);
+      else nonfiction.push(p);
+    });
+
+    var passage;
+    if (weekNumber % 2 === 1) {
+      // Odd week → fiction
+      var fi = Math.floor((weekNumber - 1) / 2);
+      passage = fi < fiction.length ? fiction[fi] : null;
+    } else {
+      // Even week → non-fiction
+      var ni = Math.floor((weekNumber - 2) / 2);
+      passage = ni < nonfiction.length ? nonfiction[ni] : null;
+    }
+
+    if (!passage) return null;
+
+    // Check completion
+    var compProgress = null;
+    try { compProgress = JSON.parse(localStorage.getItem('sm_comp_' + passage.id)) || null; } catch(e) {}
+
+    return {
+      passageId: passage.id,
+      title: passage.title,
+      type: passage.type,
+      typeLabel: passage.type === 'fiction' ? 'Fiction' : 'Non-Fiction',
+      complete: compProgress !== null,
+      score: compProgress ? compProgress.score : null,
+      total: compProgress ? compProgress.total : null
+    };
+  }
+
   // ── Weekly checklist ───────────────────────────────────────────────────────
   // Returns structured data for the current week's island list, grouped by
-  // subject → topic → islands with 4-step progress dots.
+  // subject → topic → islands with 3-step progress dots.
+  // Includes topic gating: if a subject is gated (all islands done but test
+  // not passed), this week's new islands for that subject are held back and
+  // replaced with the gate/revision status.
   function getWeekChecklist(weekNumber) {
     var plan = getStudyPlan();
     if (!plan) return null;
@@ -246,6 +438,12 @@
     var topicMap = {};
     allTopics.forEach(function (t) { topicMap[t.id] = t; });
 
+    // Compute gate status for each subject
+    var gateStatuses = {};
+    SUBJECT_IDS.forEach(function (sid) {
+      gateStatuses[sid] = getSubjectGateStatus(sid);
+    });
+
     var subjects = [];
     var totalItems = 0;
     var doneItems = 0;
@@ -255,19 +453,41 @@
       var n = queue.length;
       if (n === 0) return;
 
+      var gate = gateStatuses[sid];
+
       // Find islands assigned to this week for this subject
       var weekIslandIds = [];
       for (var i = 0; i < n; i++) {
         if (weekMap[queue[i]] === weekNumber) weekIslandIds.push(queue[i]);
       }
 
-      if (weekIslandIds.length === 0) return;
+      // If gated, check if this week's islands belong to a LATER topic
+      var gatedIslands = [];
+      var ungatedIslands = [];
 
-      // Group by topic
+      if (gate.isGated && weekIslandIds.length > 0) {
+        var subjectTopicOrder = getSubjectTopicOrder(sid);
+        var gateIdx = subjectTopicOrder.indexOf(gate.topicId);
+        weekIslandIds.forEach(function (islandId) {
+          var island = CURRICULUM.find(function (c) { return c.id === islandId; });
+          if (!island) return;
+          var islandTopic = island.topicId || '_solo_' + island.id;
+          var islandIdx = subjectTopicOrder.indexOf(islandTopic);
+          if (islandIdx > gateIdx) {
+            gatedIslands.push(islandId);
+          } else {
+            ungatedIslands.push(islandId);
+          }
+        });
+      } else {
+        ungatedIslands = weekIslandIds;
+      }
+
+      // Build the island items for ungated islands
       var topicGroups = {};
       var topicOrder = [];
 
-      weekIslandIds.forEach(function (islandId) {
+      ungatedIslands.forEach(function (islandId) {
         var island = CURRICULUM.find(function (c) { return c.id === islandId; });
         if (!island) return;
 
@@ -284,7 +504,8 @@
 
         var status = getIslandStatus(islandId);
         var progress = calcIslandProgress(islandId);
-        var dots = Math.floor(progress / 25);
+        var dots = Math.floor(progress / 33);
+        if (dots > 3) dots = 3;
         var nextTask = getNextTask(islandId);
         var tab = nextTask === 'lesson' ? 'lesson'
                 : nextTask === 'flashcards' ? 'flashcards' : 'practice';
@@ -303,15 +524,34 @@
         });
       });
 
+      // Count gated islands as items too (but not done)
+      if (gatedIslands.length > 0) {
+        totalItems += gatedIslands.length;
+      }
+
+      // Only add subject if it has content this week
+      if (weekIslandIds.length === 0 && (!gate.isGated)) return;
+      if (weekIslandIds.length === 0) return;
+
       subjects.push({
         subjectId: sid,
         subjectName: SUBJECT_NAMES[sid],
         subjectEmoji: SUBJECT_EMOJIS[sid],
         subjectColor: SUBJECT_COLORS[sid],
         topics: topicOrder.map(function (tid) { return topicGroups[tid]; }),
-        islandCount: weekIslandIds.length
+        islandCount: ungatedIslands.length,
+        // Gating info
+        gate: gate.isGated ? gate : null,
+        gatedCount: gatedIslands.length
       });
     });
+
+    // Weekly comprehension
+    var comprehension = getWeeklyComprehension(weekNumber);
+    if (comprehension) {
+      totalItems++;
+      if (comprehension.complete) doneItems++;
+    }
 
     return {
       weekNumber: weekNumber,
@@ -319,7 +559,8 @@
       subjects: subjects,
       totalItems: totalItems,
       doneItems: doneItems,
-      allDone: totalItems > 0 && doneItems === totalItems
+      allDone: totalItems > 0 && doneItems === totalItems,
+      comprehension: comprehension
     };
   }
 
@@ -602,6 +843,11 @@
     getTopicProgress: getTopicProgress,
     getSubjectRoadmap: getSubjectRoadmap,
     getWeeklyGrid: getWeeklyGrid,
+
+    // Gating & comprehension
+    getSubjectGateStatus: getSubjectGateStatus,
+    getWeeklyComprehension: getWeeklyComprehension,
+    isTopicTestPassed: isTopicTestPassed,
 
     // Building blocks
     getIslandWeekMap: getIslandWeekMap,

@@ -246,6 +246,7 @@
 <script src="english-content-1.js"></script>
 <script src="english-content-2.js"></script>
 <script src="english-content-3.js"></script>
+<script src="english-content-4.js"></script>
 <script src="english-content-5.js"></script>
 <script src="english-content-6.js"></script>
 <script src="english-content-7.js"></script>
@@ -385,18 +386,38 @@ function renderThisWeekTab() {
 
   const listEl = document.getElementById('week-list');
 
-  if (data.subjects.length === 0) {
+  if (data.subjects.length === 0 && !data.comprehension) {
     listEl.innerHTML = '<div class="week-plan-empty">No topics scheduled this week.</div>';
     return;
   }
 
   let html = '';
+
+  // ── Comprehension item (always first) ──
+  if (data.comprehension) {
+    const c = data.comprehension;
+    html += `<div class="week-plan-subject">
+      <div class="week-plan-subject-header" style="color:#ba7517">
+        📝 Comprehension
+      </div>
+      <div class="week-plan-item${c.complete ? ' complete' : ''}">
+        <span class="wp-dot-label">${c.typeLabel}</span>
+        <span class="week-plan-name">${c.title}</span>
+        ${c.complete
+          ? '<span class="week-plan-done">✓ ' + c.score + '/' + c.total + '</span>'
+          : '<a href="comprehension.html?id=' + c.passageId + '" class="week-plan-go">Start →</a>'}
+      </div>
+    </div>`;
+  }
+
+  // ── Subject sections ──
   data.subjects.forEach(subj => {
     html += `<div class="week-plan-subject">
       <div class="week-plan-subject-header" style="color:${subj.subjectColor}">
         ${subj.subjectEmoji} ${subj.subjectName}
       </div>`;
 
+    // Render ungated island items
     subj.topics.forEach(topic => {
       const showTopic = topic.islands.length > 1 ||
         (topic.topicName && topic.topicName !== topic.islands[0].islandName);
@@ -406,7 +427,7 @@ function renderThisWeekTab() {
 
       topic.islands.forEach(island => {
         const dots = [];
-        for (let d = 0; d < 4; d++) {
+        for (let d = 0; d < 3; d++) {
           dots.push(d < island.dots
             ? `<span class="wp-dot filled" style="background:${subj.subjectColor}"></span>`
             : '<span class="wp-dot empty"></span>');
@@ -428,10 +449,138 @@ function renderThisWeekTab() {
       });
     });
 
+    // ── Topic gate: revision + test CTA ──
+    if (subj.gate) {
+      const g = subj.gate;
+      html += '<div class="week-plan-gate">';
+
+      // Weak subtopics needing revision
+      if (g.weakSubtopics && g.weakSubtopics.length > 0) {
+        g.weakSubtopics.forEach(st => {
+          if (st.revised) {
+            html += `<div class="week-plan-item complete">
+              <span class="wp-dot-label">✓</span>
+              <span class="week-plan-name">Revised: ${st.islandName}</span>
+              <span class="week-plan-done">Done</span>
+            </div>`;
+          } else {
+            html += `<div class="week-plan-item revision">
+              <span class="wp-dot-label">📖</span>
+              <span class="week-plan-name">Revise: ${st.islandName} <span class="revision-score">(scored ${st.score}/${st.total})</span></span>
+              <a href="island.html?id=${st.islandId}&tab=lesson" class="week-plan-go">Review →</a>
+            </div>`;
+          }
+        });
+      }
+
+      // Test CTA
+      const canRetake = !g.weakSubtopics || g.revisionDone;
+      const testLabel = g.bestScore === null ? 'Take Test' : 'Retake Test';
+      if (canRetake) {
+        html += `<div class="week-plan-item gate-test">
+          <span class="wp-dot-label">📝</span>
+          <span class="week-plan-name">${g.gateMessage}</span>
+          <a href="test.html?id=${g.topicId}" class="week-plan-go">${testLabel} →</a>
+        </div>`;
+      } else {
+        html += `<div class="week-plan-item gate-test locked">
+          <span class="wp-dot-label">🔒</span>
+          <span class="week-plan-name">${g.gateMessage}</span>
+          <span class="week-plan-locked">Complete revision first</span>
+        </div>`;
+      }
+
+      // Locked island count
+      if (subj.gatedCount > 0) {
+        html += `<div class="week-plan-locked-notice">
+          🔒 ${subj.gatedCount} topic${subj.gatedCount > 1 ? 's' : ''} locked until test is passed
+        </div>`;
+      }
+
+      html += '</div>';
+    }
+
     html += '</div>';
   });
 
   listEl.innerHTML = html;
+
+  // ── Auto-reveal next week when current is 100% done ──
+  if (data.allDone && weekNum < data.totalWeeks) {
+    const nextData = StudyPlanner.getWeekChecklist(weekNum + 1);
+    if (nextData && nextData.subjects.length > 0) {
+      renderNextWeekPreview(nextData, listEl);
+    }
+  }
+}
+
+// ── Next week preview (shown when current week is complete) ──
+function renderNextWeekPreview(nextData, containerEl) {
+  let html = '<div class="week-plan-next">';
+  html += `<div class="week-plan-next-header">✨ Week ${nextData.weekNumber} — Up Next</div>`;
+
+  if (nextData.comprehension) {
+    const c = nextData.comprehension;
+    html += `<div class="week-plan-subject">
+      <div class="week-plan-subject-header" style="color:#ba7517">📝 Comprehension</div>
+      <div class="week-plan-item${c.complete ? ' complete' : ''}">
+        <span class="wp-dot-label">${c.typeLabel}</span>
+        <span class="week-plan-name">${c.title}</span>
+        ${c.complete
+          ? '<span class="week-plan-done">✓ ' + c.score + '/' + c.total + '</span>'
+          : '<a href="comprehension.html?id=' + c.passageId + '" class="week-plan-go">Start →</a>'}
+      </div>
+    </div>`;
+  }
+
+  nextData.subjects.forEach(subj => {
+    html += `<div class="week-plan-subject">
+      <div class="week-plan-subject-header" style="color:${subj.subjectColor}">
+        ${subj.subjectEmoji} ${subj.subjectName}
+      </div>`;
+
+    subj.topics.forEach(topic => {
+      const showTopic = topic.islands.length > 1 ||
+        (topic.topicName && topic.topicName !== topic.islands[0].islandName);
+      if (showTopic) {
+        html += `<div class="week-plan-topic">${topic.topicName}</div>`;
+      }
+
+      topic.islands.forEach(island => {
+        const dots = [];
+        for (let d = 0; d < 3; d++) {
+          dots.push(d < island.dots
+            ? `<span class="wp-dot filled" style="background:${subj.subjectColor}"></span>`
+            : '<span class="wp-dot empty"></span>');
+        }
+
+        let action = '';
+        if (island.complete) {
+          action = '<span class="week-plan-done">✓ Done</span>';
+        } else {
+          const label = island.dots === 0 ? 'Start →' : 'Continue →';
+          action = `<a href="island.html?id=${island.islandId}&tab=${island.nextTab}" class="week-plan-go">${label}</a>`;
+        }
+
+        html += `<div class="week-plan-item${island.complete ? ' complete' : ''}">
+          <span class="week-plan-dots">${dots.join('')}</span>
+          <span class="week-plan-name">${island.islandName}</span>
+          ${action}
+        </div>`;
+      });
+    });
+
+    if (subj.gate) {
+      html += `<div class="week-plan-locked-notice">
+        🔒 ${subj.gatedCount} topic${subj.gatedCount > 1 ? 's' : ''} locked — complete ${subj.gate.topicName} test first
+      </div>`;
+    }
+
+    html += '</div>';
+  });
+
+  html += '</div>';
+  containerEl.insertAdjacentHTML('beforeend', html);
 }
 
 // ── Tab 2: My Progress + Road Ahead ─────────────────────────────────────────

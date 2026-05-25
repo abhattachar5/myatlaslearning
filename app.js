@@ -95,11 +95,10 @@ function getLevelProgress(xp) {
 
 // ── Island Progress Calculations ─────────────────────────────────────────────
 //
-// Progress is built from four equal 25-point steps so 100% is always reachable:
-//   Step 1 — Lesson viewed         → +25
-//   Step 2 — All flashcards seen   → +25 (proportional to cards marked learned)
-//   Step 3 — Quiz attempted        → +25 (any score, just try it)
-//   Step 4 — Quiz passed (≥ 70%)   → +25
+// Progress is built from three equal steps so 100% is always reachable:
+//   Step 1 — Lesson viewed         → +33
+//   Step 2 — All flashcards learned → +33
+//   Step 3 — Quiz passed (≥ 70%)   → +34
 //
 function calcIslandProgress(islandId) {
   const p = getIslandProgress(islandId);
@@ -110,23 +109,20 @@ function calcIslandProgress(islandId) {
 
   var score = 0;
 
-  // Step 1 — Lesson viewed (25 pts, binary)
-  if (p.lessonViewed) score += 25;
+  // Step 1 — Lesson viewed (33 pts, binary)
+  if (p.lessonViewed) score += 33;
 
-  // Step 2 — Flashcards (25 pts, proportional to cards marked learned)
+  // Step 2 — Flashcards (33 pts, proportional to cards marked learned)
   if (cards.length > 0) {
     var learned = cards.filter(function(c) {
       return p.flashcardsLearned.includes(c.id);
     }).length;
-    score += Math.round((learned / cards.length) * 25);
+    score += Math.round((learned / cards.length) * 33);
   }
 
-  // Step 3 — Quiz attempted (25 pts, binary — just try it)
-  if (qs.length > 0 && p.quizBestScore >= 0) score += 25;
-
-  // Step 4 — Quiz passed: ≥ 70% correct (25 pts, binary)
+  // Step 3 — Quiz passed: ≥ 70% correct (34 pts, binary)
   var passMark = qs.length > 0 ? Math.ceil(qs.length * 0.7) : 0;
-  if (qs.length > 0 && p.quizBestScore >= passMark) score += 25;
+  if (qs.length > 0 && p.quizBestScore >= passMark) score += 34;
 
   return Math.min(100, score);
 }
@@ -142,11 +138,11 @@ function getIslandStatus(islandId) {
     cards.every(c => p.flashcardsLearned.includes(c.id));
   const quizPassed = qs.length > 0 && p.quizBestScore >= Math.ceil(qs.length * 0.7);
 
-  if (quizPassed && allCardsLearned) return 4;      // Mastered
-  if (allCardsLearned) return 3;                    // Proficient
-  if (p.flashcardsLearned.length > 0) return 2;    // Learning
-  if (p.lessonViewed) return 1;                     // Explored
-  return 0;                                         // Not Started
+  if (quizPassed && allCardsLearned && p.lessonViewed) return 4; // Mastered
+  if (allCardsLearned && p.lessonViewed) return 3;              // Proficient
+  if (p.lessonViewed) return 1;                                 // Explored
+  if (p.flashcardsLearned.length > 0) return 2;                // Learning
+  return 0;                                                     // Not Started
 }
 
 function isIslandUnlocked(island, allProgress) {

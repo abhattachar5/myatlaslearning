@@ -171,6 +171,7 @@
 <script src="math-content-6.js"></script>
 <script src="math-content-7.js"></script>
 <script src="math-data-y8.js"></script>
+<script src="english-data.js"></script>
 <script src="english-data-y8.js"></script>
 <script src="science-data-y7.js"></script>
 <script src="science-data-y8.js"></script>
@@ -181,6 +182,7 @@
 <script src="app.js"></script>
 <script src="test-generator.js"></script>
 <script src="science-test-generators-y7.js"></script>
+<script src="english-test-generators-y7.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
 let user = requireAuth();
@@ -222,7 +224,7 @@ document.querySelector('.test-progress-fill').style.background = topicColor;
 // Show info cards
 const infoGrid = document.getElementById('setup-info');
 infoGrid.innerHTML =
-  '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + (topicIslands.length * 5) + '</div></div>';
+  '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + Math.min(25, topicIslands.length * 5) + '</div></div>';
 
 // Theme
 (function() { initTheme(); updateThemeBtn(); })();
@@ -368,6 +370,7 @@ function submitTest() {
   var correct = 0;
   var medCorrect = 0, medTotal = 0, gdCorrect = 0, gdTotal = 0;
   var reviewItems = [];
+  var subtopicScores = {}; // per-island score tracking for revision system
 
   for (var i = 0; i < testQuestions.length; i++) {
     var q = testQuestions[i];
@@ -380,6 +383,13 @@ function submitTest() {
     } else {
       medTotal++;
       if (isCorrect) medCorrect++;
+    }
+
+    // Track per-subtopic (island) scores
+    if (q.islandId) {
+      if (!subtopicScores[q.islandId]) subtopicScores[q.islandId] = { score: 0, total: 0 };
+      subtopicScores[q.islandId].total++;
+      if (isCorrect) subtopicScores[q.islandId].score++;
     }
 
     reviewItems.push({
@@ -454,8 +464,18 @@ function submitTest() {
   document.getElementById('test-results').style.display = '';
   document.getElementById('test-results').innerHTML = html;
 
-  // Save test result
-  saveTestResult(topicId, { score: correct, total: testQuestions.length, pct: pct, date: new Date().toISOString() });
+  // Save test result (includes per-subtopic scores for revision gating)
+  saveTestResult(topicId, {
+    score: correct, total: testQuestions.length, pct: pct,
+    subtopicScores: subtopicScores,
+    date: new Date().toISOString()
+  });
+  // Clear any prior revision tracking for this topic (fresh after retake)
+  try {
+    var revDone = JSON.parse(localStorage.getItem('sm_revision_done') || '{}');
+    delete revDone[topicId];
+    localStorage.setItem('sm_revision_done', JSON.stringify(revDone));
+  } catch(e) {}
 }
 
 function retakeTest() {

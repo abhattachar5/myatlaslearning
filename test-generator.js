@@ -3,12 +3,26 @@
 // All questions are generative (dynamically created each time)
 
 function generateTopicTest(topicId, topicIslands) {
+  var MAX_QUESTIONS = 25;
   var allQuestions = [];
 
+  // Count islands that have generators
+  var islandsWithGens = [];
   for (var i = 0; i < topicIslands.length; i++) {
-    var island = topicIslands[i];
+    if (TEST_GENERATORS[topicIslands[i].id]) islandsWithGens.push(topicIslands[i]);
+  }
+  var numIslands = islandsWithGens.length;
+  if (numIslands === 0) return allQuestions;
+
+  // Distribute questions evenly across islands, capped at MAX_QUESTIONS
+  var perIsland = Math.min(5, Math.floor(MAX_QUESTIONS / numIslands));
+  if (perIsland < 1) perIsland = 1;
+  var remainder = Math.min(MAX_QUESTIONS, numIslands * perIsland) < MAX_QUESTIONS
+    ? MAX_QUESTIONS - numIslands * perIsland : 0;
+
+  for (var i = 0; i < numIslands; i++) {
+    var island = islandsWithGens[i];
     var generators = TEST_GENERATORS[island.id];
-    if (!generators) continue;
 
     var medQuestions = [];
     var gdQuestions = [];
@@ -17,6 +31,7 @@ function generateTopicTest(topicId, topicIslands) {
       var q = generators[g].gen();
       q.depth = generators[g].depth;
       q.subtopic = island.name;
+      q.islandId = island.id;
       if (q.depth === 'greater-depth') {
         gdQuestions.push(q);
       } else {
@@ -24,26 +39,29 @@ function generateTopicTest(topicId, topicIslands) {
       }
     }
 
-    // Pick 3 medium-high and 2 greater-depth (or as close to 50/50 as possible with 5)
+    var quota = perIsland + (i < remainder ? 1 : 0);
+    var medTarget = Math.ceil(quota * 0.6);
+    var gdTarget = quota - medTarget;
+
     var picked = [];
     shuffle(medQuestions);
     shuffle(gdQuestions);
 
-    var medCount = Math.min(3, medQuestions.length);
-    var gdCount = Math.min(2, gdQuestions.length);
+    var medCount = Math.min(medTarget, medQuestions.length);
+    var gdCount = Math.min(gdTarget, gdQuestions.length);
 
     // If one pool is short, fill from the other
-    if (medCount < 3 && gdQuestions.length > 2) {
-      gdCount = Math.min(5 - medCount, gdQuestions.length);
+    if (medCount < medTarget && gdQuestions.length > gdCount) {
+      gdCount = Math.min(quota - medCount, gdQuestions.length);
     }
-    if (gdCount < 2 && medQuestions.length > 3) {
-      medCount = Math.min(5 - gdCount, medQuestions.length);
+    if (gdCount < gdTarget && medQuestions.length > medCount) {
+      medCount = Math.min(quota - gdCount, medQuestions.length);
     }
 
     for (var m = 0; m < medCount; m++) picked.push(medQuestions[m]);
     for (var d = 0; d < gdCount; d++) picked.push(gdQuestions[d]);
 
-    // Shuffle the 5 picked questions
+    // Shuffle the picked questions
     shuffle(picked);
 
     // Shuffle options for each question (keeping correct answer tracked)
@@ -52,6 +70,12 @@ function generateTopicTest(topicId, topicIslands) {
     }
 
     allQuestions = allQuestions.concat(picked);
+  }
+
+  // Final safety cap
+  if (allQuestions.length > MAX_QUESTIONS) {
+    shuffle(allQuestions);
+    allQuestions = allQuestions.slice(0, MAX_QUESTIONS);
   }
 
   return allQuestions;
