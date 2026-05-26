@@ -104,7 +104,7 @@ Object.assign(QUESTIONS, {
    opts:["readable","readible","readful","readless"],c:0,
    e:"'Readable' is correct. '-able' is added to the complete root word 'read'. The rule is: if the root is a complete English word, usually add '-able'. 'Readible' is a misspelling, and '-ful'/'-less' have different meanings."},
   {q:"Which of the following correctly uses the prefix 'dis-'?",
-   opts:["disappear","disrespect","disorganise","All of these are correct"],c:0,
+   opts:["disappear","disrespect","disorganise","All of these are correct"],c:3,
    e:"All three are correct uses of 'dis-' — but the question asks which single option is correct. 'Disappear', 'disrespect', and 'disorganise' all use 'dis-' meaning not/opposite of. The answer is 'All of these are correct'."},
   // Hard (Q7–8)
   {q:"The word 'unimaginable' can be broken into parts. Which analysis is correct?",
