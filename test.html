@@ -37,7 +37,7 @@
     @keyframes pulse { 50% { opacity: .7; } }
     .test-progress-text { font-size: .875rem; color: var(--text-muted); font-weight: 600; }
 
-    .test-progress-bar { height: 6px; background: var(--ring-track); border-radius: 3px; overflow: hidden; margin-bottom: 24px; }
+    .test-progress-bar { height: 6px; background: var(--ring-track); border: 1px solid #9ca3af; border-radius: 3px; overflow: hidden; margin-bottom: 24px; }
     .test-progress-fill { height: 100%; background: var(--green); border-radius: 3px; transition: width .3s ease; }
 
     .test-question { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; }
@@ -80,6 +80,19 @@
     .review-answer { font-size: .875rem; color: var(--text-2); }
     .review-answer .correct-ans { color: var(--green); font-weight: 600; }
     .review-answer .wrong-ans { color: var(--red); text-decoration: line-through; }
+
+    /* ── Responsive ───────────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .test-header { gap: 8px; }
+      .test-timer { padding: 6px 10px; font-size: .8125rem; }
+      .test-question { padding: 16px; }
+      .test-q-text { font-size: .9375rem; }
+      .test-option { padding: 10px 12px; font-size: .875rem; gap: 10px; }
+      .test-nav-dots { gap: 3px; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; max-width: 100%; }
+      .test-nav-dots::-webkit-scrollbar { display: none; }
+      .test-nav-dot { width: 8px; height: 8px; flex-shrink: 0; }
+      .results-score { font-size: 2.25rem; }
+    }
   </style>
 </head>
 <body>
@@ -245,7 +258,10 @@ infoGrid.innerHTML =
 function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
 function updateThemeBtn() {
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
+  var btn = document.getElementById('theme-btn');
+  btn.textContent = dark ? '☀️' : '🌙';
+  btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
 }
 
 // ── Timer setup ──────────────────────────────────────────────────────────

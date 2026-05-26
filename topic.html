@@ -158,7 +158,10 @@ const topicIslands = CURRICULUM.filter(i => i.topicId === topicId);
 function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
 function updateThemeBtn() {
   const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
+  const btn = document.getElementById('theme-btn');
+  btn.textContent = dark ? '☀️' : '🌙';
+  btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
 }
 
 // ── Header ────────────────────────────────────────────────────────────────
@@ -223,6 +226,9 @@ function renderGrid() {
     return `<div class="island-card${unlocked ? '' : ' locked'}"
         style="border-top-color:${island.color || topicColor}"
         onclick="${unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`}"
+        role="link" tabindex="0"
+        aria-label="${island.name}, ${statusLabel}"
+        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();${unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`};}"
         title="${unlocked ? island.name : 'Complete prerequisites first'}">
       <div class="island-card-top">
         <div class="island-emoji">${island.emoji}</div>
@@ -414,11 +420,14 @@ document.addEventListener('keydown', function(e) {
 
 function showToast(msg, type) {
   const t = document.createElement('div');
-  t.className = 'toast toast-' + (type || 'info');
+  t.className = 'toast toast--' + (type || 'info');
+  t.setAttribute('role', 'status');
+  t.setAttribute('aria-live', 'polite');
+  t.setAttribute('aria-atomic', 'true');
   t.textContent = msg;
   document.body.appendChild(t);
-  requestAnimationFrame(() => t.classList.add('show'));
-  setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 300); }, 2500);
+  requestAnimationFrame(() => t.classList.add('toast--show'));
+  setTimeout(() => { t.classList.remove('toast--show'); setTimeout(() => t.remove(), 300); }, 2500);
 }
 </script>
 </body>

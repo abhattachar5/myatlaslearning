@@ -375,9 +375,18 @@ function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
 function updateThemeBtn() {
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
   var icon = dark ? '☀️' : '🌙';
-  document.getElementById('theme-btn').textContent = icon;
+  var label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+  var pressed = dark ? 'true' : 'false';
+  var btn = document.getElementById('theme-btn');
+  btn.textContent = icon;
+  btn.setAttribute('aria-label', label);
+  btn.setAttribute('aria-pressed', pressed);
   var mb = document.getElementById('mobile-theme-btn');
-  if (mb) mb.textContent = icon;
+  if (mb) {
+    mb.textContent = icon;
+    mb.setAttribute('aria-label', label);
+    mb.setAttribute('aria-pressed', pressed);
+  }
 }
 
 // ── Sidebar drawer ──────────────────────────────────────────────────────────

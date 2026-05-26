@@ -63,7 +63,7 @@
 </div>
 
 <!-- ── Sidebar backdrop (mobile) ──────────────────────────────────────────── -->
-<div class="sidebar-backdrop" id="sidebar-backdrop" onclick="closeSidebar()"></div>
+<div class="sidebar-backdrop" id="sidebar-backdrop" onclick="closeSidebar()" role="button" aria-label="Close navigation" tabindex="-1" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();closeSidebar();}"></div>
 
 <div class="app-layout">
 
@@ -146,9 +146,9 @@
     <!-- ── Study Plan Card (shown when plan is active) ────────────────────── -->
     <div class="week-plan" id="week-plan" style="display:none">
       <!-- Tabs -->
-      <div class="wp-tabs">
-        <button class="wp-tab active" data-tab="thisweek" onclick="switchPlanTab('thisweek')">This Week</button>
-        <button class="wp-tab" data-tab="progress" onclick="switchPlanTab('progress')">My Progress</button>
+      <div class="wp-tabs" role="tablist" aria-label="Study plan views">
+        <button class="wp-tab active" role="tab" aria-selected="true" data-tab="thisweek" onclick="switchPlanTab('thisweek')">This Week</button>
+        <button class="wp-tab" role="tab" aria-selected="false" data-tab="progress" onclick="switchPlanTab('progress')">My Progress</button>
       </div>
 
       <!-- Tab 1: This Week -->
@@ -175,13 +175,13 @@
 
       <!-- Shared footer -->
       <div class="week-plan-footer">
-        <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.downloadExport()" title="Export progress">💾 Export</button>
-        <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.triggerImport()" title="Import progress">📂 Import</button>
+        <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.downloadExport()" title="Export progress"><span aria-hidden="true">💾 </span>Export</button>
+        <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.triggerImport()" title="Import progress"><span aria-hidden="true">📂 </span>Import</button>
       </div>
     </div>
 
     <!-- Stats -->
-    <div class="stats-row">
+    <div class="stats-row" role="group" aria-label="Learning statistics">
       <div class="stat-card">
         <div class="stat-value text-blue" id="stat-started">0</div>
         <div class="stat-label">Topics started</div>
@@ -201,7 +201,7 @@
     </div>
 
     <!-- Subject filters (rendered dynamically by renderFilters()) -->
-    <div class="filter-row" id="filter-row"></div>
+    <div class="filter-row" id="filter-row" role="toolbar" aria-label="Filter by subject"></div>
 
     <!-- Island grid -->
     <div class="island-grid" id="island-grid"></div>
@@ -378,7 +378,9 @@ function renderWeekPlan() {
 // ── Tab switching ────────────────────────────────────────────────────────────
 function switchPlanTab(tab) {
   document.querySelectorAll('.wp-tab').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.tab === tab);
+    const isActive = btn.dataset.tab === tab;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
   });
   document.getElementById('wp-thisweek').style.display = tab === 'thisweek' ? '' : 'none';
   document.getElementById('wp-progress').style.display = tab === 'progress' ? '' : 'none';
@@ -806,9 +808,10 @@ function renderFilters() {
     return `<button class="filter-btn${active ? ' active' : ''}" data-filter="${s.id}"
         onclick="setFilter('${s.id}')"
         aria-pressed="${active}"
+        aria-label="${s.label}, ${count} topics"
         ${s.color ? `style="--fc:${s.color}"` : ''}>
         <span aria-hidden="true">${s.emoji ? s.emoji + ' ' : ''}</span>${s.label}
-        <span class="filter-count" aria-label="${count} topics"${active && isAll ? ' style="background:rgba(255,255,255,.2)"' : ''}>${count}</span>
+        <span class="filter-count" aria-hidden="true"${active && isAll ? ' style="background:rgba(255,255,255,.2)"' : ''}>${count}</span>
       </button>`;
   }).join('');
 
@@ -1279,9 +1282,17 @@ function handleThemeToggle() {
 function updateThemeBtn() {
   const dark = document.documentElement.getAttribute('data-theme') === 'dark';
   const icon = dark ? '☀️' : '🌙';
-  document.getElementById('theme-btn').textContent = icon;
+  const label = dark ? 'Switch to light mode' : 'Switch to dark mode';
+  const btn = document.getElementById('theme-btn');
+  btn.textContent = icon;
+  btn.setAttribute('aria-label', label);
+  btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
   const mobileBtn = document.getElementById('mobile-theme-btn');
-  if (mobileBtn) mobileBtn.textContent = icon;
+  if (mobileBtn) {
+    mobileBtn.textContent = icon;
+    mobileBtn.setAttribute('aria-label', label);
+    mobileBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+  }
 }
 
 // ── Sidebar (mobile drawer) ───────────────────────────────────────────────────

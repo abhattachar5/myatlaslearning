@@ -28,6 +28,7 @@
       flex: 1;
       height: 8px;
       background: var(--border);
+      border: 1px solid #9ca3af;
       border-radius: 4px;
       overflow: hidden;
     }
@@ -499,14 +500,18 @@
       }
       .expanded-passage-col {
         width: 100%;
-        height: 50%;
+        min-height: 40%;
+        height: auto;
+        flex: 1 1 auto;
         border-right: none;
         border-bottom: 1px solid var(--border);
         padding: 20px 16px;
       }
       .expanded-questions-col {
         width: 100%;
-        height: 50%;
+        min-height: 40%;
+        height: auto;
+        flex: 1 1 auto;
         padding: 20px 16px;
       }
       .passage-grid {
@@ -670,7 +675,10 @@ var testSubmitted = false;
 function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
 function updateThemeBtn() {
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
+  var btn = document.getElementById('theme-btn');
+  btn.textContent = dark ? '☀️' : '🌙';
+  btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
 }
 
 // ── Shuffle (Fisher-Yates) ────────────────────────────────────────────────────
@@ -1153,11 +1161,14 @@ function initMobileStreak() {
 // ── Toast ─────────────────────────────────────────────────────────────────────
 function showToast(msg, type) {
   var t = document.createElement('div');
-  t.className = 'toast toast-' + (type || 'info');
+  t.className = 'toast toast--' + (type || 'info');
+  t.setAttribute('role', 'status');
+  t.setAttribute('aria-live', 'polite');
+  t.setAttribute('aria-atomic', 'true');
   t.textContent = msg;
   document.body.appendChild(t);
-  requestAnimationFrame(function() { t.classList.add('show'); });
-  setTimeout(function() { t.classList.remove('show'); setTimeout(function() { t.remove(); }, 300); }, 2500);
+  requestAnimationFrame(function() { t.classList.add('toast--show'); });
+  setTimeout(function() { t.classList.remove('toast--show'); setTimeout(function() { t.remove(); }, 300); }, 2500);
 }
 </script>
 </body>
