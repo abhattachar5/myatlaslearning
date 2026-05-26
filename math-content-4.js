@@ -1,61 +1,61 @@
-// math-content-4.js â€" Flashcards & Questions for Topics 14-17
+// math-content-4.js — Flashcards & Questions for Topics 14-17
 // Topic 14: Order of Operations | Topic 15: Rational Numbers
 // Topic 16: Problem Solving & Estimation | Topic 17: Units of Measurement
 
-// â"€â"€â"€ TOPIC 14: ORDER OF OPERATIONS â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+// ─── TOPIC 14: ORDER OF OPERATIONS ───────────────────────────────────────────
 
 FLASHCARDS.push(
   // mi-14-1: Order of Operations: Whole Numbers
-  { islandId:'mi-14-1', front:'What does BIDMAS stand for?', back:'Brackets, Indices, Division, Multiplication, Addition, Subtraction â€" the order operations must be performed.' },
-  { islandId:'mi-14-1', front:'Evaluate: 3 + 4 Ã— 2', back:'Multiplication first: 4Ã—2=8. Then add: 3+8 = 11. (Not 14!)' },
-  { islandId:'mi-14-1', front:'Why does 6 Ã· 2 Ã— 3 = 9, not 1?', back:'Division and multiplication have equal priority â€" work left to right. 6Ã·2=3, then 3Ã—3=9.' },
+  { islandId:'mi-14-1', front:'What does BIDMAS stand for?', back:'Brackets, Indices, Division, Multiplication, Addition, Subtraction — the order operations must be performed.' },
+  { islandId:'mi-14-1', front:'Evaluate: 3 + 4 × 2', back:'Multiplication first: 4×2=8. Then add: 3+8 = 11. (Not 14!)' },
+  { islandId:'mi-14-1', front:'Why does 6 ÷ 2 × 3 = 9, not 1?', back:'Division and multiplication have equal priority — work left to right. 6÷2=3, then 3×3=9.' },
 
   // mi-14-2: Order of Operations: Decimals & Fractions
-  { islandId:'mi-14-2', front:'Evaluate: (1.5 + 0.5) Ã— 4', back:'Brackets first: 1.5+0.5=2. Then: 2Ã—4 = 8.' },
-  { islandId:'mi-14-2', front:'Evaluate: Â½ + Â¼ Ã— 8', back:'Multiplication first: Â¼Ã—8=2. Then: Â½+2 = 2Â½.' },
-  { islandId:'mi-14-2', front:'Evaluate: 2.4 Ã· (0.6 Ã— 2)', back:'Brackets first: 0.6Ã—2=1.2. Then: 2.4Ã·1.2 = 2.' },
+  { islandId:'mi-14-2', front:'Evaluate: (1.5 + 0.5) × 4', back:'Brackets first: 1.5+0.5=2. Then: 2×4 = 8.' },
+  { islandId:'mi-14-2', front:'Evaluate: ½ + ¼ × 8', back:'Multiplication first: ¼×8=2. Then: ½+2 = 2½.' },
+  { islandId:'mi-14-2', front:'Evaluate: 2.4 ÷ (0.6 × 2)', back:'Brackets first: 0.6×2=1.2. Then: 2.4÷1.2 = 2.' },
 
   // mi-14-3: Order of Operations: Integers
-  { islandId:'mi-14-3', front:'Evaluate: âˆ'3 + 4 Ã— (âˆ'2)', back:'Multiplication first: 4Ã—(âˆ'2)=âˆ'8. Then: âˆ'3+(âˆ'8) = âˆ'11.' },
-  { islandId:'mi-14-3', front:'Evaluate: (âˆ'5)Â² âˆ' 10', back:'Indices first: (âˆ'5)Â²=25. Then: 25âˆ'10 = 15.' },
-  { islandId:'mi-14-3', front:'Evaluate: 12 Ã· (âˆ'3) + 7', back:'Brackets (already evaluated): 12Ã·(âˆ'3)=âˆ'4. Then: âˆ'4+7 = 3.' }
+  { islandId:'mi-14-3', front:'Evaluate: −3 + 4 × (−2)', back:'Multiplication first: 4×(−2)=−8. Then: −3+(−8) = −11.' },
+  { islandId:'mi-14-3', front:'Evaluate: (−5)² − 10', back:'Indices first: (−5)²=25. Then: 25−10 = 15.' },
+  { islandId:'mi-14-3', front:'Evaluate: 12 ÷ (−3) + 7', back:'Brackets (already evaluated): 12÷(−3)=−4. Then: −4+7 = 3.' }
 );
 
-// â"€â"€â"€ TOPIC 15: RATIONAL NUMBERS â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+// ─── TOPIC 15: RATIONAL NUMBERS ──────────────────────────────────────────────
 
 FLASHCARDS.push(
   // mi-15-1: Rational Numbers on Number Lines
-  { islandId:'mi-15-1', front:'What is a rational number?', back:'Any number that can be written as a fraction p/q where p and q are integers and q â‰  0. Includes integers, fractions, and terminating/recurring decimals.' },
-  { islandId:'mi-15-1', front:'Plot âˆ'Â¾ on a number line. Where does it sit?', back:'Between âˆ'1 and 0, three-quarters of the way from 0 toward âˆ'1.' },
-  { islandId:'mi-15-1', front:'Is 0.333â€¦ a rational number?', back:'Yes â€" it equals â…", which is p/q form.' },
+  { islandId:'mi-15-1', front:'What is a rational number?', back:'Any number that can be written as a fraction p/q where p and q are integers and q ≠ 0. Includes integers, fractions, and terminating/recurring decimals.' },
+  { islandId:'mi-15-1', front:'Plot −¾ on a number line. Where does it sit?', back:'Between −1 and 0, three-quarters of the way from 0 toward −1.' },
+  { islandId:'mi-15-1', front:'Is 0.333… a rational number?', back:'Yes — it equals ⅓, which is p/q form.' },
 
   // mi-15-2: Compare & Order Rational Numbers
-  { islandId:'mi-15-2', front:'Which is greater: âˆ'â…– or âˆ'â…"?', back:'Convert: âˆ'â…–=âˆ'0.4, âˆ'â…"â‰ˆâˆ'0.333. Since âˆ'0.333 > âˆ'0.4, âˆ'â…" is greater.' },
-  { islandId:'mi-15-2', front:'Order: 0.7, Â¾, 71%', back:'0.7=70%, Â¾=75%, 71%=71%. Order: 0.7 < 71% < Â¾.' },
+  { islandId:'mi-15-2', front:'Which is greater: −⅖ or −⅓?', back:'Convert: −⅖=−0.4, −⅓≈−0.333. Since −0.333 > −0.4, −⅓ is greater.' },
+  { islandId:'mi-15-2', front:'Order: 0.7, ¾, 71%', back:'0.7=70%, ¾=75%, 71%=71%. Order: 0.7 < 71% < ¾.' },
   { islandId:'mi-15-2', front:'How do you compare two negative fractions?', back:'Convert to decimals or a common denominator, then remember: the less negative number is greater.' },
 
   // mi-15-3: Rational Number Problems
-  { islandId:'mi-15-3', front:'A temperature drops from 2Â½Â°C to âˆ'1Â¾Â°C. What is the change?', back:'Change = âˆ'1Â¾ âˆ' 2Â½ = âˆ'4Â¼Â°C (a drop of 4Â¼ degrees).' },
-  { islandId:'mi-15-3', front:'What is the absolute value of âˆ'3.6?', back:'|âˆ'3.6| = 3.6 (distance from zero, always positive).' },
-  { islandId:'mi-15-3', front:'Between which two consecutive integers does âˆ'7/3 lie?', back:'âˆ'7/3 â‰ˆ âˆ'2.33. It lies between âˆ'3 and âˆ'2.' }
+  { islandId:'mi-15-3', front:'A temperature drops from 2½°C to −1¾°C. What is the change?', back:'Change = −1¾ − 2½ = −4¼°C (a drop of 4¼ degrees).' },
+  { islandId:'mi-15-3', front:'What is the absolute value of −3.6?', back:'|−3.6| = 3.6 (distance from zero, always positive).' },
+  { islandId:'mi-15-3', front:'Between which two consecutive integers does −7/3 lie?', back:'−7/3 ≈ −2.33. It lies between −3 and −2.' }
 );
 
-// â"€â"€â"€ TOPIC 16: PROBLEM SOLVING & ESTIMATION â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+// ─── TOPIC 16: PROBLEM SOLVING & ESTIMATION ──────────────────────────────────
 
 FLASHCARDS.push(
   // mi-16-1: Multi-Step Word Problems
   { islandId:'mi-16-1', front:'What are the steps for solving a word problem?', back:'1. Read carefully. 2. Identify key info. 3. Choose operations. 4. Calculate. 5. Check your answer makes sense.' },
-  { islandId:'mi-16-1', front:'A cinema has 24 rows of 35 seats. 612 tickets are sold. How many seats are empty?', back:'Total = 24Ã—35=840. Empty = 840âˆ'612 = 228 seats.' },
+  { islandId:'mi-16-1', front:'A cinema has 24 rows of 35 seats. 612 tickets are sold. How many seats are empty?', back:'Total = 24×35=840. Empty = 840−612 = 228 seats.' },
   { islandId:'mi-16-1', front:'What does "working backwards" mean in problem solving?', back:'Starting from the given answer and reversing each operation to find an unknown starting value.' },
 
   // mi-16-2: Estimation Strategies
-  { islandId:'mi-16-2', front:'Estimate 487 Ã— 32 using rounding to 1 s.f.', back:'â‰ˆ 500 Ã— 30 = 15,000. (Actual: 15,584 â€" estimate is reasonable.)' },
-  { islandId:'mi-16-2', front:'What is "rounding to 1 significant figure"?', back:'Round each number so only the first non-zero digit remains. E.g. 4,763 â†' 5,000.' },
+  { islandId:'mi-16-2', front:'Estimate 487 × 32 using rounding to 1 s.f.', back:'≈ 500 × 30 = 15,000. (Actual: 15,584 — estimate is reasonable.)' },
+  { islandId:'mi-16-2', front:'What is "rounding to 1 significant figure"?', back:'Round each number so only the first non-zero digit remains. E.g. 4,763 → 5,000.' },
   { islandId:'mi-16-2', front:'When is estimation useful?', back:'To check if a calculator answer is reasonable, or to get a quick approximate answer without exact calculation.' },
 
   // mi-16-3: Logical Reasoning Problems
-  { islandId:'mi-16-3', front:'What is a counter-example?', back:'A single example that disproves a general statement. E.g. "all primes are odd" â€" counter-example: 2 is prime and even.' },
-  { islandId:'mi-16-3', front:'Sam thinks of a number, doubles it, adds 6, and gets 18. What is the number?', back:'Work backwards: 18âˆ'6=12, 12Ã·2=6. The number is 6.' },
+  { islandId:'mi-16-3', front:'What is a counter-example?', back:'A single example that disproves a general statement. E.g. "all primes are odd" — counter-example: 2 is prime and even.' },
+  { islandId:'mi-16-3', front:'Sam thinks of a number, doubles it, adds 6, and gets 18. What is the number?', back:'Work backwards: 18−6=12, 12÷2=6. The number is 6.' },
   { islandId:'mi-16-3', front:'What is a Venn diagram used for in problem solving?', back:'Organising information about overlapping groups or sets to avoid double-counting.' },
 
   // mi-16-4: Extra/Missing Info & Direction
@@ -64,13 +64,13 @@ FLASHCARDS.push(
   { islandId:'mi-16-4', front:'How do you find the distance and direction back to a starting point?', back:'Track each leg of the journey on a number line or grid.\n\nExample: Walk 5 km east, then 3 km west.\nNet displacement = 5 − 3 = 2 km east.\nTo return: walk 2 km WEST.\n\nAlways find the NET displacement, then reverse the direction.' }
 );
 
-// â"€â"€â"€ TOPIC 17: UNITS OF MEASUREMENT â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+// ─── TOPIC 17: UNITS OF MEASUREMENT ──────────────────────────────────────────
 
 FLASHCARDS.push(
   // mi-17-1: Metric Units
-  { islandId:'mi-17-1', front:'What are the metric prefixes for kilo-, centi-, milli-?', back:'kilo- = Ã—1000 | centi- = Ã·100 | milli- = Ã·1000. E.g. 1 km = 1000 m, 1 m = 100 cm = 1000 mm.' },
-  { islandId:'mi-17-1', front:'Convert 3.5 km to metres.', back:'3.5 Ã— 1000 = 3,500 m.' },
-  { islandId:'mi-17-1', front:'Convert 450 ml to litres.', back:'450 Ã· 1000 = 0.45 litres.' },
+  { islandId:'mi-17-1', front:'What are the metric prefixes for kilo-, centi-, milli-?', back:'kilo- = ×1000 | centi- = ÷100 | milli- = ÷1000. E.g. 1 km = 1000 m, 1 m = 100 cm = 1000 mm.' },
+  { islandId:'mi-17-1', front:'Convert 3.5 km to metres.', back:'3.5 × 1000 = 3,500 m.' },
+  { islandId:'mi-17-1', front:'Convert 450 ml to litres.', back:'450 ÷ 1000 = 0.45 litres.' },
 
   // mi-17-2: Imperial Units
   { islandId:'mi-17-2', front:'How many inches in a foot? Feet in a yard?', back:'12 inches = 1 foot. 3 feet = 1 yard.' },
@@ -78,9 +78,9 @@ FLASHCARDS.push(
   { islandId:'mi-17-2', front:'How many pints in a gallon?', back:'8 pints = 1 gallon.' },
 
   // mi-17-3: Convert Metric & Imperial
-  { islandId:'mi-17-3', front:'Approximate: 1 kg â‰ˆ ? pounds', back:'1 kg â‰ˆ 2.2 pounds.' },
-  { islandId:'mi-17-3', front:'Approximate: 1 mile â‰ˆ ? km', back:'1 mile â‰ˆ 1.6 km.' },
-  { islandId:'mi-17-3', front:'Convert 5 miles to km (use 1 mile â‰ˆ 1.6 km).', back:'5 Ã— 1.6 = 8 km.' },
+  { islandId:'mi-17-3', front:'Approximate: 1 kg ≈ ? pounds', back:'1 kg ≈ 2.2 pounds.' },
+  { islandId:'mi-17-3', front:'Approximate: 1 mile ≈ ? km', back:'1 mile ≈ 1.6 km.' },
+  { islandId:'mi-17-3', front:'Convert 5 miles to km (use 1 mile ≈ 1.6 km).', back:'5 × 1.6 = 8 km.' },
 
   // mi-17-4: Area/Volume Units & Temperature
   { islandId:'mi-17-4', front:'How do you convert cm² to m²?', back:'1 m = 100 cm, so 1 m² = 100 × 100 = 10,000 cm².\n\nTo convert cm² → m²: divide by 10,000.\nTo convert m² → cm²: multiply by 10,000.\n\nExample: 50,000 cm² = 50,000 ÷ 10,000 = 5 m²' },
@@ -88,11 +88,11 @@ FLASHCARDS.push(
   { islandId:'mi-17-4', front:'Which is warmer: −3°C or −8°C?', back:'−3°C is warmer.\n\nOn a number line, −3 is to the RIGHT of −8.\n−8 < −3, so −8°C is colder.\n\nThink: −3°C is only 3 degrees below zero, but −8°C is 8 degrees below.' }
 );
 
-// â"€â"€â"€ QUESTIONS â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+// ─── QUESTIONS ────────────────────────────────────────────────────────────────
 
 Object.assign(QUESTIONS, {
 
-  // â"€â"€ mi-14-1: Order of Operations: Whole Numbers â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-14-1: Order of Operations: Whole Numbers ────────────────────────────
   'mi-14-1': [
     { gen: function() {
         var a = randInt(2, 9), b = randInt(2, 6), c = randInt(2, 8);
@@ -163,7 +163,7 @@ Object.assign(QUESTIONS, {
     { question:'A student says 2+3×4−1=19. Are they correct?', options:['Yes','No — answer is 13','No — answer is 15','No — answer is 21'], answer:1, explanation:'3×4=12 first. Then 2+12−1=13.' }
   ],
 
-  // â"€â"€ mi-14-2: Order of Operations: Decimals & Fractions â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-14-2: Order of Operations: Decimals & Fractions ────────────────────
   'mi-14-2': [
     { gen: function() {
         var a = pickFrom([0.5, 1.5, 2.5, 0.4, 1.2, 0.8]);
@@ -237,7 +237,7 @@ Object.assign(QUESTIONS, {
     }}
   ],
 
-  // â"€â"€ mi-14-3: Order of Operations: Integers â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-14-3: Order of Operations: Integers ─────────────────────────────────
   'mi-14-3': [
     { gen: function() {
         var a = randInt(2, 6), b = randInt(2, 5), c = randInt(1, 8);
@@ -322,7 +322,7 @@ Object.assign(QUESTIONS, {
     }}
   ],
 
-  // â"€â"€ mi-15-1: Rational Numbers on Number Lines â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-15-1: Rational Numbers on Number Lines ───────────────────────────────
   'mi-15-1': [
     // Conceptual: definition of rational number
     { question:'Which of these is a rational number?', options:['π','√2','3/7','√3'], answer:2, explanation:'3/7 is rational (p/q form). π and √2 are irrational.' },
@@ -371,7 +371,7 @@ Object.assign(QUESTIONS, {
     }}
   ],
 
-  // â"€â"€ mi-15-2: Compare & Order Rational Numbers â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-15-2: Compare & Order Rational Numbers ──────────────────────────────
   'mi-15-2': [
     // Conceptual: compare two negative fractions
     { question:'Which is greater: −¼ or −⅓?', options:['−¼','−⅓','They are equal','Cannot compare'], answer:0, explanation:'−¼=−0.25, −⅓≈−0.333. −0.25 > −0.333, so −¼ is greater.' },
@@ -400,10 +400,10 @@ Object.assign(QUESTIONS, {
     // Conceptual: closest to 0
     { question:'Which is closest to 0 on a number line?', options:['−3/10','−2/5','2/3','−4/5'], answer:0, explanation:'Convert: −0.3, −0.4, 0.667, −0.8. Closest to 0 is −0.3 = −3/10.' },
     // Conceptual: temperature comparison
-    { question:'A thermometer shows −4½Â°C and −4.3°C. Which is colder?', options:['−4½Â°C','−4.3°C','Same temperature','Cannot compare'], answer:0, explanation:'−4½=−4.5 and −4.3. −4.5 < −4.3, so −4½Â°C is colder.' }
+    { question:'A thermometer shows −4½°C and −4.3°C. Which is colder?', options:['−4½°C','−4.3°C','Same temperature','Cannot compare'], answer:0, explanation:'−4½=−4.5 and −4.3. −4.5 < −4.3, so −4½°C is colder.' }
   ],
 
-  // â"€â"€ mi-15-3: Rational Number Problems â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-15-3: Rational Number Problems ─────────────────────────────────────
   'mi-15-3': [
     { gen: function() {
         var start = randInt(1, 8);
@@ -474,7 +474,7 @@ Object.assign(QUESTIONS, {
     { question:'Which expression has the greatest value? A: |−5| B: −|5| C: −(−5)', options:['A only','A and C equal, both greatest','B','C only'], answer:1, explanation:'|−5|=5. −|5|=−5. −(−5)=5. A and C both equal 5, which is greatest.' }
   ],
 
-  // â"€â"€ mi-16-1: Multi-Step Word Problems â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-16-1: Multi-Step Word Problems ─────────────────────────────────────
   'mi-16-1': [
     { gen: function() {
         var total = randInt(20, 60) * 12;
@@ -589,7 +589,7 @@ Object.assign(QUESTIONS, {
     }}
   ],
 
-  // â"€â"€ mi-16-2: Estimation Strategies â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-16-2: Estimation Strategies ────────────────────────────────────────
   'mi-16-2': [
     { gen: function() {
         var a = randInt(3, 9) * 10 + randInt(1, 9);
@@ -682,7 +682,7 @@ Object.assign(QUESTIONS, {
     { question:'A student estimates 2,950 ÷ 47 ≈ 60. Is this a good estimate and why?', options:['Yes — 3000÷50=60','No — should use 2900÷47','Yes — but only if both rounded up','No — answer is much larger'], answer:0, explanation:'Rounding 2950→3000 and 47→50 gives 3000÷50=60. Good estimate (actual≈62.8).' }
   ],
 
-  // â"€â"€ mi-16-3: Logical Reasoning Problems â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-16-3: Logical Reasoning Problems ───────────────────────────────────
   'mi-16-3': [
     { gen: function() {
         var start = randInt(2, 12);
@@ -805,7 +805,7 @@ Object.assign(QUESTIONS, {
     { question:'A robot moves: 6 m north, 2 m south, 5 m north, 4 m south. How far north of the start is it?', options:['5 m','6 m','17 m','11 m'], answer:0, explanation:'North: 6+5=11 m. South: 2+4=6 m. Net = 11−6 = 5 m north.' }
   ],
 
-  // â"€â"€ mi-17-1: Metric Units â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-17-1: Metric Units ──────────────────────────────────────────────────
   'mi-17-1': [
     { gen: function() {
         var v = pickFrom([1.5, 2.5, 3.5, 4.5, 0.5, 2, 3, 4, 6]);
@@ -901,7 +901,7 @@ Object.assign(QUESTIONS, {
     }}
   ],
 
-  // â"€â"€ mi-17-2: Imperial Units â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-17-2: Imperial Units ────────────────────────────────────────────────
   'mi-17-2': [
     { gen: function() {
         var feet = randInt(2, 8);
@@ -987,7 +987,7 @@ Object.assign(QUESTIONS, {
     }}
   ],
 
-  // â"€â"€ mi-17-3: Convert Metric & Imperial â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€â"€
+  // ── mi-17-3: Convert Metric & Imperial ────────────────────────────────────
   'mi-17-3': [
     { gen: function() {
         var miles = pickFrom([5, 8, 10, 15, 20, 25, 30]);

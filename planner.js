@@ -599,6 +599,14 @@
     var grandTotal = 0;
     var grandDone = 0;
 
+    var subjectTopicArrays = {
+      math: year === 'Year 8' ? (typeof MATH_TOPICS_Y8 !== 'undefined' ? MATH_TOPICS_Y8 : []) : (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS : []),
+      english: year === 'Year 8' ? (typeof ENGLISH_TOPICS_Y8 !== 'undefined' ? ENGLISH_TOPICS_Y8 : []) : (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS : []),
+      science: year === 'Year 7' ? (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS : []) : [],
+      history: year === 'Year 8' ? (typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8 : []) : (typeof HISTORY_TOPICS !== 'undefined' ? HISTORY_TOPICS : []),
+      geography: year === 'Year 8' ? (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8 : []) : (typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS : [])
+    };
+
     SUBJECT_IDS.forEach(function (sid) {
       var islands = CURRICULUM.filter(function (i) {
         return i.subjectId === sid && (i.yearGroup || 'Year 7') === year;
@@ -612,10 +620,15 @@
         topicMap[tid].push(i.id);
       });
 
+      var declaredTopics = subjectTopicArrays[sid] || [];
+      declaredTopics.forEach(function (t) {
+        if (!topicMap[t.id]) topicMap[t.id] = [];
+      });
+
       var topicIds = Object.keys(topicMap);
       var completed = 0;
       topicIds.forEach(function (tid) {
-        var allMastered = topicMap[tid].every(function (islandId) {
+        var allMastered = topicMap[tid].length > 0 && topicMap[tid].every(function (islandId) {
           return getIslandStatus(islandId) === 4;
         });
         if (allMastered) completed++;

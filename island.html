@@ -342,7 +342,7 @@ let shuffledQuestions = []; // per-session, generated + shuffled
   renderHeader();
   initFlashcards();
   initQuiz();
-  checkLessonCache();
+  checkLessonCache(true);
   touchStreak();
 
   // Deep-link: jump straight to the requested tab (lesson/flashcards/practice)

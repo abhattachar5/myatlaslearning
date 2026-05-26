@@ -1063,7 +1063,7 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   transition: background .25s, border-color .25s;
 }
 .mobile-header-logo {
-  height: 120px;
+  height: 40px;
   width: auto;
 }
 .mobile-header-actions {

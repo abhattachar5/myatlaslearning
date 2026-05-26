@@ -326,10 +326,24 @@ function getYearGeographyTopics() {
 function setWelcome() {
   const h = new Date().getHours();
   const greet = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
-  document.getElementById('welcome-msg').textContent = `${greet}, ${user.name.split(' ')[0]}! 👋`;
+  const firstName = user.name.split(' ')[0];
+  document.getElementById('welcome-msg').textContent = `${greet}, ${firstName}! 👋`;
+  const plan = StudyPlanner.getStudyPlan();
+  const subEl = document.getElementById('welcome-sub');
+  if (plan) {
+    const weekNum = StudyPlanner.getCurrentWeekNumber();
+    const data = StudyPlanner.getWeekChecklist(weekNum);
+    if (data) {
+      const remaining = data.totalItems - data.doneItems;
+      subEl.textContent = data.allDone
+        ? `Week ${weekNum} complete — nice work! 🎉`
+        : `Week ${weekNum} of your study plan — ${remaining} task${remaining !== 1 ? 's' : ''} this week.`;
+      return;
+    }
+  }
   const stats = getYearStats();
   const pct = stats.total > 0 ? Math.round((stats.mastered / stats.total) * 100) : 0;
-  document.getElementById('welcome-sub').textContent =
+  subEl.textContent =
     stats.mastered === 0
       ? 'Pick a topic below to start your ' + getUserYear() + ' journey.'
       : `You've mastered ${stats.mastered} of ${stats.total} topics (${pct}%). Keep going!`;
@@ -707,6 +721,7 @@ function activateStudyPlan() {
   StudyPlanner.createStudyPlan();
   showToast('📅 Study plan activated!', 'success');
   renderWeekPlan();
+  setWelcome();
 }
 
 // ── Sidebar ──────────────────────────────────────────────────────────────────
@@ -989,7 +1004,7 @@ function renderEnglishTopicCards() {
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
-      <div class="island-meta">${totalIslands > 0 ? totalIslands + ' topic' + (totalIslands !== 1 ? 's' : '') : 'Coming soon'}</div>
+      <div class="island-meta">${totalIslands > 0 ? totalIslands + ' topic' + (totalIslands !== 1 ? 's' : '') : (topic.id === 'et-04' ? '40 passages' : 'Coming soon')}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
         <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>
