@@ -12,10 +12,10 @@ Object.assign(LESSONS, {
 <p>These devices create pictures in the reader's mind by comparing or transforming ideas.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Device</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Definition</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Example</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Effect on Reader</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Device</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Definition</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Effect on Reader</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Simile</strong></td>
@@ -53,10 +53,10 @@ Object.assign(LESSONS, {
 <p>These devices use the sounds of words to create rhythm, mood or emphasis.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Device</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Definition</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Example</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Effect on Reader</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Device</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Definition</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Effect on Reader</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Alliteration</strong></td>
@@ -81,10 +81,10 @@ Object.assign(LESSONS, {
 <h3>Structural Devices</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Device</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Definition</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Example</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Effect on Reader</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Device</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Definition</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Effect on Reader</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Repetition</strong></td>
@@ -122,9 +122,9 @@ Object.assign(LESSONS, {
 <h3>Poetic Forms</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Form</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Key Features</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Typical Use</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Form</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Key Features</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Typical Use</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Sonnet</strong></td>
@@ -166,9 +166,9 @@ Object.assign(LESSONS, {
 <h3>Structural Features</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Feature</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Definition</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Effect</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Feature</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Definition</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Effect</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Stanza</strong></td>
@@ -222,9 +222,9 @@ Object.assign(LESSONS, {
 <h3>Step-by-Step Approach</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Reading</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Focus</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Key Questions</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Reading</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Focus</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Key Questions</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>1st Reading</strong></td>
@@ -252,9 +252,9 @@ Object.assign(LESSONS, {
 <p>Use this structure for every analytical paragraph:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Letter</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Stands For</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">What to Write</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Letter</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Stands For</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">What to Write</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>P</strong></td>
@@ -293,8 +293,8 @@ Object.assign(LESSONS, {
 <h3>Key Analytical Vocabulary</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Word / Phrase</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Use It Like This</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Word / Phrase</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Use It Like This</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">conveys / suggests / implies</td>
@@ -338,9 +338,9 @@ Object.assign(LESSONS, {
 <p>Match your form to your purpose:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">If You Want To...</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Try This Form</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Why It Works</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">If You Want To...</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Try This Form</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Why It Works</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Capture a single vivid moment</td>

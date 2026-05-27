@@ -10,39 +10,6 @@
 
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- ── Profile Modal ──────────────────────────────────────────────────────── -->
-<div class="modal-overlay" id="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title" onclick="closeProfileModal(event)">
-  <div class="modal">
-    <div class="modal-header">
-      <h3 id="profile-modal-title">My Profile</h3>
-      <button class="modal-close" onclick="closeProfileModal()" aria-label="Close profile modal">✕</button>
-    </div>
-    <div class="form-group">
-      <label class="form-label" for="edit-name">Name</label>
-      <input class="form-input" id="edit-name" type="text">
-    </div>
-    <div class="form-group">
-      <label class="form-label" for="edit-year">Year group</label>
-      <select class="form-input form-select" id="edit-year">
-        <option value="Year 7">Year 7</option>
-        <option value="Year 8" disabled>Year 8 — Coming Soon</option>
-        <option value="Year 9" disabled>Year 9 — Coming Soon</option>
-        <option value="Year 10" disabled>Year 10 — Coming Soon</option>
-        <option value="Year 11" disabled>Year 11 — Coming Soon</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label class="form-label" for="edit-school">School</label>
-      <input class="form-input" id="edit-school" type="text">
-    </div>
-    <div style="display:flex;gap:10px;margin-top:8px">
-      <button class="btn btn-primary" style="flex:1" onclick="saveProfile()">Save changes</button>
-      <button class="btn btn-secondary" onclick="confirmReset()">Reset progress</button>
-    </div>
-    <div class="divider"></div>
-    <button class="btn btn-secondary" style="width:100%" onclick="logout()">Sign out</button>
-  </div>
-</div>
 
 <!-- ── Mobile Header (≤900px only) ────────────────────────────────────────── -->
 <div class="mobile-header">
@@ -79,27 +46,20 @@
 
     <nav class="sidebar-nav" aria-label="Main navigation">
       <p class="section-heading" style="padding:0 12px;margin-bottom:8px" aria-hidden="true">Navigation</p>
-      <button class="nav-item active" aria-current="page">
+      <button class="nav-item active" id="nav-dashboard" onclick="goToDashboard(); closeSidebar()">
         <span class="nav-icon" aria-hidden="true">🏠</span> Dashboard
       </button>
-      <button class="nav-item" onclick="openProfileModal(); closeSidebar()">
+      <button class="nav-item" id="nav-profile" onclick="openProfileModal(); closeSidebar()">
         <span class="nav-icon" aria-hidden="true">👤</span> My Profile
+      </button>
+      <button class="nav-item" onclick="logout()">
+        <span class="nav-icon" aria-hidden="true">🚪</span> Sign Out
       </button>
     </nav>
 
     <div class="sidebar-user">
       <div class="user-card">
         <div class="user-name" id="sidebar-name">—</div>
-        <div class="user-level" id="sidebar-level">Level 1 · Beginner</div>
-        <div class="xp-bar-wrap">
-          <div class="xp-bar-track">
-            <div class="xp-bar-fill" id="sidebar-xp-fill" style="width:0%"></div>
-          </div>
-          <div class="xp-label">
-            <span id="sidebar-xp">0 XP</span>
-            <span id="sidebar-xp-next">100 XP</span>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -112,9 +72,80 @@
   <!-- ── Main ─────────────────────────────────────────────────────────────── -->
   <main class="main-content" id="main-content">
 
+    <!-- ── Profile Page (hidden by default) ─────────────────────────────── -->
+    <div class="profile-page" id="profile-page" style="display:none">
+      <div class="profile-page-header">
+        <button class="btn btn-secondary btn-sm profile-back-btn" onclick="closeProfilePage()">← Back</button>
+        <h2>My Profile</h2>
+      </div>
+
+      <div class="profile-page-card">
+        <div class="form-group">
+          <label class="form-label" for="edit-name">Name</label>
+          <input class="form-input" id="edit-name" type="text">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="edit-year">Year group</label>
+          <select class="form-input form-select" id="edit-year">
+            <option value="Year 7">Year 7</option>
+            <option value="Year 8" disabled>Year 8 — Coming Soon</option>
+            <option value="Year 9" disabled>Year 9 — Coming Soon</option>
+            <option value="Year 10" disabled>Year 10 — Coming Soon</option>
+            <option value="Year 11" disabled>Year 11 — Coming Soon</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="edit-school">School</label>
+          <input class="form-input" id="edit-school" type="text">
+        </div>
+        <div class="profile-page-actions">
+          <button class="btn btn-primary" onclick="saveProfile()">Save changes</button>
+          <button class="btn btn-secondary" onclick="confirmReset()">Reset progress</button>
+        </div>
+      </div>
+
+      <div class="profile-page-card" id="profile-progress-section">
+        <h3 class="profile-progress-title">📊 My Progress</h3>
+        <div class="week-plan-progress" id="week-progress"></div>
+        <div class="wp-roadahead" id="wp-roadahead"></div>
+      </div>
+
+    </div>
+
+    <!-- ── Dashboard Content ─────────────────────────────────────────────── -->
+    <div id="dashboard-content">
     <div class="page-header">
-      <h1 id="welcome-msg">Good morning! 👋</h1>
+      <div class="page-header-row">
+        <h1 id="welcome-msg">Good morning! 👋</h1>
+        <div class="header-badges">
+          <span class="header-badge"><span class="header-badge-icon">⭐</span> <strong id="stat-xp">0</strong> <span class="header-badge-label">XP</span></span>
+          <span class="header-badge"><span class="header-badge-icon">🔥</span> <strong id="stat-streak">0</strong> <span class="header-badge-label">days</span></span>
+          <span class="header-badge"><span class="header-badge-icon">👑</span> <strong id="stat-mastered">0</strong> <span class="header-badge-label">mastered</span></span>
+        </div>
+      </div>
       <p id="welcome-sub">Pick a topic to continue your studies.</p>
+    </div>
+
+    <!-- ── Hero Banner (pick up where you left off) ─────────────────────── -->
+    <div class="hero-banner" id="hero-banner" style="display:none">
+      <div class="hero-content">
+        <div class="hero-label" id="hero-label">PICK UP WHERE YOU LEFT OFF</div>
+        <div class="hero-body">
+          <div class="hero-emoji" id="hero-emoji"></div>
+          <div class="hero-text">
+            <h2 class="hero-title" id="hero-title"></h2>
+            <p class="hero-subtitle" id="hero-subtitle"></p>
+            <div class="hero-actions">
+              <a class="btn btn-primary hero-btn" id="hero-btn">Continue →</a>
+              <div class="hero-dots" id="hero-dots"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+      </div>
     </div>
 
     <!-- ── Study Plan Setup Banner (first visit only) ──────────────────────── -->
@@ -143,60 +174,23 @@
       </button>
     </div>
 
-    <!-- ── Study Plan Card (shown when plan is active) ────────────────────── -->
+    <!-- ── My Goals Card (shown when plan is active) ────────────────────── -->
     <div class="week-plan" id="week-plan" style="display:none">
-      <!-- Tabs -->
-      <div class="wp-tabs" role="tablist" aria-label="Study plan views">
-        <button class="wp-tab active" role="tab" aria-selected="true" data-tab="thisweek" onclick="switchPlanTab('thisweek')">This Week</button>
-        <button class="wp-tab" role="tab" aria-selected="false" data-tab="progress" onclick="switchPlanTab('progress')">My Progress</button>
+      <div class="goals-header">
+        <span class="goals-label">My Goals</span>
+        <div class="goals-segments" id="goals-segments"></div>
+        <span class="goals-count" id="week-count">0 of 0 tasks</span>
+        <button class="goals-toggle" id="goals-toggle" onclick="toggleWeekPlanCollapse()">
+          Show this week ▾
+        </button>
       </div>
-
-      <!-- Tab 1: This Week -->
-      <div class="wp-panel" id="wp-thisweek">
-        <div class="week-plan-header">
-          <div class="week-plan-title">
-            <strong>Week <span id="week-num">1</span> of <span id="week-total">40</span></strong>
-          </div>
-          <span class="week-plan-count" id="week-count">0 of 0 done</span>
-        </div>
-        <div class="week-plan-bar-wrap">
-          <div class="week-plan-bar-track">
-            <div class="week-plan-bar-fill" id="week-bar"></div>
-          </div>
-        </div>
+      <div class="goals-body collapsed" id="week-plan-collapsible">
+        <div class="goals-divider"></div>
         <div class="week-plan-list" id="week-list"></div>
-      </div>
-
-      <!-- Tab 2: My Progress -->
-      <div class="wp-panel" id="wp-progress" style="display:none">
-        <div class="week-plan-progress" id="week-progress"></div>
-        <div class="wp-roadahead" id="wp-roadahead"></div>
-      </div>
-
-      <!-- Shared footer -->
-      <div class="week-plan-footer">
-        <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.downloadExport()" title="Export progress"><span aria-hidden="true">💾 </span>Export</button>
-        <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.triggerImport()" title="Import progress"><span aria-hidden="true">📂 </span>Import</button>
-      </div>
-    </div>
-
-    <!-- Stats -->
-    <div class="stats-row" role="group" aria-label="Learning statistics">
-      <div class="stat-card">
-        <div class="stat-value text-blue" id="stat-started">0</div>
-        <div class="stat-label">Topics started</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value" style="color:#22c55e" id="stat-mastered">0</div>
-        <div class="stat-label">Topics mastered</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value text-amber" id="stat-xp">0</div>
-        <div class="stat-label">Total XP</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value" style="color:#f97316" id="stat-streak">0</div>
-        <div class="stat-label">Day streak 🔥</div>
+        <div class="week-plan-footer">
+          <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.downloadExport()" title="Export progress"><span aria-hidden="true">💾 </span>Export</button>
+          <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.triggerImport()" title="Import progress"><span aria-hidden="true">📂 </span>Import</button>
+        </div>
       </div>
     </div>
 
@@ -206,16 +200,17 @@
     <!-- Island grid -->
     <div class="island-grid" id="island-grid"></div>
 
+    </div><!-- /dashboard-content -->
   </main>
 </div>
 
 <!-- ── Mobile Bottom Nav (≤900px only) ────────────────────────────────────── -->
 <nav class="mobile-nav">
-  <button class="mobile-nav-item active" onclick="window.scrollTo(0,0)">
+  <button class="mobile-nav-item active" id="mobile-nav-dashboard" onclick="goToDashboard()">
     <span class="mobile-nav-icon">🏠</span>
     Home
   </button>
-  <button class="mobile-nav-item" onclick="openProfileModal()">
+  <button class="mobile-nav-item" id="mobile-nav-profile" onclick="openProfileModal()">
     <span class="mobile-nav-icon">👤</span>
     Profile
   </button>
@@ -315,12 +310,108 @@ function getYearGeographyTopics() {
   user = requireAuth();
   touchStreak();
   renderSidebar();
+  renderHeroBanner();
   renderWeekPlan();
   renderStats();
   renderFilters();
   renderGrid();
   setWelcome();
 })();
+
+// ── Hero Banner ──────────────────────────────────────────────────────────────
+function getHeroBannerIsland() {
+  const curriculum = getYearCurriculum();
+  const allProgress = getAllProgress();
+
+  // 1. Last active island (not mastered)
+  const lastId = localStorage.getItem('sm_last_island');
+  if (lastId) {
+    const island = curriculum.find(i => i.id === lastId);
+    if (island && getIslandStatus(lastId) > 0 && getIslandStatus(lastId) < 4) {
+      return island;
+    }
+  }
+
+  // 2. First incomplete item from this week's study plan
+  const plan = StudyPlanner.getStudyPlan();
+  if (plan) {
+    const weekNum = StudyPlanner.getCurrentWeekNumber();
+    const data = StudyPlanner.getWeekChecklist(weekNum);
+    if (data) {
+      for (const subj of data.subjects) {
+        for (const topic of subj.topics) {
+          for (const isl of topic.islands) {
+            if (!isl.complete) {
+              const island = curriculum.find(i => i.id === isl.islandId);
+              if (island) return island;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 3. Any in-progress island (status 1-3)
+  for (const island of curriculum) {
+    const s = getIslandStatus(island.id);
+    if (s > 0 && s < 4) return island;
+  }
+
+  // 4. First unlocked unstarted island
+  for (const island of curriculum) {
+    if (getIslandStatus(island.id) === 0 && isIslandUnlocked(island, allProgress)) {
+      return island;
+    }
+  }
+
+  return null;
+}
+
+function renderHeroBanner() {
+  const banner = document.getElementById('hero-banner');
+  const island = getHeroBannerIsland();
+  if (!island) { banner.style.display = 'none'; return; }
+
+  const status = getIslandStatus(island.id);
+  const nextTask = StudyPlanner.getNextTask(island.id);
+  const nextTab = nextTask === 'lesson' ? 'lesson'
+                : nextTask === 'flashcards' ? 'flashcards' : 'practice';
+
+  // Label
+  const action = status === 0 ? 'GET STARTED' : 'PICK UP WHERE YOU LEFT OFF';
+  document.getElementById('hero-label').textContent = action + ' · ' + island.subject.toUpperCase();
+
+  // Emoji, title
+  document.getElementById('hero-emoji').textContent = island.emoji;
+  document.getElementById('hero-title').textContent = island.name;
+
+  // Subtitle
+  let subtitle = 'Start your first lesson';
+  if (nextTask === 'flashcards') subtitle = "You've finished the lesson — try the flashcards next";
+  else if (nextTask === 'quiz') subtitle = 'Flashcards done — time for the quiz';
+  else if (nextTask === 'complete') subtitle = 'All done — review anytime';
+  else if (status > 0) subtitle = 'Continue the lesson';
+  document.getElementById('hero-subtitle').textContent = subtitle;
+
+  // Button
+  const btn = document.getElementById('hero-btn');
+  btn.href = 'island.html?id=' + island.id + '&tab=' + nextTab;
+  btn.textContent = status === 0 ? 'Start →' : 'Continue →';
+
+  // Dots (lesson / flashcards / quiz)
+  const dotStates = [
+    status >= 1,
+    nextTask === 'quiz' || nextTask === 'complete',
+    nextTask === 'complete'
+  ];
+  document.getElementById('hero-dots').innerHTML = dotStates.map(done =>
+    '<span class="hero-dot' + (done ? ' filled' : '') + '"></span>'
+  ).join('');
+
+  // Theme color
+  banner.style.setProperty('--hero-accent', island.color);
+  banner.style.display = '';
+}
 
 // ── Welcome ──────────────────────────────────────────────────────────────────
 function setWelcome() {
@@ -337,7 +428,7 @@ function setWelcome() {
       const remaining = data.totalItems - data.doneItems;
       subEl.textContent = data.allDone
         ? `Week ${weekNum} complete — nice work! 🎉`
-        : `Week ${weekNum} of your study plan — ${remaining} task${remaining !== 1 ? 's' : ''} this week.`;
+        : `You have ${remaining} task${remaining !== 1 ? 's' : ''} remaining this week.`;
       return;
     }
   }
@@ -372,33 +463,41 @@ function renderWeekPlan() {
   card.style.display = '';
 
   renderThisWeekTab();
-  renderProgressTab();
 }
 
-// ── Tab switching ────────────────────────────────────────────────────────────
-function switchPlanTab(tab) {
-  document.querySelectorAll('.wp-tab').forEach(btn => {
-    const isActive = btn.dataset.tab === tab;
-    btn.classList.toggle('active', isActive);
-    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
-  });
-  document.getElementById('wp-thisweek').style.display = tab === 'thisweek' ? '' : 'none';
-  document.getElementById('wp-progress').style.display = tab === 'progress' ? '' : 'none';
+// ── Collapse toggle for My Goals section ────────────────────────────────────
+function toggleWeekPlanCollapse() {
+  const body = document.getElementById('week-plan-collapsible');
+  const toggle = document.getElementById('goals-toggle');
+  const isCollapsed = body.classList.toggle('collapsed');
+  toggle.textContent = isCollapsed ? 'Show this week ▾' : 'Hide this week ▴';
+  toggle.classList.toggle('active', !isCollapsed);
 }
 
-// ── Tab 1: This Week ────────────────────────────────────────────────────────
+// ── Tab 1: My Goals ─────────────────────────────────────────────────────────
 function renderThisWeekTab() {
   const weekNum = StudyPlanner.getCurrentWeekNumber();
   const data = StudyPlanner.getWeekChecklist(weekNum);
   if (!data) return;
 
-  document.getElementById('week-num').textContent = data.weekNumber;
-  document.getElementById('week-total').textContent = data.totalWeeks;
+  // Segmented progress bar — one segment per task
+  const segEl = document.getElementById('goals-segments');
+  const items = [];
+  if (data.comprehension) items.push({ done: data.comprehension.complete, color: '#f59e0b' });
+  data.subjects.forEach(subj => {
+    subj.topics.forEach(topic => {
+      topic.islands.forEach(island => {
+        items.push({ done: island.complete, color: subj.subjectColor });
+      });
+    });
+  });
+  segEl.innerHTML = items.map(it =>
+    '<div class="goals-seg' + (it.done ? ' done' : '') + '" style="--seg-color:' + it.color + '"></div>'
+  ).join('');
 
-  const pct = data.totalItems > 0 ? Math.round((data.doneItems / data.totalItems) * 100) : 0;
-  document.getElementById('week-bar').style.width = pct + '%';
+  const remaining = data.totalItems - data.doneItems;
   document.getElementById('week-count').textContent =
-    data.allDone ? '🎉 All done this week!' : data.doneItems + ' of ' + data.totalItems + ' done';
+    data.allDone ? '🎉 All done!' : remaining + ' remaining';
 
   const listEl = document.getElementById('week-list');
 
@@ -413,14 +512,14 @@ function renderThisWeekTab() {
   if (data.comprehension) {
     const c = data.comprehension;
     html += `<div class="week-plan-subject">
-      <div class="week-plan-subject-header" style="color:#ba7517">
+      <div class="week-plan-subject-header" style="color:#f59e0b">
         📝 Comprehension
       </div>
       <div class="week-plan-item${c.complete ? ' complete' : ''}">
         <span class="wp-dot-label">${c.typeLabel}</span>
         <span class="week-plan-name">${c.title}</span>
         ${c.complete
-          ? '<span class="week-plan-done">✓ ' + c.score + '/' + c.total + '</span>'
+          ? '<span class="week-plan-done">✓ Done</span>'
           : '<a href="comprehension.html?id=' + c.passageId + '" class="week-plan-go">Start →</a>'}
       </div>
     </div>`;
@@ -430,7 +529,7 @@ function renderThisWeekTab() {
   data.subjects.forEach(subj => {
     html += `<div class="week-plan-subject">
       <div class="week-plan-subject-header" style="color:${subj.subjectColor}">
-        ${subj.subjectEmoji} ${subj.subjectName}
+        ${subj.subjectEmoji} ${subj.subjectName.toUpperCase()}
       </div>`;
 
     // Render ungated island items
@@ -449,6 +548,9 @@ function renderThisWeekTab() {
             : '<span class="wp-dot empty"></span>');
         }
 
+        const sqCls = island.dots > 0 ? 'filled' : 'empty';
+        const square = `<span class="wp-square ${sqCls}" style="--sq-color:${subj.subjectColor}"></span>`;
+
         let action = '';
         if (island.complete) {
           action = '<span class="week-plan-done">✓ Done</span>';
@@ -458,8 +560,9 @@ function renderThisWeekTab() {
         }
 
         html += `<div class="week-plan-item${island.complete ? ' complete' : ''}">
-          <span class="week-plan-dots">${dots.join('')}</span>
+          ${square}
           <span class="week-plan-name">${island.islandName}</span>
+          <span class="week-plan-dots">${dots.join('')}</span>
           ${action}
         </div>`;
       });
@@ -538,12 +641,12 @@ function renderNextWeekPreview(nextData, containerEl) {
   if (nextData.comprehension) {
     const c = nextData.comprehension;
     html += `<div class="week-plan-subject">
-      <div class="week-plan-subject-header" style="color:#ba7517">📝 Comprehension</div>
+      <div class="week-plan-subject-header" style="color:#f59e0b">📝 Comprehension</div>
       <div class="week-plan-item${c.complete ? ' complete' : ''}">
         <span class="wp-dot-label">${c.typeLabel}</span>
         <span class="week-plan-name">${c.title}</span>
         ${c.complete
-          ? '<span class="week-plan-done">✓ ' + c.score + '/' + c.total + '</span>'
+          ? '<span class="week-plan-done">✓ Done</span>'
           : '<a href="comprehension.html?id=' + c.passageId + '" class="week-plan-go">Start →</a>'}
       </div>
     </div>`;
@@ -601,22 +704,33 @@ function renderNextWeekPreview(nextData, containerEl) {
 
 // ── Tab 2: My Progress + Road Ahead ─────────────────────────────────────────
 function renderProgressTab() {
-  // Topic-level progress bars
+  const section = document.getElementById('profile-progress-section');
+  if (!StudyPlanner.getStudyPlan()) {
+    if (section) section.style.display = 'none';
+    return;
+  }
+  if (section) section.style.display = '';
+  // Subject progress cards
   const tp = StudyPlanner.getTopicProgress();
   const progEl = document.getElementById('week-progress');
   const sids = ['math','english','science','history','geography'];
-  let progHtml = '<h3 class="wp-section-title">Topic Progress</h3>';
+  let progHtml = '<h3 class="wp-section-title">Your subjects 📚</h3>';
+  progHtml += '<div class="subj-cards-scroll"><div class="subj-cards">';
   sids.forEach(sid => {
     const s = tp.subjects[sid];
     if (!s || s.total === 0) return;
-    progHtml += `<div class="wp-prog-row">
-      <span class="wp-prog-label" style="color:${s.color}">${s.emoji} ${s.name}</span>
-      <div class="wp-prog-bar-track">
-        <div class="wp-prog-bar-fill" style="width:${s.percent}%;background:${s.color}"></div>
+    const pct = s.total > 0 ? Math.round((s.completed / s.total) * 100) : 0;
+    progHtml += `<div class="subj-card" style="--subj-color:${s.color}">
+      <div class="subj-card-blob" aria-hidden="true"></div>
+      <div class="subj-card-emoji">${s.emoji}</div>
+      <div class="subj-card-name">${s.name}</div>
+      <div class="subj-card-stat">${s.completed} of ${s.total} mastered</div>
+      <div class="subj-card-bar-track">
+        <div class="subj-card-bar-fill" style="width:${pct}%"></div>
       </div>
-      <span class="wp-prog-stat">${s.completed}/${s.total}</span>
     </div>`;
   });
+  progHtml += '</div></div>';
   progHtml += `<div class="wp-prog-overall">Overall: ${tp.completed} of ${tp.total} topics (${tp.percent}%)</div>`;
   progEl.innerHTML = progHtml;
 
@@ -728,15 +842,7 @@ function activateStudyPlan() {
 
 // ── Sidebar ──────────────────────────────────────────────────────────────────
 function renderSidebar() {
-  const xp = getTotalXP();
-  const lvl = getUserLevel(xp);
-  const pct = getLevelProgress(xp);
-  const nextXP = lvl.maxXP === Infinity ? '∞' : lvl.maxXP + 1;
   document.getElementById('sidebar-name').textContent = user.name;
-  document.getElementById('sidebar-level').textContent = `Level ${lvl.level} · ${lvl.title}`;
-  document.getElementById('sidebar-xp').textContent = xp + ' XP';
-  document.getElementById('sidebar-xp-next').textContent = nextXP + ' XP';
-  document.getElementById('sidebar-xp-fill').style.width = pct + '%';
   const streak = getStreak();
   document.getElementById('streak-display').textContent = `🔥 ${streak} day${streak !== 1 ? 's' : ''}`;
   const mobileStreak = document.getElementById('mobile-streak-label');
@@ -756,8 +862,8 @@ function getYearStats() {
 }
 function renderStats() {
   const stats = getYearStats();
-  document.getElementById('stat-started').textContent = stats.started;
-  document.getElementById('stat-mastered').textContent = stats.mastered;
+  const tp = StudyPlanner.getTopicProgress();
+  document.getElementById('stat-mastered').textContent = tp.completed;
   document.getElementById('stat-xp').textContent = stats.xp;
   document.getElementById('stat-streak').textContent = stats.streak;
 }
@@ -945,19 +1051,21 @@ function renderMathTopicCards() {
     const totalIslands = topicIslands.length;
     const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
     const hasContent = topic.hasContent !== false;
+    const testPassed = StudyPlanner.isTopicTestPassed(topic.id);
 
-    return `<div class="island-card" style="border-top-color:#3f6f00;cursor:pointer"
+    return `<div class="island-card" style="border-top-color:#3b82f6;cursor:pointer"
         onclick="goToTopic('${topic.id}')"
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands mastered">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands mastered${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
-        ${createProgressRing(progress, '#3f6f00', 52)}
+        ${createProgressRing(progress, '#3b82f6', 52)}
       </div>
       <div style="margin-bottom:6px">
-        <span class="subject-pill" style="background:#3f6f00">Mathematics</span>
+        <span class="subject-pill" style="background:#3b82f6">Mathematics</span>
+        ${testPassed ? '<span class="badge" style="font-size:.65rem;background:#22c55e;color:white;padding:2px 6px;border-radius:4px;margin-left:4px">✓ Test</span>' : ''}
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
@@ -991,19 +1099,21 @@ function renderEnglishTopicCards() {
     const totalIslands = topicIslands.length;
     const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
     const hasContent = topic.hasContent !== false;
+    const testPassed = StudyPlanner.isTopicTestPassed(topic.id);
 
-    return `<div class="island-card" style="border-top-color:#ba7517;cursor:pointer"
+    return `<div class="island-card" style="border-top-color:#f59e0b;cursor:pointer"
         onclick="goToTopic('${topic.id}')"
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands mastered">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands mastered${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
-        ${createProgressRing(progress, '#ba7517', 52)}
+        ${createProgressRing(progress, '#f59e0b', 52)}
       </div>
       <div style="margin-bottom:6px">
-        <span class="subject-pill" style="background:#ba7517">English</span>
+        <span class="subject-pill" style="background:#f59e0b">English</span>
+        ${testPassed ? '<span class="badge" style="font-size:.65rem;background:#22c55e;color:white;padding:2px 6px;border-radius:4px;margin-left:4px">✓ Test</span>' : ''}
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
@@ -1026,7 +1136,7 @@ function renderScienceTopics(grid) {
 }
 
 function renderScienceTopicCards() {
-  const sciColor = '#185fa5';
+  const sciColor = '#6366f1';
   return getYearScienceTopics().map(topic => {
     const topicIslands = CURRICULUM.filter(i => i.topicId === topic.id);
     let mastered = 0, started = 0;
@@ -1038,19 +1148,21 @@ function renderScienceTopicCards() {
     const totalIslands = topicIslands.length;
     const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
     const hasContent = topic.hasContent !== false;
+    const testPassed = StudyPlanner.isTopicTestPassed(topic.id);
 
     return `<div class="island-card" style="border-top-color:${sciColor};cursor:pointer"
         onclick="goToTopic('${topic.id}')"
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, sciColor, 52)}
       </div>
       <div style="margin-bottom:6px">
         <span class="subject-pill" style="background:${sciColor}">Science</span>
+        ${testPassed ? '<span class="badge" style="font-size:.65rem;background:#22c55e;color:white;padding:2px 6px;border-radius:4px;margin-left:4px">✓ Test</span>' : ''}
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
@@ -1073,7 +1185,7 @@ function renderHistoryTopics(grid) {
 }
 
 function renderHistoryTopicCards() {
-  const hisColor = '#6d28d9';
+  const hisColor = '#a855f7';
   return getYearHistoryTopics().map(topic => {
     const topicIslands = CURRICULUM.filter(i => i.topicId === topic.id);
     let mastered = 0, started = 0;
@@ -1085,19 +1197,21 @@ function renderHistoryTopicCards() {
     const totalIslands = topicIslands.length;
     const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
     const hasContent = topic.hasContent !== false;
+    const testPassed = StudyPlanner.isTopicTestPassed(topic.id);
 
     return `<div class="island-card" style="border-top-color:${hisColor};cursor:pointer"
         onclick="goToTopic('${topic.id}')"
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, hisColor, 52)}
       </div>
       <div style="margin-bottom:6px">
         <span class="subject-pill" style="background:${hisColor}">History</span>
+        ${testPassed ? '<span class="badge" style="font-size:.65rem;background:#22c55e;color:white;padding:2px 6px;border-radius:4px;margin-left:4px">✓ Test</span>' : ''}
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
@@ -1120,7 +1234,7 @@ function renderGeographyTopics(grid) {
 }
 
 function renderGeographyTopicCards() {
-  const geoColor = '#0891b2';
+  const geoColor = '#0d9488';
   return getYearGeographyTopics().map(topic => {
     const topicIslands = CURRICULUM.filter(i => i.topicId === topic.id);
     let mastered = 0, started = 0;
@@ -1132,19 +1246,21 @@ function renderGeographyTopicCards() {
     const totalIslands = topicIslands.length;
     const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
     const hasContent = topic.hasContent !== false;
+    const testPassed = StudyPlanner.isTopicTestPassed(topic.id);
 
     return `<div class="island-card" style="border-top-color:${geoColor};cursor:pointer"
         onclick="goToTopic('${topic.id}')"
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, geoColor, 52)}
       </div>
       <div style="margin-bottom:6px">
         <span class="subject-pill" style="background:${geoColor}">Geography</span>
+        ${testPassed ? '<span class="badge" style="font-size:.65rem;background:#22c55e;color:white;padding:2px 6px;border-radius:4px;margin-left:4px">✓ Test</span>' : ''}
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
@@ -1210,37 +1326,39 @@ function showLockedMsg(id) {
   showToast(`🔒 Complete ${prereqNames} first`, 'error');
 }
 
-// ── Profile Modal ─────────────────────────────────────────────────────────────
-let _modalTrigger = null;
+// ── Profile Page ──────────────────────────────────────────────────────────────
+function setNavActive(page) {
+  const isDash = page === 'dashboard';
+  document.getElementById('nav-dashboard').classList.toggle('active', isDash);
+  document.getElementById('nav-profile').classList.toggle('active', !isDash);
+  const md = document.getElementById('mobile-nav-dashboard');
+  const mp = document.getElementById('mobile-nav-profile');
+  if (md) md.classList.toggle('active', isDash);
+  if (mp) mp.classList.toggle('active', !isDash);
+}
 function openProfileModal() {
-  _modalTrigger = document.activeElement;
   document.getElementById('edit-name').value = user.name;
   document.getElementById('edit-year').value = user.year || 'Year 10';
   document.getElementById('edit-school').value = user.school || '';
-  document.getElementById('profile-modal').classList.add('show');
-  setTimeout(() => document.getElementById('edit-name').focus(), 50);
+  document.getElementById('dashboard-content').style.display = 'none';
+  document.getElementById('profile-page').style.display = '';
+  setNavActive('profile');
+  renderProgressTab();
+  window.scrollTo(0, 0);
 }
-function closeProfileModal(e) {
-  if (e && e.target !== document.getElementById('profile-modal')) return;
-  document.getElementById('profile-modal').classList.remove('show');
-  if (_modalTrigger) { _modalTrigger.focus(); _modalTrigger = null; }
+function closeProfilePage() {
+  document.getElementById('profile-page').style.display = 'none';
+  document.getElementById('dashboard-content').style.display = '';
+  setNavActive('dashboard');
+  window.scrollTo(0, 0);
 }
-
-// Focus trap for profile modal
-document.getElementById('profile-modal').addEventListener('keydown', function(e) {
-  if (!this.classList.contains('show')) return;
-  if (e.key !== 'Tab') return;
-  const focusable = this.querySelector('.modal').querySelectorAll(
-    'button:not([disabled]), input, select, [tabindex]:not([tabindex="-1"])'
-  );
-  const first = focusable[0];
-  const last  = focusable[focusable.length - 1];
-  if (e.shiftKey) {
-    if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+function goToDashboard() {
+  if (document.getElementById('profile-page').style.display !== 'none') {
+    closeProfilePage();
   } else {
-    if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    window.scrollTo(0, 0);
   }
-});
+}
 function saveProfile() {
   const name   = document.getElementById('edit-name').value.trim();
   const year   = document.getElementById('edit-year').value;
@@ -1253,7 +1371,7 @@ function saveProfile() {
   const profiles = JSON.parse(localStorage.getItem('sm_profiles') || '[]');
   const idx = profiles.findIndex(p => p.joinDate === user.joinDate);
   if (idx !== -1) { profiles[idx] = user; localStorage.setItem('sm_profiles', JSON.stringify(profiles)); }
-  document.getElementById('profile-modal').classList.remove('show');
+  closeProfilePage();
   renderSidebar();
   renderStats();
   renderFilters();
@@ -1266,7 +1384,7 @@ function confirmReset() {
   saveAllProgress({});
   user.xp = 0;
   setUser(user);
-  document.getElementById('profile-modal').classList.remove('show');
+  closeProfilePage();
   renderSidebar();
   renderStats();
   renderGrid();
@@ -1322,7 +1440,9 @@ function toggleSidebar() {
 // ── Keyboard ─────────────────────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
-    document.getElementById('profile-modal').classList.remove('show');
+    if (document.getElementById('profile-page').style.display !== 'none') {
+      closeProfilePage();
+    }
     closeSidebar();
   }
 });

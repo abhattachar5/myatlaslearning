@@ -94,7 +94,7 @@ Object.assign(LESSONS, {
 </div>
 
 <h3>Decoding a Complex Word: Step by Step</h3>
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <strong>Example: unimaginable</strong><br><br>
   <strong>un-</strong> (prefix) = not<br>
   <strong>imagine</strong> (root word) = to form a mental picture<br>
@@ -192,14 +192,14 @@ Object.assign(LESSONS, {
 <h3>The Decoding Strategy</h3>
 <p>When you encounter an unfamiliar word, scan it for any roots you recognise. Then combine their meanings to make an educated guess.</p>
 
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <strong>Worked Example: autobiography</strong><br><br>
   <strong>auto</strong> = self &nbsp;&nbsp;|&nbsp;&nbsp; <strong>bio</strong> = life &nbsp;&nbsp;|&nbsp;&nbsp; <strong>graph</strong> = write<br><br>
   Combine: <em>writing about your own life</em><br><br>
   This is exactly what an autobiography is &mdash; a book someone writes about their own life. Knowing all three roots makes the meaning obvious.
 </div>
 
-<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <strong>Worked Example: interrupt</strong><br><br>
   <strong>inter</strong> = between &nbsp;&nbsp;|&nbsp;&nbsp; <strong>rupt</strong> = break<br><br>
   Combine: <em>to break in between</em> &mdash; to break into the middle of a conversation or event.
@@ -220,7 +220,7 @@ Object.assign(LESSONS, {
 <h3>Synonyms: Same (But Not Identical) Meaning</h3>
 <p>A <strong>synonym</strong> is a word with a similar meaning to another word. However, synonyms are almost never perfectly interchangeable — they carry different shades of meaning, levels of intensity, or connotations.</p>
 
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <strong>Synonym Spectrum &mdash; words for angry:</strong><br><br>
   irritated &rarr; annoyed &rarr; angry &rarr; furious &rarr; enraged<br><br>
   All mean some level of displeasure, but <em>irritated</em> is mild and <em>enraged</em> is extreme. A skilled writer chooses the word that matches the exact intensity they intend.
@@ -366,7 +366,7 @@ Object.assign(LESSONS, {
 </table>
 
 <h3>Memory Tricks</h3>
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <strong>their / there / they&rsquo;re:</strong> &ldquo;there&rdquo; contains the word &ldquo;here&rdquo; &mdash; both relate to a place.<br>
   <strong>your / you&rsquo;re:</strong> if you can say &ldquo;you are&rdquo;, use the apostrophe form.<br>
   <strong>affect / effect:</strong> Affect is the Action (both A); Effect is the End result (both E).<br>
@@ -390,7 +390,7 @@ Object.assign(LESSONS, {
 <p><strong>Denotation</strong> is the literal, dictionary meaning of a word.<br>
 <strong>Connotation</strong> is the emotional association or feeling a word carries.</p>
 
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   Both <em>slender</em> and <em>scrawny</em> mean thin (same denotation).<br>
   <em>Slender</em> suggests elegance and attractiveness &mdash; <strong>positive connotation</strong>.<br>
   <em>Scrawny</em> suggests unhealthy, unappealing thinness &mdash; <strong>negative connotation</strong>.
@@ -468,7 +468,7 @@ Object.assign(LESSONS, {
 <h3>Analogy Format</h3>
 <p>Analogies are written as: <strong>A : B :: C : D</strong>, which is read as <em>&ldquo;A is to B as C is to D.&rdquo;</em></p>
 
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <strong>Example:</strong> puppy : dog :: kitten : cat<br>
   Relationship: a young animal (baby) to its adult form.<br>
   A puppy is a baby dog; a kitten is a baby cat. Both pairs show the same relationship.
@@ -526,7 +526,7 @@ Object.assign(LESSONS, {
   <li><strong>Check all options</strong> &mdash; sometimes more than one seems plausible. The best answer fits the relationship most precisely.</li>
 </ol>
 
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <strong>Worked Example:</strong> timid : bold :: frugal : ___<br><br>
   Step 1: Timid means lacking courage; bold means courageous. Relationship: antonyms.<br>
   Step 2: &ldquo;Timid is the opposite of bold.&rdquo;<br>
@@ -581,7 +581,7 @@ Object.assign(LESSONS, {
   <li><strong>Confirm</strong> your guess fits the overall context of the passage.</li>
 </ol>
 
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <strong>Worked Example:</strong><br>
   &ldquo;Unlike her gregarious sister who loved parties, Maya was reserved.&rdquo;<br><br>
   Step 1: Read the full sentence. Two sisters are being contrasted.<br>
@@ -617,7 +617,7 @@ Object.assign(LESSONS, {
 <h3>Alphabetical Order</h3>
 <p>Both dictionaries and indexes are arranged alphabetically. When words share the same first letter, compare the second; if those match, compare the third, and so on.</p>
 
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <strong>Example:</strong> Order &mdash; plan, plum, plod, play<br>
   All start with &lsquo;pl&rsquo;. Compare the third letter: a, a, o, u.<br>
   &lsquo;a&rsquo; before &lsquo;o&rsquo; before &lsquo;u&rsquo;.<br>
@@ -797,7 +797,7 @@ Object.assign(LESSONS, {
 </ul>
 <p>Identifying the part of speech helps you work out which meaning is intended.</p>
 
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <strong>Tip:</strong> In a dictionary, different meanings of the same word are listed as numbered definitions. If a word can be more than one part of speech, each part of speech is listed separately. Learning to navigate these entries is a useful skill.
 </div>
 

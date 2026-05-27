@@ -34,7 +34,7 @@ const ENGLISH_TOPICS = [
 // et-01 Vocabulary
 CURRICULUM.push(
   {
-    id:"ei-01-1",name:"Prefixes & Suffixes",emoji:"➕",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-01-1",name:"Prefixes & Suffixes",emoji:"➕",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-01",difficulty:1,estimatedHours:2,
     description:"Understand how prefixes and suffixes change the meaning of root words.",
     learningOutcomes:[
@@ -53,7 +53,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-01-2",name:"Greek & Latin Roots",emoji:"🏛️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-01-2",name:"Greek & Latin Roots",emoji:"🏛️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-01",difficulty:2,estimatedHours:2,
     description:"Use knowledge of Greek and Latin roots to decode the meaning of unfamiliar words.",
     learningOutcomes:[
@@ -72,7 +72,7 @@ CURRICULUM.push(
     prerequisites:["ei-01-1"]
   },
   {
-    id:"ei-01-3",name:"Synonyms & Antonyms",emoji:"↔️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-01-3",name:"Synonyms & Antonyms",emoji:"↔️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-01",difficulty:1,estimatedHours:1,
     description:"Choose the most appropriate synonym or antonym in context.",
     learningOutcomes:[
@@ -91,7 +91,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-01-4",name:"Homophones",emoji:"🔊",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-01-4",name:"Homophones",emoji:"🔊",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-01",difficulty:1,estimatedHours:1,
     description:"Choose the correct homophone and understand how context determines meaning.",
     learningOutcomes:[
@@ -110,7 +110,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-01-5",name:"Shades of Meaning & Connotation",emoji:"🎨",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-01-5",name:"Shades of Meaning & Connotation",emoji:"🎨",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-01",difficulty:2,estimatedHours:2,
     description:"Explore how related words differ in intensity and whether they carry positive or negative connotations.",
     learningOutcomes:[
@@ -129,7 +129,7 @@ CURRICULUM.push(
     prerequisites:["ei-01-3"]
   },
   {
-    id:"ei-01-6",name:"Analogies",emoji:"🔗",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-01-6",name:"Analogies",emoji:"🔗",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-01",difficulty:2,estimatedHours:1,
     description:"Identify and complete word analogies by understanding the relationship between pairs of words.",
     learningOutcomes:[
@@ -148,7 +148,7 @@ CURRICULUM.push(
     prerequisites:["ei-01-3"]
   },
   {
-    id:"ei-01-7",name:"Context Clues",emoji:"🔍",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-01-7",name:"Context Clues",emoji:"🔍",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-01",difficulty:1,estimatedHours:2,
     description:"Use the surrounding words and sentences to work out the meaning of unfamiliar words.",
     learningOutcomes:[
@@ -167,7 +167,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-01-8",name:"Reference Skills",emoji:"📚",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-01-8",name:"Reference Skills",emoji:"📚",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-01",difficulty:1,estimatedHours:1,
     description:"Use dictionaries and thesauruses confidently, including alphabetical ordering and guide words.",
     learningOutcomes:[
@@ -186,7 +186,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-01-9",name:"Multiple-Meaning Words",emoji:"🔀",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-01-9",name:"Multiple-Meaning Words",emoji:"🔀",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-01",difficulty:1,estimatedHours:2,
     description:"Identify and distinguish between different meanings of words that have more than one definition, using context to determine the correct meaning.",
     learningOutcomes:[
@@ -209,7 +209,7 @@ CURRICULUM.push(
 // et-02 Grammar
 CURRICULUM.push(
   {
-    id:"ei-02-1",name:"Sentences, Fragments & Run-ons",emoji:"📝",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-02-1",name:"Sentences, Fragments & Run-ons",emoji:"📝",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-02",difficulty:1,estimatedHours:2,
     description:"Identify complete sentences and distinguish them from fragments and run-ons.",
     learningOutcomes:[
@@ -228,7 +228,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-02-2",name:"Nouns & Plurals",emoji:"🔤",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-02-2",name:"Nouns & Plurals",emoji:"🔤",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-02",difficulty:1,estimatedHours:1,
     description:"Identify common and proper nouns, form plurals correctly, and use possessives accurately.",
     learningOutcomes:[
@@ -247,7 +247,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-02-3",name:"Pronouns & Antecedents",emoji:"👥",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-02-3",name:"Pronouns & Antecedents",emoji:"👥",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-02",difficulty:2,estimatedHours:2,
     description:"Identify pronouns and their antecedents, ensure agreement, and avoid vague pronoun references.",
     learningOutcomes:[
@@ -266,7 +266,7 @@ CURRICULUM.push(
     prerequisites:["ei-02-2"]
   },
   {
-    id:"ei-02-4",name:"Pronoun Types",emoji:"🔀",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-02-4",name:"Pronoun Types",emoji:"🔀",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-02",difficulty:2,estimatedHours:2,
     description:"Use subject, object, possessive, reflexive, intensive and relative pronouns correctly.",
     learningOutcomes:[
@@ -285,7 +285,7 @@ CURRICULUM.push(
     prerequisites:["ei-02-3"]
   },
   {
-    id:"ei-02-5",name:"Verb Types",emoji:"⚡",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-02-5",name:"Verb Types",emoji:"⚡",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-02",difficulty:2,estimatedHours:2,
     description:"Identify and use main, helping, linking, transitive, intransitive and modal verbs correctly.",
     learningOutcomes:[
@@ -304,7 +304,7 @@ CURRICULUM.push(
     prerequisites:["ei-02-1"]
   },
   {
-    id:"ei-02-6",name:"Subject-Verb Agreement",emoji:"✅",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-02-6",name:"Subject-Verb Agreement",emoji:"✅",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-02",difficulty:1,estimatedHours:1,
     description:"Ensure subjects and verbs agree in number, including with compound subjects.",
     learningOutcomes:[
@@ -323,7 +323,7 @@ CURRICULUM.push(
     prerequisites:["ei-02-5"]
   },
   {
-    id:"ei-02-7",name:"Verb Tenses",emoji:"⏰",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-02-7",name:"Verb Tenses",emoji:"⏰",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-02",difficulty:2,estimatedHours:2,
     description:"Form and use simple, progressive and perfect verb tenses correctly, and avoid inappropriate tense shifts.",
     learningOutcomes:[
@@ -342,7 +342,7 @@ CURRICULUM.push(
     prerequisites:["ei-02-5"]
   },
   {
-    id:"ei-02-8",name:"Adjectives & Adverbs",emoji:"🎯",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-02-8",name:"Adjectives & Adverbs",emoji:"🎯",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-02",difficulty:1,estimatedHours:2,
     description:"Identify and use adjectives and adverbs, including comparative and superlative forms.",
     learningOutcomes:[
@@ -361,7 +361,7 @@ CURRICULUM.push(
     prerequisites:["ei-02-1"]
   },
   {
-    id:"ei-02-9",name:"Prepositions",emoji:"📍",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-02-9",name:"Prepositions",emoji:"📍",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-02",difficulty:1,estimatedHours:1,
     description:"Identify prepositions, their objects and prepositional phrases.",
     learningOutcomes:[
@@ -380,7 +380,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-02-10",name:"Conjunctions & Contractions",emoji:"🔗",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-02-10",name:"Conjunctions & Contractions",emoji:"🔗",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-02",difficulty:1,estimatedHours:1,
     description:"Use coordinating, subordinating and correlative conjunctions correctly, and form contractions accurately.",
     learningOutcomes:[
@@ -403,7 +403,7 @@ CURRICULUM.push(
 // et-03 Punctuation
 CURRICULUM.push(
   {
-    id:"ei-03-1",name:"Commas",emoji:"📌",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-03-1",name:"Commas",emoji:"📌",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-03",difficulty:1,estimatedHours:1,
     description:"Use commas correctly in compound sentences, with introductory elements, and to separate items.",
     learningOutcomes:[
@@ -422,7 +422,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-03-2",name:"Apostrophes",emoji:"✒️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-03-2",name:"Apostrophes",emoji:"✒️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-03",difficulty:1,estimatedHours:1,
     description:"Use apostrophes correctly for possession and contraction, and avoid common errors.",
     learningOutcomes:[
@@ -441,7 +441,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-03-3",name:"Speech Marks & Dialogue",emoji:"💬",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-03-3",name:"Speech Marks & Dialogue",emoji:"💬",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-03",difficulty:1,estimatedHours:2,
     description:"Punctuate direct speech correctly, including inverted commas and reporting clauses.",
     learningOutcomes:[
@@ -460,7 +460,7 @@ CURRICULUM.push(
     prerequisites:["ei-03-1"]
   },
   {
-    id:"ei-03-4",name:"Colons, Semicolons & Dashes",emoji:"⚙️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-03-4",name:"Colons, Semicolons & Dashes",emoji:"⚙️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-03",difficulty:2,estimatedHours:1,
     description:"Use colons, semicolons and dashes to structure sentences and create emphasis.",
     learningOutcomes:[
@@ -479,7 +479,7 @@ CURRICULUM.push(
     prerequisites:["ei-03-1"]
   },
   {
-    id:"ei-03-5",name:"Capitalisation & Formatting",emoji:"🔡",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-03-5",name:"Capitalisation & Formatting",emoji:"🔡",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-03",difficulty:1,estimatedHours:1,
     description:"Apply capitalisation rules correctly and format titles of books, films and other works.",
     learningOutcomes:[
@@ -505,7 +505,7 @@ CURRICULUM.push(
 // et-05 Reading Strategies
 CURRICULUM.push(
   {
-    id:"ei-05-1",name:"Author's Purpose & Tone",emoji:"🎯",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-05-1",name:"Author's Purpose & Tone",emoji:"🎯",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-05",difficulty:1,estimatedHours:2,
     description:"Identify why a writer has written a text and recognise the tone they use to achieve their purpose.",
     learningOutcomes:[
@@ -524,7 +524,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-05-2",name:"Text Structure",emoji:"🏗️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-05-2",name:"Text Structure",emoji:"🏗️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-05",difficulty:1,estimatedHours:2,
     description:"Recognise how texts are organised — chronological, compare/contrast, cause/effect, problem/solution — and explain why the writer chose that structure.",
     learningOutcomes:[
@@ -543,7 +543,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-05-3",name:"Literary Devices & Figurative Language",emoji:"✨",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-05-3",name:"Literary Devices & Figurative Language",emoji:"✨",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-05",difficulty:2,estimatedHours:2,
     description:"Identify simile, metaphor, personification, hyperbole, irony, alliteration and onomatopoeia, and analyse their effect on the reader.",
     learningOutcomes:[
@@ -562,7 +562,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-05-4",name:"Analysing Literature & Informational Texts",emoji:"📑",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-05-4",name:"Analysing Literature & Informational Texts",emoji:"📑",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-05",difficulty:2,estimatedHours:2,
     description:"Read short fiction and informational passages closely, tracing arguments and analysing how writers achieve their effects.",
     learningOutcomes:[
@@ -581,7 +581,7 @@ CURRICULUM.push(
     prerequisites:["ei-05-1"]
   },
   {
-    id:"ei-05-5",name:"Comparing Texts",emoji:"⚖️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-05-5",name:"Comparing Texts",emoji:"⚖️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-05",difficulty:2,estimatedHours:2,
     description:"Compare two texts on the same topic but in different genres or from different perspectives, explaining how context and purpose shape meaning.",
     learningOutcomes:[
@@ -604,7 +604,7 @@ CURRICULUM.push(
 // et-06 Writing Strategies
 CURRICULUM.push(
   {
-    id:"ei-06-1",name:"Planning & Organisation",emoji:"📋",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-06-1",name:"Planning & Organisation",emoji:"📋",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-06",difficulty:1,estimatedHours:2,
     description:"Plan writing effectively using essay structures, paragraph organisation, topic sentences and linking words.",
     learningOutcomes:[
@@ -623,7 +623,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-06-2",name:"Argumentative Writing",emoji:"⚔️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-06-2",name:"Argumentative Writing",emoji:"⚔️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-06",difficulty:2,estimatedHours:2,
     description:"Develop and support arguments, address counter-arguments, and use persuasive and rhetorical techniques effectively.",
     learningOutcomes:[
@@ -642,7 +642,7 @@ CURRICULUM.push(
     prerequisites:["ei-06-1"]
   },
   {
-    id:"ei-06-3",name:"Creative Writing Techniques",emoji:"🎨",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-06-3",name:"Creative Writing Techniques",emoji:"🎨",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-06",difficulty:2,estimatedHours:2,
     description:"Use creative techniques including show don't tell, sensory language, dialogue, narrative voice and descriptive writing.",
     learningOutcomes:[
@@ -661,7 +661,7 @@ CURRICULUM.push(
     prerequisites:["ei-06-1"]
   },
   {
-    id:"ei-06-4",name:"Editing & Proofreading",emoji:"🔧",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-06-4",name:"Editing & Proofreading",emoji:"🔧",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-06",difficulty:1,estimatedHours:2,
     description:"Revise drafts for clarity and impact, correct common errors, improve sentence variety and proofread accurately.",
     learningOutcomes:[
@@ -680,7 +680,7 @@ CURRICULUM.push(
     prerequisites:["ei-06-1"]
   },
   {
-    id:"ei-06-5",name:"Research & Referencing",emoji:"📚",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-06-5",name:"Research & Referencing",emoji:"📚",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-06",difficulty:2,estimatedHours:2,
     description:"Find and evaluate sources, paraphrase information in your own words, avoid plagiarism and reference sources correctly.",
     learningOutcomes:[
@@ -699,7 +699,7 @@ CURRICULUM.push(
     prerequisites:["ei-06-1"]
   },
   {
-    id:"ei-06-6",name:"Transitions & Conjunctive Adverbs",emoji:"🔗",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-06-6",name:"Transitions & Conjunctive Adverbs",emoji:"🔗",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-06",difficulty:1,estimatedHours:2,
     description:"Use conjunctive adverbs and transition words to connect ideas clearly, and punctuate them correctly.",
     learningOutcomes:[
@@ -722,7 +722,7 @@ CURRICULUM.push(
 // et-07 Poetry
 CURRICULUM.push(
   {
-    id:"ei-07-1",name:"Poetic Devices",emoji:"🎭",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-07-1",name:"Poetic Devices",emoji:"🎭",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-07",difficulty:1,estimatedHours:2,
     description:"Identify and explain the effect of simile, metaphor, personification, alliteration, assonance, onomatopoeia and repetition in poetry.",
     learningOutcomes:[
@@ -741,7 +741,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-07-2",name:"Form & Structure",emoji:"📐",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-07-2",name:"Form & Structure",emoji:"📐",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-07",difficulty:2,estimatedHours:2,
     description:"Understand poetic forms — sonnets, ballads, free verse, haiku — and structural features like stanzas, rhyme schemes and enjambment.",
     learningOutcomes:[
@@ -760,7 +760,7 @@ CURRICULUM.push(
     prerequisites:["ei-07-1"]
   },
   {
-    id:"ei-07-3",name:"Analysing a Poem",emoji:"🔎",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-07-3",name:"Analysing a Poem",emoji:"🔎",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-07",difficulty:2,estimatedHours:2,
     description:"Use a step-by-step approach to analyse an unseen poem — exploring meaning, mood, imagery, language choices and the poet's intent.",
     learningOutcomes:[
@@ -779,7 +779,7 @@ CURRICULUM.push(
     prerequisites:["ei-07-1","ei-07-2"]
   },
   {
-    id:"ei-07-4",name:"Writing Poetry",emoji:"🖊️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-07-4",name:"Writing Poetry",emoji:"🖊️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-07",difficulty:2,estimatedHours:2,
     description:"Compose original poetry using poetic techniques — choosing form, devices and language deliberately for effect.",
     learningOutcomes:[
@@ -802,7 +802,7 @@ CURRICULUM.push(
 // et-08 Shakespeare
 CURRICULUM.push(
   {
-    id:"ei-08-1",name:"Shakespeare's Language",emoji:"🗣️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-08-1",name:"Shakespeare's Language",emoji:"🗣️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-08",difficulty:1,estimatedHours:2,
     description:"Understand Elizabethan English — thee, thou, dost, hath — and learn to translate Shakespeare's language into modern English.",
     learningOutcomes:[
@@ -821,7 +821,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"ei-08-2",name:"Themes & Characters",emoji:"👑",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-08-2",name:"Themes & Characters",emoji:"👑",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-08",difficulty:2,estimatedHours:2,
     description:"Explore universal themes in Shakespeare's plays — love, ambition, jealousy, power, fate — and analyse how characters are developed.",
     learningOutcomes:[
@@ -840,7 +840,7 @@ CURRICULUM.push(
     prerequisites:["ei-08-1"]
   },
   {
-    id:"ei-08-3",name:"Dramatic Devices",emoji:"🎪",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-08-3",name:"Dramatic Devices",emoji:"🎪",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-08",difficulty:2,estimatedHours:2,
     description:"Understand dramatic irony, foreshadowing, tension, comedy and tragedy, and how Shakespeare uses staging and performance choices.",
     learningOutcomes:[
@@ -859,7 +859,7 @@ CURRICULUM.push(
     prerequisites:["ei-08-1"]
   },
   {
-    id:"ei-08-4",name:"Writing About Shakespeare",emoji:"📝",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"ei-08-4",name:"Writing About Shakespeare",emoji:"📝",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"et-08",difficulty:2,estimatedHours:2,
     description:"Develop essay-writing skills for Shakespeare — structuring paragraphs with PEE/PEEL, embedding quotations and writing about context.",
     learningOutcomes:[

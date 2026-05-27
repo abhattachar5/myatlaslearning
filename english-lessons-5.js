@@ -12,10 +12,10 @@ Object.assign(LESSONS, {
 <p>A handy mnemonic is <strong>PIEA</strong> — Persuade, Inform, Entertain, Advise. Most texts have one primary purpose, though some combine two or more.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Purpose</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Definition</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Example Text Type</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Signal Features</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Purpose</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Definition</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Example Text Type</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Signal Features</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Persuade</strong></td>
@@ -47,8 +47,8 @@ Object.assign(LESSONS, {
 <p><strong>Tone</strong> is the writer's attitude towards the subject or the reader. Think of it like a <em>tone of voice</em> — the same words spoken gently or angrily create completely different effects.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Tone</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">What It Sounds Like</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Tone</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">What It Sounds Like</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc"><strong>Formal</strong></td><td style="padding:8px;border:1px solid #ccc">Professional, serious, uses standard English</td></tr>
   <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc"><strong>Informal</strong></td><td style="padding:8px;border:1px solid #ccc">Chatty, relaxed, may use slang or contractions</td></tr>
@@ -97,10 +97,10 @@ Object.assign(LESSONS, {
 <h3>Five Key Text Structures</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Structure</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Definition</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Signal Words</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Example Text Type</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Structure</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Definition</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Signal Words</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Example Text Type</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Chronological</strong></td>
@@ -153,9 +153,9 @@ Object.assign(LESSONS, {
 <p>Structure is linked to purpose. Writers pick the structure that best achieves what they want:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Purpose</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Best Structure</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Why?</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Purpose</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Best Structure</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Why?</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Persuade (charity appeal)</td>
@@ -200,10 +200,10 @@ Object.assign(LESSONS, {
 <h3>Key Literary Devices</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Device</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Definition</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Example</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Effect on Reader</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Device</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Definition</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Effect on Reader</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Simile</strong></td>
@@ -267,8 +267,8 @@ Object.assign(LESSONS, {
 <h3>Classifying Figures of Speech</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Category</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Devices</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Category</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Devices</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc"><strong>Imagery</strong> (visual pictures)</td><td style="padding:8px;border:1px solid #ccc">Simile, Metaphor, Personification</td></tr>
   <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc"><strong>Sound devices</strong></td><td style="padding:8px;border:1px solid #ccc">Alliteration, Assonance, Onomatopoeia</td></tr>
@@ -318,9 +318,9 @@ Object.assign(LESSONS, {
 <p>To understand a character fully, look at four key areas:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Evidence Source</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">What It Reveals</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Evidence Source</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">What It Reveals</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Example</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>What they say</strong> (dialogue)</td>
@@ -373,8 +373,8 @@ Object.assign(LESSONS, {
 <p>Many non-fiction texts present an argument. Trace it by identifying:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Stage</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">What to Look For</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Stage</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">What to Look For</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Claim</strong></td>
@@ -422,8 +422,8 @@ Object.assign(LESSONS, {
 <p>When comparing two texts, consider these six key areas:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Comparison Point</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">What to Look For</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Comparison Point</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">What to Look For</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Purpose</strong></td>
@@ -455,8 +455,8 @@ Object.assign(LESSONS, {
 <p>Use these words and phrases to link your points about the two texts:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Showing Similarity</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Showing Difference</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Showing Similarity</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Showing Difference</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Similarly, Likewise, Both texts, In the same way, Equally</td>
@@ -497,9 +497,9 @@ Object.assign(LESSONS, {
 <p>The same topic can appear in very different forms. For example, the topic of climate change might appear as:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Genre</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Purpose</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc">Key Features</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Genre</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Purpose</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc">Key Features</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Newspaper article</td>
@@ -585,7 +585,7 @@ Object.assign(LESSONS, {
 </div>
 
 <p>You can also start a <strong>new sentence</strong> with a conjunctive adverb, followed by a comma:</p>
-<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #ba7517">
+<div style="background:#fff8e1;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #f59e0b">
   <em>The experiment failed. <strong>Therefore,</strong> the scientists tried a new approach.</em><br>
   <em>He wanted to go out. <strong>However,</strong> it was raining heavily.</em>
 </div>

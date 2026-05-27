@@ -1085,7 +1085,7 @@ DIAGRAMS["uk-physical-regions"] = `<svg viewBox="0 0 240 180" xmlns="http://www.
 
   <!-- simplified UK outline -->
   <!-- Scotland -->
-  <path d="M75 20 Q65 25 60 35 Q55 42 58 48 Q62 50 65 55 Q68 58 72 60 Q78 62 82 58 Q85 55 90 50 Q92 46 95 42 Q98 38 95 32 Q90 25 82 22 Z" fill="#7c3aed" opacity="0.3" stroke="#6d28d9" stroke-width="1.2"/>
+  <path d="M75 20 Q65 25 60 35 Q55 42 58 48 Q62 50 65 55 Q68 58 72 60 Q78 62 82 58 Q85 55 90 50 Q92 46 95 42 Q98 38 95 32 Q90 25 82 22 Z" fill="#7c3aed" opacity="0.3" stroke="#a855f7" stroke-width="1.2"/>
   <text x="78" y="40" text-anchor="middle" font-size="5.5" fill="#5b21b6" font-weight="600">Scottish</text>
   <text x="78" y="47" text-anchor="middle" font-size="5.5" fill="#5b21b6" font-weight="600">Highlands</text>
   <!-- Scottish Lowlands -->

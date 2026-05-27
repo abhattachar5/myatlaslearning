@@ -10,8 +10,8 @@
   var PLAN_KEY = 'sm_study_plan';
 
   var SUBJECT_COLORS = {
-    math: '#3f6f00', english: '#ba7517', science: '#185fa5',
-    history: '#6d28d9', geography: '#0891b2'
+    math: '#3b82f6', english: '#f59e0b', science: '#6366f1',
+    history: '#a855f7', geography: '#0d9488'
   };
   var SUBJECT_EMOJIS = {
     math: '📐', english: '📖', science: '🔬',

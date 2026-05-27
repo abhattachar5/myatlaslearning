@@ -9,14 +9,14 @@ DIAGRAMS["cell-comparison"] = `<svg viewBox="0 0 280 165" xmlns="http://www.w3.o
   <text x="210" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Plant Cell</text>
   <line x1="140" y1="17" x2="140" y2="158" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4,3"/>
   <!-- animal cell -->
-  <ellipse cx="70" cy="88" rx="58" ry="62" fill="#dbeafe" stroke="#185fa5" stroke-width="2"/>
+  <ellipse cx="70" cy="88" rx="58" ry="62" fill="#dbeafe" stroke="#6366f1" stroke-width="2"/>
   <circle cx="70" cy="82" r="17" fill="#93c5fd" stroke="#1d4ed8" stroke-width="1.5"/>
   <text x="70" y="86" text-anchor="middle" font-size="7.5" fill="#1e3a5f">nucleus</text>
   <ellipse cx="44" cy="65" rx="12" ry="6" fill="#fde68a" stroke="#ca8a04" stroke-width="1.2" transform="rotate(-25 44 65)"/>
   <ellipse cx="99" cy="107" rx="12" ry="6" fill="#fde68a" stroke="#ca8a04" stroke-width="1.2" transform="rotate(20 99 107)"/>
   <text x="18" y="129" font-size="7" fill="#ca8a04">mitochondria</text>
   <text x="50" y="118" font-size="6.5" fill="#475569">cytoplasm</text>
-  <text x="8" y="157" font-size="7" fill="#185fa5">cell membrane</text>
+  <text x="8" y="157" font-size="7" fill="#6366f1">cell membrane</text>
   <!-- plant cell -->
   <rect x="153" y="22" width="114" height="130" rx="4" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
   <rect x="158" y="27" width="104" height="120" rx="2" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
@@ -61,11 +61,11 @@ DIAGRAMS["food-chain"] = `<svg viewBox="0 0 280 100" xmlns="http://www.w3.org/20
 
 // ── PARTICLES ────────────────────────────────────────────────────────────────
 DIAGRAMS["particle-states"] = `<svg viewBox="0 0 280 152" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
-  <rect x="3" y="4" width="84" height="94" rx="6" fill="#f8fafc" stroke="#185fa5" stroke-width="1.5"/>
-  <rect x="98" y="4" width="84" height="94" rx="6" fill="#f8fafc" stroke="#185fa5" stroke-width="1.5"/>
-  <rect x="193" y="4" width="84" height="94" rx="6" fill="#f8fafc" stroke="#185fa5" stroke-width="1.5"/>
+  <rect x="3" y="4" width="84" height="94" rx="6" fill="#f8fafc" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="98" y="4" width="84" height="94" rx="6" fill="#f8fafc" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="193" y="4" width="84" height="94" rx="6" fill="#f8fafc" stroke="#6366f1" stroke-width="1.5"/>
   <!-- SOLID grid -->
-  <g fill="#185fa5">
+  <g fill="#6366f1">
     <circle cx="19" cy="20" r="7"/><circle cx="35" cy="20" r="7"/><circle cx="51" cy="20" r="7"/><circle cx="67" cy="20" r="7"/>
     <circle cx="19" cy="36" r="7"/><circle cx="35" cy="36" r="7"/><circle cx="51" cy="36" r="7"/><circle cx="67" cy="36" r="7"/>
     <circle cx="19" cy="52" r="7"/><circle cx="35" cy="52" r="7"/><circle cx="51" cy="52" r="7"/><circle cx="67" cy="52" r="7"/>
@@ -88,7 +88,7 @@ DIAGRAMS["particle-states"] = `<svg viewBox="0 0 280 152" xmlns="http://www.w3.o
     <circle cx="203" cy="89" r="6"/>
   </g>
   <!-- Labels -->
-  <text x="45" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#185fa5">SOLID</text>
+  <text x="45" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#6366f1">SOLID</text>
   <text x="140" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#3b82f6">LIQUID</text>
   <text x="235" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#7c3aed">GAS</text>
   <text x="45" y="122" text-anchor="middle" font-size="7.5" fill="#475569">close, ordered</text>
@@ -107,7 +107,7 @@ DIAGRAMS["force-arrows"] = `<svg viewBox="0 0 280 118" xmlns="http://www.w3.org/
   </defs>
   <!-- BALANCED -->
   <text x="70" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">BALANCED</text>
-  <rect x="36" y="38" width="68" height="36" rx="5" fill="#dbeafe" stroke="#185fa5" stroke-width="2"/>
+  <rect x="36" y="38" width="68" height="36" rx="5" fill="#dbeafe" stroke="#6366f1" stroke-width="2"/>
   <text x="70" y="61" text-anchor="middle" font-size="9" fill="#1e3a5f" font-weight="600">object</text>
   <line x1="4" y1="56" x2="34" y2="56" stroke="#ef4444" stroke-width="2.5" marker-end="url(#ar)"/>
   <text x="19" y="48" text-anchor="middle" font-size="8" fill="#ef4444">10 N</text>
@@ -170,8 +170,8 @@ DIAGRAMS["law-of-reflection"] = `<svg viewBox="0 0 280 165" xmlns="http://www.w3
 DIAGRAMS["variables-diagram"] = `<svg viewBox="0 0 280 155" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
   <defs><marker id="va" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#64748b"/></marker></defs>
   <!-- Central experiment box -->
-  <rect x="100" y="58" width="80" height="44" rx="8" fill="#f0f9ff" stroke="#185fa5" stroke-width="2"/>
-  <text x="140" y="76" text-anchor="middle" font-size="9" font-weight="700" fill="#185fa5">EXPERIMENT</text>
+  <rect x="100" y="58" width="80" height="44" rx="8" fill="#f0f9ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="140" y="76" text-anchor="middle" font-size="9" font-weight="700" fill="#6366f1">EXPERIMENT</text>
   <text x="140" y="91" text-anchor="middle" font-size="7.5" fill="#475569">fair test</text>
   <!-- Independent variable (YOU CHANGE) — left -->
   <rect x="2" y="60" width="84" height="40" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
@@ -204,12 +204,12 @@ DIAGRAMS["circuit-comparison"] = `<svg viewBox="0 0 280 155" xmlns="http://www.w
   <line x1="140" y1="16" x2="140" y2="150" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4,3"/>
   <!-- SERIES: rectangle with battery + 2 bulbs in one loop -->
   <!-- wires -->
-  <rect x="10" y="34" width="120" height="70" rx="4" fill="none" stroke="#185fa5" stroke-width="2"/>
+  <rect x="10" y="34" width="120" height="70" rx="4" fill="none" stroke="#6366f1" stroke-width="2"/>
   <!-- battery symbol (left side) -->
-  <line x1="10" y1="61" x2="10" y2="47" stroke="#185fa5" stroke-width="2"/>
-  <line x1="4" y1="61" x2="16" y2="61" stroke="#185fa5" stroke-width="3"/>
-  <line x1="7" y1="66" x2="13" y2="66" stroke="#185fa5" stroke-width="1.5"/>
-  <text x="10" y="82" text-anchor="middle" font-size="7" fill="#185fa5">+/−</text>
+  <line x1="10" y1="61" x2="10" y2="47" stroke="#6366f1" stroke-width="2"/>
+  <line x1="4" y1="61" x2="16" y2="61" stroke="#6366f1" stroke-width="3"/>
+  <line x1="7" y1="66" x2="13" y2="66" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="10" y="82" text-anchor="middle" font-size="7" fill="#6366f1">+/−</text>
   <!-- bulb 1 (top, middle-left) -->
   <circle cx="52" cy="34" r="10" fill="none" stroke="#f59e0b" stroke-width="2"/>
   <line x1="46" y1="40" x2="58" y2="28" stroke="#f59e0b" stroke-width="1.5"/>
@@ -224,16 +224,16 @@ DIAGRAMS["circuit-comparison"] = `<svg viewBox="0 0 280 155" xmlns="http://www.w
   <text x="70" y="134" text-anchor="middle" font-size="7.5" fill="#475569">voltage shared between bulbs</text>
   <!-- PARALLEL -->
   <!-- outer rectangle -->
-  <line x1="152" y1="34" x2="270" y2="34" stroke="#185fa5" stroke-width="2"/>
-  <line x1="152" y1="104" x2="270" y2="104" stroke="#185fa5" stroke-width="2"/>
-  <line x1="152" y1="34" x2="152" y2="104" stroke="#185fa5" stroke-width="2"/>
-  <line x1="270" y1="34" x2="270" y2="104" stroke="#185fa5" stroke-width="2"/>
+  <line x1="152" y1="34" x2="270" y2="34" stroke="#6366f1" stroke-width="2"/>
+  <line x1="152" y1="104" x2="270" y2="104" stroke="#6366f1" stroke-width="2"/>
+  <line x1="152" y1="34" x2="152" y2="104" stroke="#6366f1" stroke-width="2"/>
+  <line x1="270" y1="34" x2="270" y2="104" stroke="#6366f1" stroke-width="2"/>
   <!-- battery (left side) -->
-  <line x1="152" y1="61" x2="152" y2="47" stroke="#185fa5" stroke-width="2"/>
-  <line x1="146" y1="61" x2="158" y2="61" stroke="#185fa5" stroke-width="3"/>
-  <line x1="149" y1="66" x2="155" y2="66" stroke="#185fa5" stroke-width="1.5"/>
+  <line x1="152" y1="61" x2="152" y2="47" stroke="#6366f1" stroke-width="2"/>
+  <line x1="146" y1="61" x2="158" y2="61" stroke="#6366f1" stroke-width="3"/>
+  <line x1="149" y1="66" x2="155" y2="66" stroke="#6366f1" stroke-width="1.5"/>
   <!-- branch lines -->
-  <line x1="200" y1="34" x2="200" y2="104" stroke="#185fa5" stroke-width="1.5" stroke-dasharray="2,1"/>
+  <line x1="200" y1="34" x2="200" y2="104" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="2,1"/>
   <!-- bulb 1 (top branch) -->
   <circle cx="230" cy="34" r="10" fill="none" stroke="#f59e0b" stroke-width="2"/>
   <line x1="224" y1="40" x2="236" y2="28" stroke="#f59e0b" stroke-width="1.5"/>
@@ -251,8 +251,8 @@ DIAGRAMS["circuit-comparison"] = `<svg viewBox="0 0 280 155" xmlns="http://www.w
 // ── WAVES ─────────────────────────────────────────────────────────────────────
 DIAGRAMS["wave-properties"] = `<svg viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
   <defs>
-    <marker id="wpa" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0,6 3,0 6" fill="#185fa5"/></marker>
-    <marker id="wpb" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0,0 3,6 6" fill="#185fa5"/></marker>
+    <marker id="wpa" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0,6 3,0 6" fill="#6366f1"/></marker>
+    <marker id="wpb" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0,0 3,6 6" fill="#6366f1"/></marker>
     <marker id="wpc" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0,6 3,0 6" fill="#dc2626"/></marker>
   </defs>
   <!-- Title -->
@@ -260,7 +260,7 @@ DIAGRAMS["wave-properties"] = `<svg viewBox="0 0 280 140" xmlns="http://www.w3.o
   <!-- Equilibrium line -->
   <line x1="14" y1="75" x2="266" y2="75" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3"/>
   <!-- Wave (2 full cycles) -->
-  <path d="M14,75 C36,35 58,35 80,75 C102,115 124,115 146,75 C168,35 190,35 212,75 C234,115 256,115 266,75" fill="none" stroke="#185fa5" stroke-width="2.5"/>
+  <path d="M14,75 C36,35 58,35 80,75 C102,115 124,115 146,75 C168,35 190,35 212,75 C234,115 256,115 266,75" fill="none" stroke="#6366f1" stroke-width="2.5"/>
   <!-- Direction arrow -->
   <line x1="220" y1="24" x2="268" y2="24" stroke="#dc2626" stroke-width="2" marker-end="url(#wpc)"/>
   <text x="244" y="18" text-anchor="middle" font-size="7.5" fill="#dc2626">direction →</text>
@@ -294,9 +294,9 @@ DIAGRAMS["em-spectrum"] = `<svg viewBox="0 0 280 108" xmlns="http://www.w3.org/2
   <rect x="42" y="28" width="34" height="28" rx="2" fill="#8b5cf6"/>
   <rect x="78" y="28" width="34" height="28" rx="2" fill="#ec4899"/>
   <rect x="114" y="28" width="34" height="28" rx="2" fill="#f59e0b"/>
-  <rect x="150" y="28" width="34" height="28" rx="2" fill="#10b981"/>
+  <rect x="150" y="28" width="34" height="28" rx="2" fill="#3b82f6"/>
   <rect x="186" y="28" width="34" height="28" rx="2" fill="#3b82f6"/>
-  <rect x="222" y="28" width="52" height="28" rx="2" fill="#185fa5"/>
+  <rect x="222" y="28" width="52" height="28" rx="2" fill="#6366f1"/>
   <!-- Wave squiggles (indicative) -->
   <path d="M11,42 C14,37 17,37 20,42 C23,47 26,47 29,42 C32,37 35,37 38,42" fill="none" stroke="white" stroke-width="1.2"/>
   <path d="M47,42 C49,38 51,38 53,42 C55,46 57,46 59,42 C61,38 63,38 65,42 C67,46 69,46 71,42" fill="none" stroke="white" stroke-width="1.2"/>
@@ -419,8 +419,8 @@ DIAGRAMS["photosynthesis-diagram"] = `<svg viewBox="0 0 280 158" xmlns="http://w
   <line x1="212" y1="65" x2="258" y2="65" stroke="#16a34a" stroke-width="2" marker-end="url(#pha)"/>
   <text x="225" y="59" font-size="8" fill="#16a34a">glucose</text>
   <!-- O2 arrow out (right) -->
-  <line x1="212" y1="82" x2="258" y2="82" stroke="#185fa5" stroke-width="2" marker-end="url(#pha)"/>
-  <text x="228" y="96" font-size="8" fill="#185fa5">O₂</text>
+  <line x1="212" y1="82" x2="258" y2="82" stroke="#6366f1" stroke-width="2" marker-end="url(#pha)"/>
+  <text x="228" y="96" font-size="8" fill="#6366f1">O₂</text>
   <!-- Equation box -->
   <rect x="8" y="116" width="264" height="30" rx="5" fill="#dcfce7"/>
   <text x="140" y="128" text-anchor="middle" font-size="8" font-weight="700" fill="#15803d">CO₂  +  H₂O  →  glucose  +  O₂</text>
@@ -657,13 +657,13 @@ DIAGRAMS["pollination-diagram"] = `<svg viewBox="0 0 280 145" xmlns="http://www.
   <text x="140" y="42" text-anchor="middle" font-size="7" fill="#ca8a04">pollen transfer</text>
   <!-- PISTIL box -->
   <rect x="168" y="18" width="108" height="110" rx="6" fill="#fdf4ff" stroke="#7c3aed" stroke-width="1.8"/>
-  <text x="222" y="32" text-anchor="middle" font-size="9" font-weight="700" fill="#6d28d9">Pistil &#x2640;</text>
+  <text x="222" y="32" text-anchor="middle" font-size="9" font-weight="700" fill="#a855f7">Pistil &#x2640;</text>
   <!-- Stigma (receives pollen) -->
   <ellipse cx="222" cy="48" rx="24" ry="10" fill="#c084fc" stroke="#7c3aed" stroke-width="2"/>
   <text x="222" y="51" text-anchor="middle" font-size="7.5" fill="#3b0764">stigma</text>
   <!-- Style (connects stigma to ovary) -->
   <rect x="219" y="58" width="6" height="28" rx="2" fill="#a78bfa"/>
-  <text x="233" y="74" font-size="7" fill="#6d28d9">style</text>
+  <text x="233" y="74" font-size="7" fill="#a855f7">style</text>
   <!-- Ovary (contains ovules) -->
   <ellipse cx="222" cy="100" rx="22" ry="14" fill="#e9d5ff" stroke="#7c3aed" stroke-width="1.5"/>
   <text x="222" y="97" text-anchor="middle" font-size="7.5" fill="#4c1d95">ovary</text>
@@ -678,21 +678,21 @@ DIAGRAMS["pollination-diagram"] = `<svg viewBox="0 0 280 145" xmlns="http://www.
 // ── ELEMENTS &amp; REACTIONS ───────────────────────────────────────────────────────
 DIAGRAMS["separation-techniques"] = `<svg viewBox="0 0 280 152" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
   <!-- Three boxes -->
-  <rect x="4" y="4" width="82" height="98" rx="6" fill="#f0f9ff" stroke="#185fa5" stroke-width="1.5"/>
+  <rect x="4" y="4" width="82" height="98" rx="6" fill="#f0f9ff" stroke="#6366f1" stroke-width="1.5"/>
   <rect x="99" y="4" width="82" height="98" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
   <rect x="194" y="4" width="82" height="98" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
   <!-- === FILTRATION === -->
-  <text x="45" y="17" text-anchor="middle" font-size="8.5" font-weight="700" fill="#185fa5">Filtration</text>
+  <text x="45" y="17" text-anchor="middle" font-size="8.5" font-weight="700" fill="#6366f1">Filtration</text>
   <!-- Funnel (trapezoid) -->
-  <polygon points="12,24 78,24 60,58 30,58" fill="#bfdbfe" stroke="#185fa5" stroke-width="1.5" fill-opacity="0.6"/>
+  <polygon points="12,24 78,24 60,58 30,58" fill="#bfdbfe" stroke="#6366f1" stroke-width="1.5" fill-opacity="0.6"/>
   <!-- Filter paper (diagonal fold line inside funnel) -->
   <line x1="30" y1="58" x2="60" y2="24" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4,3"/>
   <!-- Residue on filter paper -->
   <ellipse cx="34" cy="46" rx="8" ry="4" fill="#94a3b8" opacity="0.9" transform="rotate(-30 34 46)"/>
   <!-- Funnel stem -->
-  <rect x="41" y="58" width="8" height="17" rx="2" fill="#93c5fd" stroke="#185fa5" stroke-width="1"/>
+  <rect x="41" y="58" width="8" height="17" rx="2" fill="#93c5fd" stroke="#6366f1" stroke-width="1"/>
   <!-- Collection flask -->
-  <ellipse cx="45" cy="84" rx="14" ry="9" fill="#dbeafe" stroke="#185fa5" stroke-width="1.5"/>
+  <ellipse cx="45" cy="84" rx="14" ry="9" fill="#dbeafe" stroke="#6366f1" stroke-width="1.5"/>
   <text x="14" y="44" font-size="6.5" fill="#475569">residue</text>
   <text x="45" y="96" text-anchor="middle" font-size="7" fill="#3b82f6">filtrate</text>
   <!-- === EVAPORATION === -->
@@ -729,8 +729,8 @@ DIAGRAMS["separation-techniques"] = `<svg viewBox="0 0 280 152" xmlns="http://ww
   <text x="257" y="48" font-size="6" fill="#7c3aed">C</text>
   <text x="201" y="83" font-size="6" fill="#3b82f6">solvent</text>
   <!-- Below-box labels -->
-  <text x="45" y="113" text-anchor="middle" font-size="7" fill="#185fa5">Insoluble solid</text>
-  <text x="45" y="123" text-anchor="middle" font-size="7" fill="#185fa5">from a liquid</text>
+  <text x="45" y="113" text-anchor="middle" font-size="7" fill="#6366f1">Insoluble solid</text>
+  <text x="45" y="123" text-anchor="middle" font-size="7" fill="#6366f1">from a liquid</text>
   <text x="140" y="113" text-anchor="middle" font-size="7" fill="#ea580c">Dissolved solid</text>
   <text x="140" y="123" text-anchor="middle" font-size="7" fill="#ea580c">from a solvent</text>
   <text x="235" y="113" text-anchor="middle" font-size="7" fill="#16a34a">Soluble pigments</text>
@@ -751,14 +751,14 @@ DIAGRAMS["heat-transfer-methods"] = `<svg viewBox="0 0 280 155" xmlns="http://ww
   </defs>
   <!-- Three boxes -->
   <rect x="4" y="4" width="82" height="98" rx="6" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
-  <rect x="99" y="4" width="82" height="98" rx="6" fill="#eff6ff" stroke="#185fa5" stroke-width="1.5"/>
+  <rect x="99" y="4" width="82" height="98" rx="6" fill="#eff6ff" stroke="#6366f1" stroke-width="1.5"/>
   <rect x="194" y="4" width="82" height="98" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
   <!-- === CONDUCTION === -->
   <text x="45" y="17" text-anchor="middle" font-size="8.5" font-weight="700" fill="#c2410c">Conduction</text>
   <!-- Solid bar with particle grid -->
   <rect x="8" y="26" width="74" height="46" rx="4" fill="#f0f9ff" stroke="#94a3b8" stroke-width="1.5"/>
   <text x="10" y="23" font-size="7" fill="#dc2626">HOT</text>
-  <text x="62" y="23" font-size="7" fill="#185fa5">COOL</text>
+  <text x="62" y="23" font-size="7" fill="#6366f1">COOL</text>
   <!-- Row 1: particles red &#x2192; blue left to right -->
   <circle cx="18" cy="38" r="6" fill="#ef4444"/>
   <circle cx="30" cy="44" r="6" fill="#f97316"/>
@@ -780,7 +780,7 @@ DIAGRAMS["heat-transfer-methods"] = `<svg viewBox="0 0 280 155" xmlns="http://ww
   <!-- === CONVECTION === -->
   <text x="140" y="17" text-anchor="middle" font-size="8.5" font-weight="700" fill="#1d4ed8">Convection</text>
   <!-- Fluid container -->
-  <rect x="108" y="24" width="64" height="60" rx="3" fill="#bfdbfe" stroke="#185fa5" stroke-width="1.5" opacity="0.5"/>
+  <rect x="108" y="24" width="64" height="60" rx="3" fill="#bfdbfe" stroke="#6366f1" stroke-width="1.5" opacity="0.5"/>
   <!-- Hot fluid rising (left side) -->
   <circle cx="118" cy="72" r="5" fill="#ef4444" opacity="0.9"/>
   <circle cx="118" cy="58" r="5" fill="#f97316" opacity="0.9"/>
@@ -797,7 +797,7 @@ DIAGRAMS["heat-transfer-methods"] = `<svg viewBox="0 0 280 155" xmlns="http://ww
   <!-- Flame below container -->
   <path d="M128,96 Q131,88 134,96 Q136,84 138,96 Q140,88 142,96 Q144,84 146,96 Q149,89 152,96 Z" fill="#f97316" opacity="0.85"/>
   <text x="106" y="82" font-size="6.5" fill="#dc2626">&#x2191;hot</text>
-  <text x="156" y="32" font-size="6.5" fill="#185fa5">&#x2193;cool</text>
+  <text x="156" y="32" font-size="6.5" fill="#6366f1">&#x2193;cool</text>
   <!-- Label -->
   <text x="140" y="112" text-anchor="middle" font-size="7" fill="#475569">Fluid: warm rises,</text>
   <text x="140" y="122" text-anchor="middle" font-size="7" fill="#475569">cool sinks (current)</text>
@@ -830,7 +830,7 @@ DIAGRAMS["five-kingdoms"] = `<svg viewBox="0 0 280 145" xmlns="http://www.w3.org
   <rect x="4" y="18" width="48" height="116" rx="5" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
   <rect x="57" y="18" width="48" height="116" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
   <rect x="110" y="18" width="48" height="116" rx="5" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
-  <rect x="163" y="18" width="48" height="116" rx="5" fill="#dbeafe" stroke="#185fa5" stroke-width="1.5"/>
+  <rect x="163" y="18" width="48" height="116" rx="5" fill="#dbeafe" stroke="#6366f1" stroke-width="1.5"/>
   <rect x="216" y="18" width="48" height="116" rx="5" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
   <!-- ANIMALIA -->
   <text x="28" y="37" text-anchor="middle" font-size="17">&#x1F981;</text>
@@ -892,9 +892,9 @@ DIAGRAMS["cell-organisation"] = `<svg viewBox="0 0 280 105" xmlns="http://www.w3
   <defs><marker id="coa" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#64748b"/></marker></defs>
   <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Levels of Organisation</text>
   <!-- Cell -->
-  <rect x="4" y="22" width="42" height="38" rx="6" fill="#dbeafe" stroke="#185fa5" stroke-width="1.5"/>
+  <rect x="4" y="22" width="42" height="38" rx="6" fill="#dbeafe" stroke="#6366f1" stroke-width="1.5"/>
   <text x="25" y="36" text-anchor="middle" font-size="13">&#x1F52C;</text>
-  <text x="25" y="50" text-anchor="middle" font-size="7" font-weight="700" fill="#185fa5">Cell</text>
+  <text x="25" y="50" text-anchor="middle" font-size="7" font-weight="700" fill="#6366f1">Cell</text>
   <line x1="48" y1="41" x2="56" y2="41" stroke="#64748b" stroke-width="2" marker-end="url(#coa)"/>
   <!-- Tissue -->
   <rect x="58" y="22" width="42" height="38" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
@@ -935,8 +935,8 @@ DIAGRAMS["changes-of-state"] = `<svg viewBox="0 0 280 120" xmlns="http://www.w3.
   </defs>
   <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Changes of State</text>
   <!-- Three state boxes -->
-  <rect x="8" y="40" width="70" height="36" rx="8" fill="#dbeafe" stroke="#185fa5" stroke-width="2"/>
-  <text x="43" y="63" text-anchor="middle" font-size="11" font-weight="700" fill="#185fa5">SOLID</text>
+  <rect x="8" y="40" width="70" height="36" rx="8" fill="#dbeafe" stroke="#6366f1" stroke-width="2"/>
+  <text x="43" y="63" text-anchor="middle" font-size="11" font-weight="700" fill="#6366f1">SOLID</text>
   <rect x="105" y="40" width="70" height="36" rx="8" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/>
   <text x="140" y="63" text-anchor="middle" font-size="11" font-weight="700" fill="#3b82f6">LIQUID</text>
   <rect x="202" y="40" width="70" height="36" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
@@ -988,8 +988,8 @@ DIAGRAMS["digestive-system"] = `<svg viewBox="0 0 280 178" xmlns="http://www.w3.
   <text x="135" y="162" font-size="6" fill="#475569">absorbs water</text>
   <line x1="120" y1="152" x2="131" y2="152" stroke="#94a3b8" stroke-width="0.8" stroke-dasharray="2,2"/>
   <!-- Accessory organs -->
-  <rect x="200" y="62" width="70" height="50" rx="5" fill="#f0f9ff" stroke="#185fa5" stroke-width="1"/>
-  <text x="235" y="74" text-anchor="middle" font-size="7" font-weight="600" fill="#185fa5">Accessory organs</text>
+  <rect x="200" y="62" width="70" height="50" rx="5" fill="#f0f9ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="235" y="74" text-anchor="middle" font-size="7" font-weight="600" fill="#6366f1">Accessory organs</text>
   <text x="235" y="86" text-anchor="middle" font-size="6.5" fill="#475569">Liver: makes bile</text>
   <text x="235" y="96" text-anchor="middle" font-size="6.5" fill="#475569">Pancreas: enzymes</text>
   <text x="235" y="106" text-anchor="middle" font-size="6.5" fill="#475569">(help small intestine)</text>
@@ -1023,14 +1023,14 @@ DIAGRAMS["reflex-arc"] = `<svg viewBox="0 0 280 118" xmlns="http://www.w3.org/20
   <text x="163" y="63" text-anchor="middle" font-size="6.5" fill="#15803d">neuron</text>
   <line x1="186" y1="54" x2="196" y2="54" stroke="#dc2626" stroke-width="2" marker-end="url(#rfa)"/>
   <!-- Effector -->
-  <rect x="198" y="40" width="42" height="28" rx="5" fill="#dbeafe" stroke="#185fa5" stroke-width="1.5"/>
+  <rect x="198" y="40" width="42" height="28" rx="5" fill="#dbeafe" stroke="#6366f1" stroke-width="1.5"/>
   <text x="219" y="53" text-anchor="middle" font-size="7" font-weight="600" fill="#1e3a5f">Effector</text>
   <text x="219" y="63" text-anchor="middle" font-size="6" fill="#1e3a5f">(muscle)</text>
   <!-- Response -->
   <text x="256" y="56" text-anchor="middle" font-size="16">&#x270B;</text>
-  <text x="256" y="72" text-anchor="middle" font-size="6.5" fill="#185fa5">response</text>
+  <text x="256" y="72" text-anchor="middle" font-size="6.5" fill="#6366f1">response</text>
   <!-- Info box -->
-  <rect x="30" y="82" width="220" height="30" rx="5" fill="#f0f9ff" stroke="#185fa5" stroke-width="1"/>
+  <rect x="30" y="82" width="220" height="30" rx="5" fill="#f0f9ff" stroke="#6366f1" stroke-width="1"/>
   <text x="140" y="94" text-anchor="middle" font-size="7" fill="#475569">Reflex arc bypasses the brain &#x2192; extremely fast response</text>
   <text x="140" y="106" text-anchor="middle" font-size="7" fill="#475569">Brain is informed AFTER the reflex has already happened</text>
 </svg>`;
@@ -1039,10 +1039,10 @@ DIAGRAMS["reflex-arc"] = `<svg viewBox="0 0 280 118" xmlns="http://www.w3.org/20
 DIAGRAMS["dna-genes-chromosomes"] = `<svg viewBox="0 0 280 120" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
   <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">DNA, Genes &amp; Chromosomes</text>
   <!-- Cell -->
-  <ellipse cx="40" cy="60" rx="28" ry="30" fill="#dbeafe" stroke="#185fa5" stroke-width="1.5"/>
+  <ellipse cx="40" cy="60" rx="28" ry="30" fill="#dbeafe" stroke="#6366f1" stroke-width="1.5"/>
   <circle cx="40" cy="60" r="14" fill="#93c5fd" stroke="#1d4ed8" stroke-width="1.2"/>
   <text x="40" y="63" text-anchor="middle" font-size="7" fill="#1e3a5f">nucleus</text>
-  <text x="40" y="98" text-anchor="middle" font-size="7.5" font-weight="600" fill="#185fa5">Cell</text>
+  <text x="40" y="98" text-anchor="middle" font-size="7.5" font-weight="600" fill="#6366f1">Cell</text>
   <!-- Arrow 1 -->
   <line x1="70" y1="60" x2="86" y2="60" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,2"/>
   <!-- Chromosome -->
@@ -1158,7 +1158,7 @@ DIAGRAMS["energy-stores"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org
   <text x="232" y="50" text-anchor="middle" font-size="6.5" fill="#475569">stored in bonds</text>
   <text x="232" y="60" text-anchor="middle" font-size="6" fill="#94a3b8">&#x1F50B; food, fuel</text>
   <!-- Row 2 -->
-  <rect x="6" y="74" width="84" height="46" rx="6" fill="#dbeafe" stroke="#185fa5" stroke-width="1.5"/>
+  <rect x="6" y="74" width="84" height="46" rx="6" fill="#dbeafe" stroke="#6366f1" stroke-width="1.5"/>
   <text x="48" y="86" text-anchor="middle" font-size="7" font-weight="700" fill="#1e3a5f">Gravitational</text>
   <text x="48" y="96" text-anchor="middle" font-size="7" font-weight="700" fill="#1e3a5f">Potential</text>
   <text x="48" y="108" text-anchor="middle" font-size="6.5" fill="#475569">raised objects</text>
@@ -1196,8 +1196,8 @@ DIAGRAMS["sankey-diagram"] = `<svg viewBox="0 0 280 130" xmlns="http://www.w3.or
   <!-- Bulb icon -->
   <text x="125" y="30" text-anchor="middle" font-size="18">&#x1F4A1;</text>
   <!-- Efficiency calc -->
-  <rect x="50" y="108" width="180" height="18" rx="4" fill="#f0f9ff" stroke="#185fa5" stroke-width="1"/>
-  <text x="140" y="120" text-anchor="middle" font-size="7.5" font-weight="600" fill="#185fa5">Efficiency = useful out &#xF7; total in = 20/100 = 20%</text>
+  <rect x="50" y="108" width="180" height="18" rx="4" fill="#f0f9ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="140" y="120" text-anchor="middle" font-size="7.5" font-weight="600" fill="#6366f1">Efficiency = useful out &#xF7; total in = 20/100 = 20%</text>
 </svg>`;
 
 // ── PERIODIC TABLE ──────────────────────────────────────────────────────────

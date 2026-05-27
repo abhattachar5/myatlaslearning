@@ -27,7 +27,7 @@ const ENGLISH_TOPICS_Y8 = [
 // ══════════════════════════════════════════════════════════════════════
 CURRICULUM.push(
   {
-    id:"e8i-01-1",name:"Word Roots & Etymology",emoji:"🏛️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-01-1",name:"Word Roots & Etymology",emoji:"🏛️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-01",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
     description:"Trace the origins of English words through Greek, Latin, Old English and French roots to decode unfamiliar vocabulary.",
     learningOutcomes:[
@@ -46,7 +46,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-01-2",name:"Academic Vocabulary",emoji:"🎓",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-01-2",name:"Academic Vocabulary",emoji:"🎓",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-01",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
     description:"Build a bank of Tier 2 academic vocabulary used across subjects to strengthen reading and writing.",
     learningOutcomes:[
@@ -65,7 +65,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-01-3",name:"Figurative Language in Context",emoji:"🎨",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-01-3",name:"Figurative Language in Context",emoji:"🎨",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-01",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Interpret figurative language — idioms, euphemisms, oxymorons and extended metaphors — within literary and non-fiction texts.",
     learningOutcomes:[
@@ -84,7 +84,7 @@ CURRICULUM.push(
     prerequisites:["e8i-01-1"]
   },
   {
-    id:"e8i-01-4",name:"Domain-Specific Terminology",emoji:"📚",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-01-4",name:"Domain-Specific Terminology",emoji:"📚",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-01",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Learn and apply specialist vocabulary from science, history, geography and other subjects to strengthen cross-curricular literacy.",
     learningOutcomes:[
@@ -109,7 +109,7 @@ CURRICULUM.push(
 // ══════════════════════════════════════════════════════════════════════
 CURRICULUM.push(
   {
-    id:"e8i-02-1",name:"Active & Passive Voice",emoji:"🔄",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-02-1",name:"Active & Passive Voice",emoji:"🔄",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-02",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
     description:"Identify and convert between active and passive voice, and choose the appropriate voice for different writing purposes.",
     learningOutcomes:[
@@ -128,7 +128,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-02-2",name:"Complex Sentence Structures",emoji:"🏗️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-02-2",name:"Complex Sentence Structures",emoji:"🏗️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-02",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
     description:"Build compound-complex sentences using subordinate clauses, embedded clauses and varied openers to add sophistication to writing.",
     learningOutcomes:[
@@ -147,7 +147,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-02-3",name:"Relative & Conditional Clauses",emoji:"🔗",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-02-3",name:"Relative & Conditional Clauses",emoji:"🔗",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-02",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Use relative clauses to add information and conditional clauses to express hypothetical situations.",
     learningOutcomes:[
@@ -166,7 +166,7 @@ CURRICULUM.push(
     prerequisites:["e8i-02-2"]
   },
   {
-    id:"e8i-02-4",name:"Subjunctive Mood & Verb Moods",emoji:"💭",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-02-4",name:"Subjunctive Mood & Verb Moods",emoji:"💭",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-02",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Understand the subjunctive mood and distinguish between indicative, imperative and subjunctive moods in writing.",
     learningOutcomes:[
@@ -191,7 +191,7 @@ CURRICULUM.push(
 // ══════════════════════════════════════════════════════════════════════
 CURRICULUM.push(
   {
-    id:"e8i-03-1",name:"Semicolons & Colons",emoji:"⚙️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-03-1",name:"Semicolons & Colons",emoji:"⚙️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-03",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
     description:"Use semicolons to link related independent clauses and colons to introduce lists, explanations and elaborations.",
     learningOutcomes:[
@@ -210,7 +210,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-03-2",name:"Dashes & Hyphens",emoji:"➖",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-03-2",name:"Dashes & Hyphens",emoji:"➖",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-03",yearGroup:"Year 8",difficulty:1,estimatedHours:1,
     description:"Distinguish between dashes and hyphens, using dashes for emphasis and parenthetical information and hyphens to form compound words.",
     learningOutcomes:[
@@ -229,7 +229,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-03-3",name:"Parenthetical Commas & Brackets",emoji:"📌",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-03-3",name:"Parenthetical Commas & Brackets",emoji:"📌",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-03",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Use parenthetical commas, brackets and dashes to embed additional information within sentences.",
     learningOutcomes:[
@@ -248,7 +248,7 @@ CURRICULUM.push(
     prerequisites:["e8i-03-1"]
   },
   {
-    id:"e8i-03-4",name:"Direct & Indirect Speech",emoji:"💬",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-03-4",name:"Direct & Indirect Speech",emoji:"💬",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-03",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Punctuate direct speech accurately and convert between direct and indirect (reported) speech.",
     learningOutcomes:[
@@ -273,7 +273,7 @@ CURRICULUM.push(
 // ══════════════════════════════════════════════════════════════════════
 CURRICULUM.push(
   {
-    id:"e8i-04-1",name:"Inference & Deduction",emoji:"🔎",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-04-1",name:"Inference & Deduction",emoji:"🔎",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-04",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
     description:"Make inferences and deductions from complex fiction and non-fiction texts, using evidence to support conclusions.",
     learningOutcomes:[
@@ -292,7 +292,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-04-2",name:"Comparing Texts",emoji:"⚖️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-04-2",name:"Comparing Texts",emoji:"⚖️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-04",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Compare two or more texts on the same topic, examining how purpose, audience, language and structure differ.",
     learningOutcomes:[
@@ -311,7 +311,7 @@ CURRICULUM.push(
     prerequisites:["e8i-04-1"]
   },
   {
-    id:"e8i-04-3",name:"Evaluating Arguments & Bias",emoji:"⚔️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-04-3",name:"Evaluating Arguments & Bias",emoji:"⚔️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-04",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Evaluate the strength of arguments in persuasive and informational texts and identify bias, opinion and misleading claims.",
     learningOutcomes:[
@@ -330,7 +330,7 @@ CURRICULUM.push(
     prerequisites:["e8i-04-1"]
   },
   {
-    id:"e8i-04-4",name:"Synthesising Information",emoji:"🧩",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-04-4",name:"Synthesising Information",emoji:"🧩",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-04",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Synthesise information from multiple sources to build a coherent understanding of a topic.",
     learningOutcomes:[
@@ -355,7 +355,7 @@ CURRICULUM.push(
 // ══════════════════════════════════════════════════════════════════════
 CURRICULUM.push(
   {
-    id:"e8i-05-1",name:"Analysing Language Effects",emoji:"🎯",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-05-1",name:"Analysing Language Effects",emoji:"🎯",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-05",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
     description:"Analyse how writers use word choice, imagery and figurative language to create specific effects on the reader.",
     learningOutcomes:[
@@ -374,7 +374,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-05-2",name:"Structural Analysis",emoji:"🏗️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-05-2",name:"Structural Analysis",emoji:"🏗️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-05",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Analyse how writers structure texts at whole-text, paragraph and sentence level to guide the reader and create effects.",
     learningOutcomes:[
@@ -393,7 +393,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-05-3",name:"Writer's Craft & Rhetorical Devices",emoji:"✨",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-05-3",name:"Writer's Craft & Rhetorical Devices",emoji:"✨",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-05",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Identify and analyse rhetorical devices — repetition, tricolon, antithesis, anaphora — and understand how writers craft texts to persuade and engage.",
     learningOutcomes:[
@@ -412,7 +412,7 @@ CURRICULUM.push(
     prerequisites:["e8i-05-1"]
   },
   {
-    id:"e8i-05-4",name:"Genre Conventions & Critical Reading",emoji:"📑",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-05-4",name:"Genre Conventions & Critical Reading",emoji:"📑",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-05",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Understand the conventions of different genres and read critically to question, challenge and evaluate what a writer presents.",
     learningOutcomes:[
@@ -437,7 +437,7 @@ CURRICULUM.push(
 // ══════════════════════════════════════════════════════════════════════
 CURRICULUM.push(
   {
-    id:"e8i-06-1",name:"Persuasive Writing",emoji:"⚔️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-06-1",name:"Persuasive Writing",emoji:"⚔️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-06",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
     description:"Plan and write persuasive texts using rhetorical devices, evidence and a clear structure to convince a target audience.",
     learningOutcomes:[
@@ -456,7 +456,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-06-2",name:"Discursive & Balanced Writing",emoji:"⚖️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-06-2",name:"Discursive & Balanced Writing",emoji:"⚖️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-06",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Write balanced discursive essays that present multiple viewpoints fairly before reaching a reasoned conclusion.",
     learningOutcomes:[
@@ -475,7 +475,7 @@ CURRICULUM.push(
     prerequisites:["e8i-06-1"]
   },
   {
-    id:"e8i-06-3",name:"Creative Writing Techniques",emoji:"🎨",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-06-3",name:"Creative Writing Techniques",emoji:"🎨",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-06",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Develop advanced creative writing skills including narrative perspective, symbolism, pathetic fallacy and controlled shifts in pace.",
     learningOutcomes:[
@@ -494,7 +494,7 @@ CURRICULUM.push(
     prerequisites:["e8i-06-1"]
   },
   {
-    id:"e8i-06-4",name:"Tone, Register & Audience",emoji:"🎤",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-06-4",name:"Tone, Register & Audience",emoji:"🎤",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-06",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
     description:"Control tone and register to write effectively for different audiences and purposes, from formal reports to informal blogs.",
     learningOutcomes:[
@@ -513,7 +513,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-06-5",name:"Editing, Proofreading & Redrafting",emoji:"🔧",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-06-5",name:"Editing, Proofreading & Redrafting",emoji:"🔧",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-06",yearGroup:"Year 8",difficulty:1,estimatedHours:1,
     description:"Edit and proofread writing systematically, improving accuracy, clarity and impact through redrafting.",
     learningOutcomes:[
@@ -538,7 +538,7 @@ CURRICULUM.push(
 // ══════════════════════════════════════════════════════════════════════
 CURRICULUM.push(
   {
-    id:"e8i-07-1",name:"Analysing Unseen Poetry",emoji:"🔎",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-07-1",name:"Analysing Unseen Poetry",emoji:"🔎",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-07",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
     description:"Approach an unseen poem methodically — identifying subject, tone, imagery and language choices — and write an analytical response.",
     learningOutcomes:[
@@ -557,7 +557,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-07-2",name:"Comparing Poems",emoji:"⚖️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-07-2",name:"Comparing Poems",emoji:"⚖️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-07",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Compare two poems by examining similarities and differences in theme, language, structure and the poets' perspectives.",
     learningOutcomes:[
@@ -576,7 +576,7 @@ CURRICULUM.push(
     prerequisites:["e8i-07-1"]
   },
   {
-    id:"e8i-07-3",name:"Poetic Form & Structure",emoji:"📐",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-07-3",name:"Poetic Form & Structure",emoji:"📐",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-07",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Explore how poets use form and structure — sonnets, dramatic monologues, free verse — and analyse how structural choices contribute to meaning.",
     learningOutcomes:[
@@ -595,7 +595,7 @@ CURRICULUM.push(
     prerequisites:["e8i-07-1"]
   },
   {
-    id:"e8i-07-4",name:"War Poetry & Nature Poetry",emoji:"🕊️",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-07-4",name:"War Poetry & Nature Poetry",emoji:"🕊️",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-07",yearGroup:"Year 8",difficulty:2,estimatedHours:3,
     description:"Study war poetry and nature poetry as thematic clusters, exploring how poets respond to conflict and the natural world.",
     learningOutcomes:[
@@ -620,7 +620,7 @@ CURRICULUM.push(
 // ══════════════════════════════════════════════════════════════════════
 CURRICULUM.push(
   {
-    id:"e8i-08-1",name:"Studying a Shakespeare Play",emoji:"📜",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-08-1",name:"Studying a Shakespeare Play",emoji:"📜",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-08",yearGroup:"Year 8",difficulty:1,estimatedHours:3,
     description:"Study a full Shakespeare play — understanding the plot, key scenes and the context in which it was written and performed.",
     learningOutcomes:[
@@ -639,7 +639,7 @@ CURRICULUM.push(
     prerequisites:[]
   },
   {
-    id:"e8i-08-2",name:"Dramatic Techniques",emoji:"🎪",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-08-2",name:"Dramatic Techniques",emoji:"🎪",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-08",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Analyse dramatic techniques — soliloquy, aside, dramatic irony, foreshadowing — and explain their effect on the audience.",
     learningOutcomes:[
@@ -658,7 +658,7 @@ CURRICULUM.push(
     prerequisites:["e8i-08-1"]
   },
   {
-    id:"e8i-08-3",name:"Character Analysis in Shakespeare",emoji:"👑",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-08-3",name:"Character Analysis in Shakespeare",emoji:"👑",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-08",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Analyse character motivation, development and relationships in a Shakespeare play using textual evidence.",
     learningOutcomes:[
@@ -677,7 +677,7 @@ CURRICULUM.push(
     prerequisites:["e8i-08-1"]
   },
   {
-    id:"e8i-08-4",name:"Writing Analytical Essays on Drama",emoji:"📝",subject:"English",subjectId:"english",color:"#ba7517",
+    id:"e8i-08-4",name:"Writing Analytical Essays on Drama",emoji:"📝",subject:"English",subjectId:"english",color:"#f59e0b",
     topicId:"e8t-08",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
     description:"Structure and write analytical essays about Shakespeare, embedding quotations, analysing language and linking to context.",
     learningOutcomes:[

@@ -11,7 +11,7 @@ Object.assign(LESSONS, {
 <p>A <strong>compound sentence</strong> joins two independent clauses using a coordinating conjunction. The conjunctions are: <strong>For, And, Nor, But, Or, Yet, So</strong> (FANBOYS). Use a comma before the conjunction when BOTH sides are complete sentences.</p>
 
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Comma needed</th>
     <th style="padding:8px;border:1px solid #ccc">No comma needed</th>
   </tr>
@@ -65,7 +65,7 @@ Object.assign(LESSONS, {
 <p>A <strong>non-restrictive clause</strong> adds extra (bonus) information that could be removed without changing the core meaning. Wrap it in commas. A <strong>restrictive clause</strong> identifies which one — no commas.</p>
 
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Non-restrictive (commas)</th>
     <th style="padding:8px;border:1px solid #ccc">Restrictive (no commas)</th>
   </tr>
@@ -77,7 +77,7 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Error</th>
     <th style="padding:8px;border:1px solid #ccc">Correction</th>
     <th style="padding:8px;border:1px solid #ccc">Reason</th>
@@ -107,7 +107,7 @@ Object.assign(LESSONS, {
 <p>Use an apostrophe to show that something belongs to someone or something.</p>
 
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Type of noun</th>
     <th style="padding:8px;border:1px solid #ccc">Rule</th>
     <th style="padding:8px;border:1px solid #ccc">Example</th>
@@ -145,7 +145,7 @@ Object.assign(LESSONS, {
 
 <h3>Tricky Pairs — Apostrophe or Not?</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">With apostrophe</th>
     <th style="padding:8px;border:1px solid #ccc">Without apostrophe</th>
     <th style="padding:8px;border:1px solid #ccc">Test</th>
@@ -182,7 +182,7 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Error</th>
     <th style="padding:8px;border:1px solid #ccc">Correction</th>
     <th style="padding:8px;border:1px solid #ccc">Reason</th>
@@ -239,7 +239,7 @@ Object.assign(LESSONS, {
 <p>When the reporting clause splits the speech, the rule depends on whether the speech continues as the <strong>same sentence</strong> or begins a <strong>new sentence</strong>.</p>
 
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Same sentence continues</th>
     <th style="padding:8px;border:1px solid #ccc">New sentence begins</th>
   </tr>
@@ -267,7 +267,7 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Error</th>
     <th style="padding:8px;border:1px solid #ccc">Correction</th>
     <th style="padding:8px;border:1px solid #ccc">Reason</th>
@@ -302,7 +302,7 @@ Object.assign(LESSONS, {
 <p>A colon says: <em>what follows explains, lists or expands on what came before.</em> The clause <strong>before</strong> the colon must always be a complete sentence.</p>
 
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Use</th>
     <th style="padding:8px;border:1px solid #ccc">Example</th>
   </tr>
@@ -343,7 +343,7 @@ Object.assign(LESSONS, {
 <p>A dash is more informal and flexible. It can mark a dramatic pause, an interruption, or a sudden afterthought.</p>
 
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Use</th>
     <th style="padding:8px;border:1px solid #ccc">Example</th>
   </tr>
@@ -363,7 +363,7 @@ Object.assign(LESSONS, {
 
 <h3>Choosing Between Colon, Semicolon and Dash</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Mark</th>
     <th style="padding:8px;border:1px solid #ccc">Key use</th>
     <th style="padding:8px;border:1px solid #ccc">Formality</th>
@@ -391,7 +391,7 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Error</th>
     <th style="padding:8px;border:1px solid #ccc">Correction</th>
     <th style="padding:8px;border:1px solid #ccc">Reason</th>
@@ -419,7 +419,7 @@ Object.assign(LESSONS, {
 
 <h3>Words That Always Need a Capital Letter</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Rule</th>
     <th style="padding:8px;border:1px solid #ccc">Examples</th>
   </tr>
@@ -479,7 +479,7 @@ Object.assign(LESSONS, {
 
 <h3>Formatting Titles</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Context</th>
     <th style="padding:8px;border:1px solid #ccc">Long works (books, films, plays)</th>
     <th style="padding:8px;border:1px solid #ccc">Short works (poems, articles, songs)</th>
@@ -498,7 +498,7 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
-  <tr style="background:#ba7517;color:white">
+  <tr style="background:#f59e0b;color:white">
     <th style="padding:8px;border:1px solid #ccc">Error</th>
     <th style="padding:8px;border:1px solid #ccc">Correction</th>
     <th style="padding:8px;border:1px solid #ccc">Reason</th>

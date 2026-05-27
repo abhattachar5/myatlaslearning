@@ -11,8 +11,8 @@ Object.assign(LESSONS, {
 <h3>Common Elizabethan Words</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Elizabethan Word</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Modern Meaning</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Elizabethan Word</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Modern Meaning</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>thee / thou</strong></td>
@@ -75,9 +75,9 @@ Object.assign(LESSONS, {
 <h3>Verse vs Prose</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Feature</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Verse</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Prose</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Feature</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Verse</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Prose</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Who speaks it?</strong></td>
@@ -131,11 +131,11 @@ Object.assign(LESSONS, {
 <h3>Six Major Themes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Theme</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Definition</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Key Play</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Key Quotation</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Modern Relevance</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Theme</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Definition</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Key Play</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Key Quotation</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Modern Relevance</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Love</strong></td>
@@ -188,9 +188,9 @@ Object.assign(LESSONS, {
 <p>Shakespeare reveals character through four key evidence sources:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Evidence Source</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">What to Look For</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Example (Macbeth)</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Evidence Source</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">What to Look For</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Example (Macbeth)</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>What they say</strong></td>
@@ -239,10 +239,10 @@ Object.assign(LESSONS, {
 <h3>Key Dramatic Devices</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Device</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Definition</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Shakespeare Example</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Effect on Audience</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Device</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Definition</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Shakespeare Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Effect on Audience</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Dramatic irony</strong></td>
@@ -291,9 +291,9 @@ Object.assign(LESSONS, {
 <h3>Comedy vs Tragedy</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Feature</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Tragedy</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Comedy</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Feature</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Tragedy</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Comedy</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Ending</strong></td>
@@ -348,9 +348,9 @@ Object.assign(LESSONS, {
 <h3>The PEEL Structure for Shakespeare</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Step</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">What to Do</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Shakespeare Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Step</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">What to Do</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Shakespeare Example</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>Point</strong></td>
@@ -378,8 +378,8 @@ Object.assign(LESSONS, {
 <p>The key rule: weave the quote into YOUR sentence so it reads naturally. Never just dump a long quotation on its own.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Weak Embedding</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Strong Embedding</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Weak Embedding</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Strong Embedding</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Macbeth says &ldquo;Is this a dagger which I see before me?&rdquo;</td>
@@ -407,9 +407,9 @@ Object.assign(LESSONS, {
 <p>Context means the historical and social background of the play. Do not just state a fact &mdash; link it directly to your analysis.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Elizabethan Context</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Brief Explanation</th>
-    <th style="background:#ba7517;color:white;padding:8px;border:1px solid #ccc;text-align:left">Most Relevant Plays</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Elizabethan Context</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Brief Explanation</th>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Most Relevant Plays</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc"><strong>The Great Chain of Being</strong></td>

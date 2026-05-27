@@ -4,7 +4,7 @@
 
 CURRICULUM.push(
 {id:"s8-01",subject:"Science",subjectId:"science",name:"Nutrition & Digestion",emoji:"🍎",
- yearGroup:"Year 8",difficulty:1,estimatedHours:5,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:1,estimatedHours:5,color:"#6366f1",
  description:"Explore the nutrients your body needs, what makes a balanced diet, and how the digestive system breaks food down so it can be absorbed and used.",
  learningOutcomes:[
    "Identify the main nutrient groups and explain their roles in the body",
@@ -17,7 +17,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-02",subject:"Science",subjectId:"science",name:"Breathing & Gas Exchange",emoji:"🫁",
- yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#6366f1",
  description:"Understand how the respiratory system works, how gas exchange takes place in the lungs, and the effects of lifestyle choices on breathing.",
  learningOutcomes:[
    "Describe the structure of the human respiratory system",
@@ -30,7 +30,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-03",subject:"Science",subjectId:"science",name:"Photosynthesis",emoji:"🌿",
- yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#6366f1",
  description:"Learn how plants make their own food through photosynthesis, investigate the factors that affect the rate, and understand why photosynthesis matters for life on Earth.",
  learningOutcomes:[
    "State the word equation for photosynthesis and identify reactants and products",
@@ -42,7 +42,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-04",subject:"Science",subjectId:"science",name:"Health & Disease",emoji:"🏥",
- yearGroup:"Year 8",difficulty:2,estimatedHours:6,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:6,color:"#6366f1",
  description:"Discover the difference between communicable and non-communicable diseases, how pathogens spread, and how the body defends itself through the immune system.",
  learningOutcomes:[
    "Distinguish between communicable and non-communicable diseases",
@@ -55,7 +55,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-05",subject:"Science",subjectId:"science",name:"Ecology & Biodiversity",emoji:"🌍",
- yearGroup:"Year 8",difficulty:2,estimatedHours:6,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:6,color:"#6366f1",
  description:"Study ecosystems, how organisms depend on each other, and how human activity affects biodiversity and the environment.",
  learningOutcomes:[
    "Describe the components of an ecosystem and how organisms interact",
@@ -70,7 +70,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-06",subject:"Science",subjectId:"science",name:"The Periodic Table",emoji:"⚗️",
- yearGroup:"Year 8",difficulty:1,estimatedHours:5,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:1,estimatedHours:5,color:"#6366f1",
  description:"Explore how elements are organised in the periodic table, understand the difference between metals and non-metals, and study the properties of key groups.",
  learningOutcomes:[
    "Explain how elements are arranged in the periodic table by atomic number",
@@ -82,7 +82,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-07",subject:"Science",subjectId:"science",name:"Chemical Reactions",emoji:"🧪",
- yearGroup:"Year 8",difficulty:2,estimatedHours:6,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:6,color:"#6366f1",
  description:"Investigate different types of chemical reaction, learn to write word equations, and understand the law of conservation of mass.",
  learningOutcomes:[
    "Identify and describe combustion, oxidation, neutralisation, and thermal decomposition reactions",
@@ -95,7 +95,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-08",subject:"Science",subjectId:"science",name:"Acids, Alkalis & Neutralisation",emoji:"🧫",
- yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#6366f1",
  description:"Understand the pH scale, use indicators to classify substances, and explore neutralisation reactions and their everyday applications.",
  learningOutcomes:[
    "Use the pH scale and indicators to classify substances as acidic, alkaline, or neutral",
@@ -108,7 +108,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-09",subject:"Science",subjectId:"science",name:"Metals & Reactivity",emoji:"⚙️",
- yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#6366f1",
  description:"Order metals by reactivity, investigate displacement reactions, and understand how metals are extracted from ores and used in everyday life.",
  learningOutcomes:[
    "Place metals in order of reactivity using experimental evidence",
@@ -120,7 +120,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-10",subject:"Science",subjectId:"science",name:"Materials & Earth Resources",emoji:"🪨",
- yearGroup:"Year 8",difficulty:1,estimatedHours:4,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:1,estimatedHours:4,color:"#6366f1",
  description:"Compare the properties of ceramics, polymers, and composites, and consider how we use and manage Earth's finite and renewable resources.",
  learningOutcomes:[
    "Compare the properties and uses of ceramics, polymers, and composites",
@@ -134,7 +134,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-11",subject:"Science",subjectId:"science",name:"Energy Transfers & Resources",emoji:"🔋",
- yearGroup:"Year 8",difficulty:1,estimatedHours:5,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:1,estimatedHours:5,color:"#6366f1",
  description:"Explore how energy is stored and transferred, understand the principle of conservation of energy, and compare renewable and non-renewable energy resources.",
  learningOutcomes:[
    "Identify energy stores and describe energy transfer pathways",
@@ -147,7 +147,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-12",subject:"Science",subjectId:"science",name:"Electricity & Circuits",emoji:"🔌",
- yearGroup:"Year 8",difficulty:2,estimatedHours:6,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:6,color:"#6366f1",
  description:"Build and analyse series and parallel circuits, measure current, voltage, and resistance, and perform simple circuit calculations.",
  learningOutcomes:[
    "Draw and interpret circuit diagrams using standard symbols",
@@ -160,7 +160,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-13",subject:"Science",subjectId:"science",name:"Magnetism & Electromagnetism",emoji:"🧲",
- yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#6366f1",
  description:"Investigate magnetic fields and poles, discover how electromagnets work, and explore their applications in motors and everyday devices.",
  learningOutcomes:[
    "Describe the properties of magnets and magnetic fields",
@@ -172,7 +172,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-14",subject:"Science",subjectId:"science",name:"Forces & Motion",emoji:"🚀",
- yearGroup:"Year 8",difficulty:2,estimatedHours:6,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:6,color:"#6366f1",
  description:"Understand speed, acceleration, and Newton's laws of motion, and apply the concepts of resultant forces and pressure to real-world situations.",
  learningOutcomes:[
    "Calculate speed using the equation speed = distance ÷ time",
@@ -185,7 +185,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-15",subject:"Science",subjectId:"science",name:"Waves & Sound",emoji:"📡",
- yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#6366f1",
  description:"Learn about wave properties, investigate how sound travels, and get an overview of the electromagnetic spectrum.",
  learningOutcomes:[
    "Describe the key properties of waves (amplitude, wavelength, frequency)",
@@ -198,7 +198,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-16",subject:"Science",subjectId:"science",name:"Light & Optics",emoji:"💡",
- yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:2,estimatedHours:5,color:"#6366f1",
  description:"Explore reflection and refraction of light, investigate lenses and colour, and understand how the human eye works.",
  learningOutcomes:[
    "Describe the law of reflection and draw ray diagrams",
@@ -212,7 +212,7 @@ CURRICULUM.push(
 
 CURRICULUM.push(
 {id:"s8-17",subject:"Science",subjectId:"science",name:"Scientific Investigation",emoji:"🔭",
- yearGroup:"Year 8",difficulty:1,estimatedHours:4,color:"#185fa5",
+ yearGroup:"Year 8",difficulty:1,estimatedHours:4,color:"#6366f1",
  description:"Develop the skills needed to plan, carry out, and evaluate scientific investigations, including handling data and drawing evidence-based conclusions.",
  learningOutcomes:[
    "Plan investigations by identifying variables and writing a method",

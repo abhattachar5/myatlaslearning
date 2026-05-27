@@ -45,7 +45,7 @@
       <span id="topic-progress-label" style="font-size:.875rem;font-weight:700;color:var(--text)">0 / 0 topics mastered</span>
     </div>
     <div style="height:8px;background:var(--ring-track);border-radius:4px;overflow:hidden">
-      <div id="topic-progress-bar" style="height:100%;background:#3f6f00;border-radius:4px;transition:width .4s ease;width:0%"></div>
+      <div id="topic-progress-bar" style="height:100%;background:#3b82f6;border-radius:4px;transition:width .4s ease;width:0%"></div>
     </div>
   </div>
 
@@ -123,7 +123,7 @@ const isEnglishTopic = topic && topic.id && (topic.id.startsWith('et-') || topic
 const isScienceTopic = topic && topic.id && topic.id.startsWith('st7-');
 const isHistoryTopic = topic && topic.id && (topic.id.startsWith('ht-') || topic.id.startsWith('h8t-'));
 const isGeographyTopic = topic && topic.id && (topic.id.startsWith('gt-') || topic.id.startsWith('g8t-'));
-const topicColor = isEnglishTopic ? '#ba7517' : isScienceTopic ? '#185fa5' : isHistoryTopic ? '#6d28d9' : isGeographyTopic ? '#0891b2' : '#3f6f00';
+const topicColor = isEnglishTopic ? '#f59e0b' : isScienceTopic ? '#6366f1' : isHistoryTopic ? '#a855f7' : isGeographyTopic ? '#0d9488' : '#3b82f6';
 const topicSubject = isEnglishTopic ? 'English' : isScienceTopic ? 'Science' : isHistoryTopic ? 'History' : isGeographyTopic ? 'Geography' : 'Mathematics';
 const subjectId = isEnglishTopic ? 'english' : isScienceTopic ? 'science' : isHistoryTopic ? 'history' : isGeographyTopic ? 'geography' : 'math';
 const dashboardUrl = 'dashboard.html?subject=' + subjectId;

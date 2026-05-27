@@ -272,6 +272,7 @@
 let user = requireAuth();
 const params = new URLSearchParams(location.search);
 const islandId = params.get('id') || 'island-1';
+localStorage.setItem('sm_last_island', islandId);
 const island = CURRICULUM.find(i => i.id === islandId);
 if (!island) { alert('Island not found'); history.back(); }
 const dashboardUrl = 'dashboard.html?subject=' + (island ? island.subjectId : 'math');

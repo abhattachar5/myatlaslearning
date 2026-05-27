@@ -214,7 +214,7 @@ const isScienceTopic = topicId && topicId.startsWith('st7-');
 const isEnglishTopic = topicId && (topicId.startsWith('et-') || topicId.startsWith('e8t-'));
 const isHistoryTopic = topicId && (topicId.startsWith('ht-') || topicId.startsWith('h8t-'));
 const isGeographyTopic = topicId && (topicId.startsWith('gt-') || topicId.startsWith('g8t-'));
-const topicColor = isScienceTopic ? '#185fa5' : isEnglishTopic ? '#ba7517' : isHistoryTopic ? '#6d28d9' : isGeographyTopic ? '#0891b2' : '#3f6f00';
+const topicColor = isScienceTopic ? '#6366f1' : isEnglishTopic ? '#f59e0b' : isHistoryTopic ? '#a855f7' : isGeographyTopic ? '#0d9488' : '#3b82f6';
 const topicSubjectLabel = isScienceTopic ? 'Science' : isEnglishTopic ? 'English' : isHistoryTopic ? 'History' : isGeographyTopic ? 'Geography' : 'Mathematics';
 
 if (!topic) {
@@ -251,7 +251,7 @@ document.querySelector('.test-progress-fill').style.background = topicColor;
 const infoGrid = document.getElementById('setup-info');
 var qIslands = isCheckpoint ? checkpointIslands : topicIslands;
 infoGrid.innerHTML =
-  '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + Math.min(25, qIslands.length * 5) + '</div></div>';
+  '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + (function(n){ var per = Math.min(5, Math.floor(25/n)); var rem = n*per < 25 ? Math.min(n, 25-n*per) : 0; return n*per+rem; })(qIslands.length) + '</div></div>';
 
 // Theme
 (function() { initTheme(); updateThemeBtn(); })();
@@ -465,7 +465,7 @@ function submitTest() {
   html += '<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:4px"><span>Medium-High</span><span style="font-weight:700">' + medPct + '%</span></div>';
   html += '<div style="height:8px;background:var(--ring-track);border-radius:4px;overflow:hidden"><div style="height:100%;width:' + medPct + '%;background:var(--green);border-radius:4px"></div></div></div>';
   html += '<div><div style="display:flex;justify-content:space-between;font-size:.875rem;margin-bottom:4px"><span>Greater Depth</span><span style="font-weight:700">' + gdPct + '%</span></div>';
-  html += '<div style="height:8px;background:var(--ring-track);border-radius:4px;overflow:hidden"><div style="height:100%;width:' + gdPct + '%;background:#6d28d9;border-radius:4px"></div></div></div>';
+  html += '<div style="height:8px;background:var(--ring-track);border-radius:4px;overflow:hidden"><div style="height:100%;width:' + gdPct + '%;background:#a855f7;border-radius:4px"></div></div></div>';
   html += '</div>';
 
   html += '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px">';

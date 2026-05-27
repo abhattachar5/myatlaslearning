@@ -11,10 +11,10 @@ Object.assign(LESSONS, {
 <h3>The Four Types of Sentences</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Type</th>
-    <th style="background:#ba7517;color:white;padding:8px">Purpose</th>
-    <th style="background:#ba7517;color:white;padding:8px">End punctuation</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Type</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Purpose</th>
+    <th style="background:#f59e0b;color:white;padding:8px">End punctuation</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Declarative</td>
@@ -46,7 +46,7 @@ Object.assign(LESSONS, {
 <p>Every complete sentence has two parts: a <strong>subject</strong> (who or what the sentence is about) and a <strong>predicate</strong> (what the subject does or is).</p>
 <div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
   <strong>The tall girl in the red coat</strong> &nbsp;|&nbsp; <em>ran quickly down the street.</em><br>
-  <span style="color:#ba7517">← complete subject</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#555">← complete predicate</span>
+  <span style="color:#f59e0b">← complete subject</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#555">← complete predicate</span>
 </div>
 <p>The <strong>simple subject</strong> is the main noun/pronoun: <em>girl</em>. The <strong>simple predicate</strong> is the main verb: <em>ran</em>.</p>
 
@@ -54,9 +54,9 @@ Object.assign(LESSONS, {
 <p>A <strong>fragment</strong> is an incomplete sentence. It is missing a subject, a verb, or a complete thought.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Fragment</th>
-    <th style="background:#ba7517;color:white;padding:8px">What is missing</th>
-    <th style="background:#ba7517;color:white;padding:8px">Complete sentence</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Fragment</th>
+    <th style="background:#f59e0b;color:white;padding:8px">What is missing</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Complete sentence</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Running down the street.</td>
@@ -92,8 +92,8 @@ Object.assign(LESSONS, {
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Mistake</th>
-    <th style="background:#ba7517;color:white;padding:8px">Correction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Mistake</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Correction</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Writing a dependent clause as its own sentence: "Because I was late."</td>
@@ -113,9 +113,9 @@ Object.assign(LESSONS, {
 <h3>Common Nouns vs Proper Nouns</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Type</th>
-    <th style="background:#ba7517;color:white;padding:8px">Description</th>
-    <th style="background:#ba7517;color:white;padding:8px">Examples</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Type</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Description</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Examples</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Common noun</td>
@@ -132,9 +132,9 @@ Object.assign(LESSONS, {
 <h3>Forming Plurals</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Noun ending</th>
-    <th style="background:#ba7517;color:white;padding:8px">Rule</th>
-    <th style="background:#ba7517;color:white;padding:8px">Examples</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Noun ending</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Rule</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Examples</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Most nouns</td>
@@ -178,9 +178,9 @@ Object.assign(LESSONS, {
 <h3>Possessives</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Type</th>
-    <th style="background:#ba7517;color:white;padding:8px">Rule</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Type</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Rule</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Singular possessive</td>
@@ -202,8 +202,8 @@ Object.assign(LESSONS, {
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Mistake</th>
-    <th style="background:#ba7517;color:white;padding:8px">Correction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Mistake</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Correction</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Adding apostrophe to form a plural: "three cat's sat..."</td>
@@ -223,10 +223,10 @@ Object.assign(LESSONS, {
 <h3>Personal Pronouns</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Person</th>
-    <th style="background:#ba7517;color:white;padding:8px">Subject</th>
-    <th style="background:#ba7517;color:white;padding:8px">Object</th>
-    <th style="background:#ba7517;color:white;padding:8px">Possessive</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Person</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Subject</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Object</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Possessive</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">1st singular</td>
@@ -271,9 +271,9 @@ Object.assign(LESSONS, {
 <p>The pronoun must agree with its antecedent in <strong>number</strong> (singular/plural) and <strong>gender</strong>.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Rule</th>
-    <th style="background:#ba7517;color:white;padding:8px">Correct</th>
-    <th style="background:#ba7517;color:white;padding:8px">Incorrect</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Rule</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Correct</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Incorrect</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Singular antecedent → singular pronoun</td>
@@ -306,8 +306,8 @@ Object.assign(LESSONS, {
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Mistake</th>
-    <th style="background:#ba7517;color:white;padding:8px">Fix</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Mistake</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Fix</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Vague 'it', 'this', or 'they' with no clear antecedent</td>
@@ -327,9 +327,9 @@ Object.assign(LESSONS, {
 <h3>Types of Pronouns at a Glance</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Type</th>
-    <th style="background:#ba7517;color:white;padding:8px">Function</th>
-    <th style="background:#ba7517;color:white;padding:8px">Examples</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Type</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Function</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Examples</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Subject pronouns</td>
@@ -379,9 +379,9 @@ Object.assign(LESSONS, {
 <h3>Reflexive vs Intensive Use</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Use</th>
-    <th style="background:#ba7517;color:white;padding:8px">Meaning</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Use</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Meaning</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Reflexive</td>
@@ -398,8 +398,8 @@ Object.assign(LESSONS, {
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Mistake</th>
-    <th style="background:#ba7517;color:white;padding:8px">Correction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Mistake</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Correction</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">"Me and Tom went to the shop."</td>
@@ -429,8 +429,8 @@ Object.assign(LESSONS, {
 </div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Category</th>
-    <th style="background:#ba7517;color:white;padding:8px">Helping verbs</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Category</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Helping verbs</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Primary auxiliaries</td>
@@ -445,9 +445,9 @@ Object.assign(LESSONS, {
 <h3>Transitive and Intransitive Verbs</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Type</th>
-    <th style="background:#ba7517;color:white;padding:8px">Needs a direct object?</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Type</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Needs a direct object?</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Transitive</td>
@@ -473,9 +473,9 @@ Object.assign(LESSONS, {
 <h3>Modal Verbs and Their Meanings</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Modal</th>
-    <th style="background:#ba7517;color:white;padding:8px">Meaning</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Modal</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Meaning</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">can / could</td><td style="padding:8px;border:1px solid #ccc">Ability</td><td style="padding:8px;border:1px solid #ccc">She can swim. He could run faster last year.</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">may / might</td><td style="padding:8px;border:1px solid #ccc">Possibility; may also = permission</td><td style="padding:8px;border:1px solid #ccc">It might rain. You may leave.</td></tr>
@@ -487,8 +487,8 @@ Object.assign(LESSONS, {
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Mistake</th>
-    <th style="background:#ba7517;color:white;padding:8px">Correction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Mistake</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Correction</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Confusing linking and action: "She looks at the painting" vs "She looks beautiful."</td>
@@ -515,9 +515,9 @@ Object.assign(LESSONS, {
 <h3>Compound Subjects</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Conjunction</th>
-    <th style="background:#ba7517;color:white;padding:8px">Rule</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Conjunction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Rule</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">and</td>
@@ -539,9 +539,9 @@ Object.assign(LESSONS, {
 <h3>Tricky Cases</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Situation</th>
-    <th style="background:#ba7517;color:white;padding:8px">Rule</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Situation</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Rule</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">Collective nouns (team, class, family)</td>
@@ -573,8 +573,8 @@ Object.assign(LESSONS, {
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Error</th>
-    <th style="background:#ba7517;color:white;padding:8px">Correction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Error</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Correction</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">"The team are playing well." (American English would use 'is')</td>
@@ -594,9 +594,9 @@ Object.assign(LESSONS, {
 <h3>Simple Tenses Overview</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Tense</th>
-    <th style="background:#ba7517;color:white;padding:8px">Form</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Tense</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Form</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Simple past</td><td style="padding:8px;border:1px solid #ccc">verb + -ed (or irregular)</td><td style="padding:8px;border:1px solid #ccc">She walked. He ran.</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Simple present</td><td style="padding:8px;border:1px solid #ccc">base form (+ -s for 3rd person singular)</td><td style="padding:8px;border:1px solid #ccc">She walks. He runs.</td></tr>
@@ -606,9 +606,9 @@ Object.assign(LESSONS, {
 <h3>Irregular Verbs: Past Tense and Past Participle</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Base form</th>
-    <th style="background:#ba7517;color:white;padding:8px">Simple past</th>
-    <th style="background:#ba7517;color:white;padding:8px">Past participle (used with have/had)</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Base form</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Simple past</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Past participle (used with have/had)</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">go</td><td style="padding:8px;border:1px solid #ccc">went</td><td style="padding:8px;border:1px solid #ccc">gone</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">see</td><td style="padding:8px;border:1px solid #ccc">saw</td><td style="padding:8px;border:1px solid #ccc">seen</td></tr>
@@ -625,10 +625,10 @@ Object.assign(LESSONS, {
 <h3>Progressive and Perfect Tenses</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Tense</th>
-    <th style="background:#ba7517;color:white;padding:8px">Form</th>
-    <th style="background:#ba7517;color:white;padding:8px">Use</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Tense</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Form</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Use</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Past progressive</td><td style="padding:8px;border:1px solid #ccc">was/were + -ing</td><td style="padding:8px;border:1px solid #ccc">Action in progress at a past time</td><td style="padding:8px;border:1px solid #ccc">She was eating.</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Present progressive</td><td style="padding:8px;border:1px solid #ccc">am/is/are + -ing</td><td style="padding:8px;border:1px solid #ccc">Action in progress now</td><td style="padding:8px;border:1px solid #ccc">She is eating.</td></tr>
@@ -647,8 +647,8 @@ Object.assign(LESSONS, {
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Mistake</th>
-    <th style="background:#ba7517;color:white;padding:8px">Correction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Mistake</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Correction</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">"I have went to the shop." (using simple past as participle)</td>
@@ -676,9 +676,9 @@ Object.assign(LESSONS, {
 <p>When several adjectives come before a noun, they follow a set order in natural English:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Order</th>
-    <th style="background:#ba7517;color:white;padding:8px">Category</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Order</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Category</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">1</td><td style="padding:8px;border:1px solid #ccc">Opinion</td><td style="padding:8px;border:1px solid #ccc">lovely, ugly, brilliant</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">2</td><td style="padding:8px;border:1px solid #ccc">Size</td><td style="padding:8px;border:1px solid #ccc">small, large, tiny</td></tr>
@@ -701,9 +701,9 @@ Object.assign(LESSONS, {
 <h3>Comparative and Superlative Forms</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Type</th>
-    <th style="background:#ba7517;color:white;padding:8px">Comparative</th>
-    <th style="background:#ba7517;color:white;padding:8px">Superlative</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Type</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Comparative</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Superlative</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Short (1–2 syllables): tall</td><td style="padding:8px;border:1px solid #ccc">taller</td><td style="padding:8px;border:1px solid #ccc">tallest</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Long (3+ syllables): beautiful</td><td style="padding:8px;border:1px solid #ccc">more beautiful</td><td style="padding:8px;border:1px solid #ccc">most beautiful</td></tr>
@@ -714,8 +714,8 @@ Object.assign(LESSONS, {
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Mistake</th>
-    <th style="background:#ba7517;color:white;padding:8px">Correction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Mistake</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Correction</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">"She sings good." (adjective used as adverb)</td>
@@ -739,9 +739,9 @@ Object.assign(LESSONS, {
 <h3>Common Prepositions by Type</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Type</th>
-    <th style="background:#ba7517;color:white;padding:8px">Prepositions</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Type</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Prepositions</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Place</td><td style="padding:8px;border:1px solid #ccc">in, on, at, under, over, beside, near, between, behind, through, inside, outside</td><td style="padding:8px;border:1px solid #ccc">The keys are on the table.</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Time</td><td style="padding:8px;border:1px solid #ccc">at, on, in, before, after, during, since, until, by, for</td><td style="padding:8px;border:1px solid #ccc">I'll meet you at noon on Monday.</td></tr>
@@ -762,9 +762,9 @@ Object.assign(LESSONS, {
 <h3>Prepositions of Time: at / on / in</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Preposition</th>
-    <th style="background:#ba7517;color:white;padding:8px">Use</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Preposition</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Use</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">at</td><td style="padding:8px;border:1px solid #ccc">Specific times; at night; at the weekend</td><td style="padding:8px;border:1px solid #ccc">at 3 o'clock, at noon, at midnight</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">on</td><td style="padding:8px;border:1px solid #ccc">Days and dates</td><td style="padding:8px;border:1px solid #ccc">on Monday, on 5th June, on my birthday</td></tr>
@@ -781,8 +781,8 @@ Object.assign(LESSONS, {
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Mistake</th>
-    <th style="background:#ba7517;color:white;padding:8px">Correction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Mistake</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Correction</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">"I'll see you in Monday."</td>
@@ -802,9 +802,9 @@ Object.assign(LESSONS, {
 <h3>Coordinating Conjunctions (FANBOYS)</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Conjunction</th>
-    <th style="background:#ba7517;color:white;padding:8px">Meaning / Use</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Conjunction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Meaning / Use</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">For</td><td style="padding:8px;border:1px solid #ccc">Gives a reason (formal)</td><td style="padding:8px;border:1px solid #ccc">I stayed inside, for it was cold.</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">And</td><td style="padding:8px;border:1px solid #ccc">Adds information</td><td style="padding:8px;border:1px solid #ccc">I like cats and dogs.</td></tr>
@@ -819,8 +819,8 @@ Object.assign(LESSONS, {
 <h3>Subordinating Conjunctions</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Group</th>
-    <th style="background:#ba7517;color:white;padding:8px">Conjunctions</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Group</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Conjunctions</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Time</td><td style="padding:8px;border:1px solid #ccc">when, after, before, until, while, as, as soon as, once</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Cause / reason</td><td style="padding:8px;border:1px solid #ccc">because, since, as</td></tr>
@@ -837,8 +837,8 @@ Object.assign(LESSONS, {
 <h3>Correlative Conjunctions</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Pair</th>
-    <th style="background:#ba7517;color:white;padding:8px">Example</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Pair</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Example</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">either ... or</td><td style="padding:8px;border:1px solid #ccc">Either you come now, or we leave without you.</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">neither ... nor</td><td style="padding:8px;border:1px solid #ccc">Neither the food nor the service was good.</td></tr>
@@ -850,9 +850,9 @@ Object.assign(LESSONS, {
 <h3>Contractions</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Original words</th>
-    <th style="background:#ba7517;color:white;padding:8px">Contraction</th>
-    <th style="background:#ba7517;color:white;padding:8px">Note</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Original words</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Contraction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Note</th>
   </tr>
   <tr><td style="padding:8px;border:1px solid #ccc">I am</td><td style="padding:8px;border:1px solid #ccc">I'm</td><td style="padding:8px;border:1px solid #ccc"></td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">you are</td><td style="padding:8px;border:1px solid #ccc">you're</td><td style="padding:8px;border:1px solid #ccc">≠ your (possessive)</td></tr>
@@ -867,8 +867,8 @@ Object.assign(LESSONS, {
 <h3>Common Mistakes</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr>
-    <th style="background:#ba7517;color:white;padding:8px">Mistake</th>
-    <th style="background:#ba7517;color:white;padding:8px">Correction</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Mistake</th>
+    <th style="background:#f59e0b;color:white;padding:8px">Correction</th>
   </tr>
   <tr>
     <td style="padding:8px;border:1px solid #ccc">"Although she was tired, but she carried on."</td>
