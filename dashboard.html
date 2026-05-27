@@ -324,51 +324,59 @@ function getHeroBannerIsland() {
   const allProgress = getAllProgress();
   const plan = StudyPlanner.getStudyPlan();
 
-  // Build set of this week's island IDs for filtering
-  const weekIslandIds = new Set();
-  if (plan) {
-    const weekNum = StudyPlanner.getCurrentWeekNumber();
-    const data = StudyPlanner.getWeekChecklist(weekNum);
-    if (data) {
-      for (const subj of data.subjects) {
-        for (const topic of subj.topics) {
-          for (const isl of topic.islands) {
-            weekIslandIds.add(isl.islandId);
+  // Helper: find first incomplete island from a week's checklist data
+  function firstIncompleteFromWeek(data) {
+    if (!data) return null;
+    for (const subj of data.subjects) {
+      for (const topic of subj.topics) {
+        for (const isl of topic.islands) {
+          if (!isl.complete) {
+            return curriculum.find(i => i.id === isl.islandId) || null;
           }
         }
       }
     }
+    return null;
   }
 
-  // 1. First incomplete item from this week's study plan (always top priority)
+  // Helper: collect island IDs for a week
+  function weekIds(data) {
+    const ids = new Set();
+    if (!data) return ids;
+    for (const subj of data.subjects) {
+      for (const topic of subj.topics) {
+        for (const isl of topic.islands) ids.add(isl.islandId);
+      }
+    }
+    return ids;
+  }
+
   if (plan) {
     const weekNum = StudyPlanner.getCurrentWeekNumber();
     const data = StudyPlanner.getWeekChecklist(weekNum);
-    if (data) {
-      // Prefer last active island if it's in this week's plan and incomplete
-      const lastId = localStorage.getItem('sm_last_island');
-      if (lastId && weekIslandIds.has(lastId)) {
-        const s = getIslandStatus(lastId);
-        if (s > 0 && s < 4) {
-          const island = curriculum.find(i => i.id === lastId);
-          if (island) return island;
-        }
-      }
-      // Otherwise first incomplete island in the plan
-      for (const subj of data.subjects) {
-        for (const topic of subj.topics) {
-          for (const isl of topic.islands) {
-            if (!isl.complete) {
-              const island = curriculum.find(i => i.id === isl.islandId);
-              if (island) return island;
-            }
-          }
-        }
+
+    // 1a. Prefer last active island if it's in this week's plan and incomplete
+    const lastId = localStorage.getItem('sm_last_island');
+    const thisWeekIds = weekIds(data);
+    if (lastId && thisWeekIds.has(lastId)) {
+      const s = getIslandStatus(lastId);
+      if (s > 0 && s < 4) {
+        const island = curriculum.find(i => i.id === lastId);
+        if (island) return island;
       }
     }
+
+    // 1b. First incomplete island from this week's plan
+    const found = firstIncompleteFromWeek(data);
+    if (found) return found;
+
+    // 2. This week is done — show first incomplete from next week (look ahead)
+    const nextData = StudyPlanner.getWeekChecklist(weekNum + 1);
+    const nextFound = firstIncompleteFromWeek(nextData);
+    if (nextFound) return nextFound;
   }
 
-  // 2. Last active island (only if no study plan or week is complete)
+  // 3. No study plan — fall back to last active island
   const lastId = localStorage.getItem('sm_last_island');
   if (lastId) {
     const island = curriculum.find(i => i.id === lastId);
@@ -377,13 +385,13 @@ function getHeroBannerIsland() {
     }
   }
 
-  // 3. Any in-progress island (status 1-3)
+  // 4. Any in-progress island (status 1-3)
   for (const island of curriculum) {
     const s = getIslandStatus(island.id);
     if (s > 0 && s < 4) return island;
   }
 
-  // 4. First unlocked unstarted island
+  // 5. First unlocked unstarted island
   for (const island of curriculum) {
     if (getIslandStatus(island.id) === 0 && isIslandUnlocked(island, allProgress)) {
       return island;
