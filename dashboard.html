@@ -322,22 +322,39 @@ function getYearGeographyTopics() {
 function getHeroBannerIsland() {
   const curriculum = getYearCurriculum();
   const allProgress = getAllProgress();
-
-  // 1. Last active island (not mastered)
-  const lastId = localStorage.getItem('sm_last_island');
-  if (lastId) {
-    const island = curriculum.find(i => i.id === lastId);
-    if (island && getIslandStatus(lastId) > 0 && getIslandStatus(lastId) < 4) {
-      return island;
-    }
-  }
-
-  // 2. First incomplete item from this week's study plan
   const plan = StudyPlanner.getStudyPlan();
+
+  // Build set of this week's island IDs for filtering
+  const weekIslandIds = new Set();
   if (plan) {
     const weekNum = StudyPlanner.getCurrentWeekNumber();
     const data = StudyPlanner.getWeekChecklist(weekNum);
     if (data) {
+      for (const subj of data.subjects) {
+        for (const topic of subj.topics) {
+          for (const isl of topic.islands) {
+            weekIslandIds.add(isl.islandId);
+          }
+        }
+      }
+    }
+  }
+
+  // 1. First incomplete item from this week's study plan (always top priority)
+  if (plan) {
+    const weekNum = StudyPlanner.getCurrentWeekNumber();
+    const data = StudyPlanner.getWeekChecklist(weekNum);
+    if (data) {
+      // Prefer last active island if it's in this week's plan and incomplete
+      const lastId = localStorage.getItem('sm_last_island');
+      if (lastId && weekIslandIds.has(lastId)) {
+        const s = getIslandStatus(lastId);
+        if (s > 0 && s < 4) {
+          const island = curriculum.find(i => i.id === lastId);
+          if (island) return island;
+        }
+      }
+      // Otherwise first incomplete island in the plan
       for (const subj of data.subjects) {
         for (const topic of subj.topics) {
           for (const isl of topic.islands) {
@@ -348,6 +365,15 @@ function getHeroBannerIsland() {
           }
         }
       }
+    }
+  }
+
+  // 2. Last active island (only if no study plan or week is complete)
+  const lastId = localStorage.getItem('sm_last_island');
+  if (lastId) {
+    const island = curriculum.find(i => i.id === lastId);
+    if (island && getIslandStatus(lastId) > 0 && getIslandStatus(lastId) < 4) {
+      return island;
     }
   }
 
