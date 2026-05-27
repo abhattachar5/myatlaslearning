@@ -1059,7 +1059,7 @@ function renderMathTopicCards() {
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands mastered${testPassed ? ', test passed' : ''}">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands completed${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, '#3b82f6', 52)}
@@ -1073,7 +1073,7 @@ function renderMathTopicCards() {
       <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
-        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>
+        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
       </div>
     </div>`;
   }).join('');
@@ -1107,7 +1107,7 @@ function renderEnglishTopicCards() {
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands mastered${testPassed ? ', test passed' : ''}">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands completed${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, '#f59e0b', 52)}
@@ -1121,7 +1121,7 @@ function renderEnglishTopicCards() {
       <div class="island-meta">${totalIslands > 0 ? totalIslands + ' topic' + (totalIslands !== 1 ? 's' : '') : (topic.id === 'et-04' ? '40 passages' : 'Coming soon')}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
-        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>
+        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
       </div>
     </div>`;
   }).join('');
@@ -1156,7 +1156,7 @@ function renderScienceTopicCards() {
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered${testPassed ? ', test passed' : ''}">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics completed${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, sciColor, 52)}
@@ -1170,7 +1170,7 @@ function renderScienceTopicCards() {
       <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
-        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>
+        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
       </div>
     </div>`;
   }).join('');
@@ -1205,7 +1205,7 @@ function renderHistoryTopicCards() {
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered${testPassed ? ', test passed' : ''}">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics completed${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, hisColor, 52)}
@@ -1219,7 +1219,7 @@ function renderHistoryTopicCards() {
       <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
-        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>
+        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
       </div>
     </div>`;
   }).join('');
@@ -1254,7 +1254,7 @@ function renderGeographyTopicCards() {
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics mastered${testPassed ? ', test passed' : ''}">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} subtopics completed${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, geoColor, 52)}
@@ -1268,7 +1268,7 @@ function renderGeographyTopicCards() {
       <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
-        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} mastered` : started > 0 ? `${started} started` : 'Not started'}</span>
+        <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
       </div>
     </div>`;
   }).join('');
