@@ -491,8 +491,9 @@ function renderThisWeekTab() {
       });
     });
   });
-  segEl.innerHTML = items.map(it =>
-    '<div class="goals-seg' + (it.done ? ' done' : '') + '" style="--seg-color:' + it.color + '"></div>'
+  const doneCount = items.filter(it => it.done).length;
+  segEl.innerHTML = items.map((it, i) =>
+    '<div class="goals-seg' + (i < doneCount ? ' done' : '') + '"></div>'
   ).join('');
 
   const remaining = data.totalItems - data.doneItems;
