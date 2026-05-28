@@ -45,6 +45,8 @@ export default async (req, context) => {
       joinDate: body.joinDate || null,
       preferences: body.preferences || { theme: "light" },
       progress: body.progress || {},
+      testResults: body.testResults || {},
+      revisionDone: body.revisionDone || {},
       updatedAt: new Date().toISOString(),
     };
 
