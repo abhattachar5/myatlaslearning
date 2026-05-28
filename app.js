@@ -67,6 +67,10 @@ function syncProgressToServer() {
     try {
       const profile = getUser();
       if (!profile) return;
+      var testResults = {};
+      try { testResults = JSON.parse(localStorage.getItem('sm_test_results') || '{}'); } catch(e) {}
+      var revisionDone = {};
+      try { revisionDone = JSON.parse(localStorage.getItem('sm_revision_done') || '{}'); } catch(e) {}
       const payload = {
         name: profile.name,
         parentName: profile.parentName || '',
@@ -78,7 +82,9 @@ function syncProgressToServer() {
         lastStudy: localStorage.getItem('sm_last_study'),
         joinDate: profile.joinDate,
         preferences: { theme: localStorage.getItem('sm_theme') || 'light' },
-        progress: getAllProgress()
+        progress: getAllProgress(),
+        testResults: testResults,
+        revisionDone: revisionDone
       };
       await fetchWithAuth('/.netlify/functions/save-progress', {
         method: 'PUT',

@@ -525,6 +525,7 @@ function saveTestResult(topicId, result) {
   if (!all[topicId]) all[topicId] = [];
   all[topicId].push(result);
   localStorage.setItem(key, JSON.stringify(all));
+  if (typeof syncProgressToServer === 'function') syncProgressToServer();
 }
 </script>
 </body>

@@ -349,6 +349,12 @@
         if (serverData.lastStudy) {
           localStorage.setItem('sm_last_study', serverData.lastStudy);
         }
+        if (serverData.testResults && Object.keys(serverData.testResults).length) {
+          localStorage.setItem('sm_test_results', JSON.stringify(serverData.testResults));
+        }
+        if (serverData.revisionDone && Object.keys(serverData.revisionDone).length) {
+          localStorage.setItem('sm_revision_done', JSON.stringify(serverData.revisionDone));
+        }
         if (serverData.preferences && serverData.preferences.theme) {
           localStorage.setItem('sm_theme', serverData.preferences.theme);
           document.documentElement.setAttribute('data-theme', serverData.preferences.theme);
