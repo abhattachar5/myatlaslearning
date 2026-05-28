@@ -209,14 +209,22 @@ Object.assign(QUESTIONS, {
   'mi-09-2': [
     { question:'Which pair shows equivalent ratios?', options:['3:4 and 6:10','2:5 and 4:10','1:3 and 2:5','4:6 and 6:10'], answer:1, explanation:'2:5 multiplied by 2 = 4:10.' },
     { gen: function() {
-        var total = pickFrom([40,60,80,100,120,150]);
-        var a = pickFrom([1,2,3]), b = pickFrom([2,3,4]);
-        while(a===b) b=pickFrom([2,3,4]);
-        var parts = a+b, shareA = Math.round(total*a/parts), shareB = total-shareA;
-        var opts = buildOpts('£'+shareA+' and £'+shareB, ['£'+(shareA+shareB/2)+' and £'+(shareB/2), '£'+total/2+' and £'+total/2, '£'+shareB+' and £'+shareA]);
+        // Pre-compute clean splits so total ÷ parts is always an integer
+        var combos = [
+          {total:40,a:1,b:3},{total:40,a:1,b:4},{total:40,a:3,b:5},
+          {total:60,a:1,b:2},{total:60,a:1,b:3},{total:60,a:1,b:4},{total:60,a:2,b:3},
+          {total:80,a:1,b:3},{total:80,a:3,b:5},
+          {total:100,a:1,b:4},{total:100,a:2,b:3},{total:100,a:3,b:7},
+          {total:120,a:1,b:2},{total:120,a:1,b:3},{total:120,a:1,b:5},{total:120,a:2,b:3},
+          {total:150,a:1,b:2},{total:150,a:2,b:3}
+        ];
+        var c = pickFrom(combos);
+        var total=c.total, a=c.a, b=c.b;
+        var parts = a+b, perPart = total/parts, shareA = a*perPart, shareB = b*perPart;
+        var opts = buildOpts('£'+shareA+' and £'+shareB, ['£'+shareB+' and £'+shareA, '£'+total/2+' and £'+total/2, '£'+(a*total/10)+' and £'+(b*total/10)]);
         return { q: 'Divide £'+total+' in the ratio '+a+':'+b+'.',
                  opts: opts, c: 0,
-                 e: 'Total parts: '+parts+'. Each part: £'+(total/parts).toFixed(2)+'. Shares: £'+shareA+' and £'+shareB+'.' };
+                 e: 'Total parts: '+parts+'. Each part: £'+perPart+'. Shares: £'+shareA+' and £'+shareB+'.' };
     }},
     { gen: function() {
         var servings = pickFrom([4,5,6]), amount = pickFrom([200,250,300,400,500]);
@@ -285,7 +293,7 @@ Object.assign(QUESTIONS, {
                  e: 'k='+y1+'/'+x1+'='+k+'. y='+k+'x. When x='+x2+': y='+k+'×'+x2+'='+ans+'.' };
     }},
     { question:'A and B share money in ratio 3:4. A gets £45. What is the total?', options:['£60','£80','£100','£105'], answer:3, explanation:'1 part=£15. Total parts=7. Total=7×£15=£105.' },
-    { question:'The angles in a triangle are in ratio 2:3:7. Find the largest angle.', options:['60°','90°','105°','126°'], answer:3, explanation:'Total=12 parts. 1 part=15°. Largest=7×15°=105°. Wait: 2+3+7=12. 180/12=15. 7×15=105°.' },
+    { question:'The angles in a triangle are in ratio 2:3:7. Find the largest angle.', options:['60°','90°','105°','126°'], answer:2, explanation:'2+3+7=12 parts. 180÷12=15° per part. Largest=7×15°=105°.' },
     { question:'A picture is enlarged so all lengths increase in ratio 3:8. Original width=12cm. New width=?', options:['24cm','32cm','36cm','48cm'], answer:1, explanation:'Scale factor=8/3. New width=12×(8/3)=32cm.' },
     { question:'Paint is mixed red:white = 1:3. How much red is needed to make 2 litres of pink paint?', options:['0.4L','0.5L','0.6L','1.0L'], answer:1, explanation:'Red = 1/4 of total. 1/4 × 2 = 0.5 litres.' },
     { question:'If y ∝ x and y=30 when x=6, find x when y=45.', options:['7','8','9','10'], answer:2, explanation:'k=30/6=5. 45=5x → x=9.' },
@@ -371,7 +379,7 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: n+'÷'+d+'='+parseFloat((n/d).toFixed(4))+'. ×100 = '+ans+'%.' };
     }},
-    { question:'Which is largest: 0.6, 58%, or 3/5?', options:['0.6','58%','3/5','All equal'], answer:3, explanation:'0.6=60%, 58%=58%, 3/5=60%. So 0.6 and 3/5 are both 60%, larger than 58%.' },
+    { question:'Which is largest: 0.6, 58%, or 3/5?', options:['0.6','58%','3/5','All equal'], answer:0, explanation:'0.6=60%, 3/5=60%, 58%=58%. 0.6 and 3/5 are both 60%, which is larger than 58%. 0.6 is one of the largest values.' },
     { question:'Write 130% as a decimal.', options:['1.3','13','0.13','130'], answer:0, explanation:'130÷100=1.3.' },
     { gen: function() {
         var denoms = [4,5,8,10,20,25]; var d = pickFrom(denoms);
@@ -581,8 +589,17 @@ Object.assign(QUESTIONS, {
                  e: (100+pct)+'% → £'+result+'. 1% → £'+(result/(100+pct)).toFixed(2)+'. 100% → £'+orig+'.' };
     }},
     { gen: function() {
-        var pct = pickFrom([10,20,25,50]); var result = pickFrom([80,90,100,120,150]);
-        var orig = result*100/(100-pct);
+        // Pre-compute clean (pct, result) pairs so original is always a whole number
+        var combos = [
+          {pct:10, result:72, orig:80},  {pct:10, result:81, orig:90},   {pct:10, result:90, orig:100},
+          {pct:10, result:108, orig:120},{pct:10, result:135, orig:150},
+          {pct:20, result:64, orig:80},  {pct:20, result:72, orig:90},   {pct:20, result:80, orig:100},
+          {pct:20, result:96, orig:120}, {pct:20, result:120, orig:150},
+          {pct:25, result:60, orig:80},  {pct:25, result:75, orig:100},  {pct:25, result:90, orig:120},
+          {pct:50, result:40, orig:80},  {pct:50, result:50, orig:100},  {pct:50, result:75, orig:150}
+        ];
+        var c = pickFrom(combos);
+        var pct=c.pct, result=c.result, orig=c.orig;
         var opts = buildOpts('£'+orig, ['£'+(result+pct), '£'+result*pct/100, '£'+(orig+pct)]);
         return { q: 'After a ' + pct + '% reduction, a price is £'+result+'. What was the original price?',
                  opts: opts, c: 0,

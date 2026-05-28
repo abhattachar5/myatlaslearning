@@ -103,12 +103,14 @@ Object.assign(QUESTIONS, {
                  e: 'Multiplication first: ' + b + '×' + c + '=' + (b*c) + '. Then: ' + a + '+' + (b*c) + '=' + ans + '.' };
     }},
     { gen: function() {
-        var a = randInt(2, 8), b = randInt(2, 6), d = randInt(2, 4);
-        var sum = a + b;
-        var ans = sum / d;
-        // Keep clean: ensure divisible
-        var dOpts = [d * 2, d * 3, sum - 1];
-        var opts = buildOpts(ans, [a / d + b, (a + b) * d, a / d]);
+        // Pick d first, then a and b so a+b is divisible by d (clean integer answer)
+        var d = randInt(2, 4);
+        var ans = randInt(2, 6);
+        var sum = ans * d;
+        var a = randInt(2, sum - 2);
+        if (a >= sum) a = Math.floor(sum/2);
+        var b = sum - a;
+        var opts = buildOpts(ans, [sum, a + b * d, Math.round(a / d) + b]);
         return { q: 'Evaluate: (' + a + ' + ' + b + ') ÷ ' + d,
                  opts: opts, c: 0,
                  e: 'Brackets first: ' + a + '+' + b + '=' + sum + '. Then ' + sum + '÷' + d + '=' + ans + '.' };
@@ -130,14 +132,18 @@ Object.assign(QUESTIONS, {
                  e: 'Multiply first: ' + b + '×' + c + '=' + (b*c) + '. Then left to right: ' + a + '−' + (b*c) + '+' + d + '=' + ans + '.' };
     }},
     { gen: function() {
-        var a = randInt(2, 6), b = randInt(1, 4), d = randInt(2, 4);
-        var inner = a + b;
-        var ans = inner * inner / d;
-        // Ensure clean result
-        var opts = buildOpts(ans, [a * a / d + b, inner * inner * d, (a + b) / d]);
+        // Pick combinations where (a+b)² ÷ d is always a clean integer
+        var combos = [
+          {a:2,b:2,d:2},{a:2,b:2,d:4},{a:3,b:3,d:2},{a:3,b:3,d:4},{a:3,b:3,d:3},
+          {a:4,b:2,d:2},{a:4,b:2,d:4},{a:5,b:1,d:2},{a:5,b:1,d:3},{a:5,b:1,d:4},
+          {a:4,b:4,d:2},{a:4,b:4,d:4},{a:5,b:3,d:2},{a:5,b:3,d:4}
+        ];
+        var c = pickFrom(combos);
+        var a=c.a, b=c.b, d=c.d, inner = a+b, sq = inner*inner, ans = sq/d;
+        var opts = buildOpts(ans, [a*a + b, sq, inner*d]);
         return { q: 'Evaluate: (' + a + ' + ' + b + ')² ÷ ' + d,
                  opts: opts, c: 0,
-                 e: 'Brackets: ' + a + '+' + b + '=' + inner + '. Indices: ' + inner + '²=' + (inner*inner) + '. Divide: ' + (inner*inner) + '÷' + d + '=' + ans + '.' };
+                 e: 'Brackets: ' + a + '+' + b + '=' + inner + '. Indices: ' + inner + '²=' + sq + '. Divide: ' + sq + '÷' + d + '=' + ans + '.' };
     }},
     { gen: function() {
         var m = randInt(2, 5), a = randInt(2, 6), b = randInt(2, 5), exp = randInt(2, 3);
@@ -148,9 +154,11 @@ Object.assign(QUESTIONS, {
                  e: 'Brackets: ' + a + '+' + b + '=' + (a+b) + '. Indices: ' + exp + '²=' + (exp*exp) + '. Multiply: ' + m + '×' + (a+b) + '=' + (m*(a+b)) + '. Subtract: ' + (m*(a+b)) + '−' + (exp*exp) + '=' + ans + '.' };
     }},
     { gen: function() {
-        var a = randInt(20, 100), b = randInt(2, 5), c = randInt(2, 4);
-        var ans = a / b / c;
-        var opts = buildOpts(ans, [a / (b * c) + b, a * b / c, a / b + c]);
+        // Pick c, b, ans first so a = ans*b*c is clean and divides evenly twice
+        var b = randInt(2, 5), c = randInt(2, 4);
+        var ans = randInt(2, 8);
+        var a = ans * b * c;
+        var opts = buildOpts(ans, [a / (b * c) + b, ans + b, ans * 2]);
         return { q: 'Evaluate: ' + a + ' ÷ ' + b + ' ÷ ' + c,
                  opts: opts, c: 0,
                  e: 'Left to right: ' + a + '÷' + b + '=' + (a/b) + '. Then ' + (a/b) + '÷' + c + '=' + ans + '.' };
@@ -290,22 +298,34 @@ Object.assign(QUESTIONS, {
                  e: 'Brackets: ' + a + '−' + b + '=' + inner + '. Indices: (' + inner + ')²=' + innerSq + '. Multiply: −' + m + '×' + innerSq + '=' + ans + '.' };
     }},
     { gen: function() {
-        var a = randInt(12, 30), b = randInt(2, 5), c = randInt(2, 6);
-        var ans = a / (-b) - (-c);
-        var ans2 = Math.round(ans * 100) / 100;
-        var opts = buildOpts(ans2, [Math.round((a / (-b) + c - 2) * 100)/100, Math.round(a / b - c * 100)/100, Math.round((-a / b) - c * 100)/100]);
+        // Pick b first, then a as a multiple of b so a÷b is a clean integer
+        var b = randInt(2, 5), c = randInt(2, 6);
+        var quotient = randInt(3, 8);
+        var a = quotient * b;
+        var ans = -quotient + c;
+        var opts = buildOpts(ans, [-quotient - c, quotient + c, quotient - c]);
         return { q: 'Evaluate: ' + a + ' ÷ (−' + b + ') − (−' + c + ')',
                  opts: opts, c: 0,
-                 e: 'Divide: ' + a + '÷(−' + b + ')=−' + (a/b) + '. Then −' + (a/b) + '−(−' + c + ')=−' + (a/b) + '+' + c + '=' + ans2 + '.' };
+                 e: 'Divide: ' + a + '÷(−' + b + ')=−' + quotient + '. Then −' + quotient + '−(−' + c + ')=−' + quotient + '+' + c + '=' + ans + '.' };
     }},
     // Conceptual: sign rules for negative squared
     { question:'Which is correct? A: −5² = 25 B: (−5)² = 25', options:['A only','B only','Both','Neither'], answer:1, explanation:'−5²=−25 (negative of 25). (−5)²=+25. Only B is 25.' },
     { gen: function() {
-        var a = randInt(2, 6), b = randInt(2, 5), m = randInt(2, 5), d = randInt(2, 4);
-        var inner = -a + (-b);
-        var step1 = inner * (-m);
-        var ans = step1 / d;
-        var opts = buildOpts(ans, [inner * m / d, step1 * d, inner / d]);
+        // Pick d, m, and inner so m*(a+b) is divisible by d
+        var d = randInt(2, 4), m = randInt(2, 5);
+        var ans = randInt(2, 8);
+        var step1 = ans * d;
+        var sum = step1 / m;
+        // sum must be a positive integer ≥ 3 so a,b ≥ 1; if not, regenerate within safe combos
+        var safeCombos = [
+          {a:2,b:2,m:2,d:2,ans:4},{a:3,b:3,m:2,d:3,ans:4},{a:2,b:4,m:3,d:2,ans:9},
+          {a:4,b:2,m:2,d:4,ans:3},{a:3,b:5,m:2,d:4,ans:4},{a:5,b:3,m:3,d:2,ans:12},
+          {a:2,b:2,m:4,d:2,ans:8},{a:4,b:4,m:2,d:4,ans:4},{a:5,b:5,m:2,d:5,ans:4}
+        ];
+        var c = pickFrom(safeCombos);
+        var a=c.a, b=c.b; m=c.m; d=c.d; ans=c.ans;
+        var inner = -a + (-b); step1 = inner * (-m);
+        var opts = buildOpts(ans, [ans + 2, ans - 1, ans * 2]);
         return { q: 'Evaluate: [−' + a + ' + (−' + b + ')] × −' + m + ' ÷ ' + d,
                  opts: opts, c: 0,
                  e: 'Brackets: −' + a + '+(−' + b + ')=−' + (a+b) + '. Multiply: −' + (a+b) + '×(−' + m + ')=' + step1 + '. Divide: ' + step1 + '÷' + d + '=' + ans + '.' };

@@ -17,8 +17,9 @@ function generateTopicTest(topicId, topicIslands) {
   // Distribute questions evenly across islands, capped at MAX_QUESTIONS
   var perIsland = Math.min(5, Math.floor(MAX_QUESTIONS / numIslands));
   if (perIsland < 1) perIsland = 1;
-  var remainder = Math.min(MAX_QUESTIONS, numIslands * perIsland) < MAX_QUESTIONS
-    ? MAX_QUESTIONS - numIslands * perIsland : 0;
+  var totalBase = numIslands * perIsland;
+  var remainder = totalBase < MAX_QUESTIONS
+    ? Math.min(numIslands, MAX_QUESTIONS - totalBase) : 0;
 
   for (var i = 0; i < numIslands; i++) {
     var island = islandsWithGens[i];
@@ -89,34 +90,61 @@ function shuffle(arr) {
 }
 
 function shuffleOptions(q) {
-  var correctOpt = q.opts[q.c];
   var indices = [];
   for (var i = 0; i < q.opts.length; i++) indices.push(i);
   shuffle(indices);
   var newOpts = [];
-  var newC = 0;
-  for (var i = 0; i < indices.length; i++) {
-    newOpts.push(q.opts[indices[i]]);
-    if (indices[i] === q.c) newC = i;
+  if (Array.isArray(q.c)) {
+    var newC = [];
+    for (var i = 0; i < indices.length; i++) {
+      newOpts.push(q.opts[indices[i]]);
+      if (q.c.indexOf(indices[i]) !== -1) newC.push(i);
+    }
+    q.opts = newOpts;
+    q.c = newC;
+  } else {
+    var newC = 0;
+    for (var i = 0; i < indices.length; i++) {
+      newOpts.push(q.opts[indices[i]]);
+      if (indices[i] === q.c) newC = i;
+    }
+    q.opts = newOpts;
+    q.c = newC;
   }
-  q.opts = newOpts;
-  q.c = newC;
   return q;
 }
 
 // ── Helper functions for generators ──────────────────────────────────────
 function _randInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 function _pickFrom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+function _snapNum(v) {
+  if (typeof v === 'number' && isFinite(v)) {
+    var r = Math.round(v * 1e10) / 1e10;
+    var r2 = Math.round(r * 100) / 100;
+    if (Math.abs(r - r2) < 1e-9) return r2;
+    return r;
+  }
+  return v;
+}
 function _buildOpts(correct, wrongs) {
-  var cs = String(correct);
+  var snapped = _snapNum(correct);
+  var cs = String(snapped);
   var seen = [cs], opts = [cs];
   for (var i = 0; i < wrongs.length && opts.length < 4; i++) {
-    var ws = String(wrongs[i]);
+    var ws = String(_snapNum(wrongs[i]));
     if (ws !== cs && seen.indexOf(ws) === -1) { seen.push(ws); opts.push(ws); }
   }
   var pad = 1;
-  while (opts.length < 4) {
-    var fb = String(Number(correct) + pad * 7);
+  var numCorrect = Number(String(snapped).replace(/,/g, ''));
+  while (opts.length < 4 && pad < 50) {
+    var fb;
+    if (!isNaN(numCorrect) && isFinite(numCorrect)) {
+      var step = Math.max(1, Math.round(Math.abs(numCorrect) * 0.1));
+      var pert = numCorrect + (pad % 2 === 1 ? step * pad : -step * pad);
+      fb = _commas(_snapNum(pert));
+    } else {
+      fb = String(correct) + ' (alt ' + pad + ')';
+    }
     if (seen.indexOf(fb) === -1) { seen.push(fb); opts.push(fb); }
     pad++;
   }
@@ -143,8 +171,11 @@ TEST_GENERATORS["mi-01-1"] = [
     var placeIdx = _randInt(3, 6);
     var digit = _randInt(1, 9);
     var numArr = [];
-    for (var i = 6; i >= 0; i--) { numArr.push(i === placeIdx ? digit : _randInt(0, 9)); }
-    if (numArr[0] === 0) numArr[0] = _randInt(1, 9);
+    for (var i = 6; i >= 0; i--) {
+      if (i === placeIdx) { numArr.push(digit); }
+      else { var d; do { d = _randInt(0, 9); } while (d === digit); numArr.push(d); }
+    }
+    if (numArr[0] === 0) { var d; do { d = _randInt(1, 9); } while (d === digit); numArr[0] = d; }
     var numStr = numArr.join('');
     var num = parseInt(numStr);
     var ans = digit * multipliers[placeIdx];
@@ -164,19 +195,24 @@ TEST_GENERATORS["mi-01-1"] = [
              e: 'Add each part together to get ' + _commas(num) + '.' };
   }},
   { depth: 'medium', gen: function() {
-    var a = _randInt(100000, 999999);
-    var b = a + _randInt(1, 99) * (_randInt(0, 1) ? 1 : -1);
-    if (b < 100000) b = a + _randInt(1, 99);
-    var bigger = Math.max(a, b), smaller = Math.min(a, b);
-    var c = _randInt(100000, 999999);
-    var d = _randInt(100000, 999999);
-    var all = [bigger, smaller, c, d].sort(function(x, y) { return x - y; });
+    // Generate four distinct 6-digit numbers
+    var picked = [];
+    while (picked.length < 4) {
+      var n = _randInt(100000, 999999);
+      if (picked.indexOf(n) === -1) picked.push(n);
+    }
+    var all = picked.slice().sort(function(x, y) { return x - y; });
     var ansStr = all.map(_commas).join(' < ');
     var wrong1 = all.slice().reverse().map(_commas).join(' < ');
     var wrong2Arr = all.slice(); wrong2Arr[1] = all[2]; wrong2Arr[2] = all[1];
     var wrong2 = wrong2Arr.map(_commas).join(' < ');
-    var opts = [ansStr, wrong1, wrong2, all.map(_commas).reverse().slice(0, 2).concat(all.map(_commas).slice(0, 2)).join(' < ')];
-    return { q: 'Put these in order from smallest to largest: ' + all.map(_commas).sort(function() { return Math.random() - 0.5; }).join(', '),
+    var wrong3Arr = all.slice(); wrong3Arr[0] = all[3]; wrong3Arr[3] = all[0];
+    var wrong3 = wrong3Arr.map(_commas).join(' < ');
+    var opts = [ansStr, wrong1, wrong2, wrong3];
+    // Display in pseudo-random order using shuffle (not Math.random()-0.5)
+    var display = picked.slice();
+    shuffle(display);
+    return { q: 'Put these in order from smallest to largest: ' + display.map(_commas).join(', '),
              opts: opts, c: 0,
              e: 'Compare digits from the left. The correct order is ' + ansStr + '.' };
   }},
@@ -199,16 +235,17 @@ TEST_GENERATORS["mi-01-1"] = [
   }},
   // GREATER DEPTH
   { depth: 'greater-depth', gen: function() {
-    var d1 = _randInt(2, 8), d2 = _randInt(2, 8);
-    while (d1 === d2) d2 = _randInt(2, 8);
-    var place1 = _randInt(4, 6); // higher place
-    var place2 = _randInt(1, 3); // lower place
+    // Use the same digit at different place values so ratio is always a clean power of 10
+    var digit = _randInt(2, 8);
+    var gap = _randInt(2, 4); // power-of-10 gap
     var multipliers = [1, 10, 100, 1000, 10000, 100000, 1000000];
-    var val1 = d1 * multipliers[place1];
-    var val2 = d2 * multipliers[place2];
-    var ratio = val1 / val2;
-    var opts = _buildOpts(_commas(ratio), [_commas(ratio * 10), _commas(ratio / 10), _commas(d1 * d2)]);
-    return { q: 'In a number, the digit ' + d1 + ' has a value of ' + _commas(val1) + ' and the digit ' + d2 + ' has a value of ' + _commas(val2) + '. How many times greater is the value of ' + d1 + ' than ' + d2 + '?',
+    var place2 = _randInt(1, 3);
+    var place1 = place2 + gap;
+    var val1 = digit * multipliers[place1];
+    var val2 = digit * multipliers[place2];
+    var ratio = Math.pow(10, gap);
+    var opts = _buildOpts(_commas(ratio), [_commas(ratio * 10), _commas(ratio / 10), _commas(gap)]);
+    return { q: 'In a number, the digit ' + digit + ' appears twice with values of ' + _commas(val1) + ' and ' + _commas(val2) + '. How many times greater is ' + _commas(val1) + ' than ' + _commas(val2) + '?',
              opts: opts, c: 0,
              e: _commas(val1) + ' ÷ ' + _commas(val2) + ' = ' + _commas(ratio) + '.' };
   }},
@@ -223,18 +260,30 @@ TEST_GENERATORS["mi-01-1"] = [
              e: millions + ' million + ' + hthou + ' hundred-thousands + ' + tens + ' tens = ' + _commas(num) + '.' };
   }},
   { depth: 'greater-depth', gen: function() {
+    // Build distractors by mutating the target number so they're guaranteed NOT to also have
+    // the same digit at the same place value (avoiding ambiguous "two correct answers")
     var num = _randInt(2000000, 8000000);
     var numStr = String(num);
     var digitPos = _randInt(1, 5);
     var digit = parseInt(numStr[digitPos]);
     while (digit === 0) { num = _randInt(2000000, 8000000); numStr = String(num); digit = parseInt(numStr[digitPos]); }
     var places = [1000000, 100000, 10000, 1000, 100, 10, 1];
+    var placeNames = ['millions','hundred-thousands','ten-thousands','thousands','hundreds','tens','units'];
     var val = digit * places[digitPos];
-    var wrong1 = _randInt(2000000, 8000000); var wrong2 = _randInt(2000000, 8000000); var wrong3 = _randInt(2000000, 8000000);
+    // Build wrong numbers by replacing the digit at digitPos with a different digit
+    function mutate(replacement) {
+      var arr = numStr.split('');
+      arr[digitPos] = String(replacement);
+      return parseInt(arr.join(''));
+    }
+    var d2 = digit === 9 ? 1 : digit + 1;
+    var d3 = digit <= 2 ? 8 : digit - 1;
+    var d4 = digit === 5 ? 7 : (digit + 3) % 10 || 4;
+    var wrong1 = mutate(d2), wrong2 = mutate(d3), wrong3 = mutate(d4);
     var opts = [_commas(num), _commas(wrong1), _commas(wrong2), _commas(wrong3)];
     return { q: 'In which number does the digit ' + digit + ' have a value of ' + _commas(val) + '?',
              opts: opts, c: 0,
-             e: 'In ' + _commas(num) + ', the digit ' + digit + ' is in position ' + digitPos + ' from the left, giving it a value of ' + _commas(val) + '.' };
+             e: 'In ' + _commas(num) + ', the digit ' + digit + ' is in the ' + placeNames[digitPos] + ' place, giving it a value of ' + _commas(val) + '.' };
   }}
 ];
 
@@ -618,10 +667,14 @@ TEST_GENERATORS["mi-02-3"] = [
   }},
   { depth: 'medium', gen: function() {
     var base = _randInt(100, 300) * 3;
-    var notDiv = base + 1;
-    var opts = [_commas(base), _commas(notDiv), _commas(notDiv + 2), _commas(base + 4)];
-    return { q: 'Which of these numbers is divisible by 3?', opts: opts, c: 0,
-             e: 'Sum of digits of ' + base + ': check if divisible by 3. ' + base + ' ÷ 3 = ' + (base / 3) + ' ✓.' };
+    var nums = [base, base + 1, base + 3, base + 4];
+    var correctIdxs = [];
+    for (var i = 0; i < nums.length; i++) { if (nums[i] % 3 === 0) correctIdxs.push(i); }
+    var opts = [_commas(nums[0]), _commas(nums[1]), _commas(nums[2]), _commas(nums[3])];
+    var expParts = [];
+    for (var j = 0; j < correctIdxs.length; j++) { expParts.push(_commas(nums[correctIdxs[j]]) + ' ÷ 3 = ' + (nums[correctIdxs[j]] / 3)); }
+    return { q: 'Which of these numbers are divisible by 3?', opts: opts, c: correctIdxs,
+             e: 'Divisible by 3: ' + expParts.join('; ') + '.' };
   }},
   { depth: 'medium', gen: function() {
     var n = _randInt(100, 999) * 4;
@@ -632,8 +685,17 @@ TEST_GENERATORS["mi-02-3"] = [
   }},
   { depth: 'medium', gen: function() {
     var n = _randInt(100, 500) * 6;
-    var opts = _buildOpts(n, [n + 1, n + 3, n - 2]);
-    return { q: 'Which number is divisible by 6?', opts: [_commas(n), _commas(n + 1), _commas(n + 3), _commas(n - 1)], c: 0,
+    var nums = [n, n + 1, n + 3, n - 1];
+    var correctIdxs = [];
+    for (var i = 0; i < nums.length; i++) { if (nums[i] % 6 === 0) correctIdxs.push(i); }
+    var opts = [_commas(nums[0]), _commas(nums[1]), _commas(nums[2]), _commas(nums[3])];
+    if (correctIdxs.length > 1) {
+      var expParts = [];
+      for (var j = 0; j < correctIdxs.length; j++) { expParts.push(_commas(nums[correctIdxs[j]])); }
+      return { q: 'Which of these numbers are divisible by 6?', opts: opts, c: correctIdxs,
+               e: 'Divisible by 6 (even AND digit sum divisible by 3): ' + expParts.join(', ') + '.' };
+    }
+    return { q: 'Which number is divisible by 6?', opts: opts, c: 0,
              e: _commas(n) + ' is even (divisible by 2) AND digit sum is divisible by 3, so it\'s divisible by 6.' };
   }},
   // GREATER DEPTH
@@ -1423,7 +1485,7 @@ TEST_GENERATORS["mi-05-1"] = [
     var multipliers = [0.1, 0.01, 0.001];
     var idx = _randInt(0, 2);
     var digit = _randInt(1, 9);
-    var whole = _randInt(1, 9);
+    var whole; do { whole = _randInt(1, 9); } while (whole === digit);
     var n = whole + digit * multipliers[idx];
     var val = digit * multipliers[idx];
     var opts = _buildOpts(val, [digit * multipliers[(idx + 1) % 3], digit, digit * multipliers[Math.abs(idx - 1)]]);
@@ -3299,12 +3361,13 @@ TEST_GENERATORS["mi-09-4"] = [
              e: realKm + ' km = ' + _commas(realCm) + ' cm. ÷ ' + _commas(scale) + ' = ' + mapCm + ' cm on map.' };
   }},
   { depth: 'greater-depth', gen: function() {
+    // Choose 'needed' as a clean multiple of 'serves' so the scale factor is a clean integer
     var cups = _randInt(2, 4);
-    var serves = _randInt(4, 6);
-    var needed = _randInt(8, 16);
-    var mult = needed / serves;
+    var serves = _pickFrom([4, 5, 6]);
+    var mult = _randInt(2, 4);
+    var needed = serves * mult;
     var ansCups = cups * mult;
-    var opts = _buildOpts(ansCups, [cups * needed, cups + needed, ansCups + cups]);
+    var opts = _buildOpts(ansCups, [cups + needed, cups * needed, ansCups + cups]);
     return { q: 'A recipe uses ' + cups + ' cups of flour for ' + serves + ' people. How many cups for ' + needed + ' people?', opts: opts, c: 0,
              e: 'Scale factor = ' + needed + '÷' + serves + ' = ' + mult + '. Flour = ' + cups + ' × ' + mult + ' = ' + ansCups + ' cups.' };
   }},
@@ -6753,7 +6816,8 @@ TEST_GENERATORS["mi-21-2"] = [
     var terms = 4;
     var sum = 0;
     for (var i = 0; i < terms; i++) sum += a * Math.pow(r, i);
-    var opts = _buildOpts(sum, [a * Math.pow(r, terms), sum + a, a * terms * r]);
+    // Note: when r=2, sum + a == a * 2^terms (mathematical identity), so use a different distractor
+    var opts = _buildOpts(sum, [a * Math.pow(r, terms), sum - a, a * terms * r]);
     return { q: 'Find the sum of the first ' + terms + ' terms of: ' + a + ', ' + (a*r) + ', ' + (a*r*r) + ', ' + (a*r*r*r), opts: opts, c: 0,
              e: 'Sum = ' + a + ' + ' + (a*r) + ' + ' + (a*r*r) + ' + ' + (a*r*r*r) + ' = ' + sum + '.' };
   }},
@@ -7013,11 +7077,19 @@ TEST_GENERATORS["mi-22-3"] = [
              e: perKm + 'x + ' + fixed + ' ≤ ' + budget + '. x ≤ ' + ((budget - fixed) / perKm).toFixed(1) + '. Max = ' + maxKm + ' km.' };
   }},
   { depth: 'greater-depth', gen: function() {
+    // Choose scores so the required minimum is always within 0..100
     var target = _randInt(60, 80);
-    var scores = [_randInt(50, 90), _randInt(50, 90), _randInt(50, 90)];
-    var sum = scores.reduce(function(a,b){return a+b;}, 0);
-    var needed = target * 4 - sum;
-    var opts = _buildOpts(needed, [target - sum, target * 4, sum / 3]);
+    var scores, sum, needed, attempts = 0;
+    do {
+      scores = [_randInt(50, 85), _randInt(50, 85), _randInt(50, 85)];
+      sum = scores[0] + scores[1] + scores[2];
+      needed = target * 4 - sum;
+      attempts++;
+    } while ((needed < 0 || needed > 100) && attempts < 30);
+    if (needed < 0) needed = 0;
+    if (needed > 100) needed = 100;
+    var avgSoFar = Math.round(sum / 3);
+    var opts = _buildOpts(needed, [Math.max(0, target - avgSoFar), target * 4, avgSoFar]);
     return { q: 'Your test scores are ' + scores.join(', ') + '. You need an average of at least ' + target + ' over 4 tests. What minimum score do you need?', opts: opts, c: 0,
              e: 'Need total ≥ ' + (target * 4) + '. Have ' + sum + '. Need ≥ ' + needed + '.' };
   }},
@@ -9300,7 +9372,7 @@ TEST_GENERATORS["island-20"] = [
     var qs = [
       { q:'What do contour lines on a map show?', opts:['The height and shape of the land (relief)','Rivers and lakes','Roads and paths','Town boundaries'], c:0, e:'Contour lines are brown lines on an OS map that join points of equal height above sea level. They show the shape and steepness of the land (relief).' },
       { q:'When contour lines are close together, what does this indicate?', opts:['A steep slope','A flat area','A valley','A lake'], c:0, e:'Closely spaced contour lines indicate a steep slope because the height changes rapidly over a short horizontal distance. Widely spaced contour lines indicate a gentle slope or flat ground.' },
-      { q:'What is the scale 1:25,000 on an OS map mean?', opts:['1 cm on the map represents 25,000 cm (250 m) in real life','1 cm represents 25 km','The map is 25,000 cm wide','There are 25,000 grid squares'], c:0, e:'A scale of 1:25,000 means that 1 cm on the map represents 25,000 cm (or 250 metres) in real life. This is the scale used for OS Explorer maps, ideal for walking.' }
+      { q:'What does the scale 1:25,000 on an OS map mean?', opts:['1 cm on the map represents 25,000 cm (250 m) in real life','1 cm represents 25 km','The map is 25,000 cm wide','There are 25,000 grid squares'], c:0, e:'A scale of 1:25,000 means that 1 cm on the map represents 25,000 cm (or 250 metres) in real life. This is the scale used for OS Explorer maps, ideal for walking.' }
     ];
     return _pickFrom(qs);
   }},

@@ -520,8 +520,8 @@ Object.assign(QUESTIONS, {
    opts:["60","56","54","52"],c:0,
    e:"Must be div by LCM(4,6)=12. Multiples of 12: 48, 60, 72... Between 50–60: only 60. 60÷4=15 ✓, 60÷6=10 ✓."},
   {q:"The number 7,4_2 is divisible by 3. What digit could replace the _?",
-   opts:["0 or 9","1 or 4","2 or 5","3 or 6"],c:0,
-   e:"Digit sum without _: 7+4+2=13. Need total divisible by 3: 13+_=15 (so _=2) or 18 (so _=5) or 21 (so _=8). Wait: 0→13 no; 9→22 no; let me recalculate. 13+_: need multiple of 3. 15−13=2, 18−13=5, 21−13=8. So _ = 2, 5, or 8. Options don't have this — let me correct: A: 2, 5 or 8 B: 0, 3 or 6 C: 1, 4 or 7 D: any digit."},
+   opts:["2, 5 or 8","0, 3 or 6","1, 4 or 7","Any digit"],c:0,
+   e:"Digit sum without _: 7+4+2=13. Need total divisible by 3: 13+2=15 ✓, 13+5=18 ✓, 13+8=21 ✓. So _ = 2, 5, or 8."},
   {q:"A number is divisible by 8. Which must also be true?",
    opts:["It is divisible by 2 and 4","It is divisible by 3","It ends in 8","It is divisible by 16"],c:0,
    e:"8 = 2 × 4 = 2³. So any multiple of 8 is also a multiple of 2 and 4. (It doesn't have to end in 8 or be divisible by 3 or 16.)"}
@@ -648,7 +648,11 @@ Object.assign(QUESTIONS, {
     var bases = [2,3,4,5]; var b = pickFrom(bases);
     var exp = randInt(2,4);
     var ans = Math.pow(b, exp);
-    var opts = buildOpts(ans, [b*exp, Math.pow(b,exp-1), Math.pow(b+1,exp)]);
+    // Build distinct distractors avoiding collisions (e.g. b=2,exp=4 makes b*exp == b^(exp-1))
+    var w1 = b*exp, w2 = Math.pow(b,exp-1), w3 = Math.pow(b+1,exp);
+    if (w1 === w2) w2 = ans + b;
+    if (w1 === w3 || w2 === w3) w3 = ans - 1;
+    var opts = buildOpts(ans, [w1, w2, w3]);
     return { q: 'What is ' + b + (exp===2?'²':exp===3?'³':'⁴') + '?',
              opts: opts, c: 0,
              e: b + (exp===2?'²':exp===3?'³':'⁴') + ' = ' + Array(exp).fill(b).join('×') + ' = ' + ans + '.' };
@@ -657,7 +661,10 @@ Object.assign(QUESTIONS, {
     var bases = [2,3,4,5]; var b = pickFrom(bases);
     var exp = randInt(2,4);
     var ans = Math.pow(b, exp);
-    var opts = buildOpts(ans, [b*exp, Math.pow(b,exp-1), Math.pow(b+1,exp)]);
+    var w1 = b*exp, w2 = Math.pow(b,exp-1), w3 = Math.pow(b+1,exp);
+    if (w1 === w2) w2 = ans + b;
+    if (w1 === w3 || w2 === w3) w3 = ans - 1;
+    var opts = buildOpts(ans, [w1, w2, w3]);
     return { q: 'What is ' + b + (exp===2?'²':exp===3?'³':'⁴') + '?',
              opts: opts, c: 0,
              e: b + (exp===2?'²':exp===3?'³':'⁴') + ' = ' + Array(exp).fill(b).join('×') + ' = ' + ans + '.' };
@@ -673,9 +680,14 @@ Object.assign(QUESTIONS, {
   }},
   // Medium (Q4–7)
   { gen: function() {
-    var fracs = [{n:1,d:2,cube:'1/8',sq:'1/4'},{n:1,d:3,cube:'1/27',sq:'1/9'},{n:1,d:4,cube:'1/64',sq:'1/16'}];
+    // Each fraction lists its own distinct distractors so no two collide
+    var fracs = [
+      {d:2, cube:'1/8',  sq:'1/4',  w1:'1/6',  w2:'2/8'},
+      {d:3, cube:'1/27', sq:'1/9',  w1:'1/6',  w2:'3/27'},
+      {d:4, cube:'1/64', sq:'1/16', w1:'1/12', w2:'3/4'}
+    ];
     var f = pickFrom(fracs);
-    var opts = buildOpts(f.cube, [f.sq, '3/' + f.d, f.n + '/' + (f.d*3)]);
+    var opts = buildOpts(f.cube, [f.sq, f.w1, f.w2]);
     return { q: 'What is (1/' + f.d + ')³?',
              opts: opts, c: 0,
              e: '(1/' + f.d + ')³ = (1/' + f.d + ')×(1/' + f.d + ')×(1/' + f.d + ') = ' + f.cube + '.' };
@@ -914,31 +926,36 @@ Object.assign(QUESTIONS, {
   {q:"Is it possible for two different numbers to have the same prime factorisation?",
    opts:["No — the Fundamental Theorem of Arithmetic states prime factorisation is unique","Yes — many numbers share the same primes","Only if they are multiples of each other","Yes — as long as they use the same primes"],c:0,
    e:"The Fundamental Theorem of Arithmetic states every integer greater than 1 has a UNIQUE prime factorisation. No two different numbers can have the same one."},
-  {q:"Find all values of n such that 2ⁿ is a factor of 96.",opts:["n can be 1, 2, 3, or 4","n can be 1, 2, or 3","n can be 1, 2, 3, 4, or 5","n = 4 only"],c:0,
-   e:"96 = 2⁵ × 3. So 2¹, 2², 2³, 2⁴ and 2⁵ are all factors. But the question asks which values of n make 2ⁿ a factor — that's n = 1, 2, 3, 4 or 5. Closest answer is n can be 1–5, but option A covers 1–4 which is the best available."}
+  {q:"Find all values of n such that 2ⁿ is a factor of 96.",opts:["n can be 1, 2, 3, or 4","n can be 1, 2, or 3","n can be 1, 2, 3, 4, or 5","n = 4 only"],c:2,
+   e:"96 = 2⁵ × 3. So 2¹, 2², 2³, 2⁴ and 2⁵ are all factors. The values of n that make 2ⁿ a factor are n = 1, 2, 3, 4, or 5."}
 ],
 
 "mi-04-3": [
   // Easy (Q1–3)
   { gen: function() {
+    function gcd(a,b){return b?gcd(b,a%b):a;}
     var factor = pickFrom([2,3,4,5,6]);
-    var m1 = factor * randInt(2,6), m2 = factor * randInt(2,6);
-    while (m1===m2) m2 = factor * randInt(2,6);
+    var k1 = randInt(2,6), k2 = randInt(2,6);
+    // Force k1 and k2 to be coprime so true HCF = factor
+    while (k1===k2 || gcd(k1,k2)!==1) { k2 = randInt(2,7); }
+    var m1 = factor * k1, m2 = factor * k2;
     var hcf = factor;
-    var opts = buildOpts(hcf, [factor*2, factor>2?Math.floor(factor/2):factor+1, Math.max(m1,m2)]);
+    var opts = buildOpts(hcf, [factor*2+1, factor>2?Math.floor(factor/2):factor+1, Math.max(m1,m2)]);
     return { q: 'What is the HCF of ' + m1 + ' and ' + m2 + '?',
              opts: opts, c: 0,
-             e: 'Factors of ' + m1 + ' and ' + m2 + ' share ' + hcf + ' as their highest common factor.' };
+             e: 'HCF of ' + m1 + ' and ' + m2 + ' = ' + hcf + '.' };
   }},
   { gen: function() {
+    function gcd(a,b){return b?gcd(b,a%b):a;}
     var factor = pickFrom([2,3,4,5,6]);
-    var m1 = factor * randInt(2,6), m2 = factor * randInt(2,6);
-    while (m1===m2) m2 = factor * randInt(2,6);
+    var k1 = randInt(2,6), k2 = randInt(2,6);
+    while (k1===k2 || gcd(k1,k2)!==1) { k2 = randInt(2,7); }
+    var m1 = factor * k1, m2 = factor * k2;
     var hcf = factor;
-    var opts = buildOpts(hcf, [factor*2, factor>2?Math.floor(factor/2):factor+1, Math.max(m1,m2)]);
+    var opts = buildOpts(hcf, [factor*2+1, factor>2?Math.floor(factor/2):factor+1, Math.max(m1,m2)]);
     return { q: 'What is the HCF of ' + m1 + ' and ' + m2 + '?',
              opts: opts, c: 0,
-             e: 'Factors of ' + m1 + ' and ' + m2 + ' share ' + hcf + ' as their highest common factor.' };
+             e: 'HCF of ' + m1 + ' and ' + m2 + ' = ' + hcf + '.' };
   }},
   { gen: function() {
     var factor = pickFrom([2,3,4,5,6,8]);

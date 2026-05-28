@@ -46,8 +46,11 @@ TEST_GENERATORS["island-13"] = [
 // ── island-14: Forces & Motion ────────────────────────────────────────────────
 TEST_GENERATORS["island-14"] = [
   { depth:'medium', gen:function(){
-    var d = _randInt(2,8)*10, t = _randInt(2,5), s = d/t;
-    return { q:"A runner travels "+d+"m in "+t+" seconds. What is their speed?", opts:_buildOpts(s,[s+2,s-2,s*2]), c:0, e:"Speed = distance ÷ time = "+d+" ÷ "+t+" = "+s+" m/s." };
+    // Pick t and s, then derive d so d/t is always a clean integer
+    var t = _randInt(2,5), s = _randInt(3,12), d = s*t;
+    var w1 = s+2, w2 = s-1, w3 = s*2;
+    if (w3 === w1) w3 = s+3;
+    return { q:"A runner travels "+d+"m in "+t+" seconds. What is their speed?", opts:_buildOpts(s,[w1,w2,w3]), c:0, e:"Speed = distance ÷ time = "+d+" ÷ "+t+" = "+s+" m/s." };
   }},
   { depth:'medium', gen:function(){ return { q:"What is the unit of force?", opts:["Newton (N)","Kilogram (kg)","Joule (J)","Metre (m)"], c:0, e:"Force is measured in Newtons (N), named after Isaac Newton." }; }},
   { depth:'medium', gen:function(){ return { q:"What is the difference between mass and weight?", opts:["Mass is the amount of matter; weight is the gravitational force on that mass","Mass is the gravitational force; weight is the amount of matter","Mass and weight are the same thing","Mass is measured in Newtons; weight in kilograms"], c:0, e:"Mass (kg) measures the amount of matter. Weight (N) is the force of gravity acting on that mass." }; }},
@@ -71,7 +74,10 @@ TEST_GENERATORS["island-15"] = [
   { depth:'medium', gen:function(){ return { q:"What causes an echo?", opts:["Sound reflecting off a hard surface","Sound being absorbed","Light interfering with sound","Sound travelling in a vacuum"], c:0, e:"An echo is produced when sound reflects off a hard surface and returns to the listener." }; }},
   { depth:'greater-depth', gen:function(){ return { q:"We see lightning before we hear thunder even though both are produced at the same moment. Why?", opts:["Light travels much faster than sound","Sound travels much faster than light","Light curves around clouds","Sound needs to warm up before travelling"], c:0, e:"Light travels at 3×10⁸ m/s; sound at ~340 m/s. The large difference in speed means light reaches us almost instantly while sound takes noticeably longer." }; }},
   { depth:'greater-depth', gen:function(){ return { q:"Astronauts in space cannot hear each other speak without radio equipment. Why?", opts:["Space is a vacuum — sound cannot travel without a medium","Sound is absorbed by their helmets","Sound waves are destroyed by radiation","Sound travels too slowly in space"], c:0, e:"Sound requires a medium to travel. Space is a near-perfect vacuum with almost no particles, so sound cannot propagate." }; }},
-  { depth:'greater-depth', gen:function(){ return { q:"A student shines a torch at a flat mirror at an angle of incidence of 50°. At what angle should they place a second mirror to reflect the light horizontally back?", opts:["The second mirror must also be at 50° to the normal","The second mirror must be parallel to the first","The light cannot be reflected back","The angle is 90°"], c:0, e:"This is an application of the law of reflection. Careful placement of mirrors at the right angles can redirect light in any direction." }; }}
+  { depth:'greater-depth', gen:function(){
+    var angle = _pickFrom([20,30,40,50,60,70]);
+    return { q:"A light ray hits a flat mirror at an angle of incidence of "+angle+"°. What is the total angle between the incident and reflected rays?", opts:[(2*angle)+"°",angle+"°",(90-angle)+"°",(180-angle)+"°"], c:0, e:"By the law of reflection, the angle of reflection equals the angle of incidence ("+angle+"°). Both are measured from the normal, so the angle between the two rays is "+angle+" + "+angle+" = "+(2*angle)+"°." };
+  }}
 ];
 
 // ── island-28: Reproduction & Life Cycles ────────────────────────────────────
@@ -168,7 +174,7 @@ TEST_GENERATORS["island-41"] = [
   { depth:'medium', gen:function(){ return { q:"Which group of vertebrates lay eggs with shells on land and have dry, scaly skin?", opts:["Reptiles","Amphibians","Mammals","Fish"], c:0, e:"Reptiles have waterproof scaly skin and lay leathery or hard-shelled eggs, allowing them to live fully on land." }; }},
   { depth:'medium', gen:function(){ return { q:"What feature do all mammals share?", opts:["They produce milk to feed their young","They lay eggs","They are cold-blooded","They have scales"], c:0, e:"All mammals are warm-blooded, have hair or fur, and nurse their young with milk produced by the mother." }; }},
   { depth:'greater-depth', gen:function(){ return { q:"Why do scientists use binomial nomenclature rather than common names?", opts:["Common names vary by language and region; binomial names are universal and unambiguous","Binomial names are shorter","Common names are more difficult to remember","Binomial names tell you what the organism eats"], c:0, e:"A single species can have many common names in different languages. Latin binomial names are agreed internationally, avoiding confusion." }; }},
-  { depth:'greater-depth', gen:function(){ return { q:"A newly discovered animal breathes air, is warm-blooded, has scales, and lays eggs. Which vertebrate group does it most likely belong to?", opts:["Reptiles","Mammals","Birds","Amphibians"], c:0, e:"Scales and egg-laying point to reptiles. Birds also have scales and lay eggs but have feathers, not scales, as the main body covering." }; }},
+  { depth:'greater-depth', gen:function(){ return { q:"A newly discovered animal breathes air, is cold-blooded, has scales, and lays eggs. Which vertebrate group does it most likely belong to?", opts:["Reptiles","Mammals","Birds","Amphibians"], c:0, e:"Cold-blooded, scales, and egg-laying point to reptiles. Birds also have scales and lay eggs but are warm-blooded and have feathers as the main body covering." }; }},
   { depth:'greater-depth', gen:function(){ return { q:"What is the advantage of a hierarchical classification system?", opts:["It organises millions of species into manageable groups and shows evolutionary relationships","It makes it easier to find organisms alphabetically","It shows which organisms are most important","It separates organisms that look similar"], c:0, e:"Hierarchical classification (Kingdom → Phylum → Class → Order → Family → Genus → Species) groups organisms by shared characteristics, making it easier to study and showing how species are related." }; }}
 ];
 
@@ -195,7 +201,7 @@ TEST_GENERATORS["island-43"] = [
   { depth:'medium', gen:function(){ return { q:"What is 'natural selection'?", opts:["Organisms with favourable traits are more likely to survive and reproduce","Organisms choose the best environment","Humans select which animals to breed","All organisms have equal chances of survival"], c:0, e:"Natural selection: individuals with advantageous traits survive, reproduce, and pass those traits on, increasing their frequency in the population over generations." }; }},
   { depth:'medium', gen:function(){ return { q:"What is the difference between genotype and phenotype?", opts:["Genotype is the genetic code; phenotype is the observable characteristic","Genotype is what you see; phenotype is the genes","They are the same thing","Phenotype is inherited; genotype is acquired"], c:0, e:"Genotype = the alleles present (e.g. Tt). Phenotype = the observable characteristic (e.g. tall). Both genotype and environment affect phenotype." }; }},
   { depth:'medium', gen:function(){ return { q:"What is a mutation?", opts:["A change in the DNA sequence","A characteristic passed from parent to offspring","A change in phenotype due to environment","The process of cell division"], c:0, e:"A mutation is a random change in the DNA base sequence. Mutations can be harmful, neutral, or rarely beneficial." }; }},
-  { depth:'greater-depth', gen:function(){ return { q:"A recessive allele (h) causes haemophilia. A carrier mother (Hh) and a normal father (HH) have children. What proportion of sons will have haemophilia?", opts:["0 — none, because father is HH so all children get at least one H","1/2","1/4","All sons"], c:0, e:"Father is HH, mother is Hh. All offspring receive H from father + either H or h from mother = HH or Hh. None will be hh, so no children will have haemophilia." }; }},
+  { depth:'greater-depth', gen:function(){ return { q:"A recessive allele (f) causes cystic fibrosis. A carrier mother (Ff) and a normal father (FF) have children. What proportion of children will have cystic fibrosis?", opts:["0 — none, because father is FF so all children get at least one F","1/2","1/4","All children"], c:0, e:"Father is FF, mother is Ff. All offspring receive F from father + either F or f from mother = FF or Ff. None will be ff, so no children will have cystic fibrosis." }; }},
   { depth:'greater-depth', gen:function(){ return { q:"Why does natural selection require variation within a population?", opts:["Without variation, no individual has an advantage — selection cannot favour any trait","Variation makes organisms reproduce faster","All individuals would survive equally","Variation prevents mutations"], c:0, e:"Natural selection acts on heritable variation. If all individuals were identical, none would have a survival advantage and the population could not evolve." }; }},
   { depth:'greater-depth', gen:function(){ return { q:"Antibiotic resistance in bacteria is an example of natural selection. Which statement best explains why?", opts:["Bacteria with resistant mutations survive treatment and reproduce, passing resistance on","Bacteria change their DNA in response to antibiotics","Antibiotics create new mutations in bacteria","Resistant bacteria are created by doctors using antibiotics"], c:0, e:"Some bacteria randomly have mutations giving antibiotic resistance. When antibiotics kill non-resistant bacteria, resistant ones survive, reproduce, and pass on the resistance gene." }; }}
 ];
@@ -283,8 +289,12 @@ TEST_GENERATORS["island-60"] = [
 TEST_GENERATORS["island-61"] = [
   { depth:'medium', gen:function(){ return { q:"What is the formula for calculating pressure?", opts:["Pressure = force ÷ area","Pressure = force × area","Pressure = area ÷ force","Pressure = force + area"], c:0, e:"Pressure = force ÷ area (P = F/A). Pressure is measured in Pascals (Pa) or N/m²." }; }},
   { depth:'medium', gen:function(){
-    var f = _randInt(2,10)*100, a = _randInt(1,5), p = f/a;
-    return { q:"A force of "+f+" N acts on an area of "+a+" m². What is the pressure?", opts:_buildOpts(p,[p+100,p*2,p-50]), c:0, e:"P = F ÷ A = "+f+" ÷ "+a+" = "+p+" Pa." };
+    // Pick p and a, derive f so f/a is always a clean integer; avoid negative distractors
+    var a = _pickFrom([1,2,4,5]), p = _randInt(2,10)*50, f = p*a;
+    var w1 = p+100, w2 = p*2, w3 = Math.max(p+25, p-25);
+    if (w1 === w2) w1 = p+150;
+    if (w3 === p || w3 === w1 || w3 === w2) w3 = p+a*10;
+    return { q:"A force of "+f+" N acts on an area of "+a+" m². What is the pressure?", opts:_buildOpts(p,[w1,w2,w3]), c:0, e:"P = F ÷ A = "+f+" ÷ "+a+" = "+p+" Pa." };
   }},
   { depth:'medium', gen:function(){ return { q:"What unit is pressure measured in?", opts:["Pascals (Pa) or N/m²","Newtons (N)","Joules (J)","Metres per second (m/s)"], c:0, e:"Pressure is measured in Pascals (Pa), which is the same as N/m² (Newtons per square metre). 1 Pa = 1 N/m²." }; }},
   { depth:'medium', gen:function(){ return { q:"Why do snowshoes stop a person from sinking into soft snow?", opts:["They spread the person's weight over a larger area, reducing pressure on the snow","They make the person lighter","They increase the force on the snow","They make the snow harder"], c:0, e:"Snowshoes have a large surface area. Since P = F/A, increasing the area while keeping the force (weight) the same reduces the pressure on the snow, so the person does not sink." }; }},
@@ -294,19 +304,23 @@ TEST_GENERATORS["island-61"] = [
   { depth:'medium', gen:function(){ return { q:"An object placed in water experiences an upward force. What is this force called?", opts:["Upthrust","Gravity","Friction","Air resistance"], c:0, e:"Upthrust is the upward force exerted by a liquid (or gas) on an object placed in it." }; }},
   { depth:'medium', gen:function(){ return { q:"An object floats when:", opts:["Its weight equals the upthrust","Its weight is greater than the upthrust","There is no upthrust acting on it","It has no mass"], c:0, e:"An object floats when the upthrust (upward force from the liquid) equals its weight (downward force due to gravity). If the weight is greater than the upthrust, the object sinks." }; }},
   { depth:'medium', gen:function(){
-    var f = _randInt(2,8)*100, a1 = _randInt(1,4), a2 = a1*_randInt(2,5), p1 = f/a1, p2 = f/a2;
-    return { q:"A box weighing "+f+" N rests on a face with area "+a1+" m², then is turned to rest on a face with area "+a2+" m². What are the two pressures?", opts:_buildOpts(p1,[p2,f,a1]), c:0, e:"Face 1: P = "+f+" ÷ "+a1+" = "+p1+" Pa. Face 2: P = "+f+" ÷ "+a2+" = "+p2+" Pa. Larger area = lower pressure. The first answer ("+p1+" Pa) is the higher pressure on the smaller face." };
+    // Pick a1≥2 so p1 != f distractor; ensure f is divisible by both a1 and a2
+    var a1 = _pickFrom([2,4]), a2 = a1*_pickFrom([2,3,4]);
+    var p1 = _randInt(50,200), f = p1*a1, p2 = f/a2;
+    return { q:"A box weighing "+f+" N rests on a face with area "+a1+" m². What is the pressure on this face?", opts:_buildOpts(p1,[p2,f,a1*10]), c:0, e:"P = F ÷ A = "+f+" ÷ "+a1+" = "+p1+" Pa. (On the larger "+a2+" m² face, the pressure would be lower at "+p2+" Pa.)" };
   }},
   { depth:'medium', gen:function(){ return { q:"Why do tractors have very wide tyres?", opts:["To spread their heavy weight over a larger area, reducing pressure on soft ground","To go faster","To increase the pressure on the ground","For decorative purposes"], c:0, e:"Tractors are very heavy. Wide tyres spread the weight over a larger area (P = F/A), reducing the pressure on the ground so the tractor does not sink into soft soil." }; }},
   { depth:'greater-depth', gen:function(){
-    var f = _randInt(1,5)*10, a = [0.001,0.0001,0.00005,0.0005][_randInt(0,3)], p = f/a;
+    var f = _randInt(1,5)*10, a = _pickFrom([0.001,0.0001,0.00005,0.0005]);
+    var p = Math.round(f/a); // snap any FP garbage to clean integer Pa
     return { q:"A drawing pin is pushed with a force of "+f+" N. The point has an area of "+a+" m². What pressure does the point exert?", opts:_buildOpts(p,[p/10,p*10,f]), c:0, e:"P = F ÷ A = "+f+" ÷ "+a+" = "+p+" Pa. The tiny area of the point creates a very large pressure." };
   }},
   { depth:'greater-depth', gen:function(){ return { q:"A steel ship has a mass of thousands of tonnes, yet it floats. Explain why.", opts:["The ship's hollow shape means it displaces a large volume of water, creating enough upthrust to equal its weight","Steel is lighter than water","Ships are pushed up by waves","Ships have engines that keep them afloat"], c:0, e:"Although steel is denser than water, the ship is hollow — it displaces a huge volume of water. The upthrust from this displaced water equals the ship's weight, so the ship floats. If the ship were a solid block of steel, it would sink." }; }},
   { depth:'greater-depth', gen:function(){ return { q:"A dam wall is much thicker at the bottom than at the top. Explain why.", opts:["Pressure in the water increases with depth, so the bottom of the dam must withstand much greater force","The bottom needs to be heavier to stay in place","The top is thinner for aesthetic reasons","Water flows faster at the top"], c:0, e:"Pressure in a liquid increases with depth. At the bottom of a reservoir, the pressure is much greater because there is more water above pushing down. The dam must be thicker at the bottom to withstand this greater pressure without cracking." }; }},
   { depth:'greater-depth', gen:function(){
-    var f = _randInt(3,9)*100, p = _randInt(1,4)*100, a = f/p;
-    return { q:"A force of "+f+" N creates a pressure of "+p+" Pa. What is the area?", opts:_buildOpts(a,[a*2,a/2,f+p]), c:0, e:"Rearranging P = F ÷ A: A = F ÷ P = "+f+" ÷ "+p+" = "+a+" m²." };
+    // Pick a and p, derive f so f/p is always a clean integer
+    var a = _randInt(2,8), p = _randInt(1,4)*100, f = a*p;
+    return { q:"A force of "+f+" N creates a pressure of "+p+" Pa. What is the area?", opts:_buildOpts(a,[a*2,Math.max(1,a-1),f+p]), c:0, e:"Rearranging P = F ÷ A: A = F ÷ P = "+f+" ÷ "+p+" = "+a+" m²." };
   }}
 ];
 
@@ -354,30 +368,48 @@ TEST_GENERATORS["island-64"] = [
   { depth:'medium', gen:function(){ return { q:"What does Hooke's Law state?", opts:["The extension of a spring is directly proportional to the force applied, up to the limit of proportionality","Force equals mass times acceleration","Energy cannot be created or destroyed","Every action has an equal and opposite reaction"], c:0, e:"Hooke's Law: F = k × e, where F is force (N), k is the spring constant (N/m), and e is extension (m). This holds up to the limit of proportionality." }; }},
   { depth:'medium', gen:function(){ return { q:"In the equation F = k × e, what does 'k' represent?", opts:["The spring constant — a measure of the stiffness of the spring","The extension of the spring","The force applied","The weight of the spring"], c:0, e:"The spring constant (k) measures stiffness, in N/m. A higher k means a stiffer spring." }; }},
   { depth:'medium', gen:function(){
-    var k = [10,20,25,40,50][_randInt(0,4)], e_val = [0.1,0.2,0.3,0.4,0.5][_randInt(0,4)], f = k*e_val;
-    return { q:"A spring has a spring constant of "+k+" N/m. What force is needed to extend it by "+e_val+" m?", opts:_buildOpts(f,[f+5,f*2,k+e_val]), c:0, e:"F = k × e = "+k+" × "+e_val+" = "+f+" N." };
+    var k = _pickFrom([10,20,25,40,50]), e_val = _pickFrom([0.1,0.2,0.3,0.4,0.5]);
+    var f = Math.round(k*e_val*100)/100; // snap FP garbage
+    // f+5 == f*2 collides when f=5; pick distinct distractors
+    var w1 = f+5, w2 = f*2, w3 = Math.round((k+e_val)*100)/100;
+    if (w1 === w2) w1 = f+3;
+    if (w3 === f) w3 = f+1;
+    return { q:"A spring has a spring constant of "+k+" N/m. What force is needed to extend it by "+e_val+" m?", opts:_buildOpts(f,[w1,w2,w3]), c:0, e:"F = k × e = "+k+" × "+e_val+" = "+f+" N." };
   }},
   { depth:'medium', gen:function(){
-    var f = [5,8,10,12,15,20][_randInt(0,5)], e_val = [0.2,0.25,0.4,0.5][_randInt(0,3)], k = f/e_val;
+    var f = _pickFrom([5,8,10,12,15,20]), e_val = _pickFrom([0.2,0.25,0.4,0.5]);
+    var k = Math.round(f/e_val*100)/100; // snap FP garbage like 19.999999999999996
     return { q:"A force of "+f+" N stretches a spring by "+e_val+" m. What is the spring constant?", opts:_buildOpts(k,[k+10,k/2,f+e_val]), c:0, e:"k = F ÷ e = "+f+" ÷ "+e_val+" = "+k+" N/m." };
   }},
   { depth:'medium', gen:function(){ return { q:"What is the difference between elastic and plastic deformation?", opts:["Elastic: object returns to its original shape when force is removed. Plastic: object is permanently deformed.","Elastic is permanent; plastic is temporary","Elastic only happens to rubber; plastic only to plastic","There is no difference"], c:0, e:"Elastic deformation is reversible — the object bounces back. Plastic deformation is permanent — the object stays changed." }; }},
   { depth:'medium', gen:function(){ return { q:"What is the 'limit of proportionality'?", opts:["The point beyond which force and extension are no longer directly proportional","The maximum force a spring can withstand before breaking","The minimum force needed to stretch a spring","The length of the spring at rest"], c:0, e:"Beyond the limit of proportionality, the force–extension graph curves — Hooke's Law no longer applies." }; }},
   { depth:'medium', gen:function(){ return { q:"On a force–extension graph for a spring obeying Hooke's Law, what does the line look like?", opts:["A straight line through the origin","A curve","A horizontal line","A vertical line"], c:0, e:"When Hooke's Law applies, the graph is a straight line through the origin. The gradient equals the spring constant (k)." }; }},
   { depth:'medium', gen:function(){
-    var orig = _randInt(8,15), stretched = orig + _randInt(2,8), ext = stretched - orig;
+    // Ensure extension != original (avoids distractor collision when orig=8, added=8)
+    var orig = _randInt(8,15), added;
+    do { added = _randInt(2,8); } while (added === orig);
+    var stretched = orig + added, ext = added;
     return { q:"A spring has a natural length of "+orig+" cm. When a force is applied, it stretches to "+stretched+" cm. What is the extension?", opts:_buildOpts(ext,[stretched,orig,stretched+orig]), c:0, e:"Extension = stretched length − original length = "+stretched+" − "+orig+" = "+ext+" cm." };
   }},
   { depth:'medium', gen:function(){ return { q:"Two springs have spring constants of 10 N/m and 40 N/m. Which spring is stiffer?", opts:["The spring with k = 40 N/m","The spring with k = 10 N/m","They are equally stiff","Spring constant does not relate to stiffness"], c:0, e:"A higher spring constant means a stiffer spring. The 40 N/m spring requires four times as much force per metre of stretch." }; }},
   { depth:'medium', gen:function(){
-    var k = [25,50,100][_randInt(0,2)], f = _randInt(2,8)*5, e_val = f/k;
-    return { q:"A spring with k = "+k+" N/m is stretched by a force of "+f+" N. What is the extension?", opts:_buildOpts(e_val,[e_val*2,k/f,f*k]), c:0, e:"e = F ÷ k = "+f+" ÷ "+k+" = "+e_val+" m." };
+    var k = _pickFrom([25,50,100]), f = _randInt(2,8)*5;
+    var e_val = Math.round(f/k*100)/100; // snap FP
+    // When f=k, k/f distractor collides with e_val (both = 1)
+    var w1 = e_val*2, w2 = (f===k) ? f+1 : k/f, w3 = f*k;
+    return { q:"A spring with k = "+k+" N/m is stretched by a force of "+f+" N. What is the extension?", opts:_buildOpts(e_val,[w1,w2,w3]), c:0, e:"e = F ÷ k = "+f+" ÷ "+k+" = "+e_val+" m." };
   }},
   { depth:'greater-depth', gen:function(){ return { q:"A student stretches a spring with increasing force. At first the extension is proportional to the force, but after a certain point the spring stretches much more for the same increase in force. What has happened?", opts:["The spring has passed its limit of proportionality","The spring has broken","Hooke's Law has been disproved","The spring constant has increased"], c:0, e:"Beyond the limit of proportionality, the force–extension relationship is no longer linear. The spring may be undergoing plastic deformation." }; }},
   { depth:'greater-depth', gen:function(){ return { q:"If you double the force applied to a spring (within the limit of proportionality), what happens to the extension?", opts:["It doubles","It halves","It stays the same","It quadruples"], c:0, e:"Within the limit of proportionality, force and extension are directly proportional (F = k × e). Doubling the force doubles the extension." }; }},
   { depth:'greater-depth', gen:function(){
-    var orig = _randInt(10,20), k = [20,25,50,100][_randInt(0,3)], f = _randInt(2,10)*5, e_m = f/k, e_cm = e_m*100, total = orig + e_cm;
-    return { q:"A spring has a natural length of "+orig+" cm and a spring constant of "+k+" N/m. A force of "+f+" N is applied. What is the total length of the spring?", opts:_buildOpts(total,[orig,e_cm,total+orig]), c:0, e:"e = F ÷ k = "+f+" ÷ "+k+" = "+e_m+" m = "+e_cm+" cm. Total length = original + extension = "+orig+" + "+e_cm+" = "+total+" cm." };
+    var orig = _randInt(10,20), k = _pickFrom([20,25,50,100]), f = _randInt(2,10)*5;
+    // Compute e_cm directly (avoid e_m * 100 FP garbage)
+    var e_cm = Math.round(f*100/k*10)/10;
+    var total = Math.round((orig + e_cm)*10)/10;
+    // Avoid distractor collision when e_cm equals orig
+    var w1 = orig, w2 = e_cm, w3 = total+orig;
+    if (w1 === w2) w1 = orig + 5;
+    return { q:"A spring has a natural length of "+orig+" cm and a spring constant of "+k+" N/m. A force of "+f+" N is applied. What is the total length of the spring?", opts:_buildOpts(total,[w1,w2,w3]), c:0, e:"e = F ÷ k = "+f+" ÷ "+k+" = "+(e_cm/100)+" m = "+e_cm+" cm. Total length = original + extension = "+orig+" + "+e_cm+" = "+total+" cm." };
   }},
   { depth:'greater-depth', gen:function(){ return { q:"Two springs are tested. Spring A has k = 30 N/m and Spring B has k = 60 N/m. Both have a 6 N force applied. How do their extensions compare?", opts:["Spring A extends twice as much as Spring B (0.2 m vs 0.1 m)","Spring B extends twice as much as Spring A","They extend the same amount","Neither spring extends"], c:0, e:"Spring A: e = 6 ÷ 30 = 0.2 m. Spring B: e = 6 ÷ 60 = 0.1 m. Spring A is less stiff (lower k), so it extends more for the same force." }; }},
   { depth:'greater-depth', gen:function(){ return { q:"Describe how you would use a force–extension graph to determine whether a spring has exceeded its limit of proportionality.", opts:["The graph would curve away from the initial straight line — the point where it starts to curve is the limit of proportionality","The graph would show a horizontal line","The graph would go below the x-axis","The spring would break and the graph would stop"], c:0, e:"A spring obeying Hooke's Law produces a straight line through the origin. The limit of proportionality is the point where the line begins to curve. Beyond this point, equal increases in force produce larger and larger extensions." }; }}
@@ -408,33 +440,60 @@ TEST_GENERATORS["island-66"] = [
   { depth:'medium', gen:function(){ return { q:"On a distance–time graph, what does a straight diagonal line going upwards represent?", opts:["The object is moving at a constant speed","The object is stationary","The object is decelerating","The object has stopped"], c:0, e:"A straight diagonal line represents constant speed. The steeper the line, the faster the object is moving." }; }},
   { depth:'medium', gen:function(){ return { q:"How do you calculate speed from a distance–time graph?", opts:["Speed = gradient of the line (distance ÷ time)","Speed = time ÷ distance","Speed = area under the graph","Speed = distance × time"], c:0, e:"Speed is calculated from the gradient: speed = distance ÷ time. A steeper gradient means a higher speed." }; }},
   { depth:'medium', gen:function(){
-    var d = _randInt(2,20)*10, t = _randInt(2,10)*5, s = d/t;
-    return { q:"An object travels "+d+" metres in "+t+" seconds at constant speed. What is its speed?", opts:_buildOpts(s,[s+2,s*2,d+t]), c:0, e:"Speed = distance ÷ time = "+d+" ÷ "+t+" = "+s+" m/s." };
+    // Pick t and s, derive d so d/t is always integer
+    var t = _randInt(2,10)*5, s = _randInt(3,15), d = s*t;
+    var w1 = s+2, w2 = s*2, w3 = s+3;
+    if (w1 === w2) w1 = s+4;
+    return { q:"An object travels "+d+" metres in "+t+" seconds at constant speed. What is its speed?", opts:_buildOpts(s,[w1,w2,w3]), c:0, e:"Speed = distance ÷ time = "+d+" ÷ "+t+" = "+s+" m/s." };
   }},
   { depth:'medium', gen:function(){ return { q:"On a distance–time graph, a steeper line means:", opts:["The object is going faster","The object is going slower","The object has stopped","The object is going backwards"], c:0, e:"A steeper gradient means more distance per unit time — the object is faster." }; }},
   { depth:'medium', gen:function(){
-    var d1 = _randInt(1,6)*100, t1 = _randInt(2,10)*10, s1 = d1/t1;
-    return { q:"A cyclist rides "+d1+" m in "+t1+" seconds. What is their speed?", opts:_buildOpts(s1,[s1+2,s1*2,d1+t1]), c:0, e:"Speed = distance ÷ time = "+d1+" ÷ "+t1+" = "+s1+" m/s." };
+    // Pick t1 and s1, derive d1 so d1/t1 is clean integer
+    var t1 = _randInt(2,10)*10, s1 = _randInt(2,12), d1 = s1*t1;
+    var w1 = s1+2, w2 = s1*2, w3 = s1+3;
+    if (w1 === w2) w1 = s1+4;
+    return { q:"A cyclist rides "+d1+" m in "+t1+" seconds. What is their speed?", opts:_buildOpts(s1,[w1,w2,w3]), c:0, e:"Speed = distance ÷ time = "+d1+" ÷ "+t1+" = "+s1+" m/s." };
   }},
   { depth:'medium', gen:function(){ return { q:"What does the total distance on a distance–time graph represent?", opts:["The total distance the object has travelled from its starting point","The speed of the object","The time taken","The acceleration"], c:0, e:"The y-axis shows the total distance from the starting point. Reading the final value tells you how far the object has travelled." }; }},
   { depth:'medium', gen:function(){ return { q:"Two runners set off at the same time. Runner A's line on the graph is steeper than Runner B's. What does this tell you?", opts:["Runner A is faster","Runner A is slower","Runner B is faster","They are the same speed"], c:0, e:"A steeper gradient means higher speed. Runner A covers more distance in the same time and is therefore faster." }; }},
   { depth:'medium', gen:function(){
-    var d = _randInt(2,10)*10, t = _randInt(2,10)*2, s = d/t;
-    return { q:"A distance–time graph shows a straight line from (0, 0) to ("+t+", "+d+"). What is the speed?", opts:_buildOpts(s,[s+3,s*2,d*t]), c:0, e:"Speed = gradient = change in distance ÷ change in time = "+d+" ÷ "+t+" = "+s+" m/s." };
+    // Pick t and s, derive d so d/t is clean integer
+    var t = _randInt(2,10)*2, s = _randInt(2,12), d = s*t;
+    var w1 = s+3, w2 = s*2, w3 = d*t;
+    if (w1 === w2) w1 = s+4;
+    return { q:"A distance–time graph shows a straight line from (0, 0) to ("+t+", "+d+"). What is the speed?", opts:_buildOpts(s,[w1,w2,w3]), c:0, e:"Speed = gradient = change in distance ÷ change in time = "+d+" ÷ "+t+" = "+s+" m/s." };
   }},
   { depth:'medium', gen:function(){ return { q:"On a distance–time graph, a curve getting steeper over time means the object is:", opts:["Speeding up (accelerating)","Slowing down","Moving at constant speed","Stationary"], c:0, e:"A curve getting steeper means the gradient is increasing — the speed is increasing, so the object is accelerating." }; }},
   { depth:'greater-depth', gen:function(){
-    var s1 = _randInt(2,8), t1 = _randInt(3,8), s2 = _randInt(2,8), t2 = _randInt(3,8), d1 = s1*t1, d2 = s2*t2, total = d1+d2;
+    // Resample until d1, d2, s1+s2, and total are all distinct (avoid distractor collisions)
+    var s1, t1, s2, t2, d1, d2, total, attempts = 0;
+    do {
+      s1 = _randInt(2,8); t1 = _randInt(3,8); s2 = _randInt(2,8); t2 = _randInt(3,8);
+      d1 = s1*t1; d2 = s2*t2; total = d1+d2;
+      attempts++;
+    } while ((d1 === d2 || d1 === s1+s2 || d2 === s1+s2 || total === d1 || total === d2) && attempts < 30);
     return { q:"A car travels at "+s1+" m/s for "+t1+" seconds, then at "+s2+" m/s for "+t2+" seconds. What total distance has it covered?", opts:_buildOpts(total,[d1,d2,s1+s2]), c:0, e:"First section: "+s1+" × "+t1+" = "+d1+" m. Second section: "+s2+" × "+t2+" = "+d2+" m. Total = "+d1+" + "+d2+" = "+total+" m." };
   }},
   { depth:'greater-depth', gen:function(){
-    var d = _randInt(3,12)*100, t_move = _randInt(2,8)*10, t_stop = _randInt(1,5)*10, t_total = t_move + t_stop, avg = Math.round(d/t_total*10)/10;
-    return { q:"An object travels "+d+" m in "+t_move+" s, then stops for "+t_stop+" s. What is the average speed for the whole journey?", opts:_buildOpts(avg,[d/t_move,d/t_stop,t_total]), c:0, e:"Average speed = total distance ÷ total time = "+d+" ÷ "+t_total+" = "+avg+" m/s. The stop is included in the total time." };
+    // Ensure t_move != t_stop (avoid d/t_move == d/t_stop collision)
+    var d = _randInt(3,12)*100, t_move = _randInt(2,8)*10, t_stop;
+    do { t_stop = _randInt(1,5)*10; } while (t_stop === t_move);
+    var t_total = t_move + t_stop;
+    var avg = Math.round(d/t_total*10)/10;
+    var w1 = Math.round(d/t_move*10)/10, w2 = Math.round(d/t_stop*10)/10, w3 = t_total;
+    return { q:"An object travels "+d+" m in "+t_move+" s, then stops for "+t_stop+" s. What is the average speed for the whole journey?", opts:_buildOpts(avg,[w1,w2,w3]), c:0, e:"Average speed = total distance ÷ total time = "+d+" ÷ "+t_total+" = "+avg+" m/s. The stop is included in the total time." };
   }},
   { depth:'greater-depth', gen:function(){ return { q:"A distance–time graph shows three sections: a steep straight line, a flat line, then a less steep straight line. Describe the journey.", opts:["Fast constant speed, then stationary, then slower constant speed","Stationary, then fast, then slow","Slow, then stationary, then fast","Accelerating throughout"], c:0, e:"Steep line = fast constant speed. Flat line = stopped (stationary). Less steep line = moving again but at a slower speed. Each straight section has a constant speed; the gradient tells you how fast." }; }},
   { depth:'greater-depth', gen:function(){
-    var d1 = _randInt(2,6)*100, t1 = _randInt(2,5)*10, d2 = _randInt(2,6)*100, t2 = _randInt(2,5)*10, s1 = d1/t1, s2 = d2/t2;
-    return { q:"Section A of a journey covers "+d1+" m in "+t1+" s. Section B covers "+d2+" m in "+t2+" s. Which section has the higher speed?", opts:_buildOpts(s1>s2?s1:s2,[s1<s2?s1:s2,d1+d2,t1+t2]), c:0, e:"Section A: speed = "+d1+" ÷ "+t1+" = "+s1+" m/s. Section B: speed = "+d2+" ÷ "+t2+" = "+s2+" m/s. "+(s1>s2?"Section A":"Section B")+" is faster at "+(s1>s2?s1:s2)+" m/s." };
+    // Resample until s1 != s2 (avoid ambiguous "which is faster" when they tie)
+    var d1, t1, d2, t2, s1, s2, attempts = 0;
+    do {
+      d1 = _randInt(2,6)*100; t1 = _randInt(2,5)*10; d2 = _randInt(2,6)*100; t2 = _randInt(2,5)*10;
+      s1 = Math.round(d1/t1*10)/10; s2 = Math.round(d2/t2*10)/10;
+      attempts++;
+    } while (s1 === s2 && attempts < 20);
+    var fast = s1>s2?s1:s2, slow = s1>s2?s2:s1;
+    return { q:"Section A of a journey covers "+d1+" m in "+t1+" s. Section B covers "+d2+" m in "+t2+" s. Which section has the higher speed?", opts:_buildOpts(fast,[slow,d1+d2,t1+t2]), c:0, e:"Section A: speed = "+d1+" ÷ "+t1+" = "+s1+" m/s. Section B: speed = "+d2+" ÷ "+t2+" = "+s2+" m/s. "+(s1>s2?"Section A":"Section B")+" is faster at "+fast+" m/s." };
   }},
   { depth:'greater-depth', gen:function(){ return { q:"Explain why the gradient of a distance–time graph gives the speed.", opts:["Gradient = rise ÷ run = change in distance ÷ change in time, which is the definition of speed","Gradient measures acceleration, not speed","The area under the graph gives speed","Speed has nothing to do with the gradient"], c:0, e:"The gradient (slope) of any graph = change in y ÷ change in x. On a distance–time graph, y = distance and x = time. So gradient = distance ÷ time = speed. This is why steeper lines mean faster speeds." }; }}
 ];

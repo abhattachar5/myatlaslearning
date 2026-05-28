@@ -229,8 +229,8 @@ Object.assign(QUESTIONS, {
              opts: opts, c: 0,
              e: 'Nearest 0.1 m means 1 decimal place. Look at 2nd d.p. (' + d2 + '). ' + (d2>=5?'≥5, round UP.':'<5, round DOWN.') + ' Answer: ' + ans + ' m.' };
   }},
-  {q:"Which number rounds to 3.6 when rounded to 1 decimal place?",opts:["3.65","3.56","3.67","3.54"],c:0,
-   e:"3.65: 2nd d.p. is 5 ≥ 5, rounds UP to 3.7 ✗. 3.56: 2nd d.p. is 6 ≥ 5, rounds UP to 3.6 ✓. Wait: 3.56 rounds to 3.6 (look at hundredths: 6≥5, tenths goes up: 5→6). Correct answer: 3.56."},
+  {q:"Which number rounds to 3.6 when rounded to 1 decimal place?",opts:["3.65","3.56","3.67","3.54"],c:1,
+   e:"3.56: hundredths digit is 6 ≥ 5, so tenths rounds up: 5→6, giving 3.6 ✓. 3.65 rounds to 3.7 ✗. 3.67 rounds to 3.7 ✗. 3.54 rounds to 3.5 ✗."},
   {q:"A shopkeeper says an item costs '£8 to the nearest pound'. What is the maximum it could actually cost?",
    opts:["£8.49","£8.50","£8.99","£7.50"],c:0,
    e:"For a price to round to £8 (nearest £1), it must be less than £8.50. Maximum = £8.49 (or £8.499...). Answer: £8.49."},
@@ -405,11 +405,10 @@ Object.assign(QUESTIONS, {
   { gen: function() {
     var ans = randInt(2,12), b = pickFrom([0.2,0.3,0.4,0.5,0.6,0.7,0.8]);
     var a = parseFloat((ans*b).toFixed(2));
-    var mult = b < 0.15 ? 100 : 10;
-    var opts = buildOpts(ans, [ans+1, ans-1, Math.round(a/b*10)/10]);
+    var opts = buildOpts(ans, [ans+1, ans-1, ans+2]);
     return { q: 'What is ' + a + ' ÷ ' + b + '?',
              opts: opts, c: 0,
-             e: 'Multiply both by ' + mult + ': ' + (a*mult).toFixed(0) + ' ÷ ' + (b*mult).toFixed(0) + ' = ' + ans + '.' };
+             e: 'Multiply both by 10: ' + (a*10).toFixed(0) + ' ÷ ' + (b*10).toFixed(0) + ' = ' + ans + '.' };
   }},
   { gen: function() {
     var speed = parseFloat((randInt(2,9)*10 + randInt(1,9) + '.' + randInt(1,9)));
@@ -500,7 +499,7 @@ Object.assign(QUESTIONS, {
     var opts = buildOpts(quotient, [quotient + 1, parseFloat((dividend * divisor).toFixed(2)), quotient - 1]);
     return { q: 'Calculate ' + dividend + ' ÷ ' + divisor + '.',
              opts: opts, c: 0,
-             e: 'Multiply both by ' + Math.round(1/divisor*dividend/dividend*10) + ' to remove the decimal divisor: ' + (dividend * 10) + ' ÷ ' + (divisor * 10) + ' = ' + quotient + '.' };
+             e: 'Multiply both by 10 to remove the decimal divisor: ' + Math.round(dividend * 10) + ' ÷ ' + Math.round(divisor * 10) + ' = ' + quotient + '.' };
   }},
   { gen: function() {
     var divisor = pickFrom([0.4, 0.5, 0.6, 0.8]);
@@ -691,14 +690,20 @@ Object.assign(QUESTIONS, {
   }},
   { gen: function() {
     function gcd(a,b){return b?gcd(b,a%b):a;}
-    var d1 = pickFrom([4,6,8,10,12]), n1 = randInt(3,d1-1);
-    var d2 = pickFrom([3,4,5,6]), n2 = randInt(1,d2-1);
+    var d1 = pickFrom([4,6,8,10,12]), d2 = pickFrom([3,4,5,6]);
     var lcd = d1*d2/gcd(d1,d2);
+    // Pick n1, n2 so n1/d1 > n2/d2 (positive result), regenerating if necessary
+    var n1, n2, attempt = 0;
+    do {
+      n1 = randInt(2, d1-1);
+      n2 = randInt(1, d2-1);
+      attempt++;
+    } while (n1*(lcd/d1) <= n2*(lcd/d2) && attempt < 20);
+    if (n1*(lcd/d1) <= n2*(lcd/d2)) { n1 = d1-1; n2 = 1; }
     var rn = n1*(lcd/d1)-n2*(lcd/d2), rd = lcd;
-    if(rn<=0){n1=d1-1; rn=n1*(lcd/d1)-n2*(lcd/d2);}
     var g = gcd(rn,rd); rn=rn/g; rd=rd/g;
     var ansStr = rd===1?String(rn):rn+'/'+rd;
-    var opts = buildOpts(ansStr, [(n1-n2)+'/'+d1, (n1-n2)+'/'+(d1-d2||1), (rn+1)+'/'+rd]);
+    var opts = buildOpts(ansStr, [(n1-n2)+'/'+d1, (n1-n2)+'/'+Math.max(d1-d2,2), (rn+1)+'/'+rd]);
     return { q: 'What is ' + n1 + '/' + d1 + ' − ' + n2 + '/' + d2 + '?',
              opts: opts, c: 0,
              e: 'LCD=' + lcd + '. ' + n1*(lcd/d1)+'/'+lcd + '−' + n2*(lcd/d2)+'/'+lcd + '=' + (rn*g)+'/'+rd*g + (g>1?' = '+ansStr:'') + '.' };
@@ -785,8 +790,8 @@ Object.assign(QUESTIONS, {
              opts: opts, c: 0,
              e: n1+'/'+d1+'−'+n2+'/'+d2+': LCD='+lcd+'. '+(n1*(lcd/d1))+'/'+lcd+'−'+(n2*(lcd/d2))+'/'+lcd+'='+(rn*g)+'/'+lcd*(g>1?g:1)+(g>1?' = '+ansStr:'')+' of the pizza.' };
   }},
-  {q:"What value of n makes 2/n + 1/3 = 1? (n is a whole number)",opts:["6","3","2","4"],c:0,
-   e:"1 − 1/3 = 2/3. So 2/n = 2/3 → n=3. Wait: 2/3+1/3=3/3=1 ✓. So n=3."}
+  {q:"What value of n makes 2/n + 1/3 = 1? (n is a whole number)",opts:["6","3","2","4"],c:1,
+   e:"1 − 1/3 = 2/3. So 2/n = 2/3 → n = 3. Check: 2/3 + 1/3 = 3/3 = 1 ✓."}
 ],
 
 "mi-06-4": [
