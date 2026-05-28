@@ -1788,18 +1788,26 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
    ═════════════════════════════════════════════════════════════════════════════ */
 
 /* ── Setup Banner ────────────────────────────────────────────────────────────── */
-.plan-setup-banner {
+.plan-setup-modal-inner {
+  position: relative;
   background: linear-gradient(135deg, var(--blue), #2a7de1);
   color: #fff;
   border-radius: var(--radius-lg);
-  padding: 28px 32px;
-  margin-bottom: 24px;
-  box-shadow: var(--shadow);
-  animation: planSlideIn .4s ease;
+  padding: 32px 36px;
+  width: 480px;
+  max-width: calc(100vw - 32px);
+  border: none;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
 }
-@keyframes planSlideIn {
-  from { opacity: 0; transform: translateY(-12px); }
-  to   { opacity: 1; transform: translateY(0); }
+.plan-setup-modal-inner .modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255,255,255,.2);
+  color: #fff;
+}
+.plan-setup-modal-inner .modal-close:hover {
+  background: rgba(255,255,255,.35);
 }
 .plan-setup-header {
   display: flex;
@@ -2424,7 +2432,7 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 
 /* ── Responsive ──────────────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
-  .plan-setup-banner { padding: 20px; }
+  .plan-setup-modal-inner { padding: 24px 20px; }
   .plan-setup-dates { flex-direction: column; gap: 12px; }
   .week-plan { padding: 16px; }
   .wp-tab { padding: 6px 14px; font-size: .8rem; }

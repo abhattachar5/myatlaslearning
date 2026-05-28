@@ -164,30 +164,33 @@
       </div>
     </div>
 
-    <!-- ── Study Plan Setup Banner (first visit only) ──────────────────────── -->
-    <div class="plan-setup-banner" id="plan-setup-banner" style="display:none">
-      <div class="plan-setup-header">
-        <span class="plan-setup-icon">📅</span>
-        <h2 class="plan-setup-title">Your Study Plan is Ready!</h2>
-      </div>
-      <p class="plan-setup-desc">
-        We have built a plan to cover all Year 7 topics.
-        Each week you'll get a checklist of topics across all five subjects.
-        Work through them at your own pace — any day, any order.
-      </p>
-      <div class="plan-setup-dates">
-        <div class="plan-setup-date">
-          <span class="plan-setup-date-label">Start</span>
-          <span class="plan-setup-date-value" id="plan-start-date">—</span>
+    <!-- ── Study Plan Setup Modal (first visit only) ─────────────────────── -->
+    <div class="modal-overlay" id="plan-setup-modal" role="dialog" aria-modal="true" aria-labelledby="plan-setup-title" onclick="closePlanSetupModal(event)">
+      <div class="modal plan-setup-modal-inner">
+        <button class="modal-close" onclick="closePlanSetupModal()" aria-label="Close">✕</button>
+        <div class="plan-setup-header">
+          <span class="plan-setup-icon">📅</span>
+          <h2 class="plan-setup-title" id="plan-setup-title">Your Study Plan is Ready!</h2>
         </div>
-        <div class="plan-setup-date">
-          <span class="plan-setup-date-label">Target</span>
-          <span class="plan-setup-date-value" id="plan-target-date">—</span>
+        <p class="plan-setup-desc">
+          We have built a plan to cover all <span id="plan-year-label">Year 7</span> topics.
+          Each week you'll get a checklist of topics across all five subjects.
+          Work through them at your own pace — any day, any order.
+        </p>
+        <div class="plan-setup-dates">
+          <div class="plan-setup-date">
+            <span class="plan-setup-date-label">Start</span>
+            <span class="plan-setup-date-value" id="plan-start-date">—</span>
+          </div>
+          <div class="plan-setup-date">
+            <span class="plan-setup-date-label">Target</span>
+            <span class="plan-setup-date-value" id="plan-target-date">—</span>
+          </div>
         </div>
+        <button class="btn btn-primary plan-setup-go" onclick="activateStudyPlan()">
+          Start My Plan ✓
+        </button>
       </div>
-      <button class="btn btn-primary plan-setup-go" onclick="activateStudyPlan()">
-        Start My Plan ✓
-      </button>
     </div>
 
     <!-- ── My Goals Card (shown when plan is active) ────────────────────── -->
@@ -409,14 +412,15 @@ function getHeroBannerIsland() {
     if (s > 0 && s < 4) return island;
   }
 
-  // 5. First unlocked unstarted island
+  // 5. First unlocked unstarted island — prefer Mathematics
+  let fallback = null;
   for (const island of curriculum) {
     if (getIslandStatus(island.id) === 0 && isIslandUnlocked(island, allProgress)) {
-      return island;
+      if (island.subjectId === 'math') return island;
+      if (!fallback) fallback = island;
     }
   }
-
-  return null;
+  return fallback;
 }
 
 function renderHeroBanner() {
@@ -493,25 +497,31 @@ function setWelcome() {
 }
 
 // ── Study Plan (banner or weekly checklist) ──────────────────────────────────
+function closePlanSetupModal(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById('plan-setup-modal').classList.remove('show');
+}
+
 function renderWeekPlan() {
   const plan = StudyPlanner.getStudyPlan();
-  const banner = document.getElementById('plan-setup-banner');
+  const modal = document.getElementById('plan-setup-modal');
   const card = document.getElementById('week-plan');
 
   if (!plan) {
-    // No plan yet — show setup banner
+    // No plan yet — show setup modal
     const today = new Date();
     const targetYear = today.getFullYear() + 1;
+    document.getElementById('plan-year-label').textContent = getUserYear();
     document.getElementById('plan-start-date').textContent =
       today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
     document.getElementById('plan-target-date').textContent = 'May ' + targetYear;
-    banner.style.display = '';
+    modal.classList.add('show');
     card.style.display = 'none';
     return;
   }
 
-  // Plan exists — show card
-  banner.style.display = 'none';
+  // Plan exists — hide modal, show card
+  modal.classList.remove('show');
   card.style.display = '';
 
   renderThisWeekTab();
@@ -888,8 +898,10 @@ function renderProgressTab() {
 
 function activateStudyPlan() {
   StudyPlanner.createStudyPlan();
+  closePlanSetupModal();
   showToast('📅 Study plan activated!', 'success');
   renderWeekPlan();
+  renderHeroBanner();
   setWelcome();
 }
 
