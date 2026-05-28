@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atlas — Comprehension</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
   <style>
     /* ── Comprehension-specific styles ──────────────────────────────────────── */
 
@@ -594,8 +595,10 @@
       <h3 id="profile-modal-title">My Profile</h3>
       <button class="modal-close" onclick="closeProfileModal()" aria-label="Close profile modal">&#10005;</button>
     </div>
+    <p style="margin:0 0 4px;font-size:.8125rem;color:var(--text-muted)">👤 Account: <span id="display-parent-name">—</span> · <span id="display-parent-email">—</span></p>
+    <div class="divider" style="margin:8px 0 12px"></div>
     <div class="form-group">
-      <label class="form-label" for="edit-name">Name</label>
+      <label class="form-label" for="edit-name">Child's name</label>
       <input class="form-input" id="edit-name" type="text">
     </div>
     <div class="form-group">
@@ -609,7 +612,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label class="form-label" for="edit-school">School</label>
+      <label class="form-label" for="edit-school">School <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
       <input class="form-input" id="edit-school" type="text">
     </div>
     <div style="display:flex;gap:10px;margin-top:8px">
@@ -640,6 +643,7 @@
 <script src="data.js"></script>
 <script src="english-data.js"></script>
 <script src="english-content-4.js"></script>
+<script src="auth-shim.js"></script>
 <script src="app.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────────
@@ -1092,9 +1096,12 @@ document.addEventListener('keydown', function(e) {
 var _modalTrigger = null;
 function openProfileModal() {
   _modalTrigger = document.activeElement;
-  var u = JSON.parse(localStorage.getItem('sm_user') || '{}');
+  var u = JSON.parse(localStorage.getItem('sm_active_profile') || '{}');
+  var identity = getIdentityUser();
+  document.getElementById('display-parent-name').textContent = u.parentName || (identity && identity.user_metadata ? identity.user_metadata.full_name : '') || '—';
+  document.getElementById('display-parent-email').textContent = identity ? identity.email : '—';
   document.getElementById('edit-name').value = u.name || '';
-  document.getElementById('edit-year').value = u.year || 'Year 10';
+  document.getElementById('edit-year').value = u.year || 'Year 7';
   document.getElementById('edit-school').value = u.school || '';
   document.getElementById('profile-modal').classList.add('show');
   setTimeout(function() { document.getElementById('edit-name').focus(); }, 50);
@@ -1123,12 +1130,10 @@ function saveProfile() {
   var year = document.getElementById('edit-year').value;
   var school = document.getElementById('edit-school').value.trim();
   if (!name) return;
-  var u = JSON.parse(localStorage.getItem('sm_user') || '{}');
+  var u = JSON.parse(localStorage.getItem('sm_active_profile') || '{}');
   u.name = name; u.year = year; u.school = school;
-  localStorage.setItem('sm_user', JSON.stringify(u));
-  var profiles = JSON.parse(localStorage.getItem('sm_profiles') || '[]');
-  var idx = profiles.findIndex(function(p) { return p.joinDate === u.joinDate; });
-  if (idx !== -1) { profiles[idx] = u; localStorage.setItem('sm_profiles', JSON.stringify(profiles)); }
+  localStorage.setItem('sm_active_profile', JSON.stringify(u));
+  syncProgressToServer();
   document.getElementById('profile-modal').classList.remove('show');
   showToast('Profile updated', 'success');
 }
@@ -1138,22 +1143,26 @@ function confirmReset() {
   passages.forEach(function(p) {
     localStorage.removeItem('sm_comp_' + p.id);
   });
-  var u = JSON.parse(localStorage.getItem('sm_user') || '{}');
+  var u = JSON.parse(localStorage.getItem('sm_active_profile') || '{}');
   u.xp = 0;
-  localStorage.setItem('sm_user', JSON.stringify(u));
+  localStorage.setItem('sm_active_profile', JSON.stringify(u));
+  syncProgressToServer();
   document.getElementById('profile-modal').classList.remove('show');
   showToast('Progress reset', 'success');
   location.reload();
 }
 function logout() {
-  localStorage.removeItem('sm_user');
+  localStorage.removeItem('gotrue.user');
+  localStorage.removeItem('sm_active_profile');
+  if (typeof netlifyIdentity !== 'undefined') {
+    try { netlifyIdentity.logout(); } catch (e) { /* token already cleared */ }
+  }
   window.location.href = 'index.html';
 }
 
 // ── Mobile streak display ─────────────────────────────────────────────────────
 function initMobileStreak() {
-  var u = JSON.parse(localStorage.getItem('sm_user') || '{}');
-  var streak = u.streak || 0;
+  var streak = parseInt(localStorage.getItem('sm_streak') || '0');
   var el = document.getElementById('mobile-streak-label');
   if (el) el.textContent = streak + ' day' + (streak !== 1 ? 's' : '');
 }

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atlas — Dashboard</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
 </head>
 <body>
 
@@ -79,9 +80,24 @@
         <h2>My Profile</h2>
       </div>
 
+      <!-- Parent / Account Info -->
       <div class="profile-page-card">
+        <h3 style="margin:0 0 12px;font-size:1rem;color:var(--text-muted)">👤 Account holder</h3>
         <div class="form-group">
-          <label class="form-label" for="edit-name">Name</label>
+          <label class="form-label">Parent/guardian name</label>
+          <div class="form-input" id="display-parent-name" style="background:var(--bg-muted,#f1f5f9);cursor:default"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <div class="form-input" id="display-parent-email" style="background:var(--bg-muted,#f1f5f9);cursor:default"></div>
+        </div>
+      </div>
+
+      <!-- Child / Learner Info -->
+      <div class="profile-page-card">
+        <h3 style="margin:0 0 12px;font-size:1rem;color:var(--text-muted)">📚 Learner details</h3>
+        <div class="form-group">
+          <label class="form-label" for="edit-name">Child's name</label>
           <input class="form-input" id="edit-name" type="text">
         </div>
         <div class="form-group">
@@ -95,7 +111,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label" for="edit-school">School</label>
+          <label class="form-label" for="edit-school">School <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
           <input class="form-input" id="edit-school" type="text">
         </div>
         <div class="profile-page-actions">
@@ -260,6 +276,7 @@
 <script src="english-lessons-5.js"></script>
 <script src="english-lessons-7.js"></script>
 <script src="english-lessons-8.js"></script>
+<script src="auth-shim.js"></script>
 <script src="app.js"></script>
 <script src="planner.js"></script>
 <script>
@@ -308,6 +325,7 @@ function getYearGeographyTopics() {
   initTheme();
   updateThemeBtn();
   user = requireAuth();
+  if (!user) return;
   touchStreak();
   renderSidebar();
   renderHeroBanner();
@@ -1372,8 +1390,13 @@ function setNavActive(page) {
   if (mp) mp.classList.toggle('active', !isDash);
 }
 function openProfileModal() {
+  // Parent info (read-only)
+  var identity = getIdentityUser();
+  document.getElementById('display-parent-name').textContent = user.parentName || (identity && identity.user_metadata ? identity.user_metadata.full_name : '') || '—';
+  document.getElementById('display-parent-email').textContent = identity ? identity.email : '—';
+  // Child info (editable)
   document.getElementById('edit-name').value = user.name;
-  document.getElementById('edit-year').value = user.year || 'Year 10';
+  document.getElementById('edit-year').value = user.year || 'Year 7';
   document.getElementById('edit-school').value = user.school || '';
   document.getElementById('dashboard-content').style.display = 'none';
   document.getElementById('profile-page').style.display = '';
@@ -1399,13 +1422,9 @@ function saveProfile() {
   const year   = document.getElementById('edit-year').value;
   const school = document.getElementById('edit-school').value.trim();
   if (!name) return;
-  // Update current profile
   user.name = name; user.year = year; user.school = school;
   setUser(user);
-  // Update in profiles list
-  const profiles = JSON.parse(localStorage.getItem('sm_profiles') || '[]');
-  const idx = profiles.findIndex(p => p.joinDate === user.joinDate);
-  if (idx !== -1) { profiles[idx] = user; localStorage.setItem('sm_profiles', JSON.stringify(profiles)); }
+  syncProgressToServer();
   closeProfilePage();
   renderSidebar();
   renderStats();
@@ -1419,6 +1438,7 @@ function confirmReset() {
   saveAllProgress({});
   user.xp = 0;
   setUser(user);
+  syncProgressToServer();
   closeProfilePage();
   renderSidebar();
   renderStats();

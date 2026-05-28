@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atlas — GCSE Learning</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
 </head>
 <body class="auth-page">
 
@@ -37,139 +38,402 @@
 </div>
 
 <div class="auth-form-panel" id="auth-form-panel">
-  <h2>Welcome to <img src="atlas-text.png" alt="ATLAS" class="welcome-atlas-text"></h2>
-  <p>Set up your profile to track your progress.</p>
 
-  <div class="auth-tab-bar" role="tablist" aria-label="Account access">
-    <button class="auth-tab-btn active" id="tab-login" role="tab" aria-selected="true" aria-controls="form-login" onclick="switchTab('login')">Sign In</button>
-    <button class="auth-tab-btn" id="tab-signup" role="tab" aria-selected="false" aria-controls="form-signup" onclick="switchTab('signup')">Sign Up</button>
+  <!-- ── Sign In / Sign Up tabs ───────────────────────────────────────────── -->
+  <div id="auth-forms-view">
+    <h2>Welcome to <img src="atlas-text.png" alt="ATLAS" class="welcome-atlas-text"></h2>
+    <p id="auth-subtitle">Sign in or create an account to track your learning progress.</p>
+
+    <div class="auth-tab-bar" role="tablist" aria-label="Account access">
+      <button class="auth-tab-btn active" id="tab-login" role="tab" aria-selected="true" aria-controls="form-login" onclick="switchTab('login')">Sign In</button>
+      <button class="auth-tab-btn" id="tab-signup" role="tab" aria-selected="false" aria-controls="form-signup" onclick="switchTab('signup')">Sign Up</button>
+    </div>
+
+    <!-- Sign In form -->
+    <form id="form-login" role="tabpanel" aria-labelledby="tab-login" onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label class="form-label" for="login-email">Email</label>
+        <input class="form-input" id="login-email" type="email" placeholder="parent@example.com" required autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="login-password">Password</label>
+        <input class="form-input" id="login-password" type="password" placeholder="Your password" required autocomplete="current-password">
+      </div>
+      <div class="form-error" id="login-error" aria-live="polite"></div>
+      <button class="btn btn-primary btn-lg" type="submit" id="login-btn" style="width:100%;margin-top:8px">Sign In</button>
+      <p class="auth-switch">New here? <a onclick="switchTab('signup')" style="cursor:pointer">Create an account</a></p>
+      <p class="auth-switch"><a onclick="handleForgotPassword()" style="cursor:pointer;color:var(--blue)">Forgot password?</a></p>
+    </form>
+
+    <!-- Sign Up form -->
+    <form id="form-signup" role="tabpanel" aria-labelledby="tab-signup" onsubmit="handleSignup(event)" style="display:none">
+      <div class="form-group">
+        <label class="form-label" for="signup-email">Email</label>
+        <input class="form-input" id="signup-email" type="email" placeholder="parent@example.com" required autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="signup-password">Password</label>
+        <input class="form-input" id="signup-password" type="password" placeholder="At least 6 characters" required autocomplete="new-password" minlength="6">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="signup-name">Parent/guardian name</label>
+        <input class="form-input" id="signup-name" type="text" placeholder="e.g. Sarah Thompson" required autocomplete="name">
+      </div>
+      <div class="form-error" id="signup-error" aria-live="polite"></div>
+      <button class="btn btn-primary btn-lg" type="submit" id="signup-btn" style="width:100%;margin-top:8px">Create Account</button>
+      <p class="auth-switch">Already have an account? <a onclick="switchTab('login')" style="cursor:pointer">Sign in</a></p>
+    </form>
+
+    <!-- Confirmation message (shown after signup) -->
+    <div id="confirm-message" style="display:none;text-align:center;padding:20px 0">
+      <div style="font-size:2rem;margin-bottom:12px">📧</div>
+      <h3 style="margin-bottom:8px">Check your email</h3>
+      <p style="color:var(--text-muted)">We've sent a confirmation link to <strong id="confirm-email"></strong>. Click it to activate your account, then come back and sign in.</p>
+      <button class="btn btn-secondary" style="margin-top:16px" onclick="showView('forms'); switchTab('login')">Back to Sign In</button>
+    </div>
+
+    <p style="margin-top:16px;font-size:.8125rem;color:var(--text-muted);text-align:center">Parents: create an account with your email to set up your child's learning profile.</p>
   </div>
 
-  <!-- Sign In -->
-  <form id="form-login" role="tabpanel" aria-labelledby="tab-login" onsubmit="handleLogin(event)">
-    <div class="form-group">
-      <label class="form-label" for="login-name">Your name</label>
-      <input class="form-input" id="login-name" type="text" placeholder="e.g. Emma Thompson" required autocomplete="username" aria-describedby="login-error">
-      <div class="form-error" id="login-error" aria-live="polite">No profile found for that name. <a onclick="switchTab('signup')" style="cursor:pointer;color:var(--blue)">Create one →</a></div>
-    </div>
-    <button class="btn btn-primary btn-lg" type="submit" style="width:100%;margin-top:8px">Sign In</button>
-    <p class="auth-switch">New here? <a onclick="switchTab('signup')">Create an account</a></p>
-  </form>
+  <!-- ── Loading ──────────────────────────────────────────────────────────── -->
+  <div id="auth-loading-view" style="display:none;text-align:center;padding:40px 0">
+    <div style="font-size:1.5rem;margin-bottom:12px">Loading your profile...</div>
+    <div style="color:var(--text-muted)">Please wait while we fetch your data.</div>
+  </div>
 
-  <!-- Sign Up -->
-  <form id="form-signup" role="tabpanel" aria-labelledby="tab-signup" onsubmit="handleSignup(event)" style="display:none">
-    <div class="form-group">
-      <label class="form-label" for="signup-name">Full name</label>
-      <input class="form-input" id="signup-name" type="text" placeholder="e.g. Emma Thompson" required autocomplete="name" aria-describedby="signup-name-error">
-      <div class="form-error" id="signup-name-error" aria-live="polite">Please enter your name.</div>
-    </div>
-    <div class="form-group">
-      <label class="form-label" for="signup-year">Year group</label>
-      <select class="form-input form-select" id="signup-year" required>
-        <option value="" disabled selected>Select your year group</option>
-        <option value="Year 7">Year 7 (age 11–12)</option>
-        <option value="Year 8" disabled>Year 8 (age 12–13) — Coming Soon</option>
-        <option value="Year 9" disabled>Year 9 (age 13–14) — Coming Soon</option>
-        <option value="Year 10" disabled>Year 10 (age 14–15) — Coming Soon</option>
-        <option value="Year 11" disabled>Year 11 (age 15–16) — Coming Soon</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label class="form-label" for="signup-school">School <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
-      <input class="form-input" id="signup-school" type="text" placeholder="e.g. Oakwood Academy" autocomplete="organization">
-    </div>
-    <div class="form-error" id="signup-error" aria-live="polite">That name is already taken. Please sign in instead.</div>
-    <button class="btn btn-primary btn-lg" type="submit" style="width:100%;margin-top:8px">Create account</button>
-    <p class="auth-switch">Already have an account? <a onclick="switchTab('login')">Sign in</a></p>
-  </form>
+  <!-- ── Profile Setup (new user after login) ─────────────────────────────── -->
+  <div id="profile-setup-view" style="display:none">
+    <h2>Set Up Your Child's Profile</h2>
+    <p>Tell us about your child so we can personalise their learning experience.</p>
+
+    <form id="form-profile-setup" onsubmit="handleProfileSetup(event)">
+      <div class="form-group">
+        <label class="form-label" for="setup-name">Child's first name</label>
+        <input class="form-input" id="setup-name" type="text" placeholder="e.g. Emma" required autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="setup-year">Year group</label>
+        <select class="form-input form-select" id="setup-year" required>
+          <option value="" disabled selected>Select year group</option>
+          <option value="Year 7">Year 7 (age 11-12)</option>
+          <option value="Year 8" disabled>Year 8 (age 12-13) -- Coming Soon</option>
+          <option value="Year 9" disabled>Year 9 (age 13-14) -- Coming Soon</option>
+          <option value="Year 10" disabled>Year 10 (age 14-15) -- Coming Soon</option>
+          <option value="Year 11" disabled>Year 11 (age 15-16) -- Coming Soon</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="setup-school">School <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
+        <input class="form-input" id="setup-school" type="text" placeholder="e.g. Oakwood Academy" autocomplete="organization">
+      </div>
+      <div class="form-error" id="setup-error" aria-live="polite"></div>
+      <button class="btn btn-primary btn-lg" type="submit" style="width:100%;margin-top:8px">Start Learning</button>
+    </form>
+  </div>
+
 </div>
 
+<script src="auth-shim.js"></script>
+<script src="app.js"></script>
 <script>
-  // ── Init ──────────────────────────────────────────────────────────────────
   (function () {
-    const t = localStorage.getItem('sm_theme') || 'light';
-    document.documentElement.setAttribute('data-theme', t);
-    // If already logged in, skip to dashboard
-    const user = JSON.parse(localStorage.getItem('sm_user') || 'null');
-    if (user) window.location.href = 'dashboard.html';
-  })();
+    initTheme();
 
-  function switchTab(tab) {
-    const isLogin = tab === 'login';
-    const loginBtn = document.getElementById('tab-login');
-    const signupBtn = document.getElementById('tab-signup');
-    loginBtn.classList.toggle('active', isLogin);
-    loginBtn.setAttribute('aria-selected', isLogin);
-    signupBtn.classList.toggle('active', !isLogin);
-    signupBtn.setAttribute('aria-selected', !isLogin);
-    document.getElementById('form-login').style.display = isLogin ? '' : 'none';
-    document.getElementById('form-signup').style.display = isLogin ? 'none' : '';
-    // Move focus to the revealed panel
-    document.getElementById(isLogin ? 'login-name' : 'signup-name').focus();
-    // Clear errors
-    document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
-  }
+    // Handle confirmation/recovery tokens from URL hash (email link redirects here)
+    var hash = window.location.hash;
+    if (hash) {
+      var tokenMatch = hash.match(/confirmation_token=([^&]+)/);
+      var recoveryMatch = hash.match(/recovery_token=([^&]+)/);
+      if (tokenMatch) {
+        gotrueAuth.confirm(tokenMatch[1]).then(function() {
+          window.location.hash = '';
+          showView('forms');
+          switchTab('login');
+          var errEl = document.getElementById('login-error');
+          errEl.textContent = 'Email confirmed! You can now sign in.';
+          errEl.classList.add('show');
+          errEl.style.color = 'var(--green, #22c55e)';
+        }).catch(function(err) {
+          console.error('Confirmation error:', err);
+        });
+        return;
+      }
+      if (recoveryMatch) {
+        gotrueAuth.recover(recoveryMatch[1]).then(function(user) {
+          window.location.hash = '';
+          handlePostLogin(user);
+        }).catch(function(err) {
+          console.error('Recovery error:', err);
+        });
+        return;
+      }
+    }
 
-  function getAllProfiles() {
-    return JSON.parse(localStorage.getItem('sm_profiles') || '[]');
-  }
-  function saveAllProfiles(profiles) {
-    localStorage.setItem('sm_profiles', JSON.stringify(profiles));
-  }
-
-  function handleLogin(e) {
-    e.preventDefault();
-    const nameEl = document.getElementById('login-name');
-    const name = nameEl.value.trim();
-    const profiles = getAllProfiles();
-    const profile = profiles.find(p => p.name.toLowerCase() === name.toLowerCase());
-    if (!profile) {
-      document.getElementById('login-error').classList.add('show');
-      nameEl.setAttribute('aria-invalid', 'true');
+    var identity = gotrueAuth.currentUser();
+    var profile = JSON.parse(localStorage.getItem('sm_active_profile') || 'null');
+    if (identity && profile) {
+      window.location.href = 'dashboard.html';
       return;
     }
-    document.getElementById('login-error').classList.remove('show');
-    nameEl.removeAttribute('aria-invalid');
-    localStorage.setItem('sm_user', JSON.stringify(profile));
-    window.location.href = 'dashboard.html';
+
+    if (identity && !profile) {
+      handlePostLogin(identity);
+    }
+  })();
+
+  // ── View switching ────────────────────────────────────────────────────────
+  function showView(name) {
+    document.getElementById('auth-forms-view').style.display = (name === 'forms' || name === 'confirm') ? '' : 'none';
+    document.getElementById('auth-loading-view').style.display = name === 'loading' ? '' : 'none';
+    document.getElementById('profile-setup-view').style.display = name === 'setup' ? '' : 'none';
+
+    // Within forms view, toggle forms vs confirmation
+    if (name === 'confirm') {
+      document.getElementById('form-login').style.display = 'none';
+      document.getElementById('form-signup').style.display = 'none';
+      document.getElementById('confirm-message').style.display = '';
+      document.querySelector('.auth-tab-bar').style.display = 'none';
+    } else if (name === 'forms') {
+      document.getElementById('confirm-message').style.display = 'none';
+      document.querySelector('.auth-tab-bar').style.display = '';
+    }
   }
 
-  function handleSignup(e) {
-    e.preventDefault();
-    const nameEl  = document.getElementById('signup-name');
-    const yearEl  = document.getElementById('signup-year');
-    const schoolEl = document.getElementById('signup-school');
-    const errEl   = document.getElementById('signup-error');
-    const nameErr = document.getElementById('signup-name-error');
-    errEl.classList.remove('show');
-    nameErr.classList.remove('show');
+  function switchTab(tab) {
+    var isLogin = tab === 'login';
+    document.getElementById('tab-login').classList.toggle('active', isLogin);
+    document.getElementById('tab-login').setAttribute('aria-selected', isLogin);
+    document.getElementById('tab-signup').classList.toggle('active', !isLogin);
+    document.getElementById('tab-signup').setAttribute('aria-selected', !isLogin);
+    document.getElementById('form-login').style.display = isLogin ? '' : 'none';
+    document.getElementById('form-signup').style.display = isLogin ? 'none' : '';
+    document.getElementById('confirm-message').style.display = 'none';
+    document.querySelectorAll('.form-error').forEach(function(el) { el.classList.remove('show'); });
+    var focusEl = document.getElementById(isLogin ? 'login-email' : 'signup-email');
+    if (focusEl) focusEl.focus();
+  }
 
-    const name   = nameEl.value.trim();
-    const year   = yearEl.value;
-    const school = schoolEl.value.trim();
+  // ── Sign Up ───────────────────────────────────────────────────────────────
+  async function handleSignup(e) {
+    e.preventDefault();
+    var emailEl = document.getElementById('signup-email');
+    var passEl  = document.getElementById('signup-password');
+    var nameEl  = document.getElementById('signup-name');
+    var errEl   = document.getElementById('signup-error');
+    var btn     = document.getElementById('signup-btn');
+    errEl.classList.remove('show');
+
+    var email = emailEl.value.trim();
+    var password = passEl.value;
+    var fullName = nameEl.value.trim();
+
+    btn.disabled = true;
+    btn.textContent = 'Creating account...';
+
+    try {
+      await gotrueAuth.signup(email, password, { full_name: fullName });
+      document.getElementById('confirm-email').textContent = email;
+      showView('confirm');
+    } catch (err) {
+      errEl.textContent = err.message || 'Signup failed. Please try again.';
+      errEl.classList.add('show');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Create Account';
+    }
+  }
+
+  // ── Sign In ───────────────────────────────────────────────────────────────
+  async function handleLogin(e) {
+    e.preventDefault();
+    var emailEl = document.getElementById('login-email');
+    var passEl  = document.getElementById('login-password');
+    var errEl   = document.getElementById('login-error');
+    var btn     = document.getElementById('login-btn');
+    errEl.classList.remove('show');
+
+    var email = emailEl.value.trim();
+    var password = passEl.value;
+
+    btn.disabled = true;
+    btn.textContent = 'Signing in...';
+
+    try {
+      var user = await gotrueAuth.login(email, password, true);
+      handlePostLogin(user);
+    } catch (err) {
+      var msg = err.message || 'Login failed.';
+      if (msg.includes('not confirmed')) {
+        msg = 'Please confirm your email first. Check your inbox for a confirmation link.';
+      } else if (msg.includes('credentials') || msg.includes('invalid_grant')) {
+        msg = 'Invalid email or password. Please try again.';
+      }
+      errEl.textContent = msg;
+      errEl.classList.add('show');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Sign In';
+    }
+  }
+
+  // ── Forgot Password ──────────────────────────────────────────────────────
+  async function handleForgotPassword() {
+    var email = document.getElementById('login-email').value.trim();
+    if (!email) {
+      var errEl = document.getElementById('login-error');
+      errEl.textContent = 'Enter your email above, then click "Forgot password?".';
+      errEl.classList.add('show');
+      document.getElementById('login-email').focus();
+      return;
+    }
+    try {
+      await gotrueAuth.requestPasswordRecovery(email);
+      var errEl = document.getElementById('login-error');
+      errEl.textContent = 'Password reset email sent! Check your inbox.';
+      errEl.classList.add('show');
+      errEl.style.color = 'var(--green, #22c55e)';
+    } catch (err) {
+      var errEl = document.getElementById('login-error');
+      errEl.textContent = err.message || 'Could not send reset email.';
+      errEl.classList.add('show');
+      errEl.style.color = '';
+    }
+  }
+
+  // ── Post-login flow ───────────────────────────────────────────────────────
+  async function handlePostLogin(identityUser) {
+    showView('loading');
+
+    try {
+      // Refresh token
+      await identityUser.jwt();
+
+      // Check for old localStorage data to migrate
+      var oldUser = JSON.parse(localStorage.getItem('sm_user') || 'null');
+      var oldProgress = JSON.parse(localStorage.getItem('sm_progress') || 'null');
+      var serverData = null;
+
+      if (oldUser || oldProgress) {
+        serverData = await migrateLocalProgress();
+      }
+
+      if (!serverData) {
+        serverData = await loadProgressFromServer();
+      }
+
+      if (serverData && serverData.name) {
+        // Returning user with profile data — name is the child's name
+        var parentName = serverData.parentName || '';
+        // Fallback: get parent name from identity metadata if not in blob
+        if (!parentName) {
+          var meta = identityUser.user_metadata;
+          parentName = (meta && meta.full_name) ? meta.full_name : '';
+        }
+        var profile = {
+          name: serverData.name,
+          parentName: parentName,
+          year: serverData.year || '',
+          school: serverData.school || '',
+          tier: serverData.tier || 'free',
+          xp: serverData.xp || 0,
+          joinDate: serverData.joinDate || new Date().toISOString()
+        };
+        localStorage.setItem('sm_active_profile', JSON.stringify(profile));
+
+        if (serverData.progress) {
+          localStorage.setItem('sm_progress', JSON.stringify(serverData.progress));
+        }
+        if (serverData.streak !== undefined) {
+          localStorage.setItem('sm_streak', String(serverData.streak));
+        }
+        if (serverData.lastStudy) {
+          localStorage.setItem('sm_last_study', serverData.lastStudy);
+        }
+        if (serverData.preferences && serverData.preferences.theme) {
+          localStorage.setItem('sm_theme', serverData.preferences.theme);
+          document.documentElement.setAttribute('data-theme', serverData.preferences.theme);
+        }
+
+        window.location.href = 'dashboard.html';
+        return;
+      }
+
+      // New user — show profile setup for the child (don't pre-fill with parent name)
+      showView('setup');
+
+    } catch (err) {
+      console.error('Post-login error:', err);
+      showView('setup');
+    }
+  }
+
+  // ── Profile setup form submission ─────────────────────────────────────────
+  async function handleProfileSetup(e) {
+    e.preventDefault();
+    var nameEl = document.getElementById('setup-name');
+    var yearEl = document.getElementById('setup-year');
+    var schoolEl = document.getElementById('setup-school');
+    var errEl = document.getElementById('setup-error');
+    errEl.classList.remove('show');
+
+    var name = nameEl.value.trim();
+    var year = yearEl.value;
+    var school = schoolEl.value.trim();
 
     if (!name) {
-      nameErr.classList.add('show');
-      nameEl.setAttribute('aria-invalid', 'true');
+      errEl.textContent = 'Please enter your child\'s name.';
+      errEl.classList.add('show');
       nameEl.focus();
       return;
     }
-    nameEl.removeAttribute('aria-invalid');
-
-    const profiles = getAllProfiles();
-    if (profiles.find(p => p.name.toLowerCase() === name.toLowerCase())) {
+    if (!year) {
+      errEl.textContent = 'Please select a year group.';
       errEl.classList.add('show');
+      yearEl.focus();
       return;
     }
 
-    const user = {
-      name, year, school,
+    // Get parent name from identity user metadata (set during signup)
+    var identityUser = gotrueAuth.currentUser();
+    var parentName = '';
+    if (identityUser && identityUser.user_metadata && identityUser.user_metadata.full_name) {
+      parentName = identityUser.user_metadata.full_name;
+    }
+
+    var profile = {
+      name: name,
+      parentName: parentName,
+      year: year,
+      school: school,
+      tier: 'free',
       xp: 0,
       joinDate: new Date().toISOString()
     };
-    profiles.push(user);
-    saveAllProfiles(profiles);
-    localStorage.setItem('sm_user', JSON.stringify(user));
+
+    localStorage.setItem('sm_active_profile', JSON.stringify(profile));
+
+    try {
+      await fetchWithAuth('/.netlify/functions/save-progress', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: profile.name,
+          parentName: profile.parentName,
+          year: profile.year,
+          school: profile.school,
+          tier: profile.tier,
+          xp: profile.xp,
+          streak: 0,
+          lastStudy: null,
+          joinDate: profile.joinDate,
+          preferences: { theme: localStorage.getItem('sm_theme') || 'light' },
+          progress: {}
+        })
+      });
+    } catch (err) {
+      console.warn('Failed to save profile to server (will sync later):', err.message);
+    }
+
     window.location.href = 'dashboard.html';
   }
 </script>

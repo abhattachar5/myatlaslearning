@@ -12,21 +12,130 @@ const LEVELS = [
 const STATUS_LABELS = ['Not Started', 'Explored', 'Learning', 'Proficient', 'Mastered'];
 const STATUS_COLORS = ['#9ca3af', '#f59e0b', '#3b82f6', '#8b5cf6', '#22c55e'];
 
-// ── Auth ─────────────────────────────────────────────────────────────────────
+// ── Netlify Identity Init ────────────────────────────────────────────────────
+if (typeof netlifyIdentity !== 'undefined') {
+  netlifyIdentity.init({
+    APIUrl: 'https://myatlaslearning.netlify.app/.netlify/identity'
+  });
+}
+
+// ── Auth (Netlify Identity) ──────────────────────────────────────────────────
+function getIdentityUser() {
+  return typeof netlifyIdentity !== 'undefined' ? netlifyIdentity.currentUser() : null;
+}
 function getUser() {
-  return JSON.parse(localStorage.getItem('sm_user') || 'null');
+  return JSON.parse(localStorage.getItem('sm_active_profile') || 'null');
 }
 function setUser(user) {
-  localStorage.setItem('sm_user', JSON.stringify(user));
+  localStorage.setItem('sm_active_profile', JSON.stringify(user));
 }
 function logout() {
-  localStorage.removeItem('sm_user');
+  // Clear GoTrue token synchronously so index.html won't see an active session
+  localStorage.removeItem('gotrue.user');
+  localStorage.removeItem('sm_active_profile');
+  // Fire async logout to revoke server-side token (best-effort)
+  if (typeof netlifyIdentity !== 'undefined') {
+    try { netlifyIdentity.logout(); } catch (e) { /* token already cleared */ }
+  }
   window.location.href = 'index.html';
 }
 function requireAuth() {
-  const user = getUser();
-  if (!user) { window.location.href = 'index.html'; return null; }
-  return user;
+  const identity = getIdentityUser();
+  if (!identity) { window.location.href = 'index.html'; return null; }
+  const profile = getUser();
+  if (!profile) { window.location.href = 'index.html'; return null; }
+  return profile;
+}
+
+// ── Server Sync ─────────────────────────────────────────────────────────────
+async function fetchWithAuth(url, options = {}) {
+  const identity = getIdentityUser();
+  if (!identity) throw new Error('Not authenticated');
+  await identity.jwt();
+  options.headers = {
+    ...options.headers,
+    'Authorization': 'Bearer ' + identity.token.access_token
+  };
+  return fetch(url, options);
+}
+
+var _syncTimer = null;
+function syncProgressToServer() {
+  if (_syncTimer) clearTimeout(_syncTimer);
+  _syncTimer = setTimeout(async function() {
+    _syncTimer = null;
+    try {
+      const profile = getUser();
+      if (!profile) return;
+      const payload = {
+        name: profile.name,
+        parentName: profile.parentName || '',
+        year: profile.year,
+        school: profile.school,
+        tier: profile.tier || 'free',
+        xp: profile.xp || 0,
+        streak: getStreak(),
+        lastStudy: localStorage.getItem('sm_last_study'),
+        joinDate: profile.joinDate,
+        preferences: { theme: localStorage.getItem('sm_theme') || 'light' },
+        progress: getAllProgress()
+      };
+      await fetchWithAuth('/.netlify/functions/save-progress', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } catch (err) {
+      console.warn('Sync to server failed (will retry on next change):', err.message);
+    }
+  }, 2000);
+}
+
+async function loadProgressFromServer() {
+  try {
+    const res = await fetchWithAuth('/.netlify/functions/get-progress');
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (err) {
+    console.warn('Failed to load progress from server:', err.message);
+    return null;
+  }
+}
+
+async function migrateLocalProgress() {
+  var oldUser = JSON.parse(localStorage.getItem('sm_user') || 'null');
+  var oldProgress = JSON.parse(localStorage.getItem('sm_progress') || 'null');
+  if (!oldUser && !oldProgress) return null;
+
+  var payload = {
+    name: oldUser ? oldUser.name : '',
+    year: oldUser ? oldUser.year : '',
+    school: oldUser ? oldUser.school : '',
+    xp: oldUser ? (oldUser.xp || 0) : 0,
+    streak: parseInt(localStorage.getItem('sm_streak') || '0'),
+    lastStudy: localStorage.getItem('sm_last_study'),
+    joinDate: oldUser ? oldUser.joinDate : null,
+    preferences: { theme: localStorage.getItem('sm_theme') || 'light' },
+    progress: oldProgress || {}
+  };
+
+  try {
+    var res = await fetchWithAuth('/.netlify/functions/merge-progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) return null;
+    var result = await res.json();
+    if (result.success) {
+      localStorage.removeItem('sm_user');
+      localStorage.removeItem('sm_profiles');
+    }
+    return result.data;
+  } catch (err) {
+    console.warn('Migration failed (old data preserved):', err.message);
+    return null;
+  }
 }
 
 // ── Progress ──────────────────────────────────────────────────────────────────
@@ -50,6 +159,7 @@ function saveIslandProgress(islandId, data) {
   const all = getAllProgress();
   all[islandId] = data;
   saveAllProgress(all);
+  syncProgressToServer();
 }
 
 // ── XP & Levels ──────────────────────────────────────────────────────────────
@@ -63,6 +173,7 @@ function addXP(amount, reason) {
   user.xp = (user.xp || 0) + amount;
   setUser(user);
   showXPToast(amount, reason);
+  syncProgressToServer();
   return user.xp;
 }
 function getUserLevel(xp) {
@@ -180,6 +291,7 @@ function touchStreak() {
   const next = last === yesterday ? streak + 1 : 1;
   localStorage.setItem('sm_streak', next);
   localStorage.setItem('sm_last_study', today);
+  syncProgressToServer();
   return next;
 }
 
@@ -194,6 +306,7 @@ function toggleTheme() {
   const next = cur === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
   localStorage.setItem('sm_theme', next);
+  syncProgressToServer();
   return next;
 }
 

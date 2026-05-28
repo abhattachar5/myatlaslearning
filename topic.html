@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atlas — Topic</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
 </head>
 <body>
 
@@ -104,6 +105,7 @@
 <script src="english-lessons-5.js"></script>
 <script src="english-lessons-7.js"></script>
 <script src="english-lessons-8.js"></script>
+<script src="auth-shim.js"></script>
 <script src="app.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
@@ -302,8 +304,10 @@ document.addEventListener('keydown', e => {
       <h3 id="profile-modal-title">My Profile</h3>
       <button class="modal-close" onclick="closeProfileModal()" aria-label="Close profile modal">✕</button>
     </div>
+    <p style="margin:0 0 4px;font-size:.8125rem;color:var(--text-muted)">👤 Account: <span id="display-parent-name">—</span> · <span id="display-parent-email">—</span></p>
+    <div class="divider" style="margin:8px 0 12px"></div>
     <div class="form-group">
-      <label class="form-label" for="edit-name">Name</label>
+      <label class="form-label" for="edit-name">Child's name</label>
       <input class="form-input" id="edit-name" type="text">
     </div>
     <div class="form-group">
@@ -317,7 +321,7 @@ document.addEventListener('keydown', e => {
       </select>
     </div>
     <div class="form-group">
-      <label class="form-label" for="edit-school">School</label>
+      <label class="form-label" for="edit-school">School <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
       <input class="form-input" id="edit-school" type="text">
     </div>
     <div style="display:flex;gap:10px;margin-top:8px">
@@ -350,9 +354,12 @@ document.addEventListener('keydown', e => {
 let _modalTrigger = null;
 function openProfileModal() {
   _modalTrigger = document.activeElement;
-  const user = JSON.parse(localStorage.getItem('sm_user') || '{}');
+  const user = JSON.parse(localStorage.getItem('sm_active_profile') || '{}');
+  var identity = getIdentityUser();
+  document.getElementById('display-parent-name').textContent = user.parentName || (identity && identity.user_metadata ? identity.user_metadata.full_name : '') || '—';
+  document.getElementById('display-parent-email').textContent = identity ? identity.email : '—';
   document.getElementById('edit-name').value = user.name || '';
-  document.getElementById('edit-year').value = user.year || 'Year 10';
+  document.getElementById('edit-year').value = user.year || 'Year 7';
   document.getElementById('edit-school').value = user.school || '';
   document.getElementById('profile-modal').classList.add('show');
   setTimeout(() => document.getElementById('edit-name').focus(), 50);
@@ -381,27 +388,30 @@ function saveProfile() {
   const year   = document.getElementById('edit-year').value;
   const school = document.getElementById('edit-school').value.trim();
   if (!name) return;
-  const user = JSON.parse(localStorage.getItem('sm_user') || '{}');
+  const user = JSON.parse(localStorage.getItem('sm_active_profile') || '{}');
   user.name = name; user.year = year; user.school = school;
-  localStorage.setItem('sm_user', JSON.stringify(user));
-  const profiles = JSON.parse(localStorage.getItem('sm_profiles') || '[]');
-  const idx = profiles.findIndex(p => p.joinDate === user.joinDate);
-  if (idx !== -1) { profiles[idx] = user; localStorage.setItem('sm_profiles', JSON.stringify(profiles)); }
+  localStorage.setItem('sm_active_profile', JSON.stringify(user));
+  syncProgressToServer();
   document.getElementById('profile-modal').classList.remove('show');
   showToast('Profile updated', 'success');
 }
 function confirmReset() {
   if (!confirm('Reset ALL your progress? This cannot be undone.')) return;
   localStorage.setItem('sm_progress', JSON.stringify({}));
-  const user = JSON.parse(localStorage.getItem('sm_user') || '{}');
+  const user = JSON.parse(localStorage.getItem('sm_active_profile') || '{}');
   user.xp = 0;
-  localStorage.setItem('sm_user', JSON.stringify(user));
+  localStorage.setItem('sm_active_profile', JSON.stringify(user));
+  syncProgressToServer();
   document.getElementById('profile-modal').classList.remove('show');
   showToast('Progress reset', 'success');
   location.reload();
 }
 function logout() {
-  localStorage.removeItem('sm_user');
+  localStorage.removeItem('gotrue.user');
+  localStorage.removeItem('sm_active_profile');
+  if (typeof netlifyIdentity !== 'undefined') {
+    try { netlifyIdentity.logout(); } catch (e) { /* token already cleared */ }
+  }
   window.location.href = 'index.html';
 }
 document.addEventListener('keydown', function(e) {
@@ -412,8 +422,8 @@ document.addEventListener('keydown', function(e) {
 
 // ── Mobile streak display ─────────────────────────────────────────────────
 (function() {
-  const user = JSON.parse(localStorage.getItem('sm_user') || '{}');
-  const streak = user.streak || 0;
+  const user = JSON.parse(localStorage.getItem('sm_active_profile') || '{}');
+  const streak = parseInt(localStorage.getItem('sm_streak') || '0');
   const el = document.getElementById('mobile-streak-label');
   if (el) el.textContent = streak + ' day' + (streak !== 1 ? 's' : '');
 })();
