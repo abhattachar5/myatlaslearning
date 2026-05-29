@@ -9,7 +9,7 @@
 FLASHCARDS.push(
 
   // s8-13 Magnetism & Electromagnetism
-  {id:"s8fc-13-A",islandId:"s8-13",front:"What is a magnetic field?",
+  {id:"s8fc-13-A",islandId:"s8-13",image:"magnetic-field",front:"What is a magnetic field?",
    back:"A magnetic field is the region around a magnet where magnetic forces act.\n\nKey points:\n• Field lines run from north pole to south pole outside the magnet.\n• The closer the field lines, the stronger the field.\n• A compass needle aligns with field lines — it points north because of Earth's magnetic field.",
    difficulty:1,category:"definition"},
 
@@ -17,7 +17,7 @@ FLASHCARDS.push(
    back:"Rule: like poles repel; unlike poles attract.\n\n• North + North → repel (push apart)\n• South + South → repel (push apart)\n• North + South → attract (pull together)\n\nMagnetic materials: iron, nickel, cobalt (and steel, which contains iron).\nNon-magnetic materials (e.g. copper, wood, plastic) are not attracted to magnets.",
    difficulty:1,category:"concept"},
 
-  {id:"s8fc-13-C",islandId:"s8-13",front:"How does an electromagnet work?",
+  {id:"s8fc-13-C",islandId:"s8-13",image:"electromagnet",front:"How does an electromagnet work?",
    back:"An electromagnet is a temporary magnet made by passing electric current through a coil of wire (solenoid) wrapped around a soft iron core.\n\nHow it works:\n1. Electric current flows through the coil.\n2. This creates a magnetic field around each turn of wire.\n3. The fields combine to act like a bar magnet — with north and south poles.\n4. When current stops, the iron core loses its magnetism.",
    difficulty:2,category:"process"},
 
@@ -34,7 +34,7 @@ FLASHCARDS.push(
    back:"Speed (m/s) = distance (m) ÷ time (s)\n\nIn symbols: v = d ÷ t\n\nRearrangements:\n• distance = speed × time\n• time = distance ÷ speed\n\nExample: a car travels 300 m in 12 s.\nSpeed = 300 ÷ 12 = 25 m/s",
    difficulty:1,category:"calculation"},
 
-  {id:"s8fc-14-B",islandId:"s8-14",front:"What do the three sections of a distance–time graph represent?",
+  {id:"s8fc-14-B",islandId:"s8-14",image:"distance-time-graph",front:"What do the three sections of a distance–time graph represent?",
    back:"A distance–time graph shows how far an object has travelled over time.\n\nSteep straight line → fast, constant speed\nShallow straight line → slow, constant speed\nHorizontal line (flat) → stationary (not moving)\nCurved line (getting steeper) → accelerating\n\nThe gradient (slope) of the line equals the speed.",
    difficulty:2,category:"concept"},
 
@@ -42,7 +42,7 @@ FLASHCARDS.push(
    back:"Newton's First Law: An object stays at rest or moves at constant velocity unless a resultant (unbalanced) force acts on it.\n\nNewton's Second Law: Force = mass × acceleration\n  F = m × a  (F in N, m in kg, a in m/s²)\n\nNewton's Third Law: Every action has an equal and opposite reaction.\n  If A exerts a force on B, then B exerts an equal force back on A — in the opposite direction.",
    difficulty:2,category:"concept"},
 
-  {id:"s8fc-14-D",islandId:"s8-14",front:"What is a resultant force and what does it cause?",
+  {id:"s8fc-14-D",islandId:"s8-14",image:"force-arrows",front:"What is a resultant force and what does it cause?",
    back:"The resultant force is the overall (net) force on an object after all forces are added, accounting for direction.\n\n• If resultant force = 0 N → balanced forces → object stays still or moves at constant speed (Newton's 1st Law).\n• If resultant force > 0 N → unbalanced forces → the object accelerates (Newton's 2nd Law: F = m × a).\n\nExample: a 500 N driving force and 200 N friction → resultant = 300 N forwards.",
    difficulty:2,category:"concept"},
 
@@ -51,11 +51,11 @@ FLASHCARDS.push(
    difficulty:2,category:"calculation"},
 
   // s8-15 Waves & Sound
-  {id:"s8fc-15-A",islandId:"s8-15",front:"What are the key properties of a wave?",
+  {id:"s8fc-15-A",islandId:"s8-15",image:"wave-properties",front:"What are the key properties of a wave?",
    back:"Amplitude: the maximum displacement of a wave from its rest position (rest position to crest). Measured in metres.\n\nWavelength (λ): the distance from one crest to the next (or trough to trough). Measured in metres.\n\nFrequency (f): the number of complete waves passing a point per second. Measured in hertz (Hz).\n\nWave speed (v): how fast the wave travels. Measured in m/s.",
    difficulty:1,category:"definition"},
 
-  {id:"s8fc-15-B",islandId:"s8-15",front:"What is the difference between transverse and longitudinal waves?",
+  {id:"s8fc-15-B",islandId:"s8-15",image:"longitudinal-wave",front:"What is the difference between transverse and longitudinal waves?",
    back:"Transverse waves: vibrations are perpendicular (at right angles) to the direction of travel.\n  Examples: light waves, water waves, waves on a rope.\n\nLongitudinal waves: vibrations are parallel (along the same line) to the direction of travel. They have compressions and rarefactions.\n  Examples: sound waves, seismic P-waves.\n\nSound is a longitudinal mechanical wave — it needs a medium (e.g. air, water, solids) to travel; it cannot travel through a vacuum.",
    difficulty:2,category:"concept"},
 
@@ -67,28 +67,28 @@ FLASHCARDS.push(
    back:"Produced: a vibrating object (e.g. vocal cords, guitar string) causes particles in the surrounding medium to vibrate.\n\nTransmitted: the vibrations pass as a longitudinal wave through a medium (solid, liquid, or gas). Sound travels faster in solids > liquids > gases.\n\nDetected: the vibrations reach the eardrum, which vibrates in response. The ear converts this to nerve signals sent to the brain.\n\nPitch is determined by frequency (higher frequency → higher pitch).\nLoudness is determined by amplitude (greater amplitude → louder sound).",
    difficulty:2,category:"process"},
 
-  {id:"s8fc-15-E",islandId:"s8-15",front:"What is the electromagnetic spectrum and name its main regions in order of wavelength.",
+  {id:"s8fc-15-E",islandId:"s8-15",image:"em-spectrum",front:"What is the electromagnetic spectrum and name its main regions in order of wavelength.",
    back:"The electromagnetic spectrum is the family of transverse waves that can all travel through a vacuum at the speed of light (3 × 10⁸ m/s).\n\nIn order of increasing wavelength (decreasing frequency):\n1. Gamma rays (shortest λ, highest f, most energy)\n2. X-rays\n3. Ultraviolet (UV)\n4. Visible light\n5. Infrared (IR)\n6. Microwaves\n7. Radio waves (longest λ, lowest f, least energy)",
    difficulty:3,category:"concept"},
 
   // s8-16 Light & Optics
-  {id:"s8fc-16-A",islandId:"s8-16",front:"State the law of reflection.",
+  {id:"s8fc-16-A",islandId:"s8-16",image:"law-of-reflection",front:"State the law of reflection.",
    back:"The law of reflection: the angle of incidence equals the angle of reflection.\n\n  i = r\n\nBoth angles are measured from the normal (a line perpendicular to the mirror surface at the point of incidence).\n\nKey diagram labels:\n• Incident ray — the ray hitting the mirror.\n• Reflected ray — the ray leaving the mirror.\n• Normal — the dashed line at 90° to the surface.",
    difficulty:1,category:"definition"},
 
-  {id:"s8fc-16-B",islandId:"s8-16",front:"What is refraction and why does it occur?",
+  {id:"s8fc-16-B",islandId:"s8-16",image:"refraction",front:"What is refraction and why does it occur?",
    back:"Refraction is the bending of light as it passes from one medium into another of different optical density.\n\nWhy it occurs: light changes speed when it crosses a boundary between materials.\n\nRules:\n• Light slows down when entering a denser medium (e.g. air → glass) and bends towards the normal.\n• Light speeds up when entering a less dense medium (e.g. glass → air) and bends away from the normal.\n• If light hits the boundary at 90° (along the normal), it passes straight through with no bending.",
    difficulty:2,category:"concept"},
 
-  {id:"s8fc-16-C",islandId:"s8-16",front:"Compare convex and concave lenses.",
+  {id:"s8fc-16-C",islandId:"s8-16",image:"lenses",front:"Compare convex and concave lenses.",
    back:"Convex lens (converging):\n• Thicker in the middle.\n• Converges (brings together) parallel rays to a focal point.\n• Used in: magnifying glasses, cameras, human eye.\n• Produces a real, inverted image for objects beyond the focal point.\n\nConcave lens (diverging):\n• Thinner in the middle.\n• Diverges (spreads out) parallel rays so they appear to come from a virtual focal point.\n• Used in: spectacles for short-sightedness.\n• Always produces a virtual, upright, diminished image.",
    difficulty:2,category:"concept"},
 
-  {id:"s8fc-16-D",islandId:"s8-16",front:"How does the human eye form an image?",
+  {id:"s8fc-16-D",islandId:"s8-16",image:"the-eye",front:"How does the human eye form an image?",
    back:"How the eye works:\n1. Light enters through the cornea, which refracts it.\n2. The iris controls the size of the pupil (controls how much light enters).\n3. The lens (flexible) changes shape to focus light precisely onto the retina — this is called accommodation.\n4. The retina contains rods (black/white, dim light) and cones (colour, bright light).\n5. The optic nerve carries impulses to the brain.\n\nShort sight (myopia): eyeball too long → image forms in front of retina → corrected with a concave lens.\nLong sight (hyperopia): eyeball too short → image forms behind retina → corrected with a convex lens.",
    difficulty:3,category:"process"},
 
-  {id:"s8fc-16-E",islandId:"s8-16",front:"How do colour filters and mixing coloured light work?",
+  {id:"s8fc-16-E",islandId:"s8-16",image:"colour-mixing",front:"How do colour filters and mixing coloured light work?",
    back:"White light is a mixture of all colours of the visible spectrum (red, orange, yellow, green, blue, indigo, violet).\n\nColour filters:\n• A filter only transmits its own colour and absorbs all others.\n• A red filter transmits red light and absorbs all other colours.\n\nAdditive colour mixing (coloured light):\n• Red + Green + Blue = White\n• Red + Green = Yellow\n• Red + Blue = Magenta\n• Green + Blue = Cyan\n\nSubtractive mixing (paints/pigments) is the opposite principle — pigments absorb (subtract) certain wavelengths.",
    difficulty:2,category:"concept"},
 
@@ -97,7 +97,7 @@ FLASHCARDS.push(
    back:"A hypothesis is a testable prediction, usually written as an 'if … then … because …' statement.\n\nExample: 'If I increase the length of a pendulum, then the period of its swing will increase, because the pendulum has a greater distance to travel.'\n\nA good hypothesis:\n• Makes a specific, measurable prediction.\n• Gives a reason based on scientific knowledge.\n• Can be tested by experiment.",
    difficulty:1,category:"definition"},
 
-  {id:"s8fc-17-B",islandId:"s8-17",front:"Define independent, dependent, and control variables.",
+  {id:"s8fc-17-B",islandId:"s8-17",image:"variables-diagram",front:"Define independent, dependent, and control variables.",
    back:"Independent variable (IV): the variable you deliberately change in an experiment.\n\nDependent variable (DV): the variable you measure to see the effect of your change.\n\nControl variables: all other variables that you keep the same to make the test fair.\n\nExample (investigating how temperature affects reaction rate):\n• IV = temperature\n• DV = reaction rate (e.g. time for colour change)\n• Control = concentration, volume, surface area of reactant",
    difficulty:1,category:"definition"},
 
@@ -367,6 +367,7 @@ Object.assign(LESSONS,{
 <strong>Non-magnetic materials</strong>: copper, aluminium, wood, plastic, glass.</p>
 
 <h3>Magnetic Fields</h3>
+<div class="lesson-diagram" data-diagram="magnetic-field"><p class="diagram-caption">Field around a bar magnet</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>A magnetic field is the region of space around a magnet where magnetic forces act. We represent magnetic fields with <strong>field lines</strong>:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
@@ -389,6 +390,7 @@ Object.assign(LESSONS,{
 <p>A compass needle aligns with field lines — we use compasses to plot magnetic fields. The Earth has a magnetic field generated by convection currents in its molten iron outer core.</p>
 
 <h3>Electromagnets</h3>
+<div class="lesson-diagram" data-diagram="electromagnet"><p class="diagram-caption">An electromagnet (solenoid)</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>An <strong>electromagnet</strong> is made by passing an electric current through a coil of wire (solenoid) wound around a soft iron core. The current produces a magnetic field; when switched off, the iron loses its magnetism.</p>
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Three ways to increase the strength of an electromagnet:</strong><br>
@@ -440,6 +442,7 @@ Object.assign(LESSONS,{
 Speed = 400 ÷ 50 = <strong>8 m/s</strong></p>
 
 <h3>Distance–Time Graphs</h3>
+<div class="lesson-diagram" data-diagram="distance-time-graph"><p class="diagram-caption">A distance–time graph</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Shape of line</th>
@@ -477,6 +480,7 @@ Speed = 400 ÷ 50 = <strong>8 m/s</strong></p>
 <p><strong>Newton's Third Law:</strong> Every action has an equal and opposite reaction. If object A exerts a force on object B, then B exerts an equal force on A in the opposite direction. <em>Example: a rocket expels gas downwards (action); the gas pushes the rocket upwards (reaction).</em></p>
 
 <h3>Resultant Forces</h3>
+<div class="lesson-diagram" data-diagram="force-arrows"><p class="diagram-caption">Balanced and unbalanced forces</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>The <strong>resultant force</strong> is the net force found by adding all forces on an object, taking direction into account.</p>
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
   • Resultant force = 0 N → balanced forces → constant velocity (or rest)<br>
@@ -499,6 +503,7 @@ Speed = 400 ÷ 50 = <strong>8 m/s</strong></p>
 <p>Waves transfer energy from one place to another without permanently transferring matter. They are fundamental to how we see, hear, and communicate — from sound to light to radio signals.</p>
 
 <h3>Wave Properties</h3>
+<div class="lesson-diagram" data-diagram="wave-properties"><p class="diagram-caption">Properties of a wave</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Property</th>
@@ -528,6 +533,7 @@ Speed = 400 ÷ 50 = <strong>8 m/s</strong></p>
 </table>
 
 <h3>Transverse vs Longitudinal Waves</h3>
+<div class="lesson-diagram" data-diagram="longitudinal-wave"><p class="diagram-caption">Transverse vs longitudinal waves</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Type</th>
@@ -563,6 +569,7 @@ Speed = 400 ÷ 50 = <strong>8 m/s</strong></p>
 </div>
 
 <h3>The Electromagnetic Spectrum</h3>
+<div class="lesson-diagram" data-diagram="em-spectrum"><p class="diagram-caption">The electromagnetic spectrum</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>All electromagnetic (EM) waves are <strong>transverse waves</strong> that travel through a vacuum at the speed of light (3 × 10⁸ m/s). They differ in wavelength and frequency.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
@@ -584,6 +591,7 @@ Speed = 400 ÷ 50 = <strong>8 m/s</strong></p>
 <p>Light is a transverse electromagnetic wave. It travels at 3 × 10⁸ m/s in a vacuum and can be reflected, refracted, and absorbed. Understanding optics is essential for designing lenses, cameras, telescopes, and medical instruments.</p>
 
 <h3>Reflection</h3>
+<div class="lesson-diagram" data-diagram="law-of-reflection"><p class="diagram-caption">The law of reflection</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Law of Reflection:</strong> Angle of incidence = Angle of reflection &nbsp;&nbsp; (i = r)<br>
   Both angles are measured from the <strong>normal</strong> — a line drawn at 90° to the surface at the point of incidence.
@@ -592,6 +600,7 @@ Speed = 400 ÷ 50 = <strong>8 m/s</strong></p>
 <strong>Diffuse reflection</strong> — rough surfaces (e.g. paper): reflected rays scatter in all directions → no clear image, but the surface is still visible.</p>
 
 <h3>Refraction</h3>
+<div class="lesson-diagram" data-diagram="refraction"><p class="diagram-caption">Refraction of light</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Refraction is the bending of light as it changes speed at a boundary between two media.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
@@ -620,6 +629,7 @@ Speed = 400 ÷ 50 = <strong>8 m/s</strong></p>
 </div>
 
 <h3>Lenses</h3>
+<div class="lesson-diagram" data-diagram="lenses"><p class="diagram-caption">Convex and concave lenses</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Lens type</th>
@@ -642,6 +652,7 @@ Speed = 400 ÷ 50 = <strong>8 m/s</strong></p>
 </table>
 
 <h3>The Human Eye</h3>
+<div class="lesson-diagram" data-diagram="the-eye"><p class="diagram-caption">The human eye</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>The eye works like a converging lens system:</p>
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Cornea</strong> — refracts most of the light entering the eye.<br>
@@ -654,6 +665,7 @@ Speed = 400 ÷ 50 = <strong>8 m/s</strong></p>
 </div>
 
 <h3>Colour</h3>
+<div class="lesson-diagram" data-diagram="colour-mixing"><p class="diagram-caption">Mixing coloured light</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>White light is a mixture of all visible colours. A prism disperses white light into the visible spectrum because each colour has a slightly different wavelength and is refracted by a different amount.<br>
 A colour <strong>filter</strong> transmits only its own colour and absorbs all others (e.g. a blue filter only lets blue light through).</p>
 `,
@@ -678,6 +690,7 @@ A colour <strong>filter</strong> transmits only its own colour and absorbs all o
 </table>
 
 <h3>Variables</h3>
+<div class="lesson-diagram" data-diagram="variables-diagram"><p class="diagram-caption">Independent, dependent and control variables</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Independent variable (IV):</strong> what you deliberately change.<br>
   <strong>Dependent variable (DV):</strong> what you measure as a result.<br>
@@ -714,8 +727,7 @@ A colour <strong>filter</strong> transmits only its own colour and absorbs all o
 </div>
 
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
-  <strong>Tip — Anomalous results:</strong> An anomalous (outlier) result is one that does not fit the pattern. Do NOT include it when calculating the mean. Circle it on your table and your graph. Suggest a reason for it in your evaluation (e.g. measurement error, equipment fault, or a genuine change in conditions).
+  <strong>Tip — Anomalous results:</strong> An anomalous (outlier) result is one that does not fit the pattern. Do NOT include it when calculating the mean. Circle it on your table and your graph. Suggest a reason for it — for example a measurement error or an unnoticed change in conditions — and, where possible, repeat that reading to check before drawing your conclusion.
 </div>
 `
-
 });

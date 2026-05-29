@@ -13,12 +13,12 @@ FLASHCARDS.push(
    back:"Biotic components are the living parts of an ecosystem.\n  Examples: plants, animals, fungi, bacteria.\n\nAbiotic components are the non-living parts.\n  Examples: sunlight, temperature, rainfall, soil, air.\n\nBoth interact constantly — abiotic factors determine which organisms can survive, and biotic organisms in turn change abiotic conditions (e.g. tree roots break up rock; plants affect soil chemistry).",
    difficulty:1,category:"definition"},
 
-  {id:"g8fc-06-B",islandId:"g8-06",
+  {id:"g8fc-06-B",islandId:"g8-06",image:"rainforest-layers",
    front:"Describe the four layers of a tropical rainforest.",
    back:"1. Emergent layer — tallest trees (40–60 m), sparse, exposed to full sun and strong winds.\n2. Canopy layer — dense, continuous leaves at 20–40 m; receives most sunlight; richest in biodiversity.\n3. Understorey — shade-tolerant shrubs and young trees at 5–20 m; dim, humid.\n4. Forest floor — very dark (only 2% of sunlight); leaf litter decomposes rapidly; roots are shallow because nutrients are near the surface.",
    difficulty:2,category:"concept"},
 
-  {id:"g8fc-06-C",islandId:"g8-06",
+  {id:"g8fc-06-C",islandId:"g8-06",image:"gersmehl-model",
    front:"What is nutrient cycling and why is it so rapid in the tropical rainforest?",
    back:"Nutrient cycling is the continuous movement of nutrients (e.g. nitrogen, phosphorus) through the ecosystem — from soil to plants, to animals, back to soil via decomposition.\n\nIn tropical rainforests it is rapid because:\n  • High temperatures and humidity speed up decomposition by bacteria and fungi.\n  • Nutrients released from dead matter are immediately absorbed by shallow roots.\n  • There is little storage of nutrients in the soil — most are locked in the biomass (living organisms).\n\nThis means cleared rainforest soil becomes infertile very quickly.",
    difficulty:2,category:"process"},
@@ -39,17 +39,17 @@ FLASHCARDS.push(
    back:"A hot desert has:\n  • Rainfall below 250 mm per year (often below 25 mm).\n  • Very high daytime temperatures — often 40–50°C in summer.\n  • Very cold nights — temperatures can drop below 0°C because there is no cloud cover to trap heat.\n  • Low humidity and strong, dry winds.\n\nHot deserts are found between 15° and 35° north and south of the Equator, where descending air masses suppress rainfall (subtropical high pressure zones).\n\nExamples: Sahara (Africa), Arabian Desert, Sonoran Desert (North America).",
    difficulty:1,category:"definition"},
 
-  {id:"g8fc-07-B",islandId:"g8-07",
+  {id:"g8fc-07-B",islandId:"g8-07",image:"xerophyte-adaptations",
    front:"How do plants (xerophytes) adapt to hot desert conditions?",
    back:"Cacti and other xerophytes have adaptations to reduce water loss and store water:\n\n  • Thick, waxy cuticle — reduces water loss through evaporation.\n  • Leaves reduced to spines — minimises surface area for transpiration.\n  • Deep or wide-spreading roots — tap underground water or capture rare rain over a wide area.\n  • Succulent stems — store water in fleshy tissue (e.g. a saguaro cactus can hold hundreds of litres).\n  • CAM photosynthesis — stomata open only at night to reduce water loss.\n  • Light-coloured or reflective surfaces — reflect solar radiation.",
    difficulty:2,category:"concept"},
 
-  {id:"g8fc-07-C",islandId:"g8-07",
+  {id:"g8fc-07-C",islandId:"g8-07",image:"desertification",
    front:"What is desertification and what are its main causes?",
    back:"Desertification is the process by which fertile land at the edge of a desert becomes increasingly dry and unproductive, effectively turning into desert.\n\nCauses:\n  Physical: prolonged drought; climate change reducing rainfall.\n\n  Human:\n  • Overgrazing — livestock strip vegetation, exposing soil to erosion.\n  • Deforestation — removal of trees destabilises soil.\n  • Over-cultivation — repeated farming depletes soil nutrients.\n  • Population growth — increased pressure on marginal land.\n\nMost affected region: the Sahel (belt south of the Sahara). Approximately 12 million hectares of productive land are lost to desertification each year globally.",
    difficulty:2,category:"definition"},
 
-  {id:"g8fc-07-D",islandId:"g8-07",
+  {id:"g8fc-07-D",islandId:"g8-07",image:"desert-landforms",
    front:"Describe two desert landforms and explain how they form.",
    back:"1. Sand dunes (ergs) — formed when wind (aeolian erosion) transports sand grains by saltation (bouncing) and deposition. Barchan dunes are crescent-shaped and migrate slowly downwind.\n\n2. Mesas and buttes — flat-topped rock formations. Formed when a hard, resistant rock cap protects softer rock beneath from erosion. Over time the softer rock is eroded away leaving an isolated flat-topped hill (mesa). Further erosion leaves a smaller pillar (butte).\n\nAlso notable: wadis — dry riverbeds that fill suddenly during rare, intense rainfall events.",
    difficulty:2,category:"process"},
@@ -75,7 +75,7 @@ FLASHCARDS.push(
    back:"Economic diversification means developing a range of industries and income sources rather than relying on one resource (in this case, oil and gas).\n\nWhy pursue it:\n  • Oil is a finite resource — reserves will eventually run out.\n  • Oil prices are volatile, making oil-dependent economies unstable.\n  • Climate change pressure is pushing the world towards renewable energy, reducing future oil demand.\n\nExamples:\n  • UAE — Dubai has developed finance, tourism and aviation (Emirates airline, Expo 2020).\n  • Saudi Arabia — Vision 2030 plan promotes tourism, entertainment and technology sectors.\n  • Qatar — investment in sport (2022 FIFA World Cup) and media (Al Jazeera).",
    difficulty:2,category:"case-study"},
 
-  {id:"g8fc-08-D",islandId:"g8-08",
+  {id:"g8fc-08-D",islandId:"g8-08",image:"middle-east-map",
    front:"Describe the physical geography and climate of the Middle East.",
    back:"The Middle East spans parts of western Asia and north-east Africa. Key physical features:\n  • Large areas of desert: Arabian Desert, Syrian Desert, Negev Desert.\n  • Major rivers: Tigris and Euphrates (both originate in Turkey) form the fertile Mesopotamia lowlands in Iraq; River Jordan flows into the Dead Sea.\n  • Highlands: Zagros and Taurus mountain ranges; Sinai Peninsula.\n  • Seas: Persian Gulf, Red Sea, Arabian Sea, Mediterranean Sea.\n\nClimate: predominantly arid or semi-arid. Coastal areas (Mediterranean coast) have a Mediterranean climate with hot, dry summers and mild, wetter winters.",
    difficulty:1,category:"definition"},
@@ -91,17 +91,17 @@ FLASHCARDS.push(
    back:"A natural hazard is a natural event that has the potential to cause harm (e.g. an earthquake, volcanic eruption, flood).\n\nHazard risk is the probability of a natural hazard occurring and causing loss of life or property in a given area.\n\nFactors that increase risk:\n  • Poverty — people cannot afford safe housing or early-warning systems.\n  • Urbanisation — dense populations in hazard-prone areas.\n  • Deforestation — removes natural flood barriers and triggers landslides.\n  • Climate change — increases frequency and intensity of weather-related hazards.\n  • Location — proximity to plate boundaries, coasts or floodplains.",
    difficulty:1,category:"definition"},
 
-  {id:"g8fc-09-B",islandId:"g8-09",
+  {id:"g8fc-09-B",islandId:"g8-09",image:"plate-boundaries",
    front:"Explain the causes of earthquakes at constructive, destructive and conservative plate boundaries.",
    back:"Constructive (divergent) boundary — plates move apart; magma rises; earthquakes tend to be shallow and less powerful.\n  Example: Mid-Atlantic Ridge.\n\nDestructive (convergent) boundary — oceanic plate subducts beneath a continental plate; intense friction as the plate is forced down; powerful earthquakes at depth. Subduction also causes volcanic eruptions.\n  Example: Japan (Pacific Plate subducting beneath Eurasian Plate).\n\nConservative (transform) boundary — plates slide past each other horizontally; no crust is created or destroyed; builds up enormous stress which releases as very powerful shallow earthquakes.\n  Example: San Andreas Fault, California.",
    difficulty:2,category:"process"},
 
-  {id:"g8fc-09-C",islandId:"g8-09",
+  {id:"g8fc-09-C",islandId:"g8-09",image:"tropical-storm",
    front:"Describe how a tropical storm (hurricane/typhoon/cyclone) forms.",
    back:"Tropical storms form over warm tropical oceans (sea surface temperature must be above 27°C) between 5° and 20° from the Equator.\n\nFormation stages:\n  1. Intense solar heating evaporates ocean water, creating warm, moist, rising air.\n  2. Rapidly rising air creates a low-pressure centre.\n  3. Condensation releases latent heat, which drives further uplift — a self-reinforcing cycle.\n  4. The Coriolis effect causes the system to spin (anticlockwise in the northern hemisphere, clockwise in the southern).\n  5. The eye forms at the centre — a calm area of descending air surrounded by the eyewall, where the most violent winds and rainfall occur.\n  6. The storm weakens when it moves over land or cooler water (loses its energy source).",
    difficulty:2,category:"process"},
 
-  {id:"g8fc-09-D",islandId:"g8-09",
+  {id:"g8fc-09-D",islandId:"g8-09",image:"volcano-cross-section",
    front:"Compare the immediate and long-term responses to a volcanic eruption.",
    back:"Immediate responses (within days/weeks):\n  • Evacuation of residents from danger zones.\n  • Emergency medical aid for injuries (burns, respiratory problems from ash).\n  • Rescue teams search for survivors.\n  • Temporary shelter and food distribution.\n  • International aid organisations (e.g. Red Cross) deployed.\n\nLong-term responses (months/years):\n  • Rebuilding homes, roads and infrastructure.\n  • Monitoring systems (seismometers, tiltmeters) installed to predict future eruptions.\n  • Hazard exclusion zones established.\n  • Volcanic soil is extremely fertile — farming resumes once safe.\n  • Tourism can develop around volcanic landscape.",
    difficulty:2,category:"application"},
@@ -127,12 +127,12 @@ FLASHCARDS.push(
    back:"Primary data is data you collect yourself in the field, first-hand.\n  Examples: questionnaire surveys, environmental quality surveys, traffic counts, river velocity measurements, land use mapping, field sketches.\n\nSecondary data is data collected by someone else that you use in your investigation.\n  Examples: census data, Ordnance Survey maps, newspaper reports, government statistics, satellite images, previous research studies.\n\nAdvantage of primary data: directly relevant to your specific question and location.\nDisadvantage: time-consuming; small sample size.\n\nAdvantage of secondary data: large datasets available; historical data allows change over time.\nDisadvantage: may not perfectly match your research question; accuracy depends on source.",
    difficulty:2,category:"definition"},
 
-  {id:"g8fc-10-D",islandId:"g8-10",
+  {id:"g8fc-10-D",islandId:"g8-10",image:"correlation-types",
    front:"What types of graph are used to present geographical data? When should each be used?",
    back:"Bar chart — comparing discrete categories (e.g. rainfall by month; population by country).\n\nLine graph — showing change over time (e.g. temperature trend; population growth).\n\nPie chart — showing proportions of a whole (e.g. land use percentages; energy mix).\n\nScatter graph — showing the relationship (correlation) between two variables (e.g. GDP vs. life expectancy).\n\nChloropleth map — using shading to show spatial variation of a variable (e.g. population density by region).\n\nDispersion diagram / box-and-whisker plot — comparing spread and distribution of data sets.\n\nRule: choose the graph type that best displays the pattern in your data and makes it easiest for the reader to interpret.",
    difficulty:1,category:"concept"},
 
-  {id:"g8fc-10-E",islandId:"g8-10",
+  {id:"g8fc-10-E",islandId:"g8-10",image:"fieldwork-enquiry",
    front:"What is a geographical enquiry and what are its key stages?",
    back:"A geographical enquiry is a structured investigation that answers a geographical question using evidence.\n\nKey stages (enquiry cycle):\n  1. Identify a question or hypothesis (e.g. 'Does the quality of the environment improve with distance from the town centre?').\n  2. Plan data collection — choose primary and/or secondary methods; consider sampling strategy (random, systematic, stratified).\n  3. Collect data — carry out fieldwork safely and accurately.\n  4. Process and present data — graphs, maps, statistical analysis.\n  5. Analyse and interpret — describe patterns, explain them using geographical knowledge.\n  6. Evaluate — assess reliability of methods, limitations, anomalies, and suggest improvements.",
    difficulty:3,category:"process"}
@@ -400,6 +400,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Structure of the Tropical Rainforest</h3>
+<div class="lesson-diagram" data-diagram="rainforest-layers"><p class="diagram-caption">Layers of a tropical rainforest</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Layer</th>
@@ -429,6 +430,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Nutrient Cycling</h3>
+<div class="lesson-diagram" data-diagram="gersmehl-model"><p class="diagram-caption">The Gersmehl nutrient cycling model</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>In the rainforest, nutrients cycle rapidly. High temperatures and humidity cause bacteria and fungi to decompose dead matter very quickly. Nutrients are immediately absorbed by shallow tree roots — so very little is stored in the soil. Most nutrients are locked in the <strong>biomass</strong> (living organisms). When forest is cleared, this cycle is broken and the soil becomes infertile within a few years.</p>
 
 <div style="background:#f0fdfa;padding:1em;border-radius:8px;margin:1em 0">
@@ -516,6 +518,7 @@ Object.assign(LESSONS,{
 <p>Hot deserts are located between <strong>15° and 35° North and South of the Equator</strong>, in the <strong>subtropical high pressure belt</strong>. Here, the Hadley Cell causes air to descend, warming and drying as it falls — suppressing rainfall. Examples: Sahara (Africa), Arabian Desert, Sonoran Desert (North America), Australian Desert.</p>
 
 <h3>Desert Landforms</h3>
+<div class="lesson-diagram" data-diagram="desert-landforms"><p class="diagram-caption">Desert landforms</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Landform</th>
@@ -545,6 +548,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Plant Adaptations (Xerophytes)</h3>
+<div class="lesson-diagram" data-diagram="xerophyte-adaptations"><p class="diagram-caption">How a cactus survives the desert</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Adaptation</th>
@@ -597,6 +601,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Desertification</h3>
+<div class="lesson-diagram" data-diagram="desertification"><p class="diagram-caption">The cycle of desertification</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Desertification is the degradation of fertile land at the desert's edge into unproductive, desert-like terrain. The Sahel — the semi-arid belt immediately south of the Sahara — is one of the most affected regions in the world.</p>
 
 <div style="background:#f0fdfa;padding:1em;border-radius:8px;margin:1em 0">
@@ -618,6 +623,7 @@ Object.assign(LESSONS,{
 <p>The Middle East is a region of profound geographical contrasts: vast oil wealth alongside extreme water scarcity; ancient civilisations alongside ultra-modern cities; and a geopolitical importance that makes it one of the most scrutinised regions on Earth.</p>
 
 <h3>Physical Geography</h3>
+<div class="lesson-diagram" data-diagram="middle-east-map"><p class="diagram-caption">The Middle East</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Feature</th>
@@ -731,6 +737,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Plate Boundaries and Tectonic Hazards</h3>
+<div class="lesson-diagram" data-diagram="plate-boundaries"><p class="diagram-caption">Plate boundaries and tectonic hazards</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Boundary type</th>
@@ -759,6 +766,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Tropical Storm Formation</h3>
+<div class="lesson-diagram" data-diagram="tropical-storm"><p class="diagram-caption">Cross-section of a tropical storm</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Tropical storms (known as hurricanes in the Atlantic and eastern Pacific, typhoons in the western Pacific, and cyclones in the Indian Ocean and South Pacific) form over warm tropical oceans.</p>
 <div style="background:#f0fdfa;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Formation stages:</strong>
@@ -860,6 +868,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Statistical Skills: Mean, Median, Mode and Range</h3>
+<div class="lesson-diagram" data-diagram="correlation-types"><p class="diagram-caption">Types of correlation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Statistical measures help geographers summarise and compare data sets. The following worked example uses pebble sizes (in cm) collected along a beach transect:</p>
 
 <div style="background:#f0fdfa;padding:1em;border-radius:8px;margin:1em 0">
@@ -928,6 +937,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Fieldwork and the Geographical Enquiry Cycle</h3>
+<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">The geographical enquiry process</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>A geographical enquiry follows a structured cycle:</p>
 <ol>
   <li><strong>Identify a question or hypothesis</strong> — e.g. 'Pebble size decreases with distance from the headland.'</li>
@@ -946,8 +956,7 @@ Object.assign(LESSONS,{
 </div>
 
 <div style="background:#f0fdfa;padding:1em;border-radius:8px;margin:1em 0">
-  <strong>Exam tip — Evaluating fieldwork:</strong> Examiners reward honest, specific evaluation. Do not just write "my results might be inaccurate." Instead, identify a specific limitation (e.g. "only 10 pebbles were measured at each site, which is a small sample size"), explain its impact ("this means random variation could significantly affect the results"), and suggest a precise improvement ("measuring 30 pebbles per site would give a more reliable mean").
+  <strong>Exam tip — Evaluating fieldwork:</strong> Examiners reward honest, specific evaluation. Do not just write "my results might be inaccurate." Instead, identify a specific limitation (e.g. "only 10 pebbles were measured at each site, which is a small sample size"), explain its impact ("this means random variation could have a larger effect on my mean"), and then suggest a realistic improvement ("measuring 30 pebbles at each site would give a more reliable average").
 </div>
 `
-
 });

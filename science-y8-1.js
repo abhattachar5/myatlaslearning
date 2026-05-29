@@ -11,7 +11,7 @@ FLASHCARDS.push(
   {id:"s8fc-01-1",islandId:"s8-01",front:"What are the seven nutrient groups and what is the main role of each?",
    back:"1. Carbohydrates — provide energy (e.g. bread, pasta, rice)\n2. Proteins — growth and repair of cells (e.g. meat, eggs, beans)\n3. Lipids (fats & oils) — energy store and insulation\n4. Vitamins — regulate body processes (e.g. vitamin C prevents scurvy)\n5. Minerals — e.g. calcium for bones; iron for red blood cells\n6. Water — transport, chemical reactions, temperature regulation\n7. Fibre (roughage) — keeps the digestive system moving; prevents constipation",difficulty:1,category:"definition"},
 
-  {id:"s8fc-01-2",islandId:"s8-01",front:"Describe the journey of food through the digestive system in order.",
+  {id:"s8fc-01-2",islandId:"s8-01",image:"digestive-system",front:"Describe the journey of food through the digestive system in order.",
    back:"Mouth — teeth chew food; salivary amylase begins starch digestion\nOesophagus — muscular tube; peristalsis moves food to stomach\nStomach — churns food; hydrochloric acid kills bacteria; protease (pepsin) digests protein\nSmall intestine — enzymes from pancreas complete digestion; villi absorb nutrients into blood\nLarge intestine — water is reabsorbed\nRectum — faeces stored\nAnus — faeces expelled",difficulty:2,category:"process"},
 
   {id:"s8fc-01-3",islandId:"s8-01",front:"What are enzymes and where are the three main digestive enzymes produced?",
@@ -24,13 +24,13 @@ FLASHCARDS.push(
    back:"Starch — add iodine solution; turns blue-black if starch is present\nGlucose (reducing sugar) — add Benedict's solution; heat; turns brick-red/orange if glucose present\nProtein — add biuret reagent (sodium hydroxide + copper sulfate); turns purple/lilac if protein present\nLipids — ethanol emulsion test: add ethanol, shake, pour into water; milky-white emulsion forms if lipids present",difficulty:3,category:"process"},
 
   // s8-02 Breathing & Gas Exchange
-  {id:"s8fc-02-1",islandId:"s8-02",front:"Name the main structures of the human respiratory system and their functions.",
+  {id:"s8fc-02-1",islandId:"s8-02",image:"respiratory-system",front:"Name the main structures of the human respiratory system and their functions.",
    back:"Nose/mouth — air enters; nose warms, filters and moistens air\nTrachea — windpipe; carries air to lungs; lined with cilia and mucus to trap pathogens\nBronchi — two branches leading to each lung\nBronchioles — smaller branches within lungs\nAlveoli — tiny air sacs where gas exchange occurs\nDiaphragm — dome-shaped muscle below lungs; controls breathing",difficulty:1,category:"definition"},
 
-  {id:"s8fc-02-2",islandId:"s8-02",front:"Explain the mechanism of inhalation and exhalation.",
+  {id:"s8fc-02-2",islandId:"s8-02",image:"ventilation-mechanism",front:"Explain the mechanism of inhalation and exhalation.",
    back:"Inhalation (breathing in):\n• Diaphragm contracts and flattens\n• External intercostal muscles contract; ribcage moves up and out\n• Chest volume increases → pressure decreases\n• Air rushes into lungs (high → low pressure)\n\nExhalation (breathing out):\n• Diaphragm relaxes and curves upward\n• Ribcage moves down and in\n• Chest volume decreases → pressure increases\n• Air is pushed out of lungs",difficulty:2,category:"process"},
 
-  {id:"s8fc-02-3",islandId:"s8-02",front:"How are the alveoli adapted for efficient gas exchange?",
+  {id:"s8fc-02-3",islandId:"s8-02",image:"alveolus-gas-exchange",front:"How are the alveoli adapted for efficient gas exchange?",
    back:"Alveoli are tiny air sacs at the end of bronchioles. Adaptations:\n• Huge number (~700 million) — enormous surface area\n• Very thin walls (one cell thick) — short diffusion distance\n• Moist surface — gases dissolve for easier diffusion\n• Dense network of capillaries — maintains steep concentration gradient\n\nGas exchange: oxygen diffuses from alveolus → blood; carbon dioxide diffuses from blood → alveolus.",difficulty:2,category:"concept"},
 
   {id:"s8fc-02-4",islandId:"s8-02",front:"What are the effects of smoking on the respiratory system?",
@@ -40,13 +40,13 @@ FLASHCARDS.push(
    back:"Breathing (ventilation): the physical movement of air in and out of the lungs using the diaphragm and intercostal muscles. It is a mechanical process.\n\nGas exchange: the diffusion of gases across the alveoli walls:\n• Oxygen moves from alveoli into the blood\n• Carbon dioxide moves from the blood into the alveoli\n\nKey distinction: breathing moves air; gas exchange transfers gases between air and blood at the alveoli surface.",difficulty:2,category:"concept"},
 
   // s8-03 Photosynthesis
-  {id:"s8fc-03-1",islandId:"s8-03",front:"What is the word equation for photosynthesis?",
+  {id:"s8fc-03-1",islandId:"s8-03",image:"photosynthesis-diagram",front:"What is the word equation for photosynthesis?",
    back:"carbon dioxide + water → glucose + oxygen\n\nThis occurs in the chloroplasts of plant cells, using light energy absorbed by chlorophyll.\n\nSymbol equation (for reference):\n6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂\n\nReactants (inputs): carbon dioxide (from air via stomata) and water (absorbed by roots)\nProducts (outputs): glucose (used for energy and growth) and oxygen (released as a by-product)",difficulty:1,category:"process"},
 
-  {id:"s8fc-03-2",islandId:"s8-03",front:"Describe the structure of a leaf and explain how each feature is adapted for photosynthesis.",
+  {id:"s8fc-03-2",islandId:"s8-03",image:"leaf-structure",front:"Describe the structure of a leaf and explain how each feature is adapted for photosynthesis.",
    back:"Waxy cuticle — transparent; reduces water loss\nUpper epidermis — transparent; allows light to reach mesophyll\nPalisade mesophyll — packed with chloroplasts; main site of photosynthesis; near surface to absorb maximum light\nSpongy mesophyll — air spaces allow CO₂ and O₂ to diffuse easily\nGuard cells / stomata — open to allow CO₂ in and O₂ out; close to reduce water loss\nVascular bundle (xylem + phloem) — xylem delivers water; phloem transports glucose\nBroad flat shape — large surface area for light absorption",difficulty:2,category:"concept"},
 
-  {id:"s8fc-03-3",islandId:"s8-03",front:"What three factors limit the rate of photosynthesis, and how does each one work?",
+  {id:"s8fc-03-3",islandId:"s8-03",image:"photosynthesis-rate",front:"What three factors limit the rate of photosynthesis, and how does each one work?",
    back:"1. Light intensity — more light → faster rate (up to a point); light provides energy for photosynthesis\n2. Carbon dioxide concentration — more CO₂ → faster rate (up to a point); CO₂ is a raw material\n3. Temperature — increasing temperature speeds up enzyme activity → faster rate; above ~45°C enzymes denature and rate drops sharply\n\nLimiting factor: the factor that is in shortest supply and is preventing a faster rate of photosynthesis.",difficulty:2,category:"concept"},
 
   {id:"s8fc-03-4",islandId:"s8-03",front:"What is chlorophyll and why is it important?",
@@ -59,26 +59,26 @@ FLASHCARDS.push(
   {id:"s8fc-04-1",islandId:"s8-04",front:"What is the difference between communicable and non-communicable diseases? Give an example of each.",
    back:"Communicable (infectious) diseases: caused by pathogens; can spread from one person to another.\nExamples: influenza (flu), COVID-19, tuberculosis (TB), malaria, athlete's foot\n\nNon-communicable diseases: not caused by pathogens; cannot be passed between people.\nExamples: type 2 diabetes, heart disease, most cancers, asthma\n\nCauses of non-communicable diseases include genetic factors, lifestyle choices (poor diet, smoking, lack of exercise) and environmental factors.",difficulty:1,category:"definition"},
 
-  {id:"s8fc-04-2",islandId:"s8-04",front:"What are the four types of pathogen? Give an example and the disease it causes for each.",
+  {id:"s8fc-04-2",islandId:"s8-04",image:"pathogen-types",front:"What are the four types of pathogen? Give an example and the disease it causes for each.",
    back:"1. Bacteria — single-celled living organisms; reproduce rapidly; release toxins\n   Example: Salmonella → food poisoning\n2. Viruses — not living cells; much smaller than bacteria; take over host cells to reproduce\n   Example: influenza virus → flu\n3. Fungi — eukaryotic organisms; spores spread through air or contact\n   Example: Tinea → athlete's foot\n4. Protists — single-celled eukaryotes; often spread by vectors\n   Example: Plasmodium → malaria (spread by mosquitoes)",difficulty:1,category:"definition"},
 
   {id:"s8fc-04-3",islandId:"s8-04",front:"How do pathogens spread? Name five routes of transmission.",
    back:"1. Droplet transmission — coughing/sneezing releases pathogen-containing droplets (e.g. flu, COVID-19)\n2. Direct contact — touching infected person or surface (e.g. athlete's foot, impetigo)\n3. Contaminated food or water — ingesting pathogens (e.g. Salmonella, cholera)\n4. Blood-to-blood — shared needles, blood transfusions (e.g. HIV, hepatitis B)\n5. Vector — an animal (usually an insect) carries the pathogen (e.g. mosquito → malaria)",difficulty:2,category:"process"},
 
-  {id:"s8fc-04-4",islandId:"s8-04",front:"How does the immune system respond when a pathogen enters the body?",
+  {id:"s8fc-04-4",islandId:"s8-04",image:"immune-response",front:"How does the immune system respond when a pathogen enters the body?",
    back:"1. Phagocytes (white blood cells) engulf and destroy pathogens by phagocytosis\n2. Lymphocytes produce antibodies — proteins that bind specifically to antigens on the pathogen surface, neutralising them and marking them for destruction\n3. Antibodies are specific to one antigen (lock-and-key model)\n4. Memory cells are produced and remain in the blood — if the same pathogen returns, the response is faster and stronger (immunity)\n\nVaccines trigger this response using dead/weakened pathogens without causing disease.",difficulty:2,category:"process"},
 
-  {id:"s8fc-04-5",islandId:"s8-04",front:"What is antibiotic resistance and why is it a serious problem?",
+  {id:"s8fc-04-5",islandId:"s8-04",image:"antibiotic-resistance",front:"What is antibiotic resistance and why is it a serious problem?",
    back:"Antibiotics are medicines that kill bacteria (but NOT viruses).\n\nAntibiotic resistance occurs when bacteria evolve so that antibiotics no longer kill them:\n• Bacteria reproduce rapidly; random mutations occasionally produce resistant variants\n• Natural selection — resistant bacteria survive antibiotic treatment and reproduce\n• The resistant strain spreads\n\nWhy it is serious:\n• Common bacterial infections could become untreatable\n• MRSA ('superbug') is an example of a resistant bacterium\n• Overusing and misusing antibiotics accelerates resistance",difficulty:3,category:"concept"},
 
   // s8-05 Ecology & Biodiversity
   {id:"s8fc-05-1",islandId:"s8-05",front:"Define: ecosystem, habitat, community, population, and organism.",
    back:"Organism — an individual living thing (e.g. one oak tree)\nPopulation — all members of the same species in an area (e.g. all rabbits in a field)\nCommunity — all the populations of different species living in an area (e.g. rabbits + foxes + grass in a field)\nHabitat — the physical environment where organisms live (e.g. a pond, a woodland)\nEcosystem — a community of organisms AND their non-living (abiotic) environment, interacting together",difficulty:1,category:"definition"},
 
-  {id:"s8fc-05-2",islandId:"s8-05",front:"How do you estimate population size using a quadrat? Describe the method.",
+  {id:"s8fc-05-2",islandId:"s8-05",image:"quadrat-sampling",front:"How do you estimate population size using a quadrat? Describe the method.",
    back:"1. Define the study area and note its total area\n2. Place quadrats randomly across the study area (use random coordinates to avoid bias)\n3. Count the number of organisms (or % cover for plants) inside each quadrat\n4. Calculate the mean number per quadrat\n5. Scale up: Estimated population = mean count per quadrat × (total area ÷ quadrat area)\n\nTransects are used for non-random distributions — place a tape measure across the habitat and sample at regular intervals.",difficulty:2,category:"process"},
 
-  {id:"s8fc-05-3",islandId:"s8-05",front:"What is a food web? Explain the terms producer, primary consumer, secondary consumer, and apex predator.",
+  {id:"s8fc-05-3",islandId:"s8-05",image:"food-web",front:"What is a food web? Explain the terms producer, primary consumer, secondary consumer, and apex predator.",
    back:"A food web shows the feeding relationships between many organisms in an ecosystem (more realistic than a single food chain).\n\nProducer — makes its own food by photosynthesis (e.g. grass, algae)\nPrimary consumer — eats producers; a herbivore (e.g. rabbit eats grass)\nSecondary consumer — eats primary consumers; often a carnivore or omnivore (e.g. fox eats rabbit)\nApex predator — top predator with no natural predators in that ecosystem (e.g. killer whale, golden eagle)\n\nArrows show the direction of energy flow.",difficulty:1,category:"definition"},
 
   {id:"s8fc-05-4",islandId:"s8-05",front:"What is biodiversity and why is it important?",
@@ -88,7 +88,7 @@ FLASHCARDS.push(
    back:"1. Deforestation → destroys habitats and reduces species numbers\n   Conservation: replanting schemes; creating protected reserves\n2. Pollution (pesticides, fertiliser run-off, plastic) → poisons organisms; eutrophication kills aquatic life\n   Conservation: reduce chemical use; improve waste management\n3. Overhunting/overfishing → reduces population sizes; can cause extinction\n   Conservation: fishing quotas; legal protection of endangered species; captive breeding programmes",difficulty:3,category:"application"},
 
   // s8-06 The Periodic Table
-  {id:"s8fc-06-1",islandId:"s8-06",front:"How are elements arranged in the modern periodic table?",
+  {id:"s8fc-06-1",islandId:"s8-06",image:"periodic-table",front:"How are elements arranged in the modern periodic table?",
    back:"Elements are arranged in order of increasing atomic number (number of protons) from left to right and top to bottom.\n\nRows are called periods — elements in the same period have the same number of electron shells.\nColumns are called groups (numbered 1–7 and 0 in UK notation, or 1–18 in IUPAC) — elements in the same group have the same number of electrons in their outer shell, giving them similar chemical properties.\n\nThere are 118 known elements. Metals are on the left and in the centre; non-metals are on the right.",difficulty:1,category:"definition"},
 
   {id:"s8fc-06-2",islandId:"s8-06",front:"What are the key properties of Group 1 (alkali metals)? Give three examples.",
@@ -436,6 +436,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>The Digestive System</h3>
+<div class="lesson-diagram" data-diagram="digestive-system"><p class="diagram-caption">The human digestive system</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Digestion involves both <strong>mechanical</strong> (physical) and <strong>chemical</strong> breakdown of food. The alimentary canal runs from mouth to anus.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
@@ -532,6 +533,7 @@ Object.assign(LESSONS,{
 <p>Every cell in your body needs a continuous supply of oxygen to release energy through respiration, and must get rid of the carbon dioxide produced. The respiratory system exists to make this possible — bringing fresh air into close contact with the blood, and exchanging gases by diffusion.</p>
 
 <h3>Structure of the Respiratory System</h3>
+<div class="lesson-diagram" data-diagram="respiratory-system"><p class="diagram-caption">The respiratory system</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Structure</th>
@@ -564,6 +566,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>The Mechanism of Ventilation</h3>
+<div class="lesson-diagram" data-diagram="ventilation-mechanism"><p class="diagram-caption">Breathing in and out</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Stage</th>
@@ -592,6 +595,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Gas Exchange in the Alveoli</h3>
+<div class="lesson-diagram" data-diagram="alveolus-gas-exchange"><p class="diagram-caption">Gas exchange at an alveolus</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Gas exchange occurs by <strong>diffusion</strong> — gases move from a region of high concentration to low concentration across the alveolar wall.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
@@ -624,10 +628,12 @@ Object.assign(LESSONS,{
 <p>Plants are producers — they can make their own food using light energy from the Sun. This process, called photosynthesis, is the foundation of nearly all food chains on Earth. Without it, there would be no oxygen in the atmosphere and no food for animals.</p>
 
 <h3>The Photosynthesis Equation</h3>
+<div class="lesson-diagram" data-diagram="photosynthesis-diagram"><p class="diagram-caption">Inputs and outputs of photosynthesis</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p style="font-size:1.1em;text-align:center;padding:0.5em;background:#eef2ff;border-radius:6px"><strong>carbon dioxide + water → glucose + oxygen</strong></p>
 <p>This reaction takes place in the <strong>chloroplasts</strong> of plant cells, using light energy absorbed by the green pigment <strong>chlorophyll</strong>. The reaction requires light and will not occur in darkness.</p>
 
 <h3>Leaf Structure and Adaptations</h3>
+<div class="lesson-diagram" data-diagram="leaf-structure"><p class="diagram-caption">Cross-section of a leaf</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Structure</th>
@@ -660,6 +666,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Limiting Factors</h3>
+<div class="lesson-diagram" data-diagram="photosynthesis-rate"><p class="diagram-caption">How limiting factors affect the rate</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>A <strong>limiting factor</strong> is the factor in shortest supply that prevents the rate of photosynthesis from increasing further. The three main limiting factors are:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
@@ -694,6 +701,7 @@ Object.assign(LESSONS,{
 <p>Health is not just the absence of disease — it is a state of complete physical, mental and social wellbeing. Diseases can be divided into two broad categories: communicable (infectious) diseases, which are caused by pathogens and can spread, and non-communicable diseases, which cannot be passed between people.</p>
 
 <h3>Types of Pathogen</h3>
+<div class="lesson-diagram" data-diagram="pathogen-types"><p class="diagram-caption">The four types of pathogen</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Pathogen type</th>
@@ -728,6 +736,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>The Body's Defences</h3>
+<div class="lesson-diagram" data-diagram="immune-response"><p class="diagram-caption">The immune response</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>The body has several lines of defence against infection:</p>
 <p><strong>First line (barriers):</strong> skin (physical barrier); mucus in nose and airways (traps pathogens); cilia (sweeps mucus away); stomach acid (kills pathogens in food).</p>
 <p><strong>Second line (immune response):</strong></p>
@@ -747,6 +756,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Vaccines &amp; Antibiotics</h3>
+<div class="lesson-diagram" data-diagram="antibiotic-resistance"><p class="diagram-caption">How antibiotic resistance develops</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc"></th>
@@ -814,11 +824,13 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Sampling Techniques</h3>
+<div class="lesson-diagram" data-diagram="quadrat-sampling"><p class="diagram-caption">Estimating population with a quadrat</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p><strong>Quadrats:</strong> Used for plants or slow-moving animals. Place randomly using coordinates. Count organisms or estimate % cover. Calculate mean, then scale up to total area.</p>
 <p><strong>Population estimate formula:</strong> mean count per quadrat × (total area ÷ quadrat area)</p>
 <p><strong>Transects:</strong> Stretch a tape across a habitat and place quadrats at regular intervals. Used to show how species distribution changes across a gradient (e.g. from water's edge to dry land).</p>
 
 <h3>Food Webs &amp; Interdependence</h3>
+<div class="lesson-diagram" data-diagram="food-web"><p class="diagram-caption">A food web</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>A food web shows the feeding relationships between many species. Each arrow shows energy transfer (from prey to predator). Species are interdependent — a change in one population affects others:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
@@ -858,6 +870,7 @@ Object.assign(LESSONS,{
 <p>The periodic table is one of the most powerful tools in science — it arranges all known elements in a way that reveals patterns in their properties. Understanding how to read the periodic table allows you to predict how an element will behave, even before you have done any experiments with it.</p>
 
 <h3>Structure of the Periodic Table</h3>
+<div class="lesson-diagram" data-diagram="periodic-table"><p class="diagram-caption">The periodic table</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Elements are arranged in order of <strong>increasing atomic number</strong> (number of protons). Horizontal rows are <strong>periods</strong>; vertical columns are <strong>groups</strong>. Elements in the same group have the same number of outer electrons and therefore similar chemical properties.</p>
 
 <h3>Metals vs Non-Metals</h3>
@@ -928,8 +941,7 @@ Object.assign(LESSONS,{
 </table>
 
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
-  <strong>Tip — Reading position:</strong> Period number = number of electron shells. Group number = number of outer electrons (for Groups 1–7). So sodium (Period 3, Group 1) has 3 shells and 1 outer electron — electron configuration 2,8,1. Use this to predict which group an element belongs to and how it will react.
+  <strong>Tip — Reading position:</strong> Period number = number of electron shells. Group number = number of outer electrons (for Groups 1–7). So sodium (Period 3, Group 1) has 3 shells and 1 outer electron — electron configuration 2,8,1. You can read both of these clues straight off the periodic table, which makes it quick to predict an element's properties in the exam.
 </div>
 `
-
 });

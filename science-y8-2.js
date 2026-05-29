@@ -13,7 +13,7 @@ FLASHCARDS.push(
    back:"1. A colour change occurs.\n2. A gas is produced (bubbles or fizzing).\n3. A precipitate (solid) forms in a solution.\n4. Energy is released or absorbed (temperature change, light, sound).\n5. A new substance with different properties is produced.\n\nRemember: physical changes (e.g. melting) do NOT produce a new substance.",
    difficulty:1,category:"concept"},
 
-  {id:"s8fc-07-B",islandId:"s8-07",
+  {id:"s8fc-07-B",islandId:"s8-07",image:"conservation-of-mass",
    front:"What is the law of conservation of mass?",
    back:"The total mass of the products of a chemical reaction always equals the total mass of the reactants.\n\nExample:\n  magnesium + oxygen → magnesium oxide\n  If 2.4 g of magnesium reacts with 1.6 g of oxygen, 4.0 g of magnesium oxide is produced.\n\nMass is neither created nor destroyed in a chemical reaction; atoms are simply rearranged.",
    difficulty:2,category:"definition"},
@@ -28,13 +28,13 @@ FLASHCARDS.push(
    back:"Thermal decomposition is a reaction in which a single compound breaks down into two or more simpler substances when heated.\n\nExample:\n  copper carbonate → copper oxide + carbon dioxide\n  (green powder → black powder + colourless gas)\n\nAnother example:\n  calcium carbonate → calcium oxide + carbon dioxide\n\nThese reactions require a continuous supply of heat — they are endothermic.",
    difficulty:2,category:"process"},
 
-  {id:"s8fc-07-E",islandId:"s8-07",
+  {id:"s8fc-07-E",islandId:"s8-07",image:"energy-level-diagram",
    front:"What is the difference between an exothermic and an endothermic reaction?",
    back:"Exothermic reaction: releases energy to the surroundings as heat. The temperature of the surroundings increases.\n  Examples: combustion, neutralisation, respiration, hand warmers.\n\nEndothermic reaction: absorbs energy from the surroundings as heat. The temperature of the surroundings decreases.\n  Examples: thermal decomposition, photosynthesis, dissolving ammonium nitrate in water, sports cold packs.",
    difficulty:2,category:"concept"},
 
   // s8-08 Acids, Alkalis & Neutralisation
-  {id:"s8fc-08-A",islandId:"s8-08",
+  {id:"s8fc-08-A",islandId:"s8-08",image:"ph-scale",
    front:"What is the pH scale and what values indicate acids, neutral, and alkalis?",
    back:"The pH scale measures how acidic or alkaline a solution is. It runs from 0 to 14.\n\n  pH 0–6: acidic (lower = more acidic)\n  pH 7: neutral\n  pH 8–14: alkaline (higher = more alkaline)\n\nExamples:\n  Hydrochloric acid: pH 1–2\n  Pure water: pH 7\n  Sodium hydroxide: pH 13–14\n\nUniversal indicator turns: red/orange (acid), green (neutral), blue/purple (alkali).",
    difficulty:1,category:"concept"},
@@ -60,12 +60,12 @@ FLASHCARDS.push(
    difficulty:3,category:"application"},
 
   // s8-09 Metals & Reactivity
-  {id:"s8fc-09-A",islandId:"s8-09",
+  {id:"s8fc-09-A",islandId:"s8-09",image:"reactivity-series",
    front:"Write the reactivity series from most to least reactive (include 8 metals).",
    back:"Most reactive at the top:\n\n  Potassium (K)\n  Sodium (Na)\n  Calcium (Ca)\n  Magnesium (Mg)\n  Aluminium (Al)\n  Zinc (Zn)\n  Iron (Fe)\n  Copper (Cu)\n\nLess reactive:\n  Silver (Ag)\n  Gold (Au)\n\nMemory aid: Please Stop Calling Me A Zombie In Cold Showers, Gold\n\nThe more reactive a metal, the harder it is to extract from its ore.",
    difficulty:2,category:"concept"},
 
-  {id:"s8fc-09-B",islandId:"s8-09",
+  {id:"s8fc-09-B",islandId:"s8-09",image:"displacement-reaction",
    front:"What is a displacement reaction? Give an example with a word equation.",
    back:"A displacement reaction occurs when a more reactive metal pushes (displaces) a less reactive metal out of a compound.\n\nGeneral rule: more reactive metal + metal salt solution → new salt + displaced metal\n\nExample:\n  iron + copper sulfate solution → iron sulfate + copper\n  (the iron nail turns copper-coloured; the blue solution fades)\n\nThis will NOT work in reverse — copper cannot displace iron from iron sulfate because copper is less reactive than iron.",
    difficulty:2,category:"process"},
@@ -91,7 +91,7 @@ FLASHCARDS.push(
    back:"Ceramics are non-metallic, inorganic solid materials that are usually made by heating at high temperatures.\n\nKey properties:\n  • Hard and rigid\n  • Brittle (crack rather than bend)\n  • High melting points\n  • Good electrical and thermal insulators\n  • Chemically resistant\n\nExamples:\n  Glass (silica-based) — transparent, used in windows and optical fibres.\n  Porcelain/china — used in crockery, tiles, electrical insulators.\n  Brick — used in construction.",
    difficulty:1,category:"definition"},
 
-  {id:"s8fc-10-B",islandId:"s8-10",
+  {id:"s8fc-10-B",islandId:"s8-10",image:"polymers-comparison",
    front:"What are polymers? Distinguish between thermosoftening and thermosetting polymers.",
    back:"Polymers are large molecules made of many repeating units (monomers) joined together. Plastics are synthetic polymers.\n\nThermosoftening polymers:\n  Soften and can be reshaped when heated; harden again on cooling. Can be recycled.\n  Examples: poly(ethene), poly(propene), PET (used in bottles).\n\nThermosetting polymers:\n  Harden permanently when heated (cross-links form between chains). Cannot be re-melted or recycled.\n  Examples: Bakelite, melamine, epoxy resin — used in plugs, saucepan handles.",
    difficulty:2,category:"concept"},
@@ -112,7 +112,7 @@ FLASHCARDS.push(
    difficulty:3,category:"application"},
 
   // s8-11 Energy Transfers & Resources
-  {id:"s8fc-11-A",islandId:"s8-11",
+  {id:"s8fc-11-A",islandId:"s8-11",image:"energy-stores",
    front:"Name six energy stores and give one example of an object that has each store.",
    back:"1. Kinetic energy store — a moving car.\n2. Gravitational potential energy store — a book held above a desk.\n3. Elastic potential energy store — a stretched spring or elastic band.\n4. Chemical energy store — food, fuel, a battery.\n5. Thermal energy store — a hot cup of tea.\n6. Nuclear energy store — uranium in a nuclear reactor.\n\nEnergy is always stored somewhere. When something happens, energy is transferred between stores.",
    difficulty:1,category:"definition"},
@@ -122,7 +122,7 @@ FLASHCARDS.push(
    back:"Energy is transferred from one store to another via a pathway:\n\n1. Mechanically — by forces acting over a distance (e.g. pushing, pulling, compressing).\n2. Electrically — by electric current flowing through a component (e.g. a bulb, motor).\n3. By heating — from hot objects to cooler ones (conduction, convection, radiation).\n4. By radiation — by electromagnetic waves (e.g. light, infrared, microwaves).\n\nExample: a falling object transfers energy from the gravitational potential store to the kinetic store mechanically.",
    difficulty:2,category:"concept"},
 
-  {id:"s8fc-11-C",islandId:"s8-11",
+  {id:"s8fc-11-C",islandId:"s8-11",image:"sankey-diagram",
    front:"State the principle of conservation of energy and explain what 'wasted energy' means.",
    back:"Principle of conservation of energy:\n  Energy cannot be created or destroyed; it can only be transferred from one store to another.\n\nWasted energy:\n  Energy that is transferred to a store or surroundings that is not useful. It is usually dissipated (spread out) as thermal energy to the surroundings.\n\nExample: a light bulb transfers chemical energy from the mains supply electrically to the thermal store (useful) and thermal energy to the surroundings (wasted heat) and light energy (useful).\n\nTotal energy in = total energy out (useful + wasted).",
    difficulty:2,category:"concept"},
@@ -138,12 +138,12 @@ FLASHCARDS.push(
    difficulty:2,category:"concept"},
 
   // s8-12 Electricity & Circuits
-  {id:"s8fc-12-A",islandId:"s8-12",
+  {id:"s8fc-12-A",islandId:"s8-12",image:"circuit-comparison",
    front:"What are the differences between a series circuit and a parallel circuit?",
    back:"Series circuit:\n  Components are connected in a single loop.\n  Current is the same at all points in the circuit.\n  Voltage is shared (split) between components.\n  If one component breaks, the whole circuit stops.\n\nParallel circuit:\n  Components are on separate branches.\n  Voltage is the same across each branch.\n  Current splits between branches (more current flows through lower resistance paths).\n  If one branch breaks, the others keep working.\n\nExample: Christmas tree lights used to be in series (one bulb broke = all went out); modern ones are in parallel.",
    difficulty:1,category:"concept"},
 
-  {id:"s8fc-12-B",islandId:"s8-12",
+  {id:"s8fc-12-B",islandId:"s8-12",image:"circuit-symbols",
    front:"What is resistance? What unit is it measured in and what factors affect it?",
    back:"Resistance is the opposition to the flow of electric current through a conductor.\n\nUnit: ohm (symbol: Ω)\n\nFactors affecting resistance:\n  1. Length: longer wire → greater resistance.\n  2. Thickness: thinner wire → greater resistance.\n  3. Material: different materials have different resistivities (e.g. copper has lower resistance than nichrome).\n  4. Temperature: for metal conductors, higher temperature → greater resistance.\n\nResistance reduces current flow and causes energy to be transferred as heat.",
    difficulty:2,category:"definition"},
@@ -570,6 +570,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>The Law of Conservation of Mass</h3>
+<div class="lesson-diagram" data-diagram="conservation-of-mass"><p class="diagram-caption">Mass is conserved in a reaction</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>In any chemical reaction, atoms are <strong>rearranged</strong> but never created or destroyed. This means:</p>
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Total mass of reactants = Total mass of products</strong><br><br>
@@ -579,6 +580,7 @@ Object.assign(LESSONS,{
 <p>If a reaction appears to lose mass, it usually means a gas has escaped (e.g. carbon dioxide). If mass appears to increase, a gas from the air (usually oxygen) has been incorporated into the product.</p>
 
 <h3>Exothermic and Endothermic Reactions</h3>
+<div class="lesson-diagram" data-diagram="energy-level-diagram"><p class="diagram-caption">Energy level diagrams</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Type</th>
@@ -612,6 +614,7 @@ Object.assign(LESSONS,{
 <p>Acids and alkalis are all around us — in our stomachs, in cleaning products, and in the soil. Understanding the pH scale and neutralisation reactions helps explain many everyday phenomena.</p>
 
 <h3>The pH Scale</h3>
+<div class="lesson-diagram" data-diagram="ph-scale"><p class="diagram-caption">The pH scale</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>The pH scale runs from 0 to 14 and measures how acidic or alkaline a solution is:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
@@ -702,6 +705,7 @@ Object.assign(LESSONS,{
 <p>Metals differ widely in how readily they react. The reactivity series orders metals from most to least reactive and helps us predict displacement reactions and choose appropriate extraction methods.</p>
 
 <h3>The Reactivity Series</h3>
+<div class="lesson-diagram" data-diagram="reactivity-series"><p class="diagram-caption">The reactivity series</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Metal</th>
@@ -721,6 +725,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Displacement Reactions</h3>
+<div class="lesson-diagram" data-diagram="displacement-reaction"><p class="diagram-caption">A displacement reaction</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>A more reactive metal will displace a less reactive metal from a solution of its salt:</p>
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
   <strong>more reactive metal + metal salt solution → new salt + displaced metal</strong><br><br>
@@ -778,6 +783,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Polymers</h3>
+<div class="lesson-diagram" data-diagram="polymers-comparison"><p class="diagram-caption">Thermosoftening vs thermosetting polymers</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Polymers are large molecules made from many repeating monomer units. Plastics are synthetic polymers.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
@@ -835,6 +841,7 @@ Object.assign(LESSONS,{
 <p>Energy is the capacity to do work or cause change. Understanding how energy is stored, transferred, and wasted — and where it comes from — is fundamental to physics and to addressing climate change.</p>
 
 <h3>Energy Stores</h3>
+<div class="lesson-diagram" data-diagram="energy-stores"><p class="diagram-caption">The main energy stores</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Energy store</th>
@@ -860,6 +867,7 @@ Object.assign(LESSONS,{
 </div>
 
 <h3>Conservation of Energy and Efficiency</h3>
+<div class="lesson-diagram" data-diagram="sankey-diagram"><p class="diagram-caption">A Sankey diagram of energy transfer</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Energy is <strong>never created or destroyed</strong> — it is only transferred between stores. However, some energy is always wasted (usually as thermal energy to the surroundings).</p>
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Efficiency formula:</strong><br>
@@ -891,6 +899,7 @@ Object.assign(LESSONS,{
 <p>Electric circuits are the foundation of modern technology. In Year 8 you will draw and analyse circuits, measure current and voltage, and perform calculations using the equation V = I × R.</p>
 
 <h3>Circuit Symbols</h3>
+<div class="lesson-diagram" data-diagram="circuit-symbols"><p class="diagram-caption">Common circuit symbols</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>You must be able to recognise and draw these standard symbols:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
@@ -907,6 +916,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Series vs Parallel Circuits</h3>
+<div class="lesson-diagram" data-diagram="circuit-comparison"><p class="diagram-caption">Series vs parallel circuits</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#6366f1;color:white">
     <th style="padding:8px;border:1px solid #ccc">Property</th>
@@ -944,8 +954,7 @@ Object.assign(LESSONS,{
 </div>
 
 <div style="background:#eef2ff;padding:1em;border-radius:8px;margin:1em 0">
-  <strong>Tip — Exam technique for V = I × R:</strong> Always write the formula first, substitute the values clearly, then calculate. Show all working. If you make an arithmetic error but your method is correct, you may still earn method marks. Double-check your units — voltage in V, current in A, resistance in Ω.
+  <strong>Tip — Exam technique for V = I × R:</strong> Always write the formula first, substitute the values clearly, then calculate. Show all working. If you make an arithmetic error but your method is correct, you may still earn method marks. Double-check your units — volts (V), amps (A) and ohms (Ω) — and that you have rearranged V = I × R correctly before writing down your final answer.
 </div>
 `
-
 });

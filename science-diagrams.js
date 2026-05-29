@@ -1316,3 +1316,633 @@ DIAGRAMS["periodic-table"] = (function() {
   svg += '</svg>';
   return svg;
 })();
+
+// ══════════════════════════════════════════════════════════════════════
+// YEAR 8 ADDITIONS — net-new diagrams for Y8 gap topics
+// ══════════════════════════════════════════════════════════════════════
+
+// ── RESPIRATORY SYSTEM (s8-02) ───────────────────────────────────────────────
+DIAGRAMS["respiratory-system"] = `<svg viewBox="0 0 280 192" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">The Respiratory System</text>
+  <rect x="96" y="20" width="13" height="46" rx="3" fill="#cbd5e1" stroke="#64748b" stroke-width="1.2"/>
+  <text x="58" y="40" font-size="7.5" fill="#475569">trachea</text>
+  <line x1="80" y1="38" x2="95" y2="40" stroke="#94a3b8" stroke-width="0.7"/>
+  <path d="M103 64 L82 90" stroke="#94a3b8" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M103 64 L124 90" stroke="#94a3b8" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <text x="125" y="84" font-size="7.5" fill="#475569">bronchus</text>
+  <path d="M80 88 C56 92 50 132 60 152 C68 164 88 160 89 144 L89 96 C89 90 85 87 80 88 Z" fill="#fecaca" stroke="#ef4444" stroke-width="1.5"/>
+  <path d="M126 88 C150 92 156 132 146 152 C138 164 118 160 117 144 L117 96 C117 90 121 87 126 88 Z" fill="#fecaca" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="28" y="120" font-size="7.5" fill="#b91c1c">lung</text>
+  <line x1="42" y1="118" x2="62" y2="124" stroke="#94a3b8" stroke-width="0.7"/>
+  <path d="M50 158 Q103 174 156 158" stroke="#7c3aed" stroke-width="2.5" fill="none"/>
+  <text x="159" y="167" font-size="7.5" fill="#7c3aed">diaphragm</text>
+  <circle cx="226" cy="74" r="35" fill="#ffffff" stroke="#3b82f6" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="214" cy="66" r="11" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="236" cy="63" r="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="228" cy="86" r="11" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="226" y="122" text-anchor="middle" font-size="8" font-weight="700" fill="#1d4ed8">alveoli</text>
+  <text x="140" y="188" text-anchor="middle" font-size="6.6" fill="#475569">gas exchange: O₂ diffuses in, CO₂ diffuses out</text>
+  <line x1="146" y1="118" x2="198" y2="92" stroke="#93c5fd" stroke-width="0.8" stroke-dasharray="2,2"/>
+</svg>`;
+
+// ── IMMUNE RESPONSE (s8-04) ───────────────────────────────────────────────────
+DIAGRAMS["immune-response"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="ir" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#64748b"/></marker></defs>
+  <text x="140" y="12" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">How the Immune System Responds</text>
+  <circle cx="48" cy="60" r="29" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <circle cx="42" cy="55" r="12" fill="#c4b5fd" stroke="#6d28d9" stroke-width="1"/>
+  <circle cx="58" cy="58" r="8" fill="#fca5a5" stroke="#dc2626" stroke-width="1"/>
+  <text x="48" y="101" text-anchor="middle" font-size="7" font-weight="700" fill="#5b21b6">1. Phagocyte</text>
+  <text x="48" y="110" text-anchor="middle" font-size="6.2" fill="#475569">engulfs pathogen</text>
+  <line x1="83" y1="60" x2="100" y2="60" stroke="#64748b" stroke-width="1.5" marker-end="url(#ir)"/>
+  <circle cx="140" cy="60" r="28" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="140" cy="60" r="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="1"/>
+  <g stroke="#1e40af" stroke-width="1.4" fill="none">
+    <path d="M119 38 l-4 -6 M119 38 l4 -6 M119 38 l0 7"/>
+    <path d="M164 42 l-4 -6 M164 42 l4 -6 M164 42 l0 7"/>
+    <path d="M167 80 l-4 -6 M167 80 l4 -6 M167 80 l0 7"/>
+  </g>
+  <text x="140" y="101" text-anchor="middle" font-size="7" font-weight="700" fill="#1e40af">2. Lymphocyte</text>
+  <text x="140" y="110" text-anchor="middle" font-size="6.2" fill="#475569">makes antibodies</text>
+  <line x1="175" y1="60" x2="192" y2="60" stroke="#64748b" stroke-width="1.5" marker-end="url(#ir)"/>
+  <circle cx="232" cy="60" r="28" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <circle cx="232" cy="60" r="12" fill="#86efac" stroke="#15803d" stroke-width="1"/>
+  <text x="232" y="64" text-anchor="middle" font-size="9" font-weight="700" fill="#14532d">M</text>
+  <text x="232" y="101" text-anchor="middle" font-size="7" font-weight="700" fill="#15803d">3. Memory cell</text>
+  <text x="232" y="110" text-anchor="middle" font-size="6.2" fill="#475569">faster next time</text>
+  <text x="140" y="134" text-anchor="middle" font-size="6.6" fill="#475569">Antibodies fit one antigen only (lock &amp; key) → this gives immunity</text>
+</svg>`;
+
+// ── pH SCALE (s8-08) ──────────────────────────────────────────────────────────
+DIAGRAMS["ph-scale"] = `<svg viewBox="0 0 280 120" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">The pH Scale</text>
+  <g stroke="#ffffff" stroke-width="0.5">
+    <rect x="8"   y="22" width="17.6" height="22" fill="#c62828"/>
+    <rect x="25.6" y="22" width="17.6" height="22" fill="#e53935"/>
+    <rect x="43.2" y="22" width="17.6" height="22" fill="#ef5350"/>
+    <rect x="60.8" y="22" width="17.6" height="22" fill="#ff7043"/>
+    <rect x="78.4" y="22" width="17.6" height="22" fill="#ffa726"/>
+    <rect x="96"   y="22" width="17.6" height="22" fill="#ffca28"/>
+    <rect x="113.6" y="22" width="17.6" height="22" fill="#d4e157"/>
+    <rect x="131.2" y="22" width="17.6" height="22" fill="#66bb6a"/>
+    <rect x="148.8" y="22" width="17.6" height="22" fill="#26a69a"/>
+    <rect x="166.4" y="22" width="17.6" height="22" fill="#29b6f6"/>
+    <rect x="184"  y="22" width="17.6" height="22" fill="#42a5f5"/>
+    <rect x="201.6" y="22" width="17.6" height="22" fill="#3f51b5"/>
+    <rect x="219.2" y="22" width="17.6" height="22" fill="#5c6bc0"/>
+    <rect x="236.8" y="22" width="17.6" height="22" fill="#7e57c2"/>
+    <rect x="254.4" y="22" width="17.6" height="22" fill="#6a1b9a"/>
+  </g>
+  <g font-size="7.5" fill="#ffffff" font-weight="700" text-anchor="middle">
+    <text x="16.8" y="37">0</text><text x="34.4" y="37">1</text><text x="52" y="37">2</text><text x="69.6" y="37">3</text>
+    <text x="87.2" y="37">4</text><text x="104.8" y="37">5</text><text x="122.4" y="37">6</text><text x="140" y="37" fill="#1b5e20">7</text>
+    <text x="157.6" y="37">8</text><text x="175.2" y="37">9</text><text x="192.8" y="37">10</text><text x="210.4" y="37">11</text>
+    <text x="228" y="37">12</text><text x="245.6" y="37">13</text><text x="263.2" y="37">14</text>
+  </g>
+  <text x="62" y="58" text-anchor="middle" font-size="8" font-weight="700" fill="#c62828">ACIDIC</text>
+  <text x="140" y="58" text-anchor="middle" font-size="7.5" font-weight="700" fill="#2e7d32">NEUTRAL</text>
+  <text x="218" y="58" text-anchor="middle" font-size="8" font-weight="700" fill="#6a1b9a">ALKALINE</text>
+  <text x="34" y="78" text-anchor="middle" font-size="6.4" fill="#475569">lemon</text>
+  <text x="34" y="87" text-anchor="middle" font-size="6.4" fill="#475569">juice (2)</text>
+  <text x="140" y="78" text-anchor="middle" font-size="6.4" fill="#475569">pure</text>
+  <text x="140" y="87" text-anchor="middle" font-size="6.4" fill="#475569">water (7)</text>
+  <text x="245" y="78" text-anchor="middle" font-size="6.4" fill="#475569">bleach</text>
+  <text x="245" y="87" text-anchor="middle" font-size="6.4" fill="#475569">(13)</text>
+  <text x="140" y="108" text-anchor="middle" font-size="6.6" fill="#475569">Universal indicator: red = acid · green = neutral · purple = alkali</text>
+</svg>`;
+
+// ── REACTIVITY SERIES (s8-09) ──────────────────────────────────────────────────
+DIAGRAMS["reactivity-series"] = `<svg viewBox="0 0 280 212" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">The Reactivity Series</text>
+  <line x1="26" y1="30" x2="26" y2="184" stroke="#64748b" stroke-width="2"/>
+  <polygon points="20,182 32,182 26,196" fill="#64748b"/>
+  <text x="14" y="62" font-size="6.8" fill="#16a34a" transform="rotate(-90 14 62)" text-anchor="middle">most reactive</text>
+  <text x="14" y="156" font-size="6.8" fill="#b91c1c" transform="rotate(-90 14 156)" text-anchor="middle">least reactive</text>
+  <g font-size="7.5" text-anchor="middle" font-weight="600">
+    <rect x="92" y="24" width="96" height="13" rx="3" fill="#dbeafe" stroke="#3b82f6"/><text x="140" y="33" fill="#1e3a5f">Potassium  K</text>
+    <rect x="92" y="38.5" width="96" height="13" rx="3" fill="#dbeafe" stroke="#3b82f6"/><text x="140" y="47.5" fill="#1e3a5f">Sodium  Na</text>
+    <rect x="92" y="53" width="96" height="13" rx="3" fill="#dbeafe" stroke="#3b82f6"/><text x="140" y="62" fill="#1e3a5f">Calcium  Ca</text>
+    <rect x="92" y="67.5" width="96" height="13" rx="3" fill="#dbeafe" stroke="#3b82f6"/><text x="140" y="76.5" fill="#1e3a5f">Magnesium  Mg</text>
+    <rect x="92" y="82" width="96" height="13" rx="3" fill="#dbeafe" stroke="#3b82f6"/><text x="140" y="91" fill="#1e3a5f">Aluminium  Al</text>
+    <rect x="92" y="96.5" width="96" height="13" rx="3" fill="#fef9c3" stroke="#ca8a04"/><text x="140" y="105.5" fill="#92400e">( Carbon  C )</text>
+    <rect x="92" y="111" width="96" height="13" rx="3" fill="#e2e8f0" stroke="#94a3b8"/><text x="140" y="120" fill="#334155">Zinc  Zn</text>
+    <rect x="92" y="125.5" width="96" height="13" rx="3" fill="#e2e8f0" stroke="#94a3b8"/><text x="140" y="134.5" fill="#334155">Iron  Fe</text>
+    <rect x="92" y="140" width="96" height="13" rx="3" fill="#fef9c3" stroke="#ca8a04"/><text x="140" y="149" fill="#92400e">( Hydrogen  H )</text>
+    <rect x="92" y="154.5" width="96" height="13" rx="3" fill="#fee2e2" stroke="#ef4444"/><text x="140" y="163.5" fill="#991b1b">Copper  Cu</text>
+    <rect x="92" y="169" width="96" height="13" rx="3" fill="#fee2e2" stroke="#ef4444"/><text x="140" y="178" fill="#991b1b">Silver  Ag</text>
+    <rect x="92" y="183.5" width="96" height="13" rx="3" fill="#fee2e2" stroke="#ef4444"/><text x="140" y="192.5" fill="#991b1b">Gold  Au</text>
+  </g>
+  <line x1="196" y1="24" x2="196" y2="95" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="200" y="50" font-size="6.4" fill="#15803d">extracted by</text>
+  <text x="200" y="59" font-size="6.4" fill="#15803d">electrolysis</text>
+  <line x1="196" y1="111" x2="196" y2="196" stroke="#b45309" stroke-width="1.5"/>
+  <text x="200" y="150" font-size="6.4" fill="#b45309">extracted by</text>
+  <text x="200" y="159" font-size="6.4" fill="#b45309">reduction with</text>
+  <text x="200" y="168" font-size="6.4" fill="#b45309">carbon</text>
+  <text x="240" y="206" font-size="6" fill="#94a3b8" text-anchor="middle">( ) = non-metals</text>
+</svg>`;
+
+
+// ── MAGNETIC FIELD (s8-13) ─────────────────────────────────────────────────────
+DIAGRAMS["magnetic-field"] = `<svg viewBox="0 0 280 162" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="mf" markerWidth="9" markerHeight="9" refX="4" refY="4.5" orient="auto"><polygon points="0 1,8 4.5,0 8" fill="#475569"/></marker></defs>
+  <text x="140" y="15" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Magnetic Field of a Bar Magnet</text>
+  <g fill="none" stroke="#64748b" stroke-width="1.2">
+    <path d="M108 72 Q140 52 172 72"/>
+    <path d="M102 74 Q140 36 178 74"/>
+    <path d="M96 76 Q140 22 184 76"/>
+    <path d="M108 92 Q140 112 172 92"/>
+    <path d="M102 90 Q140 128 178 90"/>
+    <path d="M96 88 Q140 142 184 88"/>
+  </g>
+  <g fill="none" stroke="#64748b" stroke-width="1.3" marker-end="url(#mf)">
+    <path d="M134 42 L146 42"/>
+    <path d="M134 122 L146 122"/>
+  </g>
+  <rect x="100" y="74" width="40" height="16" fill="#ef4444"/>
+  <rect x="140" y="74" width="40" height="16" fill="#2563eb"/>
+  <rect x="100" y="74" width="80" height="16" fill="none" stroke="#1e293b" stroke-width="0.8"/>
+  <text x="120" y="86.5" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">N</text>
+  <text x="160" y="86.5" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">S</text>
+  <text x="140" y="150" text-anchor="middle" font-size="6.8" fill="#475569">Field lines run N → S and are closest together at the poles</text>
+  <text x="140" y="159" text-anchor="middle" font-size="6.8" fill="#475569">Like poles repel · unlike poles attract</text>
+</svg>`;
+
+// ── DISTANCE–TIME GRAPH (s8-14) ─────────────────────────────────────────────────
+DIAGRAMS["distance-time-graph"] = `<svg viewBox="0 0 280 165" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Distance–Time Graph</text>
+  <line x1="40" y1="22" x2="40" y2="128" stroke="#1e293b" stroke-width="1.5"/>
+  <line x1="40" y1="128" x2="252" y2="128" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="18" y="78" font-size="7.5" fill="#475569" transform="rotate(-90 18 78)" text-anchor="middle">distance</text>
+  <text x="146" y="145" font-size="7.5" fill="#475569" text-anchor="middle">time</text>
+  <polyline points="40,128 110,78" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+  <polyline points="110,78 165,78" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+  <polyline points="165,78 230,30" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="70" y="118" font-size="6.4" fill="#4f46e5" text-anchor="middle">constant</text>
+  <text x="70" y="126" font-size="6.4" fill="#4f46e5" text-anchor="middle">speed</text>
+  <text x="137" y="72" font-size="6.4" fill="#b45309" text-anchor="middle">stationary</text>
+  <text x="206" y="55" font-size="6.4" fill="#15803d" text-anchor="middle">faster</text>
+  <text x="206" y="63" font-size="6.4" fill="#15803d" text-anchor="middle">(steeper)</text>
+  <text x="140" y="160" text-anchor="middle" font-size="6.8" fill="#475569">Steeper line = faster · Flat line = not moving · Gradient = speed</text>
+</svg>`;
+
+// ── TRANSVERSE vs LONGITUDINAL WAVES (s8-15) ────────────────────────────────────
+DIAGRAMS["longitudinal-wave"] = `<svg viewBox="0 0 280 165" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="12" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Transverse vs Longitudinal Waves</text>
+  <text x="10" y="30" font-size="8" font-weight="700" fill="#2563eb">Transverse</text>
+  <line x1="14" y1="55" x2="266" y2="55" stroke="#cbd5e1" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <path d="M14 55 Q40 25 66 55 T118 55 T170 55 T222 55 T266 55" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <line x1="40" y1="55" x2="40" y2="32" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="46" y="40" font-size="6.2" fill="#15803d">amplitude</text>
+  <line x1="40" y1="40" x2="92" y2="40" stroke="#7c3aed" stroke-width="1" marker-start="url(#lw)" marker-end="url(#lw)"/>
+  <defs><marker id="lw" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0,6 3,0 6" fill="#7c3aed"/></marker></defs>
+  <text x="66" y="36" font-size="6.2" fill="#7c3aed" text-anchor="middle">wavelength</text>
+  <text x="200" y="78" font-size="6.2" fill="#475569">vibration ⟂ to wave direction →</text>
+  <text x="10" y="100" font-size="8" font-weight="700" fill="#dc2626">Longitudinal (sound)</text>
+  <g stroke="#dc2626" stroke-width="1.4">
+    <line x1="20" y1="112" x2="20" y2="140"/><line x1="30" y1="112" x2="30" y2="140"/>
+    <line x1="46" y1="112" x2="46" y2="140"/><line x1="62" y1="112" x2="62" y2="140"/>
+    <line x1="72" y1="112" x2="72" y2="140"/><line x1="80" y1="112" x2="80" y2="140"/>
+    <line x1="100" y1="112" x2="100" y2="140"/><line x1="120" y1="112" x2="120" y2="140"/>
+    <line x1="130" y1="112" x2="130" y2="140"/><line x1="140" y1="112" x2="140" y2="140"/>
+    <line x1="160" y1="112" x2="160" y2="140"/><line x1="180" y1="112" x2="180" y2="140"/>
+    <line x1="190" y1="112" x2="190" y2="140"/><line x1="198" y1="112" x2="198" y2="140"/>
+    <line x1="218" y1="112" x2="218" y2="140"/><line x1="238" y1="112" x2="238" y2="140"/>
+  </g>
+  <text x="75" y="152" font-size="6.2" fill="#991b1b" text-anchor="middle">compression</text>
+  <text x="170" y="152" font-size="6.2" fill="#991b1b" text-anchor="middle">rarefaction</text>
+  <line x1="75" y1="146" x2="75" y2="141" stroke="#991b1b" stroke-width="0.8"/>
+  <line x1="170" y1="146" x2="170" y2="141" stroke="#991b1b" stroke-width="0.8"/>
+</svg>`;
+
+// ── LEAF STRUCTURE (s8-03) ──────────────────────────────────────────────────────
+DIAGRAMS["leaf-structure"] = `<svg viewBox="0 0 280 165" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Cross-Section of a Leaf</text>
+  <rect x="20" y="22" width="170" height="8" fill="#fde68a" stroke="#d97706" stroke-width="0.6"/>
+  <rect x="20" y="30" width="170" height="16" fill="#d9f99d" stroke="#65a30d" stroke-width="0.6"/>
+  <g fill="#4ade80" stroke="#15803d" stroke-width="0.6">
+    <rect x="22" y="46" width="13" height="34" rx="2"/><rect x="37" y="46" width="13" height="34" rx="2"/>
+    <rect x="52" y="46" width="13" height="34" rx="2"/><rect x="67" y="46" width="13" height="34" rx="2"/>
+    <rect x="82" y="46" width="13" height="34" rx="2"/><rect x="97" y="46" width="13" height="34" rx="2"/>
+    <rect x="112" y="46" width="13" height="34" rx="2"/><rect x="127" y="46" width="13" height="34" rx="2"/>
+    <rect x="142" y="46" width="13" height="34" rx="2"/><rect x="157" y="46" width="13" height="34" rx="2"/>
+    <rect x="172" y="46" width="13" height="34" rx="2"/>
+  </g>
+  <g fill="#86efac" stroke="#16a34a" stroke-width="0.6">
+    <circle cx="32" cy="92" r="7"/><circle cx="52" cy="98" r="7"/><circle cx="72" cy="90" r="7"/><circle cx="92" cy="99" r="7"/>
+    <circle cx="112" cy="91" r="7"/><circle cx="132" cy="99" r="7"/><circle cx="152" cy="91" r="7"/><circle cx="174" cy="98" r="7"/>
+  </g>
+  <rect x="20" y="108" width="170" height="12" fill="#d9f99d" stroke="#65a30d" stroke-width="0.6"/>
+  <rect x="92" y="120" width="10" height="6" fill="#bbf7d0" stroke="#15803d" stroke-width="0.8"/>
+  <rect x="108" y="120" width="10" height="6" fill="#bbf7d0" stroke="#15803d" stroke-width="0.8"/>
+  <circle cx="105" cy="123" r="3" fill="#ffffff" stroke="#475569" stroke-width="0.6"/>
+  <g font-size="6.6" fill="#1e293b">
+    <text x="196" y="29">waxy cuticle</text>
+    <text x="196" y="42">upper epidermis</text>
+    <text x="196" y="65">palisade mesophyll</text>
+    <text x="196" y="74" fill="#15803d" font-size="6">(most chloroplasts)</text>
+    <text x="196" y="97">spongy mesophyll</text>
+    <text x="196" y="106" fill="#15803d" font-size="6">(air spaces for gases)</text>
+    <text x="196" y="118">lower epidermis</text>
+    <text x="124" y="135" font-size="6.4">stoma &amp; guard cells</text>
+  </g>
+  <text x="105" y="148" text-anchor="middle" font-size="6.6" fill="#475569">Stomata let CO₂ in and O₂ out; guard cells open/close them</text>
+</svg>`;
+
+// ── VENTILATION MECHANISM (s8-02) ───────────────────────────────────────────────
+DIAGRAMS["ventilation-mechanism"] = `<svg viewBox="0 0 280 165" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="vm" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#2563eb"/></marker></defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Breathing In and Out</text>
+  <text x="68" y="30" text-anchor="middle" font-size="8.5" font-weight="700" fill="#16a34a">INHALE</text>
+  <path d="M40 38 h56 v66 h-56 Z" fill="#eff6ff" stroke="#94a3b8" stroke-width="1.2"/>
+  <g stroke="#dc2626" stroke-width="2" fill="none"><path d="M44 50 h48"/><path d="M44 60 h48"/><path d="M44 70 h48"/></g>
+  <ellipse cx="68" cy="80" rx="22" ry="16" fill="#fecaca" stroke="#ef4444" stroke-width="1.2"/>
+  <path d="M44 104 Q68 110 92 104" stroke="#7c3aed" stroke-width="2.5" fill="none"/>
+  <text x="68" y="120" text-anchor="middle" font-size="6.4" fill="#475569">diaphragm flattens</text>
+  <text x="68" y="129" text-anchor="middle" font-size="6.4" fill="#475569">ribs up &amp; out · volume ↑</text>
+  <text x="68" y="138" text-anchor="middle" font-size="6.4" fill="#16a34a">pressure ↓ → air in</text>
+  <line x1="68" y1="46" x2="68" y2="36" stroke="#2563eb" stroke-width="1.4" marker-end="url(#vm)"/>
+  <text x="212" y="30" text-anchor="middle" font-size="8.5" font-weight="700" fill="#b45309">EXHALE</text>
+  <path d="M184 38 h56 v66 h-56 Z" fill="#fff7ed" stroke="#94a3b8" stroke-width="1.2"/>
+  <g stroke="#dc2626" stroke-width="2" fill="none"><path d="M190 56 h44"/><path d="M190 64 h44"/><path d="M190 72 h44"/></g>
+  <ellipse cx="212" cy="78" rx="17" ry="12" fill="#fecaca" stroke="#ef4444" stroke-width="1.2"/>
+  <path d="M188 100 Q212 88 236 100" stroke="#7c3aed" stroke-width="2.5" fill="none"/>
+  <text x="212" y="120" text-anchor="middle" font-size="6.4" fill="#475569">diaphragm domes up</text>
+  <text x="212" y="129" text-anchor="middle" font-size="6.4" fill="#475569">ribs down &amp; in · volume ↓</text>
+  <text x="212" y="138" text-anchor="middle" font-size="6.4" fill="#b45309">pressure ↑ → air out</text>
+  <line x1="212" y1="36" x2="212" y2="46" stroke="#2563eb" stroke-width="1.4" marker-end="url(#vm)"/>
+  <text x="140" y="156" text-anchor="middle" font-size="6.6" fill="#475569">Ventilation is a mechanical process driven by pressure changes</text>
+</svg>`;
+
+// ── ALVEOLUS GAS EXCHANGE (s8-02) ───────────────────────────────────────────────
+DIAGRAMS["alveolus-gas-exchange"] = `<svg viewBox="0 0 280 158" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="ag" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#475569"/></marker></defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Gas Exchange in an Alveolus</text>
+  <circle cx="105" cy="82" r="56" fill="#e0f2fe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="105" y="50" text-anchor="middle" font-size="7.5" font-weight="700" fill="#1d4ed8">alveolus (air sac)</text>
+  <path d="M150 40 C200 50 200 120 150 124" fill="none" stroke="#dc2626" stroke-width="9" stroke-linecap="round"/>
+  <path d="M150 40 C200 50 200 120 150 124" fill="none" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+  <text x="205" y="84" font-size="7" font-weight="700" fill="#b91c1c" transform="rotate(90 205 84)" text-anchor="middle">capillary (blood)</text>
+  <line x1="120" y1="70" x2="158" y2="64" stroke="#16a34a" stroke-width="1.6" marker-end="url(#ag)"/>
+  <text x="138" y="60" text-anchor="middle" font-size="7" fill="#15803d">O₂ in</text>
+  <line x1="158" y1="100" x2="120" y2="96" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#ag)"/>
+  <text x="138" y="114" text-anchor="middle" font-size="7" fill="#6d28d9">CO₂ out</text>
+  <text x="140" y="146" text-anchor="middle" font-size="6.5" fill="#475569">Thin walls · large surface area · moist · rich blood supply → fast diffusion</text>
+</svg>`;
+
+// ── PHOTOSYNTHESIS RATE / LIMITING FACTORS (s8-03) ──────────────────────────────
+DIAGRAMS["photosynthesis-rate"] = `<svg viewBox="0 0 280 165" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Limiting Factors of Photosynthesis</text>
+  <line x1="42" y1="24" x2="42" y2="126" stroke="#1e293b" stroke-width="1.5"/>
+  <line x1="42" y1="126" x2="252" y2="126" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="20" y="80" font-size="7" fill="#475569" transform="rotate(-90 20 80)" text-anchor="middle">rate of photosynthesis</text>
+  <text x="146" y="143" font-size="7" fill="#475569" text-anchor="middle">light intensity / CO₂ concentration</text>
+  <path d="M42 126 C90 60 150 46 240 44" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+  <line x1="150" y1="46" x2="150" y2="126" stroke="#94a3b8" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="92" y="86" font-size="6.4" fill="#15803d" text-anchor="middle">factor is limiting</text>
+  <text x="92" y="94" font-size="6.4" fill="#15803d" text-anchor="middle">(rate rises)</text>
+  <text x="200" y="38" font-size="6.4" fill="#b45309" text-anchor="middle">levels off — another</text>
+  <text x="200" y="46" font-size="6.4" fill="#b45309" text-anchor="middle">factor now limits</text>
+  <text x="140" y="158" text-anchor="middle" font-size="6.6" fill="#475569">The limiting factor is whichever is in shortest supply</text>
+</svg>`;
+
+// ── PATHOGEN TYPES (s8-04) ──────────────────────────────────────────────────────
+DIAGRAMS["pathogen-types"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Four Types of Pathogen</text>
+  <rect x="8" y="22" width="62" height="116" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1.2"/>
+  <ellipse cx="39" cy="50" rx="16" ry="9" fill="#fca5a5" stroke="#b91c1c" stroke-width="1"/>
+  <path d="M55 50 q8 -2 10 -6" stroke="#b91c1c" stroke-width="1" fill="none"/>
+  <text x="39" y="78" text-anchor="middle" font-size="7.5" font-weight="700" fill="#991b1b">Bacteria</text>
+  <text x="39" y="92" text-anchor="middle" font-size="6" fill="#475569">living cells;</text>
+  <text x="39" y="100" text-anchor="middle" font-size="6" fill="#475569">release toxins</text>
+  <text x="39" y="114" text-anchor="middle" font-size="6" fill="#334155">e.g. Salmonella</text>
+  <text x="39" y="122" text-anchor="middle" font-size="6" fill="#334155">→ food poisoning</text>
+  <rect x="74" y="22" width="62" height="116" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2"/>
+  <polygon points="105,40 116,48 112,60 98,60 94,48" fill="#93c5fd" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="105" y="78" text-anchor="middle" font-size="7.5" font-weight="700" fill="#1e40af">Viruses</text>
+  <text x="105" y="92" text-anchor="middle" font-size="6" fill="#475569">not living;</text>
+  <text x="105" y="100" text-anchor="middle" font-size="6" fill="#475569">hijack cells</text>
+  <text x="105" y="114" text-anchor="middle" font-size="6" fill="#334155">e.g. influenza</text>
+  <text x="105" y="122" text-anchor="middle" font-size="6" fill="#334155">→ flu</text>
+  <rect x="140" y="22" width="62" height="116" rx="6" fill="#fefce8" stroke="#ca8a04" stroke-width="1.2"/>
+  <line x1="171" y1="42" x2="171" y2="62" stroke="#a16207" stroke-width="1.5"/>
+  <circle cx="171" cy="40" r="6" fill="#fde047" stroke="#a16207" stroke-width="1"/>
+  <text x="171" y="78" text-anchor="middle" font-size="7.5" font-weight="700" fill="#92400e">Fungi</text>
+  <text x="171" y="92" text-anchor="middle" font-size="6" fill="#475569">spores spread</text>
+  <text x="171" y="100" text-anchor="middle" font-size="6" fill="#475569">by air/contact</text>
+  <text x="171" y="114" text-anchor="middle" font-size="6" fill="#334155">e.g. Tinea</text>
+  <text x="171" y="122" text-anchor="middle" font-size="6" fill="#334155">→ athlete's foot</text>
+  <rect x="206" y="22" width="66" height="116" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.2"/>
+  <path d="M239 40 q-12 6 0 16 q12 6 0 12" fill="#86efac" stroke="#15803d" stroke-width="1"/>
+  <text x="239" y="78" text-anchor="middle" font-size="7.5" font-weight="700" fill="#15803d">Protists</text>
+  <text x="239" y="92" text-anchor="middle" font-size="6" fill="#475569">often carried</text>
+  <text x="239" y="100" text-anchor="middle" font-size="6" fill="#475569">by a vector</text>
+  <text x="239" y="114" text-anchor="middle" font-size="6" fill="#334155">e.g. Plasmodium</text>
+  <text x="239" y="122" text-anchor="middle" font-size="6" fill="#334155">→ malaria</text>
+</svg>`;
+
+// ── ANTIBIOTIC RESISTANCE (s8-04) ───────────────────────────────────────────────
+DIAGRAMS["antibiotic-resistance"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="ar" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#64748b"/></marker></defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">How Antibiotic Resistance Develops</text>
+  <g>
+    <text x="40" y="30" text-anchor="middle" font-size="6.6" fill="#475569">1. Population with</text>
+    <text x="40" y="38" text-anchor="middle" font-size="6.6" fill="#475569">a few resistant</text>
+    <circle cx="26" cy="56" r="5" fill="#93c5fd"/><circle cx="40" cy="52" r="5" fill="#93c5fd"/><circle cx="54" cy="58" r="5" fill="#93c5fd"/>
+    <circle cx="33" cy="68" r="5" fill="#93c5fd"/><circle cx="48" cy="70" r="5" fill="#f87171"/>
+  </g>
+  <line x1="62" y1="60" x2="82" y2="60" stroke="#64748b" stroke-width="1.4" marker-end="url(#ar)"/>
+  <g>
+    <text x="108" y="30" text-anchor="middle" font-size="6.6" fill="#475569">2. Antibiotic kills</text>
+    <text x="108" y="38" text-anchor="middle" font-size="6.6" fill="#475569">non-resistant</text>
+    <circle cx="94" cy="56" r="5" fill="#cbd5e1" stroke="#94a3b8" stroke-dasharray="2,1"/><circle cx="108" cy="52" r="5" fill="#cbd5e1" stroke="#94a3b8" stroke-dasharray="2,1"/>
+    <circle cx="122" cy="58" r="5" fill="#cbd5e1" stroke="#94a3b8" stroke-dasharray="2,1"/>
+    <circle cx="116" cy="70" r="5" fill="#f87171"/>
+  </g>
+  <line x1="130" y1="60" x2="150" y2="60" stroke="#64748b" stroke-width="1.4" marker-end="url(#ar)"/>
+  <g>
+    <text x="176" y="30" text-anchor="middle" font-size="6.6" fill="#475569">3. Resistant ones</text>
+    <text x="176" y="38" text-anchor="middle" font-size="6.6" fill="#475569">survive &amp; reproduce</text>
+    <circle cx="166" cy="56" r="5" fill="#f87171"/><circle cx="180" cy="54" r="5" fill="#f87171"/>
+    <circle cx="172" cy="68" r="5" fill="#f87171"/><circle cx="186" cy="66" r="5" fill="#f87171"/>
+  </g>
+  <line x1="196" y1="60" x2="216" y2="60" stroke="#64748b" stroke-width="1.4" marker-end="url(#ar)"/>
+  <g>
+    <text x="246" y="30" text-anchor="middle" font-size="6.6" fill="#475569">4. Resistant strain</text>
+    <text x="246" y="38" text-anchor="middle" font-size="6.6" fill="#475569">spreads</text>
+    <circle cx="232" cy="56" r="5" fill="#dc2626"/><circle cx="246" cy="52" r="5" fill="#dc2626"/><circle cx="260" cy="58" r="5" fill="#dc2626"/>
+    <circle cx="239" cy="68" r="5" fill="#dc2626"/><circle cx="253" cy="70" r="5" fill="#dc2626"/>
+  </g>
+  <rect x="20" y="92" width="240" height="44" rx="5" fill="#fef2f2" stroke="#ef4444" stroke-width="1"/>
+  <text x="140" y="106" text-anchor="middle" font-size="6.8" fill="#991b1b">This is natural selection. To slow it: finish every course of antibiotics,</text>
+  <text x="140" y="118" text-anchor="middle" font-size="6.8" fill="#991b1b">don't use them for viral infections, and reduce use in farming.</text>
+  <text x="140" y="130" text-anchor="middle" font-size="6.4" fill="#64748b">Blue = killed by antibiotic · Red = resistant</text>
+</svg>`;
+
+// ── QUADRAT SAMPLING (s8-05) ────────────────────────────────────────────────────
+DIAGRAMS["quadrat-sampling"] = `<svg viewBox="0 0 280 155" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Estimating Population with a Quadrat</text>
+  <rect x="20" y="22" width="150" height="110" rx="4" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+  <rect x="58" y="46" width="44" height="44" fill="none" stroke="#1e293b" stroke-width="2"/>
+  <g stroke="#1e293b" stroke-width="0.6"><line x1="80" y1="46" x2="80" y2="90"/><line x1="58" y1="68" x2="102" y2="68"/></g>
+  <g fill="#16a34a"><circle cx="68" cy="56" r="3"/><circle cx="92" cy="58" r="3"/><circle cx="64" cy="80" r="3"/><circle cx="88" cy="82" r="3"/><circle cx="78" cy="70" r="3"/></g>
+  <g fill="#bbf7d0"><circle cx="34" cy="40" r="3"/><circle cx="150" cy="36" r="3"/><circle cx="40" cy="116" r="3"/><circle cx="150" cy="118" r="3"/><circle cx="120" cy="100" r="3"/></g>
+  <text x="80" y="104" text-anchor="middle" font-size="6.4" fill="#475569">quadrat (0.5 m × 0.5 m)</text>
+  <rect x="180" y="30" width="92" height="100" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="226" y="44" text-anchor="middle" font-size="7" font-weight="700" fill="#1e293b">Method</text>
+  <text x="186" y="58" font-size="6.3" fill="#334155">1. Place quadrats</text>
+  <text x="186" y="68" font-size="6.3" fill="#334155">   randomly</text>
+  <text x="186" y="80" font-size="6.3" fill="#334155">2. Count species</text>
+  <text x="186" y="92" font-size="6.3" fill="#334155">3. Find the mean</text>
+  <text x="186" y="104" font-size="6.3" fill="#334155">4. × by total area</text>
+  <text x="186" y="116" font-size="6.3" fill="#334155">   ÷ quadrat area</text>
+  <text x="140" y="148" text-anchor="middle" font-size="6.4" fill="#475569">Use a transect (a line of quadrats) to study how a population changes across an area</text>
+</svg>`;
+
+// ── FOOD WEB (s8-05) ────────────────────────────────────────────────────────────
+DIAGRAMS["food-web"] = `<svg viewBox="0 0 280 165" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="fw" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#94a3b8"/></marker></defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">A Food Web</text>
+  <circle cx="50" cy="130" r="18" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/><text x="50" y="127" text-anchor="middle" font-size="13">🌿</text><text x="50" y="140" text-anchor="middle" font-size="6">grass</text>
+  <circle cx="140" cy="135" r="18" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/><text x="140" y="132" text-anchor="middle" font-size="13">🌳</text><text x="140" y="145" text-anchor="middle" font-size="6">plants</text>
+  <circle cx="55" cy="74" r="18" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><text x="55" y="71" text-anchor="middle" font-size="13">🐇</text><text x="55" y="84" text-anchor="middle" font-size="6">rabbit</text>
+  <circle cx="140" cy="72" r="18" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><text x="140" y="69" text-anchor="middle" font-size="13">🐁</text><text x="140" y="82" text-anchor="middle" font-size="6">mouse</text>
+  <circle cx="225" cy="100" r="18" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/><text x="225" y="97" text-anchor="middle" font-size="13">🦊</text><text x="225" y="110" text-anchor="middle" font-size="6">fox</text>
+  <circle cx="210" cy="38" r="18" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/><text x="210" y="35" text-anchor="middle" font-size="13">🦉</text><text x="210" y="48" text-anchor="middle" font-size="6">owl</text>
+  <g stroke="#94a3b8" stroke-width="1.3" fill="none">
+    <line x1="50" y1="112" x2="54" y2="92" marker-end="url(#fw)"/>
+    <line x1="130" y1="120" x2="62" y2="88" marker-end="url(#fw)"/>
+    <line x1="138" y1="118" x2="140" y2="90" marker-end="url(#fw)"/>
+    <line x1="70" y1="68" x2="208" y2="44" marker-end="url(#fw)"/>
+    <line x1="72" y1="80" x2="208" y2="96" marker-end="url(#fw)"/>
+    <line x1="150" y1="60" x2="204" y2="48" marker-end="url(#fw)"/>
+    <line x1="152" y1="80" x2="210" y2="92" marker-end="url(#fw)"/>
+  </g>
+  <text x="140" y="160" text-anchor="middle" font-size="6.5" fill="#475569">Arrows point in the direction energy flows. Overlapping chains = a food web.</text>
+</svg>`;
+
+// ── CONSERVATION OF MASS (s8-07) ────────────────────────────────────────────────
+DIAGRAMS["conservation-of-mass"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Conservation of Mass</text>
+  <text x="70" y="32" text-anchor="middle" font-size="7.5" font-weight="700" fill="#475569">REACTANTS</text>
+  <rect x="22" y="40" width="44" height="40" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="44" y="58" text-anchor="middle" font-size="6.6" fill="#1e40af">magnesium</text>
+  <text x="44" y="72" text-anchor="middle" font-size="8" font-weight="700" fill="#1e40af">2.4 g</text>
+  <text x="76" y="64" text-anchor="middle" font-size="11" fill="#475569">+</text>
+  <rect x="86" y="40" width="44" height="40" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.2"/>
+  <text x="108" y="58" text-anchor="middle" font-size="6.6" fill="#1e40af">oxygen</text>
+  <text x="108" y="72" text-anchor="middle" font-size="8" font-weight="700" fill="#1e40af">1.6 g</text>
+  <text x="150" y="64" text-anchor="middle" font-size="13" fill="#16a34a">→</text>
+  <text x="218" y="32" text-anchor="middle" font-size="7.5" font-weight="700" fill="#475569">PRODUCT</text>
+  <rect x="170" y="40" width="96" height="40" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+  <text x="218" y="58" text-anchor="middle" font-size="6.6" fill="#15803d">magnesium oxide</text>
+  <text x="218" y="72" text-anchor="middle" font-size="8" font-weight="700" fill="#15803d">4.0 g</text>
+  <rect x="44" y="98" width="178" height="22" rx="11" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.2"/>
+  <text x="133" y="113" text-anchor="middle" font-size="8" font-weight="700" fill="#92400e">2.4 g + 1.6 g = 4.0 g</text>
+  <text x="140" y="138" text-anchor="middle" font-size="6.6" fill="#475569">No atoms are made or lost — they are just rearranged, so total mass stays the same</text>
+</svg>`;
+
+// ── EXOTHERMIC / ENDOTHERMIC ENERGY DIAGRAM (s8-07) ─────────────────────────────
+DIAGRAMS["energy-level-diagram"] = `<svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs>
+    <marker id="el" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#475569"/></marker>
+  </defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Exothermic vs Endothermic</text>
+  <text x="68" y="28" text-anchor="middle" font-size="8" font-weight="700" fill="#dc2626">Exothermic</text>
+  <line x1="22" y1="34" x2="22" y2="120" stroke="#1e293b" stroke-width="1"/>
+  <line x1="22" y1="120" x2="120" y2="120" stroke="#1e293b" stroke-width="1"/>
+  <text x="12" y="80" font-size="6" fill="#475569" transform="rotate(-90 12 80)" text-anchor="middle">energy</text>
+  <path d="M30 50 h22 q10 0 14 12 q6 18 18 26 h22" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <line x1="40" y1="50" x2="40" y2="104" stroke="#16a34a" stroke-width="1.2" marker-end="url(#el)"/>
+  <text x="44" y="80" font-size="6" fill="#15803d">energy</text>
+  <text x="44" y="88" font-size="6" fill="#15803d">released</text>
+  <text x="34" y="48" font-size="6" fill="#475569">reactants</text>
+  <text x="92" y="100" font-size="6" fill="#475569">products</text>
+  <text x="68" y="134" text-anchor="middle" font-size="6.3" fill="#475569">products lower → releases heat</text>
+  <text x="212" y="28" text-anchor="middle" font-size="8" font-weight="700" fill="#2563eb">Endothermic</text>
+  <line x1="166" y1="34" x2="166" y2="120" stroke="#1e293b" stroke-width="1"/>
+  <line x1="166" y1="120" x2="264" y2="120" stroke="#1e293b" stroke-width="1"/>
+  <path d="M174 100 h22 q10 0 14 -12 q6 -18 18 -26 h22" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <line x1="184" y1="100 " x2="184" y2="52" stroke="#7c3aed" stroke-width="1.2" marker-end="url(#el)"/>
+  <text x="188" y="78" font-size="6" fill="#6d28d9">energy</text>
+  <text x="188" y="86" font-size="6" fill="#6d28d9">absorbed</text>
+  <text x="178" y="112" font-size="6" fill="#475569">reactants</text>
+  <text x="238" y="50" font-size="6" fill="#475569">products</text>
+  <text x="212" y="134" text-anchor="middle" font-size="6.3" fill="#475569">products higher → takes in heat</text>
+  <text x="140" y="152" text-anchor="middle" font-size="6.4" fill="#94a3b8">e.g. combustion (exo) · thermal decomposition (endo)</text>
+</svg>`;
+
+// ── DISPLACEMENT REACTION (s8-09) ───────────────────────────────────────────────
+DIAGRAMS["displacement-reaction"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Displacement Reaction</text>
+  <text x="70" y="30" text-anchor="middle" font-size="7" fill="#475569">iron nail in copper sulfate</text>
+  <path d="M34 40 h72 l-8 70 h-56 Z" fill="#bae6fd" stroke="#0284c7" stroke-width="1.2"/>
+  <rect x="66" y="34" width="8" height="60" rx="2" fill="#94a3b8" stroke="#475569" stroke-width="1"/>
+  <text x="112" y="50" font-size="6.4" fill="#0369a1">blue solution</text>
+  <text x="112" y="59" font-size="6.4" fill="#475569">(copper sulfate)</text>
+  <text x="44" y="124" text-anchor="middle" font-size="6.4" fill="#475569">BEFORE</text>
+  <text x="140" y="74" text-anchor="middle" font-size="16" fill="#16a34a">→</text>
+  <path d="M174 40 h72 l-8 70 h-56 Z" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.2"/>
+  <rect x="206" y="34" width="8" height="60" rx="2" fill="#f97316" stroke="#c2410c" stroke-width="1"/>
+  <circle cx="210" cy="80" r="3" fill="#ea580c"/><circle cx="204" cy="88" r="2.5" fill="#ea580c"/>
+  <text x="252" y="50" font-size="6.4" fill="#15803d">paler / green</text>
+  <text x="252" y="59" font-size="6.4" fill="#c2410c">copper coats nail</text>
+  <text x="210" y="124" text-anchor="middle" font-size="6.4" fill="#475569">AFTER</text>
+  <text x="140" y="140" text-anchor="middle" font-size="6.8" fill="#334155">iron + copper sulfate → iron sulfate + copper  (more reactive metal displaces less reactive)</text>
+</svg>`;
+
+// ── POLYMERS: THERMOSOFTENING vs THERMOSETTING (s8-10) ──────────────────────────
+DIAGRAMS["polymers-comparison"] = `<svg viewBox="0 0 280 155" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Thermosoftening vs Thermosetting Polymers</text>
+  <rect x="10" y="22" width="128" height="116" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="74" y="36" text-anchor="middle" font-size="7.8" font-weight="700" fill="#1e40af">Thermosoftening</text>
+  <g stroke="#2563eb" stroke-width="1.6" fill="none">
+    <path d="M22 50 q12 -8 24 0 t24 0 t24 0 t24 0"/>
+    <path d="M22 62 q12 8 24 0 t24 0 t24 0 t24 0"/>
+    <path d="M22 74 q12 -8 24 0 t24 0 t24 0 t24 0"/>
+  </g>
+  <text x="74" y="98" text-anchor="middle" font-size="6.4" fill="#475569">separate chains, no links</text>
+  <text x="74" y="110" text-anchor="middle" font-size="6.4" fill="#16a34a">melts &amp; can be remoulded</text>
+  <text x="74" y="122" text-anchor="middle" font-size="6.4" fill="#334155">e.g. polythene bottles</text>
+  <text x="74" y="132" text-anchor="middle" font-size="6" fill="#94a3b8">recyclable</text>
+  <rect x="142" y="22" width="128" height="116" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="206" y="36" text-anchor="middle" font-size="7.8" font-weight="700" fill="#991b1b">Thermosetting</text>
+  <g stroke="#dc2626" stroke-width="1.6" fill="none">
+    <path d="M154 50 q12 -8 24 0 t24 0 t24 0 t24 0"/>
+    <path d="M154 70 q12 8 24 0 t24 0 t24 0 t24 0"/>
+    <line x1="166" y1="50" x2="166" y2="70"/><line x1="190" y1="50" x2="190" y2="70"/><line x1="214" y1="50" x2="214" y2="70"/><line x1="238" y1="50" x2="238" y2="70"/>
+  </g>
+  <text x="206" y="98" text-anchor="middle" font-size="6.4" fill="#475569">cross-links lock chains</text>
+  <text x="206" y="110" text-anchor="middle" font-size="6.4" fill="#dc2626">does NOT melt; heat-resistant</text>
+  <text x="206" y="122" text-anchor="middle" font-size="6.4" fill="#334155">e.g. plug casings, saucepan handles</text>
+  <text x="206" y="132" text-anchor="middle" font-size="6" fill="#94a3b8">cannot be remoulded</text>
+</svg>`;
+
+// ── CIRCUIT SYMBOLS (s8-12) ─────────────────────────────────────────────────────
+DIAGRAMS["circuit-symbols"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Common Circuit Symbols</text>
+  <g stroke="#1e293b" stroke-width="1.6" fill="none">
+    <line x1="20" y1="38" x2="36" y2="38"/><line x1="44" y1="30" x2="44" y2="46"/><line x1="44" y1="34" x2="50" y2="34"/><line x1="50" y1="42" x2="50" y2="26"/><line x1="50" y1="38" x2="66" y2="38"/>
+    <line x1="106" y1="38" x2="122" y2="38"/><rect x="122" y="32" width="20" height="12" fill="none"/><line x1="142" y1="38" x2="158" y2="38"/>
+    <line x1="198" y1="38" x2="214" y2="38"/><circle cx="226" cy="38" r="12"/><path d="M218 38 h16 M226 30 v16" /><line x1="238" y1="38" x2="254" y2="38"/>
+    <line x1="20" y1="92" x2="36" y2="92"/><circle cx="48" cy="92" r="12"/><line x1="40" y1="84" x2="56" y2="100"/><line x1="40" y1="100" x2="56" y2="84"/><line x1="60" y1="92" x2="66" y2="92"/>
+    <line x1="106" y1="92" x2="122" y2="92"/><circle cx="134" cy="92" r="12"/><text x="134" y="96" font-size="10" stroke="none" fill="#1e293b" text-anchor="middle">A</text><line x1="146" y1="92" x2="158" y2="92"/>
+    <line x1="198" y1="92" x2="214" y2="92"/><circle cx="226" cy="92" r="12"/><text x="226" y="96" font-size="10" stroke="none" fill="#1e293b" text-anchor="middle">V</text><line x1="238" y1="92" x2="254" y2="92"/>
+  </g>
+  <g font-size="6.6" fill="#475569" text-anchor="middle">
+    <text x="43" y="60">cell</text><text x="132" y="60">resistor</text><text x="226" y="60">bulb</text>
+    <text x="43" y="114">motor</text><text x="132" y="114">ammeter</text><text x="226" y="114">voltmeter</text>
+  </g>
+  <text x="140" y="140" text-anchor="middle" font-size="6.6" fill="#475569">Ohm's Law: V = I × R  (voltage = current × resistance)</text>
+</svg>`;
+
+// ── ELECTROMAGNET / SOLENOID (s8-13) ────────────────────────────────────────────
+DIAGRAMS["electromagnet"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="em2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#2563eb"/></marker></defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">An Electromagnet (Solenoid)</text>
+  <rect x="70" y="58" width="130" height="22" rx="3" fill="#cbd5e1" stroke="#64748b" stroke-width="1.2"/>
+  <text x="135" y="73" text-anchor="middle" font-size="6.6" fill="#475569">soft iron core</text>
+  <g stroke="#b45309" stroke-width="2.4" fill="none">
+    <path d="M78 58 q6 -14 12 0"/><path d="M96 58 q6 -14 12 0"/><path d="M114 58 q6 -14 12 0"/><path d="M132 58 q6 -14 12 0"/><path d="M150 58 q6 -14 12 0"/><path d="M168 58 q6 -14 12 0"/>
+    <path d="M78 80 q6 14 12 0"/><path d="M96 80 q6 14 12 0"/><path d="M114 80 q6 14 12 0"/><path d="M132 80 q6 14 12 0"/><path d="M150 80 q6 14 12 0"/><path d="M168 80 q6 14 12 0"/>
+  </g>
+  <text x="135" y="44" text-anchor="middle" font-size="6.4" fill="#b45309">coil of wire</text>
+  <line x1="186" y1="69" x2="230" y2="69" stroke="#1e293b" stroke-width="1.4"/>
+  <line x1="74" y1="69" x2="40" y2="69" stroke="#1e293b" stroke-width="1.4"/>
+  <line x1="40" y1="69" x2="40" y2="100" stroke="#1e293b" stroke-width="1.4"/>
+  <line x1="230" y1="69" x2="230" y2="100" stroke="#1e293b" stroke-width="1.4"/>
+  <line x1="40" y1="100" x2="120" y2="100" stroke="#1e293b" stroke-width="1.4"/>
+  <line x1="150" y1="100" x2="230" y2="100" stroke="#1e293b" stroke-width="1.4"/>
+  <line x1="125" y1="94" x2="125" y2="106" stroke="#1e293b" stroke-width="1.4"/><line x1="131" y1="90" x2="131" y2="110" stroke="#1e293b" stroke-width="1.4"/><line x1="139" y1="94" x2="139" y2="106" stroke="#1e293b" stroke-width="1.4"/><line x1="145" y1="90" x2="145" y2="110" stroke="#1e293b" stroke-width="1.4"/>
+  <text x="135" y="120" text-anchor="middle" font-size="6.2" fill="#475569">cell</text>
+  <rect x="14" y="123" width="252" height="25" rx="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="140" y="134" text-anchor="middle" font-size="6.3" fill="#1e40af">Stronger with: more current · more turns on the coil · an iron core.</text>
+  <text x="140" y="144" text-anchor="middle" font-size="6.3" fill="#1e40af">Switch the current off and the magnetism stops.</text>
+</svg>`;
+
+// ── REFRACTION (s8-16) ──────────────────────────────────────────────────────────
+DIAGRAMS["refraction"] = `<svg viewBox="0 0 280 155" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="rf" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#f59e0b"/></marker></defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Refraction of Light</text>
+  <rect x="20" y="78" width="240" height="60" fill="#dbeafe" stroke="#93c5fd" stroke-width="0.8"/>
+  <text x="44" y="58" font-size="6.6" fill="#475569">air (less dense)</text>
+  <text x="44" y="98" font-size="6.6" fill="#1e40af">glass (more dense)</text>
+  <line x1="140" y1="24" x2="140" y2="134" stroke="#94a3b8" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <text x="146" y="32" font-size="6" fill="#94a3b8">normal</text>
+  <line x1="70" y1="34" x2="140" y2="78" stroke="#f59e0b" stroke-width="2" marker-end="url(#rf)"/>
+  <line x1="140" y1="78" x2="186" y2="134" stroke="#f59e0b" stroke-width="2" marker-end="url(#rf)"/>
+  <path d="M140 60 A18 18 0 0 1 128 70" fill="none" stroke="#16a34a" stroke-width="0.9"/>
+  <text x="120" y="62" font-size="6" fill="#15803d">i</text>
+  <path d="M140 96 A18 18 0 0 0 152 106" fill="none" stroke="#dc2626" stroke-width="0.9"/>
+  <text x="156" y="104" font-size="6" fill="#b91c1c">r</text>
+  <text x="140" y="150" text-anchor="middle" font-size="6.6" fill="#475569">Entering glass, light slows and bends TOWARD the normal (i &gt; r)</text>
+</svg>`;
+
+// ── LENSES: CONVEX vs CONCAVE (s8-16) ───────────────────────────────────────────
+DIAGRAMS["lenses"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="ln" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0,6 3,0 6" fill="#2563eb"/></marker></defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Convex vs Concave Lenses</text>
+  <text x="70" y="30" text-anchor="middle" font-size="7.6" font-weight="700" fill="#16a34a">Convex (converging)</text>
+  <path d="M70 38 Q86 70 70 102 Q54 70 70 38 Z" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.2"/>
+  <g stroke="#2563eb" stroke-width="1.4">
+    <line x1="20" y1="55" x2="70" y2="55" marker-end="url(#ln)"/><line x1="70" y1="55" x2="116" y2="70"/>
+    <line x1="20" y1="70" x2="70" y2="70" marker-end="url(#ln)"/><line x1="70" y1="70" x2="116" y2="70"/>
+    <line x1="20" y1="85" x2="70" y2="85" marker-end="url(#ln)"/><line x1="70" y1="85" x2="116" y2="70"/>
+  </g>
+  <circle cx="116" cy="70" r="2.5" fill="#dc2626"/><text x="116" y="86" font-size="6" fill="#b91c1c" text-anchor="middle">focal point</text>
+  <text x="70" y="116" text-anchor="middle" font-size="6.3" fill="#475569">rays bend INWARD to a focus</text>
+  <text x="210" y="30" text-anchor="middle" font-size="7.6" font-weight="700" fill="#b45309">Concave (diverging)</text>
+  <path d="M204 38 Q214 70 204 102 L218 102 Q208 70 218 38 Z" fill="#fde68a" stroke="#b45309" stroke-width="1.2"/>
+  <g stroke="#b45309" stroke-width="1.4">
+    <line x1="160" y1="55" x2="210" y2="55" marker-end="url(#ln)"/><line x1="210" y1="55" x2="256" y2="44"/>
+    <line x1="160" y1="70" x2="210" y2="70" marker-end="url(#ln)"/><line x1="210" y1="70" x2="256" y2="70"/>
+    <line x1="160" y1="85" x2="210" y2="85" marker-end="url(#ln)"/><line x1="210" y1="85" x2="256" y2="96"/>
+  </g>
+  <text x="210" y="116" text-anchor="middle" font-size="6.3" fill="#475569">rays spread OUTWARD (diverge)</text>
+  <text x="140" y="140" text-anchor="middle" font-size="6.4" fill="#94a3b8">Convex lenses are used in magnifying glasses and the eye</text>
+</svg>`;
+
+// ── THE HUMAN EYE (s8-16) ───────────────────────────────────────────────────────
+DIAGRAMS["the-eye"] = `<svg viewBox="0 0 280 158" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">The Human Eye</text>
+  <path d="M40 78 Q120 18 200 78 Q120 138 40 78 Z" fill="#eff6ff" stroke="#94a3b8" stroke-width="1.2"/>
+  <circle cx="120" cy="78" r="60" fill="none" stroke="#cbd5e1" stroke-width="0.8"/>
+  <path d="M60 78 Q70 60 80 78 Q70 96 60 78 Z" fill="#bfdbfe" stroke="#2563eb" stroke-width="1.2"/>
+  <rect x="58" y="70" width="6" height="16" rx="2" fill="#1e293b"/>
+  <ellipse cx="92" cy="78" rx="9" ry="20" fill="#bae6fd" stroke="#0284c7" stroke-width="1.2"/>
+  <path d="M178 50 Q188 78 178 106" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  <circle cx="178" cy="78" r="2.5" fill="#dc2626"/>
+  <g font-size="6.4" fill="#1e293b">
+    <text x="40" y="60">cornea</text><line x1="56" y1="62" x2="64" y2="72" stroke="#94a3b8" stroke-width="0.5"/>
+    <text x="44" y="120">pupil/iris</text><line x1="62" y1="114" x2="62" y2="90" stroke="#94a3b8" stroke-width="0.5"/>
+    <text x="92" y="116" text-anchor="middle">lens</text><line x1="92" y1="110" x2="92" y2="98" stroke="#94a3b8" stroke-width="0.5"/>
+    <text x="206" y="50">retina</text><text x="206" y="59" font-size="5.6" fill="#b91c1c">(light-sensitive)</text>
+    <text x="206" y="112">optic</text><text x="206" y="120">nerve</text>
+  </g>
+  <line x1="190" y1="106" x2="204" y2="112" stroke="#94a3b8" stroke-width="0.5"/>
+  <text x="140" y="150" text-anchor="middle" font-size="6.5" fill="#475569">Cornea + lens focus light onto the retina; the optic nerve sends signals to the brain</text>
+</svg>`;
+
+// ── COLOUR MIXING / FILTERS (s8-16) ─────────────────────────────────────────────
+DIAGRAMS["colour-mixing"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Mixing Coloured Light (Additive)</text>
+  <g style="mix-blend-mode:screen">
+    <circle cx="118" cy="58" r="32" fill="#ff0000"/>
+    <circle cx="98" cy="92" r="32" fill="#00ff00"/>
+    <circle cx="138" cy="92" r="32" fill="#0000ff"/>
+  </g>
+  <text x="118" y="40" text-anchor="middle" font-size="6.6" font-weight="700" fill="#dc2626">RED</text>
+  <text x="72" y="108" text-anchor="middle" font-size="6.6" font-weight="700" fill="#16a34a">GREEN</text>
+  <text x="166" y="108" text-anchor="middle" font-size="6.6" font-weight="700" fill="#2563eb">BLUE</text>
+  <text x="118" y="80" text-anchor="middle" font-size="6" fill="#1e293b">white</text>
+  <rect x="196" y="34" width="76" height="46" rx="4" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="234" y="48" text-anchor="middle" font-size="6.6" font-weight="700" fill="#1e293b">Primary mixes</text>
+  <text x="202" y="60" font-size="6" fill="#475569">R + G = yellow</text>
+  <text x="202" y="69" font-size="6" fill="#475569">G + B = cyan</text>
+  <text x="202" y="78" font-size="6" fill="#475569">R + B = magenta</text>
+  <rect x="196" y="86" width="76" height="40" rx="4" fill="#fef9c3" stroke="#ca8a04"/>
+  <text x="234" y="99" text-anchor="middle" font-size="6.4" font-weight="700" fill="#92400e">Filters</text>
+  <text x="202" y="110" font-size="5.9" fill="#92400e">absorb all colours</text>
+  <text x="202" y="119" font-size="5.9" fill="#92400e">except their own</text>
+  <text x="140" y="142" text-anchor="middle" font-size="6.4" fill="#475569">Red + Green + Blue light = white. A red filter only lets red light through.</text>
+</svg>`;

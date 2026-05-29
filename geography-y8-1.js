@@ -13,22 +13,22 @@ FLASHCARDS.push(
    back:"Hydraulic action is a process of coastal erosion in which waves trap and compress air in cracks in a cliff face.\n\nWhen the wave retreats, the air expands suddenly with great force, widening the cracks and breaking off pieces of rock.\n\nIt is most powerful during storms when waves are large and frequent.",
    difficulty:1,category:"definition"},
 
-  {id:"g8fc-01-2",islandId:"g8-01",
+  {id:"g8fc-01-2",islandId:"g8-01",image:"longshore-drift",
    front:"What is longshore drift and why does it matter?",
    back:"Longshore drift is the movement of sediment (sand and pebbles) along a coastline by wave action.\n\nProcess:\n1. Waves approach the beach at an angle (swash carries material up the beach diagonally).\n2. The backwash pulls material straight back down the beach under gravity.\n3. Over time, material is transported along the coast in a zigzag pattern.\n\nImportance: it builds depositional landforms such as spits and bars, and can block harbour entrances.",
    difficulty:2,category:"process"},
 
-  {id:"g8fc-01-3",islandId:"g8-01",
+  {id:"g8fc-01-3",islandId:"g8-01",image:"wave-cut-platform",
    front:"Describe the formation of a wave-cut platform.",
    back:"A wave-cut platform is a flat rock surface left at the base of a retreating cliff.\n\nFormation sequence:\n1. Waves attack the cliff base (hydraulic action, abrasion, solution).\n2. A notch forms at the high-water mark.\n3. The cliff above the notch is left unsupported and collapses.\n4. Cliff retreats inland; the bedrock exposed at sea level is smoothed by waves.\n5. Over time, a wide, gently sloping rock platform is left exposed at low tide.",
    difficulty:2,category:"process"},
 
-  {id:"g8fc-01-4",islandId:"g8-01",
+  {id:"g8fc-01-4",islandId:"g8-01",image:"coastal-stacks",
    front:"What is the Holderness Coast case study known for?",
    back:"The Holderness Coast in East Yorkshire is the fastest eroding coastline in Europe.\n\nKey facts:\n• Eroding at an average rate of ~2 metres per year.\n• Made of soft boulder clay deposited by glaciers — easily attacked by waves.\n• Villages such as Skipsea and Mappleton are threatened.\n• At Mappleton, rock groynes and a rock armour revetment were built in 1991 to protect the village.\n• These defences caused accelerated erosion further south at Great Cowden.\n• Over 30 villages have been lost to the sea since Roman times.",
    difficulty:2,category:"case-study"},
 
-  {id:"g8fc-01-5",islandId:"g8-01",
+  {id:"g8fc-01-5",islandId:"g8-01",image:"coastal-defences",
    front:"What is the difference between hard engineering and soft engineering coastal management?",
    back:"Hard engineering uses artificial, man-made structures to resist wave energy:\n• Sea walls — concrete barriers that reflect waves.\n• Groynes — wooden or rock fences that trap sediment and prevent longshore drift.\n• Rock armour (rip-rap) — large boulders placed at the cliff base to absorb wave energy.\n\nSoft engineering works with natural processes:\n• Beach nourishment — adding sand to widen beaches (cheap, natural looking).\n• Managed retreat — allowing low-value land to flood (cheapest, most sustainable).\n• Dune stabilisation — planting marram grass to hold dunes in place.",
    difficulty:3,category:"concept"},
@@ -39,17 +39,17 @@ FLASHCARDS.push(
    back:"Abrasion is a process of glacial erosion in which rocks and boulders frozen into the base and sides of a glacier act like sandpaper, scratching and scraping the bedrock as the glacier moves.\n\nThis produces:\n• Scratches in the rock called striations.\n• Fine rock flour (powdered rock) that makes meltwater rivers look milky.\n\nAbrasion is most effective where the glacier moves quickly and carries many large angular fragments.",
    difficulty:1,category:"definition"},
 
-  {id:"g8fc-02-2",islandId:"g8-02",
+  {id:"g8fc-02-2",islandId:"g8-02",image:"corrie",
    front:"Describe the formation of a corrie (cirque).",
    back:"A corrie is an armchair-shaped hollow high on a mountainside, formed by glacial erosion.\n\nFormation sequence:\n1. Snow accumulates in a hollow on a north-facing slope (in the UK).\n2. Snow compacts into ice; the mass rotates as it moves downhill (rotational slip).\n3. Freeze-thaw weathering and plucking deepen the back wall.\n4. Abrasion deepens the floor.\n5. A rock lip forms at the front where erosion is less.\n6. When the ice melts, a circular lake called a tarn may fill the corrie.\n\nExample: Red Tarn on Helvellyn, Lake District.",
    difficulty:2,category:"process"},
 
-  {id:"g8fc-02-3",islandId:"g8-02",
+  {id:"g8fc-02-3",islandId:"g8-02",image:"u-shaped-valley",
    front:"What is the difference between a U-shaped valley and a V-shaped valley?",
    back:"V-shaped valley (river valley):\n• Formed by river erosion — rivers cut downwards.\n• Narrow, steep sides in a V shape.\n• Interlocking spurs on either side.\n\nU-shaped valley (glacial trough):\n• Formed by glacial erosion — a glacier widens and deepens a pre-existing V-shaped valley.\n• Wide, flat floor and near-vertical sides.\n• Tributary valleys are left 'hanging' above the main valley floor (hanging valleys).\n• Example: Borrowdale in the Lake District.",
    difficulty:2,category:"concept"},
 
-  {id:"g8fc-02-4",islandId:"g8-02",
+  {id:"g8fc-02-4",islandId:"g8-02",image:"glacial-deposition",
    front:"What are the main depositional landforms left by glaciers?",
    back:"Glaciers transport and deposit material called till (unsorted) or outwash (sorted by meltwater).\n\nKey depositional landforms:\n• Moraine — ridges of till deposited by a glacier:\n  – Terminal moraine: at the snout (furthest advance of ice).\n  – Lateral moraine: along the sides.\n  – Medial moraine: in the middle where two glaciers join.\n• Drumlin — smooth, egg-shaped hill of till; steep upstream, tapered downstream; shows direction of ice flow.\n• Erratics — large boulders carried far from their source and deposited when ice melts.",
    difficulty:2,category:"definition"},
@@ -65,12 +65,12 @@ FLASHCARDS.push(
    back:"Urbanisation is the increase in the proportion of people living in urban areas (towns and cities).\n\nKey facts:\n• Over 55% of the world's population now lives in cities (2023).\n• Urbanisation is happening fastest in LICs (Low Income Countries) and NEEs (Newly Emerging Economies) in Africa and Asia.\n• In HICs (High Income Countries) such as the UK, urbanisation is largely complete (>80% urban).\n• The fastest growing megacities (>10 million people) include Lagos, Dhaka and Kinshasa.",
    difficulty:1,category:"definition"},
 
-  {id:"g8fc-03-2",islandId:"g8-03",
+  {id:"g8fc-03-2",islandId:"g8-03",image:"push-pull-factors",
    front:"What are push and pull factors of rural-urban migration?",
    back:"Rural-urban migration is the movement of people from the countryside to cities.\n\nPush factors (reasons to leave rural areas):\n• Lack of jobs / low wages in farming.\n• Poor services — limited schools, hospitals.\n• Natural disasters, drought, famine.\n• Mechanisation replacing farm workers.\n\nPull factors (attractions of the city):\n• More jobs and higher wages.\n• Better schools and healthcare.\n• Entertainment and social opportunities.\n• Friends and family already living there.\n\nIn reality, migrants often face overcrowding, poor housing and unemployment on arrival.",
    difficulty:1,category:"concept"},
 
-  {id:"g8fc-03-3",islandId:"g8-03",
+  {id:"g8fc-03-3",islandId:"g8-03",image:"burgess-model",
    front:"Describe the Burgess concentric zone model of urban land use.",
    back:"The Burgess model (1925) shows how cities are organised in concentric rings (circles) from the centre outward:\n\n1. Central Business District (CBD) — shops, offices, highest land values.\n2. Inner city / Zone of Transition — old factories, terraced housing, some redevelopment.\n3. Inner suburbs — older, low-cost housing; originally working class.\n4. Outer suburbs — newer, larger housing; middle class; semi-detached and detached.\n5. Rural-urban fringe — commuter villages at the edge of the city.\n\nLimitation: based on Chicago in the 1920s; many modern cities do not fit this pattern.",
    difficulty:2,category:"concept"},
@@ -101,23 +101,23 @@ FLASHCARDS.push(
    back:"Globalisation is the process by which the world's economies, cultures and populations have become increasingly interconnected and interdependent.\n\nKey drivers:\n• Improvements in transport — containerisation made shipping cheaper; jet aircraft made global travel affordable.\n• Communications technology — the internet, mobile phones and social media allow instant global communication.\n• Free trade agreements — WTO (World Trade Organisation) removed barriers to trade between countries.\n• Transnational corporations (TNCs) — companies that operate in many countries, spreading production globally.\n\nEffect: goods, money, ideas and people move around the world more freely than ever before.",
    difficulty:2,category:"concept"},
 
-  {id:"g8fc-04-4",islandId:"g8-04",
+  {id:"g8fc-04-4",islandId:"g8-04",image:"supply-chain-map",
    front:"What is a TNC and what are its positive and negative impacts?",
    back:"A TNC (Transnational Corporation) is a large company that operates in many countries, with its headquarters usually in an HIC.\n\nPositive impacts on host (LIC/NEE) countries:\n• Provides jobs and wages for local workers.\n• Brings investment — builds factories, roads and infrastructure.\n• Transfers skills and technology.\n• Increases government tax revenues.\n\nNegative impacts:\n• Low wages and poor working conditions ('sweatshops').\n• Profits are sent back to HIC headquarters, not reinvested locally.\n• Environmental damage — pollution, deforestation.\n• Dependency — country's economy relies on one foreign company.\n\nExample: Nike manufactures in Vietnam and Indonesia.",
    difficulty:2,category:"concept"},
 
-  {id:"g8fc-04-5",islandId:"g8-04",
+  {id:"g8fc-04-5",islandId:"g8-04",image:"types-of-aid",
    front:"What strategies can reduce the development gap?",
    back:"The development gap is the difference in wealth and quality of life between HICs and LICs.\n\nStrategies to reduce it:\n1. Aid — money, goods or expertise given by one country to another.\n   • Short-term emergency aid (after disasters).\n   • Long-term development aid (building schools, hospitals).\n   Criticism: can create dependency; may not reach those who need it.\n\n2. Fair trade — farmers in LICs receive a guaranteed fair price for their produce.\n\n3. Debt relief — HICs cancel or reduce LIC debt so money can be spent on development.\n\n4. Intermediate technology — small-scale, affordable technology suited to local needs (e.g. hand pumps, solar lanterns).\n\n5. Microfinance — small loans to enable people to start businesses.",
    difficulty:3,category:"application"},
 
   // g8-05 Climate Change
-  {id:"g8fc-05-1",islandId:"g8-05",
+  {id:"g8fc-05-1",islandId:"g8-05",image:"greenhouse-effect",
    front:"What is the enhanced greenhouse effect?",
    back:"The natural greenhouse effect keeps Earth warm enough for life by trapping some of the Sun's energy in the atmosphere.\n\nThe enhanced greenhouse effect is the intensification of this process due to human activity:\n1. Burning fossil fuels (coal, oil, gas) releases CO₂.\n2. Deforestation reduces the number of trees absorbing CO₂.\n3. Agriculture (rice paddies, livestock) releases methane (CH₄).\n4. Landfill waste produces methane and nitrous oxide.\n\nResult: extra greenhouse gases trap more heat, causing global average temperatures to rise — this is global warming.\n\nKey greenhouse gases: CO₂, methane (CH₄), nitrous oxide (N₂O), water vapour.",
    difficulty:1,category:"definition"},
 
-  {id:"g8fc-05-2",islandId:"g8-05",
+  {id:"g8fc-05-2",islandId:"g8-05",image:"climate-evidence",
    front:"What is the evidence for climate change?",
    back:"Scientists use multiple lines of evidence to show that Earth's climate is changing:\n\n• Temperature records — global average surface temperature has risen by ~1.2°C since the pre-industrial period (1850–1900).\n• Ice cores — bubbles of ancient air trapped in ice sheets reveal past CO₂ levels and temperatures; show current CO₂ is the highest in 800,000 years.\n• Sea level rise — thermal expansion of warming oceans and melting ice sheets; sea levels have risen ~20 cm since 1900.\n• Retreating glaciers — glaciers worldwide (Alps, Himalayas, Andes) are shrinking measurably.\n• Changing seasons — earlier spring flowering and animal migration patterns recorded by naturalists.\n• Ocean acidification — oceans absorbing more CO₂ are becoming more acidic, harming coral reefs.",
    difficulty:2,category:"concept"},
@@ -381,6 +381,7 @@ Object.assign(LESSONS,{
 <p>The coastline is one of the most dynamic environments on Earth. Waves, tides and coastal processes constantly shape the land, creating dramatic landforms ranging from towering cliffs and arches to sandy beaches and long spits. Understanding these processes is essential for managing the very real threat that coastal erosion and flooding pose to communities around the UK.</p>
 
 <h3>Coastal Erosion Processes</h3>
+<div class="lesson-diagram" data-diagram="longshore-drift"><p class="diagram-caption">Longshore drift transports material along the coast</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Waves erode coastlines through four main processes:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
@@ -406,6 +407,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Formation of a Wave-Cut Platform</h3>
+<div class="lesson-diagram" data-diagram="wave-cut-platform"><p class="diagram-caption">Formation of a wave-cut platform</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>One of the most important sequences of erosional change at the coast:</p>
 <ol>
   <li>Waves attack the cliff base through hydraulic action and abrasion, forming a <strong>notch</strong> at the high-water mark.</li>
@@ -415,6 +417,7 @@ Object.assign(LESSONS,{
 </ol>
 
 <h3>Erosional and Depositional Landforms</h3>
+<div class="lesson-diagram" data-diagram="coastal-stacks"><p class="diagram-caption">Cave to arch to stack to stump</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Landform</th>
@@ -461,6 +464,7 @@ Object.assign(LESSONS,{
 </div>
 
 <h3>Coastal Management Strategies</h3>
+<div class="lesson-diagram" data-diagram="coastal-defences"><p class="diagram-caption">Hard and soft engineering</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Strategy</th>
@@ -500,6 +504,7 @@ Object.assign(LESSONS,{
 <p>During the last ice age, which ended approximately 10,000 years ago, much of the UK was covered in glaciers. These vast rivers of ice were powerful enough to carve deep valleys, shatter rock faces and transport boulders hundreds of kilometres. Today the glaciated landscapes of the Lake District, Snowdonia and the Scottish Highlands are some of the most dramatic and economically important environments in the UK.</p>
 
 <h3>Glacial Erosion Processes</h3>
+<div class="lesson-diagram" data-diagram="u-shaped-valley"><p class="diagram-caption">U-shaped vs V-shaped valley</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Process</th>
@@ -524,6 +529,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Formation of a Corrie</h3>
+<div class="lesson-diagram" data-diagram="corrie"><p class="diagram-caption">Formation of a corrie</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>A corrie (also called a cirque or cwm) is an armchair-shaped hollow, usually on a north-facing slope:</p>
 <ol>
   <li>Snow accumulates in a hollow on a sheltered, north-facing slope and compresses into <strong>ice</strong>.</li>
@@ -535,6 +541,7 @@ Object.assign(LESSONS,{
 </ol>
 
 <h3>Key Glacial Landforms</h3>
+<div class="lesson-diagram" data-diagram="glacial-deposition"><p class="diagram-caption">Glacial depositional landforms</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Landform</th>
@@ -622,6 +629,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Push and Pull Factors of Rural-Urban Migration</h3>
+<div class="lesson-diagram" data-diagram="push-pull-factors"><p class="diagram-caption">Push and pull factors of migration</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Rural-urban migration is driven by a combination of factors pushing people away from the countryside and pulling them towards cities:</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
@@ -647,6 +655,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Urban Land Use Models</h3>
+<div class="lesson-diagram" data-diagram="burgess-model"><p class="diagram-caption">The Burgess concentric zone model</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Geographers use models to show how land is typically organised within cities:</p>
 <div style="background:#f0fdfa;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Burgess Concentric Zone Model (1925):</strong> Land use arranged in concentric rings from the CBD outward — CBD → inner city (zone of transition) → inner suburbs → outer suburbs → rural-urban fringe. Based on Chicago; assumes equal transport in all directions.<br><br>
@@ -667,6 +676,7 @@ Object.assign(LESSONS,{
 <p>Why are some countries so much wealthier than others? What can be done to close the gap? How has globalisation linked the world's economies — and who benefits? These are some of the most important questions in human geography, and understanding them requires both data and careful analysis of historical and present-day processes.</p>
 
 <h3>Measuring Development</h3>
+<div class="lesson-diagram" data-diagram="dtm-model"><p class="diagram-caption">The demographic transition model</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Indicator</th>
@@ -710,6 +720,7 @@ Object.assign(LESSONS,{
 </div>
 
 <h3>Globalisation and TNCs</h3>
+<div class="lesson-diagram" data-diagram="supply-chain-map"><p class="diagram-caption">Global supply chains</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p>Globalisation is driven by advances in transport and communications technology, and by the growth of Transnational Corporations (TNCs) operating across the world.</p>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
@@ -735,6 +746,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Strategies to Reduce the Development Gap</h3>
+<div class="lesson-diagram" data-diagram="types-of-aid"><p class="diagram-caption">Types of aid</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div style="background:#f0fdfa;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Aid:</strong> Money, goods or expertise donated by one country or organisation to another. Emergency aid addresses immediate disasters; long-term development aid funds schools, hospitals and water supplies. Criticism: risks creating dependency; may come with political conditions; may not reach those most in need.<br><br>
   <strong>Fair Trade:</strong> Guarantees farmers in LICs a minimum price plus a community premium. Empowers producers; more stable incomes. Limitation: reaches only a small percentage of global trade.<br><br>
@@ -749,6 +761,7 @@ Object.assign(LESSONS,{
 <p>Climate change is one of the defining issues of the 21st century. The Earth's climate has always varied naturally, but the speed and scale of current warming — driven overwhelmingly by human activity — is unprecedented in recorded history. Understanding the evidence, causes and consequences of climate change, and the strategies used to respond to it, is essential knowledge for any informed citizen.</p>
 
 <h3>Evidence for Climate Change</h3>
+<div class="lesson-diagram" data-diagram="climate-evidence"><p class="diagram-caption">Evidence for climate change</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
   <tr style="background:#0d9488;color:white">
     <th style="padding:8px;border:1px solid #ccc">Type of evidence</th>
@@ -777,6 +790,7 @@ Object.assign(LESSONS,{
 </table>
 
 <h3>Causes of Climate Change</h3>
+<div class="lesson-diagram" data-diagram="greenhouse-effect"><p class="diagram-caption">The enhanced greenhouse effect</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <p><strong>Natural causes</strong> have always caused climate to vary:</p>
 <ul>
   <li><strong>Milankovitch cycles</strong> — changes in Earth's orbital shape, axial tilt and wobble over tens of thousands of years drive ice age cycles.</li>
@@ -843,8 +857,7 @@ Object.assign(LESSONS,{
   • Early warning systems for hurricanes and floods.<br>
   • Managed retreat — allowing low-lying areas to flood and relocating communities.<br>
   • Changing agricultural practices — adjusting planting dates, crops grown.<br><br>
-  <strong>Key point:</strong> Both mitigation and adaptation are necessary. Mitigation limits future warming; adaptation deals with the consequences of warming that is already locked in.
+  <strong>Key point:</strong> Both mitigation and adaptation are necessary. Mitigation limits future warming; adaptation deals with the impacts we can no longer avoid. Relying on only one of them is not enough — a credible response combines both.
 </div>
 `
-
 });

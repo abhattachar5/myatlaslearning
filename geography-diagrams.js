@@ -1405,3 +1405,308 @@ DIAGRAMS["correlation-types"] = `<svg viewBox="0 0 320 170" xmlns="http://www.w3
   <text x="160" y="145" text-anchor="middle" font-size="6" font-weight="700" fill="#334155">Remember</text>
   <text x="160" y="155" text-anchor="middle" font-size="5.5" fill="#475569">Correlation does NOT prove causation — both variables may be affected by a third factor</text>
 </svg>`;
+
+// ══════════════════════════════════════════════════════════════════════
+// YEAR 8 ADDITIONS — net-new geography diagrams
+// ══════════════════════════════════════════════════════════════════════
+
+// ── LONGSHORE DRIFT (g8-01) ─────────────────────────────────────────────────────
+DIAGRAMS["longshore-drift"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs>
+    <marker id="ld" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#2563eb"/></marker>
+    <marker id="ldb" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#dc2626"/></marker>
+  </defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Longshore Drift</text>
+  <path d="M14 100 L266 60 L266 134 L14 134 Z" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <path d="M14 100 L266 60 L266 22 L14 22 Z" fill="#bae6fd" stroke="#0284c7" stroke-width="1"/>
+  <text x="40" y="40" font-size="7" fill="#0369a1">sea</text>
+  <text x="220" y="125" font-size="7" fill="#a16207">beach</text>
+  <line x1="40" y1="60" x2="70" y2="44" stroke="#475569" stroke-width="1.2" marker-end="url(#ld)"/>
+  <text x="36" y="56" font-size="6" fill="#475569">wind</text>
+  <g stroke="#2563eb" stroke-width="1.4" fill="none">
+    <line x1="60" y1="98" x2="84" y2="84" marker-end="url(#ld)"/>
+    <line x1="110" y1="90" x2="134" y2="76" marker-end="url(#ld)"/>
+    <line x1="160" y1="82" x2="184" y2="68" marker-end="url(#ld)"/>
+  </g>
+  <text x="120" y="74" font-size="6" fill="#1e40af">swash (at an angle)</text>
+  <g stroke="#dc2626" stroke-width="1.4" fill="none">
+    <line x1="84" y1="84" x2="92" y2="100" marker-end="url(#ldb)"/>
+    <line x1="134" y1="76" x2="142" y2="92" marker-end="url(#ldb)"/>
+    <line x1="184" y1="68" x2="192" y2="84" marker-end="url(#ldb)"/>
+  </g>
+  <text x="150" y="112" font-size="6" fill="#b91c1c">backwash (straight down, gravity)</text>
+  <path d="M60 100 L84 84 L92 100 L116 88 L124 100 L150 86" fill="none" stroke="#15803d" stroke-width="1.6" stroke-dasharray="3,2"/>
+  <text x="140" y="146" text-anchor="middle" font-size="6.5" fill="#475569">Material zig-zags along the coast in the direction of the prevailing wind</text>
+</svg>`;
+
+// ── WAVE-CUT PLATFORM (g8-01) ───────────────────────────────────────────────────
+DIAGRAMS["wave-cut-platform"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Formation of a Wave-Cut Platform</text>
+  <rect x="14" y="80" width="252" height="56" fill="#bae6fd" stroke="#0284c7" stroke-width="0.8"/>
+  <path d="M180 22 L180 80 L266 80 L266 22 Z" fill="#a8a29e" stroke="#57534e" stroke-width="1.2"/>
+  <path d="M180 70 q-10 6 0 12" fill="#bae6fd" stroke="#57534e" stroke-width="1"/>
+  <text x="222" y="48" text-anchor="middle" font-size="7" fill="#44403c">cliff</text>
+  <path d="M150 80 L180 80" stroke="#78716c" stroke-width="3"/>
+  <text x="120" y="96" font-size="6.4" fill="#44403c">wave-cut platform</text>
+  <line x1="120" y1="92" x2="160" y2="84" stroke="#94a3b8" stroke-width="0.5"/>
+  <path d="M40 76 q10 -6 20 0" stroke="#2563eb" stroke-width="1.4" fill="none"/>
+  <path d="M70 78 q10 -6 20 0" stroke="#2563eb" stroke-width="1.4" fill="none"/>
+  <path d="M100 80 q10 -6 20 0" stroke="#2563eb" stroke-width="1.4" fill="none"/>
+  <text x="60" y="68" font-size="6" fill="#1e40af">waves attack base</text>
+  <g stroke="#57534e" stroke-width="0.8" stroke-dasharray="4,3" fill="none">
+    <line x1="166" y1="22" x2="166" y2="80"/><line x1="152" y1="22" x2="152" y2="80"/>
+  </g>
+  <text x="158" y="34" font-size="5.8" fill="#78716c">former cliff lines</text>
+  <text x="140" y="148" text-anchor="middle" font-size="6.4" fill="#475569">Erosion cuts a notch → cliff collapses &amp; retreats → flat platform is left behind</text>
+</svg>`;
+
+// ── HEADLAND EROSION: CAVE-ARCH-STACK-STUMP (g8-01) ─────────────────────────────
+DIAGRAMS["coastal-stacks"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">How a Stack Forms</text>
+  <rect x="14" y="92" width="252" height="44" fill="#bae6fd" stroke="#0284c7" stroke-width="0.8"/>
+  <path d="M20 92 L20 50 Q40 44 60 50 L60 92 Z" fill="#a8a29e" stroke="#57534e" stroke-width="1.1"/>
+  <ellipse cx="20" cy="84" rx="7" ry="6" fill="#bae6fd"/>
+  <text x="40" y="108" text-anchor="middle" font-size="6" fill="#fff">1 cave</text>
+  <path d="M86 92 L86 50 Q106 44 126 50 L126 92 Z" fill="#a8a29e" stroke="#57534e" stroke-width="1.1"/>
+  <path d="M86 92 Q106 70 126 92 Z" fill="#bae6fd" stroke="#57534e" stroke-width="1"/>
+  <text x="106" y="108" text-anchor="middle" font-size="6" fill="#44403c">2 arch</text>
+  <path d="M152 92 L152 50 Q160 46 168 50 L168 92 Z" fill="#a8a29e" stroke="#57534e" stroke-width="1.1"/>
+  <path d="M184 92 L184 56 Q192 52 200 56 L200 92 Z" fill="#a8a29e" stroke="#57534e" stroke-width="1.1"/>
+  <text x="176" y="108" text-anchor="middle" font-size="6" fill="#44403c">3 stack</text>
+  <path d="M224 92 L224 56 Q232 52 240 56 L240 92 Z" fill="#a8a29e" stroke="#57534e" stroke-width="1.1"/>
+  <path d="M250 92 L250 78 Q256 76 262 78 L262 92 Z" fill="#a8a29e" stroke="#57534e" stroke-width="1.1"/>
+  <text x="246" y="108" text-anchor="middle" font-size="6" fill="#44403c">4 stump</text>
+  <text x="140" y="128" text-anchor="middle" font-size="6.5" fill="#475569">Waves erode a crack → cave → arch; the roof collapses → stack → stump</text>
+</svg>`;
+
+// ── COASTAL MANAGEMENT (g8-01) ──────────────────────────────────────────────────
+DIAGRAMS["coastal-defences"] = `<svg viewBox="0 0 280 152" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Coastal Management</text>
+  <text x="74" y="30" text-anchor="middle" font-size="7.6" font-weight="700" fill="#0369a1">Hard engineering</text>
+  <rect x="14" y="36" width="124" height="100" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="92" y="60" width="10" height="56" fill="#94a3b8" stroke="#475569" stroke-width="1"/>
+  <path d="M102 64 q12 -4 12 8" fill="none" stroke="#475569" stroke-width="1.5"/>
+  <text x="76" y="74" font-size="6" fill="#1e40af">sea wall →</text>
+  <g fill="#a16207"><rect x="30" y="100" width="6" height="24"/><rect x="48" y="104" width="6" height="22"/><rect x="66" y="108" width="6" height="20"/></g>
+  <text x="30" y="98" font-size="6" fill="#92400e">groynes</text>
+  <text x="76" y="132" font-size="5.8" fill="#475569">strong but costly &amp; ugly</text>
+  <text x="206" y="30" text-anchor="middle" font-size="7.6" font-weight="700" fill="#15803d">Soft engineering</text>
+  <rect x="142" y="36" width="124" height="100" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1"/>
+  <path d="M150 116 L258 92 L258 130 L150 130 Z" fill="#fde68a" stroke="#d97706" stroke-width="0.8"/>
+  <text x="180" y="110" font-size="6" fill="#92400e">beach nourishment</text>
+  <path d="M210 70 q4 -10 8 0 q4 -10 8 0" stroke="#16a34a" stroke-width="1.4" fill="none"/>
+  <text x="218" y="60" font-size="6" fill="#15803d">managed dunes</text>
+  <text x="204" y="132" font-size="5.8" fill="#475569">cheaper &amp; natural-looking</text>
+</svg>`;
+
+// ── CORRIE (g8-02) ──────────────────────────────────────────────────────────────
+DIAGRAMS["corrie"] = `<svg viewBox="0 0 280 152" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">A Corrie (Cirque)</text>
+  <path d="M14 134 L60 50 L120 86 L180 44 L230 96 L266 70 L266 134 Z" fill="#d6d3d1" stroke="#78716c" stroke-width="1.2"/>
+  <path d="M100 100 q20 -34 56 -30 q22 4 18 30 Z" fill="#a8a29e" stroke="#57534e" stroke-width="1.2"/>
+  <ellipse cx="128" cy="98" rx="22" ry="7" fill="#60a5fa" stroke="#2563eb" stroke-width="1"/>
+  <text x="128" y="101" text-anchor="middle" font-size="5.8" fill="#fff">tarn</text>
+  <text x="128" y="68" text-anchor="middle" font-size="6.4" fill="#44403c">armchair hollow</text>
+  <path d="M58 52 L66 44 L74 52" fill="none" stroke="#57534e" stroke-width="1.4"/>
+  <text x="62" y="40" font-size="6" fill="#44403c" text-anchor="middle">arête</text>
+  <path d="M176 46 L184 36 L192 46" fill="none" stroke="#57534e" stroke-width="1.4"/>
+  <text x="184" y="32" font-size="6" fill="#44403c" text-anchor="middle">pyramidal peak</text>
+  <text x="140" y="148" text-anchor="middle" font-size="6.4" fill="#475569">Snow collects in a hollow, compacts to ice, erodes a deep basin; a tarn fills it after melting</text>
+</svg>`;
+
+// ── U-SHAPED vs V-SHAPED VALLEY (g8-02) ─────────────────────────────────────────
+DIAGRAMS["u-shaped-valley"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">U-Shaped vs V-Shaped Valley</text>
+  <text x="70" y="30" text-anchor="middle" font-size="7.6" font-weight="700" fill="#2563eb">U-shaped (glacier)</text>
+  <path d="M16 40 L40 40 Q44 110 70 112 Q96 110 100 40 L124 40 L124 130 L16 130 Z" fill="#d9f99d" stroke="#65a30d" stroke-width="1.1"/>
+  <path d="M40 40 Q44 110 70 112 Q96 110 100 40" fill="#a8a29e" stroke="#57534e" stroke-width="1.4"/>
+  <text x="70" y="100" text-anchor="middle" font-size="6" fill="#44403c">wide flat floor</text>
+  <text x="70" y="124" text-anchor="middle" font-size="6" fill="#475569">steep sides</text>
+  <text x="210" y="30" text-anchor="middle" font-size="7.6" font-weight="700" fill="#16a34a">V-shaped (river)</text>
+  <path d="M156 40 L196 40 L210 110 L224 40 L264 40 L264 130 L156 130 Z" fill="#d9f99d" stroke="#65a30d" stroke-width="1.1"/>
+  <path d="M196 40 L210 110 L224 40" fill="#a8a29e" stroke="#57534e" stroke-width="1.4"/>
+  <ellipse cx="210" cy="110" rx="6" ry="3" fill="#60a5fa"/>
+  <text x="210" y="124" text-anchor="middle" font-size="6" fill="#475569">narrow, river at bottom</text>
+  <text x="140" y="146" text-anchor="middle" font-size="6.4" fill="#94a3b8">A glacier widens &amp; deepens a former V-shaped river valley into a U-shape</text>
+</svg>`;
+
+// ── GLACIAL DEPOSITION (g8-02) ──────────────────────────────────────────────────
+DIAGRAMS["glacial-deposition"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Glacial Depositional Landforms</text>
+  <rect x="14" y="40" width="252" height="92" rx="4" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <ellipse cx="70" cy="92" rx="34" ry="16" fill="#a8a29e" stroke="#57534e" stroke-width="1.1"/>
+  <path d="M36 92 q34 -22 68 0" fill="none" stroke="#44403c" stroke-width="0.8"/>
+  <text x="70" y="120" text-anchor="middle" font-size="6.6" font-weight="700" fill="#44403c">Drumlin</text>
+  <text x="70" y="129" text-anchor="middle" font-size="5.8" fill="#475569">egg-shaped hill of till</text>
+  <path d="M150 104 q10 -40 30 -40 q20 0 30 40 Z" fill="#d6d3d1" stroke="#78716c" stroke-width="1.1"/>
+  <g fill="#78716c"><circle cx="170" cy="92" r="2"/><circle cx="185" cy="84" r="2"/><circle cx="178" cy="98" r="2"/><circle cx="192" cy="96" r="2"/></g>
+  <text x="180" y="120" text-anchor="middle" font-size="6.6" font-weight="700" fill="#44403c">Moraine</text>
+  <text x="180" y="129" text-anchor="middle" font-size="5.8" fill="#475569">ridge of dumped debris</text>
+  <text x="240" y="60" text-anchor="middle" font-size="6" fill="#475569">till =</text>
+  <text x="240" y="69" text-anchor="middle" font-size="6" fill="#475569">unsorted</text>
+  <text x="240" y="78" text-anchor="middle" font-size="6" fill="#475569">rock &amp; clay</text>
+  <text x="140" y="146" text-anchor="middle" font-size="6.4" fill="#94a3b8">When a glacier melts it drops the material it carried (till), building these landforms</text>
+</svg>`;
+
+// ── PUSH & PULL FACTORS (g8-03) ─────────────────────────────────────────────────
+DIAGRAMS["push-pull-factors"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="pp" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><polygon points="0 0,8 4,0 8" fill="#475569"/></marker></defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Push &amp; Pull Factors of Migration</text>
+  <rect x="14" y="26" width="104" height="110" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1.1"/>
+  <text x="66" y="40" text-anchor="middle" font-size="7.6" font-weight="700" fill="#991b1b">PUSH (rural)</text>
+  <g font-size="6.4" fill="#7f1d1d"><text x="22" y="56">• few jobs</text><text x="22" y="68">• low wages</text><text x="22" y="80">• poor schools</text><text x="22" y="92">• crop failure</text><text x="22" y="104">• few services</text><text x="22" y="116">• drought/poverty</text></g>
+  <line x1="122" y1="80" x2="158" y2="80" stroke="#475569" stroke-width="2" marker-end="url(#pp)"/>
+  <text x="140" y="74" text-anchor="middle" font-size="6" fill="#475569">migrate</text>
+  <rect x="162" y="26" width="104" height="110" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.1"/>
+  <text x="214" y="40" text-anchor="middle" font-size="7.6" font-weight="700" fill="#15803d">PULL (city)</text>
+  <g font-size="6.4" fill="#14532d"><text x="170" y="56">• more jobs</text><text x="170" y="68">• higher wages</text><text x="170" y="80">• better schools</text><text x="170" y="92">• healthcare</text><text x="170" y="104">• services/leisure</text><text x="170" y="116">• family already there</text></g>
+</svg>`;
+
+// ── BURGESS CONCENTRIC ZONE MODEL (g8-03) ───────────────────────────────────────
+DIAGRAMS["burgess-model"] = `<svg viewBox="0 0 280 165" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Burgess Concentric Zone Model</text>
+  <circle cx="100" cy="92" r="66" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="100" cy="92" r="50" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="100" cy="92" r="34" fill="#93c5fd" stroke="#3b82f6" stroke-width="1"/>
+  <circle cx="100" cy="92" r="18" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="100" y="95" text-anchor="middle" font-size="7" font-weight="700" fill="#fff">CBD</text>
+  <g font-size="6.4" fill="#1e3a5f">
+    <text x="100" y="68" text-anchor="middle">inner city</text>
+    <text x="100" y="50" text-anchor="middle">inner suburbs</text>
+    <text x="100" y="34" text-anchor="middle">outer suburbs</text>
+  </g>
+  <g font-size="6.6" fill="#1e293b">
+    <text x="176" y="50">1. CBD — shops &amp; offices</text>
+    <text x="176" y="68">2. Inner city — old terraced</text>
+    <text x="176" y="78" font-size="5.8" fill="#64748b">   housing &amp; old industry</text>
+    <text x="176" y="96">3. Inner suburbs — 1930s</text>
+    <text x="176" y="106" font-size="5.8" fill="#64748b">   semi-detached homes</text>
+    <text x="176" y="124">4. Outer suburbs &amp;</text>
+    <text x="176" y="134" font-size="5.8" fill="#64748b">   commuter / rural-urban fringe</text>
+  </g>
+  <text x="140" y="158" text-anchor="middle" font-size="6.4" fill="#94a3b8">Land value &amp; building age fall as you move out from the centre</text>
+</svg>`;
+
+// ── EVIDENCE FOR CLIMATE CHANGE (g8-05) ─────────────────────────────────────────
+DIAGRAMS["climate-evidence"] = `<svg viewBox="0 0 280 155" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Evidence for Climate Change</text>
+  <line x1="40" y1="24" x2="40" y2="104" stroke="#1e293b" stroke-width="1.2"/>
+  <line x1="40" y1="104" x2="252" y2="104" stroke="#1e293b" stroke-width="1.2"/>
+  <text x="20" y="64" font-size="6.4" fill="#475569" transform="rotate(-90 20 64)" text-anchor="middle">temp / CO₂</text>
+  <text x="146" y="120" font-size="6.4" fill="#475569" text-anchor="middle">1850 → today</text>
+  <path d="M40 96 C110 92 150 70 200 44 L246 30" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="232" y="24" font-size="6" fill="#b91c1c" text-anchor="middle">rising temp</text>
+  <path d="M40 100 C120 96 170 78 230 52" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="150" y="92" font-size="5.8" fill="#1e40af">CO₂ (dashed)</text>
+  <rect x="20" y="128" width="240" height="22" rx="4" fill="#f0fdf4" stroke="#16a34a" stroke-width="0.8"/>
+  <text x="140" y="138" text-anchor="middle" font-size="6.3" fill="#15803d">Also: shrinking glaciers · melting sea ice · rising sea levels ·</text>
+  <text x="140" y="147" text-anchor="middle" font-size="6.3" fill="#15803d">ice cores &amp; tree rings record past climate</text>
+</svg>`;
+
+// ── XEROPHYTE ADAPTATIONS (g8-07) ───────────────────────────────────────────────
+DIAGRAMS["xerophyte-adaptations"] = `<svg viewBox="0 0 280 152" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">How a Cactus Survives the Desert</text>
+  <path d="M118 130 Q110 70 122 40 Q134 70 126 130 Z" fill="#16a34a" stroke="#15803d" stroke-width="1.2"/>
+  <path d="M120 84 Q96 78 92 60" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M124 96 Q150 90 156 70" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+  <g stroke="#15803d" stroke-width="0.8"><line x1="116" y1="60" x2="112" y2="58"/><line x1="128" y1="64" x2="132" y2="62"/><line x1="118" y1="100" x2="114" y2="100"/></g>
+  <rect x="100" y="130" width="52" height="8" fill="#fde68a"/>
+  <g fill="#a16207"><path d="M122 138 q-30 6 -50 0" fill="none" stroke="#a16207" stroke-width="1.4"/><path d="M126 138 q30 6 50 0" fill="none" stroke="#a16207" stroke-width="1.4"/></g>
+  <g font-size="6.4" fill="#1e293b">
+    <text x="160" y="44">spines (not leaves)</text><text x="160" y="52" font-size="5.6" fill="#64748b">cut water loss &amp; deter animals</text>
+    <line x1="128" y1="46" x2="158" y2="42" stroke="#94a3b8" stroke-width="0.5"/>
+    <text x="160" y="78">thick waxy stem</text><text x="160" y="86" font-size="5.6" fill="#64748b">stores water</text>
+    <line x1="128" y1="84" x2="158" y2="78" stroke="#94a3b8" stroke-width="0.5"/>
+    <text x="10" y="62">shallow wide roots</text><text x="10" y="70" font-size="5.6" fill="#64748b">catch any rain fast</text>
+    <text x="10" y="118">deep tap root</text><text x="10" y="126" font-size="5.6" fill="#64748b">reaches groundwater</text>
+  </g>
+  <text x="140" y="148" text-anchor="middle" font-size="6.3" fill="#475569">Xerophytes are adapted to minimise water loss in hot, dry conditions</text>
+</svg>`;
+
+// ── DESERTIFICATION (g8-07) ─────────────────────────────────────────────────────
+DIAGRAMS["desertification"] = `<svg viewBox="0 0 280 152" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="df" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><polygon points="0 0,8 4,0 8" fill="#b45309"/></marker></defs>
+  <text x="140" y="14" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">The Cycle of Desertification</text>
+  <g fill="none" stroke="#b45309" stroke-width="1.6" marker-end="url(#df)">
+    <path d="M188 40 Q214 50 220 66"/>
+    <path d="M220 96 Q214 112 190 120"/>
+    <path d="M90 120 Q66 112 60 96"/>
+    <path d="M60 66 Q66 50 90 40"/>
+  </g>
+  <g text-anchor="middle">
+    <rect x="96" y="24" width="88" height="20" rx="4" fill="#fef9c3" stroke="#ca8a04"/><text x="140" y="37" font-size="6.6" fill="#92400e">drought / less rainfall</text>
+    <rect x="194" y="68" width="80" height="24" rx="4" fill="#fef9c3" stroke="#ca8a04"/><text x="234" y="78" font-size="6.6" fill="#92400e">over-grazing &amp;</text><text x="234" y="88" font-size="6.6" fill="#92400e">over-farming</text>
+    <rect x="92" y="116" width="96" height="20" rx="4" fill="#fde68a" stroke="#b45309"/><text x="140" y="129" font-size="6.6" fill="#7c2d12">soil exposed &amp; eroded</text>
+    <rect x="6" y="68" width="80" height="24" rx="4" fill="#fef9c3" stroke="#ca8a04"/><text x="46" y="83" font-size="6.6" fill="#92400e">vegetation dies</text>
+  </g>
+  <text x="140" y="78" text-anchor="middle" font-size="8" font-weight="700" fill="#b45309">DESERT</text>
+  <text x="140" y="89" text-anchor="middle" font-size="8" font-weight="700" fill="#b45309">SPREADS</text>
+</svg>`;
+
+// ── DESERT LANDFORMS (g8-07) ────────────────────────────────────────────────────
+DIAGRAMS["desert-landforms"] = `<svg viewBox="0 0 280 150" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="dl" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0,6 3,0 6" fill="#0ea5e9"/></marker></defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Desert Landforms</text>
+  <rect x="14" y="80" width="124" height="56" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+  <path d="M40 110 q24 -40 48 0 Z" fill="#fbbf24" stroke="#b45309" stroke-width="1"/>
+  <path d="M64 70 q4 8 0 40" stroke="#b45309" stroke-width="0.7" fill="none" stroke-dasharray="2,2"/>
+  <text x="64" y="124" text-anchor="middle" font-size="6.6" font-weight="700" fill="#92400e">Sand dune</text>
+  <text x="40" y="92" font-size="5.6" fill="#b45309">wind →</text>
+  <text x="76" y="92" font-size="5.6" fill="#b45309">steep slip face</text>
+  <rect x="142" y="80" width="124" height="56" rx="4" fill="#fef3c7" stroke="#d97706" stroke-width="0.8"/>
+  <path d="M168 128 L168 96 L210 96 L210 128" fill="#a16207" stroke="#78350f" stroke-width="1.1"/>
+  <path d="M210 128 L210 108 L236 108 L236 128" fill="#b45309" stroke="#78350f" stroke-width="1.1"/>
+  <text x="178" y="92" font-size="6" fill="#78350f">mesa</text>
+  <text x="223" y="104" font-size="6" fill="#78350f">butte</text>
+  <text x="204" y="124" text-anchor="middle" font-size="5.6" fill="#fff">flat-topped, hard cap rock</text>
+  <text x="140" y="60" text-anchor="middle" font-size="6.6" fill="#475569">Wind (dunes) and occasional flash floods shape arid landscapes</text>
+  <path d="M30 46 q12 -6 24 0" stroke="#0ea5e9" stroke-width="1.2" fill="none" marker-end="url(#dl)"/>
+  <text x="42" y="38" font-size="5.6" fill="#0369a1">rare flash floods cut wadis</text>
+</svg>`;
+
+// ── MIDDLE EAST LOCATOR MAP (g8-08) ─────────────────────────────────────────────
+DIAGRAMS["middle-east-map"] = `<svg viewBox="0 0 280 152" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">The Middle East</text>
+  <rect x="14" y="20" width="252" height="116" rx="4" fill="#bae6fd" stroke="#0284c7" stroke-width="0.8"/>
+  <path d="M40 30 L120 26 L150 40 L150 70 L120 90 L60 96 L30 70 Z" fill="#fde68a" stroke="#b45309" stroke-width="1"/>
+  <path d="M150 40 L210 34 L250 60 L240 110 L180 120 L150 96 L150 70 Z" fill="#fcd34d" stroke="#b45309" stroke-width="1"/>
+  <path d="M150 96 L180 120 L150 130 L120 120 L120 90 Z" fill="#fde68a" stroke="#b45309" stroke-width="1"/>
+  <text x="84" y="62" text-anchor="middle" font-size="6.2" fill="#78350f">Turkey</text>
+  <text x="120" y="74" text-anchor="middle" font-size="5.8" fill="#78350f">Iraq</text>
+  <text x="200" y="70" text-anchor="middle" font-size="6.2" fill="#78350f">Iran</text>
+  <text x="150" y="112" text-anchor="middle" font-size="5.8" fill="#78350f">Saudi Arabia</text>
+  <text x="40" y="116" text-anchor="middle" font-size="5.6" fill="#0369a1">Mediterranean</text>
+  <text x="230" y="128" text-anchor="middle" font-size="5.6" fill="#0369a1">Persian Gulf</text>
+  <g fill="#1e293b"><circle cx="222" cy="78" r="2.5"/><circle cx="208" cy="96" r="2.5"/><circle cx="170" cy="108" r="2.5"/></g>
+  <text x="246" y="40" font-size="5.8" fill="#475569">● = major</text>
+  <text x="246" y="48" font-size="5.8" fill="#475569">oil fields</text>
+  <text x="140" y="148" text-anchor="middle" font-size="6.3" fill="#475569">A dry region at the crossroads of three continents, rich in oil &amp; gas</text>
+</svg>`;
+
+// ── TROPICAL STORM CROSS-SECTION (g8-09) ────────────────────────────────────────
+DIAGRAMS["tropical-storm"] = `<svg viewBox="0 0 280 155" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs><marker id="ts" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><polygon points="0 0,7 3.5,0 7" fill="#2563eb"/></marker></defs>
+  <text x="140" y="13" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Cross-Section of a Tropical Storm</text>
+  <rect x="14" y="118" width="252" height="18" fill="#0ea5e9" stroke="#0369a1" stroke-width="0.8"/>
+  <text x="140" y="131" text-anchor="middle" font-size="6.2" fill="#fff">warm ocean &gt; 27°C (the storm's energy source)</text>
+  <g fill="#cbd5e1" stroke="#94a3b8" stroke-width="0.8">
+    <ellipse cx="70" cy="60" rx="40" ry="22"/><ellipse cx="210" cy="60" rx="40" ry="22"/>
+    <ellipse cx="55" cy="90" rx="30" ry="14"/><ellipse cx="225" cy="90" rx="30" ry="14"/>
+  </g>
+  <rect x="124" y="32" width="32" height="86" fill="#e0f2fe" stroke="#bae6fd" stroke-width="0.8"/>
+  <text x="140" y="80" text-anchor="middle" font-size="6.6" font-weight="700" fill="#0369a1">eye</text>
+  <text x="140" y="90" text-anchor="middle" font-size="5.4" fill="#475569">calm,</text>
+  <text x="140" y="98" text-anchor="middle" font-size="5.4" fill="#475569">sinking air</text>
+  <text x="104" y="44" text-anchor="middle" font-size="5.8" fill="#1e293b">eyewall</text>
+  <text x="176" y="44" text-anchor="middle" font-size="5.8" fill="#1e293b">eyewall</text>
+  <text x="104" y="52" text-anchor="middle" font-size="5" fill="#64748b">strongest winds</text>
+  <g stroke="#2563eb" stroke-width="1.3" fill="none" marker-end="url(#ts)">
+    <line x1="120" y1="116" x2="120" y2="40"/><line x1="160" y1="116" x2="160" y2="40"/>
+  </g>
+  <text x="116" y="108" font-size="5.4" fill="#1e40af">rising air</text>
+  <g stroke="#7c3aed" stroke-width="1.1" fill="none" marker-end="url(#ts)">
+    <line x1="118" y1="34" x2="92" y2="30"/><line x1="162" y1="34" x2="188" y2="30"/>
+  </g>
+  <text x="140" y="26" text-anchor="middle" font-size="5.6" fill="#6d28d9">air flows out at the top</text>
+  <text x="140" y="150" text-anchor="middle" font-size="6.3" fill="#475569">Warm moist air rises &amp; condenses, releasing energy that powers the storm</text>
+</svg>`;
