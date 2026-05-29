@@ -47,6 +47,8 @@ export default async (req, context) => {
       progress: body.progress || {},
       testResults: body.testResults || {},
       revisionDone: body.revisionDone || {},
+      comprehension: body.comprehension || {},
+      yearHistory: body.yearHistory || [],
       updatedAt: new Date().toISOString(),
     };
 

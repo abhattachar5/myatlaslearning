@@ -69,6 +69,10 @@ export default async (req, context) => {
         joinDate: body.joinDate || null,
         preferences: body.preferences || { theme: "light" },
         progress: body.progress || {},
+        testResults: body.testResults || {},
+        revisionDone: body.revisionDone || {},
+        comprehension: body.comprehension || {},
+        yearHistory: body.yearHistory || [],
         updatedAt: new Date().toISOString(),
       };
     } else {
@@ -84,6 +88,10 @@ export default async (req, context) => {
         joinDate: existing.joinDate || body.joinDate || null,
         preferences: { ...{ theme: "light" }, ...(existing.preferences || {}), ...(body.preferences || {}) },
         progress: mergeProgress(existing.progress || {}, body.progress || {}),
+        testResults: { ...(body.testResults || {}), ...(existing.testResults || {}) },
+        revisionDone: { ...(body.revisionDone || {}), ...(existing.revisionDone || {}) },
+        comprehension: { ...(body.comprehension || {}), ...(existing.comprehension || {}) },
+        yearHistory: (existing.yearHistory && existing.yearHistory.length) ? existing.yearHistory : (body.yearHistory || []),
         updatedAt: new Date().toISOString(),
       };
     }
