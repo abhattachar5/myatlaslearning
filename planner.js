@@ -93,6 +93,15 @@
         return i.subjectId === sid && (i.yearGroup || 'Year 7') === year;
       });
       var sorted = topoSortIslands(islands);
+      if (sid === 'science') {
+        // Year 8 study order: round-robin across disciplines (Biology → Physics →
+        // Chemistry → repeat, Working Scientifically last), so disciplines alternate
+        // instead of running in long blocks. planOrder is set in y8-topics.js and is
+        // prerequisite-safe (units within a discipline keep ascending order).
+        sorted = sorted.slice().sort(function (a, b) {
+          return ((a && a.planOrder != null ? a.planOrder : 999)) - ((b && b.planOrder != null ? b.planOrder : 999));
+        });
+      }
       queues[sid] = sorted.map(function (i) { return i.id; });
     });
     return queues;
