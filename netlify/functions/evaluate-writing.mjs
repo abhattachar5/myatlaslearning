@@ -78,10 +78,14 @@ export default async (req, context) => {
     return Response.json({ error: "Invalid JSON" }, { status: 400, headers: CORS_HEADERS });
   }
 
-  const { prompt, response } = body;
+  const { prompt, response, year } = body;
   if (!prompt || !response) {
     return Response.json({ error: "Missing prompt or response" }, { status: 400, headers: CORS_HEADERS });
   }
+  const level = year === "Year 8" ? "Year 8" : "Year 7";
+  const systemPrompt = SYSTEM_PROMPT
+    .replace(/Year 7/g, level)
+    .replace(/11-12 years old/g, level === "Year 8" ? "12-13 years old" : "11-12 years old");
 
   if (response.length > 5000) {
     return Response.json({ error: "Response too long (max 5000 characters)" }, { status: 400, headers: CORS_HEADERS });
@@ -98,7 +102,7 @@ export default async (req, context) => {
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
         max_tokens: 1024,
-        system: SYSTEM_PROMPT,
+        system: systemPrompt,
         messages: [
           {
             role: "user",
