@@ -271,14 +271,9 @@ function submitWriting() {
   document.getElementById('wt-active').style.display = 'none';
   document.getElementById('wt-loading').style.display = '';
 
-  var token = localStorage.getItem('sm_token') || '';
-
-  fetch('/.netlify/functions/evaluate-writing', {
+  fetchWithAuth('/.netlify/functions/evaluate-writing', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + token
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       prompt: promptContext,
       response: text
