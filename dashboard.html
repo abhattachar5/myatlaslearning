@@ -61,6 +61,7 @@
     <div class="sidebar-user">
       <div class="user-card">
         <div class="user-name" id="sidebar-name">—</div>
+        <div class="year-switch-wrap" id="year-switch-wrap" style="display:none"></div>
       </div>
     </div>
 
@@ -140,7 +141,6 @@
         </div>
       </div>
       <p id="welcome-sub">Pick a topic to continue your studies.</p>
-      <div class="year-switch-wrap" id="year-switch-wrap" style="margin-top:10px;display:none"></div>
     </div>
 
     <!-- ── Hero Banner (pick up where you left off) ─────────────────────── -->
@@ -257,6 +257,7 @@
 <script src="geography-data.js"></script>
 <script src="history-data-y8.js"></script>
 <script src="geography-data-y8.js"></script>
+<script src="y8-topics.js"></script>
 <script src="english-data.js"></script>
 <script src="english-content-1.js"></script>
 <script src="english-content-2.js"></script>
@@ -375,21 +376,14 @@ function changeYear(year) {
   if (typeof syncProgressToServer === 'function') syncProgressToServer();
   location.reload();
 }
+// Read-only year-group label in the sidebar (for reference). Switching years is
+// done from the profile page only (see saveProfile).
 function renderYearSwitcher() {
   const wrap = document.getElementById('year-switch-wrap');
   if (!wrap) return;
-  const years = availableYears();
-  const cur = getUserYear();
-  if (years.length <= 1) { wrap.style.display = 'none'; return; }
   wrap.style.display = '';
-  const opts = years.map(y => {
-    const c = getYearCompletionFor(y);
-    return '<option value="' + y + '"' + (y === cur ? ' selected' : '') + '>' + y + ' — ' + c.pct + '% complete</option>';
-  }).join('');
   wrap.innerHTML =
-    '<label for="year-switcher" style="font-size:.8125rem;color:var(--text-muted);font-weight:600;margin-right:8px">Year group</label>' +
-    '<select id="year-switcher" class="form-input form-select" style="width:auto;display:inline-block;padding:6px 10px;font-size:.875rem" onchange="changeYear(this.value)">' +
-    opts + '</select>';
+    '<div style="font-size:.8125rem;color:var(--text-muted);margin-top:2px">' + getUserYear() + '</div>';
 }
 
 function getYearMathTopics() {
@@ -406,8 +400,8 @@ function getYearEnglishTopics() {
 
 function getYearScienceTopics() {
   const year = getUserYear();
-  if (year === 'Year 7') return typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS : [];
-  return [];
+  if (year === 'Year 8') return typeof SCIENCE_TOPICS_Y8 !== 'undefined' ? SCIENCE_TOPICS_Y8 : [];
+  return typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS : [];
 }
 
 function getYearHistoryTopics() {

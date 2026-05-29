@@ -253,6 +253,7 @@
 <script src="geography-data.js"></script>
 <script src="history-data-y8.js"></script>
 <script src="geography-data-y8.js"></script>
+<script src="y8-topics.js"></script>
 <script src="auth-shim.js"></script>
 <script src="app.js"></script>
 <script src="test-generator.js"></script>
@@ -282,7 +283,7 @@ const topic = (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id =
            || (typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8.find(t => t.id === topicId) : null)
            || (typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS.find(t => t.id === topicId) : null)
            || (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8.find(t => t.id === topicId) : null);
-const isScienceTopic = topicId && topicId.startsWith('st7-');
+const isScienceTopic = topicId && (topicId.startsWith('st7-') || topicId.startsWith('s8t-'));
 const isEnglishTopic = topicId && (topicId.startsWith('et-') || topicId.startsWith('e8t-'));
 const isHistoryTopic = topicId && (topicId.startsWith('ht-') || topicId.startsWith('h8t-'));
 const isGeographyTopic = topicId && (topicId.startsWith('gt-') || topicId.startsWith('g8t-'));
