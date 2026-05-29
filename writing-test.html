@@ -17,6 +17,11 @@
     .wt-info-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px; }
     .wt-info-card .label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 4px; }
     .wt-info-card .value { font-size: 1.125rem; font-weight: 700; }
+    .wt-criteria-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin: 0 auto 32px; max-width: 420px; text-align: left; }
+    .wt-criteria-box h4 { font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 12px; }
+    .wt-criteria-box ul { margin: 0 0 12px; padding-left: 20px; }
+    .wt-criteria-box li { font-size: .9375rem; line-height: 1.6; color: var(--text); }
+    .wt-criteria-box p { font-size: .8125rem; color: var(--text-muted); margin: 0; font-style: italic; }
 
     /* Writing area */
     .wt-prompt-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; text-align: left; }
@@ -102,11 +107,23 @@
     <!-- SETUP SCREEN -->
     <div id="wt-setup" class="wt-setup">
       <h2>Writing Challenge</h2>
-      <p>Put your writing skills to the test! You'll be given a writing task that draws on everything you've learned across Writing Strategies. Write your response, then get instant AI feedback on your work.</p>
+      <p>Put your writing skills to the test! You'll be given a writing task that draws on everything you've learned across Writing Strategies. Write your response, then get instant feedback on your work.</p>
 
-      <div class="wt-info-grid">
+      <div class="wt-info-grid" style="max-width:200px">
         <div class="wt-info-card"><div class="label">Target</div><div class="value">200–400 words</div></div>
-        <div class="wt-info-card"><div class="label">Feedback</div><div class="value">AI-powered</div></div>
+      </div>
+
+      <div class="wt-criteria-box">
+        <h4>Your writing will be assessed on:</h4>
+        <ul>
+          <li>Planning &amp; Organisation</li>
+          <li>Argumentative Writing</li>
+          <li>Creative Writing Techniques</li>
+          <li>Editing &amp; Proofreading</li>
+          <li>Research &amp; Referencing</li>
+          <li>Transitions &amp; Conjunctive Adverbs</li>
+        </ul>
+        <p>Only the criteria relevant to your prompt will be scored.</p>
       </div>
 
       <button class="btn btn-primary" style="font-size:1rem;padding:14px 32px" onclick="startWriting()">Start Writing Challenge</button>
@@ -130,7 +147,7 @@
 
       <div class="wt-actions">
         <button class="btn btn-secondary" onclick="confirmAbandon()">← Back</button>
-        <button class="btn btn-primary" id="submit-btn" onclick="submitWriting()">Get AI Feedback →</button>
+        <button class="btn btn-primary" id="submit-btn" onclick="submitWriting()">Get Feedback →</button>
       </div>
     </div>
 
@@ -138,7 +155,7 @@
     <div id="wt-loading" style="display:none" class="wt-loading">
       <div class="wt-spinner"></div>
       <h3>Evaluating your writing...</h3>
-      <p style="color:var(--text-muted)">Our AI teacher is reading your work and preparing feedback. This usually takes 5–10 seconds.</p>
+      <p style="color:var(--text-muted)">Your work is being read and feedback is being prepared. This usually takes 5–10 seconds.</p>
     </div>
 
     <!-- RESULTS SCREEN -->
@@ -290,7 +307,7 @@ function submitWriting() {
   })
   .catch(function(err) {
     document.getElementById('wt-loading').style.display = 'none';
-    showError('Could not connect to the AI evaluator. Please check your internet connection and try again.');
+    showError('Could not connect to the feedback service. Please check your internet connection and try again.');
   });
 }
 
@@ -371,6 +388,7 @@ function showResults(feedback, studentText) {
   html += '<button class="btn btn-primary" onclick="window.location.href=\'topic.html?id=' + topicId + '\'">← Back to Topic</button>';
   html += '</div>';
 
+  document.getElementById('wt-error').style.display = 'none';
   document.getElementById('wt-results').innerHTML = html;
   document.getElementById('wt-results').style.display = '';
   window.scrollTo(0, 0);
@@ -383,6 +401,8 @@ function escapeHtml(str) {
 }
 
 function showError(msg) {
+  document.getElementById('wt-results').style.display = 'none';
+  document.getElementById('wt-loading').style.display = 'none';
   var el = document.getElementById('wt-error');
   el.innerHTML = '<div class="wt-error"><strong>Error:</strong> ' + escapeHtml(msg) + '<br><br><button class="btn btn-secondary btn-sm" onclick="goBackToWriting()">← Back to Writing</button></div>';
   el.style.display = '';
