@@ -136,7 +136,7 @@ let topic = (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id ===
          || (typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS.find(t => t.id === topicId) : null)
          || (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8.find(t => t.id === topicId) : null);
 const isEnglishTopic = topic && topic.id && (topic.id.startsWith('et-') || topic.id.startsWith('e8t-'));
-const isScienceTopic = topic && topic.id && topic.id.startsWith('st7-');
+const isScienceTopic = topic && topic.id && (topic.id.startsWith('st7-') || topic.id.startsWith('s8t-'));
 const isHistoryTopic = topic && topic.id && (topic.id.startsWith('ht-') || topic.id.startsWith('h8t-'));
 const isGeographyTopic = topic && topic.id && (topic.id.startsWith('gt-') || topic.id.startsWith('g8t-'));
 const topicColor = isEnglishTopic ? '#f59e0b' : isScienceTopic ? '#6366f1' : isHistoryTopic ? '#a855f7' : isGeographyTopic ? '#0d9488' : '#3b82f6';
