@@ -84,7 +84,9 @@ function syncProgressToServer() {
         preferences: { theme: localStorage.getItem('sm_theme') || 'light' },
         progress: getAllProgress(),
         testResults: testResults,
-        revisionDone: revisionDone
+        revisionDone: revisionDone,
+        comprehension: getAllComprehension(),
+        yearHistory: profile.yearHistory || []
       };
       await fetchWithAuth('/.netlify/functions/save-progress', {
         method: 'PUT',
@@ -166,6 +168,27 @@ function saveIslandProgress(islandId, data) {
   all[islandId] = data;
   saveAllProgress(all);
   syncProgressToServer();
+}
+
+// ── Comprehension progress (keyed by passage id, stored as sm_comp_<id>) ──────
+// Gathered into one object for server sync and restored on login.
+function getAllComprehension() {
+  var out = {};
+  try {
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (k && k.indexOf('sm_comp_') === 0) {
+        try { out[k.slice(8)] = JSON.parse(localStorage.getItem(k)); } catch (e) { /* skip */ }
+      }
+    }
+  } catch (e) { /* ignore */ }
+  return out;
+}
+function restoreComprehension(map) {
+  if (!map || typeof map !== 'object') return;
+  Object.keys(map).forEach(function (id) {
+    try { localStorage.setItem('sm_comp_' + id, JSON.stringify(map[id])); } catch (e) { /* ignore */ }
+  });
 }
 
 // ── XP & Levels ──────────────────────────────────────────────────────────────

@@ -116,7 +116,7 @@
         <select class="form-input form-select" id="setup-year" required>
           <option value="" disabled selected>Select year group</option>
           <option value="Year 7">Year 7 (age 11-12)</option>
-          <option value="Year 8" disabled>Year 8 (age 12-13) -- Coming Soon</option>
+          <option value="Year 8">Year 8 (age 12-13)</option>
           <option value="Year 9" disabled>Year 9 (age 13-14) -- Coming Soon</option>
           <option value="Year 10" disabled>Year 10 (age 14-15) -- Coming Soon</option>
           <option value="Year 11" disabled>Year 11 (age 15-16) -- Coming Soon</option>
@@ -336,7 +336,8 @@
           school: serverData.school || '',
           tier: serverData.tier || 'free',
           xp: serverData.xp || 0,
-          joinDate: serverData.joinDate || new Date().toISOString()
+          joinDate: serverData.joinDate || new Date().toISOString(),
+          yearHistory: serverData.yearHistory || []
         };
         localStorage.setItem('sm_active_profile', JSON.stringify(profile));
 
@@ -354,6 +355,9 @@
         }
         if (serverData.revisionDone && Object.keys(serverData.revisionDone).length) {
           localStorage.setItem('sm_revision_done', JSON.stringify(serverData.revisionDone));
+        }
+        if (serverData.comprehension && Object.keys(serverData.comprehension).length && typeof restoreComprehension === 'function') {
+          restoreComprehension(serverData.comprehension);
         }
         if (serverData.preferences && serverData.preferences.theme) {
           localStorage.setItem('sm_theme', serverData.preferences.theme);

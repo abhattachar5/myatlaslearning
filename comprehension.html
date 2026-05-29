@@ -524,6 +524,25 @@
       }
     }
   </style>
+<style>
+  /* Year 8 written (GCSE) comprehension mode */
+  .comp-marks-badge { display:inline-block; float:right; font-size:.75rem; font-weight:700; color:#fff; background:#f59e0b; border-radius:10px; padding:2px 10px; }
+  .comp-written-area { width:100%; box-sizing:border-box; margin-top:10px; padding:12px; border:2px solid var(--border); border-radius:8px; font-family:inherit; font-size:.9375rem; line-height:1.6; resize:vertical; background:var(--surface); color:var(--text); }
+  .comp-written-area:focus { outline:none; border-color:#f59e0b; }
+  .comp-your-answer { white-space:pre-wrap; background:var(--bg, #f8fafc); border:1px solid var(--border); border-radius:8px; padding:12px; margin:10px 0; font-size:.875rem; line-height:1.6; color:var(--text-2, var(--text)); }
+  .comp-fb-www, .comp-fb-ebi { border-radius:8px; padding:10px 14px; margin:8px 0; font-size:.875rem; line-height:1.5; }
+  .comp-fb-www { background:#ecfdf5; border-left:4px solid #22c55e; }
+  .comp-fb-ebi { background:#fff7ed; border-left:4px solid #f59e0b; }
+  .comp-fb-www ul, .comp-fb-ebi ul { margin:6px 0 0; padding-left:18px; }
+  .comp-fb-www strong, .comp-fb-ebi strong { display:block; margin-bottom:2px; }
+  [data-theme="dark"] .comp-fb-www { background:#052e1a; } [data-theme="dark"] .comp-fb-ebi { background:#3a2a10; }
+  .comp-model-toggle { margin-top:8px; background:none; border:1px solid var(--border); border-radius:8px; padding:6px 12px; font-size:.8125rem; font-weight:600; color:var(--blue,#3b82f6); cursor:pointer; }
+  .comp-model { margin-top:8px; white-space:pre-wrap; background:#eef2ff; border:1px solid #c7d2fe; border-radius:8px; padding:12px; font-size:.875rem; line-height:1.6; color:var(--text); }
+  [data-theme="dark"] .comp-model { background:#1e1b4b; border-color:#3730a3; }
+  .comp-fallback-note { background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:12px 14px; margin-bottom:16px; font-size:.875rem; color:#9a3412; }
+  .comp-spinner { width:44px; height:44px; border:4px solid var(--ring-track,#e5e7eb); border-top-color:#f59e0b; border-radius:50%; animation:comp-spin .8s linear infinite; }
+  @keyframes comp-spin { to { transform:rotate(360deg); } }
+</style>
 </head>
 <body>
 
@@ -643,12 +662,25 @@
 <script src="data.js"></script>
 <script src="english-data.js"></script>
 <script src="english-content-4.js"></script>
+<!-- Year 8 comprehension passages (written / GCSE-style) -->
+<script src="comprehension-y8-1.js"></script>
+<script src="comprehension-y8-2.js"></script>
+<script src="comprehension-y8-3.js"></script>
+<script src="comprehension-y8-4.js"></script>
+<script src="comprehension-y8-5.js"></script>
+<script src="comprehension-y8-6.js"></script>
+<script src="comprehension-y8-7.js"></script>
+<script src="comprehension-y8-8.js"></script>
 <script src="auth-shim.js"></script>
 <script src="app.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────────
 var user = requireAuth();
-var passages = typeof COMPREHENSION_PASSAGES !== 'undefined' ? COMPREHENSION_PASSAGES : [];
+// Year-aware passage set: Year 8 uses the longer, written/GCSE-style passages.
+var isY8 = !!(user && user.year === 'Year 8');
+var passages = (isY8 && typeof COMPREHENSION_PASSAGES_Y8 !== 'undefined' && COMPREHENSION_PASSAGES_Y8.length)
+  ? COMPREHENSION_PASSAGES_Y8
+  : (typeof COMPREHENSION_PASSAGES !== 'undefined' ? COMPREHENSION_PASSAGES : []);
 var currentFilter = 'all';
 var expandedPassageId = null;
 var QUESTIONS_PER_TEST = 5;
@@ -657,6 +689,12 @@ var QUESTIONS_PER_TEST = 5;
 var currentTestQuestions = [];   // array of {q, skill, opts, c, e, shuffled, correctIdx}
 var currentSelections = {};      // { qIdx: chosenOptionIdx }
 var testSubmitted = false;
+
+// Written (GCSE) mode state
+var writtenMode = false;
+var currentWritten = [];          // array of {q, skill, marks, guidance, model}
+var writtenSubmitted = false;
+var writtenFeedback = null;
 
 (function init() {
   initTheme();
@@ -709,6 +747,8 @@ function savePassageProgress(passageId, score, total) {
     total: total,
     date: Date.now()
   }));
+  // Persist to the server so comprehension progress survives across devices/years.
+  if (typeof syncProgressToServer === 'function') syncProgressToServer();
 }
 function isPassageComplete(passage) {
   var progress = getPassageProgress(passage.id);
@@ -779,7 +819,11 @@ function renderCards() {
     var progress = getPassageProgress(p.id);
     var typeBadgeClass = p.type === 'fiction' ? 'fiction' : 'nonfiction';
     var typeLabel = p.type === 'fiction' ? 'Fiction' : 'Non-Fiction';
+    var written = isWrittenPassage(p);
     var qCount = Math.min(p.questions.length, QUESTIONS_PER_TEST);
+    var qBadgeText = written
+      ? (p.questions.reduce(function(s, q) { return s + (q.marks || 0); }, 0) + ' marks')
+      : (qCount + ' question' + (qCount !== 1 ? 's' : ''));
 
     // Score badge
     var scoreBadgeHtml = '';
@@ -798,7 +842,7 @@ function renderCards() {
       '<div class="passage-card-title">' + escapeHtml(p.title) + '</div>' +
       '<div class="passage-card-source">' + escapeHtml(p.source) + '</div>' +
       '<div class="passage-card-footer">' +
-        '<span class="passage-q-badge">' + qCount + ' question' + (qCount !== 1 ? 's' : '') + '</span>' +
+        '<span class="passage-q-badge">' + qBadgeText + '</span>' +
         scoreBadgeHtml +
       '</div>' +
     '</div>';
@@ -844,11 +888,7 @@ function openExpanded(passageId) {
   var passage = passages.find(function(p) { return p.id === passageId; });
   if (!passage) return;
   expandedPassageId = passageId;
-
-  // Reset test state
-  currentTestQuestions = pickTestQuestions(passage);
-  currentSelections = {};
-  testSubmitted = false;
+  writtenMode = isWrittenPassage(passage);
 
   // Title & meta
   document.getElementById('expanded-title').textContent = passage.title;
@@ -863,8 +903,18 @@ function openExpanded(passageId) {
     }).join('') +
   '</div>';
 
-  // Render questions (test mode — no answers revealed)
-  renderTestQuestions();
+  // Reset state and render the appropriate question mode
+  if (writtenMode) {
+    currentWritten = passage.questions.slice();
+    writtenSubmitted = false;
+    writtenFeedback = null;
+    renderWrittenQuestions();
+  } else {
+    currentTestQuestions = pickTestQuestions(passage);
+    currentSelections = {};
+    testSubmitted = false;
+    renderTestQuestions();
+  }
 
   // Show overlay
   var overlay = document.getElementById('expanded-overlay');
@@ -1054,6 +1104,161 @@ function retakeTest() {
   questionsCol.scrollTop = 0;
 
   renderTestQuestions();
+}
+
+// ── Written (GCSE) comprehension mode ────────────────────────────────────────
+function isWrittenPassage(p) {
+  return !!(p && p.questions && p.questions.length &&
+            p.questions[0].marks !== undefined && !p.questions[0].opts);
+}
+
+function renderWrittenQuestions() {
+  var col = document.getElementById('expanded-questions');
+  var totalMarks = currentWritten.reduce(function(s, q) { return s + (q.marks || 0); }, 0);
+  var html = '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">' +
+    '<span style="font-size:.9375rem;font-weight:700;color:var(--text)">Questions</span>' +
+    '<span style="font-size:.8125rem;color:var(--text-muted)">' + totalMarks + ' marks total</span></div>' +
+    '<p style="font-size:.8125rem;color:var(--text-muted);margin-bottom:16px">Answer in full sentences, as you would in a GCSE exam. Use evidence from the text. Submit when you are ready for marking.</p>';
+
+  currentWritten.forEach(function(q, i) {
+    var rows = q.marks >= 6 ? 8 : (q.marks >= 4 ? 5 : 3);
+    html += '<div class="comp-question-block">' +
+      '<span class="comp-marks-badge">' + q.marks + ' mark' + (q.marks !== 1 ? 's' : '') + '</span>' +
+      '<span class="comp-skill-badge">' + escapeHtml(q.skill || 'Question') + '</span>' +
+      '<div class="comp-question-text">' + (i + 1) + '. ' + escapeHtml(q.q) + '</div>' +
+      '<textarea class="comp-written-area" id="wq-' + i + '" rows="' + rows + '" placeholder="Write your answer here..."></textarea>' +
+    '</div>';
+  });
+  html += '<button class="comp-submit-btn" id="submit-btn" onclick="submitWritten()">Submit for Marking</button>' +
+    '<button class="comp-model-toggle" style="width:100%;margin-top:10px" onclick="revealAllModels()">Show model answers &amp; mark scheme</button>';
+  col.innerHTML = html;
+}
+
+function gatherWritten() {
+  return currentWritten.map(function(q, i) {
+    var el = document.getElementById('wq-' + i);
+    return { q: q.q, marks: q.marks, guidance: q.guidance || '', response: el ? el.value.trim() : '' };
+  });
+}
+
+function submitWritten() {
+  if (writtenSubmitted) return;
+  var items = gatherWritten();
+  var answered = items.filter(function(it) { return it.response.length > 0; }).length;
+  if (answered === 0) {
+    if (typeof showToast === 'function') showToast('Write at least one answer before submitting.', 'error');
+    else alert('Write at least one answer before submitting.');
+    return;
+  }
+  var passage = passages.find(function(p) { return p.id === expandedPassageId; });
+  var col = document.getElementById('expanded-questions');
+  col.innerHTML = '<div style="text-align:center;padding:48px 20px">' +
+    '<div class="comp-spinner" style="margin:0 auto 20px"></div>' +
+    '<h3>Marking your answers…</h3>' +
+    '<p style="color:var(--text-muted)">A GCSE examiner is reading your responses. This usually takes 5–10 seconds.</p></div>';
+
+  fetchWithAuth('/.netlify/functions/evaluate-comprehension', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ passageTitle: passage.title, passageText: passage.text, items: items })
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    if (data && data.success && data.feedback && Array.isArray(data.feedback.results)) {
+      writtenSubmitted = true;
+      writtenFeedback = data.feedback;
+      showWrittenResults(items, data.feedback);
+    } else {
+      showWrittenSelfMark(items, true);
+    }
+  })
+  .catch(function() { showWrittenSelfMark(items, true); });
+}
+
+function showWrittenResults(items, feedback) {
+  var col = document.getElementById('expanded-questions');
+  var total = 0, max = 0;
+  feedback.results.forEach(function(r) { total += r.marks; max += r.max; });
+  if (max === 0) items.forEach(function(it) { max += it.marks; });
+  savePassageProgress(expandedPassageId, total, max);
+  updateStats(); renderCards();
+
+  var pct = max > 0 ? Math.round(total / max * 100) : 0;
+  var sc = pct >= 70 ? 'perfect' : (pct >= 50 ? 'good' : 'needs-work');
+  var html = '<div class="comp-score-screen">' +
+    '<div class="comp-score-ring ' + sc + '"><div>' +
+      '<div class="comp-score-number">' + total + '</div>' +
+      '<div class="comp-score-total">out of ' + max + '</div></div></div>' +
+    '<div class="comp-score-label">' + pct + '%</div>' +
+    '<div class="comp-score-sublabel">' + escapeHtml(feedback.overall || '') + '</div></div>';
+
+  currentWritten.forEach(function(q, i) {
+    var r = feedback.results[i] || { marks: 0, max: q.marks, www: [], ebi: [] };
+    html += '<div class="comp-question-block">' +
+      '<span class="comp-marks-badge">' + r.marks + ' / ' + r.max + '</span>' +
+      '<span class="comp-skill-badge">' + escapeHtml(q.skill || '') + '</span>' +
+      '<div class="comp-question-text">' + (i + 1) + '. ' + escapeHtml(q.q) + '</div>' +
+      '<div class="comp-your-answer">' + escapeHtml(items[i].response || '(no answer given)') + '</div>' +
+      (r.www && r.www.length ? '<div class="comp-fb-www"><strong>What went well</strong><ul>' + r.www.map(function(s) { return '<li>' + escapeHtml(s) + '</li>'; }).join('') + '</ul></div>' : '') +
+      (r.ebi && r.ebi.length ? '<div class="comp-fb-ebi"><strong>Even better if</strong><ul>' + r.ebi.map(function(s) { return '<li>' + escapeHtml(s) + '</li>'; }).join('') + '</ul></div>' : '') +
+      '<button class="comp-model-toggle" onclick="toggleModel(' + i + ')">Show model answer</button>' +
+      '<div class="comp-model" id="model-' + i + '" style="display:none">' + escapeHtml(q.model || '') + '</div>' +
+    '</div>';
+  });
+  html += '<div class="comp-score-actions" style="margin-top:20px">' +
+    '<button class="comp-btn-retake" onclick="retakeWritten()">Try Again</button>' +
+    '<button class="comp-btn-close" onclick="closeExpanded()">Done</button></div>';
+  col.innerHTML = html;
+  col.scrollTop = 0;
+}
+
+// Self-mark fallback: shown if AI marking is unavailable, or when the student
+// chooses to reveal model answers before submitting. No numeric score is saved.
+function showWrittenSelfMark(items, aiFailed) {
+  var col = document.getElementById('expanded-questions');
+  var html = '<div class="comp-fallback-note">' + (aiFailed
+      ? 'Automatic marking is unavailable right now. Compare your answers with the model answers and mark scheme below and mark yourself.'
+      : 'Model answers and mark schemes are shown below. Use them to check your own answers, then submit for marking.') +
+    '</div>';
+  currentWritten.forEach(function(q, i) {
+    html += '<div class="comp-question-block">' +
+      '<span class="comp-marks-badge">' + q.marks + ' mark' + (q.marks !== 1 ? 's' : '') + '</span>' +
+      '<span class="comp-skill-badge">' + escapeHtml(q.skill || '') + '</span>' +
+      '<div class="comp-question-text">' + (i + 1) + '. ' + escapeHtml(q.q) + '</div>' +
+      (items[i] && items[i].response ? '<div class="comp-your-answer">' + escapeHtml(items[i].response) + '</div>' : '') +
+      '<div class="comp-fb-ebi"><strong>Mark scheme</strong><div>' + escapeHtml(q.guidance || '') + '</div></div>' +
+      '<button class="comp-model-toggle" onclick="toggleModel(' + i + ')">Show model answer</button>' +
+      '<div class="comp-model" id="model-' + i + '" style="display:none">' + escapeHtml(q.model || '') + '</div>' +
+    '</div>';
+  });
+  html += '<div class="comp-score-actions" style="margin-top:20px">' +
+    '<button class="comp-btn-retake" onclick="retakeWritten()">Back to Questions</button>' +
+    '<button class="comp-btn-close" onclick="closeExpanded()">Done</button></div>';
+  col.innerHTML = html;
+  col.scrollTop = 0;
+}
+
+function revealAllModels() {
+  showWrittenSelfMark(gatherWritten(), false);
+}
+
+function toggleModel(i) {
+  var el = document.getElementById('model-' + i);
+  if (!el) return;
+  var show = el.style.display === 'none';
+  el.style.display = show ? '' : 'none';
+  var btn = el.previousElementSibling;
+  if (btn && btn.classList.contains('comp-model-toggle')) btn.textContent = show ? 'Hide model answer' : 'Show model answer';
+}
+
+function retakeWritten() {
+  var passage = passages.find(function(p) { return p.id === expandedPassageId; });
+  if (!passage) return;
+  currentWritten = passage.questions.slice();
+  writtenSubmitted = false;
+  writtenFeedback = null;
+  document.getElementById('expanded-questions').scrollTop = 0;
+  renderWrittenQuestions();
 }
 
 // ── Close expanded ───────────────────────────────────────────────────────────

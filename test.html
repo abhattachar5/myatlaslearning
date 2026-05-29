@@ -189,6 +189,37 @@
 <script src="math-content-6.js"></script>
 <script src="math-content-7.js"></script>
 <script src="math-data-y8.js"></script>
+<!-- Year 8 Maths content banks. test.html doesn't load lessons.js, so ensure LESSONS
+     exists before these files Object.assign onto it (test page ignores lesson HTML). -->
+<script>window.LESSONS = window.LESSONS || {};</script>
+<script src="math-y8-t01.js"></script>
+<script src="math-y8-t02.js"></script>
+<script src="math-y8-t03.js"></script>
+<script src="math-y8-t04.js"></script>
+<script src="math-y8-t05.js"></script>
+<script src="math-y8-t06.js"></script>
+<script src="math-y8-t07.js"></script>
+<script src="math-y8-t08.js"></script>
+<script src="math-y8-t09.js"></script>
+<script src="math-y8-t10.js"></script>
+<script src="math-y8-t11.js"></script>
+<script src="math-y8-t12.js"></script>
+<script src="math-y8-t13.js"></script>
+<script src="math-y8-t14.js"></script>
+<script src="math-y8-t15.js"></script>
+<script src="math-y8-t16.js"></script>
+<script src="math-y8-t17.js"></script>
+<script src="math-y8-t18.js"></script>
+<script src="math-y8-t19.js"></script>
+<script src="math-y8-t20.js"></script>
+<script src="math-y8-t21.js"></script>
+<script src="math-y8-t22.js"></script>
+<script src="math-y8-t23.js"></script>
+<script src="math-y8-t24.js"></script>
+<script src="math-y8-t25.js"></script>
+<script src="math-y8-t26.js"></script>
+<script src="math-y8-t27.js"></script>
+<script src="math-y8-t28.js"></script>
 <script src="english-data.js"></script>
 <script src="english-content-1.js"></script>
 <script src="english-content-2.js"></script>
@@ -198,6 +229,23 @@
 <script src="english-content-6.js"></script>
 <script src="english-content-7.js"></script>
 <script src="english-content-8.js"></script>
+<!-- Year 8 English content (fresh) + Year 7 reuse aliases -->
+<script src="english-y8-1.js"></script>
+<script src="english-y8-2.js"></script>
+<script src="english-y8-3.js"></script>
+<script src="english-y8-4.js"></script>
+<script src="english-y8-5.js"></script>
+<script src="english-y8-6.js"></script>
+<script src="english-y8-7.js"></script>
+<script src="english-y8-reuse.js"></script>
+<!-- Year 8 Science / History / Geography content -->
+<script src="science-y8-1.js"></script>
+<script src="science-y8-2.js"></script>
+<script src="science-y8-3.js"></script>
+<script src="history-y8-1.js"></script>
+<script src="history-y8-2.js"></script>
+<script src="geography-y8-1.js"></script>
+<script src="geography-y8-2.js"></script>
 <script src="english-data-y8.js"></script>
 <script src="science-data-y7.js"></script>
 <script src="science-data-y8.js"></script>
@@ -209,6 +257,17 @@
 <script src="app.js"></script>
 <script src="test-generator.js"></script>
 <script src="science-test-generators-y7.js"></script>
+<!-- Reuse Year 7 science generators for matching Year 8 topics (must follow science-test-generators-y7.js) -->
+<script src="science-y8-reuse.js"></script>
+<!-- Reuse Year 7 maths generators for matching Year 8 skills (must follow test-generator.js) -->
+<script src="math-y8-generators.js"></script>
+<!-- New bespoke generators for Year-8-only skills (100% generative parity) -->
+<script src="math-y8-gen-1.js"></script>
+<script src="math-y8-gen-2.js"></script>
+<script src="math-y8-gen-3.js"></script>
+<script src="math-y8-gen-4.js"></script>
+<script src="math-y8-gen-5.js"></script>
+<script src="math-y8-gen-6.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
 let user = requireAuth();

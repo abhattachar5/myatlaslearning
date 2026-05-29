@@ -104,7 +104,7 @@
           <label class="form-label" for="edit-year">Year group</label>
           <select class="form-input form-select" id="edit-year">
             <option value="Year 7">Year 7</option>
-            <option value="Year 8" disabled>Year 8 — Coming Soon</option>
+            <option value="Year 8">Year 8</option>
             <option value="Year 9" disabled>Year 9 — Coming Soon</option>
             <option value="Year 10" disabled>Year 10 — Coming Soon</option>
             <option value="Year 11" disabled>Year 11 — Coming Soon</option>
@@ -140,6 +140,7 @@
         </div>
       </div>
       <p id="welcome-sub">Pick a topic to continue your studies.</p>
+      <div class="year-switch-wrap" id="year-switch-wrap" style="margin-top:10px;display:none"></div>
     </div>
 
     <!-- ── Hero Banner (pick up where you left off) ─────────────────────── -->
@@ -273,6 +274,35 @@
 <script src="math-lessons-5.js"></script>
 <script src="math-lessons-6.js"></script>
 <script src="math-lessons-7.js"></script>
+<!-- Year 8 Maths content (lessons + flashcards + test questions) -->
+<script src="math-y8-t01.js"></script>
+<script src="math-y8-t02.js"></script>
+<script src="math-y8-t03.js"></script>
+<script src="math-y8-t04.js"></script>
+<script src="math-y8-t05.js"></script>
+<script src="math-y8-t06.js"></script>
+<script src="math-y8-t07.js"></script>
+<script src="math-y8-t08.js"></script>
+<script src="math-y8-t09.js"></script>
+<script src="math-y8-t10.js"></script>
+<script src="math-y8-t11.js"></script>
+<script src="math-y8-t12.js"></script>
+<script src="math-y8-t13.js"></script>
+<script src="math-y8-t14.js"></script>
+<script src="math-y8-t15.js"></script>
+<script src="math-y8-t16.js"></script>
+<script src="math-y8-t17.js"></script>
+<script src="math-y8-t18.js"></script>
+<script src="math-y8-t19.js"></script>
+<script src="math-y8-t20.js"></script>
+<script src="math-y8-t21.js"></script>
+<script src="math-y8-t22.js"></script>
+<script src="math-y8-t23.js"></script>
+<script src="math-y8-t24.js"></script>
+<script src="math-y8-t25.js"></script>
+<script src="math-y8-t26.js"></script>
+<script src="math-y8-t27.js"></script>
+<script src="math-y8-t28.js"></script>
 <script src="english-lessons-1.js"></script>
 <script src="english-lessons-2.js"></script>
 <script src="english-lessons-3.js"></script>
@@ -280,6 +310,23 @@
 <script src="english-lessons-6.js"></script>
 <script src="english-lessons-7.js"></script>
 <script src="english-lessons-8.js"></script>
+<!-- Year 8 English content (fresh) + Year 7 reuse aliases -->
+<script src="english-y8-1.js"></script>
+<script src="english-y8-2.js"></script>
+<script src="english-y8-3.js"></script>
+<script src="english-y8-4.js"></script>
+<script src="english-y8-5.js"></script>
+<script src="english-y8-6.js"></script>
+<script src="english-y8-7.js"></script>
+<script src="english-y8-reuse.js"></script>
+<!-- Year 8 Science / History / Geography content -->
+<script src="science-y8-1.js"></script>
+<script src="science-y8-2.js"></script>
+<script src="science-y8-3.js"></script>
+<script src="history-y8-1.js"></script>
+<script src="history-y8-2.js"></script>
+<script src="geography-y8-1.js"></script>
+<script src="geography-y8-2.js"></script>
 <script src="auth-shim.js"></script>
 <script src="app.js"></script>
 <script src="planner.js"></script>
@@ -293,6 +340,56 @@ function getUserYear() { return user.year || 'Year 7'; }
 function getYearCurriculum() {
   const year = getUserYear();
   return CURRICULUM.filter(i => (i.yearGroup || 'Year 7') === year);
+}
+
+// ── Year management (switch year, per-year completion, history) ───────────────
+// Year groups that actually have content, in order.
+function availableYears() {
+  const counts = {};
+  CURRICULUM.forEach(i => { const y = i.yearGroup || 'Year 7'; counts[y] = (counts[y] || 0) + 1; });
+  return ['Year 7','Year 8','Year 9','Year 10','Year 11'].filter(y => counts[y]);
+}
+// Completion for any year, derived from CURRICULUM.yearGroup + saved progress.
+function getYearCompletionFor(year) {
+  const islands = CURRICULUM.filter(i => (i.yearGroup || 'Year 7') === year);
+  let mastered = 0;
+  islands.forEach(isl => { if (getIslandStatus(isl.id) === 4) mastered++; });
+  return { mastered, total: islands.length, pct: islands.length ? Math.round(mastered / islands.length * 100) : 0 };
+}
+// Record the first time a child enters a year group.
+function recordYearHistory(year) {
+  if (!user) return;
+  user.yearHistory = user.yearHistory || [];
+  if (!user.yearHistory.some(h => h.year === year)) {
+    user.yearHistory.push({ year, startedAt: new Date().toISOString() });
+    setUser(user);
+    if (typeof syncProgressToServer === 'function') syncProgressToServer();
+  }
+}
+// Switch the active year group (progress for every year is preserved by id).
+function changeYear(year) {
+  if (!year || year === getUserYear()) return;
+  user.year = year;
+  setUser(user);
+  recordYearHistory(year);
+  if (typeof syncProgressToServer === 'function') syncProgressToServer();
+  location.reload();
+}
+function renderYearSwitcher() {
+  const wrap = document.getElementById('year-switch-wrap');
+  if (!wrap) return;
+  const years = availableYears();
+  const cur = getUserYear();
+  if (years.length <= 1) { wrap.style.display = 'none'; return; }
+  wrap.style.display = '';
+  const opts = years.map(y => {
+    const c = getYearCompletionFor(y);
+    return '<option value="' + y + '"' + (y === cur ? ' selected' : '') + '>' + y + ' — ' + c.pct + '% complete</option>';
+  }).join('');
+  wrap.innerHTML =
+    '<label for="year-switcher" style="font-size:.8125rem;color:var(--text-muted);font-weight:600;margin-right:8px">Year group</label>' +
+    '<select id="year-switcher" class="form-input form-select" style="width:auto;display:inline-block;padding:6px 10px;font-size:.875rem" onchange="changeYear(this.value)">' +
+    opts + '</select>';
 }
 
 function getYearMathTopics() {
@@ -338,6 +435,8 @@ function getYearGeographyTopics() {
   renderFilters();
   renderGrid();
   setWelcome();
+  recordYearHistory(getUserYear());
+  renderYearSwitcher();
 })();
 
 // ── Hero Banner ──────────────────────────────────────────────────────────────
@@ -1435,15 +1534,24 @@ function saveProfile() {
   const year   = document.getElementById('edit-year').value;
   const school = document.getElementById('edit-school').value.trim();
   if (!name) return;
+  const yearChanged = (year !== user.year);
   user.name = name; user.year = year; user.school = school;
   setUser(user);
+  recordYearHistory(year);
   syncProgressToServer();
+  if (yearChanged) {
+    // Year switched — reload so every section reflects the new curriculum cleanly.
+    showToast('Switched to ' + year + ' — your other year\'s progress is saved', 'success');
+    setTimeout(function () { location.reload(); }, 600);
+    return;
+  }
   closeProfilePage();
   renderSidebar();
   renderStats();
   renderFilters();
   renderGrid();
   setWelcome();
+  renderYearSwitcher();
   showToast('Profile updated', 'success');
 }
 function confirmReset() {

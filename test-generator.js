@@ -24,8 +24,16 @@ function _islandGenerators(islandId) {
   if (bank && bank.length) {
     var statics = bank.filter(function(raw) { return typeof raw.gen !== 'function'; });
     if (statics.length) {
-      return statics.map(function(raw) {
-        return { depth: raw.depth || 'medium', gen: function() { return _normaliseTestQ(raw); } };
+      // Year 8 maths banks (m8i-*) are static and untagged. Assign depth by position
+      // so topic tests get the same medium/greater-depth split as Year 7: the harder
+      // questions sit later in each bank, so the last ~40% become greater-depth.
+      var gdStart = Math.ceil(statics.length * 0.6);
+      return statics.map(function(raw, idx) {
+        var depth = raw.depth;
+        if (!depth) {
+          depth = (/^m8i-/.test(islandId) && idx >= gdStart) ? 'greater-depth' : 'medium';
+        }
+        return { depth: depth, gen: function() { return _normaliseTestQ(raw); } };
       });
     }
   }
