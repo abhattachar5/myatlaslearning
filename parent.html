@@ -74,10 +74,23 @@
     <div class="gate card" id="pin-gate">
       <div style="font-size:2.5rem">🔒</div>
       <div style="font-weight:800;font-size:1.125rem;color:var(--text);margin:8px 0 4px">Parent Zone</div>
-      <p class="muted" id="pin-prompt" style="margin-bottom:16px">Enter your 4-digit PIN.</p>
-      <input class="pin-in" id="pin-input" type="password" inputmode="numeric" maxlength="4" autocomplete="off">
-      <div class="pin-err" id="pin-err"></div>
-      <button class="btn btn-primary" style="width:100%;margin-top:8px" id="pin-submit">Unlock</button>
+
+      <div id="pin-entry">
+        <p class="muted" id="pin-prompt" style="margin-bottom:16px">Enter your 4-digit PIN.</p>
+        <input class="pin-in" id="pin-input" type="password" inputmode="numeric" maxlength="4" autocomplete="off">
+        <div class="pin-err" id="pin-err"></div>
+        <button class="btn btn-primary" style="width:100%;margin-top:8px" id="pin-submit">Unlock</button>
+        <p id="pin-forgot-wrap" style="margin-top:10px;display:none"><a href="#" style="color:#6366f1;font-weight:700;font-size:.875rem" onclick="forgotPin(event)">Forgot PIN?</a></p>
+      </div>
+
+      <div id="pin-recover" style="display:none">
+        <p class="muted" style="margin-bottom:16px">Enter your account password to reset the PIN.</p>
+        <input class="pin-in" id="pin-pw" type="password" style="width:220px;letter-spacing:normal;font-size:1rem" autocomplete="current-password" placeholder="Account password">
+        <div class="pin-err" id="pin-recover-err"></div>
+        <button class="btn btn-primary" style="width:100%;margin-top:8px" onclick="verifyPassword()">Verify &amp; reset PIN</button>
+        <p style="margin-top:10px"><a href="#" style="color:var(--text-muted);font-size:.875rem" onclick="cancelRecover(event)">← Back</a></p>
+      </div>
+
       <p style="margin-top:14px"><a class="pz-back muted" href="dashboard.html">← Back to dashboard</a></p>
     </div>
 
@@ -86,10 +99,22 @@
       <div class="pz-top">
         <a class="pz-back" href="dashboard.html" title="Back to dashboard" style="font-size:1.25rem">←</a>
         <div class="pz-title">👪 Parent Zone</div>
-        <div style="margin-left:auto;display:flex;align-items:center;gap:10px">
+        <div style="margin-left:auto;display:flex;align-items:center;gap:12px">
+          <button class="btn btn-ghost" style="padding:7px 12px" onclick="toggleChangePin()">🔑 Change PIN</button>
           <span class="child-av" id="cav">–</span>
           <span><span class="cn" id="cname">–</span> <span class="cy" id="cyear"></span></span>
         </div>
+      </div>
+
+      <div class="card" id="pin-change" style="display:none;margin-bottom:14px">
+        <div style="font-weight:800;color:var(--text);margin-bottom:10px">🔑 Change your PIN</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end">
+          <div><div class="lbl">New PIN</div><input id="pin-new" class="pin-in" style="width:120px;font-size:1.25rem;letter-spacing:8px" type="password" inputmode="numeric" maxlength="4" autocomplete="off"></div>
+          <div><div class="lbl">Confirm</div><input id="pin-new2" class="pin-in" style="width:120px;font-size:1.25rem;letter-spacing:8px" type="password" inputmode="numeric" maxlength="4" autocomplete="off"></div>
+          <button class="btn btn-primary" onclick="saveNewPin()">Save PIN</button>
+          <button class="btn btn-ghost" onclick="toggleChangePin()">Cancel</button>
+        </div>
+        <div id="pin-change-msg" style="font-size:.8125rem;font-weight:600;min-height:18px;margin-top:8px"></div>
       </div>
 
       <div class="pz-nav">
@@ -248,9 +273,12 @@
     var zone = document.getElementById('zone');
     var pinInput = document.getElementById('pin-input');
     var pinErr = document.getElementById('pin-err');
+    var pinEmail = (function () { try { return netlifyIdentity.currentUser().email; } catch (e) { return ''; } })();
     if (settingPin) {
       document.getElementById('pin-prompt').textContent = 'Set a 4-digit PIN to protect the Parent Zone.';
       document.getElementById('pin-submit').textContent = 'Set PIN';
+    } else {
+      document.getElementById('pin-forgot-wrap').style.display = '';
     }
     function submitPin() {
       var v = (pinInput.value || '').trim();
@@ -273,6 +301,54 @@
     document.getElementById('pin-submit').addEventListener('click', submitPin);
     pinInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') submitPin(); });
     pinInput.focus();
+
+    // ── Forgot PIN → re-verify the account password, then set a new PIN ──────────
+    function forgotPin(e) {
+      if (e) e.preventDefault();
+      document.getElementById('pin-entry').style.display = 'none';
+      document.getElementById('pin-recover').style.display = '';
+      document.getElementById('pin-pw').focus();
+    }
+    function cancelRecover(e) {
+      if (e) e.preventDefault();
+      document.getElementById('pin-recover').style.display = 'none';
+      document.getElementById('pin-entry').style.display = '';
+    }
+    function verifyPassword() {
+      var pw = document.getElementById('pin-pw').value;
+      var msg = document.getElementById('pin-recover-err');
+      if (!pw) { msg.style.color = '#dc2626'; msg.textContent = 'Enter your password.'; return; }
+      if (!window.gotrueAuth || !pinEmail) { msg.style.color = '#dc2626'; msg.textContent = 'Cannot verify right now.'; return; }
+      msg.style.color = 'var(--text-muted)'; msg.textContent = 'Checking…';
+      window.gotrueAuth.login(pinEmail, pw, true).then(function () {
+        document.getElementById('pin-recover').style.display = 'none';
+        document.getElementById('pin-entry').style.display = '';
+        settingPin = true;
+        document.getElementById('pin-prompt').textContent = 'Password confirmed — set a new 4-digit PIN.';
+        document.getElementById('pin-submit').textContent = 'Set new PIN';
+        document.getElementById('pin-forgot-wrap').style.display = 'none';
+        pinInput.value = ''; pinErr.textContent = ''; pinInput.focus();
+      }).catch(function () {
+        msg.style.color = '#dc2626'; msg.textContent = 'Incorrect password.';
+      });
+    }
+
+    // ── Change PIN from inside the unlocked zone ─────────────────────────────────
+    function toggleChangePin() {
+      var c = document.getElementById('pin-change');
+      if (getComputedStyle(c).display === 'none') { c.style.display = ''; document.getElementById('pin-new').focus(); }
+      else { c.style.display = 'none'; document.getElementById('pin-new').value = ''; document.getElementById('pin-new2').value = ''; document.getElementById('pin-change-msg').textContent = ''; }
+    }
+    function saveNewPin() {
+      var p1 = document.getElementById('pin-new').value.trim(), p2 = document.getElementById('pin-new2').value.trim();
+      var m = document.getElementById('pin-change-msg');
+      if (!/^\d{4}$/.test(p1)) { m.style.color = '#dc2626'; m.textContent = 'PIN must be 4 digits.'; return; }
+      if (p1 !== p2) { m.style.color = '#dc2626'; m.textContent = 'PINs do not match.'; return; }
+      setParentPin(p1);
+      m.style.color = '#15803d'; m.textContent = 'PIN updated.';
+      document.getElementById('pin-new').value = ''; document.getElementById('pin-new2').value = '';
+      setTimeout(function () { document.getElementById('pin-change').style.display = 'none'; m.textContent = ''; }, 900);
+    }
 
     // ── Sub-tabs ────────────────────────────────────────────────────────────────
     document.querySelectorAll('.pz-nav button').forEach(function (b) {
