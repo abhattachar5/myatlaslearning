@@ -101,7 +101,31 @@ Object.assign(LESSONS, {
   <li>One paragraph = one point. If in doubt, start a new paragraph.</li>
   <li>Every paragraph should begin with a clear topic sentence.</li>
   <li>Vary your linking words to show different relationships between ideas.</li>
-</ul>`,
+</ul>
+
+<h3>Writing Practice</h3>
+<p>Try this task in your exercise book or on paper, then use the rubric below to evaluate your own work.</p>
+<div style="background:#e0f2fe;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #0284c7">
+  <strong>Task:</strong> Plan and write the <strong>opening three paragraphs</strong> of an essay answering this question:<br>
+  <em>"Should mobile phones be banned in schools?"</em><br><br>
+  Your plan should include: a mind map or bullet list, a clear introduction with your thesis, and two body paragraphs — each with a topic sentence, evidence, and a linking phrase to the next paragraph.
+</div>
+<h4>Self-Evaluation Rubric</h4>
+<table style="width:100%;border-collapse:collapse;margin:1em 0;font-size:.875rem">
+  <tr>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Criteria</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">Yes</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:50px;text-align:center">Partly</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">No</th>
+  </tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I created a plan before writing</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">My introduction clearly states my argument (thesis)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">Each paragraph has a clear topic sentence</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">Each paragraph covers only ONE main idea</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I used varied transition/linking words between paragraphs</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">My paragraphs are in a logical order</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+</table>
+<p><strong>Scoring:</strong> Yes = 2 points, Partly = 1, No = 0. Total out of 12. Aim for 10+.</p>`,
 
 // ── ei-06-2: Argumentative Writing ───────────────────────────────────────────
 'ei-06-2': `
@@ -218,7 +242,31 @@ Object.assign(LESSONS, {
   <li>Always rebut the counter-argument — never leave it unanswered.</li>
   <li>Use a mix of AFOREST devices, not just one.</li>
   <li>Save your strongest point for last to leave a lasting impression.</li>
-</ul>`,
+</ul>
+
+<h3>Writing Practice</h3>
+<p>Try this task in your exercise book or on paper, then use the rubric below to evaluate your own work.</p>
+<div style="background:#e0f2fe;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #0284c7">
+  <strong>Task:</strong> Write a <strong>single PEEL paragraph</strong> arguing for OR against this statement:<br>
+  <em>"Homework should be abolished for all secondary school students."</em><br><br>
+  Your paragraph must include: a clear Point, a piece of Evidence (a fact, statistic, or example), an Explanation of why the evidence supports your point, and a Link back to the question. Use at least two AFOREST devices.
+</div>
+<h4>Self-Evaluation Rubric</h4>
+<table style="width:100%;border-collapse:collapse;margin:1em 0;font-size:.875rem">
+  <tr>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Criteria</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">Yes</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:50px;text-align:center">Partly</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">No</th>
+  </tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I stated my Point clearly in the opening sentence</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I included a specific piece of Evidence (not a vague claim)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I Explained WHY my evidence supports my argument</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I Linked back to the essay question at the end</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I used at least two AFOREST persuasive devices</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I included a counter-argument and rebutted it</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+</table>
+<p><strong>Scoring:</strong> Yes = 2 points, Partly = 1, No = 0. Total out of 12. Aim for 10+.</p>`,
 
 // ── ei-06-3: Creative Writing Techniques ─────────────────────────────────────
 'ei-06-3': `
@@ -337,7 +385,31 @@ Object.assign(LESSONS, {
   <li>Make dialogue sound natural — read it aloud to check.</li>
   <li>Vary your sentence lengths deliberately to control pace and mood.</li>
   <li>Avoid cliches ("dark and stormy night") — aim for original, specific imagery.</li>
-</ul>`,
+</ul>
+
+<h3>Writing Practice</h3>
+<p>Try this task in your exercise book or on paper, then use the rubric below to evaluate your own work.</p>
+<div style="background:#e0f2fe;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #0284c7">
+  <strong>Task:</strong> Write a <strong>descriptive paragraph (100–150 words)</strong> based on this opening line:<br>
+  <em>"The door creaked open, and a wave of cold air rushed past."</em><br><br>
+  Your paragraph must: use "show, don't tell" (no emotion labels like "scared" or "nervous"), include at least three different senses, use at least one piece of dialogue, and vary your sentence lengths deliberately.
+</div>
+<h4>Self-Evaluation Rubric</h4>
+<table style="width:100%;border-collapse:collapse;margin:1em 0;font-size:.875rem">
+  <tr>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Criteria</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">Yes</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:50px;text-align:center">Partly</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">No</th>
+  </tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I showed emotions through actions/senses, not labels</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I used at least 3 different senses (sight, sound, touch, smell, taste)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I included dialogue that is correctly punctuated</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I varied my sentence lengths (short for impact, long for description)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">My imagery is original (no cliches)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">My writing creates a clear atmosphere or mood</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+</table>
+<p><strong>Scoring:</strong> Yes = 2 points, Partly = 1, No = 0. Total out of 12. Aim for 10+.</p>`,
 
 // ── ei-06-4: Editing & Proofreading ──────────────────────────────────────────
 'ei-06-4': `
@@ -453,7 +525,31 @@ Object.assign(LESSONS, {
   <li>Replace vague words (nice, good, bad, a lot) with precise alternatives.</li>
   <li>Check for the "big five" errors: homophones, comma splices, tense, apostrophes, capitals.</li>
   <li>Read your work aloud or backwards before submitting.</li>
-</ul>`,
+</ul>
+
+<h3>Writing Practice</h3>
+<p>Try this task in your exercise book or on paper, then use the rubric below to evaluate your own work.</p>
+<div style="background:#e0f2fe;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #0284c7">
+  <strong>Task:</strong> Below is a first draft with deliberate errors. <strong>Edit and proofread</strong> it, then rewrite the improved version.<br><br>
+  <em>"Their was alot of people at the event, it was really good and everyone was having a nice time. The music was loud and the food was nice. Some people was dancing and others was sat down talking. The event went on for a long time and then it finished and people went home they was tired."</em><br><br>
+  Fix: spelling/grammar errors, comma splices, weak vocabulary (nice, good, a lot), repetitive sentence openings, and tense consistency. Then rewrite it with varied sentence structures and stronger word choices.
+</div>
+<h4>Self-Evaluation Rubric</h4>
+<table style="width:100%;border-collapse:collapse;margin:1em 0;font-size:.875rem">
+  <tr>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Criteria</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">Yes</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:50px;text-align:center">Partly</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">No</th>
+  </tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I corrected all spelling errors (their/there, alot/a lot)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I fixed the comma splices (two sentences joined by only a comma)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I fixed subject-verb agreement ("people was" &rarr; "people were")</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I replaced weak words (nice, good, a lot) with precise alternatives</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I varied my sentence openings (not all starting the same way)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">My rewritten version uses consistent tense throughout</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+</table>
+<p><strong>Scoring:</strong> Yes = 2 points, Partly = 1, No = 0. Total out of 12. Aim for 10+.</p>`,
 
 // ── ei-06-5: Research & Referencing ──────────────────────────────────────────
 'ei-06-5': `
@@ -584,7 +680,34 @@ Object.assign(LESSONS, {
   <li>Always credit the source, even when paraphrasing.</li>
   <li>Keep a running list of sources as you research — do not try to find them again later.</li>
   <li>Cross-check facts across multiple reliable sources.</li>
-</ul>`,
+</ul>
+
+<h3>Writing Practice</h3>
+<p>Try this task in your exercise book or on paper, then use the rubric below to evaluate your own work.</p>
+<div style="background:#e0f2fe;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #0284c7">
+  <strong>Task:</strong> Imagine you are writing a short essay on the topic: <em>"The impact of social media on teenagers."</em><br><br>
+  Write <strong>one paragraph</strong> that includes:<br>
+  1. A paraphrased idea from a source (invent a plausible source, e.g., "According to a 2023 NHS report...")<br>
+  2. A short direct quote (invent a plausible quote with quotation marks)<br>
+  3. A sentence explaining why you chose this evidence<br><br>
+  Then write a <strong>bibliography entry</strong> for each source you invented, using the format from the lesson.
+</div>
+<h4>Self-Evaluation Rubric</h4>
+<table style="width:100%;border-collapse:collapse;margin:1em 0;font-size:.875rem">
+  <tr>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Criteria</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">Yes</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:50px;text-align:center">Partly</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">No</th>
+  </tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I paraphrased an idea in my own words (not just copied)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I credited the source for my paraphrase</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I included a direct quote in quotation marks</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I explained why the evidence supports my point</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">My bibliography entries follow the correct format</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">My paragraph reads naturally and flows well</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+</table>
+<p><strong>Scoring:</strong> Yes = 2 points, Partly = 1, No = 0. Total out of 12. Aim for 10+.</p>`,
 
 // ── ei-06-6: Transitions & Conjunctive Adverbs ──────────────────────────────
 'ei-06-6': `
@@ -681,6 +804,33 @@ Object.assign(LESSONS, {
   <li>Vary your transitions — repetition weakens your writing.</li>
   <li>You can always start a new sentence with a conjunctive adverb instead of using a semicolon.</li>
   <li>When in doubt, read the sentence aloud — if the connection between ideas is unclear, you may need a different transition.</li>
-</ul>`
+</ul>
+
+<h3>Writing Practice</h3>
+<p>Try this task in your exercise book or on paper, then use the rubric below to evaluate your own work.</p>
+<div style="background:#e0f2fe;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #0284c7">
+  <strong>Task:</strong> Rewrite each pair of sentences below as <strong>one sentence</strong> using an appropriate conjunctive adverb. Punctuate correctly with a semicolon and comma.<br><br>
+  1. The school invested in new computers. Student test scores did not improve.<br>
+  2. Regular exercise improves your mood. It strengthens your immune system.<br>
+  3. The train was cancelled. We found an alternative bus route.<br>
+  4. She revised every evening for three weeks. She achieved the highest mark in her class.<br><br>
+  For each answer, state which <strong>category</strong> your conjunctive adverb belongs to (addition, contrast, cause/effect, or time).
+</div>
+<h4>Self-Evaluation Rubric</h4>
+<table style="width:100%;border-collapse:collapse;margin:1em 0;font-size:.875rem">
+  <tr>
+    <th style="background:#f59e0b;color:white;padding:8px;border:1px solid #ccc;text-align:left">Criteria</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">Yes</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:50px;text-align:center">Partly</th>
+    <th style="background:#f59e0b;color:white;padding:6px;border:1px solid #ccc;width:40px;text-align:center">No</th>
+  </tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I used a semicolon before each conjunctive adverb</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I used a comma after each conjunctive adverb</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">I chose the correct category for each (contrast for Q1, addition for Q2, contrast for Q3, cause/effect for Q4)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I used a different conjunctive adverb for each sentence (not the same one four times)</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc">Each combined sentence reads naturally and makes logical sense</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+  <tr style="background:#fafafa"><td style="padding:8px;border:1px solid #ccc">I correctly identified the category for each conjunctive adverb</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td><td style="padding:6px;border:1px solid #ccc;text-align:center">&square;</td></tr>
+</table>
+<p><strong>Scoring:</strong> Yes = 2 points, Partly = 1, No = 0. Total out of 12. Aim for 10+.</p>`
 
 });

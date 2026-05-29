@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas — Writing Challenge</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
+  <style>
+    .wt-container { max-width: 780px; margin: 0 auto; padding: 24px 16px; }
+
+    /* Setup */
+    .wt-setup { text-align: center; padding: 48px 20px; }
+    .wt-setup h2 { margin-bottom: 8px; font-size: 1.5rem; }
+    .wt-setup p { color: var(--text-2); margin-bottom: 28px; line-height: 1.6; }
+    .wt-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 32px; text-align: left; max-width: 400px; margin-left: auto; margin-right: auto; }
+    .wt-info-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px; }
+    .wt-info-card .label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 4px; }
+    .wt-info-card .value { font-size: 1.125rem; font-weight: 700; }
+
+    /* Writing area */
+    .wt-prompt-box { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; text-align: left; }
+    .wt-prompt-box h3 { margin-bottom: 12px; font-size: 1.125rem; }
+    .wt-prompt-box .prompt-text { font-size: 1rem; line-height: 1.7; color: var(--text); }
+    .wt-prompt-box .prompt-text em { color: var(--text); font-weight: 600; }
+    .wt-prompt-box .prompt-reqs { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+    .wt-prompt-box .prompt-reqs h4 { font-size: .875rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 8px; }
+    .wt-prompt-box .prompt-reqs ul { margin: 0; padding-left: 20px; font-size: .9375rem; line-height: 1.7; }
+
+    .wt-textarea-wrap { position: relative; margin-bottom: 8px; }
+    .wt-textarea { width: 100%; min-height: 300px; padding: 16px; border: 2px solid var(--border); border-radius: var(--radius-sm); font-family: inherit; font-size: .9375rem; line-height: 1.7; resize: vertical; background: var(--surface); color: var(--text); transition: border-color .15s; box-sizing: border-box; }
+    .wt-textarea:focus { outline: none; border-color: #f59e0b; }
+    .wt-word-count { text-align: right; font-size: .8125rem; color: var(--text-muted); margin-bottom: 20px; }
+    .wt-word-count.over { color: var(--red); }
+    .wt-word-count.good { color: var(--green); }
+
+    .wt-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* Loading */
+    .wt-loading { text-align: center; padding: 48px 20px; }
+    .wt-spinner { width: 48px; height: 48px; border: 4px solid var(--ring-track); border-top-color: #f59e0b; border-radius: 50%; animation: wt-spin 0.8s linear infinite; margin: 0 auto 20px; }
+    @keyframes wt-spin { to { transform: rotate(360deg); } }
+
+    /* Results */
+    .wt-results { padding: 20px 0; }
+    .wt-overall { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; text-align: center; }
+    .wt-overall-score { font-size: 3rem; font-weight: 800; margin: 12px 0; }
+    .wt-overall-score.high { color: var(--green); }
+    .wt-overall-score.mid { color: #f59e0b; }
+    .wt-overall-score.low { color: var(--red); }
+    .wt-overall-text { font-size: .9375rem; color: var(--text-2); line-height: 1.6; max-width: 600px; margin: 0 auto; }
+
+    .wt-scores-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 20px; }
+    .wt-score-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px; }
+    .wt-score-card .sc-label { font-size: .8125rem; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
+    .wt-score-card .sc-bar { height: 8px; background: var(--ring-track); border-radius: 4px; overflow: hidden; margin-bottom: 4px; }
+    .wt-score-card .sc-fill { height: 100%; border-radius: 4px; transition: width .4s ease; }
+    .wt-score-card .sc-value { font-size: .75rem; font-weight: 700; text-align: right; }
+
+    .wt-feedback-section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px; }
+    .wt-feedback-section h3 { margin-bottom: 12px; font-size: 1rem; }
+    .wt-feedback-section ul { margin: 0; padding-left: 20px; }
+    .wt-feedback-section li { margin-bottom: 8px; font-size: .9375rem; line-height: 1.5; }
+    .wt-feedback-section.strengths { border-left: 4px solid var(--green); }
+    .wt-feedback-section.improvements { border-left: 4px solid #f59e0b; }
+
+    .wt-your-writing { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 20px; margin-bottom: 20px; }
+    .wt-your-writing h4 { font-size: .875rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 12px; }
+    .wt-your-writing p { white-space: pre-wrap; font-size: .9375rem; line-height: 1.7; color: var(--text-2); }
+
+    .wt-error { background: #fef2f2; border: 1px solid #fca5a5; border-radius: var(--radius-sm); padding: 16px; color: #991b1b; text-align: center; margin-bottom: 20px; }
+
+    @media (max-width: 600px) {
+      .wt-textarea { min-height: 220px; font-size: .875rem; }
+      .wt-overall-score { font-size: 2.25rem; }
+      .wt-scores-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#wt-main">Skip to content</a>
+
+<header class="island-header" style="background:var(--surface)">
+  <a id="back-btn" href="topic.html" class="island-header-back" aria-label="Back to topic">←</a>
+  <div class="island-header-emoji">✍️</div>
+  <div class="island-header-info">
+    <h2 id="hdr-name">Writing Challenge</h2>
+    <div class="island-header-meta">
+      <span class="subject-pill" style="font-size:.6875rem;padding:2px 8px;color:white;background:#f59e0b">English</span>
+      <span class="badge">Writing Strategies</span>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:6px">
+    <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" aria-label="Toggle colour theme">🌙</button>
+  </div>
+</header>
+
+<main class="page-main" id="wt-main">
+  <div class="wt-container">
+
+    <!-- SETUP SCREEN -->
+    <div id="wt-setup" class="wt-setup">
+      <h2>Writing Challenge</h2>
+      <p>Put your writing skills to the test! You'll be given a writing task that draws on everything you've learned across Writing Strategies. Write your response, then get instant AI feedback on your work.</p>
+
+      <div class="wt-info-grid">
+        <div class="wt-info-card"><div class="label">Target</div><div class="value">200–400 words</div></div>
+        <div class="wt-info-card"><div class="label">Feedback</div><div class="value">AI-powered</div></div>
+      </div>
+
+      <button class="btn btn-primary" style="font-size:1rem;padding:14px 32px" onclick="startWriting()">Start Writing Challenge</button>
+    </div>
+
+    <!-- WRITING SCREEN -->
+    <div id="wt-active" style="display:none">
+      <div class="wt-prompt-box">
+        <h3 id="prompt-title"></h3>
+        <div class="prompt-text" id="prompt-text"></div>
+        <div class="prompt-reqs">
+          <h4>Your writing should include:</h4>
+          <ul id="prompt-reqs-list"></ul>
+        </div>
+      </div>
+
+      <div class="wt-textarea-wrap">
+        <textarea class="wt-textarea" id="writing-area" placeholder="Start writing here..." oninput="updateWordCount()"></textarea>
+      </div>
+      <div class="wt-word-count" id="word-count">0 words</div>
+
+      <div class="wt-actions">
+        <button class="btn btn-secondary" onclick="confirmAbandon()">← Back</button>
+        <button class="btn btn-primary" id="submit-btn" onclick="submitWriting()">Get AI Feedback →</button>
+      </div>
+    </div>
+
+    <!-- LOADING SCREEN -->
+    <div id="wt-loading" style="display:none" class="wt-loading">
+      <div class="wt-spinner"></div>
+      <h3>Evaluating your writing...</h3>
+      <p style="color:var(--text-muted)">Our AI teacher is reading your work and preparing feedback. This usually takes 5–10 seconds.</p>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div id="wt-results" style="display:none" class="wt-results"></div>
+
+    <!-- ERROR -->
+    <div id="wt-error" style="display:none"></div>
+
+  </div>
+</main>
+
+<script src="data.js"></script>
+<script src="english-data.js"></script>
+<script src="auth-shim.js"></script>
+<script src="app.js"></script>
+<script>
+// ── Init ──────────────────────────────────────────────────────────────────
+var user = requireAuth();
+var params = new URLSearchParams(location.search);
+var topicId = params.get('id') || 'et-06';
+document.getElementById('back-btn').href = 'topic.html?id=' + topicId;
+
+(function() { initTheme(); updateThemeBtn(); })();
+function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
+function updateThemeBtn() {
+  var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  var btn = document.getElementById('theme-btn');
+  btn.textContent = dark ? '☀️' : '🌙';
+  btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+}
+
+// ── Writing Prompts ──────────────────────────────────────────────────────
+var WRITING_PROMPTS = [
+  {
+    title: "Persuasive Essay: Screen Time",
+    text: 'Write a short essay (3–4 paragraphs) arguing for <strong>or</strong> against this statement:<br><br><em>"Teenagers should be limited to two hours of screen time per day."</em><br><br>Take a clear position and try to convince the reader that your view is correct.',
+    requirements: [
+      "An introduction that clearly states your argument (thesis)",
+      "At least two PEEL paragraphs with evidence and explanation",
+      "A counter-argument that you acknowledge and then refute",
+      "At least three different persuasive/rhetorical devices (e.g. rhetorical question, emotive language, rule of three)",
+      "Varied transition words and conjunctive adverbs, correctly punctuated",
+      "A conclusion that summarises your position"
+    ]
+  },
+  {
+    title: "Persuasive Letter: School Improvements",
+    text: 'Write a formal letter to your headteacher arguing for <strong>one specific change</strong> you would like to see in your school. This could be about facilities, rules, the curriculum, or anything else you feel strongly about.<br><br>Begin with: <em>Dear [Headteacher\'s name],</em>',
+    requirements: [
+      "A clear opening that states your purpose and your proposed change",
+      "At least two paragraphs of argument using the PEEL structure",
+      "Evidence to support your case (statistics, examples, or expert opinions)",
+      "A counter-argument paragraph that you refute",
+      "Formal tone with varied transitions and conjunctive adverbs",
+      "A polite but firm closing paragraph with a call to action"
+    ]
+  },
+  {
+    title: "Descriptive & Argumentative: A Place That Matters",
+    text: 'Write about a place that is important to you — it could be real or imagined. Your piece should <strong>describe the place vividly</strong> in the first half, then <strong>argue why it matters</strong> (or should be protected/preserved/changed) in the second half.<br><br>Begin with a descriptive opening that puts the reader in the scene.',
+    requirements: [
+      "A vivid opening that uses 'show, don't tell' and sensory language (at least 3 senses)",
+      "Varied sentence lengths — short for impact, long for description",
+      "A clear transition from description to argument",
+      "At least one PEEL paragraph arguing your point with evidence",
+      "Conjunctive adverbs correctly punctuated with semicolons",
+      "Original imagery — avoid cliches"
+    ]
+  },
+  {
+    title: "Opinion Article: Is Homework Worth It?",
+    text: 'Write an opinion article for your school newspaper on this question:<br><br><em>"Is homework a valuable use of students\' time, or does it cause more harm than good?"</em><br><br>Your article should be balanced but come to a clear conclusion.',
+    requirements: [
+      "A headline and an engaging opening paragraph that hooks the reader",
+      "Arguments on BOTH sides of the debate, with evidence for each",
+      "At least two AFOREST persuasive devices",
+      "A counter-argument that you acknowledge before giving your verdict",
+      "Varied transitions (addition, contrast, cause/effect) correctly punctuated",
+      "A strong concluding paragraph that states your opinion clearly"
+    ]
+  }
+];
+
+var currentPrompt = null;
+
+// ── Start ────────────────────────────────────────────────────────────────
+function startWriting() {
+  currentPrompt = WRITING_PROMPTS[Math.floor(Math.random() * WRITING_PROMPTS.length)];
+
+  document.getElementById('prompt-title').textContent = currentPrompt.title;
+  document.getElementById('prompt-text').innerHTML = currentPrompt.text;
+
+  var reqList = document.getElementById('prompt-reqs-list');
+  reqList.innerHTML = currentPrompt.requirements.map(function(r) {
+    return '<li>' + r + '</li>';
+  }).join('');
+
+  document.getElementById('wt-setup').style.display = 'none';
+  document.getElementById('wt-active').style.display = '';
+  document.getElementById('writing-area').value = '';
+  updateWordCount();
+  document.getElementById('writing-area').focus();
+}
+
+// ── Word count ───────────────────────────────────────────────────────────
+function updateWordCount() {
+  var text = document.getElementById('writing-area').value.trim();
+  var count = text ? text.split(/\s+/).length : 0;
+  var el = document.getElementById('word-count');
+  el.textContent = count + ' word' + (count !== 1 ? 's' : '');
+  el.className = 'wt-word-count';
+  if (count >= 200 && count <= 400) el.classList.add('good');
+  else if (count > 400) el.classList.add('over');
+
+  document.getElementById('submit-btn').disabled = count < 30;
+}
+
+// ── Submit ────────────────────────────────────────────────────────────────
+function submitWriting() {
+  var text = document.getElementById('writing-area').value.trim();
+  var count = text ? text.split(/\s+/).length : 0;
+  if (count < 30) {
+    showToast('Please write at least 30 words before submitting.', 'error');
+    return;
+  }
+
+  var promptContext = currentPrompt.title + '\n' + currentPrompt.requirements.join('\n');
+
+  document.getElementById('wt-active').style.display = 'none';
+  document.getElementById('wt-loading').style.display = '';
+
+  var token = localStorage.getItem('sm_token') || '';
+
+  fetch('/.netlify/functions/evaluate-writing', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + token
+    },
+    body: JSON.stringify({
+      prompt: promptContext,
+      response: text
+    })
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    document.getElementById('wt-loading').style.display = 'none';
+    if (data.success && data.feedback) {
+      showResults(data.feedback, text);
+    } else {
+      showError(data.error || 'Something went wrong. Please try again.');
+    }
+  })
+  .catch(function(err) {
+    document.getElementById('wt-loading').style.display = 'none';
+    showError('Could not connect to the AI evaluator. Please check your internet connection and try again.');
+  });
+}
+
+// ── Results ──────────────────────────────────────────────────────────────
+var SCORE_LABELS = {
+  planning: 'Planning & Organisation',
+  argument: 'Argumentative Writing',
+  creative: 'Creative Writing',
+  editing: 'Editing & Proofreading',
+  research: 'Research & Referencing',
+  transitions: 'Transitions & Conjunctive Adverbs'
+};
+
+function showResults(feedback, studentText) {
+  var scores = feedback.scores || {};
+  var totalScore = 0, totalMax = 0;
+  var scoreCards = '';
+
+  var keys = ['planning', 'argument', 'creative', 'editing', 'research', 'transitions'];
+  for (var i = 0; i < keys.length; i++) {
+    var k = keys[i];
+    var val = scores[k];
+    if (val === null || val === undefined) continue;
+    totalScore += val;
+    totalMax += 4;
+    var pct = (val / 4) * 100;
+    var color = val >= 3 ? 'var(--green)' : val >= 2 ? '#f59e0b' : 'var(--red)';
+    scoreCards += '<div class="wt-score-card">';
+    scoreCards += '<div class="sc-label">' + SCORE_LABELS[k] + '</div>';
+    scoreCards += '<div class="sc-bar"><div class="sc-fill" style="width:' + pct + '%;background:' + color + '"></div></div>';
+    scoreCards += '<div class="sc-value" style="color:' + color + '">' + val + ' / 4</div>';
+    scoreCards += '</div>';
+  }
+
+  var overallPct = totalMax > 0 ? Math.round((totalScore / totalMax) * 100) : 0;
+  var scoreClass = overallPct >= 70 ? 'high' : overallPct >= 45 ? 'mid' : 'low';
+  var emoji = overallPct >= 85 ? '🏆' : overallPct >= 70 ? '🌟' : overallPct >= 45 ? '👍' : '📚';
+
+  var html = '';
+
+  // Overall
+  html += '<div class="wt-overall">';
+  html += '<div style="font-size:3rem;margin-bottom:8px">' + emoji + '</div>';
+  html += '<h2>Writing Challenge Complete!</h2>';
+  html += '<div class="wt-overall-score ' + scoreClass + '">' + overallPct + '%</div>';
+  html += '<p style="color:var(--text-muted);margin-bottom:16px">' + totalScore + ' out of ' + totalMax + ' points</p>';
+  html += '<div class="wt-overall-text">' + escapeHtml(feedback.overall || '') + '</div>';
+  html += '</div>';
+
+  // Score breakdown
+  html += '<div class="wt-scores-grid">' + scoreCards + '</div>';
+
+  // Strengths
+  if (feedback.strengths && feedback.strengths.length) {
+    html += '<div class="wt-feedback-section strengths">';
+    html += '<h3>💪 Strengths</h3>';
+    html += '<ul>' + feedback.strengths.map(function(s) { return '<li>' + escapeHtml(s) + '</li>'; }).join('') + '</ul>';
+    html += '</div>';
+  }
+
+  // Improvements
+  if (feedback.improvements && feedback.improvements.length) {
+    html += '<div class="wt-feedback-section improvements">';
+    html += '<h3>🎯 Areas to Improve</h3>';
+    html += '<ul>' + feedback.improvements.map(function(s) { return '<li>' + escapeHtml(s) + '</li>'; }).join('') + '</ul>';
+    html += '</div>';
+  }
+
+  // Student's writing
+  html += '<div class="wt-your-writing">';
+  html += '<h4>Your Writing</h4>';
+  html += '<p>' + escapeHtml(studentText) + '</p>';
+  html += '</div>';
+
+  // Actions
+  html += '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px">';
+  html += '<button class="btn btn-secondary" onclick="tryAgain()">↺ Try Another Prompt</button>';
+  html += '<button class="btn btn-primary" onclick="window.location.href=\'topic.html?id=' + topicId + '\'">← Back to Topic</button>';
+  html += '</div>';
+
+  document.getElementById('wt-results').innerHTML = html;
+  document.getElementById('wt-results').style.display = '';
+  window.scrollTo(0, 0);
+}
+
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function showError(msg) {
+  var el = document.getElementById('wt-error');
+  el.innerHTML = '<div class="wt-error"><strong>Error:</strong> ' + escapeHtml(msg) + '<br><br><button class="btn btn-secondary btn-sm" onclick="goBackToWriting()">← Back to Writing</button></div>';
+  el.style.display = '';
+}
+
+function goBackToWriting() {
+  document.getElementById('wt-error').style.display = 'none';
+  document.getElementById('wt-active').style.display = '';
+}
+
+function tryAgain() {
+  document.getElementById('wt-results').style.display = 'none';
+  document.getElementById('wt-setup').style.display = '';
+}
+
+function confirmAbandon() {
+  var text = document.getElementById('writing-area').value.trim();
+  if (text.length > 50) {
+    if (!confirm('Are you sure? Your writing will not be saved.')) return;
+  }
+  window.location.href = 'topic.html?id=' + topicId;
+}
+
+// Keyboard shortcut
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var active = document.getElementById('wt-active');
+    if (active.style.display !== 'none') {
+      confirmAbandon();
+    } else {
+      window.location.href = 'topic.html?id=' + topicId;
+    }
+  }
+});
+</script>
+</body>
+</html>

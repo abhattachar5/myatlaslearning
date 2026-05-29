@@ -64,6 +64,17 @@
     </div>
   </div>
 
+  <!-- Writing Challenge CTA (only for Writing Strategies) -->
+  <div id="writing-challenge-cta" style="margin-top:16px;display:none">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-left:4px solid #f59e0b">
+      <div>
+        <div style="font-weight:700;margin-bottom:2px">✍️ Writing Challenge</div>
+        <div style="font-size:.875rem;color:var(--text-muted)">Write a full response to a prompt and get instant AI feedback on your work.</div>
+      </div>
+      <button class="btn btn-primary" style="background:#f59e0b;border-color:#f59e0b" onclick="goToWritingTest()">Start Writing Challenge →</button>
+    </div>
+  </div>
+
 </main>
 
 <script src="data.js"></script>
@@ -260,13 +271,21 @@ function goToTest() {
   window.location.href = 'test.html?id=' + topicId;
 }
 
+function goToWritingTest() {
+  window.location.href = 'writing-test.html?id=' + topicId;
+}
+
 // Show test CTA if topic has test generators; lock until all topics covered
 (function showTestCTA() {
   var cta = document.getElementById('topic-test-cta');
-  const testableTopics = ['mt-01','mt-02','mt-03','mt-04','mt-05','mt-06','mt-07','mt-08','mt-09','mt-10','mt-11','mt-12','mt-13','mt-14','mt-15','mt-16','mt-17','mt-18','mt-19','mt-20','mt-21','mt-22','mt-23','mt-24','mt-25','mt-26','mt-27','mt-28','et-01','et-02','et-03','et-05','et-07','et-08','st7-01','st7-02','st7-03','st7-04','st7-05','st7-06','st7-07','ht-01','ht-02','ht-03','ht-04','ht-05','ht-06','gt-01','gt-02','gt-03','gt-04','gt-05','gt-06'];
+  const testableTopics = ['mt-01','mt-02','mt-03','mt-04','mt-05','mt-06','mt-07','mt-08','mt-09','mt-10','mt-11','mt-12','mt-13','mt-14','mt-15','mt-16','mt-17','mt-18','mt-19','mt-20','mt-21','mt-22','mt-23','mt-24','mt-25','mt-26','mt-27','mt-28','et-01','et-02','et-03','et-05','et-06','et-07','et-08','st7-01','st7-02','st7-03','st7-04','st7-05','st7-06','st7-07','ht-01','ht-02','ht-03','ht-04','ht-05','ht-06','gt-01','gt-02','gt-03','gt-04','gt-05','gt-06'];
   if (testableTopics.indexOf(topicId) !== -1) {
     cta.style.display = '';
     updateTestLock();
+  }
+  // Show Writing Challenge CTA for Writing Strategies topic
+  if (topicId === 'et-06') {
+    document.getElementById('writing-challenge-cta').style.display = '';
   }
 })();
 
