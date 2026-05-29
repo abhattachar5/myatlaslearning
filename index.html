@@ -337,7 +337,8 @@
           tier: serverData.tier || 'free',
           xp: serverData.xp || 0,
           joinDate: serverData.joinDate || new Date().toISOString(),
-          yearHistory: serverData.yearHistory || []
+          yearHistory: serverData.yearHistory || [],
+          parentPin: serverData.parentPin || ''
         };
         localStorage.setItem('sm_active_profile', JSON.stringify(profile));
 
@@ -355,6 +356,12 @@
         }
         if (serverData.revisionDone && Object.keys(serverData.revisionDone).length) {
           localStorage.setItem('sm_revision_done', JSON.stringify(serverData.revisionDone));
+        }
+        if (serverData.assignments && serverData.assignments.length) {
+          localStorage.setItem('sm_assignments', JSON.stringify(serverData.assignments));
+        }
+        if (serverData.activity && Object.keys(serverData.activity).length) {
+          localStorage.setItem('sm_activity', JSON.stringify(serverData.activity));
         }
         if (serverData.comprehension && Object.keys(serverData.comprehension).length && typeof restoreComprehension === 'function') {
           restoreComprehension(serverData.comprehension);

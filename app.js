@@ -71,6 +71,8 @@ function syncProgressToServer() {
       try { testResults = JSON.parse(localStorage.getItem('sm_test_results') || '{}'); } catch(e) {}
       var revisionDone = {};
       try { revisionDone = JSON.parse(localStorage.getItem('sm_revision_done') || '{}'); } catch(e) {}
+      var assignments = [];
+      try { assignments = JSON.parse(localStorage.getItem('sm_assignments') || '[]'); } catch(e) {}
       const payload = {
         name: profile.name,
         parentName: profile.parentName || '',
@@ -86,7 +88,10 @@ function syncProgressToServer() {
         testResults: testResults,
         revisionDone: revisionDone,
         comprehension: getAllComprehension(),
-        yearHistory: profile.yearHistory || []
+        yearHistory: profile.yearHistory || [],
+        parentPin: profile.parentPin || '',
+        assignments: assignments,
+        activity: getActivity()
       };
       await fetchWithAuth('/.netlify/functions/save-progress', {
         method: 'PUT',
@@ -189,6 +194,47 @@ function restoreComprehension(map) {
   Object.keys(map).forEach(function (id) {
     try { localStorage.setItem('sm_comp_' + id, JSON.stringify(map[id])); } catch (e) { /* ignore */ }
   });
+}
+
+// ── Assignments (parent-set homework & mock exams) ────────────────────────────
+// Stored in localStorage 'sm_assignments' as an array; synced to the server blob.
+// Each record: { id, type:'practice'|'exam', assignedTo (childId), subjectId,
+//   topicId, islandIds, numQuestions, difficulty,        // practice
+//   timeLimitMin, snapshotTopicIds,                       // exam
+//   note, dueDate, createdAt, status:'assigned'|'done', result }
+function getAssignments() {
+  try { return JSON.parse(localStorage.getItem('sm_assignments') || '[]'); } catch (e) { return []; }
+}
+function saveAssignments(list) {
+  localStorage.setItem('sm_assignments', JSON.stringify(Array.isArray(list) ? list : []));
+  syncProgressToServer();
+}
+function addAssignment(a) {
+  var list = getAssignments();
+  list.push(a);
+  saveAssignments(list);
+  return a;
+}
+function updateAssignment(id, patch) {
+  var list = getAssignments();
+  var i = list.findIndex(function (x) { return x.id === id; });
+  if (i === -1) return null;
+  list[i] = Object.assign({}, list[i], patch);
+  saveAssignments(list);
+  return list[i];
+}
+
+// ── Parent Zone PIN ───────────────────────────────────────────────────────────
+function getParentPin() {
+  var u = getUser();
+  return u ? (u.parentPin || '') : '';
+}
+function setParentPin(pin) {
+  var u = getUser();
+  if (!u) return;
+  u.parentPin = pin;
+  setUser(u);
+  syncProgressToServer();
 }
 
 // ── XP & Levels ──────────────────────────────────────────────────────────────
@@ -324,6 +370,35 @@ function touchStreak() {
   return next;
 }
 
+// ── Activity tracking (days active + time spent, keyed by local date) ──────────
+// Stored in localStorage 'sm_activity' as { 'YYYY-MM-DD': secondsSpent }; synced to
+// the blob. A heartbeat adds time while the page is visible; parent.html reads this.
+function _dateKey(d) {
+  d = d || new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+function getActivity() {
+  try { return JSON.parse(localStorage.getItem('sm_activity') || '{}'); } catch (e) { return {}; }
+}
+function addActiveSeconds(sec) {
+  var a = getActivity();
+  var k = _dateKey();
+  a[k] = (a[k] || 0) + sec;
+  localStorage.setItem('sm_activity', JSON.stringify(a));
+}
+var _activityTimer = null, _activityBeats = 0;
+function startActivityTracking() {
+  if (_activityTimer) return;
+  var a = getActivity(), k = _dateKey();
+  if (a[k] == null) { a[k] = 0; localStorage.setItem('sm_activity', JSON.stringify(a)); }
+  _activityTimer = setInterval(function () {
+    if (typeof document !== 'undefined' && document.visibilityState === 'hidden') return;
+    addActiveSeconds(30);
+    // Sync roughly every 2 minutes rather than every beat to limit PUTs.
+    if (++_activityBeats % 4 === 0) syncProgressToServer();
+  }, 30000);
+}
+
 // ── Theme ─────────────────────────────────────────────────────────────────────
 function initTheme() {
   const t = localStorage.getItem('sm_theme') || 'light';
@@ -399,3 +474,6 @@ function getGlobalStats() {
   });
   return { started, mastered, total: islands.length, xp: getTotalXP(), streak: getStreak() };
 }
+
+// Begin counting active time on any authed page (skips the login screen, where no profile exists yet).
+try { if (typeof document !== 'undefined' && getUser()) startActivityTracking(); } catch (e) { /* ignore */ }

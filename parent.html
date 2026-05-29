@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas — Parent Zone</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
+  <style>
+    .pz-wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 80px; }
+    .pz-top { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+    .pz-title { font-size: 1.5rem; font-weight: 800; color: var(--text); }
+    .pz-back { text-decoration: none; }
+
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius,16px); padding: 20px; }
+    .muted { color: var(--text-muted); font-size: .8125rem; }
+    .lbl { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); margin-bottom: 8px; }
+    .btn { border: none; border-radius: 10px; padding: 10px 18px; font-weight: 700; font-size: .875rem; cursor: pointer; }
+    .btn-primary { background: linear-gradient(135deg,#6366f1,#8b5cf6); color: #fff; }
+    .btn-ghost { background: var(--surface2); color: var(--text-2); }
+
+    /* PIN gate */
+    .gate { max-width: 360px; margin: 60px auto; text-align: center; }
+    .pin-in { width: 160px; text-align: center; letter-spacing: 10px; font-size: 1.75rem; font-weight: 800; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text); }
+    .pin-err { color: #dc2626; font-size: .875rem; font-weight: 600; min-height: 20px; margin-top: 8px; }
+
+    /* Child switcher */
+    .child-switch { position: relative; margin-left: auto; }
+    .child-btn { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 7px 12px; cursor: pointer; }
+    .child-av { width: 30px; height: 30px; border-radius: 50%; background: #6366f1; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .8125rem; flex-shrink: 0; }
+    .child-btn .cn { font-weight: 700; color: var(--text); font-size: .875rem; }
+    .child-btn .cy { font-size: .75rem; color: var(--text-muted); }
+    .child-menu { position: absolute; right: 0; top: calc(100% + 6px); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.14); padding: 6px; min-width: 230px; z-index: 10; display: none; }
+    .child-menu.open { display: block; }
+    .child-item { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 8px; cursor: pointer; }
+    .child-item:hover { background: var(--surface2); }
+    .child-add { border-top: 1px solid var(--border); margin-top: 4px; padding-top: 10px; color: #6366f1; font-weight: 700; }
+
+    /* Sub-nav */
+    .pz-nav { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+    .pz-nav button { border: none; background: none; padding: 10px 16px; font-weight: 700; font-size: .875rem; color: var(--text-muted); cursor: pointer; border-bottom: 2.5px solid transparent; margin-bottom: -1px; }
+    .pz-nav button.on { color: #6366f1; border-bottom-color: #6366f1; }
+    .pz-panel { display: none; } .pz-panel.on { display: block; }
+
+    .pz-subj { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 12px; margin-bottom: 18px; }
+    .pz-scard { border: 1px solid var(--border); border-radius: 14px; padding: 16px; background: var(--surface); }
+    .pz-scard .h { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .pz-scard .e { font-size: 1.4rem; }
+    .pz-scard .n { font-weight: 700; color: var(--text); }
+    .pz-scard .p { margin-left: auto; font-weight: 800; color: var(--text); }
+    .pz-scard .bar { height: 7px; background: var(--surface2); border-radius: 4px; overflow: hidden; margin-bottom: 6px; }
+    .pz-scard .bar > i { display: block; height: 100%; border-radius: 4px; }
+
+    .pz-grid { width: 100%; border-collapse: collapse; font-size: .8125rem; }
+    .pz-grid th, .pz-grid td { padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .pz-grid .wk { font-weight: 800; color: var(--text-muted); white-space: nowrap; }
+    .pz-grid tr.cur { background: rgba(99,102,241,.07); }
+    .pz-grid tr.cur .wk { color: #6366f1; }
+    .pz-grid .done { color: #22c55e; font-weight: 800; }
+    .pz-grid .em { color: var(--text-muted); }
+    .pz-grid td { color: var(--text-2); }
+
+    .assign-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width:640px){ .assign-cards { grid-template-columns: 1fr; } }
+    .hw-due { font-size: .75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+    .due-soon { background: rgba(245,158,11,.16); color: #b45309; }
+    .due-ok { background: var(--surface2); color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="pz-wrap">
+
+    <!-- PIN gate -->
+    <div class="gate card" id="pin-gate">
+      <div style="font-size:2.5rem">🔒</div>
+      <div style="font-weight:800;font-size:1.125rem;color:var(--text);margin:8px 0 4px">Parent Zone</div>
+      <p class="muted" id="pin-prompt" style="margin-bottom:16px">Enter your 4-digit PIN.</p>
+      <input class="pin-in" id="pin-input" type="password" inputmode="numeric" maxlength="4" autocomplete="off">
+      <div class="pin-err" id="pin-err"></div>
+      <button class="btn btn-primary" style="width:100%;margin-top:8px" id="pin-submit">Unlock</button>
+      <p style="margin-top:14px"><a class="pz-back muted" href="dashboard.html">← Back to dashboard</a></p>
+    </div>
+
+    <!-- Zone -->
+    <div id="zone" style="display:none">
+      <div class="pz-top">
+        <a class="pz-back" href="dashboard.html" title="Back to dashboard" style="font-size:1.25rem">←</a>
+        <div class="pz-title">👪 Parent Zone</div>
+        <div style="margin-left:auto;display:flex;align-items:center;gap:10px">
+          <span class="child-av" id="cav">–</span>
+          <span><span class="cn" id="cname">–</span> <span class="cy" id="cyear"></span></span>
+        </div>
+      </div>
+
+      <div class="pz-nav">
+        <button class="on" data-panel="assign">📌 Assign</button>
+        <button data-panel="perf">📊 Performance</button>
+        <button data-panel="road">🗺️ Road Ahead</button>
+      </div>
+
+      <!-- Assign -->
+      <div class="pz-panel on" id="panel-assign">
+        <div id="assign-home">
+          <div class="assign-cards">
+            <div class="card" style="cursor:pointer" onclick="openPracticeBuilder()">
+              <div style="font-size:2rem">📝</div>
+              <div style="font-weight:800;font-size:1.0625rem;color:var(--text);margin:8px 0 4px">Set a practice</div>
+              <p class="muted" style="margin-bottom:14px">Hand-pick subtopics, choose question count, difficulty and a due date.</p>
+              <button class="btn btn-primary">Choose subtopics →</button>
+            </div>
+            <div class="card" style="cursor:pointer" onclick="openExamBuilder()">
+              <div style="font-size:2rem">📄</div>
+              <div style="font-weight:800;font-size:1.0625rem;color:var(--text);margin:8px 0 4px">Assign a mock exam</div>
+              <p class="muted" style="margin-bottom:14px">A timed paper over every topic your child has mastered.</p>
+              <button class="btn btn-primary">Set up exam →</button>
+            </div>
+          </div>
+          <div class="card" style="margin-top:14px">
+            <div class="lbl">Currently assigned</div>
+            <div id="assign-list"><p class="muted" style="margin:0">No homework or exams assigned yet.</p></div>
+          </div>
+        </div>
+
+        <!-- Practice builder -->
+        <div id="practice-builder" class="card" style="display:none">
+          <div style="font-weight:800;font-size:1.0625rem;color:var(--text);margin-bottom:12px">📝 Set a practice</div>
+          <div class="lbl">Subject</div>
+          <div id="pb-subjects" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px"></div>
+          <div class="lbl">Topic</div>
+          <select id="pb-topic" class="pin-in" style="width:100%;letter-spacing:0;text-align:left;font-size:.9375rem;font-weight:500;padding:10px 12px"></select>
+          <div id="pb-islands" style="margin:14px 0"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div>
+              <div class="lbl">Questions <span id="pb-qout" style="color:#6366f1;font-weight:800">15</span></div>
+              <input id="pb-q" type="range" min="5" max="25" value="15" step="5" style="width:100%;accent-color:#6366f1" oninput="document.getElementById('pb-qout').textContent=this.value">
+            </div>
+            <div>
+              <div class="lbl">Difficulty</div>
+              <select id="pb-diff" class="pin-in" style="width:100%;letter-spacing:0;text-align:left;font-size:.9375rem;font-weight:500;padding:10px 12px">
+                <option value="foundation">Foundation</option>
+                <option value="mixed" selected>Mixed</option>
+                <option value="higher">Higher</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-top:12px"><div class="lbl">Due date <span style="font-weight:400;text-transform:none">(optional)</span></div><input id="pb-due" type="date" class="pin-in" style="width:100%;letter-spacing:0;text-align:left;font-size:.9375rem;font-weight:500;padding:10px 12px"></div>
+          <div style="margin-top:12px"><div class="lbl">Note (optional)</div><input id="pb-note" type="text" class="pin-in" style="width:100%;letter-spacing:0;text-align:left;font-size:.9375rem;font-weight:500;padding:10px 12px" placeholder="e.g. Focus on negatives this week"></div>
+          <div id="pb-err" style="color:#dc2626;font-size:.8125rem;font-weight:600;min-height:18px;margin-top:8px"></div>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:6px;padding-top:14px;border-top:1px solid var(--border)">
+            <span class="muted"><b id="pb-count" style="color:var(--text)">0</b> subtopics selected</span>
+            <button class="btn btn-ghost" style="margin-left:auto" onclick="closePracticeBuilder()">Cancel</button>
+            <button class="btn btn-primary" onclick="assignPractice()">Assign practice →</button>
+          </div>
+        </div>
+
+        <!-- Exam builder -->
+        <div id="exam-builder" class="card" style="display:none">
+          <div style="font-weight:800;font-size:1.0625rem;color:var(--text);margin-bottom:12px">📄 Assign a mock exam</div>
+          <div class="lbl">Subject</div>
+          <div id="eb-subjects" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px"></div>
+          <div id="eb-summary" style="background:var(--surface2);border-radius:12px;padding:16px;margin-bottom:14px"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div><div class="lbl">Due date <span style="font-weight:400;text-transform:none">(optional)</span></div><input id="eb-due" type="date" class="pin-in" style="width:100%;letter-spacing:0;text-align:left;font-size:.9375rem;font-weight:500;padding:10px 12px"></div>
+            <div><div class="lbl">Time limit</div>
+              <select id="eb-time" class="pin-in" style="width:100%;letter-spacing:0;text-align:left;font-size:.9375rem;font-weight:500;padding:10px 12px" onchange="ebRefresh()">
+                <option value="45">45 min</option><option value="60" selected>60 min</option><option value="90">90 min</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-top:12px"><div class="lbl">Note (optional)</div><input id="eb-note" type="text" class="pin-in" style="width:100%;letter-spacing:0;text-align:left;font-size:.9375rem;font-weight:500;padding:10px 12px" placeholder="e.g. Sit this in one go — good luck!"></div>
+          <div id="eb-err" style="color:#dc2626;font-size:.8125rem;font-weight:600;min-height:18px;margin-top:8px"></div>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:6px;padding-top:14px;border-top:1px solid var(--border)">
+            <button class="btn btn-ghost" style="margin-left:auto" onclick="closeExamBuilder()">Cancel</button>
+            <button class="btn btn-primary" id="eb-assign" onclick="assignExam()">Assign exam →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Performance -->
+      <div class="pz-panel" id="panel-perf">
+        <div id="perf-activity"></div>
+        <div class="pz-subj" id="perf-subjects"></div>
+        <div class="muted" id="perf-overall" style="margin-bottom:18px"></div>
+        <div id="perf-revisit"></div>
+      </div>
+
+      <!-- Road Ahead -->
+      <div class="pz-panel" id="panel-road">
+        <p class="muted" style="margin-bottom:12px">Upcoming study plan — ✓ marks mastered, the highlighted row is this week.</p>
+        <div class="card" style="padding:0;overflow:auto" id="road-wrap"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data + content + engine (same set as dashboard.html, so getIslandStatus is accurate) -->
+  <script src="data.js"></script>
+  <script src="math-data.js"></script>
+  <script src="math-content-1.js"></script><script src="math-content-2.js"></script><script src="math-content-3.js"></script>
+  <script src="math-content-4.js"></script><script src="math-content-5.js"></script><script src="math-content-6.js"></script>
+  <script src="math-content-7.js"></script>
+  <script src="math-data-y8.js"></script>
+  <script src="english-data-y8.js"></script>
+  <script src="science-data-y7.js"></script>
+  <script src="science-data-y8.js"></script>
+  <script src="history-data.js"></script>
+  <script src="geography-data.js"></script>
+  <script src="history-data-y8.js"></script>
+  <script src="geography-data-y8.js"></script>
+  <script src="y8-topics.js"></script>
+  <script src="english-data.js"></script>
+  <script src="english-content-1.js"></script><script src="english-content-2.js"></script><script src="english-content-3.js"></script>
+  <script src="english-content-4.js"></script><script src="english-content-5.js"></script><script src="english-content-6.js"></script>
+  <script src="english-content-7.js"></script><script src="english-content-8.js"></script>
+  <script src="lessons.js"></script>
+  <script src="math-lessons-1.js"></script><script src="math-lessons-2.js"></script><script src="math-lessons-3.js"></script>
+  <script src="math-lessons-4.js"></script><script src="math-lessons-5.js"></script><script src="math-lessons-6.js"></script>
+  <script src="math-lessons-7.js"></script>
+  <script src="math-y8-t01.js"></script><script src="math-y8-t02.js"></script><script src="math-y8-t03.js"></script>
+  <script src="math-y8-t04.js"></script><script src="math-y8-t05.js"></script><script src="math-y8-t06.js"></script>
+  <script src="math-y8-t07.js"></script><script src="math-y8-t08.js"></script><script src="math-y8-t09.js"></script>
+  <script src="math-y8-t10.js"></script><script src="math-y8-t11.js"></script><script src="math-y8-t12.js"></script>
+  <script src="math-y8-t13.js"></script><script src="math-y8-t14.js"></script><script src="math-y8-t15.js"></script>
+  <script src="math-y8-t16.js"></script><script src="math-y8-t17.js"></script><script src="math-y8-t18.js"></script>
+  <script src="math-y8-t19.js"></script><script src="math-y8-t20.js"></script><script src="math-y8-t21.js"></script>
+  <script src="math-y8-t22.js"></script><script src="math-y8-t23.js"></script><script src="math-y8-t24.js"></script>
+  <script src="math-y8-t25.js"></script><script src="math-y8-t26.js"></script><script src="math-y8-t27.js"></script>
+  <script src="math-y8-t28.js"></script>
+  <script src="english-lessons-1.js"></script><script src="english-lessons-2.js"></script><script src="english-lessons-3.js"></script>
+  <script src="english-lessons-5.js"></script><script src="english-lessons-6.js"></script><script src="english-lessons-7.js"></script>
+  <script src="english-lessons-8.js"></script>
+  <script src="english-y8-1.js"></script><script src="english-y8-2.js"></script><script src="english-y8-3.js"></script>
+  <script src="english-y8-4.js"></script><script src="english-y8-5.js"></script><script src="english-y8-6.js"></script>
+  <script src="english-y8-7.js"></script><script src="english-y8-reuse.js"></script>
+  <script src="science-y8-1.js"></script><script src="science-y8-2.js"></script><script src="science-y8-3.js"></script>
+  <script src="history-y8-1.js"></script><script src="history-y8-2.js"></script>
+  <script src="geography-y8-1.js"></script><script src="geography-y8-2.js"></script>
+  <script src="auth-shim.js"></script>
+  <script src="app.js"></script>
+  <script src="planner.js"></script>
+
+  <script>
+    initTheme();
+    var profile = requireAuth();
+
+    // ── PIN gate ──────────────────────────────────────────────────────────────
+    var settingPin = !getParentPin();
+    var gate = document.getElementById('pin-gate');
+    var zone = document.getElementById('zone');
+    var pinInput = document.getElementById('pin-input');
+    var pinErr = document.getElementById('pin-err');
+    if (settingPin) {
+      document.getElementById('pin-prompt').textContent = 'Set a 4-digit PIN to protect the Parent Zone.';
+      document.getElementById('pin-submit').textContent = 'Set PIN';
+    }
+    function submitPin() {
+      var v = (pinInput.value || '').trim();
+      if (!/^\d{4}$/.test(v)) { pinErr.textContent = 'Enter 4 digits.'; return; }
+      if (settingPin) {
+        setParentPin(v);
+        unlock();
+      } else if (v === getParentPin()) {
+        unlock();
+      } else {
+        pinErr.textContent = 'Incorrect PIN.';
+        pinInput.value = '';
+      }
+    }
+    function unlock() {
+      gate.style.display = 'none';
+      zone.style.display = '';
+      renderZone();
+    }
+    document.getElementById('pin-submit').addEventListener('click', submitPin);
+    pinInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') submitPin(); });
+    pinInput.focus();
+
+    // ── Sub-tabs ────────────────────────────────────────────────────────────────
+    document.querySelectorAll('.pz-nav button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        document.querySelectorAll('.pz-nav button').forEach(function (x) { x.classList.remove('on'); });
+        document.querySelectorAll('.pz-panel').forEach(function (p) { p.classList.remove('on'); });
+        b.classList.add('on');
+        document.getElementById('panel-' + b.dataset.panel).classList.add('on');
+      });
+    });
+
+    // ── Render ──────────────────────────────────────────────────────────────────
+    function renderZone() {
+      var p = getUser() || {};
+      var initial = (p.name || '?').charAt(0).toUpperCase();
+      document.getElementById('cav').textContent = initial;
+      document.getElementById('cname').textContent = p.name || 'Your child';
+      document.getElementById('cyear').textContent = p.year || '';
+
+      renderAssignments();
+      renderPerformance();
+      renderRoadAhead();
+    }
+
+    function renderAssignments() {
+      var list = (typeof getAssignments === 'function') ? getAssignments() : [];
+      var el = document.getElementById('assign-list');
+      if (!list.length) { el.innerHTML = '<p class="muted" style="margin:0">No homework or exams assigned yet.</p>'; return; }
+      el.innerHTML = list.map(function (a) {
+        var icon = a.type === 'exam' ? '📄' : '📝';
+        var title = a.type === 'exam'
+          ? ((a.subjectId || '') + ' mock exam')
+          : ((a.subjectId || '') + ' practice — ' + ((a.islandIds || []).length) + ' subtopics');
+        var due = a.dueDate ? ('Due ' + a.dueDate) : '';
+        var done = a.status === 'done';
+        return '<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)">' +
+          '<span>' + icon + '</span><span style="font-weight:600;color:var(--text);font-size:.9375rem;text-transform:capitalize">' + title + '</span>' +
+          '<span class="hw-due ' + (done ? 'due-ok' : 'due-soon') + '" style="margin-left:auto">' + (done ? 'Done' : due) + '</span></div>';
+      }).join('');
+    }
+
+    function renderActivity() {
+      var host = document.getElementById('perf-activity');
+      if (!host) return;
+      var act = (typeof getActivity === 'function') ? getActivity() : {};
+      function key(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+      function fmt(sec) { var m = Math.round(sec / 60); return m < 60 ? m + 'm' : (Math.floor(m / 60) + 'h ' + (m % 60) + 'm'); }
+      var now = new Date(), dow = (now.getDay() + 6) % 7;            // 0 = Monday
+      var mon = new Date(now); mon.setHours(0, 0, 0, 0); mon.setDate(now.getDate() - dow);
+      var labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+      var days = [], totalSec = 0, activeDays = 0;
+      for (var i = 0; i < 7; i++) {
+        var d = new Date(mon); d.setDate(mon.getDate() + i);
+        var sec = act[key(d)] || 0;
+        if (sec > 0) activeDays++;
+        totalSec += sec;
+        days.push({ label: labels[i], sec: sec, active: sec > 0, isToday: key(d) === key(now) });
+      }
+      var maxSec = Math.max.apply(null, days.map(function (x) { return x.sec; }).concat([1]));
+      var bars = days.map(function (x) {
+        var h = x.sec ? Math.max(6, Math.round(x.sec / maxSec * 60)) : 0;
+        return '<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px">' +
+          '<div style="font-size:.625rem;color:var(--text-muted);min-height:14px">' + (x.sec ? fmt(x.sec) : '') + '</div>' +
+          '<div style="width:100%;max-width:34px;height:64px;display:flex;align-items:flex-end"><div style="width:100%;height:' + h + 'px;background:' + (x.active ? '#6366f1' : 'var(--surface2)') + ';border-radius:5px"></div></div>' +
+          '<div style="font-size:.75rem;font-weight:700;color:' + (x.isToday ? '#6366f1' : 'var(--text-muted)') + '">' + x.label + '</div>' +
+          '<div style="width:7px;height:7px;border-radius:50%;background:' + (x.active ? '#22c55e' : 'var(--border)') + '"></div>' +
+        '</div>';
+      }).join('');
+      host.innerHTML = '<div class="card" style="margin-bottom:14px">' +
+        '<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px">' +
+          '<div><div class="lbl" style="margin:0">Days active</div><div style="font-size:1.4rem;font-weight:800;color:var(--text)">' + activeDays + ' / 7</div><div class="muted">this week</div></div>' +
+          '<div style="margin-left:auto;text-align:right"><div class="lbl" style="margin:0">Time on Atlas</div><div style="font-size:1.4rem;font-weight:800;color:var(--text)">' + fmt(totalSec) + '</div><div class="muted">this week</div></div>' +
+        '</div>' +
+        '<div style="display:flex;gap:6px;align-items:flex-end">' + bars + '</div>' +
+      '</div>';
+    }
+
+    function renderPerformance() {
+      renderActivity();
+      if (!window.StudyPlanner || !StudyPlanner.getTopicProgress) return;
+      var tp = StudyPlanner.getTopicProgress();
+      var C = StudyPlanner.SUBJECT_COLORS, host = document.getElementById('perf-subjects');
+      var html = '';
+      StudyPlanner.SUBJECT_IDS.forEach(function (sid) {
+        var s = tp.subjects[sid];
+        if (!s || s.total === 0) return;
+        var pct = s.total ? Math.round((s.completed / s.total) * 100) : 0;
+        html += '<div class="pz-scard"><div class="h"><span class="e">' + (s.emoji || '') + '</span><span class="n">' +
+          (s.name || sid) + '</span><span class="p">' + pct + '%</span></div>' +
+          '<div class="bar"><i style="width:' + pct + '%;background:' + (s.color || C[sid] || '#6366f1') + '"></i></div>' +
+          '<div class="muted">' + s.completed + ' of ' + s.total + ' topics mastered</div></div>';
+      });
+      host.innerHTML = html || '<p class="muted">No progress yet.</p>';
+      document.getElementById('perf-overall').innerHTML = 'Overall: <b style="color:var(--text)">' +
+        tp.completed + ' of ' + tp.total + ' topics mastered (' + tp.percent + '%)</b> · 🔥 ' +
+        (typeof getStreak === 'function' ? getStreak() : 0) + '-day streak · ' +
+        (getUser() && getUser().xp ? getUser().xp : 0) + ' XP';
+      renderRevisit();
+    }
+
+    // ── Areas to revisit — sourced from completed mock-exam results ──────────────
+    function renderRevisit() {
+      var host = document.getElementById('perf-revisit');
+      var exams = (typeof getAssignments === 'function' ? getAssignments() : []).filter(function (a) { return a.type === 'exam' && a.result; });
+      if (!exams.length) {
+        host.innerHTML = '<div class="card"><div class="lbl">🎯 Areas to revisit</div><p class="muted" style="margin:0">Assign a mock exam — weak topics will surface here once your child sits it.</p></div>';
+        return;
+      }
+      // Collect topics scored < 70% across exams; keep the lowest score per topic.
+      var weak = {};
+      exams.forEach(function (a) {
+        (a.result.perTopic || []).forEach(function (t) {
+          if (t.pct < 70 && (!weak[t.name] || t.pct < weak[t.name].pct)) weak[t.name] = { name: t.name, pct: t.pct, subjectId: a.subjectId };
+        });
+      });
+      var list = Object.keys(weak).map(function (k) { return weak[k]; }).sort(function (x, y) { return x.pct - y.pct; });
+      var rows = list.length
+        ? list.map(function (t) {
+            return '<div style="display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)">' +
+              '<span style="font-weight:600;color:var(--text);font-size:.9375rem">⚠️ ' + t.name + '</span>' +
+              '<span class="hw-due due-soon" style="margin-left:auto">' + t.pct + '%</span></div>';
+          }).join('')
+        : '<p class="muted" style="margin:0">No weak topics — every examined topic scored 70%+. 🎉</p>';
+      host.innerHTML = '<div class="card"><div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">' +
+        '<div class="lbl" style="margin:0">🎯 Areas to revisit</div>' +
+        (list.length ? '<button class="btn btn-primary" style="margin-left:auto;padding:8px 14px" onclick="openPracticeBuilder()">Assign practice →</button>' : '') +
+        '</div>' + rows + '</div>';
+    }
+
+    function renderRoadAhead() {
+      var wrap = document.getElementById('road-wrap');
+      if (!window.StudyPlanner || !StudyPlanner.getWeeklyGrid) { wrap.innerHTML = '<p class="muted" style="padding:16px">Study plan not available.</p>'; return; }
+      var grid = StudyPlanner.getWeeklyGrid();
+      if (!grid || !grid.weeks || !grid.weeks.length) { wrap.innerHTML = '<p class="muted" style="padding:16px">No study plan set up yet — create one on the dashboard.</p>'; return; }
+      var N = StudyPlanner.SUBJECT_NAMES, E = StudyPlanner.SUBJECT_EMOJIS, C = StudyPlanner.SUBJECT_COLORS;
+      var sids = grid.subjectIds;
+      var h = '<table class="pz-grid"><thead><tr><th class="wk">Week</th>';
+      sids.forEach(function (sid) { h += '<th style="color:' + C[sid] + '">' + E[sid] + ' ' + N[sid] + '</th>'; });
+      h += '</tr></thead><tbody>';
+      grid.weeks.forEach(function (row) {
+        var cls = row.isCurrent ? ' class="cur"' : '';
+        h += '<tr' + cls + '><td class="wk">W' + row.week + (row.isCurrent ? ' · now' : '') + '</td>';
+        sids.forEach(function (sid) {
+          var entries = row.subjects[sid] || [];
+          if (!entries.length) { h += '<td><span class="em">—</span></td>'; return; }
+          var parts = entries.map(function (e) {
+            if (e.type === 'comprehension') return '📝 ' + (e.title || 'Comprehension');
+            if (e.type === 'test') return '📋 Topic test';
+            if (e.type === 'checkpoint') return '🚩 Checkpoint';
+            return (e.mastered ? '<span class="done">✓</span> ' : '') + (e.island || e.name || '');
+          });
+          h += '<td>' + parts.join('<br>') + '</td>';
+        });
+        h += '</tr>';
+      });
+      h += '</tbody></table>';
+      wrap.innerHTML = h;
+    }
+
+    // ── Practice builder ─────────────────────────────────────────────────────────
+    var pbSubject = 'math', pbIslandSel = {};
+    var PB_SUBJECTS = [
+      { id: 'math', label: '📐 Mathematics' }, { id: 'english', label: '📖 English' },
+      { id: 'science', label: '🔬 Science' }, { id: 'history', label: '⚔️ History' }, { id: 'geography', label: '🗺️ Geography' }
+    ];
+    function topicsFor(sid) {
+      // NB: these topic arrays are top-level `const`s, so they're global lexical
+      // bindings — NOT properties of window. Reference the bare names via typeof.
+      var y8 = (getUser() || {}).year === 'Year 8';
+      var T = {
+        math:      y8 ? (typeof MATH_TOPICS_Y8 !== 'undefined' ? MATH_TOPICS_Y8 : null) : (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS : null),
+        english:   y8 ? (typeof ENGLISH_TOPICS_Y8 !== 'undefined' ? ENGLISH_TOPICS_Y8 : null) : (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS : null),
+        science:   y8 ? (typeof SCIENCE_TOPICS_Y8 !== 'undefined' ? SCIENCE_TOPICS_Y8 : null) : (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS : null),
+        history:   y8 ? (typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8 : null) : (typeof HISTORY_TOPICS !== 'undefined' ? HISTORY_TOPICS : null),
+        geography: y8 ? (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8 : null) : (typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS : null)
+      };
+      return T[sid] || [];
+    }
+    function islandsFor(topicId) {
+      return (typeof CURRICULUM !== 'undefined' ? CURRICULUM : []).filter(function (i) { return i.topicId === topicId; });
+    }
+    // Blank due date defaults to the end of the current week (upcoming Sunday).
+    function endOfWeekISO() {
+      var d = new Date(), add = (7 - d.getDay()) % 7;
+      var e = new Date(d); e.setDate(d.getDate() + add);
+      return e.getFullYear() + '-' + String(e.getMonth() + 1).padStart(2, '0') + '-' + String(e.getDate()).padStart(2, '0');
+    }
+    function openPracticeBuilder() {
+      document.getElementById('assign-home').style.display = 'none';
+      document.getElementById('practice-builder').style.display = '';
+      pbIslandSel = {};
+      document.getElementById('pb-subjects').innerHTML = PB_SUBJECTS.map(function (s) {
+        return '<button class="btn ' + (s.id === pbSubject ? 'btn-primary' : 'btn-ghost') + '" data-sid="' + s.id + '" onclick="pbSelectSubject(\'' + s.id + '\')">' + s.label + '</button>';
+      }).join('');
+      pbSelectSubject(pbSubject);
+    }
+    function closePracticeBuilder() {
+      document.getElementById('practice-builder').style.display = 'none';
+      document.getElementById('assign-home').style.display = '';
+    }
+    function pbSelectSubject(sid) {
+      pbSubject = sid; pbIslandSel = {};
+      document.querySelectorAll('#pb-subjects button').forEach(function (b) { b.className = 'btn ' + (b.dataset.sid === sid ? 'btn-primary' : 'btn-ghost'); });
+      var topics = topicsFor(sid);
+      var sel = document.getElementById('pb-topic');
+      sel.innerHTML = topics.map(function (t) { return '<option value="' + t.id + '">' + (t.emoji ? t.emoji + ' ' : '') + t.name + '</option>'; }).join('');
+      sel.onchange = function () { pbLoadTopic(sel.value); };
+      if (topics.length) pbLoadTopic(topics[0].id);
+      else { document.getElementById('pb-islands').innerHTML = '<p class="muted">No topics for this subject yet.</p>'; pbRecount(); }
+    }
+    function pbLoadTopic(topicId) {
+      pbIslandSel = {};
+      var islands = islandsFor(topicId);
+      var host = document.getElementById('pb-islands');
+      if (!islands.length) { host.innerHTML = '<p class="muted">No subtopics in this topic.</p>'; pbRecount(); return; }
+      host.innerHTML = islands.map(function (i) {
+        var st = (typeof getIslandStatus === 'function') ? getIslandStatus(i.id) : 0;
+        var label = (typeof STATUS_LABELS !== 'undefined') ? STATUS_LABELS[st] : '';
+        return '<label style="display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;cursor:pointer">' +
+          '<input type="checkbox" value="' + i.id + '" onchange="pbToggle(this)" style="width:18px;height:18px;accent-color:#6366f1">' +
+          '<span style="font-weight:600;color:var(--text);font-size:.9375rem">' + i.name + '</span>' +
+          '<span class="muted" style="margin-left:auto">' + label + '</span></label>';
+      }).join('');
+      pbRecount();
+    }
+    function pbToggle(cb) { if (cb.checked) pbIslandSel[cb.value] = true; else delete pbIslandSel[cb.value]; pbRecount(); }
+    function pbRecount() { document.getElementById('pb-count').textContent = Object.keys(pbIslandSel).length; }
+    function assignPractice() {
+      var ids = Object.keys(pbIslandSel);
+      var err = document.getElementById('pb-err');
+      if (!ids.length) { err.textContent = 'Select at least one subtopic.'; return; }
+      var due = document.getElementById('pb-due').value || endOfWeekISO();
+      err.textContent = '';
+      var prof = getUser() || {};
+      addAssignment({
+        id: 'as_' + Date.now().toString(36),
+        type: 'practice',
+        assignedTo: prof.name || '',
+        subjectId: pbSubject,
+        topicId: document.getElementById('pb-topic').value,
+        islandIds: ids,
+        numQuestions: parseInt(document.getElementById('pb-q').value, 10),
+        difficulty: document.getElementById('pb-diff').value,
+        dueDate: due,
+        note: document.getElementById('pb-note').value.trim(),
+        createdAt: new Date().toISOString(),
+        status: 'assigned',
+        result: null
+      });
+      closePracticeBuilder();
+      renderAssignments();
+      if (typeof showToast === 'function') showToast('Practice assigned to ' + (prof.name || 'your child'), 'success');
+    }
+
+    // ── Exam builder ─────────────────────────────────────────────────────────────
+    // Mock exams cover Maths, English and Science only (v1).
+    var EXAM_SUBJECTS = PB_SUBJECTS.filter(function (s) { return ['math', 'english', 'science'].indexOf(s.id) !== -1; });
+    var ebSubject = 'math';
+    function isTopicMastered(topicId) {
+      var islands = islandsFor(topicId);
+      return islands.length > 0 && islands.every(function (i) { return getIslandStatus(i.id) >= 4; });
+    }
+    function masteredTopics(sid) {
+      return topicsFor(sid).filter(function (t) { return isTopicMastered(t.id); });
+    }
+    function openExamBuilder() {
+      document.getElementById('assign-home').style.display = 'none';
+      document.getElementById('exam-builder').style.display = '';
+      document.getElementById('eb-subjects').innerHTML = EXAM_SUBJECTS.map(function (s) {
+        var n = masteredTopics(s.id).length;
+        return '<button class="btn ' + (s.id === ebSubject ? 'btn-primary' : 'btn-ghost') + '" data-sid="' + s.id + '" onclick="ebSelectSubject(\'' + s.id + '\')">' + s.label + ' <span style="opacity:.7">(' + n + ')</span></button>';
+      }).join('');
+      ebRefresh();
+    }
+    function closeExamBuilder() {
+      document.getElementById('exam-builder').style.display = 'none';
+      document.getElementById('assign-home').style.display = '';
+    }
+    function ebSelectSubject(sid) {
+      ebSubject = sid;
+      document.querySelectorAll('#eb-subjects button').forEach(function (b) { b.className = 'btn ' + (b.dataset.sid === sid ? 'btn-primary' : 'btn-ghost'); });
+      ebRefresh();
+    }
+    function ebRefresh() {
+      var topics = masteredTopics(ebSubject);
+      var mins = parseInt(document.getElementById('eb-time').value, 10);
+      var qn = Math.round(mins / 1.5);
+      var assignBtn = document.getElementById('eb-assign');
+      var sum = document.getElementById('eb-summary');
+      if (!topics.length) {
+        sum.innerHTML = '<p class="muted" style="margin:0">No fully-mastered topics in this subject yet — your child needs to finish a topic before a mock exam can be set.</p>';
+        assignBtn.disabled = true; assignBtn.style.opacity = '.55';
+        return;
+      }
+      assignBtn.disabled = false; assignBtn.style.opacity = '1';
+      sum.innerHTML =
+        '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center">' +
+          '<div><div style="font-size:1.4rem;font-weight:800;color:var(--text)">' + topics.length + '</div><div class="muted">topics mastered</div></div>' +
+          '<div><div style="font-size:1.4rem;font-weight:800;color:var(--text)">~' + qn + '</div><div class="muted">questions</div></div>' +
+          '<div><div style="font-size:1.4rem;font-weight:800;color:var(--text)">' + mins + '</div><div class="muted">minutes</div></div>' +
+        '</div><div style="margin-top:12px">' +
+          topics.map(function (t) { return '<span class="chip" style="display:inline-block;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--surface);color:var(--text-2);margin:3px 4px 0 0">' + t.name + '</span>'; }).join('') +
+        '</div><p class="muted" style="margin:10px 0 0">The exam auto-covers every mastered topic — like a real end-of-year paper.</p>';
+    }
+    function assignExam() {
+      var topics = masteredTopics(ebSubject);
+      var err = document.getElementById('eb-err');
+      if (!topics.length) { err.textContent = 'No mastered topics to examine yet.'; return; }
+      var due = document.getElementById('eb-due').value || endOfWeekISO();
+      err.textContent = '';
+      var mins = parseInt(document.getElementById('eb-time').value, 10);
+      var prof = getUser() || {};
+      addAssignment({
+        id: 'as_' + Date.now().toString(36),
+        type: 'exam',
+        assignedTo: prof.name || '',
+        subjectId: ebSubject,
+        snapshotTopicIds: topics.map(function (t) { return t.id; }),
+        timeLimitMin: mins,
+        numQuestions: Math.round(mins / 1.5),
+        dueDate: due,
+        note: document.getElementById('eb-note').value.trim(),
+        createdAt: new Date().toISOString(),
+        status: 'assigned',
+        result: null
+      });
+      closeExamBuilder();
+      renderAssignments();
+      if (typeof showToast === 'function') showToast('Mock exam assigned to ' + (prof.name || 'your child'), 'success');
+    }
+  </script>
+</body>
+</html>

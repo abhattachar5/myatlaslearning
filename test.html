@@ -311,6 +311,14 @@ const resultKey = isCheckpoint ? topicId + '_cp' : topicId;
 const testLabel = isCheckpoint ? topic.name + ' — Checkpoint' : topic.name + ' — Test';
 const setupLabel = isCheckpoint ? topic.name + ' Checkpoint' : topic.name + ' Test';
 
+// Optional assignment params: question count (&n=) and difficulty (&diff=foundation|mixed|higher)
+const _nParam = parseInt(params.get('n'), 10);
+const _diffParam = (params.get('diff') || '').toLowerCase();
+const examOpts = {
+  maxQuestions: (_nParam && _nParam > 0) ? _nParam : undefined,
+  difficulty: ['foundation', 'mixed', 'higher'].indexOf(_diffParam) !== -1 ? _diffParam : undefined
+};
+
 document.getElementById('back-btn').href = 'topic.html?id=' + topicId;
 document.getElementById('hdr-name').textContent = testLabel;
 document.getElementById('hdr-emoji').textContent = topic.emoji;
@@ -324,8 +332,11 @@ document.querySelector('.test-progress-fill').style.background = topicColor;
 // Show info cards
 const infoGrid = document.getElementById('setup-info');
 var qIslands = isCheckpoint ? checkpointIslands : topicIslands;
+var _cap = examOpts.maxQuestions || 25;
+var _qShown = (function(numIslands){ var per = Math.min(5, Math.floor(_cap/numIslands)); if (per < 1) per = 1; var base = numIslands*per; var rem = base < _cap ? Math.min(numIslands, _cap-base) : 0; return Math.min(_cap, base+rem); })(qIslands.length);
 infoGrid.innerHTML =
-  '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + (function(n){ var per = Math.min(5, Math.floor(25/n)); var rem = n*per < 25 ? Math.min(n, 25-n*per) : 0; return n*per+rem; })(qIslands.length) + '</div></div>';
+  '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + _qShown + '</div></div>'
+  + (examOpts.difficulty ? '<div class="test-info-card"><div class="label">Difficulty</div><div class="value" style="font-size:1rem;text-transform:capitalize">' + examOpts.difficulty + '</div></div>' : '');
 
 // Theme
 (function() { initTheme(); updateThemeBtn(); })();
@@ -360,7 +371,7 @@ function startTest() {
   isTimed = document.getElementById('timed-toggle').checked;
   var timeMins = parseInt(document.getElementById('time-slider').value);
 
-  testQuestions = generateTopicTest(topicId, isCheckpoint ? checkpointIslands : topicIslands);
+  testQuestions = generateTopicTest(topicId, isCheckpoint ? checkpointIslands : topicIslands, examOpts);
   if (!testQuestions.length) {
     alert('No test questions are available for this topic yet.');
     window.location.href = 'topic.html?id=' + topicId;

@@ -83,8 +83,10 @@ function _genDistinctQ(gp) {
   return _dedupeQ(q);
 }
 
-function generateTopicTest(topicId, topicIslands) {
-  var MAX_QUESTIONS = 25;
+function generateTopicTest(topicId, topicIslands, opts) {
+  opts = opts || {};
+  var MAX_QUESTIONS = (opts.maxQuestions && opts.maxQuestions > 0) ? opts.maxQuestions : 25;
+  var difficulty = opts.difficulty || 'mixed';   // 'foundation' | 'mixed' | 'higher'
   var allQuestions = [];
 
   // Count islands that have questions (dedicated generators or a static bank)
@@ -122,7 +124,8 @@ function generateTopicTest(topicId, topicIslands) {
     }
 
     var quota = perIsland + (i < remainder ? 1 : 0);
-    var medTarget = Math.ceil(quota * 0.6);
+    var medFrac = difficulty === 'foundation' ? 1 : (difficulty === 'higher' ? 0 : 0.6);
+    var medTarget = Math.round(quota * medFrac);
     var gdTarget = quota - medTarget;
 
     var picked = [];
@@ -161,6 +164,38 @@ function generateTopicTest(topicId, topicIslands) {
   }
 
   return allQuestions;
+}
+
+// ── Curriculum mock exam ───────────────────────────────────────────────────────
+// Aggregates questions across the given (mastered) topics for a subject, allocating
+// the question budget proportionally per topic, then capping at maxQuestions. Each
+// question is tagged with topicId so results can be broken down by topic.
+function generateExam(subjectId, opts) {
+  opts = opts || {};
+  var topicIds = opts.topicIds || [];
+  var maxQuestions = (opts.maxQuestions && opts.maxQuestions > 0) ? opts.maxQuestions : 40;
+  var difficulty = opts.difficulty || 'mixed';
+  if (typeof CURRICULUM === 'undefined' || !topicIds.length) return [];
+
+  // Topic name lookup across all loaded topic arrays.
+  var topicNames = {};
+  ['MATH_TOPICS','MATH_TOPICS_Y8','ENGLISH_TOPICS','ENGLISH_TOPICS_Y8','SCIENCE_Y7_TOPICS',
+   'SCIENCE_TOPICS_Y8','HISTORY_TOPICS','HISTORY_TOPICS_Y8','GEOGRAPHY_TOPICS','GEOGRAPHY_TOPICS_Y8']
+    .forEach(function (n) {
+      try { var arr = eval('typeof ' + n + " !== 'undefined' ? " + n + ' : null'); if (arr) arr.forEach(function (t) { topicNames[t.id] = t.name; }); } catch (e) {}
+    });
+
+  var perTopic = Math.max(1, Math.ceil(maxQuestions / topicIds.length));
+  var all = [];
+  topicIds.forEach(function (tid) {
+    var islands = CURRICULUM.filter(function (i) { return i.topicId === tid; });
+    var qs = generateTopicTest(tid, islands, { maxQuestions: perTopic + 2, difficulty: difficulty });
+    qs.forEach(function (q) { q.topicId = tid; q.topicName = topicNames[tid] || tid; });
+    all = all.concat(qs);
+  });
+  shuffle(all);
+  if (all.length > maxQuestions) all = all.slice(0, maxQuestions);
+  return all;
 }
 
 function shuffle(arr) {

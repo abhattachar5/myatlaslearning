@@ -53,6 +53,9 @@
       <button class="nav-item" id="nav-profile" onclick="openProfileModal(); closeSidebar()">
         <span class="nav-icon" aria-hidden="true">👤</span> My Profile
       </button>
+      <button class="nav-item" id="nav-parent" onclick="window.location.href='parent.html'">
+        <span class="nav-icon" aria-hidden="true">👪</span> Parent Zone
+      </button>
       <button class="nav-item" onclick="logout()">
         <span class="nav-icon" aria-hidden="true">🚪</span> Sign Out
       </button>
@@ -119,12 +122,6 @@
           <button class="btn btn-primary" onclick="saveProfile()">Save changes</button>
           <button class="btn btn-secondary" onclick="confirmReset()">Reset progress</button>
         </div>
-      </div>
-
-      <div class="profile-page-card" id="profile-progress-section">
-        <h3 class="profile-progress-title">📊 My Progress</h3>
-        <div class="week-plan-progress" id="week-progress"></div>
-        <div class="wp-roadahead" id="wp-roadahead"></div>
       </div>
 
     </div>
@@ -204,6 +201,7 @@
           Show this week ▾
         </button>
       </div>
+      <div id="homework-section"></div>
       <div class="goals-body collapsed" id="week-plan-collapsible">
         <div class="goals-divider"></div>
         <div class="week-plan-list" id="week-list"></div>
@@ -601,8 +599,16 @@ function renderWeekPlan() {
   const modal = document.getElementById('plan-setup-modal');
   const card = document.getElementById('week-plan');
 
+  const hasHomework = renderHomework();
+
   if (!plan) {
-    // No plan yet — show setup modal
+    if (hasHomework) {
+      // No study plan yet, but parent-assigned work exists — show the card (homework only).
+      modal.classList.remove('show');
+      card.style.display = '';
+      return;
+    }
+    // No plan and no homework — show setup modal
     const today = new Date();
     const targetYear = today.getFullYear() + 1;
     document.getElementById('plan-year-label').textContent = getUserYear();
@@ -619,6 +625,79 @@ function renderWeekPlan() {
   card.style.display = '';
 
   renderThisWeekTab();
+}
+
+// ── Parent-assigned homework & exams (pinned at top of My Goals) ──────────────
+function renderHomework() {
+  const host = document.getElementById('homework-section');
+  if (!host) return false;
+  const list = (typeof getAssignments === 'function') ? getAssignments() : [];
+  if (!list.length) { host.innerHTML = ''; return false; }
+
+  const sorted = list.slice().sort(function (a, b) {
+    var ad = isAssignmentDone(a) ? 1 : 0, bd = isAssignmentDone(b) ? 1 : 0;
+    if (ad !== bd) return ad - bd;
+    return (a.dueDate || '').localeCompare(b.dueDate || '');
+  });
+  const todo = sorted.filter(function (a) { return !isAssignmentDone(a); }).length;
+
+  var rows = sorted.map(function (a) {
+    var done = isAssignmentDone(a);
+    var icon = a.type === 'exam' ? '📄' : '📐';
+    var name = a.type === 'exam'
+      ? (hwCap(a.subjectId) + ' mock exam' + (a.timeLimitMin ? ' · ' + a.timeLimitMin + ' min timed' : ''))
+      : (hwCap(a.subjectId) + ' practice — ' + (a.islandIds || []).length + ' subtopics');
+    var pct = assignmentProgress(a);
+    var due = a.dueDate ? hwFormatDue(a.dueDate) : '';
+    var right = done
+      ? '<span style="margin-left:auto;color:#22c55e;font-weight:700;font-size:.8125rem">✓ Done</span>'
+      : '<a href="' + assignmentLink(a) + '" class="btn btn-primary btn-sm" style="margin-left:auto;text-decoration:none">' + (a.type === 'exam' ? 'Begin →' : 'Start →') + '</a>';
+    var noteHtml = a.note ? '<div style="font-size:.8125rem;color:var(--text-muted);font-style:italic">“' + hwEsc(a.note) + '”</div>' : '';
+    return '<div style="display:flex;align-items:center;gap:10px;padding:9px 0">' +
+      '<span style="font-size:1.1rem">' + icon + '</span>' +
+      '<div style="min-width:0"><div style="font-weight:600;color:var(--text);font-size:.9375rem">' + name + '</div>' +
+      (due ? '<div style="font-size:.75rem;color:var(--text-muted)">Due ' + due + ' · ' + pct + '% done</div>' : '') + noteHtml + '</div>' +
+      right + '</div>';
+  }).join('');
+
+  host.innerHTML =
+    '<div style="border-left:3px solid #6366f1;background:rgba(99,102,241,.05);padding:12px 16px;border-radius:8px;margin:0 0 4px">' +
+      '<div style="display:flex;align-items:center;gap:8px;font-weight:800;font-size:.8125rem;text-transform:uppercase;letter-spacing:.04em;color:#6366f1;margin-bottom:4px">' +
+        '📌 Homework' + (todo ? ' <span style="background:#6366f1;color:#fff;padding:1px 8px;border-radius:20px;font-size:.6875rem;letter-spacing:0">' + todo + ' to do</span>' : '') +
+      '</div>' + rows +
+    '</div>';
+  return true;
+}
+
+function hwCap(s) { s = s || ''; return s.charAt(0).toUpperCase() + s.slice(1); }
+function hwEsc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+function hwFormatDue(iso) { try { return new Date(iso).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }); } catch (e) { return iso; } }
+
+function isAssignmentDone(a) {
+  if (a.status === 'done') return true;
+  if (a.type === 'practice') {
+    var ids = a.islandIds || [];
+    return ids.length > 0 && ids.every(function (id) { return getIslandStatus(id) >= 3; });
+  }
+  return !!a.result;
+}
+function assignmentProgress(a) {
+  if (a.type === 'practice') {
+    var ids = a.islandIds || [];
+    if (!ids.length) return 0;
+    var d = ids.filter(function (id) { return getIslandStatus(id) >= 3; }).length;
+    return Math.round(d / ids.length * 100);
+  }
+  return a.result ? 100 : 0;
+}
+function assignmentLink(a) {
+  if (a.type === 'practice') {
+    return 'test.html?id=' + encodeURIComponent(a.topicId || '') +
+      '&cp=' + encodeURIComponent((a.islandIds || []).join(',')) +
+      (a.numQuestions ? '&n=' + a.numQuestions : '') +
+      (a.difficulty ? '&diff=' + a.difficulty : '');
+  }
+  return 'exam.html?aid=' + encodeURIComponent(a.id);
 }
 
 // ── Collapse toggle for My Goals section ────────────────────────────────────
@@ -859,136 +938,7 @@ function renderNextWeekPreview(nextData, containerEl) {
   containerEl.insertAdjacentHTML('beforeend', html);
 }
 
-// ── Tab 2: My Progress + Road Ahead ─────────────────────────────────────────
-function renderProgressTab() {
-  const section = document.getElementById('profile-progress-section');
-  if (!StudyPlanner.getStudyPlan()) {
-    if (section) section.style.display = 'none';
-    return;
-  }
-  if (section) section.style.display = '';
-  // Subject progress cards
-  const tp = StudyPlanner.getTopicProgress();
-  const progEl = document.getElementById('week-progress');
-  const sids = ['math','english','science','history','geography'];
-  let progHtml = '<h3 class="wp-section-title">Your subjects 📚</h3>';
-  progHtml += '<div class="subj-cards-scroll"><div class="subj-cards">';
-  sids.forEach(sid => {
-    const s = tp.subjects[sid];
-    if (!s || s.total === 0) return;
-    const pct = s.total > 0 ? Math.round((s.completed / s.total) * 100) : 0;
-    progHtml += `<div class="subj-card" style="--subj-color:${s.color}">
-      <div class="subj-card-blob" aria-hidden="true"></div>
-      <div class="subj-card-emoji">${s.emoji}</div>
-      <div class="subj-card-name">${s.name}</div>
-      <div class="subj-card-stat">${s.completed} of ${s.total} mastered</div>
-      <div class="subj-card-bar-track">
-        <div class="subj-card-bar-fill" style="width:${pct}%"></div>
-      </div>
-    </div>`;
-  });
-  progHtml += '</div></div>';
-  progHtml += `<div class="wp-prog-overall">Overall: ${tp.completed} of ${tp.total} topics (${tp.percent}%)</div>`;
-  progEl.innerHTML = progHtml;
-
-  // Weekly grid road ahead: weeks as rows, subjects as columns
-  const grid = StudyPlanner.getWeeklyGrid();
-  if (!grid) return;
-
-  const roadEl = document.getElementById('wp-roadahead');
-  const NAMES = StudyPlanner.SUBJECT_NAMES;
-  const EMOJIS = StudyPlanner.SUBJECT_EMOJIS;
-  const COLORS = StudyPlanner.SUBJECT_COLORS;
-  const sidsGrid = grid.subjectIds;
-
-  let roadHtml = '<h3 class="wp-section-title" style="margin-top:20px">Road Ahead</h3>';
-  roadHtml += '<div class="wp-grid-wrap"><table class="wp-grid">';
-
-  // Header row
-  roadHtml += '<thead><tr><th class="wp-grid-wk">Week</th>';
-  sidsGrid.forEach(sid => {
-    roadHtml += `<th style="color:${COLORS[sid]}">${EMOJIS[sid]} ${NAMES[sid]}</th>`;
-  });
-  roadHtml += '</tr></thead><tbody>';
-
-  // Data rows
-  grid.weeks.forEach(row => {
-    const cls = row.isCurrent ? ' class="wp-grid-current"' : row.isPast ? ' class="wp-grid-past"' : '';
-    roadHtml += `<tr${cls}>`;
-    roadHtml += `<td class="wp-grid-wk">W${row.week}</td>`;
-    sidsGrid.forEach(sid => {
-      const entries = row.subjects[sid];
-      if (entries.length === 0) {
-        roadHtml += '<td><span class="wp-grid-empty">—</span></td>';
-      } else {
-        // Separate islands, tests, checkpoints, comprehension
-        const byTopic = {};
-        const topicOrder = [];
-        const tests = [];
-        const checkpoints = [];
-        const comps = [];
-
-        entries.forEach(e => {
-          if (e.type === 'test') { tests.push(e); return; }
-          if (e.type === 'checkpoint') { checkpoints.push(e); return; }
-          if (e.type === 'comprehension') { comps.push(e); return; }
-          // island
-          if (!byTopic[e.topic]) { byTopic[e.topic] = []; topicOrder.push(e.topic); }
-          const icon = e.mastered ? '<span class="wp-grid-mastered">✓</span> '
-                     : e.locked  ? '<span class="wp-grid-locked">🔒</span> ' : '';
-          byTopic[e.topic].push(icon + e.island);
-        });
-
-        const parts = [];
-        // Islands grouped by topic, with checkpoint/test right after its topic
-        topicOrder.forEach(t => {
-          const islands = byTopic[t];
-          if (islands.length === 1 && islands[0] === t) parts.push(t);
-          else parts.push('<span class="wp-grid-topic">' + t + '</span> — ' + islands.join(', '));
-          // Append checkpoint for this topic if present
-          const cpIdx = checkpoints.findIndex(cp => cp.topicName === t);
-          if (cpIdx !== -1) {
-            const cp = checkpoints.splice(cpIdx, 1)[0];
-            const cpIcon = cp.locked ? '<span class="wp-grid-locked">🔒</span> ' : '';
-            const cpUrl = `test.html?id=${cp.topicId}&cp=${cp.coveredIslandIds.join(',')}`;
-            parts.push(`<a href="${cpUrl}" class="wp-grid-checkpoint">${cpIcon}📋 <span class="wp-grid-topic">${cp.topicName}</span> — Checkpoint ${cp.checkpointNum}</a>`);
-          }
-          // Append test for this topic if present
-          const tIdx = tests.findIndex(tm => tm.topicName === t);
-          if (tIdx !== -1) {
-            const tm = tests.splice(tIdx, 1)[0];
-            const tIcon = tm.passed ? '<span class="wp-grid-mastered">✓</span> '
-                        : tm.locked ? '<span class="wp-grid-locked">🔒</span> ' : '';
-            parts.push(`<span class="wp-grid-test">${tIcon}📝 <span class="wp-grid-topic">${tm.topicName}</span> — Test</span>`);
-          }
-        });
-        // Any remaining checkpoints (topic not in this week's islands)
-        checkpoints.forEach(cp => {
-          const cpIcon = cp.locked ? '<span class="wp-grid-locked">🔒</span> ' : '';
-          const cpUrl = `test.html?id=${cp.topicId}&cp=${cp.coveredIslandIds.join(',')}`;
-          parts.push(`<a href="${cpUrl}" class="wp-grid-checkpoint">${cpIcon}📋 <span class="wp-grid-topic">${cp.topicName}</span> — Checkpoint ${cp.checkpointNum}</a>`);
-        });
-        // Any remaining tests (topic not in this week's islands)
-        tests.forEach(tm => {
-          const tIcon = tm.passed ? '<span class="wp-grid-mastered">✓</span> '
-                      : tm.locked ? '<span class="wp-grid-locked">🔒</span> ' : '';
-          parts.push(`<span class="wp-grid-test">${tIcon}📝 <span class="wp-grid-topic">${tm.topicName}</span> — Test</span>`);
-        });
-        // Comprehension
-        comps.forEach(c => {
-          const cIcon = c.complete ? '<span class="wp-grid-mastered">✓</span> ' : '';
-          parts.push(`<span class="wp-grid-comp">${cIcon}<span class="wp-grid-topic">Comprehension (${c.typeLabel})</span> — ${c.title}</span>`);
-        });
-
-        roadHtml += '<td>' + parts.join('<br>') + '</td>';
-      }
-    });
-    roadHtml += '</tr>';
-  });
-
-  roadHtml += '</tbody></table></div>';
-  roadEl.innerHTML = roadHtml;
-}
+// My Progress + Road Ahead now live in the Parent Zone (parent.html), not the child profile.
 
 function activateStudyPlan() {
   StudyPlanner.createStudyPlan();
@@ -1508,7 +1458,6 @@ function openProfileModal() {
   document.getElementById('dashboard-content').style.display = 'none';
   document.getElementById('profile-page').style.display = '';
   setNavActive('profile');
-  renderProgressTab();
   window.scrollTo(0, 0);
 }
 function closeProfilePage() {

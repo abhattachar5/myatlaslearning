@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas — Mock Exam</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
+  <style>
+    .ex-wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 80px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+    .muted { color: var(--text-muted); font-size: .8125rem; }
+    .lbl { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); margin-bottom: 8px; }
+    .btn { border: none; border-radius: 10px; padding: 11px 20px; font-weight: 700; font-size: .9375rem; cursor: pointer; }
+    .btn-primary { background: linear-gradient(135deg,#6366f1,#8b5cf6); color: #fff; }
+    .btn-ghost { background: var(--surface2); color: var(--text-2); }
+    .chip { display:inline-block; font-size:.75rem; font-weight:700; padding:3px 10px; border-radius:20px; background:var(--surface2); color:var(--text-2); margin:3px 4px 3px 0; }
+
+    .br-banner { background: linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; border-radius:16px; padding:24px; margin-bottom:18px; }
+    .br-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:18px 0; }
+    .br-stat { background:var(--surface2); border-radius:12px; padding:16px; text-align:center; }
+    .br-stat .v { font-size:1.5rem; font-weight:800; color:var(--text); }
+    .br-stat .l { font-size:.6875rem; text-transform:uppercase; letter-spacing:.05em; color:var(--text-muted); font-weight:700; }
+    .br-rules { list-style:none; margin:0 0 18px; padding:0; }
+    .br-rules li { display:flex; gap:10px; padding:8px 0; font-size:.9375rem; color:var(--text-2); border-bottom:1px solid var(--border); }
+    .br-rules li:last-child { border:none; }
+
+    .ie-bar { display:flex; align-items:center; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:14px 18px; margin-bottom:16px; position:sticky; top:0; z-index:5; }
+    .ie-timer { font-weight:800; font-size:1.25rem; color:#b45309; background:rgba(245,158,11,.14); padding:6px 14px; border-radius:10px; }
+    .ie-timer.danger { color:#dc2626; background:rgba(220,38,38,.12); }
+    .ie-prog { flex:1; }
+    .ie-prog .t { font-size:.8125rem; color:var(--text-muted); margin-bottom:5px; }
+    .ie-track { height:6px; background:var(--surface2); border-radius:3px; overflow:hidden; }
+    .ie-track > i { display:block; height:100%; background:#6366f1; border-radius:3px; transition:width .2s; }
+    .q-num { font-size:.8125rem; font-weight:700; color:#6366f1; }
+    .q-text { font-size:1.125rem; font-weight:700; color:var(--text); margin:6px 0 18px; }
+    .q-opts { display:grid; gap:10px; }
+    .q-opt { display:flex; align-items:center; gap:12px; padding:14px 16px; border:1.5px solid var(--border); border-radius:12px; cursor:pointer; font-size:.9375rem; color:var(--text); }
+    .q-opt:hover { border-color:#6366f1; }
+    .q-opt.sel { border-color:#6366f1; background:rgba(99,102,241,.07); }
+    .q-opt .k { width:26px; height:26px; border-radius:50%; background:var(--surface2); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.8125rem; flex-shrink:0; }
+    .q-opt.sel .k { background:#6366f1; color:#fff; }
+    .ie-foot { display:flex; align-items:center; gap:12px; margin-top:20px; }
+    .nav-dots { display:flex; gap:5px; flex-wrap:wrap; margin-top:14px; }
+    .nav-dot { width:26px; height:26px; border-radius:6px; background:var(--surface2); font-size:.6875rem; font-weight:700; display:flex; align-items:center; justify-content:center; color:var(--text-muted); cursor:pointer; border:none; }
+    .nav-dot.done { background:#6366f1; color:#fff; }
+    .nav-dot.cur { outline:2px solid #6366f1; outline-offset:1px; }
+
+    .rs-hero { text-align:center; padding:28px; border-radius:16px; background:linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; margin-bottom:18px; }
+    .rs-score { font-size:3rem; font-weight:800; line-height:1; }
+    .rs-grade { display:inline-block; margin-top:10px; background:rgba(255,255,255,.22); padding:5px 16px; border-radius:20px; font-weight:700; }
+    .rs-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:18px; }
+    .rs-stat { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px; text-align:center; }
+    .rs-stat .v { font-size:1.5rem; font-weight:800; color:var(--text); }
+    .rs-stat .l { font-size:.6875rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; }
+    .rs-topic { display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid var(--border); }
+    .rs-topic:last-child { border:none; }
+    .rs-topic .nm { font-weight:600; color:var(--text); font-size:.9375rem; min-width:140px; }
+    .rs-tbar { flex:1; height:8px; background:var(--surface2); border-radius:4px; overflow:hidden; }
+    .rs-tbar > i { display:block; height:100%; border-radius:4px; }
+    .rs-tag { font-size:.75rem; font-weight:700; padding:2px 10px; border-radius:20px; white-space:nowrap; }
+    .t-strong { background:rgba(34,197,94,.15); color:#15803d; }
+    .t-revisit { background:rgba(245,158,11,.16); color:#b45309; }
+
+    /* English paper */
+    .passage { background:var(--surface2); border-radius:12px; padding:18px 20px; margin-bottom:18px; max-height:320px; overflow:auto; }
+    .passage h4 { color:var(--text); margin-bottom:8px; }
+    .passage p { font-size:.9375rem; line-height:1.75; margin-bottom:10px; color:var(--text-2); }
+    .sec-h { font-weight:800; color:var(--text); font-size:1.0625rem; margin:6px 0 12px; }
+    .cq { border:1px solid var(--border); border-radius:12px; padding:16px; margin-bottom:12px; }
+    .cq-head { display:flex; align-items:baseline; gap:8px; margin-bottom:10px; }
+    .cq-q { font-weight:700; color:var(--text); font-size:.9375rem; }
+    .cq-marks { margin-left:auto; font-size:.75rem; font-weight:700; color:#f59e0b; background:rgba(245,158,11,.14); padding:2px 10px; border-radius:20px; white-space:nowrap; }
+    .cq textarea, .wbox { width:100%; border:1px solid var(--border); border-radius:8px; padding:10px 12px; font-family:inherit; font-size:.9375rem; background:var(--surface); color:var(--text); resize:vertical; }
+    .wbox { min-height:220px; line-height:1.7; }
+    .wprompt { background:rgba(245,158,11,.1); border:1px solid rgba(245,158,11,.3); border-radius:12px; padding:16px; margin-bottom:14px; font-size:.9375rem; color:var(--text); }
+    .wcount { text-align:right; font-size:.8125rem; color:var(--text-muted); margin-top:6px; }
+    .crit { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--border); }
+    .crit:last-child { border:none; }
+    .crit .nm { font-size:.9375rem; color:var(--text); min-width:170px; }
+    .crit .dots { display:flex; gap:5px; }
+    .crit .d { width:16px; height:16px; border-radius:50%; background:var(--surface2); }
+    .crit .d.f { background:#f59e0b; }
+    .crit .na { font-size:.75rem; color:var(--text-muted); font-style:italic; }
+    .fb { border-left:3px solid var(--border); padding:4px 0 4px 12px; margin:8px 0; }
+    .fb .www { color:#15803d; font-size:.875rem; } .fb .ebi { color:#b45309; font-size:.875rem; }
+    .mk-marks { font-size:.75rem; font-weight:800; color:var(--text); background:var(--surface2); padding:2px 10px; border-radius:20px; }
+  </style>
+</head>
+<body>
+  <div class="ex-wrap">
+    <div id="ex-error" style="display:none" class="card"><p>Exam not found. <a href="dashboard.html">Back to dashboard</a></p></div>
+
+    <!-- Briefing -->
+    <div id="ex-brief" style="display:none">
+      <div class="br-banner">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.06em;opacity:.85">END-OF-YEAR MOCK EXAM</div>
+        <h2 id="br-title" style="font-size:1.375rem;margin:4px 0">Mock Exam</h2>
+        <div style="opacity:.9">A timed paper covering everything you've mastered so far.</div>
+      </div>
+      <div class="card">
+        <div class="br-stats">
+          <div class="br-stat"><div class="v" id="br-time">60:00</div><div class="l">Time limit</div></div>
+          <div class="br-stat"><div class="v" id="br-qn">40</div><div class="l">Questions</div></div>
+          <div class="br-stat"><div class="v" id="br-topics">5</div><div class="l">Topics</div></div>
+        </div>
+        <div class="lbl">Covers</div>
+        <div id="br-chips" style="margin-bottom:18px"></div>
+        <div class="lbl">How it works</div>
+        <ul class="br-rules">
+          <li>⏱️ <span>The clock starts when you begin and <b>auto-submits at 0:00</b>.</span></li>
+          <li>🚫 <span>No hints or answers until the end — just like a real exam.</span></li>
+          <li>↔️ <span>You can move back and forth between questions freely.</span></li>
+          <li>📊 <span>You'll get a grade and a topic-by-topic breakdown at the end.</span></li>
+        </ul>
+        <button class="btn btn-primary" style="width:100%;padding:14px" id="br-start">I'm ready — start the clock ▶</button>
+        <p style="text-align:center;margin-top:12px"><a class="muted" href="dashboard.html">← Back to dashboard</a></p>
+      </div>
+    </div>
+
+    <!-- Active -->
+    <div id="ex-active" style="display:none">
+      <div class="ie-bar">
+        <div class="ie-timer" id="ex-timer">--:--</div>
+        <div class="ie-prog"><div class="t" id="ex-progtext">Question 1</div><div class="ie-track"><i id="ex-progbar" style="width:0%"></i></div></div>
+        <button class="btn btn-ghost" style="padding:8px 14px" id="ex-submit">Submit</button>
+      </div>
+      <div class="card">
+        <div class="q-num" id="ex-qnum">QUESTION 1</div>
+        <div class="q-text" id="ex-qtext"></div>
+        <div class="q-opts" id="ex-qopts"></div>
+        <div class="ie-foot">
+          <div style="margin-left:auto;display:flex;gap:10px">
+            <button class="btn btn-ghost" id="ex-prev">← Back</button>
+            <button class="btn btn-primary" id="ex-next">Next →</button>
+          </div>
+        </div>
+      </div>
+      <div class="lbl" style="margin-top:14px">Jump to question</div>
+      <div class="nav-dots" id="ex-navdots"></div>
+    </div>
+
+    <!-- Results -->
+    <div id="ex-results" style="display:none">
+      <div class="rs-hero">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.06em;opacity:.85" id="rs-subject">MOCK EXAM</div>
+        <div class="rs-score" id="rs-score">0%</div>
+        <div class="rs-grade" id="rs-grade"></div>
+      </div>
+      <div class="rs-stats">
+        <div class="rs-stat"><div class="v" id="rs-correct">0/0</div><div class="l">Correct</div></div>
+        <div class="rs-stat"><div class="v" id="rs-time">0:00</div><div class="l">Time used</div></div>
+        <div class="rs-stat"><div class="v" id="rs-xp">+0</div><div class="l">XP earned</div></div>
+      </div>
+      <div class="card">
+        <div class="lbl">By topic</div>
+        <div id="rs-topics"></div>
+        <button class="btn btn-primary" style="width:100%;margin-top:18px" onclick="window.location.href='dashboard.html'">Back to dashboard →</button>
+      </div>
+    </div>
+
+    <!-- English briefing -->
+    <div id="en-brief" style="display:none">
+      <div class="br-banner">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.06em;opacity:.85">END-OF-YEAR MOCK EXAM</div>
+        <h2 style="font-size:1.375rem;margin:4px 0">English — Mock Exam</h2>
+        <div style="opacity:.9">A two-section paper: reading comprehension and extended writing.</div>
+      </div>
+      <div class="card">
+        <div class="br-stats">
+          <div class="br-stat"><div class="v" id="enbr-time">60:00</div><div class="l">Time limit</div></div>
+          <div class="br-stat"><div class="v">A + B</div><div class="l">Sections</div></div>
+          <div class="br-stat"><div class="v" id="enbr-marks">0</div><div class="l">Reading marks</div></div>
+        </div>
+        <ul class="br-rules">
+          <li>📖 <span><b>Section A</b> — read the passage and answer the comprehension questions.</span></li>
+          <li>✍️ <span><b>Section B</b> — one extended writing task.</span></li>
+          <li>⏱️ <span>The clock auto-submits at 0:00. Both sections are marked by an AI examiner.</span></li>
+        </ul>
+        <button class="btn btn-primary" style="width:100%;padding:14px" id="enbr-start">I'm ready — start the clock ▶</button>
+        <p style="text-align:center;margin-top:12px"><a class="muted" href="dashboard.html">← Back to dashboard</a></p>
+      </div>
+    </div>
+
+    <!-- English active -->
+    <div id="en-active" style="display:none">
+      <div class="ie-bar">
+        <div class="ie-timer" id="en-timer">--:--</div>
+        <div class="ie-prog"><div class="t">📖 English — answer Section A and Section B, then submit</div></div>
+        <button class="btn btn-primary" style="padding:8px 14px" id="en-submit">Submit paper</button>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <div class="sec-h">Section A · Reading</div>
+        <div class="passage" id="en-passage"></div>
+        <div id="en-questions"></div>
+      </div>
+      <div class="card">
+        <div class="sec-h">Section B · Writing</div>
+        <div class="wprompt" id="en-wprompt"></div>
+        <textarea class="wbox" id="en-writing" placeholder="Write your response here…"></textarea>
+        <div class="wcount" id="en-wcount">0 words</div>
+      </div>
+      <div id="en-marking" style="display:none;text-align:center;padding:24px;color:var(--text-muted)">⏳ Marking your paper…</div>
+    </div>
+
+    <!-- English results -->
+    <div id="en-results" style="display:none">
+      <div class="rs-hero">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.06em;opacity:.85">ENGLISH — MOCK EXAM</div>
+        <div class="rs-score" id="enrs-score">–</div>
+        <div class="rs-grade" id="enrs-grade"></div>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <div class="lbl">Section A · Reading — marked by evaluate-comprehension</div>
+        <div id="enrs-reading"></div>
+      </div>
+      <div class="card">
+        <div class="lbl">Section B · Writing — marked by evaluate-writing (1–4 per criterion)</div>
+        <div id="enrs-writing"></div>
+        <div id="enrs-overall" style="margin-top:12px"></div>
+        <button class="btn btn-primary" style="width:100%;margin-top:18px" onclick="window.location.href='dashboard.html'">Back to dashboard →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Same question sources as test.html -->
+  <script src="data.js"></script>
+  <script src="math-data.js"></script>
+  <script src="math-content-1.js"></script>
+  <script src="math-content-2.js"></script>
+  <script src="math-content-3.js"></script>
+  <script src="math-content-4.js"></script>
+  <script src="math-content-5.js"></script>
+  <script src="math-content-6.js"></script>
+  <script src="math-content-7.js"></script>
+  <script src="math-data-y8.js"></script>
+  <script src="math-y8-t01.js"></script><script src="math-y8-t02.js"></script><script src="math-y8-t03.js"></script>
+  <script src="math-y8-t04.js"></script><script src="math-y8-t05.js"></script><script src="math-y8-t06.js"></script>
+  <script src="math-y8-t07.js"></script><script src="math-y8-t08.js"></script><script src="math-y8-t09.js"></script>
+  <script src="math-y8-t10.js"></script><script src="math-y8-t11.js"></script><script src="math-y8-t12.js"></script>
+  <script src="math-y8-t13.js"></script><script src="math-y8-t14.js"></script><script src="math-y8-t15.js"></script>
+  <script src="math-y8-t16.js"></script><script src="math-y8-t17.js"></script><script src="math-y8-t18.js"></script>
+  <script src="math-y8-t19.js"></script><script src="math-y8-t20.js"></script><script src="math-y8-t21.js"></script>
+  <script src="math-y8-t22.js"></script><script src="math-y8-t23.js"></script><script src="math-y8-t24.js"></script>
+  <script src="math-y8-t25.js"></script><script src="math-y8-t26.js"></script><script src="math-y8-t27.js"></script>
+  <script src="math-y8-t28.js"></script>
+  <script src="english-data.js"></script>
+  <script src="english-content-1.js"></script><script src="english-content-2.js"></script><script src="english-content-3.js"></script>
+  <script src="english-content-4.js"></script><script src="english-content-5.js"></script><script src="english-content-6.js"></script>
+  <script src="english-content-7.js"></script><script src="english-content-8.js"></script>
+  <script src="english-y8-1.js"></script><script src="english-y8-2.js"></script><script src="english-y8-3.js"></script>
+  <script src="english-y8-4.js"></script><script src="english-y8-5.js"></script><script src="english-y8-6.js"></script>
+  <script src="english-y8-7.js"></script><script src="english-y8-reuse.js"></script>
+  <script src="comprehension-y8-1.js"></script><script src="comprehension-y8-2.js"></script><script src="comprehension-y8-3.js"></script>
+  <script src="comprehension-y8-4.js"></script><script src="comprehension-y8-5.js"></script><script src="comprehension-y8-6.js"></script>
+  <script src="comprehension-y8-7.js"></script><script src="comprehension-y8-8.js"></script>
+  <script src="science-y8-1.js"></script><script src="science-y8-2.js"></script><script src="science-y8-3.js"></script>
+  <script src="history-y8-1.js"></script><script src="history-y8-2.js"></script>
+  <script src="geography-y8-1.js"></script><script src="geography-y8-2.js"></script>
+  <script src="english-data-y8.js"></script>
+  <script src="science-data-y7.js"></script>
+  <script src="science-data-y8.js"></script>
+  <script src="history-data.js"></script>
+  <script src="geography-data.js"></script>
+  <script src="history-data-y8.js"></script>
+  <script src="geography-data-y8.js"></script>
+  <script src="y8-topics.js"></script>
+  <script src="auth-shim.js"></script>
+  <script src="app.js"></script>
+  <script src="test-generator.js"></script>
+  <script src="science-test-generators-y7.js"></script>
+  <script src="science-y8-reuse.js"></script>
+  <script src="math-y8-generators.js"></script>
+  <script src="math-y8-gen-1.js"></script><script src="math-y8-gen-2.js"></script><script src="math-y8-gen-3.js"></script>
+  <script src="math-y8-gen-4.js"></script><script src="math-y8-gen-5.js"></script><script src="math-y8-gen-6.js"></script>
+
+  <script>
+    initTheme();
+    requireAuth();
+
+    var SUBJECT_LABELS = { math: 'Mathematics', english: 'English', science: 'Science', history: 'History', geography: 'Geography' };
+
+    var params = new URLSearchParams(location.search);
+    var aid = params.get('aid');
+    var assignment = (typeof getAssignments === 'function' ? getAssignments() : []).find(function (a) { return a.id === aid; });
+
+    var questions = [], answers = [], cur = 0, total = 0;
+    var timeLeft = 0, timerId = null, startedAt = 0;
+
+    // Init runs at the END of this script (see bottom) so all vars/functions are defined first.
+
+    function escapeHtmlX(s) { return String(s == null ? '' : s).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); }
+
+    // ── English paper (reading + writing, AI-marked) ─────────────────────────────
+    var EN_WRITING_PROMPTS = [
+      'Write the opening of a story about a character who discovers something they were not meant to find. Aim for 250–400 words.',
+      'Some people argue that children spend too much time online. Write a piece arguing for or against this view.',
+      'Describe a place that is special to you, using vivid sensory detail to bring it to life.'
+    ];
+    var enPassage = null, enPrompt = '', enTimeLeft = 0, enTimerId = null, enStartedAt = 0;
+
+    function initEnglish() {
+      var mins = assignment.timeLimitMin || 60;
+      var passages = (typeof COMPREHENSION_PASSAGES_Y8 !== 'undefined' && COMPREHENSION_PASSAGES_Y8.length) ? COMPREHENSION_PASSAGES_Y8
+        : (typeof COMPREHENSION_PASSAGES !== 'undefined' ? COMPREHENSION_PASSAGES : []);
+      enPassage = passages.length ? passages[Math.floor(Math.random() * passages.length)] : null;
+      enPrompt = EN_WRITING_PROMPTS[Math.floor(Math.random() * EN_WRITING_PROMPTS.length)];
+      if (!enPassage) { document.getElementById('ex-error').style.display = ''; return; }
+      var totalMarks = (enPassage.questions || []).reduce(function (s, q) { return s + (q.marks || 0); }, 0);
+      document.getElementById('enbr-time').textContent = mins + ':00';
+      document.getElementById('enbr-marks').textContent = totalMarks;
+      document.getElementById('en-brief').style.display = '';
+      enTimeLeft = mins * 60;
+      document.getElementById('enbr-start').onclick = startEnglish;
+    }
+    function startEnglish() {
+      document.getElementById('en-brief').style.display = 'none';
+      document.getElementById('en-active').style.display = '';
+      enStartedAt = Date.now();
+      document.getElementById('en-passage').innerHTML = '<h4>' + escapeHtmlX(enPassage.title) + '</h4>' +
+        String(enPassage.text || '').split('\n\n').map(function (p) { return '<p>' + escapeHtmlX(p) + '</p>'; }).join('');
+      document.getElementById('en-questions').innerHTML = (enPassage.questions || []).map(function (q, i) {
+        return '<div class="cq"><div class="cq-head"><span class="cq-q">' + (i + 1) + '. ' + escapeHtmlX(q.q) + '</span>' +
+          '<span class="cq-marks">' + q.marks + ' mark' + (q.marks > 1 ? 's' : '') + '</span></div>' +
+          '<textarea rows="3" data-qi="' + i + '"></textarea></div>';
+      }).join('');
+      document.getElementById('en-wprompt').innerHTML = '<b>Writing task:</b> ' + escapeHtmlX(enPrompt);
+      var wbox = document.getElementById('en-writing');
+      wbox.oninput = function () { var w = wbox.value.trim() ? wbox.value.trim().split(/\s+/).length : 0; document.getElementById('en-wcount').textContent = w + ' words'; };
+      document.getElementById('en-submit').onclick = function () { if (confirm('Submit your paper for marking?')) submitEnglish(); };
+      enTick(); enTimerId = setInterval(enTick, 1000);
+    }
+    function enTick() {
+      var m = Math.floor(enTimeLeft / 60), s = enTimeLeft % 60;
+      var el = document.getElementById('en-timer');
+      el.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+      el.classList.toggle('danger', enTimeLeft <= 60);
+      if (enTimeLeft <= 0) { submitEnglish(); return; }
+      enTimeLeft--;
+    }
+    function submitEnglish() {
+      if (enTimerId) { clearInterval(enTimerId); enTimerId = null; }
+      var btn = document.getElementById('en-submit'); btn.disabled = true;
+      document.getElementById('en-marking').style.display = '';
+      var items = (enPassage.questions || []).map(function (q, i) {
+        var el = document.querySelector('#en-questions textarea[data-qi="' + i + '"]');
+        return { q: q.q, marks: q.marks, guidance: q.guidance || '', response: el ? el.value.trim() : '' };
+      });
+      var writing = document.getElementById('en-writing').value.trim();
+      var year = (getUser() || {}).year || 'Year 8';
+
+      Promise.all([
+        fetchWithAuth('/.netlify/functions/evaluate-comprehension', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ passageTitle: enPassage.title, passageText: enPassage.text, items: items }) })
+          .then(function (r) { return r.json(); }).then(function (d) { return d && d.feedback ? d.feedback : null; }).catch(function () { return null; }),
+        fetchWithAuth('/.netlify/functions/evaluate-writing', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ prompt: enPrompt, response: writing, year: year }) })
+          .then(function (r) { return r.json(); }).then(function (d) { return d && d.feedback ? d.feedback : null; }).catch(function () { return null; })
+      ]).then(function (res) {
+        renderEnglishResults(items, res[0], res[1]);
+      }).catch(function (e) {
+        renderEnglishResults(items, null, null, e.message);
+      });
+    }
+    function renderEnglishResults(items, compFb, writeFb, errMsg) {
+      document.getElementById('en-active').style.display = 'none';
+      document.getElementById('en-results').style.display = '';
+      var totalMax = items.reduce(function (s, it) { return s + (it.marks || 0); }, 0);
+      var gained = 0, readHtml = '';
+      if (compFb && compFb.results) {
+        compFb.results.forEach(function (r, i) {
+          gained += (r.marks || 0);
+          readHtml += '<div style="display:flex;align-items:center;gap:10px;margin:10px 0 6px"><span class="cq-q">Q' + (i + 1) + '</span><span class="mk-marks" style="margin-left:auto">' + (r.marks || 0) + ' / ' + (r.max || items[i].marks) + '</span></div>';
+          (r.www || []).forEach(function (w) { readHtml += '<div class="fb"><div class="www">✓ ' + escapeHtmlX(w) + '</div></div>'; });
+          (r.ebi || []).forEach(function (e) { readHtml += '<div class="fb"><div class="ebi">→ ' + escapeHtmlX(e) + '</div></div>'; });
+        });
+      } else { readHtml = '<p class="muted">' + (errMsg ? ('Marking unavailable: ' + escapeHtmlX(errMsg)) : 'No reading feedback returned (sign in required for AI marking).') + '</p>'; }
+      document.getElementById('enrs-reading').innerHTML = readHtml;
+
+      var critDefs = [['planning', 'Planning &amp; Organisation'], ['argument', 'Argument'], ['creative', 'Creative techniques'], ['editing', 'Editing &amp; Proofreading'], ['research', 'Research &amp; Referencing'], ['transitions', 'Transitions']];
+      var writeHtml = '';
+      if (writeFb && writeFb.scores) {
+        critDefs.forEach(function (c) {
+          var sc = writeFb.scores[c[0]];
+          if (sc == null) { writeHtml += '<div class="crit"><span class="nm">' + c[1] + '</span><span class="na">not applicable to this prompt</span></div>'; return; }
+          var dots = ''; for (var d = 1; d <= 4; d++) dots += '<i class="d' + (d <= sc ? ' f' : '') + '"></i>';
+          writeHtml += '<div class="crit"><span class="nm">' + c[1] + '</span><span class="dots">' + dots + '</span><span class="muted">' + sc + ' / 4</span></div>';
+        });
+      } else { writeHtml = '<p class="muted">' + (errMsg ? ('Marking unavailable: ' + escapeHtmlX(errMsg)) : 'No writing feedback returned (sign in required for AI marking).') + '</p>'; }
+      document.getElementById('enrs-writing').innerHTML = writeHtml;
+
+      var ov = '';
+      if (writeFb) {
+        if (writeFb.strengths && writeFb.strengths.length) ov += '<div style="margin-bottom:8px"><b style="color:var(--text)">Strengths:</b> ' + writeFb.strengths.map(escapeHtmlX).join('; ') + '</div>';
+        if (writeFb.improvements && writeFb.improvements.length) ov += '<div style="margin-bottom:8px"><b style="color:var(--text)">Improve:</b> ' + writeFb.improvements.map(escapeHtmlX).join('; ') + '</div>';
+        if (writeFb.overall) ov += '<p class="muted" style="margin:0">' + escapeHtmlX(writeFb.overall) + '</p>';
+      }
+      document.getElementById('enrs-overall').innerHTML = ov;
+
+      var readPct = totalMax ? Math.round(gained / totalMax * 100) : 0;
+      document.getElementById('enrs-score').textContent = gained + ' / ' + totalMax;
+      document.getElementById('enrs-grade').textContent = 'Reading ' + readPct + '% · ' + gradeBand(readPct);
+
+      var timeUsed = Math.round((Date.now() - enStartedAt) / 1000);
+      if (typeof updateAssignment === 'function') {
+        updateAssignment(aid, { status: 'done', result: { type: 'english', readingMarks: gained, readingMax: totalMax, readingPct: readPct, comprehension: compFb || null, writing: writeFb || null, timeUsedSec: timeUsed, takenAt: new Date().toISOString() } });
+      }
+      if (typeof addXP === 'function') addXP(Math.round(readPct / 2), 'Mock exam');
+    }
+
+    function initBrief() {
+      var mins = assignment.timeLimitMin || 60;
+      var qn = assignment.numQuestions || Math.round(mins / 1.5);
+      questions = generateExam(assignment.subjectId, {
+        topicIds: assignment.snapshotTopicIds || [],
+        maxQuestions: qn,
+        difficulty: 'mixed'
+      });
+      total = questions.length;
+      answers = new Array(total).fill(-1);
+
+      var topicNames = {};
+      questions.forEach(function (q) { if (q.topicId) topicNames[q.topicId] = q.topicName || q.topicId; });
+      var topicList = Object.keys(topicNames);
+
+      document.getElementById('br-title').textContent = (SUBJECT_LABELS[assignment.subjectId] || assignment.subjectId) + ' — Mock Exam';
+      document.getElementById('br-time').textContent = mins + ':00';
+      document.getElementById('br-qn').textContent = total;
+      document.getElementById('br-topics').textContent = topicList.length;
+      document.getElementById('br-chips').innerHTML = topicList.map(function (t) { return '<span class="chip">' + topicNames[t] + '</span>'; }).join('') || '<span class="muted">No mastered topics found.</span>';
+      document.getElementById('ex-brief').style.display = '';
+
+      timeLeft = mins * 60;
+      document.getElementById('br-start').onclick = startExam;
+      if (!total) { document.getElementById('br-start').disabled = true; document.getElementById('br-start').textContent = 'No questions available'; }
+    }
+
+    function startExam() {
+      document.getElementById('ex-brief').style.display = 'none';
+      document.getElementById('ex-active').style.display = '';
+      startedAt = Date.now();
+      renderNavDots();
+      renderQ();
+      tick();
+      timerId = setInterval(tick, 1000);
+      document.getElementById('ex-submit').onclick = function () { if (confirm('Submit your exam now?')) finish(); };
+      document.getElementById('ex-prev').onclick = function () { if (cur > 0) { cur--; renderQ(); } };
+      document.getElementById('ex-next').onclick = function () { if (cur < total - 1) { cur++; renderQ(); } else if (confirm('That was the last question. Submit?')) finish(); };
+    }
+
+    function tick() {
+      var m = Math.floor(timeLeft / 60), s = timeLeft % 60;
+      var el = document.getElementById('ex-timer');
+      el.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+      el.classList.toggle('danger', timeLeft <= 60);
+      if (timeLeft <= 0) { finish(); return; }
+      timeLeft--;
+    }
+
+    function renderQ() {
+      var q = questions[cur];
+      document.getElementById('ex-qnum').textContent = 'QUESTION ' + (cur + 1) + (q.topicName ? ' · ' + q.topicName.toUpperCase() : '');
+      document.getElementById('ex-qtext').textContent = q.q;
+      var letters = ['A', 'B', 'C', 'D', 'E'];
+      document.getElementById('ex-qopts').innerHTML = q.opts.map(function (opt, i) {
+        return '<div class="q-opt' + (answers[cur] === i ? ' sel' : '') + '" data-i="' + i + '"><span class="k">' + letters[i] + '</span><span>' + opt + '</span></div>';
+      }).join('');
+      document.querySelectorAll('#ex-qopts .q-opt').forEach(function (el) {
+        el.onclick = function () { answers[cur] = parseInt(el.dataset.i, 10); renderQ(); renderNavDots(); };
+      });
+      document.getElementById('ex-progtext').textContent = 'Question ' + (cur + 1) + ' of ' + total + ' · ' + answers.filter(function (a) { return a !== -1; }).length + ' answered';
+      document.getElementById('ex-progbar').style.width = Math.round((cur + 1) / total * 100) + '%';
+      document.getElementById('ex-next').textContent = cur === total - 1 ? 'Finish ✓' : 'Next →';
+    }
+
+    function renderNavDots() {
+      document.getElementById('ex-navdots').innerHTML = questions.map(function (q, i) {
+        return '<button class="nav-dot' + (answers[i] !== -1 ? ' done' : '') + (i === cur ? ' cur' : '') + '" data-i="' + i + '">' + (i + 1) + '</button>';
+      }).join('');
+      document.querySelectorAll('#ex-navdots .nav-dot').forEach(function (el) {
+        el.onclick = function () { cur = parseInt(el.dataset.i, 10); renderQ(); renderNavDots(); };
+      });
+    }
+
+    function finish() {
+      if (timerId) { clearInterval(timerId); timerId = null; }
+      var correct = 0;
+      var byTopic = {};
+      questions.forEach(function (q, i) {
+        var tid = q.topicId || '_';
+        if (!byTopic[tid]) byTopic[tid] = { name: q.topicName || tid, correct: 0, total: 0 };
+        byTopic[tid].total++;
+        var ans = answers[i];
+        var ok = Array.isArray(q.c) ? q.c.indexOf(ans) !== -1 : ans === q.c;
+        if (ok) { correct++; byTopic[tid].correct++; }
+      });
+      var pct = total ? Math.round(correct / total * 100) : 0;
+      var timeUsed = Math.round((Date.now() - startedAt) / 1000);
+      var grade = gradeBand(pct);
+      var perTopic = Object.keys(byTopic).map(function (tid) {
+        var t = byTopic[tid];
+        return { topicId: tid, name: t.name, pct: t.total ? Math.round(t.correct / t.total * 100) : 0 };
+      });
+
+      if (typeof updateAssignment === 'function') {
+        updateAssignment(aid, { status: 'done', result: { percent: pct, correct: correct, total: total, timeUsedSec: timeUsed, gradeBand: grade, perTopic: perTopic, takenAt: new Date().toISOString() } });
+      }
+      var xp = Math.round(pct / 2);
+      if (typeof addXP === 'function') addXP(xp, 'Mock exam');
+
+      // Render results
+      document.getElementById('ex-active').style.display = 'none';
+      document.getElementById('ex-results').style.display = '';
+      document.getElementById('rs-subject').textContent = (SUBJECT_LABELS[assignment.subjectId] || assignment.subjectId).toUpperCase() + ' — MOCK EXAM';
+      document.getElementById('rs-score').textContent = pct + '%';
+      document.getElementById('rs-grade').textContent = grade;
+      document.getElementById('rs-correct').textContent = correct + '/' + total;
+      document.getElementById('rs-time').textContent = Math.floor(timeUsed / 60) + ':' + (timeUsed % 60 < 10 ? '0' : '') + (timeUsed % 60);
+      document.getElementById('rs-xp').textContent = '+' + xp;
+      document.getElementById('rs-topics').innerHTML = perTopic.map(function (t) {
+        var revisit = t.pct < 70;
+        var col = revisit ? '#f59e0b' : '#22c55e';
+        return '<div class="rs-topic"><span class="nm">' + t.name + '</span><div class="rs-tbar"><i style="width:' + t.pct + '%;background:' + col + '"></i></div>' +
+          '<span class="rs-tag ' + (revisit ? 't-revisit' : 't-strong') + '">' + t.pct + '%' + (revisit ? ' · revisit' : '') + '</span></div>';
+      }).join('');
+    }
+
+    function gradeBand(pct) {
+      if (pct >= 80) return 'Strong · Greater Depth';
+      if (pct >= 60) return 'Secure · Working at expected standard';
+      if (pct >= 40) return 'Developing';
+      return 'Emerging · needs support';
+    }
+
+    // ── Init (after all definitions) ─────────────────────────────────────────────
+    if (!assignment || assignment.type !== 'exam') {
+      document.getElementById('ex-error').style.display = '';
+    } else if (assignment.subjectId === 'english') {
+      initEnglish();
+    } else {
+      initBrief();
+    }
+  </script>
+</body>
+</html>
