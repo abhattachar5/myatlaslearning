@@ -101,6 +101,18 @@
         sorted = sorted.slice().sort(function (a, b) {
           return ((a && a.planOrder != null ? a.planOrder : 999)) - ((b && b.planOrder != null ? b.planOrder : 999));
         });
+      } else if (sid === 'geography') {
+        // Follow the curriculum's topic sequence (e.g. Discovering Geography →
+        // Geographical Skills → …) rather than the raw prerequisite topo order, which
+        // otherwise surfaces the heavily-depended-on "Map Skills" unit first. This is
+        // prerequisite-safe: every geography prerequisite points to an earlier topic.
+        var topicPos = {};
+        getAllTopics().forEach(function (t, idx) { if (topicPos[t.id] === undefined) topicPos[t.id] = idx; });
+        sorted = sorted.slice().sort(function (a, b) {
+          var pa = (a && topicPos[a.topicId] != null) ? topicPos[a.topicId] : 9999;
+          var pb = (b && topicPos[b.topicId] != null) ? topicPos[b.topicId] : 9999;
+          return pa - pb;
+        });
       }
       queues[sid] = sorted.map(function (i) { return i.id; });
     });
