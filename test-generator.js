@@ -2,14 +2,87 @@
 // 5 questions per subtopic, 50% medium-high complexity, 50% greater depth
 // All questions are generative (dynamically created each time)
 
+// Normalise a static question ({q,opts,c,e} or {question,options,answer,explanation}) to {q,opts,c,e}.
+function _normaliseTestQ(raw) {
+  return {
+    q:    raw.q    !== undefined ? raw.q    : (raw.question    || ''),
+    opts: raw.opts !== undefined ? raw.opts : (raw.options     || []),
+    c:    raw.c    !== undefined ? raw.c    : (raw.answer      !== undefined ? raw.answer : 0),
+    e:    raw.e    !== undefined ? raw.e    : (raw.explanation || '')
+  };
+}
+
+// Return question generators for an island. Falls back to the static QUESTIONS bank
+// (wrapping each fixed question as a generator) for islands without dedicated generators,
+// e.g. English topics.
+function _islandGenerators(islandId) {
+  var gens = TEST_GENERATORS[islandId];
+  if (gens && gens.length) return gens;
+  // Fall back to STATIC questions only. Generative bank entries (e.g. math practice
+  // questions) depend on helpers defined in island.html, not available here, so skip them.
+  var bank = (typeof QUESTIONS !== 'undefined') ? QUESTIONS[islandId] : null;
+  if (bank && bank.length) {
+    var statics = bank.filter(function(raw) { return typeof raw.gen !== 'function'; });
+    if (statics.length) {
+      return statics.map(function(raw) {
+        return { depth: raw.depth || 'medium', gen: function() { return _normaliseTestQ(raw); } };
+      });
+    }
+  }
+  return null;
+}
+
+// True if every option in a question is a distinct string.
+function _optsAllDistinct(q) {
+  if (!q || !q.opts) return false;
+  var seen = {};
+  for (var i = 0; i < q.opts.length; i++) {
+    var k = String(q.opts[i]);
+    if (seen[k]) return false;
+    seen[k] = true;
+  }
+  return true;
+}
+
+// Remove duplicate options, keeping the correct answer pointing at the right value.
+// Used only as a last resort if a generator can't produce a distinct set.
+function _dedupeQ(q) {
+  var correctVals = (Array.isArray(q.c) ? q.c : [q.c]).map(function(i) { return String(q.opts[i]); });
+  var seen = {}, newOpts = [];
+  for (var i = 0; i < q.opts.length; i++) {
+    var k = String(q.opts[i]);
+    if (seen[k] === undefined) { seen[k] = newOpts.length; newOpts.push(q.opts[i]); }
+  }
+  q.opts = newOpts;
+  if (Array.isArray(q.c)) {
+    var cs = [];
+    for (var j = 0; j < correctVals.length; j++) { var idx = seen[correctVals[j]]; if (cs.indexOf(idx) === -1) cs.push(idx); }
+    q.c = cs;
+  } else {
+    q.c = seen[correctVals[0]];
+  }
+  return q;
+}
+
+// Call a generator, retrying until it yields a question with all-distinct options
+// (most duplicate-option collisions are intermittent). Dedupe as a final fallback.
+function _genDistinctQ(gp) {
+  var q;
+  for (var attempt = 0; attempt < 15; attempt++) {
+    q = gp.gen();
+    if (_optsAllDistinct(q)) return q;
+  }
+  return _dedupeQ(q);
+}
+
 function generateTopicTest(topicId, topicIslands) {
   var MAX_QUESTIONS = 25;
   var allQuestions = [];
 
-  // Count islands that have generators
+  // Count islands that have questions (dedicated generators or a static bank)
   var islandsWithGens = [];
   for (var i = 0; i < topicIslands.length; i++) {
-    if (TEST_GENERATORS[topicIslands[i].id]) islandsWithGens.push(topicIslands[i]);
+    if (_islandGenerators(topicIslands[i].id)) islandsWithGens.push(topicIslands[i]);
   }
   var numIslands = islandsWithGens.length;
   if (numIslands === 0) return allQuestions;
@@ -23,13 +96,13 @@ function generateTopicTest(topicId, topicIslands) {
 
   for (var i = 0; i < numIslands; i++) {
     var island = islandsWithGens[i];
-    var generators = TEST_GENERATORS[island.id];
+    var generators = _islandGenerators(island.id);
 
     var medQuestions = [];
     var gdQuestions = [];
 
     for (var g = 0; g < generators.length; g++) {
-      var q = generators[g].gen();
+      var q = _genDistinctQ(generators[g]);
       q.depth = generators[g].depth;
       q.subtopic = island.name;
       q.islandId = island.id;
@@ -487,7 +560,7 @@ TEST_GENERATORS["mi-01-4"] = [
     var opts = _buildOpts(_commas(finalAns), [_commas(ans), _commas(a + c), _commas(finalAns + 1000)]);
     return { q: 'A shop starts with £' + _commas(a) + ' in the account. They pay a bill of £' + _commas(b) + ', then receive £' + _commas(c) + '. What is the final balance?',
              opts: opts, c: 0,
-             e: '��' + _commas(a) + ' − £' + _commas(b) + ' = £' + _commas(ans) + '. Then + £' + _commas(c) + ' = £' + _commas(finalAns) + '.' };
+             e: '£' + _commas(a) + ' − £' + _commas(b) + ' = £' + _commas(ans) + '. Then + £' + _commas(c) + ' = £' + _commas(finalAns) + '.' };
   }},
   { depth: 'greater-depth', gen: function() {
     var target = _randInt(500000, 900000);
@@ -1161,7 +1234,7 @@ TEST_GENERATORS["mi-04-1"] = [
     var factors = [1, p1, p2, product];
     factors.sort(function(a,b) { return a - b; });
     var opts = [factors.join(', '), '1, ' + product, '1, ' + p1 + ', ' + product, '1, 2, ' + p1 + ', ' + p2 + ', ' + product];
-    return { q: n + ' = ' + p1 + ' × ' + p2 + '. Both are prime. List all factors of ' + product + '.', opts: opts, c: 0,
+    return { q: product + ' = ' + p1 + ' × ' + p2 + '. Both are prime. List all factors of ' + product + '.', opts: opts, c: 0,
              e: 'If n = p × q (both prime), factors are: 1, p, q, n. So factors of ' + product + ' are ' + factors.join(', ') + '.' };
   }},
   { depth: 'greater-depth', gen: function() {
@@ -4308,17 +4381,15 @@ TEST_GENERATORS["mi-12-3"] = [
              e: 'x + ' + b + ' = ' + (result/a) + '. x = ' + (result/a) + ' − ' + b + ' = ' + x + '.' };
   }},
   { depth: 'greater-depth', gen: function() {
-    var x = _randInt(2, 8);
-    var a = _randInt(2, 5), b = _randInt(1, 5);
-    var c = _randInt(1, 4), d = _randInt(1, 6);
-    var lhs = a * x + b;
-    var rhs = c * x + d;
-    while (lhs === rhs || a === c) { x++; lhs = a * x + b; rhs = c * x + d; }
-    var ansX = (d - b) / (a - c);
-    while (ansX !== Math.floor(ansX) || ansX < 1) { d++; rhs = c * x + d; ansX = (d - b) / (a - c); }
+    var ansX = _randInt(2, 8);
+    var c = _randInt(1, 4);
+    var a = c + _randInt(1, 4);          // a > c, so a !== c (no division by zero)
+    var b = _randInt(1, 6);
+    var d = b + (a - c) * ansX;          // construct so x = ansX exactly
+    var lhs = a * ansX + b;
     var opts = _buildOpts(ansX, [ansX + 1, Math.abs(a - c), lhs]);
     return { q: 'Solve: ' + a + 'x + ' + b + ' = ' + c + 'x + ' + d, opts: opts, c: 0,
-             e: (a - c) + 'x = ' + (d - b) + '. x = ' + ansX + '.' };
+             e: (a - c) + 'x = ' + (d - b) + '. x = ' + (d - b) + ' ÷ ' + (a - c) + ' = ' + ansX + '.' };
   }},
   { depth: 'greater-depth', gen: function() {
     var x = _randInt(2, 8);
@@ -4509,13 +4580,15 @@ TEST_GENERATORS["mi-13-1"] = [
   }},
   { depth: 'greater-depth', gen: function() {
     var n = 5;
-    var targetMean = _randInt(10, 20);
-    var total = targetMean * n;
     var data = [];
     var runSum = 0;
     for (var i = 0; i < n - 1; i++) { var v = _randInt(5, 25); data.push(v); runSum += v; }
-    var missing = total - runSum;
-    while (missing < 1 || missing > 30) { data[0]++; runSum++; missing = total - runSum; }
+    // Choose the fifth value so the total is divisible by 5 (integer mean) and stays in [5,25]
+    var r = ((runSum % 5) + 5) % 5;
+    var missing = 5 + ((5 - r) % 5);
+    missing += 5 * _randInt(0, Math.floor((25 - missing) / 5));
+    var total = runSum + missing;
+    var targetMean = total / n;
     var opts = _buildOpts(missing, [targetMean, total, missing + 1]);
     return { q: 'The mean of 5 numbers is ' + targetMean + '. Four of them are ' + data.join(', ') + '. Find the fifth.', opts: opts, c: 0,
              e: 'Total = 5 × ' + targetMean + ' = ' + total + '. Fifth = ' + total + ' − ' + runSum + ' = ' + missing + '.' };
@@ -5218,14 +5291,15 @@ TEST_GENERATORS["mi-15-1"] = [
              e: '−' + Math.abs(whole) + ' − ' + dec + ' = ' + val.toFixed(2) + '.' };
   }},
   { depth: 'medium', gen: function() {
-    var a_n = _randInt(1, 5), a_d = _pickFrom([2, 3, 4, 5, 6]);
-    while (a_n >= a_d) a_n = _randInt(1, a_d - 1);
-    var b_n = _randInt(1, 5), b_d = a_d;
-    while (b_n >= b_d || b_n === a_n) b_n = _randInt(1, b_d - 1);
+    var a_d = _pickFrom([3, 4, 5, 6]);            // denominator >= 3 so two distinct numerators exist
+    var b_d = a_d;
+    var count = a_d - 1;                           // numerators 1..a_d-1
+    var a_n = _randInt(1, count);
+    var b_n = ((a_n - 1 + _randInt(1, count - 1)) % count) + 1;  // distinct from a_n, no loop
     var aVal = a_n / a_d, bVal = b_n / b_d;
     var bigger = aVal > bVal ? a_n + '/' + a_d : b_n + '/' + b_d;
     var smaller = aVal > bVal ? b_n + '/' + b_d : a_n + '/' + a_d;
-    var opts = [bigger, smaller, '1/' + a_d, a_d + '/' + a_n];
+    var opts = [bigger, smaller, a_d + '/' + a_n, b_d + '/' + b_n];  // 2 proper (<1) + 2 improper (>1), all distinct
     return { q: 'Which is larger: ' + a_n + '/' + a_d + ' or ' + b_n + '/' + b_d + '?', opts: opts, c: 0,
              e: a_n + '/' + a_d + ' = ' + aVal.toFixed(3) + ', ' + b_n + '/' + b_d + ' = ' + bVal.toFixed(3) + '. ' + bigger + ' is larger.' };
   }},
@@ -5318,8 +5392,10 @@ TEST_GENERATORS["mi-15-2"] = [
              e: 'LCD = ' + lcd + '. ' + n1 + '/' + d1 + ' = ' + conv1 + '/' + lcd + '. ' + n2 + '/' + d2 + ' = ' + conv2 + '/' + lcd + '. ' + bigger + ' is larger.' };
   }},
   { depth: 'greater-depth', gen: function() {
-    var vals = [_randInt(-8, 8) / _pickFrom([2, 4, 5]), _randInt(-8, 8) / _pickFrom([2, 4, 5]), _randInt(-8, 8) / _pickFrom([2, 4, 5])];
-    while (vals[0] === vals[1] || vals[1] === vals[2]) vals[2] = _randInt(-8, 8) / 5;
+    var seen = {}, pool = [];
+    [2, 4, 5].forEach(function(den){ for (var k = -8; k <= 8; k++) { var v = k / den; if (!seen[v]) { seen[v] = 1; pool.push(v); } } });
+    for (var i = pool.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = pool[i]; pool[i] = pool[j]; pool[j] = t; }
+    var vals = pool.slice(0, 3);   // three distinct values, no loop
     var sorted = vals.slice().sort(function(a,b){return a-b;});
     var labels = sorted.map(function(v){return v.toFixed(2);});
     var ans = labels.join(' < ');
@@ -5456,11 +5532,10 @@ TEST_GENERATORS["mi-16-1"] = [
              e: '£' + rate + ' × ' + hours + ' = £' + (rate*hours) + '. Add bonus: £' + (rate*hours) + ' + £' + bonus + ' = £' + total + '.' };
   }},
   { depth: 'medium', gen: function() {
-    var dist = _randInt(100, 300);
     var speed = _pickFrom([40, 50, 60, 80]);
-    var time_h = dist / speed;
-    while (time_h !== Math.floor(time_h * 2) / 2) { dist += 10; time_h = dist / speed; }
-    var opts = _buildOpts(time_h + ' hours', [(dist + speed) + ' hours', speed / dist + ' hours', (time_h + 1) + ' hours']);
+    var time_h = _pickFrom([1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]);
+    var dist = time_h * speed;             // exact half-hour time by construction, no loop
+    var opts = _buildOpts(time_h + ' hours', [(time_h + 1) + ' hours', (time_h + 0.5) + ' hours', (time_h - 0.5) + ' hours']);
     return { q: 'A car travels ' + dist + ' km at ' + speed + ' km/h. How long does the journey take?', opts: opts, c: 0,
              e: 'Time = distance ÷ speed = ' + dist + ' ÷ ' + speed + ' = ' + time_h + ' hours.' };
   }},
@@ -6405,12 +6480,17 @@ TEST_GENERATORS["mi-19-3"] = [
     var localH = ukH + diff;
     if (localH >= 24) localH -= 24;
     var city = _pickFrom(['Paris (+' + 1 + ')', 'Cairo (+' + 2 + ')', 'Moscow (+' + 3 + ')', 'New York (−5)', 'Tokyo (+9)']);
-    diff = parseInt(city.match(/[+-]\d+/)[0]);
+    diff = parseInt(city.replace(/−/g, '-').match(/[+-]\d+/)[0]);  // normalise Unicode minus (−) before parsing
     localH = ukH + diff;
     if (localH >= 24) localH -= 24;
     if (localH < 0) localH += 24;
     var ans = pad(localH) + ':00';
-    var opts = [ans, pad(ukH) + ':00', pad((localH + 1) % 24) + ':00', pad(Math.abs(localH - 2)) + ':00'];
+    var cands = [ukH, (localH + 1) % 24, (localH + 23) % 24, (localH + 2) % 24, (localH + 22) % 24];
+    var opts = [ans];
+    for (var ci = 0; ci < cands.length && opts.length < 4; ci++) {
+      var s = pad(cands[ci]) + ':00';
+      if (opts.indexOf(s) === -1) opts.push(s);   // keep options distinct
+    }
     return { q: 'It is ' + pad(ukH) + ':00 in London. What time is it in ' + city + '?', opts: opts, c: 0,
              e: pad(ukH) + ':00 ' + (diff >= 0 ? '+' : '') + diff + 'h = ' + ans + '.' };
   }},
@@ -7473,16 +7553,9 @@ TEST_GENERATORS["mi-24-3"] = [
              e: 'Corresponding = ' + a + '°. Co-interior = ' + supp + '°. The two angles are ' + a + '° and ' + supp + '°.' };
   }},
   { depth: 'greater-depth', gen: function() {
-    var x = _randInt(20, 50);
-    var angle1 = 2 * x + 10;
-    var angle2 = 180 - angle1;
-    var given = 3 * x - 20;
-    while (given !== angle1) { x++; angle1 = 2*x + 10; given = 3*x - 20; }
-    x = 30;
-    angle1 = 70;
     var opts = _buildOpts('x = 30', ['x = 20', 'x = 40', 'x = 35']);
     return { q: 'Alternate angles are (2x + 10)° and (3x − 20)°. Find x.', opts: opts, c: 0,
-             e: 'Alternate angles are equal: 2x + 10 = 3x − 20. x = 30.' };
+             e: 'Alternate angles are equal: 2x + 10 = 3x − 20, so x = 30.' };
   }},
   { depth: 'greater-depth', gen: function() {
     var x = _randInt(20, 40);

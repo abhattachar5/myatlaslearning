@@ -854,7 +854,7 @@ Object.assign(QUESTIONS, {
     { gen: function() {
         var km = pickFrom([1.5, 2.3, 0.8, 3.1, 4.2]);
         var m1 = km * 1000;
-        var m2 = pickFrom([m1 - 50, m1 - 200, m1 + 100, m1 - 500]).filter(function(x){ return x > 0; })[0] || (m1 - 100);
+        var m2 = pickFrom([m1 - 50, m1 - 200, m1 - 500].filter(function(x){ return x > 0; })) || (m1 - 100);
         var ansStr = km + ' km';
         var m2str = m2 + ' m';
         var opts = buildOpts(km + ' km (' + m1 + 'm vs ' + m2 + 'm)', [m2str, 'They are equal', 'Cannot compare']);
@@ -1071,7 +1071,7 @@ Object.assign(QUESTIONS, {
         var gallons = randInt(1, 4);
         var litresPerGallon = 4.5;
         var galLitres = Math.round(gallons * litresPerGallon * 10) / 10;
-        var compareLitres = pickFrom([galLitres - 1, galLitres + 2, galLitres - 3, galLitres + 4]).filter(function(x){ return x > 0; })[0];
+        var compareLitres = pickFrom([galLitres - 1, galLitres + 2, galLitres - 3, galLitres + 4].filter(function(x){ return x > 0; }));
         var galWins = galLitres > compareLitres;
         var ansStr = galWins ? gallons + ' gallon' + (gallons > 1 ? 's' : '') : compareLitres + ' litres';
         var opts = buildOpts(ansStr, [galWins ? compareLitres + ' litres' : gallons + ' gallons', 'They are equal', 'Cannot compare']);

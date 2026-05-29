@@ -700,7 +700,7 @@ Object.assign(QUESTIONS, {
              opts: opts, c: 0,
              e: d.v + ' × ' + d.v + ' = ' + d.sq + '. When squaring a decimal, the number of decimal places doubles.' };
   }},
-  {q:"What is the missing exponent? 3^? = 243",opts:["5","4","6","3"],c:0,
+  {q:"What power of 3 equals 243? (3 to the power of what?)",opts:["5","4","6","3"],c:0,
    e:"3¹=3, 3²=9, 3³=27, 3⁴=81, 3⁵=243. So the missing exponent is 5."},
   { gen: function() {
     var pairs = [{a:3,ea:4,b:4,eb:3,av:81,bv:64,res:'3⁴ (81 > 64)'},{a:2,ea:5,b:5,eb:2,av:32,bv:25,res:'2⁵ (32 > 25)'},{a:2,ea:4,b:4,eb:2,av:16,bv:16,res:'They are equal (both = 16)'}];
@@ -860,7 +860,7 @@ Object.assign(QUESTIONS, {
              e: a + '²=' + v1 + '; √' + v2 + '=' + sqBase + '; ' + powerBase + sups[powerExp] + '=' + v3 + '. ' + v1 + '+' + sqBase + '−' + v3 + '=' + ans + '.' };
   }},
   // Greater Depth (Q8–10)
-  {q:"If 3^n = 729, what is n?",opts:["6","5","7","9"],c:0,
+  {q:"If 3ⁿ = 729, what is n?",opts:["6","5","7","9"],c:0,
    e:"3¹=3, 3²=9, 3³=27, 3⁴=81, 3⁵=243, 3⁶=729. So n=6."},
   {q:"Which is greater: √(100) + √(36), or √(100 + 36)?",
    opts:["√100 + √36 = 16 is greater","√(100+36) = √136 ≈ 11.7 is greater","They are equal","Cannot compare"],c:0,

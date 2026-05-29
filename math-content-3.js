@@ -1129,7 +1129,7 @@ Object.assign(QUESTIONS, {
     { question:'Rearrange to make r the subject: P = 4r', options:['r = 4P','r = P/4','r = P+4','r = P−4'], answer:1, explanation:'Divide both sides by 4: r = P/4.' },
     { question:'The formula for speed is v = d/t. Rearrange for t.', options:['t = v/d','t = dv','t = d/v','t = d−v'], answer:2, explanation:'t = d/v (multiply both sides by t then divide by v).' },
     { question:'A function machine output is 11, rule is ×3 −1. What was the input?', options:['3','4','5','6'], answer:1, explanation:'Reverse: 11+1=12. 12÷3=4.' },
-    { question:'Area of a circle: A = πr². Find A when r = 7. (Use π ≈ 3.14)', options:['21.98','43.96','153.86','21.98'], answer:2, explanation:'A = 3.14 × 49 = 153.86.' },
+    { question:'Area of a circle: A = πr². Find A when r = 7. (Use π ≈ 3.14)', options:['21.98','43.96','153.86','49'], answer:2, explanation:'A = πr² = 3.14 × 7² = 3.14 × 49 = 153.86.' },
     { question:'Make x the subject: y = 5x + 3', options:['x = (y−3)/5','x = y/5+3','x = 5y−3','x = (y+3)/5'], answer:0, explanation:'y−3=5x → x=(y−3)/5.' },
     { question:'Perimeter of a rectangle: P = 2(l + w). If P=36 and l=11, find w.', options:['w=7','w=8','w=9','w=14'], answer:0, explanation:'36=2(11+w) → 18=11+w → w=7.' },
     { question:'Using E = ½mv², find E when m=10 and v=6.', options:['30','60','180','360'], answer:2, explanation:'E = ½×10×36 = 5×36 = 180.' },

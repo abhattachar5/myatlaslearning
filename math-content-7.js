@@ -474,7 +474,7 @@ Object.assign(QUESTIONS, {
     }},
     { question:'Increasing the length of a rectangle while keeping the width the same will:', options:['Increase both area and perimeter','Increase area only','Increase perimeter only','Decrease both'], answer:0, explanation:'Longer rectangle → more area (l×w increases) AND more perimeter (2l+2w increases).' },
     { question:'A rectangle has area 36 cm². Which dimensions give the smallest perimeter?', options:['6×6','4×9','3×12','2×18'], answer:0, explanation:'6×6: P=24. 4×9: P=26. 3×12: P=30. 2×18: P=40. The square (6×6) wins.' },
-    { question:'Rectangle A (5×3) and Rectangle B (1×7). Which has more area? Which has more perimeter?', options:['A has more area (15>7), B has more perimeter (16>16) — same perimeter actually','A has more area AND more perimeter','B has more area AND more perimeter','Same area, different perimeters'], answer:0, explanation:'A: area=15, P=16. B: area=7, P=16. A has more area, perimeters are equal.' },
+    { question:'Rectangle A (5×3) and Rectangle B (1×7). Which has more area? Which has more perimeter?', options:['A has more area (15 vs 7); the perimeters are equal (both 16)','A has more area AND more perimeter','B has more area AND more perimeter','Same area, different perimeters'], answer:0, explanation:'A: area = 5×3 = 15, perimeter = 2(5+3) = 16. B: area = 1×7 = 7, perimeter = 2(1+7) = 16. So A has more area, and the perimeters are equal.' },
     { gen: function() {
         var l = pickFrom([20, 25, 30, 50]);
         var w = pickFrom([8, 10, 12, 15]);

@@ -256,7 +256,7 @@ Object.assign(QUESTIONS, {
    e:"To round to 4.5 (1 d.p.), the number must be ≥ 4.45 and < 4.55."},
   {q:"A runner's time is 13.475 seconds. Rounded to 2 d.p. and to 1 d.p., what are the times?",
    opts:["13.48 s and 13.5 s","13.47 s and 13.4 s","13.48 s and 13.4 s","13.47 s and 13.5 s"],c:0,
-   e:"To 2 d.p.: look at 3rd d.p. (5 ≥ 5), round up → 13.48. To 1 d.p.: look at 2nd d.p. (4 < 5 — wait, it's 7 now because of rounding)... Actually, round from ORIGINAL: 13.475 to 1 d.p.: look at 2nd d.p. (7 ≥ 5) → 13.5."}
+   e:"Always round from the ORIGINAL number each time. To 2 d.p.: the 3rd decimal is 5, so round up → 13.48 s. To 1 d.p.: the 2nd decimal is 7 (which is 5 or more), so round up → 13.5 s."}
 ],
 
 "mi-05-3": [

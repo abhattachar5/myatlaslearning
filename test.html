@@ -54,6 +54,10 @@
     .test-option .radio { width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: border-color .15s; }
     .test-option.selected .radio { border-color: var(--green); }
     .test-option.selected .radio::after { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--green); }
+    .test-option .checkbox { width: 20px; height: 20px; border-radius: 4px; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: border-color .15s; }
+    .test-option.selected .checkbox { border-color: var(--green); background: var(--green); }
+    .test-option.selected .checkbox::after { content: '✓'; color: white; font-size: 13px; font-weight: 700; line-height: 1; }
+    .multi-hint { font-size: .8125rem; color: var(--text-muted); font-style: italic; margin-bottom: 8px; }
 
     .test-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
     .test-nav-dots { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; }
@@ -186,6 +190,14 @@
 <script src="math-content-7.js"></script>
 <script src="math-data-y8.js"></script>
 <script src="english-data.js"></script>
+<script src="english-content-1.js"></script>
+<script src="english-content-2.js"></script>
+<script src="english-content-3.js"></script>
+<script src="english-content-4.js"></script>
+<script src="english-content-5.js"></script>
+<script src="english-content-6.js"></script>
+<script src="english-content-7.js"></script>
+<script src="english-content-8.js"></script>
 <script src="english-data-y8.js"></script>
 <script src="science-data-y7.js"></script>
 <script src="science-data-y8.js"></script>
@@ -197,7 +209,6 @@
 <script src="app.js"></script>
 <script src="test-generator.js"></script>
 <script src="science-test-generators-y7.js"></script>
-<script src="english-test-generators-y7.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
 let user = requireAuth();
@@ -289,6 +300,11 @@ function startTest() {
   var timeMins = parseInt(document.getElementById('time-slider').value);
 
   testQuestions = generateTopicTest(topicId, isCheckpoint ? checkpointIslands : topicIslands);
+  if (!testQuestions.length) {
+    alert('No test questions are available for this topic yet.');
+    window.location.href = 'topic.html?id=' + topicId;
+    return;
+  }
   answers = new Array(testQuestions.length).fill(-1);
   currentQ = 0;
 
@@ -334,14 +350,18 @@ function renderQuestion() {
   document.getElementById('test-progress-text').textContent = 'Question ' + (currentQ + 1) + ' of ' + total;
   document.getElementById('test-bar').style.width = ((currentQ + 1) / total * 100) + '%';
 
+  var isMulti = Array.isArray(q.c);
   var html = '<div class="test-question">';
   html += '<div class="test-q-num">Question ' + (currentQ + 1) + '</div>';
   html += '<div class="test-q-text">' + q.q + '</div>';
+  if (isMulti) html += '<div class="multi-hint">Select all that apply</div>';
   html += '<div class="test-options">';
   for (var i = 0; i < q.opts.length; i++) {
-    var selected = answers[currentQ] === i ? ' selected' : '';
+    var selected = isMulti
+      ? (Array.isArray(answers[currentQ]) && answers[currentQ].indexOf(i) !== -1 ? ' selected' : '')
+      : (answers[currentQ] === i ? ' selected' : '');
     html += '<div class="test-option' + selected + '" onclick="selectAnswer(' + i + ')">';
-    html += '<div class="radio"></div>';
+    html += isMulti ? '<div class="checkbox"></div>' : '<div class="radio"></div>';
     html += '<span>' + q.opts[i] + '</span>';
     html += '</div>';
   }
@@ -357,7 +377,19 @@ function renderQuestion() {
 }
 
 function selectAnswer(idx) {
-  answers[currentQ] = idx;
+  var q = testQuestions[currentQ];
+  if (Array.isArray(q.c)) {
+    if (!Array.isArray(answers[currentQ])) answers[currentQ] = [];
+    var pos = answers[currentQ].indexOf(idx);
+    if (pos === -1) {
+      answers[currentQ].push(idx);
+    } else {
+      answers[currentQ].splice(pos, 1);
+    }
+    if (answers[currentQ].length === 0) answers[currentQ] = -1;
+  } else {
+    answers[currentQ] = idx;
+  }
   renderQuestion();
 }
 
@@ -386,7 +418,7 @@ function renderNavDots() {
 function updateNavDots() {
   var dots = document.querySelectorAll('.test-nav-dot');
   for (var i = 0; i < dots.length; i++) {
-    dots[i].classList.toggle('answered', answers[i] !== -1);
+    dots[i].classList.toggle('answered', Array.isArray(answers[i]) ? answers[i].length > 0 : answers[i] !== -1);
     dots[i].classList.toggle('current', i === currentQ);
   }
 }
@@ -406,7 +438,14 @@ function submitTest() {
 
   for (var i = 0; i < testQuestions.length; i++) {
     var q = testQuestions[i];
-    var isCorrect = answers[i] === q.c;
+    var isCorrect;
+    if (Array.isArray(q.c)) {
+      var userArr = Array.isArray(answers[i]) ? answers[i].slice().sort() : [];
+      var correctArr = q.c.slice().sort();
+      isCorrect = userArr.length === correctArr.length && userArr.every(function(v, j) { return v === correctArr[j]; });
+    } else {
+      isCorrect = answers[i] === q.c;
+    }
     if (isCorrect) correct++;
 
     if (q.depth === 'greater-depth') {
@@ -424,11 +463,20 @@ function submitTest() {
       if (isCorrect) subtopicScores[q.islandId].score++;
     }
 
+    var userAnswer, correctAnswer;
+    if (Array.isArray(q.c)) {
+      var userIdxs = Array.isArray(answers[i]) ? answers[i] : [];
+      userAnswer = userIdxs.length > 0 ? userIdxs.map(function(j) { return q.opts[j]; }).join(', ') : 'Not answered';
+      correctAnswer = q.c.map(function(j) { return q.opts[j]; }).join(', ');
+    } else {
+      userAnswer = answers[i] >= 0 ? q.opts[answers[i]] : 'Not answered';
+      correctAnswer = q.opts[q.c];
+    }
     reviewItems.push({
       q: q.q,
       correct: isCorrect,
-      userAnswer: answers[i] >= 0 ? q.opts[answers[i]] : 'Not answered',
-      correctAnswer: q.opts[q.c],
+      userAnswer: userAnswer,
+      correctAnswer: correctAnswer,
       explanation: q.e || ''
     });
   }
