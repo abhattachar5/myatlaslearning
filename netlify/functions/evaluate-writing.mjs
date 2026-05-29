@@ -115,14 +115,28 @@ export default async (req, context) => {
     }
 
     const apiResult = await apiResponse.json();
-    const text = apiResult.content?.[0]?.text || "";
+    let text = apiResult.content?.[0]?.text || "";
+
+    // Strip markdown code fences if present
+    text = text.replace(/^```(?:json)?\s*\n?/i, "").replace(/\n?```\s*$/i, "").trim();
 
     let feedback;
     try {
       feedback = JSON.parse(text);
     } catch {
-      console.error("Failed to parse AI response:", text);
-      return Response.json({ error: "AI returned invalid feedback" }, { status: 502, headers: CORS_HEADERS });
+      // Try extracting JSON from within the response
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        try {
+          feedback = JSON.parse(jsonMatch[0]);
+        } catch {
+          console.error("Failed to parse AI response:", text);
+          return Response.json({ error: "AI returned invalid feedback" }, { status: 502, headers: CORS_HEADERS });
+        }
+      } else {
+        console.error("No JSON found in AI response:", text);
+        return Response.json({ error: "AI returned invalid feedback" }, { status: 502, headers: CORS_HEADERS });
+      }
     }
 
     return Response.json({ success: true, feedback }, { headers: CORS_HEADERS });
