@@ -242,6 +242,7 @@
     if (typeof ENGLISH_TOPICS !== 'undefined') topics = topics.concat(ENGLISH_TOPICS);
     if (typeof ENGLISH_TOPICS_Y8 !== 'undefined') topics = topics.concat(ENGLISH_TOPICS_Y8);
     if (typeof SCIENCE_Y7_TOPICS !== 'undefined') topics = topics.concat(SCIENCE_Y7_TOPICS);
+    if (typeof SCIENCE_TOPICS_Y8 !== 'undefined') topics = topics.concat(SCIENCE_TOPICS_Y8);
     if (typeof HISTORY_TOPICS !== 'undefined') topics = topics.concat(HISTORY_TOPICS);
     if (typeof HISTORY_TOPICS_Y8 !== 'undefined') topics = topics.concat(HISTORY_TOPICS_Y8);
     if (typeof GEOGRAPHY_TOPICS !== 'undefined') topics = topics.concat(GEOGRAPHY_TOPICS);
@@ -811,7 +812,13 @@
         if (slots.length === 0) slots = [totalWeeks]; // past end — pack into last week
 
         remaining.forEach(function (islandId, i) {
-          var si = Math.floor(i * slots.length / remaining.length);
+          // When there are at least as many available slots as islands (e.g. Year 8
+          // Science/History/Geography), place one island per consecutive slot so the
+          // odd/even-week pattern has no mid-gaps. When islands outnumber slots
+          // (e.g. Maths/English), fall back to an even proportional spread.
+          var si = (remaining.length <= slots.length)
+            ? i
+            : Math.floor(i * slots.length / remaining.length);
           if (si >= slots.length) si = slots.length - 1;
           var wk = slots[si];
           effectiveWeek[islandId] = wk;
@@ -904,11 +911,10 @@
   // ── Export / Import ────────────────────────────────────────────────────────
   function exportProgress() {
     return JSON.stringify({
-      version: 1,
-      app: 'StudyMate',
+      version: 2,
+      app: 'Atlas',
       exportedAt: new Date().toISOString(),
-      user: JSON.parse(localStorage.getItem('sm_user') || 'null'),
-      profiles: JSON.parse(localStorage.getItem('sm_profiles') || '[]'),
+      user: JSON.parse(localStorage.getItem('sm_active_profile') || 'null'),
       progress: JSON.parse(localStorage.getItem('sm_progress') || '{}'),
       studyPlan: JSON.parse(localStorage.getItem(PLAN_KEY) || 'null'),
       streak: parseInt(localStorage.getItem('sm_streak') || '0', 10),
@@ -922,13 +928,13 @@
       var data = JSON.parse(jsonString);
       if (!data.version || !data.user) throw new Error('Invalid backup file — missing version or user data.');
 
-      if (data.user)      localStorage.setItem('sm_user',      JSON.stringify(data.user));
-      if (data.profiles)  localStorage.setItem('sm_profiles',  JSON.stringify(data.profiles));
+      if (data.user)      localStorage.setItem('sm_active_profile', JSON.stringify(data.user));
       if (data.progress)  localStorage.setItem('sm_progress',  JSON.stringify(data.progress));
       if (data.studyPlan) localStorage.setItem(PLAN_KEY,       JSON.stringify(data.studyPlan));
       if (data.streak !== undefined) localStorage.setItem('sm_streak', String(data.streak));
       if (data.lastStudy) localStorage.setItem('sm_last_study', data.lastStudy);
       if (data.theme)     localStorage.setItem('sm_theme',     data.theme);
+      syncProgressToServer();
 
       return { success: true, message: 'Progress imported successfully.' };
     } catch (e) {
