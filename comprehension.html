@@ -824,7 +824,7 @@ function pickTestQuestions(passage) {
   var picked = shuffleArray(pool).slice(0, QUESTIONS_PER_TEST);
 
   return picked.map(function(q) {
-    var correctText = q.opts[0];
+    var correctText = q.opts[q.c];
     var shuffled = shuffleArray(q.opts);
     var correctIdx = shuffled.indexOf(correctText);
     return {
