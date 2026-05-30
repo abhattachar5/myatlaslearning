@@ -120,7 +120,6 @@
         </div>
         <div class="profile-page-actions">
           <button class="btn btn-primary" onclick="saveProfile()">Save changes</button>
-          <button class="btn btn-secondary" onclick="confirmReset()">Reset progress</button>
         </div>
       </div>
 
@@ -1514,19 +1513,6 @@ function saveProfile() {
   setWelcome();
   renderYearSwitcher();
   showToast('Profile updated', 'success');
-}
-function confirmReset() {
-  if (!confirm('Reset ALL your progress? This cannot be undone.')) return;
-  saveAllProgress({});
-  user.xp = 0;
-  setUser(user);
-  syncProgressToServer();
-  closeProfilePage();
-  renderSidebar();
-  renderStats();
-  renderGrid();
-  setWelcome();
-  showToast('Progress reset', 'success');
 }
 
 // ── Theme ────────────────────────────────────────────────────────────────────

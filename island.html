@@ -949,7 +949,6 @@ document.addEventListener('keydown', e => {
     </div>
     <div style="display:flex;gap:10px;margin-top:8px">
       <button class="btn btn-primary" style="flex:1" onclick="saveProfile()">Save changes</button>
-      <button class="btn btn-secondary" onclick="confirmReset()">Reset progress</button>
     </div>
     <div class="divider"></div>
     <button class="btn btn-secondary" style="width:100%" onclick="logout()">Sign out</button>
@@ -1017,17 +1016,6 @@ function saveProfile() {
   syncProgressToServer();
   document.getElementById('profile-modal').classList.remove('show');
   showToast('Profile updated', 'success');
-}
-function confirmReset() {
-  if (!confirm('Reset ALL your progress? This cannot be undone.')) return;
-  localStorage.setItem('sm_progress', JSON.stringify({}));
-  const user = JSON.parse(localStorage.getItem('sm_active_profile') || '{}');
-  user.xp = 0;
-  localStorage.setItem('sm_active_profile', JSON.stringify(user));
-  syncProgressToServer();
-  document.getElementById('profile-modal').classList.remove('show');
-  showToast('Progress reset', 'success');
-  location.reload();
 }
 function logout() {
   localStorage.removeItem('gotrue.user');
