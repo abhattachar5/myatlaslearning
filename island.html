@@ -442,6 +442,12 @@ function switchTab(name) {
   });
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
   if (name === 'lesson') checkLessonCache(true);
+  // Keep the ?tab= param in sync so the current tab survives refresh / can be shared (DEF-03).
+  try {
+    const u = new URL(location.href);
+    u.searchParams.set('tab', name);
+    history.replaceState(history.state, '', u);
+  } catch (e) { /* ignore */ }
 }
 
 // Tab bar arrow-key navigation (WCAG 2.1 — roving tabindex pattern)

@@ -429,6 +429,10 @@ function getYearGeographyTopics() {
   setWelcome();
   recordYearHistory(getUserYear());
   renderYearSwitcher();
+  // Deep-link / refresh support: open My Profile if the URL asks for it.
+  if (new URLSearchParams(location.search).get('view') === 'profile') {
+    _suppressHistory = true; openProfileModal(); _suppressHistory = false;
+  }
 })();
 
 // ── Hero Banner ──────────────────────────────────────────────────────────────
@@ -646,7 +650,7 @@ function renderHomework() {
     var icon = a.type === 'exam' ? '📄' : '📐';
     var name = a.type === 'exam'
       ? (hwCap(a.subjectId) + ' mock exam' + (a.timeLimitMin ? ' · ' + a.timeLimitMin + ' min timed' : ''))
-      : (hwCap(a.subjectId) + ' practice — ' + (a.islandIds || []).length + ' subtopics');
+      : (hwCap(a.subjectId) + ' practice — ' + (a.islandIds || []).length + ((a.islandIds || []).length === 1 ? ' subtopic' : ' subtopics'));
     var pct = assignmentProgress(a);
     var due = a.dueDate ? hwFormatDue(a.dueDate) : '';
     var right = done
@@ -1458,14 +1462,27 @@ function openProfileModal() {
   document.getElementById('dashboard-content').style.display = 'none';
   document.getElementById('profile-page').style.display = '';
   setNavActive('profile');
+  document.title = 'Atlas — My Profile';
+  if (!_suppressHistory) history.pushState({ view: 'profile' }, '', 'dashboard.html?view=profile');
   window.scrollTo(0, 0);
 }
 function closeProfilePage() {
   document.getElementById('profile-page').style.display = 'none';
   document.getElementById('dashboard-content').style.display = '';
   setNavActive('dashboard');
+  document.title = 'Atlas — Dashboard';
+  if (!_suppressHistory) history.pushState({}, '', 'dashboard.html');
   window.scrollTo(0, 0);
 }
+// Keep the URL/title in sync with the profile view so it can be refreshed and the
+// back button works. _suppressHistory avoids pushing state when we're reacting to history.
+var _suppressHistory = false;
+window.addEventListener('popstate', function () {
+  _suppressHistory = true;
+  if (new URLSearchParams(location.search).get('view') === 'profile') openProfileModal();
+  else closeProfilePage();
+  _suppressHistory = false;
+});
 function goToDashboard() {
   if (document.getElementById('profile-page').style.display !== 'none') {
     closeProfilePage();

@@ -77,7 +77,7 @@
 
       <div id="pin-entry">
         <p class="muted" id="pin-prompt" style="margin-bottom:16px">Enter your 4-digit PIN.</p>
-        <input class="pin-in" id="pin-input" type="password" inputmode="numeric" maxlength="4" autocomplete="off">
+        <input class="pin-in" id="pin-input" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" oninput="this.value=this.value.replace(/\D/g,'')">
         <div class="pin-err" id="pin-err"></div>
         <button class="btn btn-primary" style="width:100%;margin-top:8px" id="pin-submit">Unlock</button>
         <p id="pin-forgot-wrap" style="margin-top:10px;display:none"><a href="#" style="color:#6366f1;font-weight:700;font-size:.875rem" onclick="forgotPin(event)">Forgot PIN?</a></p>
@@ -109,8 +109,8 @@
       <div class="card" id="pin-change" style="display:none;margin-bottom:14px">
         <div style="font-weight:800;color:var(--text);margin-bottom:10px">🔑 Change your PIN</div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end">
-          <div><div class="lbl">New PIN</div><input id="pin-new" class="pin-in" style="width:120px;font-size:1.25rem;letter-spacing:8px" type="password" inputmode="numeric" maxlength="4" autocomplete="off"></div>
-          <div><div class="lbl">Confirm</div><input id="pin-new2" class="pin-in" style="width:120px;font-size:1.25rem;letter-spacing:8px" type="password" inputmode="numeric" maxlength="4" autocomplete="off"></div>
+          <div><div class="lbl">New PIN</div><input id="pin-new" class="pin-in" style="width:120px;font-size:1.25rem;letter-spacing:8px" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" oninput="this.value=this.value.replace(/\D/g,'')"></div>
+          <div><div class="lbl">Confirm</div><input id="pin-new2" class="pin-in" style="width:120px;font-size:1.25rem;letter-spacing:8px" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="off" oninput="this.value=this.value.replace(/\D/g,'')"></div>
           <button class="btn btn-primary" onclick="saveNewPin()">Save PIN</button>
           <button class="btn btn-ghost" onclick="toggleChangePin()">Cancel</button>
         </div>
@@ -381,7 +381,7 @@
         var icon = a.type === 'exam' ? '📄' : '📝';
         var title = a.type === 'exam'
           ? ((a.subjectId || '') + ' mock exam')
-          : ((a.subjectId || '') + ' practice — ' + ((a.islandIds || []).length) + ' subtopics');
+          : ((a.subjectId || '') + ' practice — ' + ((a.islandIds || []).length) + (((a.islandIds || []).length) === 1 ? ' subtopic' : ' subtopics'));
         var due = a.dueDate ? ('Due ' + a.dueDate) : '';
         var done = a.status === 'done';
         return '<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)">' +

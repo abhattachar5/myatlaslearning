@@ -169,7 +169,7 @@
       </div>
 
       <div style="text-align:center;margin-top:24px">
-        <button class="btn btn-primary" id="submit-btn" onclick="submitTest()" style="display:none">Submit Test</button>
+        <button class="btn btn-primary" id="submit-btn" onclick="confirmSubmit()" style="display:none">Submit Test</button>
       </div>
     </div>
 
@@ -322,7 +322,8 @@ const examOpts = {
 document.getElementById('back-btn').href = 'topic.html?id=' + topicId;
 document.getElementById('hdr-name').textContent = testLabel;
 document.getElementById('hdr-emoji').textContent = topic.emoji;
-document.getElementById('hdr-count').textContent = (isCheckpoint ? checkpointIslands.length : topicIslands.length) + ' subtopics';
+var _hdrN = (isCheckpoint ? checkpointIslands.length : topicIslands.length);
+document.getElementById('hdr-count').textContent = _hdrN + (_hdrN === 1 ? ' subtopic' : ' subtopics');
 document.getElementById('setup-title').textContent = setupLabel;
 var subjectPill = document.getElementById('hdr-subject');
 subjectPill.textContent = topicSubjectLabel;
@@ -498,6 +499,20 @@ function updateNavDots() {
 function goToQuestion(idx) {
   currentQ = idx;
   renderQuestion();
+}
+
+// Manual-submit wrapper: warn if any questions are unanswered (the timer auto-submit
+// calls submitTest() directly and intentionally skips this).
+function confirmSubmit() {
+  var un = 0;
+  for (var i = 0; i < testQuestions.length; i++) {
+    var a = answers[i];
+    if (Array.isArray(a)) { if (!a.length) un++; }
+    else if (a == null || a < 0) un++;
+  }
+  if (un > 0 && !confirm(un + (un === 1 ? ' question is' : ' questions are') +
+      ' still unanswered and will be marked incorrect. Submit anyway?')) return;
+  submitTest();
 }
 
 function submitTest() {

@@ -188,7 +188,7 @@ function renderHeader() {
   subPill.style.background = topicColor;
   subPill.style.color = 'white';
   subPill.textContent = topicSubject;
-  document.getElementById('hdr-count').textContent = `${topicIslands.length} topics`;
+  document.getElementById('hdr-count').textContent = `${topicIslands.length} ${topicIslands.length === 1 ? 'topic' : 'topics'}`;
 }
 
 // ── Progress ──────────────────────────────────────────────────────────────

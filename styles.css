@@ -950,6 +950,7 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 .auth-page {
   display: flex;
   min-height: 100vh;
+  overflow: hidden; /* contain decorative brand blobs; avoids transient edge clipping on first paint */
 }
 .auth-brand {
   flex: 1;
