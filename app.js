@@ -223,6 +223,11 @@ function updateAssignment(id, patch) {
   saveAssignments(list);
   return list[i];
 }
+function removeAssignment(id) {
+  var list = getAssignments().filter(function (x) { return x.id !== id; });
+  saveAssignments(list);
+  return list;
+}
 
 // ── Parent Zone PIN ───────────────────────────────────────────────────────────
 function getParentPin() {

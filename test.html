@@ -314,6 +314,7 @@ const setupLabel = isCheckpoint ? topic.name + ' Checkpoint' : topic.name + ' Te
 // Optional assignment params: question count (&n=) and difficulty (&diff=foundation|mixed|higher)
 const _nParam = parseInt(params.get('n'), 10);
 const _diffParam = (params.get('diff') || '').toLowerCase();
+const _assignmentId = params.get('aid'); // set when launched from an assigned practice
 const examOpts = {
   maxQuestions: (_nParam && _nParam > 0) ? _nParam : undefined,
   difficulty: ['foundation', 'mixed', 'higher'].indexOf(_diffParam) !== -1 ? _diffParam : undefined
@@ -517,6 +518,11 @@ function confirmSubmit() {
 
 function submitTest() {
   if (timerInterval) clearInterval(timerInterval);
+
+  // If this test was launched from an assigned practice, mark that assignment done.
+  if (_assignmentId && typeof updateAssignment === 'function') {
+    updateAssignment(_assignmentId, { status: 'done' });
+  }
 
   var correct = 0;
   var medCorrect = 0, medTotal = 0, gdCorrect = 0, gdTotal = 0;

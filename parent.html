@@ -383,11 +383,20 @@
           ? ((a.subjectId || '') + ' mock exam')
           : ((a.subjectId || '') + ' practice — ' + ((a.islandIds || []).length) + (((a.islandIds || []).length) === 1 ? ' subtopic' : ' subtopics'));
         var due = a.dueDate ? ('Due ' + a.dueDate) : '';
-        var done = a.status === 'done';
-        return '<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)">' +
-          '<span>' + icon + '</span><span style="font-weight:600;color:var(--text);font-size:.9375rem;text-transform:capitalize">' + title + '</span>' +
-          '<span class="hw-due ' + (done ? 'due-ok' : 'due-soon') + '" style="margin-left:auto">' + (done ? 'Done' : due) + '</span></div>';
+        var done = (a.status === 'done') || (a.type === 'exam' && a.result);
+        return '<div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">' +
+          '<span>' + icon + '</span>' +
+          '<span style="font-weight:600;color:var(--text);font-size:.9375rem;text-transform:capitalize">' + title + '</span>' +
+          '<span class="hw-due ' + (done ? 'due-ok' : 'due-soon') + '" style="margin-left:auto">' + (done ? 'Done' : due) + '</span>' +
+          '<button class="btn btn-ghost" style="padding:5px 10px;font-size:.8125rem" title="Remove this assignment" onclick="pzRemoveAssignment(\'' + a.id + '\')">✕</button>' +
+          '</div>';
       }).join('');
+    }
+    function pzRemoveAssignment(id) {
+      if (!confirm('Remove this assignment? Your child will no longer see it.')) return;
+      if (typeof removeAssignment === 'function') removeAssignment(id);
+      renderAssignments();
+      if (typeof showToast === 'function') showToast('Assignment removed', 'success');
     }
 
     function renderActiveDays() {

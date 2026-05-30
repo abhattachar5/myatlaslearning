@@ -650,7 +650,6 @@ function renderHomework() {
     var name = a.type === 'exam'
       ? (hwCap(a.subjectId) + ' mock exam' + (a.timeLimitMin ? ' · ' + a.timeLimitMin + ' min timed' : ''))
       : (hwCap(a.subjectId) + ' practice — ' + (a.islandIds || []).length + ((a.islandIds || []).length === 1 ? ' subtopic' : ' subtopics'));
-    var pct = assignmentProgress(a);
     var due = a.dueDate ? hwFormatDue(a.dueDate) : '';
     var right = done
       ? '<span style="margin-left:auto;color:#22c55e;font-weight:700;font-size:.8125rem">✓ Done</span>'
@@ -659,7 +658,7 @@ function renderHomework() {
     return '<div style="display:flex;align-items:center;gap:10px;padding:9px 0">' +
       '<span style="font-size:1.1rem">' + icon + '</span>' +
       '<div style="min-width:0"><div style="font-weight:600;color:var(--text);font-size:.9375rem">' + name + '</div>' +
-      (due ? '<div style="font-size:.75rem;color:var(--text-muted)">Due ' + due + ' · ' + pct + '% done</div>' : '') + noteHtml + '</div>' +
+      (due ? '<div style="font-size:.75rem;color:var(--text-muted)">Due ' + due + '</div>' : '') + noteHtml + '</div>' +
       right + '</div>';
   }).join('');
 
@@ -676,29 +675,22 @@ function hwCap(s) { s = s || ''; return s.charAt(0).toUpperCase() + s.slice(1); 
 function hwEsc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 function hwFormatDue(iso) { try { return new Date(iso).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }); } catch (e) { return iso; } }
 
+// An assignment is "done" only when actually completed — not because the learner
+// happened to have already mastered the chosen subtopics. Practice is marked done
+// when its test is submitted (test.html sets status via the &aid param); an exam is
+// done when it has a result.
 function isAssignmentDone(a) {
   if (a.status === 'done') return true;
-  if (a.type === 'practice') {
-    var ids = a.islandIds || [];
-    return ids.length > 0 && ids.every(function (id) { return getIslandStatus(id) >= 3; });
-  }
-  return !!a.result;
-}
-function assignmentProgress(a) {
-  if (a.type === 'practice') {
-    var ids = a.islandIds || [];
-    if (!ids.length) return 0;
-    var d = ids.filter(function (id) { return getIslandStatus(id) >= 3; }).length;
-    return Math.round(d / ids.length * 100);
-  }
-  return a.result ? 100 : 0;
+  if (a.type === 'exam') return !!a.result;
+  return false;
 }
 function assignmentLink(a) {
   if (a.type === 'practice') {
     return 'test.html?id=' + encodeURIComponent(a.topicId || '') +
       '&cp=' + encodeURIComponent((a.islandIds || []).join(',')) +
       (a.numQuestions ? '&n=' + a.numQuestions : '') +
-      (a.difficulty ? '&diff=' + a.difficulty : '');
+      (a.difficulty ? '&diff=' + a.difficulty : '') +
+      '&aid=' + encodeURIComponent(a.id);
   }
   return 'exam.html?aid=' + encodeURIComponent(a.id);
 }
