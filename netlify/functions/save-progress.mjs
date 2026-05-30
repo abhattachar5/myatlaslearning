@@ -39,7 +39,6 @@ export default async (req, context) => {
       yearHistory: body.yearHistory || [],
       parentPin: body.parentPin || "",
       assignments: Array.isArray(body.assignments) ? body.assignments : [],
-      activity: (body.activity && typeof body.activity === "object") ? body.activity : {},
       updatedAt: new Date().toISOString(),
     };
 
