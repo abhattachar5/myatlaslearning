@@ -90,8 +90,7 @@ function syncProgressToServer() {
         comprehension: getAllComprehension(),
         yearHistory: profile.yearHistory || [],
         parentPin: profile.parentPin || '',
-        assignments: assignments,
-        activity: getActivity()
+        assignments: assignments
       };
       await fetchWithAuth('/.netlify/functions/save-progress', {
         method: 'PUT',
@@ -370,35 +369,6 @@ function touchStreak() {
   return next;
 }
 
-// ── Activity tracking (days active + time spent, keyed by local date) ──────────
-// Stored in localStorage 'sm_activity' as { 'YYYY-MM-DD': secondsSpent }; synced to
-// the blob. A heartbeat adds time while the page is visible; parent.html reads this.
-function _dateKey(d) {
-  d = d || new Date();
-  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-}
-function getActivity() {
-  try { return JSON.parse(localStorage.getItem('sm_activity') || '{}'); } catch (e) { return {}; }
-}
-function addActiveSeconds(sec) {
-  var a = getActivity();
-  var k = _dateKey();
-  a[k] = (a[k] || 0) + sec;
-  localStorage.setItem('sm_activity', JSON.stringify(a));
-}
-var _activityTimer = null, _activityBeats = 0;
-function startActivityTracking() {
-  if (_activityTimer) return;
-  var a = getActivity(), k = _dateKey();
-  if (a[k] == null) { a[k] = 0; localStorage.setItem('sm_activity', JSON.stringify(a)); }
-  _activityTimer = setInterval(function () {
-    if (typeof document !== 'undefined' && document.visibilityState === 'hidden') return;
-    addActiveSeconds(30);
-    // Sync roughly every 2 minutes rather than every beat to limit PUTs.
-    if (++_activityBeats % 4 === 0) syncProgressToServer();
-  }, 30000);
-}
-
 // ── Theme ─────────────────────────────────────────────────────────────────────
 function initTheme() {
   const t = localStorage.getItem('sm_theme') || 'light';
@@ -474,6 +444,3 @@ function getGlobalStats() {
   });
   return { started, mastered, total: islands.length, xp: getTotalXP(), streak: getStreak() };
 }
-
-// Begin counting active time on any authed page (skips the login screen, where no profile exists yet).
-try { if (typeof document !== 'undefined' && getUser()) startActivityTracking(); } catch (e) { /* ignore */ }
