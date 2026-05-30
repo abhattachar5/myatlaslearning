@@ -23,7 +23,7 @@ export default async (req, context) => {
 
     if (!data) {
       return Response.json(
-        { name: "", parentName: "", year: "", school: "", tier: "free", xp: 0, streak: 0, lastStudy: null, joinDate: null, preferences: { theme: "light" }, progress: {}, testResults: {}, revisionDone: {}, comprehension: {}, yearHistory: [], parentPin: "", assignments: [] },
+        { name: "", parentName: "", year: "", school: "", tier: "free", xp: 0, streak: 0, lastStudy: null, joinDate: null, preferences: { theme: "light" }, progress: {}, testResults: {}, revisionDone: {}, comprehension: {}, yearHistory: [], parentPin: "", assignments: [], activeDays: [] },
         { headers: CORS_HEADERS }
       );
     }

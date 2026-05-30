@@ -39,6 +39,7 @@ export default async (req, context) => {
       yearHistory: body.yearHistory || [],
       parentPin: body.parentPin || "",
       assignments: Array.isArray(body.assignments) ? body.assignments : [],
+      activeDays: Array.isArray(body.activeDays) ? body.activeDays : [],
       updatedAt: new Date().toISOString(),
     };
 
