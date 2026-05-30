@@ -105,7 +105,7 @@
 <a class="skip-link" href="#test-main">Skip to content</a>
 
 <header class="island-header" style="background:var(--surface)">
-  <a id="back-btn" href="topic.html" class="island-header-back" aria-label="Back to topic">←</a>
+  <a id="back-btn" href="topic.html" class="island-header-back" aria-label="Leave test" onclick="return exitTest(event)">←</a>
   <div class="island-header-emoji" id="hdr-emoji">📝</div>
   <div class="island-header-info">
     <h2 id="hdr-name">Topic Test</h2>
@@ -514,6 +514,20 @@ function confirmSubmit() {
   if (un > 0 && !confirm(un + (un === 1 ? ' question is' : ' questions are') +
       ' still unanswered and will be marked incorrect. Submit anyway?')) return;
   submitTest();
+}
+
+// Leaving via the header arrow. Confirm only while a test is in progress (answers
+// aren't saved). Assigned practices return to the dashboard; topic tests to the topic.
+function exitTest(e) {
+  var active = document.getElementById('test-active').style.display !== 'none';
+  if (active && !confirm("Leave this test? Your answers won't be saved.")) {
+    if (e) e.preventDefault();
+    return false;
+  }
+  if (timerInterval) clearInterval(timerInterval);
+  if (e) e.preventDefault();
+  window.location.href = _assignmentId ? 'dashboard.html' : ('topic.html?id=' + topicId);
+  return false;
 }
 
 function submitTest() {

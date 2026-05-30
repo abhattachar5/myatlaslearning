@@ -123,6 +123,7 @@
       <div class="ie-bar">
         <div class="ie-timer" id="ex-timer">--:--</div>
         <div class="ie-prog"><div class="t" id="ex-progtext">Question 1</div><div class="ie-track"><i id="ex-progbar" style="width:0%"></i></div></div>
+        <button class="btn btn-ghost" style="padding:8px 14px" onclick="exitExam()">Exit</button>
         <button class="btn btn-ghost" style="padding:8px 14px" id="ex-submit">Submit</button>
       </div>
       <div class="card">
@@ -187,6 +188,7 @@
       <div class="ie-bar">
         <div class="ie-timer" id="en-timer">--:--</div>
         <div class="ie-prog"><div class="t">📖 English — answer Section A and Section B, then submit</div></div>
+        <button class="btn btn-ghost" style="padding:8px 14px" onclick="exitExam()">Exit</button>
         <button class="btn btn-primary" style="padding:8px 14px" id="en-submit">Submit paper</button>
       </div>
       <div class="card" style="margin-bottom:14px">
@@ -528,6 +530,15 @@
       if (pct >= 60) return 'Secure · Working at expected standard';
       if (pct >= 40) return 'Developing';
       return 'Emerging · needs support';
+    }
+
+    // Abandon the exam without submitting: no result is recorded, the assignment stays
+    // "to do", and reopening it later starts a fresh paper.
+    function exitExam() {
+      if (!confirm("Leave the exam? Your answers won't be saved and this attempt won't count.")) return;
+      if (typeof timerId !== 'undefined' && timerId) { clearInterval(timerId); timerId = null; }
+      if (typeof enTimerId !== 'undefined' && enTimerId) { clearInterval(enTimerId); enTimerId = null; }
+      window.location.href = 'dashboard.html';
     }
 
     // ── Init (after all definitions) ─────────────────────────────────────────────
