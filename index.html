@@ -360,6 +360,9 @@
         if (serverData.assignments && serverData.assignments.length) {
           localStorage.setItem('sm_assignments', JSON.stringify(serverData.assignments));
         }
+        if (serverData.activeDays && serverData.activeDays.length) {
+          localStorage.setItem('sm_active_days', JSON.stringify(serverData.activeDays));
+        }
         if (serverData.comprehension && Object.keys(serverData.comprehension).length && typeof restoreComprehension === 'function') {
           restoreComprehension(serverData.comprehension);
         }

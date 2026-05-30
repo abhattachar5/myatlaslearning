@@ -90,7 +90,8 @@ function syncProgressToServer() {
         comprehension: getAllComprehension(),
         yearHistory: profile.yearHistory || [],
         parentPin: profile.parentPin || '',
-        assignments: assignments
+        assignments: assignments,
+        activeDays: getActiveDays()
       };
       await fetchWithAuth('/.netlify/functions/save-progress', {
         method: 'PUT',
@@ -357,6 +358,7 @@ function getStreak() {
   return parseInt(localStorage.getItem('sm_streak') || '0');
 }
 function touchStreak() {
+  markActiveDay();
   const today = new Date().toDateString();
   const last = localStorage.getItem('sm_last_study');
   const streak = getStreak();
@@ -367,6 +369,23 @@ function touchStreak() {
   localStorage.setItem('sm_last_study', today);
   syncProgressToServer();
   return next;
+}
+
+// ── Active days (event-driven; a day is "active" when the learner studies) ──────
+// Stored in localStorage 'sm_active_days' as ['YYYY-MM-DD', ...]; synced to the blob.
+// Marked from touchStreak(), so it reflects real study activity, not presence/time.
+function getActiveDays() {
+  try { return JSON.parse(localStorage.getItem('sm_active_days') || '[]'); } catch (e) { return []; }
+}
+function markActiveDay() {
+  var d = new Date();
+  var key = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  var days = getActiveDays();
+  if (days.indexOf(key) === -1) {
+    days.push(key);
+    if (days.length > 120) days = days.slice(-120); // bound stored history
+    localStorage.setItem('sm_active_days', JSON.stringify(days));
+  }
 }
 
 // ── Theme ─────────────────────────────────────────────────────────────────────

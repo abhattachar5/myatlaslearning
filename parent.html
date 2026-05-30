@@ -203,6 +203,7 @@
 
       <!-- Performance -->
       <div class="pz-panel" id="panel-perf">
+        <div id="perf-activedays"></div>
         <div class="pz-subj" id="perf-subjects"></div>
         <div class="muted" id="perf-overall" style="margin-bottom:18px"></div>
         <div id="perf-revisit"></div>
@@ -389,7 +390,35 @@
       }).join('');
     }
 
+    function renderActiveDays() {
+      var host = document.getElementById('perf-activedays');
+      if (!host) return;
+      var list = (typeof getActiveDays === 'function') ? getActiveDays() : [];
+      var set = {}; list.forEach(function (d) { set[d] = true; });
+      function key(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+      var now = new Date(), dow = (now.getDay() + 6) % 7;            // 0 = Monday
+      var mon = new Date(now); mon.setHours(0, 0, 0, 0); mon.setDate(now.getDate() - dow);
+      var labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+      var cells = [], active = 0;
+      for (var i = 0; i < 7; i++) {
+        var d = new Date(mon); d.setDate(mon.getDate() + i);
+        var on = !!set[key(d)]; if (on) active++;
+        var isToday = key(d) === key(now);
+        cells.push('<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:6px">' +
+          '<div style="width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:' + (on ? '#22c55e' : 'var(--surface2)') + ';color:' + (on ? '#fff' : 'var(--text-muted)') + ';font-weight:800;font-size:.8125rem">' + (on ? '✓' : '') + '</div>' +
+          '<div style="font-size:.75rem;font-weight:700;color:' + (isToday ? '#6366f1' : 'var(--text-muted)') + '">' + labels[i] + '</div>' +
+        '</div>');
+      }
+      host.innerHTML = '<div class="card" style="margin-bottom:14px">' +
+        '<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">' +
+          '<div class="lbl" style="margin:0">Days active</div>' +
+          '<div style="margin-left:auto;font-size:1.25rem;font-weight:800;color:var(--text)">' + active + ' / 7</div>' +
+          '<div class="muted">this week</div></div>' +
+        '<div style="display:flex;gap:6px">' + cells.join('') + '</div></div>';
+    }
+
     function renderPerformance() {
+      renderActiveDays();
       if (!window.StudyPlanner || !StudyPlanner.getTopicProgress) return;
       var tp = StudyPlanner.getTopicProgress();
       var C = StudyPlanner.SUBJECT_COLORS, host = document.getElementById('perf-subjects');
