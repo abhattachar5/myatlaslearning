@@ -1,15 +1,4 @@
-function getUserIdFromToken(authHeader) {
-  if (!authHeader || !authHeader.startsWith("Bearer ")) return null;
-  const token = authHeader.slice(7);
-  const parts = token.split(".");
-  if (parts.length !== 3) return null;
-  try {
-    const payload = JSON.parse(atob(parts[1].replace(/-/g, "+").replace(/_/g, "/")));
-    return payload.sub || null;
-  } catch {
-    return null;
-  }
-}
+import { verifyUserId } from "../lib/auth.mjs";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -51,7 +40,7 @@ export default async (req, context) => {
     return Response.json({ error: "Method not allowed" }, { status: 405, headers: CORS_HEADERS });
   }
 
-  const userId = getUserIdFromToken(req.headers.get("authorization"));
+  const userId = await verifyUserId(req.headers.get("authorization"));
   if (!userId) {
     return Response.json({ error: "Unauthorized" }, { status: 401, headers: CORS_HEADERS });
   }
