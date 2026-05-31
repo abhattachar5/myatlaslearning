@@ -1,0 +1,287 @@
+// math-lessons-6.js — Lessons for Topics 22-25
+Object.assign(LESSONS, {
+
+'mi-22-1': {
+  title: 'Graph Inequalities',
+  sections: [
+    {
+      heading: 'Inequality Symbols',
+      content: '<p>Inequalities describe a <strong>range</strong> of possible values rather than a single value. The key distinction to master is whether the boundary value itself is included.</p><table style="border-collapse:collapse;width:100%;margin:0.75em 0"><tr style="background:#e8f5e9"><th style="border:1px solid #ccc;padding:8px">Symbol</th><th style="border:1px solid #ccc;padding:8px">Meaning</th><th style="border:1px solid #ccc;padding:8px">Boundary included?</th><th style="border:1px solid #ccc;padding:8px">Circle on number line</th></tr><tr><td style="border:1px solid #ccc;padding:8px;text-align:center;font-size:1.2em"><strong>&lt;</strong></td><td style="border:1px solid #ccc;padding:8px">Less than</td><td style="border:1px solid #ccc;padding:8px;color:#c62828">No</td><td style="border:1px solid #ccc;padding:8px">Open ○</td></tr><tr style="background:#f9f9f9"><td style="border:1px solid #ccc;padding:8px;text-align:center;font-size:1.2em"><strong>≤</strong></td><td style="border:1px solid #ccc;padding:8px">Less than or equal to</td><td style="border:1px solid #ccc;padding:8px;color:#2e7d32">Yes</td><td style="border:1px solid #ccc;padding:8px">Closed ●</td></tr><tr><td style="border:1px solid #ccc;padding:8px;text-align:center;font-size:1.2em"><strong>&gt;</strong></td><td style="border:1px solid #ccc;padding:8px">Greater than</td><td style="border:1px solid #ccc;padding:8px;color:#c62828">No</td><td style="border:1px solid #ccc;padding:8px">Open ○</td></tr><tr style="background:#f9f9f9"><td style="border:1px solid #ccc;padding:8px;text-align:center;font-size:1.2em"><strong>≥</strong></td><td style="border:1px solid #ccc;padding:8px">Greater than or equal to</td><td style="border:1px solid #ccc;padding:8px;color:#2e7d32">Yes</td><td style="border:1px solid #ccc;padding:8px">Closed ●</td></tr></table>'
+    },
+    {
+      heading: 'Graphing on a Number Line',
+      content: '<p>A number line diagram makes the solution set of an inequality immediately visual. The arrow shows all values in the solution; the circle shows whether the boundary is included.</p><div class="lesson-diagram" data-diagram="y7-math-6-0"></div>'
+    },
+    {
+      heading: 'Writing Inequalities from Words',
+      content: '<p>Real-life situations often contain inequality language. Learn these key phrases and the symbol each maps to.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>"at least 18"</strong> → x ≥ 18<br><span style="font-size:0.85em;color:#555">includes 18</span></div><div style="background:#fff3e0;padding:10px;border-radius:8px"><strong>"more than 5"</strong> → x &gt; 5<br><span style="font-size:0.85em;color:#555">excludes 5</span></div><div style="background:#fce4ec;padding:10px;border-radius:8px"><strong>"no more than 100"</strong> → x ≤ 100<br><span style="font-size:0.85em;color:#555">includes 100</span></div><div style="background:#e3f2fd;padding:10px;border-radius:8px"><strong>"fewer than 20"</strong> → x &lt; 20<br><span style="font-size:0.85em;color:#555">excludes 20</span></div></div>'
+    }
+  ]
+},
+
+'mi-22-2': {
+  title: 'Solve One-Step Inequalities',
+  sections: [
+    {
+      heading: 'Solving Inequalities',
+      content: '<p>Solve inequalities using the same inverse operations as equations — but with one crucial extra rule that catches many students out.</p><div style="background:#fce4ec;padding:1em;border-radius:8px;border-left:4px solid #c62828;margin:0.75em 0"><strong>⚠️ The Flip Rule:</strong> When you <em>multiply or divide both sides by a negative number</em>, the inequality sign must REVERSE direction.<br>Example: −2x &lt; 6 &nbsp;→ divide by −2 → x <strong>&gt;</strong> −3 (sign flips!)</div><p><strong>Why?</strong> Think of the number line: if 2 &lt; 5, then multiplying both by −1 gives −2 and −5. But −2 &gt; −5 — the order reverses.</p>'
+    },
+    {
+      heading: 'Worked Examples',
+      content: '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>x + 5 &gt; 12</strong><br>−5 from both sides<br>x &gt; <strong>7</strong><br><span style="font-size:0.85em;color:#555">No sign change (no ÷ by negative)</span></div><div style="background:#fce4ec;padding:10px;border-radius:8px"><strong>−2x ≤ 8</strong><br>÷ −2 both sides<br><em>Sign flips!</em><br>x ≥ <strong>−4</strong></div><div style="background:#e3f2fd;padding:10px;border-radius:8px"><strong>x/3 &lt; 5</strong><br>× 3 both sides<br>x &lt; <strong>15</strong><br><span style="font-size:0.85em;color:#555">No sign change (× positive)</span></div></div>'
+    },
+    {
+      heading: 'Graphing the Solution',
+      content: '<p>After solving, always represent the solution on a number line. The type of circle (open or closed) and the direction of the arrow must both be correct.</p><div class="lesson-diagram" data-diagram="y7-math-6-1"></div>'
+    }
+  ]
+},
+
+'mi-22-3': {
+  title: 'Inequality Word Problems',
+  sections: [
+    {
+      heading: 'Writing Inequalities from Word Problems',
+      content: '<p>Identify the variable, then find the key phrase that tells you the type of inequality. Circle that phrase in the problem before writing anything.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:8px;border-radius:8px;font-size:0.9em">"at least" / "minimum" → <strong>≥</strong></div><div style="background:#e3f2fd;padding:8px;border-radius:8px;font-size:0.9em">"at most" / "no more than" → <strong>≤</strong></div><div style="background:#fff3e0;padding:8px;border-radius:8px;font-size:0.9em">"more than" / "exceeds" → <strong>&gt;</strong></div><div style="background:#fce4ec;padding:8px;border-radius:8px;font-size:0.9em">"fewer than" / "less than" → <strong>&lt;</strong></div></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example:</strong> "You need <em>at least</em> 50 points to pass."<br>Let p = points scored. &nbsp; p ≥ 50</div>'
+    },
+    {
+      heading: 'Solving and Interpreting',
+      content: '<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example 1:</strong> A taxi charges £2 plus £1.50 per mile. Stay under £14.<br>2 + 1.5m &lt; 14<br>1.5m &lt; 12<br>m &lt; 8<br><strong>You can travel fewer than 8 miles.</strong></div><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example 2:</strong> A lift holds at most 600 kg. Average person weighs 75 kg.<br>75n ≤ 600<br>n ≤ 8<br><strong>Maximum 8 people in the lift.</strong></div>'
+    },
+    {
+      heading: 'Check Your Answer',
+      content: '<p>After solving, always substitute a value back into the original word problem to check your answer makes sense in context. Test a boundary value and a value just inside the solution.</p><div style="background:#fff3e0;padding:1em;border-radius:8px;margin:0.5em 0"><strong>For m &lt; 8 (taxi example):</strong><br>Try m = 7.9: cost = £2 + 1.5(7.9) = £2 + £11.85 = £13.85 ✓ (under £14)<br>Try m = 8: cost = £2 + £12 = £14 — this equals, not under, so m = 8 is NOT valid ✓<br>The strict inequality &lt; (not ≤) was correct — the cost must be <em>under</em> £14.</div>'
+    }
+  ]
+},
+
+'mi-23-1': {
+  title: 'Two-Variable Equations',
+  sections: [
+    {
+      heading: 'What are Two-Variable Equations?',
+      content: '<p>A <strong>two-variable equation</strong> such as y = 2x + 1 relates two quantities. Unlike a one-variable equation (which has one solution), a two-variable equation has <em>infinitely many solutions</em> — any ordered pair (x, y) that makes it true.</p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Solutions of y = 2x + 1:</strong><table style="border-collapse:collapse;width:100%;margin-top:0.5em;font-size:0.9em"><tr style="background:#c8e6c9"><td style="padding:6px 10px;border:1px solid #ccc"><strong>x</strong></td><td style="padding:6px 10px;border:1px solid #ccc">0</td><td style="padding:6px 10px;border:1px solid #ccc">1</td><td style="padding:6px 10px;border:1px solid #ccc">2</td><td style="padding:6px 10px;border:1px solid #ccc">3</td><td style="padding:6px 10px;border:1px solid #ccc">−1</td></tr><tr><td style="padding:6px 10px;border:1px solid #ccc"><strong>y</strong></td><td style="padding:6px 10px;border:1px solid #ccc">1</td><td style="padding:6px 10px;border:1px solid #ccc">3</td><td style="padding:6px 10px;border:1px solid #ccc">5</td><td style="padding:6px 10px;border:1px solid #ccc">7</td><td style="padding:6px 10px;border:1px solid #ccc">−1</td></tr></table>Each column is a solution: (0,1), (1,3), (2,5)…</div>'
+    },
+    {
+      heading: 'Checking Solutions',
+      content: '<p>To check if (a, b) is a solution: substitute x = a into the equation and see whether y = b results. If yes — it is a solution. If not — it isn\'t.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Is (3, 7) a solution to y = 2x + 1?</strong><br>y = 2(3) + 1 = 7 ✓<br><strong>Yes</strong></div><div style="background:#fce4ec;padding:10px;border-radius:8px"><strong>Is (2, 5) a solution to y = −x − 2?</strong><br>y = −(2) − 2 = −4 ≠ 5 ✗<br><strong>No</strong></div></div>'
+    },
+    {
+      heading: 'Independent and Dependent Variables',
+      content: '<p>In y = 3x − 2, the variable x is the <strong>independent variable</strong> (you choose its value freely) and y is the <strong>dependent variable</strong> (its value is determined by x).</p><div class="lesson-diagram" data-diagram="y7-math-6-2"></div><p>Real-life example: y = total cost, x = number of items bought. The cost depends on how many you buy — so cost is the dependent variable.</p>'
+    }
+  ]
+},
+
+'mi-23-2': {
+  title: 'Tables & Graphs of Linear Equations',
+  sections: [
+    {
+      heading: 'Completing a Table of Values',
+      content: '<p>Substitute each value of x into the equation to find the matching y. Always show substitution working clearly — one arithmetic slip changes the whole graph.</p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Example: y = 2x + 3, for x = 0, 1, 2, 3</strong><table style="border-collapse:collapse;width:100%;margin-top:0.5em;font-size:0.9em"><tr style="background:#c8e6c9"><th style="padding:7px;border:1px solid #ccc">x</th><th style="padding:7px;border:1px solid #ccc">Working</th><th style="padding:7px;border:1px solid #ccc">y</th></tr><tr><td style="padding:7px;border:1px solid #ccc">0</td><td style="padding:7px;border:1px solid #ccc">2(0)+3</td><td style="padding:7px;border:1px solid #ccc"><strong>3</strong></td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">1</td><td style="padding:7px;border:1px solid #ccc">2(1)+3</td><td style="padding:7px;border:1px solid #ccc"><strong>5</strong></td></tr><tr><td style="padding:7px;border:1px solid #ccc">2</td><td style="padding:7px;border:1px solid #ccc">2(2)+3</td><td style="padding:7px;border:1px solid #ccc"><strong>7</strong></td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">3</td><td style="padding:7px;border:1px solid #ccc">2(3)+3</td><td style="padding:7px;border:1px solid #ccc"><strong>9</strong></td></tr></table></div>'
+    },
+    {
+      heading: 'Plotting a Straight-Line Graph',
+      content: '<p>Plot each (x, y) pair from your table as a point on a grid, then join them with a straight line using a ruler. The line can be extended beyond your plotted points.</p><div class="lesson-diagram" data-diagram="y7-math-6-3"></div><p><strong>y-intercept</strong> (where the line crosses the y-axis): the constant in the equation. For y = 2x + 3, the y-intercept is <strong>3</strong>. <strong>Gradient</strong>: how steep the line is. Here it is <strong>2</strong> — y increases by 2 for every 1 increase in x.</p>'
+    },
+    {
+      heading: 'Reading the Graph',
+      content: '<p>Once plotted, the graph lets you find values without substituting into the equation. Trace vertically from an x value to the line, then horizontally to the y-axis.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Positive gradient</strong><br>Line slopes ↗ upward left to right<br>y increases as x increases</div><div style="background:#fce4ec;padding:10px;border-radius:8px"><strong>Negative gradient</strong><br>Line slopes ↘ downward left to right<br>y decreases as x increases</div></div>'
+    }
+  ]
+},
+
+'mi-23-3': {
+  title: 'Interpret Graphs',
+  sections: [
+    {
+      heading: 'Reading Information from Graphs',
+      content: '<p>Before reading any values, always check: What do the axes represent? What are the units? What does the gradient mean in context?</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e3f2fd;padding:10px;border-radius:8px"><strong>y-intercept</strong><br>Starting value when x = 0<br><span style="font-size:0.85em;color:#555">e.g. fixed cost, initial distance</span></div><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>x-intercept</strong><br>When y = 0<br><span style="font-size:0.85em;color:#555">e.g. break-even point, return to start</span></div><div style="background:#fff3e0;padding:10px;border-radius:8px"><strong>Gradient</strong><br>Rate of change<br><span style="font-size:0.85em;color:#555">e.g. speed, cost per unit</span></div><div style="background:#f3e5f5;padding:10px;border-radius:8px"><strong>Flat section</strong><br>No change<br><span style="font-size:0.85em;color:#555">e.g. stationary, constant temperature</span></div></div>'
+    },
+    {
+      heading: 'Distance-Time Graphs',
+      content: '<p>On a distance-time graph, the gradient gives the <strong>speed</strong>. A steeper gradient = faster speed.</p><div class="lesson-diagram" data-diagram="y7-math-6-4"></div><p>A <strong>horizontal line</strong> means stationary — time passes but distance from start doesn\'t change. A <strong>downward slope</strong> means returning towards the start point.</p>'
+    },
+    {
+      heading: 'Other Real-World Graphs',
+      content: '<p>The same skills apply to many types of real-life graphs — always read the labels and units before interpreting.</p><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px;font-size:0.9em"><strong>Cost graphs</strong><br>y-intercept = fixed cost<br>gradient = cost per unit</div><div style="background:#fff3e0;padding:10px;border-radius:8px;font-size:0.9em"><strong>Temperature</strong><br>Positive gradient = heating<br>Negative = cooling</div><div style="background:#f3e5f5;padding:10px;border-radius:8px;font-size:0.9em"><strong>Profit graphs</strong><br>x-intercept = break-even<br>(profit = 0)</div></div>'
+    }
+  ]
+},
+
+'mi-24-1': {
+  title: 'Classify Polygons & Angles',
+  sections: [
+    {
+      heading: 'Types of Angles',
+      content: '<div class="lesson-diagram" data-diagram="y7-math-6-5"></div>'
+    },
+    {
+      heading: 'Triangles',
+      content: '<p>Triangles are classified in two independent ways — by their angles and by their sides.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div><strong>By angles:</strong><table style="border-collapse:collapse;width:100%;font-size:0.9em;margin-top:0.4em"><tr style="background:#e3f2fd"><td style="padding:6px;border:1px solid #ccc">Acute</td><td style="padding:6px;border:1px solid #ccc">All angles &lt; 90°</td></tr><tr><td style="padding:6px;border:1px solid #ccc">Right-angled</td><td style="padding:6px;border:1px solid #ccc">One angle = 90°</td></tr><tr style="background:#e3f2fd"><td style="padding:6px;border:1px solid #ccc">Obtuse</td><td style="padding:6px;border:1px solid #ccc">One angle &gt; 90°</td></tr></table></div><div><strong>By sides:</strong><table style="border-collapse:collapse;width:100%;font-size:0.9em;margin-top:0.4em"><tr style="background:#e8f5e9"><td style="padding:6px;border:1px solid #ccc">Equilateral</td><td style="padding:6px;border:1px solid #ccc">3 equal sides, 60° each</td></tr><tr><td style="padding:6px;border:1px solid #ccc">Isosceles</td><td style="padding:6px;border:1px solid #ccc">2 equal sides, 2 equal base angles</td></tr><tr style="background:#e8f5e9"><td style="padding:6px;border:1px solid #ccc">Scalene</td><td style="padding:6px;border:1px solid #ccc">All sides different</td></tr></table></div></div>'
+    },
+    {
+      heading: 'Quadrilaterals and Polygons',
+      content: '<p>Key quadrilaterals and their distinguishing properties:</p><table style="border-collapse:collapse;width:100%;font-size:0.9em;margin:0.75em 0"><tr style="background:#e8f5e9"><th style="padding:7px;border:1px solid #ccc">Shape</th><th style="padding:7px;border:1px solid #ccc">Key properties</th></tr><tr><td style="padding:7px;border:1px solid #ccc"><strong>Square</strong></td><td style="padding:7px;border:1px solid #ccc">4 equal sides, 4 right angles, 4 lines of symmetry</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc"><strong>Rectangle</strong></td><td style="padding:7px;border:1px solid #ccc">Opposite sides equal, 4 right angles</td></tr><tr><td style="padding:7px;border:1px solid #ccc"><strong>Rhombus</strong></td><td style="padding:7px;border:1px solid #ccc">4 equal sides, opposite angles equal, no right angles</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc"><strong>Parallelogram</strong></td><td style="padding:7px;border:1px solid #ccc">Opposite sides parallel and equal</td></tr><tr><td style="padding:7px;border:1px solid #ccc"><strong>Trapezium</strong></td><td style="padding:7px;border:1px solid #ccc">Exactly one pair of parallel sides</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc"><strong>Kite</strong></td><td style="padding:7px;border:1px solid #ccc">Two pairs of adjacent equal sides</td></tr></table><p>Polygon names: triangle (3), quadrilateral (4), pentagon (5), hexagon (6), heptagon (7), octagon (8), nonagon (9), decagon (10). A <strong>regular</strong> polygon has all sides and all angles equal.</p>'
+    }
+  ]
+},
+
+'mi-24-2': {
+  title: 'Angles in Triangles & Quadrilaterals',
+  sections: [
+    {
+      heading: 'Angle Sum Rules',
+      content: '<p>These rules are essential for finding missing angles — learn them so well you never have to look them up.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:12px;border-radius:8px;text-align:center"><strong style="font-size:1.1em;color:#2e7d32">Triangle</strong><br><span style="font-size:1.5em;font-weight:bold;color:#2e7d32">180°</span><br><span style="font-size:0.85em;color:#555">Always — no exceptions</span></div><div style="background:#e3f2fd;padding:12px;border-radius:8px;text-align:center"><strong style="font-size:1.1em;color:#1565c0">Quadrilateral</strong><br><span style="font-size:1.5em;font-weight:bold;color:#1565c0">360°</span><br><span style="font-size:0.85em;color:#555">Any 4-sided shape</span></div></div><p><strong>General polygon formula:</strong> Interior angle sum = (n − 2) × 180°, where n = number of sides.<br>Pentagon (n=5): (5−2) × 180° = 540°. Each interior angle of a <em>regular</em> pentagon = 540° ÷ 5 = <strong>108°</strong></p><div class="lesson-diagram" data-diagram="math-polygon-angles"></div>'
+    },
+    {
+      heading: 'Finding Missing Angles',
+      content: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#f1f8e9;padding:10px;border-radius:8px"><strong>Triangle example</strong><br>Two angles: 47° and 68°<br>Third = 180° − 47° − 68°<br>= <strong>65°</strong></div><div style="background:#e3f2fd;padding:10px;border-radius:8px"><strong>Quadrilateral example</strong><br>Three angles: 90°, 110°, 75°<br>Fourth = 360° − 275°<br>= <strong>85°</strong></div></div><p><strong>Tip:</strong> Always add your known angles first — one subtraction is less error-prone than multiple subtractions.</p>'
+    },
+    {
+      heading: 'Special Cases',
+      content: '<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Isosceles triangle:</strong> The two base angles are always equal. If the apex angle is given as 70°, the base angles each = (180° − 70°) ÷ 2 = <strong>55°</strong>.</div><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Parallelogram:</strong> Opposite angles are equal. Adjacent angles are supplementary (add to 180°). If one angle is 120°, the adjacent angle = <strong>60°</strong>, and the opposite angle = <strong>120°</strong>.</div>'
+    }
+  ]
+},
+
+'mi-24-3': {
+  title: 'Parallel Lines & Transversals',
+  sections: [
+    {
+      heading: 'Angle Relationships',
+      content: '<p>When a straight line (called a <strong>transversal</strong>) crosses two parallel lines, it creates three types of angle pairs — all of which can be found from a single given angle.</p><div class="lesson-diagram" data-diagram="y7-math-6-6"></div><table style="border-collapse:collapse;width:100%;font-size:0.9em;margin:0.5em 0"><tr style="background:#e8f5e9"><th style="padding:7px;border:1px solid #ccc">Pair type</th><th style="padding:7px;border:1px solid #ccc">Nickname</th><th style="padding:7px;border:1px solid #ccc">Relationship</th></tr><tr><td style="padding:7px;border:1px solid #ccc">Corresponding</td><td style="padding:7px;border:1px solid #ccc">F-angles</td><td style="padding:7px;border:1px solid #ccc;font-weight:bold">Equal</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">Alternate</td><td style="padding:7px;border:1px solid #ccc">Z-angles</td><td style="padding:7px;border:1px solid #ccc;font-weight:bold">Equal</td></tr><tr><td style="padding:7px;border:1px solid #ccc">Co-interior</td><td style="padding:7px;border:1px solid #ccc">C-angles</td><td style="padding:7px;border:1px solid #ccc;font-weight:bold">Sum to 180°</td></tr></table>'
+    },
+    {
+      heading: 'Worked Examples',
+      content: '<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Given angle = 65°. Find the other angles.</strong><br><table style="border-collapse:collapse;width:100%;margin-top:0.5em;font-size:0.9em"><tr style="background:#c8e6c9"><td style="padding:6px;border:1px solid #ccc">Corresponding angle</td><td style="padding:6px;border:1px solid #ccc;font-weight:bold">65°</td><td style="padding:6px;border:1px solid #ccc">Equal (F-angles)</td></tr><tr><td style="padding:6px;border:1px solid #ccc">Alternate angle</td><td style="padding:6px;border:1px solid #ccc;font-weight:bold">65°</td><td style="padding:6px;border:1px solid #ccc">Equal (Z-angles)</td></tr><tr style="background:#c8e6c9"><td style="padding:6px;border:1px solid #ccc">Co-interior angle</td><td style="padding:6px;border:1px solid #ccc;font-weight:bold">115°</td><td style="padding:6px;border:1px solid #ccc">180° − 65° (C-angles)</td></tr></table></div>'
+    },
+    {
+      heading: 'Writing Geometric Reasons',
+      content: '<p>In exam questions that ask you to "give a reason", you must state both the angle relationship <em>and</em> the fact that the lines are parallel.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Acceptable reasons:</strong><ul style="margin:0.3em 0"><li>"Corresponding angles, lines AB and CD are parallel"</li><li>"Alternate angles, lines PQ and RS are parallel"</li><li>"Co-interior angles sum to 180°, as PQ ∥ RS"</li></ul></div><p>Saying just "F-angles" or "Z-angles" without mentioning that the lines are parallel will not earn full marks.</p>'
+    }
+  ]
+},
+
+// ── mi-24-4: Angles, Lines & Circles ──────────────────────────────────────
+'mi-24-4': {
+  title: 'Angles, Lines & Circles',
+  sections: [
+    {
+      heading: 'Vertical & Supplementary Angles',
+      content: '<p>When two straight lines cross, they form two pairs of <strong>vertically opposite angles</strong>. Each pair is equal.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Vertically opposite:</strong> angles across from each other = equal<br><strong>Supplementary:</strong> angles next to each other on a straight line = 180°<br><br>If one angle = 65°, then:<br>Vertically opposite = 65°<br>Adjacent = 180° − 65° = 115°</div><div class="lesson-diagram" data-diagram="math-vertically-opposite"></div>'
+    },
+    {
+      heading: 'Lines, Segments & Rays',
+      content: '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px;text-align:center"><strong>Line</strong><br>←————→<br>Extends infinitely both ways</div><div style="background:#fff3e0;padding:10px;border-radius:8px;text-align:center"><strong>Segment</strong><br>•————•<br>Two endpoints, finite length</div><div style="background:#f3e5f5;padding:10px;border-radius:8px;text-align:center"><strong>Ray</strong><br>•————→<br>One endpoint, infinite in one direction</div></div><p><strong>Naming:</strong> Line AB (↔), Segment AB (endpoints A and B), Ray AB (starts at A, passes through B).</p>'
+    },
+    {
+      heading: 'Bisectors',
+      content: '<p>A <strong>bisector</strong> divides something into two equal parts.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Segment bisector:</strong> cuts a line segment into two equal halves.<br>A 10 cm segment bisected → two 5 cm pieces.<br><br><strong>Angle bisector:</strong> divides an angle into two equal angles.<br>An 80° angle bisected → two 40° angles.</div>'
+    },
+    {
+      heading: 'Parts of a Circle',
+      content: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Radius</strong> — centre to edge<br><strong>Diameter</strong> — edge to edge through centre (= 2r)<br><strong>Chord</strong> — line joining two points on the edge</div><div style="background:#fff3e0;padding:10px;border-radius:8px"><strong>Arc</strong> — part of the circumference<br><strong>Sector</strong> — "pizza slice" (2 radii + arc)<br><strong>Tangent</strong> — touches circle at exactly one point</div></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Central angle:</strong> An angle at the centre of a circle. A 90° central angle = ¼ of the circle (90/360).</div><div class="lesson-diagram" data-diagram="math-circle-parts"></div>'
+    }
+  ]
+},
+
+'mi-25-1': {
+  title: 'Line & Rotational Symmetry',
+  sections: [
+    {
+      heading: 'Lines of Symmetry',
+      content: '<p>A <strong>line of symmetry</strong> (also called a mirror line) divides a shape into two halves that are exact reflections of each other. Fold along the line — the two halves must match perfectly.</p><table style="border-collapse:collapse;width:100%;font-size:0.9em;margin:0.75em 0"><tr style="background:#e8f5e9"><th style="padding:7px;border:1px solid #ccc">Shape</th><th style="padding:7px;border:1px solid #ccc">Lines of symmetry</th></tr><tr><td style="padding:7px;border:1px solid #ccc">Equilateral triangle</td><td style="padding:7px;border:1px solid #ccc">3</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">Square</td><td style="padding:7px;border:1px solid #ccc">4</td></tr><tr><td style="padding:7px;border:1px solid #ccc">Rectangle (non-square)</td><td style="padding:7px;border:1px solid #ccc">2</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">Regular hexagon</td><td style="padding:7px;border:1px solid #ccc">6</td></tr><tr><td style="padding:7px;border:1px solid #ccc">Circle</td><td style="padding:7px;border:1px solid #ccc">Infinite</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">Scalene triangle</td><td style="padding:7px;border:1px solid #ccc">0</td></tr><tr><td style="padding:7px;border:1px solid #ccc">Regular n-gon</td><td style="padding:7px;border:1px solid #ccc">n</td></tr></table>'
+    },
+    {
+      heading: 'Rotational Symmetry',
+      content: '<p>A shape has <strong>rotational symmetry</strong> if it looks identical after rotating by less than 360°. The <strong>order</strong> is how many times it maps onto itself in a full turn.</p><div class="lesson-diagram" data-diagram="y7-math-6-7"></div><p>Order 1 means <em>no rotational symmetry</em> — the shape only looks the same after a full 360° turn.</p>'
+    },
+    {
+      heading: 'Completing Symmetric Patterns',
+      content: '<p>To complete a pattern with a line of symmetry: for each marked point or line, count the perpendicular distance to the mirror line, then place the corresponding point at the same distance on the other side.</p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Steps:</strong><ol style="margin:0.3em 0;padding-left:1.3em"><li>Draw a perpendicular from each point to the mirror line.</li><li>Measure the distance to the mirror line.</li><li>Mark the same distance on the other side.</li><li>Join the reflected points to complete the shape.</li></ol></div>'
+    }
+  ]
+},
+
+'mi-25-2': {
+  title: 'Reflections & Translations',
+  sections: [
+    {
+      heading: 'Reflections',
+      content: '<p>A <strong>reflection</strong> flips a shape across a mirror line. Every point moves perpendicularly to the mirror line and lands the same distance on the other side. The shape is not rotated or resized.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e3f2fd;padding:10px;border-radius:8px"><strong>Reflect in x-axis</strong> (y = 0)<br>(x, y) → (x, −y)<br>Example: (4, 3) → <strong>(4, −3)</strong></div><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Reflect in y-axis</strong> (x = 0)<br>(x, y) → (−x, y)<br>Example: (4, 3) → <strong>(−4, 3)</strong></div></div><div class="lesson-diagram" data-diagram="y7-math-6-8"></div>'
+    },
+    {
+      heading: 'Translations',
+      content: '<p>A <strong>translation</strong> slides a shape by a fixed amount in a given direction. It is described by a vector — a column vector or written as (a, b).</p><p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px">Vector (a, b): move <strong>a</strong> right (negative = left), <strong>b</strong> up (negative = down)</p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Example:</strong> Translate point (3, −1) by vector (−2, 5):<br>New x = 3 + (−2) = 1<br>New y = −1 + 5 = 4<br>New position: <strong>(1, 4)</strong></div><p>Under a translation, the shape does not rotate or reflect — it simply moves. Every point moves by exactly the same vector.</p>'
+    },
+    {
+      heading: 'Properties Preserved',
+      content: '<p>Both reflections and translations are <strong>isometries</strong> — they preserve both shape and size. The resulting image is <strong>congruent</strong> to the original.</p><table style="border-collapse:collapse;width:100%;font-size:0.9em;margin:0.75em 0"><tr style="background:#e8f5e9"><th style="padding:7px;border:1px solid #ccc">Property</th><th style="padding:7px;border:1px solid #ccc">Reflection</th><th style="padding:7px;border:1px solid #ccc">Translation</th></tr><tr><td style="padding:7px;border:1px solid #ccc">Side lengths</td><td style="padding:7px;border:1px solid #ccc">Preserved ✓</td><td style="padding:7px;border:1px solid #ccc">Preserved ✓</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">Angles</td><td style="padding:7px;border:1px solid #ccc">Preserved ✓</td><td style="padding:7px;border:1px solid #ccc">Preserved ✓</td></tr><tr><td style="padding:7px;border:1px solid #ccc">Orientation</td><td style="padding:7px;border:1px solid #ccc">Reversed (flipped) ✗</td><td style="padding:7px;border:1px solid #ccc">Unchanged ✓</td></tr></table>'
+    }
+  ]
+},
+
+'mi-25-3': {
+  title: 'Congruent Figures',
+  sections: [
+    {
+      heading: 'What is Congruence?',
+      content: '<p>Two shapes are <strong>congruent</strong> if they have exactly the same size and shape — all corresponding sides are equal AND all corresponding angles are equal. One shape could be a reflection, rotation, or translation of the other.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Congruent ✓</strong><br>Same size and shape<br>Reflections, rotations, translations preserve congruence</div><div style="background:#fce4ec;padding:10px;border-radius:8px"><strong>Not congruent ✗</strong><br>Different size (even same shape)<br>Enlargements do NOT preserve congruence</div></div>'
+    },
+    {
+      heading: 'Congruence Statements',
+      content: '<p>A congruence statement specifies exactly which vertices correspond, allowing you to read off all equal sides and angles.</p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>△ABC ≅ △DEF</strong> tells us:<br><table style="border-collapse:collapse;width:100%;margin-top:0.5em;font-size:0.9em"><tr style="background:#c8e6c9"><td style="padding:6px;border:1px solid #ccc">Equal sides</td><td style="padding:6px;border:1px solid #ccc">AB = DE</td><td style="padding:6px;border:1px solid #ccc">BC = EF</td><td style="padding:6px;border:1px solid #ccc">AC = DF</td></tr><tr><td style="padding:6px;border:1px solid #ccc">Equal angles</td><td style="padding:6px;border:1px solid #ccc">∠A = ∠D</td><td style="padding:6px;border:1px solid #ccc">∠B = ∠E</td><td style="padding:6px;border:1px solid #ccc">∠C = ∠F</td></tr></table></div>'
+    },
+    {
+      heading: 'Proving Congruence',
+      content: '<p>To prove two triangles are congruent, you need one of four conditions. Only three pieces of information are needed — but they must be the right three.</p><table style="border-collapse:collapse;width:100%;font-size:0.9em;margin:0.75em 0"><tr style="background:#e8f5e9"><th style="padding:7px;border:1px solid #ccc">Condition</th><th style="padding:7px;border:1px solid #ccc">What you need</th></tr><tr><td style="padding:7px;border:1px solid #ccc;font-weight:bold">SSS</td><td style="padding:7px;border:1px solid #ccc">All three pairs of sides equal</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc;font-weight:bold">SAS</td><td style="padding:7px;border:1px solid #ccc">Two sides and the <em>included</em> angle equal</td></tr><tr><td style="padding:7px;border:1px solid #ccc;font-weight:bold">ASA / AAS</td><td style="padding:7px;border:1px solid #ccc">Two angles and a corresponding side equal</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc;font-weight:bold">RHS</td><td style="padding:7px;border:1px solid #ccc">Right angle, hypotenuse, and one other side equal</td></tr></table><div style="background:#fce4ec;padding:0.75em 1em;border-radius:8px;margin:0.5em 0"><strong>⚠️ AAA is NOT sufficient</strong> — three equal angles only proves the triangles are similar (same shape), not congruent (same size). They could be different sizes.</div>'
+    }
+  ]
+},
+
+'mi-24-5': {
+  title: 'Compass Constructions',
+  sections: [
+    {
+      heading: 'Equipment Needed',
+      content: '<p>For all constructions you need a <strong>pair of compasses</strong> and a <strong>straight edge</strong> (ruler). You must not rub out your construction arcs — they are your evidence of method.</p>'
+    },
+    {
+      heading: 'Perpendicular Bisector',
+      content: '<p>The <strong>perpendicular bisector</strong> of a line segment cuts it exactly in half at a right angle (90°). Every point on the perpendicular bisector is equidistant from the two endpoints.</p><div class="lesson-diagram" data-diagram="y7-math-6-9"></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Method:</strong><ol style="margin:0;padding-left:1.3em"><li>Open compasses to more than half the length of AB.</li><li>Draw arcs from A above and below the line.</li><li>Without changing the compass width, draw arcs from B above and below the line.</li><li>Join the two points where the arcs cross — this is the perpendicular bisector.</li></ol></div>'
+    },
+    {
+      heading: 'Angle Bisector',
+      content: '<p>An <strong>angle bisector</strong> divides an angle into two equal halves.</p><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Method:</strong><ol style="margin:0;padding-left:1.3em"><li>Place the compass point at the vertex of the angle. Draw an arc that crosses both arms.</li><li>Place the compass on each crossing point in turn and draw two arcs that cross each other inside the angle.</li><li>Draw a straight line from the vertex through the point where the arcs cross — this bisects the angle.</li></ol></div>'
+    },
+    {
+      heading: 'Shortest Distance to a Line',
+      content: '<p>The <strong>shortest distance</strong> from a point to a line is always the perpendicular distance — the line drawn at 90° from the point to the line.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Key fact:</strong> Any other path from the point to the line is longer than the perpendicular distance. This is why we use perpendicular constructions to find shortest distances.</div>'
+    }
+  ]
+},
+
+'mi-25-4': {
+  title: 'Rotations',
+  sections: [
+    {
+      heading: 'What is a Rotation?',
+      content: '<p>A <strong>rotation</strong> turns a shape around a fixed point called the <strong>centre of rotation</strong>. To describe a rotation you must give three things:</p><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px;text-align:center"><strong>Centre</strong><br>The fixed point</div><div style="background:#e3f2fd;padding:10px;border-radius:8px;text-align:center"><strong>Angle</strong><br>90°, 180° or 270°</div><div style="background:#fff3e0;padding:10px;border-radius:8px;text-align:center"><strong>Direction</strong><br>Clockwise (CW) or<br>anticlockwise (ACW)</div></div><div class="lesson-diagram" data-diagram="math-rotation"></div>'
+    },
+    {
+      heading: 'Key Rotations',
+      content: '<table style="border-collapse:collapse;width:100%;margin:0.75em 0;font-size:0.9em"><tr style="background:#e8f5e9"><th style="padding:7px;border:1px solid #ccc">Rotation</th><th style="padding:7px;border:1px solid #ccc">About the origin</th><th style="padding:7px;border:1px solid #ccc">Effect on (x, y)</th></tr><tr><td style="padding:7px;border:1px solid #ccc">90° anticlockwise</td><td style="padding:7px;border:1px solid #ccc">Quarter turn left</td><td style="padding:7px;border:1px solid #ccc">(x, y) → (−y, x)</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">90° clockwise</td><td style="padding:7px;border:1px solid #ccc">Quarter turn right</td><td style="padding:7px;border:1px solid #ccc">(x, y) → (y, −x)</td></tr><tr><td style="padding:7px;border:1px solid #ccc">180°</td><td style="padding:7px;border:1px solid #ccc">Half turn</td><td style="padding:7px;border:1px solid #ccc">(x, y) → (−x, −y)</td></tr><tr style="background:#f9f9f9"><td style="padding:7px;border:1px solid #ccc">270° anticlockwise</td><td style="padding:7px;border:1px solid #ccc">Same as 90° CW</td><td style="padding:7px;border:1px solid #ccc">(x, y) → (y, −x)</td></tr></table><p><strong>Note:</strong> 90° clockwise is the same as 270° anticlockwise. Direction does not matter for 180°.</p>'
+    },
+    {
+      heading: 'Worked Example',
+      content: '<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Rotate triangle with vertices A(1, 2), B(4, 2), C(4, 5) by 90° clockwise about the origin.</strong><br><br>Apply (x, y) → (y, −x):<br>A(1, 2) → A\'(2, −1)<br>B(4, 2) → B\'(2, −4)<br>C(4, 5) → C\'(5, −4)<br><br>Plot the new vertices and join them to draw the image.</div>'
+    },
+    {
+      heading: 'Common Mistakes',
+      content: '<p>❌ Forgetting to state the direction — ✅ Always say clockwise or anticlockwise (unless 180°)</p><p>❌ Rotating about the wrong centre — ✅ Use tracing paper: place your pencil on the centre of rotation, then turn</p>'
+    }
+  ]
+}
+
+});
