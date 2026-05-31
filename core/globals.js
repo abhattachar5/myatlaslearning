@@ -13,7 +13,7 @@ var FLASHCARDS = (typeof FLASHCARDS !== 'undefined' && FLASHCARDS) || [];   // f
 var QUESTIONS  = (typeof QUESTIONS  !== 'undefined' && QUESTIONS)  || {};   // static question banks, keyed by island id
 var LESSONS    = (typeof LESSONS    !== 'undefined' && LESSONS)    || {};   // lesson HTML, keyed by island id
 var DIAGRAMS   = (typeof DIAGRAMS   !== 'undefined' && DIAGRAMS)   || {};   // SVG diagrams, keyed by data-diagram name
-// NOTE: TEST_GENERATORS is declared by core/test-generator.js (which also owns
+// NOTE: TEST_GENERATORS is declared by engine/test-generator.js (which also owns
 // the generation engine). It loads before any generators content file.
 
 // ── Atlas namespace: forward-looking registration API + lifecycle ───────────

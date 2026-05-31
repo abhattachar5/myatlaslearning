@@ -19,8 +19,8 @@ var MANIFEST = (function () {
   function pad2(n) { return (n < 10 ? '0' : '') + n; }
   function tFiles(base, a, b, extra) { var o = []; for (var i = a; i <= b; i++) o.push(base + 't' + pad2(i) + '.js'); return o.concat(extra || []); }
 
-  var engine   = ['core/test-generator.js'];                                // test-only (declares TEST_GENERATORS)
-  var diagrams = ['diagrams/science.js', 'diagrams/math.js', 'diagrams/geography.js', 'diagrams/y7-lessons.js'];
+  var engine   = ['engine/test-generator.js'];                                // test-only (declares TEST_GENERATORS)
+  var diagrams = ['diagrams/science.js', 'diagrams/math.js', 'diagrams/geography.js', 'diagrams/y7-math.js'];
 
   var content = {
 

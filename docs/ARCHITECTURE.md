@@ -16,23 +16,23 @@ atlas2/
 ├── *.html                      pages
 ├── styles.css
 ├── netlify/functions/*.mjs     AI marking etc.
-├── core/                       year-agnostic engine
+├── core/                       the loading FRAMEWORK (year-agnostic, no app logic)
 │   ├── globals.js              declares all shared globals + Atlas.register()
 │   ├── config.js               which years/subjects exist + which are active
 │   ├── manifest.js             the ONE list of content modules (edit to add a year)
-│   ├── loader.js               loads content in order, fires `atlas:ready`
-│   ├── test-generator.js
-│   ├── planner.js
-│   ├── auth-shim.js
-│   └── app.js
+│   └── loader.js               loads content in order, fires `atlas:ready`
+├── engine/                     the APPLICATION logic
+│   ├── app.js                  page controllers, auth, server sync
+│   ├── planner.js              study-plan / Road Ahead
+│   ├── test-generator.js       question generation (loaded only on test/exam pages)
+│   └── auth-shim.js            GoTrue wrapper
 ├── diagrams/                   shared, cross-year SVG registries
-│   ├── math.js  science.js  geography.js
+│   ├── math.js  science.js  geography.js  y7-math.js
 └── content/
-    ├── y7/ … y11/
-    │   └── <subject>/
-    │       ├── topics.js        curriculum: topic tiles + island defs
-    │       ├── islands/*.js     flashcards + questions + lessons
-    │       └── generators/*.js  test generators
+    ├── _TEMPLATE/              canonical layout to copy when adding a year
+    ├── y7/                     legacy layout (see y7/_base/README.md — intentional exception)
+    ├── y8/                     canonical: <subject>/{ topics.js, islands/*.js, generators/*.js }
+    └── y9/ y10/ y11/           README placeholder until built
 ```
 
 ## How loading works (the load contract)
