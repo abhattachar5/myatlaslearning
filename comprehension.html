@@ -737,12 +737,44 @@ function savePassageProgress(passageId, score, total) {
     total: total,
     date: Date.now()
   }));
+  clearDraft(passageId);   // completing the passage consumes any saved draft
   // Persist to the server so comprehension progress survives across devices/years.
   if (typeof syncProgressToServer === 'function') syncProgressToServer();
 }
 function isPassageComplete(passage) {
   var progress = getPassageProgress(passage.id);
   return progress !== null;
+}
+
+// ── Draft autosave (written passages only) ──────────────────────────────────
+// Written comprehension answers are long; losing them on accidental close is
+// painful. We autosave them locally under a SEPARATE key (sm_compdraft_<id>) so
+// completion logic (sm_comp_<id>) is untouched and drafts never sync. A draft is
+// cleared the moment the passage is completed. MCQ passages re-randomise on each
+// open, so they aren't drafted.
+function getDraft(passageId) {
+  try { return JSON.parse(localStorage.getItem('sm_compdraft_' + passageId)) || null; } catch (e) { return null; }
+}
+function saveDraft(passageId, answers) {
+  try { localStorage.setItem('sm_compdraft_' + passageId, JSON.stringify({ answers: answers, updated: Date.now() })); } catch (e) {}
+}
+function clearDraft(passageId) {
+  try { localStorage.removeItem('sm_compdraft_' + passageId); } catch (e) {}
+}
+function isPassageInProgress(passage) {
+  return isWrittenPassage(passage) && !isPassageComplete(passage) && getDraft(passage.id) !== null;
+}
+// Autosave the current written answers (called on every keystroke).
+function autosaveWritten() {
+  if (!expandedPassageId || writtenSubmitted) return;
+  var answers = {};
+  (currentWritten || []).forEach(function (q, i) {
+    var el = document.getElementById('wq-' + i);
+    if (el) answers[i] = el.value;
+  });
+  var hasText = Object.keys(answers).some(function (k) { return (answers[k] || '').trim().length > 0; });
+  if (hasText) saveDraft(expandedPassageId, answers);
+  else clearDraft(expandedPassageId);
 }
 function getScoreClass(score, total) {
   if (score === total) return 'perfect';
@@ -823,6 +855,10 @@ function renderCards() {
       scoreBadgeHtml = '<span class="passage-score-badge ' + sc + '">Last: ' + progress.score + '/' + progress.total + '</span>';
       checkMark = '<span class="passage-complete-check" aria-label="Attempted" title="Last score: ' + progress.score + '/' + progress.total + '">&#10003;</span>';
     }
+    // In-progress badge (saved draft, not yet completed)
+    var inProgressHtml = (!progress && isPassageInProgress(p))
+      ? '<span class="passage-score-badge" style="background:rgba(245,158,11,.15);color:#b45309;border-color:#f59e0b">● In progress</span>'
+      : '';
 
     return '<div class="passage-card" role="listitem" tabindex="0" data-id="' + p.id + '" onclick="openExpanded(\'' + p.id + '\')" onkeydown="cardKeyHandler(event, \'' + p.id + '\')">' +
       '<div class="passage-card-header">' +
@@ -833,7 +869,7 @@ function renderCards() {
       '<div class="passage-card-source">' + escapeHtml(p.source) + '</div>' +
       '<div class="passage-card-footer">' +
         '<span class="passage-q-badge">' + qBadgeText + '</span>' +
-        scoreBadgeHtml +
+        scoreBadgeHtml + inProgressHtml +
       '</div>' +
     '</div>';
   }).join('');
@@ -1104,11 +1140,14 @@ function isWrittenPassage(p) {
 
 function renderWrittenQuestions() {
   var col = document.getElementById('expanded-questions');
+  var draft = getDraft(expandedPassageId);
+  var hasDraft = !!(draft && draft.answers && Object.keys(draft.answers).some(function (k) { return (draft.answers[k] || '').trim().length > 0; }));
   var totalMarks = currentWritten.reduce(function(s, q) { return s + (q.marks || 0); }, 0);
   var html = '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">' +
     '<span style="font-size:.9375rem;font-weight:700;color:var(--text)">Questions</span>' +
     '<span style="font-size:.8125rem;color:var(--text-muted)">' + totalMarks + ' marks total</span></div>' +
-    '<p style="font-size:.8125rem;color:var(--text-muted);margin-bottom:16px">Answer in full sentences, as you would in a GCSE exam. Use evidence from the text. Submit when you are ready for marking.</p>';
+    (hasDraft ? '<div style="background:rgba(245,158,11,.1);border:1px solid #f59e0b;border-radius:8px;padding:8px 12px;margin-bottom:12px;font-size:.8125rem;color:#b45309">↩️ Resumed your saved answers — keep going where you left off.</div>' : '') +
+    '<p style="font-size:.8125rem;color:var(--text-muted);margin-bottom:16px">Answer in full sentences, as you would in a GCSE exam. Use evidence from the text. Your answers are saved automatically. Submit when you are ready for marking.</p>';
 
   currentWritten.forEach(function(q, i) {
     var rows = q.marks >= 6 ? 8 : (q.marks >= 4 ? 5 : 3);
@@ -1116,12 +1155,20 @@ function renderWrittenQuestions() {
       '<span class="comp-marks-badge">' + q.marks + ' mark' + (q.marks !== 1 ? 's' : '') + '</span>' +
       '<span class="comp-skill-badge">' + escapeHtml(q.skill || 'Question') + '</span>' +
       '<div class="comp-question-text">' + (i + 1) + '. ' + escapeHtml(q.q) + '</div>' +
-      '<textarea class="comp-written-area" id="wq-' + i + '" rows="' + rows + '" placeholder="Write your answer here..."></textarea>' +
+      '<textarea class="comp-written-area" id="wq-' + i + '" rows="' + rows + '" placeholder="Write your answer here..." oninput="autosaveWritten()"></textarea>' +
     '</div>';
   });
   html += '<button class="comp-submit-btn" id="submit-btn" onclick="submitWritten()">Submit for Marking</button>' +
     '<button class="comp-model-toggle" style="width:100%;margin-top:10px" onclick="revealAllModels()">Show model answers &amp; mark scheme</button>';
   col.innerHTML = html;
+
+  // Restore any saved draft into the textareas.
+  if (draft && draft.answers) {
+    Object.keys(draft.answers).forEach(function (i) {
+      var el = document.getElementById('wq-' + i);
+      if (el) el.value = draft.answers[i];
+    });
+  }
 }
 
 function gatherWritten() {

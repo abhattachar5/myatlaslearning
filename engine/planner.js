@@ -442,9 +442,12 @@
 
     if (!passage) return null;
 
-    // Check completion
-    var compProgress = null;
+    // Check completion + any saved draft (written passages autosave a draft under
+    // sm_compdraft_<id> while being answered; that key is intentionally separate
+    // from the completion key so completion logic is unchanged).
+    var compProgress = null, compDraft = null;
     try { compProgress = JSON.parse(localStorage.getItem('sm_comp_' + passage.id)) || null; } catch(e) {}
+    try { compDraft = JSON.parse(localStorage.getItem('sm_compdraft_' + passage.id)) || null; } catch(e) {}
 
     return {
       passageId: passage.id,
@@ -452,6 +455,7 @@
       type: passage.type,
       typeLabel: passage.type === 'fiction' ? 'Fiction' : 'Non-Fiction',
       complete: compProgress !== null,
+      inProgress: compProgress === null && compDraft !== null,
       score: compProgress ? compProgress.score : null,
       total: compProgress ? compProgress.total : null
     };

@@ -635,7 +635,7 @@ function renderThisWeekTab() {
         <span class="week-plan-name">${c.title}</span>
         ${c.complete
           ? '<span class="week-plan-done">✓ Done</span>'
-          : '<a href="comprehension.html?id=' + c.passageId + '" class="week-plan-go">Start →</a>'}
+          : '<a href="comprehension.html?id=' + c.passageId + '" class="week-plan-go">' + (c.inProgress ? 'Resume →' : 'Start →') + '</a>'}
       </div>
     </div>`;
   }
@@ -762,7 +762,7 @@ function renderNextWeekPreview(nextData, containerEl) {
         <span class="week-plan-name">${c.title}</span>
         ${c.complete
           ? '<span class="week-plan-done">✓ Done</span>'
-          : '<a href="comprehension.html?id=' + c.passageId + '" class="week-plan-go">Start →</a>'}
+          : '<a href="comprehension.html?id=' + c.passageId + '" class="week-plan-go">' + (c.inProgress ? 'Resume →' : 'Start →') + '</a>'}
       </div>
     </div>`;
   }
