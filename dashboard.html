@@ -200,9 +200,9 @@
           Show this week ▾
         </button>
       </div>
-      <div id="homework-section"></div>
       <div class="goals-body collapsed" id="week-plan-collapsible">
         <div class="goals-divider"></div>
+        <div id="homework-section"></div>
         <div class="week-plan-list" id="week-list"></div>
         <div class="week-plan-footer">
           <button class="btn btn-secondary btn-sm" onclick="StudyPlanner.downloadExport()" title="Export progress"><span aria-hidden="true">💾 </span>Export</button>
@@ -523,9 +523,14 @@ function renderWeekPlan() {
 
   if (!plan) {
     if (hasHomework) {
-      // No study plan yet, but parent-assigned work exists — show the card (homework only).
+      // No study plan yet, but parent-assigned work exists — show the card and
+      // expand it so the homework (the only content) isn't hidden behind the toggle.
       modal.classList.remove('show');
       card.style.display = '';
+      const body = document.getElementById('week-plan-collapsible');
+      const toggle = document.getElementById('goals-toggle');
+      if (body) body.classList.remove('collapsed');
+      if (toggle) { toggle.textContent = 'Hide ▴'; toggle.classList.add('active'); }
       return;
     }
     // No plan and no homework — show setup modal

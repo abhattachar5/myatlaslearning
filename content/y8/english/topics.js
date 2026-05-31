@@ -270,85 +270,10 @@ CURRICULUM.push(
 
 // ══════════════════════════════════════════════════════════════════════
 // TOPIC 4 — READING COMPREHENSION (e8t-04)
+// No islands: Year 8 comprehension is passages-only (40 passages via
+// comprehension.html), consistent with Year 7. The tile routes straight to
+// the passages. (Empty placeholder islands e8i-04-1..4 were removed.)
 // ══════════════════════════════════════════════════════════════════════
-CURRICULUM.push(
-  {
-    id:"e8i-04-1",name:"Inference & Deduction",emoji:"🔎",subject:"English",subjectId:"english",color:"#f59e0b",
-    topicId:"e8t-04",yearGroup:"Year 8",difficulty:1,estimatedHours:2,
-    description:"Make inferences and deductions from complex fiction and non-fiction texts, using evidence to support conclusions.",
-    learningOutcomes:[
-      "Make inferences about character, setting and mood using textual evidence",
-      "Distinguish between explicit information and implied meaning",
-      "Support inferences with precise quotations from the text"
-    ],
-    topics:[
-      "What is inference vs what is stated explicitly",
-      "Inferring character feelings and motivations",
-      "Inferring mood and atmosphere from descriptive language",
-      "Deduction: drawing conclusions from multiple clues",
-      "Supporting inferences with textual evidence",
-      "Inference in non-fiction texts"
-    ],
-    prerequisites:[]
-  },
-  {
-    id:"e8i-04-2",name:"Comparing Texts",emoji:"⚖️",subject:"English",subjectId:"english",color:"#f59e0b",
-    topicId:"e8t-04",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
-    description:"Compare two or more texts on the same topic, examining how purpose, audience, language and structure differ.",
-    learningOutcomes:[
-      "Identify similarities and differences in purpose and audience between texts",
-      "Compare how two writers use language and structure to present the same topic",
-      "Write a structured comparative response using evidence from both texts"
-    ],
-    topics:[
-      "Comparing purpose and audience across texts",
-      "Comparing language choices and tone",
-      "Comparing structural features and organisation",
-      "Same topic, different genre or perspective",
-      "Using connectives for comparison (similarly, whereas, in contrast)",
-      "Writing a comparative paragraph"
-    ],
-    prerequisites:["e8i-04-1"]
-  },
-  {
-    id:"e8i-04-3",name:"Evaluating Arguments & Bias",emoji:"⚔️",subject:"English",subjectId:"english",color:"#f59e0b",
-    topicId:"e8t-04",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
-    description:"Evaluate the strength of arguments in persuasive and informational texts and identify bias, opinion and misleading claims.",
-    learningOutcomes:[
-      "Evaluate whether an argument is well-supported with evidence or relies on assertion",
-      "Identify bias, loaded language and one-sided perspectives in texts",
-      "Distinguish between fact, opinion and misleading statistics"
-    ],
-    topics:[
-      "Identifying claims and supporting evidence",
-      "Evaluating the strength of an argument",
-      "Recognising bias and loaded language",
-      "Distinguishing fact from opinion",
-      "Misleading statistics and cherry-picked evidence",
-      "Writing a critical evaluation of an argument"
-    ],
-    prerequisites:["e8i-04-1"]
-  },
-  {
-    id:"e8i-04-4",name:"Synthesising Information",emoji:"🧩",subject:"English",subjectId:"english",color:"#f59e0b",
-    topicId:"e8t-04",yearGroup:"Year 8",difficulty:2,estimatedHours:2,
-    description:"Synthesise information from multiple sources to build a coherent understanding of a topic.",
-    learningOutcomes:[
-      "Gather key information from two or more sources on the same topic",
-      "Identify where sources agree, disagree or offer complementary information",
-      "Produce a synthesis paragraph that draws on multiple sources"
-    ],
-    topics:[
-      "Reading for key information across multiple sources",
-      "Identifying agreement and disagreement between sources",
-      "Identifying complementary information",
-      "Note-making and summarising from multiple texts",
-      "Writing a synthesis paragraph",
-      "Citing sources in a synthesis response"
-    ],
-    prerequisites:["e8i-04-2","e8i-04-3"]
-  }
-);
 
 // ══════════════════════════════════════════════════════════════════════
 // TOPIC 5 — READING STRATEGIES & ANALYSIS (e8t-05)
