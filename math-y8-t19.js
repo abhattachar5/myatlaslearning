@@ -88,6 +88,7 @@ Gradient = 6 ÷ 3 = <strong>2</strong>.</p>
 <p>If the line slopes <em>downward</em> left to right, count the fall as a negative rise:<br>
 Falls 4, runs 2 → Gradient = −4 ÷ 2 = <strong>−2</strong>.</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-gradient-intercept"></div>
 
 <h3>Gradient from two coordinate points</h3>
 <p>Use the formula with two points (x₁, y₁) and (x₂, y₂):</p>

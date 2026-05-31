@@ -190,7 +190,7 @@ Object.assign(LESSONS, {
   sections: [
     {
       heading: 'Key Circle Vocabulary',
-      content: '<p>Before calculating, make sure you know these terms:</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Radius (r)</strong> — distance from centre to edge</div><div style="background:#e3f2fd;padding:10px;border-radius:8px"><strong>Diameter (d)</strong> — distance across through the centre<br>d = 2r</div></div><p><strong>π (pi)</strong> ≈ 3.14159... It is the ratio of every circle\'s circumference to its diameter. Use π ≈ 3.14 or the π button on your calculator.</p>'
+      content: '<p>Before calculating, make sure you know these terms:</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Radius (r)</strong> — distance from centre to edge</div><div style="background:#e3f2fd;padding:10px;border-radius:8px"><strong>Diameter (d)</strong> — distance across through the centre<br>d = 2r</div></div><p><strong>π (pi)</strong> ≈ 3.14159... It is the ratio of every circle\'s circumference to its diameter. Use π ≈ 3.14 or the π button on your calculator.</p><div class="lesson-diagram" data-diagram="math-circle-parts"></div>'
     },
     {
       heading: 'Circumference',
@@ -234,7 +234,7 @@ Object.assign(LESSONS, {
   sections: [
     {
       heading: 'Pythagoras\' Theorem',
-      content: '<p>For any right-angled triangle with hypotenuse c and shorter sides a and b:</p><p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px;text-align:center;font-size:1.2em"><strong>a² + b² = c²</strong></p><p>To find the hypotenuse: square both shorter sides, add them, then take the square root.</p>'
+      content: '<p>For any right-angled triangle with hypotenuse c and shorter sides a and b:</p><p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px;text-align:center;font-size:1.2em"><strong>a² + b² = c²</strong></p><p>To find the hypotenuse: square both shorter sides, add them, then take the square root.</p><div class="lesson-diagram" data-diagram="math-pythagoras"></div>'
     },
     {
       heading: 'Worked Examples',
@@ -256,7 +256,7 @@ Object.assign(LESSONS, {
   sections: [
     {
       heading: 'Rearranging the Formula',
-      content: '<p>When you know the hypotenuse and one shorter side, rearrange Pythagoras\' theorem:</p><p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px;text-align:center;font-size:1.1em"><strong>a² = c² − b²</strong> &nbsp; or &nbsp; <strong>b² = c² − a²</strong></p><p>This time you <strong>subtract</strong> the square of the known shorter side from the square of the hypotenuse.</p>'
+      content: '<p>When you know the hypotenuse and one shorter side, rearrange Pythagoras\' theorem:</p><p style="background:#e8f5e9;padding:0.5em 1em;border-radius:6px;text-align:center;font-size:1.1em"><strong>a² = c² − b²</strong> &nbsp; or &nbsp; <strong>b² = c² − a²</strong></p><p>This time you <strong>subtract</strong> the square of the known shorter side from the square of the hypotenuse.</p><div class="lesson-diagram" data-diagram="math-pythagoras"></div>'
     },
     {
       heading: 'Worked Examples',

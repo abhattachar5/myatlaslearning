@@ -134,6 +134,7 @@ Object.assign(LESSONS, {
   <tr><td style="padding:8px;border:1px solid #ccc">Straight</td><td style="padding:8px;border:1px solid #ccc">Exactly 180°</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Reflex</td><td style="padding:8px;border:1px solid #ccc">180° &lt; angle &lt; 360°</td></tr>
 </table>
+<div class="lesson-diagram" data-diagram="math-angle-types"></div>
 
 <h3>Classifying triangles</h3>
 <p><strong>By sides:</strong> equilateral (all sides equal), isosceles (2 sides equal), scalene (no sides equal).<br>
@@ -185,6 +186,7 @@ Object.assign(LESSONS, {
 <p>Sum = (5 − 2) × 180° = 540°.<br>
 Each angle = 540° ÷ 5 = <strong>108°</strong>.</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-polygon-angles"></div>
 
 <h3>Exterior Angle Theorem</h3>
 <p>The exterior angle of a triangle equals the sum of the two <em>non-adjacent</em> (remote) interior angles.</p>
@@ -220,6 +222,7 @@ Check: third interior angle = 180° − 113° = 67°; then 52° + 61° + 67° = 
   <tr><td style="padding:8px;border:1px solid #ccc">Corresponding angles</td><td style="padding:8px;border:1px solid #ccc">F-shape</td><td style="padding:8px;border:1px solid #ccc">Equal</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Co-interior angles</td><td style="padding:8px;border:1px solid #ccc">C- or U-shape</td><td style="padding:8px;border:1px solid #ccc">Sum to 180°</td></tr>
 </table>
+<div class="lesson-diagram" data-diagram="math-parallel-transversal"></div>
 
 <h3>Alternate angles (Z-shape)</h3>
 <p>Alternate angles lie <em>between</em> the parallel lines on <em>opposite</em> sides of the transversal.</p>
@@ -284,6 +287,7 @@ On a straight line: 180° − 115° = 65°.<br>
 Vertically opposite: also 65°.<br>
 Angles: 115°, 65°, 115°, 65°. Sum = 360° ✓</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-vertically-opposite"></div>
 
 <h3>Parts of a circle</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">
@@ -296,6 +300,7 @@ Angles: 115°, 65°, 115°, 65°. Sum = 360° ✓</p>
   <tr><td style="padding:8px;border:1px solid #ccc">Sector</td><td style="padding:8px;border:1px solid #ccc">Pie-slice region bounded by two radii and an arc</td></tr>
   <tr><td style="padding:8px;border:1px solid #ccc">Tangent</td><td style="padding:8px;border:1px solid #ccc">A line touching the circle at exactly one point</td></tr>
 </table>
+<div class="lesson-diagram" data-diagram="math-circle-parts"></div>
 
 <h3>📖 Key Vocabulary</h3>
 <dl>
@@ -325,6 +330,7 @@ Angles: 115°, 65°, 115°, 65°. Sum = 360° ✓</p>
 3. Keep the same radius; draw arcs from B.<br>
 4. Join the two crossing points — this is the perpendicular bisector.</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-perp-bisector"></div>
 
 <h3>Angle bisector</h3>
 <p>An angle bisector divides an angle into <strong>two equal halves</strong>.</p>
@@ -334,6 +340,7 @@ Angles: 115°, 65°, 115°, 65°. Sum = 360° ✓</p>
 2. From each intersection point, draw equal-radius arcs that cross inside the angle.<br>
 3. Draw a ray from the vertex through the new crossing point.</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-angle-bisector"></div>
 
 <h3>Equilateral triangle</h3>
 <div class="example-box">
@@ -343,6 +350,7 @@ Angles: 115°, 65°, 115°, 65°. Sum = 360° ✓</p>
 3. Same radius from B — cross the arc at C.<br>
 4. Join AC and BC. All three sides = AB, so all angles = 60°.</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-equilateral-construction"></div>
 
 <h3>Regular hexagon in a circle</h3>
 <p>A regular hexagon fits exactly inside a circle of radius r, with each side also equal to r.</p>
@@ -352,6 +360,7 @@ Angles: 115°, 65°, 115°, 65°. Sum = 360° ✓</p>
 2. Starting anywhere on the circle, mark off chords of length r six times around the circumference.<br>
 3. Join the six points to form the hexagon.</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-hexagon-construction"></div>
 
 <h3>📖 Key Vocabulary</h3>
 <dl>

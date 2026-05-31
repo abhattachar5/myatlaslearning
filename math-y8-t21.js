@@ -84,6 +84,7 @@ Check: 5 + 5 − 8 = 2 ✓</p>
 <p>A cube has 6 square faces. Its net contains exactly 6 squares joined edge-to-edge. There are 11 distinct valid nets of a cube — the most common is the cross or T-shape.<br>
 Invalid nets include a straight row of 6 squares (opposite faces overlap when folded).</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-net-cuboid"></div>
 <div class="example-box">
 <p><strong>Example:</strong> Net of a triangular prism.</p>
 <p>A triangular prism has 2 triangular faces and 3 rectangular faces. Its net shows: 2 triangles (the bases) and 3 rectangles (the lateral faces) arranged so that folding brings the triangles to the ends.</p>
@@ -124,6 +125,7 @@ Invalid nets include a straight row of 6 squares (opposite faces overlap when fo
   <tr><td style="padding:8px;border:1px solid #ccc">Top view (plan view)</td><td style="padding:8px;border:1px solid #ccc">Straight down from above</td><td style="padding:8px;border:1px solid #ccc">Width &amp; Depth</td></tr>
 </table>
 <p>Together, these three views capture all three dimensions and fully describe the shape.</p>
+<div class="lesson-diagram" data-diagram="math-plan-elevation"></div>
 
 <h3>Views of common solids</h3>
 <div class="example-box">

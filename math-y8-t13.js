@@ -67,6 +67,7 @@ Object.assign(LESSONS, {
   <tr><td style="padding:8px;border:1px solid #ccc">IV</td><td style="padding:8px;border:1px solid #ccc">Bottom-right</td><td style="padding:8px;border:1px solid #ccc">(+, −)</td><td style="padding:8px;border:1px solid #ccc">(7, −3)</td></tr>
 </table>
 <p>Points that lie exactly on an axis are <strong>not</strong> in any quadrant. A point with x = 0 is on the y-axis; a point with y = 0 is on the x-axis.</p>
+<div class="lesson-diagram" data-diagram="math-quadrants"></div>
 
 <h3>How to plot a point</h3>
 <div class="example-box">

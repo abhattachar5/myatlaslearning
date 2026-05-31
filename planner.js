@@ -101,11 +101,12 @@
         sorted = sorted.slice().sort(function (a, b) {
           return ((a && a.planOrder != null ? a.planOrder : 999)) - ((b && b.planOrder != null ? b.planOrder : 999));
         });
-      } else if (sid === 'geography') {
-        // Follow the curriculum's topic sequence (e.g. Discovering Geography →
-        // Geographical Skills → …) rather than the raw prerequisite topo order, which
-        // otherwise surfaces the heavily-depended-on "Map Skills" unit first. This is
-        // prerequisite-safe: every geography prerequisite points to an earlier topic.
+      } else if (sid === 'geography' || (sid === 'math' && year === 'Year 8')) {
+        // Follow the curriculum's TOPIC sequence (the tile order) rather than the raw
+        // prerequisite topo order. For geography this stops "Map Skills" leading; for
+        // Year 8 maths it keeps tiles in their intended order (e.g. Rounding right after
+        // Decimals, Trigonometry right after Pythagoras). Prerequisite-safe: no topic's
+        // prerequisite points to a later topic.
         var topicPos = {};
         getAllTopics().forEach(function (t, idx) { if (topicPos[t.id] === undefined) topicPos[t.id] = idx; });
         sorted = sorted.slice().sort(function (a, b) {

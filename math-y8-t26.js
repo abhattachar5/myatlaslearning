@@ -68,6 +68,7 @@ Object.assign(LESSONS, {
 4. Use the straightedge to draw the line through P and Q.<br>
 The line PQ is the perpendicular bisector. It passes through the midpoint of AB and is at 90° to AB.</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-perp-bisector"></div>
 <p><strong>Why it works:</strong> P and Q were found using equal compass radii from both A and B, so AP = BP and AQ = BQ. Any point equidistant from A and B lies on the perpendicular bisector.</p>
 
 <h3>Angle Bisector</h3>
@@ -79,6 +80,7 @@ The line PQ is the perpendicular bisector. It passes through the midpoint of AB 
 3. Keep the same radius, move to <strong>Q</strong>, and draw another arc — it crosses the previous arc at point R.<br>
 4. Draw the ray from B through R. This is the angle bisector.</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-angle-bisector"></div>
 <p><strong>Why it works:</strong> BP = BQ (equal radii from B in step 1) and PR = QR (equal radii from P and Q in steps 2–3). So R is equidistant from both arms, placing it on the bisector.</p>
 
 <h3>Perpendicular to a Line at a Point on the Line</h3>
@@ -122,6 +124,7 @@ The line PQ is the perpendicular bisector. It passes through the midpoint of AB 
 5. Use the straightedge to draw lines <strong>AC</strong> and <strong>BC</strong>.<br>
 Triangle ABC is equilateral: AC = AB (radius from A) and BC = AB (radius from B), so all three sides are equal.</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-equilateral-construction"></div>
 <p><strong>Why all angles are 60°:</strong> Since AC = AB = BC, the triangle is equilateral. In any equilateral triangle the three angles must be equal and sum to 180°, giving 60° each.</p>
 
 <h3>Constructing a Regular Hexagon Inscribed in a Circle</h3>
@@ -137,6 +140,7 @@ Triangle ABC is equilateral: AC = AB (radius from A) and BC = AB (radius from B)
 7. Join consecutive points: AB, BC, CD, DE, EF, FA with straight lines.<br>
 The result is a regular hexagon inscribed in the circle.</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-hexagon-construction"></div>
 <p><strong>Why it works:</strong> Each chord AB, BC, … was drawn with radius r — the same as the circle's radius. Each chord is therefore equal to r, and the six equal chords divide the circle into six equal arcs, creating a regular hexagon.</p>
 
 <h3>Linking Hexagon and Triangle</h3>

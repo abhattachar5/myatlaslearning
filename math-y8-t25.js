@@ -81,6 +81,7 @@ Object.assign(LESSONS, {
 
 <h3>Identifying the hypotenuse</h3>
 <p>Before you use the theorem, you must correctly identify the hypotenuse. It is always the <strong>longest side</strong>, and it is always <strong>opposite the right angle</strong>. It is never one of the two sides that meet at the right angle.</p>
+<div class="lesson-diagram" data-diagram="math-pythagoras"></div>
 
 <h3>Using the theorem to find the hypotenuse</h3>
 <p>When you know both legs, square them, add the results, then take the square root to find c.</p>

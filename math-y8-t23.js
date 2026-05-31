@@ -96,6 +96,7 @@ A(2, 3) → A′(2, −3)<br>
 B(5, 3) → B′(5, −3)<br>
 C(5, 7) → C′(5, −7)</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-reflection"></div>
 
 <h3>Translations</h3>
 <p>A translation slides every point of a shape by the same vector <strong>(a, b)</strong> — <em>a</em> units horizontally and <em>b</em> units vertically.</p>
@@ -109,6 +110,7 @@ x: −1 + 6 = 5<br>
 y: 4 + (−3) = 1<br>
 P′ = (5, 1)</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-translation"></div>
 
 <h3>📖 Key Vocabulary</h3>
 <dl>
@@ -145,6 +147,7 @@ P(1, 0) → P′(0, 1)<br>
 Q(4, 0) → Q′(0, 4)<br>
 R(4, 3) → R′(−3, 4)</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-rotation"></div>
 
 <div class="example-box">
 <p><strong>Example:</strong> Rotate point S(−3, 5) by 180° about the origin.</p>
@@ -187,6 +190,7 @@ A(1, 2) → A′(3, 6)<br>
 B(3, 2) → B′(9, 6)<br>
 C(1, 5) → C′(3, 15)</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-enlargement"></div>
 
 <div class="example-box">
 <p><strong>Example (reduction):</strong> Dilate point P(8, 4) by scale factor ¼ from the origin.</p>

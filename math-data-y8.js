@@ -8,6 +8,8 @@ const MATH_TOPICS_Y8 = [
    description:"Identify factors and primes, find HCF and LCM using prime factorisation, convert between ordinary numbers and standard form, and classify numbers."},
   {id:"m8t-02",name:"Decimals & Operations",emoji:"🔟",hasContent:true,
    description:"Compare, order and round decimals, add, subtract, multiply and divide decimals, estimate answers, and evaluate expressions involving decimals."},
+  {id:"m8t-29",name:"Rounding & Accuracy",emoji:"🎯",hasContent:true,
+   description:"Round to decimal places and significant figures, estimate answers, and find upper and lower bounds and error intervals using inequality notation."},
   {id:"m8t-03",name:"Fractions & Mixed Numbers",emoji:"½",hasContent:true,
    description:"Simplify, compare and order fractions, convert between fractions, decimals and mixed numbers, and add and subtract fractions and mixed numbers."},
   {id:"m8t-04",name:"Multiply & Divide Fractions",emoji:"✕",hasContent:true,
@@ -54,6 +56,8 @@ const MATH_TOPICS_Y8 = [
    description:"Identify congruent and similar figures, use congruence and similarity statements, find missing measurements, and apply indirect measurement."},
   {id:"m8t-25",name:"Pythagoras' Theorem",emoji:"📏",hasContent:true,
    description:"Use Pythagoras' theorem to find missing side lengths, calculate perimeters of right triangles, solve word problems, and apply the converse."},
+  {id:"m8t-30",name:"Trigonometry",emoji:"📐",hasContent:true,
+   description:"Label the sides of a right-angled triangle and use the sine, cosine and tangent ratios (SOH CAH TOA) to find missing sides and angles."},
   {id:"m8t-26",name:"Constructions",emoji:"🔧",hasContent:true,
    description:"Construct perpendicular bisectors, angle bisectors, perpendicular lines, and equilateral triangles and regular hexagons using compass and straightedge."},
   {id:"m8t-27",name:"Data & Statistics",emoji:"📊",hasContent:true,
@@ -126,6 +130,23 @@ CURRICULUM.push(
    learningOutcomes:["Evaluate multi-step decimal expressions","Solve decimal word problems involving multiple operations","Use decimal distances on maps"],
    prerequisites:["m8i-02-2","m8i-02-3"],
    topics:["Multi-step expressions","Decimal inequalities","Map distances","Mixed operation word problems"]},
+
+  // ══════════════════════════════════════════════════════════════════════
+  // TOPIC 29 — ROUNDING & ACCURACY (m8t-29) — placed after Decimals
+  // ══════════════════════════════════════════════════════════════════════
+  {id:"m8i-29-1",subject:"Mathematics",subjectId:"math",topicId:"m8t-29",yearGroup:"Year 8",
+   name:"Rounding & Significant Figures",emoji:"🎯",difficulty:1,estimatedHours:2,color:"#3b82f6",
+   description:"Round numbers to a given number of decimal places and significant figures, and use rounding to estimate answers.",
+   learningOutcomes:["Round numbers to a given number of decimal places","Round numbers to a given number of significant figures","Use rounding to estimate the answer to a calculation"],
+   prerequisites:["m8i-02-1"],
+   topics:["Rounding to decimal places","Significant figures","Estimating calculations","Checking answers by estimation"]},
+
+  {id:"m8i-29-2",subject:"Mathematics",subjectId:"math",topicId:"m8t-29",yearGroup:"Year 8",
+   name:"Upper & Lower Bounds",emoji:"📐",difficulty:2,estimatedHours:2,color:"#3b82f6",
+   description:"Find the upper and lower bounds of a rounded measurement and write error intervals using inequality notation.",
+   learningOutcomes:["Find the upper and lower bound of a rounded value","Write an error interval using inequality notation","Solve simple problems involving bounds"],
+   prerequisites:["m8i-29-1"],
+   topics:["Upper bound","Lower bound","Error intervals","Inequality notation","Rounded measurements"]},
 
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 3 — FRACTIONS & MIXED NUMBERS (m8t-03)
@@ -764,6 +785,23 @@ CURRICULUM.push(
    topics:["Word problems","Ladders and buildings","Distance problems","Converse of Pythagoras' theorem","Is it a right triangle?"]},
 
   // ══════════════════════════════════════════════════════════════════════
+  // TOPIC 30 — TRIGONOMETRY (m8t-30) — placed after Pythagoras
+  // ══════════════════════════════════════════════════════════════════════
+  {id:"m8i-30-1",subject:"Mathematics",subjectId:"math",topicId:"m8t-30",yearGroup:"Year 8",
+   name:"Trig Ratios & Finding Sides",emoji:"📐",difficulty:2,estimatedHours:2,color:"#3b82f6",
+   description:"Label the opposite, adjacent and hypotenuse, and use sin, cos and tan to find a missing side in a right-angled triangle.",
+   learningOutcomes:["Label the opposite, adjacent and hypotenuse relative to an angle","Choose the correct ratio using SOH CAH TOA","Calculate a missing side length using sin, cos or tan"],
+   prerequisites:["m8i-25-1"],
+   topics:["Opposite, adjacent, hypotenuse","SOH CAH TOA","Finding a side with sin","Finding a side with cos and tan"]},
+
+  {id:"m8i-30-2",subject:"Mathematics",subjectId:"math",topicId:"m8t-30",yearGroup:"Year 8",
+   name:"Finding Angles with Trigonometry",emoji:"🔺",difficulty:3,estimatedHours:2,color:"#3b82f6",
+   description:"Use inverse trigonometric functions to find a missing angle in a right-angled triangle and solve real-world problems.",
+   learningOutcomes:["Use inverse sin, cos and tan to find a missing angle","Choose the correct ratio from two known sides","Solve real-world problems involving angles of elevation and depression"],
+   prerequisites:["m8i-30-1"],
+   topics:["Inverse trig functions","Finding an angle","Angles of elevation and depression","Real-world trig problems"]},
+
+  // ══════════════════════════════════════════════════════════════════════
   // TOPIC 26 — CONSTRUCTIONS (m8t-26) — standalone topic
   // ══════════════════════════════════════════════════════════════════════
   {id:"m8i-26-1",subject:"Mathematics",subjectId:"math",topicId:"m8t-26",yearGroup:"Year 8",
@@ -833,6 +871,65 @@ CURRICULUM.push(
    description:"List sample spaces for compound events, find the number of outcomes, and calculate compound probabilities.",
    learningOutcomes:["List all outcomes in a sample space","Find the total number of outcomes for compound events","Calculate the probability of compound events"],
    prerequisites:["m8i-28-1"],
-   topics:["Sample spaces","Counting outcomes","Compound event probability","Tree diagrams","Word problems"]}
+   topics:["Sample spaces","Counting outcomes","Compound event probability","Tree diagrams","Word problems"]},
+
+  // ══════════════════════════════════════════════════════════════════════
+  // YEAR 8 EXPANSION — islands appended to existing topics (GCSE foundation)
+  // ══════════════════════════════════════════════════════════════════════
+  {id:"m8i-03-5",subject:"Mathematics",subjectId:"math",topicId:"m8t-03",yearGroup:"Year 8",
+   name:"Recurring Decimals as Fractions",emoji:"🔁",difficulty:3,estimatedHours:2,color:"#3b82f6",
+   description:"Recognise terminating and recurring decimals and convert recurring decimals into fractions using an algebraic method.",
+   learningOutcomes:["Distinguish terminating from recurring decimals","Convert a recurring decimal to a fraction using the algebraic method","Convert a fraction to a recurring decimal"],
+   prerequisites:["m8i-03-2"],
+   topics:["Terminating vs recurring decimals","Dot notation","Algebraic conversion method","Fraction to recurring decimal"]},
+
+  {id:"m8i-08-6",subject:"Mathematics",subjectId:"math",topicId:"m8t-08",yearGroup:"Year 8",
+   name:"Inverse Proportion",emoji:"⚖️",difficulty:3,estimatedHours:2,color:"#3b82f6",
+   description:"Recognise inverse proportion from tables and graphs, write y = k/x equations, and solve inverse proportion problems.",
+   learningOutcomes:["Recognise inverse proportion from a table or graph","Write and use an equation of the form y = k/x","Solve inverse proportion word problems"],
+   prerequisites:["m8i-08-1"],
+   topics:["Recognising inverse proportion","Constant of proportionality","y = k/x equations","Inverse proportion word problems"]},
+
+  {id:"m8i-15-5",subject:"Mathematics",subjectId:"math",topicId:"m8t-15",yearGroup:"Year 8",
+   name:"Substitution into Formulae",emoji:"🔧",difficulty:2,estimatedHours:2,color:"#3b82f6",
+   description:"Substitute numerical values, including negatives, into algebraic expressions and standard formulae.",
+   learningOutcomes:["Substitute positive and negative values into expressions","Apply BIDMAS correctly when substituting","Substitute into standard scientific and geometric formulae"],
+   prerequisites:["m8i-15-1"],
+   topics:["Substituting positive values","Substituting negative values","BIDMAS with substitution","Using formulae (e.g. area, speed)"]},
+
+  {id:"m8i-16-5",subject:"Mathematics",subjectId:"math",topicId:"m8t-16",yearGroup:"Year 8",
+   name:"Equations with Fractions & Decimals",emoji:"⚖️",difficulty:3,estimatedHours:2,color:"#3b82f6",
+   description:"Solve linear equations that contain fractional or decimal coefficients by clearing fractions first.",
+   learningOutcomes:["Solve equations with a fractional coefficient","Clear fractions by multiplying through","Solve equations involving decimals"],
+   prerequisites:["m8i-16-1"],
+   topics:["Fractional coefficients","Multiplying through to clear fractions","Decimal coefficients","Word problems"]},
+
+  {id:"m8i-19-4",subject:"Mathematics",subjectId:"math",topicId:"m8t-19",yearGroup:"Year 8",
+   name:"Parallel Lines & Midpoints",emoji:"📏",difficulty:2,estimatedHours:2,color:"#3b82f6",
+   description:"Identify parallel lines from their gradients, find the midpoint of a line segment, and write the equation of a parallel line.",
+   learningOutcomes:["Identify parallel lines from their equations (equal gradients)","Find the midpoint of a line segment","Write the equation of a line parallel to a given line"],
+   prerequisites:["m8i-19-1"],
+   topics:["Gradients of parallel lines","Midpoint of a segment","Equation of a parallel line","y = mx + c review"]},
+
+  {id:"m8i-23-4",subject:"Mathematics",subjectId:"math",topicId:"m8t-23",yearGroup:"Year 8",
+   name:"Column Vectors & Describing Transformations",emoji:"➡️",difficulty:2,estimatedHours:2,color:"#3b82f6",
+   description:"Use column vector notation to describe translations and give full descriptions of transformations on the coordinate plane.",
+   learningOutcomes:["Describe a translation using a column vector","Give a full description of a transformation (type, centre, scale factor, line)","Carry out a sequence of two transformations"],
+   prerequisites:["m8i-23-1"],
+   topics:["Column vector notation","Translations as vectors","Fully describing transformations","Combining transformations"]},
+
+  {id:"m8i-27-5",subject:"Mathematics",subjectId:"math",topicId:"m8t-27",yearGroup:"Year 8",
+   name:"Grouped Frequency & Estimated Mean",emoji:"📋",difficulty:2,estimatedHours:2,color:"#3b82f6",
+   description:"Construct grouped frequency tables, identify the modal class and the class containing the median, and estimate the mean using midpoints.",
+   learningOutcomes:["Construct a grouped frequency table from raw data","Identify the modal class and the class containing the median","Estimate the mean of grouped data using midpoints"],
+   prerequisites:["m8i-27-3"],
+   topics:["Grouped frequency tables","Modal class","Class containing the median","Estimating the mean with midpoints"]},
+
+  {id:"m8i-28-4",subject:"Mathematics",subjectId:"math",topicId:"m8t-28",yearGroup:"Year 8",
+   name:"Venn Diagrams & Two-Way Tables",emoji:"⭕",difficulty:2,estimatedHours:2,color:"#3b82f6",
+   description:"Complete and interpret Venn diagrams and two-way tables, and use them to calculate probabilities.",
+   learningOutcomes:["Complete and interpret a Venn diagram","Complete and interpret a two-way table","Calculate probabilities from Venn diagrams and two-way tables"],
+   prerequisites:["m8i-28-1"],
+   topics:["Venn diagrams","Set notation basics","Two-way tables","Probability from diagrams","Union and intersection"]}
 
 ); // end CURRICULUM.push

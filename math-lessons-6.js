@@ -132,7 +132,7 @@ Object.assign(LESSONS, {
   sections: [
     {
       heading: 'Angle Sum Rules',
-      content: '<p>These rules are essential for finding missing angles — learn them so well you never have to look them up.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:12px;border-radius:8px;text-align:center"><strong style="font-size:1.1em;color:#2e7d32">Triangle</strong><br><span style="font-size:1.5em;font-weight:bold;color:#2e7d32">180°</span><br><span style="font-size:0.85em;color:#555">Always — no exceptions</span></div><div style="background:#e3f2fd;padding:12px;border-radius:8px;text-align:center"><strong style="font-size:1.1em;color:#1565c0">Quadrilateral</strong><br><span style="font-size:1.5em;font-weight:bold;color:#1565c0">360°</span><br><span style="font-size:0.85em;color:#555">Any 4-sided shape</span></div></div><p><strong>General polygon formula:</strong> Interior angle sum = (n − 2) × 180°, where n = number of sides.<br>Pentagon (n=5): (5−2) × 180° = 540°. Each interior angle of a <em>regular</em> pentagon = 540° ÷ 5 = <strong>108°</strong></p>'
+      content: '<p>These rules are essential for finding missing angles — learn them so well you never have to look them up.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0.75em 0"><div style="background:#e8f5e9;padding:12px;border-radius:8px;text-align:center"><strong style="font-size:1.1em;color:#2e7d32">Triangle</strong><br><span style="font-size:1.5em;font-weight:bold;color:#2e7d32">180°</span><br><span style="font-size:0.85em;color:#555">Always — no exceptions</span></div><div style="background:#e3f2fd;padding:12px;border-radius:8px;text-align:center"><strong style="font-size:1.1em;color:#1565c0">Quadrilateral</strong><br><span style="font-size:1.5em;font-weight:bold;color:#1565c0">360°</span><br><span style="font-size:0.85em;color:#555">Any 4-sided shape</span></div></div><p><strong>General polygon formula:</strong> Interior angle sum = (n − 2) × 180°, where n = number of sides.<br>Pentagon (n=5): (5−2) × 180° = 540°. Each interior angle of a <em>regular</em> pentagon = 540° ÷ 5 = <strong>108°</strong></p><div class="lesson-diagram" data-diagram="math-polygon-angles"></div>'
     },
     {
       heading: 'Finding Missing Angles',
@@ -169,7 +169,7 @@ Object.assign(LESSONS, {
   sections: [
     {
       heading: 'Vertical & Supplementary Angles',
-      content: '<p>When two straight lines cross, they form two pairs of <strong>vertically opposite angles</strong>. Each pair is equal.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Vertically opposite:</strong> angles across from each other = equal<br><strong>Supplementary:</strong> angles next to each other on a straight line = 180°<br><br>If one angle = 65°, then:<br>Vertically opposite = 65°<br>Adjacent = 180° − 65° = 115°</div>'
+      content: '<p>When two straight lines cross, they form two pairs of <strong>vertically opposite angles</strong>. Each pair is equal.</p><div style="background:#e3f2fd;padding:1em;border-radius:8px;margin:0.75em 0"><strong>Vertically opposite:</strong> angles across from each other = equal<br><strong>Supplementary:</strong> angles next to each other on a straight line = 180°<br><br>If one angle = 65°, then:<br>Vertically opposite = 65°<br>Adjacent = 180° − 65° = 115°</div><div class="lesson-diagram" data-diagram="math-vertically-opposite"></div>'
     },
     {
       heading: 'Lines, Segments & Rays',
@@ -181,7 +181,7 @@ Object.assign(LESSONS, {
     },
     {
       heading: 'Parts of a Circle',
-      content: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Radius</strong> — centre to edge<br><strong>Diameter</strong> — edge to edge through centre (= 2r)<br><strong>Chord</strong> — line joining two points on the edge</div><div style="background:#fff3e0;padding:10px;border-radius:8px"><strong>Arc</strong> — part of the circumference<br><strong>Sector</strong> — "pizza slice" (2 radii + arc)<br><strong>Tangent</strong> — touches circle at exactly one point</div></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Central angle:</strong> An angle at the centre of a circle. A 90° central angle = ¼ of the circle (90/360).</div>'
+      content: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px"><strong>Radius</strong> — centre to edge<br><strong>Diameter</strong> — edge to edge through centre (= 2r)<br><strong>Chord</strong> — line joining two points on the edge</div><div style="background:#fff3e0;padding:10px;border-radius:8px"><strong>Arc</strong> — part of the circumference<br><strong>Sector</strong> — "pizza slice" (2 radii + arc)<br><strong>Tangent</strong> — touches circle at exactly one point</div></div><div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:0.5em 0"><strong>Central angle:</strong> An angle at the centre of a circle. A 90° central angle = ¼ of the circle (90/360).</div><div class="lesson-diagram" data-diagram="math-circle-parts"></div>'
     }
   ]
 },
@@ -267,7 +267,7 @@ Object.assign(LESSONS, {
   sections: [
     {
       heading: 'What is a Rotation?',
-      content: '<p>A <strong>rotation</strong> turns a shape around a fixed point called the <strong>centre of rotation</strong>. To describe a rotation you must give three things:</p><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px;text-align:center"><strong>Centre</strong><br>The fixed point</div><div style="background:#e3f2fd;padding:10px;border-radius:8px;text-align:center"><strong>Angle</strong><br>90°, 180° or 270°</div><div style="background:#fff3e0;padding:10px;border-radius:8px;text-align:center"><strong>Direction</strong><br>Clockwise (CW) or<br>anticlockwise (ACW)</div></div>'
+      content: '<p>A <strong>rotation</strong> turns a shape around a fixed point called the <strong>centre of rotation</strong>. To describe a rotation you must give three things:</p><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0.75em 0"><div style="background:#e8f5e9;padding:10px;border-radius:8px;text-align:center"><strong>Centre</strong><br>The fixed point</div><div style="background:#e3f2fd;padding:10px;border-radius:8px;text-align:center"><strong>Angle</strong><br>90°, 180° or 270°</div><div style="background:#fff3e0;padding:10px;border-radius:8px;text-align:center"><strong>Direction</strong><br>Clockwise (CW) or<br>anticlockwise (ACW)</div></div><div class="lesson-diagram" data-diagram="math-rotation"></div>'
     },
     {
       heading: 'Key Rotations',

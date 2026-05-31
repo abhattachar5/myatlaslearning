@@ -145,6 +145,7 @@ Area = 8 × 5 = <strong>40 cm²</strong></p>
 <p><strong>Example:</strong> a = 5 cm, b = 11 cm, h = 4 cm<br>
 Area = ½ × (5 + 11) × 4 = ½ × 16 × 4 = ½ × 64 = <strong>32 cm²</strong></p>
 </div>
+<div class="lesson-diagram" data-diagram="math-area-quad"></div>
 
 <h3>Rhombuses</h3>
 <p>The diagonals of a rhombus bisect each other at right angles, creating four right-angled triangles inside.</p>
@@ -179,6 +180,7 @@ Area = ½ × 8 × 6 = <strong>24 cm²</strong></p>
 <strong>Diameter (d)</strong> — right across through the centre. d = 2r.<br>
 <strong>Circumference (C)</strong> — the perimeter, the distance around the outside.<br>
 <strong>π (pi)</strong> ≈ 3.142 — the ratio of circumference to diameter for ANY circle.</p>
+<div class="lesson-diagram" data-diagram="math-circle-parts"></div>
 
 <h3>Circumference</h3>
 <div class="example-box">
@@ -296,6 +298,7 @@ V = 10 × 9 = <strong>90 cm³</strong></p>
 <p><strong>Example:</strong> r = 3 cm, h = 10 cm<br>
 V = 3.142 × 3² × 10 = 3.142 × 9 × 10 = <strong>282.78 cm³</strong></p>
 </div>
+<div class="lesson-diagram" data-diagram="math-prism-cylinder"></div>
 
 <h3>Finding a missing dimension</h3>
 <div class="example-box">
@@ -331,6 +334,7 @@ h = 168 ÷ 28 = <strong>6 cm</strong></p>
 <p><strong>Example:</strong> l = 5 cm, w = 3 cm, h = 2 cm<br>
 SA = 2(5×3 + 5×2 + 3×2) = 2(15 + 10 + 6) = 2 × 31 = <strong>62 cm²</strong></p>
 </div>
+<div class="lesson-diagram" data-diagram="math-net-cuboid"></div>
 
 <h3>Surface area of a cylinder</h3>
 <p>A cylinder has one curved face and two circular ends.</p>

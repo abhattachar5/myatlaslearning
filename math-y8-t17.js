@@ -105,6 +105,7 @@ Any value to the right of 3 is a solution: 4, 5, 3.1, 100 …</p>
 <p>Closed circle at −1 (−1 is included), arrow pointing left.<br>
 Solutions: −1, −2, −5, −100 …</p>
 </div>
+<div class="lesson-diagram" data-diagram="math-inequality-line"></div>
 
 <h3>Writing inequalities from words</h3>
 <p>Look out for key phrases:</p>

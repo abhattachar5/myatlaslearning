@@ -135,6 +135,7 @@ Every side of △DEF is 1.6 times the corresponding side of △ABC.</p>
 <p>Scale factor = PQ ÷ AB = 9 ÷ 6 = 1.5<br>
 QR = BC × 1.5 = 8 × 1.5 = <strong>12 cm</strong></p>
 </div>
+<div class="lesson-diagram" data-diagram="math-similar-triangles"></div>
 
 <h3>Similarity statements</h3>
 <p>The symbol for similarity is <strong>∼</strong>. As with congruence, the order of letters gives the correspondence. △ABC ∼ △DEF means ∠A = ∠D, ∠B = ∠E, ∠C = ∠F and all corresponding sides share the same ratio.</p>
