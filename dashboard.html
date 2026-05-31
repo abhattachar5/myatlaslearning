@@ -433,10 +433,10 @@ function setWelcome() {
     const weekNum = StudyPlanner.getCurrentWeekNumber();
     const data = StudyPlanner.getWeekChecklist(weekNum);
     if (data) {
-      const remaining = data.totalItems - data.doneItems;
-      subEl.textContent = data.allDone
+      const t = weekTaskTotals(data);
+      subEl.textContent = t.allDone
         ? `Week ${weekNum} complete — nice work! 🎉`
-        : `You have ${remaining} task${remaining !== 1 ? 's' : ''} remaining this week.`;
+        : `You have ${t.remaining} task${t.remaining !== 1 ? 's' : ''} remaining this week.`;
       return;
     }
   }
@@ -557,6 +557,18 @@ function assignmentLink(a) {
   return 'exam.html?aid=' + encodeURIComponent(a.id);
 }
 
+// Whole-week task totals INCLUDING parent-assigned homework/exams. The planner's
+// data.allDone / totalItems only cover lessons + comprehension; homework is a
+// dashboard-level concept, so fold it in here and use this everywhere a "is the
+// week done?" / "how many left?" decision is made, so they all agree.
+function weekTaskTotals(data) {
+  const a = (typeof getAssignments === 'function') ? getAssignments() : [];
+  const hwTotal = a.length, hwDone = a.filter(isAssignmentDone).length;
+  const total = (data ? data.totalItems : 0) + hwTotal;
+  const done = (data ? data.doneItems : 0) + hwDone;
+  return { total: total, done: done, remaining: total - done, allDone: total > 0 && done === total };
+}
+
 // ── Collapse toggle for My Goals section ────────────────────────────────────
 function toggleWeekPlanCollapse() {
   const body = document.getElementById('week-plan-collapsible');
@@ -572,7 +584,13 @@ function renderThisWeekTab() {
   const data = StudyPlanner.getWeekChecklist(weekNum);
   if (!data) return;
 
-  // Segmented progress bar — one segment per task
+  // Parent-assigned homework & exams are first-class weekly goals: each one adds
+  // to the task count and progress bar, and the week only reads "All done" once
+  // they're done too. Because the header (count + bar) stays visible when the
+  // week is collapsed, an outstanding practice/exam still shows as "N remaining".
+  const assignments = (typeof getAssignments === 'function') ? getAssignments() : [];
+
+  // Segmented progress bar — one segment per task (comprehension + islands + homework)
   const segEl = document.getElementById('goals-segments');
   const items = [];
   if (data.comprehension) items.push({ done: data.comprehension.complete, color: '#f59e0b' });
@@ -583,14 +601,18 @@ function renderThisWeekTab() {
       });
     });
   });
+  assignments.forEach(a => items.push({ done: isAssignmentDone(a), color: '#6366f1' }));
+
   const doneCount = items.filter(it => it.done).length;
   segEl.innerHTML = items.map((it, i) =>
     '<div class="goals-seg' + (i < doneCount ? ' done' : '') + '"></div>'
   ).join('');
 
-  const remaining = data.totalItems - data.doneItems;
+  const totalTasks = items.length;
+  const remaining = totalTasks - doneCount;
+  const allDone = totalTasks > 0 && remaining === 0;
   document.getElementById('week-count').textContent =
-    data.allDone ? '🎉 All done!' : remaining + ' remaining';
+    allDone ? '🎉 All done!' : remaining + ' remaining';
 
   const listEl = document.getElementById('week-list');
 
@@ -717,8 +739,8 @@ function renderThisWeekTab() {
 
   listEl.innerHTML = html;
 
-  // ── Auto-reveal next week when current is 100% done ──
-  if (data.allDone && weekNum < data.totalWeeks) {
+  // ── Auto-reveal next week when current is 100% done (incl. homework) ──
+  if (weekTaskTotals(data).allDone && weekNum < data.totalWeeks) {
     const nextData = StudyPlanner.getWeekChecklist(weekNum + 1);
     if (nextData && nextData.subjects.length > 0) {
       renderNextWeekPreview(nextData, listEl);
