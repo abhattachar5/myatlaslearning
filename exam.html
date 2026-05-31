@@ -264,10 +264,7 @@
       var mins = assignment.timeLimitMin || 60;
       // Year-aware: pick the passage set for the student's year (not whichever is loaded).
       var examUser = (typeof getUser === 'function') ? getUser() : null;
-      var isY8 = !!(examUser && examUser.year === 'Year 8');
-      var passages = isY8
-        ? (typeof COMPREHENSION_PASSAGES_Y8 !== 'undefined' ? COMPREHENSION_PASSAGES_Y8 : [])
-        : (typeof COMPREHENSION_PASSAGES !== 'undefined' ? COMPREHENSION_PASSAGES : []);
+      var passages = Atlas.yearPassages(examUser && examUser.year);
       enPassage = passages.length ? passages[Math.floor(Math.random() * passages.length)] : null;
       enPrompt = EN_WRITING_PROMPTS[Math.floor(Math.random() * EN_WRITING_PROMPTS.length)];
       if (!enPassage) { document.getElementById('ex-error').style.display = ''; return; }

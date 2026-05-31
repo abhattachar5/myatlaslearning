@@ -479,17 +479,8 @@
       { id: 'science', label: '🔬 Science' }, { id: 'history', label: '⚔️ History' }, { id: 'geography', label: '🗺️ Geography' }
     ];
     function topicsFor(sid) {
-      // NB: these topic arrays are top-level `const`s, so they're global lexical
-      // bindings — NOT properties of window. Reference the bare names via typeof.
-      var y8 = (getUser() || {}).year === 'Year 8';
-      var T = {
-        math:      y8 ? (typeof MATH_TOPICS_Y8 !== 'undefined' ? MATH_TOPICS_Y8 : null) : (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS : null),
-        english:   y8 ? (typeof ENGLISH_TOPICS_Y8 !== 'undefined' ? ENGLISH_TOPICS_Y8 : null) : (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS : null),
-        science:   y8 ? (typeof SCIENCE_TOPICS_Y8 !== 'undefined' ? SCIENCE_TOPICS_Y8 : null) : (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS : null),
-        history:   y8 ? (typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8 : null) : (typeof HISTORY_TOPICS !== 'undefined' ? HISTORY_TOPICS : null),
-        geography: y8 ? (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8 : null) : (typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS : null)
-      };
-      return T[sid] || [];
+      // Year-aware via CONFIG.byYear — no per-year branch needed here.
+      return Atlas.yearTopics(sid, (getUser() || {}).year);
     }
     function islandsFor(topicId) {
       return (typeof CURRICULUM !== 'undefined' ? CURRICULUM : []).filter(function (i) { return i.topicId === topicId; });

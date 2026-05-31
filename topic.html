@@ -89,16 +89,7 @@
 let user = requireAuth();
 const params = new URLSearchParams(location.search);
 const topicId = params.get('id');
-let topic = (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id === topicId) : null)
-         || (typeof MATH_TOPICS_Y8 !== 'undefined' ? MATH_TOPICS_Y8.find(t => t.id === topicId) : null)
-         || (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS.find(t => t.id === topicId) : null)
-         || (typeof ENGLISH_TOPICS_Y8 !== 'undefined' ? ENGLISH_TOPICS_Y8.find(t => t.id === topicId) : null)
-         || (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS.find(t => t.id === topicId) : null)
-         || (typeof SCIENCE_TOPICS_Y8 !== 'undefined' ? SCIENCE_TOPICS_Y8.find(t => t.id === topicId) : null)
-         || (typeof HISTORY_TOPICS !== 'undefined' ? HISTORY_TOPICS.find(t => t.id === topicId) : null)
-         || (typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8.find(t => t.id === topicId) : null)
-         || (typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS.find(t => t.id === topicId) : null)
-         || (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8.find(t => t.id === topicId) : null);
+let topic = Atlas.findTopic(topicId);
 const isEnglishTopic = topic && topic.id && (topic.id.startsWith('et-') || topic.id.startsWith('e8t-'));
 const isScienceTopic = topic && topic.id && (topic.id.startsWith('st7-') || topic.id.startsWith('s8t-'));
 const isHistoryTopic = topic && topic.id && (topic.id.startsWith('ht-') || topic.id.startsWith('h8t-'));
@@ -113,8 +104,8 @@ if (!topic) {
   window.location.href = dashboardUrl;
 }
 
-// Comprehension has its own dedicated page (Year 7: et-04, Year 8: e8t-04)
-if (topicId === 'et-04' || topicId === 'e8t-04') {
+// Comprehension has its own dedicated page (year-aware via CONFIG.byYear)
+if (Atlas.isComprehensionTopic(topicId)) {
   window.location.href = 'comprehension.html';
 }
 
@@ -253,8 +244,8 @@ function goToWritingTest() {
     cta.style.display = '';
     updateTestLock();
   }
-  // Show Writing Challenge CTA for Writing Strategies (Y7) / Writing Craft (Y8)
-  if (topicId === 'et-06' || topicId === 'e8t-06') {
+  // Show Writing Challenge CTA for the writing topic (year-aware via CONFIG.byYear)
+  if (Atlas.isWritingTopic(topicId)) {
     document.getElementById('writing-challenge-cta').style.display = '';
   }
 })();

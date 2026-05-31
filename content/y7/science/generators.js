@@ -75,7 +75,9 @@ TEST_GENERATORS["island-15"] = [
   { depth:'greater-depth', gen:function(){ return { q:"We see lightning before we hear thunder even though both are produced at the same moment. Why?", opts:["Light travels much faster than sound","Sound travels much faster than light","Light curves around clouds","Sound needs to warm up before travelling"], c:0, e:"Light travels at 3×10⁸ m/s; sound at ~340 m/s. The large difference in speed means light reaches us almost instantly while sound takes noticeably longer." }; }},
   { depth:'greater-depth', gen:function(){ return { q:"Astronauts in space cannot hear each other speak without radio equipment. Why?", opts:["Space is a vacuum — sound cannot travel without a medium","Sound is absorbed by their helmets","Sound waves are destroyed by radiation","Sound travels too slowly in space"], c:0, e:"Sound requires a medium to travel. Space is a near-perfect vacuum with almost no particles, so sound cannot propagate." }; }},
   { depth:'greater-depth', gen:function(){
-    var angle = _pickFrom([20,30,40,50,60,70]);
+    // angles chosen so 2a, a, 90−a and 180−a are always four distinct values
+    // (excludes 30° where 90−a = 2a, and 60° where 180−a = 2a)
+    var angle = _pickFrom([20,40,50,70]);
     return { q:"A light ray hits a flat mirror at an angle of incidence of "+angle+"°. What is the total angle between the incident and reflected rays?", opts:[(2*angle)+"°",angle+"°",(90-angle)+"°",(180-angle)+"°"], c:0, e:"By the law of reflection, the angle of reflection equals the angle of incidence ("+angle+"°). Both are measured from the normal, so the angle between the two rays is "+angle+" + "+angle+" = "+(2*angle)+"°." };
   }}
 ];

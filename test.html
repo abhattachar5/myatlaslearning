@@ -192,16 +192,7 @@
 let user = requireAuth();
 const params = new URLSearchParams(location.search);
 const topicId = params.get('id');
-const topic = (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS.find(t => t.id === topicId) : null)
-           || (typeof MATH_TOPICS_Y8 !== 'undefined' ? MATH_TOPICS_Y8.find(t => t.id === topicId) : null)
-           || (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS.find(t => t.id === topicId) : null)
-           || (typeof ENGLISH_TOPICS_Y8 !== 'undefined' ? ENGLISH_TOPICS_Y8.find(t => t.id === topicId) : null)
-           || (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS.find(t => t.id === topicId) : null)
-           || (typeof SCIENCE_TOPICS_Y8 !== 'undefined' ? SCIENCE_TOPICS_Y8.find(t => t.id === topicId) : null)
-           || (typeof HISTORY_TOPICS !== 'undefined' ? HISTORY_TOPICS.find(t => t.id === topicId) : null)
-           || (typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8.find(t => t.id === topicId) : null)
-           || (typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS.find(t => t.id === topicId) : null)
-           || (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8.find(t => t.id === topicId) : null);
+const topic = Atlas.findTopic(topicId);
 const isScienceTopic = topicId && (topicId.startsWith('st7-') || topicId.startsWith('s8t-'));
 const isEnglishTopic = topicId && (topicId.startsWith('et-') || topicId.startsWith('e8t-'));
 const isHistoryTopic = topicId && (topicId.startsWith('ht-') || topicId.startsWith('h8t-'));

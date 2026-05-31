@@ -40,7 +40,8 @@ var MANIFEST = (function () {
         nFiles('content/y7/math/lessons/', 1, 7),                           // maths lessons (inline SVGs, render as-is)
         ['content/y7/english/lessons/1.js','content/y7/english/lessons/2.js','content/y7/english/lessons/3.js',
          'content/y7/english/lessons/5.js','content/y7/english/lessons/6.js','content/y7/english/lessons/7.js',
-         'content/y7/english/lessons/8.js']),
+         'content/y7/english/lessons/8.js'],
+        ['content/y7/english/writing.js']),                                  // WRITING_PROMPTS (writing-test.html)
       _tests: ['content/y7/science/generators.js']                         // TEST_GENERATORS["island-N"]
     },
 
@@ -57,19 +58,35 @@ var MANIFEST = (function () {
       },
       english: {
         topics:  'content/y8/english/topics.js',
-        islands: nFiles('content/y8/english/islands/', 1, 7).concat(['content/y8/english/islands/zz-reuse.js'])
+        islands: nFiles('content/y8/english/islands/', 1, 7).concat(['content/y8/english/islands/zz-reuse.js']),
+        writing: ['content/y8/english/writing.js']                          // WRITING_PROMPTS_Y8
       },
       science:   { topics: 'content/y8/science/topics.js',   islands: nFiles('content/y8/science/islands/', 1, 3),
                    generators: ['content/y8/science/generators/reuse.js'] },
       history:   { topics: 'content/y8/history/topics.js',   islands: nFiles('content/y8/history/islands/', 1, 2) },
       geography: { topics: 'content/y8/geography/topics.js', islands: nFiles('content/y8/geography/islands/', 1, 2) },
       comprehension: { passages: nFiles('content/y8/comprehension/passages/', 1, 8) }
+    },
+
+    // ── YEAR 9 — role-based layout (authoring in progress) ──────────────────
+    y9: {
+      math: {
+        topics:     'content/y9/math/topics.js',
+        islands:    tFiles('content/y9/math/islands/', 1, 2),       // t01–t02
+        generators: ['content/y9/math/generators/gen-1.js',
+                     'content/y9/math/generators/gen-2.js']
+      }
     }
-    // y9: { ... }  ← future years slot in here
   };
 
   // ── build the two ordered load lists ──────────────────────────────────────
-  var active = (typeof CONFIG !== 'undefined' ? CONFIG.active : Object.keys(content));
+  // Normal pages load only CONFIG.active years. The Content Studio (curator.html)
+  // sets window.ATLAS_PREVIEW_ALL = true to also load DRAFT years (everything in
+  // `content`), so unreleased content can be reviewed before going live. Student
+  // pages never set the flag, so production is unaffected.
+  var previewAll = (typeof window !== 'undefined' && window.ATLAS_PREVIEW_ALL);
+  var active = previewAll ? Object.keys(content)
+             : (typeof CONFIG !== 'undefined' ? CONFIG.active : Object.keys(content));
   function subjectsOf(y) { return Object.keys(content[y] || {}).filter(function (k) { return k.charAt(0) !== '_'; }); }
 
   function yearContent(y) {                                  // everything EXCEPT generators
@@ -80,6 +97,7 @@ var MANIFEST = (function () {
     (blk._shared || []).forEach(function (f) { o.push(f); });
     subjectsOf(y).forEach(function (s) { (blk[s].islands  || []).forEach(function (f) { o.push(f); }); });
     subjectsOf(y).forEach(function (s) { (blk[s].passages || []).forEach(function (f) { o.push(f); }); });
+    subjectsOf(y).forEach(function (s) { (blk[s].writing  || []).forEach(function (f) { o.push(f); }); });
     return o;
   }
   function yearTests(y) {                                    // generators only

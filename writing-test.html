@@ -179,7 +179,14 @@
 var user = requireAuth();
 var params = new URLSearchParams(location.search);
 var topicId = params.get('id') || 'et-06';
-var isY8Writing = (topicId === 'e8t-06');
+// Year-aware writing config (prompts, word range, year) resolved from
+// CONFIG.byYear via Atlas — adding a year needs no edit on this page.
+var WRITING_CFG = Atlas.writingConfig(topicId) || {
+  year: 'Year 7',
+  prompts: (typeof WRITING_PROMPTS !== 'undefined' ? WRITING_PROMPTS : []),
+  wordRange: [200, 400]
+};
+var isY8Writing = (WRITING_CFG.year === 'Year 8');
 document.getElementById('back-btn').href = 'topic.html?id=' + topicId;
 
 (function() { initTheme(); updateThemeBtn(); })();
@@ -192,119 +199,16 @@ function updateThemeBtn() {
   btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
 }
 
-// ── Writing Prompts ──────────────────────────────────────────────────────
-var WRITING_PROMPTS = [
-  {
-    title: "Persuasive Essay: Screen Time",
-    text: 'Write a short essay (3–4 paragraphs) arguing for <strong>or</strong> against this statement:<br><br><em>"Teenagers should be limited to two hours of screen time per day."</em><br><br>Take a clear position and try to convince the reader that your view is correct.',
-    requirements: [
-      "An introduction that clearly states your argument (thesis)",
-      "At least two PEEL paragraphs with evidence and explanation",
-      "A counter-argument that you acknowledge and then refute",
-      "At least three different persuasive/rhetorical devices (e.g. rhetorical question, emotive language, rule of three)",
-      "Varied transition words and conjunctive adverbs, correctly punctuated",
-      "A conclusion that summarises your position"
-    ]
-  },
-  {
-    title: "Persuasive Letter: School Improvements",
-    text: 'Write a formal letter to your headteacher arguing for <strong>one specific change</strong> you would like to see in your school. This could be about facilities, rules, the curriculum, or anything else you feel strongly about.<br><br>Begin with: <em>Dear [Headteacher\'s name],</em>',
-    requirements: [
-      "A clear opening that states your purpose and your proposed change",
-      "At least two paragraphs of argument using the PEEL structure",
-      "Evidence to support your case (statistics, examples, or expert opinions)",
-      "A counter-argument paragraph that you refute",
-      "Formal tone with varied transitions and conjunctive adverbs",
-      "A polite but firm closing paragraph with a call to action"
-    ]
-  },
-  {
-    title: "Descriptive & Argumentative: A Place That Matters",
-    text: 'Write about a place that is important to you — it could be real or imagined. Your piece should <strong>describe the place vividly</strong> in the first half, then <strong>argue why it matters</strong> (or should be protected/preserved/changed) in the second half.<br><br>Begin with a descriptive opening that puts the reader in the scene.',
-    requirements: [
-      "A vivid opening that uses 'show, don't tell' and sensory language (at least 3 senses)",
-      "Varied sentence lengths — short for impact, long for description",
-      "A clear transition from description to argument",
-      "At least one PEEL paragraph arguing your point with evidence",
-      "Conjunctive adverbs correctly punctuated with semicolons",
-      "Original imagery — avoid cliches"
-    ]
-  },
-  {
-    title: "Opinion Article: Is Homework Worth It?",
-    text: 'Write an opinion article for your school newspaper on this question:<br><br><em>"Is homework a valuable use of students\' time, or does it cause more harm than good?"</em><br><br>Your article should be balanced but come to a clear conclusion.',
-    requirements: [
-      "A headline and an engaging opening paragraph that hooks the reader",
-      "Arguments on BOTH sides of the debate, with evidence for each",
-      "At least two AFOREST persuasive devices",
-      "A counter-argument that you acknowledge before giving your verdict",
-      "Varied transitions (addition, contrast, cause/effect) correctly punctuated",
-      "A strong concluding paragraph that states your opinion clearly"
-    ]
-  }
-];
-
-// ── Year 8 Writing Craft prompts (more demanding than Year 7) ──────────────
-var WRITING_PROMPTS_Y8 = [
-  {
-    title: "Persuasive Speech: A Cause Worth Fighting For",
-    text: 'Write the text of a persuasive speech (4–5 paragraphs) to be delivered to your year group, arguing that <strong>one issue you care about</strong> deserves more attention (e.g. the environment, mental health, online safety, animal welfare).<br><br>Take a clear stance and use the full range of rhetorical techniques to move your audience.',
-    requirements: [
-      "A powerful opening that hooks the audience (direct address, rhetorical question or a striking fact)",
-      "A clear, sustained line of argument with well-chosen evidence",
-      "A counter-argument that you acknowledge and convincingly rebut",
-      "A range of rhetorical devices — tricolon, anaphora, antithesis, emotive language",
-      "Deliberate control of tone and register for a speech",
-      "A memorable, rallying conclusion with a call to action"
-    ]
-  },
-  {
-    title: "Discursive Essay: A Balanced View",
-    text: 'Write a balanced, discursive essay exploring <strong>both sides</strong> of this question before reaching a reasoned conclusion:<br><br><em>"Should social media platforms be allowed for under-16s?"</em><br><br>Unlike a persuasive piece, weigh the arguments fairly before giving your own judgement.',
-    requirements: [
-      "An introduction that frames the debate objectively",
-      "At least two paragraphs putting the case FOR, with evidence",
-      "At least two paragraphs putting the case AGAINST, with evidence",
-      "Discourse markers that signal contrast and development (however, conversely, on the other hand, furthermore)",
-      "A formal, measured register throughout",
-      "A reasoned conclusion that weighs the evidence and gives your judgement"
-    ]
-  },
-  {
-    title: "Creative Writing: Atmosphere & Symbolism",
-    text: 'Write the opening of a story (around 350–500 words) in which a character returns to a place that has changed.<br><br>Your aim is to create a strong <strong>atmosphere</strong> and to use <strong>symbolism</strong> and <strong>pathetic fallacy</strong> so that the setting reflects the character\'s feelings.',
-    requirements: [
-      "A controlled narrative perspective (first person or third person limited)",
-      "Pathetic fallacy — the weather/setting mirrors mood",
-      "At least one developed symbol or motif",
-      "‘Show, don\'t tell’ — reveal emotion through detail and action, not statement",
-      "Varied sentence lengths for pace and effect",
-      "Original, precise imagery — avoid clichés"
-    ]
-  },
-  {
-    title: "Writing for Audience: Two Registers",
-    text: 'Choose a recent experience (a trip, an event, a problem you solved). Write about it <strong>twice</strong>:<br><br>1) a <strong>formal</strong> account (e.g. a letter or report), then<br>2) an <strong>informal</strong> version (e.g. a message or blog post) for a friend.<br><br>Show how the same content changes when the audience and purpose change.',
-    requirements: [
-      "A clearly formal first version (Standard English, no contractions, measured tone)",
-      "A clearly informal second version (relaxed tone, suited to a friend)",
-      "Deliberate differences in vocabulary between the two",
-      "Deliberate differences in sentence structure and punctuation",
-      "Both versions accurate and well organised",
-      "A consistent, appropriate register within each version"
-    ]
-  }
-];
-
 var currentPrompt = null;
 
-// Adjust visible labels for Year 8 Writing Craft.
+// Adjust visible labels. The word-range label is data-driven for every year;
+// the Year 8 "Writing Craft" badge + criteria are a year-specific enhancement.
 (function adjustForYear() {
+  var words = document.querySelector('.wt-info-card .value');
+  if (words) words.textContent = WRITING_CFG.wordRange[0] + '–' + WRITING_CFG.wordRange[1] + ' words';
   if (!isY8Writing) return;
   var badge = document.querySelector('.island-header-meta .badge');
   if (badge) badge.textContent = 'Writing Craft';
-  var target = document.querySelector('.wt-info-card .value');
-  if (target) target.textContent = '300–500 words';
   var crit = document.querySelector('.wt-criteria-box ul');
   if (crit) crit.innerHTML =
     '<li>Persuasive &amp; Discursive Writing</li>' +
@@ -317,7 +221,7 @@ var currentPrompt = null;
 
 // ── Start ────────────────────────────────────────────────────────────────
 function startWriting() {
-  var prompts = (isY8Writing && typeof WRITING_PROMPTS_Y8 !== 'undefined') ? WRITING_PROMPTS_Y8 : WRITING_PROMPTS;
+  var prompts = WRITING_CFG.prompts || [];
   currentPrompt = prompts[Math.floor(Math.random() * prompts.length)];
 
   document.getElementById('prompt-title').textContent = currentPrompt.title;
@@ -342,7 +246,7 @@ function updateWordCount() {
   var el = document.getElementById('word-count');
   el.textContent = count + ' word' + (count !== 1 ? 's' : '');
   el.className = 'wt-word-count';
-  var lo = isY8Writing ? 300 : 200, hi = isY8Writing ? 500 : 400;
+  var lo = WRITING_CFG.wordRange[0], hi = WRITING_CFG.wordRange[1];
   if (count >= lo && count <= hi) el.classList.add('good');
   else if (count > hi) el.classList.add('over');
 
@@ -369,7 +273,7 @@ function submitWriting() {
     body: JSON.stringify({
       prompt: promptContext,
       response: text,
-      year: isY8Writing ? 'Year 8' : 'Year 7'
+      year: WRITING_CFG.year
     })
   })
   .then(function(res) { return res.json(); })

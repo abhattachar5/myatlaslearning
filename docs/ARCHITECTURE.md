@@ -81,6 +81,13 @@ byte-for-byte from the current site.
 - localStorage keys: `sm_progress`, `sm_active_profile`, `sm_comp_*`, `sm_test_results`, `sm_streak`, …
 - Progress is keyed by **island ID** (`m8i-26-1`, …), and island IDs are unchanged because content was copied verbatim.
 
+**What the server syncs** (payload built in `engine/app.js` → `save-progress.mjs` blob → restored in
+`index.html` on login): profile, `xp`, `streak`, `lastStudy`, `progress`, `testResults`,
+`revisionDone`, `comprehension`, `yearHistory`, `assignments`, `activeDays`, **`studyPlan`**, preferences.
+The **study plan (`sm_study_plan`) is synced** so it follows the user across devices/browsers — it
+pushes immediately on activation and on every progress change. (`merge-progress.mjs` preserves it
+during the one-time legacy migration.)
+
 **The one rule — deploy atlas2 to the *same* Netlify site, never a new one.**
 Netlify Blobs, Identity (login) users, the custom domain, and `ANTHROPIC_API_KEY`
 are all scoped to a **site**. A brand-new site would start with an **empty**

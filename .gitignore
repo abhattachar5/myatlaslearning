@@ -11,3 +11,9 @@ node_modules/
 _dev-*.html
 _scratch/
 serve.json
+
+# ── Local-only tools — NEVER deploy these ───────────────────────────────────
+# Anything in _local/ is an internal tool (e.g. the Content Studio /
+# _local/curator.html) that must stay off the live site. Git refuses to track
+# it, so it can't be pushed to GitHub or deployed by Netlify even by accident.
+_local/

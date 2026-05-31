@@ -394,6 +394,22 @@ function markActiveDay() {
   }
 }
 
+// ── Year-group <select> ─────────────────────────────────────────────────────
+// Populated from CONFIG on every page that has #edit-year, so adding a year is
+// just a CONFIG.active change — no per-page option lists to maintain.
+function fillYearSelect() {
+  var sel = document.getElementById('edit-year');
+  if (!sel || typeof CONFIG === 'undefined') return;
+  var active = CONFIG.active || [];
+  sel.innerHTML = (CONFIG.years || []).map(function (code) {
+    var label = (CONFIG.yearLabel && CONFIG.yearLabel[code]) || code;
+    var on = active.indexOf(code) !== -1;
+    return '<option value="' + label + '"' + (on ? '' : ' disabled') + '>' +
+           label + (on ? '' : ' — Coming Soon') + '</option>';
+  }).join('');
+}
+if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded', fillYearSelect);
+
 // ── Theme ─────────────────────────────────────────────────────────────────────
 function initTheme() {
   const t = localStorage.getItem('sm_theme') || 'light';

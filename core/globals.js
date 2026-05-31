@@ -46,6 +46,50 @@ var Atlas = (function () {
     onReady: function (cb) {
       if (ready) { cb(); }
       else { document.addEventListener('atlas:ready', function () { cb(); }, { once: true }); }
-    }
+    },
+
+    // ── Year-aware content resolution (driven by CONFIG.byYear) ───────────────
+    // Every "which year's content?" decision routes through these, so adding a
+    // year = add one CONFIG.byYear block; no page/planner edits needed.
+    yearTopics: function (subject, year) {
+      var y = (typeof CONFIG !== 'undefined' && CONFIG.byYear) ? CONFIG.byYear[year] : null;
+      var f = y && y.topics && y.topics[subject];
+      var arr = (typeof f === 'function') ? f() : null;
+      return Array.isArray(arr) ? arr : [];
+    },
+    yearPassages: function (year) {
+      var y = (typeof CONFIG !== 'undefined' && CONFIG.byYear) ? CONFIG.byYear[year] : null;
+      var arr = (y && typeof y.passages === 'function') ? y.passages() : null;
+      return Array.isArray(arr) ? arr : [];
+    },
+    // Flat list of every topic across all configured years × subjects.
+    everyTopic: function () {
+      var by = (typeof CONFIG !== 'undefined' && CONFIG.byYear) ? CONFIG.byYear : {};
+      var subs = (typeof CONFIG !== 'undefined' && CONFIG.subjects) ? CONFIG.subjects : ['math', 'english', 'science', 'history', 'geography'];
+      var self = this, out = [];
+      Object.keys(by).forEach(function (yr) {
+        subs.forEach(function (s) { out = out.concat(self.yearTopics(s, yr)); });
+      });
+      return out;
+    },
+    findTopic: function (topicId) {
+      return this.everyTopic().find(function (t) { return t.id === topicId; }) || null;
+    },
+    isComprehensionTopic: function (topicId) {
+      var by = (typeof CONFIG !== 'undefined' && CONFIG.byYear) ? CONFIG.byYear : {};
+      return Object.keys(by).some(function (yr) { return by[yr].comprehensionTopicId === topicId; });
+    },
+    writingConfig: function (topicId) {
+      var by = (typeof CONFIG !== 'undefined' && CONFIG.byYear) ? CONFIG.byYear : {};
+      var yr = Object.keys(by).filter(function (y) { return by[y].writingTopicId === topicId; })[0];
+      if (!yr) return null;
+      var b = by[yr];
+      return {
+        year: yr,
+        prompts: (typeof b.writingPrompts === 'function' ? b.writingPrompts() : []),
+        wordRange: (Array.isArray(b.writingWordRange) ? b.writingWordRange : [200, 400])
+      };
+    },
+    isWritingTopic: function (topicId) { return !!this.writingConfig(topicId); }
   };
 })();

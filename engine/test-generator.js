@@ -177,13 +177,11 @@ function generateExam(subjectId, opts) {
   var difficulty = opts.difficulty || 'mixed';
   if (typeof CURRICULUM === 'undefined' || !topicIds.length) return [];
 
-  // Topic name lookup across all loaded topic arrays.
+  // Topic name lookup across every configured year/subject (CONFIG.byYear).
   var topicNames = {};
-  ['MATH_TOPICS','MATH_TOPICS_Y8','ENGLISH_TOPICS','ENGLISH_TOPICS_Y8','SCIENCE_Y7_TOPICS',
-   'SCIENCE_TOPICS_Y8','HISTORY_TOPICS','HISTORY_TOPICS_Y8','GEOGRAPHY_TOPICS','GEOGRAPHY_TOPICS_Y8']
-    .forEach(function (n) {
-      try { var arr = eval('typeof ' + n + " !== 'undefined' ? " + n + ' : null'); if (arr) arr.forEach(function (t) { topicNames[t.id] = t.name; }); } catch (e) {}
-    });
+  if (typeof Atlas !== 'undefined' && Atlas.everyTopic) {
+    Atlas.everyTopic().forEach(function (t) { topicNames[t.id] = t.name; });
+  }
 
   var perTopic = Math.max(1, Math.ceil(maxQuestions / topicIds.length));
   var all = [];
@@ -782,15 +780,11 @@ TEST_GENERATORS["mi-02-3"] = [
              e: 'A number is divisible by ' + pick.div + ' if ' + pick.rule + '.' };
   }},
   { depth: 'medium', gen: function() {
-    var base = _randInt(100, 300) * 3;
-    var nums = [base, base + 1, base + 3, base + 4];
-    var correctIdxs = [];
-    for (var i = 0; i < nums.length; i++) { if (nums[i] % 3 === 0) correctIdxs.push(i); }
-    var opts = [_commas(nums[0]), _commas(nums[1]), _commas(nums[2]), _commas(nums[3])];
-    var expParts = [];
-    for (var j = 0; j < correctIdxs.length; j++) { expParts.push(_commas(nums[correctIdxs[j]]) + ' ÷ 3 = ' + (nums[correctIdxs[j]] / 3)); }
-    return { q: 'Which of these numbers are divisible by 3?', opts: opts, c: correctIdxs,
-             e: 'Divisible by 3: ' + expParts.join('; ') + '.' };
+    var base = _randInt(100, 300) * 3;                 // divisible by 3
+    // base+1, base+2, base+4 are never divisible by 3 → exactly one correct answer
+    var opts = _buildOpts(_commas(base), [_commas(base + 1), _commas(base + 2), _commas(base + 4)]);
+    return { q: 'Which of these numbers is divisible by 3?', opts: opts, c: 0,
+             e: _commas(base) + ' ÷ 3 = ' + _commas(base / 3) + '. Its digit sum is a multiple of 3; the others are not.' };
   }},
   { depth: 'medium', gen: function() {
     var n = _randInt(100, 999) * 4;
@@ -800,19 +794,11 @@ TEST_GENERATORS["mi-02-3"] = [
              e: 'Last two digits = ' + last2 + '. ' + last2 + ' ÷ 4 = ' + (last2 / 4) + ' ✓. So yes, divisible by 4.' };
   }},
   { depth: 'medium', gen: function() {
-    var n = _randInt(100, 500) * 6;
-    var nums = [n, n + 1, n + 3, n - 1];
-    var correctIdxs = [];
-    for (var i = 0; i < nums.length; i++) { if (nums[i] % 6 === 0) correctIdxs.push(i); }
-    var opts = [_commas(nums[0]), _commas(nums[1]), _commas(nums[2]), _commas(nums[3])];
-    if (correctIdxs.length > 1) {
-      var expParts = [];
-      for (var j = 0; j < correctIdxs.length; j++) { expParts.push(_commas(nums[correctIdxs[j]])); }
-      return { q: 'Which of these numbers are divisible by 6?', opts: opts, c: correctIdxs,
-               e: 'Divisible by 6 (even AND digit sum divisible by 3): ' + expParts.join(', ') + '.' };
-    }
-    return { q: 'Which number is divisible by 6?', opts: opts, c: 0,
-             e: _commas(n) + ' is even (divisible by 2) AND digit sum is divisible by 3, so it\'s divisible by 6.' };
+    var n = _randInt(100, 500) * 6;                    // divisible by 6
+    // n+2 (even, not ÷3), n+3 (÷3 but odd), n+1 (odd) → exactly one correct answer
+    var opts = _buildOpts(_commas(n), [_commas(n + 2), _commas(n + 3), _commas(n + 1)]);
+    return { q: 'Which of these numbers is divisible by 6?', opts: opts, c: 0,
+             e: _commas(n) + ' is even (divisible by 2) AND its digit sum is divisible by 3, so it is divisible by 6. The others fail one of those tests.' };
   }},
   // GREATER DEPTH
   { depth: 'greater-depth', gen: function() {
@@ -2639,7 +2625,9 @@ TEST_GENERATORS["mi-07-2"] = [
     var squared_n = n * n, squared_d = d * d;
     var sg = _gcd(squared_n, squared_d);
     var ans = (squared_n/sg) + '/' + (squared_d/sg);
-    var opts = [ans, (2 * n) + '/' + (2 * d), (n * 2) + '/' + (d * d), squared_n + '/' + squared_d];
+    // doubled; denominator-only squared; forgot to square (the last replaces a
+    // distractor that always equalled the already-reduced answer)
+    var opts = [ans, (2 * n) + '/' + (2 * d), (n * 2) + '/' + (d * d), n + '/' + d];
     return { q: 'Calculate (' + n + '/' + d + ')².', opts: opts, c: 0,
              e: '(' + n + '/' + d + ')² = ' + n + '²/' + d + '² = ' + squared_n + '/' + squared_d + ' = ' + ans + '.' };
   }}
@@ -3336,12 +3324,15 @@ TEST_GENERATORS["mi-09-2"] = [
     var g = _gcd(a,b); a/=g; b/=g;
     var increase = _randInt(3, 10);
     var newA = a + increase;
-    // New ratio
-    var newG = _gcd(newA, b);
-    var opts = [newA + ':' + b, (a + increase) + ':' + (b + increase), a + ':' + (b + increase), (newA/newG) + ':' + (b/newG)];
-    if (newG > 1) opts[0] = (newA/newG) + ':' + (b/newG);
-    return { q: 'The ratio of cats to dogs is ' + a + ':' + b + '. ' + increase + ' more cats join. If there were ' + a + ' cats originally, what is the new ratio?', opts: opts, c: 0,
-             e: 'New cats = ' + a + ' + ' + increase + ' = ' + newA + '. Dogs unchanged = ' + b + '. New ratio: ' + newA + ':' + b + '.' };
+    var ng = _gcd(newA, b);
+    var ans = (newA/ng) + ':' + (b/ng);
+    var wrongs = [ (a + increase) + ':' + (b + increase),   // wrongly added to both
+                   a + ':' + (b + increase),                // wrongly added to the dogs
+                   newA + ':' + b ];                         // forgot to simplify
+    if (ng === 1) wrongs[2] = (newA + 1) + ':' + b;          // keep it distinct from the answer
+    return { q: 'The ratio of cats to dogs is ' + a + ':' + b + '. ' + increase + ' more cats join. If there were ' + a + ' cats originally, what is the new ratio (simplified)?',
+             opts: _buildOpts(ans, wrongs), c: 0,
+             e: 'New cats = ' + a + ' + ' + increase + ' = ' + newA + '. Dogs unchanged = ' + b + '. Ratio ' + newA + ':' + b + (ng > 1 ? ' simplifies to ' + ans : '') + '.' };
   }},
   { depth: 'greater-depth', gen: function() {
     var a = _randInt(3, 7), b = _randInt(3, 7);
@@ -4092,7 +4083,12 @@ TEST_GENERATORS["mi-11-3"] = [
     var constant = a * c - e;
     var sign1 = constant >= 0 ? ' + ' : ' − ';
     var ans = xCoeff + 'x' + sign1 + Math.abs(constant);
-    var opts = [ans, (a * b + d) + 'x + ' + (a * c + e), xCoeff + 'x + ' + constant, (a * b) + 'x − ' + e];
+    // added instead of subtracted; kept full coefficient; flipped the constant's sign
+    var opts = _buildOpts(ans, [
+      (a * b + d) + 'x + ' + (a * c + e),
+      (a * b) + 'x' + sign1 + Math.abs(constant),
+      xCoeff + 'x' + (constant >= 0 ? ' − ' : ' + ') + Math.abs(constant)
+    ]);
     return { q: 'Expand and simplify: ' + a + '(' + b + 'x + ' + c + ') − ' + d + 'x − ' + e, opts: opts, c: 0,
              e: 'Expand: ' + (a*b) + 'x + ' + (a*c) + ' − ' + d + 'x − ' + e + '. Simplify: ' + ans + '.' };
   }},
@@ -4225,7 +4221,7 @@ TEST_GENERATORS["mi-11-5"] = [
   }},
   { depth: 'medium', gen: function() {
     var n = _randInt(10, 99);
-    var opts = _buildOpts('0', [n.toString(), '1', 'undefined']);
+    var opts = _buildOpts('0', [n.toString(), '1', (n + 1).toString()]);
     return { q: n + ' × 0 = ?', opts: opts, c: 0,
              e: 'Zero property: any number × 0 = 0.' };
   }},
@@ -6153,7 +6149,9 @@ TEST_GENERATORS["mi-18-2"] = [
     var qty = _pickFrom([4, 6, 8, 10, 12]);
     var total = price * qty;
     var unitPrice = (total / qty).toFixed(2);
-    var opts = ['£' + unitPrice, '£' + total, '£' + (parseFloat(unitPrice) * 2).toFixed(2), '£' + (total / (qty/2)).toFixed(2)];
+    var up = parseFloat(unitPrice);
+    // forgot to divide; doubled; halved — all distinct from the true unit price
+    var opts = _buildOpts('£' + unitPrice, ['£' + total, '£' + (up * 2).toFixed(2), '£' + (up / 2).toFixed(2)]);
     return { q: 'A pack of ' + qty + ' costs £' + total + '. What is the unit price?', opts: opts, c: 0,
              e: 'Unit price = £' + total + ' ÷ ' + qty + ' = £' + unitPrice + '.' };
   }},
@@ -6488,14 +6486,14 @@ TEST_GENERATORS["mi-19-2"] = [
   { depth: 'greater-depth', gen: function() {
     var pad = function(n){return n<10?'0'+n:n;};
     var times = [
-      { t12: '12:30 pm', t24: '12:30' },
-      { t12: '12:45 am', t24: '00:45' },
-      { t12: '12:15 pm', t24: '12:15' }
+      { t12: '12:30 pm', t24: '12:30', w: ['00:30', '24:30', '13:30'] },
+      { t12: '12:45 am', t24: '00:45', w: ['12:45', '24:45', '01:45'] },
+      { t12: '12:15 pm', t24: '12:15', w: ['00:15', '24:15', '11:15'] }
     ];
     var pick = _pickFrom(times);
-    var opts = [pick.t24, pick.t24 === '12:30' ? '00:30' : '12:45', '24:' + pick.t24.split(':')[1], pick.t12.replace(' pm','').replace(' am','')];
+    var opts = _buildOpts(pick.t24, pick.w);
     return { q: 'Convert ' + pick.t12 + ' to 24-hour time.', opts: opts, c: 0,
-             e: pick.t12 + ' = ' + pick.t24 + '.' };
+             e: pick.t12 + ' = ' + pick.t24 + ' (noon is 12:00; midnight is 00:00).' };
   }},
   { depth: 'greater-depth', gen: function() {
     var pad = function(n){return n<10?'0'+n:n;};
@@ -6969,13 +6967,15 @@ TEST_GENERATORS["mi-21-3"] = [
   }},
   { depth: 'medium', gen: function() {
     var d = _randInt(2, 6);
-    var c = _randInt(-4, 8);
+    var c = _randInt(2, 8);                       // positive constant → clean sequence & distinct distractors
     var terms = [];
     for (var i = 1; i <= 4; i++) terms.push(d * i + c);
-    var rule = c === 0 ? d + 'n' : (c > 0 ? d + 'n + ' + c : d + 'n − ' + Math.abs(c));
-    var opts = [rule, d + 'n + ' + terms[0], (d + c) + 'n', terms[0] + 'n'];
+    function rl(coef, kon) { return coef + 'n' + (kon === 0 ? '' : (kon > 0 ? ' + ' + kon : ' − ' + Math.abs(kon))); }
+    var rule = rl(d, c);
+    // distractors: wrong constant (used first term), wrong coefficient (used first term), coefficient + 1
+    var opts = _buildOpts(rule, [ rl(d, terms[0]), rl(terms[0], c), rl(d + 1, c) ]);
     return { q: 'Find the nth-term rule for: ' + terms.join(', ') + ', …', opts: opts, c: 0,
-             e: 'Difference = ' + d + '. Rule = ' + d + 'n + (first − ' + d + ') = ' + rule + '.' };
+             e: 'Difference = ' + d + ', so the rule starts ' + d + 'n. First term ' + terms[0] + ' = ' + d + ' + ' + c + ', so add ' + c + ': ' + rule + '.' };
   }},
   { depth: 'medium', gen: function() {
     var d = _randInt(2, 5);
@@ -10223,3 +10223,44 @@ TEST_GENERATORS["island-52"] = [
     return _pickFrom(qs);
   }}
 ];
+
+// ── Generator output sanitiser ──────────────────────────────────────────────
+// Some inline generators historically built their four options by hand and, for
+// certain random inputs, produced two identical options (or a NaN/blank value,
+// or a non-integer correct index) — shipping the occasional broken question.
+// This wraps EVERY generator so it re-rolls until the output is well-formed:
+// four distinct options, a single integer correct index, no NaN/blank/Infinity.
+// Pedagogy is unchanged — it simply skips the rare input combinations that
+// collide. Wrapping happens in place, so Year 8's reused generator references
+// (set later via reuse()) inherit the fix automatically. Surfaced and verified
+// by ~/.claude/skills/atlas-content/scripts/check-generators.js.
+(function sanitiseGenerators() {
+  if (typeof TEST_GENERATORS === 'undefined') return;
+  function valid(o) {
+    if (!o || typeof o.q !== 'string' || !o.q.trim()) return false;
+    if (/undefined|NaN|Infinity/.test(o.q)) return false;
+    if (!Array.isArray(o.opts) || o.opts.length !== 4) return false;
+    var s = o.opts.map(String);
+    if (s.some(function (x) { return !x.trim() || /undefined|NaN|Infinity/.test(x); })) return false;
+    if (new Set(s).size !== 4) return false;
+    if (typeof o.c !== 'number' || o.c < 0 || o.c > 3 || (o.c | 0) !== o.c) return false;
+    return o.opts[o.c] !== undefined;
+  }
+  Object.keys(TEST_GENERATORS).forEach(function (id) {
+    var arr = TEST_GENERATORS[id];
+    if (!Array.isArray(arr)) return;
+    arr.forEach(function (entry) {
+      if (!entry || typeof entry.gen !== 'function' || entry.__sane) return;
+      var orig = entry.gen;
+      entry.gen = function () {
+        var out = null;
+        for (var i = 0; i < 40; i++) {
+          try { out = orig(); } catch (e) { out = null; }
+          if (valid(out)) return out;
+        }
+        return out; // deterministic edge case — caught by the audit, fixed at source below
+      };
+      entry.__sane = true;
+    });
+  });
+})();

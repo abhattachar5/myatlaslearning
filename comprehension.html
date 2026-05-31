@@ -668,11 +668,9 @@
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────────
 var user = requireAuth();
-// Year-aware passage set: Year 8 uses the longer, written/GCSE-style passages.
-var isY8 = !!(user && user.year === 'Year 8');
-var passages = (isY8 && typeof COMPREHENSION_PASSAGES_Y8 !== 'undefined' && COMPREHENSION_PASSAGES_Y8.length)
-  ? COMPREHENSION_PASSAGES_Y8
-  : (typeof COMPREHENSION_PASSAGES !== 'undefined' ? COMPREHENSION_PASSAGES : []);
+// Year-aware passage set (resolved from CONFIG.byYear via Atlas — adding a year
+// needs no edit here).
+var passages = Atlas.yearPassages(user && user.year);
 var currentFilter = 'all';
 var expandedPassageId = null;
 var QUESTIONS_PER_TEST = 5;

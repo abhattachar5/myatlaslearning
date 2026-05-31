@@ -300,35 +300,13 @@ function renderYearSwitcher() {
     '<div style="font-size:.8125rem;color:var(--text-muted);margin-top:2px">' + getUserYear() + '</div>';
 }
 
-function getYearMathTopics() {
-  const year = getUserYear();
-  if (year === 'Year 8') return typeof MATH_TOPICS_Y8 !== 'undefined' ? MATH_TOPICS_Y8 : [];
-  return typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS : [];
-}
-
-function getYearEnglishTopics() {
-  const year = getUserYear();
-  if (year === 'Year 8') return typeof ENGLISH_TOPICS_Y8 !== 'undefined' ? ENGLISH_TOPICS_Y8 : [];
-  return typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS : [];
-}
-
-function getYearScienceTopics() {
-  const year = getUserYear();
-  if (year === 'Year 8') return typeof SCIENCE_TOPICS_Y8 !== 'undefined' ? SCIENCE_TOPICS_Y8 : [];
-  return typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS : [];
-}
-
-function getYearHistoryTopics() {
-  const year = getUserYear();
-  if (year === 'Year 8') return typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8 : [];
-  return typeof HISTORY_TOPICS !== 'undefined' ? HISTORY_TOPICS : [];
-}
-
-function getYearGeographyTopics() {
-  const year = getUserYear();
-  if (year === 'Year 8') return typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8 : [];
-  return typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS : [];
-}
+// Year-aware topic lists — resolved via the central CONFIG.byYear map (Atlas.yearTopics),
+// so a new year needs no edits here, just a config block.
+function getYearMathTopics()      { return Atlas.yearTopics('math',      getUserYear()); }
+function getYearEnglishTopics()   { return Atlas.yearTopics('english',   getUserYear()); }
+function getYearScienceTopics()   { return Atlas.yearTopics('science',   getUserYear()); }
+function getYearHistoryTopics()   { return Atlas.yearTopics('history',   getUserYear()); }
+function getYearGeographyTopics() { return Atlas.yearTopics('geography', getUserYear()); }
 
 (function init() {
   initTheme();
@@ -353,92 +331,54 @@ function getYearGeographyTopics() {
 
 // ── Hero Banner ──────────────────────────────────────────────────────────────
 function getHeroBannerIsland() {
+  // RESUME-ONLY. The Hero Banner has exactly one job: let a student continue
+  // something they have genuinely STARTED but not finished, within their study
+  // plan. Everything else — starting a task, finishing the week, getting ahead
+  // onto next week — belongs in the My Goals view, so the banner never competes
+  // with or hides the plan. When there is nothing to resume, this returns null
+  // and the banner hides entirely.
+  //
+  // Note: "within the plan up to the current week" is deliberate. A pupil who
+  // races ahead and leaves a FUTURE-week topic half-done will NOT see it here —
+  // that island isn't part of the plan up to this week, so it doesn't count as
+  // resumable plan work. The banner hides and the My Goals view leads, which is
+  // where this week's remaining task (e.g. the comprehension) lives.
   const curriculum = getYearCurriculum();
-  const allProgress = getAllProgress();
-  const plan = StudyPlanner.getStudyPlan();
-
-  // Helper: find first incomplete island from a week's checklist data
-  function firstIncompleteFromWeek(data) {
-    if (!data) return null;
-    for (const subj of data.subjects) {
-      for (const topic of subj.topics) {
-        for (const isl of topic.islands) {
-          if (!isl.complete) {
-            return curriculum.find(i => i.id === isl.islandId) || null;
-          }
-        }
-      }
-    }
-    return null;
-  }
-
-  // Helper: collect island IDs for a week
-  function weekIds(data) {
-    const ids = new Set();
-    if (!data) return ids;
-    for (const subj of data.subjects) {
-      for (const topic of subj.topics) {
-        for (const isl of topic.islands) ids.add(isl.islandId);
-      }
-    }
-    return ids;
-  }
-
-  if (plan) {
-    const weekNum = StudyPlanner.getCurrentWeekNumber();
-    const data = StudyPlanner.getWeekChecklist(weekNum);
-
-    // 1a. Prefer last active island if it's in this week's plan and incomplete
-    const lastId = localStorage.getItem('sm_last_island');
-    const thisWeekIds = weekIds(data);
-    if (lastId && thisWeekIds.has(lastId)) {
-      const s = getIslandStatus(lastId);
-      if (s > 0 && s < 4) {
-        const island = curriculum.find(i => i.id === lastId);
-        if (island) return island;
-      }
-    }
-
-    // 1b. First incomplete island from this week's plan
-    const found = firstIncompleteFromWeek(data);
-    if (found) return found;
-
-    // 2. This week is done — show first incomplete from next week (look ahead)
-    const nextData = StudyPlanner.getWeekChecklist(weekNum + 1);
-    const nextFound = firstIncompleteFromWeek(nextData);
-    if (nextFound) return nextFound;
-  }
-
-  // 3. No study plan — fall back to last active island
+  const inProgress = id => { const s = getIslandStatus(id); return s > 0 && s < 4; };
   const lastId = localStorage.getItem('sm_last_island');
-  if (lastId) {
+
+  // Build the set of resumable island IDs. With a plan: every island in the plan
+  // up to & including the current week. With no plan: any island is resumable.
+  let resumable = null; // null === "any island"
+  const plan = StudyPlanner.getStudyPlan();
+  if (plan) {
+    resumable = new Set();
+    const weekNum = StudyPlanner.getCurrentWeekNumber();
+    for (let w = 1; w <= weekNum; w++) {
+      const data = StudyPlanner.getWeekChecklist(w);
+      if (!data) continue;
+      for (const subj of data.subjects)
+        for (const topic of subj.topics)
+          for (const isl of topic.islands) resumable.add(isl.islandId);
+    }
+  }
+  const eligible = id => (resumable === null || resumable.has(id)) && inProgress(id);
+
+  // Prefer the most-recently-active eligible island; else the first eligible one.
+  if (lastId && eligible(lastId)) {
     const island = curriculum.find(i => i.id === lastId);
-    if (island && getIslandStatus(lastId) > 0 && getIslandStatus(lastId) < 4) {
-      return island;
-    }
+    if (island) return island;
   }
-
-  // 4. Any in-progress island (status 1-3)
   for (const island of curriculum) {
-    const s = getIslandStatus(island.id);
-    if (s > 0 && s < 4) return island;
+    if (eligible(island.id)) return island;
   }
-
-  // 5. First unlocked unstarted island — prefer Mathematics
-  let fallback = null;
-  for (const island of curriculum) {
-    if (getIslandStatus(island.id) === 0 && isIslandUnlocked(island, allProgress)) {
-      if (island.subjectId === 'math') return island;
-      if (!fallback) fallback = island;
-    }
-  }
-  return fallback;
+  return null; // nothing started-but-unfinished in the plan → hide the banner
 }
 
 function renderHeroBanner() {
   const banner = document.getElementById('hero-banner');
   const island = getHeroBannerIsland();
-  if (!island) { banner.style.display = 'none'; return; }
+  if (!island) { banner.style.display = 'none'; return; }   // nothing to resume → hide
 
   const status = getIslandStatus(island.id);
   const nextTask = StudyPlanner.getNextTask(island.id);
@@ -1144,7 +1084,7 @@ function renderEnglishTopicCards() {
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
-      <div class="island-meta">${(topic.id === 'et-04' || topic.id === 'e8t-04') ? '40 passages' : (totalIslands > 0 ? totalIslands + ' subtopic' + (totalIslands !== 1 ? 's' : '') : 'Coming soon')}</div>
+      <div class="island-meta">${Atlas.isComprehensionTopic(topic.id) ? '40 passages' : (totalIslands > 0 ? totalIslands + ' subtopic' + (totalIslands !== 1 ? 's' : '') : 'Coming soon')}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
         <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>

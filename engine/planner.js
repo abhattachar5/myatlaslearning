@@ -101,7 +101,7 @@
         sorted = sorted.slice().sort(function (a, b) {
           return ((a && a.planOrder != null ? a.planOrder : 999)) - ((b && b.planOrder != null ? b.planOrder : 999));
         });
-      } else if (sid === 'geography' || (sid === 'math' && year === 'Year 8')) {
+      } else if (sid === 'geography' || (sid === 'math' && year !== 'Year 7')) {
         // Follow the curriculum's TOPIC sequence (the tile order) rather than the raw
         // prerequisite topo order. For geography this stops "Map Skills" leading; for
         // Year 8 maths it keeps tiles in their intended order (e.g. Rounding right after
@@ -258,18 +258,8 @@
 
   // ── Look up topic name for an island ───────────────────────────────────────
   function getAllTopics() {
-    var topics = [];
-    if (typeof MATH_TOPICS !== 'undefined') topics = topics.concat(MATH_TOPICS);
-    if (typeof MATH_TOPICS_Y8 !== 'undefined') topics = topics.concat(MATH_TOPICS_Y8);
-    if (typeof ENGLISH_TOPICS !== 'undefined') topics = topics.concat(ENGLISH_TOPICS);
-    if (typeof ENGLISH_TOPICS_Y8 !== 'undefined') topics = topics.concat(ENGLISH_TOPICS_Y8);
-    if (typeof SCIENCE_Y7_TOPICS !== 'undefined') topics = topics.concat(SCIENCE_Y7_TOPICS);
-    if (typeof SCIENCE_TOPICS_Y8 !== 'undefined') topics = topics.concat(SCIENCE_TOPICS_Y8);
-    if (typeof HISTORY_TOPICS !== 'undefined') topics = topics.concat(HISTORY_TOPICS);
-    if (typeof HISTORY_TOPICS_Y8 !== 'undefined') topics = topics.concat(HISTORY_TOPICS_Y8);
-    if (typeof GEOGRAPHY_TOPICS !== 'undefined') topics = topics.concat(GEOGRAPHY_TOPICS);
-    if (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined') topics = topics.concat(GEOGRAPHY_TOPICS_Y8);
-    return topics;
+    // Year-aware: every topic across all configured years (CONFIG.byYear).
+    return Atlas.everyTopic();
   }
 
   // ── Topic gating helpers ──────────────────────────────────────────────────
@@ -428,10 +418,8 @@
     // back to the list. Mirrors comprehension.html's passage-set selection.
     var _cu = getUser();
     var _cy = (_cu && _cu.year) ? _cu.year : 'Year 7';
-    var SET = (_cy === 'Year 8' && typeof COMPREHENSION_PASSAGES_Y8 !== 'undefined' && COMPREHENSION_PASSAGES_Y8.length)
-      ? COMPREHENSION_PASSAGES_Y8
-      : (typeof COMPREHENSION_PASSAGES !== 'undefined' ? COMPREHENSION_PASSAGES : null);
-    if (!SET) return null;
+    var SET = Atlas.yearPassages(_cy);
+    if (!SET || !SET.length) return null;
     if (weekNumber > 40) return null;
 
     var fiction = [];
@@ -630,12 +618,13 @@
     var grandTotal = 0;
     var grandDone = 0;
 
+    // Year-aware topic arrays, resolved via the central CONFIG.byYear map.
     var subjectTopicArrays = {
-      math: year === 'Year 8' ? (typeof MATH_TOPICS_Y8 !== 'undefined' ? MATH_TOPICS_Y8 : []) : (typeof MATH_TOPICS !== 'undefined' ? MATH_TOPICS : []),
-      english: year === 'Year 8' ? (typeof ENGLISH_TOPICS_Y8 !== 'undefined' ? ENGLISH_TOPICS_Y8 : []) : (typeof ENGLISH_TOPICS !== 'undefined' ? ENGLISH_TOPICS : []),
-      science: year === 'Year 7' ? (typeof SCIENCE_Y7_TOPICS !== 'undefined' ? SCIENCE_Y7_TOPICS : []) : [],
-      history: year === 'Year 8' ? (typeof HISTORY_TOPICS_Y8 !== 'undefined' ? HISTORY_TOPICS_Y8 : []) : (typeof HISTORY_TOPICS !== 'undefined' ? HISTORY_TOPICS : []),
-      geography: year === 'Year 8' ? (typeof GEOGRAPHY_TOPICS_Y8 !== 'undefined' ? GEOGRAPHY_TOPICS_Y8 : []) : (typeof GEOGRAPHY_TOPICS !== 'undefined' ? GEOGRAPHY_TOPICS : [])
+      math:      Atlas.yearTopics('math', year),
+      english:   Atlas.yearTopics('english', year),
+      science:   Atlas.yearTopics('science', year),
+      history:   Atlas.yearTopics('history', year),
+      geography: Atlas.yearTopics('geography', year)
     };
 
     SUBJECT_IDS.forEach(function (sid) {
@@ -869,7 +858,7 @@
 
       // ── Topic-test milestones + checkpoints for large topics ────
       topicOrder.forEach(function (tid) {
-        if (tid === 'et-04') return;                    // comprehension — no test
+        if (Atlas.isComprehensionTopic(tid)) return;    // comprehension — no test
         if (tid.indexOf('_solo_') === 0) return;        // virtual solo topic
 
         var topicIslands = queue.filter(function (id) {
