@@ -167,10 +167,13 @@
   </div>
 </main>
 
-<script src="data.js"></script>
-<script src="english-data.js"></script>
-<script src="auth-shim.js"></script>
-<script src="app.js"></script>
+<!-- ATLAS bootstrap — these tags load ALL content via core/manifest.js. Add a year = edit manifest only. -->
+<script src="core/globals.js"></script>
+<script src="core/config.js"></script>
+<script src="core/manifest.js"></script>
+<script src="core/loader.js"></script>
+<script src="core/auth-shim.js"></script>
+<script src="core/app.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
 var user = requireAuth();

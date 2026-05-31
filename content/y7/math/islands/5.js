@@ -958,7 +958,7 @@ Object.assign(QUESTIONS, {
     }},
     { question:'A sequence has nth term 2n − 5. Which is the first positive term?', options:['n=3 (term=1)','n=2 (term=−1)','n=4 (term=3)','n=5 (term=5)'], answer:0, explanation:'2n−5>0→n>2.5→n=3. Term: 2(3)−5=1.' },
     { question:'Two arithmetic sequences: A = 3, 7, 11, … and B = 1, 5, 9, … Do they share any terms?', options:['No — they share no terms','Yes — both include 9','Yes — they share 13','Yes — all terms match'], answer:0, explanation:'A: 3,7,11,15,19,… (odd multiples of 4 minus 1). B: 1,5,9,13,17,… Both have d=4 but different starting points 2 apart, so they never coincide.' },
-    { question:'The sequence 100, 95, 90, … What is the first negative term?', options:['−5 (21st term)','0 (20th term)','−10 (22nd term)','5 (19th term)'], answer:0, explanation:'nth term=105−5n. Set <0: 105−5n<0→n>21. 22nd term=105−110=−5.' }
+    { question:'The sequence 100, 95, 90, … What is the first negative term?', options:['−5 (22nd term)','0 (21st term)','−10 (23rd term)','5 (20th term)'], answer:0, explanation:'nth term=105−5n. Set <0: 105−5n<0→n>21. 22nd term=105−110=−5.' }
   ],
 
   // ── mi-21-2: Geometric Sequences ──────────────────────────────────────────
@@ -1058,7 +1058,7 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: 'T(' + n + ')=' + a + '(' + n + ')+' + b + '=' + (a*n) + '+' + b + '=' + ans + '.' };
     }},
-    { question:'Is 50 a term in the sequence with nth term 4n + 2?', options:['No','Yes — it is the 12th term','Yes — it is the 13th term','Yes — it is the 11th term'], answer:0, explanation:'4n+2=50→4n=48→n=12. Yes, it is the 12th term.' },
+    { question:'Is 50 a term in the sequence with nth term 4n + 2?', options:['No','Yes — it is the 12th term','Yes — it is the 13th term','Yes — it is the 11th term'], answer:1, explanation:'4n+2=50→4n=48→n=12. Yes, 50 is the 12th term.' },
     { question:'Write the nth-term expression for: 10, 8, 6, 4, …', options:['12 − 2n','2n + 8','10 − 2n','−2n + 8'], answer:0, explanation:'d=−2. Start: at n=1, need 10. −2(1)+c=10→c=12. nth term=12−2n. Check: 12−2(2)=8 ✓' },
     { gen: function() {
         var a = randInt(2, 5), b = randInt(-5, 3);

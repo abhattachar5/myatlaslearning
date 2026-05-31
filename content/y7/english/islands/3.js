@@ -118,8 +118,8 @@ Object.assign(QUESTIONS, {
    e:"'Whose' = belonging to whom (possessive). 'Who's' = who is (contraction). 'Whose bag' — possessive. 'Who's sitting' = who is sitting — contraction."},
 
   {q:"Which sentence contains an apostrophe error?",
-   opts:["The two dogs' owner moved away.","Its a lovely day today.","You're coming to the party, aren't you?","The children's toys were scattered everywhere."],c:0,
-   e:"Wait — the correct answer here is 'Its a lovely day today.' This should be 'It's a lovely day today' because 'it is' needs the contraction apostrophe. All other sentences are correct."},
+   opts:["The two dogs' owner moved away.","Its a lovely day today.","You're coming to the party, aren't you?","The children's toys were scattered everywhere."],c:1,
+   e:"'Its a lovely day today' should be 'It's a lovely day today' because 'it is' needs the contraction apostrophe. All other sentences are correctly punctuated."},
 
   // Harder (Q7–8)
   {q:"Three sentences follow. Which one contains NO apostrophe errors?\nA: The teacher's marking the essay's carefully.\nB: The teachers are marking the essays carefully.\nC: The teachers' are marking the essays carefully.",

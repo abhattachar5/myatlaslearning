@@ -1,7 +1,5 @@
-// science-diagrams.js — SVG diagrams for science flashcards
-// Each key matches the `image` field on a flashcard in data.js
-
-const DIAGRAMS = {};
+// diagrams/science.js — SVG diagrams for science flashcards.
+// DIAGRAMS is declared once in core/globals.js; this file only adds keys.
 
 // ── CELLS ────────────────────────────────────────────────────────────────────
 DIAGRAMS["cell-comparison"] = `<svg viewBox="0 0 280 165" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">

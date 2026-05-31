@@ -1,11 +1,7 @@
+# Netlify config — static site, no build step.
 [build]
   publish = "."
   functions = "netlify/functions"
 
-[dev]
-  publish = "."
-  functions = "netlify/functions"
-  port = 8899
-
-[functions]
-  node_bundler = "esbuild"
+# SPA-style pages are plain .html, so no redirects needed.
+# Functions run on the Node runtime; ANTHROPIC_API_KEY is set in the Netlify UI.

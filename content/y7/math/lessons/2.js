@@ -48,10 +48,7 @@ Object.assign(LESSONS, {
   Step 2 — compare tenths: 4, 5, 4 → 0.500 is largest.<br>
   Step 3 — compare hundredths of the two 0.4__ : 5 &gt; 0 → 0.450 &gt; 0.409<br>
   <br>
-  <svg width="100%" height="40" viewBox="0 0 380 40" style="max-width:380px;display:block">
-    <rect x="0" y="10" width="380" height="20" rx="4" fill="#e8f5e9"/>
-    <text x="10" y="25" font-size="13" fill="#2e7d32" font-weight="bold">0.409 &lt; 0.45 &lt; 0.5</text>
-  </svg>
+  <div class="lesson-diagram" data-diagram="y7-math-2-0"></div>
 </div>
 
 <div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
@@ -63,16 +60,7 @@ Object.assign(LESSONS, {
 <h2>Rounding Decimals</h2>
 <p>Use exactly the same rule as rounding whole numbers — look at the digit immediately to the right of your target place. That digit is the <strong>decider</strong>.</p>
 
-<svg width="100%" height="80" viewBox="0 0 420 80" style="max-width:420px;display:block;margin:0.75em 0">
-  <rect x="0" y="5" width="200" height="70" rx="8" fill="#e8f5e9"/>
-  <rect x="210" y="5" width="200" height="70" rx="8" fill="#fff9c4"/>
-  <text x="100" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">Decider is 0–4</text>
-  <text x="100" y="48" text-anchor="middle" font-size="12" fill="#2e7d32">→ Round DOWN</text>
-  <text x="100" y="65" text-anchor="middle" font-size="11" fill="#555">(keep target digit)</text>
-  <text x="310" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">Decider is 5–9</text>
-  <text x="310" y="48" text-anchor="middle" font-size="12" fill="#e65100">→ Round UP</text>
-  <text x="310" y="65" text-anchor="middle" font-size="11" fill="#555">(add 1 to target digit)</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-2-1"></div>
 
 <h3>Rounding to Decimal Places</h3>
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
@@ -114,23 +102,13 @@ Object.assign(LESSONS, {
 
 <h3>Column Addition</h3>
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
-  <svg width="220" height="75" viewBox="0 0 220 75" style="display:block">
-    <text x="10" y="22" font-family="monospace" font-size="17" fill="#333">  1 2 . 3 4 0</text>
-    <text x="10" y="42" font-family="monospace" font-size="17" fill="#333">+  4 . 8 7 6</text>
-    <line x1="5" y1="48" x2="175" y2="48" stroke="#555" stroke-width="1.5"/>
-    <text x="10" y="68" font-family="monospace" font-size="17" fill="#2e7d32" font-weight="bold">  1 7 . 2 1 6</text>
-  </svg>
+  <div class="lesson-diagram" data-diagram="y7-math-2-2"></div>
   <p style="font-size:0.85em;color:#555;margin:0.5em 0 0">Fill the empty space with a zero (4.876 → 4.876<strong>0</strong>) before adding, so every column has a digit.</p>
 </div>
 
 <h3>Column Subtraction</h3>
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
-  <svg width="200" height="75" viewBox="0 0 200 75" style="display:block">
-    <text x="10" y="22" font-family="monospace" font-size="17" fill="#333">  8 . 3 0 0</text>
-    <text x="10" y="42" font-family="monospace" font-size="17" fill="#333">− 2 . 4 7 6</text>
-    <line x1="5" y1="48" x2="160" y2="48" stroke="#555" stroke-width="1.5"/>
-    <text x="10" y="68" font-family="monospace" font-size="17" fill="#2e7d32" font-weight="bold">  5 . 8 2 4</text>
-  </svg>
+  <div class="lesson-diagram" data-diagram="y7-math-2-3"></div>
   <p style="font-size:0.85em;color:#555;margin:0.5em 0 0">Fill 8.3 as 8.300 — this gives placeholder zeros to exchange from when subtracting.</p>
 </div>
 
@@ -256,35 +234,13 @@ Object.assign(LESSONS, {
 <h3>What is a Fraction?</h3>
 <p>A fraction shows part of a whole. In ³⁄₅, the <strong>numerator</strong> (3) tells you how many parts you have; the <strong>denominator</strong> (5) tells you how many equal parts the whole is split into.</p>
 
-<svg width="100%" height="75" viewBox="0 0 380 75" style="max-width:380px;display:block;margin:0.5em 0">
-  <rect x="10"  y="10" width="55" height="35" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
-  <rect x="75"  y="10" width="55" height="35" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
-  <rect x="140" y="10" width="55" height="35" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
-  <rect x="205" y="10" width="55" height="35" rx="5" fill="#eee" stroke="#aaa" stroke-width="1.5"/>
-  <rect x="270" y="10" width="55" height="35" rx="5" fill="#eee" stroke="#aaa" stroke-width="1.5"/>
-  <text x="37"  y="32" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">✓</text>
-  <text x="102" y="32" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">✓</text>
-  <text x="167" y="32" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">✓</text>
-  <text x="10" y="65" font-size="11" fill="#555">³⁄₅ — 3 of the 5 equal parts are shaded</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-2-4"></div>
 
 <h3>Equivalent Fractions</h3>
 <p>Multiply or divide both numerator and denominator by the same non-zero number — the value of the fraction stays exactly the same.</p>
 
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
-  <svg width="100%" height="45" viewBox="0 0 400 45" style="max-width:400px;display:block">
-    <text x="10"  y="25" font-size="14" fill="#333" font-weight="bold">²⁄₃</text>
-    <text x="40"  y="25" font-size="14" fill="#555">=</text>
-    <text x="55"  y="25" font-size="14" fill="#1565c0" font-weight="bold">⁴⁄₆</text>
-    <text x="85"  y="25" font-size="14" fill="#555">=</text>
-    <text x="100" y="25" font-size="14" fill="#6a1b9a" font-weight="bold">⁶⁄₉</text>
-    <text x="130" y="25" font-size="14" fill="#555">=</text>
-    <text x="145" y="25" font-size="14" fill="#c62828" font-weight="bold">¹⁰⁄₁₅</text>
-    <text x="190" y="25" font-size="12" fill="#555">all equal the same value</text>
-    <text x="55"  y="42" font-size="9"  fill="#1565c0">×2</text>
-    <text x="100" y="42" font-size="9"  fill="#6a1b9a">×3</text>
-    <text x="145" y="42" font-size="9"  fill="#c62828">×5</text>
-  </svg>
+  <div class="lesson-diagram" data-diagram="y7-math-2-5"></div>
 </div>
 
 <h3>Simplifying (Cancelling to Lowest Terms)</h3>
@@ -523,11 +479,7 @@ Object.assign(LESSONS, {
 <h3>The Rule</h3>
 <p>Multiply the <strong>numerator</strong> by the whole number. Keep the denominator unchanged. Then simplify if possible.</p>
 
-<svg width="100%" height="50" viewBox="0 0 380 50" style="max-width:380px;display:block;margin:0.5em 0">
-  <rect x="0" y="5" width="380" height="40" rx="8" fill="#e8f5e9"/>
-  <text x="20" y="32" font-size="16" fill="#333">3 × 2/5 = (3×2)/5 = 6/5 = </text>
-  <text x="265" y="32" font-size="16" font-weight="bold" fill="#2e7d32">1 1/5</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-2-6"></div>
 
 <h3>Why This Works</h3>
 <p>3 × 2/5 means adding 2/5 three times: 2/5 + 2/5 + 2/5 = 6/5. Multiplication is just efficient repeated addition.</p>
@@ -558,9 +510,7 @@ Object.assign(LESSONS, {
 <p>Multiply numerators together, and denominators together. The result is often a smaller fraction — multiplying fractions less than 1 gives an even smaller result.</p>
 
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
-  <svg width="100%" height="40" viewBox="0 0 380 40" style="max-width:380px;display:block">
-    <text x="10" y="28" font-size="16" fill="#333">2/3 × 4/5 = (2×4)/(3×5) = 8/15</text>
-  </svg>
+  <div class="lesson-diagram" data-diagram="y7-math-2-7"></div>
 </div>
 
 <h3>Cross-Cancelling First (Simplify Before Multiplying)</h3>
@@ -592,17 +542,7 @@ Object.assign(LESSONS, {
 <h3>Keep, Change, Flip (KCF)</h3>
 <p>To divide by a fraction, multiply by its <strong>reciprocal</strong> (flip it upside down). This is because dividing by a number is the same as multiplying by its inverse.</p>
 
-<svg width="100%" height="65" viewBox="0 0 380 65" style="max-width:380px;display:block;margin:0.5em 0">
-  <rect x="0"   y="5" width="110" height="55" rx="8" fill="#e8f5e9"/>
-  <rect x="130" y="5" width="110" height="55" rx="8" fill="#fff9c4"/>
-  <rect x="260" y="5" width="110" height="55" rx="8" fill="#e3f2fd"/>
-  <text x="55"  y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">1. KEEP</text>
-  <text x="55"  y="48" text-anchor="middle" font-size="11" fill="#2e7d32">first fraction</text>
-  <text x="185" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">2. CHANGE</text>
-  <text x="185" y="48" text-anchor="middle" font-size="11" fill="#e65100">÷ becomes ×</text>
-  <text x="315" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">3. FLIP</text>
-  <text x="315" y="48" text-anchor="middle" font-size="11" fill="#1565c0">second fraction</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-2-8"></div>
 
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
   <strong>3/4 ÷ 2/5</strong><br>
@@ -728,24 +668,7 @@ Object.assign(LESSONS, {
 <h2>Understanding Integers</h2>
 <p>Integers are all whole numbers — positive, negative, and zero. They extend infinitely in both directions: …−3, −2, −1, 0, 1, 2, 3…</p>
 
-<svg width="100%" height="60" viewBox="0 0 480 60" style="max-width:480px;display:block;margin:0.75em 0">
-  <line x1="20" y1="30" x2="460" y2="30" stroke="#555" stroke-width="1.5"/>
-  <polygon points="460,30 452,26 452,34" fill="#555"/>
-  <polygon points="20,30 28,26 28,34" fill="#555"/>
-  <g font-size="12" text-anchor="middle" fill="#333">
-    <line x1="60"  y1="25" x2="60"  y2="35" stroke="#555"/><text x="60"  y="50">−5</text>
-    <line x1="110" y1="25" x2="110" y2="35" stroke="#555"/><text x="110" y="50">−4</text>
-    <line x1="160" y1="25" x2="160" y2="35" stroke="#555"/><text x="160" y="50">−3</text>
-    <line x1="210" y1="25" x2="210" y2="35" stroke="#555"/><text x="210" y="50">−2</text>
-    <line x1="260" y1="25" x2="260" y2="35" stroke="#555"/><text x="260" y="50">−1</text>
-    <line x1="310" y1="22" x2="310" y2="38" stroke="#2e7d32" stroke-width="2"/>
-    <text x="310" y="50" font-weight="bold" fill="#2e7d32">0</text>
-    <line x1="360" y1="25" x2="360" y2="35" stroke="#555"/><text x="360" y="50">1</text>
-    <line x1="410" y1="25" x2="410" y2="35" stroke="#555"/><text x="410" y="50">2</text>
-  </g>
-  <text x="30"  y="18" font-size="10" fill="#c62828">← smaller</text>
-  <text x="400" y="18" font-size="10" fill="#2e7d32">larger →</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-2-9"></div>
 
 <ul>
   <li>Numbers <strong>increase</strong> going right — even negative numbers.</li>
@@ -817,12 +740,7 @@ Object.assign(LESSONS, {
   </div>
 </div>
 
-<svg width="100%" height="55" viewBox="0 0 380 55" style="max-width:380px;display:block;margin:0.5em 0">
-  <rect x="0" y="8" width="380" height="40" rx="8" fill="#fff9c4"/>
-  <text x="20" y="28" font-size="13" fill="#333"><tspan font-weight="bold">− −</tspan> = +</text>
-  <text x="80" y="28" font-size="13" fill="#555">Two negatives combine to make a positive.</text>
-  <text x="20" y="44" font-size="11" fill="#e65100">Subtracting a negative is the same as adding its positive value.</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-2-10"></div>
 
 <h3>Worked Examples</h3>
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">

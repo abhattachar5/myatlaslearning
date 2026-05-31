@@ -18,12 +18,7 @@ Object.assign(LESSONS, {
 <h3>Simplifying Ratios</h3>
 <p>Divide all parts by their HCF — exactly like simplifying a fraction. The simplified ratio must still have whole number parts.</p>
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
-  <svg width="100%" height="40" viewBox="0 0 380 40" style="max-width:380px;display:block;margin-bottom:0.5em">
-    <text x="10"  y="26" font-size="16" fill="#333" font-weight="bold">12 : 18</text>
-    <text x="100" y="26" font-size="14" fill="#555">HCF = 6</text>
-    <text x="185" y="26" font-size="14" fill="#555">÷6 each part</text>
-    <text x="310" y="26" font-size="16" fill="#2e7d32" font-weight="bold">2 : 3</text>
-  </svg>
+  <div class="lesson-diagram" data-diagram="y7-math-3-0"></div>
   Simplify 24:36: HCF(24,36) = 12. &nbsp; 24÷12 : 36÷12 = <strong>2:3</strong>
 </div>
 
@@ -43,16 +38,7 @@ Object.assign(LESSONS, {
 <h3>Equivalent Ratios</h3>
 <p>Multiply or divide all parts by the same non-zero number to create an equivalent ratio. The proportion stays the same.</p>
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
-  <svg width="100%" height="40" viewBox="0 0 420 40" style="max-width:420px;display:block">
-    <text x="10"  y="26" font-size="14" fill="#333" font-weight="bold">3:5</text>
-    <text x="50"  y="26" font-size="12" fill="#555">=</text>
-    <text x="65"  y="26" font-size="14" fill="#1565c0">6:10</text>
-    <text x="120" y="26" font-size="12" fill="#555">=</text>
-    <text x="135" y="26" font-size="14" fill="#6a1b9a">15:25</text>
-    <text x="200" y="26" font-size="12" fill="#555">=</text>
-    <text x="215" y="26" font-size="14" fill="#c62828">30:50</text>
-    <text x="290" y="26" font-size="11" fill="#555">all equivalent</text>
-  </svg>
+  <div class="lesson-diagram" data-diagram="y7-math-3-1"></div>
 </div>
 
 <h3>Ratio Tables</h3>
@@ -94,16 +80,7 @@ Object.assign(LESSONS, {
 <h3>Speed, Distance, Time</h3>
 <p>The three formulas are related — cover the one you want to find with your thumb in the triangle below.</p>
 
-<svg width="100%" height="160" viewBox="0 0 300 160" style="max-width:300px;display:block;margin:0.75em auto">
-  <polygon points="150,10 10,120 290,120" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <line x1="150" y1="10" x2="150" y2="120" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="150" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">D</text>
-  <text x="80"  y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">S</text>
-  <text x="218" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">T</text>
-  <text x="10"  y="145" font-size="10" fill="#555">S = D ÷ T</text>
-  <text x="100" y="145" font-size="10" fill="#555">D = S × T</text>
-  <text x="200" y="145" font-size="10" fill="#555">T = D ÷ S</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-3-2"></div>
 
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
   Car travels 150 km in 2.5 hours.<br>
@@ -236,12 +213,7 @@ Object.assign(LESSONS, {
 <p>Find 10% first (divide by 10), then combine results for any percentage.</p>
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Find 35% of £260</strong>
-  <svg width="100%" height="75" viewBox="0 0 350 75" style="max-width:350px;display:block;margin:0.5em 0">
-    <rect x="0" y="5" width="350" height="65" rx="6" fill="#e8f5e9"/>
-    <text x="10" y="25" font-size="12" fill="#333">10% = £260 ÷ 10 = £26</text>
-    <text x="10" y="43" font-size="12" fill="#333">30% = 3 × £26 = £78</text>
-    <text x="10" y="61" font-size="12" fill="#333">5% = £26 ÷ 2 = £13 &nbsp;→&nbsp; 35% = £78 + £13 = <tspan font-weight="bold">£91</tspan></text>
-  </svg>
+  <div class="lesson-diagram" data-diagram="y7-math-3-3"></div>
 </div>
 
 <h3>Calculator: Decimal Multiplier (fastest method)</h3>
@@ -383,18 +355,7 @@ Object.assign(LESSONS, {
 <h3>Parts of an Algebraic Expression</h3>
 <p>An expression uses numbers, variables, and operations — but has <strong>no equals sign</strong>. It cannot be "solved", only simplified or evaluated.</p>
 
-<svg width="100%" height="105" viewBox="0 0 340 105" style="max-width:340px;display:block;margin:0.75em 0">
-  <text x="100" y="36" font-size="26" font-family="serif" fill="#333">5</text>
-  <text x="130" y="36" font-size="26" font-family="serif" fill="#1565c0" font-weight="bold">x</text>
-  <text x="163" y="36" font-size="26" font-family="serif" fill="#333">+</text>
-  <text x="196" y="36" font-size="26" font-family="serif" fill="#c62828">7</text>
-  <line x1="107" y1="48" x2="72" y2="68" stroke="#555" stroke-width="1"/>
-  <text x="72" y="84" font-size="10" text-anchor="middle" fill="#555">coefficient</text>
-  <line x1="137" y1="48" x2="162" y2="68" stroke="#1565c0" stroke-width="1"/>
-  <text x="162" y="84" font-size="10" text-anchor="middle" fill="#1565c0">variable</text>
-  <line x1="203" y1="48" x2="258" y2="68" stroke="#c62828" stroke-width="1"/>
-  <text x="258" y="84" font-size="10" text-anchor="middle" fill="#c62828">constant</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-3-4"></div>
 
 <table style="width:100%;border-collapse:collapse;margin:1em 0;font-size:0.9em">
   <tr style="background:#e8f5e9">
@@ -464,18 +425,7 @@ Object.assign(LESSONS, {
 
 <h3>Expanding Single Brackets</h3>
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
-  <svg width="100%" height="55" viewBox="0 0 380 55" style="max-width:380px;display:block;margin-bottom:0.5em">
-    <text x="10" y="28" font-size="18" fill="#c62828" font-weight="bold">3</text>
-    <text x="26" y="28" font-size="18" fill="#333">(</text>
-    <text x="36" y="28" font-size="18" fill="#1565c0" font-weight="bold">2x</text>
-    <text x="62" y="28" font-size="18" fill="#333">−</text>
-    <text x="76" y="28" font-size="18" fill="#6a1b9a" font-weight="bold">5</text>
-    <text x="90" y="28" font-size="18" fill="#333">)</text>
-    <path d="M22,32 Q40,50 48,32" stroke="#c62828" stroke-width="1.5" fill="none"/>
-    <path d="M22,32 Q65,50 78,32" stroke="#c62828" stroke-width="1.5" fill="none"/>
-    <text x="115" y="28" font-size="16" fill="#555">= 3×2x − 3×5 = </text>
-    <text x="270" y="28" font-size="18" fill="#2e7d32" font-weight="bold">6x − 15</text>
-  </svg>
+  <div class="lesson-diagram" data-diagram="y7-math-3-5"></div>
   <strong>−2(4 + x)</strong> = −2×4 + (−2)×x = <strong>−8 − 2x</strong><br>
   <span style="font-size:0.85em;color:#555">Take care with negatives outside the bracket — every term inside changes sign.</span>
 </div>
@@ -604,17 +554,7 @@ Object.assign(LESSONS, {
 <h2>Solve One-Step Equations</h2>
 <p>An equation is balanced — like a set of scales. Whatever operation you apply to one side, you must apply to the other to keep the balance.</p>
 
-<svg width="100%" height="80" viewBox="0 0 350 80" style="max-width:350px;display:block;margin:0.75em auto">
-  <line x1="175" y1="15" x2="175" y2="55" stroke="#555" stroke-width="2"/>
-  <line x1="60"  y1="55" x2="290" y2="55" stroke="#555" stroke-width="2"/>
-  <line x1="60"  y1="55" x2="60"  y2="70" stroke="#555" stroke-width="2"/>
-  <line x1="290" y1="55" x2="290" y2="70" stroke="#555" stroke-width="2"/>
-  <rect x="20"  y="38" width="80" height="20" rx="4" fill="#e3f2fd"/>
-  <rect x="250" y="38" width="80" height="20" rx="4" fill="#e8f5e9"/>
-  <text x="60"  y="52" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">x + 7</text>
-  <text x="290" y="52" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="bold">15</text>
-  <text x="175" y="75" text-anchor="middle" font-size="10" fill="#555">balanced — must keep both sides equal</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-3-6"></div>
 
 <h3>Using Inverse Operations</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0;font-size:0.9em">
@@ -808,22 +748,7 @@ Object.assign(LESSONS, {
 <h3>Bar Charts</h3>
 <p>Bar charts compare discrete categories. The height (or length) of each bar shows the frequency or value. Equal bar widths and gaps between bars are essential for readability.</p>
 
-<svg width="100%" height="140" viewBox="0 0 280 140" style="max-width:280px;display:block;margin:0.75em auto">
-  <line x1="30" y1="10" x2="30"  y2="115" stroke="#555" stroke-width="1.5"/>
-  <line x1="30" y1="115" x2="270" y2="115" stroke="#555" stroke-width="1.5"/>
-  <rect x="45"  y="45"  width="40" height="70" fill="#90caf9"/>
-  <rect x="100" y="65"  width="40" height="50" fill="#a5d6a7"/>
-  <rect x="155" y="30"  width="40" height="85" fill="#ef9a9a"/>
-  <rect x="210" y="55"  width="40" height="60" fill="#fff176"/>
-  <text x="65"  y="128" text-anchor="middle" font-size="9" fill="#555">Maths</text>
-  <text x="120" y="128" text-anchor="middle" font-size="9" fill="#555">English</text>
-  <text x="175" y="128" text-anchor="middle" font-size="9" fill="#555">Science</text>
-  <text x="230" y="128" text-anchor="middle" font-size="9" fill="#555">Art</text>
-  <text x="22" y="118" font-size="8" fill="#555">0</text>
-  <text x="18" y="88"  font-size="8" fill="#555">10</text>
-  <text x="18" y="58"  font-size="8" fill="#555">20</text>
-  <text x="18" y="28"  font-size="8" fill="#555">30</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-3-7"></div>
 
 <h3>Pie Charts</h3>
 <p>Pie charts show each category as a proportion of the whole. The full circle = 360° = 100% of the data.</p>
@@ -871,18 +796,7 @@ Object.assign(LESSONS, {
 <h2>Probability of Events</h2>
 <p>Probability measures how likely an event is to happen, expressed as a number from 0 (impossible) to 1 (certain). It can also be written as a percentage or fraction.</p>
 
-<svg width="100%" height="50" viewBox="0 0 440 50" style="max-width:440px;display:block;margin:0.75em 0">
-  <line x1="55" y1="24" x2="385" y2="24" stroke="#555" stroke-width="2"/>
-  <circle cx="55"  cy="24" r="5" fill="#c62828"/>
-  <circle cx="220" cy="24" r="5" fill="#e65100"/>
-  <circle cx="385" cy="24" r="5" fill="#2e7d32"/>
-  <text x="55"  y="15" text-anchor="middle" font-size="11" fill="#c62828">0</text>
-  <text x="220" y="15" text-anchor="middle" font-size="11" fill="#e65100">0.5</text>
-  <text x="385" y="15" text-anchor="middle" font-size="11" fill="#2e7d32">1</text>
-  <text x="55"  y="42" text-anchor="middle" font-size="10" fill="#c62828">Impossible</text>
-  <text x="220" y="42" text-anchor="middle" font-size="10" fill="#e65100">Even chance</text>
-  <text x="385" y="42" text-anchor="middle" font-size="10" fill="#2e7d32">Certain</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-3-8"></div>
 
 <h3>Calculating Probability</h3>
 <p style="text-align:center;background:#e8f5e9;padding:0.6em;border-radius:6px"><strong>P(event) = number of favourable outcomes ÷ total equally likely outcomes</strong></p>
@@ -1048,29 +962,7 @@ Object.assign(LESSONS, {
 <p>A <strong>scatter graph</strong> (scatter plot) shows the relationship between two variables. Each point represents one data item with an x-value and a y-value.</p>
 
 <h3>Types of Correlation</h3>
-<svg width="100%" height="120" viewBox="0 0 480 120" style="max-width:480px;display:block;margin:0.75em 0">
-  <rect x="0" y="0" width="150" height="115" rx="8" fill="#e8f5e9"/>
-  <rect x="165" y="0" width="150" height="115" rx="8" fill="#fce4ec"/>
-  <rect x="330" y="0" width="150" height="115" rx="8" fill="#e3f2fd"/>
-  <text x="75" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Positive correlation</text>
-  <circle cx="20" cy="95" r="3" fill="#2e7d32"/><circle cx="35" cy="85" r="3" fill="#2e7d32"/>
-  <circle cx="55" cy="70" r="3" fill="#2e7d32"/><circle cx="75" cy="60" r="3" fill="#2e7d32"/>
-  <circle cx="95" cy="45" r="3" fill="#2e7d32"/><circle cx="115" cy="35" r="3" fill="#2e7d32"/>
-  <circle cx="130" cy="30" r="3" fill="#2e7d32"/>
-  <text x="75" y="112" text-anchor="middle" font-size="9" fill="#555">As x increases, y increases</text>
-  <text x="240" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Negative correlation</text>
-  <circle cx="185" cy="35" r="3" fill="#c62828"/><circle cx="200" cy="40" r="3" fill="#c62828"/>
-  <circle cx="215" cy="55" r="3" fill="#c62828"/><circle cx="235" cy="65" r="3" fill="#c62828"/>
-  <circle cx="255" cy="75" r="3" fill="#c62828"/><circle cx="275" cy="85" r="3" fill="#c62828"/>
-  <circle cx="290" cy="95" r="3" fill="#c62828"/>
-  <text x="240" y="112" text-anchor="middle" font-size="9" fill="#555">As x increases, y decreases</text>
-  <text x="405" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">No correlation</text>
-  <circle cx="350" cy="50" r="3" fill="#1565c0"/><circle cx="370" cy="85" r="3" fill="#1565c0"/>
-  <circle cx="390" cy="40" r="3" fill="#1565c0"/><circle cx="410" cy="70" r="3" fill="#1565c0"/>
-  <circle cx="430" cy="35" r="3" fill="#1565c0"/><circle cx="450" cy="90" r="3" fill="#1565c0"/>
-  <circle cx="460" cy="55" r="3" fill="#1565c0"/>
-  <text x="405" y="112" text-anchor="middle" font-size="9" fill="#555">No clear pattern</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-3-9"></div>
 
 <h3>Line of Best Fit</h3>
 <p>A <strong>line of best fit</strong> is a straight line drawn through the middle of the data points on a scatter graph. It should:</p>
@@ -1094,18 +986,7 @@ Object.assign(LESSONS, {
 <h3>What is a Venn Diagram?</h3>
 <p>A <strong>Venn diagram</strong> uses overlapping circles inside a rectangle to show how items belong to different sets. The rectangle represents the <strong>universal set</strong> (all items).</p>
 
-<svg width="100%" height="160" viewBox="0 0 340 160" style="max-width:340px;display:block;margin:0.75em 0">
-  <rect x="0" y="0" width="340" height="160" rx="8" fill="#f5f5f5" stroke="#999"/>
-  <text x="320" y="15" text-anchor="end" font-size="11" fill="#555">ξ</text>
-  <circle cx="120" cy="85" r="60" fill="rgba(33,150,243,0.2)" stroke="#1565c0" stroke-width="1.5"/>
-  <circle cx="210" cy="85" r="60" fill="rgba(76,175,80,0.2)" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="90" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">A</text>
-  <text x="240" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">B</text>
-  <text x="85" y="90" text-anchor="middle" font-size="13" fill="#1565c0">A only</text>
-  <text x="165" y="90" text-anchor="middle" font-size="13" fill="#6a1b9a">A ∩ B</text>
-  <text x="245" y="90" text-anchor="middle" font-size="13" fill="#2e7d32">B only</text>
-  <text x="305" y="145" text-anchor="middle" font-size="11" fill="#555">Neither</text>
-</svg>
+<div class="lesson-diagram" data-diagram="y7-math-3-10"></div>
 
 <h3>Set Notation</h3>
 <table style="width:100%;border-collapse:collapse;margin:1em 0">

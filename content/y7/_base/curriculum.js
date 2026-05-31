@@ -1,6 +1,7 @@
 // data.js — Year 7 curriculum: Maths, English, Science, History, Geography
 
-const CURRICULUM = [
+// Re-architected: globals.js declares CURRICULUM/FLASHCARDS/QUESTIONS; this file populates them.
+CURRICULUM.push(
   // ── MATHEMATICS ──────────────────────────────────────────────────────────
   {id:"island-1",subject:"Mathematics",subjectId:"math",name:"Number & Place Value",emoji:"🔢",difficulty:1,estimatedHours:5,color:"#3b82f6",
    description:"Understand place value, rounding, negative numbers and the order of operations (BODMAS).",
@@ -288,9 +289,9 @@ const CURRICULUM = [
    description:"Explore the Islamic Golden Age (c. 750–1258), when Baghdad, Cairo and Córdoba were centres of learning, science, medicine and culture that far surpassed medieval Europe.",
    learningOutcomes:["Describe the extent and diversity of the Islamic world during the Golden Age","Explain why Baghdad was a global centre of learning","Describe key achievements in science, medicine and mathematics","Explain the significance of the House of Wisdom","Compare the Islamic Golden Age with medieval Europe","Assess the lasting legacy of Islamic scholarship on the modern world"],
    prerequisites:["island-55"],topics:["The Islamic world c. 750–1258: extent and diversity","Baghdad: city of peace and learning","The House of Wisdom (Bayt al-Hikma)","Key scholars: Al-Khwarizmi (algebra), Ibn Sina (medicine), Al-Idrisi (geography)","Achievements in science: optics, astronomy, chemistry","Achievements in medicine: hospitals, surgical instruments, Ibn Sina's Canon","Achievements in mathematics: algebra, Arabic numerals, zero","Art, architecture and calligraphy","Comparison with medieval Europe","Legacy: how Islamic scholarship shaped the modern world"]}
-];
+);
 
-const FLASHCARDS = [
+FLASHCARDS.push(
   // ── Maths ─────────────────────────────────────────────────────────────────
   {id:"card-1-1",islandId:"island-1",front:"What does BODMAS stand for, and in what order do you calculate?",
    back:"Brackets, Order (powers/roots), Division, Multiplication, Addition, Subtraction.\n\nAlways work through in this order. Example:\n3 + 4 × 2 = 3 + 8 = 11 (NOT 7 × 2 = 14 ❌)",difficulty:1,category:"definition"},
@@ -860,9 +861,9 @@ const FLASHCARDS = [
    back:"1. AL-KHWARIZMI (c. 780–850):\n• 'Father of Algebra' — his book gave us the word 'algebra' (al-jabr)\n• Developed algorithms (the word comes from his name!)\n• Helped introduce Hindu-Arabic numerals (0–9) to the wider world\n\n2. IBN SINA / AVICENNA (980–1037):\n• Wrote 'The Canon of Medicine' — a medical textbook used in Europe for 500 years\n• Classified diseases, described contagion, promoted clinical trials\n\n3. AL-IDRISI (1100–1165):\n• Created one of the most accurate world maps of the medieval period\n• His 'Book of Roger' described the geography of the known world\n\nOther key figures: Ibn al-Haytham (optics), Al-Razi (chemistry/medicine), Omar Khayyam (mathematics/poetry).",difficulty:2,category:"definition"},
   {id:"card-59-3",islandId:"island-59",front:"How did the Islamic Golden Age influence medieval Europe and the modern world?",
    back:"The Islamic world preserved AND advanced knowledge that Europe had lost after the fall of Rome:\n\nDirect influences:\n• MATHEMATICS — Arabic numerals (0–9) replaced Roman numerals; algebra became essential\n• MEDICINE — Ibn Sina's Canon taught European doctors for centuries; hospitals as institutions\n• SCIENCE — optics, chemistry (al-chemy → alchemy → chemistry), astronomy\n• TECHNOLOGY — paper-making, water clocks, astrolabes\n• PHILOSOPHY — Islamic scholars preserved Aristotle and Plato; transmitted them to Europe → sparked the Renaissance\n\nThe Crusades and trade in Spain and Sicily were the main channels of knowledge transfer.\n\nModern legacy: every time you use algebra, Arabic numerals, or visit a hospital, you benefit from Islamic Golden Age scholarship.",difficulty:2,category:"concept"}
-];
+);
 
-const QUESTIONS = {
+Object.assign(QUESTIONS, {
   "island-1":[
     {q:"Calculate: 3 + 4 × 2",opts:["14","11","10","7"],c:1,e:"BODMAS: do multiplication before addition. 4 × 2 = 8, then 3 + 8 = 11. If you got 14, you added first — a very common mistake!"},
     {q:"Round 4,732 to the nearest hundred.",opts:["4,700","4,730","4,800","5,000"],c:0,e:"Look at the tens digit (3). Since 3 < 5, round DOWN. The hundreds digit (7) stays, and everything after becomes 0: 4,700."},
@@ -1553,4 +1554,4 @@ const QUESTIONS = {
     {q:"Compared to medieval Europe, the Islamic world during the Golden Age was:",opts:["Less advanced in every way","Generally more advanced in science, medicine, mathematics, and learning","Exactly the same","Focused only on religion with no interest in science"],c:1,e:"While much of medieval Europe had limited literacy, poor medicine, and little scientific progress, the Islamic world was experiencing a flourishing of knowledge. Islamic scholars preserved and extended Greek and Roman learning, made original discoveries, and created the foundations for many fields that later helped spark the European Renaissance."},
     {q:"The Islamic Golden Age ended largely because of:",opts:["A natural disaster","The Mongol invasion and destruction of Baghdad in 1258","A voluntary decision to stop learning","The discovery of America"],c:1,e:"In 1258, the Mongol army led by Hulagu Khan sacked Baghdad, destroying the House of Wisdom and killing the caliph. Libraries were burned and countless manuscripts were lost. While Islamic scholarship continued in other regions (Egypt, Spain, Persia), the destruction of Baghdad marked the symbolic end of the Golden Age."}
   ]
-};
+});

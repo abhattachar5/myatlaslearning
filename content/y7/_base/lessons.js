@@ -1,7 +1,8 @@
 // lessons.js — Pre-written lesson HTML for every island.
 // Format mirrors what the AI prompt returns: h4 headings, ul/dl, .example-box
 
-var LESSONS = {
+// Re-architected: globals.js declares LESSONS; this file populates it.
+Object.assign(LESSONS, {
 
 "island-1": `<h4>Introduction</h4>
 <p>Number and place value are the foundation of all mathematics. Every digit in a number has a <strong>value</strong> that depends on its <strong>position</strong> — and knowing this lets you round, order and calculate with confidence. Master this island first and everything else becomes easier.</p>
@@ -2858,4 +2859,4 @@ Therefore, Islamic scholars advanced medicine through systematic study, practica
 <li>❌ Confusing Al-Khwarizmi with other scholars — ✅ Correct: <strong>Al-Khwarizmi</strong> = algebra and numerals; <strong>Ibn Sina</strong> = medicine; <strong>Al-Zahrawi</strong> = surgery; <strong>Ibn al-Haytham</strong> = optics.</li>
 </ul>`
 
-};
+});
