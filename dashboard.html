@@ -1090,7 +1090,7 @@ function renderMathTopicCards() {
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
-      <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
+      <div class="island-meta">${totalIslands} subtopic${totalIslands !== 1 ? 's' : ''}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
         <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
@@ -1138,7 +1138,7 @@ function renderEnglishTopicCards() {
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
-      <div class="island-meta">${totalIslands > 0 ? totalIslands + ' topic' + (totalIslands !== 1 ? 's' : '') : (topic.id === 'et-04' ? '40 passages' : 'Coming soon')}</div>
+      <div class="island-meta">${(topic.id === 'et-04' || topic.id === 'e8t-04') ? '40 passages' : (totalIslands > 0 ? totalIslands + ' subtopic' + (totalIslands !== 1 ? 's' : '') : 'Coming soon')}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
         <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
@@ -1188,7 +1188,7 @@ function renderScienceTopicCards() {
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
-      <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
+      <div class="island-meta">${totalIslands} subtopic${totalIslands !== 1 ? 's' : ''}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
         <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
@@ -1237,7 +1237,7 @@ function renderHistoryTopicCards() {
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
-      <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
+      <div class="island-meta">${totalIslands} subtopic${totalIslands !== 1 ? 's' : ''}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
         <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
@@ -1286,7 +1286,7 @@ function renderGeographyTopicCards() {
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
-      <div class="island-meta">${totalIslands} topic${totalIslands !== 1 ? 's' : ''}</div>
+      <div class="island-meta">${totalIslands} subtopic${totalIslands !== 1 ? 's' : ''}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
         <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
