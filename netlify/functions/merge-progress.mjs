@@ -61,6 +61,7 @@ export default async (req, context) => {
         revisionDone: body.revisionDone || {},
         comprehension: body.comprehension || {},
         yearHistory: body.yearHistory || [],
+        studyPlan: body.studyPlan || null,
         updatedAt: new Date().toISOString(),
       };
     } else {
@@ -80,6 +81,7 @@ export default async (req, context) => {
         revisionDone: { ...(body.revisionDone || {}), ...(existing.revisionDone || {}) },
         comprehension: { ...(body.comprehension || {}), ...(existing.comprehension || {}) },
         yearHistory: (existing.yearHistory && existing.yearHistory.length) ? existing.yearHistory : (body.yearHistory || []),
+        studyPlan: existing.studyPlan || body.studyPlan || null,
         updatedAt: new Date().toISOString(),
       };
     }

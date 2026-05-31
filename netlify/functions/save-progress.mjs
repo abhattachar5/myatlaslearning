@@ -40,6 +40,7 @@ export default async (req, context) => {
       parentPin: body.parentPin || "",
       assignments: Array.isArray(body.assignments) ? body.assignments : [],
       activeDays: Array.isArray(body.activeDays) ? body.activeDays : [],
+      studyPlan: body.studyPlan || null,
       updatedAt: new Date().toISOString(),
     };
 

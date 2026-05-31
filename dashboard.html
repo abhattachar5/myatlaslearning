@@ -859,6 +859,7 @@ function renderNextWeekPreview(nextData, containerEl) {
 
 function activateStudyPlan() {
   StudyPlanner.createStudyPlan();
+  if (typeof syncProgressToServer === 'function') syncProgressToServer();  // push the new plan to the server
   closePlanSetupModal();
   showToast('📅 Study plan activated!', 'success');
   renderWeekPlan();

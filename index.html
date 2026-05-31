@@ -365,6 +365,9 @@
         if (serverData.activeDays && serverData.activeDays.length) {
           localStorage.setItem('sm_active_days', JSON.stringify(serverData.activeDays));
         }
+        if (serverData.studyPlan) {
+          localStorage.setItem('sm_study_plan', JSON.stringify(serverData.studyPlan));
+        }
         if (serverData.comprehension && Object.keys(serverData.comprehension).length && typeof restoreComprehension === 'function') {
           restoreComprehension(serverData.comprehension);
         }

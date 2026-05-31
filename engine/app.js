@@ -91,7 +91,8 @@ function syncProgressToServer() {
         yearHistory: profile.yearHistory || [],
         parentPin: profile.parentPin || '',
         assignments: assignments,
-        activeDays: getActiveDays()
+        activeDays: getActiveDays(),
+        studyPlan: JSON.parse(localStorage.getItem('sm_study_plan') || 'null')
       };
       await fetchWithAuth('/.netlify/functions/save-progress', {
         method: 'PUT',
