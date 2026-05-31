@@ -423,12 +423,20 @@
   // ── Weekly comprehension assignment ─────────────────────────────────────
   // Odd weeks → fiction, even weeks → non-fiction, 40 passages over 40 weeks
   function getWeeklyComprehension(weekNumber) {
-    if (typeof COMPREHENSION_PASSAGES === 'undefined') return null;
+    // Year-aware: a Year 8 student must be assigned Year 8 passages, otherwise the
+    // passage id won't resolve in comprehension.html (also year-aware) and it falls
+    // back to the list. Mirrors comprehension.html's passage-set selection.
+    var _cu = getUser();
+    var _cy = (_cu && _cu.year) ? _cu.year : 'Year 7';
+    var SET = (_cy === 'Year 8' && typeof COMPREHENSION_PASSAGES_Y8 !== 'undefined' && COMPREHENSION_PASSAGES_Y8.length)
+      ? COMPREHENSION_PASSAGES_Y8
+      : (typeof COMPREHENSION_PASSAGES !== 'undefined' ? COMPREHENSION_PASSAGES : null);
+    if (!SET) return null;
     if (weekNumber > 40) return null;
 
     var fiction = [];
     var nonfiction = [];
-    COMPREHENSION_PASSAGES.forEach(function (p) {
+    SET.forEach(function (p) {
       if (p.type === 'fiction') fiction.push(p);
       else nonfiction.push(p);
     });
