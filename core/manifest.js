@@ -20,7 +20,7 @@ var MANIFEST = (function () {
   function tFiles(base, a, b, extra) { var o = []; for (var i = a; i <= b; i++) o.push(base + 't' + pad2(i) + '.js'); return o.concat(extra || []); }
 
   var engine   = ['engine/test-generator.js'];                                // test-only (declares TEST_GENERATORS)
-  var diagrams = ['diagrams/science.js', 'diagrams/math.js', 'diagrams/geography.js', 'diagrams/y7-math.js', 'diagrams/y9-math.js'];
+  var diagrams = ['diagrams/science.js', 'diagrams/math.js', 'diagrams/geography.js', 'diagrams/y7-math.js', 'diagrams/y9-math.js', 'diagrams/y10-math.js', 'diagrams/y11-math.js'];
 
   var content = {
 
@@ -86,6 +86,39 @@ var MANIFEST = (function () {
                      'content/y9/math/generators/gen-11.js',
                      'content/y9/math/generators/gen-12.js',
                      'content/y9/math/generators/gen-14.js']
+      }
+    },
+
+    // ── YEAR 10 — role-based layout (authoring in progress) ─────────────────
+    y10: {
+      math: {
+        topics:     'content/y10/math/topics.js',
+        islands:    tFiles('content/y10/math/islands/', 1, 14),      // t01–t14
+        generators: ['content/y10/math/generators/gen-1.js',
+                     'content/y10/math/generators/gen-2.js',
+                     'content/y10/math/generators/gen-5.js',
+                     'content/y10/math/generators/gen-6.js',
+                     'content/y10/math/generators/gen-7.js',
+                     'content/y10/math/generators/gen-8.js',
+                     'content/y10/math/generators/gen-9.js',
+                     'content/y10/math/generators/gen-10.js',
+                     'content/y10/math/generators/gen-11.js',
+                     'content/y10/math/generators/gen-12.js']
+      }
+    },
+
+    // ── YEAR 11 — role-based layout (authoring in progress) ─────────────────
+    y11: {
+      math: {
+        topics:     'content/y11/math/topics.js',
+        islands:    tFiles('content/y11/math/islands/', 1, 14),      // t01–t14
+        generators: ['content/y11/math/generators/gen-5.js',
+                     'content/y11/math/generators/gen-6.js',
+                     'content/y11/math/generators/gen-8.js',
+                     'content/y11/math/generators/gen-9.js',
+                     'content/y11/math/generators/gen-11.js',
+                     'content/y11/math/generators/gen-12.js',
+                     'content/y11/math/generators/gen-13.js']
       }
     }
   };

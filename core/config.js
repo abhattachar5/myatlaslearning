@@ -53,6 +53,28 @@ var CONFIG = {
       writingTopicId:       'e9t-06',
       writingPrompts:       function () { return typeof WRITING_PROMPTS_Y9 !== 'undefined' ? WRITING_PROMPTS_Y9 : []; },
       writingWordRange:     [350, 600]
+    },
+    'Year 10': {
+      // Maths only. Other subjects return [] until authored.
+      topics: {
+        math: function () { return typeof MATH_TOPICS_Y10 !== 'undefined' ? MATH_TOPICS_Y10 : []; }
+      },
+      passages:             function () { return typeof COMPREHENSION_PASSAGES_Y10 !== 'undefined' ? COMPREHENSION_PASSAGES_Y10 : []; },
+      comprehensionTopicId: 'e10t-04',
+      writingTopicId:       'e10t-06',
+      writingPrompts:       function () { return typeof WRITING_PROMPTS_Y10 !== 'undefined' ? WRITING_PROMPTS_Y10 : []; },
+      writingWordRange:     [400, 650]
+    },
+    'Year 11': {
+      // Maths only. Other subjects return [] until authored.
+      topics: {
+        math: function () { return typeof MATH_TOPICS_Y11 !== 'undefined' ? MATH_TOPICS_Y11 : []; }
+      },
+      passages:             function () { return typeof COMPREHENSION_PASSAGES_Y11 !== 'undefined' ? COMPREHENSION_PASSAGES_Y11 : []; },
+      comprehensionTopicId: 'e11t-04',
+      writingTopicId:       'e11t-06',
+      writingPrompts:       function () { return typeof WRITING_PROMPTS_Y11 !== 'undefined' ? WRITING_PROMPTS_Y11 : []; },
+      writingWordRange:     [400, 700]
     }
   }
 };
