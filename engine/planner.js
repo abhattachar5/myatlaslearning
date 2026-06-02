@@ -823,42 +823,30 @@
         });
       });
 
-      // ── Remaining islands: project from currentWeek forward ────────
-      if (remaining.length > 0) {
-        // Available weeks for this subject from currentWeek onward
-        var slots = [];
-        for (var w = currentWeek; w <= totalWeeks; w++) {
-          if (sid === 'science' && w % 2 === 0) continue;       // odd weeks
-          if ((sid === 'history' || sid === 'geography') && w % 2 === 1) continue; // even weeks
-          slots.push(w);
-        }
-        if (slots.length === 0) slots = [totalWeeks]; // past end — pack into last week
+      // ── Remaining (incomplete) islands: keep them in their PLANNED week ──
+      // Use the SAME static week-map My Goals uses (getIslandWeekMap), rather than
+      // reflowing remaining islands forward from the current week. Reflowing made
+      // Road Ahead pull future topics (and their tests) into "this week", so the
+      // parent's Road Ahead disagreed with the child's My Goals. Static placement
+      // keeps the two views in lock-step.
+      remaining.forEach(function (islandId) {
+        var wk = originalWeekMap[islandId] || totalWeeks;
+        if (wk < 1) wk = 1;
+        if (wk > totalWeeks) wk = totalWeeks;
+        effectiveWeek[islandId] = wk;
 
-        remaining.forEach(function (islandId, i) {
-          // When there are at least as many available slots as islands (e.g. Year 8
-          // Science/History/Geography), place one island per consecutive slot so the
-          // odd/even-week pattern has no mid-gaps. When islands outnumber slots
-          // (e.g. Maths/English), fall back to an even proportional spread.
-          var si = (remaining.length <= slots.length)
-            ? i
-            : Math.floor(i * slots.length / remaining.length);
-          if (si >= slots.length) si = slots.length - 1;
-          var wk = slots[si];
-          effectiveWeek[islandId] = wk;
+        var island = CURRICULUM.find(function (c) { return c.id === islandId; });
+        if (!island) return;
+        var tid = island.topicId || '_solo_' + island.id;
+        var tidIdx = topicOrder.indexOf(tid);
+        var locked = gate.isGated && tidIdx > gateIdx;
 
-          var island = CURRICULUM.find(function (c) { return c.id === islandId; });
-          if (!island) return;
-          var tid = island.topicId || '_solo_' + island.id;
-          var tidIdx = topicOrder.indexOf(tid);
-          var locked = gate.isGated && tidIdx > gateIdx;
-
-          weekData[wk][sid].push({
-            type: 'island', topic: topicNameMap[tid] || island.name,
-            island: island.name, islandId: islandId,
-            mastered: false, locked: locked
-          });
+        weekData[wk][sid].push({
+          type: 'island', topic: topicNameMap[tid] || island.name,
+          island: island.name, islandId: islandId,
+          mastered: false, locked: locked
         });
-      }
+      });
 
       // ── Topic-test milestones + checkpoints for large topics ────
       topicOrder.forEach(function (tid) {
@@ -949,15 +937,28 @@
   function importProgress(jsonString) {
     try {
       var data = JSON.parse(jsonString);
-      if (!data.version || !data.user) throw new Error('Invalid backup file — missing version or user data.');
 
-      if (data.user)      localStorage.setItem('sm_active_profile', JSON.stringify(data.user));
-      if (data.progress)  localStorage.setItem('sm_progress',  JSON.stringify(data.progress));
-      if (data.studyPlan) localStorage.setItem(PLAN_KEY,       JSON.stringify(data.studyPlan));
+      // Format A — full localStorage backup: a flat map of { "sm_xxx": "value", … }
+      // (e.g. the recovery backup). Treat it as a COMPLETE snapshot: wipe current
+      // account data, restore every key, then push to the server immediately.
+      var rawKeys = Object.keys(data).filter(function (k) { return k.indexOf('sm_') === 0; });
+      if (rawKeys.length && typeof data.version === 'undefined') {
+        if (typeof clearAccountData === 'function') clearAccountData();
+        rawKeys.forEach(function (k) { try { localStorage.setItem(k, data[k]); } catch (e) {} });
+        if (typeof flushSyncNow === 'function') flushSyncNow(); else syncProgressToServer();
+        return { success: true, message: 'Full backup restored (' + rawKeys.length + ' items) and pushed to the server.' };
+      }
+
+      // Format B — the app's own structured export { version, user, progress, … }.
+      if (!data.user) throw new Error('Unrecognised backup file.');
+      localStorage.setItem('sm_active_profile', JSON.stringify(data.user));
+      if (data.progress)    localStorage.setItem('sm_progress',   JSON.stringify(data.progress));
+      if (data.studyPlan)   localStorage.setItem(PLAN_KEY,        JSON.stringify(data.studyPlan));
       if (data.streak !== undefined) localStorage.setItem('sm_streak', String(data.streak));
-      if (data.lastStudy) localStorage.setItem('sm_last_study', data.lastStudy);
-      if (data.theme)     localStorage.setItem('sm_theme',     data.theme);
-      syncProgressToServer();
+      if (data.lastStudy)   localStorage.setItem('sm_last_study', data.lastStudy);
+      if (data.theme)       localStorage.setItem('sm_theme',     data.theme);
+      if (data.assignments) localStorage.setItem('sm_assignments', JSON.stringify(data.assignments));
+      if (typeof flushSyncNow === 'function') flushSyncNow(); else syncProgressToServer();
 
       return { success: true, message: 'Progress imported successfully.' };
     } catch (e) {
