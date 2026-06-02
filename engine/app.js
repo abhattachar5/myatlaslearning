@@ -423,9 +423,16 @@ function touchStreak() {
   const today = new Date().toDateString();
   const last = localStorage.getItem('sm_last_study');
   const streak = getStreak();
-  if (last === today) return streak;
-  const yesterday = new Date(Date.now() - 86400000).toDateString();
-  const next = last === yesterday ? streak + 1 : 1;
+  if (last === today) return streak;            // already counted today
+  // Forgiving streak: a gap of up to 2 missed days keeps the run alive.
+  // gap = calendar days between last study and today (1 = studied yesterday).
+  let next = 1;
+  if (last) {
+    const lastMid = new Date(last); lastMid.setHours(0, 0, 0, 0);
+    const todayMid = new Date(today); todayMid.setHours(0, 0, 0, 0);
+    const gap = Math.round((todayMid - lastMid) / 86400000);
+    next = (gap >= 1 && gap <= 3) ? streak + 1 : 1;  // gap 1–3 => ≤2 missed days
+  }
   localStorage.setItem('sm_streak', next);
   localStorage.setItem('sm_last_study', today);
   syncProgressToServer();

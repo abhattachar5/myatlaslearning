@@ -688,7 +688,7 @@ function renderThisWeekTab() {
       // Skip the active gate topic — the gate block below renders that with its
       // richer revision flow.
       if (topic.testPassed) {
-        html += `<div class="week-plan-item">
+        html += `<div class="week-plan-item complete">
           <span class="wp-dot-label">📝</span>
           <span class="week-plan-name">${topic.topicName} test</span>
           <span class="week-plan-done">✓ Passed${topic.testScore != null ? ` · ${topic.testScore}%` : ''}</span>
@@ -827,7 +827,7 @@ function renderNextWeekPreview(nextData, containerEl) {
       // Topic test status (passed / due) — same as the current-week list, so the
       // "Up Next" preview agrees with Road Ahead.
       if (topic.testPassed) {
-        html += `<div class="week-plan-item">
+        html += `<div class="week-plan-item complete">
           <span class="wp-dot-label">📝</span>
           <span class="week-plan-name">${topic.topicName} test</span>
           <span class="week-plan-done">✓ Passed${topic.testScore != null ? ` · ${topic.testScore}%` : ''}</span>
