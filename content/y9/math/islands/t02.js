@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 </ul>
 <h3>Worked example</h3>
 <p>List the factors of 36. Work in pairs: 1×36, 2×18, 3×12, 4×9, 6×6 → <strong>1, 2, 3, 4, 6, 9, 12, 18, 36</strong>. The repeated 6 is written once.</p>
+<div class="lesson-diagram" data-diagram="math-factor-tree"><p class="diagram-caption">Prime factor tree: 60 = 2² × 3 × 5</p></div>
 <h3>Common mistake</h3>
 <p>Numbers like 51 and 57 <em>look</em> prime but aren't — always test 3 (digit sum) and 7 before deciding. 51 = 3 × 17.</p>`,
 
@@ -117,6 +118,7 @@ Object.assign(LESSONS, {
 <li>HCF = 2² × 3 = <strong>12</strong> (lowest powers of the common primes 2 and 3).</li>
 <li>LCM = 2³ × 3² = <strong>72</strong> (highest powers).</li>
 </ul>
+<div class="lesson-diagram" data-diagram="math-prime-venn"><p class="diagram-caption">Shared primes give the HCF; all primes together give the LCM</p></div>
 <h3>Common mistake</h3>
 <p>Don't mix them up: HCF is the <em>smaller</em> answer (lowest powers), LCM is the <em>larger</em> (highest powers). A quick check: the HCF must divide both numbers; the LCM must be in both times-tables.</p>`,
 
@@ -129,6 +131,7 @@ Object.assign(LESSONS, {
 <li><strong>Rational</strong>: anything that can be written as a fraction a/b — includes integers, terminating decimals (0.25) and recurring decimals (0.3̇).</li>
 <li><strong>Irrational</strong>: cannot be written as a fraction — its decimal never ends and never repeats (π, √2).</li>
 </ul>
+<div class="lesson-diagram" data-diagram="math-number-sets"><p class="diagram-caption">Each set sits inside the next: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ. Irrationals live in ℝ but outside ℚ.</p></div>
 <h3>Worked example</h3>
 <p>Classify √40. Since 40 is not a perfect square, √40 = 6.324… never ends or repeats, so it is <strong>irrational</strong>. By contrast √49 = 7 is rational.</p>
 <h3>Common mistakes</h3>

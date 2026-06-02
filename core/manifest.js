@@ -20,7 +20,7 @@ var MANIFEST = (function () {
   function tFiles(base, a, b, extra) { var o = []; for (var i = a; i <= b; i++) o.push(base + 't' + pad2(i) + '.js'); return o.concat(extra || []); }
 
   var engine   = ['engine/test-generator.js'];                                // test-only (declares TEST_GENERATORS)
-  var diagrams = ['diagrams/science.js', 'diagrams/math.js', 'diagrams/geography.js', 'diagrams/y7-math.js'];
+  var diagrams = ['diagrams/science.js', 'diagrams/math.js', 'diagrams/geography.js', 'diagrams/y7-math.js', 'diagrams/y9-math.js'];
 
   var content = {
 
@@ -72,9 +72,20 @@ var MANIFEST = (function () {
     y9: {
       math: {
         topics:     'content/y9/math/topics.js',
-        islands:    tFiles('content/y9/math/islands/', 1, 2),       // t01–t02
+        islands:    tFiles('content/y9/math/islands/', 1, 14),      // t01–t14
         generators: ['content/y9/math/generators/gen-1.js',
-                     'content/y9/math/generators/gen-2.js']
+                     'content/y9/math/generators/gen-2.js',
+                     'content/y9/math/generators/gen-3.js',
+                     'content/y9/math/generators/gen-4.js',
+                     'content/y9/math/generators/gen-5.js',
+                     'content/y9/math/generators/gen-6.js',
+                     'content/y9/math/generators/gen-7.js',
+                     'content/y9/math/generators/gen-8.js',
+                     'content/y9/math/generators/gen-9.js',
+                     'content/y9/math/generators/gen-10.js',
+                     'content/y9/math/generators/gen-11.js',
+                     'content/y9/math/generators/gen-12.js',
+                     'content/y9/math/generators/gen-14.js']
       }
     }
   };

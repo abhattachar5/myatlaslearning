@@ -124,6 +124,7 @@ Object.assign(LESSONS, {
 <li>The largest square factor of 72 is 36, because 72 = 36 × 2.</li>
 <li>√72 = √36 × √2 = 6√2.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="math-surd-simplify"><p class="diagram-caption">√72 = √(36 × 2) = √36 × √2 = 6√2</p></div>
 <h3>Common mistake</h3>
 <p>Taking out a square factor that is <em>not</em> the largest leaves more work to do. √72 = √(4 × 18) = 2√18 is correct but not finished, because √18 still simplifies. Always take the largest square factor in one step.</p>`,
 

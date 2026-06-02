@@ -2,7 +2,7 @@
 // Flip a year from `years` into `active` to switch it on across the whole app.
 var CONFIG = {
   years:    ['y7', 'y8', 'y9', 'y10', 'y11'],
-  active:   ['y7', 'y8'],   // both years migrated; Y7 loads first so Y8 reuse resolves
+  active:   ['y7', 'y8', 'y9'],   // Y7 loads first so Y8 reuse resolves; Y9 = Maths only for now
   subjects: ['math', 'english', 'science', 'history', 'geography', 'comprehension'],
 
   // Human-friendly labels
