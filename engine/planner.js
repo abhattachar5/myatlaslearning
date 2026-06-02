@@ -575,10 +575,12 @@
       topicOrder.forEach(function (tid) {
         var tg = topicGroups[tid];
         if (!tg) return;
-        if (tid.indexOf('_none_') === 0 || Atlas.isComprehensionTopic(tid) || Atlas.isWritingTopic(tid)) { tg.dueTest = false; return; }
+        if (tid.indexOf('_none_') === 0 || Atlas.isComprehensionTopic(tid) || Atlas.isWritingTopic(tid)) { tg.dueTest = false; tg.testPassed = false; return; }
         var ti = CURRICULUM.filter(function (c) { return c.topicId === tid; });
         var complete = ti.length > 0 && ti.every(function (c) { return getIslandStatus(c.id) === 4; });
-        tg.dueTest = complete && !isTopicTestPassed(tid);
+        var passed = isTopicTestPassed(tid);
+        tg.dueTest = complete && !passed;     // finished the topic, test still to take
+        tg.testPassed = complete && passed;   // finished the topic AND passed its test
       });
 
       // Count gated islands as items too (but not done)

@@ -459,8 +459,8 @@
           var entries = row.subjects[sid] || [];
           if (!entries.length) { h += '<td><span class="em">—</span></td>'; return; }
           var parts = entries.map(function (e) {
-            if (e.type === 'comprehension') return '📝 ' + (e.title || 'Comprehension');
-            if (e.type === 'test') return '📋 Topic test';
+            if (e.type === 'comprehension') return (e.complete ? '<span class="done">✓</span> ' : '📝 ') + (e.title || 'Comprehension');
+            if (e.type === 'test') return (e.passed ? '<span class="done">✓</span> Topic test (passed)' : '📋 Topic test');
             if (e.type === 'checkpoint') return '🚩 Checkpoint';
             return (e.mastered ? '<span class="done">✓</span> ' : '') + (e.island || e.name || '');
           });
