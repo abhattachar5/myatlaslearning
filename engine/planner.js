@@ -578,10 +578,16 @@
         if (tid.indexOf('_none_') === 0 || Atlas.isComprehensionTopic(tid) || Atlas.isWritingTopic(tid)) { tg.dueTest = false; tg.testPassed = false; return; }
         var ti = CURRICULUM.filter(function (c) { return c.topicId === tid; });
         var complete = ti.length > 0 && ti.every(function (c) { return getIslandStatus(c.id) === 4; });
+        // A topic's test belongs to the week its LAST island is scheduled (its
+        // "finish" week) — so a topic spanning two weeks shows its test once, in
+        // that week, not in every week it appears. Matches Road Ahead's placement.
+        var finishWeek = 0;
+        ti.forEach(function (c) { var w = weekMap[c.id] || 0; if (w > finishWeek) finishWeek = w; });
+        var isFinishWeek = (finishWeek === weekNumber);
         var passed = isTopicTestPassed(tid);
-        tg.dueTest = complete && !passed;     // finished the topic, test still to take
-        tg.testPassed = complete && passed;   // finished the topic AND passed its test
-        tg.testScore = getTopicTestBest(tid); // best % across attempts (null if never sat)
+        tg.dueTest = isFinishWeek && complete && !passed;     // topic finishes this week, test still to take
+        tg.testPassed = isFinishWeek && complete && passed;   // topic finishes this week AND test passed
+        tg.testScore = getTopicTestBest(tid);                 // best % across attempts (null if never sat)
       });
 
       // Count gated islands as items too (but not done)

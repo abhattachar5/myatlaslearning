@@ -688,15 +688,17 @@ function renderThisWeekTab() {
       // Skip the active gate topic — the gate block below renders that with its
       // richer revision flow.
       if (topic.testPassed) {
-        html += `<div class="week-plan-item complete">
+        html += `<div class="week-plan-item">
           <span class="wp-dot-label">📝</span>
-          <span class="week-plan-name">${topic.topicName} test <span class="revision-score" style="color:#22c55e">✓ Passed${topic.testScore != null ? ` (${topic.testScore}%)` : ''}</span></span>
+          <span class="week-plan-name">${topic.topicName} test</span>
+          <span class="week-plan-done">✓ Passed${topic.testScore != null ? ` · ${topic.testScore}%` : ''}</span>
           <a href="test.html?id=${topic.topicId}" class="week-plan-go">Retake →</a>
         </div>`;
       } else if (topic.dueTest && (!subj.gate || subj.gate.topicId !== topic.topicId)) {
         html += `<div class="week-plan-item gate-test">
           <span class="wp-dot-label">📝</span>
-          <span class="week-plan-name">Test ready: ${topic.topicName}${topic.testScore != null ? ` <span class="revision-score">(best ${topic.testScore}%)</span>` : ''}</span>
+          <span class="week-plan-name">Test ready: ${topic.topicName}</span>
+          ${topic.testScore != null ? `<span class="week-plan-done" style="color:var(--text-muted)">best ${topic.testScore}%</span>` : ''}
           <a href="test.html?id=${topic.topicId}" class="week-plan-go">${topic.testScore != null ? 'Retake' : 'Take Test'} →</a>
         </div>`;
       }
@@ -825,15 +827,17 @@ function renderNextWeekPreview(nextData, containerEl) {
       // Topic test status (passed / due) — same as the current-week list, so the
       // "Up Next" preview agrees with Road Ahead.
       if (topic.testPassed) {
-        html += `<div class="week-plan-item complete">
+        html += `<div class="week-plan-item">
           <span class="wp-dot-label">📝</span>
-          <span class="week-plan-name">${topic.topicName} test <span class="revision-score" style="color:#22c55e">✓ Passed${topic.testScore != null ? ` (${topic.testScore}%)` : ''}</span></span>
+          <span class="week-plan-name">${topic.topicName} test</span>
+          <span class="week-plan-done">✓ Passed${topic.testScore != null ? ` · ${topic.testScore}%` : ''}</span>
           <a href="test.html?id=${topic.topicId}" class="week-plan-go">Retake →</a>
         </div>`;
       } else if (topic.dueTest && (!subj.gate || subj.gate.topicId !== topic.topicId)) {
         html += `<div class="week-plan-item gate-test">
           <span class="wp-dot-label">📝</span>
-          <span class="week-plan-name">Test ready: ${topic.topicName}${topic.testScore != null ? ` <span class="revision-score">(best ${topic.testScore}%)</span>` : ''}</span>
+          <span class="week-plan-name">Test ready: ${topic.topicName}</span>
+          ${topic.testScore != null ? `<span class="week-plan-done" style="color:var(--text-muted)">best ${topic.testScore}%</span>` : ''}
           <a href="test.html?id=${topic.topicId}" class="week-plan-go">${topic.testScore != null ? 'Retake' : 'Take Test'} →</a>
         </div>`;
       }
