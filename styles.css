@@ -2309,7 +2309,11 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   transition: background .1s;
 }
 .week-plan-item:hover { background: var(--surface2); border-radius: var(--radius-sm); }
-.week-plan-item.complete { opacity: .5; }
+/* Completed rows: mute the label/square/dots but keep the green check at full
+   strength so every "✓ Done" / "✓ Passed" reads as the same dark green. */
+.week-plan-item.complete .week-plan-name { color: var(--text-muted); }
+.week-plan-item.complete .wp-dot-label,
+.week-plan-item.complete .week-plan-dots { opacity: .5; }
 .week-plan-item.complete .wp-square { opacity: .6; }
 
 /* Progress dots (right side) */
