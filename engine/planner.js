@@ -581,6 +581,7 @@
         var passed = isTopicTestPassed(tid);
         tg.dueTest = complete && !passed;     // finished the topic, test still to take
         tg.testPassed = complete && passed;   // finished the topic AND passed its test
+        tg.testScore = getTopicTestBest(tid); // best % across attempts (null if never sat)
       });
 
       // Count gated islands as items too (but not done)
@@ -889,7 +890,7 @@
             weekData[testWk][sid].push({
               type: 'test', topicId: tid,
               topicName: topicNameMap[tid] || tid,
-              passed: isTopicTestPassed(tid), locked: locked
+              passed: isTopicTestPassed(tid), score: getTopicTestBest(tid), locked: locked
             });
           } else {
             // Non-gating checkpoint covering first N islands

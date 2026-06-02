@@ -690,14 +690,14 @@ function renderThisWeekTab() {
       if (topic.testPassed) {
         html += `<div class="week-plan-item complete">
           <span class="wp-dot-label">📝</span>
-          <span class="week-plan-name">${topic.topicName} test</span>
-          <span class="week-plan-done">✓ Passed</span>
+          <span class="week-plan-name">${topic.topicName} test <span class="revision-score" style="color:#22c55e">✓ Passed${topic.testScore != null ? ` (${topic.testScore}%)` : ''}</span></span>
+          <a href="test.html?id=${topic.topicId}" class="week-plan-go">Retake →</a>
         </div>`;
       } else if (topic.dueTest && (!subj.gate || subj.gate.topicId !== topic.topicId)) {
         html += `<div class="week-plan-item gate-test">
           <span class="wp-dot-label">📝</span>
-          <span class="week-plan-name">Test ready: ${topic.topicName}</span>
-          <a href="test.html?id=${topic.topicId}" class="week-plan-go">Take Test →</a>
+          <span class="week-plan-name">Test ready: ${topic.topicName}${topic.testScore != null ? ` <span class="revision-score">(best ${topic.testScore}%)</span>` : ''}</span>
+          <a href="test.html?id=${topic.topicId}" class="week-plan-go">${topic.testScore != null ? 'Retake' : 'Take Test'} →</a>
         </div>`;
       }
     });
@@ -821,6 +821,22 @@ function renderNextWeekPreview(nextData, containerEl) {
           ${action}
         </div>`;
       });
+
+      // Topic test status (passed / due) — same as the current-week list, so the
+      // "Up Next" preview agrees with Road Ahead.
+      if (topic.testPassed) {
+        html += `<div class="week-plan-item complete">
+          <span class="wp-dot-label">📝</span>
+          <span class="week-plan-name">${topic.topicName} test <span class="revision-score" style="color:#22c55e">✓ Passed${topic.testScore != null ? ` (${topic.testScore}%)` : ''}</span></span>
+          <a href="test.html?id=${topic.topicId}" class="week-plan-go">Retake →</a>
+        </div>`;
+      } else if (topic.dueTest && (!subj.gate || subj.gate.topicId !== topic.topicId)) {
+        html += `<div class="week-plan-item gate-test">
+          <span class="wp-dot-label">📝</span>
+          <span class="week-plan-name">Test ready: ${topic.topicName}${topic.testScore != null ? ` <span class="revision-score">(best ${topic.testScore}%)</span>` : ''}</span>
+          <a href="test.html?id=${topic.topicId}" class="week-plan-go">${topic.testScore != null ? 'Retake' : 'Take Test'} →</a>
+        </div>`;
+      }
     });
 
     if (subj.gate) {
