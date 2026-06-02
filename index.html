@@ -324,7 +324,11 @@
       }
 
       if (serverData && serverData.name) {
-        // Returning user with profile data — name is the child's name
+        // Returning user — the server copy is the single source of truth. Wipe any
+        // stale local data first (left by a previous account/device on this
+        // browser) so nothing bleeds in, then restore everything UNCONDITIONALLY.
+        if (typeof clearAccountData === 'function') clearAccountData();
+
         var parentName = serverData.parentName || '';
         // Fallback: get parent name from identity metadata if not in blob
         if (!parentName) {
@@ -343,32 +347,15 @@
           parentPin: serverData.parentPin || ''
         };
         localStorage.setItem('sm_active_profile', JSON.stringify(profile));
-
-        if (serverData.progress) {
-          localStorage.setItem('sm_progress', JSON.stringify(serverData.progress));
-        }
-        if (serverData.streak !== undefined) {
-          localStorage.setItem('sm_streak', String(serverData.streak));
-        }
-        if (serverData.lastStudy) {
-          localStorage.setItem('sm_last_study', serverData.lastStudy);
-        }
-        if (serverData.testResults && Object.keys(serverData.testResults).length) {
-          localStorage.setItem('sm_test_results', JSON.stringify(serverData.testResults));
-        }
-        if (serverData.revisionDone && Object.keys(serverData.revisionDone).length) {
-          localStorage.setItem('sm_revision_done', JSON.stringify(serverData.revisionDone));
-        }
-        if (serverData.assignments && serverData.assignments.length) {
-          localStorage.setItem('sm_assignments', JSON.stringify(serverData.assignments));
-        }
-        if (serverData.activeDays && serverData.activeDays.length) {
-          localStorage.setItem('sm_active_days', JSON.stringify(serverData.activeDays));
-        }
-        if (serverData.studyPlan) {
-          localStorage.setItem('sm_study_plan', JSON.stringify(serverData.studyPlan));
-        }
-        if (serverData.comprehension && Object.keys(serverData.comprehension).length && typeof restoreComprehension === 'function') {
+        localStorage.setItem('sm_progress', JSON.stringify(serverData.progress || {}));
+        localStorage.setItem('sm_streak', String(serverData.streak || 0));
+        if (serverData.lastStudy) localStorage.setItem('sm_last_study', serverData.lastStudy);
+        localStorage.setItem('sm_test_results', JSON.stringify(serverData.testResults || {}));
+        localStorage.setItem('sm_revision_done', JSON.stringify(serverData.revisionDone || {}));
+        localStorage.setItem('sm_assignments', JSON.stringify(serverData.assignments || []));
+        localStorage.setItem('sm_active_days', JSON.stringify(serverData.activeDays || []));
+        if (serverData.studyPlan) localStorage.setItem('sm_study_plan', JSON.stringify(serverData.studyPlan));
+        if (serverData.comprehension && typeof restoreComprehension === 'function') {
           restoreComprehension(serverData.comprehension);
         }
         if (serverData.preferences && serverData.preferences.theme) {

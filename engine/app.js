@@ -30,9 +30,11 @@ function setUser(user) {
   localStorage.setItem('sm_active_profile', JSON.stringify(user));
 }
 function logout() {
+  flushSyncNow();   // save this account's final state before we wipe local data
   // Clear GoTrue token synchronously so index.html won't see an active session
   localStorage.removeItem('gotrue.user');
-  localStorage.removeItem('sm_active_profile');
+  // Wipe ALL per-account data so it can't bleed into the next account on this browser
+  clearAccountData();
   // Fire async logout to revoke server-side token (best-effort)
   if (typeof netlifyIdentity !== 'undefined') {
     try { netlifyIdentity.logout(); } catch (e) { /* token already cleared */ }
@@ -59,41 +61,67 @@ async function fetchWithAuth(url, options = {}) {
   return fetch(url, options);
 }
 
+// ── Per-account local data ───────────────────────────────────────────────────
+// Every localStorage key that belongs to a logged-in account. Cleared on logout
+// and before a clean restore, so one account/device can never bleed its data
+// into another. (sm_theme is a per-browser UI preference and is left alone.)
+var ACCOUNT_KEYS = ['sm_active_profile','sm_progress','sm_assignments','sm_test_results',
+  'sm_revision_done','sm_active_days','sm_study_plan','sm_streak','sm_last_study'];
+function clearAccountData() {
+  ACCOUNT_KEYS.forEach(function (k) { try { localStorage.removeItem(k); } catch (e) {} });
+  // Comprehension keys are dynamic (sm_comp_<id> / sm_compdraft_<id>) — sweep them.
+  try {
+    var del = [];
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (k && (k.indexOf('sm_comp_') === 0 || k.indexOf('sm_compdraft_') === 0)) del.push(k);
+    }
+    del.forEach(function (k) { localStorage.removeItem(k); });
+  } catch (e) {}
+}
+
+// Full progress payload from local state — the single source for both the
+// debounced sync and the flush-on-close.
+function buildSyncPayload() {
+  const profile = getUser();
+  if (!profile) return null;
+  var testResults = {};
+  try { testResults = JSON.parse(localStorage.getItem('sm_test_results') || '{}'); } catch(e) {}
+  var revisionDone = {};
+  try { revisionDone = JSON.parse(localStorage.getItem('sm_revision_done') || '{}'); } catch(e) {}
+  var assignments = [];
+  try { assignments = JSON.parse(localStorage.getItem('sm_assignments') || '[]'); } catch(e) {}
+  return {
+    name: profile.name,
+    parentName: profile.parentName || '',
+    year: profile.year,
+    school: profile.school,
+    tier: profile.tier || 'free',
+    xp: profile.xp || 0,
+    streak: getStreak(),
+    lastStudy: localStorage.getItem('sm_last_study'),
+    joinDate: profile.joinDate,
+    preferences: { theme: localStorage.getItem('sm_theme') || 'light' },
+    progress: getAllProgress(),
+    testResults: testResults,
+    revisionDone: revisionDone,
+    comprehension: getAllComprehension(),
+    yearHistory: profile.yearHistory || [],
+    parentPin: profile.parentPin || '',
+    assignments: assignments,
+    activeDays: getActiveDays(),
+    studyPlan: JSON.parse(localStorage.getItem('sm_study_plan') || 'null')
+  };
+}
+
 var _syncTimer = null;
 function syncProgressToServer() {
   if (_syncTimer) clearTimeout(_syncTimer);
   _syncTimer = setTimeout(async function() {
     _syncTimer = null;
     try {
-      const profile = getUser();
-      if (!profile) return;
-      var testResults = {};
-      try { testResults = JSON.parse(localStorage.getItem('sm_test_results') || '{}'); } catch(e) {}
-      var revisionDone = {};
-      try { revisionDone = JSON.parse(localStorage.getItem('sm_revision_done') || '{}'); } catch(e) {}
-      var assignments = [];
-      try { assignments = JSON.parse(localStorage.getItem('sm_assignments') || '[]'); } catch(e) {}
-      const payload = {
-        name: profile.name,
-        parentName: profile.parentName || '',
-        year: profile.year,
-        school: profile.school,
-        tier: profile.tier || 'free',
-        xp: profile.xp || 0,
-        streak: getStreak(),
-        lastStudy: localStorage.getItem('sm_last_study'),
-        joinDate: profile.joinDate,
-        preferences: { theme: localStorage.getItem('sm_theme') || 'light' },
-        progress: getAllProgress(),
-        testResults: testResults,
-        revisionDone: revisionDone,
-        comprehension: getAllComprehension(),
-        yearHistory: profile.yearHistory || [],
-        parentPin: profile.parentPin || '',
-        assignments: assignments,
-        activeDays: getActiveDays(),
-        studyPlan: JSON.parse(localStorage.getItem('sm_study_plan') || 'null')
-      };
+      const payload = buildSyncPayload();
+      if (!payload) return;
       await fetchWithAuth('/.netlify/functions/save-progress', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -103,6 +131,33 @@ function syncProgressToServer() {
       console.warn('Sync to server failed (will retry on next change):', err.message);
     }
   }, 2000);
+}
+
+// Flush the latest state immediately (no debounce), using a keepalive request so
+// it completes even while the tab is closing or backgrounding. Without this, work
+// done in the last ~2s before leaving the page never reached the server — the
+// main cause of "yesterday's work didn't show up on my other device".
+function flushSyncNow() {
+  try {
+    const identity = getIdentityUser();
+    if (!identity || !identity.token || !identity.token.access_token) return;
+    const payload = buildSyncPayload();
+    if (!payload) return;
+    if (_syncTimer) { clearTimeout(_syncTimer); _syncTimer = null; }
+    fetch('/.netlify/functions/save-progress', {
+      method: 'PUT',
+      keepalive: true,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + identity.token.access_token
+      },
+      body: JSON.stringify(payload)
+    });
+  } catch (e) { /* best-effort */ }
+}
+if (typeof window !== 'undefined') {
+  document.addEventListener('visibilitychange', function () { if (document.hidden) flushSyncNow(); });
+  window.addEventListener('pagehide', flushSyncNow);
 }
 
 async function loadProgressFromServer() {
