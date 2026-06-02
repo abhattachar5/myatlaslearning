@@ -568,6 +568,19 @@
         });
       });
 
+      // Flag topics that are fully complete but whose test isn't passed — they
+      // need a "Take Test" prompt even when they aren't the single active gate.
+      // (A child who works ahead completes topics out of order, so the gate can be
+      // "stuck" on an earlier incomplete topic and hide these earned tests.)
+      topicOrder.forEach(function (tid) {
+        var tg = topicGroups[tid];
+        if (!tg) return;
+        if (tid.indexOf('_none_') === 0 || Atlas.isComprehensionTopic(tid) || Atlas.isWritingTopic(tid)) { tg.dueTest = false; return; }
+        var ti = CURRICULUM.filter(function (c) { return c.topicId === tid; });
+        var complete = ti.length > 0 && ti.every(function (c) { return getIslandStatus(c.id) === 4; });
+        tg.dueTest = complete && !isTopicTestPassed(tid);
+      });
+
       // Count gated islands as items too (but not done)
       if (gatedIslands.length > 0) {
         totalItems += gatedIslands.length;

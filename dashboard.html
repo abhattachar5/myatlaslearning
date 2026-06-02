@@ -681,6 +681,17 @@ function renderThisWeekTab() {
           ${action}
         </div>`;
       });
+
+      // Completed topic whose test isn't passed yet — prompt it here. Skip the
+      // active gate topic (the gate block below renders that with its revision
+      // flow). This surfaces tests the child has earned by working ahead.
+      if (topic.dueTest && (!subj.gate || subj.gate.topicId !== topic.topicId)) {
+        html += `<div class="week-plan-item gate-test">
+          <span class="wp-dot-label">📝</span>
+          <span class="week-plan-name">Test ready: ${topic.topicName}</span>
+          <a href="test.html?id=${topic.topicId}" class="week-plan-go">Take Test →</a>
+        </div>`;
+      }
     });
 
     // ── Topic gate: revision + test CTA ──
