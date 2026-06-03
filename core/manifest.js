@@ -101,8 +101,12 @@ var MANIFEST = (function () {
       }
     },
 
-    // ── YEAR 10 — role-based layout (authoring in progress) ─────────────────
+    // ── YEAR 10 — role-based layout ────────────────────────────────────────
     y10: {
+      science: {
+        topics:  'content/y10/science/topics.js',
+        islands: tFiles('content/y10/science/islands/', 1, 14)      // t01–t14
+      },
       english: {
         topics:  'content/y10/english/topics.js',
         islands: ['content/y10/english/islands/t01.js','content/y10/english/islands/t02.js',
@@ -127,8 +131,12 @@ var MANIFEST = (function () {
       }
     },
 
-    // ── YEAR 11 — role-based layout (authoring in progress) ─────────────────
+    // ── YEAR 11 — role-based layout ────────────────────────────────────────
     y11: {
+      science: {
+        topics:  'content/y11/science/topics.js',
+        islands: tFiles('content/y11/science/islands/', 1, 14)      // t01–t14
+      },
       english: {
         topics:  'content/y11/english/topics.js',
         islands: ['content/y11/english/islands/t01.js','content/y11/english/islands/t02.js',
