@@ -68,8 +68,12 @@ var MANIFEST = (function () {
       comprehension: { passages: nFiles('content/y8/comprehension/passages/', 1, 8) }
     },
 
-    // ── YEAR 9 — role-based layout (authoring in progress) ──────────────────
+    // ── YEAR 9 — role-based layout ────────────────────────────────────────
     y9: {
+      science: {
+        topics:  'content/y9/science/topics.js',
+        islands: tFiles('content/y9/science/islands/', 1, 14)      // t01–t14
+      },
       english: {
         topics:  'content/y9/english/topics.js',
         islands: ['content/y9/english/islands/t01.js','content/y9/english/islands/t02.js',
