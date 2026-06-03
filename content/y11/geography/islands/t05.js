@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 'g11i-05-1': `
 <h2>Enquiry Questions & Data Collection</h2>
+<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">The geographical enquiry process</p></div>
 <p>Geographical fieldwork is a compulsory part of AQA GCSE Geography. You must complete two fieldwork enquiries — one physical and one human — and be prepared to answer questions about your own fieldwork and unfamiliar fieldwork scenarios in the Paper 3 examination.</p>
 
 <h3>Designing an Enquiry</h3>
@@ -124,6 +125,7 @@ Object.assign(LESSONS, {
 
 'g11i-05-2': `
 <h2>Presentation, Analysis & Evaluation</h2>
+<div class="lesson-diagram" data-diagram="correlation-types"><p class="diagram-caption">Types of correlation on a scatter graph</p></div>
 <p>Once data has been collected, it must be presented clearly, analysed to identify patterns, and evaluated to assess reliability. These skills are tested in Paper 3 and account for a significant proportion of the marks.</p>
 
 <h3>Data Presentation</h3>

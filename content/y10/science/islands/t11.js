@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's10i-11-1': `
 <h2>Series &amp; Parallel Rules</h2>
+<div class="lesson-diagram" data-diagram="circuit-comparison"><p class="diagram-caption">Series and parallel circuits</p></div>
 <p>Electrical circuits come in two basic arrangements: <strong>series</strong> (one path) and <strong>parallel</strong> (multiple paths). The rules for current and voltage are different in each, and understanding these is essential for circuit analysis.</p>
 
 <h3>Series Circuits</h3>

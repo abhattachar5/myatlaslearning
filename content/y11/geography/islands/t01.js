@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g11i-01-1': `
 <h2>Causes of Climate Change</h2>
+<div class="lesson-diagram" data-diagram="greenhouse-effect"><p class="diagram-caption">The enhanced greenhouse effect</p></div>
 <p>Climate change refers to long-term shifts in global temperatures and weather patterns. While natural processes have always driven climate variation, human activities since the Industrial Revolution have dramatically accelerated warming. Understanding both sets of causes is essential for the AQA GCSE Geography examination.</p>
 
 <h3>Natural Causes</h3>
@@ -159,6 +160,7 @@ Object.assign(LESSONS, {
 
 'g11i-01-2': `
 <h2>Effects of Climate Change</h2>
+<div class="lesson-diagram" data-diagram="climate-evidence"><p class="diagram-caption">Evidence for climate change</p></div>
 <p>Climate change is already having measurable effects on the environment, societies and economies worldwide. These effects are unequally distributed — low-income countries are often the most severely affected despite contributing least to global emissions.</p>
 
 <h3>Environmental Effects</h3>

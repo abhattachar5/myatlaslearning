@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g9i-04-1': `
 <h2>The Water Cycle</h2>
+<div class="lesson-diagram" data-diagram="drainage-basin"><p class="diagram-caption">A drainage basin and its features</p></div>
 <p>Water is essential for all life on Earth, and it is constantly moving. The water cycle — also called the hydrological cycle — describes the continuous movement of water between the atmosphere, the land surface and the oceans. Understanding this cycle is the foundation for studying rivers, flooding and water management.</p>
 
 <h3>The Global Water Cycle: A Closed System</h3>
@@ -159,6 +160,7 @@ Object.assign(LESSONS, {
 
 'g9i-04-2': `
 <h2>River Processes &amp; Landforms</h2>
+<div class="lesson-diagram" data-diagram="river-long-profile"><p class="diagram-caption">The long profile of a river</p></div>
 <p>Rivers are powerful agents of landscape change. They erode, transport and deposit material to create a range of distinctive landforms. The character of a river changes dramatically from its upland source to its lowland mouth.</p>
 
 <h3>Processes of Erosion</h3>
@@ -202,6 +204,7 @@ Object.assign(LESSONS, {
 
 'g9i-04-3': `
 <h2>Flooding &amp; Flood Management</h2>
+<div class="lesson-diagram" data-diagram="meander-formation"><p class="diagram-caption">How a meander and oxbow lake form</p></div>
 <p>Flooding is one of the most common natural hazards in the UK and around the world. Understanding its causes, impacts and management is a core part of GCSE Geography. The key to a strong exam answer is explaining <strong>both</strong> physical and human causes, and evaluating management strategies rather than simply listing them.</p>
 
 <h3>Causes of Flooding</h3>

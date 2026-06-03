@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g10i-03-1': `
 <h2>River Processes</h2>
+<div class="lesson-diagram" data-diagram="drainage-basin"><p class="diagram-caption">A drainage basin and its features</p></div>
 <p>Rivers are powerful agents of landscape change. Through erosion, transportation and deposition, they sculpt valleys, create landforms and shape the environment from source to mouth.</p>
 
 <h3>Erosion Processes</h3>
@@ -140,6 +141,7 @@ Object.assign(LESSONS, {
 
 'g10i-03-2': `
 <h2>River Landforms</h2>
+<div class="lesson-diagram" data-diagram="river-long-profile"><p class="diagram-caption">The long profile of a river</p></div>
 <p>Rivers create distinctive landforms as they flow from source to mouth. The type of landform depends on whether erosion or deposition is the dominant process at that point in the river's course.</p>
 
 <h3>Upper Course Landforms</h3>
@@ -158,6 +160,7 @@ Object.assign(LESSONS, {
 
 'g10i-03-3': `
 <h2>Flooding &amp; Management</h2>
+<div class="lesson-diagram" data-diagram="meander-formation"><p class="diagram-caption">How a meander and oxbow lake form</p></div>
 <p>River flooding is a natural process, but it becomes a hazard when it affects people, property and infrastructure. Understanding the causes of flooding and the strategies available to manage it is essential for the GCSE examination.</p>
 
 <h3>Causes of Flooding</h3>

@@ -79,6 +79,7 @@ Object.assign(LESSONS, {
 
 's11i-02-2': `
 <h2>Classification &amp; Extinction</h2>
+<div class="lesson-diagram" data-diagram="five-kingdoms"><p class="diagram-caption">The five kingdoms of classification</p></div>
 <p>Classification is the process of sorting living organisms into groups based on shared characteristics. It helps scientists communicate clearly and understand evolutionary relationships.</p>
 
 <h3>The Linnaean system</h3>

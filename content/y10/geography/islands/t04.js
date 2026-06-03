@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g10i-04-1': `
 <h2>Coastal Processes</h2>
+<div class="lesson-diagram" data-diagram="longshore-drift"><p class="diagram-caption">How longshore drift transports sediment</p></div>
 <p>The coastline is shaped by a constant battle between the sea and the land. Understanding the waves, erosion processes, weathering and mass movement that act on the coast is essential for explaining both the landforms we see and the management decisions we make.</p>
 
 <h3>Wave Types</h3>
@@ -145,6 +146,7 @@ Object.assign(LESSONS, {
 
 'g10i-04-2': `
 <h2>Coastal Landforms</h2>
+<div class="lesson-diagram" data-diagram="coastal-stacks"><p class="diagram-caption">Formation of caves, arches, stacks and stumps</p></div>
 <p>The coastline features a rich variety of landforms created by erosion and deposition. Understanding how each forms — and the processes involved — is a core requirement for the GCSE examination.</p>
 
 <h3>Erosional Landforms</h3>
@@ -163,6 +165,7 @@ Object.assign(LESSONS, {
 
 'g10i-04-3': `
 <h2>Coastal Management</h2>
+<div class="lesson-diagram" data-diagram="coastal-defences"><p class="diagram-caption">Hard and soft coastal defences</p></div>
 <p>Coastal management involves difficult decisions about which areas to protect, which methods to use and how to balance economic, social and environmental factors. The Holderness Coast is a key case study that illustrates these challenges.</p>
 
 <h3>Management Strategies</h3>

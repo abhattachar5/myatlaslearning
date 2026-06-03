@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's9i-14-1': `
 <h2>Current, Voltage &amp; Resistance</h2>
+<div class="lesson-diagram" data-diagram="circuit-symbols"><p class="diagram-caption">Common circuit symbols</p></div>
 <p>Electricity is one of the most important topics in physics. Understanding how current, voltage and resistance relate to each other is the foundation for all circuit analysis.</p>
 
 <h3>Current</h3>
@@ -127,6 +128,7 @@ Object.assign(LESSONS, {
 
 's9i-14-2': `
 <h2>Series &amp; Parallel Circuits</h2>
+<div class="lesson-diagram" data-diagram="circuit-comparison"><p class="diagram-caption">Series and parallel circuits</p></div>
 <p>Components can be connected in series (one path) or in parallel (multiple paths). The rules for current and voltage are different in each type of circuit.</p>
 
 <h3>Series Circuits</h3>

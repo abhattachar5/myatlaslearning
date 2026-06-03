@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 's10i-12-1': `
 <h2>Density &amp; States of Matter</h2>
+<div class="lesson-diagram" data-diagram="particle-states"><p class="diagram-caption">The particle model of solids, liquids and gases</p></div>
 <p>The particle model describes how particles are arranged and behave in solids, liquids and gases. It explains density, changes of state and latent heat.</p>
 
 <h3>Density</h3>

@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's9i-03-1': `
 <h2>Photosynthesis</h2>
+<div class="lesson-diagram" data-diagram="photosynthesis-diagram"><p class="diagram-caption">The process of photosynthesis</p></div>
 <p>Photosynthesis is the process by which plants (and algae) convert light energy into chemical energy stored in glucose. It is one of the most important reactions on Earth — it produces the oxygen we breathe and the food at the base of almost every food chain.</p>
 
 <h3>The Equation</h3>
@@ -126,6 +127,7 @@ Object.assign(LESSONS, {
 
 's9i-03-2': `
 <h2>Aerobic &amp; Anaerobic Respiration</h2>
+<div class="lesson-diagram" data-diagram="respiration-comparison"><p class="diagram-caption">Aerobic vs anaerobic respiration</p></div>
 <p>Respiration is NOT breathing. Respiration is a chemical reaction that occurs in every living cell, releasing energy from glucose. There are two types: aerobic (with oxygen) and anaerobic (without oxygen).</p>
 
 <h3>Aerobic Respiration</h3>

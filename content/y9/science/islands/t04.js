@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's9i-04-1': `
 <h2>Ecosystems &amp; Sampling</h2>
+<div class="lesson-diagram" data-diagram="quadrat-sampling"><p class="diagram-caption">Using a quadrat to estimate population size</p></div>
 <p>Ecology is the study of how organisms interact with each other and with their environment. To study these interactions scientifically, you need to know the key terminology and practical sampling techniques used in fieldwork.</p>
 
 <h3>Key Terms</h3>
@@ -127,6 +128,7 @@ Object.assign(LESSONS, {
 
 's9i-04-2': `
 <h2>Food Webs &amp; Interdependence</h2>
+<div class="lesson-diagram" data-diagram="food-web"><p class="diagram-caption">A food web showing interdependence</p></div>
 <p>All organisms in an ecosystem are connected through feeding relationships. Understanding food webs and how species depend on one another is essential for predicting what happens when populations change.</p>
 
 <h3>Food Chains and Food Webs</h3>
@@ -153,6 +155,7 @@ Object.assign(LESSONS, {
 
 's9i-04-3': `
 <h2>Carbon Cycle &amp; Human Impact</h2>
+<div class="lesson-diagram" data-diagram="carbon-cycle"><p class="diagram-caption">The carbon cycle</p></div>
 <p>Carbon is one of the most important elements for life. It cycles continuously between the atmosphere, living organisms, the oceans and the ground. Human activities are disrupting this cycle, with significant consequences for the planet.</p>
 
 <h3>The Carbon Cycle</h3>

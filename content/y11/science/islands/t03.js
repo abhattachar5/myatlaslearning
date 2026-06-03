@@ -71,6 +71,7 @@ Object.assign(LESSONS, {
 
 's11i-03-1': `
 <h2>Trophic Levels &amp; Biomass</h2>
+<div class="lesson-diagram" data-diagram="food-web"><p class="diagram-caption">Trophic levels in a food web</p></div>
 <p>Energy flows through an ecosystem along <strong>food chains</strong>. Each step in the chain is called a <strong>trophic level</strong>.</p>
 
 <h3>Trophic levels</h3>
@@ -116,6 +117,7 @@ Object.assign(LESSONS, {
 
 's11i-03-3': `
 <h2>Water &amp; Carbon Cycles</h2>
+<div class="lesson-diagram" data-diagram="water-cycle"><p class="diagram-caption">The water cycle</p></div>
 <p>Materials are constantly recycled through ecosystems. The <strong>water cycle</strong> and the <strong>carbon cycle</strong> are two key examples.</p>
 
 <h3>The water cycle</h3>

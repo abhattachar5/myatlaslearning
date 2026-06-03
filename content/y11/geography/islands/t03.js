@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g11i-03-1': `
 <h2>Population Structure</h2>
+<div class="lesson-diagram" data-diagram="population-pyramid"><p class="diagram-caption">Population pyramids and their shapes</p></div>
 <p>Population structure describes the composition of a population by age and sex. Understanding it is essential for planning services, predicting future challenges and comparing countries at different levels of development.</p>
 
 <h3>Population Pyramids</h3>
@@ -143,6 +144,7 @@ Object.assign(LESSONS, {
 
 'g11i-03-2': `
 <h2>The Demographic Transition Model</h2>
+<div class="lesson-diagram" data-diagram="dtm-model"><p class="diagram-caption">The Demographic Transition Model</p></div>
 <p>The Demographic Transition Model (DTM) shows how birth rates, death rates and total population change as a country develops. It is a generalisation based on historical European data, but remains a useful framework for understanding population change.</p>
 
 <h3>The Five Stages</h3>
@@ -205,6 +207,7 @@ Object.assign(LESSONS, {
 
 'g11i-03-3': `
 <h2>Migration: Push & Pull</h2>
+<div class="lesson-diagram" data-diagram="push-pull-factors"><p class="diagram-caption">Push and pull factors in migration</p></div>
 <p>Migration is the movement of people from one place to another. It can be internal (within a country) or international (across borders), voluntary (by choice) or forced (against one's will). Understanding the causes and consequences of migration is essential for GCSE Geography.</p>
 
 <h3>Push and Pull Factors</h3>

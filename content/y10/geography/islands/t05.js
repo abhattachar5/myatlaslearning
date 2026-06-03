@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g10i-05-1': `
 <h2>Urbanisation</h2>
+<div class="lesson-diagram" data-diagram="burgess-model"><p class="diagram-caption">The Burgess urban land-use model</p></div>
 <p>Urbanisation — the increasing proportion of people living in towns and cities — is one of the most significant global trends of the 21st century. Understanding its causes, patterns and challenges is essential for GCSE Geography.</p>
 
 <h3>Global Patterns</h3>

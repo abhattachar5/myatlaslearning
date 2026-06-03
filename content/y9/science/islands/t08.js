@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's9i-08-1': `
 <h2>Writing &amp; Balancing Equations</h2>
+<div class="lesson-diagram" data-diagram="conservation-of-mass"><p class="diagram-caption">Conservation of mass in a reaction</p></div>
 <p>Chemical equations are the language of chemistry. They tell you what reacts, what is produced, and in what proportions. Being able to write and balance equations is an essential skill.</p>
 
 <h3>Word and Symbol Equations</h3>
@@ -122,6 +123,7 @@ Object.assign(LESSONS, {
 
 's9i-08-2': `
 <h2>Types of Reaction</h2>
+<div class="lesson-diagram" data-diagram="displacement-reaction"><p class="diagram-caption">A displacement reaction</p></div>
 <p>Chemical reactions can be classified into several types. Recognising these patterns helps you predict products and write equations.</p>
 
 <h3>Key Reaction Types</h3>
@@ -145,6 +147,7 @@ Object.assign(LESSONS, {
 
 's9i-08-3': `
 <h2>Exothermic &amp; Endothermic Reactions</h2>
+<div class="lesson-diagram" data-diagram="energy-level-diagram"><p class="diagram-caption">Energy profiles: exothermic and endothermic</p></div>
 <p>Every chemical reaction involves an energy change. Understanding whether a reaction releases or absorbs energy is important for both theory and practical applications.</p>
 
 <h3>Exothermic Reactions</h3>

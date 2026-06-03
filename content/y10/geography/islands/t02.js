@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g10i-02-1': `
 <h2>Ecosystems</h2>
+<div class="lesson-diagram" data-diagram="gersmehl-model"><p class="diagram-caption">Nutrient cycling in an ecosystem</p></div>
 <p>An ecosystem is a community of living organisms interacting with each other and with the non-living environment. Understanding how ecosystems function — from a garden pond to a global biome — is fundamental to geography.</p>
 
 <h3>Components of an Ecosystem</h3>
@@ -129,6 +130,7 @@ Object.assign(LESSONS, {
 
 'g10i-02-2': `
 <h2>Tropical Rainforests</h2>
+<div class="lesson-diagram" data-diagram="rainforest-layers"><p class="diagram-caption">The layers of a tropical rainforest</p></div>
 <p>Tropical rainforests are the most biodiverse biome on Earth, containing over 50% of the world's plant and animal species. They play a critical role in regulating the global climate, yet they are being destroyed at an alarming rate.</p>
 
 <h3>Climate and Structure</h3>
@@ -174,6 +176,7 @@ Object.assign(LESSONS, {
 
 'g10i-02-3': `
 <h2>Hot Deserts</h2>
+<div class="lesson-diagram" data-diagram="desert-landforms"><p class="diagram-caption">Hot desert landscape features</p></div>
 <p>Hot deserts cover approximately one-third of the Earth's land surface. Despite their harsh conditions — extreme heat, minimal rainfall and limited biodiversity — they are important environments with significant economic opportunities and pressing environmental challenges.</p>
 
 <h3>Desert Climate and Characteristics</h3>

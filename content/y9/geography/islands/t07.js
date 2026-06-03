@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g9i-07-1': `
 <h2>Measuring Development</h2>
+<div class="lesson-diagram" data-diagram="dtm-model"><p class="diagram-caption">The Demographic Transition Model</p></div>
 <p>Development is about more than just money. It encompasses improvements in health, education, living standards and quality of life. Geographers use a range of indicators to measure and compare development between countries — and understanding the <strong>limitations</strong> of these measures is just as important as knowing the measures themselves.</p>
 
 <h3>Development Indicators</h3>
@@ -150,6 +151,7 @@ Object.assign(LESSONS, {
 
 'g9i-07-2': `
 <h2>Trade, Aid &amp; TNCs</h2>
+<div class="lesson-diagram" data-diagram="supply-chain-map"><p class="diagram-caption">A global supply chain</p></div>
 <p>International trade, foreign aid and transnational corporations all play a role in shaping development — but their effects are complex. Understanding the <strong>arguments for and against</strong> each is crucial for balanced exam answers.</p>
 
 <h3>International Trade</h3>
@@ -202,6 +204,7 @@ Object.assign(LESSONS, {
 
 'g9i-07-3': `
 <h2>Reducing the Development Gap</h2>
+<div class="lesson-diagram" data-diagram="types-of-aid"><p class="diagram-caption">Different types of international aid</p></div>
 <p>The gap between the world's richest and poorest countries remains vast. A range of strategies — from Fair Trade to debt relief — aim to close this gap. The key exam skill is <strong>evaluating</strong> each strategy: explaining how it works, assessing its strengths and identifying its limitations.</p>
 
 <h3>Key Strategies</h3>

@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's9i-01-1': `
 <h2>Cell Structure &amp; Microscopy</h2>
+<div class="lesson-diagram" data-diagram="cell-comparison"><p class="diagram-caption">Animal and plant cell structure</p></div>
 <p>All living things are made of cells. Cells are the basic building blocks of life, and understanding their structure is essential for the whole of biology. At GCSE level you need to know the differences between animal and plant cells, how to use a microscope, and how to calculate magnification.</p>
 
 <h3>Animal and Plant Cells</h3>
@@ -155,6 +156,7 @@ Object.assign(LESSONS, {
 
 's9i-01-3': `
 <h2>Organisation: Tissues to Systems</h2>
+<div class="lesson-diagram" data-diagram="cell-organisation"><p class="diagram-caption">Levels of organisation: cells to organ systems</p></div>
 <p>In multicellular organisms, cells do not work alone. They are organised into a hierarchy that allows complex body functions to be carried out efficiently. Understanding this hierarchy — cell, tissue, organ, organ system, organism — is fundamental to GCSE Biology.</p>
 
 <h3>Levels of Organisation</h3>

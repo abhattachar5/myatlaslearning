@@ -91,6 +91,7 @@ Object.assign(LESSONS, {
 
 's11i-05-2': `
 <h2>Chromatography</h2>
+<div class="lesson-diagram" data-diagram="separation-techniques"><p class="diagram-caption">Paper chromatography</p></div>
 <p><strong>Paper chromatography</strong> separates the components of a mixture based on how well each substance dissolves in the solvent and how attracted it is to the paper.</p>
 
 <h3>Method</h3>

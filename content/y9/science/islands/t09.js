@@ -74,6 +74,7 @@ Object.assign(LESSONS, {
 
 's9i-09-1': `
 <h2>The pH Scale &amp; Indicators</h2>
+<div class="lesson-diagram" data-diagram="ph-scale"><p class="diagram-caption">The pH scale</p></div>
 <p>Acids and alkalis are everywhere in everyday life, from lemon juice and vinegar to cleaning products and indigestion tablets. The pH scale gives us a way to measure just how acidic or alkaline a substance is.</p>
 
 <h3>The pH Scale</h3>

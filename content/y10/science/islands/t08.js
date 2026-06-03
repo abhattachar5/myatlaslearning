@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 's10i-08-1': `
 <h2>Exothermic &amp; Endothermic Reactions</h2>
+<div class="lesson-diagram" data-diagram="energy-level-diagram"><p class="diagram-caption">Energy profiles: exothermic and endothermic</p></div>
 <p>Every chemical reaction involves an energy change. Reactions either release energy to the surroundings (exothermic) or absorb energy from them (endothermic). Understanding this is key to predicting temperature changes and interpreting reaction profiles.</p>
 
 <h3>Exothermic Reactions</h3>

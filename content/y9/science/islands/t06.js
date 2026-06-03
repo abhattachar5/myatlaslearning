@@ -155,6 +155,7 @@ Object.assign(LESSONS, {
 
 's9i-06-3': `
 <h2>Groups &amp; Trends</h2>
+<div class="lesson-diagram" data-diagram="periodic-table"><p class="diagram-caption">Groups and periods in the periodic table</p></div>
 <p>The periodic table is not just a list of elements &mdash; it reveals patterns (trends) in their properties. Understanding these trends allows you to predict how unfamiliar elements will behave.</p>
 
 <h3>Group 1 &mdash; The Alkali Metals</h3>

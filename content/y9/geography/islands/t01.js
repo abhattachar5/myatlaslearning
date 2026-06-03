@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g9i-01-1': `
 <h2>Plate Boundaries &amp; Tectonic Theory</h2>
+<div class="lesson-diagram" data-diagram="plate-boundaries"><p class="diagram-caption">The three main types of plate boundary</p></div>
 <p>The Earth may feel solid beneath our feet, but its surface is made up of enormous slabs of rock called tectonic plates that are constantly, slowly moving. Understanding why and how they move is the key to explaining earthquakes, volcanoes and tsunami.</p>
 
 <h3>Structure of the Earth</h3>
@@ -170,6 +171,7 @@ Object.assign(LESSONS, {
 
 'g9i-01-2': `
 <h2>Earthquakes &amp; Volcanoes</h2>
+<div class="lesson-diagram" data-diagram="earth-structure-geo"><p class="diagram-caption">The internal structure of the Earth</p></div>
 <p>Earthquakes and volcanic eruptions are among the most powerful and destructive natural events on Earth. Understanding their causes, effects and the factors that determine how badly people are affected is essential GCSE knowledge.</p>
 
 <h3>Earthquake Causes</h3>
@@ -217,6 +219,7 @@ Object.assign(LESSONS, {
 
 'g9i-01-3': `
 <h2>Tsunami &amp; Hazard Management</h2>
+<div class="lesson-diagram" data-diagram="volcano-cross-section"><p class="diagram-caption">Cross-section of a volcano</p></div>
 <p>Tsunami are among the most devastating natural hazards on Earth. A single event can cross entire ocean basins and affect coastlines thousands of kilometres from the source. Effective management — prediction, protection and preparation — is vital for reducing the loss of life.</p>
 
 <h3>How Tsunami Form</h3>

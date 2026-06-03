@@ -74,6 +74,7 @@ Object.assign(LESSONS, {
 
 's9i-05-1': `
 <h2>DNA, Genes &amp; Chromosomes</h2>
+<div class="lesson-diagram" data-diagram="dna-genes-chromosomes"><p class="diagram-caption">DNA, genes and chromosomes</p></div>
 <p>Every living organism carries a set of instructions in its cells. These instructions are encoded in a molecule called DNA. Understanding DNA, genes and chromosomes is the foundation for all of genetics.</p>
 
 <h3>The Structure of DNA</h3>
@@ -97,6 +98,7 @@ Object.assign(LESSONS, {
 
 's9i-05-2': `
 <h2>Simple Inheritance &amp; Punnett Squares</h2>
+<div class="lesson-diagram" data-diagram="punnett-square"><p class="diagram-caption">A Punnett square for a monohybrid cross</p></div>
 <p>One of the most satisfying parts of genetics is predicting the outcomes of crosses. Using Punnett squares, you can work out the expected genotypes and phenotypes of offspring from two known parents.</p>
 
 <h3>Key Terms</h3>

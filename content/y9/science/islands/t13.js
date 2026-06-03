@@ -74,6 +74,7 @@ Object.assign(LESSONS, {
 
 's9i-13-1': `
 <h2>Wave Properties</h2>
+<div class="lesson-diagram" data-diagram="wave-properties"><p class="diagram-caption">Wavelength, amplitude and frequency</p></div>
 <p>Waves are everywhere &mdash; from the sound you hear to the light you see. Understanding how waves behave and the maths behind them is essential for GCSE Physics.</p>
 
 <h3>Types of Wave</h3>
@@ -104,6 +105,7 @@ Object.assign(LESSONS, {
 
 's9i-13-2': `
 <h2>The Electromagnetic Spectrum</h2>
+<div class="lesson-diagram" data-diagram="em-spectrum"><p class="diagram-caption">The electromagnetic spectrum</p></div>
 <p>The electromagnetic (EM) spectrum is a continuous range of waves that all travel at the speed of light. From radio waves to gamma rays, each type has different wavelengths, frequencies, uses and dangers.</p>
 
 <h3>The Spectrum in Order</h3>

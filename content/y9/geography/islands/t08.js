@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 'g9i-08-1': `
 <h2>Maps &amp; Grid References</h2>
+<div class="lesson-diagram" data-diagram="grid-reference"><p class="diagram-caption">Reading grid references on an OS map</p></div>
 <p>Map reading is a fundamental geographical skill. The GCSE exam expects you to read Ordnance Survey (OS) maps confidently — giving grid references, measuring distances, interpreting symbols and describing the physical and human landscape shown on the map.</p>
 
 <h3>Four-Figure Grid References</h3>
@@ -107,6 +108,7 @@ Object.assign(LESSONS, {
 
 'g9i-08-2': `
 <h2>Graphs, Data &amp; Fieldwork</h2>
+<div class="lesson-diagram" data-diagram="correlation-types"><p class="diagram-caption">Types of correlation on a scatter graph</p></div>
 <p>Geographical skills are not just tested on their own — they appear throughout the GCSE exam in every topic. Being confident with graphs, statistics and fieldwork methods will improve your marks across all papers.</p>
 
 <h3>Choosing the Right Graph</h3>

@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's10i-02-1': `
 <h2>The Heart &amp; Blood Vessels</h2>
+<div class="lesson-diagram" data-diagram="heart-diagram"><p class="diagram-caption">Structure of the human heart</p></div>
 <p>The heart is a muscular organ that pumps blood around the body. Understanding its structure and how it connects to the three types of blood vessel is essential for GCSE Biology.</p>
 
 <h3>Structure of the Heart</h3>
@@ -159,6 +160,7 @@ Object.assign(LESSONS, {
 
 's10i-02-3': `
 <h2>Lungs &amp; Gas Exchange</h2>
+<div class="lesson-diagram" data-diagram="alveolus-gas-exchange"><p class="diagram-caption">Gas exchange in an alveolus</p></div>
 <p>The lungs are the organs of gas exchange. Air is drawn in through the respiratory system and reaches the alveoli, where oxygen passes into the blood and carbon dioxide is removed. This process relies entirely on diffusion.</p>
 
 <h3>Structure of the Respiratory System</h3>

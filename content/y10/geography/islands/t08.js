@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 'g10i-08-1': `
 <h2>OS Maps &amp; Statistics</h2>
+<div class="lesson-diagram" data-diagram="grid-reference"><p class="diagram-caption">Reading grid references on an OS map</p></div>
 <p>Geographical skills — reading OS maps, using statistics and presenting data — are examined in every GCSE Geography paper. Mastering these skills is worth significant marks.</p>
 
 <h3>Grid References</h3>
@@ -115,6 +116,7 @@ The IQR tells us the middle 50% of values span a range of 7. This is more repres
 
 'g10i-08-2': `
 <h2>Fieldwork Techniques</h2>
+<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">The geographical enquiry process</p></div>
 <p>GCSE Geography requires you to understand the fieldwork enquiry process, even if the specific investigation you conducted differs from the examples used in the exam. You must be able to design, collect, present, analyse and evaluate geographical fieldwork.</p>
 
 <h3>The Enquiry Cycle</h3>

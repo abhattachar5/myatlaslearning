@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g10i-06-1': `
 <h2>The Development Gap</h2>
+<div class="lesson-diagram" data-diagram="dtm-model"><p class="diagram-caption">The Demographic Transition Model</p></div>
 <p>The development gap refers to the growing difference in levels of development between the world's richest and poorest countries. Understanding how development is measured, why it is uneven and what strategies can reduce the gap is central to GCSE Geography.</p>
 
 <h3>Measuring Development</h3>
@@ -140,6 +141,7 @@ Object.assign(LESSONS, {
 
 'g10i-06-2': `
 <h2>Nigeria: an NEE Case Study</h2>
+<div class="lesson-diagram" data-diagram="supply-chain-map"><p class="diagram-caption">A global supply chain</p></div>
 <p>Nigeria is Africa's largest economy and most populous country. As a Newly Emerging Economy (NEE), it is experiencing rapid economic growth — but this growth brings both opportunities and challenges.</p>
 
 <h3>Nigeria in Context</h3>
@@ -163,6 +165,7 @@ Object.assign(LESSONS, {
 
 'g10i-06-3': `
 <h2>The UK Economy</h2>
+<div class="lesson-diagram" data-diagram="types-of-aid"><p class="diagram-caption">Different types of international aid</p></div>
 <p>The UK has undergone a dramatic economic transformation — from an industrial powerhouse to a post-industrial, service-based economy. Understanding deindustrialisation, the rise of the service and quaternary sectors, and the persistent north-south divide is essential for this topic.</p>
 
 <h3>Economic Change</h3>

@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 's10i-10-1': `
 <h2>Crude Oil &amp; Fractional Distillation</h2>
+<div class="lesson-diagram" data-diagram="separation-techniques"><p class="diagram-caption">Fractional distillation of crude oil</p></div>
 <p>Crude oil is one of the world's most important natural resources. It is a finite, non-renewable mixture of hydrocarbons formed over millions of years from the remains of ancient marine organisms. Before crude oil can be used, it must be separated into useful fractions.</p>
 
 <h3>What Are Hydrocarbons?</h3>

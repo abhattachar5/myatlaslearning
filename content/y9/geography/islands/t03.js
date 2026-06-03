@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 'g9i-03-1': `
 <h2>Tropical Rainforests</h2>
+<div class="lesson-diagram" data-diagram="rainforest-layers"><p class="diagram-caption">The layers of a tropical rainforest</p></div>
 <p>Tropical rainforests are found near the Equator in South America, Central Africa and South-East Asia. They are the most biodiverse ecosystems on Earth, home to over 50% of all species despite covering just 6% of the land surface. Understanding their structure, climate and the threats they face is essential for GCSE Geography.</p>
 
 <h3>Climate</h3>
@@ -104,6 +105,7 @@ Object.assign(LESSONS, {
 
 'g9i-03-2': `
 <h2>Hot Deserts &amp; Food Chains</h2>
+<div class="lesson-diagram" data-diagram="desert-landforms"><p class="diagram-caption">Hot desert landscape features</p></div>
 <p>Hot deserts are harsh environments defined by extreme heat and very low rainfall. Despite this, they support remarkable adaptations and play an important role in global ecosystems. Understanding food chains and food webs helps us see how energy flows through all ecosystems, including deserts.</p>
 
 <h3>Hot Desert Climate and Location</h3>

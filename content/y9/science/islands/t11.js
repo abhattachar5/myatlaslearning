@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's9i-11-1': `
 <h2>Energy Stores</h2>
+<div class="lesson-diagram" data-diagram="energy-stores"><p class="diagram-caption">The energy stores</p></div>
 <p>Energy is one of the most fundamental concepts in physics. Everything that happens &mdash; from a ball bouncing to a star shining &mdash; involves energy being transferred between stores.</p>
 
 <h3>The Eight Energy Stores</h3>
@@ -153,6 +154,7 @@ v = <strong>20 m/s</strong></p>
 
 's9i-11-3': `
 <h2>Conservation &amp; Efficiency</h2>
+<div class="lesson-diagram" data-diagram="sankey-diagram"><p class="diagram-caption">A Sankey diagram showing efficiency</p></div>
 <p>No device converts all its input energy into useful output &mdash; some is always wasted. Understanding efficiency helps us design better machines and reduce energy waste.</p>
 
 <h3>Conservation of Energy</h3>

@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 'g9i-05-1': `
 <h2>Coastal Erosion &amp; Landforms</h2>
+<div class="lesson-diagram" data-diagram="wave-cut-platform"><p class="diagram-caption">Formation of a wave-cut platform</p></div>
 <p>Coastlines are dynamic environments, constantly shaped by the power of waves, weathering and mass movement. Understanding how waves erode, transport and deposit material is essential for explaining the distinctive landforms found along the UK coast.</p>
 
 <h3>Wave Types</h3>
@@ -120,6 +121,7 @@ Object.assign(LESSONS, {
 
 'g9i-05-2': `
 <h2>Coastal Management</h2>
+<div class="lesson-diagram" data-diagram="coastal-defences"><p class="diagram-caption">Hard and soft coastal defences</p></div>
 <p>Protecting coastlines from erosion is a major challenge. The UK alone spends hundreds of millions of pounds on coastal defences, yet it is impossible to defend every stretch of coast. Geographers must evaluate the advantages and disadvantages of different management approaches.</p>
 
 <h3>Hard Engineering</h3>

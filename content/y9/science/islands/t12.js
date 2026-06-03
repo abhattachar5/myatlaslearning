@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's9i-12-1': `
 <h2>Speed &amp; Distance&ndash;Time Graphs</h2>
+<div class="lesson-diagram" data-diagram="distance-time-graph"><p class="diagram-caption">Interpreting a distance-time graph</p></div>
 <p>Speed and motion are central to physics. At GCSE, you need to calculate speed, interpret distance&ndash;time graphs, and understand the difference between scalars and vectors.</p>
 
 <h3>The Speed Formula</h3>
@@ -125,6 +126,7 @@ Object.assign(LESSONS, {
 
 's9i-12-2': `
 <h2>Resultant Forces</h2>
+<div class="lesson-diagram" data-diagram="force-arrows"><p class="diagram-caption">Resultant forces on an object</p></div>
 <p>Forces rarely act alone. To predict how an object will move, you need to find the single resultant force that represents the combined effect of all forces.</p>
 
 <h3>Calculating Resultant Force</h3>

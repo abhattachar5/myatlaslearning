@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 's9i-02-1': `
 <h2>Pathogens &amp; Defence</h2>
+<div class="lesson-diagram" data-diagram="pathogen-types"><p class="diagram-caption">The four types of pathogen</p></div>
 <p>Disease is a major topic in GCSE Biology. You need to understand the types of pathogen, how they spread, and how the body defends itself before the immune system even kicks in.</p>
 
 <h3>The Four Types of Pathogen</h3>
@@ -101,6 +102,7 @@ Object.assign(LESSONS, {
 
 's9i-02-2': `
 <h2>White Blood Cells &amp; Vaccination</h2>
+<div class="lesson-diagram" data-diagram="immune-response"><p class="diagram-caption">How white blood cells defend the body</p></div>
 <p>If pathogens get past the body's barriers, the immune system fights back. White blood cells are the key players, and vaccination is one of the most important medical advances in history.</p>
 
 <h3>The Immune Response</h3>

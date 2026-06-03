@@ -71,6 +71,7 @@ Object.assign(LESSONS, {
 
 's11i-09-1': `
 <h2>Newton's Three Laws</h2>
+<div class="lesson-diagram" data-diagram="force-arrows"><p class="diagram-caption">Forces and Newton's laws</p></div>
 <p>Sir Isaac Newton's three laws of motion describe how forces affect the movement of objects. They are fundamental to GCSE Physics.</p>
 
 <h3>First law — Inertia</h3>

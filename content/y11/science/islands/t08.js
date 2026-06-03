@@ -52,6 +52,7 @@ Object.assign(LESSONS, {
 
 's11i-08-1': `
 <h2>The Solar System &amp; Orbits</h2>
+<div class="lesson-diagram" data-diagram="solar-system"><p class="diagram-caption">The solar system</p></div>
 <p>Our <strong>Solar System</strong> consists of the Sun (a star), eight planets, dwarf planets, moons, asteroids and comets, all held together by <strong>gravity</strong>.</p>
 
 <h3>The planets</h3>

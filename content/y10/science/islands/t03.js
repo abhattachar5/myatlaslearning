@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's10i-03-1': `
 <h2>Pathogens &amp; Transmission</h2>
+<div class="lesson-diagram" data-diagram="pathogen-types"><p class="diagram-caption">The four types of pathogen</p></div>
 <p>A pathogen is a microorganism that causes disease. Understanding the different types and how they spread is the foundation of this topic.</p>
 
 <h3>The Four Types of Pathogen</h3>
@@ -129,6 +130,7 @@ Object.assign(LESSONS, {
 
 's10i-03-2': `
 <h2>The Body's Defences</h2>
+<div class="lesson-diagram" data-diagram="immune-response"><p class="diagram-caption">The body's immune response</p></div>
 <p>The human body has multiple layers of defence against pathogens: non-specific barriers that protect against all invaders, and specific immune responses that target individual pathogens.</p>
 
 <h3>Non-Specific Defences</h3>
@@ -159,6 +161,7 @@ Object.assign(LESSONS, {
 
 's10i-03-3': `
 <h2>Vaccination &amp; Drugs</h2>
+<div class="lesson-diagram" data-diagram="antibiotic-resistance"><p class="diagram-caption">How antibiotic resistance develops</p></div>
 <p>Modern medicine uses two main approaches to fight infectious disease: vaccination (prevention) and drugs (treatment). Understanding how these work — and their limitations — is essential.</p>
 
 <h3>Vaccination</h3>

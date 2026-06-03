@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 'g9i-06-1': `
 <h2>Urban Growth &amp; Challenges</h2>
+<div class="lesson-diagram" data-diagram="burgess-model"><p class="diagram-caption">The Burgess urban land-use model</p></div>
 <p>More than half the world's population now lives in cities, and the proportion is rising fast. Understanding <strong>why</strong> cities grow and the <strong>challenges</strong> this creates — particularly in lower-income countries — is central to GCSE Geography.</p>
 
 <h3>Global Urbanisation Patterns</h3>

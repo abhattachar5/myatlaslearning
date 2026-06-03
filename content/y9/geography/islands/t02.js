@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g9i-02-1': `
 <h2>The Atmosphere &amp; Weather Systems</h2>
+<div class="lesson-diagram" data-diagram="weather-fronts-depression"><p class="diagram-caption">A depression with warm and cold fronts</p></div>
 <p>The atmosphere is the thin blanket of gases surrounding the Earth. It protects us from harmful radiation, regulates temperature and produces the weather that shapes our daily lives. Understanding how the atmosphere works is the first step to explaining weather patterns.</p>
 
 <h3>Layers of the Atmosphere</h3>
@@ -134,6 +135,7 @@ Object.assign(LESSONS, {
 
 'g9i-02-2': `
 <h2>UK Weather &amp; Extreme Events</h2>
+<div class="lesson-diagram" data-diagram="relief-rainfall"><p class="diagram-caption">How relief (orographic) rainfall forms</p></div>
 <p>The UK has a <strong>temperate maritime climate</strong> — mild, wet and changeable. However, extreme weather events are becoming more noticeable. Understanding the factors that create our climate and the impacts of extreme events is essential for GCSE Geography.</p>
 
 <h3>Factors Influencing UK Climate</h3>
@@ -173,6 +175,7 @@ Object.assign(LESSONS, {
 
 'g9i-02-3': `
 <h2>Global Climate Zones</h2>
+<div class="lesson-diagram" data-diagram="tropical-storm"><p class="diagram-caption">Structure of a tropical storm</p></div>
 <p>The Earth's climate is not the same everywhere. Differences in latitude, altitude, ocean currents and distance from the sea create distinct climate zones, each supporting a characteristic biome. Understanding these patterns helps geographers explain the distribution of ecosystems, agriculture and human settlement.</p>
 
 <h3>Global Climate Zones</h3>

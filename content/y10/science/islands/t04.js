@@ -129,6 +129,7 @@ Object.assign(LESSONS, {
 
 's10i-04-2': `
 <h2>The Nervous System &amp; Reflexes</h2>
+<div class="lesson-diagram" data-diagram="reflex-arc"><p class="diagram-caption">The reflex arc</p></div>
 <p>The nervous system allows the body to detect changes in the environment and respond rapidly. It uses electrical impulses carried along neurones to coordinate fast, precise responses.</p>
 
 <h3>Structure of the Nervous System</h3>
@@ -155,6 +156,7 @@ Object.assign(LESSONS, {
 
 's10i-04-3': `
 <h2>The Eye &amp; Brain</h2>
+<div class="lesson-diagram" data-diagram="the-eye"><p class="diagram-caption">Structure of the human eye</p></div>
 <p>The eye is a sense organ containing receptors that detect light. The brain processes the signals to create the images we see. At GCSE, you need to understand the structure of the eye, how it focuses (accommodation), and how vision defects are corrected.</p>
 
 <h3>Structure of the Eye</h3>

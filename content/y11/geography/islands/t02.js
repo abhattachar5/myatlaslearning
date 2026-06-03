@@ -72,6 +72,7 @@ Object.assign(LESSONS, {
 
 'g11i-02-1': `
 <h2>Deforestation & Desertification</h2>
+<div class="lesson-diagram" data-diagram="desertification"><p class="diagram-caption">The causes of desertification</p></div>
 <p>Ecosystems across the world are under threat from human activities and climate change. Tropical deforestation and desertification in semi-arid regions are two of the most pressing environmental challenges, with far-reaching consequences for biodiversity, climate and human communities.</p>
 
 <h3>Causes of Tropical Deforestation</h3>
@@ -125,6 +126,7 @@ Object.assign(LESSONS, {
 
 'g11i-02-2': `
 <h2>Conservation Strategies</h2>
+<div class="lesson-diagram" data-diagram="rainforest-layers"><p class="diagram-caption">The layers of a tropical rainforest</p></div>
 <p>Protecting threatened ecosystems requires action at local, national and international scales. No single strategy is sufficient — effective conservation combines legislation, sustainable management and community involvement.</p>
 
 <h3>International Strategies</h3>

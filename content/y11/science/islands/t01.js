@@ -93,6 +93,7 @@ Object.assign(LESSONS, {
 
 's11i-01-2': `
 <h2>DNA &amp; Protein Synthesis</h2>
+<div class="lesson-diagram" data-diagram="dna-genes-chromosomes"><p class="diagram-caption">DNA, genes and chromosomes</p></div>
 <p>DNA (deoxyribonucleic acid) carries the genetic code that determines the proteins an organism makes — and therefore its characteristics.</p>
 
 <h3>Structure of DNA</h3>
@@ -120,6 +121,7 @@ Object.assign(LESSONS, {
 
 's11i-01-3': `
 <h2>Variation &amp; Inherited Disorders</h2>
+<div class="lesson-diagram" data-diagram="punnett-square"><p class="diagram-caption">A Punnett square for inheritance</p></div>
 <p>No two individuals of a species are exactly alike (unless they are clones). This <strong>variation</strong> arises from genetic differences, environmental influences, or both.</p>
 
 <h3>Types of variation</h3>

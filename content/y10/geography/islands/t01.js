@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 'g10i-01-1': `
 <h2>Tectonic Hazards</h2>
+<div class="lesson-diagram" data-diagram="plate-boundaries"><p class="diagram-caption">The three types of plate boundary</p></div>
 <p>Tectonic hazards — earthquakes, volcanic eruptions and tsunami — are among the most powerful natural events on Earth. Their distribution, effects and the responses they provoke are shaped by both physical processes and human factors such as wealth, governance and preparedness.</p>
 
 <h3>Global Distribution of Tectonic Hazards</h3>
@@ -168,6 +169,7 @@ Object.assign(LESSONS, {
 
 'g10i-01-2': `
 <h2>Weather Hazards</h2>
+<div class="lesson-diagram" data-diagram="tropical-storm"><p class="diagram-caption">Structure of a tropical storm</p></div>
 <p>Weather hazards — including tropical storms and extreme weather events — are driven by the global atmospheric circulation system. Understanding this system is the key to explaining where and why these hazards occur.</p>
 
 <h3>Global Atmospheric Circulation</h3>
@@ -217,6 +219,7 @@ Object.assign(LESSONS, {
 
 'g10i-01-3': `
 <h2>Climate Change</h2>
+<div class="lesson-diagram" data-diagram="climate-evidence"><p class="diagram-caption">Evidence for climate change</p></div>
 <p>Climate change is arguably the most significant global challenge of the 21st century. Understanding the evidence, causes and possible responses is essential for the GCSE examination and for informed citizenship.</p>
 
 <h3>Evidence for Climate Change</h3>

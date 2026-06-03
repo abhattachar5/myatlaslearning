@@ -101,6 +101,7 @@ Object.assign(LESSONS, {
 
 's10i-07-1': `
 <h2>The Reactivity Series</h2>
+<div class="lesson-diagram" data-diagram="reactivity-series"><p class="diagram-caption">The reactivity series of metals</p></div>
 <p>The reactivity series is a ranking of metals (and some non-metals) in order of how readily they react. Understanding this series allows you to predict displacement reactions, extraction methods, and whether a reaction will occur at all.</p>
 
 <h3>The Series</h3>

@@ -128,6 +128,7 @@ Object.assign(LESSONS, {
 
 's10i-01-2': `
 <h2>The Digestive System</h2>
+<div class="lesson-diagram" data-diagram="digestive-system"><p class="diagram-caption">The human digestive system</p></div>
 <p>The human digestive system is an organ system that breaks down food into small, soluble molecules which can be absorbed into the blood and transported to cells. It involves both <strong>mechanical digestion</strong> (physically breaking food into smaller pieces) and <strong>chemical digestion</strong> (enzymes breaking bonds in large molecules).</p>
 
 <h3>The Main Organs</h3>

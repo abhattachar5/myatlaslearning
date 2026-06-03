@@ -71,6 +71,7 @@ Object.assign(LESSONS, {
 
 's11i-07-1': `
 <h2>Magnetic Fields</h2>
+<div class="lesson-diagram" data-diagram="magnetic-field"><p class="diagram-caption">Magnetic field around a bar magnet</p></div>
 <p>A <strong>magnetic field</strong> is an invisible region around a magnet where a force acts on magnetic materials or moving charges. We represent fields using <strong>field lines</strong> — they show the direction and strength of the field.</p>
 
 <h3>Bar magnets</h3>
@@ -97,6 +98,7 @@ Object.assign(LESSONS, {
 
 's11i-07-2': `
 <h2>The Motor Effect</h2>
+<div class="lesson-diagram" data-diagram="electromagnet"><p class="diagram-caption">An electromagnet and the motor effect</p></div>
 <p>When a wire carrying a current is placed in a magnetic field, it experiences a <strong>force</strong>. This is the <strong>motor effect</strong>, and it is the principle behind electric motors.</p>
 
 <h3>The equation</h3>
