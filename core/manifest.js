@@ -125,6 +125,14 @@ var MANIFEST = (function () {
 
     // ── YEAR 11 — role-based layout (authoring in progress) ─────────────────
     y11: {
+      english: {
+        topics:  'content/y11/english/topics.js',
+        islands: ['content/y11/english/islands/t01.js','content/y11/english/islands/t02.js',
+                  'content/y11/english/islands/t05.js','content/y11/english/islands/t06.js',
+                  'content/y11/english/islands/t07.js','content/y11/english/islands/t08.js',
+                  'content/y11/english/islands/t09.js'],
+        writing: ['content/y11/english/writing.js']
+      },
       math: {
         topics:     'content/y11/math/topics.js',
         islands:    tFiles('content/y11/math/islands/', 1, 14),      // t01–t14
