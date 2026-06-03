@@ -149,6 +149,14 @@ var MANIFEST = (function () {
 
     // ── YEAR 11 — role-based layout ────────────────────────────────────────
     y11: {
+      history: {
+        topics:  'content/y11/history/topics.js',
+        islands: tFiles('content/y11/history/islands/', 1, 7)       // t01–t07
+      },
+      geography: {
+        topics:  'content/y11/geography/topics.js',
+        islands: tFiles('content/y11/geography/islands/', 1, 7)     // t01–t07
+      },
       science: {
         topics:  'content/y11/science/topics.js',
         islands: tFiles('content/y11/science/islands/', 1, 14)      // t01–t14
