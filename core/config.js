@@ -44,11 +44,12 @@ var CONFIG = {
       writingWordRange:     [300, 500]
     },
     'Year 9': {
-      // Maths, English and Science authored. Other subjects return [] until authored.
       topics: {
-        math:    function () { return typeof MATH_TOPICS_Y9    !== 'undefined' ? MATH_TOPICS_Y9    : []; },
-        english: function () { return typeof ENGLISH_TOPICS_Y9 !== 'undefined' ? ENGLISH_TOPICS_Y9 : []; },
-        science: function () { return typeof SCIENCE_TOPICS_Y9 !== 'undefined' ? SCIENCE_TOPICS_Y9 : []; }
+        math:      function () { return typeof MATH_TOPICS_Y9      !== 'undefined' ? MATH_TOPICS_Y9      : []; },
+        english:   function () { return typeof ENGLISH_TOPICS_Y9   !== 'undefined' ? ENGLISH_TOPICS_Y9   : []; },
+        science:   function () { return typeof SCIENCE_TOPICS_Y9   !== 'undefined' ? SCIENCE_TOPICS_Y9   : []; },
+        history:   function () { return typeof HISTORY_TOPICS_Y9   !== 'undefined' ? HISTORY_TOPICS_Y9   : []; },
+        geography: function () { return typeof GEOGRAPHY_TOPICS_Y9 !== 'undefined' ? GEOGRAPHY_TOPICS_Y9 : []; }
       },
       passages:             function () { return typeof COMPREHENSION_PASSAGES_Y9 !== 'undefined' ? COMPREHENSION_PASSAGES_Y9 : []; },
       comprehensionTopicId: 'e9t-04',
@@ -57,11 +58,12 @@ var CONFIG = {
       writingWordRange:     [350, 600]
     },
     'Year 10': {
-      // Maths, English and Science authored. Other subjects return [] until authored.
       topics: {
-        math:    function () { return typeof MATH_TOPICS_Y10    !== 'undefined' ? MATH_TOPICS_Y10    : []; },
-        english: function () { return typeof ENGLISH_TOPICS_Y10 !== 'undefined' ? ENGLISH_TOPICS_Y10 : []; },
-        science: function () { return typeof SCIENCE_TOPICS_Y10 !== 'undefined' ? SCIENCE_TOPICS_Y10 : []; }
+        math:      function () { return typeof MATH_TOPICS_Y10      !== 'undefined' ? MATH_TOPICS_Y10      : []; },
+        english:   function () { return typeof ENGLISH_TOPICS_Y10   !== 'undefined' ? ENGLISH_TOPICS_Y10   : []; },
+        science:   function () { return typeof SCIENCE_TOPICS_Y10   !== 'undefined' ? SCIENCE_TOPICS_Y10   : []; },
+        history:   function () { return typeof HISTORY_TOPICS_Y10   !== 'undefined' ? HISTORY_TOPICS_Y10   : []; },
+        geography: function () { return typeof GEOGRAPHY_TOPICS_Y10 !== 'undefined' ? GEOGRAPHY_TOPICS_Y10 : []; }
       },
       passages:             function () { return typeof COMPREHENSION_PASSAGES_Y10 !== 'undefined' ? COMPREHENSION_PASSAGES_Y10 : []; },
       comprehensionTopicId: 'e10t-04',
@@ -70,11 +72,12 @@ var CONFIG = {
       writingWordRange:     [400, 650]
     },
     'Year 11': {
-      // Maths, English and Science authored. Other subjects return [] until authored.
       topics: {
-        math:    function () { return typeof MATH_TOPICS_Y11    !== 'undefined' ? MATH_TOPICS_Y11    : []; },
-        english: function () { return typeof ENGLISH_TOPICS_Y11 !== 'undefined' ? ENGLISH_TOPICS_Y11 : []; },
-        science: function () { return typeof SCIENCE_TOPICS_Y11 !== 'undefined' ? SCIENCE_TOPICS_Y11 : []; }
+        math:      function () { return typeof MATH_TOPICS_Y11      !== 'undefined' ? MATH_TOPICS_Y11      : []; },
+        english:   function () { return typeof ENGLISH_TOPICS_Y11   !== 'undefined' ? ENGLISH_TOPICS_Y11   : []; },
+        science:   function () { return typeof SCIENCE_TOPICS_Y11   !== 'undefined' ? SCIENCE_TOPICS_Y11   : []; },
+        history:   function () { return typeof HISTORY_TOPICS_Y11   !== 'undefined' ? HISTORY_TOPICS_Y11   : []; },
+        geography: function () { return typeof GEOGRAPHY_TOPICS_Y11 !== 'undefined' ? GEOGRAPHY_TOPICS_Y11 : []; }
       },
       passages:             function () { return typeof COMPREHENSION_PASSAGES_Y11 !== 'undefined' ? COMPREHENSION_PASSAGES_Y11 : []; },
       comprehensionTopicId: 'e11t-04',
