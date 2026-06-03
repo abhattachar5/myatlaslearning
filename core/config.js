@@ -56,9 +56,10 @@ var CONFIG = {
       writingWordRange:     [350, 600]
     },
     'Year 10': {
-      // Maths only. Other subjects return [] until authored.
+      // Maths + English authored. Other subjects return [] until authored.
       topics: {
-        math: function () { return typeof MATH_TOPICS_Y10 !== 'undefined' ? MATH_TOPICS_Y10 : []; }
+        math:    function () { return typeof MATH_TOPICS_Y10    !== 'undefined' ? MATH_TOPICS_Y10    : []; },
+        english: function () { return typeof ENGLISH_TOPICS_Y10 !== 'undefined' ? ENGLISH_TOPICS_Y10 : []; }
       },
       passages:             function () { return typeof COMPREHENSION_PASSAGES_Y10 !== 'undefined' ? COMPREHENSION_PASSAGES_Y10 : []; },
       comprehensionTopicId: 'e10t-04',

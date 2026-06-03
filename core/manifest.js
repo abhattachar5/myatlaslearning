@@ -99,6 +99,14 @@ var MANIFEST = (function () {
 
     // ── YEAR 10 — role-based layout (authoring in progress) ─────────────────
     y10: {
+      english: {
+        topics:  'content/y10/english/topics.js',
+        islands: ['content/y10/english/islands/t01.js','content/y10/english/islands/t02.js',
+                  'content/y10/english/islands/t03.js','content/y10/english/islands/t05.js',
+                  'content/y10/english/islands/t06.js','content/y10/english/islands/t07.js',
+                  'content/y10/english/islands/t08.js'],
+        writing: ['content/y10/english/writing.js']
+      },
       math: {
         topics:     'content/y10/math/topics.js',
         islands:    tFiles('content/y10/math/islands/', 1, 14),      // t01–t14
