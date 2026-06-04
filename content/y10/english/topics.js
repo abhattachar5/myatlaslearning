@@ -17,7 +17,11 @@ const ENGLISH_TOPICS_Y10 = [
   {id:"e10t-07", name:"Poetry Anthology & Comparison", emoji:"🌟", hasContent:true,
    description:"Analyse anthology poems and write comparative responses on theme, method and the poets' perspectives."},
   {id:"e10t-08", name:"Prose & Drama Study", emoji:"🎭", hasContent:true,
-   description:"Study a 19th-century novel and a play, analysing character, theme, context and the writer's methods."}
+   description:"Study a 19th-century novel and a play, analysing character, theme, context and the writer's methods."},
+  {id:"e10t-09", name:"Macbeth (Shakespeare)", emoji:"🗡️", hasContent:true,
+   description:"AQA set text: plot, characters, themes, context and key quotations for Shakespeare's Macbeth (Literature Paper 1)."},
+  {id:"e10t-10", name:"A Christmas Carol (Dickens)", emoji:"🕯️", hasContent:true,
+   description:"AQA set text: plot, characters, themes, context and key quotations for Dickens's A Christmas Carol (Literature Paper 1)."}
 ];
 
 // ── Topic 1: Vocabulary for Analysis & Writing (e10t-01) ────────────────────
@@ -151,4 +155,72 @@ CURRICULUM.push(
    description:"Plan and write a thesis-driven literature essay with embedded evidence and context.",
    learningOutcomes:["Build a thesis-driven argument","Embed evidence and analyse methods","Integrate context purposefully"],
    topics:["Thesis & argument","Evidence & method","Context integration"], prerequisites:["e10i-08-1"]}
+);
+
+// ── Topic 9: Macbeth — AQA set text (e10t-09) ───────────────────────────────
+CURRICULUM.push(
+  {id:"e10i-09-1", name:"Plot & Structure", emoji:"📜", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-09", yearGroup:"Year 10", difficulty:1, estimatedHours:2,
+   description:"Master the five-act arc of Macbeth, from the witches' prophecy to Macbeth's downfall and the restoration of order.",
+   learningOutcomes:["Recall the key events of each act","Understand the tragic structure","Use plot as evidence, not retelling"],
+   topics:["The five-act arc","Key events","Tragic structure"], prerequisites:[]},
+  {id:"e10i-09-2", name:"Macbeth: Character & Arc", emoji:"🗡️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-09", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Analyse Macbeth as a tragic hero — his nobility, his 'vaulting ambition', his guilt and his descent into tyranny.",
+   learningOutcomes:["Trace Macbeth's arc from hero to tyrant","Identify his hamartia and key quotations","Explain why he is a tragic hero"],
+   topics:["Tragic hero","Ambition & guilt","Key quotations"], prerequisites:["e10i-09-1"]},
+  {id:"e10i-09-3", name:"Lady Macbeth: Character & Arc", emoji:"👑", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-09", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Analyse Lady Macbeth's ambition, manipulation and guilt, and how Shakespeare uses her to explore gender and conscience.",
+   learningOutcomes:["Trace Lady Macbeth's inverted arc","Analyse 'unsex me here' and her guilt","Link her to the theme of gender"],
+   topics:["Ambition & manipulation","Gender","Guilt & collapse"], prerequisites:["e10i-09-1"]},
+  {id:"e10i-09-4", name:"Themes", emoji:"🎯", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-09", yearGroup:"Year 10", difficulty:2, estimatedHours:3,
+   description:"Explore ambition, guilt, appearance vs reality, the supernatural and kingship — each anchored to key quotations.",
+   learningOutcomes:["Explain the major themes with evidence","Link themes to the writer's methods","Select apt quotations per theme"],
+   topics:["Ambition & guilt","Appearance vs reality","Supernatural & kingship"], prerequisites:["e10i-09-1"]},
+  {id:"e10i-09-5", name:"Context", emoji:"🏰", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-09", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Understand Jacobean context — James I, the Divine Right of Kings, witchcraft and the Gunpowder Plot — and use it to deepen analysis.",
+   learningOutcomes:["Explain key Jacobean context","Link context to the play's meaning","Avoid bolted-on historical facts"],
+   topics:["James I & kingship","Divine Right","Witchcraft & the Gunpowder Plot"], prerequisites:["e10i-09-1"]},
+  {id:"e10i-09-6", name:"Key Quotations Bank", emoji:"💬", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-09", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Memorise and deploy essential quotations grouped by theme, ready for the closed-book Literature exam.",
+   learningOutcomes:["Memorise key quotations by theme","Know speaker and context for each","Embed and analyse quotations precisely"],
+   topics:["Quotations by theme","Speaker & context","Embedding evidence"], prerequisites:["e10i-09-2","e10i-09-4"]}
+);
+
+// ── Topic 10: A Christmas Carol — AQA set text (e10t-10) ─────────────────────
+CURRICULUM.push(
+  {id:"e10i-10-1", name:"Plot & Structure", emoji:"📜", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-10", yearGroup:"Year 10", difficulty:1, estimatedHours:2,
+   description:"Master the five staves of A Christmas Carol, from Marley's warning to Scrooge's redemption.",
+   learningOutcomes:["Recall the events of each stave","Understand the redemption structure","Use plot as evidence, not retelling"],
+   topics:["The five staves","Key events","Redemption arc"], prerequisites:[]},
+  {id:"e10i-10-2", name:"Scrooge: Character & Arc", emoji:"🕯️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-10", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Analyse Scrooge's transformation from cold miser to generous benefactor, and Dickens's methods.",
+   learningOutcomes:["Trace Scrooge's redemption arc","Analyse key quotations","Explain Dickens's purpose"],
+   topics:["The miser","Transformation","Key quotations"], prerequisites:["e10i-10-1"]},
+  {id:"e10i-10-3", name:"Key Characters", emoji:"👥", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-10", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Analyse Marley, the Cratchits, Tiny Tim, Fred, Fezziwig, Belle and the allegory of Ignorance and Want.",
+   learningOutcomes:["Explain each character's role","Link characters to Dickens's purpose","Use the spirits as structural devices"],
+   topics:["Marley & the poor","Foils to Scrooge","Ignorance & Want"], prerequisites:["e10i-10-1"]},
+  {id:"e10i-10-4", name:"Themes", emoji:"🎯", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-10", yearGroup:"Year 10", difficulty:2, estimatedHours:3,
+   description:"Explore redemption, social responsibility, poverty, Christmas, memory and community — anchored to quotations.",
+   learningOutcomes:["Explain the major themes with evidence","Link themes to Dickens's social purpose","Select apt quotations per theme"],
+   topics:["Redemption","Social responsibility","Christmas & community"], prerequisites:["e10i-10-1"]},
+  {id:"e10i-10-5", name:"Context", emoji:"🏭", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-10", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Understand Victorian poverty, the Poor Law, Malthus and Dickens's own life, and use context to deepen analysis.",
+   learningOutcomes:["Explain key Victorian context","Link context to Dickens's purpose","Avoid bolted-on historical facts"],
+   topics:["Victorian poverty","Poor Law & Malthus","Dickens's purpose"], prerequisites:["e10i-10-1"]},
+  {id:"e10i-10-6", name:"Key Quotations Bank", emoji:"💬", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-10", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Memorise and deploy essential quotations grouped by idea, ready for the closed-book Literature exam.",
+   learningOutcomes:["Memorise key quotations by idea","Know speaker and context for each","Embed and analyse quotations precisely"],
+   topics:["Quotations by idea","Speaker & context","Embedding evidence"], prerequisites:["e10i-10-2","e10i-10-4"]}
 );

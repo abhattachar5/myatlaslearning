@@ -16,7 +16,11 @@ const ENGLISH_TOPICS_Y11 = [
   {id:"e11t-08", name:"Literature: Novel & Play", emoji:"🎭", hasContent:true,
    description:"Write thesis-driven extract + whole-text literature essays on your studied novel and play."},
   {id:"e11t-09", name:"Writing for Exams", emoji:"✍️", hasContent:true,
-   description:"Produce polished descriptive, narrative and transactional writing under timed exam conditions."}
+   description:"Produce polished descriptive, narrative and transactional writing under timed exam conditions."},
+  {id:"e11t-10", name:"An Inspector Calls (Priestley)", emoji:"🔔", hasContent:true,
+   description:"AQA set text: plot, the Inspector, characters, themes, context and key quotations for An Inspector Calls (Literature Paper 2)."},
+  {id:"e11t-11", name:"Power & Conflict Anthology", emoji:"⚔️", hasContent:true,
+   description:"AQA set text: all 15 Power & Conflict poems — poets, ideas, methods, quotations and comparison skills (Literature Paper 2)."}
 ];
 
 // ── Topic 1: Vocabulary Mastery (e11t-01) ────────────────────────────────────
@@ -130,4 +134,72 @@ CURRICULUM.push(
    description:"Produce polished transactional writing (letter, article, speech) under exam conditions (Paper 2 Section B).",
    learningOutcomes:["Match FAP and deploy rhetoric efficiently","Sustain a clear argument or viewpoint","Achieve accuracy and control under pressure"],
    topics:["FAP & rhetoric","Sustained argument","Timed accuracy"], prerequisites:["e11i-09-1"]}
+);
+
+// ── Topic 10: An Inspector Calls — AQA set text (e11t-10) ────────────────────
+CURRICULUM.push(
+  {id:"e11i-10-1", name:"Plot & Structure", emoji:"📜", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-10", yearGroup:"Year 11", difficulty:1, estimatedHours:2,
+   description:"Master the events of An Inspector Calls — the chain of responsibility for Eva Smith and the cyclical twist.",
+   learningOutcomes:["Recall each character's link to Eva Smith","Understand the well-made-play structure","Explain the cyclical ending"],
+   topics:["The chain of events","Well-made play","The twist"], prerequisites:[]},
+  {id:"e11i-10-2", name:"The Inspector & Priestley's Message", emoji:"🔔", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-10", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Analyse Inspector Goole as Priestley's socialist mouthpiece and dramatic device.",
+   learningOutcomes:["Explain the Inspector's central message","Analyse his control and symbolism","Link him to Priestley's purpose"],
+   topics:["Collective responsibility","Goole as device","Key quotations"], prerequisites:["e11i-10-1"]},
+  {id:"e11i-10-3", name:"The Birlings & Gerald", emoji:"👥", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-10", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Analyse Mr and Mrs Birling, Sheila, Eric and Gerald, and the generational divide between old and young.",
+   learningOutcomes:["Contrast the older and younger generations","Analyse character through dramatic irony","Track who changes and who doesn't"],
+   topics:["Older generation","Younger generation","Generational divide"], prerequisites:["e11i-10-1"]},
+  {id:"e11i-10-4", name:"Themes", emoji:"🎯", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-10", yearGroup:"Year 11", difficulty:2, estimatedHours:3,
+   description:"Explore social responsibility, class, gender, age and capitalism vs socialism — anchored to quotations.",
+   learningOutcomes:["Explain the major themes with evidence","Link themes to Priestley's purpose","Select apt quotations per theme"],
+   topics:["Social responsibility","Class & gender","Capitalism vs socialism"], prerequisites:["e11i-10-1"]},
+  {id:"e11i-10-5", name:"Context", emoji:"🏛️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-10", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Understand the 1912 setting and 1945 writing, Priestley's socialism, and use dramatic irony in analysis.",
+   learningOutcomes:["Explain the 1912 vs 1945 gap","Link context to Priestley's purpose","Analyse Birling's dramatic irony"],
+   topics:["1912 vs 1945","Priestley's politics","Dramatic irony"], prerequisites:["e11i-10-1"]},
+  {id:"e11i-10-6", name:"Key Quotations Bank", emoji:"💬", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-10", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Memorise and deploy essential quotations grouped by idea, ready for the closed-book Literature exam.",
+   learningOutcomes:["Memorise key quotations by idea","Attribute each line to the right character","Embed and analyse quotations precisely"],
+   topics:["Quotations by idea","Speaker & purpose","Embedding evidence"], prerequisites:["e11i-10-2","e11i-10-4"]}
+);
+
+// ── Topic 11: Power & Conflict Anthology — AQA set text (e11t-11) ────────────
+CURRICULUM.push(
+  {id:"e11i-11-1", name:"Power of Nature", emoji:"🏔️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-11", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Analyse Ozymandias, Extract from The Prelude and Storm on the Island — nature and time overpowering humans.",
+   learningOutcomes:["Recall each poem's key idea and quotation","Analyse the poets' methods","Compare presentations of nature's power"],
+   topics:["Ozymandias","The Prelude","Storm on the Island"], prerequisites:[]},
+  {id:"e11i-11-2", name:"Power of Humans & Authority", emoji:"👑", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-11", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Analyse London, My Last Duchess and Tissue — the use and abuse of human power.",
+   learningOutcomes:["Recall each poem's key idea and quotation","Analyse the poets' methods","Compare presentations of human power"],
+   topics:["London","My Last Duchess","Tissue"], prerequisites:["e11i-11-1"]},
+  {id:"e11i-11-3", name:"The Reality of War", emoji:"💥", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-11", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Analyse The Charge of the Light Brigade, Exposure and Bayonet Charge — heroism, futility and fear.",
+   learningOutcomes:["Recall each poem's key idea and quotation","Contrast glory and futility","Compare presentations of war"],
+   topics:["Charge of the Light Brigade","Exposure","Bayonet Charge"], prerequisites:["e11i-11-1"]},
+  {id:"e11i-11-4", name:"Memory, Loss & Trauma", emoji:"🕯️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-11", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Analyse Remains, War Photographer, Poppies and Kamikaze — the lasting, personal aftermath of conflict.",
+   learningOutcomes:["Recall each poem's key idea and quotation","Analyse trauma, witness and family loss","Compare aftermath poems"],
+   topics:["Remains & War Photographer","Poppies & Kamikaze","Aftermath"], prerequisites:["e11i-11-1"]},
+  {id:"e11i-11-5", name:"Identity & Place", emoji:"🌍", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-11", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Analyse The Emigrée and Checking Out Me History — identity, memory and resisting a controlling narrative.",
+   learningOutcomes:["Recall each poem's key idea and quotation","Analyse form as resistance","Compare identity and place"],
+   topics:["The Emigrée","Checking Out Me History","Identity"], prerequisites:["e11i-11-1"]},
+  {id:"e11i-11-6", name:"Comparing the Cluster", emoji:"⚖️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-11", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Master the anthology comparison question — reliable pairings, planning by idea, and a key quotations bank.",
+   learningOutcomes:["Plan a comparison by idea","Choose apt poem pairings quickly","Deploy key quotations across the cluster"],
+   topics:["Comparison method","Reliable pairings","Quotations bank"], prerequisites:["e11i-11-1","e11i-11-2","e11i-11-3","e11i-11-4","e11i-11-5"]}
 );

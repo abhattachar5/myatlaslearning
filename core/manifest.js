@@ -128,7 +128,8 @@ var MANIFEST = (function () {
         islands: ['content/y10/english/islands/t01.js','content/y10/english/islands/t02.js',
                   'content/y10/english/islands/t03.js','content/y10/english/islands/t05.js',
                   'content/y10/english/islands/t06.js','content/y10/english/islands/t07.js',
-                  'content/y10/english/islands/t08.js'],
+                  'content/y10/english/islands/t08.js','content/y10/english/islands/t09.js',
+                  'content/y10/english/islands/t10.js'],
         writing: ['content/y10/english/writing.js']
       },
       math: {
@@ -166,7 +167,8 @@ var MANIFEST = (function () {
         islands: ['content/y11/english/islands/t01.js','content/y11/english/islands/t02.js',
                   'content/y11/english/islands/t05.js','content/y11/english/islands/t06.js',
                   'content/y11/english/islands/t07.js','content/y11/english/islands/t08.js',
-                  'content/y11/english/islands/t09.js'],
+                  'content/y11/english/islands/t09.js','content/y11/english/islands/t10.js',
+                  'content/y11/english/islands/t11.js'],
         writing: ['content/y11/english/writing.js']
       },
       math: {
