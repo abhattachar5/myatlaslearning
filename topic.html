@@ -50,6 +50,19 @@
     </div>
   </div>
 
+  <!-- Read the full text CTA (set texts with a public-domain reader) -->
+  <div id="reader-cta" style="margin-bottom:24px;display:none">
+    <a id="reader-cta-link" href="#" style="text-decoration:none;display:block">
+      <div style="background:var(--surface);border:1px solid var(--border);border-left:4px solid #f59e0b;border-radius:14px;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <div style="font-weight:700;margin-bottom:2px;color:var(--text)">📖 Read the full text</div>
+          <div style="font-size:.875rem;color:var(--text-muted)" id="reader-cta-desc">Read the complete text first, then use the topics below to reaffirm what you know.</div>
+        </div>
+        <span class="btn btn-primary" style="background:#f59e0b;border-color:#f59e0b">Open the text →</span>
+      </div>
+    </a>
+  </div>
+
   <!-- Island grid -->
   <div class="island-grid" id="island-grid"></div>
 
@@ -248,6 +261,21 @@ function goToWritingTest() {
   if (Atlas.isWritingTopic(topicId)) {
     document.getElementById('writing-challenge-cta').style.display = '';
   }
+})();
+
+// Show "Read the full text" CTA for set texts that have a public-domain in-app reader.
+(function showReaderCTA() {
+  var READER_TOPICS = {
+    'e10t-09': { key: 'macbeth',         noun: 'play' },
+    'e10t-10': { key: 'christmas-carol', noun: 'novella' }
+  };
+  var r = READER_TOPICS[topicId];
+  if (!r) return;
+  var box = document.getElementById('reader-cta');
+  document.getElementById('reader-cta-link').href = 'reader.html?text=' + r.key + '&topicId=' + topicId;
+  document.getElementById('reader-cta-desc').textContent =
+    'Read the complete ' + r.noun + ' first, then use the topics below to reaffirm what you know.';
+  box.style.display = '';
 })();
 
 function updateTestLock() {

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas — Reader</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
+  <style>
+    .reader-wrap{display:grid;grid-template-columns:250px 1fr;gap:32px;max-width:1060px;margin:0 auto;padding:22px 16px 80px}
+    @media(max-width:780px){.reader-wrap{grid-template-columns:1fr;gap:16px}}
+    .reader-nav{position:sticky;top:78px;align-self:start;max-height:calc(100vh - 100px);overflow:auto;
+      background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:10px}
+    @media(max-width:780px){.reader-nav{position:static;max-height:240px}}
+    .reader-nav-title{font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+      color:var(--text-muted);padding:6px 8px 8px}
+    .reader-navlink{display:block;padding:7px 10px;border-radius:8px;font-size:.85rem;color:var(--text-2);
+      text-decoration:none;line-height:1.3}
+    .reader-navlink:hover{background:var(--ring-track);color:var(--text)}
+    .reader-navlink.active{background:#f59e0b;color:#fff;font-weight:600}
+    .reader-source{font-size:.75rem;color:var(--text-muted);padding:10px 8px 2px;border-top:1px solid var(--border);margin-top:8px}
+    .reader-section{margin:0 0 40px;scroll-margin-top:80px}
+    .reader-section-title{font-size:1.05rem;font-weight:700;color:#f59e0b;letter-spacing:.02em;
+      border-bottom:1px solid var(--border);padding-bottom:8px;margin:0 0 18px}
+    .reader-text{max-width:680px}
+    .reader-text p{font-family:Georgia,'Times New Roman',serif;line-height:1.75;font-size:1.06rem;
+      color:var(--text);margin:0 0 1.05em}
+    .reader-text strong{color:var(--text);letter-spacing:.02em}
+    .reader-text em{color:var(--text-2)}
+    .reader-fontbtn{background:var(--surface);border:1px solid var(--border);color:var(--text-2);
+      border-radius:8px;width:34px;height:34px;font-size:.9rem;cursor:pointer}
+    .reader-fontbtn:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#reader-main">Skip to content</a>
+
+<header class="island-header" id="reader-header" style="background:var(--surface)">
+  <a href="dashboard.html" class="island-header-back" aria-label="Back">←</a>
+  <div class="island-header-emoji" id="hdr-emoji">📖</div>
+  <div class="island-header-info">
+    <h2 id="hdr-name">Loading…</h2>
+    <div class="island-header-meta">
+      <span class="subject-pill" style="font-size:.6875rem;padding:2px 8px;background:#f59e0b;color:#fff" id="hdr-author">—</span>
+      <span class="badge" id="hdr-count">—</span>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:6px">
+    <button class="reader-fontbtn" onclick="changeFont(-1)" aria-label="Smaller text">A−</button>
+    <button class="reader-fontbtn" onclick="changeFont(1)" aria-label="Larger text">A+</button>
+    <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" aria-label="Toggle colour theme">🌙</button>
+  </div>
+</header>
+
+<main id="reader-main">
+  <div class="reader-wrap">
+    <nav class="reader-nav" id="reader-nav" aria-label="Contents"></nav>
+    <div class="reader-text" id="reader-body"><p>Loading the text…</p></div>
+  </div>
+</main>
+
+<!-- Auth + theme only — reader text files are loaded on demand below, NOT via the global manifest. -->
+<script src="core/globals.js"></script>
+<script src="core/config.js"></script>
+<script src="engine/auth-shim.js"></script>
+<script src="engine/app.js"></script>
+<script>
+// ── Init ──────────────────────────────────────────────────────────────────
+(function(){ try { if (typeof initTheme === 'function') initTheme(); } catch(e){} updateThemeBtn(); })();
+
+const params  = new URLSearchParams(location.search);
+const textKey = params.get('text');
+const topicId = params.get('topicId');
+
+document.querySelector('.island-header-back').href = topicId ? ('topic.html?id=' + topicId) : 'dashboard.html';
+
+const VALID = { 'macbeth': 1, 'christmas-carol': 1 };
+if (!VALID[textKey]) { alert('Text not found'); window.location.href = 'dashboard.html'; }
+
+// Gate exactly like every other page.
+const user = (typeof requireAuth === 'function') ? requireAuth() : null;
+
+// Load the chosen reader data file on demand (kept out of the global manifest by design).
+(function loadReader(){
+  const s = document.createElement('script');
+  s.src = 'content/readers/' + textKey + '.js';
+  s.onload = renderReader;
+  s.onerror = function(){ document.getElementById('reader-body').innerHTML = '<p>Sorry — the text could not be loaded.</p>'; };
+  document.head.appendChild(s);
+})();
+
+function renderReader(){
+  const data = (typeof READERS !== 'undefined') ? READERS[textKey] : null;
+  if (!data) { document.getElementById('reader-body').innerHTML = '<p>Sorry — the text could not be loaded.</p>'; return; }
+
+  document.title = 'Atlas — ' + data.title;
+  document.getElementById('hdr-name').textContent = data.title;
+  document.getElementById('hdr-author').textContent = data.author;
+  document.getElementById('hdr-count').textContent = data.sections.length + ' parts';
+
+  document.getElementById('reader-nav').innerHTML =
+    '<div class="reader-nav-title">Contents</div>' +
+    data.sections.map(function(sec){
+      return '<a class="reader-navlink" href="#' + sec.id + '" data-id="' + sec.id + '">' + sec.title + '</a>';
+    }).join('') +
+    '<div class="reader-source">' + data.source + '</div>';
+
+  document.getElementById('reader-body').innerHTML =
+    data.sections.map(function(sec){
+      return '<section class="reader-section" id="' + sec.id + '"><h3 class="reader-section-title">' + sec.title + '</h3>' + sec.html + '</section>';
+    }).join('');
+
+  applyFont();
+  setupScrollSpy(data.sections);
+}
+
+// ── Reading font size (persisted) ──────────────────────────────────────────
+function applyFont(){
+  const px = Math.max(15, Math.min(22, parseInt(localStorage.getItem('reader_font') || '17', 10)));
+  document.querySelectorAll('.reader-text p').forEach(function(p){ p.style.fontSize = px + 'px'; });
+}
+function changeFont(dir){
+  const px = Math.max(15, Math.min(22, (parseInt(localStorage.getItem('reader_font') || '17', 10)) + dir));
+  localStorage.setItem('reader_font', px);
+  applyFont();
+}
+
+// ── Highlight the section currently in view ────────────────────────────────
+function setupScrollSpy(sections){
+  const links = {};
+  document.querySelectorAll('.reader-navlink').forEach(function(a){ links[a.getAttribute('data-id')] = a; });
+  const obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){
+        Object.values(links).forEach(function(l){ l.classList.remove('active'); });
+        const a = links[en.target.id];
+        if (a){ a.classList.add('active'); a.scrollIntoView({block:'nearest'}); }
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(function(sec){ const el = document.getElementById(sec.id); if (el) obs.observe(el); });
+}
+
+// ── Theme toggle (mirrors the other pages) ─────────────────────────────────
+function handleThemeToggle(){ if (typeof toggleTheme === 'function') toggleTheme(); updateThemeBtn(); }
+function updateThemeBtn(){
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const btn = document.getElementById('theme-btn');
+  if (!btn) return;
+  btn.textContent = dark ? '☀️' : '🌙';
+  btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+}
+</script>
+</body>
+</html>
