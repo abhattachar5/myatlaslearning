@@ -32,15 +32,25 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-10-1": `<h2>An Inspector Calls: Plot &amp; Structure</h2>
-<p>Priestley's 1945 play, set in 1912, is a tightly structured 'well-made play' that works like a detective story to deliver a moral message.</p>
+<p>Written in 1945 but set in 1912, Priestley's play is a tightly controlled <strong>'well-made play'</strong> — one room, one evening, real time — that uses the shape of a detective thriller to deliver a moral argument. The Birling family are celebrating Sheila's engagement to Gerald Croft when Inspector Goole arrives to investigate the suicide of a young working-class woman, Eva Smith.</p>
 <h3>The chain of responsibility</h3>
-<p>Inspector Goole reveals that each character harmed Eva Smith: Mr Birling sacked her; Sheila had her fired; Gerald used and abandoned her; Mrs Birling denied her charity; Eric fathered her child. A single life destroyed by a chain of selfish acts.</p>
+<p>The Inspector reveals that <em>each</em> character played a part in Eva's downfall, exposed one link at a time:</p>
+<ul>
+<li><strong>Mr Birling</strong> sacked her for leading a request for higher wages.</li>
+<li><strong>Sheila</strong> had her fired from Milwards out of jealous spite.</li>
+<li><strong>Gerald</strong> kept her as his mistress (as 'Daisy Renton'), then abandoned her.</li>
+<li><strong>Mrs Birling</strong> refused her charity when she came, pregnant and desperate.</li>
+<li><strong>Eric</strong> fathered her child and stole money to support her.</li>
+</ul>
+<p>A single life is destroyed by an accumulating chain of selfish acts — exactly Priestley's point about how individual choices add up to collective harm.</p>
+<h3>The Inspector's method</h3>
+<p>Goole interrogates the family 'one person and one line of inquiry at a time', building tension methodically like a detective story towards a moral reckoning. He controls the pace, refusing to let anyone race ahead, so each confession lands before the next begins.</p>
 <h3>The cyclical twist</h3>
-<p>The 'Inspector' may not be real — but a final phone call announces a real death and a real inspector. The loop traps the unrepentant and warns the audience.</p>
+<p>At the climax the family discover there may be <em>no</em> Inspector Goole and no girl died at the Infirmary, so the older characters relax with relief. Then a phone call announces that a girl <em>has</em> just died and a real inspector is on his way. The loop traps the unrepentant and warns the audience that ignoring the lesson only brings it back, harder.</p>
 <h3>Worked example</h3>
 <p>'Priestley structures the interrogation so that each confession links to the last, dramatising his central claim that individual selfishness accumulates into collective harm.'</p>
 <h3>Common mistake</h3>
-<p>Summarising the plot. Use structure analytically — e.g. how the cyclical ending reinforces the theme of consequences.</p>`
+<p>Simply retelling the plot. Use structure <em>analytically</em> — for example, explain how the cyclical ending reinforces the theme of inescapable consequences.</p>`
 });
 
 // ── e11i-10-2 — The Inspector & Priestley's Message ──────────────────────────
@@ -72,15 +82,17 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-10-2": `<h2>The Inspector &amp; Priestley's Message</h2>
-<p>Inspector Goole is the moral centre of the play and Priestley's <strong>socialist mouthpiece</strong>.</p>
-<h3>The message</h3>
-<p>'We don't live alone. We are members of one body. We are responsible for each other.' He widens Eva into 'millions… of Eva Smiths and John Smiths' — a symbol of the exploited.</p>
-<h3>Warning and control</h3>
-<p>His prophecy of 'fire and blood and anguish' evokes the World Wars. His ghoulish name and commanding presence ('massiveness, solidity and purposefulness') suggest a force beyond an ordinary policeman.</p>
+<p>Inspector Goole is the moral centre of the play and Priestley's <strong>socialist mouthpiece</strong>, the device through which he dismantles the Birlings' complacent individualism and addresses the audience directly.</p>
+<h3>The central message</h3>
+<p>The Inspector's creed is <strong>collective responsibility</strong>: 'We don't live alone. We are members of one body. We are responsible for each other.' The metaphor of 'one body' presents society as a single living organism, so that harming one member — Eva — wounds the whole. The collective pronoun 'we' enacts the social unity Priestley wants his audience to embrace.</p>
+<h3>Symbol and warning</h3>
+<p>The Inspector widens Eva into a symbol of the entire exploited class: 'There are millions and millions and millions of Eva Smiths and John Smiths still left with us.' The triple repetition of 'millions' makes her stand for the countless vulnerable who depend on others' choices. His final prophecy — that if men will not learn, 'they will be taught it in fire and blood and anguish' — would strike a 1945 audience as a direct evocation of the <em>two World Wars</em> they had just lived through, presented as the terrible price of selfishness.</p>
+<h3>A force, not a policeman</h3>
+<p>His ghoulish name ('Goole' is a homophone of 'ghoul') hints he is supernatural or a moral force rather than an ordinary detective. The stage directions give him 'massiveness, solidity and purposefulness', and he dominates those of higher social class, controlling the stage by dictating the pace and unsettling the family with the photograph.</p>
 <h3>Worked example</h3>
-<p>'Through the Inspector's collective "we", Priestley dissolves the Birlings' individualism: the pronoun itself enacts the social unity he wants his 1945 audience to embrace.'</p>
+<p>'Through the Inspector's collective "we", Priestley dissolves the Birlings' selfish individualism: the pronoun itself enacts the social unity he wants his 1945 audience to embrace.'</p>
 <h3>Common mistake</h3>
-<p>Treating the Inspector as a realistic detective. Analyse him as a dramatic device for Priestley's argument.</p>`
+<p>Treating the Inspector as a realistic detective. Analyse him as a <em>dramatic device</em> for Priestley's socialist argument.</p>`
 });
 
 // ── e11i-10-3 — The Birlings & Gerald ────────────────────────────────────────
@@ -112,15 +124,17 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-10-3": `<h2>The Birlings &amp; Gerald</h2>
-<p>Priestley splits the characters along lines of <strong>age</strong> and <strong>attitude</strong> to dramatise who can change.</p>
+<p>Priestley splits his characters along lines of <strong>age</strong> and <strong>attitude</strong> to dramatise a single question: who is capable of change? The generational divide between parents and children carries his political argument.</p>
 <h3>The unrepentant older generation</h3>
-<p>Mr Birling preaches 'look after himself and his own'; Mrs Birling's class prejudice ('girls of that class') condemns her own son. Gerald ultimately sides with them.</p>
+<p><strong>Arthur Birling</strong> is a complacent capitalist who insists 'A man has to mind his own business and look after himself and his own' — the selfish creed the whole play attacks. His confident wrong predictions (the Titanic is 'unsinkable') make him a figure of dramatic irony. <strong>Mrs (Sybil) Birling</strong> is cold and class-prejudiced: she chairs the charity that turns away the pregnant Eva, dismissing 'girls of that class', and in demanding the father be punished she unknowingly condemns her own son, Eric.</p>
 <h3>The hopeful young</h3>
-<p>Sheila — 'these girls aren't cheap labour — they're people' — and Eric accept responsibility. Through them Priestley locates hope in the next generation.</p>
+<p><strong>Sheila</strong> becomes the moral conscience of the play. She recognises that 'these girls aren't cheap labour — they're people', and vows 'I'll never, never do it again'. <strong>Eric</strong>, though troubled by heavy drinking and guilty of fathering Eva's child and stealing money, likewise accepts his guilt and turns on his parents' refusal to change. Through both, Priestley locates hope in the next generation.</p>
+<h3>Gerald — change resisted</h3>
+<p><strong>Gerald Croft</strong> sits between the camps. He shows brief, genuine remorse over 'Daisy Renton', but he ultimately sides with the older generation, working to disprove the Inspector. His relief at the idea of a 'hoax' shows he has not truly changed at all. The contrast is deliberate: Sheila and Eric measure their worth by what they have learned, while Birling, Mrs Birling and Gerald measure theirs by whether they can escape the scandal — and so they learn nothing.</p>
 <h3>Worked example</h3>
 <p>'Priestley uses dramatic irony to dismantle Mr Birling: an audience that knows the Titanic sank and war came cannot trust a word of his capitalist confidence.'</p>
 <h3>Common mistake</h3>
-<p>Describing characters statically. Track who changes and who doesn't — that contrast is Priestley's argument.</p>`
+<p>Describing characters statically. Track <em>who changes and who doesn't</em> — that contrast is Priestley's argument.</p>`
 });
 
 // ── e11i-10-4 — Themes ───────────────────────────────────────────────────────
@@ -152,17 +166,17 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-10-4": `<h2>An Inspector Calls: Key Themes</h2>
-<p>Priestley wrote a 'morality play' with a clear political purpose. Anchor each theme to a quotation.</p>
-<h3>Social responsibility</h3>
-<p>The core message: 'We are responsible for each other', set against Birling's 'look after himself and his own'.</p>
+<p>Priestley wrote what is effectively a <strong>morality play</strong> with a clear political purpose. Anchor each theme to a quotation and link it back to his argument for social change.</p>
+<h3>Social responsibility (the central conflict)</h3>
+<p>The play's beating heart is the clash between selfishness and obligation. The Inspector insists 'We are responsible for each other'; Birling counters with 'look after himself and his own'. Priestley dramatises responsibility as a moral duty we all share, and structures the whole play to prove Birling wrong.</p>
 <h3>Class and gender</h3>
-<p>Eva is exploited as 'cheap labour' and as a vulnerable woman — Priestley exposes how class and gender combine to make her powerless.</p>
-<h3>Age and politics</h3>
-<p>The young change; the old don't. Beneath it all is the clash of capitalism and socialism, with Priestley firmly on the Inspector's side.</p>
+<p>Eva is exploited twice over — as 'cheap labour' to be discarded, and as a vulnerable working-class <em>woman</em> used by men (Gerald, Eric) and judged by Mrs Birling. Priestley exposes how class and gender combine to leave her powerless, and how the wealthy treated such people as disposable.</p>
+<h3>Age, capitalism and socialism</h3>
+<p>The young (Sheila, Eric) learn and change; the old (Mr and Mrs Birling) and Gerald do not — Priestley invests his hope in the younger generation. Beneath this runs the larger ideological clash: Birling's capitalism, which dismisses 'community and all that nonsense', against the Inspector's socialism that we are 'members of one body'. As a committed socialist, Priestley plainly endorses the Inspector. These themes are not separate boxes to tick: class, gender, age and politics all converge on Eva, whose destruction is the proof of Priestley's case that selfish individualism has human consequences.</p>
 <h3>Worked example</h3>
 <p>'By making the supposedly respectable Mrs Birling condemn her own son, Priestley argues that class prejudice is not just cruel but self-destructive — it blinds people to their own complicity.'</p>
 <h3>Common mistake</h3>
-<p>Ignoring Priestley's purpose. He is arguing for social change in 1945 — link every theme to that aim.</p>`
+<p>Ignoring Priestley's purpose. He is arguing for social change in 1945 — link <em>every</em> theme back to that aim.</p>`
 });
 
 // ── e11i-10-5 — Context: 1912 vs 1945 ────────────────────────────────────────
@@ -194,11 +208,13 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-10-5": `<h2>An Inspector Calls: Context</h2>
-<p>The play's power comes from the <strong>gap between its setting (1912) and its writing (1945)</strong>.</p>
+<p>The play's power comes from the <strong>gap between its setting (1912) and its writing (1945)</strong>. Priestley exploits everything the later audience knows that the complacent Birlings cannot foresee.</p>
 <h3>1912 — the world on stage</h3>
-<p>A rigidly class-divided Britain, before WWI and women's suffrage, full of complacent industrialists like Birling — whose confident predictions the audience knows are wrong.</p>
+<p>The Britain we watch is rigidly class-divided, before the First World War and before women won the vote. Wealthy industrialists like Birling were confident and complacent — exactly the world Priestley wanted to criticise. Their certainty is undercut by <strong>dramatic irony</strong>: Birling calls the Titanic 'unsinkable, absolutely unsinkable' and insists 'there isn't a chance of war'. The audience knows both predictions are catastrophically wrong, which discredits his judgement and, with it, his selfish ideology.</p>
 <h3>1945 — the world watching</h3>
-<p>After two World Wars, with a Labour landslide and the welfare state emerging, audiences were ready for the Inspector's call to collective responsibility. Priestley, a socialist, wrote to push that change.</p>
+<p>By the time the play was first performed, Britain had endured two World Wars and elected a Labour government in a landslide; the welfare state and (soon) the NHS were being born. The national mood now favoured exactly the collective responsibility the Inspector preaches. Priestley wrote to push that change forward.</p>
+<h3>Priestley himself</h3>
+<p>Priestley was a committed <strong>socialist</strong> who served in the First World War and made hugely popular wartime radio broadcasts. He believed deeply in social equality and collective responsibility — the very values he gives to the Inspector. Knowing this helps explain the play's design: it is not a neutral whodunit but a deliberate argument, using a 1912 setting to warn a 1945 audience that the old, complacent attitudes must not return.</p>
 <h3>Worked example</h3>
 <p>'Priestley weaponises dramatic irony: every false prophecy from Birling — the "unsinkable" Titanic, "no chance of war" — invites the 1945 audience to reject not just the man but the selfish ideology he represents.'</p>
 <h3>Common mistake</h3>
@@ -234,17 +250,19 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-10-6": `<h2>An Inspector Calls: Key Quotations Bank</h2>
-<p>Learn a few precise quotations per idea for the closed-book exam, with speaker and purpose.</p>
+<p>The exam is <strong>closed-book</strong>, so learn a few precise quotations per idea — always with the speaker and the purpose. A short, accurate quotation embedded into your sentence beats a long one half-remembered.</p>
 <h3>Learn by idea</h3>
 <ul>
-<li><strong>Individualism:</strong> Birling — 'look after himself and his own'; 'community and all that nonsense'.</li>
-<li><strong>Collective responsibility:</strong> Inspector — 'We are members of one body. We are responsible for each other'.</li>
-<li><strong>The warning:</strong> 'fire and blood and anguish'.</li>
-<li><strong>Change:</strong> Sheila — 'they're people'; 'I'll never, never do it again'.</li>
-<li><strong>Eva as symbol:</strong> 'millions… of Eva Smiths and John Smiths'.</li>
+<li><strong>Individualism (Birling):</strong> 'A man has to mind his own business and look after himself and his own' — and his sneer at 'community and all that nonsense'. The selfish creed the play sets out to demolish.</li>
+<li><strong>Collective responsibility (Inspector):</strong> 'We don't live alone. We are members of one body. We are responsible for each other.' Priestley's central message.</li>
+<li><strong>The warning (Inspector):</strong> 'If men will not learn that lesson, then they will be taught it in fire and blood and anguish' — evoking the World Wars.</li>
+<li><strong>Change (Sheila):</strong> 'these girls aren't cheap labour — they're people'; 'I'll never, never do it again'. The voice of conscience and hope.</li>
+<li><strong>Eva as symbol (Inspector):</strong> 'There are millions and millions and millions of Eva Smiths and John Smiths still left with us.' She stands for all the exploited.</li>
 </ul>
+<h3>How to deploy a quotation</h3>
+<p>Name the <strong>method</strong>, embed the <strong>quotation</strong>, then explain the <strong>effect</strong> and tie it to Priestley's purpose. Zoom in on a single word where you can — the triple 'millions', the metaphor of 'one body', the violent 'fire and blood'.</p>
 <h3>Worked example (deploying a quotation)</h3>
-<p>'The Inspector's metaphor of 'one body' presents society as a single organism, so that harming one member — Eva — wounds the whole: Priestley makes selfishness not just immoral but self-harming.'</p>
+<p>'The Inspector's metaphor of "one body" presents society as a single organism, so that harming one member — Eva — wounds the whole: Priestley makes selfishness not just immoral but self-harming.'</p>
 <h3>Common mistake</h3>
 <p>Attributing quotations to the wrong character. Know exactly who speaks each line and why.</p>`
 });

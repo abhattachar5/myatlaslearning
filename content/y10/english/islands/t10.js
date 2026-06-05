@@ -32,19 +32,17 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-10-1": `<h2>A Christmas Carol: Plot &amp; Structure</h2>
-<p>Dickens's 1843 novella is a five-part 'ghost story of Christmas' structured as a journey of <strong>redemption</strong>, told in five musical 'staves'.</p>
-<h3>The five staves</h3>
-<ul>
-<li><strong>Stave 1 — Marley's Ghost:</strong> Scrooge the miser; Marley's warning.</li>
-<li><strong>Stave 2 — Christmas Past:</strong> childhood, Fezziwig, the loss of Belle.</li>
-<li><strong>Stave 3 — Christmas Present:</strong> the Cratchits, Fred's party, Ignorance &amp; Want.</li>
-<li><strong>Stave 4 — Christmas Yet to Come:</strong> Scrooge's lonely death; Tiny Tim's grave.</li>
-<li><strong>Stave 5 — The End of It:</strong> Scrooge transformed and generous.</li>
-</ul>
+<p>Dickens's 1843 novella is a 'ghost story of Christmas' built as a deliberate journey of <strong>redemption</strong>. He divides it not into chapters but into five <em>staves</em> — a stave being the set of lines on which music is written — so that the whole book reads as a single joyful <strong>carol</strong> in five verses, ending in harmony.</p>
+<h3>The opening and the warning (Staves 1-2)</h3>
+<p><strong>Stave 1</strong> establishes Scrooge as a cold miser whose 'Bah! Humbug!' rejects all goodwill. His dead partner Marley appears, bound in 'the chain I forged in life', and warns that three spirits will come to save Scrooge from the same fate. <strong>Stave 2</strong>, the Ghost of Christmas Past, reopens old wounds: his lonely childhood, kind sister Fan, the generous employer Fezziwig, and Belle — the fiancee who left because a 'golden idol' of money had displaced her. Memory plants the first seeds of regret.</p>
+<h3>The present and the future (Staves 3-4)</h3>
+<p><strong>Stave 3</strong>, Christmas Present, shows the Cratchits' loving but poor Christmas, the ill Tiny Tim, and Fred's warm party. Beneath the spirit's robe crouch two ragged children, <strong>Ignorance and Want</strong>, whom Scrooge is told to 'beware'. <strong>Stave 4</strong>, the silent Ghost of Christmas Yet to Come, shows Scrooge's own lonely, unmourned death and Tiny Tim's tiny grave. Terror completes what memory and pity began.</p>
+<h3>The rebirth (Stave 5)</h3>
+<p>Scrooge wakes transformed on Christmas morning: he buys the Cratchits a turkey, raises Bob's wages, and the narrator confirms 'Tiny Tim... did NOT die'. The cyclical return to Christmas Day frames the whole arc as a rebirth.</p>
 <h3>Worked example</h3>
-<p>'Dickens structures the novella around the three spirits so that Scrooge confronts his past, present and future in turn — a clear moral arc that argues redemption is possible for anyone who is willing to change.'</p>
+<p>'By marching Scrooge through past, present and future in turn, Dickens builds a tight moral structure that argues redemption is available to anyone willing to confront themselves.'</p>
 <h3>Common mistake</h3>
-<p>Retelling each stave in the exam. Use the structure as evidence — e.g. how the cyclical return to Christmas morning frames Scrooge's rebirth.</p>`
+<p>Simply retelling each stave. Use the structure as <em>evidence</em> — for example, how the return to Christmas morning frames Scrooge's rebirth.</p>`
 });
 
 // ── e10i-10-2 — Scrooge: Character & Redemption Arc ──────────────────────────
@@ -76,15 +74,17 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-10-2": `<h2>Scrooge: Character &amp; Redemption Arc</h2>
-<p>Scrooge is Dickens's vehicle for the central idea that <strong>anyone can change</strong>. He moves from cold miser to generous benefactor.</p>
+<p>Scrooge is Dickens's vehicle for the central idea that <strong>anyone can change</strong>. He travels from cold, friendless miser to generous benefactor across five staves, and the reader is meant to travel with him.</p>
 <h3>The miser</h3>
-<p>Dickens introduces him through hard, cold imagery — 'hard and sharp as flint', 'solitary as an oyster' — and damning words like 'Bah! Humbug!' and the 'surplus population' remark.</p>
-<h3>The transformation</h3>
-<p>The spirits revive his capacity to feel: pity, joy, fear. By Stave 5 he keeps Christmas 'all the year' and becomes 'as good a man… as the good old city knew'.</p>
+<p>Dickens introduces Scrooge through hard, cold imagery: he is 'hard and sharp as flint' and 'secret, and self-contained, and solitary as an oyster'. The similes present a man closed off from human warmth, while his catchphrase 'Bah! Humbug!' dismisses Christmas and goodwill outright. His cruelty turns chilling when, told the poor may die, he replies they 'had better do it, and decrease the surplus population' — a line that exposes a heart hardened to the suffering of others.</p>
+<h3>The turning point</h3>
+<p>The spirits work by forcing Scrooge to <em>feel</em> again. The Ghost of Christmas Past stirs pity for his lonely younger self and joy at Fezziwig's party; the Ghost of Christmas Present brings him close to the ailing Tiny Tim; the silent Ghost of the Future confronts him with his own neglected grave and Tim's death. Memory reawakens tenderness and fear reawakens conscience — together they crack open the shell greed had built.</p>
+<h3>The redemption</h3>
+<p>By Stave 5 the change is total. Scrooge vows to 'honour Christmas in my heart, and try to keep it all the year', and the narrator declares he became 'as good a friend, as good a master, and as good a man, as the good old city knew'. He becomes a 'second father' to Tiny Tim — care for the vulnerable being the truest proof of his reform.</p>
 <h3>Worked example</h3>
-<p>'Dickens makes Scrooge's redemption deliberately complete — even excessive — so that the reader leaves convinced that transformation, and therefore social reform, is genuinely possible.'</p>
+<p>'Dickens makes Scrooge's transformation deliberately complete so the reader leaves convinced that change — and therefore social reform — is genuinely possible for everyone.'</p>
 <h3>Common mistake</h3>
-<p>Treating Scrooge as a fixed villain. The whole point is his change — track the arc and its purpose.</p>`
+<p>Treating Scrooge as a fixed villain. The whole point is his change — track the arc and Dickens's purpose behind it.</p>`
 });
 
 // ── e10i-10-3 — Key Characters ───────────────────────────────────────────────
@@ -116,11 +116,13 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-10-3": `<h2>A Christmas Carol: Key Characters</h2>
-<p>Each character carries part of Dickens's argument about wealth, poverty and responsibility.</p>
-<h3>Warnings and the poor</h3>
-<p><strong>Marley</strong> warns Scrooge through his chains and 'Mankind was my business'. <strong>Bob Cratchit</strong> and <strong>Tiny Tim</strong> give the poor a human face — patient, loving, vulnerable.</p>
-<h3>Foils to Scrooge</h3>
-<p><strong>Fred</strong> embodies Christmas goodwill; <strong>Fezziwig</strong> shows a generous employer; <strong>Belle</strong> reveals what greed cost Scrooge. <strong>Ignorance and Want</strong> deliver the social message directly.</p>
+<p>Dickens makes almost every character carry part of his argument about wealth, poverty and responsibility. Read them as <strong>functions</strong> as well as people.</p>
+<h3>The warning: Marley</h3>
+<p>Jacob Marley exists to show Scrooge his possible fate. Dragging the chain he 'forged in life... link by link, and yard by yard', he is a vivid symbol that a selfish life leaves a lasting burden. His anguished cry 'Mankind was my business' rebukes a life spent on profit rather than people, and it is the moral hinge of the whole novella.</p>
+<h3>The face of the poor: the Cratchits</h3>
+<p><strong>Bob Cratchit</strong> is loyal and underpaid, dignified despite hardship; his son <strong>Tiny Tim</strong> is ill and vulnerable yet utterly without bitterness, blessing the company with 'God bless us, every one!'. Through them Dickens gives poverty a loving, human face so his middle-class readers cannot look away. Tim's survival in Stave 5 becomes the measure of Scrooge's reform — and of what charity can achieve.</p>
+<h3>The foils: Fred, Fezziwig, Ignorance &amp; Want</h3>
+<p><strong>Fred</strong>, Scrooge's nephew, embodies Christmas warmth, insisting the season makes people 'open their shut-up hearts freely' — a direct contrast to his uncle's coldness. <strong>Fezziwig</strong> shows the joyful, generous employer Scrooge could be, throwing a party for his workers where Scrooge merely exploits Bob. Finally the allegorical children <strong>Ignorance and Want</strong>, whom Scrooge is warned to 'beware', deliver Dickens's social message with blunt force.</p>
 <h3>Worked example</h3>
 <p>'Dickens contrasts Fezziwig's joyful generosity with Scrooge's treatment of Bob Cratchit to argue that employers have a moral duty of care — a pointed message in an industrial age.'</p>
 <h3>Common mistake</h3>
@@ -156,13 +158,13 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-10-4": `<h2>A Christmas Carol: Key Themes</h2>
-<p>Dickens wrote with a clear social purpose. Learn a 'big idea' and quotation for each theme.</p>
+<p>Dickens wrote with a clear social purpose, so every theme connects back to his campaign against indifference to poverty. Learn a 'big idea' and a quotation for each.</p>
 <h3>Redemption</h3>
-<p>Scrooge's complete change argues that no one — and no society — is beyond reform.</p>
+<p>Redemption is presented as <strong>always possible</strong>. Scrooge's complete change from miser to benefactor — vowing to 'keep it all the year' — argues that no individual, and by extension no society, is beyond reform. Dickens makes the change deliberately total so the reader leaves hopeful that people <em>can</em> be better, and that it is never too late to begin.</p>
 <h3>Social responsibility &amp; poverty</h3>
-<p>Dickens's central message: the rich owe a duty to the poor. 'Mankind was my business'; the allegory of Ignorance and Want makes it explicit.</p>
+<p>Dickens's central message is that the rich owe a duty to the poor. Marley's tormented 'Mankind was my business' reframes worth: a life measured only in profit is a moral failure. The allegory of <strong>Ignorance and Want</strong> states the warning directly, while Scrooge's earlier wish to 'decrease the surplus population' shows the heartless attitude Dickens wants his readers to reject.</p>
 <h3>Christmas, memory &amp; community</h3>
-<p>Christmas 'open[s] shut-up hearts'; memory reawakens conscience; redemption means rejoining the community Scrooge had shut out.</p>
+<p>Christmas is shown as a force that opens hearts: Fred says it is the time people 'open their shut-up hearts freely'. <strong>Memory</strong> matters because revisiting the past reawakens Scrooge's feelings and regret, beginning his change. Redemption ultimately means <strong>rejoining the community</strong> — Fred's table, the Cratchits' home — that Scrooge, once 'solitary as an oyster', had shut out. Dickens suggests that isolation is itself a kind of poverty, and that connection is the truest form of wealth.</p>
 <h3>Worked example</h3>
 <p>'Through Marley's tormented "Mankind was my business", Dickens reframes worth: a life measured only in profit is, morally, a failure — a direct challenge to his wealthy Victorian readers.'</p>
 <h3>Common mistake</h3>
@@ -198,11 +200,13 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-10-5": `<h2>A Christmas Carol: Context</h2>
-<p>Use context to reveal <strong>why</strong> Dickens wrote — he is campaigning against social indifference.</p>
+<p>Context matters because it reveals <strong>why</strong> Dickens wrote: the novella is a moral campaign against social indifference, not just a ghost story.</p>
 <h3>Industrial poverty &amp; the Poor Law</h3>
-<p>In 1843 Britain's wealth sat beside terrible poverty. The 1834 Poor Law forced the destitute into harsh workhouses — the attitude behind Scrooge's 'Are there no… workhouses?'.</p>
-<h3>Malthus and Dickens's own past</h3>
-<p>Scrooge's 'surplus population' echoes Malthus, whom Dickens despised. Having worked as a child in a blacking factory, Dickens campaigned for the poor all his life.</p>
+<p>Written in <strong>1843</strong>, during the Industrial Revolution, the book reflects a Britain that was immensely wealthy yet deeply unequal: factory owners prospered while the urban poor faced slums, child labour and disease. The <strong>1834 Poor Law</strong> forced the destitute into harsh workhouses, kept deliberately grim to deter 'idleness'. Scrooge's cold question 'Are there no... workhouses?' voices exactly the callous attitude Dickens set out to attack.</p>
+<h3>Malthus and the 'surplus population'</h3>
+<p>The economist Malthus argued the poor were a 'surplus population' society could not afford to support. Scrooge parrots this thinking when he hopes the poor will 'decrease the surplus population' — and Dickens deliberately gives the idea to his villain so that, as Scrooge is redeemed, the ideology itself is discredited.</p>
+<h3>Dickens's own past &amp; purpose</h3>
+<p>As a boy, Dickens was sent to work in a blacking factory while his father sat in a debtors' prison; that experience of poverty fuelled a lifetime of campaigning. Inspired partly by visiting a 'Ragged School' for poor children, he wrote the novella to stir his middle-class readers' consciences and promote <strong>charity and reform</strong>. The festive setting was a tactic: by wrapping his protest in the warmth of Christmas, Dickens made an uncomfortable message about inequality impossible to ignore.</p>
 <h3>Worked example</h3>
 <p>'Dickens deliberately places Malthusian rhetoric in Scrooge's mouth so that, as Scrooge is redeemed, the ideology itself is discredited — context and character work together to push for reform.'</p>
 <h3>Common mistake</h3>
@@ -238,17 +242,15 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-10-6": `<h2>A Christmas Carol: Key Quotations Bank</h2>
-<p>Learn a few precise quotations per idea for the closed-book exam, and know who says each and why.</p>
-<h3>Learn by idea</h3>
-<ul>
-<li><strong>Scrooge's coldness:</strong> 'hard and sharp as flint'; 'solitary as an oyster'; 'Bah! Humbug!'</li>
-<li><strong>Social responsibility:</strong> 'Mankind was my business'; 'decrease the surplus population'.</li>
-<li><strong>Consequence:</strong> 'I wear the chain I forged in life'.</li>
-<li><strong>Goodness:</strong> 'God bless us, every one!'; hearts 'open… freely'.</li>
-<li><strong>Redemption:</strong> 'keep it all the year'; 'as good a man… as the good old city knew'.</li>
-</ul>
+<p>Because Paper 1 is closed-book, you must carry a small, precise set of quotations in your memory — and know <strong>who</strong> says each, <strong>when</strong>, and <strong>why</strong> Dickens chose those words.</p>
+<h3>Coldness &amp; social neglect</h3>
+<p>Scrooge's hardness is built from cold imagery: the narrator calls him 'hard and sharp as flint' and 'solitary as an oyster', while his own 'Bah! Humbug!' rejects all goodwill. His wish that the poor 'decrease the surplus population' exposes that neglect — and Marley's reply to it all, 'Mankind was my business', rebukes a life spent on profit not people.</p>
+<h3>Consequence &amp; goodness</h3>
+<p>Marley's warning is made physical in 'I wear the chain I forged in life... link by link, and yard by yard' — a symbol of selfishness made into a lasting burden. Against this, Dickens sets warmth: Tiny Tim's 'God bless us, every one!' and Fred's belief that at Christmas people 'open their shut-up hearts freely'. The vulnerable child and the warm-hearted nephew become living proof that goodness costs nothing yet outweighs all of Scrooge's hoarded gold.</p>
+<h3>Redemption</h3>
+<p>The final movement is captured in Scrooge's vow to 'honour Christmas in my heart, and try to keep it all the year', and the narrator's verdict that he became 'as good a friend, as good a master, and as good a man, as the good old city knew'. The triple structure of that praise mirrors and reverses his earlier coldness, sealing the carol's harmonious close.</p>
 <h3>Worked example (deploying a quotation)</h3>
-<p>'The metaphor of a "chain… forged in life" makes Marley's greed physical and inescapable; Dickens warns that selfishness has consequences that outlast death itself.'</p>
+<p>'The metaphor of a "chain... forged in life" makes Marley's greed physical and inescapable; Dickens warns that selfishness has consequences that outlast death itself.'</p>
 <h3>Common mistake</h3>
 <p>Memorising long passages. A short embedded phrase, closely analysed, scores far higher.</p>`
 });

@@ -32,19 +32,21 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-09-1": `<h2>Macbeth: Plot &amp; Structure</h2>
-<p><em>Macbeth</em> is Shakespeare's shortest tragedy, built as a tight five-act arc: a noble man rises through murder and falls into tyranny before order is restored.</p>
+<p><em>Macbeth</em> is Shakespeare's shortest, fastest tragedy, built on a single ruthless arc: a brave, loyal general hears a prophecy, murders his king to seize the throne, becomes a paranoid tyrant, and is finally destroyed so that order can be restored under Malcolm. It is a classic five-act tragedy — a rise through crime followed by an inevitable fall.</p>
 <h3>The five-act shape</h3>
 <ul>
-<li><strong>Act 1 — Temptation:</strong> the witches' prophecy; Lady Macbeth's persuasion.</li>
-<li><strong>Act 2 — The murder:</strong> Duncan is killed; guilt begins immediately.</li>
-<li><strong>Act 3 — Consolidation:</strong> Banquo murdered; the ghost at the banquet.</li>
-<li><strong>Act 4 — Tyranny:</strong> the apparitions; the slaughter of Macduff's family.</li>
-<li><strong>Act 5 — Downfall:</strong> Lady Macbeth's death; Birnam Wood; Macbeth killed; Malcolm crowned.</li>
+<li><strong>Act 1 — Temptation:</strong> the witches greet Macbeth as Thane of Cawdor and 'king hereafter'; when the Cawdor prophecy comes true at once, ambition stirs. Lady Macbeth reads his letter, fears his 'milk of human kindness', and persuades him to kill Duncan — a guest in their castle.</li>
+<li><strong>Act 2 — The murder (point of no return):</strong> Macbeth hallucinates a dagger, then murders the sleeping Duncan. Guilt strikes instantly — 'Macbeth does murder sleep' — while Lady Macbeth smears the grooms; the murder is discovered and Duncan's sons flee.</li>
+<li><strong>Act 3 — Consolidation &amp; unravelling:</strong> now king, Macbeth has Banquo murdered (fearing the prophecy that Banquo's sons will be kings), but Fleance escapes. Banquo's ghost shatters him at the banquet.</li>
+<li><strong>Act 4 — Tyranny:</strong> the apparitions give false security ('none of woman born'; 'until Birnam Wood'); Macbeth slaughters Macduff's family.</li>
+<li><strong>Act 5 — Catastrophe &amp; restoration:</strong> Lady Macbeth sleepwalks in guilt and dies; Birnam Wood 'moves'; Macduff (born by caesarean) kills Macbeth; the rightful Malcolm is crowned.</li>
 </ul>
+<h3>How the structure creates meaning</h3>
+<p>Each murder forces the next. The pace never slackens: the relentless momentum dramatises how <strong>ambition</strong> and <strong>guilt</strong> feed on one another, so that turning back feels as hard as going on. Malcolm's coronation finally reassures a Jacobean audience that the natural order, though violently overturned, cannot be permanently destroyed.</p>
 <h3>Worked example</h3>
 <p>'Shakespeare structures the tragedy so that Macbeth's first murder breeds others: each act shows him "in blood / Stepp'd in so far" that retreat feels impossible, dramatising how guilt and ambition feed on themselves.'</p>
 <h3>Common mistake</h3>
-<p>Re-telling the plot in the exam. Examiners want analysis of the writer's methods and ideas — use plot only as evidence for an argument.</p>`
+<p>Re-telling the plot in the exam. Examiners want analysis of the writer's methods and ideas — use structure as <em>evidence</em> (e.g. how the escalating murders chart his descent), not as story summary.</p>`
 });
 
 // ── e10i-09-2 — Macbeth: Character & Arc ─────────────────────────────────────
@@ -76,15 +78,15 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-09-2": `<h2>Macbeth: Character &amp; Arc</h2>
-<p>Macbeth is Shakespeare's tragic hero: a man of real nobility whose <strong>ambition</strong>, once awakened, destroys both his conscience and his humanity.</p>
+<p>Macbeth is Shakespeare's tragic hero: a man of genuine nobility whose <strong>ambition</strong>, once awakened, destroys both his conscience and his humanity. Tracing his arc means tracing how a hero becomes a tyrant — and never quite escapes the guilt that hounds him.</p>
 <h3>From hero to tyrant</h3>
-<p>He begins as 'brave Macbeth', but the prophecy and Lady Macbeth's goading unleash his 'vaulting ambition'. After killing Duncan he cannot stop — 'I am in blood / Stepp'd in so far' — and becomes a paranoid tyrant who murders Banquo and Macduff's family.</p>
+<p>He begins as 'brave Macbeth' and 'valour's minion', a loyal warrior who carves his way through traitors. This noble opening is vital: it makes his collapse a genuine fall. Yet his hamartia is plain in his own admission that he has 'no spur / To prick the sides of my intent, but only / Vaulting ambition, which o'erleaps itself'. Spurred by the prophecy and Lady Macbeth's goading, he kills Duncan — and after that cannot stop. Once king, he grows paranoid and ruthless: 'I am in blood / Stepp'd in so far that, should I wade no more, / Returning were as tedious as go o'er.' Guilt has hardened into a numb readiness to murder Banquo and Macduff's family.</p>
 <h3>Conscience and collapse</h3>
-<p>His imagination tortures him throughout: the floating dagger, Banquo's ghost, the famous despair of 'Tomorrow, and tomorrow, and tomorrow'. Unlike his wife, he never fully silences his conscience — which is what makes him tragic rather than merely evil.</p>
+<p>What separates Macbeth from mere villainy is his tortured imagination. Before the murder he hallucinates a weapon — 'Is this a dagger which I see before me, / The handle toward my hand?' — his guilty mind conjuring horror before he has even killed. Later, Banquo's ghost destroys his composure. By Act 5 ambition has emptied life of all meaning: 'Tomorrow, and tomorrow, and tomorrow', he says, life is 'but a walking shadow… a tale / Told by an idiot… signifying nothing.' His nihilistic despair shows that the crown brought no peace.</p>
 <h3>Worked example</h3>
-<p>'Shakespeare charts Macbeth's decline through his imagery of blood: what begins as horror ("Will all great Neptune's ocean wash this blood / Clean from my hand?") hardens into the numb resolve of a man already "in blood / Stepp'd in so far".'</p>
+<p>'Shakespeare charts Macbeth's decline through his imagery of blood: what begins as horror hardens into the numb resolve of a man already "in blood / Stepp'd in so far" — yet his haunted "walking shadow" speech proves his conscience is never wholly silenced.'</p>
 <h3>Common mistake</h3>
-<p>Calling Macbeth simply a villain. Top answers recognise the tension between his ambition and his guilt — he is a tragic hero, not a pantomime baddie.</p>`
+<p>Calling Macbeth simply a villain. Top answers recognise the tension between his 'vaulting ambition' and his guilt — he is a tragic hero, not a pantomime baddie.</p>`
 });
 
 // ── e10i-09-3 — Lady Macbeth: Character & Arc ────────────────────────────────
@@ -116,15 +118,15 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-09-3": `<h2>Lady Macbeth: Character &amp; Arc</h2>
-<p>Lady Macbeth is one of Shakespeare's most striking creations: a woman who rejects the limits of her society to pursue power — and is ultimately destroyed by the guilt she thought she could dismiss.</p>
+<p>Lady Macbeth is one of Shakespeare's most striking creations: a woman who rejects the limits her society places on her in order to pursue power — and is ultimately destroyed by the very guilt she thought she could dismiss. Her arc is a mirror-image of her husband's, and tracking that inversion is the key to analysing her.</p>
 <h3>Ambition and manipulation</h3>
-<p>She is initially the stronger partner, fearing Macbeth's 'milk of human kindness'. She calls on spirits to 'unsex me here', and drives him to murder by attacking his masculinity and teaching him to 'look like the innocent flower, / But be the serpent under't'.</p>
+<p>When we first meet her she is the <strong>stronger, more ruthless partner</strong>. Reading Macbeth's letter, she fears he is 'too full o' the milk of human kindness' to seize the crown, and resolves to 'pour my spirits in thine ear'. She summons dark forces to strip away her femininity — 'Come, you spirits / That tend on mortal thoughts, unsex me here' — asking to be filled 'top-full / Of direst cruelty', a startling rejection of Jacobean ideas of womanhood. She then manipulates Macbeth by attacking his masculinity — 'When you durst do it, then you were a man' — and teaches him deceit: 'look like the innocent flower, / But be the serpent under't.'</p>
 <h3>The collapse into guilt</h3>
-<p>The woman who once said 'a little water clears us of this deed' ends sleepwalking and scrubbing imaginary blood: 'Out, damned spot!' Her mental disintegration and offstage death reverse her early control.</p>
+<p>Her downfall inverts this early control. The woman who once dismissed murder with 'a little water clears us of this deed' ends sleepwalking and obsessively scrubbing imaginary blood: 'Out, damned spot! out, I say!' and 'all the perfumes of Arabia will not sweeten this little hand.' The guilt she once brushed aside destroys her mind and drives her to an implied suicide. While Macbeth begins hesitant and ends a hardened tyrant, she begins unfeeling and collapses into madness — the two arcs cross.</p>
 <h3>Worked example</h3>
-<p>'Shakespeare uses Lady Macbeth to explore gender: her plea to be "unsex[ed]" suggests she believes cruelty requires the rejection of womanhood — yet it is conscience, not weakness, that finally breaks her.'</p>
+<p>'Shakespeare uses Lady Macbeth to explore gender: her plea to be "unsex[ed]" suggests she believes cruelty requires the rejection of womanhood — yet it is conscience, not weakness, that finally breaks her in "Out, damned spot!".'</p>
 <h3>Common mistake</h3>
-<p>Treating her as simply evil. The power of her arc lies in the contrast between her early ruthlessness and her final, broken humanity.</p>`
+<p>Treating her as simply evil. The power of her arc lies in the contrast between her early ruthlessness ('a little water clears us of this deed') and her final, broken humanity.</p>`
 });
 
 // ── e10i-09-4 — Themes: Ambition, Guilt, Kingship & the Supernatural ──────────
@@ -156,19 +158,19 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-09-4": `<h2>Macbeth: Key Themes</h2>
-<p>Five themes recur in almost every AQA question. Learn a 'big idea' plus quotations for each.</p>
+<p>Five themes recur in almost every AQA question. For each, learn a 'big idea' plus the language Shakespeare uses to build it — method first, then meaning.</p>
 <h3>Ambition</h3>
-<p>Unchecked ambition is self-destroying — 'vaulting ambition, which o'erleaps itself'. It brings Macbeth power but no peace.</p>
+<p>Shakespeare presents ambition as <strong>destructive when unchecked by morality</strong>. Macbeth's 'vaulting ambition, which o'erleaps itself' is the engine of the tragedy, yet it brings only paranoia, tyranny and death. The metaphor of a leap that overshoots itself warns that ambition without conscience consumes the self.</p>
 <h3>Guilt</h3>
-<p>Conveyed through <strong>blood</strong> and <strong>sleeplessness</strong>: 'Will all great Neptune's ocean wash this blood / Clean from my hand?' and 'Out, damned spot!'</p>
+<p>Guilt is conveyed through recurring imagery of <strong>blood</strong> and <strong>sleeplessness</strong>, and is shown to be inescapable and self-punishing. Macbeth asks 'Will all great Neptune's ocean wash this blood / Clean from my hand?'; even an ocean cannot cleanse him. The same motif returns in Lady Macbeth's 'Out, damned spot!' and in the warning that 'Macbeth does murder sleep' — conscience denies the guilty any rest.</p>
 <h3>Appearance vs reality</h3>
-<p>'Fair is foul, and foul is fair'; the 'innocent flower' hiding the 'serpent'. Deception is everywhere.</p>
+<p>Things are repeatedly not what they seem. The witches' paradox 'Fair is foul, and foul is fair' opens a world of deception, echoed in Lady Macbeth's 'look like the innocent flower, / But be the serpent under't' and Macbeth's 'False face must hide what the false heart doth know.' Deception runs from the witches to the murderers.</p>
 <h3>The supernatural &amp; kingship</h3>
-<p>The witches tempt and equivocate; Duncan's murder overturns the divine order, restored only when the rightful Malcolm is crowned.</p>
+<p>The witches ('weird sisters') spark the tragedy and equivocate to mislead, chanting 'Double, double toil and trouble' and announcing 'Something wicked this way comes'. Against this, kingship and the <strong>natural order</strong> are sacred: Duncan is a God-anointed king, so his murder convulses nature (storms; horses eating each other). Macbeth becomes a 'tyrant', and the 'king-becoming graces' define the true kingship finally restored under Malcolm.</p>
 <h3>Worked example</h3>
 <p>'Guilt in the play is physical and inescapable: Shakespeare links it to water and blood so that no "perfume" or "ocean" can cleanse it, suggesting conscience cannot be washed away by power.'</p>
 <h3>Common mistake</h3>
-<p>Writing about a theme with no quotation. Always anchor a theme to specific language the writer uses.</p>`
+<p>Writing about a theme with no quotation. Always anchor a theme to the specific language the writer uses, then analyse a single key word.</p>`
 });
 
 // ── e10i-09-5 — Context: Jacobean England & James I ──────────────────────────
@@ -200,13 +202,13 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-09-5": `<h2>Macbeth: Context</h2>
-<p>Context earns marks only when it <strong>illuminates meaning</strong>. Tie each fact to how it shapes the play and its first audience.</p>
+<p>Context earns marks only when it <strong>illuminates meaning</strong>. Tie each fact to how it shapes the play and the response of its first, Jacobean audience.</p>
 <h3>James I and kingship</h3>
-<p>Written c.1606 for James I, the play flatters its royal patron: it is set in Scotland, presents his supposed ancestor Banquo nobly, and treats the murder of a king as monstrous.</p>
+<p>Macbeth was written around 1606, early in the reign of James I (formerly James VI of Scotland). The play deliberately flatters its royal patron: it is set in Scotland, condemns regicide, and presents Banquo — supposedly James's own ancestor — as noble and honourable. Reading it as a piece written <em>for</em> a particular king helps explain why the murder of Duncan is treated as so monstrous.</p>
 <h3>Divine Right &amp; the Great Chain of Being</h3>
-<p>Kings were believed chosen by God within a fixed cosmic hierarchy. Duncan's murder is therefore a crime against God and nature — which is why the natural world convulses afterwards.</p>
+<p>The <strong>Divine Right of Kings</strong> held that a monarch is chosen by God. Killing Duncan is therefore not merely murder but a sin against God himself. This sat within the <strong>Great Chain of Being</strong>, a fixed, God-ordained hierarchy (God &gt; king &gt; nobles &gt; people &gt; nature). When Macbeth's regicide breaks the chain, the natural world rebels — darkness falls at noon, and horses are said to eat each other. The cosmic disorder mirrors the political crime.</p>
 <h3>Witchcraft and the Gunpowder Plot</h3>
-<p>James wrote 'Daemonologie' and the 1605 plot to kill him made regicide a live terror. Both make the witches and the murder far more charged for a Jacobean audience.</p>
+<p>James I was fascinated by witchcraft: he wrote 'Daemonologie' (1597) and oversaw witch trials, and Jacobean audiences genuinely feared witches, so the 'weird sisters' would have seemed truly dangerous rather than fantastical. Meanwhile the <strong>Gunpowder Plot of 1605</strong> — a Catholic conspiracy to blow up James I — made treason and regicide a raw, topical terror, and the play's motif of 'equivocation' (heard in the Porter scene) tapped directly into this anxiety.</p>
 <h3>Worked example</h3>
 <p>'For a Jacobean audience steeped in the Divine Right of Kings, Macbeth's regicide is not merely criminal but blasphemous, which is why Shakespeare surrounds it with unnatural omens that signal a broken cosmic order.'</p>
 <h3>Common mistake</h3>
@@ -242,15 +244,17 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e10i-09-6": `<h2>Macbeth: Key Quotations Bank</h2>
-<p>The closed-book exam rewards <strong>precise, memorised quotations</strong> used as evidence. Learn a handful per theme and know who says them and why.</p>
+<p>The closed-book exam rewards <strong>precise, memorised quotations</strong> used as evidence. Learn a handful per theme and always know <em>who</em> says each line and <em>why</em> — attribution and purpose are what turn a quotation into analysis.</p>
 <h3>Learn by theme</h3>
 <ul>
-<li><strong>Ambition:</strong> 'Vaulting ambition, which o'erleaps itself'; 'Stars, hide your fires'.</li>
-<li><strong>Guilt:</strong> 'Will all great Neptune's ocean wash this blood / Clean from my hand?'; 'Out, damned spot!'</li>
-<li><strong>Supernatural:</strong> 'Fair is foul, and foul is fair'; 'Double, double toil and trouble'.</li>
-<li><strong>Gender:</strong> 'unsex me here'; 'When you durst do it, then you were a man'.</li>
-<li><strong>Appearance vs reality:</strong> 'look like the innocent flower, / But be the serpent under't'.</li>
+<li><strong>Ambition (Macbeth):</strong> 'I have no spur / To prick the sides of my intent, but only / Vaulting ambition' (1.7), and 'Stars, hide your fires; / Let not light see my black and deep desires' (1.4) — he wants the darkness to conceal his own intentions.</li>
+<li><strong>Guilt:</strong> Macbeth's 'Will all great Neptune's ocean wash this blood / Clean from my hand?' (2.2) and Lady Macbeth's 'Out, damned spot! out, I say!' (5.1) plus 'all the perfumes of Arabia will not sweeten this little hand' — guilt that no ocean or perfume can cleanse.</li>
+<li><strong>The supernatural (the witches):</strong> 'Fair is foul, and foul is fair' (1.1); 'Double, double toil and trouble; / Fire burn, and cauldron bubble' (4.1); 'Something wicked this way comes' (4.1).</li>
+<li><strong>Gender / manhood (Lady Macbeth):</strong> 'Come, you spirits… unsex me here' (1.5) and 'When you durst do it, then you were a man' (1.7) — she equates cruelty with masculinity.</li>
+<li><strong>Appearance vs reality:</strong> Lady Macbeth's 'look like the innocent flower, / But be the serpent under't' (1.5) and Macbeth's 'False face must hide what the false heart doth know' (1.7).</li>
 </ul>
+<h3>How to deploy a quotation</h3>
+<p>Embed only a few words, then zoom in on a single word's connotations. A short, exactly-quoted phrase analysed closely scores far higher than a long passage copied out. Always link the language back to a theme or to the writer's purpose.</p>
 <h3>Worked example (deploying a quotation)</h3>
 <p>'The verb "vaulting" implies a leap so excessive it "o'erleaps itself" — Shakespeare suggests Macbeth's ambition is not measured aspiration but a reckless overreaching that guarantees his fall.'</p>
 <h3>Common mistake</h3>

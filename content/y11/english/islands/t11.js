@@ -32,17 +32,17 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-11-1": `<h2>Power &amp; Conflict: Power of Nature</h2>
-<p>Three poems present nature and time as forces greater than human power.</p>
-<h3>The poems</h3>
-<ul>
-<li><strong>Ozymandias (Shelley):</strong> a tyrant's statue lies in ruins — 'Look on my Works, ye Mighty, and despair!' is mocked by the 'lone and level sands'.</li>
-<li><strong>The Prelude (Wordsworth):</strong> a 'huge peak, black and huge' humbles the boy and becomes 'a trouble to my dreams'.</li>
-<li><strong>Storm on the Island (Heaney):</strong> nature 'spits like a tame cat / Turned savage'; 'it is a huge nothing that we fear.'</li>
-</ul>
+<p>These three poems present <strong>nature and time</strong> as forces far greater than human power. In each, human confidence, pride or effort is dwarfed by something vast and lasting. When you revise this cluster, hold onto one big idea: human power is always <em>provisional</em> before nature and time.</p>
+<h3>Ozymandias (Shelley)</h3>
+<p>A long-dead tyrant's boast — <em>'Look on my Works, ye Mighty, and despair!'</em> — is bitterly mocked by the 'colossal Wreck' and the 'lone and level sands' that now stretch around it. The dramatic irony is the whole point: the command meant to terrify now exposes how <strong>temporary</strong> human power is, because nature and time have erased the empire. Shelley reinforces this through <strong>form</strong>: the broken, irregular rhyme scheme of the sonnet mirrors the shattered statue itself.</p>
+<h3>Extract from, The Prelude (Wordsworth)</h3>
+<p>After the boy guiltily steals a boat, a mountain rears up: <em>'a huge peak, black and huge'</em>. The repetition makes nature seem to grow and pursue him, and it later becomes <em>'a trouble to my dreams'</em>. Here nature is <strong>sublime</strong> — beautiful but overwhelming — and it humbles the boy's youthful confidence. Wordsworth writes in unrhymed blank verse, whose flowing lines mimic both the boat's journey and the child's dawning, fearful awe.</p>
+<h3>Storm on the Island (Heaney)</h3>
+<p>The islanders defend themselves practically — they 'build our houses squat' — yet nature still overpowers them. The storm <em>'spits like a tame cat / Turned savage'</em>, a simile that exposes nature's hidden, sudden violence. The poem's unsettling close, <em>'it is a huge nothing that we fear'</em>, captures how nature's power is <strong>invisible and psychological</strong> as much as physical: the islanders are besieged by an enemy they cannot even see.</p>
 <h3>Worked example</h3>
-<p>'Shelley's choice of a sonnet — a form associated with permanence and love — is deeply ironic: its fractured rhyme enacts the collapse of the very power Ozymandias believed eternal.'</p>
+<p>'Whereas Shelley shows power decaying over centuries, Heaney presents nature's threat as immediate and physical — together they suggest human strength is always provisional before nature and time.'</p>
 <h3>Common mistake</h3>
-<p>Analysing poems in isolation. For the exam, always be ready to compare how two poets present nature's power.</p>`
+<p>Analysing poems in isolation. For the exam, always be ready to <strong>compare</strong> how two poets present nature's power, linking each idea to a specific method such as Shelley's irony or Heaney's simile.</p>`
 });
 
 // ── e11i-11-2 — Power of Humans & Authority (London, My Last Duchess, Tissue) ──
@@ -74,17 +74,17 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-11-2": `<h2>Power &amp; Conflict: Power of Humans &amp; Authority</h2>
-<p>Three poems examine how humans wield — and abuse — power.</p>
-<h3>The poems</h3>
-<ul>
-<li><strong>London (Blake):</strong> institutional oppression; 'mind-forg'd manacles'; 'marks of weakness, marks of woe'.</li>
-<li><strong>My Last Duchess (Browning):</strong> a Duke's deadly control; 'I gave commands; / Then all smiles stopped together'.</li>
-<li><strong>Tissue (Dharker):</strong> human power is as fragile as paper; structures could 'fly our lives like paper kites'.</li>
-</ul>
+<p>These three poems examine how humans <strong>wield — and abuse — power</strong>. Two attack tyranny (one institutional, one personal), while the third reminds us that all human power is ultimately fragile. The cluster invites you to ask: is human authority as solid and permanent as it pretends to be?</p>
+<h3>London (Blake)</h3>
+<p>Blake exposes <strong>institutional oppression</strong> by monarchy, church and commerce. Walking the city he sees 'marks of weakness, marks of woe' on every face, and famously hears <em>'mind-forg'd manacles'</em> in every voice. This metaphor suggests oppression is <strong>mental as well as physical</strong> — people are trapped by attitudes and authority, not only chains. The 'black'ning Church appalls', condemning institutions that should protect the powerless many but instead betray them.</p>
+<h3>My Last Duchess (Browning)</h3>
+<p>Browning's Duke embodies a <strong>controlling, jealous abuse of power</strong>. In a chillingly casual aside he admits <em>'I gave commands; / Then all smiles stopped together'</em> — strongly implying he had his wife killed for smiling too freely. The <strong>dramatic monologue</strong> form lets the Duke condemn himself: speaking alone, he unintentionally reveals his tyranny. The tight rhyming couplets mirror his need to control everything, while enjambment lets his sinister meaning slip out.</p>
+<h3>Tissue (Dharker)</h3>
+<p>Dharker counters these tyrants by showing human power and structures are as <strong>fragile as paper</strong>. 'Paper that lets the light / shine through' is set against the buildings, money and maps we treat as permanent — yet they could <em>'fly our lives like paper kites'</em>. The extended metaphor of paper suggests how easily our seemingly 'solid' structures of authority can be undone or remade.</p>
 <h3>Worked example</h3>
-<p>'Browning traps the Duke in rhyming couplets so rigid they mirror his obsession with control — yet enjambment lets his confession of murder "leak" out, suggesting power cannot fully hide its own brutality.'</p>
+<p>'Browning traps the Duke in rhyming couplets so rigid they mirror his obsession with control, whereas Dharker's free-flowing form lets her paper imagery drift, suggesting power that endures versus power that can simply blow away.'</p>
 <h3>Common mistake</h3>
-<p>Forgetting method. Link the idea of power to specific techniques — Blake's repetition, Browning's monologue, Dharker's extended metaphor.</p>`
+<p>Forgetting method. Always link the idea of power to a <strong>specific technique</strong> — Blake's repetition and metaphor, Browning's dramatic monologue, Dharker's extended metaphor.</p>`
 });
 
 // ── e11i-11-3 — The Reality of War (Charge of the Light Brigade, Exposure, Bayonet Charge) ─
@@ -116,17 +116,17 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-11-3": `<h2>Power &amp; Conflict: The Reality of War</h2>
-<p>Three poems present very different visions of combat.</p>
-<h3>The poems</h3>
-<ul>
-<li><strong>The Charge of the Light Brigade (Tennyson):</strong> duty and heroism — 'Theirs but to do and die'.</li>
-<li><strong>Exposure (Owen):</strong> futility — the weather 'knife[s] us'; 'But nothing happens'.</li>
-<li><strong>Bayonet Charge (Hughes):</strong> raw terror — ideals 'Dropped like luxuries'.</li>
-</ul>
+<p>These three poems present very different visions of combat — one <strong>celebrating</strong> duty, two <strong>exposing</strong> war's misery and fear. Comparing them shows how a poet's purpose and historical moment shape whether war is glorified or condemned. Tennyson, the Victorian Poet Laureate, writes to honour; Owen and Hughes, closer to the trenches, write to expose.</p>
+<h3>The Charge of the Light Brigade (Tennyson)</h3>
+<p>Tennyson honours the soldiers' <strong>duty and courage</strong> despite a fatal blunder in the Crimean War. The men ride 'Into the valley of Death', and <em>'Theirs not to reason why, / Theirs but to do and die'</em> presents them as obedient and heroic, never questioning their orders. The poem's driving, galloping rhythm propels them onward and the command to 'Honour the Light Brigade' celebrates their sacrifice rather than mourning the disaster.</p>
+<h3>Exposure (Owen)</h3>
+<p>Owen presents the <strong>futility</strong> of the First World War, where the real enemy is the weather, not the opposing army. <em>'Our brains ache, in the merciless iced east winds that knife us'</em> shows nature as the killer, and the haunting refrain <em>'But nothing happens'</em> stresses pointless, deadly waiting. The circular structure mirrors the soldiers' frozen, hopeless monotony — there is no glory here, only suffering. Notice how the verb 'knife us' makes the wind itself the attacker, turning nature into the war's true weapon while the human enemy never even appears.</p>
+<h3>Bayonet Charge (Hughes)</h3>
+<p>Hughes plunges us into the <strong>raw terror</strong> of one soldier in combat. We begin mid-action — <em>'Suddenly he awoke and was running'</em> — and patriotic ideals such as 'King, honour, human dignity, etcetera' are <em>'Dropped like luxuries'</em> in the face of fear. The dismissive 'etcetera' and the enjambment and chaotic imagery mirror panic, showing how survival instinct overwhelms abstract patriotism.</p>
 <h3>Worked example</h3>
-<p>'Where Tennyson's insistent dactylic rhythm drives his soldiers gloriously onward, Owen's circular refrain "But nothing happens" stalls all momentum — form itself carries each poet's opposing view of war.'</p>
+<p>'Where Tennyson's insistent rhythm drives his soldiers gloriously onward, Owen's circular refrain "But nothing happens" stalls all momentum — form itself carries each poet's opposing view of war.'</p>
 <h3>Common mistake</h3>
-<p>Treating all war poems as anti-war. Tennyson largely celebrates sacrifice — note the differences carefully.</p>`
+<p>Treating all war poems as anti-war. Tennyson largely <strong>celebrates</strong> sacrifice, whereas Owen and Hughes expose its horror — note the differences carefully.</p>`
 });
 
 // ── e11i-11-4 — Memory, Loss & Trauma (Remains, War Photographer, Poppies, Kamikaze) ─
@@ -158,18 +158,19 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-11-4": `<h2>Power &amp; Conflict: Memory, Loss &amp; Trauma</h2>
-<p>Four modern poems explore conflict's lasting effects on individuals and families.</p>
-<h3>The poems</h3>
-<ul>
-<li><strong>Remains (Armitage):</strong> PTSD and guilt — 'his bloody life in my bloody hands'.</li>
-<li><strong>War Photographer (Duffy):</strong> suffering and indifference — 'they do not care'.</li>
-<li><strong>Poppies (Weir):</strong> a mother's grief and memory at home.</li>
-<li><strong>Kamikaze (Garland):</strong> duty versus family; survival as shame.</li>
-</ul>
+<p>These four modern poems explore conflict's <strong>lasting effects</strong> on individuals and families. The focus is not the battle itself but the <em>aftermath</em> — memory, guilt, grief and the people left behind. Two are narrated by soldiers or witnesses, two by family members.</p>
+<h3>Remains (Armitage)</h3>
+<p>Armitage captures the <strong>PTSD and guilt</strong> of killing. The soldier shoots a looter who was 'probably armed, possibly not', and is haunted ever after: <em>'his bloody life in my bloody hands'</em>. The blunt repetition of 'bloody' works as both a casual swear word and literal blood, suggesting the memory has soaked into his everyday mind and will not wash out. The guilt outlives the war itself.</p>
+<h3>War Photographer (Duffy)</h3>
+<p>Duffy contrasts real <strong>suffering with Western indifference</strong>. The photographer develops 'a hundred agonies in black and white', yet at home he 'earns his living and they do not care'. The criticism targets readers' <strong>apathy</strong>: we glance at images of distant war over breakfast and feel nothing, while the photographer is left carrying the weight of what he has seen.</p>
+<h3>Poppies (Weir)</h3>
+<p>Weir presents a <strong>mother's grief</strong> on the home front as her son leaves for war. She pins a poppy on his 'blazer' and later listens 'hoping to hear / your playground voice'. Loss is told through <strong>memory and domestic detail</strong>: the childhood images make her son's absence, and her fear of his death, painfully tender and ordinary.</p>
+<h3>Kamikaze (Garland)</h3>
+<p>Garland dramatises a <strong>conflict between duty and family</strong>. A pilot turns back from his suicide mission, choosing life — but his family then 'treated him as though he no longer existed.' Narrated by his daughter, the poem shows that <strong>survival brings shame</strong>: honour culture punishes the choice of life, and the cost is paid across generations.</p>
 <h3>Worked example</h3>
-<p>'Armitage's blunt repetition of "bloody" — at once a swear word and literal blood — fuses casual speech with horror, suggesting the memory has soaked into the soldier's everyday mind and will not wash out.'</p>
+<p>'Whereas Armitage's "Remains" locates trauma inside the guilty soldier himself, Weir's "Poppies" shows conflict's wound reaching the family at home — together they prove that war's damage spreads far beyond the battlefield.'</p>
 <h3>Common mistake</h3>
-<p>Focusing only on the battlefield. These poems are about aftermath — memory, guilt and the family left behind.</p>`
+<p>Focusing only on the battlefield. These poems are about <strong>aftermath</strong> — memory, guilt and the family left behind. Remember Poppies and Kamikaze are both narrated by a relative.</p>`
 });
 
 // ── e11i-11-5 — Identity & Place (The Emigrée, Checking Out Me History) ───────
@@ -201,16 +202,15 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-11-5": `<h2>Power &amp; Conflict: Identity &amp; Place</h2>
-<p>Two poems explore how place, memory and history shape identity — and how individuals resist a controlling narrative.</p>
-<h3>The poems</h3>
-<ul>
-<li><strong>The Emigrée (Rumens):</strong> a luminous memory of a lost homeland — 'branded by an impression of sunlight' — survives its 'death'-muttering reality.</li>
-<li><strong>Checking Out Me History (Agard):</strong> reclaiming a silenced past — 'Dem tell me / Wha dem want to tell me' — to 'carve out me identity'.</li>
-</ul>
+<p>These two poems explore how <strong>place, memory and history shape identity</strong> — and how individuals resist a controlling narrative. The 'conflict' here is internal and cultural rather than military: it is a struggle over who gets to define a person and their past.</p>
+<h3>The Emigrée (Rumens)</h3>
+<p>The speaker holds onto a <strong>loving memory of a lost homeland</strong> even as its reality darkens. 'There once was a country… I left it as a child', she recalls, and insists <em>'I am branded by an impression of sunlight'</em> — her identity is permanently marked by remembered light. The homeland may now be under tyranny or war, since 'They mutter death' and try to taint it, yet she declares <em>'I can't stop a love of mine'</em>. Memory and identity <strong>defy oppression</strong>: the past she carries cannot be confiscated. The contrast between the warm, remembered sunlight and the cold, threatening present dramatises a conflict between personal memory and political reality.</p>
+<h3>Checking Out Me History (Agard)</h3>
+<p>Agard's speaker reclaims his <strong>identity from a biased education</strong>. <em>'Dem tell me / Wha dem want to tell me'</em> about British history but omit Black history — figures such as Toussaint L'Ouverture and Mary Seacole — so he resolves: 'I carving out me identity'. Agard makes <strong>form itself an act of resistance</strong>: he writes in Caribbean dialect and non-standard spelling, and italicises the heroes the curriculum ignored, refusing the 'standard' English that erased them.</p>
 <h3>Worked example</h3>
-<p>'Agard turns form into protest: by spelling in Caribbean dialect and italicising the Black heroes the curriculum ignored, he makes the very surface of the poem resist the "standard" history that erased them.'</p>
+<p>'Whereas Rumens's speaker resists oppression by clutching a private memory "branded" with sunlight, Agard resists publicly through the very language of his poem — together they show identity asserting itself against a narrative that would silence it.'</p>
 <h3>Common mistake</h3>
-<p>Reading these as only about war. The 'conflict' here is internal and cultural — over identity, memory and power.</p>`
+<p>Reading these as only about war. The 'conflict' here is <strong>internal and cultural</strong> — over identity, memory and power — and both speakers actively fight back rather than simply suffering.</p>`
 });
 
 // ── e11i-11-6 — Comparing the Cluster & Key Quotations ───────────────────────
@@ -242,18 +242,20 @@ Object.assign(QUESTIONS, {
 });
 Object.assign(LESSONS, {
   "e11i-11-6": `<h2>Power &amp; Conflict: Comparing the Cluster</h2>
-<p>The exam gives you one printed poem and asks you to compare it with <strong>one of your choice</strong> on a theme such as power, fear, memory or the effects of conflict.</p>
-<h3>Plan by idea</h3>
-<p>Each paragraph should compare BOTH poems on one idea, using a connective ('whereas', 'similarly') and analysing a method in each. Never analyse one poem then the other.</p>
-<h3>Reliable pairings</h3>
+<p>The anthology question gives you <strong>one printed poem</strong> and asks you to compare it with <strong>one of your choice</strong> on a theme such as power, fear, memory or the effects of conflict. Top answers <em>interweave</em> the two poems, comparing both on the same idea in every paragraph.</p>
+<h3>How to plan by idea</h3>
+<p>Each paragraph should compare BOTH poems on one idea, using a connective ('whereas', 'similarly', 'in contrast') and analysing a <strong>method</strong> in each. Never write about one poem and then the other in separate halves — that is the single biggest cause of low marks.</p>
+<h3>Reliable thematic pairings</h3>
 <ul>
-<li><strong>Power of nature:</strong> Ozymandias / The Prelude / Storm on the Island.</li>
-<li><strong>Power of humans:</strong> London / My Last Duchess / Tissue.</li>
-<li><strong>Reality of war:</strong> Charge of the Light Brigade / Exposure / Bayonet Charge.</li>
-<li><strong>Memory &amp; trauma:</strong> Remains / War Photographer / Poppies / Kamikaze.</li>
+<li><strong>Power of nature:</strong> Ozymandias / The Prelude / Storm on the Island / Exposure. Ozymandias bridges nature and human power, as human pride is humbled by time.</li>
+<li><strong>Power of humans:</strong> London / My Last Duchess / Tissue / Checking Out Me History.</li>
+<li><strong>Reality of war &amp; fear:</strong> Charge of the Light Brigade / Exposure / Bayonet Charge.</li>
+<li><strong>Memory &amp; trauma:</strong> Remains and War Photographer (lasting trauma and witness); Poppies and Kamikaze (family and memory).</li>
 </ul>
+<h3>Key quotations to memorise</h3>
+<p>Learn one anchor quotation per poem. For power: Ozymandias <em>'Look on my Works, ye Mighty, and despair!'</em>; London <em>'mind-forg'd manacles'</em>; My Last Duchess <em>'I gave commands; / Then all smiles stopped together'</em>. For war and its aftermath: Exposure <em>'But nothing happens'</em>; Remains <em>'his bloody life in my bloody hands'</em>; Kamikaze <em>'treated him as though he no longer existed'</em>.</p>
 <h3>Worked example</h3>
 <p>'Whereas Shelley uses the ruined statue in "Ozymandias" to show power decaying over centuries, Blake's "London" presents oppression as an immediate, living force — "mind-forg'd manacles" that bind the city here and now.'</p>
 <h3>Common mistake</h3>
-<p>Choosing a poem that doesn't fit the theme. Know your pairings in advance so you can choose quickly and compare deeply.</p>`
+<p>Choosing a poem that doesn't fit the theme, or describing each poem separately. <strong>Know your pairings in advance</strong> so you can choose quickly and compare deeply, idea by idea.</p>`
 });
