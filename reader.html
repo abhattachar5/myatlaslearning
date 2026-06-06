@@ -127,18 +127,31 @@ function changeFont(dir){
 }
 
 // ── Highlight the section currently in view ────────────────────────────────
+// IMPORTANT: never call scrollIntoView() here — it scrolls every scrollable
+// ancestor (including the window) and hijacks the reader's own scrolling.
+// We only adjust the sidebar's internal scroll position.
 function setupScrollSpy(sections){
+  const nav = document.getElementById('reader-nav');
   const links = {};
   document.querySelectorAll('.reader-navlink').forEach(function(a){ links[a.getAttribute('data-id')] = a; });
+
+  function setActive(id){
+    for (const k in links) links[k].classList.remove('active');
+    const a = links[id];
+    if (!a) return;
+    a.classList.add('active');
+    // Keep the active link visible WITHIN the sidebar only — adjust nav.scrollTop
+    // directly so the main page scroll is never touched.
+    if (nav && nav.scrollHeight > nav.clientHeight){
+      const top = a.offsetTop, bottom = top + a.offsetHeight;
+      if (top < nav.scrollTop) nav.scrollTop = top - 8;
+      else if (bottom > nav.scrollTop + nav.clientHeight) nav.scrollTop = bottom - nav.clientHeight + 8;
+    }
+  }
+
   const obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if (en.isIntersecting){
-        Object.values(links).forEach(function(l){ l.classList.remove('active'); });
-        const a = links[en.target.id];
-        if (a){ a.classList.add('active'); a.scrollIntoView({block:'nearest'}); }
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
+    entries.forEach(function(en){ if (en.isIntersecting) setActive(en.target.id); });
+  }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
   sections.forEach(function(sec){ const el = document.getElementById(sec.id); if (el) obs.observe(el); });
 }
 
