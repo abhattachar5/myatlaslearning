@@ -185,11 +185,20 @@ Iron is oxidised (Fe &rarr; Fe²⁺ + 2e⁻); copper is reduced (Cu²⁺ + 2e⁻
   <li><strong>Anode:</strong> if a halide ion is present, the halogen forms; otherwise oxygen is produced</li>
 </ul>
 
+<h3>Anode Half-Equations (Aqueous)</h3>
+<p>The half-equation at the anode depends on whether a halide ion is present:</p>
+<ul>
+  <li><strong>If a halide ion (Cl⁻, Br⁻, I⁻) is present</strong>, the halogen forms. For a chloride: 2Cl⁻ &rarr; Cl₂ + 2e⁻ (chlorine gas is produced).</li>
+  <li><strong>If no halide is present</strong>, the OH⁻ ions from water are discharged and oxygen forms: 4OH⁻ &rarr; O₂ + 2H₂O + 4e⁻ (oxygen gas is produced).</li>
+</ul>
+
 <h3>Worked Example</h3>
 <p>Predict the products of electrolysing sodium chloride solution (brine).</p>
-<p>At the cathode: sodium is more reactive than hydrogen, so H₂ forms: 2H⁺ + 2e⁻ &rarr; H₂<br>
+<p>At the cathode: sodium is more reactive than hydrogen, so hydrogen gas forms. This can be written either as:<br>
+2H⁺ + 2e⁻ &rarr; H₂<br>
+or, showing the water directly: 2H₂O + 2e⁻ &rarr; H₂ + 2OH⁻<br>
 At the anode: chloride is a halide, so Cl₂ forms: 2Cl⁻ &rarr; Cl₂ + 2e⁻<br>
-Remaining in solution: Na⁺ and OH⁻ &rarr; sodium hydroxide (NaOH)</p>
+The Cl⁻ ions are removed at the anode and H⁺ is removed at the cathode, leaving Na⁺ and OH⁻ ions in solution. These remaining ions form sodium hydroxide (NaOH), which is why a solution of NaOH is left behind.</p>
 
 <h3>Common Mistake</h3>
 <p>Students often confuse which ions go to which electrode. Remember: <em>opposites attract</em>. Positive ions (cations) go to the <em>negative</em> cathode. Negative ions (anions) go to the <em>positive</em> anode. Use the mnemonic: PANIC — Positive Anode, Negative Is Cathode.</p>

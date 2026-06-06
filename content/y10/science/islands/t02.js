@@ -114,6 +114,19 @@ Object.assign(LESSONS, {
 </ul>
 <p>The left ventricle has a <strong>thicker muscular wall</strong> than the right because it needs to generate higher pressure to push blood all the way around the body.</p>
 
+<h3>Coronary Arteries</h3>
+<p>The heart is a muscle, so it needs its own supply of oxygenated blood to keep beating. The <strong>coronary arteries</strong> branch off the aorta and run across the surface of the heart, supplying the heart muscle itself with the oxygen and glucose it needs for respiration.</p>
+
+<h3>The Pacemaker and Heart Rate</h3>
+<p>Resting heart rate is controlled by a group of cells in the wall of the <strong>right atrium</strong> called the <strong>natural pacemaker</strong>. These cells produce a small electrical impulse that spreads across the heart and makes the muscle contract. If the natural rhythm becomes irregular, an <strong>artificial pacemaker</strong> can be fitted — a small electrical device that sends regular impulses to correct the heart's rhythm.</p>
+
+<h3>Coronary Heart Disease</h3>
+<p>In <strong>coronary heart disease (CHD)</strong>, layers of fatty material build up inside the coronary arteries, narrowing them. This reduces the flow of oxygenated blood to the heart muscle, which can cause a heart attack. Two common treatments are:</p>
+<ul>
+  <li><strong>Stents</strong> — wire mesh tubes inserted to hold a narrowed artery open, keeping blood flowing</li>
+  <li><strong>Statins</strong> — drugs that lower blood cholesterol, slowing the build-up of fatty material in the arteries</li>
+</ul>
+
 <h3>Blood Vessels</h3>
 <ul>
   <li><strong>Arteries</strong> — carry blood away from the heart; thick, muscular, elastic walls; small lumen; high pressure</li>
@@ -124,6 +137,13 @@ Object.assign(LESSONS, {
 <h3>Worked Example</h3>
 <p>Explain why arteries have thick muscular walls.</p>
 <p>Arteries carry blood at high pressure directly from the heart. Their thick walls, containing muscle and elastic tissue, withstand this pressure without bursting. The elastic tissue stretches as blood surges through with each heartbeat and then recoils, helping to smooth out the flow of blood.</p>
+
+<h3>Worked Example (Calculation)</h3>
+<p>The volume of blood pumped by the heart each minute is called the <strong>cardiac output</strong>:</p>
+<p><strong>cardiac output = stroke volume × heart rate</strong></p>
+<p>(stroke volume is the volume of blood pumped out of the heart with each beat.)</p>
+<p>A person has a stroke volume of 70 cm³ and a heart rate of 72 beats per minute. Calculate their cardiac output.</p>
+<p>cardiac output = 70 cm³ × 72 bpm = <strong>5040 cm³/min</strong> (about 5 litres per minute).</p>
 
 <h3>Common Mistake</h3>
 <p>Students often assume all arteries carry oxygenated blood and all veins carry deoxygenated blood. This is not true: the <em>pulmonary artery</em> carries deoxygenated blood to the lungs, and the <em>pulmonary vein</em> carries oxygenated blood back to the heart. The definitions are about direction — arteries carry blood <em>away</em> from the heart; veins carry blood <em>towards</em> it.</p>

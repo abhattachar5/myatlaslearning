@@ -183,12 +183,29 @@ Object.assign(LESSONS, {
   <li><strong>Long-sightedness (hyperopia)</strong> — near objects are blurred (light focused behind retina). Corrected with a <em>convex</em> (converging) lens.</li>
 </ul>
 
+<h3>The Brain</h3>
+<p>The brain is part of the central nervous system. It is made of billions of interconnected neurones and controls complex behaviour. You need to know three main regions and what they control:</p>
+<ul>
+  <li><strong>Cerebral cortex</strong> — the highly folded outer layer; responsible for consciousness, intelligence, memory and language</li>
+  <li><strong>Cerebellum</strong> — at the back of the brain; responsible for the coordination of movement and balance</li>
+  <li><strong>Medulla</strong> — in the brain stem; controls unconscious activities such as heart rate and breathing</li>
+</ul>
+
+<h3>Studying the Brain</h3>
+<p>Neuroscientists have mapped the regions of the brain to particular functions in several ways:</p>
+<ul>
+  <li>Studying patients with <strong>brain damage</strong> — if a small area is damaged, the effects on the patient show what that area normally does</li>
+  <li><strong>Electrically stimulating</strong> parts of the brain and observing the effect</li>
+  <li>Using <strong>MRI scans</strong>, which show which parts of the brain are active during particular tasks</li>
+</ul>
+<p>Investigating and treating brain disorders is very difficult because the brain is extremely <strong>delicate, very complex, and hard to access</strong> inside the skull — so damage or surgery can easily cause further harm.</p>
+
 <h3>Worked Example</h3>
 <p>Explain how the eye focuses on a nearby book after looking at a distant tree.</p>
 <p>When looking at the tree, the ciliary muscles are relaxed and the suspensory ligaments are taut, pulling the lens thin and flat. To switch focus to the nearby book, the ciliary muscles contract. This slackens the suspensory ligaments, allowing the elastic lens to spring into a thicker, more curved shape. The thicker lens refracts (bends) the light more, bringing the close-up image into focus on the retina.</p>
 
 <h3>Common Mistake</h3>
-<p>Students often mix up which lens corrects which defect. A useful memory aid: short-sightedness = concave lens (both words begin with <em>c</em>... well almost — think "short = spread out = concave"). Long-sightedness = convex lens (converge the light to reach the retina).</p>
+<p>Students often mix up which lens corrects which defect. A clean memory aid: <strong>coNcave for myopia</strong> (the "N" in coNcave reminds you it spreads light out for the <em>near</em>-sighted), and <strong>coNVex for the loNg-sighted</strong> (coNVex bends light inward to <em>converge</em> on the retina). In short: short-sightedness → concave; long-sightedness → convex.</p>
 `
 
 });

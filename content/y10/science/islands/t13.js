@@ -105,6 +105,13 @@ Object.assign(LESSONS, {
 
 <h3>The Nuclear Model</h3>
 <p>The atom has a tiny, dense, positively charged <strong>nucleus</strong> containing protons and neutrons, surrounded by orbiting <strong>electrons</strong>. Almost all the mass is in the nucleus; the atom is mostly empty space. This model was established after Rutherford&rsquo;s alpha scattering (gold foil) experiment.</p>
+<p>The atom is incredibly small. A typical atom has a radius of about <strong>1 &times; 10⁻¹⁰ m</strong>, while its nucleus has a radius of about <strong>1 &times; 10⁻¹⁴ m</strong> &mdash; roughly 1/10 000 of the radius of the whole atom. Despite this tiny size, the nucleus contains almost all of the atom&rsquo;s mass.</p>
+
+<h3>Isotopes</h3>
+<p>An <strong>isotope</strong> is an atom of the same element with the <strong>same number of protons but a different number of neutrons</strong>. Because the number of protons (the atomic number) is unchanged, isotopes are the same element and behave identically chemically &mdash; but they have different mass numbers. For example, carbon-12 and carbon-14 are both carbon (6 protons) but have 6 and 8 neutrons respectively.</p>
+
+<h3>Development of the Atomic Model</h3>
+<p>Our understanding of the atom developed in stages: the <strong>plum-pudding model</strong> (a ball of positive charge with electrons embedded in it) &rarr; <strong>Rutherford&rsquo;s alpha-scattering experiment</strong>, which led to the <strong>nuclear model</strong> (a tiny dense positive nucleus) &rarr; <strong>Bohr&rsquo;s</strong> refinement placing electrons in fixed energy levels (shells) &rarr; the later <strong>discovery of the neutron</strong> within the nucleus.</p>
 
 <h3>Types of Radiation</h3>
 <ul>
@@ -119,6 +126,9 @@ Object.assign(LESSONS, {
   <li>Beta decay: mass number unchanged, atomic number +1 (a neutron becomes a proton)</li>
   <li>Gamma emission: no change to mass or atomic number (just energy released)</li>
 </ul>
+<p>A full beta-decay equation in standard notation is:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>¹⁴₆C &rarr; ¹⁴₇N + ⁰₋₁e</strong></p>
+<p>Carbon-14 decays to nitrogen-14 by beta emission. The <strong>mass number stays the same (14)</strong> while the <strong>atomic number increases by 1 (6 &rarr; 7)</strong>, because a neutron in the nucleus turns into a proton and emits the high-speed electron (the beta particle).</p>
 
 <h3>Worked Example</h3>
 <p>Uranium-238 decays by alpha emission. Write the decay equation.</p>

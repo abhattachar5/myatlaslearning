@@ -77,7 +77,23 @@ Object.assign(LESSONS, {
 
 <h3>Density</h3>
 <p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>&rho; = m &divide; V</strong></p>
-<p>Density is mass per unit volume. Solids are generally the densest (particles tightly packed); gases are the least dense (particles far apart). If an object&rsquo;s density is less than the fluid it is in, it floats.</p>
+<p>Density is mass per unit volume, where &rho; is density, m is mass and V is volume. Solids are generally the densest (particles tightly packed); gases are the least dense (particles far apart). If an object&rsquo;s density is less than the fluid it is in, it floats.</p>
+<p>The SI unit of density is the <strong>kilogram per cubic metre (kg/m³)</strong>, using mass in kilograms (kg) and volume in cubic metres (m³). It can also be quoted in g/cm³. As a key reference value, the density of water is approximately <strong>1000 kg/m³</strong> (equivalent to about 1 g/cm³).</p>
+
+<h3>Worked Example: Density in SI Units</h3>
+<p>A block of aluminium has a mass of 5.4 kg and a volume of 0.002 m³. Calculate its density in kg/m³.</p>
+<p>&rho; = m &divide; V = 5.4 &divide; 0.002 = <strong>2700 kg/m³</strong><br>
+Since 2700 kg/m³ &gt; 1000 kg/m³ (water), the aluminium is denser than water and would sink.</p>
+
+<h3>Required Practical: Measuring Density</h3>
+<p>To find the density of a material, measure its mass and its volume, then divide using &rho; = m &divide; V.</p>
+<ul>
+  <li><strong>Mass:</strong> measure with a balance (in kg or g).</li>
+  <li><strong>Volume of a regular solid:</strong> measure its dimensions with a ruler and calculate (e.g. V = length &times; width &times; height for a cuboid).</li>
+  <li><strong>Volume of an irregular solid:</strong> use displacement &mdash; lower the object into a eureka (displacement) can filled to the spout and collect the displaced water in a measuring cylinder; the volume of water displaced equals the volume of the object. Alternatively, lower it into a measuring cylinder of water and record the rise in level.</li>
+  <li><strong>Volume of a liquid:</strong> pour it into a measuring cylinder to read the volume; find its mass by weighing the cylinder empty and again with the liquid on a balance.</li>
+</ul>
+<p>Then calculate density = mass &divide; volume for each sample.</p>
 
 <h3>States of Matter</h3>
 <ul>
@@ -90,9 +106,19 @@ Object.assign(LESSONS, {
 <p>During a change of state, temperature stays constant because the energy supplied is used to overcome intermolecular forces rather than increase kinetic energy. The energy required is called <strong>latent heat</strong>:</p>
 <p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>E = m &times; L</strong></p>
 <ul>
+  <li><strong>E</strong> = energy transferred, in joules (J)</li>
+  <li><strong>m</strong> = mass, in kilograms (kg)</li>
+  <li><strong>L</strong> = specific latent heat, in joules per kilogram (J/kg)</li>
+</ul>
+<ul>
   <li>Specific latent heat of fusion (L<sub>f</sub>) &mdash; solid &harr; liquid</li>
   <li>Specific latent heat of vaporisation (L<sub>v</sub>) &mdash; liquid &harr; gas</li>
 </ul>
+
+<h3>Worked Example: Latent Heat</h3>
+<p>Calculate the energy needed to melt 0.5 kg of ice. The specific latent heat of fusion of water is 334 000 J/kg.</p>
+<p>E = m &times; L = 0.5 &times; 334 000 = <strong>167 000 J</strong> (167 kJ)<br>
+This energy is absorbed without any change in temperature &mdash; it breaks the forces holding the solid together.</p>
 
 <h3>Worked Example</h3>
 <p>A stone has a mass of 250 g and a volume of 100 cm³. Calculate its density and state whether it will float in water (&rho; = 1 g/cm³).</p>

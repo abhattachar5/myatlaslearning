@@ -103,8 +103,11 @@ Object.assign(LESSONS, {
 <h2>Enzymes &amp; Digestion</h2>
 <p>Enzymes are biological catalysts — proteins that speed up chemical reactions in living organisms without being used up. Every metabolic reaction in your body depends on enzymes, and digestion is one of the best examples of enzymes at work.</p>
 
+<h3>What Digestion Achieves</h3>
+<p><strong>Digestion breaks down large, insoluble food molecules into small, soluble molecules that can be absorbed into the blood.</strong> Large molecules such as starch, proteins and lipids are too big to pass through the gut wall, so digestive enzymes break them into smaller units that can be absorbed and transported to cells.</p>
+
 <h3>The Lock-and-Key Model</h3>
-<p>Each enzyme has a specially shaped region called the <strong>active site</strong>. Only a substrate with the matching shape can fit into the active site, just as only the correct key fits a particular lock. When the substrate binds, an enzyme–substrate complex forms, the reaction takes place, and the products are released. The enzyme is then free to catalyse another reaction.</p>
+<p>Each enzyme has a specially shaped region called the <strong>active site</strong>. Enzymes are <strong>specific</strong> — the substrate must be <strong>complementary in shape</strong> to the active site, just as only the correct key fits a particular lock. If the shapes do not match, the reaction cannot take place. When a matching substrate binds, an enzyme–substrate complex forms, the reaction takes place, and the products are released. The enzyme is then free to catalyse another reaction.</p>
 
 <h3>Effect of Temperature and pH</h3>
 <p>Enzymes have an <strong>optimum temperature</strong> and <strong>optimum pH</strong> at which they work fastest. For most human enzymes, the optimum temperature is about 37 °C. Above this temperature, the bonds holding the enzyme's shape break, the active site changes shape, and the enzyme is <strong>denatured</strong> — the substrate can no longer fit.</p>
@@ -117,6 +120,24 @@ Object.assign(LESSONS, {
   <li><strong>Lipase</strong> — breaks lipids into glycerol and fatty acids (produced in the pancreas and small intestine)</li>
 </ul>
 <p><strong>Bile</strong> (made by the liver, stored in the gallbladder) is not an enzyme. It emulsifies fats and neutralises stomach acid.</p>
+
+<h3>The Products of Digestion and Their Uses</h3>
+<p>The small soluble molecules produced by digestion are absorbed and used to build new substances or to release energy:</p>
+<ul>
+  <li><strong>Glucose</strong> (from starch) — used in respiration to release energy</li>
+  <li><strong>Amino acids</strong> (from proteins) — used to build new proteins</li>
+  <li><strong>Glycerol and fatty acids</strong> (from lipids) — used to build cell membranes and other lipids</li>
+</ul>
+
+<h3>Required Practical: Effect of pH on Amylase</h3>
+<p>This practical investigates how pH affects the rate at which amylase digests starch:</p>
+<ul>
+  <li>Use <strong>buffer solutions</strong> to set a range of different pH values</li>
+  <li>Mix <strong>amylase</strong> with <strong>starch</strong> at each pH and start a stopwatch</li>
+  <li>At regular intervals, place a drop of the mixture onto <strong>iodine solution</strong> on a spotting tile</li>
+  <li>While starch is still present, the iodine turns blue-black. Once all the starch has been digested, the iodine stays <strong>orange-brown</strong></li>
+  <li><strong>Record the time taken for the starch to disappear</strong> at each pH — the shorter the time, the faster amylase is working, indicating the pH is closer to its optimum</li>
+</ul>
 
 <h3>Worked Example</h3>
 <p>Explain why amylase in the mouth stops working when food reaches the stomach.</p>

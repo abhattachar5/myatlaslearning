@@ -120,6 +120,23 @@ Object.assign(LESSONS, {
   <li><strong>Vector</strong> — carried by another organism, e.g. mosquitoes (malaria)</li>
 </ul>
 
+<h3>Named Diseases</h3>
+<ul>
+  <li><strong>HIV (viral)</strong> — spread by sexual contact and by the exchange of body fluids such as blood (e.g. when drug users share needles). The virus attacks the body's immune cells. At first it causes flu-like symptoms, but if it is not controlled with antiretroviral drugs it damages the immune system so badly that the body can no longer fight off other infections — this late stage is called <strong>AIDS</strong>.</li>
+  <li><strong>Salmonella (bacterial)</strong> — a type of food poisoning, often caught from food prepared in unhygienic conditions. The symptoms (fever, vomiting, diarrhoea, stomach cramps) are caused by the <strong>toxins</strong> the bacteria release. In the UK, poultry are <strong>vaccinated</strong> against Salmonella to control its spread.</li>
+  <li><strong>Tobacco mosaic virus, TMV (viral plant disease)</strong> — causes a mosaic pattern of discolouration on the leaves, which reduces photosynthesis and slows growth.</li>
+  <li><strong>Rose black spot (fungal plant disease)</strong> — causes black/purple spots on leaves, which then turn yellow and drop early, again reducing photosynthesis.</li>
+</ul>
+
+<h3>Reducing the Spread of Disease</h3>
+<p>There are four main ways to reduce or prevent the spread of communicable disease:</p>
+<ul>
+  <li><strong>Hygiene</strong> — handwashing, disinfecting surfaces and preparing food safely</li>
+  <li><strong>Destroying vectors</strong> — killing the organisms that carry pathogens, e.g. using insecticides against mosquitoes</li>
+  <li><strong>Isolating infected individuals</strong> — keeping infected people away from others so they cannot pass on the pathogen</li>
+  <li><strong>Vaccination</strong> — making people (or animals) immune so the pathogen cannot spread through the population</li>
+</ul>
+
 <h3>Worked Example</h3>
 <p>Explain why malaria is difficult to control in tropical countries.</p>
 <p>Malaria is spread by the female Anopheles mosquito, which breeds in warm, stagnant water — conditions common in tropical regions. Controlling mosquito populations requires ongoing use of insecticides, bed nets and draining standing water, all of which are costly. There is no widely available vaccine, so the disease continues to spread where mosquitoes are abundant.</p>
@@ -182,6 +199,22 @@ Object.assign(LESSONS, {
 
 <h3>Antibiotic Resistance</h3>
 <p>When antibiotics are overused or courses are not finished, resistant bacteria can survive and multiply. The resistant strain spreads, and the antibiotic becomes ineffective. MRSA is a well-known antibiotic-resistant bacterium. To combat resistance: only prescribe antibiotics when necessary, always complete the course, and develop new antibiotics.</p>
+
+<h3>Developing New Drugs</h3>
+<p>Many drugs were originally extracted from plants and microorganisms:</p>
+<ul>
+  <li><strong>Digitalis</strong> — a heart drug originally extracted from <strong>foxgloves</strong></li>
+  <li><strong>Aspirin</strong> — a painkiller originally derived from <strong>willow</strong></li>
+  <li><strong>Penicillin</strong> — the first antibiotic, discovered by <strong>Alexander Fleming</strong> from the <strong>Penicillium</strong> mould</li>
+</ul>
+<p>Before a new drug can be used, it must be tested for <strong>toxicity, efficacy (whether it works) and dose</strong>. Testing follows strict stages:</p>
+<ul>
+  <li><strong>Preclinical testing</strong> — the drug is first tested on cells and tissues in the laboratory, then on live animals</li>
+  <li><strong>Clinical trials</strong> — the drug is then tested on humans: first on a small number of healthy volunteers to check it is safe, then on patients to find the <strong>optimum dose</strong></li>
+  <li>Trials start at a <strong>very low dose</strong> which is gradually increased</li>
+  <li><strong>Placebo and double-blind trials</strong> — some patients are given a placebo (a dummy treatment); in a double-blind trial neither the patient nor the doctor knows who has received the real drug, which prevents bias</li>
+  <li><strong>Peer review</strong> — the results are checked by other scientists before publication to prevent false claims</li>
+</ul>
 
 <h3>Worked Example</h3>
 <p>Explain why a doctor would prescribe painkillers but not antibiotics for a patient with flu.</p>

@@ -117,6 +117,17 @@ Object.assign(LESSONS, {
   <li><strong>Current:</strong> shared between branches (I<sub>total</sub> = I₁ + I₂ + I₃)</li>
   <li><strong>Resistance:</strong> total resistance is less than the smallest individual resistor</li>
 </ul>
+<p>This last point can seem surprising. Adding a resistor in <strong>parallel</strong> always <em>reduces</em> the total resistance to a value <strong>less than the smallest individual resistor</strong>. This is because each extra resistor provides another path for the current to flow. With more paths available, the total current drawn from the supply increases, and since R = V &divide; I a larger current for the same potential difference means a smaller total resistance.</p>
+
+<h3>Ohm&rsquo;s Law</h3>
+<p>The relationship between potential difference, current and resistance is given by Ohm&rsquo;s law:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>V = I &times; R</strong></p>
+<ul>
+  <li><strong>V</strong> = potential difference, in volts (V)</li>
+  <li><strong>I</strong> = current, in amps (A)</li>
+  <li><strong>R</strong> = resistance, in ohms (&Omega;)</li>
+</ul>
+<p>This can be rearranged to I = V &divide; R or R = V &divide; I, and is used throughout circuit analysis.</p>
 
 <h3>Worked Example</h3>
 <p>A series circuit contains a 9 V battery and two resistors: 3 &Omega; and 6 &Omega;. Calculate the current and the voltage across each resistor.</p>
@@ -141,6 +152,27 @@ Check: 3 V + 6 V = 9 V &check;</p>
 <h3>Energy Transferred</h3>
 <p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>E = P &times; t &nbsp;&nbsp;&nbsp; E = I &times; V &times; t</strong></p>
 <p>Where E is energy (J) and t is time (s).</p>
+
+<h3>Charge Flow and Energy Transferred</h3>
+<p>Charge is carried by the moving charged particles in a circuit. The charge that flows depends on the current and the time for which it flows:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>Q = I &times; t</strong></p>
+<ul>
+  <li><strong>Q</strong> = charge, in coulombs (C)</li>
+  <li><strong>I</strong> = current, in amps (A)</li>
+  <li><strong>t</strong> = time, in seconds (s)</li>
+</ul>
+<p>The energy transferred when charge flows through a potential difference is:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>E = Q &times; V</strong></p>
+<ul>
+  <li><strong>E</strong> = energy transferred, in joules (J)</li>
+  <li><strong>Q</strong> = charge, in coulombs (C)</li>
+  <li><strong>V</strong> = potential difference, in volts (V)</li>
+</ul>
+
+<h3>Worked Example: Charge and Energy</h3>
+<p>A current of 3 A flows for 120 s. Calculate the charge that flows, then the energy transferred if the potential difference is 230 V.</p>
+<p>Charge: Q = I &times; t = 3 &times; 120 = <strong>360 C</strong><br>
+Energy: E = Q &times; V = 360 &times; 230 = <strong>82 800 J</strong> (82.8 kJ)</p>
 
 <h3>Cost of Electricity</h3>
 <p>Electricity bills use kilowatt-hours (kWh):</p>

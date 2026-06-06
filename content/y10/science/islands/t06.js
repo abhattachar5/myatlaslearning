@@ -139,7 +139,26 @@ moles = mass &divide; Mr = 5.6 &divide; 28 = <strong>0.2 mol</strong></p>
 </ul>
 
 <h3>Limiting Reactant</h3>
-<p>The <strong>limiting reactant</strong> is the one completely used up first — it determines the maximum amount of product. The other reactant is <em>in excess</em>.</p>
+<p>When two reactants are mixed, one is usually used up before the other. The <strong>limiting reactant</strong> is the one completely used up first — it determines the <strong>maximum amount of product</strong> that can form. Once it has run out, the reaction stops, no matter how much of the other reactant is left. The reactant that is left over is said to be <em>in excess</em>.</p>
+<p>To find the limiting reactant:</p>
+<ul>
+  <li><strong>Step 1:</strong> Convert the mass of <em>each</em> reactant to moles (moles = mass &divide; Mr)</li>
+  <li><strong>Step 2:</strong> Compare these mole amounts against the mole ratio in the balanced equation</li>
+  <li><strong>Step 3:</strong> Whichever reactant provides fewer moles than the ratio requires runs out first — that is the limiting reactant</li>
+  <li><strong>Step 4:</strong> Calculate the mass of product using the moles of the limiting reactant only</li>
+</ul>
+
+<h3>Worked Example — Limiting Reactant</h3>
+<p>4.8 g of magnesium is added to 7.3 g of hydrochloric acid. Which reactant is limiting, and what mass of hydrogen is produced?<br>
+Equation: Mg + 2HCl &rarr; MgCl₂ + H₂<br>(Ar: Mg = 24, H = 1, Cl = 35.5; Mr of HCl = 36.5, Mr of H₂ = 2)</p>
+<p><strong>Step 1 — moles of each reactant:</strong><br>
+moles of Mg = 4.8 &divide; 24 = 0.20 mol<br>
+moles of HCl = 7.3 &divide; 36.5 = 0.20 mol</p>
+<p><strong>Step 2 — compare with the ratio:</strong> the equation needs <em>2 mol HCl for every 1 mol Mg</em>. To react all 0.20 mol of Mg would need 2 &times; 0.20 = 0.40 mol of HCl, but only 0.20 mol of HCl is available.</p>
+<p><strong>Step 3 — identify the limiting reactant:</strong> the HCl runs out first, so <strong>HCl is the limiting reactant</strong> and the magnesium is in excess.</p>
+<p><strong>Step 4 — mass of product from the limiting reactant:</strong><br>
+Ratio: 2 mol HCl &rarr; 1 mol H₂, so 0.20 mol HCl &rarr; 0.10 mol H₂<br>
+mass of H₂ = 0.10 &times; 2 = <strong>0.2 g</strong></p>
 
 <h3>Worked Example</h3>
 <p>Fe₂O₃ + 3CO &rarr; 2Fe + 3CO₂. What mass of iron is produced from 80 g of Fe₂O₃?<br>(Ar: Fe = 56, O = 16)</p>
