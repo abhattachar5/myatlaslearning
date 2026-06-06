@@ -209,3 +209,79 @@ Object.assign(LESSONS, {
 `
 
 });
+
+// ── s10i-04-4 — The Kidneys & Water Balance ──────────────────────────────────
+FLASHCARDS.push(
+  {id:"s10fc-04-4-1", islandId:"s10i-04-4", front:"What is the role of the kidneys in homeostasis?",
+   back:"The kidneys filter the blood and regulate the levels of water, ions and urea in the body — this is called osmoregulation.\n\nThey:\n• Remove waste products such as urea\n• Adjust the amount of water reabsorbed to keep water levels balanced\n• Adjust ion levels\n\nUseful substances are kept in the blood; excess substances and waste are removed in urine.", difficulty:2, category:"definition"},
+  {id:"s10fc-04-4-2", islandId:"s10i-04-4", front:"How and where is urea formed?",
+   back:"The body cannot store excess amino acids (from digested protein).\n\n• In the liver, excess amino acids are broken down in a process called deamination.\n• This produces ammonia, which is toxic.\n• The ammonia is immediately converted into urea, which is less toxic.\n• Urea is carried in the blood to the kidneys, where it is removed and excreted in urine.", difficulty:2, category:"concept"},
+  {id:"s10fc-04-4-3", islandId:"s10i-04-4", front:"Describe filtration and selective reabsorption in the kidney.",
+   back:"1. Filtration — blood is filtered at high pressure. Small molecules (water, ions, glucose and urea) pass out of the blood; large molecules (proteins) and blood cells stay in.\n\n2. Selective reabsorption — useful substances are reabsorbed back into the blood:\n   • ALL of the glucose\n   • As much water and ions as the body needs\n\nThe remaining liquid (excess water, excess ions and urea) forms urine.", difficulty:2, category:"concept"},
+  {id:"s10fc-04-4-4", islandId:"s10i-04-4", front:"How does ADH control the water content of the blood?",
+   back:"Water levels are controlled by negative feedback using the hormone ADH (antidiuretic hormone), released by the pituitary gland.\n\n• If blood is TOO concentrated (low water): more ADH is released → kidneys reabsorb more water → less, more concentrated urine.\n\n• If blood is TOO dilute (high water): less ADH is released → kidneys reabsorb less water → more, dilute urine.\n\nThis keeps the water content of the blood constant.", difficulty:3, category:"application"},
+  {id:"s10fc-04-4-5", islandId:"s10i-04-4", front:"Compare dialysis and a kidney transplant as treatments for kidney failure.",
+   back:"Dialysis: a machine filters the blood. Blood flows on one side of a partially permeable membrane; dialysis fluid (with normal blood levels of glucose and ions) flows on the other. Urea and excess ions diffuse out, but glucose and useful ions are not lost. It must be done regularly (several times a week).\n\nTransplant: a healthy donor kidney replaces the failed one. It is a long-term solution but the kidney may be rejected by the immune system, so the patient must take immunosuppressant drugs. Donor kidneys are in short supply.", difficulty:2, category:"concept"}
+);
+
+Object.assign(QUESTIONS, {
+  "s10i-04-4": [
+    {q:"Which substances are completely reabsorbed back into the blood during selective reabsorption?",
+     opts:["Urea","Glucose","Excess water","Excess ions"], c:1,
+     e:"All of the glucose is reabsorbed back into the blood because it is a valuable energy source. Urea is not reabsorbed, and only as much water and ions as the body needs are reabsorbed."},
+    {q:"Where is urea produced in the body?",
+     opts:["In the kidneys","In the liver","In the pancreas","In the bladder"], c:1,
+     e:"Urea is produced in the liver when excess amino acids are broken down (deamination). The ammonia produced is toxic, so it is converted to less-toxic urea, which the kidneys then remove from the blood."},
+    {q:"When the blood is too concentrated (not enough water), what happens?",
+     opts:["Less ADH is released and more water is reabsorbed","More ADH is released and more water is reabsorbed","More ADH is released and less water is reabsorbed","No ADH is released"], c:1,
+     e:"When the blood is too concentrated, more ADH is released by the pituitary gland. This makes the kidneys reabsorb more water, producing a small amount of concentrated urine and restoring the blood's water level."},
+    {q:"In a dialysis machine, why does the dialysis fluid contain a normal blood concentration of glucose?",
+     opts:["To add extra glucose to the blood","So that glucose does not diffuse out of the blood","To remove all glucose from the blood","To kill bacteria in the blood"], c:1,
+     e:"The dialysis fluid contains the same concentration of glucose as normal blood, so there is no concentration gradient for glucose. This means glucose stays in the blood, while urea (absent from the fluid) diffuses out."},
+    {q:"What is a disadvantage of a kidney transplant compared with dialysis?",
+     opts:["It only works for a few days","The donor kidney may be rejected by the immune system","The patient must visit hospital several times a week","It cannot remove urea from the blood"], c:1,
+     e:"A transplanted kidney may be rejected by the recipient's immune system, so the patient must take immunosuppressant drugs. Donor kidneys are also in short supply. A transplant is, however, a longer-term solution than regular dialysis."}
+  ]
+});
+
+Object.assign(LESSONS, {
+
+'s10i-04-4': `
+<h2>The Kidneys &amp; Water Balance</h2>
+<p>The kidneys are vital organs of homeostasis. They filter the blood, remove waste and carefully control the amount of water and ions in the body — a process called <strong>osmoregulation</strong>.</p>
+
+<h3>What the Kidneys Do</h3>
+<p>The kidneys regulate the levels of <strong>water, ions and urea</strong> in the blood. Useful substances are kept in the blood, while excess water, excess ions and waste urea are removed and excreted in urine.</p>
+
+<h3>Forming Urea</h3>
+<p>The body cannot store excess amino acids. In the <strong>liver</strong>, excess amino acids are broken down by <strong>deamination</strong>, producing toxic ammonia. The ammonia is immediately converted into less-toxic <strong>urea</strong>, which is carried in the blood to the kidneys to be excreted.</p>
+
+<h3>Filtration and Selective Reabsorption</h3>
+<ol>
+  <li><strong>Filtration</strong> — blood is filtered at high pressure. Small molecules (water, ions, glucose and urea) leave the blood; large proteins and blood cells stay behind.</li>
+  <li><strong>Selective reabsorption</strong> — useful substances are taken back into the blood: <strong>all the glucose</strong>, plus as much water and as many ions as the body needs.</li>
+</ol>
+<p>The liquid left behind — excess water, excess ions and urea — forms <strong>urine</strong>, which passes to the bladder.</p>
+
+<h3>Controlling Water with ADH</h3>
+<p>Water content is controlled by <strong>negative feedback</strong> using the hormone <strong>ADH</strong> (antidiuretic hormone) from the pituitary gland:</p>
+<ul>
+  <li>Blood too concentrated → <strong>more ADH</strong> → more water reabsorbed → small volume of concentrated urine</li>
+  <li>Blood too dilute → <strong>less ADH</strong> → less water reabsorbed → large volume of dilute urine</li>
+</ul>
+
+<h3>Treating Kidney Failure</h3>
+<ul>
+  <li><strong>Dialysis</strong> — a machine filters the blood. Blood flows past a <strong>partially permeable membrane</strong> with <strong>dialysis fluid</strong> (containing normal blood levels of glucose and ions) on the other side. Urea and excess ions diffuse out, but glucose and useful ions are not lost. It must be done several times a week.</li>
+  <li><strong>Kidney transplant</strong> — a healthy donor kidney replaces the failed one. It is a long-term solution, but the kidney may be <strong>rejected</strong> by the immune system, so the patient takes <strong>immunosuppressant</strong> drugs. Donor organs are in short supply.</li>
+</ul>
+
+<h3>Worked Example</h3>
+<p>Explain why the dialysis fluid contains glucose but no urea.</p>
+<p>The fluid contains glucose at the same concentration as normal blood, so there is no concentration gradient — glucose stays in the blood and is not lost. The fluid contains no urea, so there is a steep concentration gradient from blood to fluid, and urea diffuses out of the blood, cleaning it.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often write that "more ADH means more urine." It is the opposite: more ADH causes more water to be <em>reabsorbed</em>, so <em>less</em> (and more concentrated) urine is produced. Remember ADH stands for <em>anti-diuretic</em> hormone — it reduces water loss.</p>
+`
+
+});

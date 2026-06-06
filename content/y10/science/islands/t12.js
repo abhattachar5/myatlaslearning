@@ -158,3 +158,144 @@ Since 2.5 g/cm³ &gt; 1 g/cm³, the stone is denser than water and will <strong>
 `
 
 });
+
+// ── APPENDED ISLANDS: s10i-12-3, s10i-12-4 ───────────────────────────────────
+
+// ── FLASHCARDS ──────────────────────────────────────────────────────────────
+FLASHCARDS.push(
+  // s10i-12-3 — Internal Energy & Latent Heat
+  {id:"s10fc-12-3-1", islandId:"s10i-12-3", front:"What is the internal energy of a substance?",
+   back:"Internal energy is the TOTAL energy stored by the particles of a substance.\n\nIt is the sum of:\n• The KINETIC energy of the particles (due to their movement/vibration)\n• The POTENTIAL energy stored in the forces (bonds) between particles\n\nHeating a substance increases its internal energy by raising either the kinetic energy (temperature rises) or the potential energy (state changes).", difficulty:1, category:"definition"},
+  {id:"s10fc-12-3-2", islandId:"s10i-12-3", front:"When you heat a substance, what two things can happen to it?",
+   back:"Heating increases internal energy, which causes either:\n\n1. A rise in TEMPERATURE — the particles' KINETIC energy increases (they move/vibrate faster)\n\nOR\n\n2. A change of STATE — the particles' POTENTIAL energy increases as bonds/attractions are broken, while the temperature stays constant\n\nDuring a change of state, all the energy goes into potential energy, so the temperature does not change.", difficulty:2, category:"concept"},
+  {id:"s10fc-12-3-3", islandId:"s10i-12-3", front:"What is specific latent heat? Give the equation with units.",
+   back:"Specific latent heat (L) is the energy needed to change the state of 1 kg of a substance with NO change in temperature.\n\nE = m × L\n\n• E = energy (J)\n• m = mass (kg)\n• L = specific latent heat (J/kg)\n\nFusion (Lf): solid ↔ liquid (melting/freezing)\nVaporisation (Lv): liquid ↔ gas (boiling/condensing)", difficulty:1, category:"definition"},
+  {id:"s10fc-12-3-4", islandId:"s10i-12-3", front:"What do the flat sections on a heating curve represent?",
+   back:"On a temperature–time (heating) graph, the FLAT (horizontal) sections are where a CHANGE OF STATE is happening.\n\nDuring these sections:\n• Energy is still being supplied\n• Temperature stays constant\n• Energy goes into breaking bonds (increasing potential energy), not increasing kinetic energy\n\nThe first flat section is melting; the second (longer) flat section is boiling. The sloped sections are where the temperature is rising.", difficulty:2, category:"concept"},
+  {id:"s10fc-12-3-5", islandId:"s10i-12-3", front:"Calculate the energy needed to boil away 0.2 kg of water. (Lv of water = 2 260 000 J/kg)",
+   back:"E = m × L\nE = 0.2 × 2 260 000\nE = 452 000 J (452 kJ)\n\nThis energy is absorbed at constant temperature (100 °C) to turn the liquid water completely into steam. Vaporisation needs much more energy than melting because all the particle bonds must be fully broken.", difficulty:2, category:"calculation"},
+
+  // s10i-12-4 — Particle Motion & Gas Pressure
+  {id:"s10fc-12-4-1", islandId:"s10i-12-4", front:"What causes the pressure of a gas?",
+   back:"Gas pressure is caused by the gas PARTICLES COLLIDING with the walls of their container.\n\n• Each collision exerts a tiny force on the wall\n• Billions of collisions every second produce a steady overall pressure\n• Pressure = force ÷ area of the wall\n\nThe particles move in random directions at high speed, so they hit all the walls equally.", difficulty:1, category:"concept"},
+  {id:"s10fc-12-4-2", islandId:"s10i-12-4", front:"Why does increasing the temperature of a gas at constant volume increase its pressure?",
+   back:"Increasing temperature increases the KINETIC energy of the particles, so they move FASTER.\n\nAs a result:\n• The particles hit the walls MORE FREQUENTLY\n• Each collision is HARDER (more force)\n\nSince the volume is fixed, more frequent and harder collisions mean a greater total force on the same wall area, so the PRESSURE INCREASES.", difficulty:2, category:"concept"},
+  {id:"s10fc-12-4-3", islandId:"s10i-12-4", front:"State the relationship between pressure and volume for a fixed mass of gas at constant temperature.",
+   back:"For a fixed mass of gas at constant temperature:\n\npressure × volume = constant\n\npV = constant\n\nSo p₁V₁ = p₂V₂\n\nIf the volume DECREASES, the pressure INCREASES (and vice versa). This is because the same number of particles in a smaller space hit the walls more often.", difficulty:2, category:"definition"},
+  {id:"s10fc-12-4-4", islandId:"s10i-12-4", front:"Why does a bicycle pump get warm when you compress the air inside it?",
+   back:"When you push the pump's plunger, you do WORK on the gas (you transfer energy to it by applying a force over a distance).\n\nThis work increases the INTERNAL ENERGY of the gas. With the same number of particles, the extra energy raises their kinetic energy, so the TEMPERATURE rises.\n\nThis is why the pump (and the compressed air) feels warm. Compressing a gas quickly transfers energy to it.", difficulty:2, category:"application"},
+  {id:"s10fc-12-4-5", islandId:"s10i-12-4", front:"A gas has a volume of 0.5 m³ at a pressure of 200 kPa. It is compressed to 0.2 m³ at constant temperature. Find the new pressure.",
+   back:"Use pV = constant, so p₁V₁ = p₂V₂\n\np₂ = p₁V₁ ÷ V₂\np₂ = (200 000 × 0.5) ÷ 0.2\np₂ = 100 000 ÷ 0.2\np₂ = 500 000 Pa = 500 kPa\n\nThe smaller volume gives a higher pressure, as expected.", difficulty:2, category:"calculation"}
+);
+
+// ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
+Object.assign(QUESTIONS, {
+  "s10i-12-3": [
+    {q:"The internal energy of a substance is the total of which two stores?",
+     opts:["Kinetic and gravitational energy","Kinetic and potential energy of the particles","Chemical and nuclear energy","Heat and light energy"], c:1,
+     e:"Internal energy is the sum of the kinetic energy of the particles (due to their motion) and the potential energy stored in the forces between them."},
+    {q:"During a change of state, the temperature stays constant because the energy supplied:",
+     opts:["Is reflected away","Increases the kinetic energy of the particles","Is used to break the forces between particles (potential energy)","Is converted to light"], c:2,
+     e:"During melting or boiling, the supplied energy increases the potential energy of the particles by breaking their bonds/attractions, rather than increasing kinetic energy, so the temperature does not change."},
+    {q:"Which equation is used to calculate the energy needed to change the state of a substance?",
+     opts:["E = mcΔθ","E = mL","E = ½mv²","P = IV"], c:1,
+     e:"E = mL is the specific latent heat equation: E is energy (J), m is mass (kg) and L is the specific latent heat (J/kg). It applies during a change of state at constant temperature."},
+    {q:"On a heating curve, what does a flat (horizontal) section represent?",
+     opts:["The substance cooling down","A change of state at constant temperature","The substance gaining mass","A faster rise in temperature"], c:1,
+     e:"A flat section shows a change of state. Energy is still supplied, but the temperature stays constant because the energy breaks bonds (increases potential energy) rather than raising kinetic energy."},
+    {q:"How much energy is needed to melt 2 kg of ice? (Lf of water = 334 000 J/kg)",
+     opts:["167 000 J","334 000 J","668 000 J","6 680 J"], c:2,
+     e:"E = mL = 2 × 334 000 = 668 000 J. The latent heat of fusion is the energy to change 1 kg from solid to liquid, so 2 kg needs twice that energy."}
+  ],
+  "s10i-12-4": [
+    {q:"What causes the pressure exerted by a gas on its container?",
+     opts:["The weight of the gas particles","Particles colliding with the container walls","The gas dissolving into the walls","Heat radiating from the gas"], c:1,
+     e:"Gas pressure is caused by the random collisions of gas particles with the walls of the container. Each collision exerts a small force; billions of collisions produce a steady pressure."},
+    {q:"At constant volume, what happens to the pressure of a gas if its temperature is increased?",
+     opts:["It decreases","It increases","It stays the same","It becomes zero"], c:1,
+     e:"Higher temperature means the particles move faster, hitting the walls more often and harder. With the volume fixed, this increases the pressure."},
+    {q:"For a fixed mass of gas at constant temperature, which relationship is correct?",
+     opts:["p ÷ V = constant","p × V = constant","p + V = constant","p × V² = constant"], c:1,
+     e:"At constant temperature for a fixed mass of gas, pressure × volume = constant (pV = constant), so p₁V₁ = p₂V₂. Decreasing the volume increases the pressure."},
+    {q:"A gas at 100 kPa occupies 0.6 m³. At constant temperature it is compressed to 0.2 m³. What is the new pressure?",
+     opts:["33 kPa","300 kPa","100 kPa","120 kPa"], c:1,
+     e:"Using p₁V₁ = p₂V₂: p₂ = (100 × 0.6) ÷ 0.2 = 60 ÷ 0.2 = 300 kPa. The smaller volume gives a higher pressure."},
+    {q:"Why does the air in a bike pump get warmer when it is compressed quickly?",
+     opts:["The pump adds chemical energy","Work is done on the gas, increasing its internal energy and temperature","The particles lose kinetic energy","The volume increases"], c:1,
+     e:"Compressing the gas does work on it, transferring energy. This increases the gas's internal energy, raising the kinetic energy of the particles and so its temperature."}
+  ]
+});
+
+// ── LESSONS ─────────────────────────────────────────────────────────────────
+Object.assign(LESSONS, {
+
+'s10i-12-3': `
+<h2>Internal Energy &amp; Latent Heat</h2>
+<div class="lesson-diagram" data-diagram="changes-of-state"><p class="diagram-caption">Changes of state and the energy involved</p></div>
+<p>Every substance stores energy in its particles. Understanding <strong>internal energy</strong> explains why heating sometimes raises the temperature and sometimes changes the state of a material.</p>
+
+<h3>Internal Energy</h3>
+<p><strong>Internal energy</strong> is the total energy stored by the particles of a substance. It is made up of two parts:</p>
+<ul>
+  <li>The <strong>kinetic energy</strong> of the particles (due to their movement and vibration)</li>
+  <li>The <strong>potential energy</strong> stored in the forces between the particles</li>
+</ul>
+<p>Heating a substance always increases its internal energy. That extra energy goes into <em>either</em> raising the temperature <em>or</em> changing the state.</p>
+
+<h3>Temperature Change vs Change of State</h3>
+<ul>
+  <li><strong>Temperature rises:</strong> the particles&rsquo; <em>kinetic</em> energy increases &mdash; they move or vibrate faster.</li>
+  <li><strong>State changes:</strong> the particles&rsquo; <em>potential</em> energy increases as bonds and attractions are broken. The temperature stays <strong>constant</strong> during the change.</li>
+</ul>
+<p>On a heating curve (temperature against time), the <strong>flat sections</strong> show changes of state, and the <strong>sloped sections</strong> show the temperature rising.</p>
+
+<h3>Specific Latent Heat</h3>
+<p><strong>Specific latent heat (L)</strong> is the energy needed to change the state of 1 kg of a substance with no change in temperature.</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>E = m &times; L</strong></p>
+<ul>
+  <li><strong>E</strong> = energy transferred, in joules (J)</li>
+  <li><strong>m</strong> = mass, in kilograms (kg)</li>
+  <li><strong>L</strong> = specific latent heat, in joules per kilogram (J/kg)</li>
+</ul>
+<p>There are two types: latent heat of <strong>fusion</strong> (melting/freezing) and latent heat of <strong>vaporisation</strong> (boiling/condensing). Vaporisation needs more energy because the particle bonds must be broken completely.</p>
+
+<h3>Worked Example</h3>
+<p>Calculate the energy needed to melt 0.4 kg of ice at 0 &deg;C. The specific latent heat of fusion of water is 334 000 J/kg.</p>
+<p>E = m &times; L = 0.4 &times; 334 000 = <strong>133 600 J</strong> (about 134 kJ)<br>
+This energy is absorbed at a constant temperature of 0 &deg;C while the ice turns to water.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often try to use &Delta;E = mc&Delta;&theta; during melting or boiling. That equation only applies when the <em>temperature changes</em>. During a change of state the temperature is constant, so you must use E = mL instead.</p>
+`,
+
+'s10i-12-4': `
+<h2>Particle Motion &amp; Gas Pressure</h2>
+<div class="lesson-diagram" data-diagram="particle-states"><p class="diagram-caption">Gas particles in random motion colliding with the container walls</p></div>
+<p>The particle model explains how gases create pressure and how that pressure changes when you alter the temperature or volume of the gas.</p>
+
+<h3>The Cause of Gas Pressure</h3>
+<p>Gas particles move in <strong>random directions</strong> at high speed. They constantly <strong>collide with the walls</strong> of their container. Each collision exerts a tiny force, and billions of collisions every second produce a steady overall <strong>pressure</strong> (pressure = force &divide; area).</p>
+
+<h3>Temperature and Pressure (Constant Volume)</h3>
+<p>Raising the temperature increases the kinetic energy of the particles, so they move <strong>faster</strong>. They then hit the walls <strong>more frequently</strong> and <strong>harder</strong>. With the volume fixed, this means a greater total force on the same wall area, so the <strong>pressure increases</strong>.</p>
+
+<h3>Pressure and Volume (Constant Temperature)</h3>
+<p>For a fixed mass of gas at constant temperature:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>p &times; V = constant &nbsp;&nbsp;&nbsp; so &nbsp;&nbsp;&nbsp; p&#8321;V&#8321; = p&#8322;V&#8322;</strong></p>
+<p>where p is pressure (Pa) and V is volume (m³). If the volume <strong>decreases</strong>, the same number of particles are squeezed into a smaller space, so they hit the walls more often and the <strong>pressure increases</strong>.</p>
+
+<h3>Doing Work on a Gas</h3>
+<p>Compressing a gas, for example pushing the plunger of a bicycle pump, means you <strong>do work</strong> on the gas (a force acts over a distance). This transfers energy to the gas, increasing its <strong>internal energy</strong> and raising its <strong>temperature</strong> &mdash; which is why a pump feels warm after use.</p>
+
+<h3>Worked Example</h3>
+<p>A sealed syringe contains 80 cm³ of gas at a pressure of 100 kPa. The plunger is pushed in until the volume is 50 cm³, keeping the temperature constant. Calculate the new pressure.</p>
+<p>p&#8321;V&#8321; = p&#8322;V&#8322;<br>
+p&#8322; = (p&#8321;V&#8321;) &divide; V&#8322; = (100 &times; 80) &divide; 50<br>
+p&#8322; = 8000 &divide; 50 = <strong>160 kPa</strong><br>
+The smaller volume gives a higher pressure, as expected. (Because the ratio of volumes is used, the cm³ units cancel.)</p>
+
+<h3>Common Mistake</h3>
+<p>The relationship pV = constant only holds at <em>constant temperature</em> for a <em>fixed mass</em> of gas. If the gas is heated or cooled, you cannot simply use p&#8321;V&#8321; = p&#8322;V&#8322;. Always check that the temperature is unchanged before applying it.</p>
+`
+
+});

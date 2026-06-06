@@ -73,7 +73,12 @@ CURRICULUM.push(
    topicId:"s10t-02", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Explain the structure of the lungs and how gas exchange occurs in the alveoli.",
    learningOutcomes:["Describe the structure of the lungs","Explain gas exchange at the alveoli","Describe how alveoli are adapted for efficient exchange"],
-   topics:["Lung structure","Gas exchange","Alveolar adaptations"], prerequisites:["s10i-02-1"]}
+   topics:["Lung structure","Gas exchange","Alveolar adaptations"], prerequisites:["s10i-02-1"]},
+  {id:"s10i-02-4", name:"Health, Disease & Risk Factors", emoji:"🩺", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-02", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain communicable vs non-communicable disease, lifestyle risk factors and cancer.",
+   learningOutcomes:["Distinguish communicable and non-communicable disease","Link lifestyle risk factors to disease","Describe benign and malignant tumours and carcinogens"],
+   topics:["Health & disease","Risk factors","Cancer"], prerequisites:["s10i-02-1"]}
 );
 
 // Topic 3: Communicable Disease & Defence
@@ -92,7 +97,12 @@ CURRICULUM.push(
    topicId:"s10t-03", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Explain how vaccines and drugs work, including the problem of antibiotic resistance.",
    learningOutcomes:["Explain how vaccination produces immunity","Distinguish antibiotics from painkillers","Explain antibiotic resistance"],
-   topics:["Vaccination","Antibiotics","Antibiotic resistance"], prerequisites:["s10i-03-2"]}
+   topics:["Vaccination","Antibiotics","Antibiotic resistance"], prerequisites:["s10i-03-2"]},
+  {id:"s10i-03-4", name:"Plant Diseases & Defences", emoji:"🌿", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-03", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Identify plant diseases and explain plant physical, chemical and mechanical defences.",
+   learningOutcomes:["Recognise signs of plant disease and how it is detected","Describe physical, chemical and mechanical plant defences","Identify nitrate and magnesium deficiencies"],
+   topics:["Plant pathogens","Plant defences","Mineral deficiencies"], prerequisites:["s10i-03-1"]}
 );
 
 // Topic 4: Homeostasis & the Nervous System
@@ -111,7 +121,12 @@ CURRICULUM.push(
    topicId:"s10t-04", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Describe the structure of the eye, how it focuses light and the role of the brain.",
    learningOutcomes:["Label the parts of the eye","Explain accommodation (focusing)","Describe short- and long-sightedness and their correction"],
-   topics:["Eye structure","Accommodation","Correcting vision"], prerequisites:["s10i-04-2"]}
+   topics:["Eye structure","Accommodation","Correcting vision"], prerequisites:["s10i-04-2"]},
+  {id:"s10i-04-4", name:"The Kidneys & Water Balance", emoji:"🫘", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-04", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Explain how the kidneys regulate water and remove urea, and compare dialysis and transplant.",
+   learningOutcomes:["Describe filtration and selective reabsorption","Explain water control by ADH (negative feedback)","Compare dialysis and kidney transplant"],
+   topics:["Osmoregulation","ADH & negative feedback","Dialysis vs transplant"], prerequisites:["s10i-04-1"]}
 );
 
 // Topic 5: Hormonal Coordination
@@ -125,7 +140,17 @@ CURRICULUM.push(
    topicId:"s10t-05", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Explain the hormones involved in puberty, the menstrual cycle and fertility treatments.",
    learningOutcomes:["Describe the role of hormones in puberty","Explain the menstrual cycle (FSH, LH, oestrogen, progesterone)","Describe hormonal contraception and fertility treatments"],
-   topics:["Puberty hormones","Menstrual cycle","Contraception & fertility"], prerequisites:["s10i-05-1"]}
+   topics:["Puberty hormones","Menstrual cycle","Contraception & fertility"], prerequisites:["s10i-05-1"]},
+  {id:"s10i-05-3", name:"Contraception & Fertility Treatments", emoji:"👶", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-05", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Compare hormonal and barrier contraception and describe fertility treatments including IVF.",
+   learningOutcomes:["Compare hormonal and barrier methods of contraception","Evaluate contraceptive methods","Describe FSH/LH fertility treatment and IVF"],
+   topics:["Contraception","Evaluating methods","IVF & fertility"], prerequisites:["s10i-05-2"]},
+  {id:"s10i-05-4", name:"Plant Hormones & Tropisms", emoji:"🌱", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-05", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain phototropism and gravitropism using auxin, and the commercial uses of plant hormones.",
+   learningOutcomes:["Explain phototropism and gravitropism","Describe the role of auxin in cell elongation","Give commercial uses of auxins, gibberellins and ethene"],
+   topics:["Tropisms","Auxin","Commercial uses"], prerequisites:["s10i-05-1"]}
 );
 
 // ── Chemistry islands ────────────────────────────────────────────────────────
@@ -248,7 +273,17 @@ CURRICULUM.push(
    topicId:"s10t-11", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Describe mains electricity, the three-pin plug and safety features (fuses, earth wire, RCDs).",
    learningOutcomes:["Describe the UK mains supply (230V, 50Hz, ac)","Wire a three-pin plug correctly","Explain the role of fuses, earth wire and RCDs"],
-   topics:["Mains supply","Wiring a plug","Safety features"], prerequisites:["s10i-11-1"]}
+   topics:["Mains supply","Wiring a plug","Safety features"], prerequisites:["s10i-11-1"]},
+  {id:"s10i-11-4", name:"Circuit Components & I–V Characteristics", emoji:"📉", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-11", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Describe the I–V characteristics of resistors, lamps and diodes, and the LDR and thermistor.",
+   learningOutcomes:["Describe I–V graphs for a resistor, lamp and diode","Explain LDR and thermistor behaviour and uses","Describe the I–V required practical"],
+   topics:["I–V characteristics","LDR & thermistor","Required practical"], prerequisites:["s10i-11-1"]},
+  {id:"s10i-11-5", name:"Static Electricity & Electric Fields", emoji:"⚡", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-11", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain charging by friction, forces between charges and electric fields.",
+   learningOutcomes:["Explain charging by friction (electron transfer)","State that like charges repel and opposite charges attract","Describe electric fields and sparking"],
+   topics:["Charging by friction","Forces between charges","Electric fields"], prerequisites:["s10i-11-1"]}
 );
 
 // Topic 12: Particle Model & Density
@@ -262,7 +297,17 @@ CURRICULUM.push(
    topicId:"s10t-12", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Use the specific heat capacity equation and describe the practical.",
    learningOutcomes:["Use ΔE = mcΔθ","Describe the SHC practical","Interpret SHC data"],
-   topics:["SHC equation","SHC practical","Interpreting data"], prerequisites:["s10i-12-1"]}
+   topics:["SHC equation","SHC practical","Interpreting data"], prerequisites:["s10i-12-1"]},
+  {id:"s10i-12-3", name:"Internal Energy & Latent Heat", emoji:"🔥", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-12", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Explain internal energy and use specific latent heat (E = mL) for changes of state.",
+   learningOutcomes:["Explain internal energy as particle KE + PE","Use E = mL for fusion and vaporisation","Interpret heating and cooling curves"],
+   topics:["Internal energy","Specific latent heat","Heating curves"], prerequisites:["s10i-12-1"]},
+  {id:"s10i-12-4", name:"Particle Motion & Gas Pressure", emoji:"🎈", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-12", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Explain gas pressure using particle motion and use pV = constant for a fixed mass of gas.",
+   learningOutcomes:["Explain gas pressure from particle collisions","Relate temperature to pressure at constant volume","Use pV = constant (Boyle's law)"],
+   topics:["Gas pressure","Pressure & temperature","pV = constant"], prerequisites:["s10i-12-1"]}
 );
 
 // Topic 13: Radioactivity
@@ -295,5 +340,20 @@ CURRICULUM.push(
    topicId:"s10t-14", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Calculate pressure and explain atmospheric pressure and pressure in liquids.",
    learningOutcomes:["Use pressure = force ÷ area","Explain atmospheric pressure","Use P = hρg for liquid pressure"],
-   topics:["Pressure formula","Atmospheric pressure","Liquid pressure"], prerequisites:["s10i-14-1"]}
+   topics:["Pressure formula","Atmospheric pressure","Liquid pressure"], prerequisites:["s10i-14-1"]},
+  {id:"s10i-14-3", name:"Work, Energy & Power", emoji:"💪", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-14", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Use W = Fs and P = W/t to calculate work done and power.",
+   learningOutcomes:["Use work done = force × distance","Explain energy transfer and work against friction","Use power = work ÷ time"],
+   topics:["Work done","Energy transfer","Power"], prerequisites:["s10i-14-1"]},
+  {id:"s10i-14-4", name:"Elasticity & Hooke's Law", emoji:"🪝", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-14", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Apply Hooke's law (F = ke), the force–extension practical and elastic potential energy.",
+   learningOutcomes:["Distinguish elastic and inelastic deformation","Use F = ke and the limit of proportionality","Describe the force–extension required practical"],
+   topics:["Hooke's law","Force–extension practical","Elastic potential energy"], prerequisites:["s10i-14-1"]},
+  {id:"s10i-14-5", name:"Scalars, Vectors & Resultant Forces", emoji:"➡️", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-14", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Distinguish scalars and vectors and find resultant forces using diagrams.",
+   learningOutcomes:["Distinguish scalar and vector quantities","Draw free-body diagrams","Find resultant forces and resolve perpendicular forces"],
+   topics:["Scalars vs vectors","Free-body diagrams","Resultant forces"], prerequisites:["s10i-14-1"]}
 );

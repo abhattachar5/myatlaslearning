@@ -227,3 +227,142 @@ Use a <strong>5 A</strong> fuse (a 3 A fuse would blow during normal use; 13 A i
 `
 
 });
+
+// ── APPENDED ISLANDS: s10i-11-4, s10i-11-5 ───────────────────────────────────
+
+// ── FLASHCARDS ──────────────────────────────────────────────────────────────
+FLASHCARDS.push(
+  // s10i-11-4 — Circuit Components & I–V Characteristics
+  {id:"s10fc-11-4-1", islandId:"s10i-11-4", front:"Describe the I–V characteristic of an ohmic resistor at constant temperature.",
+   back:"For an ohmic resistor (a fixed resistor at constant temperature):\n\n• The I–V graph is a STRAIGHT LINE through the ORIGIN\n• Current is directly proportional to potential difference (I ∝ V)\n• The resistance is CONSTANT\n\nThis obeys Ohm's law: V = I × R, so the gradient of an I–V graph (I against V) equals 1 ÷ R.", difficulty:1, category:"concept"},
+  {id:"s10fc-11-4-2", islandId:"s10i-11-4", front:"Why is the I–V graph of a filament lamp an S-shaped curve?",
+   back:"As the current increases, the filament gets hotter.\n\nThe higher temperature makes the metal ions vibrate more, so they obstruct the flow of electrons more. This means the RESISTANCE INCREASES as the lamp heats up.\n\nBecause resistance rises with current, equal increases in pd produce smaller and smaller increases in current — the curve gradient decreases, giving the characteristic S-shape.\n\nA filament lamp is therefore a non-ohmic component.", difficulty:2, category:"concept"},
+  {id:"s10fc-11-4-3", islandId:"s10i-11-4", front:"Describe the I–V characteristic of a diode.",
+   back:"A diode only allows current to flow in ONE direction (the forward direction).\n\n• Forward direction: very little current flows until a small threshold pd is reached, then current rises sharply\n• Reverse direction: the resistance is VERY HIGH, so almost no current flows\n\nThe I–V graph is flat (near zero) for negative pd and curves upward for positive pd. Diodes are used to make sure current flows the correct way round.", difficulty:2, category:"concept"},
+  {id:"s10fc-11-4-4", islandId:"s10i-11-4", front:"How do the resistances of an LDR and a thermistor change, and what are they used for?",
+   back:"LDR (light-dependent resistor):\n• Resistance FALLS as light intensity INCREASES\n• Used in light sensors, e.g. automatic street lights and camera light meters\n\nThermistor:\n• Resistance FALLS as temperature INCREASES\n• Used in temperature sensors, e.g. thermostats, ovens and fire alarms\n\nBoth are used in sensing circuits to detect and respond to changes in their surroundings.", difficulty:2, category:"application"},
+  {id:"s10fc-11-4-5", islandId:"s10i-11-4", front:"Describe the I–V required practical.",
+   back:"Aim: investigate how current varies with potential difference for a component.\n\nMethod:\n1. Connect the component in series with an ammeter and a variable resistor\n2. Connect a voltmeter in parallel across the component\n3. Adjust the variable resistor to change the pd across the component\n4. Record several pairs of current (I) and potential difference (V) readings\n5. Reverse the connections to the battery to obtain negative values\n6. Plot a graph of current (y-axis) against potential difference (x-axis)\n\nThe shape of the graph reveals the component's I–V characteristic.", difficulty:2, category:"application"},
+
+  // s10i-11-5 — Static Electricity & Electric Fields
+  {id:"s10fc-11-5-1", islandId:"s10i-11-5", front:"How does an insulator become charged by friction?",
+   back:"When two insulators are rubbed together, ELECTRONS are transferred from one to the other.\n\n• The material that GAINS electrons becomes NEGATIVELY charged\n• The material that LOSES electrons becomes POSITIVELY charged\n\nOnly electrons move — the positive nuclei stay fixed. For example, rubbing a polythene rod with a cloth gives the rod a negative charge as it gains electrons from the cloth.", difficulty:1, category:"concept"},
+  {id:"s10fc-11-5-2", islandId:"s10i-11-5", front:"State the rule for forces between electric charges.",
+   back:"• LIKE charges REPEL (two positives, or two negatives, push apart)\n• OPPOSITE charges ATTRACT (a positive and a negative pull together)\n\nThis is a non-contact force, acting through the electric field around each charged object. The force gets stronger as the charges are brought closer together.", difficulty:1, category:"definition"},
+  {id:"s10fc-11-5-3", islandId:"s10i-11-5", front:"What is an electric field and how is its strength shown?",
+   back:"An electric field is the region around a charged object where another charge experiences a force.\n\n• Shown using FIELD LINES with arrows\n• Arrows point AWAY from a positive charge and TOWARDS a negative charge\n• The field is STRONGER where the lines are CLOSER together — i.e. nearer the charge\n\nThe closer you are to the charged object, the stronger the field and the larger the force on another charge.", difficulty:2, category:"definition"},
+  {id:"s10fc-11-5-4", islandId:"s10i-11-5", front:"Explain how a spark is produced by static electricity.",
+   back:"As charge builds up on an object, the electric field around it becomes stronger.\n\nIf the field becomes strong enough, it can IONISE the air — pulling electrons off air molecules so the air becomes a conductor.\n\nCharge then flows suddenly through the ionised air, which we see and hear as a SPARK (and feel as a shock). This is also the cause of lightning, where huge charges build up in clouds.", difficulty:2, category:"concept"},
+  {id:"s10fc-11-5-5", islandId:"s10i-11-5", front:"Why do you sometimes get a shock after walking across a carpet?",
+   back:"Walking across a carpet rubs your shoes against it, transferring electrons by friction. Your body becomes charged (you are an insulator from the ground if wearing rubber-soled shoes).\n\nWhen you then touch a metal object (e.g. a door handle), the charge flows quickly to earth through the conductor.\n\nThis sudden movement of charge is felt as a small electric shock, and may produce a tiny spark as the air briefly ionises.", difficulty:2, category:"application"}
+);
+
+// ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
+Object.assign(QUESTIONS, {
+  "s10i-11-4": [
+    {q:"The I–V graph of a component is a straight line through the origin. What does this tell you?",
+     opts:["The resistance increases with current","The resistance is constant (ohmic conductor)","Current only flows one way","The component is a diode"], c:1,
+     e:"A straight line through the origin means current is directly proportional to potential difference, so the resistance is constant. This is the characteristic of an ohmic conductor, such as a fixed resistor at constant temperature."},
+    {q:"Why does the resistance of a filament lamp increase as the current increases?",
+     opts:["The filament cools down","The filament heats up, so the metal ions vibrate more and obstruct the electrons","The voltage decreases","Electrons are used up"], c:1,
+     e:"A larger current heats the filament. The hotter metal ions vibrate more vigorously, making it harder for electrons to pass, so the resistance increases. This produces the S-shaped I–V curve."},
+    {q:"What is the key property of a diode?",
+     opts:["It has constant resistance","It only allows current to flow in one direction","Its resistance falls with light","It stores charge"], c:1,
+     e:"A diode allows current to flow in one direction only (the forward direction). In the reverse direction its resistance is very high, so virtually no current flows."},
+    {q:"How does the resistance of an LDR change as the light gets brighter?",
+     opts:["It increases","It decreases","It stays the same","It becomes infinite"], c:1,
+     e:"In a light-dependent resistor (LDR), resistance falls as light intensity increases. This makes LDRs useful in light-sensing circuits such as automatic street lights."},
+    {q:"In the I–V required practical, what is the purpose of the variable resistor?",
+     opts:["To measure the current","To change the potential difference across the component","To measure the voltage","To protect the voltmeter"], c:1,
+     e:"The variable resistor is adjusted to change the current and therefore the potential difference across the component, allowing several pairs of I and V readings to be recorded and plotted."}
+  ],
+  "s10i-11-5": [
+    {q:"A polythene rod is rubbed with a cloth and becomes negatively charged. What has happened?",
+     opts:["The rod has lost electrons","The rod has gained electrons from the cloth","The rod has gained protons","The cloth has gained electrons"], c:1,
+     e:"Charging by friction transfers electrons. A negatively charged rod has gained electrons; the cloth, which lost those electrons, becomes positively charged. Only electrons move."},
+    {q:"Two objects both carry a positive charge. What force acts between them?",
+     opts:["They attract","They repel","No force acts","They first attract then repel"], c:1,
+     e:"Like charges repel. Two positively charged objects push apart. Only opposite charges (one positive, one negative) attract each other."},
+    {q:"Where is an electric field strongest around a charged sphere?",
+     opts:["Far from the sphere","Nearest to the sphere where field lines are closest together","Field strength is the same everywhere","At the centre only"], c:1,
+     e:"The electric field is strongest where the field lines are closest together, which is nearest to the charged object. The field gets weaker with distance as the lines spread out."},
+    {q:"What happens when the electric field around a charged object becomes strong enough?",
+     opts:["The charge disappears","It ionises the air, allowing a spark to jump","The object gains mass","The field reverses direction"], c:1,
+     e:"A very strong electric field can ionise the air (knock electrons off air molecules), turning it into a conductor. Charge then flows suddenly through the air, producing a spark."},
+    {q:"In which direction do electric field lines point around a single negative charge?",
+     opts:["Away from the charge","Towards the charge","In circles around the charge","There are no field lines"], c:1,
+     e:"Field lines point in the direction of the force on a positive test charge. Around a negative charge, the lines point inwards, towards the charge. Around a positive charge they point outwards."}
+  ]
+});
+
+// ── LESSONS ─────────────────────────────────────────────────────────────────
+Object.assign(LESSONS, {
+
+'s10i-11-4': `
+<h2>Circuit Components &amp; I&ndash;V Characteristics</h2>
+<div class="lesson-diagram" data-diagram="circuit-symbols"><p class="diagram-caption">Standard circuit symbols for common components</p></div>
+<p>An <strong>I&ndash;V characteristic</strong> is a graph of current (I) against potential difference (V) for a component. Its shape tells us how the resistance of that component behaves. Some components have constant resistance; others change as conditions change.</p>
+
+<h3>Ohmic Resistor</h3>
+<p>For a fixed resistor kept at constant temperature, the I&ndash;V graph is a <strong>straight line through the origin</strong>. Current is directly proportional to potential difference (I &prop; V), so the <strong>resistance is constant</strong>. This obeys Ohm&rsquo;s law:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>V = I &times; R</strong></p>
+<p>where V is potential difference (V), I is current (A) and R is resistance (&Omega;).</p>
+
+<h3>Filament Lamp</h3>
+<p>The I&ndash;V graph of a filament lamp is an <strong>S-shaped curve</strong>. As current increases, the filament heats up. The hot metal ions vibrate more and obstruct the electrons, so the <strong>resistance increases</strong>. The curve becomes less steep at higher pd because larger increases in voltage produce smaller increases in current.</p>
+
+<h3>Diode</h3>
+<p>A diode allows current to flow in <strong>one direction only</strong>. In the forward direction, very little current flows until a small threshold pd is reached, then current rises sharply. In the reverse direction the resistance is <strong>very high</strong>, so almost no current flows.</p>
+
+<h3>LDR and Thermistor (Sensors)</h3>
+<ul>
+  <li><strong>LDR (light-dependent resistor):</strong> resistance <em>falls</em> as light gets brighter. Used in light sensors such as automatic street lights.</li>
+  <li><strong>Thermistor:</strong> resistance <em>falls</em> as temperature rises. Used in temperature sensors such as thermostats and fire alarms.</li>
+</ul>
+
+<h3>Required Practical: I&ndash;V Characteristics</h3>
+<p>Connect the component in series with an ammeter and a variable resistor, and a voltmeter in parallel across it. Adjust the variable resistor to change the pd, recording pairs of I and V readings. Reverse the battery to get negative values, then plot current against potential difference.</p>
+
+<h3>Worked Example</h3>
+<p>An ohmic resistor carries a current of 0.4 A when the pd across it is 6 V. Calculate its resistance, and predict the current when the pd is increased to 9 V.</p>
+<p>R = V &divide; I = 6 &divide; 0.4 = <strong>15 &Omega;</strong><br>
+Because the resistor is ohmic, R stays constant. At 9 V: I = V &divide; R = 9 &divide; 15 = <strong>0.6 A</strong></p>
+
+<h3>Common Mistake</h3>
+<p>Students often assume every component obeys Ohm&rsquo;s law. Only an ohmic resistor at constant temperature has a straight-line I&ndash;V graph. A filament lamp and a diode are <em>non-ohmic</em> &mdash; their resistance changes, so you cannot use a single fixed value of R across the whole graph.</p>
+`,
+
+'s10i-11-5': `
+<h2>Static Electricity &amp; Electric Fields</h2>
+<p>Static electricity is the build-up of electric charge on the surface of an insulator. It explains everyday effects such as shocks, sparks and clinging materials, and introduces the idea of an electric field.</p>
+
+<h3>Charging by Friction</h3>
+<p>When two insulators are rubbed together, <strong>electrons are transferred</strong> from one to the other. Only electrons move &mdash; the positive nuclei stay put.</p>
+<ul>
+  <li>The material that <strong>gains electrons</strong> becomes <strong>negatively charged</strong>.</li>
+  <li>The material that <strong>loses electrons</strong> becomes <strong>positively charged</strong>.</li>
+</ul>
+<p>For example, rubbing a polythene rod with a cloth gives the rod a negative charge because it gains electrons from the cloth.</p>
+
+<h3>Forces Between Charges</h3>
+<ul>
+  <li><strong>Like charges repel</strong> (two positives, or two negatives, push apart).</li>
+  <li><strong>Opposite charges attract</strong> (a positive and a negative pull together).</li>
+</ul>
+<p>This is a <strong>non-contact force</strong>: the charges affect each other without touching, through the electric field around them. The force is stronger when the charges are closer.</p>
+
+<h3>Electric Fields</h3>
+<p>An <strong>electric field</strong> is the region around a charged object where another charge feels a force. We draw it using <strong>field lines</strong> with arrows that point away from a positive charge and towards a negative charge. The field is <strong>stronger nearer the charge</strong>, shown by the field lines being closer together. As you move away, the lines spread out and the field weakens.</p>
+
+<h3>Sparks and Shocks</h3>
+<p>As charge builds up, the electric field around the object grows stronger. If the field becomes strong enough, it can <strong>ionise the air</strong> &mdash; pulling electrons off air molecules so the air becomes a conductor. Charge then flows suddenly through the ionised air, which we see as a <strong>spark</strong> and feel as a shock. Lightning is a large-scale example.</p>
+
+<h3>Worked Example</h3>
+<p>A balloon is rubbed on a jumper and then sticks to a wall. Explain, using charge, why this happens.</p>
+<p>Rubbing transfers electrons to the balloon, giving it a <strong>negative charge</strong>. When held near the neutral wall, the balloon&rsquo;s field pushes electrons in the wall&rsquo;s surface slightly away, leaving the near surface of the wall <strong>positively charged</strong> (induced charge). The opposite charges <strong>attract</strong>, so the balloon sticks.</p>
+
+<h3>Common Mistake</h3>
+<p>Students sometimes say protons are transferred when an object is charged. This is wrong &mdash; protons are locked in the nuclei and do not move. Charging always involves the transfer of <em>electrons</em> only: gaining electrons gives a negative charge, losing them gives a positive charge.</p>
+`
+
+});

@@ -225,3 +225,86 @@ Object.assign(LESSONS, {
 `
 
 });
+
+// ── s10i-03-4 — Plant Diseases & Defences ────────────────────────────────────
+FLASHCARDS.push(
+  {id:"s10fc-03-4-1", islandId:"s10i-03-4", front:"Name three plant pathogens or pests and the problems they cause.",
+   back:"• Tobacco mosaic virus (TMV) — a virus that causes a mosaic pattern of discolouration on leaves, reducing photosynthesis and growth.\n\n• Rose black spot — a fungus that causes purple/black spots on leaves; leaves then turn yellow and drop early, reducing photosynthesis.\n\n• Aphids — insect pests that pierce the plant and suck out sap (containing sugars), weakening the plant and spreading viruses.", difficulty:1, category:"definition"},
+  {id:"s10fc-03-4-2", islandId:"s10i-03-4", front:"What are the visible signs that a plant may be diseased?",
+   back:"Common signs of plant disease include:\n\n• Stunted growth\n• Spots on leaves\n• Areas of discolouration\n• Rotting of stems, roots or fruit\n• Lesions (wounds or sores)\n• Malformed (oddly shaped) stems or leaves\n• Wilting\n• The presence of visible pests", difficulty:1, category:"concept"},
+  {id:"s10fc-03-4-3", islandId:"s10i-03-4", front:"How can a diseased plant be detected and identified?",
+   back:"Plant diseases can be identified by:\n\n• Looking up the symptoms in a gardening manual or on a website\n• Taking the infected plant to a laboratory to identify the pathogen\n• Using monoclonal antibody test kits that detect specific pathogens quickly and on site\n\nIdentifying the cause is important so the correct treatment can be used.", difficulty:2, category:"application"},
+  {id:"s10fc-03-4-4", islandId:"s10i-03-4", front:"Describe the physical, chemical and mechanical defences plants use against pathogens and herbivores.",
+   back:"• Physical defences: a cellulose cell wall, a waxy cuticle on leaves, and layers of dead cells around stems (bark) that fall off — all act as barriers.\n\n• Chemical defences: antibacterial chemicals that kill bacteria, and poisons that deter herbivores from eating the plant.\n\n• Mechanical defences: thorns and hairs to stop animals touching/eating the plant, leaves that droop or curl when touched, and mimicry to trick animals (e.g. looking unhealthy or like another organism).", difficulty:2, category:"concept"},
+  {id:"s10fc-03-4-5", islandId:"s10i-03-4", front:"What are the effects of nitrate and magnesium ion deficiency in plants?",
+   back:"Plants need mineral ions absorbed from the soil for healthy growth:\n\n• Nitrate ions are needed to make proteins (for growth). A nitrate deficiency causes stunted growth.\n\n• Magnesium ions are needed to make chlorophyll. A magnesium deficiency causes chlorosis — the leaves turn yellow because they cannot make enough chlorophyll for photosynthesis.", difficulty:2, category:"application"}
+);
+
+Object.assign(QUESTIONS, {
+  "s10i-03-4": [
+    {q:"Which pathogen causes a mosaic pattern of discolouration on plant leaves?",
+     opts:["Rose black spot fungus","Aphids","Tobacco mosaic virus","Magnesium deficiency"], c:2,
+     e:"Tobacco mosaic virus (TMV) causes a distinctive mosaic pattern of discolouration on leaves. The discoloured areas cannot photosynthesise well, so the plant's growth is reduced."},
+    {q:"Aphids damage plants mainly by:",
+     opts:["Releasing antibacterial chemicals","Sucking sap from the plant","Producing fungal spores","Blocking sunlight with their bodies"], c:1,
+     e:"Aphids are insect pests that pierce the plant and suck out the sugary sap, weakening the plant. They can also transmit plant viruses from one plant to another."},
+    {q:"Which of the following is a physical (rather than chemical or mechanical) plant defence?",
+     opts:["Producing poisons to deter herbivores","A waxy cuticle and cellulose cell walls","Thorns and hairs on the stem","Leaves that droop when touched"], c:1,
+     e:"Physical defences are barriers such as the cellulose cell wall, the waxy cuticle and layers of dead cells (bark). Poisons are chemical defences; thorns and drooping leaves are mechanical defences."},
+    {q:"A plant has yellowing leaves caused by a lack of chlorophyll. Which mineral ion is it most likely deficient in?",
+     opts:["Nitrate ions","Magnesium ions","Carbon dioxide","Water"], c:1,
+     e:"Magnesium ions are needed to make chlorophyll. A magnesium deficiency causes chlorosis — yellowing of the leaves — because the plant cannot make enough chlorophyll. Nitrate deficiency causes stunted growth instead."},
+    {q:"Why might a gardener use a monoclonal antibody test kit on a sick plant?",
+     opts:["To add minerals to the soil","To quickly identify the specific pathogen causing the disease","To kill all insects on the plant","To increase the rate of photosynthesis"], c:1,
+     e:"Monoclonal antibody test kits detect a specific pathogen quickly and on site. Identifying the exact cause of the disease means the correct treatment can be chosen."}
+  ]
+});
+
+Object.assign(LESSONS, {
+
+'s10i-03-4': `
+<h2>Plant Diseases &amp; Defences</h2>
+<p>Plants, like animals, can be attacked by pathogens and pests. They also have an impressive range of defences to protect themselves. This island looks at plant disease and how plants fight back.</p>
+
+<h3>Plant Pathogens and Pests</h3>
+<ul>
+  <li><strong>Tobacco mosaic virus (TMV)</strong> — a virus that causes a mosaic pattern of discolouration on leaves, reducing photosynthesis and growth.</li>
+  <li><strong>Rose black spot</strong> — a fungus causing purple or black spots on leaves; the leaves then turn yellow and drop early, reducing photosynthesis. It is spread by water and wind.</li>
+  <li><strong>Aphids</strong> — insect pests that pierce the plant and suck out the sugary sap, weakening it and spreading viruses.</li>
+</ul>
+
+<h3>Signs of Plant Disease</h3>
+<p>A diseased plant may show: stunted growth, spots on leaves, areas of discolouration, rot, lesions (sores), malformed stems or leaves, wilting, or the presence of visible pests.</p>
+
+<h3>Detecting and Identifying Disease</h3>
+<p>To treat a plant correctly, the cause must first be identified. This can be done by:</p>
+<ul>
+  <li>Looking up the symptoms in a <strong>gardening manual</strong> or on a website</li>
+  <li>Sending the infected plant to a <strong>testing laboratory</strong> to identify the pathogen</li>
+  <li>Using <strong>monoclonal antibody test kits</strong> that detect a specific pathogen quickly and on site</li>
+</ul>
+
+<h3>Plant Defences</h3>
+<p>Plants have three categories of defence:</p>
+<ul>
+  <li><strong>Physical defences</strong> — a cellulose cell wall, a waxy cuticle on leaves, and layers of dead cells (such as bark) act as barriers to pathogens.</li>
+  <li><strong>Chemical defences</strong> — antibacterial chemicals that kill bacteria, and poisons that deter herbivores from eating the plant.</li>
+  <li><strong>Mechanical defences</strong> — thorns and hairs that stop animals touching or eating the plant, leaves that droop or curl when touched, and mimicry (looking like something unappetising or dangerous).</li>
+</ul>
+
+<h3>Mineral Ion Deficiencies</h3>
+<p>Plants absorb mineral ions from the soil for healthy growth. A shortage leads to clear symptoms:</p>
+<ul>
+  <li><strong>Nitrate deficiency</strong> — nitrate ions are needed to make proteins for growth, so a lack causes <strong>stunted growth</strong>.</li>
+  <li><strong>Magnesium deficiency</strong> — magnesium ions are needed to make chlorophyll, so a lack causes <strong>chlorosis</strong> (yellow leaves).</li>
+</ul>
+
+<h3>Worked Example</h3>
+<p>A farmer notices that crop plants in one field are short with yellowing leaves. Suggest two possible mineral deficiencies and explain the symptoms.</p>
+<p>The stunted growth suggests a <strong>nitrate deficiency</strong>, because nitrate ions are needed to make the proteins required for growth. The yellow leaves (chlorosis) suggest a <strong>magnesium deficiency</strong>, because magnesium is needed to make chlorophyll, without which leaves cannot stay green or photosynthesise efficiently.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often assume yellow leaves always mean a disease caused by a pathogen. Yellowing (chlorosis) can also be caused by a <em>mineral ion deficiency</em>, particularly a lack of magnesium. It is important to distinguish between deficiency symptoms and infection by a pathogen.</p>
+`
+
+});

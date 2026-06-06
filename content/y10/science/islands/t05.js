@@ -139,3 +139,160 @@ Object.assign(LESSONS, {
 `
 
 });
+
+// ── s10i-05-3 — Contraception & Fertility Treatments ─────────────────────────
+FLASHCARDS.push(
+  {id:"s10fc-05-3-1", islandId:"s10i-05-3", front:"How do hormonal methods of contraception prevent pregnancy?",
+   back:"Hormonal contraceptives contain oestrogen and/or progesterone, which inhibit FSH so that no eggs mature (and ovulation does not occur). They also thicken cervical mucus to block sperm.\n\nForms include:\n• The pill — taken orally\n• The implant, injection and skin patch — release hormones slowly over a long period\n\nThey are very effective but do not protect against STIs.", difficulty:2, category:"concept"},
+  {id:"s10fc-05-3-2", islandId:"s10i-05-3", front:"List the main non-hormonal and barrier methods of contraception.",
+   back:"• Condom — a barrier that stops sperm reaching the egg; also protects against STIs\n• Diaphragm — a barrier placed over the cervix (used with spermicide)\n• Spermicide — chemicals that kill or disable sperm\n• Intrauterine device (IUD) — placed in the uterus to prevent implantation (some also release hormones)\n• Sterilisation — surgically cutting/tying the sperm or egg tubes (permanent)\n• Abstinence — avoiding intercourse, especially when an egg may be present", difficulty:2, category:"definition"},
+  {id:"s10fc-05-3-3", islandId:"s10i-05-3", front:"Which contraceptive methods protect against sexually transmitted infections (STIs)?",
+   back:"Only barrier methods that physically cover the genitals protect against STIs — most importantly the condom.\n\nHormonal methods (the pill, implant, injection, patch) and the IUD prevent pregnancy but do NOT protect against STIs, because they do not form a physical barrier to body fluids.\n\nThis is an important point when evaluating which method to use.", difficulty:2, category:"application"},
+  {id:"s10fc-05-3-4", islandId:"s10i-05-3", front:"How can FSH and LH be used as a fertility drug?",
+   back:"If a woman does not produce enough FSH, her eggs may not mature, so she cannot become pregnant.\n\nA 'fertility drug' containing FSH and LH can be given:\n• FSH stimulates eggs to mature in the ovaries\n• LH triggers ovulation (release of the egg)\n\nThis can help the woman become pregnant naturally. A drawback is that it may cause several eggs to mature, leading to multiple births.", difficulty:2, category:"application"},
+  {id:"s10fc-05-3-5", islandId:"s10i-05-3", front:"Describe IVF and evaluate it as a fertility treatment.",
+   back:"IVF (in vitro fertilisation):\n1. The mother is given FSH and LH to mature several eggs\n2. The eggs are collected and fertilised by sperm in a laboratory\n3. The fertilised eggs develop into embryos\n4. One or two embryos are inserted into the mother's uterus\n\nEvaluation:\n• It is emotionally and physically stressful\n• Success rates are often low\n• It can lead to multiple births, which are risky for mother and babies", difficulty:2, category:"concept"}
+);
+
+Object.assign(QUESTIONS, {
+  "s10i-05-3": [
+    {q:"How does the contraceptive pill prevent the maturation of eggs?",
+     opts:["By increasing FSH levels","By inhibiting FSH","By triggering ovulation","By thickening the uterus lining"], c:1,
+     e:"The pill contains oestrogen and/or progesterone, which inhibit FSH. Without FSH, eggs do not mature in the ovaries, so the woman cannot become pregnant."},
+    {q:"Which contraceptive method also protects against sexually transmitted infections?",
+     opts:["The contraceptive pill","The intrauterine device (IUD)","The condom","The hormone implant"], c:2,
+     e:"Only barrier methods like the condom protect against STIs, because they physically prevent contact between body fluids. Hormonal methods and the IUD prevent pregnancy but offer no protection against STIs."},
+    {q:"Which of the following is a non-hormonal method of contraception?",
+     opts:["The skin patch","The injection","The diaphragm","The implant"], c:2,
+     e:"A diaphragm is a barrier method that covers the cervix to stop sperm reaching the egg — it uses no hormones. The patch, injection and implant are all hormonal methods."},
+    {q:"In a fertility drug, what is the role of FSH?",
+     opts:["It triggers ovulation","It stimulates eggs to mature in the ovaries","It thickens cervical mucus","It maintains the uterus lining"], c:1,
+     e:"FSH (follicle stimulating hormone) stimulates eggs to mature in the ovaries. LH then triggers ovulation. Giving both can help a woman who does not produce enough of her own FSH to become pregnant."},
+    {q:"Which of these is a recognised disadvantage of IVF?",
+     opts:["It guarantees a successful pregnancy","It has low success rates and can cause multiple births","It protects against STIs","It removes the need for hormones"], c:1,
+     e:"IVF is emotionally and physically stressful and often has low success rates. Because several embryos may be implanted, it can lead to multiple births, which carry risks for the mother and babies."}
+  ]
+});
+
+Object.assign(LESSONS, {
+
+'s10i-05-3': `
+<h2>Contraception &amp; Fertility Treatments</h2>
+<p>Hormones can be used both to <strong>prevent</strong> pregnancy (contraception) and to <strong>help</strong> people who are struggling to conceive (fertility treatments). This island compares the methods and weighs up their advantages and disadvantages.</p>
+
+<h3>Hormonal Contraception</h3>
+<p>Hormonal methods use <strong>oestrogen and/or progesterone</strong> to prevent pregnancy. They work mainly by <strong>inhibiting FSH</strong>, so eggs do not mature, and by thickening cervical mucus to block sperm.</p>
+<ul>
+  <li><strong>The pill</strong> — taken orally; the combined pill contains oestrogen and progesterone</li>
+  <li><strong>The implant, injection and patch</strong> — release hormones (usually progesterone) slowly over weeks to years</li>
+</ul>
+<p>These methods are very effective when used correctly, but they do <strong>not</strong> protect against STIs.</p>
+
+<h3>Non-Hormonal and Barrier Methods</h3>
+<ul>
+  <li><strong>Condom</strong> — a barrier that stops sperm meeting the egg and also protects against STIs</li>
+  <li><strong>Diaphragm</strong> — a barrier over the cervix, used with spermicide</li>
+  <li><strong>Spermicide</strong> — chemicals that kill or disable sperm</li>
+  <li><strong>Intrauterine device (IUD)</strong> — placed in the uterus to prevent implantation</li>
+  <li><strong>Sterilisation</strong> — surgically cutting or tying the sperm/egg tubes (permanent)</li>
+  <li><strong>Abstinence</strong> — avoiding intercourse, especially when an egg may be present</li>
+</ul>
+
+<h3>Comparing Methods</h3>
+<p>When evaluating contraception, consider <strong>effectiveness</strong>, <strong>side effects</strong> and whether it gives <strong>STI protection</strong>. Hormonal methods are highly effective but can cause side effects and give no STI protection. Barrier methods are slightly less reliable but the condom uniquely protects against STIs.</p>
+
+<h3>Treating Infertility</h3>
+<p>If a woman does not make enough FSH, her eggs may not mature. A <strong>fertility drug</strong> containing FSH and LH can be given: FSH matures the eggs and LH triggers ovulation, helping her conceive naturally.</p>
+
+<h3>IVF (In Vitro Fertilisation)</h3>
+<ol>
+  <li>The mother is given FSH and LH to mature several eggs</li>
+  <li>Eggs are collected and fertilised by sperm in a laboratory</li>
+  <li>The fertilised eggs develop into embryos</li>
+  <li>One or two embryos are inserted into the uterus</li>
+</ol>
+<p>IVF is <strong>emotionally and physically stressful</strong>, has relatively <strong>low success rates</strong>, and can lead to <strong>multiple births</strong>, which are risky for mother and babies.</p>
+
+<h3>Worked Example</h3>
+<p>A couple are deciding between the contraceptive pill and condoms. Give one advantage of choosing condoms.</p>
+<p>Condoms are a barrier method, so as well as preventing pregnancy they protect against sexually transmitted infections. The contraceptive pill prevents pregnancy effectively but offers no protection against STIs because it is a hormonal method.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often assume the contraceptive pill protects against STIs. It does not — only barrier methods such as condoms prevent the spread of infection. The pill works hormonally to prevent ovulation, not by forming a barrier.</p>
+`
+
+});
+
+// ── s10i-05-4 — Plant Hormones & Tropisms ────────────────────────────────────
+FLASHCARDS.push(
+  {id:"s10fc-05-4-1", islandId:"s10i-05-4", front:"What are phototropism and gravitropism (geotropism)?",
+   back:"A tropism is a growth response of a plant towards or away from a stimulus.\n\n• Phototropism — growth in response to light. Shoots grow towards light (positive phototropism) to maximise photosynthesis.\n\n• Gravitropism (geotropism) — growth in response to gravity. Roots grow towards gravity (positive gravitropism) to anchor the plant and reach water; shoots grow away from it (negative gravitropism).", difficulty:1, category:"definition"},
+  {id:"s10fc-05-4-2", islandId:"s10i-05-4", front:"What is auxin and how does it cause shoots to bend towards light?",
+   back:"Auxin is the main plant growth hormone. It is produced in the tips of shoots and roots and controls cell elongation (how much cells lengthen).\n\nWhen light shines from one side, auxin moves to the shaded side of the shoot. The extra auxin makes the cells on the shaded side elongate more, so that side grows faster and the shoot bends towards the light.", difficulty:2, category:"concept"},
+  {id:"s10fc-05-4-3", islandId:"s10i-05-4", front:"How does auxin affect shoots and roots differently?",
+   back:"Auxin promotes cell elongation in shoots but inhibits it in roots — so the same hormone has opposite effects.\n\n• Shoots: positively phototropic (grow towards light) and negatively gravitropic (grow up, away from gravity).\n• Roots: negatively phototropic (grow away from light) and positively gravitropic (grow down, towards gravity).\n\nIn a root, auxin gathers on the lower side and inhibits growth there, so the upper side grows more and the root bends down.", difficulty:3, category:"application"},
+  {id:"s10fc-05-4-4", islandId:"s10i-05-4", front:"Give the commercial uses of auxins.",
+   back:"Auxins are used in agriculture and horticulture:\n\n• As weedkillers — selective herbicides that make broad-leaved weeds grow too fast and die, leaving narrow-leaved crops unharmed\n• As rooting powder — to encourage cuttings to grow roots quickly\n• In tissue culture — to promote growth of plant tissues in the laboratory", difficulty:2, category:"application"},
+  {id:"s10fc-05-4-5", islandId:"s10i-05-4", front:"What are the commercial uses of gibberellins and ethene?",
+   back:"Gibberellins are used to:\n• End seed dormancy so seeds germinate\n• Promote flowering\n• Increase fruit size\n\nEthene is a gas used to:\n• Control ripening of fruit during storage and transport — fruit can be picked and transported unripe (hard, less easily damaged) and then ripened with ethene before sale.", difficulty:2, category:"application"}
+);
+
+Object.assign(QUESTIONS, {
+  "s10i-05-4": [
+    {q:"What is phototropism?",
+     opts:["Growth in response to gravity","Growth in response to light","Growth in response to water","Growth in response to touch"], c:1,
+     e:"Phototropism is a plant's growth response to light. Shoots are positively phototropic — they grow towards the light to maximise the light available for photosynthesis."},
+    {q:"Where in a plant is auxin produced?",
+     opts:["In the roots only","In the tips of shoots and roots","In the flowers","In the older parts of the stem"], c:1,
+     e:"Auxin is produced in the tips of shoots and roots. It then moves through the plant and controls cell elongation, causing the bending responses seen in tropisms."},
+    {q:"A shoot is lit from one side. Why does it bend towards the light?",
+     opts:["Auxin moves to the lit side, slowing growth there","Auxin moves to the shaded side, making those cells elongate more","Light destroys all the auxin","Water collects on the shaded side"], c:1,
+     e:"Auxin accumulates on the shaded side of the shoot. There it promotes cell elongation, so the shaded side grows faster than the lit side, bending the shoot towards the light."},
+    {q:"How do shoots and roots respond to gravity?",
+     opts:["Both grow towards gravity","Both grow away from gravity","Shoots grow away from gravity; roots grow towards it","Shoots grow towards gravity; roots grow away from it"], c:2,
+     e:"Shoots are negatively gravitropic (grow upward, away from gravity) while roots are positively gravitropic (grow downward, towards gravity). This anchors the plant and helps roots reach water."},
+    {q:"Which plant hormone is used to control the ripening of fruit during storage and transport?",
+     opts:["Auxin","Gibberellin","Ethene","Oestrogen"], c:2,
+     e:"Ethene is a gas that controls fruit ripening. Fruit can be picked and transported while unripe (and less easily damaged), then treated with ethene to ripen it before sale."}
+  ]
+});
+
+Object.assign(LESSONS, {
+
+'s10i-05-4': `
+<h2>Plant Hormones &amp; Tropisms</h2>
+<p>Plants cannot move around, but they can control the <strong>direction</strong> in which they grow using hormones. These growth responses, called <strong>tropisms</strong>, help plants reach light, water and support.</p>
+
+<h3>Tropisms</h3>
+<ul>
+  <li><strong>Phototropism</strong> — growth in response to light. Shoots grow <em>towards</em> light (positive phototropism) to maximise photosynthesis.</li>
+  <li><strong>Gravitropism (geotropism)</strong> — growth in response to gravity. Roots grow <em>towards</em> gravity (positive) to anchor the plant and find water; shoots grow <em>away</em> from gravity (negative).</li>
+</ul>
+
+<h3>The Role of Auxin</h3>
+<p><strong>Auxin</strong> is the main plant growth hormone. It is produced in the <strong>tips</strong> of shoots and roots and controls <strong>cell elongation</strong>. Crucially, auxin becomes <strong>unequally distributed</strong> in response to a stimulus, and this uneven distribution causes the plant to bend.</p>
+<p>When light comes from one side, auxin moves to the shaded side of the shoot. There it makes cells elongate more, so the shaded side grows faster and the shoot bends towards the light.</p>
+
+<h3>Opposite Effects in Shoots and Roots</h3>
+<p>Auxin <strong>promotes</strong> elongation in shoots but <strong>inhibits</strong> it in roots. This is why:</p>
+<ul>
+  <li>Shoots are <strong>positively phototropic</strong> and <strong>negatively gravitropic</strong></li>
+  <li>Roots are <strong>negatively phototropic</strong> and <strong>positively gravitropic</strong></li>
+</ul>
+
+<h3>Commercial Uses of Plant Hormones</h3>
+<ul>
+  <li><strong>Auxins</strong> — used as selective weedkillers, as rooting powder for cuttings, and in tissue culture</li>
+  <li><strong>Gibberellins</strong> — used to end seed dormancy, promote flowering and produce larger fruit</li>
+  <li><strong>Ethene</strong> — a gas used to control the ripening of fruit during storage and transport</li>
+</ul>
+
+<h3>Worked Example</h3>
+<p>A seed germinates underground in the dark. Explain how its root and shoot grow in the correct directions.</p>
+<p>In the dark, the plant responds to gravity. In the root, auxin gathers on the lower side and inhibits elongation there, so the upper side grows faster and the root bends downward (positive gravitropism). In the shoot, auxin also gathers on the lower side but promotes elongation there, so the lower side grows faster and the shoot bends upward (negative gravitropism), eventually reaching the light.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often state that auxin always speeds up growth. In fact auxin <em>promotes</em> cell elongation in shoots but <em>inhibits</em> it in roots. The same hormone produces opposite effects in different parts of the plant, which is exactly why roots and shoots bend in opposite directions.</p>
+`
+
+});

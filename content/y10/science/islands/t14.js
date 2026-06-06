@@ -120,3 +120,187 @@ Total pressure = water pressure + atmospheric pressure<br>
 `
 
 });
+
+// ════════════════════════════════════════════════════════════════════════════
+// APPENDED ISLANDS: s10i-14-3, s10i-14-4, s10i-14-5
+// ════════════════════════════════════════════════════════════════════════════
+
+// ── FLASHCARDS ──────────────────────────────────────────────────────────────
+FLASHCARDS.push(
+  // s10i-14-3 — Work, Energy & Power
+  {id:"s10fc-14-3-1", islandId:"s10i-14-3", front:"What is work done, and how is it calculated?",
+   back:"Work is done whenever a force moves an object through a distance. Work done equals the energy transferred.\n\nWork done = force × distance\nW = F s\n\nWhere:\n• W = work done in joules (J)\n• F = force in newtons (N)\n• s = distance moved along the line of action of the force in metres (m)\n\n1 joule = 1 newton-metre: one joule of work is done when a force of 1 N moves an object 1 m.", difficulty:1, category:"definition"},
+  {id:"s10fc-14-3-2", islandId:"s10i-14-3", front:"A force of 25 N pushes a box 4 m across the floor. Calculate the work done.",
+   back:"W = F s\nW = 25 × 4\nW = 100 J\n\n100 joules of energy are transferred. If the box moves at a steady speed, this energy is transferred to the thermal store of the box and floor by friction.", difficulty:1, category:"calculation"},
+  {id:"s10fc-14-3-3", islandId:"s10i-14-3", front:"What happens to energy when work is done against friction?",
+   back:"When work is done against friction, energy is transferred to the thermal (internal) energy stores of the surfaces in contact.\n\n• The surfaces heat up\n• This energy is usually dissipated to the surroundings\n• It is no longer useful, so we call it 'wasted' energy\n\nThis is why rubbing your hands together or braking a car makes things warm.", difficulty:2, category:"concept"},
+  {id:"s10fc-14-3-4", islandId:"s10i-14-3", front:"What is power, and how is it calculated?",
+   back:"Power is the rate of doing work, or the rate at which energy is transferred.\n\nP = W ÷ t = E ÷ t\n\nWhere:\n• P = power in watts (W)\n• W = work done in joules (J)\n• E = energy transferred in joules (J)\n• t = time taken in seconds (s)\n\n1 watt = 1 joule per second. A more powerful device transfers the same energy in less time.", difficulty:1, category:"definition"},
+  {id:"s10fc-14-3-5", islandId:"s10i-14-3", front:"A motor does 600 J of work in 5 s. Calculate its power.",
+   back:"P = W ÷ t\nP = 600 ÷ 5\nP = 120 W\n\nThe motor has a power output of 120 watts — it transfers 120 joules of energy every second.", difficulty:1, category:"calculation"},
+
+  // s10i-14-4 — Elasticity & Hooke's Law
+  {id:"s10fc-14-4-1", islandId:"s10i-14-4", front:"What is the difference between elastic and inelastic (plastic) deformation?",
+   back:"Both happen when a force changes an object's shape.\n\n• Elastic deformation: the object returns to its original shape and size when the force is removed (e.g. a stretched spring within its limit).\n• Inelastic (plastic) deformation: the object does NOT return to its original shape when the force is removed — it stays permanently deformed (e.g. bending a paperclip too far).", difficulty:1, category:"definition"},
+  {id:"s10fc-14-4-2", islandId:"s10i-14-4", front:"State Hooke's law and the equation.",
+   back:"Hooke's law: the extension of an elastic object is directly proportional to the force applied, provided the limit of proportionality is not exceeded.\n\nF = k e\n\nWhere:\n• F = force in newtons (N)\n• k = spring constant in newtons per metre (N/m)\n• e = extension in metres (m)\n\nA stiffer spring has a larger spring constant.", difficulty:1, category:"definition"},
+  {id:"s10fc-14-4-3", islandId:"s10i-14-4", front:"What is the limit of proportionality?",
+   back:"The limit of proportionality is the point beyond which extension is no longer directly proportional to force.\n\n• Below this limit, a force–extension graph is a straight line through the origin (obeys Hooke's law).\n• Beyond this limit, the line curves and the spring may deform inelastically (it won't return to its original length).\n\nIt is sometimes shown on a graph as the point where the line stops being straight.", difficulty:2, category:"concept"},
+  {id:"s10fc-14-4-4", islandId:"s10i-14-4", front:"A spring extends by 0.05 m when a force of 4 N is applied. Calculate the spring constant.",
+   back:"F = k e, so k = F ÷ e\nk = 4 ÷ 0.05\nk = 80 N/m\n\nThe spring constant is 80 newtons per metre. This means a force of 80 N would be needed to extend the spring by 1 metre (within its limit of proportionality).", difficulty:2, category:"calculation"},
+  {id:"s10fc-14-4-5", islandId:"s10i-14-4", front:"How do you calculate the elastic potential energy stored in a spring?",
+   back:"Elastic potential energy stored in a stretched (or compressed) spring:\n\nEe = ½ k e²\n\nWhere:\n• Ee = elastic potential energy in joules (J)\n• k = spring constant in newtons per metre (N/m)\n• e = extension in metres (m)\n\nThis assumes the spring is not stretched beyond its limit of proportionality. Note the extension is squared.", difficulty:2, category:"calculation"},
+
+  // s10i-14-5 — Scalars, Vectors & Resultant Forces
+  {id:"s10fc-14-5-1", islandId:"s10i-14-5", front:"What is the difference between a scalar and a vector quantity?",
+   back:"• A scalar has magnitude (size) only.\nExamples: distance, speed, mass, energy, time, temperature.\n\n• A vector has both magnitude and direction.\nExamples: displacement, velocity, force, acceleration, weight, momentum.\n\nVectors are often drawn as arrows: the length shows the magnitude and the arrow points in the direction.", difficulty:1, category:"definition"},
+  {id:"s10fc-14-5-2", islandId:"s10i-14-5", front:"What is a free-body diagram?",
+   back:"A free-body diagram shows a single object on its own with all the forces acting on it drawn as arrows.\n\n• Each arrow starts at the object.\n• The length of each arrow represents the size of the force.\n• The direction of each arrow represents the direction of the force.\n\nFree-body diagrams make it easier to identify and combine forces to find the resultant.", difficulty:1, category:"concept"},
+  {id:"s10fc-14-5-3", islandId:"s10i-14-5", front:"What is a resultant force?",
+   back:"A resultant force is the single force that has the same effect as all the forces acting on an object combined.\n\n• Forces in the same direction: add them.\n• Forces in opposite directions: subtract them (take the difference; the resultant acts in the direction of the larger force).\n\nIf the resultant force is zero, the object is in equilibrium (balanced).", difficulty:1, category:"definition"},
+  {id:"s10fc-14-5-4", islandId:"s10i-14-5", front:"A box has a 30 N force pulling it right and a 12 N friction force acting left. Calculate the resultant force.",
+   back:"The forces act along the same line in opposite directions, so subtract:\n\nResultant = 30 − 12 = 18 N to the right\n\nThe resultant force is 18 N in the direction of motion (right). Because the resultant is not zero, the box accelerates.", difficulty:1, category:"calculation"},
+  {id:"s10fc-14-5-5", islandId:"s10i-14-5", front:"How can two perpendicular forces be combined into a resultant?",
+   back:"Two forces acting at right angles can be combined using a scale drawing:\n\n• Draw each force as an arrow to scale, tip-to-tail (or as a rectangle / parallelogram).\n• The diagonal arrow from the start to the finish is the resultant.\n• Measure its length (and scale back) to find the magnitude, and measure the angle to find the direction.\n\nA single force can also be resolved into two perpendicular components in the reverse way.", difficulty:2, category:"concept"}
+);
+
+// ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
+Object.assign(QUESTIONS, {
+  "s10i-14-3": [
+    {q:"A force of 50 N moves an object 6 m in the direction of the force. How much work is done?",
+     opts:["56 J","300 J","8.3 J","44 J"], c:1,
+     e:"W = F s = 50 × 6 = 300 J. Work done equals the energy transferred, measured in joules."},
+    {q:"What is 1 joule equal to?",
+     opts:["1 newton per metre","1 newton-metre","1 watt per second","1 newton per second"], c:1,
+     e:"1 joule = 1 newton-metre. One joule of work is done when a force of 1 N moves an object 1 m along the line of action of the force."},
+    {q:"When work is done against friction as a box slides across a floor, where does the energy go?",
+     opts:["To the kinetic store of the box only","To the thermal (internal) energy stores of the surfaces","It disappears completely","To the gravitational store of the box"], c:1,
+     e:"Work done against friction transfers energy to the thermal energy stores of the surfaces in contact, which warm up. This energy is usually dissipated and 'wasted'."},
+    {q:"A crane lifts a load, doing 8000 J of work in 20 s. What is the crane's power?",
+     opts:["160 000 W","400 W","0.0025 W","2.5 W"], c:1,
+     e:"P = W ÷ t = 8000 ÷ 20 = 400 W. Power is the rate of energy transfer, measured in watts (1 W = 1 J/s)."},
+    {q:"Two motors transfer the same amount of energy, but motor A takes less time than motor B. Which has the greater power?",
+     opts:["Motor B","Motor A","They have equal power","Cannot be determined"], c:1,
+     e:"Power = energy ÷ time. For the same energy, a shorter time gives greater power. Motor A transfers the energy faster, so it is more powerful."}
+  ],
+  "s10i-14-4": [
+    {q:"Which statement describes elastic deformation?",
+     opts:["The object stays permanently deformed","The object returns to its original shape when the force is removed","The object breaks apart","The object gets hotter and melts"], c:1,
+     e:"In elastic deformation the object returns to its original shape and size once the force is removed. Permanent change is inelastic (plastic) deformation."},
+    {q:"A spring has a spring constant of 25 N/m. What force is needed to extend it by 0.2 m?",
+     opts:["5 N","125 N","0.008 N","12.5 N"], c:0,
+     e:"F = k e = 25 × 0.2 = 5 N. The extension must be in metres and the spring constant in N/m."},
+    {q:"What does the limit of proportionality represent on a force–extension graph?",
+     opts:["The point where the spring snaps","The point beyond which extension is no longer directly proportional to force","The maximum extension ever possible","The starting point of the graph"], c:1,
+     e:"Up to the limit of proportionality the graph is a straight line through the origin (Hooke's law holds). Beyond it, the line curves and extension is no longer proportional to force."},
+    {q:"In the force–extension required practical, what shape is the graph before the limit of proportionality?",
+     opts:["A curve bending upwards","A horizontal straight line","A straight line through the origin","A straight line with a negative gradient"], c:2,
+     e:"While Hooke's law holds, force is directly proportional to extension, so the graph is a straight line passing through the origin. The gradient equals the spring constant k."},
+    {q:"A spring with a spring constant of 200 N/m is extended by 0.1 m. How much elastic potential energy is stored?",
+     opts:["20 J","2 J","1 J","10 J"], c:2,
+     e:"Ee = ½ k e² = 0.5 × 200 × (0.1)² = 0.5 × 200 × 0.01 = 1 J. Remember to square the extension before multiplying."}
+  ],
+  "s10i-14-5": [
+    {q:"Which of the following is a vector quantity?",
+     opts:["Mass","Speed","Velocity","Energy"], c:2,
+     e:"Velocity is a vector because it has both magnitude and direction. Mass, speed and energy are scalars (magnitude only)."},
+    {q:"Which set contains only scalar quantities?",
+     opts:["Distance, speed, mass, energy","Displacement, velocity, force","Force, acceleration, weight","Velocity, momentum, displacement"], c:0,
+     e:"Distance, speed, mass and energy all have magnitude only, so they are scalars. The other options contain vectors such as velocity, force and acceleration."},
+    {q:"A car experiences a 500 N driving force forwards and 200 N of resistive forces backwards. What is the resultant force?",
+     opts:["700 N forwards","300 N backwards","300 N forwards","250 N forwards"], c:2,
+     e:"Forces along the same line in opposite directions are subtracted: 500 − 200 = 300 N. The resultant acts in the direction of the larger force, i.e. forwards."},
+    {q:"On a free-body diagram, what does the length of each force arrow represent?",
+     opts:["The time the force acts","The magnitude (size) of the force","The mass of the object","The speed of the object"], c:1,
+     e:"In a free-body diagram, the length of each arrow represents the magnitude of the force, and the direction of the arrow shows the direction the force acts."},
+    {q:"Two forces of 3 N and 4 N act on an object at right angles to each other. What is the magnitude of the resultant force?",
+     opts:["7 N","1 N","5 N","12 N"], c:2,
+     e:"For perpendicular forces the resultant is the diagonal of a rectangle. By a scale drawing (or Pythagoras): √(3² + 4²) = √25 = 5 N."}
+  ]
+});
+
+// ── LESSONS ─────────────────────────────────────────────────────────────────
+Object.assign(LESSONS, {
+
+'s10i-14-3': `
+<h2>Work, Energy &amp; Power</h2>
+<div class="lesson-diagram" data-diagram="energy-stores"><p class="diagram-caption">Doing work transfers energy from one store to another &mdash; for example from a chemical store to a kinetic or thermal store.</p></div>
+<p>Whenever a force makes an object move, <strong>work is done</strong>. Work done is exactly equal to the energy transferred, and both are measured in joules (J).</p>
+
+<h3>Calculating Work Done</h3>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>Work done (J) = force (N) &times; distance (m)&nbsp;&nbsp;&rarr;&nbsp;&nbsp;W = F s</strong></p>
+<p>The distance must be measured along the line of action of the force. One joule is the work done when a force of one newton moves an object one metre, so <strong>1 J = 1 N&middot;m (one newton-metre)</strong>.</p>
+
+<h3>Work Done Against Friction</h3>
+<p>When you push an object at a steady speed, you are doing work against friction. This energy is transferred to the <strong>thermal energy stores</strong> of the object and the surface, so they warm up. The energy is dissipated to the surroundings and becomes wasted energy.</p>
+
+<h3>Power</h3>
+<p>Power is the <strong>rate</strong> of doing work, or the rate at which energy is transferred:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>P = W &divide; t = E &divide; t</strong></p>
+<p>Power is measured in watts (W), where 1 W = 1 joule per second. A more powerful machine transfers the same energy in a shorter time.</p>
+
+<h3>Worked Example</h3>
+<p>A student lifts a 150 N box onto a shelf 2 m high, taking 4 s.</p>
+<p>Work done: W = F s = 150 &times; 2 = <strong>300 J</strong><br>
+Power: P = W &divide; t = 300 &divide; 4 = <strong>75 W</strong></p>
+<p>The student transfers 300 J of energy to the gravitational store of the box, at a rate of 75 joules every second.</p>
+
+<h3>Common Mistake</h3>
+<p>Students sometimes confuse work (energy, in joules) with power (rate, in watts). Power always involves <em>time</em>. Also, only the distance moved <em>in the direction of the force</em> counts &mdash; if a force is applied but the object does not move, no work is done.</p>
+`,
+
+'s10i-14-4': `
+<h2>Elasticity &amp; Hooke&rsquo;s Law</h2>
+<p>When a force is applied to an object it can stretch, compress or bend. How the object responds depends on whether the deformation is elastic or inelastic.</p>
+
+<h3>Elastic and Inelastic Deformation</h3>
+<p><strong>Elastic deformation:</strong> the object returns to its original shape and size when the force is removed (e.g. a spring stretched within its limit).<br>
+<strong>Inelastic (plastic) deformation:</strong> the object is permanently changed and does not return to its original shape (e.g. over-bending a metal wire).</p>
+
+<h3>Hooke&rsquo;s Law</h3>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>F = k e</strong></p>
+<p>Force F is in newtons (N), the spring constant k is in newtons per metre (N/m), and the extension e is in metres (m). Hooke&rsquo;s law states that extension is <strong>directly proportional</strong> to the force applied, as long as the <strong>limit of proportionality</strong> is not exceeded. Beyond this limit, extension is no longer proportional to force.</p>
+
+<h3>Required Practical: Force &amp; Extension</h3>
+<p>Hang a spring from a clamp stand and measure its natural length. Add masses one at a time, calculating the weight (force) of each, and measure the new length to find the extension each time. Plot a graph of <strong>force (y-axis) against extension (x-axis)</strong>. The result is a straight line through the origin until the limit of proportionality, after which the line curves. The gradient of the straight section equals the spring constant k.</p>
+
+<h3>Elastic Potential Energy</h3>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>Ee = &frac12; k e&sup2;</strong></p>
+<p>This is the energy stored in a spring stretched within its limit of proportionality (Ee in joules).</p>
+
+<h3>Worked Example</h3>
+<p>A spring has a spring constant of 50 N/m and is stretched by 0.2 m (within its limit of proportionality).</p>
+<p>Force needed: F = k e = 50 &times; 0.2 = <strong>10 N</strong><br>
+Energy stored: Ee = &frac12; k e&sup2; = 0.5 &times; 50 &times; (0.2)&sup2; = 0.5 &times; 50 &times; 0.04 = <strong>1 J</strong></p>
+
+<h3>Common Mistake</h3>
+<p>In Ee = &frac12; k e&sup2;, only the extension is squared &mdash; not the whole expression. Work out e&sup2; first, then multiply by &frac12; and k. Also remember to convert any extension given in centimetres into metres before substituting.</p>
+`,
+
+'s10i-14-5': `
+<h2>Scalars, Vectors &amp; Resultant Forces</h2>
+<div class="lesson-diagram" data-diagram="force-arrows"><p class="diagram-caption">Forces are drawn as arrows: the length shows the size of the force and the arrowhead shows its direction.</p></div>
+<p>Physical quantities fall into two groups. A <strong>scalar</strong> has magnitude only; a <strong>vector</strong> has both magnitude and direction.</p>
+
+<h3>Scalars and Vectors</h3>
+<p><strong>Scalars:</strong> distance, speed, mass, energy, time, temperature.<br>
+<strong>Vectors:</strong> displacement, velocity, force, acceleration, weight, momentum.<br>
+Vectors are represented by arrows &mdash; the length is drawn to scale to show the magnitude, and the direction of the arrow shows the direction of the quantity.</p>
+
+<h3>Free-Body Diagrams</h3>
+<p>A free-body diagram shows a single object with all the forces acting on it drawn as arrows from the object. They make it easy to see which forces to combine.</p>
+
+<h3>Resultant Forces</h3>
+<p>The <strong>resultant force</strong> is the single force that has the same effect as all the forces combined. For forces acting along a straight line: add forces in the same direction, and subtract forces in opposite directions. If the resultant is zero, the object is in equilibrium.</p>
+<p>Two forces at right angles can be combined using a <strong>scale drawing</strong>: draw each force to scale tip-to-tail, then the diagonal arrow from start to finish is the resultant. Measuring its length and angle gives the magnitude and direction. The reverse process &mdash; splitting one force into two perpendicular components &mdash; is called resolving.</p>
+
+<h3>Worked Example</h3>
+<p>A sledge is pulled with a 40 N force forwards while friction provides 15 N backwards along the same line.</p>
+<p>Resultant = 40 &minus; 15 = <strong>25 N forwards</strong></p>
+<p>For perpendicular forces: a boat is pushed by a 6 N current and a 8 N engine force at right angles. By scale drawing (or Pythagoras): resultant = &radic;(6&sup2; + 8&sup2;) = &radic;100 = <strong>10 N</strong>, acting along the diagonal.</p>
+
+<h3>Common Mistake</h3>
+<p>A common error is adding the magnitudes of forces that act at an angle &mdash; e.g. saying 6 N and 8 N at right angles give 14 N. Perpendicular forces must be combined using a scale drawing (the diagonal of a rectangle), giving 10 N, not 14 N.</p>
+`
+
+});
