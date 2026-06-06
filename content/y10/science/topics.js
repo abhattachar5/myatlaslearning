@@ -165,7 +165,17 @@ CURRICULUM.push(
    topicId:"s10t-07", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
    description:"Explain electrolysis of molten and aqueous ionic compounds.",
    learningOutcomes:["Explain what happens at each electrode","Write half equations","Predict products of electrolysis"],
-   topics:["Electrolysis setup","Half equations","Predicting products"], prerequisites:["s10i-07-1"]}
+   topics:["Electrolysis setup","Half equations","Predicting products"], prerequisites:["s10i-07-1"]},
+  {id:"s10i-07-4", name:"Acids, Bases & Making Salts", emoji:"🧪", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-07", yearGroup:"Year 10", difficulty:2, estimatedHours:3,
+   description:"React acids with metals, bases and carbonates to make salts, and prepare a pure soluble salt.",
+   learningOutcomes:["Recall the three reactions of acids and name salts","Write the neutralisation ionic equation","Prepare a pure, dry soluble salt; distinguish strong and weak acids"],
+   topics:["Reactions of acids","Neutralisation & salts","Strong vs weak acids"], prerequisites:["s10i-07-1"]},
+  {id:"s10i-07-5", name:"Oxidation, Reduction & Redox", emoji:"🔄", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-07", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Define oxidation and reduction (electrons and oxygen) and write half equations for redox reactions.",
+   learningOutcomes:["Define oxidation and reduction (OIL RIG)","Explain why displacement is redox","Write half equations for redox reactions"],
+   topics:["OIL RIG","Redox in displacement","Half equations"], prerequisites:["s10i-07-1"]}
 );
 
 // Topic 8: Energy Changes
@@ -193,7 +203,17 @@ CURRICULUM.push(
    topicId:"s10t-09", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Use collision theory to explain rate and interpret rate–time graphs.",
    learningOutcomes:["Explain collision theory (frequency and energy)","Read and interpret rate graphs","Calculate mean rate of reaction"],
-   topics:["Collision theory","Rate graphs","Mean rate"], prerequisites:["s10i-09-1"]}
+   topics:["Collision theory","Rate graphs","Mean rate"], prerequisites:["s10i-09-1"]},
+  {id:"s10i-09-3", name:"Reversible Reactions & Equilibrium", emoji:"⇌", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-09", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Understand reversible reactions, energy changes and dynamic equilibrium in a closed system.",
+   learningOutcomes:["Explain reversible reactions and the ⇌ symbol","Describe dynamic equilibrium","Relate exothermic and endothermic directions"],
+   topics:["Reversible reactions","Dynamic equilibrium","Energy changes"], prerequisites:["s10i-09-1"]},
+  {id:"s10i-09-4", name:"Le Chatelier's Principle", emoji:"⚖️", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-09", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Predict how changes in concentration, temperature and pressure shift the position of equilibrium.",
+   learningOutcomes:["State and apply Le Chatelier's principle","Predict effects of concentration, temperature and pressure","Explain the Haber process compromise conditions"],
+   topics:["Le Chatelier's principle","Shifting equilibrium","The Haber process"], prerequisites:["s10i-09-3"]}
 );
 
 // Topic 10: Organic Chemistry

@@ -132,3 +132,133 @@ Object.assign(LESSONS, {
 `
 
 });
+
+// ════════════════════════════════════════════════════════════════════════════
+// NEW ISLANDS (set-content gap fill): Reversible Reactions & Equilibrium
+//   s10i-09-3 — Reversible Reactions & Dynamic Equilibrium
+//   s10i-09-4 — Le Chatelier's Principle
+// ════════════════════════════════════════════════════════════════════════════
+FLASHCARDS.push(
+  // s10i-09-3 — Reversible Reactions & Dynamic Equilibrium
+  {id:"s10fc-09-3-1", islandId:"s10i-09-3", front:"What is a reversible reaction? How is it shown?",
+   back:"A reaction in which the products can react together to re-form the original reactants. It is shown by the ⇌ symbol instead of a single arrow.\n\nExample: hydrated copper(II) sulfate ⇌ anhydrous copper(II) sulfate + water (blue ⇌ white).", difficulty:1, category:"definition"},
+  {id:"s10fc-09-3-2", islandId:"s10i-09-3", front:"What is dynamic equilibrium?",
+   back:"In a CLOSED system, equilibrium is reached when the forward and reverse reactions occur at exactly the same rate.\n\nAt this point the concentrations of reactants and products stay constant (they do not change), even though both reactions are still happening.", difficulty:2, category:"concept"},
+  {id:"s10fc-09-3-3", islandId:"s10i-09-3", front:"At equilibrium, are the amounts of reactants and products equal?",
+   back:"No — not necessarily. The concentrations are CONSTANT, but not usually equal.\n\nEquilibrium can lie to the right (mostly products) or to the left (mostly reactants), depending on the reaction and conditions.", difficulty:2, category:"concept"},
+  {id:"s10fc-09-3-4", islandId:"s10i-09-3", front:"How does energy transfer work in a reversible reaction?",
+   back:"If the forward reaction is exothermic, the reverse reaction is endothermic — by the same amount of energy.\n\nExample: heating hydrated copper sulfate (blue → white) is endothermic; adding water to anhydrous copper sulfate (white → blue) is exothermic.", difficulty:2, category:"concept"},
+  {id:"s10fc-09-3-5", islandId:"s10i-09-3", front:"Why must a reversible reaction be in a closed system to reach equilibrium?",
+   back:"A closed system is one where no reactants or products can escape (and none are added).\n\nIf products could escape, the reverse reaction could not occur and equilibrium could never be established. A closed system keeps everything present so both reactions continue.", difficulty:2, category:"concept"},
+
+  // s10i-09-4 — Le Chatelier's Principle
+  {id:"s10fc-09-4-1", islandId:"s10i-09-4", front:"State Le Chatelier's principle.",
+   back:"If a change is made to a system at equilibrium, the position of equilibrium shifts to oppose (counteract) that change.\n\nThis lets us predict how changing concentration, temperature or pressure affects the amount of product.", difficulty:1, category:"definition"},
+  {id:"s10fc-09-4-2", islandId:"s10i-09-4", front:"How does changing CONCENTRATION affect the position of equilibrium?",
+   back:"• Increasing the concentration of a reactant shifts equilibrium to the right → more product.\n• Removing a product also shifts equilibrium to the right.\n• Increasing a product shifts equilibrium to the left.\n\nThe system shifts to use up whatever you added.", difficulty:2, category:"concept"},
+  {id:"s10fc-09-4-3", islandId:"s10i-09-4", front:"How does changing TEMPERATURE affect the position of equilibrium?",
+   back:"• Increasing temperature shifts equilibrium in the ENDOTHERMIC direction (to absorb the added heat).\n• Decreasing temperature shifts it in the EXOTHERMIC direction.\n\nSo for an exothermic forward reaction, raising the temperature reduces the yield of product.", difficulty:3, category:"concept"},
+  {id:"s10fc-09-4-4", islandId:"s10i-09-4", front:"How does changing PRESSURE affect a gaseous equilibrium?",
+   back:"Only affects reactions involving gases.\n\n• Increasing pressure shifts equilibrium to the side with FEWER gas molecules.\n• Decreasing pressure shifts it to the side with MORE gas molecules.\n\nCount the moles of gas on each side to decide.", difficulty:3, category:"concept"},
+  {id:"s10fc-09-4-5", islandId:"s10i-09-4", front:"What effect does a catalyst have on the position of equilibrium?",
+   back:"None. A catalyst does NOT change the position of equilibrium or the yield.\n\nIt speeds up the forward and reverse reactions equally, so equilibrium is simply reached FASTER.", difficulty:2, category:"concept"}
+);
+
+Object.assign(QUESTIONS, {
+  "s10i-09-3": [
+    {q:"Which symbol shows that a reaction is reversible?",
+     opts:["→","⇌","=","↓"], c:1,
+     e:"The ⇌ (double half-arrows) symbol shows a reversible reaction — the reaction can go both forwards and backwards. A single arrow → shows a one-way reaction."},
+    {q:"At dynamic equilibrium in a closed system:",
+     opts:["The forward and reverse reactions have both stopped","The forward and reverse reactions occur at the same rate","Only the forward reaction occurs","The amounts of reactants and products are always equal"], c:1,
+     e:"At dynamic equilibrium both reactions are still occurring, but at equal rates, so the concentrations of reactants and products stay constant. The reactions have not stopped, and the amounts are constant but not necessarily equal."},
+    {q:"Heating blue hydrated copper(II) sulfate turns it white (anhydrous). This forward reaction is endothermic. The reverse reaction (adding water) is therefore:",
+     opts:["Also endothermic","Exothermic","Neither","Impossible"], c:1,
+     e:"In a reversible reaction, if the forward reaction is endothermic, the reverse reaction is exothermic by the same amount. Adding water to white anhydrous copper sulfate releases energy (and turns it blue)."},
+    {q:"Why can equilibrium only be reached in a closed system?",
+     opts:["So the temperature stays constant","So no reactants or products can escape, allowing the reverse reaction to occur","So a catalyst can be added","So the pressure increases"], c:1,
+     e:"A closed system stops products escaping. If products escaped, the reverse reaction could not happen and equilibrium could never be established."},
+    {q:"At equilibrium, the concentrations of reactants and products are:",
+     opts:["Always equal","Constant (unchanging)","Always zero","Constantly increasing"], c:1,
+     e:"At equilibrium the concentrations remain constant — they stop changing — but they are usually not equal. Equilibrium may favour the products or the reactants."}
+  ],
+  "s10i-09-4": [
+    {q:"Le Chatelier's principle states that a system at equilibrium responds to a change by:",
+     opts:["Shifting to oppose the change","Stopping the reaction","Always making more product","Releasing a catalyst"], c:0,
+     e:"The position of equilibrium shifts in the direction that counteracts the change imposed on it — this lets us predict the effect of changing conditions."},
+    {q:"In an exothermic forward reaction at equilibrium, increasing the temperature will:",
+     opts:["Increase the yield of product","Decrease the yield of product","Have no effect on yield","Stop the reaction"], c:1,
+     e:"Increasing temperature shifts equilibrium in the endothermic (reverse) direction to absorb the heat, so less product forms — the yield decreases."},
+    {q:"For the equilibrium N₂(g) + 3H₂(g) ⇌ 2NH₃(g), increasing the pressure shifts the equilibrium:",
+     opts:["To the left (4 molecules of gas)","To the right (2 molecules of gas)","No effect","It depends on the catalyst"], c:1,
+     e:"Increasing pressure shifts equilibrium to the side with fewer gas molecules. There are 4 moles of gas on the left and 2 on the right, so equilibrium shifts right, increasing the yield of ammonia."},
+    {q:"Adding a catalyst to a reaction at equilibrium will:",
+     opts:["Increase the amount of product at equilibrium","Shift the equilibrium to the right","Make equilibrium be reached faster, with no change in yield","Make the reaction irreversible"], c:2,
+     e:"A catalyst speeds up the forward and reverse reactions equally. Equilibrium is reached faster but the position of equilibrium — and therefore the yield — is unchanged."},
+    {q:"Removing a product from a reaction mixture at equilibrium will shift the equilibrium:",
+     opts:["To the left","To the right, forming more product","Nowhere","Backwards to reactants"], c:1,
+     e:"Removing product means the system shifts to the right to replace it, forming more product. This is one way to increase yield in industrial processes."}
+  ]
+});
+
+Object.assign(LESSONS, {
+
+'s10i-09-3': `
+<h2>Reversible Reactions &amp; Dynamic Equilibrium</h2>
+<p>In some reactions the products can react together to re-form the reactants. These are <strong>reversible reactions</strong>, shown by the <strong>&rlhar;</strong> (⇌) symbol rather than a single arrow.</p>
+
+<h3>A Classic Example</h3>
+<p>Hydrated copper(II) sulfate ⇌ anhydrous copper(II) sulfate + water</p>
+<ul>
+  <li>Heating the <strong>blue</strong> hydrated crystals drives off water, leaving the <strong>white</strong> anhydrous powder (forward reaction, endothermic).</li>
+  <li>Adding water to the white powder turns it <strong>blue</strong> again and releases heat (reverse reaction, exothermic).</li>
+</ul>
+<p>If the forward reaction is endothermic, the reverse is exothermic by the same amount of energy.</p>
+
+<h3>Dynamic Equilibrium</h3>
+<p>In a <strong>closed system</strong> (nothing can enter or leave), a reversible reaction reaches <strong>equilibrium</strong> when the forward and reverse reactions happen at the <strong>same rate</strong>. At this point the concentrations of reactants and products stay <strong>constant</strong> — but both reactions are still going on. This is why it is called <em>dynamic</em>.</p>
+<p>Equilibrium does not mean the amounts are equal. It can lie towards the products (mostly products present) or towards the reactants.</p>
+
+<h3>Worked Example</h3>
+<p>A student seals reactants in a flask and the reaction reaches equilibrium. They observe no further colour change. Has the reaction stopped?</p>
+<p>No. At dynamic equilibrium the forward and reverse reactions are still occurring, but at equal rates, so there is no <em>net</em> change in the concentrations. The colour appears constant even though particles are continually reacting in both directions.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often write that at equilibrium "the reaction has stopped" or "the amounts of reactants and products are equal". Both are wrong. The reactions continue at equal rates, and the concentrations are constant but generally <em>not</em> equal.</p>
+`,
+
+'s10i-09-4': `
+<h2>Le Chatelier's Principle</h2>
+<p><strong>Le Chatelier's principle:</strong> if a change is made to a system at equilibrium, the position of equilibrium shifts to <strong>oppose (counteract)</strong> the change. This lets us predict how to increase the yield of a product.</p>
+
+<h3>Concentration</h3>
+<ul>
+  <li>Increase a reactant &rarr; equilibrium shifts <strong>right</strong> (more product).</li>
+  <li>Remove a product &rarr; equilibrium shifts <strong>right</strong> (more product).</li>
+  <li>Increase a product &rarr; equilibrium shifts <strong>left</strong>.</li>
+</ul>
+
+<h3>Temperature</h3>
+<ul>
+  <li>Increase temperature &rarr; shifts in the <strong>endothermic</strong> direction.</li>
+  <li>Decrease temperature &rarr; shifts in the <strong>exothermic</strong> direction.</li>
+</ul>
+
+<h3>Pressure (gases only)</h3>
+<ul>
+  <li>Increase pressure &rarr; shifts to the side with <strong>fewer gas molecules</strong>.</li>
+  <li>Decrease pressure &rarr; shifts to the side with <strong>more gas molecules</strong>.</li>
+</ul>
+
+<h3>Catalyst</h3>
+<p>A catalyst has <strong>no effect on the position</strong> of equilibrium. It speeds up the forward and reverse reactions equally, so equilibrium is just reached faster.</p>
+
+<h3>Worked Example — The Haber Process</h3>
+<p>N₂(g) + 3H₂(g) ⇌ 2NH₃(g)&nbsp;&nbsp;(forward reaction is exothermic)</p>
+<p>To maximise the yield of ammonia you would want a <strong>high pressure</strong> (shifts right — 4 gas molecules → 2) and a <strong>low temperature</strong> (shifts in the exothermic forward direction). In practice a <strong>compromise</strong> is used: ~200 atmospheres and ~450 °C with an iron catalyst. A lower temperature would give a higher yield but far too slowly, so a moderate temperature balances yield against rate.</p>
+
+<h3>Common Mistake</h3>
+<p>A frequent error is saying a catalyst increases the yield at equilibrium. It does not — it only makes equilibrium arrive faster. Also remember that pressure changes only affect reactions involving <em>gases</em>, and you must compare the number of gas molecules on each side.</p>
+`
+
+});

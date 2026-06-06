@@ -196,3 +196,141 @@ Remaining in solution: Na⁺ and OH⁻ &rarr; sodium hydroxide (NaOH)</p>
 `
 
 });
+
+// ════════════════════════════════════════════════════════════════════════════
+// NEW ISLANDS (set-content gap fill): the acids / salts / redox strand
+//   s10i-07-4 — Acids, Bases & Making Salts
+//   s10i-07-5 — Oxidation, Reduction & Redox
+// ════════════════════════════════════════════════════════════════════════════
+FLASHCARDS.push(
+  // s10i-07-4 — Acids, Bases & Making Salts
+  {id:"s10fc-07-4-1", islandId:"s10i-07-4", front:"Give the three general reactions of acids.",
+   back:"1. acid + metal → salt + hydrogen\n2. acid + base (metal oxide or hydroxide) → salt + water\n3. acid + metal carbonate → salt + water + carbon dioxide\n\nA 'base' that dissolves in water is called an alkali.", difficulty:1, category:"definition"},
+  {id:"s10fc-07-4-2", islandId:"s10i-07-4", front:"What salt does each common acid produce?",
+   back:"• Hydrochloric acid (HCl) → chlorides\n• Sulfuric acid (H₂SO₄) → sulfates\n• Nitric acid (HNO₃) → nitrates\n\nExample: zinc + sulfuric acid → zinc sulfate + hydrogen.", difficulty:2, category:"concept"},
+  {id:"s10fc-07-4-3", islandId:"s10i-07-4", front:"Write the ionic equation for neutralisation.",
+   back:"H⁺(aq) + OH⁻(aq) → H₂O(l)\n\nAn acid (source of H⁺) reacts with an alkali (source of OH⁻) to form water. A neutral solution (a salt + water) has pH 7.", difficulty:2, category:"concept"},
+  {id:"s10fc-07-4-4", islandId:"s10i-07-4", front:"Describe how to make a pure, dry sample of a soluble salt (required practical).",
+   back:"1. Add EXCESS insoluble base (e.g. copper oxide) to warm acid until no more dissolves\n2. Filter to remove the unreacted excess base\n3. Gently evaporate the filtrate to the point of crystallisation\n4. Leave to cool so crystals form\n5. Pat the crystals dry\n\nUsing excess base ensures all the acid is used up.", difficulty:3, category:"application"},
+  {id:"s10fc-07-4-5", islandId:"s10i-07-4", front:"What is the difference between a strong acid and a weak acid?",
+   back:"• Strong acids (HCl, H₂SO₄, HNO₃) fully ionise in water.\n• Weak acids (ethanoic, citric, carbonic) only partially ionise.\n\nStrength is NOT the same as concentration. At the same concentration, a strong acid has a lower pH than a weak acid.\n\n(As pH falls by 1, H⁺ concentration rises 10×.)", difficulty:3, category:"concept"},
+
+  // s10i-07-5 — Oxidation, Reduction & Redox
+  {id:"s10fc-07-5-1", islandId:"s10i-07-5", front:"Define oxidation and reduction in terms of electrons (OIL RIG).",
+   back:"OIL RIG:\n• Oxidation Is Loss of electrons\n• Reduction Is Gain of electrons\n\nA reaction in which both happen together is called a REDOX reaction.", difficulty:1, category:"definition"},
+  {id:"s10fc-07-5-2", islandId:"s10i-07-5", front:"Define oxidation and reduction in terms of oxygen.",
+   back:"• Oxidation = gain of oxygen\n• Reduction = loss of oxygen\n\nExample: when iron oxide is reduced by carbon, the iron oxide loses oxygen (reduced) and the carbon gains oxygen (oxidised).", difficulty:2, category:"concept"},
+  {id:"s10fc-07-5-3", islandId:"s10i-07-5", front:"Why are displacement reactions redox reactions?",
+   back:"A more reactive metal gives away electrons (oxidised) and the less reactive metal ion gains them (reduced).\n\nExample: Zn + Cu²⁺ → Zn²⁺ + Cu\nZinc is oxidised; copper ions are reduced — so it is a redox reaction.", difficulty:2, category:"concept"},
+  {id:"s10fc-07-5-4", islandId:"s10i-07-5", front:"Write half equations for: Zn + Cu²⁺ → Zn²⁺ + Cu.",
+   back:"Oxidation (loss of e⁻): Zn → Zn²⁺ + 2e⁻\nReduction (gain of e⁻): Cu²⁺ + 2e⁻ → Cu\n\nThe electrons lost by zinc are gained by the copper ions. A half equation shows what happens to one species.", difficulty:3, category:"calculation"},
+  {id:"s10fc-07-5-5", islandId:"s10i-07-5", front:"Give three examples of redox reactions from the GCSE course.",
+   back:"1. Metal + acid (the metal is oxidised, losing electrons)\n2. Displacement reactions (electron transfer between metals/ions)\n3. Extraction of metals with carbon (metal oxide reduced) and electrolysis (reduction at the cathode, oxidation at the anode).", difficulty:2, category:"concept"}
+);
+
+Object.assign(QUESTIONS, {
+  "s10i-07-4": [
+    {q:"Which products form when an acid reacts with a metal carbonate?",
+     opts:["Salt + hydrogen","Salt + water only","Salt + water + carbon dioxide","Salt + oxygen"], c:2,
+     e:"Acid + metal carbonate → salt + water + carbon dioxide. The fizzing (CO₂) is a test for a carbonate. (Acid + metal gives hydrogen; acid + base gives just salt + water.)"},
+    {q:"Hydrochloric acid reacts with sodium hydroxide. Which salt is formed?",
+     opts:["Sodium sulfate","Sodium chloride","Sodium nitrate","Sodium carbonate"], c:1,
+     e:"Hydrochloric acid always produces a chloride salt. Acid + alkali → salt + water, so HCl + NaOH → NaCl (sodium chloride) + water."},
+    {q:"The ionic equation for neutralisation is:",
+     opts:["H⁺ + OH⁻ → H₂O","Na⁺ + Cl⁻ → NaCl","H₂ + O₂ → H₂O","H⁺ + Cl⁻ → HCl"], c:0,
+     e:"Neutralisation is the reaction of hydrogen ions from the acid with hydroxide ions from the alkali to form water: H⁺(aq) + OH⁻(aq) → H₂O(l)."},
+    {q:"When making copper sulfate from copper oxide and sulfuric acid, why is the copper oxide added in excess?",
+     opts:["To make the reaction exothermic","To ensure all the acid reacts, so the salt is pure","To change the colour","To speed up crystallisation"], c:1,
+     e:"Adding excess insoluble copper oxide ensures all the acid is used up. The unreacted excess is then filtered off, leaving a pure salt solution to crystallise."},
+    {q:"Two acids have the same concentration, but acid A has a lower pH than acid B. This means:",
+     opts:["Acid A is more dilute","Acid A is a stronger acid (ionises more fully)","Acid B contains no hydrogen","They are identical"], c:1,
+     e:"At the same concentration, the acid with the lower pH ionises more fully — it is the stronger acid. Strength (degree of ionisation) is different from concentration (amount dissolved)."}
+  ],
+  "s10i-07-5": [
+    {q:"In terms of electrons, oxidation is:",
+     opts:["Gain of electrons","Loss of electrons","Gain of oxygen only","Loss of protons"], c:1,
+     e:"OIL RIG: Oxidation Is Loss of electrons; Reduction Is Gain of electrons. (In terms of oxygen, oxidation is gain of oxygen — but the electron definition is the key one for redox.)"},
+    {q:"In the reaction Zn + Cu²⁺ → Zn²⁺ + Cu, the zinc atom is:",
+     opts:["Reduced (gains electrons)","Oxidised (loses electrons)","Unchanged","A catalyst"], c:1,
+     e:"Zinc goes from Zn to Zn²⁺, losing two electrons — it is oxidised. The copper ion Cu²⁺ gains those electrons to become Cu, so it is reduced."},
+    {q:"Which is the correct half equation for the reduction of copper ions?",
+     opts:["Cu → Cu²⁺ + 2e⁻","Cu²⁺ + 2e⁻ → Cu","Cu²⁺ → Cu + 2e⁻","Cu + 2e⁻ → Cu²⁺"], c:1,
+     e:"Reduction is gain of electrons. Cu²⁺ gains 2 electrons to form Cu: Cu²⁺ + 2e⁻ → Cu."},
+    {q:"When iron(III) oxide is reduced by carbon in a blast furnace, the carbon is:",
+     opts:["Reduced","Oxidised","Neither","Acting as a catalyst"], c:1,
+     e:"The iron oxide loses oxygen (reduced); the carbon gains oxygen to form carbon dioxide (oxidised). This is a redox reaction."},
+    {q:"Which of these is NOT a redox reaction?",
+     opts:["Magnesium burning in oxygen","Zinc displacing copper from copper sulfate","Neutralising hydrochloric acid with sodium hydroxide","Extracting iron with carbon"], c:2,
+     e:"Neutralisation (H⁺ + OH⁻ → H₂O) involves no change in electrons or oxidation states, so it is not redox. The other three all involve electron transfer (gain/loss of electrons or oxygen)."}
+  ]
+});
+
+Object.assign(LESSONS, {
+
+'s10i-07-4': `
+<h2>Acids, Bases &amp; Making Salts</h2>
+<div class="lesson-diagram" data-diagram="ph-scale"><p class="diagram-caption">The pH scale: acids below 7, neutral at 7, alkalis above 7</p></div>
+<p>Acids react with metals, bases and carbonates to produce <strong>salts</strong>. A salt is a compound formed when the hydrogen in an acid is replaced by a metal (or ammonium).</p>
+
+<h3>The Three Reactions of Acids</h3>
+<ul>
+  <li><strong>acid + metal</strong> → salt + hydrogen</li>
+  <li><strong>acid + base</strong> (metal oxide/hydroxide) → salt + water</li>
+  <li><strong>acid + metal carbonate</strong> → salt + water + carbon dioxide</li>
+</ul>
+<p>The salt's name comes from the acid: hydrochloric → <em>chloride</em>, sulfuric → <em>sulfate</em>, nitric → <em>nitrate</em>.</p>
+
+<h3>Neutralisation</h3>
+<p>When an acid reacts with an alkali, the reaction is <strong>neutralisation</strong>:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>H⁺(aq) + OH⁻(aq) &rarr; H₂O(l)</strong></p>
+<p>The pH scale runs from 0–14: acids are below 7, neutral solutions are 7, and alkalis are above 7. As pH falls by 1, the hydrogen-ion concentration increases tenfold.</p>
+
+<h3>Strong vs Weak Acids</h3>
+<p>A <strong>strong</strong> acid (HCl, H₂SO₄, HNO₃) ionises completely in water. A <strong>weak</strong> acid (ethanoic, citric, carbonic) only partially ionises. This is different from concentration — at the same concentration, a strong acid has a lower pH than a weak acid.</p>
+
+<h3>Worked Example — Making Copper Sulfate (Required Practical)</h3>
+<p>How would you make pure, dry copper(II) sulfate crystals from copper(II) oxide and sulfuric acid?</p>
+<ol>
+  <li>Warm the dilute sulfuric acid and add copper(II) oxide a little at a time until some remains <strong>unreacted</strong> (excess) — this ensures all the acid is used up.</li>
+  <li><strong>Filter</strong> to remove the excess copper oxide, leaving blue copper sulfate solution.</li>
+  <li>Gently <strong>evaporate</strong> the solution to the point of crystallisation, then leave it to <strong>cool</strong> so crystals form.</li>
+  <li>Remove and pat the crystals dry.</li>
+</ol>
+
+<h3>Common Mistake</h3>
+<p>Students often confuse <em>strength</em> with <em>concentration</em>. A concentrated weak acid can have a higher pH than a dilute strong acid. Strength is about how fully the acid ionises; concentration is about how much acid is dissolved.</p>
+`,
+
+'s10i-07-5': `
+<h2>Oxidation, Reduction &amp; Redox</h2>
+<div class="lesson-diagram" data-diagram="displacement-reaction"><p class="diagram-caption">A displacement reaction — a redox reaction driven by electron transfer</p></div>
+<p>Many reactions involve the transfer of electrons. <strong>Redox</strong> reactions are ones where oxidation and reduction happen at the same time.</p>
+
+<h3>Two Definitions</h3>
+<ul>
+  <li><strong>In terms of electrons (OIL RIG):</strong> Oxidation Is Loss of electrons; Reduction Is Gain of electrons.</li>
+  <li><strong>In terms of oxygen:</strong> oxidation is gain of oxygen; reduction is loss of oxygen.</li>
+</ul>
+<p>The electron definition is the more powerful one — it applies even when no oxygen is involved.</p>
+
+<h3>Redox in Displacement</h3>
+<p>When zinc displaces copper: Zn + Cu²⁺ &rarr; Zn²⁺ + Cu</p>
+<ul>
+  <li>Zinc loses electrons → <strong>oxidised</strong></li>
+  <li>Copper ions gain electrons → <strong>reduced</strong></li>
+</ul>
+
+<h3>Half Equations</h3>
+<p>A half equation shows what happens to one species:</p>
+<p style="text-align:center"><strong>Zn &rarr; Zn²⁺ + 2e⁻</strong> (oxidation)<br><strong>Cu²⁺ + 2e⁻ &rarr; Cu</strong> (reduction)</p>
+<p>The electrons lost in one half equation are gained in the other.</p>
+
+<h3>Worked Example</h3>
+<p>Magnesium reacts with copper(II) ions: Mg + Cu²⁺ → Mg²⁺ + Cu. Write the two half equations and identify what is oxidised.</p>
+<p>Mg &rarr; Mg²⁺ + 2e⁻ (magnesium loses electrons → oxidised).<br>Cu²⁺ + 2e⁻ &rarr; Cu (copper ions gain electrons → reduced).<br>Magnesium is oxidised; the copper ions are reduced.</p>
+
+<h3>Common Mistake</h3>
+<p>It is easy to mix up OIL RIG. Remember: in terms of <em>electrons</em>, oxidation is LOSS (not gain). The "gain of oxygen = oxidation" rule still works, but don't apply the oxygen rule to electrons — they are opposite ways round.</p>
+`
+
+});
