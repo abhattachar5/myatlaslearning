@@ -162,3 +162,168 @@ Object.assign(LESSONS, {
 `
 
 });
+
+// ── FLASHCARDS (g11i-05-3 .. g11i-05-5) ─────────────────────────────────────
+FLASHCARDS.push(
+  // g11i-05-3 — Physical Fieldwork Enquiry
+  {id:"g11fc-05-3-1", islandId:"g11i-05-3", front:"What is a suitable hypothesis and risk assessment for a river fieldwork enquiry?",
+   back:"Enquiry question: 'How do river characteristics change downstream along the River Holford?'\n\nHypothesis: 'River width, depth and velocity all increase with distance downstream, as predicted by the Bradshaw model.'\n\nRisk assessment (identify hazard → likelihood → control):\n• Slipping on wet banks → likely → wear wellingtons, work in pairs.\n• Cold water / deep pools → possible → avoid sites deeper than knee height, never wade alone.\n• Fast flow after rain → possible → check the forecast, postpone in flood conditions.\n• Weil's disease from river water → unlikely but serious → cover cuts, wash hands, no eating by the river.\n\nA written risk assessment is expected for any physical fieldwork. It shows you planned for safety and links directly to the methods you chose.", difficulty:2, category:"application"},
+  {id:"g11fc-05-3-2", islandId:"g11i-05-3", front:"How do you measure river width, depth and velocity in the field?",
+   back:"Width: stretch a tape measure from one bank to the other at the water's edge; record in metres.\n\nDepth: place a metre ruler vertically on the bed at regular intervals across the channel (e.g. every 20 cm); read the depth at the water surface; calculate the mean.\n\nVelocity: use a flow meter at 60% depth facing upstream, or the float method — time an orange over a 10 m stretch, repeat three times, take the mean, then multiply by 0.85 to correct for faster surface flow.\n\nCross-sectional area = mean width × mean depth.\nDischarge = cross-sectional area × velocity (in cumecs, m³/s).\n\nTake repeat readings at each site and calculate means to improve reliability.", difficulty:2, category:"calculation"},
+  {id:"g11fc-05-3-3", islandId:"g11i-05-3", front:"How would you measure a beach profile and sediment size in a coastal enquiry?",
+   back:"Beach profile (to investigate gradient):\n1. Work up the beach from the water's edge to the back.\n2. At each break of slope, place two ranging poles a fixed distance apart.\n3. Use a clinometer to measure the angle of slope between them.\n4. Record the distance and angle for each segment; plot as a profile.\n\nSediment size (to investigate sorting):\n1. At each point, collect a sample of pebbles (e.g. pick up the first 10 your finger touches — random).\n2. Measure the long axis of each with callipers in millimetres.\n3. Calculate the mean size at each point along the transect.\n4. Optionally measure roundness using Power's index.\n\nThis lets you test hypotheses such as 'pebble size decreases along the beach in the direction of longshore drift'.", difficulty:2, category:"application"},
+  {id:"g11fc-05-3-4", islandId:"g11i-05-3", front:"How should physical fieldwork data be presented and analysed?",
+   back:"Presentation:\n• River cross-sections — drawn to scale to show channel shape at each site.\n• Line graphs — width, depth or velocity against distance downstream.\n• Scatter graphs — to test relationships (e.g. distance vs velocity) with a line of best fit.\n• Located bar charts on a map — to show spatial variation along the river or beach.\n\nAnalysis (move from 'what' to 'why'):\n• Describe the trend: 'Velocity rose from 0.3 m/s at Site 1 to 1.1 m/s at Site 6.'\n• Explain it: 'Velocity increases downstream because the channel deepens, the hydraulic radius increases and friction falls, so flow becomes more efficient — matching the Bradshaw model.'\n• Identify anomalies and suggest reasons (e.g. a weir or tributary).\n\nStatistical test: Spearman's rank can confirm whether a relationship is significant.", difficulty:2, category:"concept"},
+  {id:"g11fc-05-3-5", islandId:"g11i-05-3", front:"How do you write a conclusion and evaluation for a physical fieldwork enquiry?",
+   back:"Conclusion — answer the question using evidence:\n'The data supports the hypothesis. Width increased from 1.2 m to 4.8 m and velocity from 0.3 to 1.1 m/s downstream, matching the Bradshaw model. Depth showed a weaker trend, partly rejecting the prediction.'\n\nEvaluation — judge the enquiry honestly:\n• Reliability: 6 sites over 3 km is limited coverage; data from one dry day in June may not be typical.\n• Accuracy: the float method is less precise than a flow meter; human error in reading the metre ruler.\n• Anomalies: one shallow site behind a weir distorted the depth trend.\n• Improvements: add more sites, use a digital flow meter, repeat in different seasons, take more repeats per site.\n\nStrong evaluations are specific and link each weakness to a practical improvement.", difficulty:3, category:"concept"},
+
+  // g11i-05-4 — Human Fieldwork Enquiry
+  {id:"g11fc-05-4-1", islandId:"g11i-05-4", front:"What is a suitable hypothesis for a human (urban) fieldwork enquiry?",
+   back:"Enquiry question: 'How does environmental quality change with distance from the city centre?'\n\nHypothesis: 'Environmental quality improves with distance from the CBD because of reduced traffic, less litter and more green space in the suburbs.'\n\nThis is a good human-geography hypothesis because it is:\n• Geographical — about a spatial pattern across the city.\n• Testable — environmental quality can be scored with a survey.\n• Specific — focused on one transect through one city.\n• Linked to theory — connects to urban land-use models (e.g. Burgess) which predict zones changing outward from the centre.\n\nA second variable (e.g. pedestrian counts or land use) can be added to deepen the analysis.", difficulty:2, category:"application"},
+  {id:"g11fc-05-4-2", islandId:"g11i-05-4", front:"What primary methods are used in human fieldwork?",
+   back:"Common human-geography methods:\n• Questionnaires — collect opinions and perceptions (closed questions for statistics, open for depth).\n• Environmental quality surveys (EQS) — score factors such as litter, noise, greenery and building condition on a bipolar scale (e.g. −2 to +2).\n• Pedestrian counts — tally people passing a point in a fixed time (e.g. 5 minutes) to measure footfall.\n• Traffic counts — tally vehicles by type passing a point in a fixed time.\n• Land-use mapping — record the use of each building (retail, residential, office) onto a base map, often with colour coding.\n• Environmental field sketches and photographs — annotated to capture qualitative evidence.\n\nUsing several methods (triangulation) gives a fuller, more reliable picture.", difficulty:2, category:"concept"},
+  {id:"g11fc-05-4-3", islandId:"g11i-05-4", front:"Compare random, systematic and stratified sampling in a human enquiry.",
+   back:"Random sampling — survey respondents or sites chosen by chance (e.g. random grid references, every nth person decided by a random number). Removes bias but may cluster or miss areas.\n\nSystematic sampling — data at regular intervals (e.g. an EQS every 200 m along a transect, or every 10th shopper). Ensures even coverage but can miss variation between points.\n\nStratified sampling — divide the population or area into groups (strata) and sample each in proportion (e.g. survey age groups in proportion to the local population, or sample each land-use zone). Ensures all groups are represented but needs prior knowledge.\n\nExam tip: always justify the strategy for your specific enquiry and explain how it reduces bias and improves representativeness.", difficulty:2, category:"concept"},
+  {id:"g11fc-05-4-4", islandId:"g11i-05-4", front:"How is human fieldwork data presented and analysed?",
+   back:"Presentation:\n• Scatter graphs — distance from CBD vs environmental quality score, with a line of best fit.\n• Located (proportional) bar or pie charts on a base map — to show traffic or land use at each site.\n• Choropleth maps — shade areas by EQS value or pedestrian density.\n• Bar charts — compare questionnaire responses between sites.\n\nAnalysis:\n• Describe: 'Mean EQS rose from −3 in the CBD to +7 in the suburbs.'\n• Explain: 'Quality improves outward because traffic and litter concentrate in the busy CBD, while suburbs have more gardens and green space, matching concentric urban models.'\n• Test significance with Spearman's rank if comparing two ranked variables.\n• Identify anomalies (e.g. a regenerated waterfront with a high score near the centre) and explain them.", difficulty:2, category:"concept"},
+  {id:"g11fc-05-4-5", islandId:"g11i-05-4", front:"How do you conclude and evaluate a human fieldwork enquiry?",
+   back:"Conclusion — answer using evidence:\n'The data supports the hypothesis. Mean environmental quality scores rose from −3 in the CBD to +7 in the outer suburbs, and pedestrian counts fell with distance, both consistent with urban land-use theory.'\n\nEvaluation — judge reliability and validity:\n• Sample size — only 6 sites and 30 questionnaires; a larger sample would be more representative.\n• Subjectivity — EQS scores depend on the observer's judgement; different people may score differently (low inter-observer reliability).\n• Timing — counts taken on one weekday at midday may miss rush-hour or weekend patterns.\n• Bias — non-response and leading questions can skew questionnaire results.\n• Improvements — more sites, repeat at different times, have two people score the EQS and average, pilot the questionnaire to remove leading questions.", difficulty:3, category:"concept"},
+
+  // g11i-05-5 — Unfamiliar Fieldwork (Paper 3)
+  {id:"g11fc-05-5-1", islandId:"g11i-05-5", front:"What is Section B of AQA Paper 3 and what skills does it test?",
+   back:"AQA Paper 3 ('Geographical applications') has two sections:\n• Section A — the pre-released Issue Evaluation resource booklet.\n• Section B — Fieldwork.\n\nSection B is split between:\n• Questions on YOUR OWN two fieldwork enquiries (one physical, one human).\n• Questions on an UNFAMILIAR fieldwork context you have never seen, presented through figures, tables, maps and method descriptions.\n\nThe unfamiliar questions test whether you can apply fieldwork skills generally, not just recall your trip. You may be asked to interpret unseen data, suggest suitable methods or improvements, and evaluate the effectiveness and reliability of someone else's enquiry.", difficulty:1, category:"definition"},
+  {id:"g11fc-05-5-2", islandId:"g11i-05-5", front:"How should you interpret unseen methods and data in an unfamiliar enquiry?",
+   back:"A structured approach:\n1. Read the enquiry question or hypothesis first — everything must link back to it.\n2. Study each resource (table, graph, map, photo) and note what variable it shows and its units.\n3. Describe the pattern using figures from the resource (quote values and use data).\n4. Check the presentation method is appropriate for that data type (e.g. scatter graph for a relationship).\n5. Consider whether the method shown would actually answer the question — and how it could mislead.\n\nExam tip: use the resource. Markers reward answers that quote specific data from the provided figures rather than vague general statements.", difficulty:2, category:"application"},
+  {id:"g11fc-05-5-3", islandId:"g11i-05-5", front:"How do you suggest a suitable method or improvement for an unfamiliar enquiry?",
+   back:"When asked to suggest a method or improvement, always tie it to the enquiry's aim and justify it:\n• Name the method precisely (e.g. 'a systematic pedestrian count at 5-minute intervals').\n• State what data it would collect (e.g. footfall at each site).\n• Explain how that helps answer the question (e.g. 'to test whether footfall falls with distance from the CBD').\n• Add a reliability point (e.g. 'repeat at three times of day to reduce timing bias').\n\nFor improvements, identify a weakness in the given enquiry first, then propose a specific fix and explain the benefit. Avoid generic answers like 'collect more data' — say exactly what, where and why.", difficulty:2, category:"application"},
+  {id:"g11fc-05-5-4", islandId:"g11i-05-5", front:"How do you evaluate the reliability of someone else's enquiry?",
+   back:"Use the same criteria you would apply to your own work:\n• Sample size — were enough sites/people sampled to be representative?\n• Sampling strategy — was it random, systematic or stratified, and was it appropriate? Any bias?\n• Timing — was data collected once, or at varied times to capture change?\n• Equipment and accuracy — were instruments suitable and used correctly? Any subjectivity (e.g. EQS scoring)?\n• Presentation — does the chosen technique suit the data and show the pattern honestly?\n• Conclusion — is it actually supported by the data, or overstated?\n\nA good evaluation gives a balanced judgement: state strengths and weaknesses, then reach an overall conclusion on how much the results can be trusted.", difficulty:3, category:"concept"},
+  {id:"g11fc-05-5-5", islandId:"g11i-05-5", front:"How do you interpret a scatter graph and correlation in an unfamiliar enquiry?",
+   back:"Scatter graphs are common in Paper 3 because they show relationships between two variables.\n\nReading the correlation:\n• Positive correlation — points rise from bottom-left to top-right; as one variable increases, so does the other.\n• Negative correlation — points fall from top-left to bottom-right; as one increases, the other decreases.\n• No correlation — points are scattered with no clear trend.\n\nA line of best fit shows the overall direction; the closer points lie to it, the stronger the relationship. Spearman's rank gives a value from +1 to −1 to quantify strength, checked against critical values at the 0.05 level.\n\nBeware: correlation does not prove causation. Always identify anomalies (points far from the line) and suggest why they occur.", difficulty:2, category:"concept"}
+);
+
+// ── STATIC QUESTION BANKS (g11i-05-3 .. g11i-05-5) ──────────────────────────
+Object.assign(QUESTIONS, {
+  "g11i-05-3": [
+    {q:"Which of the following is the most appropriate hypothesis for a physical river fieldwork enquiry?",
+     opts:["The river is very pretty in summer","River width, depth and velocity increase with distance downstream, as predicted by the Bradshaw model","People like living near the river","The river should be cleaned up by the council"], c:1,
+     e:"A physical fieldwork hypothesis must be a testable prediction about a measurable physical process linked to theory. 'Width, depth and velocity increase downstream' can be tested with field measurements and connects to the Bradshaw model. The other options are subjective opinions or value judgements that cannot be tested with primary physical data."},
+    {q:"When measuring river velocity with the float method, why is the result multiplied by 0.85?",
+     opts:["To convert metres into centimetres","To correct for the fact that surface velocity is faster than the average velocity of the whole channel","Because the float always travels too slowly","To account for the width of the river"], c:1,
+     e:"Surface water flows faster than water lower in the channel, where friction with the bed and banks slows it down. A float measures surface velocity, so multiplying by roughly 0.85 gives a closer estimate of the mean velocity of the whole channel. This makes the discharge calculation more accurate. It is a standard correction and shows awareness of the method's limitation."},
+    {q:"A risk assessment for river fieldwork should include which of the following?",
+     opts:["Only the equipment list","The hazards, their likelihood, and the control measures to reduce them","A list of nice places to have lunch","Only the names of the students involved"], c:1,
+     e:"A risk assessment identifies hazards (e.g. slipping, deep water, fast flow, Weil's disease), judges how likely each is, and states control measures to reduce the risk (e.g. work in pairs, check the forecast, cover cuts). This demonstrates that safety was planned and links directly to the methods chosen. An equipment or lunch list is not a risk assessment."},
+    {q:"In a beach profile survey, what is measured between each pair of ranging poles?",
+     opts:["The colour of the sand","The angle of slope using a clinometer, plus the distance between the poles","The number of people on the beach","The temperature of the sea"], c:1,
+     e:"A beach profile investigates how gradient changes up the beach. At each break of slope, two ranging poles are placed a set distance apart and a clinometer measures the angle of slope between them. Recording the angle and distance for each segment allows the profile to be plotted to scale. Sand colour, crowd numbers and sea temperature are not part of a beach profile."},
+    {q:"Which statement is the best evaluation point for a physical fieldwork enquiry?",
+     opts:["The fieldwork was perfect and had no limitations","Data was collected at only 6 sites on one dry day, so increasing the number of sites and repeating in different seasons would improve reliability","We could have collected more data","The river was too cold to measure properly"], c:1,
+     e:"A strong evaluation identifies a specific limitation (only 6 sites, one dry day), explains why it weakens the results (limited coverage, untypical conditions) and proposes a concrete improvement (more sites, repeat in different seasons). Claiming there were no limitations is naive; 'collect more data' is too vague; and a one-line complaint about the cold does not assess reliability."}
+  ],
+  "g11i-05-4": [
+    {q:"Which method is most suitable for measuring how pleasant a street environment is in a human fieldwork enquiry?",
+     opts:["A river velocity flow meter","An environmental quality survey scoring factors such as litter, noise and greenery on a bipolar scale","A clinometer and ranging poles","A rain gauge"], c:1,
+     e:"An environmental quality survey (EQS) scores factors such as litter, noise, building condition and greenery on a bipolar scale (e.g. −2 to +2), producing a total quality score for each site. This directly measures how pleasant an environment is. Flow meters, clinometers and rain gauges are physical-geography instruments unsuited to assessing urban environmental quality."},
+    {q:"In stratified sampling for a human enquiry, the study population is:",
+     opts:["Chosen completely at random with no structure","Divided into sub-groups (strata) and sampled in proportion to each group's size","Sampled only where it is easiest to reach people","Sampled at fixed regular intervals along a line"], c:1,
+     e:"Stratified sampling divides the population or area into sub-groups (strata) — such as age groups or land-use zones — and samples each in proportion to its size, so every group is fairly represented. Random sampling has no such structure, convenience sampling is biased towards easy locations, and sampling at fixed intervals describes systematic sampling."},
+    {q:"Which presentation technique best shows the relationship between distance from the CBD and environmental quality score?",
+     opts:["A pie chart","A scatter graph with a line of best fit","A single annotated photograph","A flow-line map"], c:1,
+     e:"A scatter graph plots distance from the CBD on one axis and environmental quality score on the other, with a line of best fit revealing whether quality rises or falls with distance. This is the standard way to show a relationship between two continuous variables. A pie chart shows proportions, a photograph is qualitative, and a flow-line map shows movement, none of which display this relationship."},
+    {q:"Why might an environmental quality survey produce unreliable data?",
+     opts:["It uses expensive equipment that often breaks","Scores depend on the observer's personal judgement, so different people may score the same site differently","It can only be used at night","It measures river discharge inaccurately"], c:1,
+     e:"An EQS relies on the observer judging factors such as 'litter' or 'attractiveness' on a scale, which is subjective. Different observers may give the same site different scores (low inter-observer reliability). This can be reduced by having two people score independently and averaging, and by clearly defining what each score means. EQS needs no costly equipment and is unrelated to river discharge."},
+    {q:"What is the best way to reduce bias when carrying out questionnaires in a town centre?",
+     opts:["Only ask people who look friendly","Sample at different times and locations, avoid leading questions, and aim for a reasonable sample size","Ask the same person several times","Only survey your friends and family"], c:1,
+     e:"Bias is reduced by sampling at different times and places (so the sample is more representative), wording questions neutrally (so they do not lead respondents), and gathering enough responses (at least about 30) to be representative. Choosing only friendly-looking people, repeating one respondent, or surveying friends and family all introduce strong selection bias."}
+  ],
+  "g11i-05-5": [
+    {q:"In AQA Paper 3 Section B, the 'unfamiliar fieldwork' questions require you to:",
+     opts:["Describe only the fieldwork trip you went on yourself","Apply fieldwork skills to a context you have not seen before, using the provided resources","Memorise a textbook case study","Write about a country's physical geography"], c:1,
+     e:"The unfamiliar fieldwork questions present an enquiry you have never carried out, using figures, tables, maps and method descriptions. You must apply general fieldwork skills — interpreting data, suggesting methods or improvements, and evaluating reliability — using the resources given. They are not about recalling your own trip, a memorised case study, or a country's physical geography."},
+    {q:"When suggesting a data-collection method for an unfamiliar enquiry, the best answers always:",
+     opts:["Name any method, with no need to explain it","Name a specific method and explain how the data it collects would help answer the enquiry question","List as many methods as possible without detail","Copy the method already shown in the resource"], c:1,
+     e:"A strong answer names a precise method (e.g. 'a systematic pedestrian count at 5-minute intervals'), states what data it collects, and explains how that helps answer the specific enquiry question, ideally adding a reliability point. Simply naming a method, listing many without justification, or repeating the existing method does not show applied understanding and scores poorly."},
+    {q:"A scatter graph in an unfamiliar enquiry shows points falling from top-left to bottom-right. This indicates:",
+     opts:["A positive correlation","A negative correlation — as one variable increases, the other decreases","No correlation at all","That the data must be wrong"], c:1,
+     e:"Points falling from top-left to bottom-right show a negative correlation: as one variable increases, the other decreases. A positive correlation rises from bottom-left to top-right, and no correlation shows scattered points with no trend. A clear downward pattern is a valid result, not an error, though correlation does not prove causation."},
+    {q:"Which is the most useful evaluation of another student's enquiry that sampled only 5 sites on a single afternoon?",
+     opts:["The enquiry was excellent and cannot be improved","The small sample of 5 sites and data from one afternoon limit reliability; more sites and repeats at different times would make the results more representative","The student should have chosen a different topic","Five sites is always enough for any enquiry"], c:1,
+     e:"A good evaluation identifies the specific weaknesses (only 5 sites; one afternoon limits how representative the data is) and proposes concrete improvements (more sites, repeat at different times) with a reason (greater representativeness and reliability). Praising it as flawless, criticising the topic choice, or claiming five sites is always enough are not valid, evidence-based evaluations."},
+    {q:"When using a resource table in an unfamiliar fieldwork question, you should:",
+     opts:["Ignore the data and write from general knowledge","Quote specific figures and units from the table to support your description of the pattern","Only describe the layout of the table","Assume the data is unreliable and dismiss it"], c:1,
+     e:"Markers reward answers that use the resource: quote specific figures and units from the table and refer to them when describing the pattern. Writing from general knowledge ignores the data, describing only the layout misses the point, and dismissing the data without justification is not evaluation. Always anchor your answer in the evidence provided."}
+  ]
+});
+
+// ── LESSONS (g11i-05-3 .. g11i-05-5) ────────────────────────────────────────
+Object.assign(LESSONS, {
+
+'g11i-05-3': `
+<h2>Physical Fieldwork Enquiry</h2>
+<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">Stages of a physical fieldwork enquiry, from question to evaluation</p></div>
+<p>For your physical enquiry you investigate a natural environment — most often a river or a coast. This lesson works through a complete river investigation so you can see how every stage links together, from the question to the evaluation.</p>
+
+<h3>Question, Hypothesis and Risk Assessment</h3>
+<p>Our enquiry question is: 'How do river characteristics change downstream along the River Holford?' The hypothesis is: 'Width, depth and velocity increase with distance downstream, as predicted by the Bradshaw model.' Before going out, a written risk assessment lists each hazard, its likelihood and a control: slipping on wet banks (work in pairs, wear wellingtons), deep or fast water (avoid sites above knee height, check the forecast) and Weil's disease (cover cuts, wash hands).</p>
+
+<h3>Primary Methods and Sampling</h3>
+<p>At six sites, chosen by <strong>systematic sampling</strong> every 500 metres downstream, we measured: width (tape across the channel), depth (metre ruler every 20 cm across the channel, then a mean) and velocity (a flow meter at 60% depth, three repeats). Cross-sectional area equals mean width multiplied by mean depth, and discharge equals area multiplied by velocity. Repeats at each site reduce the effect of anomalies.</p>
+
+<h3>Presentation, Analysis and Conclusion</h3>
+<p>Cross-sections were drawn to scale, and scatter graphs plotted distance against width, depth and velocity with lines of best fit. The data showed velocity rising from 0.3 m/s to 1.1 m/s downstream. We explain this: the channel deepens, the hydraulic radius increases, friction falls and flow becomes more efficient. We conclude the hypothesis is largely supported, though depth showed a weaker trend.</p>
+
+<h3>Worked Example</h3>
+<p>Explain how you ensured your river data was reliable. [4 marks]</p>
+<p>Reliability was improved by taking <strong>three repeat readings</strong> of velocity at each site and calculating the <strong>mean</strong>, which reduced the effect of anomalies such as a sudden gust. <strong>Systematic sampling</strong> every 500 m gave even coverage of the river course, and a <strong>flow meter</strong> gave more accurate velocity readings than the float method, so the results better represent how the channel changes downstream.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often record measurements but forget to explain <strong>why</strong> the pattern occurs. Stating that velocity increases downstream is only description. To reach higher marks you must analyse the cause, linking it to friction, hydraulic radius and the Bradshaw model.</p>
+`,
+
+'g11i-05-4': `
+<h2>Human Fieldwork Enquiry</h2>
+<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">Stages of a human fieldwork enquiry, from hypothesis to evaluation</p></div>
+<p>Your human enquiry investigates people and places — for example quality of life, environmental quality or land use in a town. This lesson follows a worked urban investigation so you can see how each stage connects.</p>
+
+<h3>Question, Hypothesis and Methods</h3>
+<p>Our question is: 'How does environmental quality change with distance from the city centre?' The hypothesis is: 'Environmental quality improves with distance from the CBD because traffic and litter fall while green space increases.' We collected data using an <strong>environmental quality survey</strong> (scoring litter, noise, greenery and building condition from −2 to +2), <strong>pedestrian counts</strong> (people passing in five minutes), a <strong>questionnaire</strong> on residents' perceptions, and <strong>land-use mapping</strong> onto a base map.</p>
+
+<h3>Sampling Strategies</h3>
+<p>Sites were selected by <strong>systematic sampling</strong> every 500 m along a transect from the CBD outwards, giving even coverage. For the questionnaire we used <strong>stratified sampling</strong>, surveying age groups in proportion to the local population so all groups were represented. Random sampling could also remove bias but risks clustering. Each strategy must be justified for the enquiry.</p>
+
+<h3>Presentation, Analysis and Conclusion</h3>
+<p>We plotted a scatter graph of distance against environmental quality score with a line of best fit, and located bar charts on a map for traffic. Mean scores rose from −3 in the CBD to +7 in the suburbs. We explain this: traffic and litter concentrate in the busy centre, while suburbs have gardens and green space, matching concentric urban models. We conclude the hypothesis is supported.</p>
+
+<h3>Worked Example</h3>
+<p>Justify the use of stratified sampling for your questionnaire. [3 marks]</p>
+<p>Stratified sampling was used because the local population was <strong>divided into age groups</strong> and each was surveyed in <strong>proportion to its size</strong>. This ensured that younger and older residents were <strong>fairly represented</strong>, so the perceptions collected reflected the whole community rather than being biased towards one group, improving the validity of the results.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often treat environmental quality scores as fully objective. Because scoring depends on personal judgement, different observers may rate the same site differently. Always acknowledge this <strong>subjectivity</strong> in your evaluation and suggest having two people score independently and averaging the results.</p>
+`,
+
+'g11i-05-5': `
+<h2>Unfamiliar Fieldwork (Paper 3)</h2>
+<div class="lesson-diagram" data-diagram="correlation-types"><p class="diagram-caption">Positive, negative and no correlation on a scatter graph</p></div>
+<p>In AQA Paper 3 Section B you answer questions on your own fieldwork and on an <strong>unfamiliar</strong> enquiry you have never carried out. The unfamiliar questions present figures, tables, maps and method descriptions, and test whether you can apply fieldwork skills generally rather than just recall your trip.</p>
+
+<h3>Interpreting Unseen Methods and Data</h3>
+<p>Always read the enquiry question first, then study each resource and note the variable and its units. Describe patterns using <strong>specific figures quoted from the resource</strong>, and check whether the presentation method suits the data — for example a scatter graph for a relationship between two variables. Marks are awarded for using the evidence given, not for general knowledge.</p>
+
+<h3>Suggesting Methods and Improvements</h3>
+<p>When asked to suggest a method, name it precisely (e.g. 'a systematic pedestrian count every five minutes'), state the data it collects, and explain how it helps answer the enquiry question, adding a reliability point such as repeating at different times. For improvements, first identify a weakness in the given enquiry, then propose a specific fix and explain its benefit.</p>
+
+<h3>Evaluating Others' Enquiries</h3>
+<p>Judge an unfamiliar enquiry using the same criteria as your own: sample size, sampling strategy, timing, equipment and accuracy, and whether the conclusion is supported by the data. Reach a <strong>balanced judgement</strong> — state strengths and weaknesses, then conclude how far the results can be trusted. Remember that a correlation on a scatter graph does not prove causation.</p>
+
+<h3>Worked Example</h3>
+<p>A student sampled environmental quality at only 4 sites on one afternoon. Evaluate the reliability of their enquiry. [4 marks]</p>
+<p>The enquiry has <strong>low reliability</strong> because only <strong>4 sites</strong> were sampled, which is too few to represent the whole transect, and data from a <strong>single afternoon</strong> may not be typical of other times. Environmental quality scoring is also <strong>subjective</strong>. Reliability would improve by sampling <strong>more sites</strong>, repeating at <strong>different times</strong>, and having two observers score independently and averaging.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often answer unfamiliar questions from memory of their own trip instead of using the resource provided. You must refer to the <strong>figures, tables and methods given</strong>, quoting data from them, because the marks reward applying skills to the unseen context, not describing your own fieldwork.</p>
+`
+
+});

@@ -26,7 +26,31 @@ FLASHCARDS.push(
   {id:"g11fc-04-2-4", islandId:"g11i-04-2", front:"Evaluate large-scale water transfer schemes.",
    back:"Water transfer moves water from surplus to deficit areas via pipelines, aqueducts or rivers.\n\nExample: China's South-North Water Transfer Project\n• The world's largest — three routes transfer water from the Yangtze River basin to the dry north.\n• Cost: over $80 billion.\n• Eastern route opened in 2013; central route in 2014.\n\nAdvantages:\n+ Provides water to drought-prone areas, supporting agriculture and millions of people.\n+ Reduces groundwater depletion in receiving areas.\n\nDisadvantages:\n− Extremely expensive.\n− Environmental damage — habitat disruption, altered river flows, displacement of communities.\n− Source areas may face water shortages themselves.\n− Pollution in source rivers can be transferred to receiving areas.\n− Addresses symptoms rather than the root cause (overconsumption, inefficiency).", difficulty:3, category:"evaluation"},
   {id:"g11fc-04-2-5", islandId:"g11i-04-2", front:"How can the UK improve its energy security?",
-   back:"The UK's energy security strategies include:\n\n• Expanding renewables — offshore wind capacity has grown rapidly (the UK has the world's largest offshore wind farm at Hornsea). Target: net zero emissions by 2050.\n• New nuclear — Hinkley Point C (under construction in Somerset) will provide ~7% of UK electricity.\n• Energy efficiency — insulation programmes, LED lighting, smart meters reduce demand.\n• Diversifying supply — importing gas from multiple countries (Norway, USA LNG) rather than depending on one.\n• Fracking (hydraulic fracturing) — extracting shale gas domestically. Controversial due to earthquake risk and environmental concerns; currently under moratorium.\n• North Sea oil and gas — declining reserves, but new licences granted to extend production.\n• Interconnectors — subsea cables link the UK grid to France, Norway, Belgium and the Netherlands, enabling energy trading.\n\nA diverse energy mix combining renewables, nuclear and interconnection offers the best path to long-term security.", difficulty:2, category:"application"}
+   back:"The UK's energy security strategies include:\n\n• Expanding renewables — offshore wind capacity has grown rapidly (the UK has the world's largest offshore wind farm at Hornsea). Target: net zero emissions by 2050.\n• New nuclear — Hinkley Point C (under construction in Somerset) will provide ~7% of UK electricity.\n• Energy efficiency — insulation programmes, LED lighting, smart meters reduce demand.\n• Diversifying supply — importing gas from multiple countries (Norway, USA LNG) rather than depending on one.\n• Fracking (hydraulic fracturing) — extracting shale gas domestically. Controversial due to earthquake risk and environmental concerns; currently under moratorium.\n• North Sea oil and gas — declining reserves, but new licences granted to extend production.\n• Interconnectors — subsea cables link the UK grid to France, Norway, Belgium and the Netherlands, enabling energy trading.\n\nA diverse energy mix combining renewables, nuclear and interconnection offers the best path to long-term security.", difficulty:2, category:"application"},
+
+  // g11i-04-3 — Water Security: Supply, Demand & Management
+  {id:"g11fc-04-3-1", islandId:"g11i-04-3", front:"Why is global water demand rising faster than supply?",
+   back:"Water demand is rising while usable supply is roughly fixed, creating growing pressure:\n\nRising demand:\n• Population growth — over 8 billion people need water for drinking, sanitation and food.\n• Economic development — industry and energy production use large volumes of water.\n• Rising living standards — wealthier households use more (showers, appliances, gardens).\n• Agriculture — irrigation accounts for ~70% of freshwater use as food demand grows.\n\nLimited supply:\n• Only ~3% of Earth's water is freshwater, and most is locked in ice or deep groundwater.\n• Climate change is altering rainfall patterns and increasing droughts.\n• Pollution reduces the amount of clean, usable water.\n\nThe result is that over 2 billion people now live in water-stressed countries.", difficulty:2, category:"concept"},
+  {id:"g11fc-04-3-2", islandId:"g11i-04-3", front:"What is the difference between a water surplus and a water deficit?",
+   back:"A water surplus exists where the available supply of water is greater than demand. These are typically areas with high rainfall and lower population density — for example north-west England, Scotland and Wales in the UK.\n\nA water deficit exists where demand is greater than the available supply. These are typically drier and/or more densely populated and industrialised areas — for example south-east England.\n\nWhere demand approaches or exceeds supply, an area experiences <strong>water stress</strong> or <strong>water insecurity</strong>. The mismatch between where water is plentiful and where it is needed creates the case for water transfer schemes that move water from surplus to deficit regions.", difficulty:2, category:"concept"},
+  {id:"g11fc-04-3-3", islandId:"g11i-04-3", front:"What are the causes and impacts of water insecurity?",
+   back:"Causes of water insecurity:\n• Physical — low or variable rainfall, droughts, geology with few aquifers, climate change.\n• Human — population growth, over-abstraction, pollution, poor infrastructure (leaking pipes), unequal distribution.\n\nImpacts:\n• Waterborne disease — without clean water, illnesses such as cholera and diarrhoea spread; these kill many children in LICs.\n• Food production — irrigation shortages reduce crop yields and threaten food security.\n• Industrial output — factories and power stations that need water may have to cut production.\n• Conflict — competition over shared rivers and aquifers can cause tension between regions and countries ('water wars').\n\nWater insecurity therefore affects health, the economy and political stability.", difficulty:2, category:"concept"},
+  {id:"g11fc-04-3-4", islandId:"g11i-04-3", front:"How do dams, reservoirs and water transfer schemes increase water supply?",
+   back:"Dams and reservoirs:\n• A dam blocks a river to create a reservoir that stores water through dry seasons.\n• Provides water for homes, industry and irrigation, plus HEP and flood control.\n• But they are costly, flood land and habitats, displace people and trap sediment.\n\nWater transfer schemes:\n• Move water through pipelines, canals or aqueducts from areas of surplus to areas of deficit.\n• Example: China's South-North Water Transfer Project moves water from the wetter south to the dry north (cost over $80 billion).\n• Effective at supplying dry regions, but expensive and environmentally disruptive, and the source area may face its own shortages.\n\nBoth are large-scale 'hard engineering' approaches that boost supply but carry high economic and environmental costs.", difficulty:2, category:"application"},
+  {id:"g11fc-04-3-5", islandId:"g11i-04-3", front:"What sustainable strategies can manage water demand and conserve supply?",
+   back:"As well as boosting supply, water security can be improved by managing demand sustainably:\n\n• Water conservation — fixing leaking pipes, water-efficient appliances, metering and public awareness campaigns.\n• Recycling and grey-water reuse — treating wastewater for reuse; Singapore's NEWater meets ~40% of demand.\n• Rainwater harvesting — collecting rooftop rainfall in tanks for non-drinking uses.\n• Efficient irrigation — drip irrigation delivers water straight to crop roots, cutting waste.\n• Desalination — removing salt from seawater in arid coastal regions (energy-intensive).\n• Groundwater management — preventing over-abstraction of aquifers.\n\nSustainable schemes are usually cheaper and less damaging than large dams, and tackle the root cause by reducing waste rather than only increasing supply.", difficulty:2, category:"application"},
+
+  // g11i-04-4 — Energy Security: Supply & the Energy Mix
+  {id:"g11fc-04-4-1", islandId:"g11i-04-4", front:"What is energy security and what does the energy mix mean?",
+   back:"Energy security is the ability of a country to access reliable and affordable energy to meet its demand, now and in the future. A country is energy secure when it has dependable supplies and is not over-reliant on a single, vulnerable source.\n\nThe <strong>energy mix</strong> is the combination of different energy sources a country uses to meet its needs. It typically includes:\n• Fossil fuels — coal, oil and natural gas.\n• Nuclear power.\n• Renewables — wind, solar, hydroelectric, tidal, geothermal and biomass.\n\nA balanced, diverse mix improves security because if one source is disrupted, others can compensate. The UK's mix has shifted away from coal towards gas, nuclear and especially renewables.", difficulty:2, category:"concept"},
+  {id:"g11fc-04-4-2", islandId:"g11i-04-4", front:"What causes energy insecurity and what are its consequences?",
+   back:"Causes of energy insecurity:\n• Reliance on imported fossil fuels from politically unstable regions.\n• Depletion of domestic reserves (e.g. declining North Sea oil and gas).\n• Rising demand outstripping supply.\n• Conflict, sanctions or disasters disrupting supply (e.g. gas price shocks).\n\nConsequences:\n• Rising prices and fuel poverty — households struggle to afford heating.\n• Economic disruption — industries face higher costs or power cuts.\n• Political tension — countries compete for resources and become vulnerable to suppliers.\n• Environmental risk — pressure to exploit sensitive areas (tar sands, Arctic, fracking).\n\nEnergy insecurity therefore threatens the economy, society and the environment, which is why countries pursue diverse, secure supplies.", difficulty:2, category:"concept"},
+  {id:"g11fc-04-4-3", islandId:"g11i-04-4", front:"How is the global and UK energy mix changing?",
+   back:"The energy mix is shifting away from high-carbon fossil fuels towards lower-carbon sources:\n\nGlobally:\n• Renewables grew from around 20% to over 30% of global electricity generation between 2010 and 2023, driven by falling solar and wind costs.\n• Coal use is declining in many HICs but remains high in some NEEs.\n\nIn the UK:\n• Coal has been almost phased out (the last coal power station closed in 2024).\n• Natural gas remains important for flexible generation.\n• Renewables — especially offshore wind (e.g. Hornsea) — now provide a large and growing share.\n• Nuclear provides reliable low-carbon 'baseload' power; Hinkley Point C is under construction.\n\nThe drivers are climate targets (net zero by 2050), falling renewable costs and the need for greater energy security.", difficulty:2, category:"application"},
+  {id:"g11fc-04-4-4", islandId:"g11i-04-4", front:"Compare fossil fuels, nuclear and renewables as parts of the energy mix.",
+   back:"Fossil fuels (coal, oil, gas):\n+ Reliable and produce energy on demand; existing infrastructure.\n− Finite and emit CO₂, driving climate change.\n\nNuclear:\n+ Reliable low-carbon 'baseload'; high energy output from little fuel.\n− Very expensive and slow to build; produces hazardous radioactive waste; accident fears.\n\nRenewables (wind, solar, tidal, HEP, geothermal):\n+ Infinite and low-carbon; costs falling fast.\n− Many are intermittent (weather-dependent); need storage; visual/land impacts.\n\nNo single source is perfect, so a <strong>diverse mix</strong> is the most secure: renewables and nuclear cut emissions, gas provides flexible back-up, and interconnectors allow trading when one source is low.", difficulty:2, category:"evaluation"},
+  {id:"g11fc-04-4-5", islandId:"g11i-04-4", front:"What strategies create a sustainable and secure energy supply?",
+   back:"A sustainable, secure energy supply combines increasing low-carbon supply with reducing demand:\n\nSecuring supply:\n• Expanding renewables — wind, solar, tidal and HEP.\n• New nuclear for reliable low-carbon baseload (e.g. Hinkley Point C).\n• Diversifying imports and using interconnectors to trade electricity with neighbours.\n• Developing energy storage (batteries, pumped storage) to manage intermittency.\n\nEnergy conservation (reducing demand):\n• Home insulation, double glazing and efficient boilers.\n• LED lighting and energy-efficient appliances.\n• Smart meters and demand management.\n• Public transport, cycling and electric vehicles.\n\nReducing demand is often the cheapest, fastest and greenest option, because the most sustainable unit of energy is the one that is never used.", difficulty:2, category:"application"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -64,6 +88,40 @@ Object.assign(QUESTIONS, {
     {q:"Why is fracking (hydraulic fracturing) controversial in the UK?",
      opts:["It only works in tropical climates","It extracts shale gas by injecting high-pressure fluid underground, which has been linked to earth tremors, groundwater contamination and landscape damage","It produces more CO₂ than coal","It is the cheapest form of energy and undercuts renewables"], c:1,
      e:"Fracking involves drilling into shale rock and injecting high-pressure fluid to release trapped natural gas. In the UK, it is controversial because small earthquakes have been triggered near fracking sites (e.g. near Blackpool in 2019), there are concerns about groundwater contamination, it damages local landscapes, and it perpetuates fossil fuel dependency when the UK has committed to net zero by 2050. A moratorium on fracking is currently in place."}
+  ],
+  "g11i-04-3": [
+    {q:"Which of the following best explains why global water demand is rising?",
+     opts:["The total amount of freshwater on Earth is increasing","Population growth, economic development and rising living standards are all increasing the demand for water","Climate change is creating new oceans of freshwater","Agriculture now uses almost no water"], c:1,
+     e:"Global water demand is rising because the population exceeds 8 billion, industry and energy production are expanding, and rising living standards mean people use more water at home. Agriculture alone accounts for around 70% of freshwater use. Meanwhile usable freshwater is limited (only ~3% of Earth's water is fresh, much of it locked in ice), so demand is rising faster than supply, leaving over 2 billion people water-stressed."},
+    {q:"What is a water deficit?",
+     opts:["A region where water supply is greater than demand","A region where demand for water is greater than the available supply","A region with no rivers at all","A region that exports water to other countries"], c:1,
+     e:"A water deficit exists where the demand for water is greater than the available supply, typically in drier and/or densely populated, industrialised areas such as south-east England. A water surplus is the opposite — supply exceeds demand, as in the wetter, less populated north and west. Where demand approaches or exceeds supply, an area suffers water stress or insecurity."},
+    {q:"Which of the following is an impact of water insecurity?",
+     opts:["A fall in waterborne disease","The spread of waterborne diseases, reduced food production and the risk of conflict over shared water","Guaranteed peace between neighbouring countries","Unlimited industrial growth"], c:1,
+     e:"Water insecurity has serious impacts. Without clean water, waterborne diseases such as cholera and diarrhoea spread, killing many children in LICs. Shortages of irrigation water reduce crop yields and threaten food security, and factories and power stations may have to cut output. Competition over shared rivers and aquifers can also cause tension or conflict between regions and countries."},
+    {q:"How do large-scale water transfer schemes improve water supply?",
+     opts:["By removing salt from seawater","By moving water through pipelines or canals from areas of surplus to areas of deficit","By collecting rainwater from individual rooftops","By banning all industrial water use"], c:1,
+     e:"Water transfer schemes move water from regions with a surplus to regions with a deficit using pipelines, canals or aqueducts. China's South-North Water Transfer Project, costing over $80 billion, moves water from the wetter south to the dry, densely populated north. Such schemes are effective at supplying dry regions but are expensive, environmentally disruptive, and can leave the source area facing its own shortages. Desalination and rainwater harvesting are separate strategies."},
+    {q:"Why is water conservation considered a sustainable way to improve water security?",
+     opts:["It requires building the largest possible dams","It reduces waste and demand through efficient appliances, fixing leaks and recycling, tackling the problem at source rather than only increasing supply","It only works in countries with no rainfall","It increases the total amount of freshwater on Earth"], c:1,
+     e:"Water conservation improves security by reducing demand and waste — for example by fixing leaking pipes, using water-efficient appliances, metering, recycling grey water and harvesting rainwater. It is sustainable because it is usually cheaper and far less environmentally damaging than building large dams, and it tackles the root cause (overuse and waste) rather than simply trying to increase supply."}
+  ],
+  "g11i-04-4": [
+    {q:"What is meant by a country's 'energy mix'?",
+     opts:["The single source a country relies on for all its energy","The combination of different energy sources, such as fossil fuels, nuclear and renewables, that a country uses","The amount of energy a country exports","A blend of petrol and diesel used in cars"], c:1,
+     e:"A country's energy mix is the combination of different sources it uses to meet its energy demand — typically fossil fuels (coal, oil, gas), nuclear power and renewables (wind, solar, HEP, tidal and others). A balanced, diverse mix improves energy security, because if one source is disrupted, others can compensate. The UK's mix has shifted from coal towards gas, nuclear and renewables."},
+    {q:"Which of the following is a cause of energy insecurity?",
+     opts:["Having a wide range of domestic and imported energy sources","Heavy reliance on imported fossil fuels from politically unstable regions and the depletion of domestic reserves","Producing more energy than the country can use","Rapidly falling demand for energy"], c:1,
+     e:"Energy insecurity arises when a country cannot guarantee a reliable, affordable supply. Major causes include over-reliance on imported fossil fuels from unstable regions, the depletion of domestic reserves (such as declining North Sea oil and gas), rising demand outstripping supply, and conflict or sanctions disrupting supply. A diverse mix and secure domestic sources reduce this risk."},
+    {q:"Which statement best describes how the UK energy mix is changing?",
+     opts:["Coal is increasing while renewables are being phased out","Coal has been almost phased out while renewables, especially offshore wind, provide a growing share","The UK now relies entirely on imported oil","Nuclear power has been completely abandoned"], c:1,
+     e:"The UK energy mix is shifting towards lower-carbon sources. Coal has been almost entirely phased out (the last coal power station closed in 2024), natural gas remains important for flexible generation, and renewables — especially offshore wind such as Hornsea — provide a large and growing share. Nuclear continues to supply reliable low-carbon baseload power, with Hinkley Point C under construction. The drivers are climate targets, falling renewable costs and energy security."},
+    {q:"What is a key disadvantage of relying heavily on renewable sources such as wind and solar?",
+     opts:["They release large amounts of CO₂","Many are intermittent and weather-dependent, so supply can vary and storage is needed","They will quickly run out","They cannot generate electricity at all"], c:1,
+     e:"The main drawback of wind and solar is that they are intermittent — they only generate when the wind blows or the sun shines, so output varies and energy storage (such as batteries or pumped storage) is needed to ensure a steady supply. Renewables are low-carbon and infinite, which is why a diverse mix often combines them with reliable nuclear and flexible gas back-up to maintain security."},
+    {q:"Why is energy conservation an important part of a sustainable energy strategy?",
+     opts:["It increases overall energy demand","It reduces demand through efficiency measures such as insulation, LED lighting and smart meters, which is often the cheapest and greenest option","It only applies to power stations, not homes","It requires burning more fossil fuels"], c:1,
+     e:"Energy conservation reduces demand through measures such as home insulation, efficient boilers, LED lighting, energy-efficient appliances, smart meters and greener transport. It is a vital part of a sustainable strategy because reducing demand is usually cheaper, faster and less environmentally damaging than building new supply — the most sustainable unit of energy is the one that is never used."}
   ]
 });
 
@@ -157,6 +215,74 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>When evaluating strategies, students often describe what a scheme does without assessing its effectiveness. To 'evaluate' means to weigh advantages against disadvantages and reach a judgement. Always include both sides and a concluding statement.</p>
+`,
+
+'g11i-04-3': `
+<h2>Water Security: Supply, Demand & Management</h2>
+<p>Water is essential for drinking, sanitation, farming and industry. As demand rises while usable supply stays roughly fixed, an increasing number of people face <strong>water insecurity</strong> — over 2 billion already live in water-stressed countries.</p>
+
+<h3>Rising Demand vs Limited Supply</h3>
+<p>Water <strong>demand</strong> is rising due to population growth, economic development, higher living standards and the huge needs of agriculture (~70% of freshwater use). Yet <strong>supply</strong> is limited — only about 3% of Earth's water is freshwater, much of it locked in ice or deep underground, and climate change and pollution reduce what is usable.</p>
+
+<h3>Surplus, Deficit and Insecurity</h3>
+<p>Where supply exceeds demand, an area has a <strong>water surplus</strong> (e.g. the wetter north and west of the UK). Where demand exceeds supply, it has a <strong>water deficit</strong> (e.g. the drier, crowded south-east). Where demand approaches or exceeds supply, the result is <strong>water stress</strong>. The causes of insecurity are physical (low or variable rainfall, drought, geology) and human (over-abstraction, pollution, leaking infrastructure, unequal distribution). Impacts include the spread of waterborne disease, reduced food production, lost industrial output and even conflict over shared rivers.</p>
+
+<h3>Strategies to Increase and Manage Supply</h3>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#0d9488;color:white">
+    <th style="padding:8px;border:1px solid #ccc">Strategy</th>
+    <th style="padding:8px;border:1px solid #ccc">Strength</th>
+    <th style="padding:8px;border:1px solid #ccc">Weakness</th>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Dams &amp; reservoirs</td>
+    <td style="padding:8px;border:1px solid #ccc">Store water; provide HEP and flood control</td>
+    <td style="padding:8px;border:1px solid #ccc">Costly; flood land; displace people</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Water transfer</td>
+    <td style="padding:8px;border:1px solid #ccc">Moves water from surplus to deficit (e.g. China S–N)</td>
+    <td style="padding:8px;border:1px solid #ccc">Expensive; environmentally disruptive</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Desalination</td>
+    <td style="padding:8px;border:1px solid #ccc">Reliable supply in arid coasts</td>
+    <td style="padding:8px;border:1px solid #ccc">Energy-intensive; brine waste</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Conservation &amp; recycling</td>
+    <td style="padding:8px;border:1px solid #ccc">Cheap; cuts waste at source (NEWater)</td>
+    <td style="padding:8px;border:1px solid #ccc">Needs behaviour change and investment</td>
+  </tr>
+</table>
+
+<h3>Worked Example</h3>
+<p>Explain one advantage and one disadvantage of large-scale water transfer schemes. [4 marks]</p>
+<p>One <strong>advantage</strong> is that water transfer schemes supply water to dry, densely populated regions that would otherwise face shortages — China's South-North Water Transfer Project moves water from the wetter south to support millions of people and farms in the dry north. One <strong>disadvantage</strong> is that they are extremely expensive (over $80 billion) and environmentally disruptive, altering river flows, damaging habitats and sometimes leaving the source region short of water itself.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often assume increasing supply is always the answer. The most sustainable strategies also <strong>manage demand</strong> — conservation, recycling and efficient irrigation reduce waste and are usually cheaper and less damaging than building new dams.</p>
+`,
+
+'g11i-04-4': `
+<h2>Energy Security: Supply & the Energy Mix</h2>
+<p>Reliable, affordable energy underpins modern life. <strong>Energy security</strong> is a country's ability to access the energy it needs, now and in the future, without being dangerously dependent on a single vulnerable source.</p>
+
+<h3>Demand, Supply and Insecurity</h3>
+<p>Global energy <strong>demand</strong> is rising due to population growth and industrialisation in NEEs such as China and India. <strong>Energy insecurity</strong> arises when supply cannot reliably or affordably meet demand — caused by reliance on imports from unstable regions, depleting domestic reserves (e.g. North Sea oil and gas), rising demand and supply disruptions. Its consequences include fuel poverty, rising prices, economic disruption, political tension and pressure to exploit sensitive environments.</p>
+
+<h3>The Changing Energy Mix</h3>
+<p>A country's <strong>energy mix</strong> is the combination of sources it uses — fossil fuels, nuclear and renewables. The mix is shifting away from high-carbon fossil fuels: globally, renewables rose from around 20% to over 30% of electricity generation between 2010 and 2023. In the UK, coal has been almost phased out, gas provides flexible generation, offshore wind (e.g. Hornsea) supplies a growing share, and nuclear (Hinkley Point C) provides low-carbon baseload power.</p>
+
+<h3>Towards a Sustainable, Secure Supply</h3>
+<p>No single source is perfect, so a <strong>diverse mix</strong> is most secure. Fossil fuels are reliable but finite and high-carbon; nuclear is low-carbon and reliable but expensive with hazardous waste; renewables are infinite and clean but often intermittent. Security is improved by expanding renewables, building new nuclear, using interconnectors and storage, and — crucially — <strong>energy conservation</strong> such as insulation, LED lighting, smart meters and efficient transport, which reduces demand.</p>
+
+<h3>Worked Example</h3>
+<p>Evaluate the use of renewable energy for improving a country's energy security. [6 marks]</p>
+<p>Renewables such as wind and solar improve security because they are <strong>infinite</strong> and <strong>domestic</strong> — they cannot run out and reduce reliance on imported fossil fuels, while producing minimal emissions to meet climate targets. Costs have fallen sharply (solar is down around 90% since 2010). However, many renewables are <strong>intermittent</strong>, generating only when the wind blows or sun shines, so storage and back-up are needed to guarantee supply. There are also high initial costs and land or visual impacts. Overall, renewables are central to a secure, sustainable future but work best as part of a <strong>diverse mix</strong> alongside reliable nuclear and flexible gas back-up.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often treat 'energy security' as simply 'having lots of energy'. It specifically means a <strong>reliable and affordable</strong> supply that is not over-dependent on one vulnerable source. Always link your points to reliability, affordability and reducing dependence.</p>
 `
 
 });

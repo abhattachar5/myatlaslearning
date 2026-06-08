@@ -49,7 +49,17 @@ CURRICULUM.push(
    topicId:"g11t-02", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Evaluate strategies for managing and conserving threatened ecosystems at local, national and international scales.",
    learningOutcomes:["Describe conservation approaches including national parks, CITES and debt-for-nature swaps","Evaluate sustainable forestry, selective logging and ecotourism","Assess the effectiveness of local community projects in combating desertification"],
-   topics:["Protected areas and legislation","Sustainable management","Community-led conservation"], prerequisites:["g11i-02-1"]}
+   topics:["Protected areas and legislation","Sustainable management","Community-led conservation"], prerequisites:["g11i-02-1"]},
+  {id:"g11i-02-3", name:"Deforestation: Causes, Impacts & a Case Study", emoji:"🪓", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g11t-02", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Use an Amazon case study to explain the causes and impacts of deforestation.",
+   learningOutcomes:["Explain the causes of rainforest deforestation","Assess the environmental and economic impacts","Apply a named case study"],
+   topics:["Causes","Impacts","Case study"], prerequisites:["g11i-02-1"]},
+  {id:"g11i-02-4", name:"Desertification in the Sahel", emoji:"🏜️", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g11t-02", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain the causes, impacts and solutions of desertification in the Sahel.",
+   learningOutcomes:["Explain the causes of desertification","Describe its impacts on people and environment","Evaluate solutions including the Great Green Wall"],
+   topics:["Causes","Impacts","Solutions"], prerequisites:["g11i-02-1"]}
 );
 
 // ── Topic 3: Population & Migration (3 islands) ────────────────────────────
@@ -82,7 +92,17 @@ CURRICULUM.push(
    topicId:"g11t-04", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Evaluate strategies for increasing energy and water security including large-scale schemes and sustainable approaches.",
    learningOutcomes:["Compare renewable and non-renewable energy sources","Evaluate large-scale water transfer and desalination schemes","Assess the role of local and sustainable solutions in improving security"],
-   topics:["Energy mix and renewables","Large-scale water schemes","Sustainable local solutions"], prerequisites:["g11i-04-1"]}
+   topics:["Energy mix and renewables","Large-scale water schemes","Sustainable local solutions"], prerequisites:["g11i-04-1"]},
+  {id:"g11i-04-3", name:"Water Security: Supply, Demand & Management", emoji:"💧", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g11t-04", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain rising water demand, water insecurity, and strategies to increase and manage supply.",
+   learningOutcomes:["Explain causes and impacts of water insecurity","Describe areas of water surplus and deficit","Evaluate water management strategies"],
+   topics:["Demand & supply","Insecurity","Management"], prerequisites:["g11i-04-1"]},
+  {id:"g11i-04-4", name:"Energy Security: Supply & the Energy Mix", emoji:"⚡", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g11t-04", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain energy demand, energy security and the changing energy mix.",
+   learningOutcomes:["Explain causes and impacts of energy insecurity","Describe the changing energy mix","Evaluate sustainable energy strategies"],
+   topics:["Demand & supply","Energy mix","Sustainability"], prerequisites:["g11i-04-1"]}
 );
 
 // ── Topic 5: Fieldwork Skills (2 islands) ────────────────────────────────────
@@ -96,7 +116,22 @@ CURRICULUM.push(
    topicId:"g11t-05", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Present fieldwork data using appropriate techniques, analyse patterns and evaluate the enquiry process.",
    learningOutcomes:["Select and construct appropriate data presentation techniques","Analyse data using statistical methods and identify patterns","Evaluate the reliability of conclusions and suggest improvements"],
-   topics:["Data presentation","Statistical analysis","Evaluation and improvement"], prerequisites:["g11i-05-1"]}
+   topics:["Data presentation","Statistical analysis","Evaluation and improvement"], prerequisites:["g11i-05-1"]},
+  {id:"g11i-05-3", name:"Physical Fieldwork Enquiry", emoji:"🏞️", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g11t-05", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Work through a physical fieldwork enquiry from question and data collection to conclusion and evaluation.",
+   learningOutcomes:["Form a question and hypothesis for a physical enquiry","Select primary methods and sampling","Analyse, conclude and evaluate"],
+   topics:["Question & methods","Data collection","Analysis & evaluation"], prerequisites:["g11i-05-1"]},
+  {id:"g11i-05-4", name:"Human Fieldwork Enquiry", emoji:"🏙️", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g11t-05", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Work through a human fieldwork enquiry, selecting methods, sampling, analysis and evaluation.",
+   learningOutcomes:["Form a hypothesis for a human enquiry","Select methods and sampling strategies","Present, analyse and evaluate"],
+   topics:["Question & methods","Sampling","Analysis & evaluation"], prerequisites:["g11i-05-1"]},
+  {id:"g11i-05-5", name:"Unfamiliar Fieldwork (Paper 3)", emoji:"🧭", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g11t-05", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Answer Paper 3 Section B questions about an unfamiliar fieldwork context.",
+   learningOutcomes:["Interpret unseen methods and data","Suggest suitable methods and improvements","Evaluate the reliability of others' enquiries"],
+   topics:["Unseen context","Suggesting methods","Evaluating enquiries"], prerequisites:["g11i-05-1"]}
 );
 
 // ── Topic 6: Exam Technique: 6 & 9-Mark Questions (3 islands) ──────────────

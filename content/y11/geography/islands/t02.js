@@ -26,7 +26,31 @@ FLASHCARDS.push(
   {id:"g11fc-02-2-4", islandId:"g11i-02-2", front:"How can sustainable forestry and selective logging help conserve rainforests?",
    back:"Sustainable forestry manages forests so that timber is harvested without destroying the ecosystem long-term.\n\nKey practices:\n• Selective logging — only mature trees of certain species are felled, allowing the forest to regenerate.\n• Replanting — new trees are planted to replace those harvested.\n• Certification — organisations like the FSC (Forest Stewardship Council) certify wood from sustainably managed forests.\n• Reduced-impact logging — careful planning of roads and felling directions minimises damage.\n\nAdvantages:\n+ Provides income while maintaining biodiversity and carbon storage.\n+ FSC-certified products allow consumers to make sustainable choices.\n\nDisadvantages:\n− Slower and less profitable than clear-felling.\n− Difficult to monitor and enforce in remote areas.\n− Illegal logging undermines certified operations.", difficulty:2, category:"application"},
   {id:"g11fc-02-2-5", islandId:"g11i-02-2", front:"How are local community projects helping to combat desertification in the Sahel?",
-   back:"The Great Green Wall initiative is the most ambitious project:\n\n• Goal: plant an 8,000 km belt of trees across the width of Africa, from Senegal to Djibouti.\n• Purpose: restore degraded land, improve food security and create jobs.\n• Progress: over 12 million hectares have been restored in some form since 2007.\n\nOther local strategies:\n• Stone lines (bunds) — rows of stones slow rainwater runoff, allowing it to soak into the soil and reducing erosion.\n• Agroforestry — planting trees alongside crops provides shade, reduces wind erosion and improves soil fertility.\n• Improved cooking stoves — reduce the amount of wood needed for fuel, slowing deforestation.\n• Water harvesting — small dams and terraces capture rainwater for irrigation.\n\nThese community-led approaches are effective because they are low-cost, use local knowledge and give people ownership of the solution.", difficulty:2, category:"application"}
+   back:"The Great Green Wall initiative is the most ambitious project:\n\n• Goal: plant an 8,000 km belt of trees across the width of Africa, from Senegal to Djibouti.\n• Purpose: restore degraded land, improve food security and create jobs.\n• Progress: over 12 million hectares have been restored in some form since 2007.\n\nOther local strategies:\n• Stone lines (bunds) — rows of stones slow rainwater runoff, allowing it to soak into the soil and reducing erosion.\n• Agroforestry — planting trees alongside crops provides shade, reduces wind erosion and improves soil fertility.\n• Improved cooking stoves — reduce the amount of wood needed for fuel, slowing deforestation.\n• Water harvesting — small dams and terraces capture rainwater for irrigation.\n\nThese community-led approaches are effective because they are low-cost, use local knowledge and give people ownership of the solution.", difficulty:2, category:"application"},
+
+  // g11i-02-3 — Deforestation: Causes, Impacts & a Case Study
+  {id:"g11fc-02-3-1", islandId:"g11i-02-3", front:"Outline the main causes of deforestation in the Amazon rainforest.",
+   back:"The Amazon — the world's largest tropical rainforest — is being cleared for several reasons:\n\n• Commercial farming — cattle ranching is the single biggest cause, with vast areas cleared for grazing; soya plantations supply global animal feed.\n• Logging — felling of valuable hardwoods such as mahogany, both legally and illegally.\n• Mineral extraction — open-cast mining for iron ore, gold and bauxite (e.g. the Carajás mine in Brazil).\n• Roads and settlement — highways such as the Trans-Amazonian Highway open up forest to migrants and farmers.\n• Hydroelectric power (HEP) — large dams (e.g. Belo Monte) flood huge areas of forest to generate electricity.\n\nBrazil has lost roughly 20% of its original Amazon forest. Clearance often proceeds in a 'fishbone' pattern spreading out from new roads.", difficulty:2, category:"concept"},
+  {id:"g11fc-02-3-2", islandId:"g11i-02-3", front:"What are the environmental impacts of Amazon deforestation?",
+   back:"Environmental impacts include:\n\n• Loss of biodiversity — the Amazon holds around 10% of all known species; habitat destruction drives extinction and breaks food chains.\n• Carbon emissions and climate change — the forest stores billions of tonnes of carbon. Burning and clearance release CO₂, while fewer trees absorb less. The Amazon is at risk of becoming a net carbon source.\n• Soil erosion — without tree roots and canopy, heavy rainfall washes away thin tropical soils, leaving infertile land.\n• Disrupted water cycle — reduced transpiration lowers regional rainfall and can push the forest towards a drier 'tipping point'.\n\nThese impacts are felt locally (soil and water) and globally (climate).", difficulty:2, category:"concept"},
+  {id:"g11fc-02-3-3", islandId:"g11i-02-3", front:"Weigh the economic gains and losses of deforestation in the Amazon.",
+   back:"Economic gains:\n• Jobs and income from ranching, soya farming, logging and mining.\n• Export earnings — beef, soya and minerals bring foreign currency to Brazil.\n• HEP provides electricity for industry and homes.\n• Roads improve access and trade for remote regions.\n\nEconomic losses:\n• Loss of ecosystem services — the forest regulates climate, water and soil at no cost; replacing these is hugely expensive.\n• Cleared land often loses fertility within a few years, so farming is short-lived.\n• Lost potential from undiscovered medicines and sustainable products (e.g. nuts, rubber, ecotourism).\n• Climate change costs (flooding, drought) fall on the whole world.\n\nMany gains are short-term and private, while losses are long-term and shared globally.", difficulty:3, category:"evaluation"},
+  {id:"g11fc-02-3-4", islandId:"g11i-02-3", front:"How can the Amazon rainforest be managed sustainably?",
+   back:"Sustainable management aims to use the forest without destroying it for future generations:\n\n• Selective logging — only mature trees are felled, allowing regeneration.\n• Replanting and afforestation — replacing trees that are harvested.\n• Forest reserves and national parks — legally protecting key areas.\n• Ecotourism — generating income from the living forest while funding conservation.\n• International agreements — REDD+ pays countries to keep forests standing for their carbon value.\n• Debt-for-nature swaps — cancelling debt in return for conservation.\n• Education and community involvement — giving local people a stake in protection.\n\nThe key is balancing development needs with conservation so the forest's ecosystem services are preserved.", difficulty:2, category:"application"},
+  {id:"g11fc-02-3-5", islandId:"g11i-02-3", front:"Describe the structure (layers) of a tropical rainforest.",
+   back:"A tropical rainforest has four main layers, each adapted to different light levels:\n\n• Emergent layer — the tallest trees (up to 45 m) poke above the canopy. They receive full sunlight but face strong winds.\n• Canopy — a continuous 'roof' of treetops around 30 m high. It absorbs most sunlight and rainfall and contains the greatest abundance of wildlife.\n• Under-canopy (understorey) — smaller trees and shrubs in shade; plants have large leaves to capture limited light.\n• Forest floor — dark and humid; little grows here, but rapid decomposition recycles nutrients quickly.\n\nThis layering creates many habitats and is one reason rainforests are so biodiverse. Removing the canopy through deforestation exposes the lower layers and the thin soil to damage.", difficulty:2, category:"concept"},
+
+  // g11i-02-4 — Desertification in the Sahel
+  {id:"g11fc-02-4-1", islandId:"g11i-02-4", front:"Where is the Sahel and why is it prone to desertification?",
+   back:"The Sahel is a semi-arid belt of dryland stretching across Africa just south of the Sahara Desert, from Senegal in the west to Sudan and beyond in the east.\n\nWhy it is prone to desertification:\n• Transitional climate — low and highly variable rainfall (roughly 150–600 mm/year) between desert and savanna.\n• Fragile, thin soils that are easily eroded once vegetation is lost.\n• Frequent droughts that kill vegetation and dry out the land.\n• Rapid population growth increasing pressure on land, water and fuelwood.\n\nThese natural and human factors combine, so any extra stress can tip the land towards becoming desert. Over 40 million people in the Sahel are affected.", difficulty:2, category:"concept"},
+  {id:"g11fc-02-4-2", islandId:"g11i-02-4", front:"Explain the causes of desertification in the Sahel.",
+   back:"Desertification in the Sahel results from interacting physical and human causes:\n\nPhysical:\n• Climate change — reduced and more variable rainfall and higher temperatures dry out soil and vegetation.\n• Soil erosion — wind and rain strip bare, unprotected soil.\n\nHuman:\n• Population growth — more people demand more food, water and fuel.\n• Overgrazing — too many cattle, sheep and goats strip vegetation faster than it can recover.\n• Over-cultivation — continuous farming without rest exhausts soil nutrients.\n• Removal of fuel wood — cutting trees for cooking fuel removes roots that bind the soil and shelter that retains moisture.\n\nThese causes form a vicious cycle: losing vegetation exposes soil, which erodes, reducing fertility and pushing people to clear yet more land.", difficulty:2, category:"concept"},
+  {id:"g11fc-02-4-3", islandId:"g11i-02-4", front:"What are the impacts of desertification on people and the environment in the Sahel?",
+   back:"Impacts on people:\n• Food insecurity — falling crop yields and dying livestock cause hunger and famine.\n• Water scarcity — wells and rivers dry up, so people (often women and children) walk far for water.\n• Migration — families move to cities or other countries, creating 'environmental refugees'.\n• Conflict — competition for shrinking land and water can spark violence between farmers and herders.\n• Poverty and poor health — malnutrition and dust storms (respiratory illness) worsen living conditions.\n\nImpacts on the environment:\n• Loss of vegetation and biodiversity.\n• Soil becomes infertile and is lost to wind and water erosion.\n• Rivers and water sources silt up or dry out.\n\nThe impacts reinforce one another, trapping communities in a cycle of land degradation and poverty.", difficulty:2, category:"application"},
+  {id:"g11fc-02-4-4", islandId:"g11i-02-4", front:"What is the Great Green Wall and how does tree planting tackle desertification?",
+   back:"The Great Green Wall is an African Union initiative to plant an 8,000 km belt of trees and vegetation across the Sahel, from Senegal to Djibouti, aiming to restore 100 million hectares of degraded land by 2030.\n\nHow tree planting helps:\n• Roots bind the soil, reducing wind and water erosion.\n• Canopy shelters the ground, reducing evaporation and keeping soil moist.\n• Fallen leaves add organic matter, improving fertility.\n• Trees provide fuelwood, fruit, fodder and income, reducing pressure to clear new land.\n• Vegetation can increase local humidity and rainfall over time.\n\nProgress has been uneven — drought and funding gaps mean many seedlings die — but over 12 million hectares have been restored in some form since 2007.", difficulty:2, category:"application"},
+  {id:"g11fc-02-4-5", islandId:"g11i-02-4", front:"Which water, soil and technology solutions help reduce desertification?",
+   back:"A range of appropriate, low-cost solutions help manage drylands:\n\nWater management:\n• Stone lines (bunds) — rows of stones along contours slow runoff so water soaks in.\n• Small dams and terraces capture rainwater for irrigation.\n• Rainwater harvesting from rooftops and surfaces.\n\nSoil management:\n• Agroforestry — growing trees among crops to anchor soil and add nutrients.\n• Leaving fields fallow and rotating crops to let soil recover.\n• Adding manure and mulch to rebuild fertility.\n\nAppropriate technology:\n• Fuel-efficient cooking stoves reduce the wood needed, slowing tree loss.\n• Solar pumps and drip irrigation use scarce water efficiently.\n\nThese work best when communities lead them, because they are cheap, use local knowledge and build local ownership.", difficulty:2, category:"application"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -64,6 +88,40 @@ Object.assign(QUESTIONS, {
     {q:"Which local strategy helps combat desertification by slowing surface water runoff?",
      opts:["Building motorways across the Sahel","Laying stone lines (bunds) across slopes to slow rainwater and allow it to soak into the soil","Importing sand from coastal areas","Removing all vegetation to reduce water loss"], c:1,
      e:"Stone lines (bunds) are rows of stones laid along the contours of slopes. They slow the flow of rainwater across the surface, allowing it to soak into the soil rather than running off and being lost. This improves soil moisture, reduces erosion and helps crops grow. It is a low-cost, low-technology approach that uses local materials and knowledge, making it effective and accessible for Sahel communities."}
+  ],
+  "g11i-02-3": [
+    {q:"Which activity is the single largest cause of deforestation in the Amazon rainforest?",
+     opts:["Collecting Brazil nuts and rubber","Cattle ranching for beef production","Building ecotourism lodges","Subsistence fruit gardening"], c:1,
+     e:"Cattle ranching is the single largest driver of Amazon deforestation. Huge areas of forest are cleared and burned to create pasture for beef cattle, much of it for export. Soya farming, logging, mining, road building and HEP dams also contribute, but ranching accounts for the greatest share. Collecting forest products like nuts and rubber is sustainable and does not require clearance."},
+    {q:"Why does deforestation in the Amazon contribute to climate change?",
+     opts:["Trees release oxygen that traps heat in the atmosphere","Cleared and burned forest releases stored carbon as CO₂, and fewer trees remain to absorb CO₂","Removing trees increases the ozone layer","Deforestation cools the planet by reflecting more sunlight"], c:1,
+     e:"Rainforests store vast amounts of carbon in their biomass. When the forest is cleared and burned, this carbon is released into the atmosphere as CO₂, a greenhouse gas. At the same time, the loss of trees means less CO₂ is absorbed through photosynthesis. Both effects increase the greenhouse effect and contribute to global warming. Deforestation does not affect the ozone layer."},
+    {q:"Which statement best describes the economic costs of Amazon deforestation?",
+     opts:["There are no economic costs, only benefits","Loss of ecosystem services, short-lived soil fertility and lost future products often outweigh short-term private gains","Deforestation permanently increases farmland value","Only LICs experience any economic cost"], c:1,
+     e:"While deforestation brings short-term income from ranching, soya, logging and mining, the economic costs are significant. The forest provides free ecosystem services (climate regulation, water and soil protection) that are costly to replace. Cleared soils often lose fertility within a few years, and potential income from medicines, sustainable products and ecotourism is lost. Many gains are short-term and private, while losses are long-term and shared globally."},
+    {q:"Which layer of a tropical rainforest forms a continuous 'roof' that absorbs most sunlight?",
+     opts:["The forest floor","The canopy","The emergent layer","The understorey"], c:1,
+     e:"The canopy is a dense, continuous layer of treetops about 30 m above the ground. It absorbs the majority of sunlight and rainfall and contains the greatest abundance of rainforest wildlife. The emergent layer is the few tallest trees poking above it; the understorey and forest floor receive very little light. Removing the canopy through deforestation exposes the lower layers and thin soil to damage."},
+    {q:"Which of the following is an example of sustainable management of the rainforest?",
+     opts:["Clear-felling large areas for cattle pasture","Selective logging that fells only mature trees and allows regeneration","Building highways to open up the interior","Open-cast mining for iron ore"], c:1,
+     e:"Selective logging is a sustainable strategy because only mature trees of certain species are felled, leaving the rest of the forest intact to regenerate and continue providing ecosystem services. Clear-felling, road building and open-cast mining all cause large-scale, lasting destruction. Other sustainable approaches include replanting, forest reserves, ecotourism and international agreements such as REDD+."}
+  ],
+  "g11i-02-4": [
+    {q:"Where is the Sahel located?",
+     opts:["A tropical rainforest belt along the Equator","A semi-arid belt of dryland across Africa just south of the Sahara Desert","A mountainous region of southern Africa","A coastal wetland in North Africa"], c:1,
+     e:"The Sahel is a semi-arid transitional belt stretching across Africa immediately south of the Sahara Desert, running from Senegal in the west towards Sudan and beyond in the east. It lies between the desert to the north and wetter savanna to the south. Its low, variable rainfall and fragile soils make it highly vulnerable to desertification."},
+    {q:"Which of the following is a human cause of desertification in the Sahel?",
+     opts:["Increased and reliable rainfall","Overgrazing by too many livestock, which strips vegetation faster than it can recover","Planting too many trees","A fall in the human population"], c:1,
+     e:"Overgrazing is a key human cause of desertification. When too many cattle, sheep and goats graze an area, they remove vegetation faster than it can regrow, leaving bare soil exposed to wind and water erosion. Other human causes include over-cultivation, removal of fuel wood and population growth. Reduced rainfall (climate change) is the main physical cause."},
+    {q:"How does the removal of fuel wood contribute to desertification?",
+     opts:["It increases rainfall in the area","Cutting trees removes roots that bind soil and canopy that retains moisture, exposing soil to erosion","It makes the soil more fertile","It has no effect on the land"], c:1,
+     e:"In the Sahel, trees are often cut for cooking fuel. Removing them strips away the roots that hold the soil together and the canopy that shelters the ground and reduces evaporation. The exposed soil dries out and is easily eroded by wind and rain, losing fertility. This is one link in the vicious cycle of vegetation loss, erosion and land degradation that drives desertification."},
+    {q:"Which of the following is an impact of desertification on people in the Sahel?",
+     opts:["Improved crop yields and food surpluses","Food and water insecurity that can force people to migrate as 'environmental refugees'","A reduction in conflict over resources","Better public health due to cleaner air"], c:1,
+     e:"Desertification reduces crop yields and kills livestock, causing food insecurity and famine, while wells and rivers dry up, causing water scarcity. These pressures force families to migrate to cities or other countries as 'environmental refugees', and competition for shrinking resources can trigger conflict between farmers and herders. Dust storms and malnutrition also harm health, so the impacts on people are overwhelmingly negative."},
+    {q:"What is the aim of the Great Green Wall initiative?",
+     opts:["To build a concrete barrier to stop sand dunes","To plant an 8,000 km belt of trees and vegetation across the Sahel to restore degraded land","To dam every major river in the Sahara","To relocate all Sahel communities to the coast"], c:1,
+     e:"The Great Green Wall is an African Union initiative to plant an 8,000 km belt of trees and vegetation across the width of the Sahel, from Senegal to Djibouti, aiming to restore 100 million hectares of degraded land by 2030. Tree roots bind the soil, the canopy reduces evaporation and the vegetation provides fuelwood, food and income, helping to reverse desertification. Progress has been uneven due to drought and funding gaps."}
   ]
 });
 
@@ -174,6 +232,78 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes describe conservation strategies without evaluating them. For 9-mark questions, the mark scheme rewards a <strong>balanced assessment</strong> — state what each strategy achieves and what it fails to address, then reach a justified conclusion.</p>
+`,
+
+'g11i-02-3': `
+<h2>Deforestation: Causes, Impacts & a Case Study</h2>
+<div class="lesson-diagram" data-diagram="rainforest-layers"><p class="diagram-caption">The layered structure of a tropical rainforest</p></div>
+<p>The Amazon is the world's largest tropical rainforest, spanning nine countries with most lying in Brazil. It is a globally important store of carbon and biodiversity, yet it is being cleared rapidly. Brazil has already lost around 20% of its original Amazon forest, making it a key AQA case study of deforestation.</p>
+
+<h3>Causes of Deforestation</h3>
+<ul>
+  <li><strong>Commercial farming</strong> — cattle ranching is the biggest cause; soya plantations supply global animal feed.</li>
+  <li><strong>Logging</strong> — felling of hardwoods such as mahogany, both legal and illegal.</li>
+  <li><strong>Mineral extraction</strong> — open-cast mines for iron ore, gold and bauxite (e.g. Carajás).</li>
+  <li><strong>Roads and settlement</strong> — highways such as the Trans-Amazonian Highway open the forest to migrants, spreading clearance in a 'fishbone' pattern.</li>
+  <li><strong>Hydroelectric power</strong> — dams such as Belo Monte flood large areas of forest.</li>
+</ul>
+
+<h3>Impacts of Deforestation</h3>
+<p>The <strong>environmental</strong> impacts are severe. The Amazon holds roughly 10% of known species, so clearance drives <strong>biodiversity loss</strong> and extinction. Burning releases stored <strong>carbon</strong> as CO₂, contributing to <strong>climate change</strong>, while fewer trees absorb less CO₂. Exposed thin soils suffer <strong>erosion</strong> in heavy rain, and reduced transpiration disrupts the water cycle. The <strong>economic</strong> picture is mixed: ranching, soya, logging, mining and HEP bring jobs and export income, but cleared land loses fertility within years, and the loss of ecosystem services and future products (medicines, ecotourism) often outweighs short-term private gains.</p>
+
+<h3>Towards Sustainable Management</h3>
+<p>Because the gains are short-term but the losses long-term and global, sustainable management is essential. Selective logging, replanting, forest reserves, ecotourism and international schemes such as REDD+ aim to keep the forest standing while still allowing development.</p>
+
+<h3>Worked Example</h3>
+<p>Explain two causes of deforestation in a tropical rainforest you have studied. [4 marks]</p>
+<p>In the Amazon, the main cause is <strong>commercial cattle ranching</strong>. Large areas of forest are cleared and burned to create pasture for beef cattle, much of which is exported, making ranching the single biggest driver. A second cause is <strong>road building</strong>, such as the Trans-Amazonian Highway. New roads give farmers, loggers and miners access to previously remote forest, so clearance spreads outwards from the road in a 'fishbone' pattern.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often write that the rainforest is cleared 'for wood' and stop there. Logging is only one cause — and rarely the largest. Always identify <strong>commercial farming</strong> (especially cattle ranching) as the leading driver in the Amazon, and support each cause with detail.</p>
+`,
+
+'g11i-02-4': `
+<h2>Desertification in the Sahel</h2>
+<div class="lesson-diagram" data-diagram="desertification"><p class="diagram-caption">The causes and cycle of desertification</p></div>
+<p>The Sahel is a semi-arid belt of dryland stretching across Africa just south of the Sahara, from Senegal in the west towards Sudan in the east. With low, variable rainfall and fragile soils, it is one of the regions most threatened by <strong>desertification</strong> — the process by which productive land degrades into desert. Over 40 million people are affected.</p>
+
+<h3>Causes of Desertification</h3>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#0d9488;color:white">
+    <th style="padding:8px;border:1px solid #ccc">Type</th>
+    <th style="padding:8px;border:1px solid #ccc">Cause</th>
+    <th style="padding:8px;border:1px solid #ccc">Effect</th>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Physical</td>
+    <td style="padding:8px;border:1px solid #ccc">Climate change — less, more variable rainfall</td>
+    <td style="padding:8px;border:1px solid #ccc">Soil and vegetation dry out</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Human</td>
+    <td style="padding:8px;border:1px solid #ccc">Population growth and overgrazing</td>
+    <td style="padding:8px;border:1px solid #ccc">Vegetation stripped faster than it recovers</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Human</td>
+    <td style="padding:8px;border:1px solid #ccc">Over-cultivation and removal of fuel wood</td>
+    <td style="padding:8px;border:1px solid #ccc">Soil exhausted and exposed to erosion</td>
+  </tr>
+</table>
+<p>These causes form a <strong>vicious cycle</strong>: losing vegetation exposes soil, which erodes and loses fertility, pushing people to clear yet more land.</p>
+
+<h3>Impacts on People and Environment</h3>
+<p>For <strong>people</strong>, falling crop yields and dying livestock cause food insecurity and famine, wells dry up causing water scarcity, and families migrate as 'environmental refugees'. Competition for scarce land and water can trigger conflict, while dust storms and malnutrition harm health. For the <strong>environment</strong>, vegetation and biodiversity are lost, soils become infertile and erode, and water sources silt up or dry out.</p>
+
+<h3>Solutions</h3>
+<p>Solutions focus on water and soil management, tree planting and appropriate technology. <strong>Stone lines (bunds)</strong> slow runoff so water soaks in; <strong>agroforestry</strong> anchors soil and adds nutrients; the <strong>Great Green Wall</strong> aims to plant an 8,000 km belt of trees across the Sahel; and fuel-efficient stoves cut the wood needed for cooking.</p>
+
+<h3>Worked Example</h3>
+<p>Explain how one strategy can reduce desertification in the Sahel. [4 marks]</p>
+<p>Planting <strong>stone lines (bunds)</strong> along the contours of slopes reduces desertification. The rows of stones slow rainwater as it flows across the surface, giving it time to soak into the soil instead of running off and being lost. This keeps the soil moist so crops can grow, and reduces the erosion of bare soil. Because the technique is cheap and uses local materials, communities can build and maintain it themselves.</p>
+
+<h3>Common Mistake</h3>
+<p>Students sometimes confuse desertification with the natural existence of deserts. Desertification is the <strong>degradation of once-productive land</strong> caused by climate change and human pressure — not simply 'where deserts are'. Always link causes (overgrazing, over-cultivation, fuelwood removal) to the cycle of soil erosion.</p>
 `
 
 });
