@@ -108,3 +108,44 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Check the equation's form before sketching: 3ˣ (exponential) and 3/x (reciprocal) look similar in words but give very different graphs.</p>`
 });
+
+FLASHCARDS.push(
+  // m11i-02-4 — Exponential Graphs & Equations
+  {id:"m11fc-02-4-1", islandId:"m11i-02-4", front:"What is the general form of an exponential function?",
+   back:"y = kaˣ, where a > 0.\n\nThe variable x is the POWER, which makes the curve grow or decay ever faster.", difficulty:2, category:"definition"},
+  {id:"m11fc-02-4-2", islandId:"m11i-02-4", front:"When does y = kaˣ show growth, and when decay?",
+   back:"Growth when a > 1; decay when 0 < a < 1.\n\nGrowth rises ever more steeply; decay falls towards zero.", difficulty:2, category:"concept"},
+  {id:"m11fc-02-4-3", islandId:"m11i-02-4", front:"Through which point does y = kaˣ always pass?",
+   back:"(0, k).\n\nWhen x = 0, aˣ = a⁰ = 1, so y = k × 1 = k.", difficulty:2, category:"concept"},
+  {id:"m11fc-02-4-4", islandId:"m11i-02-4", front:"For y = 2ˣ, find y when x = 0, 1, 2 and 3.",
+   back:"1, 2, 4 and 8.\n\n2⁰ = 1, 2¹ = 2, 2² = 4, 2³ = 8 — the curve rises ever more steeply (growth).", difficulty:2, category:"calculation"},
+  {id:"m11fc-02-4-5", islandId:"m11i-02-4", front:"Why does y = 2ˣ never reach y = 0?",
+   back:"The x-axis is an asymptote.\n\nFor positive k the curve gets ever closer to y = 0 but never touches it.", difficulty:3, category:"application"});
+
+Object.assign(QUESTIONS, {
+  "m11i-02-4": [
+    {q:"The general exponential function is:", opts:["y = kaˣ","y = ax²","y = mx + c","y = k/x"], c:0,
+     e:"y = kaˣ with a > 0; x is the power."},
+    {q:"y = kaˣ gives exponential growth when:", opts:["a > 1","0 < a < 1","a = 1","a = 0"], c:0,
+     e:"For a > 1 the curve rises ever more steeply — growth."},
+    {q:"The graph of y = kaˣ passes through:", opts:["(0, k)","(k, 0)","(0, 0)","(1, k)"], c:0,
+     e:"a⁰ = 1, so y = k when x = 0, giving (0, k)."},
+    {q:"For y = 2ˣ, the value when x = 3 is:", opts:["8","6","9","16"], c:0,
+     e:"2³ = 8."},
+    {q:"For positive k, the x-axis is the curve's:", opts:["Asymptote","Root","Turning point","Tangent"], c:0,
+     e:"The curve approaches y = 0 but never reaches it — the x-axis is an asymptote."}
+  ]
+});
+
+Object.assign(LESSONS, {
+  "m11i-02-4": `<h2>Exponential Graphs &amp; Equations</h2>
+<p>An <strong>exponential function</strong> has the form y = kaˣ, where a &gt; 0. Here x is the <em>power</em>, so the value changes by a constant multiplier for each step in x. This models real situations such as <strong>compound interest</strong>, <strong>population growth</strong> and <strong>radioactive decay</strong>.</p>
+<h3>Growth and decay</h3>
+<p>If a &gt; 1 the graph shows <strong>growth</strong> — it rises ever more steeply. If 0 &lt; a &lt; 1 it shows <strong>decay</strong> — it falls towards the x-axis. Every such curve passes through (0, k), because a⁰ = 1.</p>
+<h3>The asymptote</h3>
+<p>For k &gt; 0 the curve never reaches y = 0: the x-axis is an <strong>asymptote</strong> it gets ever closer to but never touches.</p>
+<h3>Worked example</h3>
+<p>For y = 2ˣ: when x = 0, y = 1; x = 1, y = 2; x = 2, y = 4; x = 3, y = 8. The curve rises ever more steeply — that is growth. By contrast y = (½)ˣ falls towards zero — that is decay.</p>
+<h3>Common mistake</h3>
+<p>Do not confuse y = 2ˣ (the power changes) with y = x² (the base changes). They give completely different graphs — only the exponential keeps multiplying by the same factor.</p>`
+});

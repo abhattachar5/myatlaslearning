@@ -119,3 +119,44 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Match the multiplier to the number of recurring digits: one digit → ×10, two digits → ×100. Always simplify the final fraction.</p>`
 });
+
+FLASHCARDS.push(
+  // m11i-04-4 — Solving Equations with Algebraic Fractions
+  {id:"m11fc-04-4-1", islandId:"m11i-04-4", front:"What is the first step in solving an equation with algebraic fractions?",
+   back:"Multiply EVERY term by the denominators to clear the fractions.\n\nThis usually leaves a quadratic to solve.", difficulty:3, category:"definition"},
+  {id:"m11fc-04-4-2", islandId:"m11i-04-4", front:"After clearing the fractions, what type of equation do you usually get?",
+   back:"A quadratic.\n\nRearrange to the form ax² + bx + c = 0, then factorise or use the formula.", difficulty:2, category:"concept"},
+  {id:"m11fc-04-4-3", islandId:"m11i-04-4", front:"To clear 6/x − 6/(x+1) = 1, what do you multiply by?",
+   back:"x(x + 1).\n\nMultiplying every term by the product of the denominators removes all the fractions.", difficulty:3, category:"calculation"},
+  {id:"m11fc-04-4-4", islandId:"m11i-04-4", front:"Solve 6/x − 6/(x+1) = 1.",
+   back:"x = 2 or x = −3.\n\nClearing gives x² + x − 6 = 0, i.e. (x + 3)(x − 2) = 0.", difficulty:3, category:"application"},
+  {id:"m11fc-04-4-5", islandId:"m11i-04-4", front:"Why should you check a solution back in the original equation?",
+   back:"To confirm it works and to reject any value that makes a denominator zero.\n\nE.g. x = 2 gives 3 − 2 = 1 ✓.", difficulty:3, category:"concept"});
+
+Object.assign(QUESTIONS, {
+  "m11i-04-4": [
+    {q:"To solve an equation with algebraic fractions, first:", opts:["Multiply every term by the denominators","Add the numerators","Square both sides","Cancel the x terms"], c:0,
+     e:"Multiplying through by the denominators clears the fractions."},
+    {q:"Clearing the fractions in such equations usually forms a:", opts:["Quadratic","Straight line","Cubic","Reciprocal"], c:0,
+     e:"You typically reach ax² + bx + c = 0."},
+    {q:"To clear 6/x − 6/(x+1) = 1 you multiply by:", opts:["x(x + 1)","x","x + 1","6"], c:0,
+     e:"The product of both denominators is x(x + 1)."},
+    {q:"6/x − 6/(x+1) = 1 rearranges to:", opts:["x² + x − 6 = 0","x² − x − 6 = 0","x² + 6 = 0","x² + x + 6 = 0"], c:0,
+     e:"6(x+1) − 6x = x(x+1) gives 6 = x² + x, so x² + x − 6 = 0."},
+    {q:"The solutions of 6/x − 6/(x+1) = 1 are:", opts:["x = 2 or x = −3","x = 3 or x = −2","x = 1 or x = 6","x = −1 or x = 6"], c:0,
+     e:"(x + 3)(x − 2) = 0 gives x = 2 or x = −3."}
+  ]
+});
+
+Object.assign(LESSONS, {
+  "m11i-04-4": `<h2>Solving Equations with Algebraic Fractions</h2>
+<p>When an equation contains algebraic fractions, the key first move is to <strong>clear the fractions</strong>: multiply <em>every</em> term — including any whole-number terms — by the denominators. This usually leaves a <strong>quadratic</strong>, which you then solve by factorising or using the formula.</p>
+<h3>The method</h3>
+<p>Identify the denominators, multiply through by their product, expand and simplify, rearrange to ax² + bx + c = 0, then solve. Finally, <strong>check</strong> each solution in the original equation and reject any value that makes a denominator zero.</p>
+<h3>Worked example</h3>
+<p>Solve 6/x − 6/(x+1) = 1. Multiply through by x(x+1):</p>
+<p>6(x+1) − 6x = x(x+1) → 6x + 6 − 6x = x² + x → 6 = x² + x → x² + x − 6 = 0 → (x+3)(x−2) = 0 → x = 2 or x = −3.</p>
+<p>Check: x = 2 gives 3 − 2 = 1 ✓.</p>
+<h3>Common mistake</h3>
+<p>Multiply <em>every</em> term by the denominators, not just the fractions — forgetting the term on the right (here the 1, which becomes x(x+1)) is the most common slip.</p>`
+});

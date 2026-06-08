@@ -80,3 +80,46 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Inside-the-bracket shifts go the 'wrong' way: f(x + 3) moves the graph 3 to the <em>left</em>, not the right.</p>`
 });
+
+FLASHCARDS.push(
+  // m11i-10-3 — Solving Trig Equations Graphically
+  {id:"m11fc-10-3-1", islandId:"m11i-10-3", front:"How do you find the principal value of a trig equation?",
+   back:"Use inverse trig (sin⁻¹, cos⁻¹ or tan⁻¹) on your calculator.\n\nThis gives the FIRST solution; the graph's symmetry gives the rest.", difficulty:2, category:"definition"},
+  {id:"m11fc-10-3-2", islandId:"m11i-10-3", front:"For sin x = k, how do you find the second solution in 0°–360°?",
+   back:"Second solution = 180° − (first solution).\n\nThe sine curve is symmetric about x = 90°.", difficulty:3, category:"concept"},
+  {id:"m11fc-10-3-3", islandId:"m11i-10-3", front:"For cos x = k, how do you find the second solution in 0°–360°?",
+   back:"Second solution = 360° − (first solution).\n\nThe cosine curve is symmetric about x = 180°.", difficulty:3, category:"concept"},
+  {id:"m11fc-10-3-4", islandId:"m11i-10-3", front:"How often does the tan curve repeat, and what does that mean for solutions?",
+   back:"Every 180°.\n\nAdd 180° to a tan solution to find the next one within the range.", difficulty:3, category:"concept"},
+  {id:"m11fc-10-3-5", islandId:"m11i-10-3", front:"Solve sin x = 0.5 for 0° ≤ x ≤ 360°.",
+   back:"x = 30° or x = 150°.\n\nPrincipal value 30°; the other is 180° − 30° = 150°.", difficulty:3, category:"application"});
+
+Object.assign(QUESTIONS, {
+  "m11i-10-3": [
+    {q:"The principal value of a trig equation is found using:", opts:["Inverse trig","The period","A protractor","The y-intercept"], c:0,
+     e:"sin⁻¹, cos⁻¹ or tan⁻¹ gives the first solution."},
+    {q:"For sin x = k, the second solution in 0°–360° is:", opts:["180° − first","360° − first","90° − first","first + 180°"], c:0,
+     e:"The sine curve is symmetric about 90°, so the second is 180° − first."},
+    {q:"For cos x = k, the second solution in 0°–360° is:", opts:["360° − first","180° − first","90° + first","first + 180°"], c:0,
+     e:"The cosine curve is symmetric about 180°, so the second is 360° − first."},
+    {q:"The tan curve repeats every:", opts:["180°","360°","90°","270°"], c:0,
+     e:"Tangent has period 180°, so solutions repeat every 180°."},
+    {q:"Solving sin x = 0.5 for 0° ≤ x ≤ 360° gives:", opts:["30° and 150°","30° and 210°","30° and 330°","60° and 120°"], c:0,
+     e:"Principal value 30°; the other is 180° − 30° = 150°."}
+  ]
+});
+
+Object.assign(LESSONS, {
+  "m11i-10-3": `<h2>Solving Trig Equations Graphically</h2>
+<p>A trig equation like sin x = 0.5 usually has <strong>more than one</strong> solution in 0°–360°. The trick is to find the <strong>principal value</strong> with inverse trig, then use the <strong>symmetry of the curve</strong> to find the others within the range.</p>
+<h3>Using the symmetry</h3>
+<ul>
+<li><strong>sin x = k:</strong> the second solution is 180° − (first).</li>
+<li><strong>cos x = k:</strong> the second solution is 360° − (first).</li>
+<li><strong>tan x = k:</strong> the curve repeats every 180°, so add 180° for the next.</li>
+</ul>
+<h3>Worked example</h3>
+<p>Solve sin x = 0.5 for 0° ≤ x ≤ 360°. The principal value is x = 30°; by the symmetry of the sine curve the other solution is 180° − 30° = 150°. So x = 30° or x = 150°.</p>
+<h3>Common mistake</h3>
+<p>Do not stop at the calculator's first answer — sketch the curve and read off <em>every</em> solution inside the given range.</p>`
+});

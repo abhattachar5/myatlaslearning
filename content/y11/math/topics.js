@@ -78,7 +78,13 @@ CURRICULUM.push(
    description:"Match equations to the shapes of linear, quadratic, cubic, reciprocal and exponential graphs.",
    learningOutcomes:["Recognise graph shapes from equations","Identify exponential growth/decay curves","Match equations to sketches"],
    prerequisites:["m11i-02-2"],
-   topics:["Matching shapes","Exponential graphs","Equation to graph"]}
+   topics:["Matching shapes","Exponential graphs","Equation to graph"]},
+  {id:"m11i-02-4", subject:"Mathematics", subjectId:"math", topicId:"m11t-02", yearGroup:"Year 11",
+   name:"Exponential Graphs & Equations", emoji:"📈", difficulty:3, estimatedHours:2, color:"#3b82f6",
+   description:"Plot and interpret exponential graphs y = kaˣ, including growth and decay.",
+   learningOutcomes:["Recognise exponential growth and decay","Plot y = kaˣ and identify the asymptote","Link to real growth and decay contexts"],
+   prerequisites:["m11i-02-3"],
+   topics:["y = kaˣ","Growth & decay","Asymptotes"]}
 );
 
 // ── Topic 3: Simultaneous Equations (linear & quadratic) (m11t-03) ──────────
@@ -119,7 +125,13 @@ CURRICULUM.push(
    description:"Convert a recurring decimal to a fraction using algebra.",
    learningOutcomes:["Set the decimal equal to x","Multiply by a power of 10 and subtract","Write the result as a fraction in simplest form"],
    prerequisites:[],
-   topics:["Let x = the decimal","Subtract to remove the recurring part","Simplify the fraction"]}
+   topics:["Let x = the decimal","Subtract to remove the recurring part","Simplify the fraction"]},
+  {id:"m11i-04-4", subject:"Mathematics", subjectId:"math", topicId:"m11t-04", yearGroup:"Year 11",
+   name:"Solving Equations with Algebraic Fractions", emoji:"🟰", difficulty:3, estimatedHours:2, color:"#3b82f6",
+   description:"Clear algebraic fractions to form and solve an equation (often a quadratic).",
+   learningOutcomes:["Multiply through by the denominators","Form a quadratic equation","Solve and check the solutions"],
+   prerequisites:["m11i-04-2"],
+   topics:["Clearing fractions","Forming a quadratic","Solving"]}
 );
 
 // ── Topic 5: Functions (m11t-05) ────────────────────────────────────────────
@@ -177,7 +189,13 @@ CURRICULUM.push(
    description:"Use the cyclic-quadrilateral theorem and give reasons in circle proofs.",
    learningOutcomes:["Opposite angles of a cyclic quadrilateral sum to 180°","Combine theorems to find angles","Give a reason for each step"],
    prerequisites:["m11i-07-1"],
-   topics:["Cyclic quadrilateral","Combining theorems","Reasoning"]}
+   topics:["Cyclic quadrilateral","Combining theorems","Reasoning"]},
+  {id:"m11i-07-4", subject:"Mathematics", subjectId:"math", topicId:"m11t-07", yearGroup:"Year 11",
+   name:"The Alternate Segment Theorem", emoji:"⭕", difficulty:3, estimatedHours:2, color:"#3b82f6",
+   description:"Apply the alternate segment theorem and quote reasons in circle-geometry proofs.",
+   learningOutcomes:["State the alternate segment theorem","Identify the alternate segment","Use it with other circle theorems"],
+   prerequisites:["m11i-07-2"],
+   topics:["Tangent-chord angle","Alternate segment","Reasoning"]}
 );
 
 // ── Topic 8: Sine & Cosine Rules (m11t-08) ──────────────────────────────────
@@ -235,7 +253,13 @@ CURRICULUM.push(
    description:"Apply translations and reflections to the graph of a function y = f(x).",
    learningOutcomes:["Use f(x) + a and f(x + a) translations","Use −f(x) and f(−x) reflections","Describe a transformation from two graphs"],
    prerequisites:["m11i-02-1"],
-   topics:["Translations of graphs","Reflections of graphs","Describing transformations"]}
+   topics:["Translations of graphs","Reflections of graphs","Describing transformations"]},
+  {id:"m11i-10-3", subject:"Mathematics", subjectId:"math", topicId:"m11t-10", yearGroup:"Year 11",
+   name:"Solving Trig Equations Graphically", emoji:"🌊", difficulty:3, estimatedHours:2, color:"#3b82f6",
+   description:"Use the symmetry of sin, cos and tan graphs to find all solutions in a given range.",
+   learningOutcomes:["Find the principal value with inverse trig","Use graph symmetry for further solutions","Solve trig equations over 0-360°"],
+   prerequisites:["m11i-10-1"],
+   topics:["Principal value","Graph symmetry","All solutions"]}
 );
 
 // ── Topic 11: Growth, Decay & Iteration (m11t-11) ───────────────────────────

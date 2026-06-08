@@ -107,3 +107,44 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Set out the reasoning step by step with a named reason each time — examiners award marks for the theorem used, not just the final angle.</p>`
 });
+
+FLASHCARDS.push(
+  // m11i-07-4 — The Alternate Segment Theorem
+  {id:"m11fc-07-4-1", islandId:"m11i-07-4", front:"State the alternate segment theorem.",
+   back:"The angle between a TANGENT and a CHORD equals the angle in the ALTERNATE SEGMENT.\n\nThat is the inscribed angle subtended by the chord on the other side of it.", difficulty:3, category:"definition"},
+  {id:"m11fc-07-4-2", islandId:"m11i-07-4", front:"What is the 'alternate segment'?",
+   back:"The segment on the OTHER side of the chord from the tangent–chord angle.\n\nThe inscribed angle in that segment matches the tangent–chord angle.", difficulty:3, category:"concept"},
+  {id:"m11fc-07-4-3", islandId:"m11i-07-4", front:"The angle between a tangent and a chord is 65°. What is the angle in the alternate segment?",
+   back:"65°.\n\nBy the alternate segment theorem the two angles are equal.", difficulty:2, category:"calculation"},
+  {id:"m11fc-07-4-4", islandId:"m11i-07-4", front:"Can the alternate segment theorem be combined with other circle theorems?",
+   back:"Yes.\n\nUse it to find one angle, then apply theorems like 'angles in the same segment' or the cyclic-quadrilateral rule.", difficulty:3, category:"application"},
+  {id:"m11fc-07-4-5", islandId:"m11i-07-4", front:"What must you do when using the alternate segment theorem in a proof?",
+   back:"Quote the reason in words.\n\nState 'the angle between a tangent and a chord equals the angle in the alternate segment'.", difficulty:2, category:"concept"});
+
+Object.assign(QUESTIONS, {
+  "m11i-07-4": [
+    {q:"The alternate segment theorem links a chord with a:", opts:["Tangent","Diameter","Radius","Second chord"], c:0,
+     e:"It relates the tangent–chord angle to the angle in the alternate segment."},
+    {q:"The tangent–chord angle equals the angle in the:", opts:["Alternate segment","Same segment","Semicircle","Centre"], c:0,
+     e:"That is the alternate segment theorem."},
+    {q:"The tangent–chord angle is 65°. The angle in the alternate segment is:", opts:["65°","115°","25°","130°"], c:0,
+     e:"By the theorem the two angles are equal: 65°."},
+    {q:"The 'alternate segment' is the segment:", opts:["On the other side of the chord","At the centre","Outside the circle","Behind the tangent"], c:0,
+     e:"It is the segment on the opposite side of the chord from the tangent–chord angle."},
+    {q:"In a proof using this theorem you must:", opts:["Quote the reason in words","Measure with a protractor","Only give the number","Draw the radius"], c:0,
+     e:"Reasons must be quoted: the tangent–chord angle equals the angle in the alternate segment."}
+  ]
+});
+
+Object.assign(LESSONS, {
+  "m11i-07-4": `<h2>The Alternate Segment Theorem</h2>
+<p>The <strong>alternate segment theorem</strong> states that the angle between a <strong>tangent</strong> and a <strong>chord</strong> equals the angle in the <strong>alternate segment</strong> — the inscribed angle subtended by that chord in the segment on the other side of it.</p>
+<h3>Finding the alternate segment</h3>
+<p>The chord divides the circle into two segments. The tangent–chord angle sits in one of them; the equal inscribed angle lies in the <em>other</em> (alternate) segment, where the chord acts as the base of an inscribed triangle.</p>
+<h3>Combining with other theorems</h3>
+<p>Once you know one angle, link it to other facts — 'angles in the same segment are equal' or 'opposite angles in a cyclic quadrilateral sum to 180°' — to reach further angles. Always <strong>quote the reason</strong> in a proof.</p>
+<h3>Worked example</h3>
+<p>If the angle between a tangent and a chord is 65°, then the angle in the alternate segment is also <strong>65°</strong>.</p>
+<h3>Common mistake</h3>
+<p>Pick the correct segment: the equal angle is on the <em>opposite</em> side of the chord from the tangent–chord angle, not the same side.</p>`
+});
