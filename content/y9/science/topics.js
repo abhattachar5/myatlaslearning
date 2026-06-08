@@ -193,7 +193,12 @@ CURRICULUM.push(
    topicId:"s9t-09", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Write equations for neutralisation and describe the products of acid reactions.",
    learningOutcomes:["Write acid + base → salt + water","Write acid + metal → salt + hydrogen","Name salts from their acid and base"],
-   topics:["Acid + base","Acid + metal","Naming salts"], prerequisites:["s9i-09-1"]}
+   topics:["Acid + base","Acid + metal","Naming salts"], prerequisites:["s9i-09-1"]},
+  {id:"s9i-09-3", name:"Making Salts", emoji:"🧂", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s9t-09", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"React acids with metals, bases and carbonates to make and name salts.",
+   learningOutcomes:["Recall the three reactions of acids","Name salts from the acid used","Describe making a soluble salt"],
+   topics:["Reactions of acids","Naming salts","Soluble salt method"], prerequisites:["s9i-09-1"]}
 );
 
 // Topic 10: Earth's Atmosphere & Resources
@@ -261,7 +266,12 @@ CURRICULUM.push(
    topicId:"s9t-13", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Order the EM spectrum, give uses and dangers of each type.",
    learningOutcomes:["Order the EM spectrum by wavelength/frequency","Give uses and dangers of each type","Explain that all EM waves travel at the speed of light"],
-   topics:["The EM spectrum","Uses & dangers","Speed of light"], prerequisites:["s9i-13-1"]}
+   topics:["The EM spectrum","Uses & dangers","Speed of light"], prerequisites:["s9i-13-1"]},
+  {id:"s9i-13-3", name:"Reflection, Refraction & Sound", emoji:"🔊", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s9t-13", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Explain reflection, refraction and sound as a longitudinal wave.",
+   learningOutcomes:["State the law of reflection","Explain refraction as a change of speed","Describe sound as a longitudinal wave"],
+   topics:["Reflection","Refraction","Sound waves"], prerequisites:["s9i-13-1"]}
 );
 
 // Topic 14: Electricity: Circuits & Charge

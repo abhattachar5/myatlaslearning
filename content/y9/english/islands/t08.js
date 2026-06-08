@@ -114,3 +114,45 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Don't just retell what a character does. Always ask <em>why</em> (motivation) and <em>what it shows</em> (theme), supported by embedded evidence.</p>`
 });
+
+FLASHCARDS.push(
+  // e9i-08-4 — Context & the Writer's Purpose
+  {id:"e9fc-08-4-1", islandId:"e9i-08-4", front:"What does 'context' mean in literature?",
+   back:"The circumstances around a text: the period it was written in, its original audience, and the writer's purpose.\n\nContext also includes the beliefs and values of the time (e.g. attitudes to kingship or gender).", difficulty:1, category:"definition"},
+  {id:"e9fc-08-4-2", islandId:"e9i-08-4", front:"What is assessment objective AO3?",
+   back:"The objective that rewards showing the relationship between a text and the CONTEXT in which it was written.\n\nIt asks you to use context to deepen interpretation, not to list historical facts.", difficulty:2, category:"definition"},
+  {id:"e9fc-08-4-3", islandId:"e9i-08-4", front:"What is the 'writer's purpose'?",
+   back:"What the writer wanted to achieve — to warn, criticise, entertain, persuade or explore an idea.\n\nE.g. a play may warn its audience about the dangers of unchecked ambition.", difficulty:2, category:"concept"},
+  {id:"e9fc-08-4-4", islandId:"e9i-08-4", front:"How do you 'weave' context into analysis (not bolt it on)?",
+   back:"Link the contextual point to the specific words or moment you are analysing.\n\nNot: 'Shakespeare lived under James I.' But: 'A Jacobean audience, fearful of regicide, would find Macbeth's crime especially shocking.'", difficulty:3, category:"application"},
+  {id:"e9fc-08-4-5", islandId:"e9i-08-4", front:"Why is 'bolted-on' context a weakness?",
+   back:"Dropping in facts that don't connect to the text adds nothing to meaning.\n\nStrong context explains how period beliefs shape an audience's RESPONSE to a particular moment or character.", difficulty:3, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "e9i-08-4": [
+    {q:"In literature, 'context' refers to:", opts:["The period, audience and writer's purpose","The number of acts","The font of the text","The length of a speech"], c:0,
+     e:"Context is the circumstances around a text — period, audience and purpose."},
+    {q:"AO3 rewards you for showing the relationship between a text and:", opts:["The context it was written in","The page count","The actor's costume","The reader's handwriting"], c:0,
+     e:"AO3 is the contextual assessment objective."},
+    {q:"The 'writer's purpose' means what the writer wanted to:", opts:["Achieve (e.g. warn or criticise)","Spell","Rhyme","Count"], c:0,
+     e:"Purpose is the writer's intention — to warn, criticise, entertain and so on."},
+    {q:"Which is context WOVEN into analysis (not bolted on)?", opts:["A Jacobean audience, fearful of regicide, would find the murder especially shocking.","Shakespeare was born in 1564.","The play has five acts.","This scene is set at night."], c:0,
+     e:"It links a period belief to the audience's response at a specific moment."},
+    {q:"'Bolted-on' context is weak because it:", opts:["Does not connect to the text's meaning","Is always untrue","Uses too many quotes","Is written in verse"], c:0,
+     e:"Facts that don't deepen interpretation add nothing to the analysis."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e9i-08-4": `<h2>Context &amp; the Writer's Purpose</h2>
+<p><strong>Context</strong> is the set of circumstances around a text: the <strong>period</strong> it was written in, its original <strong>audience</strong>, and the <strong>writer's purpose</strong>. Used well, it deepens meaning; used badly, it is just a list of facts.</p>
+<h3>The three strands of context</h3>
+<p>Period (the beliefs and values of the time), audience (who first watched or read the work and what they expected), and purpose (what the writer set out to do — to warn, criticise, entertain or explore an idea).</p>
+<h3>Introducing AO3</h3>
+<p><strong>AO3</strong> is the assessment objective that rewards showing the relationship between a text and its context. Crucially, it credits context that <em>illuminates</em> the text, not facts dropped in for their own sake.</p>
+<h3>Weaving, not bolting on</h3>
+<p>Connect the contextual point to the exact moment you are analysing. Bolted-on: 'Shakespeare lived under James I.' Woven: 'A Jacobean audience, fearful of regicide after the Gunpowder Plot, would find the killing of a king especially horrifying.'</p>
+<h3>Worked example</h3>
+<p>'Because Elizabethans believed ambition that defied the natural order brought chaos, the writer's purpose here is partly to warn: the bloody consequences position the audience to fear over-reaching pride.'</p>
+<h3>Common mistake</h3>
+<p>Don't bolt a biography fact onto a paragraph. Every contextual point should change how we read a specific word, character or moment — otherwise leave it out.</p>`
+});

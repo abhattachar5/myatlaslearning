@@ -491,3 +491,25 @@ DIAGRAMS["math-inequality-line"] = `<svg viewBox="0 0 280 140" xmlns="http://www
   <line x1="110" y1="114" x2="68" y2="114" stroke="#f59e0b" stroke-width="3" marker-end="url(#ineq-l)"/>
   <circle cx="110" cy="114" r="5" fill="#f59e0b"/>
 </svg>`;
+
+// ── Sector of a circle (arc length & sector area) ────────────────────────────
+DIAGRAMS["math-sector"] = `<svg viewBox="0 0 280 210" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <text x="140" y="15" text-anchor="middle" font-size="11" font-weight="700" fill="#1e293b">Sector of a Circle</text>
+  <!-- full circle outline (faint) -->
+  <circle cx="120" cy="118" r="70" fill="none" stroke="#cbd5e1" stroke-width="1.4" stroke-dasharray="3 3"/>
+  <!-- shaded sector: centre (120,118), from 0deg (right) up to -60deg -->
+  <path d="M 120 118 L 190 118 A 70 70 0 0 0 155 57.4 Z" fill="#dbeafe" stroke="#3b82f6" stroke-width="2.2"/>
+  <!-- two radii -->
+  <line x1="120" y1="118" x2="190" y2="118" stroke="#6366f1" stroke-width="1.8"/>
+  <line x1="120" y1="118" x2="155" y2="57.4" stroke="#6366f1" stroke-width="1.8"/>
+  <!-- radius label -->
+  <text x="150" y="113" text-anchor="middle" font-size="9" font-weight="700" fill="#6366f1">r</text>
+  <!-- centre dot and angle -->
+  <circle cx="120" cy="118" r="3" fill="#1e293b"/>
+  <text x="113" y="115" text-anchor="end" font-size="9" font-weight="700" fill="#1e293b">O</text>
+  <path d="M 142 118 A 22 22 0 0 0 131 99" fill="none" stroke="#ef4444" stroke-width="1.4"/>
+  <text x="150" y="100" font-size="10" font-weight="700" fill="#ef4444">θ</text>
+  <!-- arc label -->
+  <text x="200" y="86" font-size="9" font-weight="700" fill="#3b82f6">arc</text>
+  <text x="140" y="202" text-anchor="middle" font-size="9" fill="#64748b">fraction of circle = θ ÷ 360</text>
+</svg>`;

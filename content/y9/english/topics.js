@@ -94,7 +94,12 @@ CURRICULUM.push(
    topicId:"e9t-05", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Identify and analyse rhetorical devices and how writers persuade and position the reader.",
    learningOutcomes:["Identify rhetorical devices (tricolon, anaphora, antithesis)","Explain ethos, pathos and logos","Analyse how a writer positions the reader"],
-   topics:["Rhetorical devices","Ethos, pathos, logos","Positioning the reader"], prerequisites:["e9i-05-1"]}
+   topics:["Rhetorical devices","Ethos, pathos, logos","Positioning the reader"], prerequisites:["e9i-05-1"]},
+  {id:"e9i-05-4", name:"Inference & Retrieval", emoji:"🔎", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e9t-05", yearGroup:"Year 9", difficulty:1, estimatedHours:2,
+   description:"Retrieve explicit information and make supported inferences from a text.",
+   learningOutcomes:["Retrieve explicit information accurately","Make supported inferences","Distinguish explicit from implied meaning"],
+   topics:["Retrieval","Inference","Using evidence"], prerequisites:["e9i-05-1"]}
 );
 
 // ── Topic 6: Writing Craft: Narrative & Descriptive (e9t-06, writingTopicId) ─
@@ -151,5 +156,10 @@ CURRICULUM.push(
    topicId:"e9t-08", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Analyse character motivation and development and trace key themes with evidence.",
    learningOutcomes:["Analyse character motivation and change","Trace a theme across the play","Embed quotations in analytical writing"],
-   topics:["Character motivation","Themes","Embedding quotations"], prerequisites:["e9i-08-1"]}
+   topics:["Character motivation","Themes","Embedding quotations"], prerequisites:["e9i-08-1"]},
+  {id:"e9i-08-4", name:"Context & the Writer's Purpose", emoji:"🏛️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e9t-08", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Use context — period, audience and purpose — to deepen analysis (AO3).",
+   learningOutcomes:["Explain what context means","Weave context into analysis","Understand AO3"],
+   topics:["Context","Writer's purpose","AO3"], prerequisites:["e9i-08-1"]}
 );

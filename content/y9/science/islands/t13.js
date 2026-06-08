@@ -28,7 +28,19 @@ FLASHCARDS.push(
   {id:"s9fc-13-2-5", islandId:"s9i-13-2", front:"An EM wave has a frequency of 5 × 10¹⁴ Hz. Calculate its wavelength. (Speed of light = 3 × 10⁸ m/s)",
    back:"λ = v / f\n= 3 × 10⁸ / 5 × 10¹⁴\n= 6 × 10⁻⁷ m\n= 600 nm\n\nThis is in the visible light range (orange/red light).", difficulty:2, category:"calculation"},
   {id:"s9fc-13-2-6", islandId:"s9i-13-2", front:"What is the relationship between wavelength and frequency for EM waves?",
-   back:"Wavelength and frequency are inversely proportional.\n\nAs wavelength increases, frequency decreases (and vice versa).\n\nThis is because all EM waves travel at the same speed (c = 3 × 10⁸ m/s):\nv = fλ → if v is constant, when λ goes up, f must come down.", difficulty:2, category:"concept"}
+   back:"Wavelength and frequency are inversely proportional.\n\nAs wavelength increases, frequency decreases (and vice versa).\n\nThis is because all EM waves travel at the same speed (c = 3 × 10⁸ m/s):\nv = fλ → if v is constant, when λ goes up, f must come down.", difficulty:2, category:"concept"},
+
+  // s9i-13-3 — Reflection, Refraction & Sound
+  {id:"s9fc-13-3-1", islandId:"s9i-13-3", front:"State the law of reflection.",
+   back:"The angle of incidence = the angle of reflection.\n\nBoth angles are measured between the ray and the NORMAL (a line drawn at 90° to the surface), not between the ray and the surface.\n\nThe incident ray, the reflected ray and the normal all lie in the same plane.", difficulty:1, category:"definition"},
+  {id:"s9fc-13-3-2", islandId:"s9i-13-3", front:"What is the difference between specular and diffuse reflection?",
+   back:"Specular reflection — occurs at a smooth, shiny surface (e.g. a mirror). Parallel rays stay parallel after reflecting, giving a clear image.\n\nDiffuse reflection — occurs at a rough surface (e.g. paper). The surface scatters parallel rays in many directions, so no clear image forms.\n\nThe law of reflection still holds for each individual ray in both cases.", difficulty:2, category:"concept"},
+  {id:"s9fc-13-3-3", islandId:"s9i-13-3", front:"What is refraction and why does it happen?",
+   back:"Refraction is the change in direction of a wave as it passes from one medium into another.\n\nIt happens because the wave changes SPEED.\n\n• Entering a denser medium (e.g. air → glass), light slows down and bends TOWARDS the normal.\n• Entering a less dense medium (e.g. glass → air), light speeds up and bends AWAY from the normal.\n\nThe frequency stays the same; the wavelength changes.", difficulty:2, category:"concept"},
+  {id:"s9fc-13-3-4", islandId:"s9i-13-3", front:"Describe sound as a wave. Why can't sound travel through a vacuum?",
+   back:"Sound is a longitudinal wave. The particles of the medium vibrate back and forth parallel to the direction of travel, creating compressions and rarefactions.\n\nSound needs a MEDIUM (solid, liquid or gas) to travel because it relies on particles passing on the vibrations.\n\nA vacuum has no particles, so there is nothing to carry the vibrations — sound cannot travel through it.", difficulty:2, category:"concept"},
+  {id:"s9fc-13-3-5", islandId:"s9i-13-3", front:"In which state of matter does sound travel fastest, and give a use of reflected sound.",
+   back:"Sound travels fastest in solids, slower in liquids, and slowest in gases. This is because the particles in a solid are packed closely together, so vibrations pass on quickly.\n\nReflected sound (an echo) is used in:\n• Ultrasound scans (medical imaging of a baby)\n• Sonar (measuring the depth of the sea or detecting objects underwater)", difficulty:2, category:"application"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -66,6 +78,23 @@ Object.assign(QUESTIONS, {
     {q:"Which type of EM radiation can cause sunburn and increase the risk of skin cancer?",
      opts:["Infrared","Visible light","Radio waves","Ultraviolet"], c:3,
      e:"Ultraviolet (UV) radiation has enough energy to damage skin cells and DNA, causing sunburn and increasing the risk of skin cancer. Suncream protects by absorbing UV radiation before it reaches the skin. Infrared causes heating but not sunburn."}
+  ],
+  "s9i-13-3": [
+    {q:"A ray of light hits a mirror at an angle of incidence of 30°. What is the angle of reflection?",
+     opts:["15°","30°","60°","90°"], c:1,
+     e:"By the law of reflection, the angle of incidence equals the angle of reflection, so it is 30°. Both angles are measured from the normal (the line at 90° to the surface), not from the surface itself."},
+    {q:"Reflection from a rough surface such as paper is called:",
+     opts:["Specular reflection","Diffuse reflection","Refraction","Total internal reflection"], c:1,
+     e:"A rough surface scatters parallel rays in many directions, which is diffuse reflection, so no clear image forms. Specular reflection happens at a smooth surface like a mirror and produces a clear image."},
+    {q:"Why does light bend when it passes from air into glass?",
+     opts:["Its frequency increases","It changes speed","It changes colour","It stops completely"], c:1,
+     e:"Refraction happens because the light changes speed when it enters a new medium. Going from air into denser glass, light slows down and bends towards the normal. Its frequency stays the same; the wavelength changes."},
+    {q:"Sound waves cannot travel through a vacuum because:",
+     opts:["A vacuum is too cold","There are no particles to carry the vibrations","Sound is a transverse wave","A vacuum absorbs all sound"], c:1,
+     e:"Sound is a longitudinal wave that relies on particles passing on vibrations. A vacuum has no particles, so there is nothing to carry the wave. This is why EM waves (which need no medium) reach us from the Sun but sound does not."},
+    {q:"In which medium does sound travel fastest?",
+     opts:["A gas such as air","A liquid such as water","A solid such as steel","A vacuum"], c:2,
+     e:"Sound travels fastest in solids because their particles are packed closely together, so vibrations pass on quickly. It is slower in liquids and slowest in gases. Sound cannot travel through a vacuum at all."}
   ]
 });
 
@@ -131,6 +160,29 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes think visible light is "not part of the EM spectrum" or is somehow different. It is simply the narrow band of EM radiation that our eyes can detect. Also, remember that higher frequency means higher energy and greater danger &mdash; which is why gamma rays and X-rays are more hazardous than radio waves.</p>
+`,
+
+'s9i-13-3': `
+<h2>Reflection, Refraction &amp; Sound</h2>
+<p>Waves do not always travel in straight lines forever. When they meet a surface or a new material, they can bounce off or bend. This lesson looks at how light reflects and refracts, and how sound travels as a wave.</p>
+
+<h3>Reflection</h3>
+<p>When a wave hits a surface it can be reflected. The <strong>law of reflection</strong> states:</p>
+<p style="text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>angle of incidence = angle of reflection</strong></p>
+<p>Both angles are measured from the <strong>normal</strong> &mdash; a line drawn at 90&deg; to the surface. <strong>Specular</strong> reflection happens at smooth surfaces (like a mirror) and gives a clear image. <strong>Diffuse</strong> reflection happens at rough surfaces, which scatter the rays so no image forms.</p>
+
+<h3>Refraction</h3>
+<p>Refraction is the bending of a wave as it passes from one medium into another, and it happens because the wave <strong>changes speed</strong>. Entering a denser medium (air to glass), light slows down and bends <strong>towards</strong> the normal. Entering a less dense medium (glass to air), it speeds up and bends <strong>away</strong> from the normal. The frequency stays the same; the wavelength changes.</p>
+
+<h3>Sound</h3>
+<p>Sound is a <strong>longitudinal</strong> wave: particles vibrate back and forth parallel to the direction of travel. Sound needs a <strong>medium</strong>, so it cannot travel through a vacuum. It travels fastest in solids (closely packed particles) and slowest in gases. Reflected sound gives <strong>echoes</strong>, used in ultrasound scans and in sonar to measure the depth of the sea.</p>
+
+<h3>Worked Example</h3>
+<p>A ray of light strikes a mirror with an angle of incidence of 40&deg;. State the angle of reflection and explain your answer.</p>
+<p>The angle of reflection is <strong>40&deg;</strong>, because the law of reflection states that the angle of incidence equals the angle of reflection. Both are measured from the normal.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often measure the angle of incidence from the surface instead of from the normal &mdash; always measure from the normal. A second slip is saying sound and light behave the same way: light can travel through a vacuum, but sound cannot, because sound needs particles to carry its vibrations.</p>
 `
 
 });

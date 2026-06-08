@@ -89,7 +89,12 @@ CURRICULUM.push(
    topicId:"g9t-04", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Investigate the causes and impacts of river flooding and evaluate management strategies.",
    learningOutcomes:["Explain physical and human causes of flooding","Describe a case study of a flood event","Evaluate hard and soft engineering flood management"],
-   topics:["Causes of flooding","Flood case study","Flood management strategies"], prerequisites:["g9i-04-2"]}
+   topics:["Causes of flooding","Flood case study","Flood management strategies"], prerequisites:["g9i-04-2"]},
+  {id:"g9i-04-4", name:"Depositional River Landforms", emoji:"🏞️", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g9t-04", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Explain the formation of meanders, oxbow lakes, floodplains and levées.",
+   learningOutcomes:["Explain why deposition occurs","Explain meanders and oxbow lakes","Describe floodplains and levées"],
+   topics:["Meanders & oxbows","Floodplains","Levées"], prerequisites:["g9i-04-2"]}
 );
 
 // ── Topic 5: Coastal Landscapes (2 islands) ──────────────────────────────────
@@ -103,7 +108,12 @@ CURRICULUM.push(
    topicId:"g9t-05", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Evaluate the advantages and disadvantages of hard and soft engineering coastal defences.",
    learningOutcomes:["Describe hard engineering methods and their impacts","Describe soft engineering methods and their benefits","Evaluate management using a case study"],
-   topics:["Hard engineering","Soft engineering","Case study: Holderness Coast"], prerequisites:["g9i-05-1"]}
+   topics:["Hard engineering","Soft engineering","Case study: Holderness Coast"], prerequisites:["g9i-05-1"]},
+  {id:"g9i-05-3", name:"Coastal Processes & Deposition", emoji:"🏖️", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g9t-05", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Explain waves, longshore drift and the formation of beaches and spits.",
+   learningOutcomes:["Distinguish constructive and destructive waves","Explain longshore drift","Explain beaches and spits"],
+   topics:["Wave types","Longshore drift","Beaches & spits"], prerequisites:["g9i-05-1"]}
 );
 
 // ── Topic 6: Urbanisation (2 islands) ────────────────────────────────────────

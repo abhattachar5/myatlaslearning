@@ -108,7 +108,17 @@ CURRICULUM.push(
    topicId:"h9t-05", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Study key independence movements including India's partition and African decolonisation.",
    learningOutcomes:["Describe Gandhi's role in Indian independence and the partition of 1947","Explain the struggle for independence in African nations such as Ghana and Kenya","Evaluate the lasting impact of decolonisation on former colonies"],
-   topics:["Indian independence and partition","African independence movements","Legacy of decolonisation"], prerequisites:["h9i-05-1"]}
+   topics:["Indian independence and partition","African independence movements","Legacy of decolonisation"], prerequisites:["h9i-05-1"]},
+  {id:"h9i-05-3", name:"India & Partition (1947)", emoji:"🇮🇳", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h9t-05", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Explain British rule in India, the independence movement and the 1947 Partition.",
+   learningOutcomes:["Describe the British Raj","Explain Gandhi and the independence movement","Explain Partition and its impact"],
+   topics:["The Raj","Independence movement","Partition"], prerequisites:["h9i-05-1"]},
+  {id:"h9i-05-4", name:"Migration & the Legacy of Empire", emoji:"🚢", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h9t-05", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Explain post-war Commonwealth migration, the Windrush generation and its legacy.",
+   learningOutcomes:["Explain post-war migration","Describe the Windrush generation","Explain migrants' contribution and the challenges"],
+   topics:["Post-war migration","Windrush","Contribution & challenges"], prerequisites:["h9i-05-1"]}
 );
 
 // ── Topic 6: Civil Rights & Equality (h9t-06) ─────────────────────────────

@@ -240,7 +240,13 @@ CURRICULUM.push(
    description:"Substitute numbers into expressions and formulae, respecting order of operations.",
    learningOutcomes:["Substitute positive and negative numbers","Use formulae written in words and symbols","Apply correct order of operations with powers"],
    prerequisites:["m9i-09-1"],
-   topics:["Substitution","Using formulae","Negatives & powers"]}
+   topics:["Substitution","Using formulae","Negatives & powers"]},
+  {id:"m9i-09-4", subject:"Mathematics", subjectId:"math", topicId:"m9t-09", yearGroup:"Year 9",
+   name:"Rearranging Formulae", emoji:"🔧", difficulty:2, estimatedHours:2, color:"#3b82f6",
+   description:"Change the subject of a formula using inverse operations.",
+   learningOutcomes:["Use inverse operations on both sides","Rearrange one- and two-step formulae","Make a given variable the subject"],
+   prerequisites:["m9i-09-3"],
+   topics:["Changing the subject","Inverse operations","Two-step rearranging"]}
 );
 
 // ── Topic 10: Sequences & nth Term (m9t-10) ─────────────────────────────────
@@ -305,7 +311,13 @@ CURRICULUM.push(
    description:"Draw and interpret plans and front and side elevations of 3D solids.",
    learningOutcomes:["Identify the plan view of a solid","Identify the front and side elevations","Build a solid from its plan and elevations"],
    prerequisites:["m9i-12-1"],
-   topics:["Plan view","Front & side elevation","From views to solid"]}
+   topics:["Plan view","Front & side elevation","From views to solid"]},
+  {id:"m9i-12-4", subject:"Mathematics", subjectId:"math", topicId:"m9t-12", yearGroup:"Year 9",
+   name:"Arc Length & Sector Area", emoji:"🥧", difficulty:3, estimatedHours:2, color:"#3b82f6",
+   description:"Find the arc length and sector area as a fraction of a circle.",
+   learningOutcomes:["Use arc length = (θ/360) × 2πr","Use sector area = (θ/360) × πr²","Solve sector problems"],
+   prerequisites:["m9i-12-1"],
+   topics:["Arc length","Sector area","Fractions of a circle"]}
 );
 
 // ── Topic 13: Constructions & Loci (m9t-13) ─────────────────────────────────

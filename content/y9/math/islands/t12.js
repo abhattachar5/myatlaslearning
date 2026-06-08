@@ -44,7 +44,21 @@ FLASHCARDS.push(
   {id:"m9fc-12-3-5", islandId:"m9i-12-3", front:"The front elevation is a rectangle and the plan is a circle. What is the solid?",
    back:"A cylinder.\n\nLooking from the front a standing cylinder is a rectangle; from above it is a circle.", difficulty:2, category:"application"},
   {id:"m9fc-12-3-6", islandId:"m9i-12-3", front:"On elevations, what do solid and dashed lines show?",
-   back:"Solid lines show visible edges; dashed lines show hidden edges behind the solid.", difficulty:2, category:"concept"}
+   back:"Solid lines show visible edges; dashed lines show hidden edges behind the solid.", difficulty:2, category:"concept"},
+
+  // m9i-12-4 — Arc Length & Sector Area
+  {id:"m9fc-12-4-1", islandId:"m9i-12-4", front:"What is an arc, and what is a sector?",
+   back:"An arc is part of the circle's edge (a curved length). A sector is the 'pizza slice' between two radii and an arc.", difficulty:1, category:"definition"},
+  {id:"m9fc-12-4-2", islandId:"m9i-12-4", front:"What fraction of the whole circle is a sector with angle θ?",
+   back:"θ/360.\n\nA full circle is 360°, so an angle of θ at the centre gives the fraction θ ÷ 360 of the whole.", difficulty:1, category:"concept"},
+  {id:"m9fc-12-4-3", islandId:"m9i-12-4", front:"State the formula for arc length.",
+   back:"Arc length = (θ/360) × 2πr.\n\nIt is that fraction of the full circumference, 2πr.", difficulty:2, category:"definition"},
+  {id:"m9fc-12-4-4", islandId:"m9i-12-4", front:"State the formula for sector area.",
+   back:"Sector area = (θ/360) × πr².\n\nIt is the same fraction of the full circle area, πr².", difficulty:2, category:"definition"},
+  {id:"m9fc-12-4-5", islandId:"m9i-12-4", front:"Find the arc length when θ = 90° and r = 8 cm (leave in terms of π).",
+   back:"4π cm\n\n(90/360) × 2π × 8 = (1/4) × 16π = 4π ≈ 12.6 cm.", difficulty:2, category:"calculation"},
+  {id:"m9fc-12-4-6", islandId:"m9i-12-4", front:"Find the sector area when θ = 90° and r = 8 cm (leave in terms of π).",
+   back:"16π cm²\n\n(90/360) × π × 8² = (1/4) × 64π = 16π ≈ 50.3 cm².", difficulty:3, category:"application"}
 );
 
 Object.assign(QUESTIONS, {
@@ -83,6 +97,18 @@ Object.assign(QUESTIONS, {
      e:"Hidden edges are shown with dashed lines; visible edges are solid."},
     {q:"Which view do you get by looking straight down on a solid?", opts:["Plan","Front elevation","Side elevation","Net"], c:0,
      e:"The plan is the view from directly above."}
+  ],
+  "m9i-12-4": [
+    {q:"What fraction of a circle is a sector with a centre angle of 90°?", opts:["1/4","1/2","1/3","1/90"], c:0,
+     e:"90/360 = 1/4, so the sector is a quarter of the whole circle."},
+    {q:"Find the arc length for θ = 90°, r = 8 cm (leave in terms of π).", opts:["4π cm","16π cm","8π cm","2π cm"], c:0,
+     e:"(90/360) × 2π × 8 = (1/4) × 16π = 4π cm (≈ 12.6 cm)."},
+    {q:"Find the sector area for θ = 90°, r = 8 cm (leave in terms of π).", opts:["16π cm²","64π cm²","4π cm²","32π cm²"], c:0,
+     e:"(90/360) × π × 8² = (1/4) × 64π = 16π cm² (≈ 50.3 cm²)."},
+    {q:"Which formula gives the length of an arc?", opts:["(θ/360) × 2πr","(θ/360) × πr²","2πr","πr²"], c:0,
+     e:"Arc length is the fraction θ/360 of the full circumference 2πr."},
+    {q:"Find the arc length of a semicircle (θ = 180°) with radius 10 cm (leave in terms of π).", opts:["10π cm","20π cm","5π cm","100π cm"], c:0,
+     e:"(180/360) × 2π × 10 = (1/2) × 20π = 10π cm."}
   ]
 });
 
@@ -115,5 +141,24 @@ Object.assign(LESSONS, {
 <h3>Worked example</h3>
 <p>A solid has a circular plan and a rectangular front elevation. It is a <strong>cylinder</strong> standing upright.</p>
 <h3>Common mistake</h3>
-<p>Draw hidden edges as dashed lines and visible edges as solid lines — leaving them all solid loses marks and can make the shape ambiguous.</p>`
+<p>Draw hidden edges as dashed lines and visible edges as solid lines — leaving them all solid loses marks and can make the shape ambiguous.</p>`,
+
+  "m9i-12-4": `<h2>Arc Length &amp; Sector Area</h2>
+<p>An <strong>arc</strong> is part of a circle's edge — a curved length. A <strong>sector</strong> is the 'pizza slice' enclosed by two radii and an arc. The key idea is simple: a sector with centre angle θ is just the fraction <strong>θ/360</strong> of the whole circle, because a full turn is 360°.</p>
+<div class="lesson-diagram" data-diagram="math-sector"><p class="diagram-caption">A sector is the fraction θ/360 of the whole circle</p></div>
+<h3>The two formulas</h3>
+<p>Take that same fraction of the circumference and of the area:</p>
+<ul>
+<li>Arc length = (θ/360) × 2πr</li>
+<li>Sector area = (θ/360) × πr²</li>
+</ul>
+<h3>Worked example</h3>
+<p>For θ = 90° and r = 8 cm, find the arc length and the sector area.</p>
+<ul>
+<li>The fraction is 90/360 = 1/4.</li>
+<li>Arc length = (1/4) × 2π × 8 = (1/4) × 16π = <strong>4π ≈ 12.6 cm</strong>.</li>
+<li>Sector area = (1/4) × π × 8² = (1/4) × 64π = <strong>16π ≈ 50.3 cm²</strong>.</li>
+</ul>
+<h3>Common mistake</h3>
+<p>Use 2πr for arc length (a length) and πr² for sector area (an area) — swapping them is a common slip. Also keep the angle on top of 360, not 180: a semicircle uses 180/360 = 1/2, not 1.</p>`
 });

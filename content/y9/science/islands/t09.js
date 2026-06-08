@@ -28,7 +28,19 @@ FLASHCARDS.push(
   {id:"s9fc-09-2-5", islandId:"s9i-09-2", front:"Name the salt produced when nitric acid reacts with potassium hydroxide.",
    back:"Nitric acid → nitrate salt\nPotassium hydroxide → potassium\n\nSalt = potassium nitrate\n\nFull equation:\nHNO₃ + KOH → KNO₃ + H₂O", difficulty:2, category:"calculation"},
   {id:"s9fc-09-2-6", islandId:"s9i-09-2", front:"Describe a practical method for making a pure, dry sample of a soluble salt from an acid and an insoluble base.",
-   back:"1. Warm the acid gently in a beaker\n2. Add the insoluble base (e.g. copper oxide) a little at a time, stirring, until it is in excess (some remains undissolved)\n3. Filter to remove the excess solid\n4. Pour the filtrate (salt solution) into an evaporating basin\n5. Heat gently to evaporate some water, then leave to crystallise\n6. Pat dry the crystals with filter paper\n\nThe excess base ensures all the acid has reacted.", difficulty:2, category:"application"}
+   back:"1. Warm the acid gently in a beaker\n2. Add the insoluble base (e.g. copper oxide) a little at a time, stirring, until it is in excess (some remains undissolved)\n3. Filter to remove the excess solid\n4. Pour the filtrate (salt solution) into an evaporating basin\n5. Heat gently to evaporate some water, then leave to crystallise\n6. Pat dry the crystals with filter paper\n\nThe excess base ensures all the acid has reacted.", difficulty:2, category:"application"},
+
+  // s9i-09-3 — Making Salts
+  {id:"s9fc-09-3-1", islandId:"s9i-09-3", front:"State the three general reactions that acids undergo, including the products of each.",
+   back:"1. acid + metal → salt + hydrogen\n2. acid + metal oxide / metal hydroxide (base) → salt + water\n3. acid + metal carbonate → salt + water + carbon dioxide\n\nAll three produce a salt. The difference is the second (and third) product:\n• a reactive metal gives hydrogen\n• a base gives only water\n• a carbonate gives water and carbon dioxide", difficulty:2, category:"concept"},
+  {id:"s9fc-09-3-2", islandId:"s9i-09-3", front:"How does the acid used decide the second part of the salt's name?",
+   back:"The acid determines the negative ion in the salt, and therefore the salt's ending:\n\n• Hydrochloric acid (HCl) → chloride\n• Sulfuric acid (H₂SO₄) → sulfate\n• Nitric acid (HNO₃) → nitrate\n\nThe first part of the salt's name comes from the metal.\n\nExample: zinc + nitric acid → zinc nitrate", difficulty:1, category:"definition"},
+  {id:"s9fc-09-3-3", islandId:"s9i-09-3", front:"Magnesium reacts with sulfuric acid. Name both products and give the word equation.",
+   back:"acid + metal → salt + hydrogen\n\nmagnesium + sulfuric acid → magnesium sulfate + hydrogen\n\n• Salt = magnesium sulfate (sulfuric acid gives a sulfate)\n• Gas = hydrogen (test: a lit splint gives a squeaky pop)", difficulty:2, category:"calculation"},
+  {id:"s9fc-09-3-4", islandId:"s9i-09-3", front:"Describe the method for making a pure, dry sample of a soluble salt from an acid and an insoluble base.",
+   back:"1. Warm some dilute acid gently in a beaker\n2. Add the insoluble base (metal oxide, hydroxide or carbonate) a little at a time, stirring, until it is in excess (some solid remains undissolved)\n3. Filter to remove the excess solid\n4. Pour the filtrate into an evaporating basin and heat gently to the point of crystallisation\n5. Leave the solution to cool so crystals form, then pat dry with filter paper\n\nUsing excess base guarantees that all the acid has been used up.", difficulty:2, category:"application"},
+  {id:"s9fc-09-3-5", islandId:"s9i-09-3", front:"When making a soluble salt, why is an insoluble base added in excess and then filtered off?",
+   back:"Adding the base in excess ensures that every bit of acid reacts, so no acid is left in the solution.\n\nBecause the base is insoluble, the leftover excess does not dissolve into the salt solution — it can simply be filtered out.\n\nThis leaves a pure salt solution (the filtrate) that can be evaporated and crystallised to give a pure, dry salt.", difficulty:2, category:"application"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -66,6 +78,23 @@ Object.assign(QUESTIONS, {
     {q:"A student wants to make copper sulfate crystals from copper oxide and sulfuric acid. Why should they add excess copper oxide?",
      opts:["To make the reaction go faster","To make the crystals blue","To ensure all the acid has reacted so the solution is not acidic","To save money on sulfuric acid"], c:2,
      e:"Adding excess insoluble base (copper oxide) ensures that all the sulfuric acid is neutralised. The excess copper oxide is then removed by filtration. If acid remained in the solution, the crystals would be contaminated."}
+  ],
+  "s9i-09-3": [
+    {q:"Which set of products is correct for the reaction of an acid with a metal carbonate?",
+     opts:["Salt + hydrogen","Salt + water only","Salt + water + carbon dioxide","Salt + oxygen"], c:2,
+     e:"Acid + metal carbonate → salt + water + carbon dioxide. The carbonate gives the extra CO₂ (which fizzes and turns limewater milky). A reactive metal would give hydrogen; a metal oxide or hydroxide would give only water."},
+    {q:"Zinc reacts with hydrochloric acid. Name the salt produced.",
+     opts:["Zinc sulfate","Zinc chloride","Zinc nitrate","Zinc carbonate"], c:1,
+     e:"Hydrochloric acid always produces chloride salts, and the metal is zinc, so the salt is zinc chloride. Sulfuric acid would give a sulfate and nitric acid a nitrate. Hydrogen gas is the other product."},
+    {q:"Nitric acid reacts with copper oxide. Which salt is formed?",
+     opts:["Copper chloride","Copper sulfate","Copper nitrate","Copper hydroxide"], c:2,
+     e:"Nitric acid produces nitrate salts, so copper oxide gives copper nitrate. The other product is water (acid + metal oxide → salt + water). Copper hydroxide is a base, not a salt formed here."},
+    {q:"In the preparation of a soluble salt, why is the insoluble base added until it is in excess?",
+     opts:["To make the reaction faster","To make sure all the acid has reacted","To change the colour of the salt","To stop any gas being produced"], c:1,
+     e:"Excess base ensures every bit of acid is neutralised, so no acid contaminates the final salt. Because the base is insoluble, the unreacted excess can simply be filtered off afterwards."},
+    {q:"What is the final step used to obtain dry crystals from a pure salt solution?",
+     opts:["Filtering the solution","Adding more acid","Evaporating to crystallise, then drying the crystals","Adding an indicator"], c:2,
+     e:"After filtering off the excess base, the salt solution (filtrate) is evaporated to the point of crystallisation and left to cool so crystals form. The crystals are then patted dry. Filtering only removes the leftover solid base, not the dissolved salt."}
   ]
 });
 
@@ -128,6 +157,38 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes forget the third product when an acid reacts with a carbonate. Remember: acid + carbonate gives salt + water + <strong>carbon dioxide</strong>. The CO&#8322; is what causes the fizzing you observe. Also, when naming salts, match the acid to the correct ending: HCl &rarr; chloride, H&#8322;SO&#8324; &rarr; sulfate, HNO&#8323; &rarr; nitrate.</p>
+`,
+
+'s9i-09-3': `
+<h2>Making Salts</h2>
+<p>A salt is the compound formed when the hydrogen in an acid is replaced by a metal. Acids react with three different families of chemical, and each reaction is a reliable way to make a salt.</p>
+
+<h3>The Three Reactions of Acids</h3>
+<ul>
+  <li><strong>acid + metal &rarr; salt + hydrogen</strong> (only with metals more reactive than hydrogen)</li>
+  <li><strong>acid + metal oxide or hydroxide (a base) &rarr; salt + water</strong></li>
+  <li><strong>acid + metal carbonate &rarr; salt + water + carbon dioxide</strong></li>
+</ul>
+<p>Every reaction makes a salt. The clue to which reaction you are watching is the second product: a fizz of hydrogen (metal), nothing but water (base), or fizzing carbon dioxide that turns limewater milky (carbonate).</p>
+
+<h3>Naming the Salt</h3>
+<p>The metal gives the first part of the salt's name. The acid gives the ending:</p>
+<ul>
+  <li>Hydrochloric acid &rarr; <strong>chloride</strong></li>
+  <li>Sulfuric acid &rarr; <strong>sulfate</strong></li>
+  <li>Nitric acid &rarr; <strong>nitrate</strong></li>
+</ul>
+
+<h3>Making a Soluble Salt</h3>
+<p>To make a pure, dry sample of a soluble salt, warm some dilute acid and add an insoluble base (such as copper oxide) a little at a time until it is in <strong>excess</strong> &mdash; some solid stays undissolved. Filter off the excess, then evaporate the filtrate to crystallise the salt.</p>
+
+<h3>Worked Example</h3>
+<p>Name the salt and the other product when magnesium reacts with sulfuric acid, then write the word equation.</p>
+<p>Sulfuric acid gives a <strong>sulfate</strong>, so the salt is <strong>magnesium sulfate</strong>. The metal releases <strong>hydrogen</strong>.</p>
+<p>magnesium + sulfuric acid &rarr; magnesium sulfate + hydrogen</p>
+
+<h3>Common Mistake</h3>
+<p>Students often get the salt ending from the metal instead of the acid. The ending always comes from the acid: HCl &rarr; chloride, H&#8322;SO&#8324; &rarr; sulfate, HNO&#8323; &rarr; nitrate. A second slip is filtering at the wrong stage &mdash; filtering removes the leftover insoluble base, but the dissolved salt itself is only recovered by evaporating and crystallising the filtrate.</p>
 `
 
 });

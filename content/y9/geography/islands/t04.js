@@ -38,7 +38,19 @@ FLASHCARDS.push(
   {id:"g9fc-04-3-4", islandId:"g9i-04-3", front:"What is a hydrograph and what does lag time mean?",
    back:"A storm hydrograph is a graph that shows how a river's discharge (flow) changes in response to a rainfall event.\n\nKey features:\n• Rainfall (bar chart) — shows the precipitation event\n• Rising limb — the increase in river discharge after rainfall\n• Peak discharge — the highest point of river flow\n• Falling (recession) limb — the decrease in discharge as the river returns to normal\n• Lag time — the delay between peak rainfall and peak discharge\n\nA short lag time and high peak discharge mean higher flood risk. Impermeable surfaces, steep slopes and deforestation all shorten lag time.", difficulty:2, category:"concept"},
   {id:"g9fc-04-3-5", islandId:"g9i-04-3", front:"Evaluate whether hard or soft engineering is better for managing river flooding.",
-   back:"Hard engineering:\n+ Provides immediate, physical protection\n+ Can protect large areas and high-value property\n− Very expensive to build and maintain\n− Often unsightly and disrupts natural habitats\n− Can move the problem downstream (channel straightening)\n\nSoft engineering:\n+ Cheaper and more sustainable long-term\n+ Works with natural processes; benefits wildlife\n+ Community-based approaches improve resilience\n− Takes longer to implement (e.g. afforestation)\n− May not protect against extreme flood events\n\nConclusion: the best approach uses both together. Hard engineering for critical urban areas combined with soft engineering across the wider catchment is most effective and sustainable.", difficulty:3, category:"evaluation"}
+   back:"Hard engineering:\n+ Provides immediate, physical protection\n+ Can protect large areas and high-value property\n− Very expensive to build and maintain\n− Often unsightly and disrupts natural habitats\n− Can move the problem downstream (channel straightening)\n\nSoft engineering:\n+ Cheaper and more sustainable long-term\n+ Works with natural processes; benefits wildlife\n+ Community-based approaches improve resilience\n− Takes longer to implement (e.g. afforestation)\n− May not protect against extreme flood events\n\nConclusion: the best approach uses both together. Hard engineering for critical urban areas combined with soft engineering across the wider catchment is most effective and sustainable.", difficulty:3, category:"evaluation"},
+
+  // g9i-04-4 — Depositional River Landforms
+  {id:"g9fc-04-4-1", islandId:"g9i-04-4", front:"Why does deposition happen in the lower course of a river?",
+   back:"Deposition is the dropping of material a river is carrying (its load). It happens when the river loses energy and can no longer transport its load.\n\nIn the lower course:\n• The gradient is very gentle, so the river flows more slowly\n• Velocity falls, especially on the inside of bends and where the river meets the sea\n• The river is wide and shallow, so friction with the bed and banks is high\n\nWhen velocity drops, the heaviest material is deposited first, followed by progressively finer sediment. This builds depositional landforms such as floodplains and levées.", difficulty:1, category:"concept"},
+  {id:"g9fc-04-4-2", islandId:"g9i-04-4", front:"Explain how erosion and deposition combine to form a meander.",
+   back:"A meander is a bend in a river. It forms because flow is not evenly distributed across the channel:\n\nOuter bank (outside of the bend):\n• Water flows faster and deeper here\n• Erosion by hydraulic action and abrasion undercuts the bank\n• This forms a steep river cliff\n\nInner bank (inside of the bend):\n• Water flows slower and shallower here\n• The river loses energy and deposits sediment\n• This builds a gentle slip-off slope (point bar)\n\nThis continuous outer-bank erosion and inner-bank deposition makes the meander migrate sideways across the floodplain over time.", difficulty:2, category:"process"},
+  {id:"g9fc-04-4-3", islandId:"g9i-04-4", front:"How does an oxbow lake form from a meander?",
+   back:"1. Erosion on the outer banks of two bends gradually narrows the neck of land between them.\n2. The neck becomes so narrow that, during a flood, the river breaks straight through, taking the shorter, steeper route.\n3. Deposition then builds up across the entrance to the old loop, sealing it off from the main channel.\n4. The abandoned, horseshoe-shaped loop is left as an oxbow lake.\n5. Over time the oxbow lake fills with sediment and vegetation, drying out to leave a curved meander scar on the floodplain.", difficulty:2, category:"process"},
+  {id:"g9fc-04-4-4", islandId:"g9i-04-4", front:"What is a floodplain and how does it form?",
+   back:"A floodplain is the wide, flat area of land either side of a river in its lower course that is covered with water when the river floods.\n\nFormation:\n• Lateral (sideways) erosion as meanders migrate widens the valley floor.\n• When the river floods, it spreads across the valley floor and loses energy.\n• The reduced velocity causes deposition of fine sediment called alluvium.\n• Repeated flooding builds up layers of fertile alluvium, creating a flat, wide floodplain.\n\nFloodplains are valuable for farming because of their fertile soils, but building on them increases flood risk.", difficulty:2, category:"concept"},
+  {id:"g9fc-04-4-5", islandId:"g9i-04-4", front:"Explain how natural levées form on a floodplain.",
+   back:"A levée is a raised bank of sediment running along the edge of a river channel on its floodplain.\n\nFormation:\n1. During a flood, the river overflows its banks onto the floodplain.\n2. As water leaves the channel, it slows down suddenly and loses energy.\n3. The heaviest, coarsest material (sand and gravel) is deposited first, right next to the channel.\n4. Finer material (silt and clay) is carried further across the floodplain.\n5. After many floods, the coarse material builds up into raised banks (levées) on either side of the channel.\n\nLevées can raise the river above the level of the floodplain, which makes flooding more severe if they are breached.", difficulty:2, category:"application"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -93,6 +105,23 @@ Object.assign(QUESTIONS, {
     {q:"Evaluate: why might a combination of hard and soft engineering be the best approach to flood management?",
      opts:["Hard engineering alone is always sufficient","Soft engineering alone can protect all areas from extreme floods","Combining both provides immediate physical protection for high-risk areas while soft engineering sustainably reduces flood risk across the wider catchment","There is no benefit to combining approaches"], c:2,
      e:"Hard engineering (e.g. embankments, flood barriers) provides immediate, robust protection for urban areas and critical infrastructure. However, it is expensive and can damage the environment. Soft engineering (e.g. afforestation, floodplain zoning) is cheaper, more sustainable and reduces flood risk at the catchment scale. Using both together provides the strongest overall protection."}
+  ],
+  "g9i-04-4": [
+    {q:"Why does deposition mainly occur in the lower course of a river?",
+     opts:["The gradient is steep, so the river flows quickly","The river loses energy as velocity falls, so it can no longer carry its load","The river only erodes in the lower course, never deposits","Rainfall is heavier in the lower course"], c:1,
+     e:"Deposition happens when a river loses energy and can no longer transport the material it is carrying. In the lower course the gradient is very gentle, so velocity falls, particularly where the channel widens, on the inside of bends, and where the river meets the sea. The heaviest load is dropped first, followed by finer sediment."},
+    {q:"On a meander, where does erosion occur and what landform does it create?",
+     opts:["The inner bank, forming a slip-off slope","The outer bank, forming a river cliff","The inner bank, forming a river cliff","The river bed only, forming a gorge"], c:1,
+     e:"On the outer bank of a meander the water is deeper and faster, so erosion by hydraulic action and abrasion undercuts the bank to form a steep river cliff. On the inner bank the water is slower and shallower, so the river deposits sediment to build a gentle slip-off slope. A common error is to swap these two over."},
+    {q:"What happens on the inner bank of a meander?",
+     opts:["Fast flow erodes a river cliff","Slow flow deposits sediment, forming a slip-off slope","The neck of the meander is cut through","A levée is breached during a flood"], c:1,
+     e:"On the inside of a meander bend the water flows more slowly and is shallower, so the river loses energy and deposits sediment. This builds a gentle slip-off slope (point bar). It contrasts with the outer bank, where fast, deep flow erodes a steep river cliff. Together these processes make the meander migrate sideways over time."},
+    {q:"How is an oxbow lake formed?",
+     opts:["A tributary is dammed by deposited sediment","Erosion narrows the meander neck until the river breaks through, and deposition then seals off the old loop","A waterfall retreats upstream leaving a curved channel","The river floods and deposits a levée across the channel"], c:1,
+     e:"Erosion on the outer banks of two neighbouring bends gradually narrows the neck of land between them. During a flood the river breaks straight through the neck, taking the shorter route. Deposition then seals off the abandoned loop, leaving a horseshoe-shaped oxbow lake that slowly silts up to form a meander scar."},
+    {q:"How does a natural levée form on a floodplain?",
+     opts:["Humans build raised concrete walls along the river","During a flood the river drops its coarsest load nearest the channel, building up raised banks over time","The river erodes its banks to leave raised ridges","Vegetation grows along the river to trap water"], c:1,
+     e:"When a river floods, it overflows onto the floodplain and slows down suddenly. The heaviest, coarsest material (sand and gravel) is deposited first, right next to the channel, while finer silt is carried further away. Repeated floods build these coarse deposits into raised banks called levées. Although humans can reinforce them, natural levées form purely through deposition."}
   ]
 });
 
@@ -249,6 +278,28 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students often describe flood management strategies without evaluating them. In an exam, always give <strong>advantages and disadvantages</strong> of each method and, where possible, reach a conclusion about which approach is best and why.</p>
+`,
+
+'g9i-04-4': `
+<h2>Depositional River Landforms</h2>
+<div class="lesson-diagram" data-diagram="meander-formation"><p class="diagram-caption">How a meander and oxbow lake form</p></div>
+<p>In the upper course a river is dominated by erosion, but as it nears the sea its work changes. In the lower course the river deposits the material it has been carrying, building a distinctive set of landforms: meanders, oxbow lakes, floodplains and levées. These features are created when the river loses energy.</p>
+
+<h3>Why Deposition Happens</h3>
+<p>A river deposits its load (the sediment it carries) when it loses energy and can no longer transport that material. In the <strong>lower course</strong> the gradient is very gentle, so the river flows more slowly. Velocity falls further on the inside of bends, where the channel widens, and where the river meets the sea. As velocity drops, the <strong>heaviest material is deposited first</strong>, followed by progressively finer sand, silt and clay.</p>
+
+<h3>Meanders</h3>
+<p>A <strong>meander</strong> is a sweeping bend in a river. It forms because flow is uneven across the channel. On the <strong>outer bank</strong> the water is deeper and faster, so erosion by hydraulic action and abrasion undercuts the bank to create a steep <strong>river cliff</strong>. On the <strong>inner bank</strong> the water is slower and shallower, so the river deposits sediment to build a gentle <strong>slip-off slope</strong> (point bar). This continuous erosion on the outside and deposition on the inside makes the meander slowly migrate across the valley floor.</p>
+
+<h3>Oxbow Lakes, Floodplains and Levées</h3>
+<p>Where two bends sit close together, erosion narrows the <strong>neck</strong> of land between them. During a flood the river breaks straight through, and deposition seals off the old loop to leave a horseshoe-shaped <strong>oxbow lake</strong>. As meanders migrate, lateral erosion widens the valley into a flat <strong>floodplain</strong>, which is built up by layers of fine, fertile <strong>alluvium</strong> dropped during floods. Where a river overflows, the coarsest material is dropped right beside the channel, building raised banks called <strong>levées</strong>.</p>
+
+<h3>Worked Example</h3>
+<p>Explain the formation of a meander. (4 marks)</p>
+<p>As a river flows around a bend, the fastest, deepest flow swings towards the <strong>outer bank</strong>. Here erosion by hydraulic action and abrasion undercuts the bank, forming a steep <strong>river cliff</strong>. On the <strong>inner bank</strong> the water is slower and shallower, so the river loses energy and <strong>deposits</strong> sediment, building a gentle <strong>slip-off slope</strong>. Because erosion and deposition continue on opposite banks, the bend becomes more pronounced and the meander migrates sideways across the floodplain over time.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often muddle which bank erodes and which receives deposition. Remember: the <strong>outer bank</strong> has fast, deep flow, so it is <em>eroded</em> to form a river cliff; the <strong>inner bank</strong> has slow, shallow flow, so sediment is <em>deposited</em> to form a slip-off slope. Do not write that a river only erodes or only deposits — in the lower course it does both, on opposite sides of the same bend.</p>
 `
 
 });

@@ -114,3 +114,45 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Naming a device isn't analysis. Explain how it shapes the reader's response: 'The rhetorical question \"How long must we wait?\" implies the answer \"too long\", positioning the reader to demand change.'</p>`
 });
+
+FLASHCARDS.push(
+  // e9i-05-4 — Inference & Retrieval
+  {id:"e9fc-05-4-1", islandId:"e9i-05-4", front:"What is the difference between retrieval and inference?",
+   back:"Retrieval = finding information stated explicitly in the text ('the door was locked').\nInference = working out what the text implies but doesn't state directly ('the locked door suggests someone wanted to keep others out').", difficulty:1, category:"definition"},
+  {id:"e9fc-05-4-2", islandId:"e9i-05-4", front:"What does it mean to 'read between the lines'?",
+   back:"To draw a conclusion the writer hints at but does not state outright.\n\nIf a character 'forced a smile', we infer they are unhappy or hiding something, even though the text never says so.", difficulty:1, category:"concept"},
+  {id:"e9fc-05-4-3", islandId:"e9i-05-4", front:"How do you make a SUPPORTED inference?",
+   back:"Pair the inference with the exact evidence that prompts it, using a verb like 'suggests' or 'implies'.\n\n'The word \"trembled\" suggests she is afraid.' No evidence = guessing, not inference.", difficulty:2, category:"application"},
+  {id:"e9fc-05-4-4", islandId:"e9i-05-4", front:"Which verbs signal that you are inferring (not just retrieving)?",
+   back:"'This suggests…', 'this implies…', 'this hints that…', 'we can infer that…'.\n\nThese show you are interpreting evidence, not simply copying out a fact.", difficulty:2, category:"application"},
+  {id:"e9fc-05-4-5", islandId:"e9i-05-4", front:"How do you avoid an inference that 'over-reads' the text?",
+   back:"Stay anchored to the evidence; don't invent a whole backstory.\n\n'He gripped the letter tightly' implies tension or strong feeling — NOT that 'he had been waiting years for bad news'.", difficulty:3, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "e9i-05-4": [
+    {q:"Finding information stated directly in a text is called:", opts:["Retrieval","Inference","Implication","Analysis"], c:0,
+     e:"Retrieval means locating explicit, directly stated information."},
+    {q:"'The locked door suggests someone wanted privacy' is an example of:", opts:["Inference","Retrieval","A quotation","A summary"], c:0,
+     e:"It interprets a clue to reach a conclusion the text does not state outright."},
+    {q:"A supported inference must include:", opts:["Evidence from the text","The page number","A simile","The writer's name"], c:0,
+     e:"Inference becomes 'supported' when tied to the exact evidence that prompts it."},
+    {q:"Which verb best signals an inference?", opts:["Suggests","States","Lists","Spells"], c:0,
+     e:"'Suggests' shows you are interpreting, not just copying a stated fact."},
+    {q:"Which is the SAFEST, best-anchored inference from 'her hands trembled'?", opts:["She may be nervous or afraid.","She has a lifelong illness.","She hates the other character.","She is about to leave the country."], c:0,
+     e:"Trembling hands reasonably imply nervousness/fear; the others over-read beyond the evidence."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e9i-05-4": `<h2>Inference &amp; Retrieval</h2>
+<p>GCSE reading assumes two foundational skills. <strong>Retrieval</strong> is finding information the text states <em>explicitly</em>; <strong>inference</strong> is working out what the text <em>implies</em> but does not say directly. Confident readers move fluently between the two.</p>
+<h3>Retrieval: what the text says</h3>
+<p>Retrieval is accurate copying or paraphrasing of stated facts: 'the door was locked', 'it was raining'. Mark the exact words; do not add anything that is not there.</p>
+<h3>Inference: what the text implies</h3>
+<p>Inference means reading between the lines. If a character 'forced a smile', we infer they are unhappy or hiding something, although the text never says so. Signal it with verbs like <strong>suggests</strong>, <strong>implies</strong> or <strong>hints</strong>.</p>
+<h3>Making it supported</h3>
+<p>An inference only counts if it is anchored to evidence: 'The word <strong>trembled</strong> suggests she is afraid.' Evidence first, then interpretation.</p>
+<h3>Worked example</h3>
+<p>Text: 'He gripped the letter tightly and did not look up.' Inference: 'This implies he is tense or absorbed, perhaps dreading its contents' — tied directly to <strong>gripped</strong> and <strong>did not look up</strong>.</p>
+<h3>Common mistake</h3>
+<p>Don't over-read. 'Gripped the letter tightly' implies tension; it does NOT prove 'he had waited years for terrible news'. Keep every inference inside what the evidence can support.</p>`
+});

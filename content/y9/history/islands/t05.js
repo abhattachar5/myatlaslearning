@@ -85,3 +85,99 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Students sometimes assume all decolonisation was peaceful. While India's independence movement was largely non-violent, many countries — such as Algeria, Kenya and Vietnam — achieved independence only after prolonged and bloody conflicts.</p>`
 });
+
+FLASHCARDS.push(
+  // h9i-05-3 — India & Partition (1947)
+  {id:"h9fc-05-3-1", islandId:"h9i-05-3", front:"What was the British Raj?",
+   back:"The British Raj was the period of direct British Crown rule over India, lasting from 1858 to 1947.\n\nBefore 1858, India had been governed by the East India Company. After the Indian Rebellion of 1857, the British government took direct control. India became the 'jewel in the crown' of the British Empire, and Queen Victoria was later proclaimed Empress of India in 1876.\n\nThe Raj brought railways, a unified administration and the English language, but also economic exploitation, famines and the suppression of Indian political rights.", difficulty:2, category:"definition"},
+  {id:"h9fc-05-3-2", islandId:"h9i-05-3", front:"What was the Indian National Congress?",
+   back:"The Indian National Congress (INC) was founded in 1885 and became the leading organisation in the struggle for Indian independence.\n\nAt first it sought only modest reforms, but over time it demanded full self-government (swaraj). Key leaders included Mahatma Gandhi and Jawaharlal Nehru, who became India's first prime minister.\n\nThe Congress organised mass campaigns of protest and civil disobedience against British rule, drawing in millions of ordinary Indians.", difficulty:2, category:"concept"},
+  {id:"h9fc-05-3-3", islandId:"h9i-05-3", front:"What methods did Gandhi use in the independence movement?",
+   back:"Mahatma Gandhi championed non-violent resistance, which he called satyagraha ('truth-force'):\n\n• Civil disobedience — peacefully breaking unjust laws.\n• The Salt March (1930) — a 390 km march to make salt from seawater, defying the British salt monopoly.\n• Boycotts of British goods, especially cloth, encouraging Indians to spin their own (khadi).\n• The Quit India Movement (1942) — a mass campaign demanding immediate British withdrawal.\n\nGandhi was imprisoned many times, but his peaceful methods won worldwide attention and moral authority.", difficulty:2, category:"concept"},
+  {id:"h9fc-05-3-4", islandId:"h9i-05-3", front:"What was the Quit India Movement (1942)?",
+   back:"The Quit India Movement was launched by Gandhi and the Congress in August 1942, demanding an immediate end to British rule.\n\nWith Britain distracted by the Second World War, Gandhi called on Indians to 'do or die' in a mass campaign of non-violent protest. The British responded by arresting Congress leaders and imprisoning tens of thousands.\n\nAlthough the movement was suppressed, it showed that Britain could no longer govern India by consent, and it made independence after the war almost inevitable.", difficulty:2, category:"application"},
+  {id:"h9fc-05-3-5", islandId:"h9i-05-3", front:"What was the Partition of India in 1947?",
+   back:"Partition was the division of British India into two independent states on 15 August 1947: India (Hindu majority) and Pakistan (Muslim majority).\n\nMuslim leaders, especially Muhammad Ali Jinnah of the Muslim League, feared domination in a Hindu-majority India and demanded a separate state. The hurried boundary, drawn by Cyril Radcliffe, split communities apart.\n\nPartition triggered horrific violence between Hindus, Muslims and Sikhs. Up to one million people were killed, and 10–15 million were forced to flee their homes in one of the largest migrations in history.", difficulty:3, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "h9i-05-3": [
+    {q:"What was the British Raj?",
+     opts:["The period of direct British Crown rule over India (1858–1947)","An Indian political party founded by Gandhi","A treaty granting India independence","The Indian army that fought for Britain"], c:0,
+     e:"The British Raj refers to direct rule of India by the British Crown from 1858, after the East India Company's control ended, until independence in 1947."},
+    {q:"In which year was the Indian National Congress founded?",
+     opts:["1885","1947","1919","1857"], c:0,
+     e:"The Indian National Congress was founded in 1885 and grew into the main organisation leading the campaign for Indian independence."},
+    {q:"What name did Gandhi give to his philosophy of non-violent resistance?",
+     opts:["Satyagraha","Swaraj","Partition","Raj"], c:0,
+     e:"Satyagraha, meaning 'truth-force', was Gandhi's philosophy of peaceful, non-violent resistance to injustice. (Swaraj means self-rule.)"},
+    {q:"What did the Quit India Movement of 1942 demand?",
+     opts:["An immediate end to British rule in India","The partition of India and Pakistan","Indian support for Britain in the war","The return of the East India Company"], c:0,
+     e:"Launched in August 1942, the Quit India Movement demanded an immediate British withdrawal. Gandhi urged Indians to 'do or die' in peaceful protest."},
+    {q:"Who led the Muslim League in demanding a separate state of Pakistan?",
+     opts:["Muhammad Ali Jinnah","Jawaharlal Nehru","Mahatma Gandhi","Cyril Radcliffe"], c:0,
+     e:"Muhammad Ali Jinnah led the Muslim League and argued that India's Muslims needed their own state, leading to the creation of Pakistan in 1947."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h9i-05-3": `<h2>India &amp; Partition (1947)</h2>
+<p>India was the most important colony in the British Empire — the 'jewel in the crown'. Its journey to independence, and the painful division that came with it, is one of the most significant stories of the twentieth century.</p>
+<h3>British rule: the Raj</h3>
+<p>From 1858 to 1947, India was governed directly by the British Crown in a period known as the <strong>Raj</strong>. The British built railways and a unified administration, but they also exploited India economically and denied Indians a real political voice. Resentment of foreign rule grew steadily.</p>
+<h3>The independence movement</h3>
+<p>The <strong>Indian National Congress</strong>, founded in 1885, became the leading voice for self-rule. Its most famous leader, <strong>Mahatma Gandhi</strong>, pioneered <strong>non-violent resistance</strong> (satyagraha) — civil disobedience, boycotts and protests such as the Salt March of 1930. The <strong>Quit India Movement</strong> of 1942 demanded an immediate end to British rule and showed Britain could no longer govern by consent.</p>
+<h3>Independence and Partition</h3>
+<p>In 1947 Britain finally agreed to leave. But deep tensions between Hindus and Muslims meant the subcontinent was split into two nations: <strong>India</strong> (Hindu majority) and <strong>Pakistan</strong> (Muslim majority). This <strong>Partition</strong> unleashed terrible communal violence and one of the largest forced migrations in history.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain why the Partition of India led to such violence in 1947.</strong></p>
+<p>The hurried division created <strong>Hindu-majority India and Muslim-majority Pakistan</strong>, but millions of people found themselves on the 'wrong' side of the new border. The boundary was drawn quickly and announced only after independence, causing panic. As Hindus and Sikhs fled towards India and Muslims fled towards Pakistan, neighbours turned on one another in massacres. Up to one million people were killed and 10–15 million were displaced.</p>
+<h3>Common mistake</h3>
+<p>Students sometimes think Gandhi supported Partition. In fact, Gandhi was deeply opposed to dividing India and dreamed of Hindus and Muslims living together in one nation. Partition was driven by the Muslim League's demand for a separate state and by the urgency of the British withdrawal.</p>`
+});
+
+FLASHCARDS.push(
+  // h9i-05-4 — Migration & the Legacy of Empire
+  {id:"h9fc-05-4-1", islandId:"h9i-05-4", front:"Why did people migrate to Britain from the Commonwealth after WWII?",
+   back:"After the Second World War, Britain faced severe labour shortages while rebuilding the country. It actively invited people from its colonies and the Commonwealth to come and work.\n\nThe British Nationality Act of 1948 gave citizens of the Commonwealth the right to live and work in Britain. People came from the Caribbean, India, Pakistan and elsewhere, seeking jobs, better wages and new opportunities.\n\nMany filled vital roles in transport, factories and the newly created National Health Service.", difficulty:2, category:"concept"},
+  {id:"h9fc-05-4-2", islandId:"h9i-05-4", front:"What was the Empire Windrush (1948)?",
+   back:"The HMT Empire Windrush was a ship that arrived at Tilbury Docks near London on 22 June 1948, carrying around 500 passengers from the Caribbean, mainly Jamaica.\n\nThey came in response to Britain's call for workers to help rebuild after the war. The Windrush's arrival is often seen as the symbolic beginning of large-scale Caribbean migration to Britain.\n\nThose who arrived in this era are known as the 'Windrush generation'.", difficulty:1, category:"definition"},
+  {id:"h9fc-05-4-3", islandId:"h9i-05-4", front:"Who were the Windrush generation?",
+   back:"The Windrush generation refers to the Caribbean migrants who came to Britain between 1948 and 1971, named after the ship Empire Windrush.\n\nThey helped rebuild post-war Britain, working on the railways, buses, in factories and in the new NHS. They were British subjects with the legal right to settle.\n\nDecades later, the 'Windrush scandal' (2018) revealed that many had been wrongly detained or threatened with deportation because they lacked formal paperwork — despite living legally in Britain for most of their lives.", difficulty:2, category:"concept"},
+  {id:"h9fc-05-4-4", islandId:"h9i-05-4", front:"How did Commonwealth migrants contribute to Britain?",
+   back:"Migrants from the Commonwealth made an enormous contribution to post-war Britain:\n\n• The NHS, founded in 1948, relied heavily on doctors and nurses recruited from the Caribbean, India and elsewhere.\n• Migrants worked on London's transport network, in factories and in the construction that rebuilt bombed cities.\n• They enriched British culture — food, music (such as reggae and later British-Asian music), festivals (like the Notting Hill Carnival) and literature.\n\nWithout this labour, Britain's post-war recovery would have been far slower.", difficulty:2, category:"application"},
+  {id:"h9fc-05-4-5", islandId:"h9i-05-4", front:"What challenges did Commonwealth migrants face in Britain?",
+   back:"Despite their contribution, migrants faced serious challenges:\n\n• Racism and discrimination — many were refused housing or jobs, with signs reading 'No Blacks, No Irish, No Dogs'.\n• Violence — such as the Notting Hill race riots of 1958.\n• Hostile politics — speeches like Enoch Powell's 1968 'Rivers of Blood' stirred up fear.\n\nOver time, laws such as the Race Relations Acts (1965, 1968, 1976) outlawed discrimination, and Britain gradually became a more multicultural society — though the struggle against racism continues.", difficulty:3, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "h9i-05-4": [
+    {q:"Why did Britain encourage migration from the Commonwealth after WWII?",
+     opts:["To fill severe labour shortages while rebuilding the country","To reduce the population of its colonies","To prepare colonies for independence","To strengthen its army after the war"], c:0,
+     e:"After the war Britain needed workers to rebuild and to staff services like transport and the new NHS, so it invited people from across the Commonwealth."},
+    {q:"What was the Empire Windrush?",
+     opts:["A ship that brought Caribbean migrants to Britain in 1948","A law granting Commonwealth citizens British nationality","A government scheme to rebuild bombed cities","A famous London hospital"], c:0,
+     e:"The HMT Empire Windrush arrived at Tilbury in June 1948 carrying around 500 mostly Jamaican passengers, symbolising the start of large-scale Caribbean migration."},
+    {q:"Which 1948 law gave Commonwealth citizens the right to live and work in Britain?",
+     opts:["The British Nationality Act","The Race Relations Act","The Atlantic Charter","The Quit India Act"], c:0,
+     e:"The British Nationality Act of 1948 granted citizens of the Commonwealth the legal right to settle and work in Britain."},
+    {q:"Which major British institution, founded in 1948, relied heavily on Commonwealth migrants?",
+     opts:["The National Health Service (NHS)","The British Army","The East India Company","The United Nations"], c:0,
+     e:"The NHS, founded in 1948, depended on doctors and nurses recruited from the Caribbean, India and elsewhere to staff its hospitals."},
+    {q:"What did the Race Relations Acts of 1965, 1968 and 1976 do?",
+     opts:["They made racial discrimination illegal in Britain","They restricted all migration from the Commonwealth","They encouraged migrants to return home","They created separate schools for migrants"], c:0,
+     e:"The Race Relations Acts gradually outlawed discrimination on the grounds of race, helping Britain move towards a more multicultural and equal society."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h9i-05-4": `<h2>Migration &amp; the Legacy of Empire</h2>
+<p>The end of empire did not end Britain's connection to its former colonies. In the decades after the Second World War, hundreds of thousands of people from the Commonwealth came to Britain, transforming the nation into a multicultural society.</p>
+<h3>Post-war migration</h3>
+<p>After 1945, Britain faced severe <strong>labour shortages</strong> as it rebuilt cities damaged by bombing and created new public services. The <strong>British Nationality Act of 1948</strong> gave Commonwealth citizens the right to settle and work in Britain, and the government actively invited them to come.</p>
+<h3>The Windrush generation</h3>
+<p>On 22 June 1948, the <strong>Empire Windrush</strong> docked near London carrying around 500 passengers from the Caribbean. Their arrival is seen as the symbolic start of large-scale Caribbean migration. The migrants who came between 1948 and 1971 are known as the <strong>Windrush generation</strong>.</p>
+<h3>Contribution and challenges</h3>
+<p>Migrants made a huge contribution. They staffed the new <strong>NHS</strong>, drove buses and trains, worked in factories and helped rebuild Britain. They also enriched its culture through food, music and festivals. Yet they faced harsh <strong>racism</strong> — discrimination in housing and jobs, and even violence such as the 1958 Notting Hill riots. Over time, the <strong>Race Relations Acts</strong> outlawed discrimination, and Britain moved towards becoming a multicultural nation.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain how Commonwealth migrants contributed to post-war Britain.</strong></p>
+<p>Commonwealth migrants helped solve Britain's <strong>labour shortage</strong>. They staffed the <strong>newly created NHS</strong> as doctors and nurses, keeping hospitals running. They worked on the <strong>transport network and in factories</strong>, supporting the economy and helping to rebuild bombed cities. Beyond work, they <strong>enriched British culture</strong>, bringing new food, music and events such as the Notting Hill Carnival.</p>
+<h3>Common mistake</h3>
+<p>Students sometimes assume the Windrush generation were immigrants without the right to be in Britain. In fact, they were <strong>British subjects</strong> with a legal right to settle. This is why the later Windrush scandal — when some were wrongly threatened with deportation — was such a serious injustice.</p>`
+});

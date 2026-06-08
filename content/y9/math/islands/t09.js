@@ -43,7 +43,21 @@ FLASHCARDS.push(
   {id:"m9fc-09-3-5", islandId:"m9i-09-3", front:"Use the formula P = 2(l + w) to find P when l = 7 and w = 3.",
    back:"20\n\nBrackets first: 7 + 3 = 10, then 2 × 10 = 20.", difficulty:2, category:"application"},
   {id:"m9fc-09-3-6", islandId:"m9i-09-3", front:"Find 2x² when x = 4. Is it 64 or 32?",
-   back:"32.\n\nThe power applies only to x, not the 2: 2x² = 2 × 4² = 2 × 16 = 32. (2x)² would be 64.", difficulty:3, category:"concept"}
+   back:"32.\n\nThe power applies only to x, not the 2: 2x² = 2 × 4² = 2 × 16 = 32. (2x)² would be 64.", difficulty:3, category:"concept"},
+
+  // m9i-09-4 — Rearranging Formulae
+  {id:"m9fc-09-4-1", islandId:"m9i-09-4", front:"What does 'change the subject' of a formula mean?",
+   back:"Rearrange it so a different letter is on its own on one side of the equals sign.\n\nIn v = u + at, the subject is v. Making a the subject means getting a alone.", difficulty:1, category:"definition"},
+  {id:"m9fc-09-4-2", islandId:"m9i-09-4", front:"What is the golden rule when rearranging a formula?",
+   back:"Whatever you do to one side, do exactly the same to the other side.\n\nThis keeps the two sides balanced and equal.", difficulty:1, category:"concept"},
+  {id:"m9fc-09-4-3", islandId:"m9i-09-4", front:"Make r the subject of C = 2πr.",
+   back:"r = C ÷ (2π)\n\nr is multiplied by 2π, so divide both sides by 2π: C ÷ (2π) = r.", difficulty:2, category:"calculation"},
+  {id:"m9fc-09-4-4", islandId:"m9i-09-4", front:"Make x the subject of y = x + 7.",
+   back:"x = y − 7\n\n7 is added to x, so subtract 7 from both sides to undo it.", difficulty:1, category:"calculation"},
+  {id:"m9fc-09-4-5", islandId:"m9i-09-4", front:"Make a the subject of v = u + at.",
+   back:"a = (v − u) ÷ t\n\nFirst subtract u from both sides: v − u = at. Then divide both sides by t: (v − u) ÷ t = a.", difficulty:3, category:"application"},
+  {id:"m9fc-09-4-6", islandId:"m9i-09-4", front:"Why do inverse operations come in the reverse order?",
+   back:"To undo a formula you peel away operations from the outside in, like removing layers.\n\nIn u + at, the + u is the outermost layer, so undo it first, then undo the × t.", difficulty:3, category:"concept"}
 );
 
 Object.assign(QUESTIONS, {
@@ -82,6 +96,18 @@ Object.assign(QUESTIONS, {
      e:"v = 3 + 4×2 = 3 + 8 = 11 (multiplication before addition)."},
     {q:"Find 5x² when x = 2.", opts:["20","100","40","10"], c:0,
      e:"The power is only on x: 5 × 2² = 5 × 4 = 20. (5x)² would be 100.)"}
+  ],
+  "m9i-09-4": [
+    {q:"Make r the subject of C = 2πr.", opts:["r = C ÷ (2π)","r = 2πC","r = C − 2π","r = 2π ÷ C"], c:0,
+     e:"r is multiplied by 2π, so divide both sides by 2π: r = C ÷ (2π)."},
+    {q:"Make x the subject of y = x − 5.", opts:["x = y + 5","x = y − 5","x = 5 − y","x = 5y"], c:0,
+     e:"5 is subtracted from x, so add 5 to both sides: x = y + 5."},
+    {q:"Make a the subject of v = u + at.", opts:["a = (v − u) ÷ t","a = (v + u) ÷ t","a = v − u − t","a = (v − u) × t"], c:0,
+     e:"Subtract u from both sides: v − u = at. Then divide by t: a = (v − u) ÷ t."},
+    {q:"Make w the subject of A = lw.", opts:["w = A ÷ l","w = A − l","w = Al","w = l ÷ A"], c:0,
+     e:"w is multiplied by l, so divide both sides by l: w = A ÷ l."},
+    {q:"Make y the subject of x = 3y.", opts:["y = x ÷ 3","y = 3x","y = x − 3","y = x + 3"], c:0,
+     e:"y is multiplied by 3, so divide both sides by 3: y = x ÷ 3."}
   ]
 });
 
@@ -119,5 +145,26 @@ Object.assign(LESSONS, {
 <li>Then × 2: 2 × 10 = <strong>20</strong>.</li>
 </ul>
 <h3>Common mistake</h3>
-<p>A power attaches only to the letter next to it. 2x² when x = 4 is 2 × 16 = 32, not 64 — square the x first, then multiply by 2. Only (2x)² would give 64.</p>`
+<p>A power attaches only to the letter next to it. 2x² when x = 4 is 2 × 16 = 32, not 64 — square the x first, then multiply by 2. Only (2x)² would give 64.</p>`,
+
+  "m9i-09-4": `<h2>Rearranging Formulae</h2>
+<p>A formula links several quantities. Sometimes the letter you want is not on its own — you need to <strong>change the subject</strong>, rearranging the formula so a different letter sits alone on one side. You do this with <strong>inverse operations</strong>: the opposite of + is −, and the opposite of × is ÷.</p>
+<h3>The golden rule</h3>
+<p>Whatever you do to one side, do exactly the same to the other side. This keeps both sides balanced and equal. To free the letter you want, peel away the operations attached to it, undoing the outermost layer first.</p>
+<h3>Single-step rearrangement</h3>
+<p>Make r the subject of C = 2πr.</p>
+<ul>
+<li>r is multiplied by 2π.</li>
+<li>The inverse of × is ÷, so divide both sides by 2π.</li>
+<li>C ÷ (2π) = r, so <strong>r = C ÷ (2π)</strong>.</li>
+</ul>
+<h3>Worked example</h3>
+<p>Make a the subject of v = u + at (a two-step rearrangement).</p>
+<ul>
+<li>Undo the + u first: subtract u from both sides → v − u = at.</li>
+<li>Now a is multiplied by t: divide both sides by t → (v − u) ÷ t = a.</li>
+<li>Answer: <strong>a = (v − u) ÷ t</strong>.</li>
+</ul>
+<h3>Common mistake</h3>
+<p>Undo operations in reverse order and apply them to the <em>whole</em> side. A frequent slip is writing a = v − u ÷ t — without brackets that only divides u by t. You must subtract u first, then divide everything by t, so brackets are needed: a = (v − u) ÷ t.</p>`
 });

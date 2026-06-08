@@ -26,7 +26,19 @@ FLASHCARDS.push(
   {id:"g9fc-05-2-4", islandId:"g9i-05-2", front:"What are the arguments for and against protecting the Holderness Coast?",
    back:"Arguments for protection:\n• Homes, businesses and infrastructure (roads, gas terminal at Easington) need defending\n• Entire villages (e.g. Mappleton) risk being lost to the sea\n• Property values collapse when coastal defences are absent\n• Cultural and historical heritage would be destroyed\n\nArguments against protection:\n• Coastal defences are extremely expensive — funds are limited\n• Protecting one area can increase erosion elsewhere (e.g. groynes at Mappleton starved Cowden of sediment)\n• Managed retreat allows new habitats to form\n• It is not economically viable to protect every stretch of coast\n\nDecisions are guided by cost-benefit analysis and Shoreline Management Plans.", difficulty:2, category:"evaluation"},
   {id:"g9fc-05-2-5", islandId:"g9i-05-2", front:"What is a Shoreline Management Plan (SMP)?",
-   back:"A Shoreline Management Plan is a large-scale strategy used by coastal authorities to decide how to manage stretches of coastline.\n\nFour policy options:\n1. Hold the line — maintain existing defences to protect the current coastline position\n2. Advance the line — build new defences further out to sea to reclaim land\n3. Managed retreat (managed realignment) — allow the coast to erode naturally and relocate people and infrastructure\n4. No active intervention — let nature take its course; monitor but do not intervene\n\nThe choice depends on economic value of the land, cost of defences, environmental impact and the number of people at risk.", difficulty:2, category:"concept"}
+   back:"A Shoreline Management Plan is a large-scale strategy used by coastal authorities to decide how to manage stretches of coastline.\n\nFour policy options:\n1. Hold the line — maintain existing defences to protect the current coastline position\n2. Advance the line — build new defences further out to sea to reclaim land\n3. Managed retreat (managed realignment) — allow the coast to erode naturally and relocate people and infrastructure\n4. No active intervention — let nature take its course; monitor but do not intervene\n\nThe choice depends on economic value of the land, cost of defences, environmental impact and the number of people at risk.", difficulty:2, category:"concept"},
+
+  // g9i-05-3 — Coastal Processes & Deposition
+  {id:"g9fc-05-3-1", islandId:"g9i-05-3", front:"What is the difference between constructive and destructive waves, and what does each do to a beach?",
+   back:"Constructive waves:\n• Low height, long wavelength, low frequency (6–8 per minute)\n• Strong swash carries material up the beach; weak backwash\n• Net result: deposition — they build the beach up\n• Linked to calm conditions and gentle winds\n\nDestructive waves:\n• High height, short wavelength, high frequency (10–14 per minute)\n• Weak swash; strong backwash drags material back out to sea\n• Net result: erosion — they wear the beach away\n• Linked to storms and strong winds\n\nThe balance of swash and backwash decides whether material is added to or removed from the coast.", difficulty:1, category:"definition"},
+  {id:"g9fc-05-3-2", islandId:"g9i-05-3", front:"What are swash and backwash?",
+   back:"When a wave breaks on a beach:\n\nSwash — the movement of water (and the sediment it carries) up the beach after the wave breaks. It is driven by the wave's energy and momentum.\n\nBackwash — the movement of water back down the beach under gravity, returning to the sea.\n\nThe relative strength of swash and backwash determines the wave type. A strong swash and weak backwash (constructive waves) deposits material; a weak swash and strong backwash (destructive waves) removes it. Swash and backwash are also central to longshore drift.", difficulty:1, category:"definition"},
+  {id:"g9fc-05-3-3", islandId:"g9i-05-3", front:"Explain how longshore drift transports sediment along a coast.",
+   back:"Longshore drift moves sediment along a coastline in a zig-zag pattern:\n1. The prevailing wind drives waves towards the shore at an angle (not straight on).\n2. The swash carries sediment up the beach at that same angle.\n3. The backwash drags the sediment straight back down the beach under gravity (at 90° to the shoreline).\n4. The next wave repeats the process, so each grain follows a zig-zag path.\n5. Over time, large amounts of sand and shingle are transported along the coast in the direction of the prevailing wind.\n\nLongshore drift supplies the sediment that builds beaches and spits.", difficulty:2, category:"process"},
+  {id:"g9fc-05-3-4", islandId:"g9i-05-3", front:"How are beaches formed, and how do sand and shingle beaches differ?",
+   back:"A beach is a build-up of sediment (sand, shingle or pebbles) deposited by constructive waves between the low and high tide marks.\n\nFormation: constructive waves have a strong swash that deposits more material than the weak backwash removes, so sediment accumulates over time.\n\nSand beaches:\n• Made of fine particles; gentle, wide, flat profile\n• Water drains slowly, so backwash stays strong\n\nShingle beaches:\n• Made of larger pebbles; steep, narrow profile\n• Water drains quickly between pebbles, weakening backwash and encouraging deposition higher up", difficulty:2, category:"concept"},
+  {id:"g9fc-05-3-5", islandId:"g9i-05-3", front:"Explain how a spit is formed by longshore drift.",
+   back:"A spit is a long, narrow ridge of sand or shingle joined to the land at one end and extending into the sea or across an estuary.\n\nFormation:\n1. Longshore drift transports sediment along the coast in the direction of the prevailing wind.\n2. Where the coastline suddenly changes direction (e.g. at a river mouth or bay), the sediment is carried out into open water and deposited.\n3. Deposition builds a ridge that grows outwards from the coast — the spit.\n4. A change in wind or wave direction can curve the end, forming a recurved (hooked) end.\n5. The sheltered water behind the spit allows mud to settle, forming a salt marsh.\n\nExample: Spurn Head, at the southern end of the Holderness Coast.", difficulty:2, category:"process"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -64,6 +76,23 @@ Object.assign(QUESTIONS, {
     {q:"A Shoreline Management Plan offers four policy options. Which option allows the coastline to erode naturally without intervention?",
      opts:["Hold the line","Advance the line","Managed retreat","No active intervention"], c:3,
      e:"'No active intervention' means the coast is left entirely to natural processes with no defences built or maintained. This option is typically chosen for stretches of coast with very low economic or population value, where the cost of any defence far exceeds the value of what would be protected. 'Managed retreat' is different — it actively plans the relocation of people and allows flooding to create new habitats."}
+  ],
+  "g9i-05-3": [
+    {q:"Which features describe a constructive wave?",
+     opts:["High wave height, short wavelength, strong backwash","Low wave height, long wavelength, strong swash","High frequency and a steep breaking wave","Weak swash that drags material out to sea"], c:1,
+     e:"Constructive waves have a low wave height, a long wavelength and a low frequency. Their strong swash pushes material up the beach while their weak backwash removes little, so the net effect is deposition that builds the beach up. Destructive waves are the opposite: high, short, frequent waves with a strong backwash that erodes the beach."},
+    {q:"What is the swash of a wave?",
+     opts:["The movement of water back down the beach under gravity","The movement of water and sediment up the beach after a wave breaks","The chemical dissolving of rock by sea water","The zig-zag movement of sediment along the whole coast"], c:1,
+     e:"Swash is the rush of water (and the sediment it carries) up the beach after a wave breaks, driven by the wave's energy. Backwash is the return of water down the beach under gravity. The balance between the two determines whether a beach is built up (strong swash) or eroded (strong backwash)."},
+    {q:"What causes the zig-zag movement of sediment in longshore drift?",
+     opts:["Waves approach the shore at an angle (swash), but backwash returns straight down under gravity","Tides pull sediment in and out twice a day","Rivers deposit sediment directly along the coast","Sea water dissolves rock and redeposits it"], c:0,
+     e:"Longshore drift occurs because the prevailing wind drives waves onto the beach at an angle, so the swash carries sediment up the beach diagonally. Gravity then pulls the backwash straight back down at right angles to the shoreline. Repeating this gives each particle a zig-zag path, moving sediment steadily along the coast."},
+    {q:"How is a beach formed?",
+     opts:["Destructive waves erode the cliff and pile rock at its base","Constructive waves deposit more sediment than the backwash removes, so material builds up","Longshore drift carries sediment out to sea","Sea walls trap sediment against the coast"], c:1,
+     e:"A beach is a deposit of sand or shingle left between the high and low tide marks. Constructive waves have a strong swash that carries sediment up the beach and a weak backwash that removes little, so over time material accumulates. Shingle beaches are steep because water drains quickly, weakening backwash; sand beaches are flatter."},
+    {q:"Where is a spit most likely to form?",
+     opts:["Along a straight stretch of resistant cliff","Where the coastline changes direction, such as at a river mouth, allowing deposition into open water","At the base of a wave-cut platform","In the centre of a deep, sheltered bay with no sediment supply"], c:1,
+     e:"A spit forms where longshore drift is transporting sediment and the coastline suddenly changes direction, for example at a river estuary. The sediment continues to be carried out into the open water and is deposited as a long ridge. A change in wind direction can curve the end, and a salt marsh often develops in the sheltered water behind."}
   ]
 });
 
@@ -194,6 +223,28 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students often describe coastal management strategies without considering their <strong>knock-on effects</strong>. Always explain how a defence at one location can affect neighbouring stretches of coast. This is particularly important for groynes and sea walls, which can redirect wave energy or starve adjacent beaches of sediment.</p>
+`,
+
+'g9i-05-3': `
+<h2>Coastal Processes &amp; Deposition</h2>
+<div class="lesson-diagram" data-diagram="longshore-drift"><p class="diagram-caption">Longshore drift: swash and backwash move sediment along the coast</p></div>
+<p>The coast is shaped by waves that erode, transport and deposit material. Whether a beach grows or shrinks depends on the type of wave attacking it and on the movement of sediment along the shore. This lesson explains those processes and the depositional landforms they build.</p>
+
+<h3>Wave Types</h3>
+<p><strong>Constructive waves</strong> are low and have a long wavelength. Their <strong>swash</strong> (the rush of water up the beach) is strong while their <strong>backwash</strong> (the return of water down the beach) is weak, so they deposit more material than they remove and build the beach up. <strong>Destructive waves</strong> are tall, frequent and have a short wavelength; their backwash is stronger than their swash, so they drag material out to sea and erode the beach. Calm weather brings constructive waves; storms bring destructive ones.</p>
+
+<h3>Erosion, Transport and Deposition</h3>
+<p>Waves erode the coast through hydraulic action, abrasion, attrition and solution. The eroded sediment is then <strong>transported</strong> along the coast, mainly by <strong>longshore drift</strong>. Because the prevailing wind drives waves onto the beach at an angle, the swash carries sediment up the beach diagonally, while gravity pulls the backwash straight back down. This gives each grain a <strong>zig-zag path</strong>, moving sediment steadily along the coast. When waves lose energy, <strong>deposition</strong> occurs and the sediment is dropped.</p>
+
+<h3>Depositional Landforms: Beaches and Spits</h3>
+<p>A <strong>beach</strong> forms where constructive waves deposit sand or shingle between the high and low tide marks. A <strong>spit</strong> forms where longshore drift carries sediment past a point where the coastline changes direction — for example at a river mouth. The sediment is deposited into open water, building a long, narrow ridge. A change in wind direction can curve its end, and a <strong>salt marsh</strong> often develops in the sheltered water behind.</p>
+
+<h3>Worked Example</h3>
+<p>Explain how longshore drift transports material along a coastline. (4 marks)</p>
+<p>The <strong>prevailing wind</strong> drives waves towards the shore at an <strong>angle</strong>. When a wave breaks, the <strong>swash</strong> carries sand and shingle up the beach in the same diagonal direction. Once the wave's energy is spent, the <strong>backwash</strong> drags the sediment straight back down the beach at right angles to the shoreline, pulled by gravity. The next wave repeats the process, so each particle follows a <strong>zig-zag</strong> route. Over time this moves large volumes of sediment along the coast in the direction of the prevailing wind.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often think the backwash returns at the same angle as the swash. It does not: the swash moves <strong>diagonally</strong> up the beach (following the wave), but the backwash always runs <strong>straight down</strong> the beach under gravity. It is this difference in direction that produces the zig-zag movement of longshore drift.</p>
 `
 
 });
