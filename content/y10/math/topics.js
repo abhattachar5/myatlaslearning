@@ -56,7 +56,13 @@ CURRICULUM.push(
    description:"Solve linear inequalities and show the solution set on a number line.",
    learningOutcomes:["Solve linear inequalities","Show a solution set on a number line","List integer solutions"],
    prerequisites:["m10i-01-1"],
-   topics:["Solving inequalities","Number-line notation","Integer solutions"]}
+   topics:["Solving inequalities","Number-line notation","Integer solutions"]},
+  {id:"m10i-01-4", subject:"Mathematics", subjectId:"math", topicId:"m10t-01", yearGroup:"Year 10",
+   name:"Quadratic & Graphical Inequalities", emoji:"📈", difficulty:3, estimatedHours:2, color:"#3b82f6",
+   description:"Solve quadratic inequalities and represent linear inequalities as regions on a graph.",
+   learningOutcomes:["Solve a quadratic inequality using critical values","Choose the correct region (between or outside roots)","Shade the region satisfying linear inequalities"],
+   prerequisites:["m10i-01-3"],
+   topics:["Quadratic inequalities","Critical values","Graphical regions"]}
 );
 
 // ── Topic 2: Simultaneous Equations (m10t-02) ───────────────────────────────
@@ -97,7 +103,19 @@ CURRICULUM.push(
    description:"Recognise and factorise a² − b² as (a + b)(a − b).",
    learningOutcomes:["Recognise a difference of two squares","Factorise a² − b²","Apply it to numerical calculations"],
    prerequisites:["m10i-03-1"],
-   topics:["Recognising a²−b²","Factorising","Numerical shortcuts"]}
+   topics:["Recognising a²−b²","Factorising","Numerical shortcuts"]},
+  {id:"m10i-03-4", subject:"Mathematics", subjectId:"math", topicId:"m10t-03", yearGroup:"Year 10",
+   name:"Expanding Three Brackets", emoji:"📦", difficulty:3, estimatedHours:2, color:"#3b82f6",
+   description:"Expand the product of three linear brackets to a cubic and collect like terms.",
+   learningOutcomes:["Expand two brackets then multiply by the third","Collect like terms in a cubic","Handle negative signs carefully"],
+   prerequisites:["m10i-03-1"],
+   topics:["Two-stage expansion","Cubics","Signs"]},
+  {id:"m10i-03-5", subject:"Mathematics", subjectId:"math", topicId:"m10t-03", yearGroup:"Year 10",
+   name:"Factorising ax² + bx + c", emoji:"🧩", difficulty:3, estimatedHours:2, color:"#3b82f6",
+   description:"Factorise quadratics where a ≠ 1 using the AC method (splitting the middle term).",
+   learningOutcomes:["Use a×c to find the splitting numbers","Split the middle term and factorise by grouping","Check by expanding"],
+   prerequisites:["m10i-03-2"],
+   topics:["AC method","Splitting the middle term","Grouping"]}
 );
 
 // ── Topic 4: Solving Quadratics (m10t-04) ───────────────────────────────────
@@ -172,7 +190,19 @@ CURRICULUM.push(
    description:"Rearrange Pythagoras to find a shorter side and solve worded problems.",
    learningOutcomes:["Subtract to find a shorter side","Apply Pythagoras to real contexts","Decide which side is the hypotenuse"],
    prerequisites:["m10i-07-1"],
-   topics:["c² − a² for a side","Worded problems","Choosing the hypotenuse"]}
+   topics:["c² − a² for a side","Worded problems","Choosing the hypotenuse"]},
+  {id:"m10i-07-3", subject:"Mathematics", subjectId:"math", topicId:"m10t-07", yearGroup:"Year 10",
+   name:"3D Pythagoras", emoji:"🧊", difficulty:3, estimatedHours:2, color:"#3b82f6",
+   description:"Find the longest diagonal of a cuboid using 3D Pythagoras.",
+   learningOutcomes:["Find a base diagonal then the space diagonal","Use d = √(l²+w²+h²)","Apply to 3D problems"],
+   prerequisites:["m10i-07-1"],
+   topics:["Space diagonal","Two-step method","√(l²+w²+h²)"]},
+  {id:"m10i-07-4", subject:"Mathematics", subjectId:"math", topicId:"m10t-07", yearGroup:"Year 10",
+   name:"Distance Between Two Points", emoji:"📐", difficulty:2, estimatedHours:1, color:"#3b82f6",
+   description:"Use Pythagoras to find the distance between two coordinate points.",
+   learningOutcomes:["Form a right-angled triangle on the grid","Use distance = √((x₂−x₁)²+(y₂−y₁)²)","Apply to coordinate problems"],
+   prerequisites:["m10i-07-1"],
+   topics:["Coordinate distance","Right triangle on a grid","Distance formula"]}
 );
 
 // ── Topic 8: Trigonometry SOHCAHTOA (m10t-08) ───────────────────────────────
@@ -196,7 +226,13 @@ CURRICULUM.push(
    description:"Recall exact trig values and apply trigonometry to problems.",
    learningOutcomes:["Recall exact values for 0,30,45,60,90°","Apply trig to bearings and elevation","Combine with Pythagoras"],
    prerequisites:["m10i-08-2"],
-   topics:["Exact values","Angles of elevation","Combined problems"]}
+   topics:["Exact values","Angles of elevation","Combined problems"]},
+  {id:"m10i-08-4", subject:"Mathematics", subjectId:"math", topicId:"m10t-08", yearGroup:"Year 10",
+   name:"3D Trigonometry", emoji:"🧊", difficulty:3, estimatedHours:2, color:"#3b82f6",
+   description:"Find lengths and the angle between a line and a plane in 3D shapes.",
+   learningOutcomes:["Identify the right-angled triangle inside a 3D shape","Find the angle between a line and a plane","Combine with 3D Pythagoras"],
+   prerequisites:["m10i-08-2"],
+   topics:["Triangle in 3D","Line and plane angle","Combined with Pythagoras"]}
 );
 
 // ── Topic 9: Transformations (m10t-09) ──────────────────────────────────────
@@ -268,7 +304,13 @@ CURRICULUM.push(
    description:"Solve multi-step ratio and proportion problems in context.",
    learningOutcomes:["Combine ratio with proportion","Solve best-value and mixing problems","Work backwards from a part"],
    prerequisites:["m10i-11-2"],
-   topics:["Multi-step ratio","Mixing & recipes","Working backwards"]}
+   topics:["Multi-step ratio","Mixing & recipes","Working backwards"]},
+  {id:"m10i-11-4", subject:"Mathematics", subjectId:"math", topicId:"m10t-11", yearGroup:"Year 10",
+   name:"Converting Compound Units", emoji:"🔄", difficulty:2, estimatedHours:1, color:"#3b82f6",
+   description:"Convert compound units such as m/s ↔ km/h and g/cm³ ↔ kg/m³.",
+   learningOutcomes:["Convert speeds between m/s and km/h","Convert densities between g/cm³ and kg/m³","Compare quantities in consistent units"],
+   prerequisites:["m10i-11-1"],
+   topics:["Speed units","Density units","Comparing"]}
 );
 
 // ── Topic 12: Statistics: Averages & Diagrams (m10t-12) ─────────────────────

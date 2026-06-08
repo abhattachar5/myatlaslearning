@@ -115,3 +115,102 @@ Object.assign(LESSONS, {
 <h3>A handy shortcut</h3>
 <p>It speeds up arithmetic too: 41² − 39² = (41 + 39)(41 − 39) = 80 × 2 = 160. Note a <em>sum</em> of squares (x² + 9) does not factorise this way.</p>`
 });
+
+// ── m10i-03-4 — Expanding Three Brackets ─────────────────────────────────────
+FLASHCARDS.push(
+  {id:"m10fc-03-4-1", islandId:"m10i-03-4", front:"How do you expand three brackets like (x+a)(x+b)(x+c)?",
+   back:"Expand any TWO of the brackets first to get a quadratic, then multiply that quadratic by the remaining bracket and collect like terms.\n\nThe result is a cubic (highest power x³).", difficulty:2, category:"concept"},
+  {id:"m10fc-03-4-2", islandId:"m10i-03-4", front:"Expand (x+2)(x+3)(x+1).",
+   back:"First (x+2)(x+3) = x² + 5x + 6.\nThen (x² + 5x + 6)(x+1) = x³ + 5x² + 6x + x² + 5x + 6\n= x³ + 6x² + 11x + 6.", difficulty:2, category:"application"},
+  {id:"m10fc-03-4-3", islandId:"m10i-03-4", front:"What is the highest power in the expansion of three linear brackets?",
+   back:"x³ (a cubic). Each bracket contributes one x, so multiplying three of them gives x × x × x = x³.", difficulty:1, category:"concept"},
+  {id:"m10fc-03-4-4", islandId:"m10i-03-4", front:"What must you be careful with when a bracket contains a minus sign?",
+   back:"The signs. Multiply every term by every term, keeping track of negatives.\n\ne.g. (x−1)(x+2) = x² + 2x − x − 2 = x² + x − 2.", difficulty:2, category:"application"},
+  {id:"m10fc-03-4-5", islandId:"m10i-03-4", front:"Expand (x−1)(x+2)(x−3).",
+   back:"First (x−1)(x+2) = x² + x − 2.\nThen (x² + x − 2)(x−3) = x³ − 3x² + x² − 3x − 2x + 6\n= x³ − 2x² − 5x + 6.", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "m10i-03-4": [
+    {q:"To expand (x+1)(x+4)(x+2), the best first step is to:", opts:["Add all the numbers","Expand two of the brackets to get a quadratic, then multiply by the third","Multiply only the x terms","Square the first bracket"], c:1,
+     e:"Expand any two brackets first to get a quadratic, then multiply by the remaining bracket and collect like terms."},
+    {q:"(x+2)(x+3) expands to:", opts:["x² + 6","x² + 5x + 6","x² + 6x + 5","2x + 5"], c:1,
+     e:"(x+2)(x+3) = x² + 3x + 2x + 6 = x² + 5x + 6."},
+    {q:"The expansion of three linear brackets is a:", opts:["Quadratic (x²)","Cubic (x³)","Linear (x)","Quartic (x⁴)"], c:1,
+     e:"Three factors of x multiply to x³, so the result is a cubic."},
+    {q:"(x+2)(x+3)(x+1) =", opts:["x³ + 6x² + 11x + 6","x³ + 5x² + 6x","x³ + 6x² + 6","x² + 6x + 6"], c:0,
+     e:"(x²+5x+6)(x+1) = x³+5x²+6x + x²+5x+6 = x³+6x²+11x+6."},
+    {q:"When expanding (x−2)(x+1)(x+3), the constant term is:", opts:["−6","6","−5","2"], c:0,
+     e:"The constant term is the product of the three numbers: (−2)(+1)(+3) = −6."}
+  ]
+});
+Object.assign(LESSONS, {
+
+'m10i-03-4': `
+<h2>Expanding Three Brackets</h2>
+<p>Expanding three brackets such as (x+a)(x+b)(x+c) produces a <strong>cubic</strong> expression (highest power x³). The trick is to do it in two stages.</p>
+<h3>The method</h3>
+<ol>
+  <li>Expand any <strong>two</strong> of the brackets to get a quadratic.</li>
+  <li>Multiply that quadratic by the <strong>third</strong> bracket — every term in the quadratic times every term in the bracket.</li>
+  <li>Collect like terms.</li>
+</ol>
+<h3>Worked example</h3>
+<p>Expand (x+2)(x+3)(x+1).</p>
+<p>Step 1: (x+2)(x+3) = x² + 5x + 6.<br>
+Step 2: (x² + 5x + 6)(x+1) = x³ + 5x² + 6x + x² + 5x + 6.<br>
+Step 3: collect like terms → <strong>x³ + 6x² + 11x + 6</strong>.</p>
+<h3>Common mistake</h3>
+<p>Trying to multiply all three brackets at once, or forgetting to multiply <em>every</em> term in the quadratic by both terms of the last bracket. Work in two clear stages and keep track of signs.</p>
+`
+});
+
+// ── m10i-03-5 — Factorising ax² + bx + c (a ≠ 1) ─────────────────────────────
+FLASHCARDS.push(
+  {id:"m10fc-03-5-1", islandId:"m10i-03-5", front:"What is the 'AC method' for factorising ax² + bx + c?",
+   back:"1. Multiply a × c.\n2. Find two numbers that MULTIPLY to ac and ADD to b.\n3. Split the middle term bx using those two numbers.\n4. Factorise by grouping (take out common factors in pairs).", difficulty:2, category:"concept"},
+  {id:"m10fc-03-5-2", islandId:"m10i-03-5", front:"Factorise 6x² + 11x + 3.",
+   back:"ac = 6 × 3 = 18. Two numbers that multiply to 18 and add to 11: 9 and 2.\n6x² + 9x + 2x + 3\n= 3x(2x + 3) + 1(2x + 3)\n= (2x + 3)(3x + 1).", difficulty:3, category:"application"},
+  {id:"m10fc-03-5-3", islandId:"m10i-03-5", front:"In factorising 2x² + 7x + 3, what two numbers do you need?",
+   back:"ac = 2 × 3 = 6. Need two numbers that multiply to 6 and add to 7: 6 and 1.\n2x² + 6x + x + 3 = 2x(x + 3) + 1(x + 3) = (2x + 1)(x + 3).", difficulty:3, category:"application"},
+  {id:"m10fc-03-5-4", islandId:"m10i-03-5", front:"How can you check a factorisation is correct?",
+   back:"Expand it back out. If you get the original quadratic, it is correct.\n\ne.g. (2x + 3)(3x + 1) = 6x² + 2x + 9x + 3 = 6x² + 11x + 3. ✓", difficulty:2, category:"application"},
+  {id:"m10fc-03-5-5", islandId:"m10i-03-5", front:"Factorise 3x² − 10x + 8.",
+   back:"ac = 3 × 8 = 24. Two numbers multiplying to 24 and adding to −10: −6 and −4.\n3x² − 6x − 4x + 8 = 3x(x − 2) − 4(x − 2) = (x − 2)(3x − 4).", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "m10i-03-5": [
+    {q:"To factorise 2x² + 7x + 3 using the AC method, you first find two numbers that multiply to ___ and add to ___:", opts:["6 and 7","3 and 7","2 and 7","7 and 3"], c:0,
+     e:"ac = 2 × 3 = 6, and they must add to b = 7. The numbers are 6 and 1."},
+    {q:"6x² + 11x + 3 factorises to:", opts:["(2x + 3)(3x + 1)","(6x + 1)(x + 3)","(2x + 1)(3x + 3)","(6x + 3)(x + 1)"], c:0,
+     e:"Split 11x into 9x + 2x: 3x(2x+3) + 1(2x+3) = (2x+3)(3x+1)."},
+    {q:"After splitting the middle term, the next step is to:", opts:["Factorise by grouping in pairs","Add the brackets","Square root everything","Divide by a"], c:0,
+     e:"Group the four terms into two pairs and take out the common factor from each pair."},
+    {q:"Which check confirms (x − 2)(3x − 4) = 3x² − 10x + 8?", opts:["Expanding gives 3x² − 4x − 6x + 8 = 3x² − 10x + 8","Adding the brackets","Substituting x = 0 only","Counting the terms"], c:0,
+     e:"Expanding back is the reliable check: 3x² − 4x − 6x + 8 = 3x² − 10x + 8. ✓"},
+    {q:"For 3x² − 10x + 8 (ac = 24), the two numbers are:", opts:["−6 and −4","6 and 4","−12 and −2","−8 and −3"], c:0,
+     e:"They must multiply to +24 and add to −10, so both are negative: −6 and −4."}
+  ]
+});
+Object.assign(LESSONS, {
+
+'m10i-03-5': `
+<h2>Factorising ax² + bx + c (a ≠ 1)</h2>
+<p>When the coefficient of x² is not 1, factorising needs an extra step. The reliable approach is the <strong>AC method</strong>.</p>
+<h3>The AC method</h3>
+<ol>
+  <li>Multiply <strong>a × c</strong>.</li>
+  <li>Find two numbers that <strong>multiply to ac</strong> and <strong>add to b</strong>.</li>
+  <li>Split the middle term bx into those two terms.</li>
+  <li>Factorise by <strong>grouping</strong> — take out the common factor from each pair.</li>
+</ol>
+<h3>Worked example</h3>
+<p>Factorise 6x² + 11x + 3.</p>
+<p>ac = 6 × 3 = 18. Two numbers that multiply to 18 and add to 11 are <strong>9 and 2</strong>.<br>
+6x² + 9x + 2x + 3<br>
+= 3x(2x + 3) + 1(2x + 3)<br>
+= <strong>(2x + 3)(3x + 1)</strong>.</p>
+<p>Check: (2x + 3)(3x + 1) = 6x² + 2x + 9x + 3 = 6x² + 11x + 3. ✓</p>
+<h3>Common mistake</h3>
+<p>Forgetting the sign rules: if c is positive but b is negative, both numbers are negative (e.g. for 3x² − 10x + 8 use −6 and −4). Always check by expanding back.</p>
+`
+});

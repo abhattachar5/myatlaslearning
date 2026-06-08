@@ -107,3 +107,52 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Match the sides to the angle before choosing the ratio — for elevation problems the horizontal distance is usually the adjacent side.</p>`
 });
+
+// ── m10i-08-4 — 3D Trigonometry ──────────────────────────────────────────────
+FLASHCARDS.push(
+  {id:"m10fc-08-4-1", islandId:"m10i-08-4", front:"What is the key skill in 3D trigonometry?",
+   back:"Finding the correct right-angled triangle INSIDE the 3D shape, then using SOHCAHTOA (or Pythagoras) on that 2D triangle.\n\nOften you must find one length first (using 3D Pythagoras) before you can find an angle.", difficulty:2, category:"concept"},
+  {id:"m10fc-08-4-2", islandId:"m10i-08-4", front:"How do you find the angle between a line and a plane?",
+   back:"1. Drop the line onto the plane to find its 'shadow' (projection).\n2. The angle is between the line and its projection.\n3. Identify the right-angled triangle (line = hypotenuse) and use SOHCAHTOA.", difficulty:3, category:"concept"},
+  {id:"m10fc-08-4-3", islandId:"m10i-08-4", front:"A cuboid is 3 cm × 4 cm × 12 cm. What is the diagonal of its base?",
+   back:"Use Pythagoras on the base rectangle: √(3² + 4²) = √(9 + 16) = √25 = 5 cm.\n\nThis base diagonal is the 'adjacent' side when finding the angle to the base.", difficulty:2, category:"application"},
+  {id:"m10fc-08-4-4", islandId:"m10i-08-4", front:"For that 3×4×12 cuboid, what angle does the space diagonal make with the base?",
+   back:"The right-angled triangle has base diagonal 5 (adjacent) and height 12 (opposite).\ntan θ = 12 / 5 = 2.4\nθ = tan⁻¹(2.4) ≈ 67.4°.", difficulty:3, category:"application"},
+  {id:"m10fc-08-4-5", islandId:"m10i-08-4", front:"Why might you need 3D Pythagoras before 3D trig?",
+   back:"Because the side you need for the trig ratio (often a diagonal across a face or the base) isn't given directly — you calculate it first with Pythagoras, then use it in SOHCAHTOA.", difficulty:2, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "m10i-08-4": [
+    {q:"The first step in most 3D trigonometry problems is to:", opts:["Identify a right-angled triangle inside the shape","Use the cosine rule","Add all the edges","Find the volume"], c:0,
+     e:"Locate the relevant 2D right-angled triangle within the 3D shape, then apply SOHCAHTOA or Pythagoras."},
+    {q:"The base diagonal of a 3 cm × 4 cm rectangle is:", opts:["5 cm","7 cm","12 cm","25 cm"], c:0,
+     e:"√(3² + 4²) = √25 = 5 cm."},
+    {q:"For a 3×4×12 cuboid, the angle between the space diagonal and the base uses the triangle with opposite = 12 and adjacent =:", opts:["5 (the base diagonal)","3","4","13"], c:0,
+     e:"The base diagonal (5 cm) is the adjacent side; the height (12 cm) is opposite."},
+    {q:"tan⁻¹(12 ÷ 5) is approximately:", opts:["67.4°","22.6°","2.4°","13°"], c:0,
+     e:"tan θ = 2.4 gives θ ≈ 67.4° (and the complementary angle would be ≈ 22.6°)."},
+    {q:"To find an angle in 3D you often must first find a length using:", opts:["3D Pythagoras","The quadratic formula","The mean","Standard form"], c:0,
+     e:"A needed side (e.g. a face or base diagonal) is usually found with Pythagoras before applying a trig ratio."}
+  ]
+});
+Object.assign(LESSONS, {
+
+'m10i-08-4': `
+<h2>3D Trigonometry</h2>
+<p>3D trigonometry looks hard but reduces to the same skills as 2D — the challenge is <strong>finding the right-angled triangle hidden inside the 3D shape</strong>, then using SOHCAHTOA or Pythagoras on it.</p>
+<h3>The angle between a line and a plane</h3>
+<ol>
+  <li>Project the line straight down onto the plane to get its 'shadow'.</li>
+  <li>The angle you want is between the line and that shadow.</li>
+  <li>This forms a right-angled triangle with the line as the hypotenuse — apply SOHCAHTOA.</li>
+</ol>
+<p>You often have to find a length first (e.g. a base diagonal) using <strong>3D Pythagoras</strong> before you can use a trig ratio.</p>
+<h3>Worked example</h3>
+<p>A cuboid measures 3 cm × 4 cm × 12 cm. Find the angle between the space diagonal and the base.</p>
+<p>Step 1 — base diagonal: √(3² + 4²) = √25 = 5 cm.<br>
+Step 2 — the right-angled triangle has adjacent = 5 (base diagonal) and opposite = 12 (height).<br>
+Step 3 — tan θ = 12 ÷ 5 = 2.4, so θ = tan⁻¹(2.4) ≈ <strong>67.4°</strong>.</p>
+<h3>Common mistake</h3>
+<p>Using a given edge instead of the correct diagonal as the adjacent side. Always identify which 2D triangle you are working in and which sides you actually have before choosing the ratio.</p>
+`
+});

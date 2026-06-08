@@ -43,7 +43,19 @@ FLASHCARDS.push(
   {id:"m10fc-01-3-5", islandId:"m10i-01-3", front:"What happens to the inequality sign when you multiply or divide by a negative?",
    back:"It FLIPS (reverses).\n\nFor −2x < 6, divide by −2 and flip: x > −3.", difficulty:3, category:"concept"},
   {id:"m10fc-01-3-6", islandId:"m10i-01-3", front:"Solve 4x − 3 ≥ 9.",
-   back:"x ≥ 3\n\nAdd 3: 4x ≥ 12, then divide by 4: x ≥ 3. The ≥ is unchanged (dividing by a positive).", difficulty:2, category:"calculation"}
+   back:"x ≥ 3\n\nAdd 3: 4x ≥ 12, then divide by 4: x ≥ 3. The ≥ is unchanged (dividing by a positive).", difficulty:2, category:"calculation"},
+
+  // m10i-01-4 — Quadratic & Graphical Inequalities
+  {id:"m10fc-01-4-1", islandId:"m10i-01-4", front:"How do you solve a quadratic inequality such as x² − x − 6 < 0?",
+   back:"Factorise to find the critical values, then choose the correct region.\n\nx² − x − 6 = (x − 3)(x + 2), so the critical values are −2 and 3. For < 0 the answer is the region BETWEEN them: −2 < x < 3.", difficulty:3, category:"definition"},
+  {id:"m10fc-01-4-2", islandId:"m10i-01-4", front:"For a positive quadratic, when is the solution BETWEEN the roots and when is it OUTSIDE?",
+   back:"< 0 (below the x-axis) → between the roots.\n> 0 (above the x-axis) → outside the roots (two separate pieces).\n\nThe parabola dips below the axis only between its roots.", difficulty:3, category:"concept"},
+  {id:"m10fc-01-4-3", islandId:"m10i-01-4", front:"Solve x² − x − 6 > 0.",
+   back:"x < −2 or x > 3\n\nSame critical values (−2 and 3), but > 0 gives the two OUTSIDE regions, written as two separate inequalities joined by 'or'.", difficulty:3, category:"calculation"},
+  {id:"m10fc-01-4-4", islandId:"m10i-01-4", front:"When you shade a region for a linear inequality, when is the boundary line solid and when is it dashed?",
+   back:"Solid for ≤ or ≥ (points on the line are included).\nDashed for < or > (the line itself is NOT included).", difficulty:2, category:"concept"},
+  {id:"m10fc-01-4-5", islandId:"m10i-01-4", front:"How do you decide which side of a boundary line to shade?",
+   back:"Pick a test point not on the line — (0, 0) is easiest if the line misses the origin. If it satisfies the inequality, shade that side; if not, shade the other side.", difficulty:3, category:"application"}
 );
 
 Object.assign(QUESTIONS, {
@@ -82,6 +94,18 @@ Object.assign(QUESTIONS, {
      e:"Divide by −3 and FLIP the sign: x < −4."},
     {q:"Which circle shows x > 2 at the value 2 on a number line?", opts:["Open circle","Filled circle","No circle","Two circles"], c:0,
      e:"> does not include the boundary, so 2 is marked with an open circle."}
+  ],
+  "m10i-01-4": [
+    {q:"Solve x² − x − 6 < 0.", opts:["−2 < x < 3","x < −2 or x > 3","2 < x < 3","x < −3 or x > 2"], c:0,
+     e:"(x − 3)(x + 2) = 0 gives critical values −2 and 3. For < 0 take the region between them: −2 < x < 3."},
+    {q:"Solve x² − 4 > 0.", opts:["x < −2 or x > 2","−2 < x < 2","x > 2 only","x < 4"], c:0,
+     e:"x² − 4 = (x + 2)(x − 2), roots ±2. For > 0 take the two outside regions: x < −2 or x > 2."},
+    {q:"The critical values of x² + 2x − 15 are:", opts:["−5 and 3","5 and −3","−5 and −3","15 and 1"], c:0,
+     e:"x² + 2x − 15 = (x + 5)(x − 3), so the critical values are −5 and 3."},
+    {q:"When sketching y = x² − x − 6 to solve x² − x − 6 ≤ 0, which part of the curve do you want?", opts:["On or below the x-axis","On or above the x-axis","Only the vertex","Only where x = 0"], c:0,
+     e:"≤ 0 means y is on or below the x-axis, which happens between (and at) the roots."},
+    {q:"For the inequality y < 2x + 1 shown on a graph, the boundary line is:", opts:["Dashed, shade below","Solid, shade below","Dashed, shade above","Solid, shade above"], c:0,
+     e:"< means the line is dashed and not included; 'less than' the line means the region below it."}
   ]
 });
 
@@ -121,5 +145,22 @@ Object.assign(LESSONS, {
 <li>Divide by 3: <strong>x < 5</strong>.</li>
 </ul>
 <h3>Common mistake</h3>
-<p>If you multiply or divide both sides by a <strong>negative</strong> number, the inequality sign <em>flips</em>. For −2x < 6, dividing by −2 gives x > −3, not x < −3.</p>`
+<p>If you multiply or divide both sides by a <strong>negative</strong> number, the inequality sign <em>flips</em>. For −2x < 6, dividing by −2 gives x > −3, not x < −3.</p>`,
+
+  "m10i-01-4": `<h2>Quadratic &amp; Graphical Inequalities</h2>
+<p>A <strong>quadratic inequality</strong> is solved by finding where the quadratic equals zero, then deciding which region satisfies the inequality. A quick sketch or number line shows whether you want the part <em>between</em> the roots or <em>outside</em> them.</p>
+<h3>Solving a quadratic inequality</h3>
+<p>First make one side zero, then <strong>factorise</strong> to find the <strong>critical values</strong> (where the curve crosses the x-axis). For a positive x² term the parabola is U-shaped: it dips <em>below</em> the axis between the roots and sits <em>above</em> the axis outside them. So &lt; 0 gives the region between the roots, while &gt; 0 gives the two outside regions.</p>
+<h3>Worked example</h3>
+<p>Solve x² − x − 6 &lt; 0.</p>
+<ul>
+<li>Factorise: x² − x − 6 = (x − 3)(x + 2).</li>
+<li>Critical values: x = 3 and x = −2.</li>
+<li>The graph of y = x² − x − 6 is below the x-axis between these values.</li>
+<li>So the solution is <strong>−2 &lt; x &lt; 3</strong>. (Had it been &gt; 0, the answer would be x &lt; −2 or x &gt; 3.)</li>
+</ul>
+<h3>Shading linear regions</h3>
+<p>A linear inequality such as y ≤ 2x + 1 describes a <strong>region</strong> of the graph. Draw the boundary line y = 2x + 1: make it <strong>solid</strong> for ≤ or ≥ and <strong>dashed</strong> for &lt; or &gt;. Then test a point such as (0, 0): if it satisfies the inequality, shade its side; otherwise shade the other side. To show several inequalities at once, shade each and the required region is where all the shadings overlap.</p>
+<h3>Common mistake</h3>
+<p>Do not write a &gt; 0 answer as a single chain like −2 &gt; x &gt; 3 — that is impossible. The two outside regions must be written separately as x &lt; −2 <em>or</em> x &gt; 3.</p>`
 });

@@ -28,7 +28,31 @@ FLASHCARDS.push(
   {id:"m10fc-07-2-5", islandId:"m10i-07-2", front:"Find the leg when the hypotenuse is 25 cm and the other leg is 7 cm.",
    back:"24 cm\n\na² = 25² − 7² = 625 − 49 = 576, so a = 24 cm.", difficulty:3, category:"calculation"},
   {id:"m10fc-07-2-6", islandId:"m10i-07-2", front:"When does an answer need rounding?",
-   back:"When the square root is not exact.\n\n√50 ≈ 7.07 — give it to a sensible number of decimal places or as a surd.", difficulty:2, category:"concept"}
+   back:"When the square root is not exact.\n\n√50 ≈ 7.07 — give it to a sensible number of decimal places or as a surd.", difficulty:2, category:"concept"},
+
+  // m10i-07-3 — 3D Pythagoras
+  {id:"m10fc-07-3-1", islandId:"m10i-07-3", front:"What is the space diagonal of a cuboid?",
+   back:"The longest diagonal — corner to opposite corner through the inside of the solid.\n\nd = √(l² + w² + h²).", difficulty:2, category:"definition"},
+  {id:"m10fc-07-3-2", islandId:"m10i-07-3", front:"Give the formula for the space diagonal of a cuboid l × w × h.",
+   back:"d = √(l² + w² + h²).\n\nIt applies Pythagoras twice: once across the base, once up to the far corner.", difficulty:2, category:"definition"},
+  {id:"m10fc-07-3-3", islandId:"m10i-07-3", front:"Describe the two-step method for a space diagonal.",
+   back:"1) Find the base diagonal: √(l² + w²).\n2) Combine it with the height: √((base diagonal)² + h²).", difficulty:2, category:"concept"},
+  {id:"m10fc-07-3-4", islandId:"m10i-07-3", front:"Find the space diagonal of a cuboid 3 cm × 4 cm × 12 cm.",
+   back:"13 cm\n\nd = √(3² + 4² + 12²) = √(9 + 16 + 144) = √169 = 13 cm.", difficulty:2, category:"calculation"},
+  {id:"m10fc-07-3-5", islandId:"m10i-07-3", front:"In the two-step method, why is the base diagonal a leg of the second triangle?",
+   back:"The base diagonal lies flat in the base; the height is vertical and perpendicular to it.\n\nSo they form a right-angled triangle whose hypotenuse is the space diagonal.", difficulty:3, category:"concept"},
+
+  // m10i-07-4 — Distance Between Two Points
+  {id:"m10fc-07-4-1", islandId:"m10i-07-4", front:"State the distance formula between two points.",
+   back:"distance = √((x₂ − x₁)² + (y₂ − y₁)²).\n\nIt is Pythagoras applied to the horizontal and vertical gaps.", difficulty:2, category:"definition"},
+  {id:"m10fc-07-4-2", islandId:"m10i-07-4", front:"How does the distance formula relate to a right-angled triangle?",
+   back:"The horizontal gap (x₂ − x₁) and vertical gap (y₂ − y₁) are the two legs.\n\nThe distance between the points is the hypotenuse.", difficulty:2, category:"concept"},
+  {id:"m10fc-07-4-3", islandId:"m10i-07-4", front:"Find the distance from (1, 2) to (4, 6).",
+   back:"5\n\nd = √((4 − 1)² + (6 − 2)²) = √(3² + 4²) = √(9 + 16) = √25 = 5.", difficulty:2, category:"calculation"},
+  {id:"m10fc-07-4-4", islandId:"m10i-07-4", front:"Does it matter which point you subtract first?",
+   back:"No — the differences are squared, so the sign cancels.\n\n(4 − 1)² and (1 − 4)² both equal 9.", difficulty:2, category:"concept"},
+  {id:"m10fc-07-4-5", islandId:"m10i-07-4", front:"Find the distance from (0, 0) to (5, 12).",
+   back:"13\n\nd = √(5² + 12²) = √(25 + 144) = √169 = 13.", difficulty:3, category:"calculation"}
 );
 
 Object.assign(QUESTIONS, {
@@ -55,6 +79,30 @@ Object.assign(QUESTIONS, {
      e:"a² = 26² − 10² = 676 − 100 = 576, so a = 24 cm."},
     {q:"A right triangle has hypotenuse 10 and leg 6. The other leg is:", opts:["8","4","16","14"], c:0,
      e:"a² = 100 − 36 = 64, so a = 8."}
+  ],
+  "m10i-07-3": [
+    {q:"The space diagonal of a cuboid l × w × h is:", opts:["√(l² + w² + h²)","l + w + h","√(l² + w²)","l × w × h"], c:0,
+     e:"d = √(l² + w² + h²): Pythagoras applied across the base then up to the far corner."},
+    {q:"Find the space diagonal of a cuboid 3 cm × 4 cm × 12 cm.", opts:["13 cm","19 cm","12 cm","169 cm"], c:0,
+     e:"d = √(9 + 16 + 144) = √169 = 13 cm."},
+    {q:"A cuboid has base diagonal 5 cm and height 12 cm. Its space diagonal is:", opts:["13 cm","17 cm","7 cm","60 cm"], c:0,
+     e:"d = √(5² + 12²) = √(25 + 144) = √169 = 13 cm."},
+    {q:"Find the space diagonal of a cube of side 2 cm.", opts:["√12 ≈ 3.46 cm","6 cm","2√2 cm","4 cm"], c:0,
+     e:"d = √(2² + 2² + 2²) = √12 ≈ 3.46 cm."},
+    {q:"In the two-step method, the first step finds the:", opts:["Diagonal of the base rectangle","Height of the cuboid","Volume","Area of one face"], c:0,
+     e:"Step 1 finds the base diagonal √(l² + w²); step 2 combines it with the height."}
+  ],
+  "m10i-07-4": [
+    {q:"The distance between two points is:", opts:["√((x₂ − x₁)² + (y₂ − y₁)²)","(x₂ − x₁) + (y₂ − y₁)","√(x₂ − x₁) + √(y₂ − y₁)","(x₂ − x₁)² + (y₂ − y₁)²"], c:0,
+     e:"It is Pythagoras on the horizontal and vertical gaps, then square-root."},
+    {q:"Find the distance from (1, 2) to (4, 6).", opts:["5","7","25","√7"], c:0,
+     e:"d = √(3² + 4²) = √(9 + 16) = √25 = 5."},
+    {q:"Find the distance from (0, 0) to (5, 12).", opts:["13","17","7","60"], c:0,
+     e:"d = √(5² + 12²) = √(25 + 144) = √169 = 13."},
+    {q:"In the distance formula, the two differences form the:", opts:["Legs of a right-angled triangle","Hypotenuse","Area of the triangle","Gradient"], c:0,
+     e:"The horizontal and vertical gaps are the legs; the distance is the hypotenuse."},
+    {q:"Does the order of subtracting the points matter?", opts:["No, the differences are squared","Yes, always largest first","Yes, x before y only","Only for negative coordinates"], c:0,
+     e:"Squaring removes the sign, so (a − b)² = (b − a)²."}
   ]
 });
 
@@ -76,5 +124,37 @@ Object.assign(LESSONS, {
 <li>base = √36 = <strong>6 m</strong>.</li>
 </ul>
 <h3>Common mistake</h3>
-<p>Decide add vs subtract by finding the hypotenuse: add the squares to find it, subtract to find a shorter side.</p>`
+<p>Decide add vs subtract by finding the hypotenuse: add the squares to find it, subtract to find a shorter side.</p>`,
+
+  "m10i-07-3": `<h2>3D Pythagoras</h2>
+<p>To find the longest diagonal of a cuboid — the <strong>space diagonal</strong> running from one corner to the opposite corner — apply Pythagoras twice, or use the formula directly.</p>
+<h3>The two-step method</h3>
+<ol>
+<li>Find the diagonal of the <strong>base</strong> rectangle: √(l² + w²).</li>
+<li>Form a right-angled triangle from that base diagonal and the <strong>height</strong>, then find the space diagonal: √(base² + h²).</li>
+</ol>
+<p>Combined into one formula: <strong>d = √(l² + w² + h²)</strong>.</p>
+<h3>Worked example</h3>
+<p>A cuboid measures 3 cm × 4 cm × 12 cm.</p>
+<ul>
+<li>Base diagonal = √(3² + 4²) = √25 = 5 cm.</li>
+<li>Space diagonal = √(5² + 12²) = √(25 + 144) = √169 = <strong>13 cm</strong>.</li>
+</ul>
+<p>(Or directly: √(3² + 4² + 12²) = √169 = 13 cm.)</p>
+<h3>Common mistake</h3>
+<p>Using only two of the three dimensions. The space diagonal needs all three — length, width and height.</p>`,
+
+  "m10i-07-4": `<h2>Distance Between Two Points</h2>
+<p>The distance between two points on a coordinate grid is Pythagoras in disguise. The horizontal gap and the vertical gap are the two shorter sides of a right-angled triangle; the straight-line distance is the hypotenuse.</p>
+<h3>The distance formula</h3>
+<p style="text-align:center;padding:0.4em;background:#eff6ff;border-radius:6px"><strong>distance = √((x₂ − x₁)² + (y₂ − y₁)²)</strong></p>
+<h3>Worked example</h3>
+<p>Find the distance from (1, 2) to (4, 6).</p>
+<ul>
+<li>Horizontal gap: 4 − 1 = 3.</li>
+<li>Vertical gap: 6 − 2 = 4.</li>
+<li>Distance = √(3² + 4²) = √25 = <strong>5</strong>.</li>
+</ul>
+<h3>Common mistake</h3>
+<p>It doesn't matter which point you subtract first — the differences are squared, so a negative becomes positive. Just be consistent and always square before adding.</p>`
 });

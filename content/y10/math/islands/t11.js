@@ -111,3 +111,49 @@ Object.assign(LESSONS, {
 <h3>Inverse situations</h3>
 <p>'More workers, less time' is inverse: keep the product constant. 6 workers × 10 days = 60 worker-days, so 4 workers take 60 ÷ 4 = 15 days.</p>`
 });
+
+// ── m10i-11-4 — Converting Compound Units ────────────────────────────────────
+FLASHCARDS.push(
+  {id:"m10fc-11-4-1", islandId:"m10i-11-4", front:"How do you convert a speed from m/s to km/h?",
+   back:"Multiply by 3.6.\n\nReason: there are 3600 seconds in an hour (×3600) and 1000 metres in a km (÷1000), and 3600 ÷ 1000 = 3.6.\n\ne.g. 20 m/s = 20 × 3.6 = 72 km/h.", difficulty:2, category:"application"},
+  {id:"m10fc-11-4-2", islandId:"m10i-11-4", front:"How do you convert a speed from km/h to m/s?",
+   back:"Divide by 3.6 (the reverse of m/s → km/h).\n\ne.g. 90 km/h = 90 ÷ 3.6 = 25 m/s.", difficulty:2, category:"application"},
+  {id:"m10fc-11-4-3", islandId:"m10i-11-4", front:"How do you convert a density from g/cm³ to kg/m³?",
+   back:"Multiply by 1000.\n\nReason: 1 g = 0.001 kg (÷1000) but 1 cm³ = 0.000001 m³, and combining gives ×1000.\n\ne.g. 2.7 g/cm³ = 2700 kg/m³.", difficulty:3, category:"application"},
+  {id:"m10fc-11-4-4", islandId:"m10i-11-4", front:"What is the general method for converting a compound (combined) unit?",
+   back:"Convert each part of the unit separately, keeping track of whether each conversion multiplies or divides, then combine.\n\nA compound unit like m/s has a unit on top (m) and bottom (s) — convert each.", difficulty:2, category:"concept"},
+  {id:"m10fc-11-4-5", islandId:"m10i-11-4", front:"A car travels at 15 m/s. Is that faster or slower than 50 km/h?",
+   back:"15 m/s = 15 × 3.6 = 54 km/h, which is faster than 50 km/h.\n\nConvert to the same units before comparing.", difficulty:2, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "m10i-11-4": [
+    {q:"To convert a speed from m/s to km/h you:", opts:["Multiply by 3.6","Divide by 3.6","Multiply by 1000","Divide by 60"], c:0,
+     e:"×3600 seconds per hour, ÷1000 metres per km, and 3600 ÷ 1000 = 3.6."},
+    {q:"30 m/s in km/h is:", opts:["108 km/h","8.3 km/h","300 km/h","83 km/h"], c:0,
+     e:"30 × 3.6 = 108 km/h."},
+    {q:"72 km/h in m/s is:", opts:["20 m/s","25 m/s","200 m/s","259 m/s"], c:0,
+     e:"72 ÷ 3.6 = 20 m/s."},
+    {q:"A density of 2.7 g/cm³ converted to kg/m³ is:", opts:["2700 kg/m³","0.0027 kg/m³","27 kg/m³","270 kg/m³"], c:0,
+     e:"Multiply g/cm³ by 1000: 2.7 × 1000 = 2700 kg/m³."},
+    {q:"Which is faster, 20 m/s or 65 km/h?", opts:["20 m/s (= 72 km/h)","65 km/h","They are equal","Cannot tell"], c:0,
+     e:"20 m/s = 20 × 3.6 = 72 km/h, which is faster than 65 km/h."}
+  ]
+});
+Object.assign(LESSONS, {
+
+'m10i-11-4': `
+<h2>Converting Compound Units</h2>
+<p>A <strong>compound unit</strong> combines two quantities — like m/s (metres per second) or g/cm³ (grams per cubic centimetre). To convert one, convert each part of the unit in turn.</p>
+<h3>Speed: m/s ↔ km/h</h3>
+<p style="text-align:center;padding:0.4em;background:#eff6ff;border-radius:6px"><strong>m/s → km/h: × 3.6&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;km/h → m/s: ÷ 3.6</strong></p>
+<p>Why 3.6? There are 3600 seconds in an hour (so a per-second rate covers 3600× more distance per hour) and 1000 m in a km (÷1000). 3600 ÷ 1000 = 3.6.</p>
+<h3>Density: g/cm³ ↔ kg/m³</h3>
+<p>Multiply by 1000 to go from g/cm³ to kg/m³ (divide by 1000 to reverse). So water, 1 g/cm³, is 1000 kg/m³.</p>
+<h3>Worked example</h3>
+<p>A cheetah runs at 30 m/s. How fast is that in km/h?<br>
+30 × 3.6 = <strong>108 km/h</strong>.</p>
+<p>Convert 2.7 g/cm³ (aluminium) to kg/m³: 2.7 × 1000 = <strong>2700 kg/m³</strong>.</p>
+<h3>Common mistake</h3>
+<p>Multiplying when you should divide (or vice versa). Sanity-check: a value in m/s should give a <em>bigger</em> number in km/h (×3.6), because you travel further in an hour than in a second.</p>
+`
+});
