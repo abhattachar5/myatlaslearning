@@ -38,7 +38,31 @@ FLASHCARDS.push(
   {id:"g10fc-02-3-4", islandId:"g10i-02-3", front:"What is desertification and what causes it?",
    back:"Desertification is the process by which fertile land becomes increasingly dry and unproductive, eventually becoming desert.\n\nNatural causes:\n• Climate change — reduced rainfall in semi-arid regions\n• Drought — prolonged dry periods kill vegetation and dry out soil\n\nHuman causes:\n• Overgrazing — livestock strip vegetation faster than it can regrow, exposing bare soil\n• Over-cultivation — intensive farming exhausts soil nutrients\n• Deforestation — removing trees for fuel reduces soil stability and moisture retention\n• Population growth — increased demand for food, water and fuel puts pressure on marginal land\n\nThe Sahel region of Africa (southern edge of the Sahara) is a key example of an area at risk.", difficulty:2, category:"concept"},
   {id:"g10fc-02-3-5", islandId:"g10i-02-3", front:"Evaluate strategies for reducing desertification.",
-   back:"Water management:\n+ Drip irrigation reduces water waste\n+ Stone lines (bunds) slow runoff and trap moisture\n− Large-scale irrigation can deplete aquifers\n\nAfforestation — the Great Green Wall (Africa):\n+ A belt of trees planted across the Sahel to slow desert advance\n+ Trees reduce wind erosion, improve soil quality and provide fuel\n− Slow to establish; requires long-term commitment and funding\n\nSoil management:\n+ Crop rotation and composting maintain soil fertility\n+ Leaving crop stubble protects soil from wind erosion\n\nReducing population pressure:\n+ Education and family planning reduce demand on marginal land\n− Sensitive issue; difficult to implement\n\nConclusion: a combination of appropriate technology, education and international support is needed. Top-down mega-projects must work alongside local community solutions.", difficulty:3, category:"evaluation"}
+   back:"Water management:\n+ Drip irrigation reduces water waste\n+ Stone lines (bunds) slow runoff and trap moisture\n− Large-scale irrigation can deplete aquifers\n\nAfforestation — the Great Green Wall (Africa):\n+ A belt of trees planted across the Sahel to slow desert advance\n+ Trees reduce wind erosion, improve soil quality and provide fuel\n− Slow to establish; requires long-term commitment and funding\n\nSoil management:\n+ Crop rotation and composting maintain soil fertility\n+ Leaving crop stubble protects soil from wind erosion\n\nReducing population pressure:\n+ Education and family planning reduce demand on marginal land\n− Sensitive issue; difficult to implement\n\nConclusion: a combination of appropriate technology, education and international support is needed. Top-down mega-projects must work alongside local community solutions.", difficulty:3, category:"evaluation"},
+
+  // g10i-02-4 — Deforestation: Causes, Impacts & Management
+  {id:"g10fc-02-4-1", islandId:"g10i-02-4", front:"Why is the Amazon a key case study for deforestation?",
+   back:"The Amazon is the world's largest tropical rainforest, spanning nine South American countries (around 60% lies in Brazil).\n\n• It contains an estimated 10% of all known species, making it the most biodiverse place on Earth.\n• It stores vast amounts of carbon (often called the 'lungs of the planet').\n• It is being cleared rapidly — Brazil has lost a large share of its original forest cover.\n• Deforestation is driven by powerful economic forces: cattle ranching, soya, logging and mining.\n\nIt illustrates the global tension between economic development and environmental protection, which is why it is the standard AQA case study.", difficulty:1, category:"case-study"},
+  {id:"g10fc-02-4-2", islandId:"g10i-02-4", front:"What are the main causes of deforestation in the Amazon?",
+   back:"Causes of Amazon deforestation:\n\n• Commercial farming — cattle ranching is the single largest driver; soya plantations clear further huge areas.\n• Logging — valuable hardwoods (mahogany) are felled; roads built for logging open up more forest.\n• Mineral extraction — gold, iron ore and bauxite mining clear and pollute land.\n• Road building — the Trans-Amazonian Highway gives access for settlers and industry.\n• Settlement — population growth and government resettlement schemes clear land for housing.\n• Energy — hydroelectric power (HEP) dams such as Belo Monte flood large areas of forest.\n\nMost causes are economic — clearing forest generates jobs, food and export income.", difficulty:2, category:"application"},
+  {id:"g10fc-02-4-3", islandId:"g10i-02-4", front:"What are the impacts of deforestation in the Amazon?",
+   back:"Environmental impacts:\n• Loss of biodiversity — habitat destruction threatens countless species with extinction.\n• Climate change — burning trees releases stored carbon as CO₂; fewer trees absorb CO₂.\n• Soil erosion — without canopy and roots, heavy rain washes away the thin topsoil.\n• Disrupted water cycle — less transpiration reduces rainfall.\n\nEconomic impacts:\n• Gains — income from cattle, soya, timber, minerals and HEP; jobs and development.\n• Losses — soil exhaustion reduces long-term farm productivity; loss of potential ecotourism and undiscovered medicines.\n\nDeforestation brings short-term economic gains but serious long-term environmental and economic costs.", difficulty:2, category:"application"},
+  {id:"g10fc-02-4-4", islandId:"g10i-02-4", front:"How can tropical rainforests be managed sustainably?",
+   back:"Sustainable management balances use with conservation:\n\n• Selective logging — only mature trees felled, allowing the forest to recover.\n• Replanting (afforestation) — new trees planted to replace those cut down.\n• Ecotourism — income from visitors without destroying the forest; funds conservation and provides local jobs.\n• Conservation — national parks and protected reserves safeguard habitats.\n• International agreements — e.g. FSC certification of sustainable timber; REDD schemes.\n• Debt reduction (debt-for-nature swaps) — debt relief in exchange for protecting rainforest.\n\nNo single method is enough; sustainable management combines several approaches and requires enforcement.", difficulty:2, category:"evaluation"},
+  {id:"g10fc-02-4-5", islandId:"g10i-02-4", front:"Why does deforestation contribute to climate change?",
+   back:"Trees play a vital role in the carbon cycle:\n\n1. Living trees absorb CO₂ during photosynthesis and store carbon in their trunks, branches, roots and leaves.\n2. When forest is cleared by burning, this stored carbon is released straight back into the atmosphere as CO₂.\n3. Even where trees are felled rather than burned, decomposition releases the carbon over time.\n4. Fewer remaining trees means less CO₂ is absorbed in future, so atmospheric concentrations rise further.\n\nTropical deforestation is therefore a 'double blow' — it both releases stored carbon and reduces the forest's future capacity to absorb it, enhancing the greenhouse effect.", difficulty:2, category:"process"},
+
+  // g10i-02-5 — Hot Deserts: Opportunities & Challenges
+  {id:"g10fc-02-5-1", islandId:"g10i-02-5", front:"What development opportunities do hot deserts offer?",
+   back:"Despite harsh conditions, hot deserts provide real opportunities:\n\n• Mineral extraction — deserts contain valuable deposits (e.g. copper in the Atacama, oil and gas in the Middle East and Sahara).\n• Energy — intense, reliable sunshine makes deserts ideal for solar power; oil and gas reserves provide fossil-fuel energy.\n• Farming — where water can be supplied by irrigation, deserts can be highly productive (e.g. Imperial Valley, California).\n• Tourism — dramatic landscapes, dunes and clear skies attract visitors (e.g. Las Vegas, desert safaris in Dubai).\n\nEach opportunity creates jobs and income, but all depend on overcoming the desert's natural challenges, especially water supply.", difficulty:2, category:"application"},
+  {id:"g10fc-02-5-2", islandId:"g10i-02-5", front:"What are the challenges of developing hot desert environments?",
+   back:"Three main challenges limit development:\n\n• Extreme temperatures — daytime heat (over 45 °C) makes outdoor work dangerous and increases cooling and water costs; cold nights add further difficulty.\n• Water supply — extremely low, unreliable rainfall means water is scarce; aquifers can be depleted faster than they recharge, and irrigation can cause salinisation.\n• Inaccessibility — vast, remote distances and difficult terrain make building roads, supplying materials and reaching markets expensive and slow.\n\nThese challenges raise the cost of every activity, so development usually depends on high-value resources (minerals, energy) or large investment.", difficulty:2, category:"application"},
+  {id:"g10fc-02-5-3", islandId:"g10i-02-5", front:"How can solar energy help develop hot desert regions?",
+   back:"Hot deserts are among the best places on Earth for solar power:\n\n• They receive intense, reliable sunshine for most of the year with few cloudy days.\n• Large areas of flat, cheap, unused land are available for solar farms.\n• Solar provides clean, renewable electricity that can power settlements, industry and water-pumping/desalination.\n\nExamples include large solar projects in Morocco (Ouarzazate) and the south-western USA.\n\nLimitations: building and connecting solar farms in remote areas is costly; sand and dust can reduce panel efficiency and require cleaning (using scarce water). Even so, solar turns the desert's greatest hazard — intense heat and sun — into a valuable resource.", difficulty:2, category:"application"},
+  {id:"g10fc-02-5-4", islandId:"g10i-02-5", front:"What are the causes of desertification?",
+   back:"Desertification is the degradation of land in semi-arid areas into desert. Its causes are both physical and human:\n\nPhysical:\n• Climate change — reduced and less reliable rainfall in semi-arid regions.\n• Drought — prolonged dry spells kill vegetation and dry out the soil.\n• Soil erosion — once vegetation is lost, wind and water strip away the exposed topsoil.\n\nHuman:\n• Population growth — rising demand for food, water and fuel puts pressure on fragile land.\n• Removal of fuel wood — cutting trees for fuel exposes and destabilises the soil.\n• Overgrazing — too many animals strip vegetation faster than it can regrow.\n• Over-cultivation — intensive farming exhausts soil nutrients.\n\nThese factors interact, often reinforcing one another.", difficulty:2, category:"concept"},
+  {id:"g10fc-02-5-5", islandId:"g10i-02-5", front:"What strategies can reduce desertification?",
+   back:"Solutions tackle the causes of land degradation:\n\nWater and soil management:\n• Drip irrigation delivers water efficiently, reducing waste and salinisation.\n• Stone lines (bunds) slow runoff and trap soil and moisture.\n• Terracing and contour ploughing reduce erosion on slopes.\n\nTree planting (afforestation):\n• Trees bind the soil, reduce wind erosion and add nutrients (e.g. the Great Green Wall across the Sahel).\n\nAppropriate technology:\n• Low-cost, locally suitable methods such as solar cookers (reducing fuel-wood demand) and 'magic stones' (bunds) that communities can build and maintain.\n\nThe most successful schemes combine these methods with community involvement.", difficulty:2, category:"evaluation"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -93,6 +117,40 @@ Object.assign(QUESTIONS, {
     {q:"How does the Great Green Wall project aim to combat desertification in Africa?",
      opts:["By building a concrete wall across the Sahara to block sand","By planting a belt of trees across the width of Africa to slow desert advance, reduce wind erosion and improve soil quality","By relocating all communities away from the Sahel","By pumping seawater inland to irrigate desert land"], c:1,
      e:"The Great Green Wall is an African Union initiative to plant a belt of trees and vegetation approximately 8,000 km long and 15 km wide across the southern edge of the Sahara, from Senegal to Djibouti. Trees reduce wind speed (limiting soil erosion), improve soil quality through leaf litter, increase moisture retention and provide fuel and food for local communities. It combines afforestation with sustainable land management techniques."}
+  ],
+  "g10i-02-4": [
+    {q:"What is the single largest cause of deforestation in the Amazon rainforest?",
+     opts:["Ecotourism lodges","Cattle ranching, which clears vast areas for pasture","Sustainable selective logging","National park creation"], c:1,
+     e:"Cattle ranching is the single largest driver of deforestation in the Amazon, as huge areas are cleared (often by burning) to create pasture for beef cattle. Brazil is one of the world's largest beef exporters. Soya farming is the next major cause, followed by logging, mining, road building and HEP dams. Ecotourism and national parks are forms of conservation, not causes of deforestation."},
+    {q:"How does deforestation in the Amazon contribute to climate change?",
+     opts:["Trees release oxygen that traps heat","Burning and felling trees releases their stored carbon as CO₂, while fewer remaining trees absorb less CO₂","Cleared land reflects more sunlight, warming the planet","Deforestation increases rainfall, which warms the atmosphere"], c:1,
+     e:"Living trees store carbon absorbed during photosynthesis. When forest is cleared by burning, this carbon is released straight back into the atmosphere as CO₂, a greenhouse gas; felling followed by decomposition releases it more slowly. At the same time, fewer remaining trees means less CO₂ is absorbed in future. This 'double blow' enhances the greenhouse effect and contributes to global warming."},
+    {q:"Why does the thin soil of the Amazon become exhausted soon after deforestation?",
+     opts:["The soil is naturally frozen","Most nutrients are stored in the biomass, not the soil, so once trees are gone the thin topsoil is quickly leached and eroded","Farmers add too many nutrients","The soil is washed away by the sea"], c:1,
+     e:"In tropical rainforests the largest nutrient store is the biomass (living plants), not the soil, which is thin and nutrient-poor. Rapid cycling keeps nutrients moving through living plants. Once trees are removed, leaf litter stops falling, heavy rain leaches the remaining nutrients, and without roots and canopy the topsoil is quickly eroded — so cleared farmland loses fertility within a few years."},
+    {q:"Which of these is an example of the sustainable management of tropical rainforests?",
+     opts:["Clear-felling large areas for soya plantations","Selective logging combined with replanting of felled trees","Building roads to open up untouched forest","Burning forest to create cattle pasture"], c:1,
+     e:"Sustainable management meets present needs without preventing future generations from benefiting. Selective logging — felling only mature trees — combined with replanting allows the forest to recover and continue providing resources. Clear-felling for soya, road building into untouched forest and burning for pasture are all unsustainable because they cause permanent loss of forest and biodiversity."},
+    {q:"What is a debt-for-nature swap?",
+     opts:["A scheme where a country's debt is reduced in exchange for protecting areas of rainforest","A way of selling rainforest timber to pay off national debt","A loan to build hydroelectric dams","A tax on ecotourism"], c:0,
+     e:"A debt-for-nature swap is an international agreement in which part of a developing country's foreign debt is cancelled or reduced in return for a commitment to protect and conserve areas of rainforest. It eases the economic pressure that drives countries to exploit their forests, while funding conservation. It is one of several international approaches, alongside FSC timber certification and REDD schemes."}
+  ],
+  "g10i-02-5": [
+    {q:"Why are hot deserts considered ideal locations for solar energy?",
+     opts:["They are always cool and cloudy","They receive intense, reliable sunshine with large areas of cheap, flat, unused land","They have abundant rainfall to clean the panels","They are densely populated, providing many workers"], c:1,
+     e:"Hot deserts receive intense, reliable sunshine for most of the year with very few cloudy days, and offer large areas of flat, cheap, unused land for solar farms. This makes them ideal for generating clean renewable electricity, as seen at Ouarzazate in Morocco. The main drawbacks are the cost of building in remote areas and dust reducing panel efficiency — but the sunshine that makes deserts hostile becomes a valuable resource."},
+    {q:"Which of the following is a challenge to developing hot desert environments?",
+     opts:["Abundant, reliable rainfall","Extreme temperatures, scarce water supply and inaccessibility","Dense forest cover blocking construction","Frequent flooding from rivers"], c:1,
+     e:"The main challenges of developing hot deserts are extreme temperatures (daytime heat over 45 °C makes work dangerous and raises cooling costs), a scarce and unreliable water supply (limiting farming and settlement), and inaccessibility (vast remote distances make transport and supply expensive). These raise the cost of every activity, so development usually depends on high-value resources or large investment."},
+    {q:"How does irrigation create farming opportunities in hot deserts?",
+     opts:["It cools the air enough to cause regular rainfall","It supplies water to otherwise dry but often fertile and sunny land, allowing crops to grow","It removes all minerals from the soil","It replaces the need for sunlight"], c:1,
+     e:"Although deserts are dry, they are sunny and the soil can be fertile where water is added. Irrigation supplies water from rivers, aquifers or canals, enabling productive farming — for example the Imperial Valley in California grows large quantities of fruit and vegetables. However, irrigation must be managed carefully, as over-extraction can deplete aquifers and poor drainage can cause salinisation."},
+    {q:"Which of these is a human cause of desertification?",
+     opts:["Volcanic eruptions","Overgrazing and the removal of fuel wood, which strip vegetation and expose the soil","Plate tectonic movement","Long-term orbital changes"], c:1,
+     e:"Human causes of desertification include overgrazing (too many animals stripping vegetation faster than it regrows), removal of fuel wood (cutting trees exposes and destabilises soil), over-cultivation (exhausting nutrients) and population growth (increasing pressure on fragile land). These combine with physical causes such as drought and climate change. Volcanic eruptions, tectonics and orbital changes are not causes of desertification."},
+    {q:"Why is 'appropriate technology' often effective in reducing desertification?",
+     opts:["It uses expensive imported machinery that only experts can operate","It uses low-cost, locally suited methods such as stone bunds and solar cookers that communities can build and maintain","It relies on relocating entire populations","It involves removing all vegetation to start again"], c:1,
+     e:"Appropriate technology means low-cost, sustainable methods suited to local conditions and skills, which communities can build and maintain themselves. Examples include stone lines (bunds) that trap soil and water, and solar cookers that reduce the demand for fuel wood (lowering deforestation). Because they are affordable and locally owned, such schemes are often more successful and lasting than expensive, externally imposed mega-projects."}
   ]
 });
 
@@ -220,6 +278,96 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes write that desertification means 'deserts expanding'. More precisely, it is the degradation of land on the margins of deserts — previously productive semi-arid land becomes unproductive. It is not the desert itself growing outward, but rather human and natural factors degrading the land at its edges.</p>
+`,
+
+'g10i-02-4': `
+<h2>Deforestation: Causes, Impacts &amp; Management</h2>
+<div class="lesson-diagram" data-diagram="rainforest-layers"><p class="diagram-caption">The layers of a tropical rainforest</p></div>
+<p>The Amazon is the world's largest tropical rainforest, but it is being cleared rapidly. Understanding the causes and impacts of deforestation — and how the forest can be managed sustainably — is central to the AQA case study.</p>
+
+<h3>Causes of Deforestation in the Amazon</h3>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#0d9488;color:white">
+    <th style="padding:8px;border:1px solid #ccc">Cause</th>
+    <th style="padding:8px;border:1px solid #ccc">Detail</th>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Commercial farming</td>
+    <td style="padding:8px;border:1px solid #ccc">Cattle ranching (largest driver) and soya plantations</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Logging</td>
+    <td style="padding:8px;border:1px solid #ccc">Felling hardwoods such as mahogany for export</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Mineral extraction</td>
+    <td style="padding:8px;border:1px solid #ccc">Gold, iron ore and bauxite mining</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Roads &amp; settlement</td>
+    <td style="padding:8px;border:1px solid #ccc">Trans-Amazonian Highway opens land for settlers</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Energy (HEP)</td>
+    <td style="padding:8px;border:1px solid #ccc">Dams such as Belo Monte flood large forest areas</td>
+  </tr>
+</table>
+
+<h3>Impacts of Deforestation</h3>
+<p><strong>Environmental impacts</strong> include loss of <strong>biodiversity</strong>, <strong>climate change</strong> (burning trees releases stored carbon as CO₂ while fewer trees absorb it), <strong>soil erosion</strong> once the protective canopy and roots are gone, and a disrupted water cycle. <strong>Economically</strong>, deforestation brings short-term gains — income and jobs from cattle, soya, timber, minerals and HEP — but long-term losses, as exhausted soils reduce productivity and the value of ecotourism and undiscovered medicines is lost.</p>
+
+<h3>Sustainable Management</h3>
+<p>Sustainable strategies include <strong>selective logging</strong> and <strong>replanting</strong>, <strong>ecotourism</strong>, <strong>conservation</strong> in national parks, <strong>international agreements</strong> (FSC certification, REDD) and <strong>debt-for-nature swaps</strong>, where debt relief is given in exchange for protecting forest.</p>
+
+<h3>Worked Example</h3>
+<p>Explain the environmental impacts of deforestation in a tropical rainforest. [6 marks]</p>
+<p>Clearing forest destroys habitats, causing a serious <strong>loss of biodiversity</strong> as species lose their homes and may face extinction. Burning the trees releases their stored carbon as <strong>CO₂</strong>, contributing to climate change, while fewer remaining trees absorb less CO₂ in future. Without the canopy to intercept rain and roots to bind the ground, heavy rainfall causes rapid <strong>soil erosion</strong> and leaches the thin topsoil. Reduced <strong>transpiration</strong> also disrupts the water cycle, lowering rainfall in the region.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often list only the negative impacts. To reach the top marks, recognise that deforestation also brings real economic gains (jobs, food and export income) — which is precisely why it happens. A strong answer weighs these short-term gains against the long-term environmental and economic costs.</p>
+`,
+
+'g10i-02-5': `
+<h2>Hot Deserts: Opportunities &amp; Challenges</h2>
+<div class="lesson-diagram" data-diagram="desert-landforms"><p class="diagram-caption">Hot desert landscape features</p></div>
+<p>Hot deserts may seem hostile, but they offer significant development opportunities. These come with serious challenges, and poorly managed development can lead to desertification — the degradation of land into desert.</p>
+
+<h3>Development Opportunities</h3>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#0d9488;color:white">
+    <th style="padding:8px;border:1px solid #ccc">Opportunity</th>
+    <th style="padding:8px;border:1px solid #ccc">Example</th>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Mineral extraction</td>
+    <td style="padding:8px;border:1px solid #ccc">Copper (Atacama); oil and gas (Sahara, Middle East)</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Energy (solar)</td>
+    <td style="padding:8px;border:1px solid #ccc">Ouarzazate solar farm, Morocco</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Farming (irrigation)</td>
+    <td style="padding:8px;border:1px solid #ccc">Imperial Valley, California</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Tourism</td>
+    <td style="padding:8px;border:1px solid #ccc">Las Vegas; desert safaris in Dubai</td>
+  </tr>
+</table>
+
+<h3>Challenges of Development</h3>
+<p>Three challenges limit development: <strong>extreme temperatures</strong> (daytime heat over 45 °C makes work dangerous and raises cooling costs); <strong>water supply</strong> (scarce, unreliable rainfall, with aquifers easily depleted and irrigation risking salinisation); and <strong>inaccessibility</strong> (vast remote distances make transport and construction expensive). These raise the cost of every activity.</p>
+
+<h3>Desertification</h3>
+<p>Desertification is the degradation of semi-arid land into desert. <strong>Causes</strong> include climate change, drought and soil erosion (physical), plus population growth, removal of fuel wood, overgrazing and over-cultivation (human). <strong>Solutions</strong> include water and soil management (drip irrigation, stone bunds), tree planting (the Great Green Wall) and appropriate technology (solar cookers, locally built bunds).</p>
+
+<h3>Worked Example</h3>
+<p>'Hot deserts offer more opportunities than challenges for development.' Discuss. [6 marks]</p>
+<p>Hot deserts offer valuable opportunities: intense sunshine makes them ideal for <strong>solar energy</strong>, while <strong>minerals</strong> and oil provide export income and, with <strong>irrigation</strong>, farming can be productive. However, these depend on overcoming major challenges — especially the <strong>scarce water supply</strong>, <strong>extreme heat</strong> and <strong>inaccessibility</strong>, which raise costs and can cause environmental harm such as aquifer depletion. Whether opportunities outweigh challenges depends on wealth and technology: rich nations can exploit deserts profitably, whereas poorer regions struggle, and over-development risks desertification.</p>
+
+<h3>Common Mistake</h3>
+<p>Students sometimes treat 'hot deserts' and 'desertification' as the same topic. They are linked but distinct: hot deserts are an existing biome with opportunities and challenges, whereas desertification is the <em>process</em> by which semi-arid land on the desert margins becomes degraded. Be sure to address the specific focus of the question.</p>
 `
 
 });

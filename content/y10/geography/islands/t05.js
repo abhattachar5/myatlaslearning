@@ -38,7 +38,19 @@ FLASHCARDS.push(
   {id:"g10fc-05-3-4", islandId:"g10i-05-3", front:"Describe Freiburg, Germany, as a case study of a sustainable city.",
    back:"Freiburg, south-west Germany (~230,000 population), is widely regarded as one of the world's most sustainable cities.\n\nTransport:\n• Extensive tram network; car-free zones in the city centre\n• Over 400 km of cycle paths; ~30% of journeys made by bike\n• Vauban district designed as car-free — residents cannot park near their homes\n\nEnergy:\n• More solar panels per capita than almost any city in the world\n• Buildings in Vauban are 'passive houses' — ultra-low energy design\n• Target of carbon neutrality by 2050\n\nGreen spaces:\n• 44% of the city area is forest; extensive parks and green corridors\n• Biodiversity protection policies\n\nWaste:\n• Strict recycling programme; very low landfill rates\n\nCommunity:\n• Strong citizen participation in planning decisions\n• Affordable housing requirements in new developments\n\nFreiburg demonstrates that sustainability can be achieved through long-term planning, political commitment and public engagement.", difficulty:2, category:"case-study"},
   {id:"g10fc-05-3-5", islandId:"g10i-05-3", front:"Evaluate whether sustainable urban living can be achieved in all cities.",
-   back:"Arguments for:\n+ Freiburg, Curitiba and Copenhagen show it is achievable with political will\n+ Many strategies (cycling infrastructure, recycling) are relatively low cost\n+ Public health and quality of life improve alongside sustainability\n+ Climate change makes sustainability not optional but essential\n\nArguments against:\n− LICs may lack funds for green infrastructure\n− Rapidly growing cities in NEEs struggle to provide basic services, let alone sustainable ones\n− Existing car-dependent cities (e.g. many US cities) face enormous retrofit costs\n− Behavioural change is slow — people resist giving up cars and convenience\n− Political short-termism — sustainability requires long-term commitment\n\nConclusion: all cities can move towards sustainability, but the pace and extent will vary depending on wealth, governance, existing infrastructure and public attitudes. Starting with affordable, high-impact strategies (public transport, recycling, green spaces) is realistic even for lower-income cities.", difficulty:3, category:"evaluation"}
+   back:"Arguments for:\n+ Freiburg, Curitiba and Copenhagen show it is achievable with political will\n+ Many strategies (cycling infrastructure, recycling) are relatively low cost\n+ Public health and quality of life improve alongside sustainability\n+ Climate change makes sustainability not optional but essential\n\nArguments against:\n− LICs may lack funds for green infrastructure\n− Rapidly growing cities in NEEs struggle to provide basic services, let alone sustainable ones\n− Existing car-dependent cities (e.g. many US cities) face enormous retrofit costs\n− Behavioural change is slow — people resist giving up cars and convenience\n− Political short-termism — sustainability requires long-term commitment\n\nConclusion: all cities can move towards sustainability, but the pace and extent will vary depending on wealth, governance, existing infrastructure and public attitudes. Starting with affordable, high-impact strategies (public transport, recycling, green spaces) is realistic even for lower-income cities.", difficulty:3, category:"evaluation"},
+
+  // g10i-05-4 — LIC/NEE City Case Study
+  {id:"g10fc-05-4-1", islandId:"g10i-05-4", front:"Describe the location and importance of Lagos, Nigeria.",
+   back:"Location:\n• South-west Nigeria, on the Atlantic coast of West Africa, in the Gulf of Guinea\n• Built around a large lagoon; the original city occupies islands and the surrounding mainland\n• Nigeria is a newly-emerging economy (NEE) with Africa's largest population\n\nImportance:\n• Nigeria's largest city and former capital (capital moved to Abuja in 1991)\n• Population of approximately 15 million and growing rapidly — one of the world's fastest-growing megacities\n• The economic and financial heart of Nigeria — generates a large share of national GDP\n• Major port handling much of Nigeria's trade\n• Hub for banking, manufacturing, film ('Nollywood') and technology\n• Regionally important across West Africa as a centre of commerce and culture", difficulty:1, category:"application"},
+  {id:"g10fc-05-4-2", islandId:"g10i-05-4", front:"Explain the causes of rapid growth in Lagos.",
+   back:"Rural-urban migration (push factors):\n• Poverty and low wages in rural farming areas\n• Poor access to education, healthcare and services in the countryside\n• Drought, desertification and flooding damaging rural livelihoods\n• Conflict and insecurity in northern Nigeria\n\nRural-urban migration (pull factors):\n• Perception of better-paid jobs in industry and services\n• Better schools, hospitals and infrastructure\n• Family and social networks already in the city\n• Entertainment and the prospect of a better quality of life\n\nNatural increase:\n• Migrants are mostly young adults of child-bearing age\n• High birth rates combined with improving healthcare lower death rates\n• This causes the population to grow from within, not just from migration\n\nTogether, migration and natural increase make Lagos one of the fastest-growing cities on Earth.", difficulty:2, category:"concept"},
+  {id:"g10fc-05-4-3", islandId:"g10i-05-4", front:"What social and economic opportunities does urban growth bring to Lagos?",
+   back:"Economic opportunities:\n• Formal jobs in banking, manufacturing, port industries, oil and technology\n• Higher average wages than in rural areas\n• Lagos generates a large share of Nigeria's GDP, attracting investment\n• A thriving creative economy (Nollywood film industry, music)\n\nSocial opportunities:\n• Better access to education — more schools, colleges and universities\n• Improved healthcare — more hospitals and clinics than rural areas\n• Access to electricity, piped water and communications for some residents\n• Social mobility — the chance to improve living standards over a generation\n\nServices:\n• Greater availability of shops, markets, transport and entertainment\n\nThese opportunities are the 'pull' that draws millions to the city, but they are unevenly shared — many migrants do not immediately gain formal employment or services.", difficulty:2, category:"application"},
+  {id:"g10fc-05-4-4", islandId:"g10i-05-4", front:"Describe the challenges created by rapid growth in Lagos.",
+   back:"Housing:\n• Squatter settlements such as Makoko — informal housing built on stilts over the lagoon\n• Overcrowding; structures lack legal land ownership and basic services\n\nThe informal economy:\n• A large share of workers are in informal jobs (street trading, scavenging) with no contracts, security or protection\n\nServices and utilities:\n• Many lack clean water and sanitation — risk of cholera and other waterborne disease\n• Unreliable electricity supply; frequent power cuts; reliance on private generators\n\nTraffic and pollution:\n• Severe congestion ('go-slows') wastes hours each day\n• Air pollution from vehicles, generators and waste burning\n• Waste management overwhelmed (e.g. the Olusosun dump)\n\nCrime and inequality:\n• High crime rates in deprived areas\n• Stark inequality between wealthy gated districts and slums", difficulty:2, category:"application"},
+  {id:"g10fc-05-4-5", islandId:"g10i-05-4", front:"How can urban planning improve life for the urban poor in Lagos?",
+   back:"Site-and-service schemes:\n• The authorities prepare plots with basic infrastructure (water, sewerage, electricity, roads)\n• Residents then build their own homes on the serviced plots, improving them over time\n• Cheaper than building finished housing; gives residents ownership and pride\n\nUpgrading existing settlements:\n• Installing water pipes, drainage, paved roads and street lighting in slums\n• Building schools and health clinics within communities\n• Granting legal land tenure so residents invest in their homes\n\nExamples and approaches:\n• Programmes to regularise and upgrade informal areas rather than demolish them\n• Investment in transport (e.g. the Lagos Bus Rapid Transit and rail lines) to ease congestion\n• Microfinance to help residents start small businesses\n\nThese 'bottom-up', incremental approaches generally improve life for the urban poor more effectively than forced clearance, which destroys homes and livelihoods.", difficulty:2, category:"application"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -93,6 +105,23 @@ Object.assign(QUESTIONS, {
     {q:"How does congestion charging help make a city more sustainable?",
      opts:["It encourages more people to drive","It discourages private car use in city centres, reducing traffic congestion, air pollution and carbon emissions, and generates revenue for public transport","It makes public transport more expensive","It removes all roads from the city centre"], c:1,
      e:"Congestion charging discourages unnecessary private car journeys into the city centre by making driving more expensive. This reduces traffic congestion, lowers air pollution (NO₂, particulate matter) and cuts carbon emissions. The revenue generated can be invested in improving public transport, cycling infrastructure and pedestrian areas, creating a virtuous cycle. London's congestion charge, introduced in 2003, reduced city-centre traffic by approximately 30% in its first year."}
+  ],
+  "g10i-05-4": [
+    {q:"Why is Lagos important to Nigeria?",
+     opts:["It is the current capital city of Nigeria","It is Nigeria's largest city and economic and financial heart, generating a large share of national GDP and handling much of the country's trade","It is the only city in Nigeria","It has the smallest population of any Nigerian city"], c:1,
+     e:"Lagos, on Nigeria's south-west Atlantic coast, is the country's largest city with around 15 million people and one of the fastest-growing megacities in the world. Although the capital moved to Abuja in 1991, Lagos remains the economic and financial heart of Nigeria, generating a large share of national GDP. It is a major port, a banking and manufacturing hub, and home to the 'Nollywood' film industry, giving it regional importance across West Africa."},
+    {q:"What are the main causes of the rapid population growth of Lagos?",
+     opts:["Only government policy forcing people to move there","Rural-urban migration (driven by rural poverty and urban opportunities) combined with natural increase from a young population with high birth rates","Tourism from other countries","People moving out of the city"], c:1,
+     e:"Lagos grows rapidly for two main reasons. First, rural-urban migration: people are pushed from rural areas by poverty, poor services, drought and conflict, and pulled to Lagos by the perception of jobs, better schools and hospitals, and a better quality of life. Second, natural increase: most migrants are young adults, so high birth rates combined with falling death rates cause the population to grow from within. Together these make Lagos one of the fastest-growing cities on Earth."},
+    {q:"What is the 'informal economy' that many Lagos residents work in?",
+     opts:["Well-paid government jobs with full contracts","Work such as street trading and scavenging that is unregulated, with no contracts, job security, taxation or legal protection","Jobs in large multinational companies","Farming in the rural areas around the city"], c:1,
+     e:"The informal economy (or informal sector) consists of jobs that are not officially recognised, taxed or regulated by the government. In Lagos, a large share of workers are street traders, scavengers on waste dumps, casual labourers and small-scale service providers. These jobs provide vital income but offer no contracts, sick pay, pension or legal protection, and wages are often very low. Reliance on the informal economy is typical of rapidly growing LIC and NEE cities."},
+    {q:"Which of the following is a challenge created by rapid growth in Lagos?",
+     opts:["Too few people to fill jobs","Squatter settlements such as Makoko, inadequate clean water and sanitation, unreliable electricity, severe traffic congestion and pollution","An ageing population with no young workers","A complete lack of any industry"], c:1,
+     e:"Rapid, largely unplanned growth has outpaced Lagos's infrastructure. Squatter settlements such as Makoko (housing built on stilts over the lagoon) lack legal land ownership and basic services. Many residents have no clean water or sanitation, risking waterborne disease, and electricity is unreliable. Traffic congestion ('go-slows') and air pollution from vehicles, generators and waste burning are severe, while waste management struggles to cope. Inequality and crime are further challenges."},
+    {q:"Why are site-and-service schemes considered an effective way to help the urban poor?",
+     opts:["They demolish slums and move residents far away","The authorities provide plots with basic infrastructure (water, sewerage, electricity) and residents build and improve their own homes, giving ownership at lower cost","They build expensive finished apartments only wealthy people can afford","They ban people from improving their homes"], c:1,
+     e:"In a site-and-service scheme, the authorities lay out plots with basic services — water, sewerage, electricity and roads — and residents then build their own homes on the serviced plots, improving them gradually over time. This is far cheaper than constructing finished housing and gives residents ownership, pride and an incentive to invest. Combined with upgrading existing settlements and granting legal land tenure, these 'bottom-up' approaches usually help the urban poor more than forced clearance, which destroys homes and livelihoods."}
   ]
 });
 
@@ -217,6 +246,44 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes write that sustainable cities are only possible in wealthy European countries. While Freiburg benefits from German investment, cities in LICs have also made progress — Curitiba in Brazil pioneered bus rapid transit, and Medell&iacute;n in Colombia transformed its transport and public spaces. Sustainability is a spectrum, not a binary state.</p>
+`,
+
+'g10i-05-4': `
+<h2>LIC/NEE City Study: Lagos, Nigeria</h2>
+<p>Lagos, on Nigeria's south-west Atlantic coast, is one of the fastest-growing megacities in the world. As a named case study of a city in a newly-emerging economy (NEE), you need specific detail on its location, importance, growth, opportunities and challenges.</p>
+
+<h3>Location and Importance</h3>
+<p>Lagos sits on the Gulf of Guinea, built around a large lagoon. Although the capital moved to <strong>Abuja in 1991</strong>, Lagos (around 15 million people) remains Nigeria's economic and financial heart, generating a large share of national GDP. It is a major port and a hub for banking, manufacturing and the 'Nollywood' film industry.</p>
+
+<h3>Causes of Rapid Growth</h3>
+<p>Two forces drive growth. <strong>Rural-urban migration</strong> pushes people from rural poverty, poor services, drought and conflict, and pulls them towards perceived jobs, better schools and hospitals. <strong>Natural increase</strong> follows because migrants are mostly young adults, so high birth rates and falling death rates make the population grow from within.</p>
+
+<h3>Opportunities and Challenges</h3>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#0d9488;color:white">
+    <th style="padding:8px;border:1px solid #ccc">Opportunities</th>
+    <th style="padding:8px;border:1px solid #ccc">Challenges</th>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Formal jobs in banking, industry and the port</td>
+    <td style="padding:8px;border:1px solid #ccc">Squatter settlements such as Makoko; informal economy</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Better schools, hospitals and services</td>
+    <td style="padding:8px;border:1px solid #ccc">Lack of clean water, sanitation and reliable electricity</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Higher wages and social mobility</td>
+    <td style="padding:8px;border:1px solid #ccc">Severe traffic, air pollution, crime and inequality</td>
+  </tr>
+</table>
+
+<h3>Worked Example</h3>
+<p>Explain how urban planning can improve quality of life for the urban poor in an NEE city. [6 marks]</p>
+<p>In Lagos, <strong>site-and-service schemes</strong> prepare plots with basic infrastructure — water, sewerage, electricity and roads — and residents then build and improve their own homes. This is far cheaper than finished housing and gives residents <strong>ownership</strong> and pride, encouraging investment. Existing settlements such as Makoko can be <strong>upgraded</strong> with piped water, drainage and clinics rather than demolished, and granting <strong>legal land tenure</strong> gives security. Investment in transport, such as the Bus Rapid Transit system, eases congestion. These 'bottom-up' approaches improve life more effectively than forced clearance, which destroys homes and livelihoods.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often list only the problems of a rapidly growing city. Examiners reward balance: rapid growth brings real <strong>opportunities</strong> (jobs, education, healthcare, higher wages) as well as challenges. A strong answer recognises both, and notes that the benefits are unevenly shared across the population.</p>
 `
 
 });

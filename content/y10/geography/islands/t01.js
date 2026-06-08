@@ -38,7 +38,43 @@ FLASHCARDS.push(
   {id:"g10fc-01-3-4", islandId:"g10i-01-3", front:"What is the difference between mitigation and adaptation in response to climate change?",
    back:"Mitigation — actions that reduce or prevent greenhouse gas emissions to slow climate change:\n• Switching from fossil fuels to renewable energy (wind, solar, nuclear)\n• Carbon capture and storage (CCS) technology\n• International agreements (e.g. Paris Agreement 2015 — limit warming to 1.5 °C)\n• Afforestation to increase CO₂ absorption\n• Improving energy efficiency in buildings and transport\n\nAdaptation — actions that adjust to the effects of climate change already occurring:\n• Building flood defences and sea walls\n• Developing drought-resistant crop varieties\n• Changing agricultural practices to suit new climates\n• Managed retreat from vulnerable coastal areas\n• Designing buildings to cope with higher temperatures\n\nBoth are needed: mitigation to limit future change; adaptation to cope with change already locked in.", difficulty:2, category:"concept"},
   {id:"g10fc-01-3-5", islandId:"g10i-01-3", front:"Evaluate the effectiveness of international agreements in tackling climate change.",
-   back:"Paris Agreement (2015):\n+ 196 countries committed to limiting warming to well below 2 °C, aiming for 1.5 °C\n+ Each country sets its own Nationally Determined Contributions (NDCs)\n+ Regular review cycles to ratchet up ambition\n− Commitments are voluntary — no enforcement mechanism\n− Current NDCs are insufficient to meet the 1.5 °C target\n− Some major emitters have been slow to act\n\nCOP conferences:\n+ Keep climate change on the political agenda\n+ Enable technology transfer and climate finance for LICs\n− Progress is often slow due to competing national interests\n− Fossil fuel industries exert political influence\n\nConclusion: international agreements are essential for coordination but insufficient alone. National policy, corporate action and individual behaviour change are all needed.", difficulty:3, category:"evaluation"}
+   back:"Paris Agreement (2015):\n+ 196 countries committed to limiting warming to well below 2 °C, aiming for 1.5 °C\n+ Each country sets its own Nationally Determined Contributions (NDCs)\n+ Regular review cycles to ratchet up ambition\n− Commitments are voluntary — no enforcement mechanism\n− Current NDCs are insufficient to meet the 1.5 °C target\n− Some major emitters have been slow to act\n\nCOP conferences:\n+ Keep climate change on the political agenda\n+ Enable technology transfer and climate finance for LICs\n− Progress is often slow due to competing national interests\n− Fossil fuel industries exert political influence\n\nConclusion: international agreements are essential for coordination but insufficient alone. National policy, corporate action and individual behaviour change are all needed.", difficulty:3, category:"evaluation"},
+
+  // g10i-01-4 — Tropical Storms
+  {id:"g10fc-01-4-1", islandId:"g10i-01-4", front:"Describe the global distribution of tropical storms.",
+   back:"Tropical storms form over warm tropical oceans and follow a clear pattern:\n\n• They occur between roughly 5° and 30° north and south of the Equator, where sea temperatures are high enough.\n• They do not form within 5° of the Equator because the Coriolis effect is too weak to make them spin.\n• Main regions: the Caribbean and Gulf of Mexico (hurricanes), the western Pacific around Japan and the Philippines (typhoons), and the Bay of Bengal and northern Australia (cyclones).\n• They track westward and away from the Equator, steered by prevailing winds, before curving polewards.\n\nThe name differs by region — hurricane, typhoon or cyclone — but the storm is the same phenomenon.", difficulty:2, category:"concept"},
+  {id:"g10fc-01-4-2", islandId:"g10i-01-4", front:"What conditions are needed for a tropical storm to form?",
+   back:"Three key conditions must be met:\n\n1. Warm ocean water — sea surface temperature must exceed 26.5 °C. This provides the thermal energy that powers the storm.\n2. Sufficient depth of warm water — the warm layer must extend to about 60–70 m so the storm is not quickly cut off from its heat source.\n3. Low latitude (5°–30°) — far enough from the Equator for the Coriolis effect to create spin, but within the tropics where the ocean is warm.\n\nLow wind shear (little change in wind speed with height) is also needed so the developing storm is not torn apart. Storms weaken when these conditions are removed — over land or cooler water.", difficulty:2, category:"concept"},
+  {id:"g10fc-01-4-3", islandId:"g10i-01-4", front:"Describe the structure of a tropical storm.",
+   back:"A mature tropical storm has a distinctive structure:\n\n• Eye — a central column of calm, clear, sinking air, typically 30–50 km across. Here pressure is lowest, winds are light and skies are clear.\n• Eyewall — a ring of towering cumulonimbus cloud surrounding the eye. This is where conditions are most violent: the strongest winds and heaviest, most intense rainfall.\n• Spiralling rain bands — bands of cloud and rain that spiral inwards towards the eyewall, becoming more intense closer to the centre.\n\nThe whole system can be hundreds of kilometres wide and rotates anticlockwise in the Northern Hemisphere (clockwise in the Southern Hemisphere).", difficulty:2, category:"concept"},
+  {id:"g10fc-01-4-4", islandId:"g10i-01-4", front:"Explain the sequence of formation of a tropical storm.",
+   back:"Tropical storms form through a clear sequence:\n\n1. The sun heats large areas of ocean, warming the air above to over 26.5 °C.\n2. Warm, moist air rises rapidly, creating an area of intense low pressure at the surface.\n3. As the air rises and cools, water vapour condenses to form towering cumulonimbus clouds, releasing latent heat that powers further uplift.\n4. More warm air is drawn in at the surface, and the Coriolis effect makes the system spin.\n5. The storm grows and is driven across the ocean, gathering energy from the warm water.\n6. On reaching land or cooler water, the energy supply is cut off and the storm weakens and dies.", difficulty:2, category:"process"},
+  {id:"g10fc-01-4-5", islandId:"g10i-01-4", front:"Distinguish between the primary and secondary effects, and the immediate and long-term responses, to a tropical storm.",
+   back:"Primary effects (direct, immediate):\n• Buildings destroyed by high winds; coastal areas flooded by storm surge\n• People killed or injured; power lines and crops flattened\n\nSecondary effects (knock-on):\n• Flooding leads to contaminated water and the spread of disease\n• Destroyed crops cause food shortages; unemployment as businesses are damaged\n\nImmediate responses (during/just after):\n• Evacuation and rescue; emergency shelters; aid (food, water, medicine)\n\nLong-term responses (weeks to years):\n• Rebuilding homes and infrastructure to be storm-resistant\n• Improving flood defences and early warning systems\n• Restoring the economy and livelihoods", difficulty:2, category:"concept"},
+
+  // g10i-01-5 — Reducing Tectonic Hazard Risk
+  {id:"g10fc-01-5-1", islandId:"g10i-01-5", front:"Why do people continue to live in tectonically active areas?",
+   back:"Despite the dangers, people live near plate boundaries for many reasons:\n\n• Fertile soils — weathered volcanic ash and lava produce rich, fertile soils ideal for farming (e.g. slopes of Mount Etna).\n• Geothermal energy — volcanic areas provide cheap, renewable power (e.g. Iceland heats and powers homes geothermally).\n• Mineral resources — volcanic areas yield valuable minerals such as sulphur, copper and gold.\n• Tourism — volcanoes, hot springs and geysers attract visitors, creating jobs and income.\n• Family and community ties — people are reluctant to leave their homes, land and culture.\n• Perceived low risk — hazards may be rare, so people feel the benefits outweigh the dangers.", difficulty:2, category:"application"},
+  {id:"g10fc-01-5-2", islandId:"g10i-01-5", front:"How can monitoring and prediction reduce tectonic hazard risk?",
+   back:"Monitoring uses scientific instruments to detect warning signs:\n\n• Seismometers detect small earthquakes (tremors) that may precede an eruption.\n• Tiltmeters and GPS measure ground swelling as magma rises.\n• Gas sensors detect changes in sulphur dioxide emissions.\n• Thermal imaging and satellites monitor temperature and ground deformation.\n\nFor volcanoes, these signs allow reasonably accurate prediction and timely evacuation. Tsunami can be detected by DART buoys, giving coastal warnings.\n\nLimitation: earthquakes cannot yet be reliably predicted — there is no consistent warning sign for exactly when a fault will rupture, so protection and planning matter more for earthquakes.", difficulty:2, category:"concept"},
+  {id:"g10fc-01-5-3", islandId:"g10i-01-5", front:"How does protection through building design reduce earthquake risk?",
+   back:"Earthquake-resistant ('aseismic') building design saves lives by allowing structures to withstand shaking:\n\n• Deep foundations anchored into bedrock keep buildings stable.\n• Cross-bracing and steel frames allow the structure to flex rather than snap.\n• Rubber shock absorbers (base isolators) between the building and foundations absorb energy.\n• A large counterweight near the top sways to counteract movement.\n• Automatic shutters cut gas and electricity to prevent fires.\n• Reinforced, flexible materials replace brittle ones like unreinforced brick.\n\nJapan and Chile use strict building codes, which is why strong earthquakes there cause far fewer deaths than weaker ones in poorer, less prepared countries.", difficulty:2, category:"concept"},
+  {id:"g10fc-01-5-4", islandId:"g10i-01-5", front:"How does planning reduce tectonic hazard risk?",
+   back:"Planning prepares communities and governments before a hazard strikes:\n\n• Emergency drills — regular practice (e.g. Japan's annual Disaster Prevention Day) means people know how to react, reducing panic and casualties.\n• Hazard mapping — identifying high-risk zones (areas of liquefaction, lahar paths, tsunami inundation) guides safe development.\n• Land-use zoning — restricting building in the most dangerous areas; keeping vital services (hospitals) in safer zones.\n• Emergency planning — stockpiling supplies, training emergency services, planning evacuation routes.\n• Public education — teaching people what to do (e.g. 'drop, cover, hold on').\n\nPlanning is relatively low cost and especially important where prediction is unreliable.", difficulty:2, category:"concept"},
+  {id:"g10fc-01-5-5", islandId:"g10i-01-5", front:"Evaluate the three Ps (prediction, protection, planning) for reducing tectonic risk.",
+   back:"Prediction:\n+ Effective for volcanoes — monitoring allows evacuation\n− Earthquakes cannot be reliably predicted\n\nProtection:\n+ Earthquake-resistant buildings dramatically cut death tolls\n+ Sea walls and flood barriers reduce tsunami damage\n− Very expensive — often unaffordable in LICs\n\nPlanning:\n+ Drills, education and hazard mapping are low cost and effective\n+ Improve response and reduce panic\n− Require sustained commitment and public cooperation\n\nConclusion: no single approach is enough. For earthquakes, protection and planning matter most because prediction is unreliable; for volcanoes, prediction is highly valuable. A combination tailored to local wealth and hazard type is best.", difficulty:3, category:"evaluation"},
+
+  // g10i-01-6 — UK Extreme Weather
+  {id:"g10fc-01-6-1", islandId:"g10i-01-6", front:"What types of extreme weather affect the UK?",
+   back:"The UK experiences a range of extreme weather because it lies where several air masses meet:\n\n• Storms — deep depressions bring damaging winds (e.g. winter storms named by the Met Office).\n• Flooding — prolonged or intense rainfall causes river and surface flooding.\n• Drought — extended dry spells reduce water supplies (e.g. summer 2018, 1976).\n• Heavy snow — cold air from the east or north brings disruptive snowfall (e.g. the 'Beast from the East', 2018).\n• Heatwaves — prolonged hot, dry weather (e.g. July 2022, when the UK first exceeded 40 °C).\n\nThis variety reflects the UK's position in the path of mid-latitude depressions and contrasting air masses.", difficulty:2, category:"concept"},
+  {id:"g10fc-01-6-2", islandId:"g10i-01-6", front:"What were the causes of the Somerset Levels floods of 2014?",
+   back:"The Somerset Levels flooded over the winter of 2013–2014 due to a combination of factors:\n\n• Wettest January on record — successive Atlantic depressions brought prolonged, heavy rainfall.\n• The Somerset Levels are low-lying and naturally flat, so water drains very slowly.\n• High tides and storm surges pushed water up the rivers, preventing drainage to the sea.\n• Rivers (the Tone and Parrett) had not been dredged for over 20 years, reducing their capacity to carry water.\n• Saturated ground from earlier rain meant no further water could infiltrate.\n\nThese physical and human factors combined to keep large areas underwater for several weeks.", difficulty:2, category:"case-study"},
+  {id:"g10fc-01-6-3", islandId:"g10i-01-6", front:"Describe the social, economic and environmental effects of the Somerset Levels floods (2014).",
+   back:"Social effects:\n• Around 600 homes flooded; villages such as Moorland evacuated\n• Residents temporarily homeless; roads cut off, isolating communities\n\nEconomic effects:\n• Over 14,000 hectares of farmland under water for 3–4 weeks\n• Around 1,000 livestock evacuated; local businesses lost trade\n• Total cost estimated at over £10 million\n\nEnvironmental effects:\n• Floodwaters became contaminated with sewage, oil and debris\n• Stagnant water had to be pumped back into rivers, carrying pollutants\n• Soil and habitats damaged by prolonged inundation\n\nThe floods showed how a single event affects people, the economy and the environment together.", difficulty:2, category:"case-study"},
+  {id:"g10fc-01-6-4", islandId:"g10i-01-6", front:"How did people respond to the Somerset Levels floods (2014)?",
+   back:"Immediate responses:\n• Communities used sandbags and pumps to protect homes\n• Volunteers and emergency services provided boats and support\n• Some villages were evacuated; livestock were moved to safety\n\nLonger-term responses (the Somerset Levels and Moors Flood Action Plan, 2014):\n• The rivers Tone and Parrett were dredged to increase capacity\n• Riverbanks raised and pumping stations upgraded\n• Road levels raised in vulnerable areas\n• A tidal barrier at Bridgwater planned to prevent tidal surges\n• £20 million committed over 20 years to flood management\n\nThe plan aimed to reduce both the frequency and impact of future flooding.", difficulty:2, category:"case-study"},
+  {id:"g10fc-01-6-5", islandId:"g10i-01-6", front:"What evidence suggests UK weather is becoming more extreme?",
+   back:"Several lines of evidence point to increasingly extreme UK weather:\n\n• Record temperatures — the UK exceeded 40 °C for the first time in July 2022 (Coningsby, 40.3 °C).\n• More intense rainfall — record-breaking daily totals (e.g. Honister Pass during Storm Desmond, 2015).\n• More frequent named storms — a growing number of damaging winter storms each season.\n• Wetter winters and drier summers — a trend consistent with climate model projections.\n• Increased flooding — major flood events appear to be occurring more often.\n\nWhile single events cannot be blamed on climate change alone, the long-term trend of more frequent and intense extremes is consistent with a warming climate.", difficulty:3, category:"application"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -76,6 +112,57 @@ Object.assign(QUESTIONS, {
     {q:"During Storm Desmond (2015), what was the main cause of the severe flooding in Cumbria?",
      opts:["A tsunami struck the coast","An atmospheric river delivered record-breaking rainfall — 341.4 mm in 24 hours at Honister Pass","A dam burst upstream of Carlisle","Unusually high tides coincided with heavy snowmelt"], c:1,
      e:"Storm Desmond was fuelled by an atmospheric river — a narrow corridor of moisture drawn from the subtropical Atlantic. This delivered record-breaking rainfall to Cumbria, with 341.4 mm falling at Honister Pass in 24 hours. Rivers burst their banks, overwhelming flood defences in Carlisle that had only been built in 2010. Over 5,200 homes were flooded and the estimated cost exceeded £500 million."}
+  ],
+  "g10i-01-4": [
+    {q:"Which sea surface temperature is the minimum needed for a tropical storm to develop?",
+     opts:["About 15 °C","About 20 °C","About 26.5 °C","About 35 °C"], c:2,
+     e:"Tropical storms require a sea surface temperature of at least 26.5 °C. This warm water heats the air above it, causing rapid evaporation and uplift. The warm layer must also be reasonably deep (around 60–70 m) so the storm is not quickly starved of energy. When a storm moves over cooler water or land, this heat source is removed and it rapidly weakens."},
+    {q:"Why do tropical storms not form within about 5° of the Equator?",
+     opts:["The ocean is too cold there","There is too much rainfall at the Equator","The Coriolis effect is too weak to make the storm spin","The water is too shallow at the Equator"], c:2,
+     e:"Although ocean temperatures at the Equator are high enough, the Coriolis effect — which deflects moving air and gives the storm its spin — is too weak within about 5° of the Equator. Without sufficient spin, the rising air cannot organise into a rotating storm system. This is why tropical storms form between roughly 5° and 30° north and south, not on the Equator itself."},
+    {q:"Where in a tropical storm are conditions most violent?",
+     opts:["In the eye, at the very centre","In the eyewall, the ring of cloud surrounding the eye","In the outermost spiralling rain bands","Above the storm in the stratosphere"], c:1,
+     e:"The eyewall is the ring of towering cumulonimbus cloud immediately surrounding the eye. Here the strongest winds and the heaviest, most intense rainfall occur. By contrast, the eye at the centre is a region of calm, sinking air with clear skies and light winds — which is why a brief lull is felt as the eye passes overhead before the violent eyewall returns from the opposite direction."},
+    {q:"How might climate change affect tropical storms in the future?",
+     opts:["Storms will disappear entirely as oceans cool","Warmer oceans may make storms more intense and the area warm enough to generate them may expand","Storms will only ever form at the Equator","Climate change has no possible effect on tropical storms"], c:1,
+     e:"As sea surface temperatures rise, storms have access to more thermal energy, so a greater proportion are expected to be intense. Warmer air also holds more moisture (about 7% more per 1 °C), increasing rainfall and worsening flooding, while higher sea levels amplify storm surges. The area of ocean warm enough (over 26.5 °C) to generate storms may expand, potentially exposing new regions, even if the total number of storms does not rise much."},
+    {q:"Which of these is a secondary effect of a tropical storm?",
+     opts:["Buildings flattened by high winds","Coastal areas flooded by the storm surge","The spread of disease from contaminated floodwater","Power lines blown down during the storm"], c:2,
+     e:"Secondary effects are knock-on consequences that follow the initial impact. The spread of disease from contaminated floodwater is secondary because it results from the flooding rather than the storm directly. Buildings flattened by wind, coastal flooding from the storm surge and downed power lines are all primary effects — the immediate, direct results of the storm's winds and water."}
+  ],
+  "g10i-01-5": [
+    {q:"Why do many people continue to live near active volcanoes despite the risk?",
+     opts:["Volcanic areas are always completely safe","Weathered volcanic material creates fertile soils, and the area may offer geothermal energy, minerals and tourism","Governments force people to live there","Volcanoes guarantee there will never be an earthquake"], c:1,
+     e:"People weigh the benefits against the risks. Weathered volcanic ash and lava produce very fertile soils ideal for farming. Volcanic regions also offer geothermal energy, valuable minerals, and tourism that creates jobs. Strong family, cultural and economic ties make people reluctant to move, and where eruptions are rare, many feel the benefits outweigh the hazard."},
+    {q:"Why is prediction more reliable for volcanic eruptions than for earthquakes?",
+     opts:["Volcanoes give measurable warning signs such as ground swelling and gas emissions, whereas earthquakes have no reliable warning","Earthquakes only happen at night","Volcanoes are always smaller hazards than earthquakes","Scientists choose not to monitor earthquakes"], c:0,
+     e:"Rising magma produces measurable warning signs before an eruption — small tremors detected by seismometers, ground swelling measured by tiltmeters and GPS, increased temperatures and changes in gas emissions. These allow scientists to predict eruptions and evacuate in time. Earthquakes, by contrast, strike without a consistent, detectable warning, so reliable short-term prediction is not yet possible — meaning protection and planning matter more."},
+    {q:"Which of these is an example of protection rather than prediction or planning?",
+     opts:["Holding an annual earthquake evacuation drill","Designing buildings with cross-bracing and rubber shock absorbers to withstand shaking","Producing a hazard map of liquefaction-prone areas","Monitoring gas emissions from a volcano"], c:1,
+     e:"Protection means designing the built environment to withstand a hazard. Earthquake-resistant buildings with deep foundations, cross-bracing, steel frames and rubber base isolators allow structures to flex and survive shaking. Evacuation drills and hazard maps are planning measures, and monitoring gas emissions is prediction. Protection physically reduces the damage a hazard causes when it strikes."},
+    {q:"How does land-use zoning reduce tectonic hazard risk?",
+     opts:["It predicts exactly when an earthquake will happen","It restricts building in the most dangerous areas and keeps vital services in safer zones","It makes all buildings earthquake-proof automatically","It removes the need for emergency services"], c:1,
+     e:"Land-use zoning is a planning strategy that uses hazard maps to identify the most dangerous areas — such as those prone to liquefaction, landslides or tsunami inundation — and restricts or prevents building there. Vital services like hospitals and emergency centres are sited in safer zones so they can keep functioning. This reduces the number of people and key buildings exposed to the greatest danger."},
+    {q:"Why is a combination of prediction, protection and planning more effective than relying on one alone?",
+     opts:["Using three strategies is always cheaper than one","Each strategy has limitations, so together they cover different hazards and situations — for example planning compensates where earthquake prediction fails","Only one strategy is ever needed at a time","Prediction alone can stop earthquakes from happening"], c:1,
+     e:"No single strategy is sufficient. Prediction works well for volcanoes but not earthquakes; protection saves lives but is expensive; planning is low cost but needs sustained public commitment. Combining them means the weaknesses of one are covered by the strengths of another — for instance, where earthquakes cannot be predicted, earthquake-resistant building and well-rehearsed drills still save lives."}
+  ],
+  "g10i-01-6": [
+    {q:"Which of the following is an example of extreme weather experienced in the UK?",
+     opts:["Volcanic eruptions","Prolonged heatwaves and intense winter storms","Tropical cyclones forming over UK land","Year-round monsoon rains"], c:1,
+     e:"The UK experiences a range of extreme weather including storms, flooding, drought, heavy snow and heatwaves. This variety arises because the UK lies in the path of mid-latitude depressions where contrasting air masses meet. Volcanic eruptions are tectonic, not weather, and tropical cyclones form over warm tropical oceans, not over the cool waters and land of the UK."},
+    {q:"What was a key human cause of the severe Somerset Levels floods of 2013–2014?",
+     opts:["A nearby volcanic eruption","The rivers Tone and Parrett had not been dredged for over 20 years, reducing their capacity","Excessive irrigation of desert farmland","Deforestation of tropical rainforest"], c:1,
+     e:"While the immediate trigger was record-breaking winter rainfall on flat, low-lying land, a key human factor was that the rivers Tone and Parrett had not been dredged for over 20 years. This reduced their capacity to carry water away. Combined with high tides preventing drainage to the sea and already saturated ground, large areas remained under water for several weeks."},
+    {q:"Which of these was an environmental effect of the Somerset Levels floods (2014)?",
+     opts:["A rise in local house prices","Floodwater became contaminated with sewage and oil, damaging soils and habitats","An increase in tourism to the area","Improved crop yields the following season"], c:1,
+     e:"An environmental effect concerns the natural surroundings. The stagnant floodwater became contaminated with sewage, oil and debris, and when it was pumped back into the rivers it carried these pollutants with it. Prolonged inundation damaged soils and habitats. Flooded homes and lost farmland are social and economic effects rather than environmental ones."},
+    {q:"What was a long-term response to the Somerset Levels floods?",
+     opts:["Building a tropical storm warning system","Dredging the rivers Tone and Parrett and producing a 20-year Flood Action Plan","Abandoning the entire region permanently","Constructing a nuclear power station"], c:1,
+     e:"The Somerset Levels and Moors Flood Action Plan (2014) was the main long-term response. The rivers Tone and Parrett were dredged to increase their capacity, riverbanks were raised, pumping stations upgraded, vulnerable road levels raised and a tidal barrier at Bridgwater planned. Around £20 million was committed over 20 years to reduce the frequency and impact of future flooding."},
+    {q:"Which piece of evidence supports the view that UK weather is becoming more extreme?",
+     opts:["The UK has never recorded a temperature above 30 °C","The UK exceeded 40 °C for the first time in July 2022","Winters in the UK are becoming colder and drier","Named storms have become less frequent"], c:1,
+     e:"In July 2022 the UK exceeded 40 °C for the first time on record (40.3 °C at Coningsby). Alongside record rainfall totals, more frequent named storms and a trend towards wetter winters and drier summers, this is consistent with a warming climate producing more frequent and intense extremes. Although no single event proves climate change, the long-term trend is clear."}
   ],
   "g10i-01-3": [
     {q:"Which source of evidence shows that CO₂ levels are now higher than at any point in the last 800,000 years?",
@@ -283,6 +370,133 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes confuse the natural greenhouse effect (which keeps Earth habitable) with the enhanced greenhouse effect (the additional warming caused by human emissions). The natural greenhouse effect is beneficial — without it, Earth would be about 33 °C colder. The problem is the enhancement caused by rising CO₂ and methane from human activities.</p>
+`,
+
+'g10i-01-4': `
+<h2>Tropical Storms</h2>
+<div class="lesson-diagram" data-diagram="tropical-storm"><p class="diagram-caption">Structure of a tropical storm</p></div>
+<p>Tropical storms — known as hurricanes, typhoons or cyclones depending on the region — are intense, rotating low-pressure systems that form over warm tropical oceans. They are among the most destructive weather hazards on Earth.</p>
+
+<h3>Distribution and Formation Conditions</h3>
+<p>Tropical storms form between roughly <strong>5° and 30°</strong> north and south of the Equator, over the Caribbean, the western Pacific and the Indian Ocean. Three conditions are required:</p>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#0d9488;color:white">
+    <th style="padding:8px;border:1px solid #ccc">Condition</th>
+    <th style="padding:8px;border:1px solid #ccc">Why it matters</th>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Warm ocean (over 26.5 °C)</td>
+    <td style="padding:8px;border:1px solid #ccc">Provides the thermal energy that powers the storm</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Sufficient depth (~60–70 m)</td>
+    <td style="padding:8px;border:1px solid #ccc">Keeps the storm supplied with heat and moisture</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Low latitude (5°–30°)</td>
+    <td style="padding:8px;border:1px solid #ccc">Coriolis effect is strong enough to create spin</td>
+  </tr>
+</table>
+
+<h3>Structure and Sequence of Formation</h3>
+<p>A mature storm has a calm central <strong>eye</strong> of sinking air, surrounded by the violent <strong>eyewall</strong> of towering cloud where winds and rain are most intense, with <strong>spiralling rain bands</strong> feeding in. It forms in sequence: the sun warms the ocean; warm, moist air rises rapidly creating intense low pressure; water vapour condenses into cumulonimbus clouds, releasing latent heat that drives further uplift; the Coriolis effect makes the system spin; and the storm grows as it tracks across the warm ocean, weakening only when it reaches land or cooler water.</p>
+
+<h3>Climate Change and Effects</h3>
+<p>Warmer oceans may make a greater proportion of storms <strong>intense</strong>, increase rainfall, and expand the area warm enough to generate them. <strong>Primary effects</strong> (wind damage, storm-surge flooding) are immediate and direct; <strong>secondary effects</strong> (disease, food shortages, unemployment) follow on. <strong>Immediate responses</strong> include evacuation, rescue and aid; <strong>long-term responses</strong> include rebuilding storm-resistant homes and improving warning systems.</p>
+
+<h3>Worked Example</h3>
+<p>Explain why tropical storms only form in certain locations. [4 marks]</p>
+<p>Tropical storms need a sea surface temperature above <strong>26.5 °C</strong>, which is only found over tropical oceans, so they cannot form over the cool waters around the UK. The warm water must be reasonably <strong>deep</strong> so the storm is not quickly starved of energy. They also form between <strong>5° and 30°</strong> latitude, because nearer the Equator the <strong>Coriolis effect</strong> is too weak to give the storm its spin. This combination of conditions limits formation to specific tropical regions.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often write that tropical storms form 'on the Equator' because it is hottest there. In fact they form between 5° and 30° latitude — at the Equator itself the Coriolis effect is too weak to make the rising air rotate, so no organised storm can develop.</p>
+`,
+
+'g10i-01-5': `
+<h2>Reducing Tectonic Hazard Risk</h2>
+<div class="lesson-diagram" data-diagram="plate-boundaries"><p class="diagram-caption">The three types of plate boundary</p></div>
+<p>Millions of people live in tectonically active areas. Because the hazards cannot be prevented, the focus is on reducing the risk to life and property through prediction, protection and planning — often called the 'three Ps'.</p>
+
+<h3>Why People Live in Tectonically Active Areas</h3>
+<p>Despite the danger, people stay near plate boundaries because the benefits can outweigh the risks: <strong>fertile volcanic soils</strong> for farming, <strong>geothermal energy</strong>, valuable <strong>minerals</strong>, and <strong>tourism</strong> that creates jobs. Strong family, cultural and economic ties make people reluctant to leave, and where eruptions or earthquakes are rare, many perceive the risk as low.</p>
+
+<h3>Managing the Risk: The Three Ps</h3>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#0d9488;color:white">
+    <th style="padding:8px;border:1px solid #ccc">Approach</th>
+    <th style="padding:8px;border:1px solid #ccc">Examples</th>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Prediction (monitoring)</td>
+    <td style="padding:8px;border:1px solid #ccc">Seismometers, tiltmeters, gas sensors, satellites; DART tsunami buoys</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Protection</td>
+    <td style="padding:8px;border:1px solid #ccc">Earthquake-resistant buildings: deep foundations, cross-bracing, rubber base isolators, automatic gas shut-off</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Planning</td>
+    <td style="padding:8px;border:1px solid #ccc">Emergency drills, hazard mapping, land-use zoning, stockpiling supplies, public education</td>
+  </tr>
+</table>
+<p>Prediction works well for volcanoes, where rising magma gives warning signs, but earthquakes cannot yet be reliably predicted — so for earthquakes, protection and planning matter most.</p>
+
+<h3>Worked Example</h3>
+<p>Explain how planning can reduce the impact of an earthquake. [4 marks]</p>
+<p><strong>Hazard mapping</strong> identifies the most dangerous areas, such as those prone to liquefaction, so that <strong>land-use zoning</strong> can prevent building there and keep hospitals in safer zones. Regular <strong>emergency drills</strong> mean people know how to react — for example 'drop, cover, hold on' — which reduces panic and casualties. Stockpiling supplies and training emergency services speeds up the response. Because earthquakes cannot be predicted, this preparation is especially valuable and is relatively low cost.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often claim that scientists can 'predict earthquakes' in the same way as volcanic eruptions. This is incorrect — there is no reliable short-term warning sign for exactly when a fault will rupture. For earthquakes, the emphasis must be on protection (building design) and planning (drills and zoning), not prediction.</p>
+`,
+
+'g10i-01-6': `
+<h2>UK Extreme Weather</h2>
+<div class="lesson-diagram" data-diagram="weather-fronts-depression"><p class="diagram-caption">A depression and its weather fronts over the UK</p></div>
+<p>The UK lies where several air masses meet, so it experiences a wide variety of extreme weather. There is growing evidence that these extremes are becoming more frequent and intense.</p>
+
+<h3>Types of UK Extreme Weather</h3>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+  <tr style="background:#0d9488;color:white">
+    <th style="padding:8px;border:1px solid #ccc">Type</th>
+    <th style="padding:8px;border:1px solid #ccc">Example</th>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Storms</td>
+    <td style="padding:8px;border:1px solid #ccc">Damaging winds from deep depressions</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Flooding</td>
+    <td style="padding:8px;border:1px solid #ccc">Somerset Levels, winter 2013–2014</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Drought</td>
+    <td style="padding:8px;border:1px solid #ccc">Summer 1976; summer 2018</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Heavy snow</td>
+    <td style="padding:8px;border:1px solid #ccc">'Beast from the East', 2018</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ccc">Heatwaves</td>
+    <td style="padding:8px;border:1px solid #ccc">July 2022 — UK first exceeded 40 °C</td>
+  </tr>
+</table>
+
+<h3>Case Study: Somerset Levels Floods, 2013–2014</h3>
+<div style="background:#f0fdfa;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Causes:</strong> wettest January on record; flat, low-lying land draining slowly; high tides blocking drainage; rivers Tone and Parrett not dredged for 20+ years<br>
+  <strong>Social:</strong> ~600 homes flooded; villages such as Moorland evacuated and cut off<br>
+  <strong>Economic:</strong> 14,000+ hectares of farmland flooded for weeks; ~1,000 livestock evacuated; cost over £10 million<br>
+  <strong>Environmental:</strong> water contaminated with sewage and oil; soils and habitats damaged<br>
+  <strong>Responses:</strong> sandbags, pumps and boats; the Flood Action Plan — rivers dredged, banks raised, tidal barrier planned, £20 million over 20 years
+</div>
+
+<h3>Worked Example</h3>
+<p>Using a named example, explain the causes of a UK flood event. [6 marks]</p>
+<p>In the Somerset Levels (2013–2014), the immediate cause was the <strong>wettest January on record</strong>, as successive Atlantic depressions brought prolonged heavy rain. Physical factors made it worse: the land is <strong>flat and low-lying</strong>, so water drained slowly, and <strong>high tides and storm surges</strong> pushed water up the rivers, preventing drainage to the sea. A key human factor was that the rivers Tone and Parrett had <strong>not been dredged for over 20 years</strong>, reducing their capacity. Together these physical and human causes kept large areas under water for several weeks.</p>
+
+<h3>Common Mistake</h3>
+<p>Students sometimes blame a single extreme event directly on climate change. A more careful answer notes that one event cannot be attributed to climate change alone, but that the long-term trend — record temperatures (40.3 °C in 2022), more intense rainfall and more frequent named storms — is consistent with a warming climate.</p>
 `
 
 });
