@@ -127,3 +127,89 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Telling a long, unfocused story instead of crafting a controlled piece. Quality of writing matters more than quantity.</p>`
 });
+
+FLASHCARDS.push(
+  // e11i-05-4 — Q2: Language Analysis
+  {id:"e11fc-05-4-1", islandId:"e11i-05-4", front:"What exactly does Paper 1 Q2 reward, and how long should you spend?",
+   back:"Q2 (8 marks, ~10 mins): how the writer uses LANGUAGE to create a specific effect.\n\nReward comes from short quotations, named methods and a clear analysis of the effect on the reader — not from retelling the content.", difficulty:2, category:"concept"},
+  {id:"e11fc-05-4-2", islandId:"e11i-05-4", front:"What is the method → effect → reader-response chain?",
+   back:"Name the method (e.g. simile), explain the EFFECT it creates, then the READER RESPONSE it provokes.\n\n'The simile likens the storm to a beast, creating a sense of menace, so the reader feels the character's vulnerability.'", difficulty:3, category:"application"},
+  {id:"e11fc-05-4-3", islandId:"e11i-05-4", front:"Name three categories of language method to look for in Q2.",
+   back:"1. Word choice (connotations of individual words).\n2. Imagery (simile, metaphor, personification).\n3. Sentence forms (short sentences for impact, long flowing ones, fragments).\n\nAQA names all three in the bullet prompts.", difficulty:2, category:"definition"},
+  {id:"e11fc-05-4-4", islandId:"e11i-05-4", front:"Why should quotations in Q2 be short?",
+   back:"Short, embedded quotations let you analyse a precise word or phrase ('the verb \"clawed\"').\n\nLong quotations waste time and usually contain only one analysable detail. Zoom in on the word doing the work.", difficulty:2, category:"application"},
+  {id:"e11fc-05-4-5", islandId:"e11i-05-4", front:"Write an analytical sentence using subject terminology.",
+   back:"e.g. 'The personification of the wind, which \"shrieked\" through the rafters, attributes a tormented human voice to the storm, unsettling the reader and foreshadowing danger.'\n\n(Method named + short quote + effect + reader response.)", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e11i-05-4": [
+    {q:"Paper 1 Q2 asks you to analyse:", opts:["How the writer uses language to create an effect","The structure of the whole text","Four true statements","Two compared sources"], c:0,
+     e:"Q2 is the language question — methods and their effects in the named lines."},
+    {q:"The method → effect → reader-response chain means:", opts:["Name the technique, explain its effect, then the reader's reaction","List as many techniques as possible","Summarise the plot","Quote a long passage"], c:0,
+     e:"Top answers move from naming a method to its effect and the response it creates in the reader."},
+    {q:"Which is the best length for a Q2 quotation?", opts:["A short embedded word or phrase","A full sentence","An entire paragraph","Two paragraphs"], c:0,
+     e:"Short, embedded quotations let you zoom in on the precise word doing the work."},
+    {q:"'Subject terminology' in Q2 refers to:", opts:["Correct names for methods, e.g. metaphor, sibilance, declarative","Long sophisticated adjectives","The writer's biography","Words copied from the source"], c:0,
+     e:"Subject terminology means the accurate technical vocabulary for language methods."},
+    {q:"Which sentence best analyses the verb in 'the ivy clawed at the window'?", opts:["The verb 'clawed' personifies the ivy as a predator, making it seem threatening to the reader.","The ivy is on the window.","The writer describes plants.","'Clawed' is a past-tense verb."], c:0,
+     e:"It names the method (personification), uses the short quote and explains the threatening effect on the reader."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e11i-05-4": `<h2>Q2: Language Analysis</h2>
+<p>Paper 1 Q2 (8 marks, ~10 mins) asks <strong>how the writer uses language</strong> to achieve a specific effect within a named section. It tests analysis of words, imagery and sentence forms — not content retelling.</p>
+<h3>Selecting and embedding quotations</h3>
+<p>Choose <strong>short</strong> quotations and embed them in your sentences. Zoom in on the single word or phrase doing the work, such as a loaded verb or a striking adjective.</p>
+<h3>Naming methods with subject terminology</h3>
+<p>Identify the method precisely: word choice and connotation, imagery (simile, metaphor, personification) or sentence forms (short declaratives, fragments, lists). Accurate terminology signals control.</p>
+<h3>The method to effect to reader chain</h3>
+<p>Always move from method to <strong>effect</strong> to <strong>reader response</strong>. Naming a technique alone earns little; explaining what it does and how the reader feels earns the marks.</p>
+<h3>Worked example</h3>
+<p>'The personification of the wind, which "shrieked" through the rafters, attributes a tormented human voice to the storm. This unsettles the reader and foreshadows the danger to come, making the cottage feel under siege.'</p>
+<h3>Common mistake</h3>
+<p>Feature-spotting — listing techniques ('there is a simile and a metaphor') without analysing their effect. Depth on one method beats a shallow list.</p>`
+});
+
+FLASHCARDS.push(
+  // e11i-05-5 — Q3: Analysing Structure
+  {id:"e11fc-05-5-1", islandId:"e11i-05-5", front:"What does Paper 1 Q3 ask, and what must you NOT do?",
+   back:"Q3 (8 marks, ~10 mins): how the writer has STRUCTURED the text to interest the reader.\n\nDo NOT analyse individual word choices or imagery — that is Q2. Q3 is about the shape and order of the whole extract.", difficulty:2, category:"concept"},
+  {id:"e11fc-05-5-2", islandId:"e11i-05-5", front:"Name four structural features to discuss in Q3.",
+   back:"How the text OPENS; shifts in focus/perspective/time; a zoom from wide to narrow (or narrow to wide); how the text ENDS.\n\nAlso: withholding information, cyclical structure, contrast between sections.", difficulty:2, category:"definition"},
+  {id:"e11fc-05-5-3", islandId:"e11i-05-5", front:"What is a cyclical structure and why use it as evidence?",
+   back:"The ending echoes or returns to the opening (an image, phrase or setting).\n\nIt creates a sense of completeness or entrapment. Naming it shows you are tracking the WHOLE text, which Q3 rewards.", difficulty:3, category:"concept"},
+  {id:"e11fc-05-5-4", islandId:"e11i-05-5", front:"Why is Q3 the lowest-scoring question nationally?",
+   back:"Students confuse it with Q2 and analyse language instead of structure, or simply summarise the plot.\n\nSecuring marks just means tracking deliberate structural choices across the extract and linking each to its effect.", difficulty:2, category:"concept"},
+  {id:"e11fc-05-5-5", islandId:"e11i-05-5", front:"Write a structural analysis sentence for Q3.",
+   back:"e.g. 'The writer opens with a wide-angle view of the deserted valley, then narrows the focus to a single trembling hand, drawing the reader's eye inward and creating intimacy and tension.'\n\n(Structural feature + zoom + effect.)", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e11i-05-5": [
+    {q:"Paper 1 Q3 asks you to analyse:", opts:["How the text is structured to interest the reader","Individual word choices","Four true statements","The writer's life"], c:0,
+     e:"Q3 is the structure question — the shape and order of the whole extract."},
+    {q:"Which of these is a STRUCTURAL feature (not language)?", opts:["A shift in focus from a wide view to a close-up","A metaphor","An emotive adjective","Sibilance"], c:0,
+     e:"Shifts in focus are structural; metaphors and word choice belong in Q2."},
+    {q:"A cyclical structure is when:", opts:["The ending echoes or returns to the opening","The text uses many similes","Sentences are very short","The writer addresses the reader"], c:0,
+     e:"A cyclical structure links the close back to the start, creating completeness or entrapment."},
+    {q:"Q3 is the lowest-scoring question nationally mainly because students:", opts:["Analyse language instead of structure","Run out of paper","Use too many quotations","Write too much about structure"], c:0,
+     e:"The most common error is slipping into language analysis, which belongs in Q2."},
+    {q:"'Withholding information' as a structural device:", opts:["Delays a key detail to build curiosity or suspense","Means leaving out punctuation","Is a type of metaphor","Refers to spelling errors"], c:0,
+     e:"Holding back information controls the reader's knowledge and builds suspense — a structural choice."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e11i-05-5": `<h2>Q3: Analysing Structure</h2>
+<p>Paper 1 Q3 (8 marks, ~10 mins) asks how the writer has <strong>structured</strong> the text to interest the reader. It is the lowest-scoring question nationally because students drift into language analysis. Stay focused on the shape and order of the whole extract.</p>
+<h3>Structure, not language</h3>
+<p>Discuss how the text <strong>opens</strong>, how focus, perspective or time <strong>shifts</strong>, and how it <strong>ends</strong>. Ignore individual word choices and imagery — those belong in Q2.</p>
+<h3>Key structural features</h3>
+<ul>
+<li><strong>Zoom:</strong> a move from a wide view to a close-up (or the reverse).</li>
+<li><strong>Withholding information:</strong> delaying a detail to build suspense.</li>
+<li><strong>Cyclical structure:</strong> the ending echoing the opening.</li>
+</ul>
+<h3>Worked example</h3>
+<p>'The writer opens with a wide-angle view of the deserted valley, then narrows the focus to a single trembling hand. This <strong>zoom</strong> draws the reader's eye inward, building intimacy and tension before the perspective shifts again to the watcher on the ridge.'</p>
+<h3>Common mistake</h3>
+<p>Analysing word choices or imagery. Q3 rewards tracking deliberate structural choices across the extract and linking each to its effect on the reader.</p>`
+});

@@ -86,3 +86,87 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Spending too long on Part 1 and rushing Part 2. Budget your time and stick to it.</p>`
 });
+
+FLASHCARDS.push(
+  // e11i-07-3 — Unseen Poetry Comparison
+  {id:"e11fc-07-3-1", islandId:"e11i-07-3", front:"What does the second unseen poetry question ask you to do?",
+   back:"Compare how two unseen poets present a similar theme or feeling, focusing on their methods.\n\nIt is worth around 8 marks — fewer than the single-poem response — so it must be concise and tightly comparative.", difficulty:2, category:"concept"},
+  {id:"e11fc-07-3-2", islandId:"e11i-07-3", front:"How does the unseen comparison differ from the single unseen response?",
+   back:"The single response (~24 marks) is a full, detailed analysis of one poem.\n\nThe comparison (~8 marks) is shorter and must address BOTH poems together, focusing on how their methods differ rather than re-analysing poem one.", difficulty:2, category:"concept"},
+  {id:"e11fc-07-3-3", islandId:"e11i-07-3", front:"With limited time, what should the unseen comparison focus on?",
+   back:"One or two clear points of comparison — often a contrast in method or tone.\n\nDon't attempt to cover everything. A single well-developed contrast, supported with brief evidence from both poems, scores well.", difficulty:2, category:"application"},
+  {id:"e11fc-07-3-4", islandId:"e11i-07-3", front:"What sentence stems keep a comparison genuinely comparative?",
+   back:"'Whereas the first poet uses... the second poet instead...'\n'Both poets convey... but through different methods...'\n'In contrast, the second poem's tone is...'\n\nComparative connectives signal that you are weighing the two poems side by side.", difficulty:2, category:"application"},
+  {id:"e11fc-07-3-5", islandId:"e11i-07-3", front:"Write a model comparative sentence for the unseen comparison.",
+   back:"e.g. 'Both poets present loss as overwhelming, but whereas the first uses gentle, flowing enjambment to suggest quiet acceptance, the second employs abrupt end-stopped lines that convey a sharper, more bitter grief.'\n\n(Shared theme → poem A method + effect → contrasting poem B method + effect.)", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e11i-07-3": [
+    {q:"The second unseen poetry question asks you to:", opts:["Compare how two unseen poets present a theme using methods","Analyse one poem in full detail","Summarise both poems' stories","Write about the anthology poems"], c:0,
+     e:"The comparison question weighs two unseen poems against each other, focusing on method."},
+    {q:"Compared with the single unseen response, the comparison is:", opts:["Shorter and worth fewer marks (~8)","Longer and worth more marks","Identical in length","Not marked"], c:0,
+     e:"Worth around 8 marks, it must be concise and tightly comparative rather than a full essay."},
+    {q:"With limited time, the comparison should focus on:", opts:["One or two clear points, often a contrast in method or tone","Every technique in both poems","Only the first poem","The poets' biographies"], c:0,
+     e:"A single well-developed contrast supported by brief evidence scores well under time pressure."},
+    {q:"Which connective best signals genuine comparison?", opts:["'Whereas the first poet... the second instead...'","'Firstly...'","'In conclusion...'","'For example...'"], c:0,
+     e:"Comparative connectives like 'whereas' weigh the two poems side by side."},
+    {q:"A strong comparison should avoid:", opts:["Simply re-analysing poem one without comparing","Brief evidence from both poems","A clear contrast in tone","Comparative connectives"], c:0,
+     e:"The comparison must address both poems together, not repeat the single-poem analysis."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e11i-07-3": `<h2>Unseen Poetry Comparison</h2>
+<p>The second unseen poetry question asks you to <strong>compare how two unseen poets</strong> present a similar theme or feeling, focusing on their <strong>methods</strong>. It is worth around <strong>8 marks</strong> — fewer than the single-poem response — so it must be concise and comparative throughout.</p>
+<h3>How it differs from the single response</h3>
+<p>The single unseen response (~24 marks) is a full, detailed analysis of one poem. This comparison is much shorter and must address <strong>both poems together</strong>. Do not simply re-analyse the first poem; weigh the two against each other.</p>
+<h3>Working under time pressure</h3>
+<p>With limited time, focus on <strong>one or two clear points of comparison</strong> — often a contrast in method or tone. A single well-developed contrast, supported with brief evidence from each poem, scores better than a thin survey of everything.</p>
+<h3>Comparative connectives</h3>
+<p>Use signposts such as <em>whereas</em>, <em>in contrast</em>, <em>both poets... but</em>. These show the examiner you are genuinely comparing rather than describing each poem in turn.</p>
+<h3>Worked comparative sentence</h3>
+<p>'Both poets present loss as overwhelming, but <strong>whereas</strong> the first uses gentle, flowing enjambment to suggest quiet acceptance, the second employs abrupt end-stopped lines that convey a sharper, more bitter grief.'</p>
+<h3>Common mistake</h3>
+<p>Treating the comparison as a second full essay and running out of time. Keep it short, focused and explicitly comparative.</p>`
+});
+
+FLASHCARDS.push(
+  // e11i-07-4 — Planning & Timing the Poetry Exam
+  {id:"e11fc-07-4-1", islandId:"e11i-07-4", front:"What three tasks make up the Literature poetry section?",
+   back:"1. The anthology comparison (compare a named poem with one you choose).\n2. The single unseen poetry response.\n3. The unseen poetry comparison.\n\nAll three must fit within the section's time allocation.", difficulty:1, category:"concept"},
+  {id:"e11fc-07-4-2", islandId:"e11i-07-4", front:"Why do the mark weightings matter for timing?",
+   back:"Higher-mark tasks deserve more time. The anthology essay and the single unseen response carry the most marks; the unseen comparison (~8 marks) carries the least.\n\nMatch your minutes to the marks on offer.", difficulty:2, category:"application"},
+  {id:"e11fc-07-4-3", islandId:"e11i-07-4", front:"What is a quick plan for a poetry essay?",
+   back:"A thesis (your overall argument) plus 3 points.\n\nJot the thesis, then three comparative points with a method and a quotation each. Two or three minutes of planning prevents a directionless essay.", difficulty:2, category:"application"},
+  {id:"e11fc-07-4-4", islandId:"e11i-07-4", front:"Why is it dangerous to over-run on the first question?",
+   back:"Time stolen from later questions can't be earned back, and the easiest marks are often the first few on a fresh question.\n\nOnce your time for a task is up, draw a quick conclusion and move on.", difficulty:2, category:"concept"},
+  {id:"e11fc-07-4-5", islandId:"e11i-07-4", front:"Suggest a sensible timing split for the poetry section.",
+   back:"e.g. anthology comparison ~45 mins, single unseen response ~25 mins, unseen comparison ~15 mins — plus a couple of minutes' planning each.\n\nAdjust to your paper, but always protect time for the final task.", difficulty:2, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e11i-07-4": [
+    {q:"The Literature poetry section consists of:", opts:["The anthology comparison plus two unseen questions","One essay only","Five short answers","A comprehension passage"], c:0,
+     e:"You face the anthology comparison and both unseen poetry questions within the time."},
+    {q:"Time should be allocated according to:", opts:["The mark weighting of each task","Alphabetical order","Which poem you like most","How long the poems are"], c:0,
+     e:"Match your minutes to the marks: higher-mark tasks deserve more time."},
+    {q:"A quick poetry-essay plan should contain:", opts:["A thesis plus three points","Ten paragraphs","Only quotations","No structure"], c:0,
+     e:"A thesis and three comparative points keep the essay focused and on-argument."},
+    {q:"Over-running on the first question is risky because:", opts:["Lost time can't be recovered and easy marks come early on fresh questions","It impresses the examiner","Later questions are worth nothing","The first question is always hardest"], c:0,
+     e:"The first marks on each new question are often the easiest, so protect time for every task."},
+    {q:"Which is a sensible timing split for the poetry section?", opts:["~45 mins anthology, ~25 mins single unseen, ~15 mins comparison","60 mins on the first question, 0 on the rest","5 mins total","Equal time regardless of marks"], c:0,
+     e:"Time should reflect the marks, with a buffer for planning and a protected slot for the final task."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e11i-07-4": `<h2>Planning & Timing the Poetry Exam</h2>
+<p>The Literature poetry section asks you to do three things within one time allocation: the <strong>anthology comparison</strong>, the <strong>single unseen response</strong>, and the <strong>unseen comparison</strong>. Managing the clock is as important as knowing the poems.</p>
+<h3>Mark weightings</h3>
+<p>Match minutes to marks. The anthology essay and the single unseen response carry the most marks; the unseen comparison (~8 marks) carries the least. Spend your time in proportion.</p>
+<h3>Quick planning</h3>
+<p>For each essay, jot a <strong>thesis plus three points</strong> — your overall argument and three comparative points, each with a method and a quotation. Two or three minutes of planning prevents a directionless answer.</p>
+<h3>Don't over-run</h3>
+<p>Time stolen from later questions cannot be earned back, and the first few marks on a fresh question are often the easiest. When your slot for a task ends, write a brief conclusion and move on.</p>
+<h3>Worked timing split</h3>
+<p>'Anthology comparison ~45 minutes, single unseen response ~25 minutes, unseen comparison ~15 minutes, with a couple of minutes' planning built into each.' Adjust to your paper, but always protect the final task.</p>
+<h3>Common mistake</h3>
+<p>Pouring everything into the anthology essay and leaving the unseen comparison half-finished. A balanced, complete paper scores more than one brilliant answer and two rushed ones.</p>`
+});

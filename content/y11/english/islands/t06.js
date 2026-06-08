@@ -128,3 +128,85 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Ignoring form conventions. A speech with no direct address, or a letter with no sign-off, loses easy marks.</p>`
 });
+
+FLASHCARDS.push(
+  // e11i-06-4 — Q2: Summary & Synthesis
+  {id:"e11fc-06-4-1", islandId:"e11i-06-4", front:"What does Paper 2 Q2 ask, and what is the core skill?",
+   back:"Q2 (8 marks, ~10 mins): summarise the similarities OR differences between the two sources on a given topic.\n\nCore skill: synthesis — combining inferred ideas from BOTH sources in your OWN words, not analysing language.", difficulty:2, category:"concept"},
+  {id:"e11fc-06-4-2", islandId:"e11i-06-4", front:"What does 'in your own words' mean for Q2?",
+   back:"Paraphrase and infer rather than copying chunks of the source.\n\nLifting whole sentences earns little. Show you understand by re-expressing the idea and drawing an inference from a short detail.", difficulty:2, category:"application"},
+  {id:"e11fc-06-4-3", islandId:"e11i-06-4", front:"What does 'synthesis' mean in Q2?",
+   back:"Combining matching details from both sources into a single comparative point.\n\n'Both writers find the crowds overwhelming — Source A notes the \"crush\" of bodies, while Source B describes streets \"thick with people\".'", difficulty:3, category:"definition"},
+  {id:"e11fc-06-4-4", islandId:"e11i-06-4", front:"How do you select 'matching detail' across two sources?",
+   back:"Find a point made in BOTH, then quote a brief supporting detail from each.\n\nMatching detail lets you compare like with like, which is what synthesis means. Always cover both sources in each point.", difficulty:2, category:"application"},
+  {id:"e11fc-06-4-5", islandId:"e11i-06-4", front:"Write a synthesised Q2 sentence drawing on both sources.",
+   back:"e.g. 'Both writers suggest the journey was exhausting: the modern writer admits she was \"wrung out\" by the heat, while the Victorian traveller infers similar fatigue, describing limbs that \"would no longer obey\".'\n\n(One shared idea, inference + brief evidence from each source.)", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e11i-06-4": [
+    {q:"Paper 2 Q2 asks you to:", opts:["Summarise similarities or differences across both sources","Analyse language in one source","Write a persuasive speech","Compare the writers' methods"], c:0,
+     e:"Q2 is a summary/synthesis task about content, drawing on both sources."},
+    {q:"'Synthesis' in Q2 means:", opts:["Combining matching details from both sources into one comparative point","Using long quotations","Analysing metaphors","Writing about one source only"], c:0,
+     e:"Synthesis weaves inferences from both sources together into a single point."},
+    {q:"Writing 'in your own words' for Q2 means you should:", opts:["Paraphrase and infer rather than copy chunks","Copy whole sentences","Avoid all quotation","Use no evidence"], c:0,
+     e:"Paraphrasing and inferring shows understanding; lifting chunks earns little credit."},
+    {q:"'Matching detail' helps Q2 because it lets you:", opts:["Compare like with like across both sources","Fill space","Analyse one source deeply","Add personal opinion"], c:0,
+     e:"Matching detail from each source supports a genuine comparative point."},
+    {q:"Which is the strongest Q2 point?", opts:["Both writers find the heat draining, shown by phrasing such as 'wrung out' in A and limbs that 'would no longer obey' in B.","Source A is about heat.","The Victorian writer was tired.","Heat is mentioned a lot."], c:0,
+     e:"It makes one inferred point and supports it with brief matching evidence from both sources."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e11i-06-4": `<h2>Q2: Summary &amp; Synthesis</h2>
+<p>Paper 2 Q2 (8 marks, ~10 mins) asks you to <strong>summarise</strong> the similarities or differences between the two sources on a given topic. The skill is <strong>synthesis</strong>: combining inferred ideas from both sources in your own words. This is about content, not language analysis.</p>
+<h3>Synthesise, do not analyse</h3>
+<p>Make a comparative point about what the sources <strong>say</strong>, then support it with a brief detail from each. Do not comment on how the language works — that belongs in Q3 and Q4.</p>
+<h3>Inference in your own words</h3>
+<p>Paraphrase and infer rather than copying chunks. A short embedded quotation from each source anchors the inference without dominating it.</p>
+<h3>Selecting matching detail</h3>
+<p>Find a point made in both sources, then quote a brief supporting detail from each so you compare like with like.</p>
+<h3>Worked example</h3>
+<p>'Both writers suggest the journey was exhausting. The modern writer admits she was "wrung out" by the heat, while the Victorian traveller implies similar fatigue, describing limbs that "would no longer obey". Each, then, presents travel as a physical ordeal rather than a pleasure.'</p>
+<h3>Common mistake</h3>
+<p>Analysing language or writing about only one source. Q2 needs both sources synthesised into shared comparative points.</p>`
+});
+
+FLASHCARDS.push(
+  // e11i-06-5 — Q3: Single-Source Language Analysis
+  {id:"e11fc-06-5-1", islandId:"e11i-06-5", front:"What does Paper 2 Q3 ask, and how is it different from Q4?",
+   back:"Q3 (12 marks, ~12 mins): how ONE writer uses language to achieve an effect.\n\nUnlike Q4, there is NO comparison here — focus entirely on a single source's methods and their effects.", difficulty:2, category:"concept"},
+  {id:"e11fc-06-5-2", islandId:"e11i-06-5", front:"Which language methods are common in non-fiction Q3?",
+   back:"Emotive language, direct address, statistics/facts, anecdote, rhetorical questions, imagery, contrast and tone.\n\nNon-fiction writers persuade and inform, so look for methods that shape the reader's opinion.", difficulty:2, category:"definition"},
+  {id:"e11fc-06-5-3", islandId:"e11i-06-5", front:"How do you structure a Q3 analytical paragraph?",
+   back:"Short quotation → named method → effect → reader response.\n\n'The emotive noun \"catastrophe\" frames the flooding as disaster, alarming the reader and pressing them to act.' Build several such points.", difficulty:2, category:"application"},
+  {id:"e11fc-06-5-4", islandId:"e11i-06-5", front:"Why does precise terminology matter in Q3?",
+   back:"Q3 carries 12 marks and rewards accurate identification of methods.\n\nNaming a 'rhetorical question' or 'emotive verb' precisely, then analysing its effect, lifts you into the higher bands.", difficulty:2, category:"concept"},
+  {id:"e11fc-06-5-5", islandId:"e11i-06-5", front:"Write a Q3 analytical sentence on a non-fiction source.",
+   back:"e.g. 'The writer's rhetorical question — \"How many more must suffer?\" — directly challenges the reader, implying inaction is indefensible and provoking a sense of personal responsibility.'\n\n(Method + short quote + effect + reader response.)", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e11i-06-5": [
+    {q:"Paper 2 Q3 asks you to analyse:", opts:["How one writer uses language to achieve an effect","How both writers compare","The structure of both sources","Four true statements"], c:0,
+     e:"Q3 is single-source language analysis — no comparison."},
+    {q:"How does Q3 differ from Q4?", opts:["Q3 analyses one source; Q4 compares both","Q3 compares; Q4 does not","They are identical","Q3 is about structure"], c:0,
+     e:"Q3 focuses on one source's language; Q4 compares viewpoints and methods across both."},
+    {q:"Which method is typical of persuasive non-fiction?", opts:["Emotive language and direct address","Iambic pentameter","Stage directions","A rhyme scheme"], c:0,
+     e:"Non-fiction writers use emotive language, direct address, statistics and rhetoric to influence readers."},
+    {q:"A strong Q3 paragraph moves from:", opts:["Short quotation to named method to effect to reader response","Plot to summary","Opinion to opinion","Long quote to longer quote"], c:0,
+     e:"The chain quotation → method → effect → reader response earns the analytical marks."},
+    {q:"Why is precise terminology important in Q3?", opts:["It is worth 12 marks and rewards accurate identification of methods","It fills space","It replaces quotations","It is not important"], c:0,
+     e:"Accurate naming of methods, then analysis of their effect, lifts you into the higher bands."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e11i-06-5": `<h2>Q3: Single-Source Language Analysis</h2>
+<p>Paper 2 Q3 (12 marks, ~12 mins) asks how <strong>one</strong> writer uses language to achieve a specific effect. Crucially, there is <strong>no comparison</strong> here — that is Q4. Focus all your attention on a single source's methods.</p>
+<h3>Methods in non-fiction</h3>
+<p>Persuasive and informative writers use emotive language, direct address, statistics, anecdote, rhetorical questions, imagery and tone. Identify the methods that shape the reader's opinion.</p>
+<h3>The analytical chain</h3>
+<p>Structure each point: short quotation, then the <strong>named method</strong>, its <strong>effect</strong>, and the <strong>reader response</strong>. Precise terminology is rewarded across these 12 marks.</p>
+<h3>Worked example</h3>
+<p>'The writer's rhetorical question — "How many more must suffer?" — directly challenges the reader. By demanding a number the reader cannot answer, it implies that inaction is indefensible and provokes a sense of personal responsibility.'</p>
+<h3>Common mistake</h3>
+<p>Drifting into comparison or summarising content. Q3 rewards depth on one source's language methods and their effects, not a list of what the text is about.</p>`
+});

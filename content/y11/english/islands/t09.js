@@ -83,3 +83,87 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Rushing the conclusion. A weak ending ('That is all I have to say') undermines the whole piece. Plan a strong final sentence before you start writing.</p>`
 });
+
+FLASHCARDS.push(
+  // e11i-09-3 — Planning & Time Management for Writing
+  {id:"e11fc-09-3-1", islandId:"e11i-09-3", front:"How long should you spend planning a writing task?",
+   back:"Around 5 minutes.\n\nThose five minutes decide your structure, atmosphere or key points before you write a word — and almost always raise your mark.", difficulty:1, category:"application"},
+  {id:"e11fc-09-3-2", islandId:"e11i-09-3", front:"What should a creative-writing plan decide before you start?",
+   back:"The structure (e.g. a zoom or cyclical frame), the atmosphere or mood, and the one moment you will focus on.\n\nKnowing the shape stops you drifting mid-piece.", difficulty:2, category:"application"},
+  {id:"e11fc-09-3-3", islandId:"e11i-09-3", front:"What should a transactional-writing plan decide before you start?",
+   back:"Form, audience and purpose, your viewpoint (thesis), and the key points in order — usually three or four, plus a counter-argument.\n\nA quick plan keeps the argument coherent.", difficulty:2, category:"application"},
+  {id:"e11fc-09-3-4", islandId:"e11i-09-3", front:"How should you split time between the reading and writing sections?",
+   back:"Allocate time deliberately so the writing task is never rushed — it is worth as many marks as the reading.\n\nA common rule: stop the reading questions on schedule even if unfinished, so writing gets its full slot.", difficulty:2, category:"concept"},
+  {id:"e11fc-09-3-5", islandId:"e11i-09-3", front:"Why leave time at the end of a writing task?",
+   back:"To check your work — catching errors in the last few minutes recovers technical-accuracy marks.\n\nBuild a 5-minute checking slot into your plan from the start.", difficulty:1, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e11i-09-3": [
+    {q:"Roughly how long should you spend planning a writing task?", opts:["About 5 minutes","No time at all","Half the exam","One minute"], c:0,
+     e:"Around five minutes of planning sets up structure and almost always raises the mark."},
+    {q:"A creative-writing plan should decide:", opts:["Structure, atmosphere and the one moment to focus on","The examiner's name","How many pages to fill","Nothing in advance"], c:0,
+     e:"Deciding shape, mood and focus before writing stops you drifting mid-piece."},
+    {q:"A transactional-writing plan should decide:", opts:["Form, audience, purpose, viewpoint and ordered key points","Only the first sentence","The font size","Whether to use a pen"], c:0,
+     e:"Planning FAP, your thesis and ordered points keeps the argument coherent."},
+    {q:"Time across reading and writing should be split so that:", opts:["The writing task is never rushed","Reading takes the whole exam","Writing is left to the last minute","Both are skipped"], c:0,
+     e:"Writing carries as many marks as reading, so it must get its full, protected slot."},
+    {q:"You should leave time at the end in order to:", opts:["Check your work for errors","Start a new piece","Re-read the questions","Daydream"], c:0,
+     e:"A short checking slot recovers technical-accuracy marks that would otherwise be lost."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e11i-09-3": `<h2>Planning & Time Management for Writing</h2>
+<p>Strong exam writing starts before the first sentence. Spending about <strong>5 minutes planning</strong> a creative or transactional piece almost always raises your mark, because it gives the writing shape and direction.</p>
+<h3>Planning a creative piece</h3>
+<p>Decide the <strong>structure</strong> (a zoom, a cyclical frame, a contrast), the <strong>atmosphere</strong> you will sustain, and the single moment you will focus on. Knowing the shape stops you drifting halfway through.</p>
+<h3>Planning a transactional piece</h3>
+<p>Fix your <strong>form, audience and purpose</strong>, then your viewpoint and three or four key points in order, plus a counter-argument. A quick plan keeps the argument coherent and persuasive.</p>
+<h3>Splitting your time</h3>
+<p>Allocate time across the reading and writing sections deliberately so the writing task is <strong>never rushed</strong> — it carries as many marks as the reading. Stop the reading questions on schedule, even if unfinished, so writing gets its full slot.</p>
+<h3>Worked time plan</h3>
+<p>'5 minutes planning, around 40 minutes writing, 5 minutes checking.' Building the checking slot in from the start protects technical-accuracy marks.</p>
+<h3>Common mistake</h3>
+<p>Diving straight in with no plan, then running out of time and ending abruptly. Five minutes of planning is never wasted.</p>`
+});
+
+FLASHCARDS.push(
+  // e11i-09-4 — Hitting the Mark Scheme & Proofreading
+  {id:"e11fc-09-4-1", islandId:"e11i-09-4", front:"What does the AO5 (content and organisation) mark reward?",
+   back:"Crafted, ambitious vocabulary, clear and effective paragraphing, and a deliberate, controlled structure.\n\nIt rewards how well your ideas are chosen, shaped and organised — not just length.", difficulty:2, category:"concept"},
+  {id:"e11fc-09-4-2", islandId:"e11i-09-4", front:"What does the AO6 (technical accuracy) mark reward?",
+   back:"Accurate spelling and punctuation, a range of punctuation used correctly, and varied sentence forms.\n\nThese marks are easy to protect with careful proofreading.", difficulty:2, category:"concept"},
+  {id:"e11fc-09-4-3", islandId:"e11i-09-4", front:"What features push writing into the top band?",
+   back:"Consciously crafted vocabulary, varied and ambitious sentence structures, fluently linked paragraphs, and convincing control of tone and purpose throughout.\n\nConsistency across the whole piece is what separates the top band.", difficulty:3, category:"application"},
+  {id:"e11fc-09-4-4", islandId:"e11i-09-4", front:"What is a comma splice and why does it cost marks?",
+   back:"Joining two complete sentences with only a comma: 'It was late, she left.'\n\nFix it with a full stop, semicolon or conjunction: 'It was late, so she left.' Comma splices lower your technical-accuracy mark.", difficulty:2, category:"definition"},
+  {id:"e11fc-09-4-5", islandId:"e11i-09-4", front:"What should a last-5-minutes proofreading checklist cover?",
+   back:"1. Tense — consistent throughout?\n2. Comma splices — sentences correctly separated?\n3. Apostrophes — possession and contractions correct?\n4. Missing words — read slowly to catch them.\n\nA quick, targeted check recovers easy marks.", difficulty:2, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e11i-09-4": [
+    {q:"AO5 (content and organisation) rewards:", opts:["Crafted vocabulary, paragraphing and deliberate structure","Only spelling","Handwriting neatness","Word count alone"], c:0,
+     e:"AO5 is about how well ideas are chosen, shaped and organised."},
+    {q:"AO6 (technical accuracy) rewards:", opts:["Accurate spelling, punctuation range and varied sentences","Longer paragraphs","More adjectives","A dramatic plot"], c:0,
+     e:"AO6 measures technical control — spelling, punctuation and sentence variety."},
+    {q:"A top-band feature is:", opts:["Consciously crafted vocabulary and varied sentence structures","Repeating the same sentence opener","Avoiding paragraphs","Writing as fast as possible"], c:0,
+     e:"The top band rewards crafted vocabulary, varied sentences and consistent control."},
+    {q:"A comma splice is:", opts:["Two complete sentences joined by only a comma","A correctly used semicolon","A type of paragraph","A spelling error"], c:0,
+     e:"Two main clauses need more than a comma — use a full stop, semicolon or conjunction."},
+    {q:"A last-5-minutes proofreading check should include:", opts:["Tense, comma splices, apostrophes and missing words","Only the title","Counting your words","Redrawing the margin"], c:0,
+     e:"A targeted check of tense, splices, apostrophes and missing words recovers easy marks."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e11i-09-4": `<h2>Hitting the Mark Scheme & Proofreading</h2>
+<p>Exam writing is marked on two objectives: <strong>AO5</strong> (content and organisation) and <strong>AO6</strong> (technical accuracy). Knowing what each rewards lets you target your effort and protect easy marks.</p>
+<h3>AO5: content and organisation</h3>
+<p>This rewards <strong>crafted vocabulary</strong>, clear and effective <strong>paragraphing</strong>, and a deliberate, controlled <strong>structure</strong>. It is about how well your ideas are chosen and shaped, not simply how much you write.</p>
+<h3>AO6: technical accuracy</h3>
+<p>This rewards accurate <strong>spelling and punctuation</strong>, a range of punctuation used correctly, and <strong>varied sentence forms</strong>. These marks are some of the easiest to secure through careful checking.</p>
+<h3>Top-band features</h3>
+<p>The top band rewards consciously crafted vocabulary, varied and ambitious sentences, fluently linked paragraphs, and convincing control of tone and purpose <strong>throughout</strong>. Consistency across the whole piece is decisive.</p>
+<h3>Worked proofreading checklist</h3>
+<p>In your last 5 minutes, check: <strong>tense</strong> (consistent?), <strong>comma splices</strong> ('It was late, she left' should be 'It was late, so she left'), <strong>apostrophes</strong> (possession and contractions), and <strong>missing words</strong> (read slowly to catch them).</p>
+<h3>Common mistake</h3>
+<p>Writing right up to the final second with no time to check. A two-minute proofread catches errors that would otherwise cost AO6 marks.</p>`
+});

@@ -79,3 +79,45 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Forcing in words you are not sure of. If it sounds odd when you re-read, swap it out. Clarity always beats obscurity in the exam.</p>`
 });
+
+FLASHCARDS.push(
+  // e11i-01-3 — Tone & Mood Word Bank
+  {id:"e11fc-01-3-1", islandId:"e11i-01-3", front:"Give three precise words for a threatening, dangerous atmosphere.",
+   back:"Menacing, ominous, foreboding.\n\n'Menacing' = actively threatening; 'ominous' = signalling something bad to come; 'foreboding' = a heavy sense of approaching dread. Group them so you recall the whole cluster at once.", difficulty:2, category:"application"},
+  {id:"e11fc-01-3-2", islandId:"e11i-01-3", front:"Give three precise words for a sad, longing tone.",
+   back:"Wistful, nostalgic, melancholic.\n\n'Wistful' = gentle yearning; 'nostalgic' = longing for the past; 'melancholic' = a settled, pensive sadness. Far sharper than simply writing 'sad'.", difficulty:2, category:"application"},
+  {id:"e11fc-01-3-3", islandId:"e11i-01-3", front:"How does active recall help you memorise a tone word bank?",
+   back:"Cover the words and try to produce a cluster from a feeling prompt ('threatening = ?'), then check.\n\nRetrieving from memory, rather than rereading, forces the words into long-term storage so they surface in the exam.", difficulty:2, category:"concept"},
+  {id:"e11fc-01-3-4", islandId:"e11i-01-3", front:"Give precise words for a mocking tone and a calm mood.",
+   back:"Mocking/scornful: sardonic, cynical, mocking.\nCalm: serene, tranquil.\n\nAlso useful — defiant cluster: defiant, resolute (firm, unyielding). Bank these by feeling so the right shade is ready.", difficulty:2, category:"application"},
+  {id:"e11fc-01-3-5", islandId:"e11i-01-3", front:"Upgrade: 'The tone of the extract is quite scary.'",
+   back:"e.g. 'The extract sustains a foreboding tone, the writer's images of decay hinting at the horror still to come.'\n\nReplace the vague 'scary' with a precise tone word, then anchor it to evidence and effect.", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e11i-01-3": [
+    {q:"Which word most precisely describes a tone that hints something bad is coming?", opts:["Foreboding","Happy","Plain","Loud"], c:0,
+     e:"'Foreboding' conveys a heavy sense of approaching dread — far more precise than 'scary'."},
+    {q:"Which cluster best describes a sad, longing tone?", opts:["Wistful, nostalgic, melancholic","Defiant, resolute, bold","Serene, tranquil, calm","Sardonic, cynical, mocking"], c:0,
+     e:"These three words all capture shades of yearning sadness, grouped by feeling."},
+    {q:"'Sardonic' is closest in meaning to:", opts:["Mockingly cynical","Peacefully calm","Firmly defiant","Deeply nostalgic"], c:0,
+     e:"'Sardonic' describes grimly mocking, scornful humour — part of the mocking/cynical cluster."},
+    {q:"Active recall means you memorise tone words by:", opts:["Retrieving them from memory before checking","Reading the list over and over","Copying the list out neatly","Highlighting the list"], c:0,
+     e:"Retrieval practice — producing the words from a prompt — fixes them in long-term memory far better than rereading."},
+    {q:"Which is the strongest analytical upgrade of 'the tone is scary'?", opts:["The writer sustains a menacing tone through images of encroaching darkness.","The tone is really very scary indeed.","It is a scary and frightening sort of tone.","The tone is scary because it is scary."], c:0,
+     e:"It swaps the vague word for a precise tone word and links it to evidence and effect."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e11i-01-3": `<h2>Tone &amp; Mood Word Bank</h2>
+<p>Vague tone labels like 'scary', 'sad' or 'happy' cap your marks. Build a memorisable bank of precise <strong>tone and mood words</strong>, grouped by feeling so the right shade is always to hand.</p>
+<h3>The clusters</h3>
+<p><strong>Threatening:</strong> menacing, ominous, foreboding. <strong>Sad/longing:</strong> wistful, nostalgic, melancholic. <strong>Defiant:</strong> defiant, resolute. <strong>Mocking:</strong> sardonic, cynical, mocking. <strong>Calm:</strong> serene, tranquil.</p>
+<h3>Memorise with active recall</h3>
+<p>Don't reread the list — test it. Give yourself a feeling ('threatening = ?') and produce the cluster from memory, then check. This retrieval practice fixes the words so they surface under exam pressure.</p>
+<h3>Worked example</h3>
+<p>Vague: 'The tone of the extract is quite scary.'</p>
+<p>Precise: 'The extract sustains a <strong>foreboding</strong> tone, the writer's images of decay hinting at the horror still to come.'</p>
+<p>Vague: 'It has a sad tone.' Precise: 'A <strong>wistful</strong> tone pervades the passage as the narrator lingers over what is lost.'</p>
+<h3>Common mistake</h3>
+<p>Reaching for an impressive word that doesn't fit the feeling — calling a gentle, yearning passage 'menacing'. Match the precise word to the actual mood, or the analysis collapses.</p>`
+});

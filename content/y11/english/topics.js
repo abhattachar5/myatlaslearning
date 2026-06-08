@@ -34,7 +34,12 @@ CURRICULUM.push(
    topicId:"e11t-01", yearGroup:"Year 11", difficulty:2, estimatedHours:1,
    description:"Choose sophisticated, apt vocabulary in creative and transactional exam writing.",
    learningOutcomes:["Select vocabulary that fits tone and audience","Use connotation deliberately","Avoid forced or misused words"],
-   topics:["Audience-apt vocabulary","Connotation","Naturalness"], prerequisites:["e11i-01-1"]}
+   topics:["Audience-apt vocabulary","Connotation","Naturalness"], prerequisites:["e11i-01-1"]},
+  {id:"e11i-01-3", name:"Tone & Mood Word Bank", emoji:"🎭", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-01", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Memorise a bank of precise tone and mood words and deploy them in analysis.",
+   learningOutcomes:["Recall precise tone words grouped by feeling","Use active recall to memorise them","Upgrade vague descriptions to precise ones"],
+   topics:["Tone clusters","Active recall","Precise word choice"], prerequisites:["e11i-01-1"]}
 );
 
 // ── Topic 2: Grammar & Accuracy under Pressure (e11t-02) ────────────────────
@@ -48,7 +53,12 @@ CURRICULUM.push(
    topicId:"e11t-02", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Write with a full range of sentence forms and punctuation accurately under timed conditions.",
    learningOutcomes:["Sustain varied sentence forms in timed writing","Use the full punctuation range accurately","Proofread efficiently"],
-   topics:["Sentence forms","Punctuation range","Timed proofreading"], prerequisites:["e11i-02-1"]}
+   topics:["Sentence forms","Punctuation range","Timed proofreading"], prerequisites:["e11i-02-1"]},
+  {id:"e11i-02-3", name:"Punctuation for Effect & SPaG Marks", emoji:"✒️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-02", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Deploy the full punctuation range for effect under timed conditions and secure SPaG marks.",
+   learningOutcomes:["Use semicolons, colons, dashes and ellipsis for effect","Explain how SPaG/AO6 marks are awarded","Eliminate common errors under pressure"],
+   topics:["Punctuation for effect","SPaG marks","Errors to eliminate"], prerequisites:["e11i-02-1"]}
 );
 
 // ── Topic 5: Language Paper 1: Fiction Reading (e11t-05) ─────────────────────
@@ -67,7 +77,17 @@ CURRICULUM.push(
    topicId:"e11t-05", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Write a polished descriptive or narrative piece for Paper 1 Section B under exam timing.",
    learningOutcomes:["Plan quickly and effectively","Write with crafted language and structure","Proofread for SPaG in the last minutes"],
-   topics:["Quick planning","Crafted writing","Proofreading"], prerequisites:["e11i-05-1"]}
+   topics:["Quick planning","Crafted writing","Proofreading"], prerequisites:["e11i-05-1"]},
+  {id:"e11i-05-4", name:"Q2: Language Analysis", emoji:"🔎", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-05", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Answer Paper 1 Q2 — how the writer uses language — with precise method-effect analysis.",
+   learningOutcomes:["Select short quotations and name methods","Use the method-effect-response chain","Use subject terminology precisely"],
+   topics:["Language methods","Method & effect","Terminology"], prerequisites:["e11i-05-1"]},
+  {id:"e11i-05-5", name:"Q3: Analysing Structure", emoji:"🏗️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-05", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Answer Paper 1 Q3 by analysing structural features — the lowest-scoring question nationally.",
+   learningOutcomes:["Identify structural (not language) features","Analyse shifts, zoom and cyclical structure","Write a focused structural paragraph"],
+   topics:["Structural features","Shifts & zoom","Q3 technique"], prerequisites:["e11i-05-1"]}
 );
 
 // ── Topic 6: Language Paper 2: Non-fiction & Comparison (e11t-06) ────────────
@@ -86,7 +106,17 @@ CURRICULUM.push(
    topicId:"e11t-06", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Write a polished letter, article, speech or essay for Paper 2 Section B under exam timing.",
    learningOutcomes:["Match form, audience and purpose","Deploy rhetorical and structural skills","Maintain accuracy under time pressure"],
-   topics:["FAP matching","Rhetoric & structure","Timed accuracy"], prerequisites:["e11i-06-1"]}
+   topics:["FAP matching","Rhetoric & structure","Timed accuracy"], prerequisites:["e11i-06-1"]},
+  {id:"e11i-06-4", name:"Q2: Summary & Synthesis", emoji:"🔗", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-06", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Answer Paper 2 Q2 by summarising and synthesising inferences across two sources.",
+   learningOutcomes:["Summarise in your own words","Combine inferences from both sources","Select matching detail"],
+   topics:["Summary & synthesis","Two sources","Inference"], prerequisites:["e11i-06-1"]},
+  {id:"e11i-06-5", name:"Q3: Single-Source Language", emoji:"📰", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-06", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Answer Paper 2 Q3 by analysing how one non-fiction source uses language.",
+   learningOutcomes:["Analyse one source (not a comparison)","Use the method-effect chain","Use precise terminology"],
+   topics:["Single-source analysis","Method & effect","Terminology"], prerequisites:["e11i-06-1"]}
 );
 
 // ── Topic 7: Literature: Poetry Anthology & Unseen (e11t-07) ────────────────
@@ -100,7 +130,17 @@ CURRICULUM.push(
    topicId:"e11t-07", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
    description:"Write a focused unseen poetry response and an unseen comparison under exam timing.",
    learningOutcomes:["Respond to an unseen poem analytically","Compare two unseen poems efficiently","Manage time across both parts"],
-   topics:["Single unseen","Unseen comparison","Time management"], prerequisites:["e11i-07-1"]}
+   topics:["Single unseen","Unseen comparison","Time management"], prerequisites:["e11i-07-1"]},
+  {id:"e11i-07-3", name:"Unseen Poetry Comparison", emoji:"⚖️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-07", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Compare how two unseen poets present a theme using methods (the second unseen question).",
+   learningOutcomes:["Compare methods across two unseen poems","Focus on one or two clear contrasts","Use comparative connectives"],
+   topics:["Unseen comparison","Comparing methods","Connectives"], prerequisites:["e11i-07-2"]},
+  {id:"e11i-07-4", name:"Planning & Timing the Poetry Exam", emoji:"⏱️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-07", yearGroup:"Year 11", difficulty:2, estimatedHours:1,
+   description:"Manage the anthology comparison plus two unseen questions within the time.",
+   learningOutcomes:["Know the mark weightings","Plan quickly (thesis + 3 points)","Split the time sensibly"],
+   topics:["Mark weightings","Quick planning","Timing"], prerequisites:["e11i-07-1"]}
 );
 
 // ── Topic 8: Literature: Novel & Play (e11t-08) ─────────────────────────────
@@ -133,7 +173,17 @@ CURRICULUM.push(
    topicId:"e11t-09", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Produce polished transactional writing (letter, article, speech) under exam conditions (Paper 2 Section B).",
    learningOutcomes:["Match FAP and deploy rhetoric efficiently","Sustain a clear argument or viewpoint","Achieve accuracy and control under pressure"],
-   topics:["FAP & rhetoric","Sustained argument","Timed accuracy"], prerequisites:["e11i-09-1"]}
+   topics:["FAP & rhetoric","Sustained argument","Timed accuracy"], prerequisites:["e11i-09-1"]},
+  {id:"e11i-09-3", name:"Planning & Time Management for Writing", emoji:"🗓️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-09", yearGroup:"Year 11", difficulty:2, estimatedHours:1,
+   description:"Plan a writing task in five minutes and manage time across reading and writing.",
+   learningOutcomes:["Plan structure and key points in 5 minutes","Allocate time across the paper","Leave time to check"],
+   topics:["Quick planning","Time allocation","Checking"], prerequisites:["e11i-09-1"]},
+  {id:"e11i-09-4", name:"Hitting the Mark Scheme & Proofreading", emoji:"✅", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-09", yearGroup:"Year 11", difficulty:2, estimatedHours:1,
+   description:"Target the AO5/AO6 mark scheme and proofread effectively in the last five minutes.",
+   learningOutcomes:["Explain what AO5 and AO6 reward","Aim for top-band features","Use a proofreading checklist"],
+   topics:["AO5 & AO6","Top-band features","Proofreading"], prerequisites:["e11i-09-1"]}
 );
 
 // ── Topic 10: An Inspector Calls — AQA set text (e11t-10) ────────────────────

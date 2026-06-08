@@ -81,3 +81,45 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Writing only in simple sentences, or only in long, sprawling ones. Deliberate variety shows control — and earns marks.</p>`
 });
+
+FLASHCARDS.push(
+  // e11i-02-3 — Punctuation for Effect & SPaG Marks
+  {id:"e11fc-02-3-1", islandId:"e11i-02-3", front:"How can a semicolon and a colon each be used for effect?",
+   back:"Semicolon: links two related independent ideas, balancing them ('The lights flickered; the room fell silent.').\nColon: introduces an explanation, list or punchline ('There was only one option left: run.').", difficulty:2, category:"application"},
+  {id:"e11fc-02-3-2", islandId:"e11i-02-3", front:"How do dashes and ellipsis create effect?",
+   back:"Dashes — like these — add emphasis or a parenthetical aside, or a dramatic pause before a reveal.\nEllipsis trails off for tension or hesitation: 'And behind the door...'.\n\nUse them deliberately, not as lazy commas.", difficulty:2, category:"application"},
+  {id:"e11fc-02-3-3", islandId:"e11i-02-3", front:"Where are SPaG / technical-accuracy (AO6) marks awarded?",
+   back:"In BOTH papers' writing sections. AO6 explicitly rewards a range of accurate punctuation, correct spelling and varied sentence structures.\n\nIt is worth a significant chunk of the writing marks — never neglect it.", difficulty:2, category:"concept"},
+  {id:"e11fc-02-3-4", islandId:"e11i-02-3", front:"Name three errors to eliminate under time pressure.",
+   back:"Comma splices (two clauses joined by only a comma), apostrophe errors (its/it's, plural apostrophes), and missing full stops (run-on sentences).\n\nThese are the cheapest marks to lose — and to reclaim with proofreading.", difficulty:1, category:"application"},
+  {id:"e11fc-02-3-5", islandId:"e11i-02-3", front:"Punctuate for effect: 'The house was empty there was no sound at all just darkness'",
+   back:"e.g. 'The house was empty; there was no sound at all — just darkness.'\n\nA semicolon links the related clauses; a dash isolates 'just darkness' for a chilling final emphasis.", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e11i-02-3": [
+    {q:"Which sentence uses a colon correctly to introduce?", opts:["There was only one option left: run.","There was only one option left: and she ran.","There was, only one option: left to run.","There was only one option left run."], c:0,
+     e:"A colon introduces what follows — here, the single option being explained."},
+    {q:"A dash is best used to:", opts:["Add emphasis, a pause or a parenthetical aside","End every sentence","Replace all full stops","Show possession"], c:0,
+     e:"Dashes signal emphasis, a dramatic pause, or set off a parenthetical aside."},
+    {q:"AO6 (technical accuracy / SPaG) marks are awarded:", opts:["In the writing sections of both papers","Only in Paper 1","Only for reading questions","Never in GCSE English"], c:0,
+     e:"AO6 rewards accurate spelling, punctuation and sentence variety across both papers' writing tasks."},
+    {q:"'The rain fell, the streets emptied.' This sentence contains a:", opts:["Comma splice","Correct semicolon","Colon error","Spelling error"], c:0,
+     e:"Two independent clauses joined by only a comma is a comma splice; use a semicolon or full stop."},
+    {q:"Which best uses ellipsis to build tension?", opts:["She reached for the handle... and the lights went out.","She reached... for... the... handle.","She reached for the handle.","She reached for the handle, and the lights went out."], c:0,
+     e:"A single, well-placed ellipsis creates suspense before the reveal; scattering it everywhere does not."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e11i-02-3": `<h2>Punctuation for Effect &amp; SPaG Marks</h2>
+<p>Under timed conditions, deploying the <strong>full range of punctuation deliberately</strong> does two jobs at once: it shapes meaning for the reader and it banks <strong>AO6 technical-accuracy (SPaG) marks</strong>, which are awarded in the writing sections of <em>both</em> papers.</p>
+<h3>Punctuation for effect</h3>
+<p>Use a <strong>semicolon</strong> to link two related ideas ('The lights flickered; the room fell silent'); a <strong>colon</strong> to introduce an explanation or punchline ('There was only one option left: run'); a <strong>dash</strong> for emphasis or a parenthetical aside; and an <strong>ellipsis</strong> to trail off into tension. Each must be chosen on purpose, not scattered.</p>
+<h3>Errors to eliminate under pressure</h3>
+<p>The cheapest marks lost are <strong>comma splices</strong>, <strong>apostrophe errors</strong> (its/it's, plural apostrophes) and <strong>missing full stops</strong> that create run-ons. A quick proofread reclaims them.</p>
+<h3>Worked example</h3>
+<p>Flat: 'The house was empty there was no sound at all just darkness.'</p>
+<p>For effect: 'The house was empty<strong>;</strong> there was no sound at all <strong>—</strong> just darkness.'</p>
+<p>The semicolon balances the related clauses; the dash isolates 'just darkness' for a chilling final emphasis.</p>
+<h3>Common mistake</h3>
+<p>Overusing one mark — dashes everywhere, or an ellipsis after every sentence. Deliberate, varied, accurate punctuation earns AO6; decoration does not.</p>`
+});
