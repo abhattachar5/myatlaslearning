@@ -69,7 +69,17 @@ CURRICULUM.push(
    topicId:"s11t-02", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Describe how organisms are classified and explain causes of extinction.",
    learningOutcomes:["Describe the Linnaean classification system","Explain the three-domain system","Discuss causes of extinction"],
-   topics:["Linnaean classification","Three domains","Extinction"], prerequisites:["s11i-02-1"]}
+   topics:["Linnaean classification","Three domains","Extinction"], prerequisites:["s11i-02-1"]},
+  {id:"s11i-02-3", name:"Selective Breeding & Genetic Engineering", emoji:"🧬", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-02", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain selective breeding and genetic engineering, their uses, benefits and concerns.",
+   learningOutcomes:["Explain selective breeding and the risk of inbreeding","Outline the genetic engineering process and its uses","Evaluate the benefits and concerns"],
+   topics:["Selective breeding","Genetic engineering","Benefits & ethics"], prerequisites:["s11i-02-1"]},
+  {id:"s11i-02-4", name:"Evidence for Evolution", emoji:"🦴", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-02", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Describe evidence for evolution from fossils and antibiotic-resistant bacteria.",
+   learningOutcomes:["Explain how fossils form evidence (and gaps)","Explain antibiotic resistance as evolution now","Describe causes of extinction"],
+   topics:["Fossil record","Antibiotic resistance","Extinction"], prerequisites:["s11i-02-1"]}
 );
 
 // Topic 3: Ecology: Populations & Sustainability
@@ -88,7 +98,17 @@ CURRICULUM.push(
    topicId:"s11t-03", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Describe the water cycle and its role in maintaining ecosystems.",
    learningOutcomes:["Describe the water cycle","Link the water and carbon cycles","Explain decomposition and its role in cycling"],
-   topics:["Water cycle","Carbon cycle links","Decomposition"], prerequisites:["s11i-03-1"]}
+   topics:["Water cycle","Carbon cycle links","Decomposition"], prerequisites:["s11i-03-1"]},
+  {id:"s11i-03-4", name:"Biodiversity & Human Impact", emoji:"🌍", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-03", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain biodiversity and the human activities that reduce it.",
+   learningOutcomes:["Define biodiversity and its importance","Explain pollution and land-use impacts","Link population growth to resource use"],
+   topics:["Biodiversity","Pollution & land use","Population"], prerequisites:["s11i-03-1"]},
+  {id:"s11i-03-5", name:"Maintaining Biodiversity", emoji:"🌳", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-03", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Describe conservation measures used to protect and restore biodiversity.",
+   learningOutcomes:["Describe breeding and habitat programmes","Explain field margins, hedgerows and reforestation","Link recycling to conservation"],
+   topics:["Conservation","Habitats","Recycling"], prerequisites:["s11i-03-1"]}
 );
 
 // ── Chemistry islands ────────────────────────────────────────────────────────
@@ -104,7 +124,17 @@ CURRICULUM.push(
    topicId:"s11t-04", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Describe the Haber process and evaluate the production and use of fertilisers.",
    learningOutcomes:["State the Haber process equation and conditions","Explain the compromise conditions","Evaluate the use of fertilisers"],
-   topics:["Haber process","Compromise conditions","Fertilisers"], prerequisites:["s11i-04-1"]}
+   topics:["Haber process","Compromise conditions","Fertilisers"], prerequisites:["s11i-04-1"]},
+  {id:"s11i-04-3", name:"Life-Cycle Assessment & Recycling", emoji:"♻️", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-04", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Carry out a life-cycle assessment and explain the value of recycling.",
+   learningOutcomes:["Describe the four LCA stages","Explain the difficulty of quantifying impacts","Explain why recycling saves energy and resources"],
+   topics:["Life-cycle assessment","Reduce/reuse/recycle","Recycling materials"], prerequisites:["s11i-04-1"]},
+  {id:"s11i-04-4", name:"Corrosion & Using Materials", emoji:"🪤", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-04", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain corrosion and its prevention, and why alloys are harder than pure metals.",
+   learningOutcomes:["Explain that rusting needs water and oxygen","Describe barrier and sacrificial protection","Explain why alloys are harder than pure metals"],
+   topics:["Rusting","Preventing corrosion","Alloys & materials"], prerequisites:["s11i-04-1"]}
 );
 
 // Topic 5: Chemical Analysis & Testing
@@ -186,7 +216,17 @@ CURRICULUM.push(
    topicId:"s11t-09", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Explain factors affecting stopping distance and how safety features reduce injury.",
    learningOutcomes:["Define thinking and braking distance","Explain factors affecting each","Describe how crumple zones and seatbelts reduce force"],
-   topics:["Thinking distance","Braking distance","Safety features"], prerequisites:["s11i-09-1"]}
+   topics:["Thinking distance","Braking distance","Safety features"], prerequisites:["s11i-09-1"]},
+  {id:"s11i-09-4", name:"Acceleration & Velocity-Time Graphs", emoji:"📈", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-09", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Calculate acceleration and interpret velocity-time graphs, including v² = u² + 2as.",
+   learningOutcomes:["Use a = Δv ÷ t","Use v² = u² + 2as","Read acceleration and distance from a v-t graph"],
+   topics:["Acceleration","v² = u² + 2as","Velocity-time graphs"], prerequisites:["s11i-09-1"]},
+  {id:"s11i-09-5", name:"Terminal Velocity", emoji:"🪂", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-09", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain terminal velocity using the balance of weight and air resistance on a falling object.",
+   learningOutcomes:["Identify the forces on a falling object","Explain how terminal velocity is reached","Describe the velocity-time graph shape"],
+   topics:["Forces in free fall","Reaching terminal velocity","v-t graph"], prerequisites:["s11i-09-1"]}
 );
 
 // Topic 10: Energy: Efficiency & Resources

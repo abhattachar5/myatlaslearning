@@ -38,7 +38,31 @@ FLASHCARDS.push(
   {id:"s11fc-09-3-4",islandId:"s11i-09-3",front:"Explain how crumple zones reduce injury in a crash.",
    back:"Crumple zones are designed to deform (crush) on impact, increasing the time over which the vehicle decelerates.\n\nFrom F = ma (or F = Δp/Δt): increasing the time of deceleration reduces the force on the occupants, reducing injury.",difficulty:2,category:"concept"},
   {id:"s11fc-09-3-5",islandId:"s11i-09-3",front:"How do seatbelts reduce the risk of injury?",
-   back:"Seatbelts stretch slightly on impact, increasing the time taken for the passenger to decelerate.\n\nThis reduces the force (F = Δp/Δt — longer Δt means smaller F). They also prevent the passenger from being thrown forward into the dashboard or windscreen.",difficulty:2,category:"concept"}
+   back:"Seatbelts stretch slightly on impact, increasing the time taken for the passenger to decelerate.\n\nThis reduces the force (F = Δp/Δt — longer Δt means smaller F). They also prevent the passenger from being thrown forward into the dashboard or windscreen.",difficulty:2,category:"concept"},
+
+  // s11i-09-4 — Acceleration & Velocity-Time Graphs
+  {id:"s11fc-09-4-1",islandId:"s11i-09-4",front:"State the equation for acceleration.",
+   back:"a = Δv ÷ t\n\na = acceleration (m/s²)\nΔv = change in velocity (m/s)\nt = time taken (s)\n\nAcceleration is the rate of change of velocity. A negative value means the object is slowing down (deceleration).",difficulty:2,category:"calculation"},
+  {id:"s11fc-09-4-2",islandId:"s11i-09-4",front:"A car speeds up from 8 m/s to 20 m/s in 4 s. Calculate its acceleration.",
+   back:"a = Δv ÷ t\nΔv = 20 − 8 = 12 m/s\na = 12 ÷ 4 = 3 m/s²\n\nThe car accelerates at 3 metres per second squared.",difficulty:2,category:"calculation"},
+  {id:"s11fc-09-4-3",islandId:"s11i-09-4",front:"State the uniform-acceleration equation linking v, u, a and s.",
+   back:"v² = u² + 2as\n\nv = final velocity (m/s)\nu = initial velocity (m/s)\na = acceleration (m/s²)\ns = distance (m)\n\nUse this equation when you do NOT know the time taken.",difficulty:3,category:"calculation"},
+  {id:"s11fc-09-4-4",islandId:"s11i-09-4",front:"On a velocity-time graph, what do the gradient and the area under the line represent?",
+   back:"GRADIENT (slope) = acceleration. A steeper line means a greater acceleration; a horizontal line means constant velocity.\n\nAREA under the line = distance travelled.\n\nA negative gradient (line sloping down) shows deceleration.",difficulty:2,category:"concept"},
+  {id:"s11fc-09-4-5",islandId:"s11i-09-4",front:"A car decelerates from 25 m/s to rest over a distance of 50 m. Find its acceleration using v² = u² + 2as.",
+   back:"v² = u² + 2as\n0² = 25² + 2 × a × 50\n0 = 625 + 100a\n100a = −625\na = −6.25 m/s²\n\nThe negative sign shows it is decelerating.",difficulty:3,category:"calculation"},
+
+  // s11i-09-5 — Terminal Velocity
+  {id:"s11fc-09-5-1",islandId:"s11i-09-5",front:"What two forces act on an object falling through air?",
+   back:"1. WEIGHT — acts downwards (due to gravity).\n2. AIR RESISTANCE (drag) — acts upwards, opposing motion.\n\nThe resultant of these two forces determines whether the object accelerates, decelerates or falls at constant speed.",difficulty:1,category:"concept"},
+  {id:"s11fc-09-5-2",islandId:"s11i-09-5",front:"What is terminal velocity?",
+   back:"Terminal velocity is the constant, maximum velocity reached by a falling object.\n\nIt happens when air resistance has increased to exactly balance the weight, so the resultant force is zero. With no resultant force there is no acceleration, so the object falls at a steady speed.",difficulty:2,category:"definition"},
+  {id:"s11fc-09-5-3",islandId:"s11i-09-5",front:"Explain why a falling object reaches terminal velocity.",
+   back:"At the start, weight is greater than air resistance, so there is a resultant downward force and the object accelerates.\n\nAs speed increases, air resistance increases. Eventually air resistance equals weight, the resultant force becomes zero, and acceleration stops — the object falls at terminal velocity.",difficulty:3,category:"application"},
+  {id:"s11fc-09-5-4",islandId:"s11i-09-5",front:"Describe the shape of the velocity-time graph for an object falling to terminal velocity.",
+   back:"The line starts steep (large acceleration, since air resistance is small).\n\nAs air resistance grows, the gradient decreases — the line curves and becomes less steep.\n\nFinally the line becomes horizontal: constant velocity (terminal velocity), where acceleration is zero.",difficulty:2,category:"concept"},
+  {id:"s11fc-09-5-5",islandId:"s11i-09-5",front:"How does opening a parachute change a skydiver's motion?",
+   back:"The parachute greatly increases air resistance, which becomes larger than weight.\n\nThe resultant force now acts upwards, so the skydiver decelerates. As they slow down, air resistance falls until it again equals weight, giving a new, lower terminal velocity for a safe landing.",difficulty:3,category:"application"}
 );
 
 // ── TEST QUESTIONS ────────────────────────────────────────────────────────────
@@ -63,6 +87,20 @@ Object.assign(QUESTIONS, {
     {q:"How do crumple zones reduce the force on passengers?",opts:["By making the car lighter","By increasing the time of deceleration","By removing the seatbelts","By making the car travel faster"],c:1,e:"Crumple zones deform on impact, extending the time over which the car decelerates. Since F = change in momentum / time, a longer time means a smaller force on the occupants."},
     {q:"At higher speeds, braking distance increases because:",opts:["The driver's reaction time is longer","The car has more kinetic energy to dissipate","The brakes become weaker","The road becomes more slippery"],c:1,e:"Kinetic energy is proportional to v². At higher speeds, the car has much more kinetic energy, requiring more work (force × distance) to stop — so braking distance increases significantly."},
     {q:"A car's total stopping distance at 30 mph is about 23 m. At 60 mph it is about 73 m. This shows that stopping distance:",opts:["Doubles when speed doubles","More than doubles when speed doubles","Stays the same at all speeds","Halves when speed doubles"],c:1,e:"73 m is more than double 23 m. This is because braking distance increases with the square of speed (kinetic energy ∝ v²), so doubling speed more than doubles the total stopping distance."}
+  ],
+  "s11i-09-4":[
+    {q:"A cyclist accelerates from 4 m/s to 10 m/s in 3 s. What is the acceleration?",opts:["2 m/s²","3 m/s²","6 m/s²","18 m/s²"],c:0,e:"a = Δv ÷ t = (10 − 4) ÷ 3 = 6 ÷ 3 = 2 m/s². Always find the change in velocity first, then divide by the time."},
+    {q:"On a velocity-time graph, the gradient (slope) of the line represents:",opts:["Distance travelled","Acceleration","Momentum","Force"],c:1,e:"The gradient of a velocity-time graph is the rate of change of velocity, which is the acceleration. The area under the line gives the distance travelled."},
+    {q:"On a velocity-time graph, the area under the line represents:",opts:["Acceleration","Speed","Distance travelled","Time"],c:2,e:"The area between the line and the time axis equals the distance travelled. For a straight line you can use the area of triangles and rectangles to work it out."},
+    {q:"Which equation should you use when the time taken is NOT known?",opts:["v = u + at","v² = u² + 2as","a = Δv ÷ t","distance = speed × time"],c:1,e:"The equation v² = u² + 2as links final velocity, initial velocity, acceleration and distance without needing the time, so it is used when time is not given."},
+    {q:"A train accelerates from rest at 2 m/s² over a distance of 100 m. Use v² = u² + 2as to find its final velocity.",opts:["10 m/s","20 m/s","200 m/s","400 m/s"],c:1,e:"v² = u² + 2as = 0² + 2 × 2 × 100 = 400, so v = √400 = 20 m/s."}
+  ],
+  "s11i-09-5":[
+    {q:"Which two forces act on an object falling through the air?",opts:["Weight upward and drag downward","Weight downward and air resistance upward","Friction and thrust","Air resistance downward and weight downward"],c:1,e:"Weight acts downwards (due to gravity) and air resistance (drag) acts upwards, opposing the motion. The balance between them determines the object's acceleration."},
+    {q:"An object reaches terminal velocity when:",opts:["Weight is greater than air resistance","Air resistance is greater than weight","Air resistance equals weight, so the resultant force is zero","There is no air resistance"],c:2,e:"At terminal velocity, air resistance has increased until it exactly balances the weight. The resultant force is zero, so there is no acceleration and the object falls at a constant speed."},
+    {q:"Why does air resistance on a falling object increase as it speeds up?",opts:["Its weight increases","Faster movement means greater drag","Gravity gets stronger","The object becomes heavier"],c:1,e:"Air resistance (drag) increases with speed. As the object falls faster, the drag force grows until it eventually balances the weight."},
+    {q:"On a velocity-time graph for a falling object, the line becomes horizontal when the object:",opts:["Has stopped moving","Reaches terminal velocity","Begins to fall","Accelerates fastest"],c:1,e:"A horizontal line means constant velocity. For a falling object this is terminal velocity, where weight and air resistance are balanced and acceleration is zero."},
+    {q:"When a skydiver opens a parachute, air resistance becomes larger than weight. The skydiver will:",opts:["Continue at the same speed","Speed up","Slow down to a new, lower terminal velocity","Stop instantly"],c:2,e:"With air resistance now greater than weight, the resultant force acts upwards, so the skydiver decelerates. They slow until air resistance again equals weight at a new, lower terminal velocity."}
   ]
 });
 
@@ -151,6 +189,71 @@ After: m₁v₁ + m₂v₂ = 0, so the objects fly apart with equal and opposite
 <p><strong>A:</strong> Kinetic energy = ½mv². Doubling the speed quadruples the kinetic energy. The brakes must do work equal to the kinetic energy to stop the car, and since the braking force is roughly constant, four times the energy requires four times the distance.</p>
 
 <h3>Common mistake</h3>
-<p>Students often think stopping distance doubles when speed doubles. Thinking distance doubles (it is proportional to speed), but braking distance <strong>quadruples</strong> (proportional to speed²), so total stopping distance more than doubles.</p>`
+<p>Students often think stopping distance doubles when speed doubles. Thinking distance doubles (it is proportional to speed), but braking distance <strong>quadruples</strong> (proportional to speed²), so total stopping distance more than doubles.</p>`,
+
+'s11i-09-4': `
+<h2>Acceleration &amp; Velocity-Time Graphs</h2>
+<p><strong>Acceleration</strong> tells us how quickly an object's velocity is changing. Velocity-time graphs are a powerful way to picture this motion.</p>
+
+<h3>Calculating acceleration</h3>
+<p>Acceleration is the change in velocity divided by the time taken:</p>
+<p><strong>a = Δv ÷ t</strong></p>
+<ul>
+<li>a = acceleration (m/s²)</li>
+<li>Δv = change in velocity (m/s)</li>
+<li>t = time taken (s)</li>
+</ul>
+<p>A <strong>negative</strong> acceleration means the object is slowing down (decelerating).</p>
+
+<h3>The uniform-acceleration equation</h3>
+<p>When the time is not known, use:</p>
+<p><strong>v² = u² + 2as</strong></p>
+<ul>
+<li>v = final velocity (m/s)</li>
+<li>u = initial velocity (m/s)</li>
+<li>a = acceleration (m/s²)</li>
+<li>s = distance (m)</li>
+</ul>
+
+<h3>Reading velocity-time graphs</h3>
+<p>On a velocity-time graph:</p>
+<ul>
+<li>The <strong>gradient</strong> (slope) of the line = <strong>acceleration</strong>. A steeper line means a greater acceleration; a horizontal line means constant velocity.</li>
+<li>The <strong>area</strong> under the line = <strong>distance travelled</strong>.</li>
+</ul>
+
+<h3>Worked example</h3>
+<p><strong>Q:</strong> A car accelerates uniformly from rest at 2 m/s² over a distance of 100 m. Find its final velocity.</p>
+<p><strong>A:</strong> Using v² = u² + 2as:<br>
+v² = 0² + 2 × 2 × 100 = 400<br>
+v = √400 = <strong>20 m/s</strong></p>
+
+<h3>Common mistake</h3>
+<p>Students often read the <strong>height</strong> of a velocity-time graph as the distance. It is not — the height is the velocity at that moment. To find distance you must calculate the <strong>area</strong> under the line.</p>`,
+
+'s11i-09-5': `
+<h2>Terminal Velocity</h2>
+<div class="lesson-diagram" data-diagram="force-arrows"><p class="diagram-caption">Forces on a falling object</p></div>
+<p>When an object falls through the air, two forces act on it. The balance between them explains why falling objects do not keep speeding up forever.</p>
+
+<h3>The forces on a falling object</h3>
+<ul>
+<li><strong>Weight</strong> — acts downwards, due to gravity.</li>
+<li><strong>Air resistance (drag)</strong> — acts upwards, opposing the motion.</li>
+</ul>
+
+<h3>Reaching terminal velocity</h3>
+<p>At the start of a fall, the object is slow, so air resistance is small. Weight is much greater, giving a large resultant force downwards — so the object <strong>accelerates</strong>.</p>
+<p>As the object speeds up, <strong>air resistance increases</strong>. Eventually air resistance grows until it exactly balances the weight. Now the <strong>resultant force is zero</strong>, so there is no acceleration and the object falls at a constant, maximum speed — its <strong>terminal velocity</strong>.</p>
+
+<h3>The velocity-time graph</h3>
+<p>The graph starts <strong>steep</strong> (large acceleration). As air resistance builds up, the gradient decreases and the line <strong>curves and levels off</strong>. Finally it becomes <strong>horizontal</strong>, showing constant velocity (terminal velocity) where acceleration is zero.</p>
+
+<h3>Worked example</h3>
+<p><strong>Q:</strong> A skydiver falls and reaches terminal velocity, then opens a parachute. Explain what happens to their motion.</p>
+<p><strong>A:</strong> The parachute greatly increases air resistance, which becomes larger than the weight. The resultant force now acts upwards, so the skydiver <strong>decelerates</strong>. As they slow down, air resistance falls until it again equals the weight, giving a new, lower terminal velocity for a safe landing.</p>
+
+<h3>Common mistake</h3>
+<p>Students sometimes say air resistance becomes greater than weight at terminal velocity. It does <strong>not</strong> — at terminal velocity air resistance exactly <strong>equals</strong> weight, so the resultant force is zero.</p>`
 
 });

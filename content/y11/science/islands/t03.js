@@ -41,6 +41,34 @@ FLASHCARDS.push(
    back:"Decomposition is faster when:\n\n• Temperature is warm (enzymes work faster)\n• Moisture is available (decomposers need water)\n• Oxygen is present (aerobic respiration is more efficient)\n\nCold, dry or anaerobic conditions slow decomposition.",difficulty:2,category:"application"}
 );
 
+FLASHCARDS.push(
+  // s11i-03-4 — Biodiversity & Human Impact
+  {id:"s11fc-03-4-1",islandId:"s11i-03-4",front:"What is biodiversity?",
+   back:"Biodiversity is the variety of all the different species of organisms on Earth, or within an ecosystem.\n\nA high biodiversity makes an ecosystem more stable, because species depend on each other for food and shelter.",difficulty:1,category:"definition"},
+  {id:"s11fc-03-4-2",islandId:"s11i-03-4",front:"Why is high biodiversity important?",
+   back:"High biodiversity makes ecosystems more stable and less dependent on any single species.\n\nIt provides resilience against environmental change and disease, and supports services humans rely on (pollination, clean water, food).",difficulty:2,category:"concept"},
+  {id:"s11fc-03-4-3",islandId:"s11i-03-4",front:"Give three ways humans reduce biodiversity through land use.",
+   back:"1. Building (houses, roads, factories).\n2. Quarrying and mining.\n3. Farming.\n\nDumping waste and these land uses all destroy or fragment habitats, reducing the number of species that can live there.",difficulty:2,category:"application"},
+  {id:"s11fc-03-4-4",islandId:"s11i-03-4",front:"Why is the destruction of peat bogs a problem?",
+   back:"Peat bogs store large amounts of carbon. When they are drained or dug up (e.g. for compost), the peat decays or is burned, releasing carbon dioxide.\n\nThis adds to global warming and destroys the habitats of specialised peat-bog species, reducing biodiversity.",difficulty:2,category:"concept"},
+  {id:"s11fc-03-4-5",islandId:"s11i-03-4",front:"How does a rising human population threaten biodiversity?",
+   back:"A larger population uses more resources and produces more waste.\n\nThis increases pollution (air, water, land), land use for building and farming, deforestation, and global warming — all of which destroy habitats and reduce biodiversity.",difficulty:2,category:"concept"}
+);
+
+FLASHCARDS.push(
+  // s11i-03-5 — Maintaining Biodiversity
+  {id:"s11fc-03-5-1",islandId:"s11i-03-5",front:"What is a breeding programme and how does it protect biodiversity?",
+   back:"A breeding programme breeds endangered species, often in captivity (e.g. in zoos), to increase their numbers.\n\nOffspring can be released into the wild to boost the wild population and reduce the risk of extinction.",difficulty:1,category:"definition"},
+  {id:"s11fc-03-5-2",islandId:"s11i-03-5",front:"How does protecting and regenerating habitats help biodiversity?",
+   back:"Protecting habitats (e.g. as nature reserves) prevents them from being destroyed by building or farming.\n\nRegenerating damaged habitats — such as replanting forests or restoring peat bogs — allows species to return and populations to recover.",difficulty:2,category:"concept"},
+  {id:"s11fc-03-5-3",islandId:"s11i-03-5",front:"How can farmers help maintain biodiversity?",
+   back:"By reintroducing field margins and hedgerows rather than growing a single crop right to the edge of every field.\n\nThese provide habitats and food for a wide range of species, increasing biodiversity on farmland.",difficulty:2,category:"application"},
+  {id:"s11fc-03-5-4",islandId:"s11i-03-5",front:"Why is reducing deforestation important for biodiversity?",
+   back:"Forests are home to a huge range of species. Reducing deforestation protects these habitats.\n\nIt also reduces carbon dioxide release (less burning) and keeps trees that absorb CO₂, helping to limit global warming.",difficulty:2,category:"concept"},
+  {id:"s11fc-03-5-5",islandId:"s11i-03-5",front:"How does recycling resources help protect biodiversity?",
+   back:"Recycling materials rather than dumping waste in landfill reduces land use and pollution.\n\nIt also means fewer raw materials need to be extracted (e.g. by quarrying), protecting more habitats from destruction.",difficulty:1,category:"application"}
+);
+
 // ── TEST QUESTIONS ────────────────────────────────────────────────────────────
 Object.assign(QUESTIONS, {
   "s11i-03-1":[
@@ -63,6 +91,20 @@ Object.assign(QUESTIONS, {
     {q:"What is the role of transpiration in the water cycle?",opts:["It causes rain to fall","It releases water vapour from plant leaves","It filters water in the soil","It condenses water in the atmosphere"],c:1,e:"Transpiration is the loss of water vapour from the surface of plant leaves through stomata. This water enters the atmosphere and contributes to cloud formation."},
     {q:"How is carbon stored in fossil fuels?",opts:["Plants photosynthesise fossil fuels directly","Dead organisms were buried and compressed over millions of years","Carbon from the atmosphere dissolves into rocks","Animals excrete carbon into the ground"],c:1,e:"Millions of years ago, dead plants and animals were buried under layers of sediment. Over time, heat and pressure converted them into fossil fuels (coal, oil, gas), locking in the carbon."},
     {q:"Which of these is a greenhouse gas released during decomposition?",opts:["Oxygen","Nitrogen","Carbon dioxide","Hydrogen"],c:2,e:"Decomposers carry out respiration as they break down dead material, releasing carbon dioxide (and sometimes methane in anaerobic conditions) into the atmosphere."}
+  ],
+  "s11i-03-4":[
+    {q:"What does biodiversity mean?",opts:["The total number of animals in a country","The variety of different species in an ecosystem or on Earth","The mass of producers in a food chain","The number of trophic levels in a food web"],c:1,e:"Biodiversity is the variety of all the different species of organisms within an ecosystem or on Earth. Greater biodiversity generally makes an ecosystem more stable."},
+    {q:"Why does high biodiversity benefit an ecosystem?",opts:["It makes the ecosystem more stable and less reliant on single species","It guarantees that no species ever becomes extinct","It removes the need for decomposers","It stops all competition between organisms"],c:0,e:"A high biodiversity means species are interdependent and the ecosystem is more resilient to change, disease and the loss of any single species."},
+    {q:"Which of these human activities does NOT directly reduce biodiversity?",opts:["Deforestation","Dumping waste on land","Protecting a wetland as a nature reserve","Draining peat bogs"],c:2,e:"Protecting a wetland conserves habitats and supports biodiversity. Deforestation, dumping waste and draining peat bogs all destroy habitats and reduce biodiversity."},
+    {q:"Why does destroying peat bogs contribute to global warming?",opts:["Peat reflects sunlight back into space","Decaying or burning peat releases stored carbon dioxide","Peat bogs produce oxygen when drained","Peat absorbs heat from the atmosphere"],c:1,e:"Peat bogs store large amounts of carbon. When drained or dug up, the peat decays or is burned, releasing CO₂ that adds to global warming."},
+    {q:"How does a rising human population tend to affect biodiversity?",opts:["It increases biodiversity by creating new habitats","It has no effect on biodiversity","It reduces biodiversity through more pollution, land use and deforestation","It only affects ocean ecosystems"],c:2,e:"A larger population uses more resources and produces more waste, increasing pollution, land use, deforestation and global warming — all of which reduce biodiversity."}
+  ],
+  "s11i-03-5":[
+    {q:"How does a captive breeding programme help endangered species?",opts:["It removes them from the wild permanently","It increases their numbers so individuals can be released into the wild","It changes their genes to make them stronger","It stops them from reproducing"],c:1,e:"Breeding programmes increase the numbers of an endangered species, often in zoos, so that offspring can be released to boost the wild population and reduce extinction risk."},
+    {q:"Why do farmers reintroduce field margins and hedgerows?",opts:["To make fields look tidy","To provide habitats and food that increase biodiversity on farmland","To increase the amount of land used for a single crop","To prevent rain from reaching crops"],c:1,e:"Field margins and hedgerows provide habitats and food for many species, increasing biodiversity compared with growing one crop right to the field's edge."},
+    {q:"Which measure helps maintain biodiversity by protecting habitats?",opts:["Draining wetlands for farming","Regenerating damaged habitats such as replanting forests","Increasing landfill dumping","Quarrying more land for stone"],c:1,e:"Regenerating habitats, for example replanting forests or restoring peat bogs, allows species to return and helps maintain biodiversity."},
+    {q:"How does reducing deforestation help limit global warming?",opts:["It increases the burning of fossil fuels","It keeps trees that absorb carbon dioxide and reduces CO₂ release","It removes all carbon from the atmosphere","It stops plants from respiring"],c:1,e:"Reducing deforestation keeps trees that absorb CO₂ and avoids the CO₂ released when forests are burned, helping to limit global warming as well as protecting habitats."},
+    {q:"How does recycling resources help maintain biodiversity?",opts:["It increases the demand for raw materials","It reduces waste dumping and the need to extract new raw materials","It requires more land to be quarried","It releases more carbon dioxide than landfill"],c:1,e:"Recycling reduces waste sent to landfill and means fewer raw materials need to be extracted by quarrying, protecting more habitats from destruction."}
   ]
 });
 
@@ -140,6 +182,56 @@ Object.assign(LESSONS, {
 <p><strong>A:</strong> Fossil fuels contain carbon that was locked away millions of years ago. Burning them releases this carbon as CO₂ back into the atmosphere. Because this adds "ancient" carbon that was not part of the recent carbon cycle, the overall concentration of CO₂ in the atmosphere increases.</p>
 
 <h3>Common mistake</h3>
-<p>Students forget that <strong>all living organisms</strong> respire — including plants. Plants carry out photosynthesis <em>and</em> respiration. During the day, photosynthesis usually exceeds respiration, so the net effect is CO₂ absorption.</p>`
+<p>Students forget that <strong>all living organisms</strong> respire — including plants. Plants carry out photosynthesis <em>and</em> respiration. During the day, photosynthesis usually exceeds respiration, so the net effect is CO₂ absorption.</p>`,
+
+'s11i-03-4': `
+<h2>Biodiversity &amp; Human Impact</h2>
+<p><strong>Biodiversity</strong> is the variety of all the different species of organisms on Earth, or within an ecosystem. A high biodiversity makes an ecosystem more <strong>stable</strong> because species depend on one another for food and shelter, and the ecosystem is less reliant on any single species.</p>
+
+<h3>Why biodiversity matters</h3>
+<p>Greater biodiversity gives an ecosystem resilience against disease and environmental change. It also supports services humans depend on, such as pollination of crops, clean water and a reliable food supply. A future for humans relies on us maintaining biodiversity.</p>
+
+<h3>Human impacts that reduce biodiversity</h3>
+<ul>
+<li><strong>Pollution</strong> of air, water and land kills organisms and damages habitats.</li>
+<li><strong>Land use</strong> — building, quarrying, farming and dumping waste destroys or fragments habitats.</li>
+<li><strong>Deforestation</strong> removes the habitats of huge numbers of species.</li>
+<li><strong>Peat bog destruction</strong> releases stored carbon dioxide and destroys specialised habitats.</li>
+<li><strong>Global warming</strong> changes climates faster than many species can adapt.</li>
+</ul>
+
+<h3>Rising population</h3>
+<p>As the human population grows, more resources are used and more waste is produced. This increases pollution, land use, deforestation and global warming — all of which reduce biodiversity.</p>
+
+<h3>Worked example</h3>
+<p><strong>Q:</strong> Explain why draining a peat bog reduces biodiversity and adds to global warming.</p>
+<p><strong>A:</strong> Draining a peat bog destroys the habitat of specialised species, so fewer species can survive there, lowering biodiversity. The drained peat decays or is burned, releasing the carbon dioxide it stored. This extra CO₂ adds to global warming.</p>
+
+<h3>Common mistake</h3>
+<p>Students sometimes treat biodiversity as just "the number of animals". It actually means the <strong>variety of species</strong> — including plants, fungi and microorganisms — not simply the total number of individuals.</p>`,
+
+'s11i-03-5': `
+<h2>Maintaining Biodiversity</h2>
+<p>Because human activity has reduced biodiversity, scientists and governments use <strong>conservation</strong> measures to protect and restore it. These measures aim to slow the loss of species and repair damaged ecosystems.</p>
+
+<h3>Protecting species</h3>
+<p><strong>Breeding programmes</strong> for endangered species increase their numbers, often in zoos or wildlife parks. Offspring can then be released into the wild to boost the wild population and reduce the risk of extinction.</p>
+
+<h3>Protecting and restoring habitats</h3>
+<ul>
+<li><strong>Protecting habitats</strong> — for example as nature reserves — stops them being destroyed by building or farming.</li>
+<li><strong>Regenerating habitats</strong> — such as replanting forests or restoring peat bogs — lets species return.</li>
+<li><strong>Field margins and hedgerows</strong> are reintroduced on farms to provide habitats and food.</li>
+</ul>
+
+<h3>Reducing our impact</h3>
+<p><strong>Reducing deforestation</strong> protects forest habitats and keeps trees that absorb carbon dioxide. <strong>Reducing carbon emissions</strong> helps limit global warming. <strong>Recycling resources</strong> rather than dumping waste reduces land use, pollution and the need to extract new raw materials.</p>
+
+<h3>Worked example</h3>
+<p><strong>Q:</strong> Explain how reintroducing hedgerows on a farm helps maintain biodiversity.</p>
+<p><strong>A:</strong> Hedgerows provide habitats, shelter and food for many species of insects, birds and small mammals. This supports a wider variety of organisms than a single crop grown to the edge of every field, so the biodiversity of the farmland increases.</p>
+
+<h3>Common mistake</h3>
+<p>Students sometimes assume conservation always means leaving land untouched. In fact, active measures — like replanting forests, breeding programmes and reintroducing hedgerows — are often needed to <strong>restore</strong> biodiversity, not just protect what remains.</p>`
 
 });
