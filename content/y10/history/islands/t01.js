@@ -129,3 +129,139 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Students sometimes credit Fleming alone for penicillin. He discovered the mould, but it was Florey and Chain who turned it into a usable drug — and the US government funded mass production. All three shared the 1945 Nobel Prize.</p>`
 });
+
+FLASHCARDS.push(
+  // h10i-01-4 — Public Health & Government
+  {id:"h10fc-01-4-1", islandId:"h10i-01-4", front:"How did John Snow prove how cholera spread in 1854?",
+   back:"During the 1854 cholera outbreak in Soho, London, John Snow mapped the deaths and noticed they clustered around the Broad Street water pump.\n\nHe persuaded the local authorities to remove the pump's handle, and the outbreak in that area stopped.\n\nThis provided strong evidence that cholera was spread through contaminated water, not 'bad air' (miasma). However, because Germ Theory had not yet been published (1861), many did not accept his conclusions immediately.", difficulty:2, category:"concept"},
+  {id:"h10fc-01-4-2", islandId:"h10i-01-4", front:"What did Edwin Chadwick's 1842 Report argue?",
+   back:"Edwin Chadwick's 'Report on the Sanitary Condition of the Labouring Population' (1842) argued that poverty and disease were caused by the filthy, overcrowded conditions in industrial towns.\n\nHe claimed that improving sanitation — clean water, drainage and sewerage — would reduce illness and actually save money, because fewer people would need poor relief.\n\nHis report influenced the 1848 Public Health Act, though many ratepayers resisted the cost of reform.", difficulty:2, category:"concept"},
+  {id:"h10fc-01-4-3", islandId:"h10i-01-4", front:"What was the Great Stink of 1858 and how did Bazalgette respond?",
+   back:"In the hot summer of 1858, the River Thames — full of raw sewage — produced such an overwhelming smell that Parliament (beside the river) could barely function. This was the 'Great Stink'.\n\nIt finally forced the government to act. Engineer Joseph Bazalgette designed a vast network of London sewers (around 1,300 miles), completed in the 1860s–70s, which carried sewage away from the city.\n\nThough built to combat miasma, the sewers dramatically reduced cholera and other waterborne diseases.", difficulty:2, category:"application"},
+  {id:"h10fc-01-4-4", islandId:"h10i-01-4", front:"What was the difference between the 1848 and 1875 Public Health Acts?",
+   back:"1848 Public Health Act — Set up a central Board of Health and allowed towns to set up local boards, appoint a medical officer and improve sanitation. However, it was PERMISSIVE (voluntary), so many towns did nothing.\n\n1875 Public Health Act — Made action COMPULSORY. Councils HAD to provide clean water, drainage, sewers and appoint medical officers of health.\n\nThe shift from voluntary to compulsory shows government moving away from 'laissez-faire'.", difficulty:2, category:"concept"},
+  {id:"h10fc-01-4-5", islandId:"h10i-01-4", front:"What were the Liberal welfare reforms (1906–11)?",
+   back:"The Liberal government introduced reforms to tackle poverty, partly because of reports by Booth and Rowntree and concern over the poor health of army recruits:\n\n• Free school meals (1906) and medical inspections (1907) for children.\n• Old Age Pensions (1908) for the over-70s.\n• Labour Exchanges (1909) to help find work.\n• National Insurance Act (1911) — sick pay and unemployment benefit for some workers.\n\nThese marked a major step away from laissez-faire towards state welfare.", difficulty:2, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-01-4": [
+    {q:"How did John Snow demonstrate the link between cholera and water in 1854?", opts:["He mapped deaths around the Broad Street pump and had its handle removed","He identified the cholera bacterium under a microscope","He proved that miasma carried cholera through the air","He vaccinated residents of Soho against cholera"], c:0,
+     e:"Snow mapped cholera deaths clustering around the Broad Street pump and removed its handle, after which cases fell — strong evidence that cholera spread through contaminated water."},
+    {q:"What did Edwin Chadwick's 1842 Report recommend?", opts:["Improving sanitation, clean water and drainage to reduce disease and poverty","Compulsory vaccination of the whole population","Closing all industrial towns","Building hospitals funded by the Church"], c:0,
+     e:"Chadwick argued that filthy living conditions caused disease and poverty, and that better sanitation would reduce illness and the cost of poor relief."},
+    {q:"What finally pushed Parliament to fund London's new sewers?", opts:["The Great Stink of 1858, when the smell of the Thames overwhelmed Parliament","The discovery of Germ Theory in 1861","The 1848 Public Health Act","A cholera vaccine becoming available"], c:0,
+     e:"The unbearable smell of the sewage-filled Thames in the summer of 1858 forced Parliament to act, leading to Bazalgette's sewer system."},
+    {q:"Why was the 1875 Public Health Act more effective than the 1848 Act?", opts:["It made sanitary improvements compulsory rather than voluntary","It was the first Act to mention clean water","It abolished local councils","It introduced the National Health Service"], c:0,
+     e:"The 1848 Act was permissive, so many towns ignored it. The 1875 Act made it compulsory for councils to provide clean water, sewers and medical officers."},
+    {q:"What does the founding of the NHS in 1948 show about the role of government?", opts:["Government had moved from laissez-faire to direct intervention in health","Government had returned to a laissez-faire approach","Healthcare was left entirely to charities","The Church now controlled all hospitals"], c:0,
+     e:"The NHS, providing free healthcare for all funded by taxation, marked the completion of a long shift from laissez-faire towards active government responsibility for public health."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-01-4": `<h2>Public Health &amp; Government</h2>
+<p>In the early 1800s, the government followed a policy of <strong>laissez-faire</strong> — the belief that it should not interfere in people's lives or the economy. Rapid industrialisation created overcrowded, filthy towns where diseases like <strong>cholera</strong> spread rapidly. Over the next century, the government was forced to abandon laissez-faire and take responsibility for public health.</p>
+<h3>The cholera years and the fight for reform</h3>
+<p><strong>Edwin Chadwick's 1842 Report</strong> argued that dirty living conditions caused disease and poverty, and that sanitation would save money. This led to the <strong>1848 Public Health Act</strong>, but it was only voluntary, so many towns ignored it.</p>
+<p>In <strong>1854</strong>, <strong>John Snow</strong> mapped cholera deaths around the <strong>Broad Street pump</strong> and removed its handle, proving cholera spread through water — though without Germ Theory (1861) to explain it, his ideas were resisted.</p>
+<h3>From the Great Stink to the NHS</h3>
+<p>The <strong>Great Stink of 1858</strong> finally forced action: <strong>Bazalgette</strong> built London's sewers. The <strong>1875 Public Health Act</strong> made reform compulsory. The <strong>Liberal welfare reforms (1906–11)</strong> and the founding of the <strong>NHS (1948)</strong> completed the shift to an interventionist government.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain why the government's attitude to public health changed during the 19th century. (8 marks)</strong></p>
+<p>One reason was the impact of <strong>cholera epidemics</strong>. Repeated outbreaks killed thousands and frightened rich and poor alike, making it clear that individuals could not solve the problem alone and that government had to act.</p>
+<p>Another reason was the work of <strong>reformers</strong>. Chadwick's 1842 Report provided evidence linking dirt to disease, while John Snow's 1854 study pointed to contaminated water. The Great Stink of 1858 then gave politicians a direct, personal reason to fund Bazalgette's sewers, accelerating the move away from laissez-faire.</p>
+<h3>Common mistake</h3>
+<p>Do not say the 1848 Public Health Act solved the problem. It was only <em>permissive</em> (voluntary), so many towns did nothing — real change came with the <em>compulsory</em> 1875 Act.</p>`
+});
+
+FLASHCARDS.push(
+  // h10i-01-5 — Surgery: Anaesthetics & Antiseptics
+  {id:"h10fc-01-5-1", islandId:"h10i-01-5", front:"What were the three main problems of surgery before the mid-19th century?",
+   back:"Before surgery could become safe, three problems had to be solved:\n\n1. Pain — there were no effective anaesthetics, so patients were awake and agony limited how long operations could last.\n2. Infection — surgeons did not understand germs, so wounds became infected and many patients died afterwards.\n3. Blood loss — there was no way to replace lost blood or stop heavy bleeding reliably.\n\nProgress on pain came first (anaesthetics), then infection (antiseptics), with blood loss largely solved in the 20th century.", difficulty:1, category:"concept"},
+  {id:"h10fc-01-5-2", islandId:"h10i-01-5", front:"How did James Simpson contribute to surgery in 1847?",
+   back:"In 1847, James Simpson, a Scottish doctor, discovered that <strong>chloroform</strong> could be used as an anaesthetic to put patients to sleep during operations.\n\nHe and his friends tested gases on themselves and found chloroform was effective.\n\nChloroform was a major advance over earlier ether because it was easier to use. Its acceptance was boosted in 1853 when Queen Victoria used it during the birth of her son, Prince Leopold.", difficulty:1, category:"concept"},
+  {id:"h10fc-01-5-3", islandId:"h10i-01-5", front:"What did Joseph Lister do in 1865 and why did it matter?",
+   back:"In 1865, Joseph Lister used <strong>carbolic acid</strong> as an antiseptic during surgery. He had read Pasteur's Germ Theory and reasoned that germs in the air caused wound infection.\n\nHe sprayed carbolic acid on wounds, instruments and bandages to kill germs. Death rates from infection in his patients fell dramatically.\n\nLister's work introduced antiseptic surgery — directly killing germs during operations — and laid the foundation for modern sterile surgery.", difficulty:2, category:"concept"},
+  {id:"h10fc-01-5-4", islandId:"h10i-01-5", front:"What is the difference between antiseptic and aseptic surgery?",
+   back:"Antiseptic surgery (Lister, from 1865) — killing germs that are already present, e.g. spraying carbolic acid on wounds and instruments during an operation.\n\nAseptic surgery (developed from the 1890s onwards) — preventing germs from getting near the patient in the first place. This includes sterilising instruments with steam, surgeons washing thoroughly, wearing sterile gowns, masks, gloves, and using clean operating theatres.\n\nAseptic surgery is the modern approach and is more effective than simply killing germs.", difficulty:2, category:"concept"},
+  {id:"h10fc-01-5-5", islandId:"h10i-01-5", front:"Why did the 'Black Period' of surgery see deaths rise before they fell?",
+   back:"The 'Black Period' of surgery (roughly 1846–1870) followed the introduction of anaesthetics.\n\nBecause patients could now be kept asleep, surgeons attempted longer, more complex and deeper operations.\n\nHowever, they still did not understand or control infection. Deeper wounds and dirty conditions meant more patients died of infection after surgery — so death rates actually ROSE.\n\nOnly once antiseptics (Lister, 1865) and then aseptic methods were adopted did surgical death rates finally fall.", difficulty:2, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-01-5": [
+    {q:"What were the three problems that made surgery dangerous before the mid-1800s?", opts:["Pain, infection and blood loss","Cost, distance and superstition","Anaesthetics, antiseptics and asepsis","Germs, miasma and the humours"], c:0,
+     e:"Surgery was limited by pain (no anaesthetics), infection (no understanding of germs) and blood loss (no transfusions). Each had to be solved for surgery to become safe."},
+    {q:"What anaesthetic did James Simpson introduce in 1847?", opts:["Chloroform","Penicillin","Carbolic acid","Nitrous oxide"], c:0,
+     e:"Simpson discovered that chloroform could safely put patients to sleep. Its use was boosted when Queen Victoria used it during childbirth in 1853."},
+    {q:"What inspired Joseph Lister to use carbolic acid in 1865?", opts:["Pasteur's Germ Theory, which suggested germs caused wound infection","Chadwick's report on sanitation","Jenner's smallpox vaccination","The Great Stink of 1858"], c:0,
+     e:"Having read Pasteur's Germ Theory, Lister reasoned that microbes caused infection and used carbolic acid to kill germs on wounds and instruments, sharply reducing deaths."},
+    {q:"What is the key feature of aseptic surgery?", opts:["Preventing germs from reaching the patient at all","Killing germs only after infection appears","Operating without any anaesthetic","Using bloodletting to clean wounds"], c:0,
+     e:"Aseptic surgery prevents germs reaching the patient by sterilising instruments, using sterile gowns, masks and gloves, and keeping operating theatres clean."},
+    {q:"Why did surgical death rates rise during the 'Black Period' after anaesthetics were introduced?", opts:["Surgeons attempted longer, deeper operations but still could not control infection","Anaesthetics were poisonous and killed patients directly","Surgeons stopped using anaesthetics","Carbolic acid made patients more ill"], c:0,
+     e:"Anaesthetics allowed longer, more ambitious operations, but without control of infection these deeper wounds led to more post-operative deaths until antiseptics were adopted."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-01-5": `<h2>Surgery: Anaesthetics &amp; Antiseptics</h2>
+<p>For most of history, surgery was a last resort. Three great problems made it deadly: <strong>pain</strong>, <strong>infection</strong> and <strong>blood loss</strong>. The 19th century saw the first two of these begin to be solved, transforming surgery forever.</p>
+<h3>Solving pain: anaesthetics</h3>
+<p>In <strong>1847</strong>, <strong>James Simpson</strong> discovered that <strong>chloroform</strong> could safely put patients to sleep during operations. Its acceptance grew after Queen Victoria used it in childbirth in 1853. For the first time, surgeons could operate without their patients writhing in agony.</p>
+<h3>Solving infection: antiseptics and asepsis</h3>
+<p>In <strong>1865</strong>, <strong>Joseph Lister</strong>, inspired by Pasteur's Germ Theory, used <strong>carbolic acid</strong> to kill germs on wounds and instruments. Death rates fell sharply. From the 1890s, surgery moved on to <strong>aseptic</strong> methods — sterilising instruments and using sterile gowns, masks and gloves to prevent germs reaching the patient at all.</p>
+<h3>The Black Period</h3>
+<p>Curiously, deaths first <em>rose</em> after anaesthetics were introduced. Because patients could be kept asleep, surgeons attempted longer, deeper operations — but without controlling infection, more patients died. Only after antiseptics did death rates finally fall.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain the significance of Joseph Lister's work for the development of surgery. (8 marks)</strong></p>
+<p>Lister's use of carbolic acid in 1865 was significant because it directly tackled <strong>infection</strong>, one of the three great problems of surgery. By applying Pasteur's Germ Theory, he showed that killing germs during operations dramatically reduced deaths.</p>
+<p>His work was also significant in the longer term. It convinced other surgeons that germs, not 'bad air', caused infection, and it paved the way for <strong>aseptic surgery</strong>, where germs are prevented from reaching the patient at all. This made the complex operations of modern medicine possible.</p>
+<h3>Common mistake</h3>
+<p>Do not confuse antiseptic and aseptic surgery. <em>Antiseptic</em> means killing germs that are present (Lister); <em>aseptic</em> means preventing germs getting near the patient in the first place — a later and more effective approach.</p>`
+});
+
+FLASHCARDS.push(
+  // h10i-01-6 — Factors in Medical Progress
+  {id:"h10fc-01-6-1", islandId:"h10i-01-6", front:"How did WAR drive medical progress? Give an example.",
+   back:"War often accelerates medical progress because the urgent need to treat huge numbers of casualties forces rapid innovation, and governments fund research.\n\nExamples:\n• World War One led to advances in blood transfusion (storing blood) and plastic surgery (Harold Gillies rebuilt soldiers' faces).\n• World War Two drove the mass production of penicillin and improved the treatment of wounds and burns.\n\nWar can also hinder progress by diverting resources and destroying infrastructure.", difficulty:2, category:"concept"},
+  {id:"h10fc-01-6-2", islandId:"h10i-01-6", front:"How did CHANCE play a role in medical progress? Give an example.",
+   back:"Chance (luck or accident) has sometimes led to major breakthroughs — but usually only when a prepared scientist recognises the significance of what they have seen.\n\nThe classic example is <strong>Fleming and penicillin (1928)</strong>: Fleming left a petri dish uncovered, mould grew by accident, and he noticed it had killed the surrounding bacteria.\n\nChance gave the opportunity, but Fleming's scientific knowledge allowed him to understand what he was looking at.", difficulty:2, category:"concept"},
+  {id:"h10fc-01-6-3", islandId:"h10i-01-6", front:"How did key INDIVIDUALS drive medical progress? Give examples.",
+   back:"Determined, talented individuals have repeatedly pushed medicine forward through their own research and persistence:\n\n• <strong>Pasteur</strong> — proved Germ Theory (1861).\n• <strong>Koch</strong> — identified specific disease-causing bacteria.\n• <strong>Jenner</strong> — developed vaccination (1796).\n• <strong>Lister</strong> — antiseptic surgery (1865).\n\nIndividuals rarely work alone, however — their success usually depends on other factors such as science, technology and government support.", difficulty:1, category:"concept"},
+  {id:"h10fc-01-6-4", islandId:"h10i-01-6", front:"How did SCIENCE & TECHNOLOGY and GOVERNMENT drive medical progress?",
+   back:"Science & technology — New tools and ideas make discoveries possible. Better microscopes let Pasteur and Koch see and identify germs; X-rays (1895) and modern scanners aid diagnosis; the printing press spread knowledge.\n\nGovernment — When governments act, change can reach everyone. Examples include the Public Health Acts (1848, 1875), compulsory vaccination, the founding of the NHS (1948), and funding for research. The move from laissez-faire to intervention was crucial.", difficulty:2, category:"concept"},
+  {id:"h10fc-01-6-5", islandId:"h10i-01-6", front:"How did RELIGION / the Church both help and hinder medical progress?",
+   back:"The Church (religion) had a mixed effect across the whole period.\n\nHindered: In the medieval period it promoted Galen's ideas as truth and discouraged dissection and new research, so questioning Galen could be seen as questioning God.\n\nHelped: The Church funded and ran hospitals and infirmaries, monks preserved ancient medical texts by copying them, and religious motivation inspired care for the sick.\n\nThis shows a single factor can both help and hinder.", difficulty:2, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-01-6": [
+    {q:"Which factor is best illustrated by Harold Gillies rebuilding wounded soldiers' faces in World War One?", opts:["War","Chance","Religion","Government"], c:0,
+     e:"The need to treat huge numbers of facial injuries in WWI drove advances in plastic surgery — a clear example of war accelerating medical progress."},
+    {q:"Fleming's discovery of penicillin in 1928 is the classic example of which factor?", opts:["Chance","Government","War","Religion"], c:0,
+     e:"Fleming noticed by accident that mould on an uncovered petri dish had killed bacteria. Chance provided the opportunity, but his scientific knowledge let him grasp its importance."},
+    {q:"Which factor is best shown by Pasteur proving Germ Theory and Koch identifying bacteria?", opts:["The work of key individuals","Chance","War","Religion"], c:0,
+     e:"Pasteur and Koch were determined individuals whose research transformed understanding of disease, illustrating the importance of key individuals (supported by science and technology)."},
+    {q:"How did better microscopes contribute to medical progress?", opts:["They allowed scientists like Pasteur and Koch to see and identify germs","They were used to perform surgery","They replaced the need for vaccination","They spread miasma theory"], c:0,
+     e:"Improved microscope technology made it possible to observe microorganisms, allowing Pasteur and Koch to prove germs cause disease — an example of science and technology as a factor."},
+    {q:"Why is religion / the Church described as both helping and hindering medical progress?", opts:["It promoted Galen's ideas uncritically but also funded hospitals and preserved texts","It only ever blocked all medical research","It discovered Germ Theory","It founded the NHS in 1948"], c:0,
+     e:"The Church hindered progress by promoting Galen as unquestionable truth, yet helped by running hospitals and preserving ancient medical texts — showing one factor can do both."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-01-6": `<h2>Factors in Medical Progress</h2>
+<p>The AQA thematic study asks you to think <strong>synoptically</strong> — across the whole period from medieval times to today. To do this well, you need to understand the <strong>factors</strong> that drive (or hold back) medical progress, and link a concrete example to each.</p>
+<h3>The key factors</h3>
+<ul>
+<li><strong>Science &amp; technology</strong> — better microscopes let Pasteur and Koch see germs; X-rays aid diagnosis.</li>
+<li><strong>Individuals</strong> — Pasteur (Germ Theory), Koch (bacteria), Jenner (vaccination), Lister (antiseptics).</li>
+<li><strong>War</strong> — World War One advanced blood transfusion and plastic surgery; World War Two drove penicillin production.</li>
+<li><strong>Government</strong> — Public Health Acts (1848, 1875) and the NHS (1948).</li>
+<li><strong>Religion / the Church</strong> — promoted Galen (hindrance) yet ran hospitals and preserved texts (help).</li>
+<li><strong>Chance</strong> — Fleming's accidental discovery of penicillin (1928).</li>
+</ul>
+<h3>Factors work together</h3>
+<p>The best answers show that factors <strong>combine</strong>. Penicillin, for example, involved <em>chance</em> (Fleming), <em>individuals</em> (Florey and Chain), <em>war</em> (the WWII need for treatment) and <em>government</em> (funding mass production).</p>
+<h3>Worked example</h3>
+<p><strong>Q: 'Chance was the most important factor in the development of penicillin.' How far do you agree? (16 marks)</strong></p>
+<p>Chance certainly mattered: Fleming only noticed penicillin because mould landed on his petri dish by accident in 1928. Without that lucky observation, the discovery might have been delayed.</p>
+<p>However, other factors were arguably more important. The work of <strong>individuals</strong> Florey and Chain turned Fleming's observation into a usable drug, while <strong>war</strong> and <strong>government</strong> funding enabled mass production in the 1940s. Chance created the opportunity, but science, individuals and war were needed to deliver it — so I only partly agree.</p>
+<h3>Common mistake</h3>
+<p>Do not treat chance as 'pure luck'. Breakthroughs happen when a <em>prepared</em> scientist recognises what they are seeing — Fleming succeeded because of his expertise, not luck alone.</p>`
+});

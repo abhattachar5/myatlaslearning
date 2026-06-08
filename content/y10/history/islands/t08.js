@@ -124,3 +124,89 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Do not assume the Normans 'destroyed' English culture. Many English customs, laws (like the shire system) and the English language survived. The Conquest was a takeover by a new elite, not the annihilation of English society.</p>`
 });
+
+FLASHCARDS.push(
+  // h10i-08-4 — Resistance & Rebellion
+  {id:"h10fc-08-4-1", islandId:"h10i-08-4", front:"Who were the early English leaders who resisted the Normans?",
+   back:"Several Anglo-Saxon leaders resisted William after 1066:\n\n• Edwin and Morcar — the brothers who were Earls of Mercia and Northumbria. They submitted to William in 1066 but later rebelled in 1068 and 1071.\n• Edgar the Ætheling — the great-nephew of Edward the Confessor and the strongest blood claimant. He fled north and became a focus for rebellion, twice seeking refuge in Scotland with King Malcolm III.\n• Hereward the Wake — led resistance in the Fens around Ely.\n\nThese leaders never united effectively, which made it easier for William to defeat them one rebellion at a time.", difficulty:2, category:"concept"},
+  {id:"h10fc-08-4-2", islandId:"h10i-08-4", front:"What was the revolt at Ely and who was Hereward the Wake?",
+   back:"Hereward the Wake was an English thegn who led a famous revolt in the Fens of East Anglia (1070–71).\n\n• He based his resistance on the Isle of Ely, an area surrounded by marshes that was difficult for Norman cavalry to attack.\n• He was joined by Morcar and a band of rebels, and the Danish king's fleet briefly supported the rising.\n• William eventually built a causeway across the marshes to reach the island.\n• According to tradition, the monks of Ely betrayed Hereward by showing William a safe path.\n• The revolt collapsed; Morcar was captured, but Hereward reportedly escaped and his later fate is unknown.\n\nEly became a symbol of stubborn English resistance.", difficulty:2, category:"concept"},
+  {id:"h10fc-08-4-3", islandId:"h10i-08-4", front:"What were the rebellions of 1069–70?",
+   back:"The years 1069–70 saw the most serious threat to William's rule:\n\n• Early 1069 — A rising in the North killed the Norman earl Robert de Comines at Durham, and rebels attacked York.\n• A Danish fleet (around 240 ships) sent by King Sweyn arrived and joined the northern rebels, capturing York and destroying its Norman garrison.\n• Edgar the Ætheling and the northern earls supported the rising.\n• Rebellions also broke out in the south-west, the Welsh borders and the Midlands.\n\nWilliam responded with force: he bribed the Danes to leave, recaptured York, and then launched the Harrying of the North to crush resistance permanently.", difficulty:2, category:"concept"},
+  {id:"h10fc-08-4-4", islandId:"h10i-08-4", front:"What was the Harrying of the North and what did William do?",
+   back:"The Harrying of the North (winter 1069–70) was William's brutal campaign to destroy northern England's ability to rebel.\n\nWhat William did:\n• His soldiers systematically burned villages, crops and stores of grain across Yorkshire and the surrounding counties.\n• They slaughtered livestock and destroyed the tools and seed needed for the next harvest.\n• Survivors were left to face a winter with no food.\n\nIt was a deliberate scorched-earth policy designed to make the region incapable of supporting future revolts or invading armies.", difficulty:2, category:"concept"},
+  {id:"h10fc-08-4-5", islandId:"h10i-08-4", front:"What was the impact of the Harrying of the North?",
+   back:"The Harrying of the North had a devastating and lasting impact:\n\n• Famine — with crops and livestock destroyed, mass starvation followed. The chronicler Orderic Vitalis claimed around 100,000 people died, though modern historians debate the exact figure.\n• Depopulation — the Domesday Book (1086) records large areas of Yorkshire as 'waste' (worth nothing), 17 years later.\n• It ended serious resistance in the North — the region never rose against William again.\n• Refugees fled south and even into Scotland.\n• It damaged William's reputation; even some Norman chroniclers condemned it as excessively cruel.\n\nThe Harrying was effective control through terror, but at an enormous human cost.", difficulty:2, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-08-4": [
+    {q:"Who was Edgar the Ætheling?", opts:["The great-nephew of Edward the Confessor with the strongest blood claim, who became a focus for English rebellion","A Norman baron loyal to William","The leader of the Danish fleet","The Archbishop of York"], c:0,
+     e:"Edgar the Ætheling had the strongest hereditary claim to the throne but was too young in 1066. He fled north and repeatedly became a rallying point for English resistance, often sheltering in Scotland."},
+    {q:"Where did Hereward the Wake base his revolt?", opts:["The Isle of Ely in the Fens, protected by surrounding marshes","The city of York","The Tower of London","The New Forest"], c:0,
+     e:"Hereward based his resistance on the Isle of Ely, where the surrounding marshland made it very difficult for Norman cavalry to attack. William eventually built a causeway to reach the island."},
+    {q:"What made the rebellions of 1069 especially dangerous for William?", opts:["A large Danish fleet arrived and joined the northern rebels, capturing York","All the Norman barons defected to the rebels","The Pope withdrew his support for William","Harold Godwinson returned to lead the rebels"], c:0,
+     e:"The arrival of a Danish fleet of around 240 ships, which joined the northern rebels and helped capture York and destroy its garrison, turned a regional revolt into a serious national threat."},
+    {q:"What was the Harrying of the North?", opts:["A scorched-earth campaign in which William's forces burned crops, villages and livestock across the North","A peaceful agreement between William and the northern earls","A Danish invasion of Yorkshire","A rebuilding programme for northern towns"], c:0,
+     e:"The Harrying of the North (1069–70) was a deliberate campaign of destruction. William's troops burned villages, crops and grain stores and killed livestock so the region could not support future rebellions."},
+    {q:"What evidence in the Domesday Book reflects the impact of the Harrying of the North?", opts:["Large areas of Yorkshire are recorded as 'waste' (worth nothing) in 1086","It records a sharp rise in the value of northern manors","It lists no manors in the North at all","It shows the North had the highest population in England"], c:0,
+     e:"Seventeen years after the Harrying, the Domesday Book still recorded much of Yorkshire as 'waste', showing how thoroughly and lastingly the region had been devastated."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-08-4": `<h2>Resistance &amp; Rebellion</h2>
+<p>William's conquest was not accepted peacefully. Between 1066 and 1071 he faced repeated risings led by surviving English nobles.</p>
+<h3>Early English resistance</h3>
+<p>The brothers <strong>Edwin and Morcar</strong>, Earls of Mercia and Northumbria, submitted in 1066 but rebelled in 1068. <strong>Edgar the Ætheling</strong>, who had the strongest blood claim, fled north and became a rallying point, often sheltering in Scotland with King Malcolm.</p>
+<h3>Hereward the Wake and Ely</h3>
+<p><strong>Hereward the Wake</strong> led a revolt in the Fens, based on the marsh-protected <strong>Isle of Ely</strong> (1070–71). Joined by Morcar and briefly by a Danish fleet, the rebels held out until William built a causeway across the marshes. The revolt then collapsed.</p>
+<h3>The rebellions of 1069–70 and the Harrying of the North</h3>
+<p>The most dangerous rising came in 1069, when a <strong>Danish fleet</strong> joined northern rebels and captured York. William bribed the Danes to leave, then launched the <strong>Harrying of the North</strong> — burning crops, villages and livestock so the region could not rebel again.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain the consequences of the Harrying of the North. (8 marks)</strong></p>
+<p>One consequence was <strong>mass famine</strong>. With crops and livestock destroyed before winter, large numbers starved; the chronicler Orderic Vitalis claimed around 100,000 deaths. Another consequence was <strong>lasting devastation</strong> — the Domesday Book still recorded much of Yorkshire as 'waste' in 1086, and the North never rebelled against William again.</p>
+<h3>Common mistake</h3>
+<p>Do not treat the '100,000 deaths' figure as a proven fact. It comes from a chronicler writing decades later and is debated by historians. Show awareness that the scale was enormous while noting the evidence is uncertain.</p>`
+});
+
+FLASHCARDS.push(
+  // h10i-08-5 — The Historic Environment Site Study
+  {id:"h10fc-08-5-1", islandId:"h10i-08-5", front:"How does the AQA Norman site study work?",
+   back:"The Historic Environment is part of the Norman England depth study. AQA specifies one particular site each year (it changes), and students must study it in detail.\n\nKey points:\n• The site is usually a Norman building such as a motte-and-bailey or stone keep castle, or a cathedral or abbey.\n• Students must understand the site's features, function and how it connects to the wider history of Norman England.\n• In the exam, you answer a question about the specified site, applying your knowledge of the period.\n• You are not expected to have visited the site, but you must know its key characteristics.\n\nThe aim is to use a real place as evidence for how the Normans controlled, defended and ruled England.", difficulty:2, category:"concept"},
+  {id:"h10fc-08-5-2", islandId:"h10i-08-5", front:"What features of a Norman castle should you be able to describe?",
+   back:"When studying a Norman castle site, you should know its physical features and their purpose:\n\n• Motte — a raised earth mound topped by a tower or keep, giving height for defence and surveillance.\n• Bailey — an enclosed courtyard below the motte, holding stables, halls, workshops and a garrison.\n• Keep — the strongest tower (wooden at first, later stone, like the Tower of London), the lord's residence and last line of defence.\n• Curtain wall, gatehouse, ditch and palisade — outer defences.\n\nLink each feature to a function: defence, control of the surrounding area, accommodation, and display of status.", difficulty:2, category:"concept"},
+  {id:"h10fc-08-5-3", islandId:"h10i-08-5", front:"How do you relate a site's features to its function in Norman England?",
+   back:"For each feature, ask what job it did for the Normans. The main functions were:\n\n• Control — castles were placed in or near towns and on key routes to dominate the population and respond to rebellion.\n• Defence — mottes, ditches, walls and keeps allowed a small garrison to hold out against a much larger force.\n• Religion — cathedrals and abbeys (e.g. Durham) expressed Norman piety and reorganised the English Church under Norman bishops.\n• Status — the size and grandeur of a keep or cathedral displayed the power and permanence of the new Norman ruling class.\n\nGood answers connect specific physical features to these wider purposes.", difficulty:3, category:"application"},
+  {id:"h10fc-08-5-4", islandId:"h10i-08-5", front:"How can a site be used as evidence about Norman England?",
+   back:"A site is a piece of physical evidence that can support arguments about the period:\n\n• Location — a castle built beside an English town suggests the Normans needed to control a hostile population.\n• Building materials — early timber rebuilt in stone shows growing Norman confidence and permanence.\n• Scale and style — huge Romanesque cathedrals show the wealth and ambition of the Norman Church.\n• Reused or destroyed buildings — some castles were built over English houses, showing the impact on local people.\n\nYou treat the site like a source: describe what you can observe, then infer what it tells you about Norman aims and methods.", difficulty:3, category:"application"},
+  {id:"h10fc-08-5-5", islandId:"h10i-08-5", front:"Why did the Normans build cathedrals and abbeys as well as castles?",
+   back:"Religious buildings served Norman aims just as castles did:\n\n• Religion — they showed Norman devotion and helped reform the English Church under new Norman bishops and abbots like Lanfranc.\n• Control — placing a Norman cathedral (e.g. Durham, begun 1093) in a key town reinforced authority alongside any nearby castle.\n• Status and permanence — grand stone buildings in the Romanesque style displayed the power of the new ruling elite and were meant to last for centuries.\n• Sometimes castle and cathedral stood together (as at Durham), combining military and religious dominance in one place.\n\nLike castles, religious buildings were tools of both faith and control.", difficulty:2, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-08-5": [
+    {q:"What is the purpose of the Historic Environment site study in AQA Norman England?", opts:["To study a specified Norman site in detail and relate its features and function to the wider period","To memorise every Norman castle in England","To visit a site and write a travel report","To compare Norman and Roman architecture"], c:0,
+     e:"The site study requires students to examine one AQA-specified Norman site, understand its features and function, and use it as evidence for how the Normans controlled and ruled England."},
+    {q:"What was the function of the motte in a motte-and-bailey castle?", opts:["A raised earth mound topped by a tower, giving height for defence and surveillance","A chapel for the garrison","A market square for the town","A storehouse for grain only"], c:0,
+     e:"The motte was a raised mound carrying the tower or keep. Its height made the castle easier to defend and allowed the garrison to watch over the surrounding area."},
+    {q:"Which function does a large Romanesque cathedral like Durham best illustrate?", opts:["Religion, status and control combined in one imposing building","Purely military defence with no religious purpose","The poverty of the Norman Church","A temporary structure built in days"], c:0,
+     e:"Grand stone cathedrals expressed Norman piety and the reform of the Church, while their scale displayed the status of the new elite and reinforced control over a key town."},
+    {q:"How should a student use a Norman site as evidence?", opts:["Observe its features, then infer what they reveal about Norman aims and methods","Describe its appearance only, without any conclusions","Ignore the building and focus on national events","Assume every feature was purely decorative"], c:0,
+     e:"A site is treated like a source: you describe observable features such as location, materials and scale, then draw inferences about Norman control, defence, religion and status."},
+    {q:"Why did the Normans often rebuild timber castles in stone?", opts:["To show growing confidence and permanence and to create stronger, lasting defences","Because timber was illegal under forest law","To make them easier to demolish","Because stone castles were cheaper to build"], c:0,
+     e:"Rebuilding in stone made castles far stronger and longer-lasting, and signalled that Norman rule was permanent rather than a temporary occupation."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-08-5": `<h2>The Historic Environment Site Study</h2>
+<p>The Historic Environment is a special part of the Norman England depth study. AQA names one Norman site each year, and you must be able to apply your knowledge of the period to it.</p>
+<h3>How the site study works</h3>
+<p>The specified site is usually a Norman building, such as a <strong>motte-and-bailey</strong> or <strong>stone keep castle</strong>, or a <strong>cathedral or abbey</strong>. You study its features and function and link them to wider Norman England. You do not need to have visited it, but you must know its key characteristics.</p>
+<h3>Features and their functions</h3>
+<p>For a castle, learn the <strong>motte</strong> (raised mound and tower), the <strong>bailey</strong> (enclosed yard with hall and garrison) and the <strong>keep</strong> (strongest tower). Connect each feature to a function: <strong>control</strong> of a town, <strong>defence</strong> by a small garrison, accommodation, and a display of <strong>status</strong>. Religious sites add the function of <strong>religion</strong> and Church reform.</p>
+<h3>Using the site as evidence</h3>
+<p>Treat the site like a source. Its location, building materials, scale and style let you infer Norman aims — for example, a stone cathedral beside a castle shows religion and control working together.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain how the features of a Norman castle show its function. (8 marks)</strong></p>
+<p>The <strong>motte</strong> gave height, so a small garrison could watch over and dominate a hostile town — showing the function of control. The <strong>keep and walls</strong> allowed defenders to hold out against a larger force, showing defence. The sheer scale of a stone keep also displayed the <strong>status</strong> and permanence of the new Norman lords.</p>
+<h3>Common mistake</h3>
+<p>Do not simply describe what the site looks like. The marks come from linking each feature to a function and using the site as evidence about Norman aims such as control, defence, religion and status.</p>`
+});

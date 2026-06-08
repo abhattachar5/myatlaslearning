@@ -126,3 +126,91 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Avoid judging appeasement only with hindsight. At the time, it seemed a rational policy: Britain was militarily unprepared, the public dreaded another war, and some German demands appeared reasonable. A good answer acknowledges the context.</p>`
 });
+
+FLASHCARDS.push(
+  // h10i-04-4 — Hopes for Peace in the 1920s
+  {id:"h10fc-04-4-1", islandId:"h10i-04-4", front:"What was the Dawes Plan (1924)?",
+   back:"The Dawes Plan was an agreement, organised by the American banker Charles Dawes, to ease Germany's reparations crisis.\n\nKey terms:\n• Germany's annual reparations payments were reduced and rescheduled to match what it could afford.\n• American banks lent Germany 800 million marks to rebuild its economy.\n• French and Belgian troops withdrew from the Ruhr (which they had occupied in 1923).\n\nThe plan stabilised the German economy and improved international relations, but it left Germany dependent on American loans.", difficulty:2, category:"definition"},
+  {id:"h10fc-04-4-2", islandId:"h10i-04-4", front:"What were the Locarno Treaties (1925)?",
+   back:"The Locarno Treaties were a series of agreements signed by Germany, France, Britain, Italy and Belgium.\n\nKey points:\n• Germany freely accepted its western borders with France and Belgium as fixed by the Treaty of Versailles.\n• The demilitarisation of the Rhineland was confirmed.\n• Britain and Italy guaranteed the western borders.\n• Crucially, Germany agreed to these terms voluntarily, rather than having them imposed.\n\nLocarno greatly improved relations and led to Germany joining the League of Nations in 1926.", difficulty:2, category:"concept"},
+  {id:"h10fc-04-4-3", islandId:"h10i-04-4", front:"What was the Kellogg-Briand Pact (1928)?",
+   back:"The Kellogg-Briand Pact was an international agreement, named after US Secretary of State Frank Kellogg and French foreign minister Aristide Briand.\n\n• 65 nations eventually signed it.\n• They agreed to renounce war as a means of settling disputes.\n\nIt showed a genuine international desire for peace and marked the high point of 1920s optimism. However, it had a fatal flaw: there was no way to enforce it, so it could not actually prevent a country that chose to go to war.", difficulty:1, category:"definition"},
+  {id:"h10fc-04-4-4", islandId:"h10i-04-4", front:"Why were the later 1920s called the 'Locarno honeymoon'?",
+   back:"The 'Locarno honeymoon' describes the period of optimism and improved international relations after the Locarno Treaties of 1925.\n\nReasons for the optimism:\n• Germany was being reintegrated into the international community and joined the League in 1926.\n• The Dawes Plan had stabilised the German economy.\n• Agreements like Locarno and the Kellogg-Briand Pact suggested war could be avoided.\n• The mood was one of reconciliation rather than confrontation.\n\nThe term 'honeymoon' captures the hope — but also hints that the good feeling did not last.", difficulty:2, category:"concept"},
+  {id:"h10fc-04-4-5", islandId:"h10i-04-4", front:"What were the limits of the peace agreements of the 1920s?",
+   back:"Despite the optimism, the agreements had serious limitations:\n\n• The Kellogg-Briand Pact had no means of enforcement.\n• The Dawes Plan left Germany dangerously dependent on American loans — when the Wall Street Crash came in 1929, the loans were recalled.\n• Locarno only fixed Germany's western borders; its eastern borders (with Poland and Czechoslovakia) were left open to question.\n• Disarmament made little real progress, as countries would not weaken themselves first.\n\nThe agreements relied on goodwill, which collapsed in the 1930s.", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-04-4": [
+    {q:"What was the main purpose of the Dawes Plan (1924)?", opts:["To reschedule Germany's reparations and provide American loans to rebuild its economy","To rearm the German army","To remove Germany from the League of Nations","To increase Germany's reparations payments"], c:0,
+     e:"The Dawes Plan reduced and rescheduled Germany's reparations to an affordable level and arranged American loans to rebuild its economy, easing the crisis caused by the 1923 Ruhr occupation."},
+    {q:"What made the Locarno Treaties (1925) significant?", opts:["Germany freely accepted its western borders rather than having them imposed","Germany was forced to pay extra reparations","Britain left the League of Nations","France invaded the Ruhr"], c:0,
+     e:"At Locarno, Germany voluntarily accepted its western borders with France and Belgium. Because Germany agreed willingly, relations improved dramatically and Germany joined the League in 1926."},
+    {q:"What did countries agree to in the Kellogg-Briand Pact (1928)?", opts:["To renounce war as a means of settling disputes","To form a military alliance against the USSR","To cancel all reparations","To disband the League of Nations"], c:0,
+     e:"In the Kellogg-Briand Pact, 65 nations agreed to renounce war as a way of settling disputes. It expressed genuine optimism but had no mechanism to enforce the promise."},
+    {q:"Why were the later 1920s called the 'Locarno honeymoon'?", opts:["There was a period of optimism and improved relations after the Locarno Treaties","Germany and France formed a marriage alliance","The League of Nations was disbanded","War broke out across Europe"], c:0,
+     e:"The 'Locarno honeymoon' describes the hopeful mood after 1925, when Germany rejoined the international community, the economy stabilised and peace agreements suggested war could be avoided."},
+    {q:"What was a key weakness of the 1920s peace agreements?", opts:["They relied on goodwill and had no real means of enforcement","They were kept completely secret","They forced Germany to leave the League","They created a powerful international army"], c:0,
+     e:"The agreements depended on goodwill. The Kellogg-Briand Pact could not be enforced, disarmament stalled, and the Dawes Plan left Germany dependent on American loans that were recalled after 1929."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-04-4": `<h2>Hopes for Peace in the 1920s</h2>
+<p>After the bitterness of Versailles and the crisis of 1923, the mid-1920s brought a wave of optimism. A series of agreements seemed to show that the great powers could cooperate and that another war might be avoided.</p>
+<h3>The Dawes Plan and Locarno</h3>
+<p>The <strong>Dawes Plan</strong> (1924) rescheduled Germany's reparations to an affordable level and arranged American loans to rebuild its economy, ending the crisis caused by the French occupation of the Ruhr. The <strong>Locarno Treaties</strong> (1925) went further: Germany <em>freely</em> accepted its western borders with France and Belgium. Because Germany agreed willingly, relations improved and Germany joined the League of Nations in 1926.</p>
+<h3>The Kellogg-Briand Pact and disarmament</h3>
+<p>The <strong>Kellogg-Briand Pact</strong> (1928) saw 65 nations renounce war as a means of settling disputes. Alongside the League's efforts to encourage <strong>disarmament</strong>, it marked the high point of 1920s optimism — the period often called the <strong>'Locarno honeymoon'</strong>.</p>
+<h3>The limits of the agreements</h3>
+<p>Yet these hopes rested on shaky foundations. The Kellogg-Briand Pact had no means of enforcement. Disarmament made little real progress. Locarno fixed only Germany's western borders, leaving its eastern borders open to question. Worst of all, the Dawes Plan left Germany dependent on American loans that were recalled after the Wall Street Crash.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain why the later 1920s were a time of hope for international peace. (8 marks)</strong></p>
+<p>One reason was <strong>economic recovery</strong>. The Dawes Plan stabilised Germany's economy and ended the Ruhr crisis, reducing a major source of tension between Germany and France.</p>
+<p>Another reason was <strong>improved diplomacy</strong>. At Locarno, Germany voluntarily accepted its western borders, and it joined the League in 1926. The Kellogg-Briand Pact then saw 65 nations renounce war, creating a genuine mood of reconciliation.</p>
+<h3>Common mistake</h3>
+<p>Do not present these agreements as guarantees of peace. They depended on goodwill and economic stability, both of which collapsed after 1929. A strong answer recognises that the 'honeymoon' was fragile from the start.</p>`
+});
+
+FLASHCARDS.push(
+  // h10i-04-5 — Escalation to War 1938–39
+  {id:"h10fc-04-5-1", islandId:"h10i-04-5", front:"What was the Anschluss (1938)?",
+   back:"Anschluss means 'union' — the joining together of Germany and Austria, which was forbidden by the Treaty of Versailles.\n\n• Hitler pressured the Austrian government and encouraged Austrian Nazis to stir up unrest.\n• In March 1938, German troops marched into Austria unopposed.\n• A rigged plebiscite then 'approved' the union with a 99% vote.\n\nBritain and France protested but took no action. The Anschluss broke the treaty, strengthened Germany and showed that appeasement was encouraging Hitler to go further.", difficulty:2, category:"definition"},
+  {id:"h10fc-04-5-2", islandId:"h10i-04-5", front:"What was the Sudetenland crisis and the Munich Agreement (1938)?",
+   back:"The Sudetenland was a region of Czechoslovakia with a large German-speaking population. In 1938 Hitler demanded it be handed to Germany.\n\n• As war loomed, Chamberlain flew to meet Hitler three times.\n• At the Munich Conference (September 1938), Britain, France, Germany and Italy agreed to give the Sudetenland to Germany. Czechoslovakia was not invited.\n• Chamberlain returned claiming 'peace for our time'.\n\nMunich is seen as the high point — and the turning point — of appeasement.", difficulty:2, category:"concept"},
+  {id:"h10fc-04-5-3", islandId:"h10i-04-5", front:"Why was the occupation of Czechoslovakia (March 1939) so important?",
+   back:"In March 1939, Hitler broke the Munich Agreement by sending troops to occupy the rest of Czechoslovakia (Bohemia and Moravia).\n\nThis was a turning point because:\n• It proved Hitler could not be trusted — he was no longer just reclaiming German-speaking lands but seizing non-German territory.\n• It showed appeasement had failed.\n• Britain and France abandoned appeasement and guaranteed to protect Poland if it were attacked.\n\nFrom this point, war became far more likely.", difficulty:2, category:"concept"},
+  {id:"h10fc-04-5-4", islandId:"h10i-04-5", front:"What was the Nazi-Soviet Pact (August 1939)?",
+   back:"The Nazi-Soviet Pact was a non-aggression agreement between Hitler's Germany and Stalin's USSR.\n\n• Both sides promised not to attack each other.\n• A secret clause divided Poland between Germany and the USSR.\n\nIt shocked the world because Nazis and communists were bitter enemies. For Hitler, it removed the danger of a two-front war, freeing him to invade Poland. For Stalin, it bought time to prepare for a war he believed was coming.", difficulty:2, category:"concept"},
+  {id:"h10fc-04-5-5", islandId:"h10i-04-5", front:"How did the invasion of Poland lead to the outbreak of war (September 1939)?",
+   back:"After the Nazi-Soviet Pact removed the threat of a two-front war, Hitler moved against Poland.\n\n• On 1 September 1939, German forces invaded Poland.\n• Britain and France had guaranteed Polish independence and demanded Germany withdraw.\n• Hitler ignored the ultimatum.\n• On 3 September 1939, Britain and France declared war on Germany.\n\nUnlike at Munich, the Allies refused to back down. The era of appeasement was over and the Second World War had begun.", difficulty:2, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-04-5": [
+    {q:"What was the Anschluss of 1938?", opts:["The union of Germany and Austria, forbidden by the Treaty of Versailles","A German alliance with Italy","The German invasion of Poland","A trade deal with the USSR"], c:0,
+     e:"Anschluss means 'union'. In March 1938, German troops marched into Austria unopposed and a rigged plebiscite approved the union, breaking the Treaty of Versailles."},
+    {q:"Which region did Hitler demand from Czechoslovakia at the Munich Conference?", opts:["The Sudetenland","The Rhineland","The Saar","The Polish Corridor"], c:0,
+     e:"Hitler demanded the Sudetenland, a part of Czechoslovakia with a large German-speaking population. At Munich in September 1938, Britain and France agreed to hand it to Germany."},
+    {q:"Why was Hitler's occupation of the rest of Czechoslovakia in March 1939 a turning point?", opts:["It proved Hitler could not be trusted and that appeasement had failed","It was approved by the League of Nations","It returned land to its rightful owners","It ended the threat of war in Europe"], c:0,
+     e:"By seizing non-German territory in breach of the Munich Agreement, Hitler showed he could not be trusted. Britain and France abandoned appeasement and guaranteed Poland's independence."},
+    {q:"What was secretly agreed in the Nazi-Soviet Pact (August 1939)?", opts:["To divide Poland between Germany and the USSR","To launch a joint attack on Britain","To return the Sudetenland to Czechoslovakia","To disband the German army"], c:0,
+     e:"The Nazi-Soviet Pact contained a secret clause dividing Poland between Germany and the USSR. It freed Hitler from the fear of a two-front war, allowing him to invade Poland."},
+    {q:"What event led directly to Britain and France declaring war on 3 September 1939?", opts:["The German invasion of Poland on 1 September 1939","The Anschluss with Austria","The Munich Agreement","The signing of the Kellogg-Briand Pact"], c:0,
+     e:"Germany invaded Poland on 1 September 1939. Because Britain and France had guaranteed Polish independence and Hitler ignored their ultimatum, they declared war on 3 September."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-04-5": `<h2>Escalation to War 1938–39</h2>
+<p>By 1938 Hitler's demands had grown bolder. In just eighteen months, a series of aggressive moves turned the uneasy peace of the 1930s into a second world war.</p>
+<h3>Anschluss and the Sudetenland</h3>
+<p>In March 1938, Hitler achieved <strong>Anschluss</strong> — the union of Germany and Austria forbidden by Versailles — as German troops marched in unopposed. He then turned to the <strong>Sudetenland</strong>, the German-speaking region of Czechoslovakia. At the <strong>Munich Agreement</strong> (September 1938), Britain, France, Germany and Italy handed the Sudetenland to Germany without consulting the Czechs. Chamberlain claimed 'peace for our time'.</p>
+<h3>Czechoslovakia and the Nazi-Soviet Pact</h3>
+<p>In <strong>March 1939</strong>, Hitler broke the Munich Agreement and occupied the rest of Czechoslovakia. This proved he could not be trusted, and Britain and France guaranteed Poland's independence. Then, in <strong>August 1939</strong>, the <strong>Nazi-Soviet Pact</strong> stunned the world: Hitler and Stalin secretly agreed to divide Poland, freeing Hitler from the fear of a two-front war.</p>
+<h3>The invasion of Poland</h3>
+<p>On <strong>1 September 1939</strong>, Germany invaded Poland. This time the Allies did not back down: on <strong>3 September 1939</strong>, Britain and France declared war. The Second World War had begun.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain why the occupation of Czechoslovakia in March 1939 was a turning point. (8 marks)</strong></p>
+<p>One reason was that it <strong>discredited appeasement</strong>. By seizing land that was not German-speaking, Hitler broke the Munich Agreement and showed his promises were worthless. Chamberlain could no longer argue that Hitler only wanted to unite German peoples.</p>
+<p>Another reason was the <strong>change in Allied policy</strong>. Britain and France abandoned appeasement and guaranteed Poland's independence. This made war far more likely, because the next act of aggression would trigger a military response.</p>
+<h3>Common mistake</h3>
+<p>Do not confuse the order of events. The Anschluss (March 1938) came before Munich (September 1938), which came before the occupation of Czechoslovakia (March 1939) and the Nazi-Soviet Pact (August 1939). Getting the sequence right is essential for explaining the escalation.</p>`
+});

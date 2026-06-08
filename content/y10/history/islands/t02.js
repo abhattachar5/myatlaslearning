@@ -86,3 +86,91 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Do not describe the chain of evacuation as if it worked perfectly from the start. Early in the war it was chaotic — improvements came through painful trial and error, and evacuation was always dangerous under shellfire.</p>`
 });
+
+FLASHCARDS.push(
+  // h10i-02-3 — The Context of the Western Front
+  {id:"h10fc-02-3-1", islandId:"h10i-02-3", front:"How was a typical trench system organised?",
+   back:"Trenches were dug in a connected system, not a single ditch:\n\n• Front-line trench — closest to the enemy; soldiers fought and kept watch here.\n• Support trench — a short distance behind; troops retreated here if the front line was attacked.\n• Reserve trench — further back; held reserve troops ready to counter-attack.\n• Communication trenches — ran at right angles, linking the lines so men, supplies and the wounded could move under cover.\n\nBetween the opposing front lines lay no-man's-land — open ground churned by shellfire and laced with barbed wire.", difficulty:1, category:"definition"},
+  {id:"h10fc-02-3-2", islandId:"h10i-02-3", front:"What was no-man's-land?",
+   back:"No-man's-land was the strip of open ground between the opposing front-line trenches.\n\n• Its width varied from around 30 metres to several hundred metres.\n• It was cratered by shell fire, flooded in places, and covered with barbed wire.\n• Bodies of the dead often lay there because retrieving them was deadly.\n\nSoldiers had to cross no-man's-land when 'going over the top', advancing into machine-gun and artillery fire. This is where many of the worst wounds treated by the medical services were inflicted.", difficulty:1, category:"concept"},
+  {id:"h10fc-02-3-3", islandId:"h10i-02-3", front:"What were conditions like in the trenches?",
+   back:"Trench conditions were squalid and dangerous:\n\n• Mud — heavy rain and shelling turned the ground to thick mud; men could drown in waterlogged shell holes.\n• Shell holes — craters from artillery filled with water and made movement treacherous.\n• Rats — fed on food scraps and corpses; they spread disease and infested dugouts.\n• Lice — infested clothing and spread trench fever.\n• Trench foot — caused by standing in cold, wet conditions for long periods.\n\nThese conditions caused illness and made wounds far more likely to become infected.", difficulty:1, category:"concept"},
+  {id:"h10fc-02-3-4", islandId:"h10i-02-3", front:"Which weapons caused the injuries treated by the medical services?",
+   back:"The fighting on the Western Front used industrial weapons that caused mass casualties:\n\n• Artillery and shrapnel — shells were the biggest cause of wounds; shrapnel drove metal and dirt deep into the body.\n• Machine guns — fired hundreds of rounds a minute, cutting down advancing soldiers.\n• Rifles and snipers — caused single high-velocity wounds.\n• Poison gas — chlorine and mustard gas burned lungs, skin and eyes.\n• Going over the top — exposed soldiers to all of these as they crossed no-man's-land.\n\nThese weapons produced wounds of a scale and severity the medical services had never seen before.", difficulty:2, category:"application"},
+  {id:"h10fc-02-3-5", islandId:"h10i-02-3", front:"Why did the nature of the fighting create so many casualties?",
+   back:"The Western Front combined modern firepower with static, defensive warfare:\n\n• Trenches, barbed wire and machine guns made defence far stronger than attack.\n• Generals still ordered men to advance across open no-man's-land ('going over the top'), straight into machine-gun and artillery fire.\n• Massed artillery bombardments could fire millions of shells in a single battle.\n• Poison gas added a new and terrifying source of injury.\n\nThe result was huge numbers of severe wounds — and it was these injuries that the chain of evacuation and medical advances were developed to treat.", difficulty:2, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-02-3": [
+    {q:"Which trench ran at right angles to link the front line, support and reserve trenches?", opts:["The communication trench","The fire trench","The sap","The redoubt"], c:0,
+     e:"Communication trenches ran at right angles to the main lines, allowing men, supplies and the wounded to move between the front line, support and reserve trenches under cover."},
+    {q:"What was no-man's-land?", opts:["The open, cratered ground between the opposing front-line trenches","The area behind the reserve trench","A trench used only by officers","A safe zone agreed by both sides"], c:0,
+     e:"No-man's-land was the exposed strip between the two front lines, churned by shellfire and covered in barbed wire. Soldiers crossed it when going over the top, under machine-gun and artillery fire."},
+    {q:"Why were rats a serious problem in the trenches?", opts:["They spread disease and fed on food and corpses","They chewed through the barbed wire","They carried messages for the enemy","They were harmless but annoying"], c:0,
+     e:"Rats thrived on food scraps and the bodies of the dead. They spread disease, contaminated supplies and infested the dugouts where soldiers tried to rest."},
+    {q:"What was the single biggest cause of wounds on the Western Front?", opts:["Artillery and shrapnel from exploding shells","Bayonet charges","Hand grenades","Cavalry attacks"], c:0,
+     e:"Artillery caused the majority of wounds. Exploding shells scattered shrapnel that drove jagged metal and contaminated soil deep into the body, producing severe, infection-prone injuries."},
+    {q:"What does 'going over the top' refer to?", opts:["Climbing out of the trench to advance across no-man's-land","Repairing the trench parapet","Firing artillery over the enemy lines","Retreating to the reserve trench"], c:0,
+     e:"'Going over the top' meant climbing out of the front-line trench to attack across no-man's-land. Soldiers were exposed to machine-gun fire, artillery and gas, causing devastating casualties."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-02-3": `<h2>The Context of the Western Front</h2>
+<p>To understand the medical history of the First World War, you must first understand where and how it was fought. By the end of 1914 the Western Front had settled into a system of <strong>trenches</strong> stretching from the Channel to Switzerland.</p>
+<h3>The trench system</h3>
+<p>Trenches were dug in connected lines. The <strong>front-line trench</strong> faced the enemy; behind it lay the <strong>support trench</strong> and then the <strong>reserve trench</strong>, holding troops for a counter-attack. <strong>Communication trenches</strong> ran at right angles to link these lines, allowing men, supplies and the wounded to move under cover. Between the opposing front lines lay <strong>no-man's-land</strong> — open ground laced with barbed wire and pitted with shell holes.</p>
+<h3>Terrain and conditions</h3>
+<p>Conditions were squalid. Rain and shelling turned the ground to deep <strong>mud</strong>, and water-filled <strong>shell holes</strong> could drown a wounded man. <strong>Rats</strong> fed on scraps and corpses, lice spread trench fever, and standing in cold water caused <strong>trench foot</strong>. These conditions made every wound far more likely to become infected.</p>
+<h3>The nature of the fighting</h3>
+<p>Industrial weapons caused mass casualties. <strong>Artillery and shrapnel</strong> were the biggest cause of wounds; <strong>machine guns</strong> cut down men advancing across no-man's-land; and <strong>poison gas</strong> burned lungs, skin and eyes. When soldiers went 'over the top', they were exposed to all of these at once.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain why the conditions on the Western Front led to so many severe injuries. (8 marks)</strong></p>
+<p>One reason was the <strong>weaponry</strong>. Shrapnel from artillery shells drove jagged metal and contaminated soil deep into the body, while machine guns inflicted multiple high-velocity wounds on advancing troops.</p>
+<p>Another reason was the <strong>environment</strong>. The muddy, bacteria-rich ground meant wounds quickly became infected, and the difficulty of crossing shell-cratered terrain delayed treatment, allowing infections such as gas gangrene to set in.</p>
+<h3>Common mistake</h3>
+<p>Do not picture a single ditch. The trenches were a connected system of front-line, support, reserve and communication trenches — understanding this layout is essential for explaining how the wounded were moved and treated.</p>`
+});
+
+FLASHCARDS.push(
+  // h10i-02-4 — Sources & the Historic Environment
+  {id:"h10fc-02-4-1", islandId:"h10i-02-4", front:"What does it mean to judge how 'useful' a source is?",
+   back:"In the historic environment question, usefulness is always judged for a specific enquiry — not in general.\n\nA source is useful if it helps you answer a particular question about the Western Front. You judge usefulness by considering:\n• Provenance — its origin and purpose (who made it, when, why).\n• Content — what it actually tells you.\n\nA source can be useful even if it is biased or limited, as long as it sheds light on the enquiry. Always link your judgement back to the specific question asked.", difficulty:2, category:"concept"},
+  {id:"h10fc-02-4-2", islandId:"h10i-02-4", front:"What is provenance and why does it matter?",
+   back:"Provenance is the origin of a source — who produced it, when, where and why.\n\nKey elements:\n• Origin — the author or creator and the date (e.g. a surgeon's diary written in 1916).\n• Purpose — why it was made (to record facts, to reassure families, to train medics, as propaganda).\n\nProvenance helps you judge usefulness. For example, an army recruitment poster has a persuasive purpose, which makes it less reliable for facts but very useful for studying official attitudes.", difficulty:2, category:"concept"},
+  {id:"h10fc-02-4-3", islandId:"h10i-02-4", front:"How do you use the content of a source to judge usefulness?",
+   back:"After looking at provenance, examine what the source actually says or shows:\n\n• Identify specific details relevant to the enquiry.\n• Ask whether those details match what you already know.\n• Consider what the source leaves out.\n\nFor example, a photograph of a Casualty Clearing Station shows tents, stretchers and staff — useful for studying how surgery was organised near the front, but it cannot tell us about the soldiers' experiences or survival rates.", difficulty:2, category:"application"},
+  {id:"h10fc-02-4-4", islandId:"h10i-02-4", front:"How do you combine a source with your own knowledge?",
+   back:"A strong answer uses your own contextual knowledge to test and support the source:\n\n• Confirm — explain how your knowledge shows the source is accurate (e.g. a source mentioning the Thomas splint fits what we know about reducing femur-fracture deaths).\n• Challenge — point out where the source is incomplete or misleading.\n• Extend — add detail the source does not mention.\n\nThis shows the examiner you are evaluating the source, not just describing it.", difficulty:2, category:"application"},
+  {id:"h10fc-02-4-5", islandId:"h10i-02-4", front:"How do you identify a useful follow-up source?",
+   back:"The follow-up question asks you to plan further research. Answer in three parts:\n\n• Detail in the source you would follow up — pick something specific (e.g. a mention of blood transfusions).\n• Question you would ask — what you want to find out (e.g. how widely were transfusions used by 1918?).\n• Type of source you could use — name a sensible source (e.g. RAMC medical records or a surgeon's published memoir) and explain how it would help.\n\nThe three parts must link together logically.", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-02-4": [
+    {q:"When judging usefulness in the historic environment question, you should judge a source for...", opts:["A specific enquiry or question","Whether it is interesting","Whether it is long enough","Whether it agrees with the textbook word for word"], c:0,
+     e:"Usefulness is always judged for a specific enquiry. A source is useful if it helps answer the particular question asked about the Western Front, even if it is biased or incomplete."},
+    {q:"Which two things make up the provenance of a source?", opts:["Its origin and its purpose","Its length and its colour","Its price and its owner","Its title and its footnotes"], c:0,
+     e:"Provenance is made up of origin (who made it, when and where) and purpose (why it was made). Both help you judge how useful the source is for an enquiry."},
+    {q:"Why might a wartime recruitment poster still be useful, despite being propaganda?", opts:["Its persuasive purpose makes it useful for studying official attitudes and aims","Propaganda sources are always completely accurate","Posters contain no opinions","It proves nothing and should be ignored"], c:0,
+     e:"A biased source can still be useful. A recruitment poster's persuasive purpose makes it less reliable for facts but very useful for understanding the official message the government wanted to send."},
+    {q:"What is the best way to use your own knowledge when evaluating a source?", opts:["To confirm, challenge and extend what the source says","To replace the source with the textbook","To ignore the source completely","To copy out the source word for word"], c:0,
+     e:"You should use contextual knowledge to confirm where the source is accurate, challenge where it is incomplete or misleading, and extend it with detail it does not mention."},
+    {q:"Which three parts should a follow-up answer contain?", opts:["A detail to follow up, a question to ask, and a type of source to use","A date, a place and a name","An introduction, a middle and a conclusion","A photograph, a map and a diagram"], c:0,
+     e:"A follow-up answer identifies a specific detail in the source to investigate, the question you would ask about it, and a sensible type of source that would help you find the answer."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-02-4": `<h2>Sources &amp; the Historic Environment</h2>
+<p>The historic environment unit has a signature skill: judging how <strong>useful</strong> a source is for a specific enquiry about the Western Front. Usefulness is never judged in general — always for the particular question asked.</p>
+<h3>Using provenance</h3>
+<p><strong>Provenance</strong> is the origin and purpose of a source: who made it, when, where and why. A surgeon's diary written in 1916 has a different value from a recruitment poster. The poster's persuasive <strong>purpose</strong> makes it less reliable for facts but very useful for studying official attitudes. Always explain how the provenance affects usefulness for the enquiry.</p>
+<h3>Using content and own knowledge</h3>
+<p>Next, examine the <strong>content</strong> — the specific details the source provides — and test them against your own knowledge. A strong answer will <strong>confirm</strong> where the source is accurate, <strong>challenge</strong> where it is incomplete, and <strong>extend</strong> it with detail the source omits. This shows you are evaluating, not merely describing.</p>
+<h3>Identifying a follow-up source</h3>
+<p>The follow-up question asks you to plan further research in three linked parts: a <strong>detail</strong> from the source you would follow up, a <strong>question</strong> you would ask about it, and the <strong>type of source</strong> you would use to find out. The three parts must connect logically.</p>
+<h3>Worked example</h3>
+<p><strong>Q: How useful is Source A, a photograph of a Casualty Clearing Station, for an enquiry into the treatment of wounded soldiers? (8 marks)</strong></p>
+<p>Using <strong>content</strong>, the photograph shows tents, stretchers and medical staff, which is useful for understanding how surgery was organised close to the front line. Using <strong>own knowledge</strong>, this fits what we know about CCS units performing operations and using mobile X-ray equipment.</p>
+<p>However, considering <strong>provenance</strong>, an official photograph may have been posed or selected to reassure the public, so it cannot tell us about survival rates or the soldiers' experiences. It is therefore useful for the organisation of treatment but limited on its effectiveness.</p>
+<h3>Common mistake</h3>
+<p>Do not reject a source simply because it is biased. Bias does not make a source useless — it changes what the source is useful for. Always tie your judgement to the specific enquiry.</p>`
+});

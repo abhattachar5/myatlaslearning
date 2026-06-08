@@ -37,7 +37,22 @@ CURRICULUM.push(
    topicId:"h10t-01", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Examine the breakthroughs of Jenner, Pasteur, Koch and Fleming, and the creation of the NHS.",
    learningOutcomes:["Explain Jenner's development of the smallpox vaccination","Describe the Germ Theory of Pasteur and Koch's identification of specific bacteria","Assess the significance of penicillin and the founding of the NHS"],
-   topics:["Vaccination","Germ Theory","Penicillin and the NHS"], prerequisites:["h10i-01-2"]}
+   topics:["Vaccination","Germ Theory","Penicillin and the NHS"], prerequisites:["h10i-01-2"]},
+  {id:"h10i-01-4", name:"Public Health & Government", emoji:"🚰", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-01", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Trace the growth of public health and government intervention from cholera to the NHS.",
+   learningOutcomes:["Explain Snow, Chadwick and the Public Health Acts","Describe the Great Stink and Bazalgette's sewers","Explain the move from laissez-faire to the NHS"],
+   topics:["Cholera & Snow","Public Health Acts","Welfare state & NHS"], prerequisites:["h10i-01-3"]},
+  {id:"h10i-01-5", name:"Surgery: Anaesthetics & Antiseptics", emoji:"🔪", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-01", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain how surgery overcame the problems of pain, infection and blood loss.",
+   learningOutcomes:["Explain Simpson and chloroform","Explain Lister and antiseptics","Distinguish antiseptic and aseptic surgery"],
+   topics:["Pain","Infection","Aseptic surgery"], prerequisites:["h10i-01-3"]},
+  {id:"h10i-01-6", name:"Factors in Medical Progress", emoji:"🧩", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-01", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Analyse the synoptic factors — science, individuals, war, government, religion and chance — that drove medical progress.",
+   learningOutcomes:["Identify each factor with an example","Explain how factors combine","Apply factors to a 16-mark question"],
+   topics:["The six factors","Combining factors","Synoptic essays"], prerequisites:["h10i-01-3"]}
 );
 
 // ── Topic 2: The Western Front 1914–18 (h10t-02) ─────────────────────────────
@@ -51,7 +66,17 @@ CURRICULUM.push(
    topicId:"h10t-02", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Examine how the war drove medical innovation including blood transfusions, the Thomas splint, mobile X-rays and the RAMC chain of evacuation.",
    learningOutcomes:["Describe the chain of evacuation from the front line to base hospitals","Explain the significance of blood transfusions, the Thomas splint and the Carrel-Dakin method","Assess how far the Western Front accelerated medical progress"],
-   topics:["Chain of evacuation","Blood transfusions and the Thomas splint","Impact on medical progress"], prerequisites:["h10i-02-1"]}
+   topics:["Chain of evacuation","Blood transfusions and the Thomas splint","Impact on medical progress"], prerequisites:["h10i-02-1"]},
+  {id:"h10i-02-3", name:"The Context of the Western Front", emoji:"🪖", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-02", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Describe the trench system, terrain and nature of fighting that caused the injuries on the Western Front.",
+   learningOutcomes:["Describe the trench system","Explain the conditions and terrain","Link the fighting to the injuries treated"],
+   topics:["The trench system","Conditions","Weapons & injuries"], prerequisites:["h10i-02-1"]},
+  {id:"h10i-02-4", name:"Sources & the Historic Environment", emoji:"🔍", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-02", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Judge the usefulness of sources for an enquiry about the Western Front and follow them up.",
+   learningOutcomes:["Judge utility using provenance and content","Combine sources with own knowledge","Identify a follow-up source"],
+   topics:["Utility of sources","Provenance","Follow-up enquiry"], prerequisites:["h10i-02-1"]}
 );
 
 // ── Topic 3: Elizabethan England (h10t-03) ───────────────────────────────────
@@ -70,7 +95,22 @@ CURRICULUM.push(
    topicId:"h10t-03", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Explore the voyages of Drake and Raleigh, the defeat of the Spanish Armada and the flowering of theatre and the arts.",
    learningOutcomes:["Describe the voyages of Drake and Raleigh and their significance","Explain why the Spanish Armada was defeated in 1588","Assess the importance of theatre and the arts in Elizabethan England"],
-   topics:["Drake and Raleigh","The Spanish Armada","Elizabethan theatre"], prerequisites:["h10i-03-1"]}
+   topics:["Drake and Raleigh","The Spanish Armada","Elizabethan theatre"], prerequisites:["h10i-03-1"]},
+  {id:"h10i-03-4", name:"Poverty & the Poor Laws", emoji:"🪙", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-03", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain the causes of poverty, attitudes to the poor and the 1601 Poor Law.",
+   learningOutcomes:["Explain the causes of rising poverty","Distinguish deserving and undeserving poor","Describe the 1601 Poor Law"],
+   topics:["Causes of poverty","Attitudes & vagabonds","The 1601 Poor Law"], prerequisites:["h10i-03-1"]},
+  {id:"h10i-03-5", name:"The Spanish Armada", emoji:"⛵", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-03", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain the causes, course and consequences of the defeat of the Spanish Armada.",
+   learningOutcomes:["Explain the causes of the Armada","Describe the course and the fireships at Calais","Explain why England won"],
+   topics:["Causes","The course","Reasons for victory"], prerequisites:["h10i-03-1"]},
+  {id:"h10i-03-6", name:"The Historic Environment Site Study", emoji:"🏰", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-03", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Relate the features and purpose of a specified Elizabethan site to the wider period.",
+   learningOutcomes:["Explain how the site study works","Link features to Elizabethan developments","Use a site as evidence"],
+   topics:["The site study","Reading features","Site as evidence"], prerequisites:["h10i-03-1"]}
 );
 
 // ── Topic 4: Conflict & Tension 1919–39 (h10t-04) ───────────────────────────
@@ -89,7 +129,17 @@ CURRICULUM.push(
    topicId:"h10t-04", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Examine Hitler's foreign policy, the policy of appeasement, the Munich Agreement and the outbreak of war in 1939.",
    learningOutcomes:["Describe Hitler's key foreign-policy actions: rearmament, Rhineland, Anschluss, Sudetenland","Explain the arguments for and against appeasement","Assess why war broke out in September 1939"],
-   topics:["Hitler's aggression","Appeasement debate","Outbreak of war"], prerequisites:["h10i-04-2"]}
+   topics:["Hitler's aggression","Appeasement debate","Outbreak of war"], prerequisites:["h10i-04-2"]},
+  {id:"h10i-04-4", name:"Hopes for Peace in the 1920s", emoji:"🕊️", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-04", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain the peace efforts of the 1920s — Dawes, Locarno, Kellogg-Briand — and their limits.",
+   learningOutcomes:["Explain the Dawes Plan and Locarno","Explain the Kellogg-Briand Pact","Assess the limits of these agreements"],
+   topics:["Dawes & Locarno","Kellogg-Briand","Locarno honeymoon"], prerequisites:["h10i-04-1"]},
+  {id:"h10i-04-5", name:"Escalation to War 1938-39", emoji:"💣", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-04", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Trace the escalation from the Anschluss to the invasion of Poland.",
+   learningOutcomes:["Explain the Anschluss and Munich Agreement","Explain the occupation of Czechoslovakia and the Nazi-Soviet Pact","Explain the outbreak of war"],
+   topics:["Anschluss & Munich","Czechoslovakia & the Pact","Poland & war"], prerequisites:["h10i-04-1"]}
 );
 
 // ── Topic 5: Source Analysis Skills (h10t-05) ────────────────────────────────
@@ -141,7 +191,32 @@ CURRICULUM.push(
    topicId:"h10t-07", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Study the campaigns for the vote and fair working conditions, from the Chartists to the suffragettes and trade unions.",
    learningOutcomes:["Describe the aims and methods of the Chartists","Explain the campaigns of the suffragists (NUWSS) and suffragettes (WSPU)","Assess the impact of trade unions and the General Strike (1926) on workers' rights"],
-   topics:["The Chartists","Suffragists and suffragettes","Trade unions and the General Strike"], prerequisites:["h10i-07-2"]}
+   topics:["The Chartists","Suffragists and suffragettes","Trade unions and the General Strike"], prerequisites:["h10i-07-2"]},
+  {id:"h10i-07-4", name:"The Great Reform Act & Chartism", emoji:"🗳️", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-07", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain the 1832 Reform Act and the rise and aims of the Chartists.",
+   learningOutcomes:["Explain the causes and limits of the 1832 Reform Act","Describe the six points of the Charter","Explain why Chartism failed short-term but mattered"],
+   topics:["1832 Reform Act","The People's Charter","Chartist methods"], prerequisites:["h10i-07-1"]},
+  {id:"h10i-07-5", name:"Slavery & the Abolition Movement", emoji:"⛓️", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-07", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain the abolition of the slave trade and slavery and the campaigners who achieved it.",
+   learningOutcomes:["Describe the slave trade","Explain the abolition campaign and key figures","Explain the 1807 and 1833 Acts"],
+   topics:["The slave trade","Abolitionists","1807 & 1833 Acts"], prerequisites:["h10i-07-1"]},
+  {id:"h10i-07-6", name:"Trade Unions: Tolpuddle to the General Strike", emoji:"✊", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-07", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Trace the growth of trade unions from the Tolpuddle Martyrs to the 1926 General Strike.",
+   learningOutcomes:["Explain the Tolpuddle Martyrs","Describe the growth of unions","Explain the 1926 General Strike"],
+   topics:["Tolpuddle Martyrs","New Model Unions","1926 General Strike"], prerequisites:["h10i-07-1"]},
+  {id:"h10i-07-7", name:"Twentieth-Century Rights", emoji:"⚖️", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-07", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain the welfare state, the NHS and the campaigns for equal rights.",
+   learningOutcomes:["Explain the welfare state and NHS","Describe women's and anti-racism campaigns","Explain trade union rights"],
+   topics:["Welfare state & NHS","Equal rights","Union rights"], prerequisites:["h10i-07-1"]},
+  {id:"h10i-07-8", name:"Factors & Continuity in Protest", emoji:"🧩", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-07", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Analyse the factors driving protest and the patterns of continuity and change across the period.",
+   learningOutcomes:["Identify the factors driving protest","Explain how they combine","Analyse continuity and change"],
+   topics:["Factors","Continuity & change","Synoptic essays"], prerequisites:["h10i-07-1"]}
 );
 
 // ── Topic 8: Norman England (h10t-08) ────────────────────────────────────────
@@ -160,5 +235,15 @@ CURRICULUM.push(
    topicId:"h10t-08", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Explore the changes the Normans brought to English society, including the role of the Church and the impact on Anglo-Saxon life.",
    learningOutcomes:["Describe how the Normans changed the English Church","Explain the impact of Norman rule on Anglo-Saxon landowners and peasants","Assess the extent to which life changed for ordinary people after 1066"],
-   topics:["The Norman Church","Impact on Anglo-Saxons","Continuity and change"], prerequisites:["h10i-08-2"]}
+   topics:["The Norman Church","Impact on Anglo-Saxons","Continuity and change"], prerequisites:["h10i-08-2"]},
+  {id:"h10i-08-4", name:"Resistance & Rebellion", emoji:"⚔️", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-08", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain English resistance to the Normans and the Harrying of the North.",
+   learningOutcomes:["Describe early English resistance","Explain Hereward the Wake and the 1069-70 revolts","Explain the Harrying of the North and its impact"],
+   topics:["Early resistance","Hereward & revolts","Harrying of the North"], prerequisites:["h10i-08-1"]},
+  {id:"h10i-08-5", name:"The Historic Environment Site Study", emoji:"🏯", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h10t-08", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Relate the features and function of a specified Norman site to Norman England.",
+   learningOutcomes:["Explain how the site study works","Link castle or church features to function","Use a site as evidence"],
+   topics:["The site study","Features & function","Site as evidence"], prerequisites:["h10i-08-1"]}
 );

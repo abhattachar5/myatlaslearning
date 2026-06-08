@@ -122,3 +122,221 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Do not ignore the suffragists (NUWSS). Students often focus only on the suffragettes because their tactics were dramatic, but the suffragists' patient campaigning over decades built the broad support base that made change possible.</p>`
 });
+
+FLASHCARDS.push(
+  // h10i-07-4 — The Great Reform Act & Chartism
+  {id:"h10fc-07-4-1", islandId:"h10i-07-4", front:"What were the causes of the Great Reform Act of 1832?",
+   back:"Causes of the 1832 Reform Act:\n\n• The old system was hopelessly unfair — 'rotten boroughs' (like Old Sarum) had almost no voters but still elected MPs, while huge new industrial cities (Manchester, Birmingham, Leeds) had none.\n• The Industrial Revolution had shifted population to the towns, but representation had not changed.\n• Pressure from the growing middle class, who paid taxes but had no vote.\n• Political unions and mass meetings demanded reform.\n• Fear of revolution — the 1830 revolution in France and unrest such as the Bristol Riots (1831) frightened the government.\n• The Whigs, led by Earl Grey, championed reform.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-4-2", islandId:"h10i-07-4", front:"What did the Great Reform Act of 1832 actually change?",
+   back:"The 1832 Reform Act made important but limited changes:\n\n• Abolished 56 'rotten' and 'pocket' boroughs that had few or no voters.\n• Gave seats to new industrial towns like Manchester, Birmingham and Leeds.\n• Extended the vote to middle-class men who owned or rented property of a certain value.\n• The electorate grew from about 400,000 to about 650,000.\n\nIt redistributed seats more fairly and gave the industrial middle class a political voice for the first time.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-4-3", islandId:"h10i-07-4", front:"What were the limitations of the 1832 Reform Act?",
+   back:"The 1832 Act was a disappointment to many:\n\n• Only about one in five adult men could vote — the property qualification excluded the working class entirely.\n• Women remained completely excluded (the Act used the word 'male' explicitly for the first time).\n• Voting was still done in public (no secret ballot), so bribery and intimidation continued.\n• Many small boroughs survived.\n\nThe working classes felt betrayed, having supported the campaign expecting wider change. This anger fed directly into the rise of Chartism.", difficulty:2, category:"application"},
+  {id:"h10fc-07-4-4", islandId:"h10i-07-4", front:"What were the six points of the People's Charter?",
+   back:"The People's Charter (1838) set out six demands:\n1. Universal male suffrage — votes for all men over 21.\n2. A secret ballot.\n3. No property qualification to become an MP.\n4. Payment of MPs (so working men could afford to serve).\n5. Equal-sized constituencies.\n6. Annual parliaments (elections every year).\n\nThe Chartists believed political power was the key to improving working-class lives. Five of the six points were eventually achieved — only annual parliaments was never adopted.", difficulty:1, category:"definition"},
+  {id:"h10fc-07-4-5", islandId:"h10i-07-4", front:"What methods did the Chartists use and why did they fail in the short term?",
+   back:"Methods:\n• Mass petitions — three huge national petitions (1839, 1842, 1848) carrying millions of signatures were presented to Parliament.\n• Mass meetings and rallies, such as the Kennington Common gathering of 1848.\n• 'Moral force' Chartists (William Lovett) favoured peaceful persuasion; 'physical force' Chartists (Feargus O'Connor) hinted at violence (e.g. the Newport Rising, 1839).\n\nShort-term failure:\n• Parliament rejected all three petitions.\n• The movement was divided over tactics and leadership.\n• Improving economic conditions after 1848 reduced support.\n\nLong-term, it mattered: five of the six points later became law and it built a tradition of organised working-class politics.", difficulty:2, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-07-4": [
+    {q:"What was a 'rotten borough'?", opts:["A constituency with very few voters that still elected MPs","A town that had lost the right to vote","A borough controlled by the working class","A new industrial city without representation"], c:0,
+     e:"A rotten borough, such as Old Sarum, had hardly any voters yet still sent MPs to Parliament, while booming industrial cities had none. The 1832 Reform Act abolished many of these."},
+    {q:"Roughly what proportion of adult men could vote after the 1832 Reform Act?", opts:["About one in five","About four in five","All of them","About one in two"], c:0,
+     e:"Even after 1832, only around one in five adult men could vote because of the property qualification. The working class was excluded entirely, which caused great disappointment."},
+    {q:"Which group felt most betrayed by the 1832 Reform Act?", opts:["The working class, who gained nothing from it","The middle class, who gained the vote","The aristocracy","Factory owners"], c:0,
+     e:"The working class had supported the reform campaign but gained no vote, since the new qualification was based on property. This sense of betrayal fed directly into the rise of Chartism."},
+    {q:"Which of the six points of the People's Charter was NEVER adopted?", opts:["Annual parliaments","A secret ballot","Payment of MPs","Universal male suffrage"], c:0,
+     e:"Five of the six Chartist demands eventually became law. Only annual parliaments — elections every year — was never adopted, as it was seen as impractical."},
+    {q:"Why did Chartism matter in the long term despite its short-term failure?", opts:["Five of its six demands eventually became law and it built a tradition of working-class politics","It immediately won all six demands","It overthrew the government","It ended the property qualification in 1848"], c:0,
+     e:"Although Parliament rejected all three petitions and the movement faded after 1848, five of the six points were later achieved, and Chartism established a lasting tradition of organised working-class political campaigning."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-07-4": `<h2>The Great Reform Act &amp; Chartism</h2>
+<p>The early 19th century saw growing demands to reform an electoral system that had not kept pace with the Industrial Revolution.</p>
+<h3>The Great Reform Act (1832)</h3>
+<p>Before 1832, the system was deeply unfair. <strong>Rotten boroughs</strong> such as Old Sarum had almost no voters but still elected MPs, while huge new cities like <strong>Manchester</strong> and <strong>Birmingham</strong> had none. Pressure from the middle class, mass political unions and the <strong>fear of revolution</strong> after events in France pushed Earl Grey's Whig government to act. The Act abolished 56 rotten boroughs, gave seats to industrial towns and extended the vote to middle-class property owners, raising the electorate from about 400,000 to 650,000.</p>
+<h3>The limitations</h3>
+<p>The Act was a bitter disappointment to many. Only about <strong>one in five</strong> adult men could now vote; the working class was excluded by the property qualification, women were explicitly barred, and there was still no secret ballot. This sense of betrayal fed directly into Chartism.</p>
+<h3>Chartism</h3>
+<p>The <strong>Chartists</strong> demanded reform through the <strong>People's Charter</strong> (1838) and its six points: universal male suffrage, a secret ballot, no property qualification for MPs, payment of MPs, equal constituencies and annual parliaments. They used <strong>mass petitions</strong> (1839, 1842, 1848) and huge meetings. Parliament rejected all three petitions and the movement, divided between 'moral force' and 'physical force' wings, faded after 1848.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain why the 1832 Reform Act led to the rise of Chartism. (8 marks)</strong></p>
+<p>The Reform Act raised expectations among the working class, who had campaigned for it expecting to gain the vote. When the Act based the franchise on <strong>property ownership</strong>, they were excluded and felt <strong>betrayed</strong>. This anger convinced many that only a dedicated working-class movement could win real political rights, leading them to organise around the People's Charter.</p>
+<p>Chartism therefore grew directly out of the <strong>disappointment</strong> of 1832, channelling working-class frustration into a national campaign for democratic reform.</p>
+<h3>Common mistake</h3>
+<p>Do not call the 1832 Act 'democratic'. It extended the vote only to middle-class men with property; the vast majority of the population still could not vote, and it was the limits of the Act, not its successes, that fuelled later protest.</p>`
+});
+
+FLASHCARDS.push(
+  // h10i-07-5 — Slavery & the Abolition Movement
+  {id:"h10fc-07-5-1", islandId:"h10i-07-5", front:"What was the transatlantic slave trade?",
+   back:"The transatlantic slave trade was the forced transportation of enslaved Africans across the Atlantic, mainly in the 17th and 18th centuries.\n\nIt operated as a 'triangular trade':\n• Ships carried manufactured goods from Britain to West Africa.\n• Enslaved Africans were transported across the Atlantic — the 'Middle Passage' — to the Americas.\n• Sugar, tobacco and cotton produced by slave labour were shipped back to Britain.\n\nBritain became one of the largest slave-trading nations. The trade brought enormous wealth to ports such as Bristol and Liverpool, but at the cost of millions of African lives.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-5-2", islandId:"h10i-07-5", front:"What were conditions like on the Middle Passage?",
+   back:"The Middle Passage was the brutal sea voyage from West Africa to the Americas:\n\n• Enslaved people were packed tightly below deck, chained together with little room to move.\n• Disease, dehydration and starvation were widespread.\n• Sanitation was almost non-existent, spreading dysentery and other illnesses.\n• Many died; bodies were thrown overboard.\n• Some enslaved people resisted through revolt or by refusing food; some chose to die.\n\nIt is estimated that around one in five enslaved Africans died during the crossing. The horrors of the Middle Passage became central to abolitionist campaigning.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-5-3", islandId:"h10i-07-5", front:"Who were the key figures in the abolition movement?",
+   back:"Key abolitionists:\n\n• William Wilberforce — MP who led the parliamentary campaign against the slave trade for decades.\n• Olaudah Equiano — a formerly enslaved African whose published autobiography (1789) exposed the horrors of slavery to a wide audience.\n• Thomas Clarkson — researcher and campaigner who gathered evidence, collected equipment (like shackles) and toured the country building support.\n• Granville Sharp — a lawyer who fought legal cases on behalf of enslaved people (e.g. the Somerset case, 1772).\n\nThey worked through Parliament, petitions, books and public meetings to turn opinion against slavery.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-5-4", islandId:"h10i-07-5", front:"What did the 1807 Act and the 1833 Act achieve?",
+   back:"Two key laws ended British involvement in slavery:\n\n• 1807 — The Abolition of the Slave Trade Act made it illegal to buy and sell enslaved people within the British Empire. However, those already enslaved remained in bondage.\n• 1833 — The Slavery Abolition Act abolished slavery itself throughout most of the British Empire, freeing around 800,000 enslaved people (though through a transitional 'apprenticeship' system, and with compensation paid to slave owners, not the enslaved).\n\nWilberforce died in 1833, just days after hearing the Abolition Act would pass.", difficulty:2, category:"application"},
+  {id:"h10fc-07-5-5", islandId:"h10i-07-5", front:"What methods did the abolition campaign use?",
+   back:"The abolition movement pioneered modern campaigning methods:\n\n• Petitions — hundreds of thousands of signatures were presented to Parliament.\n• Eyewitness evidence — Clarkson collected testimony and objects to expose the trade's cruelty.\n• Books and pamphlets — Equiano's autobiography reached a mass readership.\n• Public meetings and lectures across the country.\n• A consumer boycott of slave-grown sugar.\n• Powerful imagery, such as the Wedgwood medallion ('Am I not a man and a brother?').\n• Parliamentary pressure led by Wilberforce.\n\nThis combination of moral argument and mass mobilisation slowly shifted public and political opinion.", difficulty:2, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-07-5": [
+    {q:"What was the 'Middle Passage'?", opts:["The sea voyage transporting enslaved Africans across the Atlantic","The route ships took from Britain to West Africa","The journey of goods back to Britain","A trade route through the Mediterranean"], c:0,
+     e:"The Middle Passage was the brutal Atlantic crossing on which enslaved Africans were packed below deck in appalling conditions. Around one in five died during the voyage."},
+    {q:"Who was Olaudah Equiano?", opts:["A formerly enslaved African whose autobiography exposed slavery's horrors","An MP who led the parliamentary campaign","A lawyer who fought legal cases against slavery","A ship owner from Liverpool"], c:0,
+     e:"Olaudah Equiano was formerly enslaved and published an influential autobiography in 1789. His first-hand account brought the realities of slavery to a wide British readership."},
+    {q:"What did the 1807 Act achieve?", opts:["It made buying and selling enslaved people illegal in the British Empire","It freed all enslaved people immediately","It abolished slavery throughout the world","It compensated formerly enslaved people"], c:0,
+     e:"The 1807 Abolition of the Slave Trade Act banned the trade in enslaved people, but those already enslaved remained in bondage until the 1833 Slavery Abolition Act."},
+    {q:"Which abolitionist led the parliamentary campaign against the slave trade?", opts:["William Wilberforce","Thomas Clarkson","Granville Sharp","Olaudah Equiano"], c:0,
+     e:"William Wilberforce, an MP, led the decades-long parliamentary campaign. He died in 1833, just days after learning the Slavery Abolition Act would pass."},
+    {q:"What was controversial about the 1833 Slavery Abolition Act?", opts:["Compensation was paid to slave owners, not to the enslaved, and freedom came through an 'apprenticeship' system","It freed no one","It applied only to Britain, not the Empire","It was never actually passed"], c:0,
+     e:"The 1833 Act freed around 800,000 people but did so through a transitional apprenticeship system, and the government compensated the slave owners for their financial loss rather than the people who had been enslaved."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-07-5": `<h2>Slavery &amp; the Abolition Movement</h2>
+<p>For over two centuries Britain profited from the <strong>transatlantic slave trade</strong> before a powerful campaign brought about its abolition.</p>
+<h3>The slave trade and its conditions</h3>
+<p>The trade operated as a <strong>triangular</strong> system: goods went from Britain to West Africa, enslaved Africans were carried across the Atlantic, and slave-grown sugar, tobacco and cotton returned to Britain. The Atlantic crossing — the <strong>Middle Passage</strong> — was horrific: people were chained below deck in filthy, overcrowded conditions, and around one in five died. The trade brought wealth to ports like Bristol and Liverpool at an appalling human cost.</p>
+<h3>The abolition campaign</h3>
+<p>A determined movement turned opinion against slavery. <strong>William Wilberforce</strong> led the parliamentary campaign; <strong>Thomas Clarkson</strong> gathered evidence and toured the country; <strong>Olaudah Equiano</strong>, formerly enslaved, exposed the trade in his autobiography; and <strong>Granville Sharp</strong> fought legal cases. They used petitions, pamphlets, public meetings and a boycott of slave-grown sugar.</p>
+<h3>The key laws</h3>
+<p>The <strong>1807</strong> Abolition of the Slave Trade Act banned buying and selling enslaved people in the Empire. The <strong>1833</strong> Slavery Abolition Act abolished slavery itself, freeing around 800,000 people — though through an apprenticeship system and with compensation paid to owners, not the enslaved.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain why the slave trade was abolished in 1807. (8 marks)</strong></p>
+<p>One reason was the <strong>moral campaign</strong>. Abolitionists like Wilberforce and Clarkson used petitions, books and eyewitness evidence to expose the cruelty of the trade, shifting public opinion against it. Equiano's autobiography gave the campaign a powerful first-hand voice.</p>
+<p>Economic change also played a part, as some argued the trade was becoming less profitable. However, the sustained <strong>parliamentary pressure</strong> and mass public mobilisation were decisive in persuading Parliament to act in 1807.</p>
+<h3>Common mistake</h3>
+<p>Do not confuse the two Acts. The <strong>1807</strong> Act ended the slave <em>trade</em>; slavery itself continued until the <strong>1833</strong> Act. Mixing these dates up is a common and costly error in the exam.</p>`
+});
+
+FLASHCARDS.push(
+  // h10i-07-6 — Trade Unions: Tolpuddle to the General Strike
+  {id:"h10fc-07-6-1", islandId:"h10i-07-6", front:"Who were the Tolpuddle Martyrs and what happened to them?",
+   back:"The Tolpuddle Martyrs were six farm labourers from the village of Tolpuddle in Dorset.\n\n• In 1834, led by George Loveless, they formed a 'friendly society' (an early union) to protest against falling agricultural wages.\n• They swore a secret oath of loyalty.\n• The authorities, fearful of unrest, used an obscure law against secret oaths to convict them.\n• They were sentenced to seven years' transportation to Australia.\n\nThe harsh punishment provoked huge public outrage. A massive petition (around 800,000 signatures) and demonstrations forced the government to pardon them in 1836.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-6-2", islandId:"h10i-07-6", front:"Why are the Tolpuddle Martyrs significant?",
+   back:"The Tolpuddle Martyrs became powerful symbols of the trade union movement:\n\n• Their case showed the lengths the authorities would go to in order to crush early unions.\n• The mass campaign for their pardon demonstrated the power of organised public protest.\n• Their pardon (1836) was an early victory for the union cause.\n• They became martyrs and an inspiration for later trade unionists.\n\nThey are still commemorated by the trade union movement today. Their story illustrates the repression early unions faced and the importance of public solidarity.", difficulty:2, category:"application"},
+  {id:"h10fc-07-6-3", islandId:"h10i-07-6", front:"How did trade unions grow and become legal?",
+   back:"Trade unions developed gradually through the 19th century:\n\n• Early unions were repressed (the Combination Acts banned them until 1824).\n• The Tolpuddle case (1834) showed continued hostility.\n• 'New Model Unions' emerged from the 1850s — skilled, well-organised craft unions (like the Amalgamated Society of Engineers, 1851) that were respectable, charged subscriptions and avoided strikes where possible.\n• The 1871 Trade Union Act gave unions full legal recognition.\n• Later, 'New Unionism' (from the 1880s) organised unskilled workers, such as the successful 1889 London Dock Strike.\n\nUnions steadily won the right to organise, bargain and strike.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-6-4", islandId:"h10i-07-6", front:"What were the causes of the General Strike of 1926?",
+   back:"Causes of the General Strike:\n\n• The coal industry was in crisis — falling prices and exports after WWI.\n• Mine owners wanted to cut miners' wages and increase their hours.\n• The miners' slogan was 'Not a penny off the pay, not a minute on the day'.\n• A government subsidy (1925) only delayed the crisis (the so-called 'Red Friday').\n• The Samuel Commission recommended wage cuts.\n• When talks broke down in 1926, the TUC (Trades Union Congress) called a general strike in support of the miners.\n\nThe dispute was rooted in the long decline of British heavy industry and the clash between owners and workers.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-6-5", islandId:"h10i-07-6", front:"What happened during the General Strike and what was its outcome?",
+   back:"Events and outcome of the General Strike (4–12 May 1926):\n\n• The TUC called out around 1.7 million workers in key industries — transport, docks, gas, electricity and printing.\n• The government was well prepared: it used volunteers, troops and the BBC to keep essential services running.\n• Middle-class volunteers drove buses and trains.\n• After just nine days the TUC called off the strike, fearing it was failing and could be seen as unconstitutional.\n• The miners fought on alone until November but were forced back on worse terms.\n• The 1927 Trade Disputes Act made general and sympathetic strikes illegal.\n\nThe strike was a major defeat for the unions.", difficulty:2, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-07-6": [
+    {q:"Why were the Tolpuddle Martyrs convicted in 1834?", opts:["For swearing a secret oath when forming a union","For going on strike illegally","For attacking mine owners","For refusing to pay taxes"], c:0,
+     e:"The six Dorset labourers were convicted under an obscure law against secret oaths after forming a friendly society. They were sentenced to seven years' transportation to Australia."},
+    {q:"How were the Tolpuddle Martyrs eventually freed?", opts:["A massive public petition and demonstrations forced the government to pardon them","They escaped from Australia","They served their full sentence","The union paid a fine"], c:0,
+     e:"A petition of around 800,000 signatures and widespread demonstrations created such pressure that the government pardoned them in 1836, making them symbols of the union movement."},
+    {q:"What were 'New Model Unions'?", opts:["Skilled craft unions from the 1850s that were respectable and avoided strikes where possible","Unions of unskilled dockworkers","Illegal secret societies","Unions controlled by the government"], c:0,
+     e:"New Model Unions, such as the Amalgamated Society of Engineers (1851), were well-organised skilled craft unions that charged subscriptions, offered benefits and sought respectability, helping unions gain acceptance."},
+    {q:"What was the miners' slogan during the lead-up to the General Strike?", opts:["'Not a penny off the pay, not a minute on the day'","'Deeds not words'","'Liberty or death'","'Bread and freedom'"], c:0,
+     e:"The miners' slogan 'Not a penny off the pay, not a minute on the day' summed up their refusal to accept the wage cuts and longer hours demanded by the mine owners."},
+    {q:"What was the outcome of the General Strike of 1926?", opts:["The TUC called it off after nine days and it was a major defeat for the unions","The miners won all their demands","The government fell","Trade unions were made illegal"], c:0,
+     e:"The well-prepared government kept services running with volunteers and troops. The TUC called off the strike after nine days; the miners were eventually forced back on worse terms, and the 1927 Trade Disputes Act restricted future strikes."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-07-6": `<h2>Trade Unions: Tolpuddle to the General Strike</h2>
+<p>Across the 19th and early 20th centuries, working people organised into <strong>trade unions</strong> to win better pay and conditions — often in the face of fierce opposition.</p>
+<h3>The Tolpuddle Martyrs (1834)</h3>
+<p>Six Dorset farm labourers, led by <strong>George Loveless</strong>, formed a society to resist wage cuts and swore a secret oath of loyalty. The authorities, fearful of unrest, used an obscure law against secret oaths to sentence them to <strong>seven years' transportation</strong> to Australia. The punishment provoked outrage: a petition of around 800,000 signatures and mass demonstrations forced the government to pardon them in 1836. They became enduring symbols of the union cause.</p>
+<h3>Growth and legalisation</h3>
+<p>Early unions had been repressed, but from the 1850s respectable <strong>New Model Unions</strong> of skilled workers (such as the Amalgamated Society of Engineers) gained acceptance. The <strong>1871 Trade Union Act</strong> gave unions legal recognition, and 'New Unionism' from the 1880s organised unskilled workers too.</p>
+<h3>The General Strike (1926)</h3>
+<p>When mine owners demanded lower wages and longer hours, the miners refused: 'Not a penny off the pay, not a minute on the day'. The <strong>TUC</strong> called out around 1.7 million workers in May 1926. The government, well prepared, used volunteers and troops to keep services running. After just <strong>nine days</strong> the TUC called off the strike; the miners were eventually forced back on worse terms, and the 1927 Trade Disputes Act restricted future strikes.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain why the General Strike of 1926 failed. (8 marks)</strong></p>
+<p>One key reason was the <strong>government's preparation</strong>. It had stockpiled supplies and organised volunteers, troops and the BBC to keep essential services running, so the strike caused less disruption than the unions hoped.</p>
+<p>A second reason was <strong>division and caution within the TUC</strong>. Many leaders feared the strike was unconstitutional and worried about its consequences, so they called it off after only nine days, leaving the miners isolated and ensuring defeat.</p>
+<h3>Common mistake</h3>
+<p>Do not confuse the General Strike with a victory for workers. It was a significant <strong>defeat</strong>: the miners gained nothing, returned on worse terms, and the 1927 Act restricted future strike action.</p>`
+});
+
+FLASHCARDS.push(
+  // h10i-07-7 — Twentieth-Century Rights
+  {id:"h10fc-07-7-1", islandId:"h10i-07-7", front:"What were the Liberal welfare reforms (1906–14)?",
+   back:"The Liberal welfare reforms laid the foundations of the welfare state:\n\n• Free school meals (1906) and medical inspections for children.\n• Old Age Pensions (1908) — a small weekly pension for people over 70.\n• Labour Exchanges (1909) — to help the unemployed find work.\n• The National Insurance Act (1911) — provided sickness and unemployment benefits funded by contributions from workers, employers and the state.\n\nThese reforms marked a shift away from the idea that poverty was the individual's own fault, accepting that the state had a duty to help the vulnerable.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-7-2", islandId:"h10i-07-7", front:"How and why was the NHS founded in 1948?",
+   back:"The National Health Service (NHS) was founded in 1948:\n\n• It was created by the post-war Labour government, with Health Minister Aneurin (Nye) Bevan as its driving force.\n• It provided healthcare 'free at the point of use', funded by taxation.\n• It was inspired by the Beveridge Report (1942), which identified 'disease' as one of the 'five giants' to defeat.\n• The shared sacrifice of WWII created public demand for a fairer society.\n\nBevan had to overcome opposition from many doctors. The NHS became one of Britain's most important institutions, transforming access to healthcare for ordinary people.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-7-3", islandId:"h10i-07-7", front:"What was the welfare state created after 1945?",
+   back:"After 1945 the Labour government built a comprehensive welfare state, guided by the Beveridge Report (1942), which aimed to defeat the 'five giants': want, disease, ignorance, squalor and idleness.\n\nKey measures:\n• National Insurance Act (1946) — benefits for sickness, unemployment and retirement.\n• National Health Service (1948) — free healthcare.\n• National Assistance Act (1948) — support for those not covered by insurance.\n• Council house building to tackle poor housing.\n• Free secondary education (following the 1944 Education Act).\n\nThe welfare state aimed to support citizens 'from cradle to grave'.", difficulty:2, category:"concept"},
+  {id:"h10fc-07-7-4", islandId:"h10i-07-7", front:"What were the key campaigns for women's equal rights in the 20th century?",
+   back:"After winning the vote, women campaigned for wider equality:\n\n• The 1968 Ford Dagenham sewing machinists' strike demanded equal pay for women workers.\n• The Equal Pay Act (1970) made it illegal to pay women less than men for the same work.\n• The Sex Discrimination Act (1975) banned discrimination on grounds of sex in employment, education and services.\n• The Equal Opportunities Commission was set up to enforce these rights.\n\nThese reforms were driven by the women's liberation movement and by trade union action, though true equality in pay and opportunity remained a continuing struggle.", difficulty:2, category:"application"},
+  {id:"h10fc-07-7-5", islandId:"h10i-07-7", front:"How did Britain tackle racial discrimination in the 20th century?",
+   back:"Post-war immigration, including the arrival of the Windrush generation from 1948, made race relations a major issue.\n\nKey developments:\n• The Notting Hill riots (1958) highlighted racial tension.\n• The Bristol Bus Boycott (1963), led by Paul Stephenson, protested against a refusal to employ black or Asian bus crews and helped change attitudes.\n• The Race Relations Acts (1965, 1968 and 1976) made racial discrimination illegal in public places, housing and employment.\n• The Commission for Racial Equality was established to enforce the law.\n\nTrade unions and civil rights campaigners played an important role in pressing for these changes.", difficulty:2, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-07-7": [
+    {q:"What did the National Insurance Act of 1911 provide?", opts:["Sickness and unemployment benefits funded by contributions","Free healthcare for everyone","Old age pensions only","Free university education"], c:0,
+     e:"The 1911 National Insurance Act provided sickness and unemployment benefits funded by contributions from workers, employers and the state — a key Liberal welfare reform."},
+    {q:"Who was the Health Minister responsible for founding the NHS in 1948?", opts:["Aneurin (Nye) Bevan","William Beveridge","Clement Attlee","David Lloyd George"], c:0,
+     e:"Aneurin Bevan, Health Minister in the post-war Labour government, was the driving force behind the NHS, which provided healthcare free at the point of use from 1948."},
+    {q:"Which report identified the 'five giants' and inspired the welfare state?", opts:["The Beveridge Report (1942)","The Samuel Commission","The Grand Remonstrance","The People's Charter"], c:0,
+     e:"The Beveridge Report (1942) identified want, disease, ignorance, squalor and idleness as the 'five giants' to defeat, shaping the post-war welfare state."},
+    {q:"What did the Equal Pay Act of 1970 establish?", opts:["That women must be paid the same as men for the same work","That women could vote on equal terms","That discrimination in housing was illegal","That all workers must join a union"], c:0,
+     e:"The 1970 Equal Pay Act, prompted partly by the 1968 Ford Dagenham strike, made it illegal to pay women less than men for doing the same work."},
+    {q:"What was the significance of the Bristol Bus Boycott of 1963?", opts:["It protested against racial discrimination in employment and helped change attitudes","It was a strike over miners' pay","It demanded votes for women","It ended the slave trade"], c:0,
+     e:"The Bristol Bus Boycott, led by Paul Stephenson, protested against the refusal to employ black or Asian bus crews. It helped shift opinion and contributed to the later Race Relations Acts."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-07-7": `<h2>Twentieth-Century Rights</h2>
+<p>The 20th century saw the state take on a far greater role in protecting citizens' welfare and rights.</p>
+<h3>The Liberal reforms and the welfare state</h3>
+<p>The <strong>Liberal welfare reforms</strong> (1906–14) — free school meals, old age pensions (1908) and the National Insurance Act (1911) — marked the beginning of state responsibility for the vulnerable. After WWII, the <strong>Beveridge Report</strong> (1942) inspired a comprehensive <strong>welfare state</strong> to defeat the 'five giants' of want, disease, ignorance, squalor and idleness, supporting citizens 'from cradle to grave'.</p>
+<h3>The founding of the NHS (1948)</h3>
+<p>The post-war Labour government, with <strong>Aneurin Bevan</strong> as Health Minister, created the <strong>National Health Service</strong> in 1948, providing healthcare free at the point of use and funded by taxation. It transformed access to medicine for ordinary people and remains one of Britain's most valued institutions.</p>
+<h3>Equal rights campaigns</h3>
+<p>Women campaigned for economic equality: the 1968 Ford Dagenham strike led to the <strong>Equal Pay Act (1970)</strong>, followed by the Sex Discrimination Act (1975). Anti-racism campaigns, including the <strong>Bristol Bus Boycott (1963)</strong>, helped bring about the <strong>Race Relations Acts</strong> (1965, 1968, 1976). <strong>Trade unions</strong> supported many of these campaigns, linking workplace rights to wider equality.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain the significance of the founding of the NHS in 1948. (8 marks)</strong></p>
+<p>The NHS was significant because it made healthcare <strong>free at the point of use</strong> for everyone, regardless of wealth. For the first time, ordinary families could see a doctor or receive hospital treatment without fear of the cost, dramatically improving public health.</p>
+<p>It also marked a wider shift in the role of <strong>government</strong>, confirming that the state had a duty to care for its citizens. As a central pillar of the welfare state, the NHS became a model admired around the world.</p>
+<h3>Common mistake</h3>
+<p>Do not say the NHS or welfare state ended all poverty or inequality. They greatly improved living standards, but problems remained, and rights such as equal pay required continued campaigning for decades afterwards.</p>`
+});
+
+FLASHCARDS.push(
+  // h10i-07-8 — Factors & Continuity in Protest
+  {id:"h10fc-07-8-1", islandId:"h10i-07-8", front:"How have individuals driven protest and change across the period?",
+   back:"Key individuals shaped many of the major movements c1170–present:\n\n• Simon de Montfort — summoned an early parliament (1265).\n• William Wilberforce — led the abolition campaign.\n• The Tolpuddle Martyrs and trade union leaders.\n• Emmeline Pankhurst and Millicent Fawcett — women's suffrage.\n• Aneurin Bevan — the NHS.\n• Paul Stephenson — the Bristol Bus Boycott.\n\nIndividuals could inspire, organise and lead, but they usually succeeded only when wider factors — ideas, the economy, war or government — created the right conditions for change.", difficulty:2, category:"application"},
+  {id:"h10fc-07-8-2", islandId:"h10i-07-8", front:"How have ideas driven protest across the period?",
+   back:"Powerful ideas inspired demands for rights and change:\n\n• Medieval ideas of justice and custom underpinned Magna Carta and the Peasants' Revolt (John Ball's preaching).\n• Religious ideas (Puritanism) shaped the Civil War.\n• Enlightenment ideas of liberty and rights influenced abolition and reform campaigns.\n• Democratic ideas drove Chartism and the suffrage movement.\n• Ideas of equality and social justice shaped the welfare state and civil rights campaigns.\n\nAcross the whole period, the spread of ideas — often through preaching, printing and the press — gave protesters a language and justification for change.", difficulty:2, category:"application"},
+  {id:"h10fc-07-8-3", islandId:"h10i-07-8", front:"How have war and the economy driven change?",
+   back:"War and the economy were recurring drivers of protest and reform:\n\nWar:\n• Military failure in France pressured King John into Magna Carta.\n• The Civil War transformed Crown–Parliament relations.\n• WWI helped women win the vote; WWII created demand for the welfare state and NHS.\n\nThe economy:\n• The Black Death and labour shortages caused the Peasants' Revolt.\n• Industrialisation drove demands for the 1832 Reform Act and Chartism.\n• Economic decline triggered the General Strike (1926).\n\nWar often acted as a catalyst, while economic change altered the balance of power between groups in society.", difficulty:3, category:"application"},
+  {id:"h10fc-07-8-4", islandId:"h10i-07-8", front:"How has the role of government changed across the period?",
+   back:"Government acted both as a target of protest and as an agent of change:\n\n• Medieval and Stuart monarchs resisted demands, provoking Magna Carta and the Civil War.\n• 19th-century governments slowly conceded reform (1832 Act) under pressure but also repressed protest (Tolpuddle, Peterloo).\n• In the 20th century, government became a driver of rights — the Liberal reforms, the welfare state, the NHS and anti-discrimination laws.\n\nOver time, the role of government shifted from defending the established order to actively extending rights and welfare, though often only after sustained pressure from below.", difficulty:3, category:"application"},
+  {id:"h10fc-07-8-5", islandId:"h10i-07-8", front:"What patterns of continuity and change run through the struggle for rights?",
+   back:"Across c1170–present several patterns stand out:\n\nContinuity:\n• Ordinary people repeatedly organised to challenge those in power.\n• Protest often combined petitions, meetings and, at times, violence.\n• Change usually came slowly and after setbacks.\n\nChange:\n• Power gradually shifted from the monarch to Parliament and then to the wider people.\n• The franchise expanded from a tiny elite to (almost) all adults.\n• The role of the state grew to include protecting welfare and rights.\n\nThe overall direction was towards greater rights and representation, but progress was uneven and often hard-won.", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "h10i-07-8": [
+    {q:"Which factor best explains why WWI helped women win the vote in 1918?", opts:["War acted as a catalyst, as women's war work changed attitudes","Individuals alone forced the change","Ideas of democracy were new in 1918","The economy was irrelevant to suffrage"], c:0,
+     e:"War often acted as a catalyst. Women's war work (1914–18) proved their capability and made it politically difficult to deny them the vote, showing how war could speed up change."},
+    {q:"How did the economy help cause both the Peasants' Revolt and Chartism?", opts:["Economic change (labour shortages, then industrialisation) shifted power and fuelled demands","Both were caused only by individual leaders","Neither was linked to the economy","The economy only mattered in the 20th century"], c:0,
+     e:"The Black Death created labour shortages behind the Peasants' Revolt, while industrialisation drove the demand for reform behind 1832 and Chartism. Economic change repeatedly altered the balance of power."},
+    {q:"How did the role of government change across the period?", opts:["From defending the established order to actively extending rights and welfare","From extending rights to opposing all reform","It never changed at all","From democratic to absolute monarchy"], c:0,
+     e:"Early monarchs resisted demands, provoking conflict. By the 20th century, government became a driver of change through the welfare state, NHS and anti-discrimination laws — though usually after pressure from below."},
+    {q:"Which of these is an example of CONTINUITY in the struggle for rights?", opts:["Ordinary people repeatedly organising to challenge those in power","The monarch gaining absolute power over time","The franchise shrinking across the period","The state withdrawing from welfare"], c:0,
+     e:"A key continuity is that ordinary people repeatedly organised — through petitions, meetings and sometimes violence — to challenge authority, from the Peasants' Revolt to 20th-century rights campaigns."},
+    {q:"Why does AQA describe these factors as a 'synoptic' thread?", opts:["Because students must link factors like individuals, ideas, war, economy and government across the whole period","Because only one factor ever mattered","Because the factors apply only to the 20th century","Because the factors never overlap"], c:0,
+     e:"The synoptic element requires students to connect causes across the whole period c1170–present, showing how individuals, ideas, war, the economy and government combined to drive protest and change."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h10i-07-8": `<h2>Factors &amp; Continuity in Protest</h2>
+<p>This is the <strong>synoptic</strong> part of the thematic study: rather than learning one event, you must trace the <strong>factors</strong> that drove protest and change across the whole period c1170–present.</p>
+<h3>The five factors</h3>
+<p><strong>Individuals</strong> — leaders like Wilberforce, Pankhurst and Bevan inspired and organised movements. <strong>Ideas</strong> — from medieval notions of justice to Enlightenment liberty and modern equality — gave protesters a justification for change. <strong>War</strong> often acted as a catalyst: military failure produced Magna Carta, and the two World Wars advanced women's rights and the welfare state. The <strong>economy</strong> repeatedly shifted power, from the Black Death behind the Peasants' Revolt to industrialisation behind Chartism. <strong>Government</strong> was both a target of protest and, increasingly, a driver of reform.</p>
+<h3>Continuity and change</h3>
+<p>Important <strong>continuities</strong> run through the period: ordinary people repeatedly organised to challenge authority, usually through petitions, meetings and sometimes violence, and change generally came slowly and after setbacks. The key <strong>changes</strong> were the gradual shift of power from the monarch to Parliament and then to the wider people, the expansion of the franchise from a tiny elite to nearly all adults, and the growing role of the state in protecting rights and welfare.</p>
+<h3>Worked example</h3>
+<p><strong>Q: 'Individuals were the main factor driving change in the struggle for rights.' How far do you agree? (16 marks)</strong></p>
+<p>Individuals clearly mattered: Wilberforce led abolition and Bevan founded the NHS. However, individuals usually succeeded only when <strong>other factors</strong> created the right conditions. Wilberforce relied on a mass movement and shifting ideas; Bevan depended on the impact of <strong>war</strong> and the demand for a fairer society after 1945.</p>
+<p>Across the period, <strong>war and the economy</strong> were often more decisive in creating the opportunity for change, with individuals shaping how that opportunity was used. The best answer therefore argues that no single factor dominated — change came from factors working <strong>together</strong>.</p>
+<h3>Common mistake</h3>
+<p>Do not simply list events. Synoptic questions reward <strong>linking factors across the whole period</strong> and comparing their importance, not retelling each protest in turn.</p>`
+});

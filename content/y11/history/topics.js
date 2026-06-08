@@ -35,7 +35,22 @@ CURRICULUM.push(
    topicId:"h11t-01", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Examine how Hitler became dictator, Nazi methods of control, life in Nazi Germany and the persecution of minorities.",
    learningOutcomes:["Explain how Hitler consolidated power between January 1933 and August 1934","Describe Nazi methods of control: propaganda, terror, censorship, concordat","Assess the impact of Nazi policies on women, young people and Jewish communities"],
-   topics:["Consolidation of power","Propaganda and terror","Life in Nazi Germany"], prerequisites:["h11i-01-2"]}
+   topics:["Consolidation of power","Propaganda and terror","Life in Nazi Germany"], prerequisites:["h11i-01-2"]},
+  {id:"h11i-01-4", name:"Nazi Control: The Police State & Propaganda", emoji:"📢", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h11t-01", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain how the Nazis used the SS, Gestapo, courts and propaganda to control Germany.",
+   learningOutcomes:["Describe the SS, Gestapo and concentration camps","Explain control of the courts","Explain Goebbels' propaganda and censorship"],
+   topics:["The police state","Courts & camps","Propaganda"], prerequisites:["h11i-01-3"]},
+  {id:"h11i-01-5", name:"Life in Nazi Germany", emoji:"🏘️", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h11t-01", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain Nazi policies towards women, young people, workers and the Churches.",
+   learningOutcomes:["Explain policies towards women and youth","Explain policies towards workers","Explain the relationship with the Churches"],
+   topics:["Women & youth","Workers","The Churches"], prerequisites:["h11i-01-3"]},
+  {id:"h11i-01-6", name:"Persecution & the Racial State", emoji:"✡️", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h11t-01", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Explain Nazi racial ideology and the escalating persecution towards the Holocaust.",
+   learningOutcomes:["Explain Nazi racial ideology","Describe the persecution of Jews and others","Explain the escalation to the Final Solution"],
+   topics:["Racial ideology","Persecution","Towards the Holocaust"], prerequisites:["h11i-01-3"]}
 );
 
 // ── Topic 2: Conflict & Tension in Asia 1950–75 (h11t-02) ──────────────────
@@ -87,7 +102,17 @@ CURRICULUM.push(
    topicId:"h11t-04", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Analyse the conflict between settlers and Native Americans, the destruction of the buffalo, and the struggle for law and order.",
    learningOutcomes:["Describe key conflicts: Little Bighorn (1876), Wounded Knee (1890)","Explain the impact of reservations and the destruction of the buffalo on Native Americans","Assess the challenges of maintaining law and order in western towns"],
-   topics:["Little Bighorn and Wounded Knee","Reservations and the buffalo","Law and order"], prerequisites:["h11i-04-1"]}
+   topics:["Little Bighorn and Wounded Knee","Reservations and the buffalo","Law and order"], prerequisites:["h11i-04-1"]},
+  {id:"h11i-04-4", name:"The Mormons & Early Migration", emoji:"🐂", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h11t-04", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain the Mormon migration and the wider early migration west along the trails.",
+   learningOutcomes:["Explain why the Mormons migrated","Describe Brigham Young and the Salt Lake settlement","Explain the dangers of the trails and the Donner Party"],
+   topics:["The Mormons","Migration west","The trails"], prerequisites:["h11i-04-1"]},
+  {id:"h11i-04-5", name:"Homesteading & Farming the Plains", emoji:"🌾", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h11t-04", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain the Homestead Act and how settlers solved the problems of farming the Plains.",
+   learningOutcomes:["Explain the Homestead Act and Timber Culture Act","Describe the problems of Plains farming","Explain the solutions settlers found"],
+   topics:["Homestead Act","Farming problems","Solutions"], prerequisites:["h11i-04-1"]}
 );
 
 // ── Topic 5: Exam Technique: Source Questions (h11t-05) ─────────────────────
