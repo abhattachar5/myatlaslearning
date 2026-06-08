@@ -110,3 +110,83 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Ambition without accuracy loses marks. Aim for controlled, accurate sophistication, not error-strewn 'fancy' writing.</p>`
 });
+
+FLASHCARDS.push(
+  // e10i-06-4 — Speeches & Spoken-Style Writing
+  {id:"e10fc-06-4-1", islandId:"e10i-06-4", front:"Name five conventions of a persuasive speech.",
+   back:"Direct address ('you'), rhetorical questions, the rule of three (tricolon), repetition and emotive language.\n\nAlso: anecdote, a strong opening and a clear call to action.", difficulty:1, category:"definition"},
+  {id:"e10fc-06-4-2", islandId:"e10i-06-4", front:"What is a 'call to action' and where does it go?",
+   back:"A direct appeal telling the audience what to do next ('Join us', 'Act today').\n\nIt usually closes the speech, leaving the audience with a clear purpose.", difficulty:2, category:"concept"},
+  {id:"e10fc-06-4-3", islandId:"e10i-06-4", front:"Why is an anecdote effective in a speech?",
+   back:"A short personal story makes an abstract issue relatable and human, building a connection with the audience before the wider argument.", difficulty:2, category:"application"},
+  {id:"e10fc-06-4-4", islandId:"e10i-06-4", front:"How should you match tone to occasion in a speech?",
+   back:"A school assembly is warm and motivating; a campaign speech is urgent and impassioned; a formal address is dignified.\n\nThe occasion and audience set the tone.", difficulty:2, category:"application"},
+  {id:"e10fc-06-4-5", islandId:"e10i-06-4", front:"Write a strong opening line for a speech on protecting local parks.",
+   back:"e.g. 'Imagine our town with no green left at all — just concrete, traffic and grey. Is that the future we want for our children?'\n\n(Vivid image + direct address + rhetorical question.)", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e10i-06-4": [
+    {q:"The 'rule of three' in a speech is also called a:", opts:["Tricolon","Metaphor","Headline","Caption"], c:0,
+     e:"Three parallel items (the tricolon) create rhythm and emphasis."},
+    {q:"A 'call to action' usually appears:", opts:["At the end of the speech","In the middle only","In the title","Never"], c:0,
+     e:"It closes the speech, telling the audience what to do next."},
+    {q:"An anecdote in a speech works because it is:", opts:["Relatable and human","A long statistic","A formal heading","A counter-argument"], c:0,
+     e:"A short personal story builds connection with the audience."},
+    {q:"Tone in a speech should be matched to the:", opts:["Occasion and audience","Word count","Font","Page number"], c:0,
+     e:"The setting and listeners decide whether the tone is warm, urgent or formal."},
+    {q:"Which is the strongest speech opening?", opts:["Imagine our town with no green left at all.","This speech is about parks.","I will talk about parks now.","Parks are a topic."], c:0,
+     e:"A vivid image and direct address grip the audience immediately."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e10i-06-4": `<h2>Speeches &amp; Spoken-Style Writing</h2>
+<p>A speech is written to be <em>heard</em>, so it leans on spoken-style techniques: <strong>direct address</strong> ('you'), <strong>rhetorical questions</strong>, the <strong>rule of three</strong> (tricolon), <strong>repetition</strong> and <strong>emotive language</strong>. An <strong>anecdote</strong> makes the issue human, and the piece ends with a clear <strong>call to action</strong>.</p>
+<h3>Structure</h3>
+<p>Open with a hook — a vivid image, a startling fact or a question — that signals your purpose. Build your argument in clear stages, then close on a memorable call to action that tells the audience exactly what to do.</p>
+<h3>Match tone to occasion</h3>
+<p>An assembly talk is warm and motivating; a campaign speech is urgent and impassioned; a formal address is dignified. Let the occasion and audience set your tone and vocabulary.</p>
+<h3>Worked opening</h3>
+<p>'Imagine our town with no green left at all — just concrete, traffic and grey. Is that the future we want for our children?' — a vivid image, direct address and a rhetorical question.</p>
+<h3>Common mistake</h3>
+<p>Don't just list techniques mechanically. Weave them into a genuine argument; a string of rhetorical questions with no real points feels hollow.</p>`
+});
+
+FLASHCARDS.push(
+  // e10i-06-5 — Adapting Tone & Register to Audience and Purpose
+  {id:"e10fc-06-5-1", islandId:"e10i-06-5", front:"What does FAP stand for and why plan with it?",
+   back:"Form, Audience, Purpose.\n\nIdentifying all three before writing decides your tone, register, structure and vocabulary, keeping the piece on brief.", difficulty:1, category:"definition"},
+  {id:"e10fc-06-5-2", islandId:"e10i-06-5", front:"What is the difference between 'tone' and 'register'?",
+   back:"Register: the level of formality (formal vs informal).\nTone: the attitude or mood (serious, light-hearted, urgent).\n\nBoth must suit the audience and purpose.", difficulty:2, category:"concept"},
+  {id:"e10fc-06-5-3", islandId:"e10i-06-5", front:"How does register change for a formal versus informal audience?",
+   back:"Formal: no slang or contractions, full forms, varied precise vocabulary.\nInformal: contractions, everyday words, a chattier, friendlier voice.", difficulty:2, category:"application"},
+  {id:"e10fc-06-5-4", islandId:"e10i-06-5", front:"How does purpose shift your tone?",
+   back:"To persuade: emotive and rhetorical.\nTo inform: clear and neutral.\nTo advise: supportive and reassuring.\n\nThe same topic is written very differently for each purpose.", difficulty:2, category:"application"},
+  {id:"e10fc-06-5-5", islandId:"e10i-06-5", front:"Write the same idea (a school trip) in formal then informal register.",
+   back:"Formal: 'The excursion offers valuable educational benefits for all pupils.'\nInformal: 'Honestly, the trip's going to be brilliant — you won't want to miss it!'", difficulty:3, category:"application"}
+);
+Object.assign(QUESTIONS, {
+  "e10i-06-5": [
+    {q:"FAP stands for Form, Audience and:", opts:["Purpose","Paragraph","Punctuation","Plan"], c:0,
+     e:"Form, Audience and Purpose shape every writing choice."},
+    {q:"'Register' refers to the level of:", opts:["Formality","Volume","Handwriting","Length"], c:0,
+     e:"Register is how formal or informal the writing is."},
+    {q:"An informal register typically uses:", opts:["Contractions and everyday words","No contractions ever","Only technical terms","Latin only"], c:0,
+     e:"Informal writing is chattier, with contractions and everyday vocabulary."},
+    {q:"Writing to inform should usually be:", opts:["Clear and neutral","Highly emotive","Sarcastic","Slangy"], c:0,
+     e:"Informing calls for a clear, neutral tone rather than persuasion."},
+    {q:"Which sentence is in a formal register?", opts:["The excursion offers valuable educational benefits.","The trip's gonna be epic!","You'll love it, trust me.","It's well good."], c:0,
+     e:"Full forms and precise vocabulary mark the formal register."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e10i-06-5": `<h2>Adapting Tone &amp; Register to Audience and Purpose</h2>
+<p>Before writing, plan with <strong>FAP</strong> — <strong>Form</strong>, <strong>Audience</strong> and <strong>Purpose</strong>. These three decide your register, tone, structure and vocabulary, and keep your response firmly on brief.</p>
+<h3>Register and tone</h3>
+<p><strong>Register</strong> is the level of formality; <strong>tone</strong> is the attitude or mood. A formal register avoids slang and contractions and uses precise vocabulary; an informal register is chattier, with contractions and everyday words. Tone then shifts with purpose: emotive to persuade, neutral to inform, reassuring to advise.</p>
+<h3>Matching style to the reader</h3>
+<p>Choose vocabulary and sentence style to suit the audience. A head teacher expects measured, formal sentences; a teenage readership responds to a livelier, direct voice.</p>
+<h3>Worked example</h3>
+<p>The same school trip, two registers. Formal: 'The excursion offers valuable educational benefits for all pupils.' Informal: 'Honestly, the trip is going to be brilliant — you won't want to miss it!'</p>
+<h3>Common mistake</h3>
+<p>Don't mix registers carelessly. Slipping slang into a formal letter, or stiff jargon into a friendly article, jars the reader and loses marks for inconsistent voice.</p>`
+});

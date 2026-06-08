@@ -97,7 +97,22 @@ CURRICULUM.push(
    topicId:"e10t-05", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Evaluate how successfully a writer achieves their purpose and respond to a statement with a personal judgement.",
    learningOutcomes:["Respond to an evaluative statement","Judge how far a writer succeeds, with evidence","Develop a critical personal response"],
-   topics:["Evaluation questions","Critical judgement","Personal response"], prerequisites:["e10i-05-1"]}
+   topics:["Evaluation questions","Critical judgement","Personal response"], prerequisites:["e10i-05-1"]},
+  {id:"e10i-05-4", name:"Summary & Synthesis", emoji:"🔗", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-05", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Summarise and synthesise information and inferences across two source texts (Language Paper 2).",
+   learningOutcomes:["Distinguish summary from synthesis","Combine inferences from two sources","Select and group relevant detail"],
+   topics:["Summary vs synthesis","Using two sources","Inference"], prerequisites:["e10i-05-1"]},
+  {id:"e10i-05-5", name:"Reading 19th-Century Non-fiction", emoji:"📜", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-05", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Decode the archaic vocabulary and complex syntax of 19th-century non-fiction sources.",
+   learningOutcomes:["Read for gist then detail","Decode archaic vocabulary using context","Unpack long, multi-clause sentences"],
+   topics:["19th-century sources","Decoding vocabulary","Complex syntax"], prerequisites:["e10i-05-1"]},
+  {id:"e10i-05-6", name:"Single-Source Language Analysis", emoji:"🔎", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-05", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Analyse how a writer uses language in one non-fiction source (Language Paper 2 Q3).",
+   learningOutcomes:["Select words, phrases and devices","Use the method-effect-response chain","Use subject terminology precisely"],
+   topics:["Selecting evidence","Method & effect","Terminology"], prerequisites:["e10i-05-1"]}
 );
 
 // ── Topic 6: Writing: Transactional & Persuasive (e10t-06, writingTopicId) ───
@@ -116,7 +131,17 @@ CURRICULUM.push(
    topicId:"e10t-06", yearGroup:"Year 10", difficulty:2, estimatedHours:1,
    description:"Craft sophisticated openings and conclusions and ensure technical accuracy under timed conditions.",
    learningOutcomes:["Craft strong openings and conclusions","Vary sentences and vocabulary for effect","Proofread for accuracy under time pressure"],
-   topics:["Openings & conclusions","Crafting for effect","Accuracy"], prerequisites:["e10i-06-1"]}
+   topics:["Openings & conclusions","Crafting for effect","Accuracy"], prerequisites:["e10i-06-1"]},
+  {id:"e10i-06-4", name:"Speeches & Spoken-Style Writing", emoji:"🎤", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-06", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Write a persuasive speech using rhetorical conventions, structure and an appropriate tone.",
+   learningOutcomes:["Use direct address, rhetorical questions and the rule of three","Structure a persuasive speech with a call to action","Match tone to occasion"],
+   topics:["Speech conventions","Structure","Tone"], prerequisites:["e10i-06-1"]},
+  {id:"e10i-06-5", name:"Adapting Tone & Register", emoji:"🎚️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-06", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Use form, audience and purpose (FAP) to adapt tone and register to the reader.",
+   learningOutcomes:["Plan with form, audience and purpose","Choose formal or informal register","Match vocabulary and sentence style to the reader"],
+   topics:["FAP planning","Formal vs informal","Matching style"], prerequisites:["e10i-06-1"]}
 );
 
 // ── Topic 7: Poetry Anthology & Comparison (e10t-07) ────────────────────────
@@ -154,7 +179,22 @@ CURRICULUM.push(
    topicId:"e10t-08", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Plan and write a thesis-driven literature essay with embedded evidence and context.",
    learningOutcomes:["Build a thesis-driven argument","Embed evidence and analyse methods","Integrate context purposefully"],
-   topics:["Thesis & argument","Evidence & method","Context integration"], prerequisites:["e10i-08-1"]}
+   topics:["Thesis & argument","Evidence & method","Context integration"], prerequisites:["e10i-08-1"]},
+  {id:"e10i-08-4", name:"Analysing a Writer's Methods (AO2)", emoji:"🛠️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-08", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Analyse a writer's methods — language, form and structure — and their effects (AO2).",
+   learningOutcomes:["Identify methods in prose and drama","Use the method-effect-meaning chain","Write about 'the writer', not the character"],
+   topics:["Writer's methods","Method & effect","AO2"], prerequisites:["e10i-08-1"]},
+  {id:"e10i-08-5", name:"Integrating Context (AO3)", emoji:"🏛️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-08", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Use context to illuminate meaning rather than bolting on historical facts (AO3).",
+   learningOutcomes:["Explain what AO3 rewards","Weave context into an analytical point","Judge how much context to use"],
+   topics:["Purposeful context","Weaving vs bolting on","AO3"], prerequisites:["e10i-08-1"]},
+  {id:"e10i-08-6", name:"Tracking Character & Theme Across a Whole Text", emoji:"📈", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-08", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Trace how a character or theme develops across a whole text for the extract-plus-essay question.",
+   learningOutcomes:["Trace development from beginning to end","Select evidence from across the text","Build a thesis about change/development"],
+   topics:["Whole-text skill","Development","Selecting evidence"], prerequisites:["e10i-08-1"]}
 );
 
 // ── Topic 9: Macbeth — AQA set text (e10t-09) ───────────────────────────────
