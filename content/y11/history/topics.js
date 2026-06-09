@@ -7,8 +7,6 @@ const HISTORY_TOPICS_Y11 = [
    description:"Examine Kaiser Wilhelm II's Germany, the Weimar Republic's struggles and successes, and the rise and rule of the Nazi Party."},
   {id:"h11t-02", name:"Conflict & Tension in Asia 1950–75", emoji:"🌏", hasContent:true,
    description:"Analyse the Korean War, the Vietnam War and the wider Cold War struggle for influence in Asia."},
-  {id:"h11t-03", name:"Britain: Health & the People", emoji:"🏥", hasContent:true,
-   description:"Trace key developments in British public health from medieval epidemics to the founding of the NHS and modern challenges."},
   {id:"h11t-04", name:"American West c1835–95", emoji:"🤠", hasContent:true,
    description:"Explore the settlement of the American West, the experience of Native Americans, the coming of the railroads and the struggle for law and order."},
   {id:"h11t-05", name:"Exam Technique: Source Questions", emoji:"🔍", hasContent:true,
@@ -72,19 +70,9 @@ CURRICULUM.push(
    topics:["Containment and domino theory","China and the USSR","Cold War legacy in Asia"], prerequisites:["h11i-02-1"]}
 );
 
-// ── Topic 3: Britain: Health & the People (h11t-03) ─────────────────────────
-CURRICULUM.push(
-  {id:"h11i-03-1", name:"Public Health Before 1800", emoji:"🏚️", subject:"History", subjectId:"history", color:"#a855f7",
-   topicId:"h11t-03", yearGroup:"Year 11", difficulty:1, estimatedHours:2,
-   description:"Explore public health challenges from the medieval period to the 18th century, including the Black Death and early attempts at quarantine.",
-   learningOutcomes:["Describe public health conditions in medieval towns and the impact of the Black Death","Explain the limited role of government in public health before 1800","Assess why there was so little improvement in public health during this period"],
-   topics:["Medieval public health","The Black Death","Government inaction"], prerequisites:[]},
-  {id:"h11i-03-2", name:"Public Health 1800–Present", emoji:"💊", subject:"History", subjectId:"history", color:"#a855f7",
-   topicId:"h11t-03", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
-   description:"Examine the public health reforms of the 19th and 20th centuries, from cholera and the Great Stink to the Beveridge Report and the NHS.",
-   learningOutcomes:["Describe the impact of cholera epidemics and the work of John Snow","Explain the significance of the 1875 Public Health Act and the Great Stink","Assess the importance of the Beveridge Report (1942) and the founding of the NHS (1948)"],
-   topics:["Cholera and John Snow","Public Health Acts","Beveridge and the NHS"], prerequisites:["h11i-03-1"]}
-);
+// ── Topic 3 REMOVED: "Britain: Health & the People" was a duplicate of the Year 10
+//    "Medicine Through Time" thematic study (same AQA "Health and the people" unit).
+//    De-duplicated — the full study lives in y10 h10t-01. Island file t03.js is now a stub.
 
 // ── Topic 4: American West c1835–95 (h11t-04) ──────────────────────────────
 CURRICULUM.push(
