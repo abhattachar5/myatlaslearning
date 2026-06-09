@@ -121,7 +121,7 @@ var MANIFEST = (function () {
       },
       science: {
         topics:  'content/y10/science/topics.js',
-        islands: tFiles('content/y10/science/islands/', 1, 14)      // t01–t14
+        islands: tFiles('content/y10/science/islands/', 1, 16)      // t01–t16 (t15 Transition Metals, t16 Optics & Lenses)
       },
       english: {
         topics:  'content/y10/english/topics.js',

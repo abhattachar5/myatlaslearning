@@ -33,7 +33,12 @@ const SCIENCE_TOPICS_Y10 = [
   {id:"s10t-13", name:"Radioactivity", emoji:"☢️", hasContent:true,
    description:"Understand atomic structure, types of radiation, half-life and uses/dangers of radioactive materials."},
   {id:"s10t-14", name:"Forces & Pressure", emoji:"🏗️", hasContent:true,
-   description:"Apply force, pressure and moments calculations and understand atmospheric pressure."}
+   description:"Apply force, pressure and moments calculations and understand atmospheric pressure."},
+  // ── Triple-only (Separate Science) topics ──────────────────────────────
+  {id:"s10t-15", name:"Transition Metals", emoji:"🟤", hasContent:true,
+   description:"Triple Chemistry: the properties, coloured compounds, variable oxidation states and catalytic uses of the transition metals."},
+  {id:"s10t-16", name:"Optics & Lenses", emoji:"🔬", hasContent:true,
+   description:"Triple Physics: reflection, refraction, convex and concave lenses, ray diagrams and the colour of light."}
 ];
 
 // ── Biology islands ──────────────────────────────────────────────────────────
@@ -381,4 +386,42 @@ CURRICULUM.push(
    description:"Distinguish scalars and vectors and find resultant forces using diagrams.",
    learningOutcomes:["Distinguish scalar and vector quantities","Draw free-body diagrams","Find resultant forces and resolve perpendicular forces"],
    topics:["Scalars vs vectors","Free-body diagrams","Resultant forces"], prerequisites:["s10i-14-1"]}
+);
+
+// Topic 15: Transition Metals (Triple Chemistry)
+CURRICULUM.push(
+  {id:"s10i-15-1", name:"Properties of Transition Metals", emoji:"🟤", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-15", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Describe the properties of transition metals and compare them with Group 1 metals.",
+   learningOutcomes:["Locate the transition metals in the periodic table","Compare their properties with Group 1 metals","Link properties to uses"],
+   topics:["Position","Properties vs Group 1","Uses"], prerequisites:[]},
+  {id:"s10i-15-2", name:"Coloured Compounds & Variable Oxidation States", emoji:"🎨", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-15", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Explain variable oxidation states and the coloured compounds of transition metals.",
+   learningOutcomes:["Explain variable oxidation states (e.g. Fe²⁺/Fe³⁺)","Describe coloured compounds","Contrast with Group 1 compounds"],
+   topics:["Variable oxidation states","Coloured compounds","Contrast with Group 1"], prerequisites:["s10i-15-1"]},
+  {id:"s10i-15-3", name:"Transition Metals as Catalysts", emoji:"⚗️", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-15", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain how transition metals act as catalysts, with named examples.",
+   learningOutcomes:["Explain what a catalyst does","Give named transition-metal catalysts","Link catalysts to industrial processes"],
+   topics:["Catalysts","Named examples","Industrial uses"], prerequisites:["s10i-15-1"]}
+);
+
+// Topic 16: Optics & Lenses (Triple Physics)
+CURRICULUM.push(
+  {id:"s10i-16-1", name:"Reflection & Refraction of Light", emoji:"💡", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-16", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain the law of reflection and the refraction of light at boundaries.",
+   learningOutcomes:["State the law of reflection","Distinguish specular and diffuse reflection","Explain refraction and bending towards/away from the normal"],
+   topics:["Reflection","Specular vs diffuse","Refraction"], prerequisites:[]},
+  {id:"s10i-16-2", name:"Lenses: Convex & Concave", emoji:"🔍", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-16", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Describe convex and concave lenses, draw ray diagrams and calculate magnification.",
+   learningOutcomes:["Distinguish converging and diverging lenses","Draw a ray diagram and describe the image","Use magnification = image height ÷ object height"],
+   topics:["Convex & concave","Ray diagrams","Magnification"], prerequisites:["s10i-16-1"]},
+  {id:"s10i-16-3", name:"Visible Light & Colour", emoji:"🌈", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-16", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain the visible spectrum, why objects appear coloured and how filters work.",
+   learningOutcomes:["Describe the visible spectrum","Explain the colour of opaque objects","Explain how colour filters work"],
+   topics:["Visible spectrum","Colour of objects","Filters"], prerequisites:["s10i-16-1"]}
 );
