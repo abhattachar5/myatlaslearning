@@ -11,6 +11,8 @@ const ENGLISH_TOPICS_Y9 = [
    description:"Use varied sentence structures, the passive voice and modal verbs deliberately to control emphasis and tone."},
   {id:"e9t-03", name:"Advanced Punctuation", emoji:"✏️", hasContent:true,
    description:"Use semicolons, colons, dashes and parenthetical punctuation accurately and for effect in your own writing."},
+  {id:"e9t-04", name:"Reading Comprehension", emoji:"📝", hasContent:true,
+   description:"Read fiction and non-fiction passages and answer exam-style questions on retrieval, language, structure and evaluation — with mark schemes and model answers."},
   {id:"e9t-05", name:"Reading: Language & Structure", emoji:"🔍", hasContent:true,
    description:"Analyse how writers use language and structure to influence the reader, and write analytical responses with evidence."},
   {id:"e9t-06", name:"Writing Craft: Narrative & Descriptive", emoji:"✍️", hasContent:true,

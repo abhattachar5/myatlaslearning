@@ -87,9 +87,10 @@ var MANIFEST = (function () {
         islands: ['content/y9/english/islands/t01.js','content/y9/english/islands/t02.js',
                   'content/y9/english/islands/t03.js','content/y9/english/islands/t05.js',
                   'content/y9/english/islands/t06.js','content/y9/english/islands/t07.js',
-                  'content/y9/english/islands/t08.js'],   // t04 = comprehension (passages, tbc)
+                  'content/y9/english/islands/t08.js'],   // t04 = comprehension (passages, below)
         writing: ['content/y9/english/writing.js']
       },
+      comprehension: { passages: nFiles('content/y9/comprehension/passages/', 1, 7) },  // e9t-04 (passages-only): 4 fiction + 3 non-fiction
       math: {
         topics:     'content/y9/math/topics.js',
         islands:    tFiles('content/y9/math/islands/', 1, 14),      // t01–t14
@@ -132,6 +133,7 @@ var MANIFEST = (function () {
                   'content/y10/english/islands/t10.js'],
         writing: ['content/y10/english/writing.js']
       },
+      comprehension: { passages: nFiles('content/y10/comprehension/passages/', 1, 7) },  // e10t-04 (passages-only): 4 fiction + 3 paired Paper-2
       math: {
         topics:     'content/y10/math/topics.js',
         islands:    tFiles('content/y10/math/islands/', 1, 14),      // t01–t14
@@ -171,6 +173,7 @@ var MANIFEST = (function () {
                   'content/y11/english/islands/t11.js'],
         writing: ['content/y11/english/writing.js']
       },
+      comprehension: { passages: nFiles('content/y11/comprehension/passages/', 1, 6) },  // e11t-04 (passages-only): 3 fiction + 3 paired Paper-2
       math: {
         topics:     'content/y11/math/topics.js',
         islands:    tFiles('content/y11/math/islands/', 1, 14),      // t01–t14

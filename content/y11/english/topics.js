@@ -7,6 +7,8 @@ const ENGLISH_TOPICS_Y11 = [
    description:"Refine analytical and creative vocabulary for top-band responses and deploy it under exam conditions."},
   {id:"e11t-02", name:"Grammar & Accuracy under Pressure", emoji:"🔤", hasContent:true,
    description:"Maintain grammatical control and accuracy in timed writing, avoiding common errors and achieving sophistication."},
+  {id:"e11t-04", name:"Reading Comprehension", emoji:"📝", hasContent:true,
+   description:"Full exam-length fiction and non-fiction reading practice with mark schemes and model answers, including paired Paper 2 sources for synthesis and comparison."},
   {id:"e11t-05", name:"Language Paper 1: Fiction Reading", emoji:"📕", hasContent:true,
    description:"Master the four AQA Language Paper 1 reading questions: locate, analyse language, analyse structure, evaluate."},
   {id:"e11t-06", name:"Language Paper 2: Non-fiction & Comparison", emoji:"📰", hasContent:true,

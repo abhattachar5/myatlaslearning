@@ -10,6 +10,8 @@ const ENGLISH_TOPICS_Y10 = [
    description:"Control a full range of sentence structures and cohesive devices to write with fluency and deliberate effect."},
   {id:"e10t-03", name:"Punctuation for Sophistication", emoji:"✏️", hasContent:true,
    description:"Use the full range of punctuation accurately and for effect, the mark of confident, ambitious writing."},
+  {id:"e10t-04", name:"Reading Comprehension", emoji:"📝", hasContent:true,
+   description:"Practise full-length fiction and non-fiction reading with exam-style questions and mark schemes, including paired Paper 2 sources for synthesis and comparison."},
   {id:"e10t-05", name:"Analysing Non-fiction & Comparing Texts", emoji:"📰", hasContent:true,
    description:"Read and analyse non-fiction and 19th-century texts, and compare writers' viewpoints and methods (Language Paper 2)."},
   {id:"e10t-06", name:"Writing: Transactional & Persuasive", emoji:"✍️", hasContent:true,
