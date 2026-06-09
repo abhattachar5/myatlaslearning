@@ -760,10 +760,20 @@ function renderThisWeekTab() {
 
   listEl.innerHTML = html;
 
-  // ── Auto-reveal next week when current is 100% done (incl. homework) ──
+  // ── Auto-reveal the next week that still has outstanding work ──
+  // A child can work several weeks ahead, so don't just peek at weekNum + 1:
+  // skip past any upcoming weeks that are empty or already fully complete and
+  // surface the first one that still has something to do. (allDone here is the
+  // week's own islands + comprehension, excluding global homework.)
   if (weekTaskTotals(data).allDone && weekNum < data.totalWeeks) {
-    const nextData = StudyPlanner.getWeekChecklist(weekNum + 1);
-    if (nextData && nextData.subjects.length > 0) {
+    let nextWeek = weekNum + 1;
+    let nextData = StudyPlanner.getWeekChecklist(nextWeek);
+    while (nextData && nextWeek < data.totalWeeks &&
+           (nextData.totalItems === 0 || nextData.allDone)) {
+      nextWeek++;
+      nextData = StudyPlanner.getWeekChecklist(nextWeek);
+    }
+    if (nextData && nextData.totalItems > 0 && !nextData.allDone) {
       renderNextWeekPreview(nextData, listEl);
     }
   }
