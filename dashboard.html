@@ -499,38 +499,66 @@ function renderHomework() {
   const list = (typeof getAssignments === 'function') ? getAssignments() : [];
   if (!list.length) { host.innerHTML = ''; return false; }
 
-  const sorted = list.slice().sort(function (a, b) {
-    var ad = isAssignmentDone(a) ? 1 : 0, bd = isAssignmentDone(b) ? 1 : 0;
-    if (ad !== bd) return ad - bd;
-    return (a.dueDate || '').localeCompare(b.dueDate || '');
-  });
-  const todo = sorted.filter(function (a) { return !isAssignmentDone(a); }).length;
-
-  var rows = sorted.map(function (a) {
-    var done = isAssignmentDone(a);
-    var icon = a.type === 'exam' ? '📄' : '📐';
-    var name = a.type === 'exam'
+  function nameOf(a) {
+    return a.type === 'exam'
       ? (hwCap(a.subjectId) + ' mock exam' + (a.timeLimitMin ? ' · ' + a.timeLimitMin + ' min timed' : ''))
       : (hwCap(a.subjectId) + ' practice — ' + (a.islandIds || []).length + ((a.islandIds || []).length === 1 ? ' subtopic' : ' subtopics'));
-    var due = a.dueDate ? hwFormatDue(a.dueDate) : '';
-    var right = done
-      ? '<span style="margin-left:auto;color:#22c55e;font-weight:700;font-size:.8125rem">✓ Done</span>'
-      : '<a href="' + assignmentLink(a) + '" class="btn btn-primary btn-sm" style="margin-left:auto;text-decoration:none">' + (a.type === 'exam' ? 'Begin →' : 'Start →') + '</a>';
-    var noteHtml = a.note ? '<div style="font-size:.8125rem;color:var(--text-muted);font-style:italic">“' + hwEsc(a.note) + '”</div>' : '';
-    return '<div style="display:flex;align-items:center;gap:10px;padding:9px 0">' +
-      '<span style="font-size:1.1rem">' + icon + '</span>' +
-      '<div style="min-width:0"><div style="font-weight:600;color:var(--text);font-size:.9375rem">' + name + '</div>' +
-      (due ? '<div style="font-size:.75rem;color:var(--text-muted)">Due ' + due + '</div>' : '') + noteHtml + '</div>' +
-      right + '</div>';
-  }).join('');
+  }
 
-  host.innerHTML =
-    '<div style="border-left:3px solid #6366f1;background:rgba(99,102,241,.05);padding:12px 16px;border-radius:8px;margin:0 0 4px">' +
+  const pending = list.filter(function (a) { return !isAssignmentDone(a); })
+    .sort(function (a, b) { return (a.dueDate || '').localeCompare(b.dueDate || ''); });
+  const done = list.filter(isAssignmentDone).sort(function (a, b) {
+    var ta = (a.result && a.result.takenAt) || a.createdAt || '';
+    var tb = (b.result && b.result.takenAt) || b.createdAt || '';
+    return ta < tb ? 1 : (ta > tb ? -1 : 0);   // newest first
+  });
+
+  var html = '';
+
+  // ── Pending homework (action block, pinned) ──
+  if (pending.length) {
+    var rows = pending.map(function (a) {
+      var due = a.dueDate ? hwFormatDue(a.dueDate) : '';
+      var noteHtml = a.note ? '<div style="font-size:.8125rem;color:var(--text-muted);font-style:italic">“' + hwEsc(a.note) + '”</div>' : '';
+      return '<div style="display:flex;align-items:center;gap:10px;padding:9px 0">' +
+        '<span style="font-size:1.1rem">' + (a.type === 'exam' ? '📄' : '📐') + '</span>' +
+        '<div style="min-width:0"><div style="font-weight:600;color:var(--text);font-size:.9375rem">' + nameOf(a) + '</div>' +
+        (due ? '<div style="font-size:.75rem;color:var(--text-muted)">Due ' + due + '</div>' : '') + noteHtml + '</div>' +
+        '<a href="' + assignmentLink(a) + '" class="btn btn-primary btn-sm" style="margin-left:auto;text-decoration:none">' + (a.type === 'exam' ? 'Begin →' : 'Start →') + '</a>' +
+        '</div>';
+    }).join('');
+    html += '<div style="border-left:3px solid #6366f1;background:rgba(99,102,241,.05);padding:12px 16px;border-radius:8px;margin:0 0 4px">' +
       '<div style="display:flex;align-items:center;gap:8px;font-weight:800;font-size:.8125rem;text-transform:uppercase;letter-spacing:.04em;color:#6366f1;margin-bottom:4px">' +
-        '📌 Homework' + (todo ? ' <span style="background:#6366f1;color:#fff;padding:1px 8px;border-radius:20px;font-size:.6875rem;letter-spacing:0">' + todo + ' to do</span>' : '') +
-      '</div>' + rows +
-    '</div>';
-  return true;
+        '📌 Homework <span style="background:#6366f1;color:#fff;padding:1px 8px;border-radius:20px;font-size:.6875rem;letter-spacing:0">' + pending.length + ' to do</span>' +
+      '</div>' + rows + '</div>';
+  }
+
+  // ── Completed history with scores (collapsible) ──
+  if (done.length) {
+    var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var pctOf = function (a) { if (!a.result) return null; if (a.result.percent != null) return a.result.percent; if (a.result.readingPct != null) return a.result.readingPct; return null; };
+    var bandColor = function (p) { return p == null ? 'var(--text-muted)' : (p >= 70 ? '#15803d' : (p >= 50 ? '#b45309' : '#b91c1c')); };
+    var bandBg = function (p) { return p == null ? 'var(--surface2)' : (p >= 70 ? 'rgba(34,197,94,.16)' : (p >= 50 ? 'rgba(245,158,11,.16)' : 'rgba(239,68,68,.16)')); };
+    var fmt = function (iso) { if (!iso) return ''; var d = new Date(iso); return isNaN(d.getTime()) ? '' : (d.getDate() + ' ' + MON[d.getMonth()]); };
+    var hrows = done.map(function (a) {
+      var p = pctOf(a);
+      var chip = (p == null)
+        ? '<span style="margin-left:auto;color:#22c55e;font-weight:700;font-size:.8125rem">✓ Done</span>'
+        : '<span style="margin-left:auto;background:' + bandBg(p) + ';color:' + bandColor(p) + ';font-weight:800;font-size:.75rem;padding:3px 10px;border-radius:20px;white-space:nowrap">' + p + '%' + (a.result && a.result.correct != null ? ' · ' + a.result.correct + '/' + a.result.total : '') + '</span>';
+      var when = fmt(a.result && a.result.takenAt);
+      return '<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--border)">' +
+        '<span style="font-size:1.05rem">' + (a.type === 'exam' ? '📄' : '📐') + '</span>' +
+        '<div style="min-width:0"><div style="font-weight:600;color:var(--text);font-size:.9rem">' + nameOf(a) + '</div>' +
+        (when ? '<div style="font-size:.72rem;color:var(--text-muted)">' + when + '</div>' : '') + '</div>' +
+        chip + '</div>';
+    }).join('');
+    html += '<details style="margin-top:6px;padding:0 4px">' +
+      '<summary style="cursor:pointer;font-weight:800;font-size:.8125rem;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted);padding:6px 0">🏅 Practice &amp; exam history <span style="font-weight:600;text-transform:none;letter-spacing:0">(' + done.length + ')</span></summary>' +
+      hrows + '</details>';
+  }
+
+  host.innerHTML = html;
+  return (pending.length > 0 || done.length > 0);
 }
 
 function hwCap(s) { s = s || ''; return s.charAt(0).toUpperCase() + s.slice(1); }

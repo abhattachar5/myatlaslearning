@@ -65,6 +65,18 @@
     .hw-due { font-size: .75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
     .due-soon { background: rgba(245,158,11,.16); color: #b45309; }
     .due-ok { background: var(--surface2); color: var(--text-muted); }
+    .assign-row { display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--border); }
+    .assign-title { flex:1 1 auto; font-weight:600; color:var(--text); font-size:.9375rem; text-transform:capitalize; }
+    .assign-when { font-size:.75rem; color:var(--text-muted); white-space:nowrap; }
+    .assign-x { padding:5px 10px; font-size:.8125rem; }
+    .assign-hist-head { margin:16px 0 2px; font-size:.75rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--text-muted); }
+    .score-chip { font-size:.75rem; font-weight:800; padding:3px 10px; border-radius:20px; white-space:nowrap; }
+    .score-good { background:rgba(34,197,94,.16); color:#15803d; }
+    .score-mid { background:rgba(245,158,11,.16); color:#b45309; }
+    .score-low { background:rgba(239,68,68,.16); color:#b91c1c; }
+    .assign-breakdown { margin:2px 0 6px 26px; font-size:.8125rem; color:var(--text-muted); }
+    .assign-breakdown .bd-row { display:flex; gap:8px; padding:2px 0; }
+    .assign-breakdown .bd-name { flex:1 1 auto; }
   </style>
 </head>
 <body>
@@ -341,20 +353,74 @@
       var list = (typeof getAssignments === 'function') ? getAssignments() : [];
       var el = document.getElementById('assign-list');
       if (!list.length) { el.innerHTML = '<p class="muted" style="margin:0">No homework or exams assigned yet.</p>'; return; }
-      el.innerHTML = list.map(function (a) {
-        var icon = a.type === 'exam' ? '📄' : '📝';
-        var title = a.type === 'exam'
+
+      function isDone(a){ return (a.status === 'done') || (a.type === 'exam' && a.result); }
+      function scorePct(a){
+        if (!a.result) return null;
+        if (a.result.percent != null) return a.result.percent;
+        if (a.result.readingPct != null) return a.result.readingPct;
+        return null;
+      }
+      function band(p){ return p == null ? '' : (p >= 70 ? 'score-good' : (p >= 50 ? 'score-mid' : 'score-low')); }
+      var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      function fmtDate(iso){ if (!iso) return ''; var d = new Date(iso); return isNaN(d.getTime()) ? '' : (d.getDate() + ' ' + MON[d.getMonth()]); }
+      function titleOf(a){
+        return a.type === 'exam'
           ? ((a.subjectId || '') + ' mock exam')
           : ((a.subjectId || '') + ' practice — ' + ((a.islandIds || []).length) + (((a.islandIds || []).length) === 1 ? ' subtopic' : ' subtopics'));
-        var due = a.dueDate ? ('Due ' + a.dueDate) : '';
-        var done = (a.status === 'done') || (a.type === 'exam' && a.result);
-        return '<div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">' +
-          '<span>' + icon + '</span>' +
-          '<span style="font-weight:600;color:var(--text);font-size:.9375rem;text-transform:capitalize">' + title + '</span>' +
-          '<span class="hw-due ' + (done ? 'due-ok' : 'due-soon') + '" style="margin-left:auto">' + (done ? 'Done' : due) + '</span>' +
-          '<button class="btn btn-ghost" style="padding:5px 10px;font-size:.8125rem" title="Remove this assignment" onclick="pzRemoveAssignment(\'' + a.id + '\')">✕</button>' +
+      }
+      function breakdown(a){
+        var rows = a.type === 'exam' ? (a.result && a.result.perTopic) : (a.result && a.result.perIsland);
+        if (!rows || !rows.length) return '';
+        return '<div class="assign-breakdown">' + rows.map(function (t) {
+          var p = (t.pct != null) ? t.pct : null;
+          return '<div class="bd-row"><span class="bd-name">' + (t.name || '') + '</span>' +
+            (t.correct != null && t.total != null ? '<span>' + t.correct + '/' + t.total + '</span>' : '') +
+            (p != null ? '<span class="score-chip ' + band(p) + '" style="padding:1px 8px">' + p + '%</span>' : '') +
+            '</div>';
+        }).join('') + '</div>';
+      }
+      function xbtn(a, label){
+        return '<button class="btn btn-ghost assign-x" title="' + label + '" onclick="pzRemoveAssignment(\'' + a.id + '\')">✕</button>';
+      }
+
+      var pending = list.filter(function (a) { return !isDone(a); });
+      var doneList = list.filter(isDone).slice().sort(function (a, b) {
+        var ta = (a.result && a.result.takenAt) || a.createdAt || '';
+        var tb = (b.result && b.result.takenAt) || b.createdAt || '';
+        return ta < tb ? 1 : (ta > tb ? -1 : 0);   // newest first
+      });
+
+      var html = '';
+
+      pending.forEach(function (a) {
+        var due = a.dueDate ? ('Due ' + a.dueDate) : 'Assigned';
+        html += '<div class="assign-row">' +
+          '<span>' + (a.type === 'exam' ? '📄' : '📝') + '</span>' +
+          '<span class="assign-title">' + titleOf(a) + '</span>' +
+          '<span class="hw-due due-soon">' + due + '</span>' + xbtn(a, 'Remove this assignment') +
           '</div>';
-      }).join('');
+      });
+
+      if (doneList.length) {
+        html += '<div class="assign-hist-head">History</div>';
+        doneList.forEach(function (a) {
+          var p = scorePct(a);
+          var chip = (p == null)
+            ? '<span class="hw-due due-ok">Done</span>'
+            : '<span class="score-chip ' + band(p) + '">' + p + '%' +
+              (a.result && a.result.correct != null ? ' · ' + a.result.correct + '/' + a.result.total : '') + '</span>';
+          var when = fmtDate(a.result && a.result.takenAt);
+          html += '<div class="assign-row">' +
+            '<span>' + (a.type === 'exam' ? '📄' : '📝') + '</span>' +
+            '<span class="assign-title">' + titleOf(a) + '</span>' +
+            (when ? '<span class="assign-when">' + when + '</span>' : '') +
+            chip + xbtn(a, 'Remove from history') +
+            '</div>' + breakdown(a);
+        });
+      }
+
+      el.innerHTML = html;
     }
     function pzRemoveAssignment(id) {
       if (!confirm('Remove this assignment? Your child will no longer see it.')) return;

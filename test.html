@@ -442,11 +442,6 @@ function exitTest(e) {
 function submitTest() {
   if (timerInterval) clearInterval(timerInterval);
 
-  // If this test was launched from an assigned practice, mark that assignment done.
-  if (_assignmentId && typeof updateAssignment === 'function') {
-    updateAssignment(_assignmentId, { status: 'done' });
-  }
-
   var correct = 0;
   var medCorrect = 0, medTotal = 0, gdCorrect = 0, gdTotal = 0;
   var reviewItems = [];
@@ -498,6 +493,24 @@ function submitTest() {
   }
 
   var pct = Math.round((correct / testQuestions.length) * 100);
+
+  // If this test was launched from a parent-assigned practice, record completion
+  // AND the score so it appears in the practice/exam history (parent + child).
+  if (_assignmentId && typeof updateAssignment === 'function') {
+    var perIsland = Object.keys(subtopicScores).map(function (iid) {
+      var s = subtopicScores[iid];
+      var isl = (typeof CURRICULUM !== 'undefined') ? CURRICULUM.find(function (c) { return c.id === iid; }) : null;
+      return { islandId: iid, name: isl ? isl.name : iid, correct: s.score, total: s.total,
+               pct: s.total ? Math.round((s.score / s.total) * 100) : 0 };
+    });
+    var _timeUsedSec = null;
+    try { if (isTimed) _timeUsedSec = parseInt(document.getElementById('time-slider').value, 10) * 60 - timeRemaining; } catch (e) {}
+    updateAssignment(_assignmentId, { status: 'done', result: {
+      percent: pct, correct: correct, total: testQuestions.length,
+      timeUsedSec: _timeUsedSec, takenAt: new Date().toISOString(), perIsland: perIsland
+    } });
+  }
+
   var scoreClass = pct >= 70 ? '' : pct >= 50 ? ' medium' : ' low';
   var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '🌟' : pct >= 50 ? '👍' : '📚';
 
