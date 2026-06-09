@@ -411,35 +411,49 @@
   }
 
   // ── Weekly comprehension assignment ─────────────────────────────────────
-  // Odd weeks → fiction, even weeks → non-fiction, 40 passages over 40 weeks
+  // Year-aware: uses the student's own year passage set (Atlas.yearPassages),
+  // otherwise the passage id won't resolve in comprehension.html (also year-aware).
+  // The available passages are SPREAD EVENLY across the whole study plan so
+  // comprehension recurs throughout, instead of front-loading into the first few
+  // weeks. Year 8 has ~40 passages (≈ one per week); Years 9–11 have fewer (≈6–7),
+  // so they are paced out across the plan. Fiction and non-fiction alternate
+  // through the ordered sequence so each new comprehension varies in type.
   function getWeeklyComprehension(weekNumber) {
-    // Year-aware: a Year 8 student must be assigned Year 8 passages, otherwise the
-    // passage id won't resolve in comprehension.html (also year-aware) and it falls
-    // back to the list. Mirrors comprehension.html's passage-set selection.
     var _cu = getUser();
     var _cy = (_cu && _cu.year) ? _cu.year : 'Year 7';
     var SET = Atlas.yearPassages(_cy);
     if (!SET || !SET.length) return null;
-    if (weekNumber > 40) return null;
 
-    var fiction = [];
-    var nonfiction = [];
-    SET.forEach(function (p) {
-      if (p.type === 'fiction') fiction.push(p);
-      else nonfiction.push(p);
-    });
-
-    var passage;
-    if (weekNumber % 2 === 1) {
-      // Odd week → fiction
-      var fi = Math.floor((weekNumber - 1) / 2);
-      passage = fi < fiction.length ? fiction[fi] : null;
-    } else {
-      // Even week → non-fiction
-      var ni = Math.floor((weekNumber - 2) / 2);
-      passage = ni < nonfiction.length ? nonfiction[ni] : null;
+    // Ordered sequence: interleave fiction / non-fiction for variety.
+    var fiction = [], nonfiction = [];
+    SET.forEach(function (p) { (p.type === 'fiction' ? fiction : nonfiction).push(p); });
+    var seq = [], fi = 0, ni = 0;
+    while (fi < fiction.length || ni < nonfiction.length) {
+      if (fi < fiction.length) seq.push(fiction[fi++]);
+      if (ni < nonfiction.length) seq.push(nonfiction[ni++]);
     }
+    var N = seq.length;
+    if (!N) return null;
 
+    // Spread the passages across the plan. When the plan is at least as long as
+    // the passage count (the normal case for Y9–11), passage k falls on week
+    // 1 + floor(k * totalWeeks / N) — one passage every ~totalWeeks/N weeks, no
+    // repeats, recurring to the end of the plan. When there are more passages
+    // than weeks (e.g. Year 8's 40), fall back to one per week in order.
+    var plan = getStudyPlan();
+    var totalWeeks = plan ? getTotalStudyWeeks(plan) : N;
+    if (totalWeeks < 1) totalWeeks = N;
+
+    var idx = -1;
+    if (totalWeeks >= N) {
+      for (var k = 0; k < N; k++) {
+        if ((1 + Math.floor(k * totalWeeks / N)) === weekNumber) { idx = k; break; }
+      }
+    } else if (weekNumber >= 1 && weekNumber <= N) {
+      idx = weekNumber - 1;
+    }
+    if (idx < 0) return null;
+    var passage = seq[idx];
     if (!passage) return null;
 
     // Check completion + any saved draft (written passages autosave a draft under
@@ -914,7 +928,9 @@
     });
 
     // ── Comprehension in English column ─────────────────────────────────
-    var maxCompWeek = Math.min(40, totalWeeks);
+    // Scan the whole plan: passages are now spread across all weeks, not just
+    // the first 40, so the cap must follow totalWeeks.
+    var maxCompWeek = totalWeeks;
     for (var w = 1; w <= maxCompWeek; w++) {
       var comp = getWeeklyComprehension(w);
       if (comp) {
