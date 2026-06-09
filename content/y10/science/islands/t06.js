@@ -38,7 +38,19 @@ FLASHCARDS.push(
   {id:"s10fc-06-3-4", islandId:"s10i-06-3", front:"In a titration, 25.0 cm³ of 0.1 mol/dm³ NaOH reacts with HCl. The mean titre is 20.0 cm³. Find the concentration of HCl.",
    back:"NaOH + HCl → NaCl + H₂O (1:1 ratio)\n\nStep 1: moles of NaOH = 0.1 × (25.0 ÷ 1000) = 0.0025 mol\n\nStep 2: moles of HCl = 0.0025 mol (1:1 ratio)\n\nStep 3: concentration of HCl = 0.0025 ÷ (20.0 ÷ 1000)\n= 0.0025 ÷ 0.020 = 0.125 mol/dm³", difficulty:3, category:"calculation"},
   {id:"s10fc-06-3-5", islandId:"s10i-06-3", front:"Why are concordant results important in a titration?",
-   back:"Concordant results are titre readings that are very close together (within 0.10 cm³). They are important because:\n\n• They show the results are reproducible and reliable\n• Anomalous (outlier) results can be identified and discarded\n• The mean of concordant values gives a more accurate titre\n\nTypically, a rough titration is done first, then accurate titrations until at least two concordant results are obtained.", difficulty:2, category:"concept"}
+   back:"Concordant results are titre readings that are very close together (within 0.10 cm³). They are important because:\n\n• They show the results are reproducible and reliable\n• Anomalous (outlier) results can be identified and discarded\n• The mean of concordant values gives a more accurate titre\n\nTypically, a rough titration is done first, then accurate titrations until at least two concordant results are obtained.", difficulty:2, category:"concept"},
+
+  // s10i-06-4 — Percentage Yield & Atom Economy
+  {id:"s10fc-06-4-1", islandId:"s10i-06-4", front:"What is percentage yield and how is it calculated?",
+   back:"Percentage yield compares how much product you actually made with the maximum amount you could have made.\n\npercentage yield = (actual mass of product ÷ theoretical maximum mass) × 100\n\nThe theoretical maximum mass is calculated from the balanced equation (using reacting masses). The actual mass is what you really collect in the experiment.\n\nYield is always given as a percentage between 0 and 100%.", difficulty:1, category:"definition"},
+  {id:"s10fc-06-4-2", islandId:"s10i-06-4", front:"Why is the percentage yield of a reaction never 100%?",
+   back:"Yield is never 100% because of:\n\n• Reversible reactions — the reaction does not go fully to completion; products turn back into reactants\n• Losses — product is lost during transfer, filtering or evaporation\n• Side reactions — some reactants react in unwanted ways to form different products\n\nThese factors mean the actual mass of product is always less than the theoretical maximum.", difficulty:2, category:"concept"},
+  {id:"s10fc-06-4-3", islandId:"s10i-06-4", front:"A reaction has a theoretical yield of 8.0 g but only 6.0 g is collected. Calculate the percentage yield.",
+   back:"percentage yield = (actual mass ÷ theoretical mass) × 100\n\npercentage yield = (6.0 ÷ 8.0) × 100\n= 0.75 × 100\n= 75%\n\nThe percentage yield is 75%.", difficulty:2, category:"calculation"},
+  {id:"s10fc-06-4-4", islandId:"s10i-06-4", front:"What is atom economy and how is it calculated?",
+   back:"Atom economy measures how much of the mass of the reactants ends up as the useful (desired) product.\n\natom economy = (Mr of desired product ÷ total Mr of all products) × 100\n\nA high atom economy means most of the atoms from the reactants are used in the desired product, with little waste.", difficulty:2, category:"definition"},
+  {id:"s10fc-06-4-5", islandId:"s10i-06-4", front:"Why is a high atom economy more sustainable?",
+   back:"A reaction with high atom economy is more sustainable because:\n\n• Less waste is produced — fewer atoms end up in unwanted by-products\n• Raw materials are used more efficiently, so less is wasted\n• There are fewer waste products to dispose of, which can be costly and harmful\n• It is usually more profitable for industry\n\nHigh atom economy reactions make better use of finite resources.", difficulty:2, category:"concept"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -93,6 +105,23 @@ Object.assign(QUESTIONS, {
     {q:"Why should titrations be repeated until concordant results are obtained?",
      opts:["To use up all the chemicals","To check the indicator is working","To improve accuracy and identify anomalies","To make the experiment take longer"], c:2,
      e:"Concordant results (within 0.10 cm³) confirm the measurement is reliable. The mean of concordant values gives a more accurate result, and any anomalous readings can be identified and excluded."}
+  ],
+  "s10i-06-4": [
+    {q:"What is the formula for percentage yield?",
+     opts:["(theoretical mass ÷ actual mass) × 100","(actual mass ÷ theoretical mass) × 100","actual mass ÷ theoretical mass","(actual mass × theoretical mass) ÷ 100"], c:1,
+     e:"percentage yield = (actual mass of product ÷ theoretical maximum mass) × 100. The actual mass is what you collect; the theoretical maximum comes from the balanced equation."},
+    {q:"A reaction should theoretically produce 25 g of product, but only 20 g is collected. What is the percentage yield?",
+     opts:["80%","75%","125%","20%"], c:0,
+     e:"percentage yield = (20 ÷ 25) × 100 = 0.8 × 100 = 80%."},
+    {q:"Which of these is NOT a reason why percentage yield is less than 100%?",
+     opts:["The reaction is reversible","Product is lost during transfer or filtering","Side reactions form unwanted products","The equation is balanced"], c:3,
+     e:"Reversible reactions, losses during handling, and side reactions all reduce yield below 100%. Balancing the equation is a normal, correct step and does not lower the yield."},
+    {q:"What is the formula for atom economy?",
+     opts:["(Mr of desired product ÷ total Mr of all products) × 100","(Mr of all products ÷ Mr of desired product) × 100","(actual mass ÷ theoretical mass) × 100","(Mr of reactants ÷ Mr of products) × 100"], c:0,
+     e:"atom economy = (Mr of the desired product ÷ total Mr of all products) × 100. It measures how much of the reactant mass ends up as useful product."},
+    {q:"Why is a reaction with a high atom economy more sustainable?",
+     opts:["It always happens faster","Less waste is produced and raw materials are used efficiently","It uses a catalyst","It produces more by-products"], c:1,
+     e:"High atom economy means most atoms from the reactants end up in the desired product, so less waste is made and finite raw materials are used efficiently — making the process more sustainable."}
   ]
 });
 
@@ -198,6 +227,43 @@ concentration of H₂SO₄ = 0.00125 &divide; 0.0125 = <strong>0.10 mol/dm³</st
 
 <h3>Common Mistake</h3>
 <p>Students frequently forget to convert cm³ to dm³ before using the concentration formula. If you use 25 instead of 0.025 for the volume, your answer will be out by a factor of 1000. Always divide by 1000 first.</p>
+`,
+
+'s10i-06-4': `
+<h2>Percentage Yield &amp; Atom Economy</h2>
+<p>In industry, chemists need to know how efficient a reaction is. Two measures of efficiency are <strong>percentage yield</strong> (how much product you actually get) and <strong>atom economy</strong> (how little waste the reaction produces).</p>
+
+<h3>Percentage Yield</h3>
+<p>The <strong>theoretical maximum mass</strong> is the amount of product you would get if the reaction worked perfectly, calculated from the balanced equation. The <strong>actual mass</strong> is what you really collect. The percentage yield compares the two:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>percentage yield = (actual mass &divide; theoretical maximum mass) &times; 100</strong></p>
+
+<h3>Why Yield Is Never 100%</h3>
+<p>In practice you never collect every gram of product, because of:</p>
+<ul>
+  <li><strong>Reversible reactions</strong> — the reaction does not go fully to completion, as products turn back into reactants</li>
+  <li><strong>Losses</strong> — product is left behind during filtering, transferring or evaporating</li>
+  <li><strong>Side reactions</strong> — some reactants react in unwanted ways to make different products</li>
+</ul>
+
+<h3>Worked Example — Percentage Yield</h3>
+<p>A student calculates a theoretical maximum mass of 12.0 g of copper sulfate, but only collects 9.0 g. Calculate the percentage yield.</p>
+<p>percentage yield = (actual mass &divide; theoretical mass) &times; 100<br>
+= (9.0 &divide; 12.0) &times; 100<br>
+= 0.75 &times; 100 = <strong>75%</strong></p>
+
+<h3>Atom Economy</h3>
+<p>Atom economy measures how much of the mass of the reactants ends up as the <em>useful</em> product, rather than as waste by-products:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>atom economy = (Mr of desired product &divide; total Mr of all products) &times; 100</strong></p>
+<p>A <strong>high atom economy</strong> is more sustainable: less waste is made, finite raw materials are used efficiently, and there are fewer by-products to dispose of.</p>
+
+<h3>Worked Example — Atom Economy</h3>
+<p>Hydrogen is made by reacting zinc with acid: Zn + H₂SO₄ &rarr; ZnSO₄ + H₂. Calculate the atom economy for making hydrogen.<br>(Mr of H₂ = 2, Mr of ZnSO₄ = 161)</p>
+<p>total Mr of all products = 161 + 2 = 163<br>
+atom economy = (2 &divide; 163) &times; 100 = <strong>1.2%</strong></p>
+<p>This is very low — almost all the reactant mass becomes the by-product ZnSO₄, so this is a wasteful way to make hydrogen.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often confuse percentage yield with atom economy. Yield is about how much product you <em>actually collect</em> in an experiment; atom economy depends only on the <em>balanced equation</em> and the Mr values, not on how the experiment is carried out. A reaction can have a high yield but a low atom economy, or the other way round.</p>
 `
 
 });

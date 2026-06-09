@@ -38,7 +38,19 @@ FLASHCARDS.push(
   {id:"s11fc-07-3-4",islandId:"s11i-07-3",front:"A transformer has 200 primary turns and 1000 secondary turns. The input voltage is 25 V. Find the output voltage.",
    back:"Vp / Vs = Np / Ns\n25 / Vs = 200 / 1000\nVs = 25 × (1000 / 200) = 25 × 5 = 125 V\n\nThis is a step-up transformer (more turns on the secondary → higher voltage).",difficulty:2,category:"calculation"},
   {id:"s11fc-07-3-5",islandId:"s11i-07-3",front:"What is the difference between a step-up and a step-down transformer?",
-   back:"Step-up transformer: more turns on the secondary coil → output voltage is higher than input voltage.\n\nStep-down transformer: fewer turns on the secondary coil → output voltage is lower than input voltage.\n\nTransformers only work with alternating current (AC).",difficulty:1,category:"concept"}
+   back:"Step-up transformer: more turns on the secondary coil → output voltage is higher than input voltage.\n\nStep-down transformer: fewer turns on the secondary coil → output voltage is lower than input voltage.\n\nTransformers only work with alternating current (AC).",difficulty:1,category:"concept"},
+
+  // s11i-07-4 — Transformers
+  {id:"s11fc-07-4-1",islandId:"s11i-07-4",front:"What does a transformer do, and what type of current must it use?",
+   back:"A transformer changes the size of an alternating potential difference (voltage).\n\nIt only works with alternating current (AC), because a changing magnetic field is needed to induce a voltage in the secondary coil.",difficulty:1,category:"definition"},
+  {id:"s11fc-07-4-2",islandId:"s11i-07-4",front:"State the transformer equation, including units.",
+   back:"Vp / Vs = np / ns\n\nVp = primary potential difference (V)\nVs = secondary potential difference (V)\nnp = number of turns on the primary coil\nns = number of turns on the secondary coil\n\nThe ratio of voltages equals the ratio of turns.",difficulty:2,category:"calculation"},
+  {id:"s11fc-07-4-3",islandId:"s11i-07-4",front:"What is the difference between a step-up and a step-down transformer in terms of the coils?",
+   back:"Step-up: MORE turns on the secondary coil than the primary → increases the potential difference.\n\nStep-down: FEWER turns on the secondary coil than the primary → decreases the potential difference.",difficulty:2,category:"concept"},
+  {id:"s11fc-07-4-4",islandId:"s11i-07-4",front:"For a 100% efficient transformer, what equation links the voltages and currents?",
+   back:"Power in = power out, so:\n\nVp × Ip = Vs × Is\n\nVp, Vs = primary and secondary potential differences (V)\nIp, Is = primary and secondary currents (A)\n\nIf the voltage is stepped up, the current is stepped down (and vice versa).",difficulty:2,category:"calculation"},
+  {id:"s11fc-07-4-5",islandId:"s11i-07-4",front:"Why are transformers used in the National Grid?",
+   back:"Step-up transformers raise the potential difference to a very high value for transmission. This makes the current low.\n\nA low current means less energy is wasted heating the cables (less power loss), making transmission efficient.\n\nStep-down transformers then reduce the voltage to a safe level for use in homes and businesses.",difficulty:3,category:"application"}
 );
 
 // ── TEST QUESTIONS ────────────────────────────────────────────────────────────
@@ -63,6 +75,13 @@ Object.assign(QUESTIONS, {
     {q:"An efficient transformer has Vp = 230 V, Ip = 2 A and Vs = 23 V. What is Is?",opts:["0.2 A","2 A","20 A","200 A"],c:2,e:"For a 100% efficient transformer: Vp × Ip = Vs × Is → 230 × 2 = 23 × Is → Is = 460/23 = 20 A. Stepping down the voltage steps up the current."},
     {q:"Which action would NOT increase the induced voltage when moving a magnet into a coil?",opts:["Moving the magnet faster","Using a stronger magnet","Using more turns on the coil","Moving the magnet at a constant slow speed"],c:3,e:"Moving the magnet slowly gives a smaller rate of change of field, producing a smaller voltage. To increase the induced voltage you need to move faster, use a stronger magnet or more coil turns."},
     {q:"Electromagnetic induction occurs when:",opts:["A magnet is held stationary inside a coil","A conductor moves through a magnetic field","A battery is connected to a coil","An electromagnet is switched off and stays off"],c:1,e:"Induction requires a change in the magnetic field experienced by the conductor. Moving the conductor through a field (or moving the field past the conductor) causes this change and induces a voltage."}
+  ],
+  "s11i-07-4":[
+    {q:"A transformer has 500 primary turns and 100 secondary turns, with a primary pd of 230 V. What is the secondary pd?",opts:["46 V","230 V","1150 V","50 V"],c:0,e:"Vp/Vs = np/ns → 230/Vs = 500/100 → Vs = 230 × (100/500) = 46 V. Fewer secondary turns means this is a step-down transformer."},
+    {q:"A step-up transformer has:",opts:["Fewer turns on the secondary coil","More turns on the secondary coil","Equal turns on both coils","No core"],c:1,e:"A step-up transformer has more turns on the secondary coil than the primary, which increases the potential difference."},
+    {q:"For a 100% efficient transformer with Vp = 240 V, Ip = 5 A and Vs = 1200 V, what is the secondary current Is?",opts:["1 A","5 A","25 A","0.5 A"],c:0,e:"Vp × Ip = Vs × Is → 240 × 5 = 1200 × Is → Is = 1200/1200 = 1 A. Stepping the voltage up steps the current down."},
+    {q:"Why is electricity transmitted across the National Grid at a very high voltage?",opts:["To make the current high","So the current is low and less energy is wasted heating the cables","To make the cables thicker","Because high voltage is safer in homes"],c:1,e:"A high transmission voltage means a low current. Lower current reduces the energy wasted as heat in the cables, making transmission more efficient. The voltage is stepped down before reaching homes."},
+    {q:"A transformer will NOT work with which of the following?",opts:["Alternating current","A steady direct current","Mains electricity","A changing magnetic field"],c:1,e:"A transformer needs a changing magnetic field to induce a voltage in the secondary coil. A steady direct current produces a constant field, so no voltage is induced."}
   ]
 });
 
@@ -160,6 +179,40 @@ Object.assign(LESSONS, {
 Vs = 400 × (200 / 4000) = 400 × 0.05 = <strong>20 V</strong>.</p>
 
 <h3>Common mistake</h3>
-<p>Students forget that transformers only work with <strong>AC</strong>. A steady (DC) current produces a constant magnetic field — no change means no induction and no output voltage.</p>`
+<p>Students forget that transformers only work with <strong>AC</strong>. A steady (DC) current produces a constant magnetic field — no change means no induction and no output voltage.</p>`,
+
+'s11i-07-4': `
+<h2>Transformers</h2>
+<div class="lesson-diagram" data-diagram="electromagnet"><p class="diagram-caption">A transformer: primary and secondary coils on an iron core</p></div>
+<p>A <strong>transformer</strong> changes the size of an <strong>alternating potential difference</strong>. It has two coils of wire — a primary and a secondary — wound around a soft iron core. Transformers only work with <strong>alternating current (AC)</strong>, because a changing magnetic field is needed to induce a voltage in the secondary coil.</p>
+
+<h3>Step-up and step-down</h3>
+<ul>
+<li><strong>Step-up transformer</strong> — more turns on the secondary coil than the primary, so the potential difference is <strong>increased</strong>.</li>
+<li><strong>Step-down transformer</strong> — fewer turns on the secondary coil than the primary, so the potential difference is <strong>decreased</strong>.</li>
+</ul>
+
+<h3>The transformer equation</h3>
+<p><strong>Vp / Vs = np / ns</strong></p>
+<ul>
+<li><strong>Vp</strong> = primary potential difference (V)</li>
+<li><strong>Vs</strong> = secondary potential difference (V)</li>
+<li><strong>np</strong> = number of turns on the primary coil</li>
+<li><strong>ns</strong> = number of turns on the secondary coil</li>
+</ul>
+<p>For a transformer that is <strong>100% efficient</strong>, the power in equals the power out, so:</p>
+<p><strong>Vp × Ip = Vs × Is</strong>, where Ip and Is are the primary and secondary currents (A).</p>
+
+<h3>Transformers in the National Grid</h3>
+<p><strong>Step-up</strong> transformers raise the voltage to a very high value for transmission. This makes the <strong>current low</strong>, so less energy is wasted heating the cables. <strong>Step-down</strong> transformers then reduce the voltage to a safe level for use in homes and businesses.</p>
+
+<h3>Worked example</h3>
+<p><strong>Q:</strong> A step-up transformer has 1000 primary turns and 25000 secondary turns. The primary potential difference is 11 000 V. Find the secondary potential difference.</p>
+<p><strong>A:</strong> Vp / Vs = np / ns<br>
+11000 / Vs = 1000 / 25000<br>
+Vs = 11000 × (25000 / 1000) = 11000 × 25 = <strong>275 000 V</strong>.</p>
+
+<h3>Common mistake</h3>
+<p>Students invert the equation. Remember the ratio of <strong>voltages</strong> equals the ratio of <strong>turns</strong> on the matching coils: Vp / Vs = np / ns. A larger secondary coil (more turns) always means a larger secondary voltage.</p>`
 
 });

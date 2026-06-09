@@ -102,7 +102,12 @@ CURRICULUM.push(
    topicId:"s10t-03", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Identify plant diseases and explain plant physical, chemical and mechanical defences.",
    learningOutcomes:["Recognise signs of plant disease and how it is detected","Describe physical, chemical and mechanical plant defences","Identify nitrate and magnesium deficiencies"],
-   topics:["Plant pathogens","Plant defences","Mineral deficiencies"], prerequisites:["s10i-03-1"]}
+   topics:["Plant pathogens","Plant defences","Mineral deficiencies"], prerequisites:["s10i-03-1"]},
+  {id:"s10i-03-5", name:"Monoclonal Antibodies", emoji:"🧫", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-03", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Explain how monoclonal antibodies are produced and used (Triple).",
+   learningOutcomes:["Explain what monoclonal antibodies are","Describe how they are produced (hybridoma)","Describe their uses and limitations"],
+   topics:["What they are","Production","Uses"], prerequisites:["s10i-03-2"]}
 );
 
 // Topic 4: Homeostasis & the Nervous System
@@ -171,7 +176,12 @@ CURRICULUM.push(
    topicId:"s10t-06", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
    description:"Calculate concentration and describe how to carry out a titration.",
    learningOutcomes:["Use concentration = moles ÷ volume","Describe the titration method","Calculate unknowns from titration results"],
-   topics:["Concentration","Titration method","Titration calculations"], prerequisites:["s10i-06-1"]}
+   topics:["Concentration","Titration method","Titration calculations"], prerequisites:["s10i-06-1"]},
+  {id:"s10i-06-4", name:"Percentage Yield & Atom Economy", emoji:"📊", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-06", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Calculate percentage yield and atom economy and explain why they matter (Triple).",
+   learningOutcomes:["Calculate percentage yield","Calculate atom economy","Explain why high atom economy is sustainable"],
+   topics:["Percentage yield","Atom economy","Sustainability"], prerequisites:["s10i-06-1"]}
 );
 
 // Topic 7: Chemical Changes
@@ -252,7 +262,17 @@ CURRICULUM.push(
    topicId:"s10t-10", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Compare alkanes and alkenes and explain why cracking is important.",
    learningOutcomes:["Name and draw alkanes and alkenes","Test for an alkene with bromine water","Explain cracking and why it is useful"],
-   topics:["Alkanes","Alkenes","Cracking"], prerequisites:["s10i-10-1"]}
+   topics:["Alkanes","Alkenes","Cracking"], prerequisites:["s10i-10-1"]},
+  {id:"s10i-10-3", name:"Alcohols, Carboxylic Acids & Esters", emoji:"🍷", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-10", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Study the alcohols, carboxylic acids and esters homologous series (Triple).",
+   learningOutcomes:["Describe alcohols and their reactions","Describe carboxylic acids","Explain how esters are made and used"],
+   topics:["Alcohols","Carboxylic acids","Esters"], prerequisites:["s10i-10-1"]},
+  {id:"s10i-10-4", name:"Polymers: Addition & Condensation", emoji:"🔗", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-10", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Compare addition and condensation polymerisation and natural polymers (Triple).",
+   learningOutcomes:["Explain addition polymerisation","Explain condensation polymerisation","Identify natural polymers"],
+   topics:["Addition","Condensation","Natural polymers"], prerequisites:["s10i-10-2"]}
 );
 
 // ── Physics islands ──────────────────────────────────────────────────────────
@@ -326,7 +346,12 @@ CURRICULUM.push(
    topicId:"s10t-13", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Evaluate the uses and dangers of radioactive materials.",
    learningOutcomes:["Describe uses (medical, industrial, dating)","Explain contamination vs irradiation","Evaluate risks and benefits"],
-   topics:["Medical & industrial uses","Contamination vs irradiation","Risk–benefit"], prerequisites:["s10i-13-1"]}
+   topics:["Medical & industrial uses","Contamination vs irradiation","Risk–benefit"], prerequisites:["s10i-13-1"]},
+  {id:"s10i-13-4", name:"Nuclear Fission & Fusion", emoji:"☢️", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-13", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Explain nuclear fission, chain reactions and nuclear fusion (Triple).",
+   learningOutcomes:["Explain nuclear fission and chain reactions","Explain nuclear fusion","Contrast fission and fusion"],
+   topics:["Fission","Chain reactions","Fusion"], prerequisites:["s10i-13-1"]}
 );
 
 // Topic 14: Forces & Pressure

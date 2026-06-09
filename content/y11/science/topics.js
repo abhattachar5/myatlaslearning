@@ -148,7 +148,12 @@ CURRICULUM.push(
    topicId:"s11t-05", yearGroup:"Year 11", difficulty:2, estimatedHours:1,
    description:"Describe paper chromatography and calculate Rf values.",
    learningOutcomes:["Describe the chromatography method","Calculate Rf values","Interpret chromatograms to identify substances"],
-   topics:["Method","Rf values","Interpreting results"], prerequisites:["s11i-05-1"]}
+   topics:["Method","Rf values","Interpreting results"], prerequisites:["s11i-05-1"]},
+  {id:"s11i-05-3", name:"Flame Tests & Instrumental Methods", emoji:"🔥", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-05", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Identify metal ions by flame tests and flame emission spectroscopy (Triple).",
+   learningOutcomes:["Recall flame test colours","Explain flame emission spectroscopy","State the advantages of instrumental methods"],
+   topics:["Flame tests","Flame emission spectroscopy","Instrumental advantages"], prerequisites:["s11i-05-1"]}
 );
 
 // Topic 6: Atmospheric Chemistry & Climate
@@ -183,7 +188,12 @@ CURRICULUM.push(
    topicId:"s11t-07", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
    description:"Explain electromagnetic induction, generators and transformers.",
    learningOutcomes:["Explain how a changing field induces a voltage","Describe how a generator works","Use the transformer equation"],
-   topics:["Induction","Generators","Transformers"], prerequisites:["s11i-07-2"]}
+   topics:["Induction","Generators","Transformers"], prerequisites:["s11i-07-2"]},
+  {id:"s11i-07-4", name:"Transformers", emoji:"⚡", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-07", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Explain transformers, the transformer equation and their role in the National Grid (Triple).",
+   learningOutcomes:["Explain step-up and step-down transformers","Use Vp/Vs = np/ns and Vp×Ip = Vs×Is","Explain transformers in the National Grid"],
+   topics:["Step-up & step-down","Transformer equation","National Grid"], prerequisites:["s11i-07-3"]}
 );
 
 // Topic 8: Space Physics

@@ -26,7 +26,19 @@ FLASHCARDS.push(
   {id:"s11fc-05-2-4",islandId:"s11i-05-2",front:"A spot moves 3.6 cm and the solvent front moves 9.0 cm. Calculate the Rf value.",
    back:"Rf = 3.6 ÷ 9.0 = 0.40\n\nAlways measure from the pencil baseline to the centre of the spot, and from the baseline to the solvent front.",difficulty:2,category:"calculation"},
   {id:"s11fc-05-2-5",islandId:"s11i-05-2",front:"How can you tell from a chromatogram whether a sample is a pure substance or a mixture?",
-   back:"A pure substance produces only one spot on the chromatogram.\n\nA mixture produces two or more spots, each representing a different component of the mixture.",difficulty:1,category:"concept"}
+   back:"A pure substance produces only one spot on the chromatogram.\n\nA mixture produces two or more spots, each representing a different component of the mixture.",difficulty:1,category:"concept"},
+
+  // s11i-05-3 — Flame Tests & Instrumental Methods
+  {id:"s11fc-05-3-1",islandId:"s11i-05-3",front:"What flame colours are produced by lithium, sodium, potassium, calcium and copper ions?",
+   back:"Lithium — crimson\nSodium — yellow\nPotassium — lilac\nCalcium — orange-red\nCopper — green\n\nA clean nichrome (or platinum) wire is dipped in the sample and held in a blue Bunsen flame.",difficulty:2,category:"definition"},
+  {id:"s11fc-05-3-2",islandId:"s11i-05-3",front:"What is the main limitation of using a flame test to identify a metal ion?",
+   back:"If the sample is a mixture of metal ions, the flame colour of one ion can mask (hide) the colour of another.\n\nFor example, the strong yellow of sodium can swamp the lilac of potassium, so a mixture may give an unreliable result.",difficulty:2,category:"concept"},
+  {id:"s11fc-05-3-3",islandId:"s11i-05-3",front:"How does flame emission spectroscopy work?",
+   back:"The sample is placed into a flame, and the light given off is passed through a spectroscope.\n\nThis produces a line spectrum. The set of lines (their positions) is unique to each element, allowing the element to be identified. The intensity of the lines indicates the concentration.",difficulty:3,category:"concept"},
+  {id:"s11fc-05-3-4",islandId:"s11i-05-3",front:"What information can flame emission spectroscopy give that a simple flame test cannot?",
+   back:"It can both IDENTIFY the metal ions present (from the unique line spectrum) and MEASURE their concentration (from the intensity of the lines).\n\nIt also works on mixtures, where a simple flame test would be masked.",difficulty:2,category:"application"},
+  {id:"s11fc-05-3-5",islandId:"s11i-05-3",front:"State the advantages of instrumental methods over traditional chemical tests.",
+   back:"Instrumental methods are:\n1. Fast (rapid results)\n2. Accurate\n3. Sensitive — they detect very small amounts\n4. Able to work on very small or mixed samples\n\nThey do need expensive equipment and trained operators, however.",difficulty:2,category:"concept"}
 );
 
 // ── TEST QUESTIONS ────────────────────────────────────────────────────────────
@@ -44,6 +56,13 @@ Object.assign(QUESTIONS, {
     {q:"A chromatogram shows three spots from one sample. What does this indicate?",opts:["The sample is pure","The sample contains three different substances","The experiment failed","The solvent was wrong"],c:1,e:"Each spot represents a different component of the mixture. Three spots means the sample contains at least three different substances."},
     {q:"Why must the baseline NOT be drawn in ink?",opts:["Ink is too dark to see","Ink would dissolve in the solvent and interfere with results","Ink costs more than pencil","Ink would damage the chromatography paper"],c:1,e:"If the baseline were drawn in ink, the ink could dissolve in the solvent and travel up the paper alongside the sample, contaminating the results."},
     {q:"Two substances have the same Rf value in the same solvent. What can you conclude?",opts:["They are definitely the same substance","They are likely the same substance but further tests may be needed","They must be different substances","The chromatography failed"],c:1,e:"The same Rf in the same solvent strongly suggests they are the same substance, but it is not absolute proof. Further analysis (e.g. using a different solvent or another analytical technique) may be needed to confirm."}
+  ],
+  "s11i-05-3":[
+    {q:"Which metal ion gives a crimson (red) flame colour?",opts:["Lithium","Sodium","Potassium","Copper"],c:0,e:"Lithium produces a crimson (red) flame. Sodium gives yellow, potassium gives lilac and copper gives green."},
+    {q:"A flame test gives a yellow flame. Which metal ion is present?",opts:["Potassium","Calcium","Sodium","Copper"],c:2,e:"Sodium ions produce a strong yellow flame. This intense colour can easily mask the flame colours of other ions in a mixture."},
+    {q:"Why might a flame test give an unreliable result for a sample containing several metal ions?",opts:["The flame is too cold","The colour of one ion can mask the colour of another","Metal ions do not produce flame colours","The wire dissolves in the sample"],c:1,e:"In a mixture, the flame colour of one ion (e.g. the strong yellow of sodium) can hide the colour of another, making identification unreliable. Instrumental methods overcome this."},
+    {q:"In flame emission spectroscopy, what is passed through a spectroscope?",opts:["The solid sample","The light given off when the sample is put into a flame","An electric current","X-rays from the sample"],c:1,e:"The sample is placed into a flame and the light emitted is passed through a spectroscope, producing a line spectrum that is unique to each element."},
+    {q:"Which is NOT an advantage of instrumental methods of analysis?",opts:["They are fast","They are sensitive and detect tiny amounts","They are cheap and need no special equipment","They can analyse very small or mixed samples"],c:2,e:"Instrumental methods are fast, accurate, sensitive and work on small or mixed samples, but they require expensive equipment and trained operators — so they are not cheap."}
   ]
 });
 
@@ -115,6 +134,41 @@ Object.assign(LESSONS, {
 <p><strong>A:</strong> Rf = 5.4 ÷ 9.0 = <strong>0.60</strong>.</p>
 
 <h3>Common mistake</h3>
-<p>Students sometimes measure from the top of the paper instead of from the <strong>pencil baseline</strong>. Always measure both distances from the baseline — the substance to the centre of its spot, and the solvent to the solvent front line.</p>`
+<p>Students sometimes measure from the top of the paper instead of from the <strong>pencil baseline</strong>. Always measure both distances from the baseline — the substance to the centre of its spot, and the solvent to the solvent front line.</p>`,
+
+'s11i-05-3': `
+<h2>Flame Tests &amp; Instrumental Methods</h2>
+<p>Metal ions can be identified by the colour they produce in a flame. For more reliable analysis, scientists use <strong>instrumental methods</strong> such as flame emission spectroscopy.</p>
+
+<h3>Flame tests</h3>
+<p>A clean nichrome wire is dipped in the sample and held in a blue Bunsen flame. The colour identifies the metal ion:</p>
+<ul>
+<li><strong>Lithium</strong> — crimson</li>
+<li><strong>Sodium</strong> — yellow</li>
+<li><strong>Potassium</strong> — lilac</li>
+<li><strong>Calcium</strong> — orange-red</li>
+<li><strong>Copper</strong> — green</li>
+</ul>
+
+<h3>The limitation of flame tests</h3>
+<p>If a sample contains a <strong>mixture</strong> of metal ions, the colour of one ion can <strong>mask</strong> the colour of another. The strong yellow flame of sodium, for example, can easily swamp the lilac of potassium, making the result unreliable.</p>
+
+<h3>Flame emission spectroscopy</h3>
+<p>This is an <strong>instrumental method</strong>. The sample is put into a flame, and the light given off is passed through a <strong>spectroscope</strong>. This produces a <strong>line spectrum</strong>. The positions of the lines are unique to each element, so the spectrum can be used to <strong>identify</strong> the metal ions present. The <strong>intensity</strong> of the lines depends on the concentration, so the method also <strong>measures</strong> how much of each ion is present.</p>
+
+<h3>Advantages of instrumental methods</h3>
+<ul>
+<li><strong>Fast</strong> — results are produced rapidly</li>
+<li><strong>Accurate</strong> and reliable</li>
+<li><strong>Sensitive</strong> — they detect very small amounts</li>
+<li>Work on <strong>very small or mixed samples</strong></li>
+</ul>
+
+<h3>Worked example</h3>
+<p><strong>Q:</strong> A sample is thought to contain both sodium and potassium ions, but a flame test shows only a yellow colour. Explain why, and suggest a better method.</p>
+<p><strong>A:</strong> The strong yellow flame of sodium has masked the lilac flame of potassium. <strong>Flame emission spectroscopy</strong> would give a line spectrum showing the unique lines of both elements, identifying and measuring each ion even in the mixture.</p>
+
+<h3>Common mistake</h3>
+<p>Students say instrumental methods have no disadvantages. They are fast and sensitive, but they need <strong>expensive equipment</strong> and <strong>trained operators</strong> to interpret the results.</p>`
 
 });

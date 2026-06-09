@@ -195,3 +195,65 @@ Or: 6400 &times; (&frac12;)⁴ = 6400 &times; 1/16 = 400 Bq</p>
 `
 
 });
+
+// ── s10i-13-4 — Nuclear Fission & Fusion ─────────────────────────────────────
+FLASHCARDS.push(
+  {id:"s10fc-13-4-1", islandId:"s10i-13-4", front:"What is nuclear fission?",
+   back:"Nuclear fission is the splitting of a large, unstable nucleus into two smaller nuclei.\n\n• A large nucleus (such as uranium-235 or plutonium-239) absorbs a neutron and becomes unstable.\n• It splits into two smaller nuclei, plus two or three neutrons.\n• Energy is released (carried mostly as kinetic energy of the fragments).\n\nSpontaneous fission is rare — fission is usually triggered by the nucleus absorbing a neutron.", difficulty:1, category:"definition"},
+  {id:"s10fc-13-4-2", islandId:"s10i-13-4", front:"What is a chain reaction in nuclear fission?",
+   back:"When a nucleus undergoes fission it releases two or three neutrons.\n\nThese neutrons can be absorbed by other large nuclei, causing them to split as well. Each of those releases more neutrons, and so on.\n\nThis is a chain reaction. If it is uncontrolled, the rate increases rapidly and a huge amount of energy is released (as in a nuclear bomb). In a power station the chain reaction is controlled.", difficulty:2, category:"concept"},
+  {id:"s10fc-13-4-3", islandId:"s10i-13-4", front:"How is fission controlled in a nuclear power station?",
+   back:"In a nuclear reactor the chain reaction is kept under control so that energy is released steadily.\n\n• Control rods (e.g. boron) absorb some of the neutrons. Lowering them in slows the reaction; raising them speeds it up.\n• A moderator slows the neutrons so they are more likely to be absorbed and cause further fission.\n\nThe energy released heats water to make steam, which drives turbines to generate electricity.", difficulty:2, category:"application"},
+  {id:"s10fc-13-4-4", islandId:"s10i-13-4", front:"What is nuclear fusion?",
+   back:"Nuclear fusion is the joining of two light nuclei to form a heavier nucleus.\n\n• Two light nuclei (e.g. hydrogen isotopes) join together.\n• A heavier nucleus is formed, and a large amount of energy is released — far more than from fission.\n\nFusion powers the Sun and other stars. Some of the mass of the nuclei is converted into the energy that is released.", difficulty:1, category:"definition"},
+  {id:"s10fc-13-4-5", islandId:"s10i-13-4", front:"Why is nuclear fusion so difficult to achieve on Earth?",
+   back:"For two nuclei to fuse they must get extremely close together. But both nuclei are positively charged, so they repel each other strongly (electrostatic repulsion).\n\nTo overcome this repulsion, fusion requires:\n• Extremely high temperatures\n• Extremely high pressures\n\nThese conditions exist naturally in the cores of stars, but they are very hard and expensive to create and contain on Earth, which is why fusion is not yet used for power generation.", difficulty:2, category:"concept"}
+);
+
+Object.assign(QUESTIONS, {
+  "s10i-13-4": [
+    {q:"What happens during nuclear fission?",
+     opts:["Two small nuclei join to form a larger nucleus","A large unstable nucleus splits into two smaller nuclei","A neutron turns into a proton and an electron","An atom gains electrons to become an ion"], c:1,
+     e:"In nuclear fission a large, unstable nucleus (such as uranium-235) absorbs a neutron and splits into two smaller nuclei, releasing two or three neutrons and a large amount of energy. Joining nuclei together is fusion, not fission."},
+    {q:"Which of these is commonly used as a fuel for nuclear fission?",
+     opts:["Hydrogen-2","Carbon-14","Uranium-235","Helium-4"], c:2,
+     e:"Uranium-235 and plutonium-239 are the large, unstable nuclei used as fuel in fission reactors. Hydrogen isotopes are used in fusion, not fission. Carbon-14 is used for dating, and helium-4 is a stable, light nucleus."},
+    {q:"What is released during fission that allows a chain reaction to occur?",
+     opts:["Alpha particles","Two or three neutrons","Gamma rays only","Protons"], c:1,
+     e:"Each fission event releases two or three neutrons. These neutrons can be absorbed by other large nuclei, causing them to split too. This self-sustaining sequence is called a chain reaction."},
+    {q:"What is nuclear fusion?",
+     opts:["The splitting of a heavy nucleus","The joining of two light nuclei to form a heavier nucleus","The absorption of a neutron by a nucleus","The emission of an electron from the nucleus"], c:1,
+     e:"Nuclear fusion is the joining of two light nuclei (such as hydrogen isotopes) to form a heavier nucleus, releasing a large amount of energy. It is the process that powers the Sun and stars. Splitting a heavy nucleus is fission."},
+    {q:"Why is nuclear fusion difficult to achieve on Earth?",
+     opts:["The nuclei are too heavy to move","It requires extremely high temperatures and pressures to overcome repulsion","There is no fuel available for fusion","Fusion releases too little energy to be useful"], c:1,
+     e:"Both nuclei are positively charged and repel each other. Forcing them close enough to fuse requires extremely high temperatures and pressures, like those in the core of a star. Creating and containing these conditions on Earth is very difficult."}
+  ]
+});
+
+Object.assign(LESSONS, {
+
+'s10i-13-4': `
+<h2>Nuclear Fission &amp; Fusion</h2>
+<p>Both fission and fusion are nuclear processes that release energy, but they are opposites. Fission <strong>splits</strong> a large nucleus apart; fusion <strong>joins</strong> two small nuclei together.</p>
+
+<h3>Nuclear Fission</h3>
+<p>Nuclear fission is the splitting of a large, unstable nucleus. A nucleus such as <strong>uranium-235</strong> or <strong>plutonium-239</strong> absorbs a neutron and becomes unstable. It then splits into two smaller nuclei, releasing <strong>two or three neutrons</strong> and a large amount of energy. Spontaneous fission is rare &mdash; it is usually triggered when the nucleus absorbs a neutron.</p>
+
+<h3>Chain Reactions</h3>
+<p>The neutrons released by one fission event can be absorbed by other large nuclei, causing them to split as well. Each of those releases more neutrons, which split still more nuclei. This is a <strong>chain reaction</strong>. If left uncontrolled, the rate grows rapidly and releases an enormous amount of energy &mdash; this is what happens in a nuclear weapon.</p>
+
+<h3>Controlled Fission in Power Stations</h3>
+<p>In a nuclear power station the chain reaction is kept under control. <strong>Control rods</strong> absorb some of the neutrons so that, on average, only one neutron from each fission goes on to cause another. The energy released heats water to produce steam, which drives turbines that generate electricity.</p>
+
+<h3>Nuclear Fusion</h3>
+<p>Nuclear fusion is the joining of two light nuclei, such as <strong>hydrogen isotopes</strong>, to form a single heavier nucleus. This releases <strong>far more energy</strong> than fission. Fusion is the process that powers the <strong>Sun and other stars</strong>. However, because both nuclei are positively charged, they repel one another strongly, so fusion only happens at <strong>extremely high temperatures and pressures</strong>. These conditions are very difficult and expensive to create and contain on Earth, which is why fusion is not yet used to generate electricity.</p>
+
+<h3>Worked Example</h3>
+<p>State the key difference between nuclear fission and nuclear fusion, and give one example of where each occurs.</p>
+<p>In fission a large nucleus <strong>splits</strong> into smaller nuclei &mdash; this happens in nuclear power stations using uranium-235. In fusion, two light nuclei <strong>join</strong> to form a heavier nucleus &mdash; this happens in the Sun, where hydrogen nuclei fuse. The simplest way to remember it: fission splits, fusion joins.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often mix up the two words because they look similar. Remember that fis<em>sion</em> is the spli<em>tting</em> of a heavy nucleus, while fu<em>sion</em> is the f<em>using</em> (joining) of light nuclei. Fusion releases more energy and powers the stars, but is far harder to achieve on Earth than fission.</p>
+`
+
+});

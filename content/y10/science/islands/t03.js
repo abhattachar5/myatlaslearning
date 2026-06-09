@@ -308,3 +308,73 @@ Object.assign(LESSONS, {
 `
 
 });
+
+// ── s10i-03-5 — Monoclonal Antibodies ────────────────────────────────────────
+FLASHCARDS.push(
+  {id:"s10fc-03-5-1", islandId:"s10i-03-5", front:"What are monoclonal antibodies?",
+   back:"Monoclonal antibodies are identical antibodies produced from a single clone of cells.\n\nBecause they all come from one type of cell, they are specific to one type of antigen and bind to only one place on it (a single binding site).\n\nThis high specificity means they can be made to target one particular chemical or one particular type of cell in the body, which is why they are so useful in tests and treatments.", difficulty:1, category:"definition"},
+  {id:"s10fc-03-5-2", islandId:"s10i-03-5", front:"How are monoclonal antibodies produced?",
+   back:"1. A mouse is injected with the antigen so its lymphocytes make the desired antibody.\n2. These lymphocytes are removed. They make the right antibody but do not divide easily.\n3. Each lymphocyte is fused with a tumour (cancer) cell, which divides rapidly. The fused cell is called a hybridoma.\n4. The hybridoma divides quickly to form a clone, all making the same antibody.\n5. A large amount of the antibody is produced, then collected and purified.", difficulty:2, category:"concept"},
+  {id:"s10fc-03-5-3", islandId:"s10i-03-5", front:"How do pregnancy tests use monoclonal antibodies?",
+   back:"Pregnancy tests detect the hormone hCG (human chorionic gonadotropin), which is found in the urine of pregnant women.\n\n• Monoclonal antibodies on the test strip are specific to hCG.\n• If hCG is present, it binds to the antibodies, which carry a coloured bead/dye.\n• The complex is trapped at a test line, where a second set of antibodies binds it, producing a coloured line.\n\nA coloured line means hCG was detected — a positive result.", difficulty:2, category:"application"},
+  {id:"s10fc-03-5-4", islandId:"s10i-03-5", front:"Give three uses of monoclonal antibodies (other than pregnancy testing).",
+   back:"• Diagnosis — detecting pathogens, or antigens on cancer cells, in blood or tissue samples.\n\n• Measuring and monitoring — measuring the levels of hormones and other chemicals in the blood, or detecting specific molecules.\n\n• Treating disease — for example in cancer, the antibody can be bound to a radioactive substance, a toxic drug or a chemical that stops cells growing. The antibody delivers it directly to the cancer cells without harming normal cells.", difficulty:2, category:"application"},
+  {id:"s10fc-03-5-5", islandId:"s10i-03-5", front:"Why are monoclonal antibodies not used as widely as first hoped?",
+   back:"When monoclonal antibodies were first developed, scientists expected them to be widely used to treat many diseases.\n\nHowever, they created more side effects (such as fever, vomiting and low blood pressure) than expected. These side effects were more severe than first hoped.\n\nAs a result they are not yet as widely used as people once predicted, although they are still very useful in laboratory tests and diagnosis, and their use in treatment is improving.", difficulty:2, category:"concept"}
+);
+
+Object.assign(QUESTIONS, {
+  "s10i-03-5": [
+    {q:"Why are monoclonal antibodies described as specific?",
+     opts:["They can bind to any antigen","They are produced from many different cells","They bind to only one type of antigen at a single binding site","They only work inside a mouse"], c:2,
+     e:"Monoclonal antibodies come from a single clone of identical cells, so they are all the same. They bind to only one specific antigen at one binding site, which makes them ideal for targeting a particular chemical or type of cell."},
+    {q:"In producing monoclonal antibodies, what is a mouse lymphocyte fused with to form a hybridoma?",
+     opts:["A red blood cell","A tumour (cancer) cell","Another lymphocyte","A bacterial cell"], c:1,
+     e:"The lymphocyte makes the desired antibody but does not divide well. It is fused with a tumour cell, which divides rapidly. The resulting hybridoma both makes the antibody and divides quickly to form a clone."},
+    {q:"Which hormone do pregnancy tests detect using monoclonal antibodies?",
+     opts:["Insulin","Oestrogen","hCG","Testosterone"], c:2,
+     e:"Pregnancy tests use monoclonal antibodies specific to the hormone hCG (human chorionic gonadotropin), which is present in the urine of pregnant women. If hCG binds to the antibodies, a coloured line appears."},
+    {q:"How can monoclonal antibodies be used to treat cancer?",
+     opts:["By dissolving the tumour with acid","By delivering a drug or radioactive substance directly to cancer cells","By boosting the patient's stomach acid","By replacing the patient's white blood cells"], c:1,
+     e:"A monoclonal antibody can be bound to a toxic drug, a radioactive substance or a chemical that stops cells dividing. The antibody binds to antigens on cancer cells, delivering the substance directly to them while largely sparing healthy cells."},
+    {q:"Why are monoclonal antibodies not used as widely in treatment as first hoped?",
+     opts:["They are too cheap to manufacture","They caused more severe side effects than expected","They cannot be purified","They only bind to healthy cells"], c:1,
+     e:"Although monoclonal antibodies were expected to revolutionise treatment, they produced more side effects (such as fever, vomiting and low blood pressure) than first hoped. This has limited their use in treatment, though they remain very useful in diagnosis."}
+  ]
+});
+
+Object.assign(LESSONS, {
+
+'s10i-03-5': `
+<h2>Monoclonal Antibodies</h2>
+<p>Monoclonal antibodies are one of the most powerful tools in modern biology and medicine. They allow scientists to target one specific chemical or one type of cell with great precision.</p>
+
+<h3>What Are Monoclonal Antibodies?</h3>
+<p>A monoclonal antibody is one of many <strong>identical antibodies</strong> produced from a <strong>single clone of cells</strong>. Because they all come from one type of cell, they are all the same shape and bind to <strong>only one type of antigen</strong> at a single binding site. This specificity is what makes them so useful: an antibody can be designed to lock onto just one particular molecule or one particular type of cell in the body.</p>
+
+<h3>How They Are Produced</h3>
+<p>The problem is that the lymphocytes which make a useful antibody do not divide easily, while cells that divide rapidly do not make the antibody we want. The solution is to combine the two:</p>
+<ul>
+  <li>A mouse is injected with the antigen, so its lymphocytes make the required antibody.</li>
+  <li>These lymphocytes are removed and each is fused with a fast-dividing <strong>tumour cell</strong>.</li>
+  <li>The fused cell is called a <strong>hybridoma</strong>. It both makes the antibody and divides rapidly.</li>
+  <li>The hybridoma is cloned, producing large quantities of identical antibody, which is then collected and purified.</li>
+</ul>
+
+<h3>Uses</h3>
+<ul>
+  <li><strong>Pregnancy tests</strong> — monoclonal antibodies detect the hormone hCG in urine, producing a coloured line if a woman is pregnant.</li>
+  <li><strong>Diagnosis</strong> — detecting pathogens, or antigens on cancer cells, in blood and tissue samples.</li>
+  <li><strong>Measuring chemicals</strong> — measuring hormone levels and detecting specific molecules in the blood.</li>
+  <li><strong>Treating cancer</strong> — the antibody is bound to a radioactive substance, a toxic drug or a growth-stopping chemical and delivers it directly to cancer cells, sparing healthy ones.</li>
+</ul>
+
+<h3>Worked Example</h3>
+<p>Explain why a monoclonal antibody can deliver a cancer drug to a tumour without harming most healthy cells.</p>
+<p>Cancer cells have specific antigens on their surface. The monoclonal antibody is made to be complementary to those antigens, so it binds only to cancer cells. The toxic drug attached to the antibody is therefore carried directly to the cancer cells. Healthy cells do not carry that antigen, so the antibody does not bind to them and they are largely unaffected.</p>
+
+<h3>Common Mistake</h3>
+<p>Students sometimes say monoclonal antibodies have no side effects because they are so specific. In fact, when first developed they caused <em>more</em> side effects (such as fever, vomiting and low blood pressure) than expected, and these were more severe than first hoped. This is why they are not yet used as widely in treatment as scientists originally predicted.</p>
+`
+
+});

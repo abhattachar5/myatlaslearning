@@ -26,7 +26,31 @@ FLASHCARDS.push(
   {id:"s10fc-10-2-4", islandId:"s10i-10-2", front:"What is cracking and why is it important?",
    back:"Cracking is the process of breaking down long-chain hydrocarbons into shorter, more useful molecules.\n\nWhy it is important:\n• There is less demand for long-chain fractions (e.g. fuel oil)\n• There is more demand for short-chain fractions (e.g. petrol, gases)\n• Cracking produces alkenes, which are needed for making polymers (plastics)\n\nMethods:\n1. Catalytic cracking — uses a hot catalyst (e.g. zeolite) at ~600 °C\n2. Steam cracking — uses high temperature steam (~800 °C)", difficulty:2, category:"concept"},
   {id:"s10fc-10-2-5", islandId:"s10i-10-2", front:"Write an example equation for cracking.",
-   back:"Example: cracking decane\n\nC₁₀H₂₂ → C₈H₁₈ + C₂H₄\n(decane → octane + ethene)\n\nThe long-chain alkane is broken into a shorter alkane and an alkene.\n\nCheck: carbons balance (10 = 8 + 2) ✓\nHydrogens balance (22 = 18 + 4) ✓\n\nThe products always include at least one alkene (unsaturated) because there are not enough hydrogen atoms for all products to be alkanes.", difficulty:2, category:"application"}
+   back:"Example: cracking decane\n\nC₁₀H₂₂ → C₈H₁₈ + C₂H₄\n(decane → octane + ethene)\n\nThe long-chain alkane is broken into a shorter alkane and an alkene.\n\nCheck: carbons balance (10 = 8 + 2) ✓\nHydrogens balance (22 = 18 + 4) ✓\n\nThe products always include at least one alkene (unsaturated) because there are not enough hydrogen atoms for all products to be alkanes.", difficulty:2, category:"application"},
+
+  // s10i-10-3 — Alcohols, Carboxylic Acids & Esters
+  {id:"s10fc-10-3-1", islandId:"s10i-10-3", front:"What are alcohols? Give the first four members.",
+   back:"Alcohols are a homologous series of organic molecules that all contain the functional group –OH (hydroxyl).\n\n1. Methanol — CH₃OH\n2. Ethanol — C₂H₅OH\n3. Propanol — C₃H₇OH\n4. Butanol — C₄H₉OH\n\nThey have the general formula CₙH₂ₙ₊₁OH. The –OH group gives them their characteristic reactions.", difficulty:1, category:"definition"},
+  {id:"s10fc-10-3-2", islandId:"s10i-10-3", front:"What are the main uses and reactions of alcohols?",
+   back:"Uses:\n• Fuels (e.g. ethanol burns cleanly)\n• Solvents (dissolve substances that water cannot)\n• Alcoholic drinks (ethanol)\n\nReactions:\n• Combustion — burn in oxygen to make carbon dioxide and water\n• React with sodium — fizz, releasing hydrogen gas\n• Oxidation — can be oxidised to carboxylic acids (e.g. by microbes or oxidising agents); this is why wine turns to vinegar in air", difficulty:2, category:"concept"},
+  {id:"s10fc-10-3-3", islandId:"s10i-10-3", front:"What are carboxylic acids? Give examples and their functional group.",
+   back:"Carboxylic acids are a homologous series containing the functional group –COOH (carboxyl).\n\n1. Methanoic acid — HCOOH\n2. Ethanoic acid — CH₃COOH\n3. Propanoic acid — C₂H₅COOH\n4. Butanoic acid — C₃H₇COOH\n\nThey are weak acids — they only partially ionise in water, so they have a higher pH than a strong acid of the same concentration. Ethanoic acid is the acid found in vinegar.", difficulty:1, category:"definition"},
+  {id:"s10fc-10-3-4", islandId:"s10i-10-3", front:"How do carboxylic acids react with carbonates?",
+   back:"Carboxylic acids react with carbonates to produce a salt, water and carbon dioxide.\n\nacid + carbonate → salt + water + carbon dioxide\n\nExample:\nethanoic acid + sodium carbonate → sodium ethanoate + water + carbon dioxide\n\nThe carbon dioxide gas causes fizzing/effervescence. This is a typical acid reaction and shows that carboxylic acids are acidic.", difficulty:2, category:"application"},
+  {id:"s10fc-10-3-5", islandId:"s10i-10-3", front:"How are esters made and what are they used for?",
+   back:"Esters are made by reacting an alcohol with a carboxylic acid, using an acid catalyst (e.g. sulfuric acid).\n\nalcohol + carboxylic acid → ester + water\n\nExample:\nethanol + ethanoic acid → ethyl ethanoate + water\n\nEsters have distinctive sweet, fruity smells. They are used in flavourings and perfumes.", difficulty:2, category:"concept"},
+
+  // s10i-10-4 — Polymers: Addition & Condensation
+  {id:"s10fc-10-4-1", islandId:"s10i-10-4", front:"What is addition polymerisation?",
+   back:"In addition polymerisation, many small alkene monomers (each with a C=C double bond) join together to form one long polymer chain.\n\n• The only product is the polymer — no other molecule is made\n• The double bond opens up to form single bonds linking the monomers\n\nExample: many ethene molecules → poly(ethene)\nnC₂H₄ → –(C₂H₄)ₙ–\n\nThe repeating unit has the same atoms as the monomer.", difficulty:1, category:"definition"},
+  {id:"s10fc-10-4-2", islandId:"s10i-10-4", front:"What is condensation polymerisation?",
+   back:"In condensation polymerisation, two different monomers, each with two functional groups, join together. A small molecule (usually water) is lost each time a bond forms.\n\nExample: diols + dicarboxylic acids → a polyester + water\n\nKey differences from addition polymerisation:\n• Two different monomers (each with two functional groups)\n• A small molecule (e.g. water) is released\n• Monomers do not need a C=C double bond", difficulty:2, category:"concept"},
+  {id:"s10fc-10-4-3", islandId:"s10i-10-4", front:"Compare addition and condensation polymerisation.",
+   back:"Addition polymerisation:\n• One type of monomer (an alkene with C=C)\n• Only product is the polymer\n• No small molecule lost\n\nCondensation polymerisation:\n• Two different monomers, each with two functional groups\n• Two products: the polymer + a small molecule (e.g. water)\n• A small molecule is lost each time a link forms", difficulty:2, category:"concept"},
+  {id:"s10fc-10-4-4", islandId:"s10i-10-4", front:"Give three examples of naturally occurring polymers and their monomers.",
+   back:"• DNA — made from monomers called nucleotides; two strands form a double helix\n• Proteins — made from amino acid monomers joined in a chain\n• Starch and cellulose — made from sugar (glucose) monomers\n\nThese are all natural polymers essential to living things.", difficulty:1, category:"definition"},
+  {id:"s10fc-10-4-5", islandId:"s10i-10-4", front:"Why must monomers for condensation polymerisation have two functional groups?",
+   back:"Each monomer needs two functional groups (one at each end) so it can bond on both sides and form a long chain.\n\nIf a monomer had only one functional group, it could only join at one end, and the chain could not keep growing.\n\nFor a polyester: diols (two –OH groups) react with dicarboxylic acids (two –COOH groups), forming ester links and releasing water each time.", difficulty:3, category:"concept"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -64,6 +88,40 @@ Object.assign(QUESTIONS, {
     {q:"Cracking always produces at least one alkene because:",
      opts:["Catalysts can only make alkenes","There are not enough hydrogen atoms for all products to be alkanes","Alkenes are less expensive to produce","Alkanes cannot be cracked"], c:1,
      e:"When a long-chain alkane is broken, there are not enough hydrogen atoms for every fragment to be a saturated alkane (CₙH₂ₙ₊₂). At least one product must be an alkene (CₙH₂ₙ), which has fewer hydrogens per carbon."}
+  ],
+  "s10i-10-3": [
+    {q:"What functional group do all alcohols contain?",
+     opts:["–COOH","–OH","C=C","–O–"], c:1,
+     e:"All alcohols contain the hydroxyl group –OH. For example, ethanol is C₂H₅OH. The –COOH group belongs to carboxylic acids, and C=C is found in alkenes."},
+    {q:"Which of these is an alcohol?",
+     opts:["CH₃COOH","C₂H₄","CH₃OH","C₃H₈"], c:2,
+     e:"CH₃OH is methanol, an alcohol (it has the –OH group). CH₃COOH is ethanoic acid (a carboxylic acid), C₂H₄ is ethene (an alkene), and C₃H₈ is propane (an alkane)."},
+    {q:"What is produced when a carboxylic acid reacts with a carbonate?",
+     opts:["A salt, water and carbon dioxide","Only a salt and water","An ester and water","Hydrogen gas only"], c:0,
+     e:"acid + carbonate → salt + water + carbon dioxide. The carbon dioxide causes fizzing. This is a typical acid reaction that shows carboxylic acids are acidic."},
+    {q:"Why are carboxylic acids described as weak acids?",
+     opts:["They are very dilute","They only partially ionise in water","They contain no hydrogen","They do not react with metals"], c:1,
+     e:"Weak acids only partially ionise (dissociate) in water, releasing fewer H⁺ ions. This gives them a higher pH than a strong acid of the same concentration. It is not about how dilute they are."},
+    {q:"How is an ester such as ethyl ethanoate made?",
+     opts:["By cracking an alkane","By reacting an alcohol with a carboxylic acid using an acid catalyst","By burning an alcohol in oxygen","By adding bromine water to an alkene"], c:1,
+     e:"Esters are made by reacting an alcohol with a carboxylic acid with an acid catalyst: alcohol + carboxylic acid → ester + water. Ethanol + ethanoic acid gives ethyl ethanoate, which has a sweet, fruity smell."}
+  ],
+  "s10i-10-4": [
+    {q:"In addition polymerisation, what is the only product?",
+     opts:["The polymer and water","The polymer only","The polymer and carbon dioxide","Two different monomers"], c:1,
+     e:"In addition polymerisation, alkene monomers join via their C=C double bonds to form a single product — the polymer. No other molecule (such as water) is made, unlike in condensation polymerisation."},
+    {q:"What feature must a monomer have to take part in addition polymerisation?",
+     opts:["A C=C double bond","Two –OH groups","A –COOH group","Two functional groups"], c:0,
+     e:"Addition polymerisation uses alkene monomers, which contain a C=C double bond. The double bond opens up so the monomers can join together. Monomers with two functional groups are used in condensation polymerisation."},
+    {q:"In condensation polymerisation, what small molecule is commonly lost?",
+     opts:["Hydrogen","Oxygen","Water","Carbon dioxide"], c:2,
+     e:"Condensation polymerisation joins monomers and loses a small molecule each time a bond forms — most commonly water. For example, diols + dicarboxylic acids form a polyester plus water."},
+    {q:"Which of these is a naturally occurring polymer made from amino acids?",
+     opts:["Poly(ethene)","Starch","A protein","DNA"], c:2,
+     e:"Proteins are natural polymers made from amino acid monomers. Starch and cellulose are made from sugars, DNA is made from nucleotides, and poly(ethene) is a synthetic addition polymer."},
+    {q:"To make a polyester by condensation polymerisation, you need:",
+     opts:["One alkene monomer with a C=C bond","Diols and dicarboxylic acids","Only amino acids","Nucleotides"], c:1,
+     e:"A polyester is made by reacting diols (two –OH groups) with dicarboxylic acids (two –COOH groups). Each monomer has two functional groups so the chain can grow on both sides, releasing water each time a link forms."}
   ]
 });
 
@@ -132,6 +190,66 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes confuse fractional distillation with cracking. Fractional distillation is a <em>physical</em> separation (no bonds broken). Cracking is a <em>chemical</em> process — covalent bonds in large molecules are broken to form smaller molecules. Both are essential but serve different purposes.</p>
+`,
+
+'s10i-10-3': `
+<h2>Alcohols, Carboxylic Acids &amp; Esters</h2>
+<p>These three families of organic compounds are all built around a particular <strong>functional group</strong> — a group of atoms that gives the molecules their characteristic reactions. They are linked: alcohols can be oxidised to carboxylic acids, and the two react together to make esters.</p>
+
+<h3>Alcohols</h3>
+<p>Alcohols are a homologous series with the <strong>&ndash;OH</strong> (hydroxyl) functional group: methanol, ethanol, propanol and butanol.</p>
+<ul>
+  <li><strong>Uses:</strong> fuels, solvents, and alcoholic drinks (ethanol)</li>
+  <li><strong>Combustion:</strong> they burn in oxygen to form carbon dioxide and water</li>
+  <li><strong>Reaction with sodium:</strong> they fizz, releasing hydrogen gas</li>
+  <li><strong>Oxidation:</strong> alcohols can be oxidised to carboxylic acids — this is why wine left open turns sour (vinegar)</li>
+</ul>
+
+<h3>Carboxylic Acids</h3>
+<p>Carboxylic acids have the <strong>&ndash;COOH</strong> (carboxyl) functional group: methanoic, ethanoic, propanoic and butanoic acid. <strong>Ethanoic acid</strong> is the acid in vinegar. They are <strong>weak acids</strong> — they only partially ionise in water, so they have a higher pH than a strong acid of the same concentration. They react with carbonates to give a salt, water and carbon dioxide (which causes fizzing).</p>
+
+<h3>Esters</h3>
+<p>Esters are made by reacting an alcohol with a carboxylic acid, using an acid catalyst:</p>
+<p style="text-align:center"><strong>alcohol + carboxylic acid &rarr; ester + water</strong></p>
+<p>Esters have sweet, fruity smells and are used in flavourings and perfumes.</p>
+
+<h3>Worked Example</h3>
+<p>Name the ester made from ethanol and ethanoic acid, and write a word equation.</p>
+<p>The alcohol part is named first (ethanol &rarr; ethyl) and the acid part second (ethanoic acid &rarr; ethanoate), giving <strong>ethyl ethanoate</strong>.<br>
+Word equation: ethanol + ethanoic acid &rarr; ethyl ethanoate + water</p>
+
+<h3>Common Mistake</h3>
+<p>Students often muddle the &ndash;OH group of alcohols with the &ndash;COOH group of carboxylic acids. Although both contain oxygen and hydrogen, only the &ndash;COOH group makes a molecule acidic. Ethanol (C₂H₅OH) is neutral; ethanoic acid (CH₃COOH) is acidic.</p>
+`,
+
+'s10i-10-4': `
+<h2>Polymers: Addition &amp; Condensation</h2>
+<div class="lesson-diagram" data-diagram="polymers-comparison"><p class="diagram-caption">Addition versus condensation polymerisation</p></div>
+<p>Polymers are very long molecules made by joining together many small molecules called <strong>monomers</strong>. There are two main ways monomers join: <strong>addition</strong> polymerisation and <strong>condensation</strong> polymerisation.</p>
+
+<h3>Addition Polymerisation</h3>
+<p>In addition polymerisation, the monomers are <strong>alkenes</strong> — each has a C=C double bond. The double bonds open up and the monomers join in a chain. The <strong>only product is the polymer</strong> — no other molecule is made.</p>
+<p style="text-align:center">many ethene molecules &rarr; poly(ethene)</p>
+
+<h3>Condensation Polymerisation</h3>
+<p>In condensation polymerisation, <strong>two different monomers</strong> are used, each with <strong>two functional groups</strong> (one at each end). Each time two monomers join, a <strong>small molecule</strong> (usually water) is lost.</p>
+<p style="text-align:center">diols + dicarboxylic acids &rarr; a polyester + water</p>
+<p>Because each monomer has a functional group at both ends, the chain can keep growing on both sides.</p>
+
+<h3>Naturally Occurring Polymers</h3>
+<p>Many polymers occur naturally in living things:</p>
+<ul>
+  <li><strong>DNA</strong> — made from monomers called nucleotides; two strands form a double helix</li>
+  <li><strong>Proteins</strong> — made from amino acid monomers</li>
+  <li><strong>Starch and cellulose</strong> — made from sugar (glucose) monomers</li>
+</ul>
+
+<h3>Worked Example</h3>
+<p>State two ways in which condensation polymerisation differs from addition polymerisation.</p>
+<p>First, condensation polymerisation uses two different monomers, each with two functional groups, whereas addition polymerisation uses a single alkene monomer with a C=C double bond. Second, condensation polymerisation makes two products — the polymer and a small molecule such as water — whereas addition polymerisation produces only the polymer.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often forget that condensation polymerisation makes a <em>second</em> product (the small molecule, usually water), and wrongly say only the polymer forms. Remember: addition makes one product (just the polymer), condensation makes two (the polymer + a small molecule).</p>
 `
 
 });
