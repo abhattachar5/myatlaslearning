@@ -26,7 +26,19 @@ FLASHCARDS.push(
   {id:"s9fc-10-2-4", islandId:"s9i-10-2", front:"Give one advantage and one disadvantage of using biofuels instead of fossil fuels.",
    back:"Advantage: biofuels are renewable — crops can be regrown, so the supply is not finite. They are roughly carbon-neutral because the CO₂ released on burning was absorbed by the plant during growth.\n\nDisadvantage: growing biofuel crops takes up farmland that could be used for food production. Large-scale farming can lead to deforestation, loss of biodiversity and use of fertilisers that pollute waterways.", difficulty:2, category:"application"},
   {id:"s9fc-10-2-5", islandId:"s9i-10-2", front:"What is potable water and how is it produced?",
-   back:"Potable water is water that is safe to drink. It does not have to be pure — it may contain dissolved minerals.\n\nIn the UK, fresh water from rivers and reservoirs is treated:\n1. Sedimentation — large particles settle out\n2. Filtration — through sand and gravel beds to remove fine particles\n3. Sterilisation — chlorine, ozone or UV light kills harmful microorganisms\n\nIn areas with limited fresh water, desalination (distillation or reverse osmosis) can make seawater potable, but this is energy-intensive.", difficulty:2, category:"concept"}
+   back:"Potable water is water that is safe to drink. It does not have to be pure — it may contain dissolved minerals.\n\nIn the UK, fresh water from rivers and reservoirs is treated:\n1. Sedimentation — large particles settle out\n2. Filtration — through sand and gravel beds to remove fine particles\n3. Sterilisation — chlorine, ozone or UV light kills harmful microorganisms\n\nIn areas with limited fresh water, desalination (distillation or reverse osmosis) can make seawater potable, but this is energy-intensive.", difficulty:2, category:"concept"},
+
+  // s9i-10-3 — Potable Water & Treatment
+  {id:"s9fc-10-3-1", islandId:"s9i-10-3", front:"What is potable water, and is it the same as pure water?",
+   back:"Potable water is water that is safe to drink. It is NOT the same as pure water.\n\n• Pure water (in chemistry) contains only H₂O molecules and nothing else.\n• Potable water is safe to drink but usually contains dissolved minerals (such as calcium) and low levels of harmless substances.\n\nTo be potable, water must have low levels of dissolved salts and microbes, so it does not make people ill.", difficulty:1, category:"definition"},
+  {id:"s9fc-10-3-2", islandId:"s9i-10-3", front:"What are the main sources of fresh water for treatment in the UK?",
+   back:"There are two main sources of fresh water:\n\n1. Groundwater — water held underground in porous rocks called aquifers, reached by drilling wells or boreholes.\n2. Surface water — water collected from rivers, lakes and reservoirs.\n\nThe choice depends on the local geography. Wherever it comes from, the water must be treated before it is safe to drink.", difficulty:1, category:"concept"},
+  {id:"s9fc-10-3-3", islandId:"s9i-10-3", front:"Describe the two main stages of treating fresh water to make it potable.",
+   back:"Fresh water is treated in two key stages:\n\n1. Filtration — passing the water through filter beds (e.g. sand and gravel) to remove solid particles such as grit and bits of plant.\n2. Sterilisation — killing harmful microorganisms (bacteria, viruses). This can be done using chlorine, ozone or ultraviolet (UV) light.\n\nFiltration removes solids; sterilisation kills microbes. Both steps are needed to make water safe.", difficulty:2, category:"application"},
+  {id:"s9fc-10-3-4", islandId:"s9i-10-3", front:"How can salty (sea) water be made potable by desalination?",
+   back:"Desalination removes dissolved salts from seawater. There are two main methods:\n\n1. Distillation — the water is boiled to make steam, leaving the salt behind; the steam is then condensed back into pure water.\n2. Reverse osmosis — the water is forced at high pressure through a partially permeable membrane that lets water through but blocks the salt ions.\n\nDesalination is used in countries with little fresh water, such as those in the Middle East.", difficulty:2, category:"concept"},
+  {id:"s9fc-10-3-5", islandId:"s9i-10-3", front:"Why is desalination only used when fresh water is scarce?",
+   back:"Desalination requires a lot of energy:\n\n• Distillation needs large amounts of heat energy to boil the water.\n• Reverse osmosis needs high pressure, which requires energy to maintain.\n\nThis makes desalination expensive and, if fossil fuels supply the energy, it releases CO₂. So it is usually only used where there is no cheaper source of fresh water, such as in hot, dry countries.", difficulty:2, category:"application"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -64,6 +76,23 @@ Object.assign(QUESTIONS, {
     {q:"What is one disadvantage of using biofuels?",
      opts:["They release no CO₂ when burned","They are more expensive than nuclear energy","Growing biofuel crops uses farmland that could grow food","They are a finite resource"], c:2,
      e:"Biofuel crops compete with food crops for land. Large-scale biofuel farming can lead to food shortages, higher food prices, deforestation and biodiversity loss. Biofuels are renewable (not finite) and do release CO₂ when burned (though roughly the same amount the crop absorbed while growing)."}
+  ],
+  "s9i-10-3": [
+    {q:"Which statement about potable water is correct?",
+     opts:["It is chemically pure H₂O with nothing dissolved in it","It is water that is safe to drink but may contain dissolved minerals","It is the same as distilled water","It must be taken directly from the sea"], c:1,
+     e:"Potable water is safe to drink but is not pure water — it usually contains harmless dissolved minerals such as calcium. Pure water in the chemical sense contains only H₂O molecules."},
+    {q:"What is an aquifer?",
+     opts:["A reservoir built behind a dam","An underground layer of rock that holds groundwater","A machine that filters river water","A pipe carrying treated water to homes"], c:1,
+     e:"An aquifer is a layer of porous underground rock that stores groundwater. Wells and boreholes are drilled to reach it as a source of fresh water."},
+    {q:"In water treatment, what is the purpose of filtration?",
+     opts:["To kill harmful microorganisms","To remove dissolved salts","To remove solid particles such as grit","To add minerals to the water"], c:2,
+     e:"Filtration passes water through beds of sand and gravel to remove insoluble solid particles. It does not kill microbes — that is the job of sterilisation."},
+    {q:"Which of these is used to sterilise water and kill microbes?",
+     opts:["Chlorine, ozone or UV light","Sand and gravel filter beds","Reverse osmosis membranes","Sedimentation tanks"], c:0,
+     e:"Sterilisation kills harmful microorganisms using chlorine, ozone or ultraviolet (UV) light. Filtration and sedimentation only remove solids, not microbes."},
+    {q:"Why is desalination of seawater not used everywhere?",
+     opts:["It makes the water unsafe to drink","It requires large amounts of energy and so is expensive","It removes useful minerals only","It works only on groundwater"], c:1,
+     e:"Desalination by distillation (boiling) or reverse osmosis (high pressure) uses a lot of energy, making it costly. It is mainly used where fresh water is scarce, such as hot, dry countries."}
   ]
 });
 
@@ -118,6 +147,28 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes think potable water must be chemically pure (just H&#8322;O). In reality, potable water is safe to drink but contains dissolved minerals and may contain trace amounts of other harmless substances. Also, LCAs are not perfectly objective &mdash; some aspects (like the value of lost biodiversity) are difficult to quantify and involve judgement.</p>
+`,
+
+'s9i-10-3': `
+<h2>Potable Water &amp; Treatment</h2>
+<div class="lesson-diagram" data-diagram="water-cycle"><p class="diagram-caption">The water cycle: evaporation from the sea, condensation into clouds, and precipitation that feeds rivers and groundwater.</p></div>
+<p>We need clean, safe water to drink. Water that is safe to drink is called <strong>potable water</strong>. Importantly, potable water is <em>not</em> the same as pure water &mdash; it is simply safe to drink, and usually contains dissolved minerals.</p>
+
+<h3>Where Does Our Water Come From?</h3>
+<p>There are two main sources of fresh water. <strong>Groundwater</strong> is stored underground in porous rocks called <strong>aquifers</strong>, reached by wells and boreholes. <strong>Surface water</strong> is collected from rivers, lakes and reservoirs. Whichever the source, the water must be treated before it is safe to drink.</p>
+
+<h3>Treating Fresh Water</h3>
+<p>Treatment has two key stages. First, <strong>filtration</strong> passes the water through beds of sand and gravel to remove solid particles such as grit and plant debris. Second, <strong>sterilisation</strong> kills harmful microorganisms using <strong>chlorine, ozone or UV light</strong>. Filtration removes solids; sterilisation kills microbes &mdash; both steps are needed.</p>
+
+<h3>Desalination of Salty Water</h3>
+<p>In dry regions there may be little fresh water, so <strong>seawater</strong> is treated instead. <strong>Desalination</strong> removes dissolved salts, either by <strong>distillation</strong> (boiling the water and condensing the steam) or by <strong>reverse osmosis</strong> (forcing water through a membrane at high pressure that blocks the salt). Both methods need a lot of energy, making desalination expensive.</p>
+
+<h3>Worked Example</h3>
+<p>Explain why treating fresh river water uses less energy than desalinating seawater.</p>
+<p>Fresh river water only needs <strong>filtration</strong> (passing through sand and gravel) and <strong>sterilisation</strong> (chlorine, ozone or UV) &mdash; neither needs much energy. Seawater contains a high concentration of dissolved salt that must be removed. Distillation requires lots of <strong>heat energy</strong> to boil the water, and reverse osmosis needs energy to maintain <strong>high pressure</strong>. This is why desalination is only used where fresh water is scarce.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often confuse the two treatment steps. <strong>Filtration removes solid particles</strong> but does not kill microbes; <strong>sterilisation kills microbes</strong> but does not remove solids. A second common error is thinking potable water is pure water &mdash; in fact it is merely safe to drink and still contains dissolved minerals.</p>
 `
 
 });

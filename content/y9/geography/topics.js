@@ -70,7 +70,12 @@ CURRICULUM.push(
    topicId:"g9t-03", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Study hot desert environments, adaptations, desertification and ecosystem food chains.",
    learningOutcomes:["Describe desert climate and adaptations","Explain the causes and effects of desertification","Construct and interpret food chains and food webs"],
-   topics:["Desert climate and adaptations","Desertification","Food chains and webs"], prerequisites:["g9i-03-1"]}
+   topics:["Desert climate and adaptations","Desertification","Food chains and webs"], prerequisites:["g9i-03-1"]},
+  {id:"g9i-03-3", name:"Small-Scale Ecosystems & Nutrient Cycling", emoji:"🦠", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g9t-03", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Study a small-scale UK ecosystem (e.g. a pond), its food web and how nutrients cycle within it.",
+   learningOutcomes:["Distinguish biotic and abiotic components","Construct food chains and food webs","Explain nutrient cycling and interdependence"],
+   topics:["Biotic & abiotic","Food chains & webs","Nutrient cycling"], prerequisites:["g9i-03-1"]}
 );
 
 // ── Topic 4: Rivers & Flooding (3 islands) ───────────────────────────────────
@@ -94,7 +99,12 @@ CURRICULUM.push(
    topicId:"g9t-04", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Explain the formation of meanders, oxbow lakes, floodplains and levées.",
    learningOutcomes:["Explain why deposition occurs","Explain meanders and oxbow lakes","Describe floodplains and levées"],
-   topics:["Meanders & oxbows","Floodplains","Levées"], prerequisites:["g9i-04-2"]}
+   topics:["Meanders & oxbows","Floodplains","Levées"], prerequisites:["g9i-04-2"]},
+  {id:"g9i-04-5", name:"Erosional River Landforms", emoji:"⛰️", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g9t-04", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Explain how erosion in a river's upper course forms V-shaped valleys, interlocking spurs, waterfalls and gorges.",
+   learningOutcomes:["Describe the four processes of erosion","Explain V-shaped valleys and interlocking spurs","Explain waterfall and gorge formation"],
+   topics:["Erosion processes","Upper-course valleys","Waterfalls & gorges"], prerequisites:["g9i-04-2"]}
 );
 
 // ── Topic 5: Coastal Landscapes (2 islands) ──────────────────────────────────
@@ -127,7 +137,12 @@ CURRICULUM.push(
    topicId:"g9t-06", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Evaluate strategies for creating sustainable urban environments.",
    learningOutcomes:["Define sustainable urban living","Describe strategies: green transport, waste management, green spaces","Evaluate a case study of a sustainable city"],
-   topics:["Sustainable urban living","Strategies for sustainability","Case study: Freiburg or Curitiba"], prerequisites:["g9i-06-1"]}
+   topics:["Sustainable urban living","Strategies for sustainability","Case study: Freiburg or Curitiba"], prerequisites:["g9i-06-1"]},
+  {id:"g9i-06-3", name:"An LIC/NEE City Case Study", emoji:"🌆", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g9t-06", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Examine the growth, opportunities and challenges of a major city in an LIC or NEE (Lagos, Nigeria).",
+   learningOutcomes:["Explain why the city has grown rapidly","Describe the opportunities urban growth brings","Analyse challenges and management of squatter settlements"],
+   topics:["Causes of growth","Opportunities","Challenges & management"], prerequisites:["g9i-06-1"]}
 );
 
 // ── Topic 7: Development & Globalisation (3 islands) ─────────────────────────
@@ -160,5 +175,10 @@ CURRICULUM.push(
    topicId:"g9t-08", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Choose appropriate graphs, apply basic statistics and plan geographical fieldwork enquiries.",
    learningOutcomes:["Select appropriate graphical techniques","Calculate mean, median, mode and range","Plan a fieldwork enquiry using the enquiry cycle"],
-   topics:["Graph types","Basic statistics","Fieldwork enquiry"], prerequisites:["g9i-08-1"]}
+   topics:["Graph types","Basic statistics","Fieldwork enquiry"], prerequisites:["g9i-08-1"]},
+  {id:"g9i-08-3", name:"The Fieldwork Enquiry Process", emoji:"📋", subject:"Geography", subjectId:"geography", color:"#0d9488",
+   topicId:"g9t-08", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Work through the six-stage fieldwork enquiry cycle, from question to evaluation, including sampling methods.",
+   learningOutcomes:["Sequence the six stages of an enquiry","Choose appropriate sampling methods","Present, analyse and evaluate fieldwork data"],
+   topics:["The enquiry cycle","Sampling methods","Analysis & evaluation"], prerequisites:["g9i-08-1"]}
 );

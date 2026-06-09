@@ -26,7 +26,19 @@ FLASHCARDS.push(
   {id:"g9fc-03-2-4", islandId:"g9i-03-2", front:"What is a food chain and how does it differ from a food web?",
    back:"A food chain shows a single pathway of energy transfer from producer to consumers:\n\nExample: grass → grasshopper → lizard → hawk\n\n• Producer — makes its own food (photosynthesis)\n• Primary consumer — herbivore; eats the producer\n• Secondary consumer — carnivore; eats the primary consumer\n• Tertiary consumer — top predator\n\nA food web is a network of interconnected food chains in an ecosystem. It is more realistic because most organisms eat more than one type of food.\n\nEnergy is lost at each trophic level (through respiration, movement and heat), so there are fewer organisms at the top.", difficulty:1, category:"concept"},
   {id:"g9fc-03-2-5", islandId:"g9i-03-2", front:"What happens to a food web when one species is removed?",
-   back:"Removing one species from a food web has knock-on effects throughout the ecosystem:\n\nExample: if a secondary consumer (e.g. snake) is removed:\n• Its prey (e.g. mice) may increase in number due to less predation\n• The increase in mice reduces their food source (e.g. seeds, insects)\n• Species that competed with mice may decline due to increased competition\n• Predators of the snake (e.g. hawks) may decline due to less food\n\nThis demonstrates interdependence — all organisms in an ecosystem are connected, and changes to one population affect others.\n\nThe more complex a food web, the more resilient it tends to be because species can switch to alternative food sources.", difficulty:2, category:"application"}
+   back:"Removing one species from a food web has knock-on effects throughout the ecosystem:\n\nExample: if a secondary consumer (e.g. snake) is removed:\n• Its prey (e.g. mice) may increase in number due to less predation\n• The increase in mice reduces their food source (e.g. seeds, insects)\n• Species that competed with mice may decline due to increased competition\n• Predators of the snake (e.g. hawks) may decline due to less food\n\nThis demonstrates interdependence — all organisms in an ecosystem are connected, and changes to one population affect others.\n\nThe more complex a food web, the more resilient it tends to be because species can switch to alternative food sources.", difficulty:2, category:"application"},
+
+  // g9i-03-3 — Small-Scale Ecosystems & Nutrient Cycling
+  {id:"g9fc-03-3-1", islandId:"g9i-03-3", front:"What is the difference between biotic and abiotic components of an ecosystem?",
+   back:"An ecosystem is a community of living organisms interacting with their non-living environment.\n\nBiotic components (the living parts):\n• Plants (producers)\n• Animals (consumers)\n• Bacteria and fungi (decomposers)\n\nAbiotic components (the non-living parts):\n• Water\n• Light (sunlight)\n• Temperature\n• Soil and the nutrients it contains\n• Air (oxygen and carbon dioxide)\n\nThe biotic and abiotic parts are interdependent: for example, the amount of light and water (abiotic) controls how well plants (biotic) can grow.", difficulty:1, category:"definition"},
+  {id:"g9fc-03-3-2", islandId:"g9i-03-3", front:"What are producers, consumers and decomposers in a small-scale ecosystem?",
+   back:"Producers: organisms that make their own food using sunlight through photosynthesis.\nExample in a pond: pondweed and algae.\n\nConsumers: organisms that get energy by eating other organisms.\n• Primary consumer (herbivore) — e.g. a pond snail eating algae\n• Secondary consumer (carnivore) — e.g. a small fish eating insects\n• Tertiary consumer (top predator) — e.g. a heron eating fish\n\nDecomposers: bacteria and fungi that break down dead plants and animals, releasing nutrients back into the water and soil.\nExample: bacteria breaking down dead leaves on the pond bed.\n\nTogether these recycle energy and nutrients through the ecosystem.", difficulty:1, category:"concept"},
+  {id:"g9fc-03-3-3", islandId:"g9i-03-3", front:"Give an example of a food chain and a food web in a UK pond ecosystem.",
+   back:"A food chain shows one pathway of energy transfer:\n\nalgae → pond snail → small fish → heron\n\n• Algae — producer\n• Pond snail — primary consumer\n• Small fish — secondary consumer\n• Heron — tertiary consumer\n\nA food web links several food chains together, because most organisms eat (and are eaten by) more than one species. For example, the small fish may also eat water beetles and tadpoles, while the heron may eat frogs as well as fish.\n\nA food web is more realistic than a single food chain because it shows the many feeding relationships in the pond.", difficulty:2, category:"concept"},
+  {id:"g9fc-03-3-4", islandId:"g9i-03-3", front:"How are nutrients cycled in a small-scale ecosystem such as a woodland?",
+   back:"Nutrients are stored in three places: biomass (living things), litter (dead material on the ground) and soil.\n\nThe nutrient cycle:\n1. Plants take up nutrients from the soil through their roots.\n2. Animals gain nutrients by eating the plants (and each other).\n3. When plants and animals die, they fall as litter.\n4. Decomposers (bacteria and fungi) break down the litter.\n5. This releases nutrients back into the soil, ready to be taken up again.\n\nInputs come from weathering of rock and from rainfall; outputs are lost through leaching (washing out of the soil) and surface run-off.\n\nThe Gersmehl model uses three circles (biomass, litter, soil) to show the size of these stores and the flows between them.", difficulty:2, category:"process"},
+  {id:"g9fc-03-3-5", islandId:"g9i-03-3", front:"Explain how a change to one part of an ecosystem affects the whole (interdependence).",
+   back:"Interdependence means all the living and non-living parts of an ecosystem are connected, so a change to one part affects the others.\n\nExample: a pond becomes polluted with fertiliser run-off.\n• The extra nutrients cause algae to grow rapidly (an algal bloom).\n• The thick algae blocks sunlight, so pondweed below the surface dies.\n• When the algae and pondweed die, decomposers use up the oxygen in the water.\n• Fish and invertebrates suffocate and die due to low oxygen.\n• The heron loses its food supply and leaves.\n\nThis chain of effects shows that damaging one component (water quality) disrupts the producers, consumers and decomposers throughout the whole ecosystem.", difficulty:3, category:"application"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -64,6 +76,23 @@ Object.assign(QUESTIONS, {
     {q:"Why are there fewer organisms at higher trophic levels in a food chain?",
      opts:["Higher-level organisms reproduce more slowly","Energy is lost at each level through respiration, movement and heat, so less energy is available to support organisms at the top","Higher-level organisms are larger and need more space","Predators at the top are killed by humans"], c:1,
      e:"At each trophic level, approximately 90% of energy is lost — mainly through respiration (life processes) and heat. Only about 10% is passed on to the next level. This means there is progressively less energy available to support organisms, resulting in fewer individuals (or less biomass) at higher trophic levels."}
+  ],
+  "g9i-03-3": [
+    {q:"Which of these is an abiotic component of a pond ecosystem?",
+     opts:["Pondweed","Water temperature","A pond snail","Decomposing bacteria"], c:1,
+     e:"Abiotic components are the non-living parts of an ecosystem, such as water, light, temperature, soil and air. Water temperature is therefore abiotic. Pondweed, pond snails and bacteria are all living organisms, making them biotic components."},
+    {q:"In the food chain algae → pond snail → small fish → heron, what is the pond snail?",
+     opts:["A producer","A primary consumer","A secondary consumer","A decomposer"], c:1,
+     e:"The pond snail eats the algae (the producer), so it is the primary consumer (a herbivore). The small fish that eats the snail is the secondary consumer, and the heron at the top is the tertiary consumer. Decomposers, by contrast, break down dead material."},
+    {q:"What is the role of decomposers in nutrient cycling?",
+     opts:["They make food using sunlight through photosynthesis","They break down dead plants and animals, releasing nutrients back into the soil","They are the top predators that control prey numbers","They store nutrients permanently so they cannot be reused"], c:1,
+     e:"Decomposers (bacteria and fungi) break down dead organisms and waste. This releases the nutrients locked inside them back into the soil, where plants can take them up again through their roots. Without decomposers the nutrient cycle would stop and nutrients would remain trapped in dead material."},
+    {q:"In the Gersmehl model, which three stores are shown as circles?",
+     opts:["Air, water and rock","Biomass, litter and soil","Producers, consumers and predators","Rainfall, run-off and leaching"], c:1,
+     e:"The Gersmehl model represents the nutrient cycle using three circles: biomass (nutrients held in living organisms), litter (nutrients in dead material on the surface) and soil (nutrients in the ground). The arrows between them show the flows of nutrients, and arrows in and out show inputs (weathering, rainfall) and outputs (leaching, run-off)."},
+    {q:"A pond is polluted by fertiliser run-off, causing a thick algal bloom. Why does this kill the fish?",
+     opts:["The algae poison the fish directly on contact","The algae block sunlight and then decompose, using up the oxygen the fish need","The algae eat the fish as a predator","The algae raise the water temperature until the fish boil"], c:1,
+     e:"This illustrates interdependence. Extra nutrients make algae grow rapidly, blocking sunlight so pondweed dies. When the algae and pondweed die, decomposers break them down and use up the dissolved oxygen in the water. With little oxygen left, the fish suffocate. A change to one part (water quality) disrupts the whole ecosystem."}
   ]
 });
 
@@ -136,6 +165,28 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes write that energy is "passed on" without mentioning losses. Always state that approximately 90% of energy is lost at each trophic level through respiration, movement and heat — only about 10% is transferred to the next level.</p>
+`,
+
+'g9i-03-3': `
+<h2>Small-Scale Ecosystems &amp; Nutrient Cycling</h2>
+<div class="lesson-diagram" data-diagram="gersmehl-model"><p class="diagram-caption">The Gersmehl nutrient cycle model</p></div>
+<p>An ecosystem does not have to be as vast as a rainforest. A single UK pond or patch of woodland is a small-scale ecosystem with all the same parts: living organisms interacting with their non-living surroundings. Studying one helps us understand how energy and nutrients flow, and how delicately balanced nature is.</p>
+
+<h3>Biotic and Abiotic Components</h3>
+<p>Every ecosystem has <strong>biotic</strong> (living) and <strong>abiotic</strong> (non-living) components. In a pond, the biotic parts include pondweed, snails, fish, herons and decomposing bacteria. The abiotic parts include water, sunlight, temperature, oxygen and the nutrients in the mud. These are <strong>interdependent</strong>: the amount of light and warmth controls how fast plants grow, which in turn controls how much food is available for animals.</p>
+
+<h3>Producers, Consumers and Decomposers</h3>
+<p><strong>Producers</strong> (algae, pondweed) make their own food by photosynthesis. <strong>Consumers</strong> eat other organisms: a snail (primary consumer) eats algae, a small fish (secondary consumer) eats insects, and a heron (tertiary consumer) eats fish. <strong>Decomposers</strong> (bacteria and fungi) break down dead material and return nutrients to the water and soil. A <strong>food web</strong> links many such food chains together, because most animals eat more than one type of food.</p>
+
+<h3>Nutrient Cycling</h3>
+<p>Nutrients are stored in three places: <strong>biomass</strong> (living things), <strong>litter</strong> (dead material) and <strong>soil</strong>. Plants take up nutrients from the soil; animals gain them by eating plants; dead organisms become litter; decomposers break this litter down and release the nutrients back into the soil. The <strong>Gersmehl model</strong> shows these three stores as circles, with arrows for the flows between them and for inputs (weathering, rainfall) and outputs (leaching, run-off).</p>
+
+<h3>Worked Example</h3>
+<p>Fertiliser runs off a farmer's field into a pond. Explain how this affects the whole ecosystem. (4 marks)</p>
+<p>The extra nutrients cause <strong>algae</strong> to grow rapidly, forming a bloom across the surface. This <strong>blocks sunlight</strong>, so the pondweed below cannot photosynthesise and dies. When the algae and pondweed die, <strong>decomposers</strong> break them down and use up the dissolved <strong>oxygen</strong> in the water. With little oxygen left, fish and invertebrates suffocate, and the heron loses its food supply. This shows <strong>interdependence</strong> — a change to one abiotic factor disrupts producers, consumers and decomposers throughout the ecosystem.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often mix up biotic and abiotic. Remember: <strong>biotic</strong> means living or once-living (plants, animals, bacteria, dead leaves); <strong>abiotic</strong> means never alive (water, light, temperature, oxygen). A dead leaf is still biotic because it came from a living organism.</p>
 `
 
 });

@@ -99,7 +99,12 @@ CURRICULUM.push(
    topicId:"e9t-05", yearGroup:"Year 9", difficulty:1, estimatedHours:2,
    description:"Retrieve explicit information and make supported inferences from a text.",
    learningOutcomes:["Retrieve explicit information accurately","Make supported inferences","Distinguish explicit from implied meaning"],
-   topics:["Retrieval","Inference","Using evidence"], prerequisites:["e9i-05-1"]}
+   topics:["Retrieval","Inference","Using evidence"], prerequisites:["e9i-05-1"]},
+  {id:"e9i-05-5", name:"Building an Analytical Paragraph", emoji:"🧱", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e9t-05", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Build a full analytical paragraph that embeds evidence and analyses a writer's methods and effects.",
+   learningOutcomes:["Structure a paragraph with point, evidence and analysis","Embed short quotations fluently","Zoom in on individual words and their effects"],
+   topics:["Paragraph structure","Embedding evidence","Word-level analysis"], prerequisites:["e9i-05-1"]}
 );
 
 // ── Topic 6: Writing Craft: Narrative & Descriptive (e9t-06, writingTopicId) ─
@@ -161,5 +166,10 @@ CURRICULUM.push(
    topicId:"e9t-08", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Use context — period, audience and purpose — to deepen analysis (AO3).",
    learningOutcomes:["Explain what context means","Weave context into analysis","Understand AO3"],
-   topics:["Context","Writer's purpose","AO3"], prerequisites:["e9i-08-1"]}
+   topics:["Context","Writer's purpose","AO3"], prerequisites:["e9i-08-1"]},
+  {id:"e9i-08-5", name:"Writing a Shakespeare Essay", emoji:"📝", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e9t-08", yearGroup:"Year 9", difficulty:3, estimatedHours:2,
+   description:"Plan and write a full essay response to a Shakespeare extract-to-whole-play question.",
+   learningOutcomes:["Plan a thesis-led essay argument","Move between the extract and the whole play","Integrate quotation, analysis and context (AO1–AO3)"],
+   topics:["Planning an essay","Extract to whole play","Thesis & structure"], prerequisites:["e9i-08-3"]}
 );

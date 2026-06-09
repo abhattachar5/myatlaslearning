@@ -26,7 +26,19 @@ FLASHCARDS.push(
   {id:"g9fc-08-2-4", islandId:"g9i-08-2", front:"Describe the stages of a geographical fieldwork enquiry.",
    back:"The enquiry cycle:\n\n1. Question — identify a geographical question or hypothesis to investigate.\n   Example: 'Does pebble size decrease with distance along the beach?'\n\n2. Data collection — choose appropriate primary methods (questionnaires, measurements, field sketches) and secondary sources (maps, census data, websites).\n\n3. Data presentation — display results using graphs, maps, tables or GIS.\n\n4. Data analysis — describe patterns and trends in the results.\n\n5. Conclusion — answer the original question and decide whether the hypothesis is supported.\n\n6. Evaluation — assess the reliability and accuracy of the data; suggest improvements.\n\nIn the GCSE exam, you must be able to describe, justify and evaluate every stage of your own fieldwork.", difficulty:2, category:"process"},
   {id:"g9fc-08-2-5", islandId:"g9i-08-2", front:"What is the difference between primary and secondary data in fieldwork?",
-   back:"Primary data: information you collect yourself in the field.\nExamples:\n• Measuring river width and depth with a tape measure\n• Counting pedestrians along a transect\n• Conducting questionnaire surveys\n• Taking field sketches or photographs\n• Measuring wind speed with an anemometer\n\nSecondary data: information collected by someone else that you use in your investigation.\nExamples:\n• Ordnance Survey maps\n• Census data from the Office for National Statistics\n• Climate data from the Met Office\n• Satellite images and GIS data\n\nA strong investigation uses both primary and secondary data. Primary data is specific to your study but may have small sample sizes. Secondary data covers larger areas and longer time periods but may not match your exact location or date.", difficulty:1, category:"definition"}
+   back:"Primary data: information you collect yourself in the field.\nExamples:\n• Measuring river width and depth with a tape measure\n• Counting pedestrians along a transect\n• Conducting questionnaire surveys\n• Taking field sketches or photographs\n• Measuring wind speed with an anemometer\n\nSecondary data: information collected by someone else that you use in your investigation.\nExamples:\n• Ordnance Survey maps\n• Census data from the Office for National Statistics\n• Climate data from the Met Office\n• Satellite images and GIS data\n\nA strong investigation uses both primary and secondary data. Primary data is specific to your study but may have small sample sizes. Secondary data covers larger areas and longer time periods but may not match your exact location or date.", difficulty:1, category:"definition"},
+
+  // g9i-08-3 — The Fieldwork Enquiry Process
+  {id:"g9fc-08-3-1", islandId:"g9i-08-3", front:"What are the six stages of the geographical enquiry cycle?",
+   back:"1. Question/hypothesis — decide what to investigate and form a clear, testable statement.\n   Example: 'Pebble size decreases with distance downstream.'\n\n2. Data collection — gather primary data (your own measurements) and secondary data (existing sources).\n\n3. Data presentation — display results using graphs, maps, tables or GIS.\n\n4. Data analysis — describe the patterns and trends, including any anomalies.\n\n5. Conclusion — answer the original question and state whether the hypothesis is supported.\n\n6. Evaluation — assess the reliability of the methods and suggest improvements.\n\nIt is called a 'cycle' because the conclusion often leads to new questions to investigate.", difficulty:1, category:"process"},
+  {id:"g9fc-08-3-2", islandId:"g9i-08-3", front:"What is the difference between a question and a hypothesis in fieldwork?",
+   back:"A geographical question sets out what you want to find out.\nExample: 'Does the quality of the environment change towards the city centre?'\n\nA hypothesis is a clear, testable statement (a prediction) that the data can support or reject.\nExample: 'Environmental quality decreases towards the city centre.'\n\nA good hypothesis:\n• Is based on geographical theory you already know\n• Can be measured with the data you will collect\n• Can be proved right or wrong (it is testable)\n\nAfter collecting and analysing data, your conclusion states whether the hypothesis is accepted or rejected.", difficulty:1, category:"concept"},
+  {id:"g9fc-08-3-3", islandId:"g9i-08-3", front:"Explain the three main sampling methods used in fieldwork.",
+   back:"Sampling means collecting data from a selection of points rather than every possible one, because measuring everything is impractical.\n\n1. Random sampling — points are chosen by chance (e.g. using random number coordinates). Avoids bias, but may miss important areas or cluster by accident.\n\n2. Systematic sampling — points are chosen at regular intervals (e.g. every 10 m along a transect). Gives even coverage and is easy to do, but may miss variation between intervals.\n\n3. Stratified sampling — the area is divided into groups (e.g. by land use) and samples are taken from each in proportion to its size. Ensures all groups are represented, but needs background information first.", difficulty:2, category:"concept"},
+  {id:"g9fc-08-3-4", islandId:"g9i-08-3", front:"How do you present and analyse fieldwork data?",
+   back:"Presentation — choose techniques that suit the data:\n• Bar charts for discrete categories\n• Line graphs for continuous data over time\n• Scatter graphs to show relationships between two variables\n• Located proportional symbols or choropleth maps to show spatial patterns\n\nAnalysis — describe what the presented data shows:\n• Identify the overall pattern or trend\n• Use specific figures from your data to support points\n• Point out any anomalies (results that do not fit) and suggest why they occurred\n• Link the findings back to your hypothesis\n\nGood analysis goes beyond describing — it begins to explain why the patterns exist.", difficulty:2, category:"process"},
+  {id:"g9fc-08-3-5", islandId:"g9i-08-3", front:"Why is evaluation important and what should it include?",
+   back:"Evaluation is the final stage of the enquiry. It judges how trustworthy your investigation was.\n\nIt should consider:\n• Reliability — would you get the same results if you repeated it? Larger samples are more reliable.\n• Accuracy — were the measurements precise, or were there errors (e.g. a tape measure not held tight)?\n• Limitations — small sample size, data collected at one time of day, weather affecting results.\n• Improvements — specific changes that would make the enquiry more robust (e.g. more sample sites, repeating on different days).\n\nA strong evaluation is honest about weaknesses and suggests realistic, specific improvements rather than vague ones.", difficulty:2, category:"evaluation"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -64,6 +76,23 @@ Object.assign(QUESTIONS, {
     {q:"Which of these is an example of primary data?",
      opts:["Census statistics from the Office for National Statistics","Climate records from the Met Office website","River width measurements you took in the field using a tape measure","A map downloaded from an online atlas"], c:2,
      e:"Primary data is information you collect yourself, first-hand, in the field. Measuring river width with a tape measure is a primary data collection method. All the other options — census data, climate records and downloaded maps — are secondary data because they were collected by someone else. A strong investigation uses a combination of both primary and secondary data."}
+  ],
+  "g9i-08-3": [
+    {q:"Which is the correct order of the geographical enquiry cycle?",
+     opts:["Conclusion → question → data collection → evaluation","Question → data collection → presentation → analysis → conclusion → evaluation","Data collection → question → evaluation → conclusion","Presentation → analysis → question → data collection"], c:1,
+     e:"The enquiry cycle runs: form a question or hypothesis, collect data, present it, analyse it, reach a conclusion, then evaluate the investigation. It is described as a cycle because the conclusion and evaluation often raise new questions that could be investigated next."},
+    {q:"Which of these is a good geographical hypothesis?",
+     opts:["What is the weather like today?","Pebble size decreases with distance downstream","Rivers are interesting to study","Why do people live in cities?"], c:1,
+     e:"A hypothesis is a clear, testable statement (a prediction) that data can support or reject. 'Pebble size decreases with distance downstream' can be measured and proved right or wrong. The others are open questions or opinions, not testable statements, so they cannot be accepted or rejected by data."},
+    {q:"What is systematic sampling?",
+     opts:["Choosing sample points completely at random","Choosing sample points at regular intervals, such as every 10 metres","Dividing the area into groups and sampling each in proportion","Only sampling the points that look most interesting"], c:1,
+     e:"Systematic sampling selects points at regular, fixed intervals — for example, taking a measurement every 10 m along a transect. It gives even coverage and is simple to carry out, although it can miss variation that occurs between the chosen intervals. Random sampling uses chance, and stratified sampling divides the area into proportional groups."},
+    {q:"Why do geographers use sampling rather than measuring every single point?",
+     opts:["Because sampling always gives perfect results","Because measuring every possible point would be impractical and too time-consuming","Because data from a sample is never reliable","Because sampling avoids the need for any analysis"], c:1,
+     e:"It is usually impossible or impractical to measure every point in a study area — there is not enough time or resources. Sampling collects data from a manageable selection of points that, if chosen well, represents the whole area. The trade-off is that a sample may not perfectly capture every variation, which is why sample size and method matter."},
+    {q:"What is the main purpose of the evaluation stage of an enquiry?",
+     opts:["To collect more primary data","To assess the reliability and accuracy of the methods and suggest improvements","To decide on the original hypothesis","To present the data as graphs"], c:1,
+     e:"Evaluation critically reviews how trustworthy the investigation was: whether the results are reliable (repeatable), whether measurements were accurate, what the limitations were (e.g. small sample, one-off timing), and how the enquiry could be improved. Honest, specific evaluation is what separates a strong investigation from a weak one."}
   ]
 });
 
@@ -160,6 +189,36 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students often forget to <strong>label axes</strong> on graphs (including units), add a <strong>title</strong>, or use an appropriate <strong>scale</strong>. These are all worth marks in the exam. When drawing a line of best fit on a scatter graph, it should pass through the middle of the data points — it does not need to touch every point and should not be drawn as a zig-zag connecting them.</p>
+`,
+
+'g9i-08-3': `
+<h2>The Fieldwork Enquiry Process</h2>
+<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">The six stages of the geographical enquiry cycle</p></div>
+<p>Fieldwork is where geography comes alive. Rather than reading about a place, you go out and investigate it yourself. The GCSE exam expects you to understand the full <strong>enquiry cycle</strong> and to be able to justify and evaluate every decision you made during your own fieldwork.</p>
+
+<h3>Forming a Question and Hypothesis</h3>
+<p>Every enquiry starts with a clear <strong>question</strong> (what you want to find out) and often a <strong>hypothesis</strong> — a testable prediction based on geographical theory. For example: <em>'Pebble size decreases with distance downstream.'</em> A good hypothesis can be measured and proved right or wrong.</p>
+
+<h3>Collecting Data and Sampling</h3>
+<p>You collect <strong>primary data</strong> (your own measurements) and <strong>secondary data</strong> (existing sources such as maps and census data). Because you cannot measure everything, you use <strong>sampling</strong>:</p>
+<ul>
+  <li><strong>Random</strong> — points chosen by chance; avoids bias but may cluster.</li>
+  <li><strong>Systematic</strong> — points at regular intervals (e.g. every 10 m); even coverage but may miss variation.</li>
+  <li><strong>Stratified</strong> — the area is split into groups and sampled in proportion; ensures every group is represented.</li>
+</ul>
+
+<h3>Presenting, Analysing and Concluding</h3>
+<p><strong>Presentation</strong> displays results using the most suitable graphs, maps or tables. <strong>Analysis</strong> describes the patterns and trends, quotes specific figures and explains any <strong>anomalies</strong>. The <strong>conclusion</strong> answers the original question and states whether the hypothesis is accepted or rejected.</p>
+
+<h3>Evaluating the Enquiry</h3>
+<p>Finally, <strong>evaluation</strong> judges how reliable and accurate the investigation was, identifies <strong>limitations</strong> (such as a small sample or one-off timing) and suggests realistic <strong>improvements</strong>.</p>
+
+<h3>Worked Example</h3>
+<p>A student measures pebble size at 8 points along a beach using systematic sampling. Suggest one limitation and one improvement. (4 marks)</p>
+<p>One <strong>limitation</strong> is the small <strong>sample size</strong>: only 8 points may not represent the whole beach, so the results could be unreliable and any anomaly has a large effect on the trend. An <strong>improvement</strong> would be to take measurements at more sample sites (e.g. every 5 m instead of every 20 m) and to repeat the survey on a different day, making the data more <strong>reliable</strong> and reducing the impact of any single unusual reading.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often write vague evaluations such as "it could have been better." Always be <strong>specific</strong>: name the exact limitation (e.g. small sample, measured at low tide only) and give a precise, realistic improvement (e.g. more sample sites, repeat at high and low tide). Vague comments earn few marks.</p>
 `
 
 });

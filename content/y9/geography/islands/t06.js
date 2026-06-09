@@ -26,7 +26,19 @@ FLASHCARDS.push(
   {id:"g9fc-06-2-4", islandId:"g9i-06-2", front:"What is a brownfield site and why is building on one more sustainable than using a greenfield site?",
    back:"Brownfield site: previously developed land (e.g. an old factory, warehouse or disused industrial area) that can be cleared and rebuilt upon.\n\nGreenfield site: undeveloped land, often on the rural-urban fringe (e.g. farmland, woodland).\n\nWhy brownfield is more sustainable:\n• Reuses land that is already developed — no loss of countryside or habitats\n• Often located closer to city centres with existing transport and services\n• Reduces urban sprawl into the surrounding countryside\n• Can regenerate deprived areas, creating jobs and improving facilities\n\nDrawbacks of brownfield: may need expensive decontamination; sites can be small and awkward to develop; demolition costs can be high.", difficulty:2, category:"concept"},
   {id:"g9fc-06-2-5", islandId:"g9i-06-2", front:"Evaluate whether sustainable urban strategies can work in LICs as well as HICs.",
-   back:"In HICs:\n+ Governments have the funding for large-scale green infrastructure\n+ Citizens can afford energy-efficient homes and electric vehicles\n+ Technology is readily available\n− Consumer culture and high consumption can resist change\n\nIn LICs:\n+ Community-led initiatives (self-help schemes, local recycling) are often highly effective\n+ Lower existing car ownership makes public transport adoption easier\n+ Many LIC cities are still growing — sustainability can be built in from the start\n− Limited government budgets restrict investment in green technology\n− Pressing issues (housing, water, sanitation) take priority over sustainability\n\nConclusion: sustainability is achievable in both, but strategies must be adapted to local economic and social conditions. Bottom-up approaches often work best in LICs.", difficulty:3, category:"evaluation"}
+   back:"In HICs:\n+ Governments have the funding for large-scale green infrastructure\n+ Citizens can afford energy-efficient homes and electric vehicles\n+ Technology is readily available\n− Consumer culture and high consumption can resist change\n\nIn LICs:\n+ Community-led initiatives (self-help schemes, local recycling) are often highly effective\n+ Lower existing car ownership makes public transport adoption easier\n+ Many LIC cities are still growing — sustainability can be built in from the start\n− Limited government budgets restrict investment in green technology\n− Pressing issues (housing, water, sanitation) take priority over sustainability\n\nConclusion: sustainability is achievable in both, but strategies must be adapted to local economic and social conditions. Bottom-up approaches often work best in LICs.", difficulty:3, category:"evaluation"},
+
+  // g9i-06-3 — An LIC/NEE City Case Study (Lagos, Nigeria)
+  {id:"g9fc-06-3-1", islandId:"g9i-06-3", front:"Describe the location and importance of Lagos.",
+   back:"Location: Lagos is on the south-western coast of Nigeria, in West Africa, on the Gulf of Guinea (Atlantic Ocean).\n\nImportance:\n• Nigeria's largest city, with a population of over 15 million (one of Africa's fastest-growing megacities)\n• The country's main economic and financial hub, generating a large share of Nigeria's wealth\n• A major port handling much of Nigeria's trade\n• A centre for industry, banking, film (Nollywood) and technology\n• Regionally important as one of the largest cities in the whole of Africa\n\nNigeria is classed as a Newly Emerging Economy (NEE).", difficulty:1, category:"case-study"},
+  {id:"g9fc-06-3-2", islandId:"g9i-06-3", front:"What are the causes of rapid population growth in Lagos?",
+   back:"Lagos is growing rapidly due to two main causes:\n\n1. Rural-urban migration\nPush factors (rural areas): poverty, few jobs, drought, poor services, conflict in the north.\nPull factors (Lagos): jobs, higher wages, better schools and hospitals, the perception of opportunity.\n\n2. Natural increase\n• A large, young population means high birth rates.\n• Improving healthcare lowers death rates.\n• More births than deaths means the population grows even without migration.\n\nTogether these add an estimated several hundred thousand people to Lagos each year.", difficulty:2, category:"case-study"},
+  {id:"g9fc-06-3-3", islandId:"g9i-06-3", front:"What opportunities does living in Lagos offer?",
+   back:"Economic opportunities:\n• More jobs in industry, services, banking and the port than in rural areas\n• A thriving informal economy (street trading, recycling) provides income\n• Nollywood film industry and a growing tech sector create skilled work\n\nSocial opportunities:\n• Better access to schools and universities\n• More hospitals and healthcare than rural areas\n• Greater access to electricity and clean water than the countryside\n• Entertainment, culture and social networks\n\nThese opportunities are the 'pull' that attracts millions of migrants, even though conditions for the poorest can be very hard.", difficulty:2, category:"case-study"},
+  {id:"g9fc-06-3-4", islandId:"g9i-06-3", front:"What challenges does rapid growth create in Lagos?",
+   back:"Housing: about two-thirds of residents live in squatter settlements such as Makoko, a slum partly built on stilts over a lagoon, with no legal land ownership.\n\nServices:\n• Clean water and sanitation are inadequate; many use shared standpipes or polluted water, spreading disease\n• Electricity supply is unreliable, with frequent power cuts\n• Waste collection cannot cope; the Olusosun dump is one of Africa's largest\n\nTransport: severe traffic congestion ('go-slows') and air pollution.\n\nEmployment: many work in the informal economy with low pay and no protection.\n\nThese pressures arise because the city grows faster than infrastructure can be built.", difficulty:2, category:"case-study"},
+  {id:"g9fc-06-3-5", islandId:"g9i-06-3", front:"How is Lagos trying to manage the challenges of rapid growth?",
+   back:"Transport:\n• A new Bus Rapid Transit (BRT) system and a light rail network to ease congestion\n\nWater and sanitation:\n• Investment in water treatment and new boreholes to improve clean water access\n\nWaste:\n• Schemes to formalise recycling and improve waste collection; capturing gas from dumps\n\nHousing:\n• Some site-and-service and self-help approaches, though controversial slum clearances (e.g. at Makoko) have also displaced residents\n\nEconomy:\n• The Eko Atlantic project is building a new coastal business district on reclaimed land\n\nEvaluation: schemes help, but the scale of growth means demand still outstrips provision, and the poorest often benefit least.", difficulty:3, category:"case-study"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -64,6 +76,23 @@ Object.assign(QUESTIONS, {
     {q:"Why might sustainable strategies need to be different in LICs compared to HICs?",
      opts:["LICs have no environmental problems","HICs do not need sustainability because they are wealthy","LICs have limited budgets and more urgent priorities like housing and sanitation, so strategies must be low-cost and locally appropriate","Sustainability is only relevant to HICs"], c:2,
      e:"In LICs, governments have limited budgets and must address immediate needs such as housing, clean water and sanitation before investing in large-scale green technology. Strategies need to be affordable and community-driven — for example, self-help housing improvements, local recycling schemes and shared public transport. In HICs, greater wealth allows investment in expensive infrastructure like electric vehicle networks, solar panels and smart buildings."}
+  ],
+  "g9i-06-3": [
+    {q:"Where is Lagos located?",
+     opts:["The north-eastern desert region of Nigeria","The south-western coast of Nigeria, on the Gulf of Guinea","The centre of Nigeria, far from any coast","On an island in the Indian Ocean"], c:1,
+     e:"Lagos lies on the south-western coast of Nigeria, on the Gulf of Guinea (part of the Atlantic Ocean). Its coastal position made it an important port and helped it become Nigeria's largest city and main economic hub. Nigeria is classed as a Newly Emerging Economy (NEE)."},
+    {q:"Which two processes are the main causes of Lagos's rapid population growth?",
+     opts:["Emigration and falling birth rates","Rural-urban migration and natural increase","Tourism and retirement migration","International immigration only"], c:1,
+     e:"Lagos grows rapidly through rural-urban migration (people moving from the countryside, drawn by jobs and services and pushed by rural poverty) and natural increase (a young population with high birth rates and falling death rates means more births than deaths). Together these add hundreds of thousands of people each year."},
+    {q:"Which of these is an opportunity offered by living in Lagos?",
+     opts:["Guaranteed legal housing for every resident","Better access to jobs, schools and healthcare than in rural areas","No traffic congestion anywhere in the city","A complete absence of squatter settlements"], c:1,
+     e:"Lagos offers more jobs (in industry, services, the port, Nollywood and a growing tech sector) and better access to schools, hospitals, electricity and clean water than rural Nigeria. These pull factors attract migrants. The other options are false — much housing is informal, congestion is severe and large slums exist."},
+    {q:"Makoko, in Lagos, is best described as:",
+     opts:["A modern financial district built on reclaimed land","A large squatter settlement, partly built on stilts over a lagoon","A national park protecting wildlife","A purpose-built sustainable eco-suburb"], c:1,
+     e:"Makoko is a large squatter settlement in Lagos, much of it built on stilts over a lagoon. Like other slums, it has no legal land ownership and limited clean water, sanitation and electricity. Around two-thirds of Lagos residents live in such informal settlements because the city grows faster than formal housing can be built."},
+    {q:"Which scheme is Lagos using to reduce traffic congestion?",
+     opts:["Banning all public transport","A Bus Rapid Transit (BRT) system and light rail network","Closing the port to reduce visitors","Building more squatter settlements"], c:1,
+     e:"To tackle severe congestion (the notorious 'go-slows'), Lagos has invested in a Bus Rapid Transit (BRT) system using dedicated bus lanes, plus a developing light rail network. These aim to move large numbers of people efficiently and reduce reliance on private cars, easing both congestion and air pollution."}
   ]
 });
 
@@ -171,6 +200,30 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes write that "sustainable" means "environmentally friendly." Sustainability has three dimensions: <strong>environmental</strong> (reducing pollution and waste), <strong>economic</strong> (creating jobs and wealth) and <strong>social</strong> (ensuring fair access to housing, services and opportunities). A truly sustainable city addresses all three.</p>
+`,
+
+'g9i-06-3': `
+<h2>An LIC/NEE City Case Study: Lagos</h2>
+<p>The fastest urban growth on Earth is happening in the cities of lower-income and newly emerging economies. <strong>Lagos</strong>, Nigeria, is a powerful example: a coastal megacity of over 15 million people that grows by hundreds of thousands every year. Studying Lagos shows both the opportunities a fast-growing city offers and the serious challenges it creates.</p>
+
+<h3>Location and Importance</h3>
+<p>Lagos lies on the <strong>south-western coast of Nigeria</strong>, on the Gulf of Guinea in West Africa. It is Nigeria's largest city and its main economic and financial hub, home to a major port, banking, industry, the Nollywood film industry and a fast-growing tech sector. Nigeria is a <strong>Newly Emerging Economy (NEE)</strong>, and Lagos generates a large share of the country's wealth.</p>
+
+<h3>Causes of Rapid Growth</h3>
+<p>Two processes drive the growth. <strong>Rural-urban migration</strong> brings people from the countryside, pushed by rural poverty, drought and a lack of jobs, and pulled by the promise of work, higher wages and better services. <strong>Natural increase</strong> adds to this: a young population means high birth rates, while improving healthcare lowers death rates, so there are far more births than deaths.</p>
+
+<h3>Opportunities</h3>
+<p>Lagos offers more jobs than rural areas — in industry, the port, services and the informal economy — plus better access to schools, hospitals, electricity and clean water. These pull factors are why millions choose to move there despite the difficulties.</p>
+
+<h3>Challenges</h3>
+<p>Because the city grows faster than infrastructure can be built, around two-thirds of residents live in <strong>squatter settlements</strong> such as <strong>Makoko</strong>, built on stilts over a lagoon. Clean water and sanitation are inadequate, electricity is unreliable, waste overwhelms dumps like Olusosun, and traffic congestion and air pollution are severe.</p>
+
+<h3>Worked Example</h3>
+<p>Explain why rapid growth in Lagos has led to the spread of squatter settlements. (4 marks)</p>
+<p><strong>Rural-urban migration</strong> and <strong>natural increase</strong> add huge numbers of people to Lagos each year. The city cannot build formal housing fast enough, and most newcomers cannot afford it. With nowhere else to live, they build makeshift homes from scrap materials on unused or marginal land, creating <strong>squatter settlements</strong> like Makoko. These lack legal land ownership, clean water, sanitation and reliable electricity, so living conditions are poor and disease spreads easily.</p>
+
+<h3>Common Mistake</h3>
+<p>Students sometimes describe only the problems of a city like Lagos and forget the <strong>opportunities</strong>. Strong answers recognise that, despite the challenges, Lagos offers better jobs, services and prospects than rural Nigeria — which is exactly why people keep moving there.</p>
 `
 
 });

@@ -156,3 +156,43 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Don't over-read. 'Gripped the letter tightly' implies tension; it does NOT prove 'he had waited years for terrible news'. Keep every inference inside what the evidence can support.</p>`
 });
+
+FLASHCARDS.push(
+  // e9i-05-5 — Building an Analytical Paragraph
+  {id:"e9fc-05-5-1", islandId:"e9i-05-5", front:"What does PEE / PETAL stand for in an analytical paragraph?",
+   back:"PEE: Point – Evidence – Explanation (Analysis).\nPETAL: Point, Evidence, Technique, Analysis, Link.\n\nMake a clear point, support it with a quotation, then explain the effect; the optional T (terminology) and L (link) sharpen it.", difficulty:1, category:"definition"},
+  {id:"e9fc-05-5-2", islandId:"e9i-05-5", front:"How do you embed a short quotation smoothly?",
+   back:"Weave a few words of the quote into your own sentence rather than dropping it in separately.\n\nNot: 'The storm is fierce. \"The wind howled.\"' But: 'The writer describes how the wind \"howled\", suggesting menace.'", difficulty:2, category:"application"},
+  {id:"e9fc-05-5-3", islandId:"e9i-05-5", front:"What is the 'what / how / why' chain?",
+   back:"WHAT the writer does, HOW they do it (the method/word), and WHY — the effect on the reader.\n\nIt turns identifying into analysing by always pushing through to the reader's response.", difficulty:2, category:"concept"},
+  {id:"e9fc-05-5-4", islandId:"e9i-05-5", front:"Why 'zoom in' on a single word inside your paragraph?",
+   back:"Analysing the connotations of one key word shows depth and earns marks.\n\n'The verb \"clawed\" connotes violence, making the storm feel like a predator.' One word, fully explored.", difficulty:2, category:"application"},
+  {id:"e9fc-05-5-5", islandId:"e9i-05-5", front:"What is the purpose of the 'Link' at the end of a PETAL paragraph?",
+   back:"It connects your point back to the question, the wider text or the writer's overall intention.\n\nIt stops the paragraph drifting and shows your analysis answers what was actually asked.", difficulty:3, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "e9i-05-5": [
+    {q:"In PEE, the three stages in order are:", opts:["Point, Evidence, Explanation","Plot, Ending, Effect","Praise, Example, Edit","Phrase, Echo, Extend"], c:0,
+     e:"PEE stands for Point, Evidence, Explanation (Analysis)."},
+    {q:"Which sentence embeds the quotation most smoothly?", opts:["The writer says the wind \"howled\", suggesting menace.","The wind is scary. \"The wind howled.\"","\"The wind howled.\" This is a quote.","The wind howled the writer wrote it."], c:0,
+     e:"The quoted word is woven into the writer's own sentence and then analysed."},
+    {q:"The 'what / how / why' chain ends with:", opts:["The effect on the reader","The page number","The word count","The writer's birthplace"], c:0,
+     e:"'Why' pushes through to the effect on the reader — the heart of analysis."},
+    {q:"'Zooming in' within a paragraph means:", opts:["Exploring one key word's connotations","Quoting a whole paragraph","Reading faster","Counting the adjectives"], c:0,
+     e:"You focus on a single powerful word and unpack its associations."},
+    {q:"The 'Link' in PETAL mainly serves to:", opts:["Connect the point back to the question or text","Add a new quotation","Introduce a simile","Start a new topic"], c:0,
+     e:"The link ties the analysis back to the question, wider text or writer's intention."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e9i-05-5": `<h2>Building an Analytical Paragraph</h2>
+<p>A strong analytical paragraph follows a clear structure such as <strong>PEE</strong> (Point, Evidence, Explanation) or the fuller <strong>PETAL</strong> (Point, Evidence, Technique, Analysis, Link). The shape keeps you focused and pushes you from naming features to explaining their effect.</p>
+<h3>Point and embedded evidence</h3>
+<p>Open with a clear <strong>point</strong> that answers the question. Then support it with <strong>evidence</strong> — but embed the quotation smoothly. Don't drop a quote in on its own; weave a few words into your sentence: 'The writer describes how the wind <strong>"howled"</strong>, creating a sense of menace.'</p>
+<h3>Zoom in and use the what / how / why chain</h3>
+<p>The best analysis <strong>zooms in</strong> on a single key word and explores its connotations. Drive your explanation with the <strong>what / how / why</strong> chain: <em>what</em> the writer does, <em>how</em> they do it, and <em>why</em> — the effect on the reader. This is what turns identifying into analysing.</p>
+<h3>Worked model paragraph</h3>
+<p>'The writer presents the storm as a living threat (point). She describes how the wind <strong>"clawed"</strong> at the windows (embedded evidence). The violent verb <strong>"clawed"</strong> personifies the storm as a predator with talons, tearing at the house (technique and zoom-in). This makes the reader feel the family is under attack, building tension and fear (effect/analysis), and reinforces the wider sense that nature is hostile and beyond human control (link).'</p>
+<h3>Common mistake</h3>
+<p>Don't separate the quote from your sentence and then forget to analyse it. A floating quotation with no explanation is just decoration; always reach the <em>why</em> — the effect on the reader.</p>`
+});

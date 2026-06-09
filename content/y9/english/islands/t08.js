@@ -156,3 +156,43 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Don't bolt a biography fact onto a paragraph. Every contextual point should change how we read a specific word, character or moment — otherwise leave it out.</p>`
 });
+
+FLASHCARDS.push(
+  // e9i-08-5 — Writing a Shakespeare Essay
+  {id:"e9fc-08-5-1", islandId:"e9i-08-5", front:"What is a thesis in a Shakespeare essay?",
+   back:"A clear, arguable central idea that your whole essay sets out to prove.\n\nNot 'Macbeth is ambitious' (a fact) but 'Shakespeare presents Macbeth's ambition as a force that destroys him from within' (an argument).", difficulty:1, category:"definition"},
+  {id:"e9fc-08-5-2", islandId:"e9i-08-5", front:"How do you plan a thesis-driven essay?",
+   back:"Decide your overall argument first, then choose 3-4 points that each prove part of it.\n\nEvery paragraph should advance the thesis, not just describe a new bit of the play.", difficulty:2, category:"application"},
+  {id:"e9fc-08-5-3", islandId:"e9i-08-5", front:"What is the ideal shape of an essay paragraph?",
+   back:"Point → embedded evidence → analysis → context link.\n\nMake an argument-driven point, embed a short quote, zoom in on method and effect, then weave in relevant context.", difficulty:2, category:"concept"},
+  {id:"e9fc-08-5-4", islandId:"e9i-08-5", front:"How should context be used in an essay (not just listed)?",
+   back:"Weave it purposefully to deepen the point you are making, linked to a specific word or moment.\n\nNot a bolted-on fact, but: 'A Jacobean audience, fearing regicide, would find this murder especially shocking.'", difficulty:3, category:"application"},
+  {id:"e9fc-08-5-5", islandId:"e9i-08-5", front:"What makes a strong essay conclusion?",
+   back:"It returns to the thesis and elevates it — showing the writer's bigger purpose or message.\n\nDon't just repeat points; explain what the play, as a whole, leads the audience to feel or understand.", difficulty:3, category:"concept"}
+);
+Object.assign(QUESTIONS, {
+  "e9i-08-5": [
+    {q:"Which of these is a thesis (an argument), not just a fact?", opts:["Shakespeare presents Macbeth's ambition as a force that destroys him from within.","Macbeth is a Scottish thane.","The play has five acts.","Macbeth meets three witches."], c:0,
+     e:"A thesis is arguable and drives the whole essay; the others are plot facts."},
+    {q:"In a thesis-driven essay, each paragraph should:", opts:["Advance the central argument","Tell a new part of the story","Introduce a new character","List a technique"], c:0,
+     e:"Every paragraph must prove part of the thesis, not merely describe."},
+    {q:"The recommended shape of an essay paragraph is:", opts:["Point, embedded evidence, analysis, context link","Quote, quote, quote","Summary then opinion","Context, plot, ending"], c:0,
+     e:"Argument-driven point, embedded quote, analysis, then a purposeful context link."},
+    {q:"Context is used well when it:", opts:["Deepens a specific point of analysis","Is listed at the start as facts","Replaces the quotations","Fills space at the end"], c:0,
+     e:"Woven context illuminates a specific word or moment rather than being bolted on."},
+    {q:"A strong conclusion should:", opts:["Return to the thesis and elevate it to the writer's purpose","Add a brand-new point","Repeat the introduction word for word","Quote a whole speech"], c:0,
+     e:"It revisits the argument and shows the play's wider message or purpose."}
+  ]
+});
+Object.assign(LESSONS, {
+  "e9i-08-5": `<h2>Writing a Shakespeare Essay</h2>
+<p>Analysis becomes an essay when it is driven by an <strong>argument</strong>. The difference between a good and a great response is usually a clear <strong>thesis</strong> — a central idea you set out to prove — rather than a string of separate observations.</p>
+<h3>Planning a thesis-driven argument</h3>
+<p>Decide your overall argument before you write, then choose three or four points that each prove part of it. A worked thesis statement might read: 'Shakespeare presents Macbeth's ambition not as simple greed but as a corrupting force that destroys his conscience, warning the audience about the cost of defying the natural order.' Every paragraph must advance this idea, not just retell the plot.</p>
+<h3>Structuring each paragraph</h3>
+<p>Use the shape <strong>point → embedded evidence → analysis → context link</strong>. A strong paragraph opener keeps the argument visible: 'Shakespeare first reveals the destructive nature of Macbeth's ambition when he calls it a <strong>"spur"</strong>.' Embed the quote, zoom in on the method and effect, then weave in context purposefully — 'a Jacobean audience, fearful of regicide, would read this as a chilling warning' — so the context deepens the point rather than sitting beside it.</p>
+<h3>Writing a strong conclusion</h3>
+<p>End by returning to your thesis and <em>elevating</em> it. Don't merely repeat your points; show what the play, as a whole, leads the audience to understand about ambition, power or guilt, and link this to Shakespeare's overall purpose.</p>
+<h3>Common mistake</h3>
+<p>Don't write a series of disconnected PEE paragraphs with no overall line of argument. If a paragraph does not push your thesis forward, rework it so that it does.</p>`
+});

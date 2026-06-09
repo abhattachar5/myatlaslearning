@@ -50,7 +50,19 @@ FLASHCARDS.push(
   {id:"g9fc-04-4-4", islandId:"g9i-04-4", front:"What is a floodplain and how does it form?",
    back:"A floodplain is the wide, flat area of land either side of a river in its lower course that is covered with water when the river floods.\n\nFormation:\n• Lateral (sideways) erosion as meanders migrate widens the valley floor.\n• When the river floods, it spreads across the valley floor and loses energy.\n• The reduced velocity causes deposition of fine sediment called alluvium.\n• Repeated flooding builds up layers of fertile alluvium, creating a flat, wide floodplain.\n\nFloodplains are valuable for farming because of their fertile soils, but building on them increases flood risk.", difficulty:2, category:"concept"},
   {id:"g9fc-04-4-5", islandId:"g9i-04-4", front:"Explain how natural levées form on a floodplain.",
-   back:"A levée is a raised bank of sediment running along the edge of a river channel on its floodplain.\n\nFormation:\n1. During a flood, the river overflows its banks onto the floodplain.\n2. As water leaves the channel, it slows down suddenly and loses energy.\n3. The heaviest, coarsest material (sand and gravel) is deposited first, right next to the channel.\n4. Finer material (silt and clay) is carried further across the floodplain.\n5. After many floods, the coarse material builds up into raised banks (levées) on either side of the channel.\n\nLevées can raise the river above the level of the floodplain, which makes flooding more severe if they are breached.", difficulty:2, category:"application"}
+   back:"A levée is a raised bank of sediment running along the edge of a river channel on its floodplain.\n\nFormation:\n1. During a flood, the river overflows its banks onto the floodplain.\n2. As water leaves the channel, it slows down suddenly and loses energy.\n3. The heaviest, coarsest material (sand and gravel) is deposited first, right next to the channel.\n4. Finer material (silt and clay) is carried further across the floodplain.\n5. After many floods, the coarse material builds up into raised banks (levées) on either side of the channel.\n\nLevées can raise the river above the level of the floodplain, which makes flooding more severe if they are breached.", difficulty:2, category:"application"},
+
+  // g9i-04-5 — Erosional River Landforms
+  {id:"g9fc-04-5-1", islandId:"g9i-04-5", front:"Describe the four processes of river erosion.",
+   back:"1. Hydraulic action — the sheer force of moving water hits the bed and banks, compressing air into cracks and breaking the rock apart over time.\n\n2. Abrasion (corrasion) — sediment carried by the river is thrown against the bed and banks, wearing them away like sandpaper. This is the most effective erosion in the upper course.\n\n3. Attrition — the rocks being transported collide with each other and break into smaller, smoother, more rounded pieces. This does not erode the channel itself.\n\n4. Solution (corrosion) — slightly acidic river water chemically dissolves soluble rock such as chalk and limestone.", difficulty:1, category:"process"},
+  {id:"g9fc-04-5-2", islandId:"g9i-04-5", front:"How does a V-shaped valley form in the upper course of a river?",
+   back:"In the upper course the river has a steep gradient and high potential energy, so erosion is mainly downwards (vertical erosion).\n\nFormation:\n1. The river cuts down into its bed by hydraulic action and abrasion, creating a deep, narrow channel.\n2. Weathering (e.g. freeze-thaw) loosens rock on the steep valley sides.\n3. This loosened material falls or is washed down the slope by gravity and rainfall (mass movement and surface run-off).\n4. The river transports the fallen material away.\n5. The result is a steep-sided, narrow valley shaped like the letter V.", difficulty:2, category:"process"},
+  {id:"g9fc-04-5-3", islandId:"g9i-04-5", front:"What are interlocking spurs and how do they form?",
+   back:"Interlocking spurs are projecting ridges of more resistant land that jut out alternately from each side of a river valley in the upper course.\n\nFormation:\n• In the upper course the river has little energy for sideways (lateral) erosion.\n• Instead of eroding through obstacles of harder rock, the river is forced to wind around them.\n• It bends from side to side, leaving alternating ridges of higher land projecting into the valley.\n• These ridges appear to 'interlock' like the teeth of a zip when viewed from up or down the valley.", difficulty:2, category:"concept"},
+  {id:"g9fc-04-5-4", islandId:"g9i-04-5", front:"Explain how a waterfall forms.",
+   back:"A waterfall forms where a band of hard (resistant) rock lies over softer (less resistant) rock.\n\nFormation:\n1. The river erodes the softer rock more quickly than the hard rock by hydraulic action and abrasion.\n2. This creates a step in the river, with the hard rock left overhanging.\n3. At the base, the force of the falling water and abrasion carve out a deep plunge pool.\n4. Splashback and erosion undercut the hard rock, enlarging the overhang.\n5. Unsupported, the overhanging hard rock eventually collapses into the plunge pool.\n\nExample: High Force on the River Tees.", difficulty:2, category:"process"},
+  {id:"g9fc-04-5-5", islandId:"g9i-04-5", front:"How does a gorge form from a retreating waterfall?",
+   back:"A gorge is a narrow, steep-sided valley found immediately downstream of a waterfall.\n\nFormation:\n1. A waterfall undercuts and collapses the overhanging hard rock.\n2. The collapsed rock swirls in the plunge pool, eroding it further by abrasion.\n3. The waterfall is now in the same position but slightly further upstream — it has 'retreated'.\n4. This process of undercutting, collapse and retreat repeats many times over thousands of years.\n5. As the waterfall retreats upstream, it leaves behind a deep, narrow gorge marking its former positions.", difficulty:3, category:"process"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -122,6 +134,23 @@ Object.assign(QUESTIONS, {
     {q:"How does a natural levée form on a floodplain?",
      opts:["Humans build raised concrete walls along the river","During a flood the river drops its coarsest load nearest the channel, building up raised banks over time","The river erodes its banks to leave raised ridges","Vegetation grows along the river to trap water"], c:1,
      e:"When a river floods, it overflows onto the floodplain and slows down suddenly. The heaviest, coarsest material (sand and gravel) is deposited first, right next to the channel, while finer silt is carried further away. Repeated floods build these coarse deposits into raised banks called levées. Although humans can reinforce them, natural levées form purely through deposition."}
+  ],
+  "g9i-04-5": [
+    {q:"Which erosion process involves the river's load colliding and breaking into smaller, rounder pieces?",
+     opts:["Hydraulic action","Abrasion","Attrition","Solution"], c:2,
+     e:"Attrition is the collision of transported rocks and stones with each other, which breaks them into smaller, smoother and more rounded fragments as they travel downstream. Note that attrition wears down the load itself, not the river channel — it is abrasion and hydraulic action that erode the bed and banks."},
+    {q:"Why does vertical erosion dominate in the upper course of a river?",
+     opts:["The gradient is gentle, so the river flows slowly","The steep gradient gives the river high energy, so it cuts downwards into its bed","The river is wide and shallow with lots of deposition","Sea level rises and forces the river to cut down"], c:1,
+     e:"In the upper course the river flows down a steep gradient, giving it high potential energy. This energy is directed downwards, so the river erodes its bed by hydraulic action and abrasion (vertical erosion). Combined with weathering and mass movement on the valley sides, this produces a steep, narrow V-shaped valley."},
+    {q:"What are interlocking spurs?",
+     opts:["Raised banks of sediment beside the channel","Alternating ridges of resistant land that the river winds around in the upper course","Steps of hard rock over which a waterfall flows","Curved bends formed by lateral erosion in the lower course"], c:1,
+     e:"In the upper course the river lacks the energy to erode sideways through bands of harder rock, so it is forced to wind around them. This leaves projecting ridges of higher land that jut out alternately from each side of the valley and appear to interlock like the teeth of a zip when viewed along the valley."},
+    {q:"In the formation of a waterfall, why does the hard cap rock eventually collapse?",
+     opts:["It is dissolved by acidic water","The softer rock beneath is eroded faster, leaving the hard rock unsupported and overhanging","It is pushed up by pressure from below","Freeze-thaw shatters it from above"], c:1,
+     e:"The softer rock beneath the resistant cap rock is eroded more quickly by hydraulic action and abrasion, and the plunge pool undercuts it. This leaves the hard rock overhanging with no support beneath. Eventually the unsupported overhang collapses into the plunge pool, and the process repeats."},
+    {q:"How does a gorge form?",
+     opts:["A meander neck is cut through during a flood","Repeated undercutting and collapse causes a waterfall to retreat upstream, leaving a narrow valley behind","Deposition builds up raised banks on either side of the river","The river erodes sideways to widen its floodplain"], c:1,
+     e:"As a waterfall undercuts and collapses its overhanging hard rock, it retreats upstream. This cycle of undercutting, collapse and retreat repeats over thousands of years. Each former position of the waterfall is marked by the steep-sided, narrow valley left behind — this is a gorge."}
   ]
 });
 
@@ -300,6 +329,33 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students often muddle which bank erodes and which receives deposition. Remember: the <strong>outer bank</strong> has fast, deep flow, so it is <em>eroded</em> to form a river cliff; the <strong>inner bank</strong> has slow, shallow flow, so sediment is <em>deposited</em> to form a slip-off slope. Do not write that a river only erodes or only deposits — in the lower course it does both, on opposite sides of the same bend.</p>
+`,
+
+'g9i-04-5': `
+<h2>Erosional River Landforms</h2>
+<div class="lesson-diagram" data-diagram="river-long-profile"><p class="diagram-caption">The long profile of a river from source to mouth</p></div>
+<p>In its upper course, near the source, a river is dominated by erosion. With a steep gradient and high energy, it cuts down into the landscape to create some of the most dramatic river landforms: V-shaped valleys, interlocking spurs, waterfalls and gorges.</p>
+
+<h3>The Four Processes of Erosion</h3>
+<ul>
+  <li><strong>Hydraulic action</strong> — the force of water compresses air into cracks, breaking rock apart.</li>
+  <li><strong>Abrasion</strong> — sediment is hurled at the bed and banks, wearing them away like sandpaper.</li>
+  <li><strong>Attrition</strong> — transported rocks collide and break into smaller, rounder pieces (this wears down the load, not the channel).</li>
+  <li><strong>Solution</strong> — acidic water chemically dissolves soluble rock such as limestone.</li>
+</ul>
+
+<h3>V-Shaped Valleys and Interlocking Spurs</h3>
+<p>In the upper course the steep gradient gives the river high energy, so it erodes <strong>vertically</strong> (downwards). As the river cuts down, weathering loosens rock on the valley sides and gravity moves it downslope, where the river carries it away. This creates a steep-sided, narrow <strong>V-shaped valley</strong>. The river has little energy to erode sideways, so it winds around bands of harder rock, leaving projecting ridges called <strong>interlocking spurs</strong> that appear to lock together like the teeth of a zip.</p>
+
+<h3>Waterfalls and Gorges</h3>
+<p>A <strong>waterfall</strong> forms where hard rock lies over softer rock. The soft rock is eroded faster, leaving the hard rock overhanging. A deep <strong>plunge pool</strong> is carved at the base, and splashback undercuts the hard rock until the unsupported overhang <strong>collapses</strong>. This cycle repeats, so the waterfall <strong>retreats</strong> upstream over thousands of years, leaving a steep-sided <strong>gorge</strong> behind it.</p>
+
+<h3>Worked Example</h3>
+<p>Explain the formation of a waterfall and gorge. (6 marks)</p>
+<p>A river flows over a band of <strong>hard rock</strong> lying on top of <strong>softer rock</strong>. The soft rock is eroded more quickly by <strong>hydraulic action and abrasion</strong>, creating a step. At the base, the falling water carves out a deep <strong>plunge pool</strong>. Splashback erodes the soft rock further, <strong>undercutting</strong> the hard rock so it overhangs. Eventually the unsupported hard rock <strong>collapses</strong> into the plunge pool. As this repeats, the waterfall <strong>retreats upstream</strong>, leaving a narrow, steep-sided <strong>gorge</strong> marking its former positions.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often confuse attrition with abrasion. <strong>Abrasion</strong> wears away the river's bed and banks; <strong>attrition</strong> wears down the rocks the river is carrying (its load), making them smaller and rounder. Attrition does not erode the channel itself, so never use it to explain how a valley or waterfall is shaped.</p>
 `
 
 });

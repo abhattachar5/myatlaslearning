@@ -212,7 +212,12 @@ CURRICULUM.push(
    topicId:"s9t-10", yearGroup:"Year 9", difficulty:2, estimatedHours:1,
    description:"Evaluate how we use Earth's resources and why recycling and sustainability matter.",
    learningOutcomes:["Distinguish finite and renewable resources","Explain the importance of recycling","Evaluate life-cycle assessments"],
-   topics:["Finite vs renewable","Recycling","Life-cycle assessments"], prerequisites:["s9i-10-1"]}
+   topics:["Finite vs renewable","Recycling","Life-cycle assessments"], prerequisites:["s9i-10-1"]},
+  {id:"s9i-10-3", name:"Potable Water & Treatment", emoji:"🚰", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s9t-10", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Explain how safe drinking (potable) water is produced from fresh water and sea water.",
+   learningOutcomes:["Distinguish potable water from pure water","Describe filtration and sterilisation of fresh water","Explain desalination by distillation and reverse osmosis"],
+   topics:["Potable vs pure","Filtration & sterilisation","Desalination"], prerequisites:["s9i-10-1"]}
 );
 
 // ── Physics islands ──────────────────────────────────────────────────────────

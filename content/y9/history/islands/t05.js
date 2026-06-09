@@ -181,3 +181,51 @@ Object.assign(LESSONS, {
 <h3>Common mistake</h3>
 <p>Students sometimes assume the Windrush generation were immigrants without the right to be in Britain. In fact, they were <strong>British subjects</strong> with a legal right to settle. This is why the later Windrush scandal — when some were wrongly threatened with deportation — was such a serious injustice.</p>`
 });
+
+FLASHCARDS.push(
+  // h9i-05-5 — Decolonisation in Africa
+  {id:"h9fc-05-5-1", islandId:"h9i-05-5", front:"What was the 'Wind of Change' speech (1960)?",
+   back:"The 'Wind of Change' speech was given by British Prime Minister Harold Macmillan in February 1960, to the parliament of South Africa in Cape Town.\n\nMacmillan declared that 'the wind of change is blowing through this continent', acknowledging that African nationalism was growing and that the end of British colonial rule in Africa was inevitable.\n\nThe speech signalled a major shift in British policy — accepting that the empire in Africa was coming to an end. It also pointedly criticised South Africa's apartheid system.", difficulty:2, category:"concept"},
+  {id:"h9fc-05-5-2", islandId:"h9i-05-5", front:"How did Ghana become independent and why was it significant?",
+   back:"Ghana (formerly the Gold Coast) became independent on 6 March 1957, the first sub-Saharan African colony to break free from European rule.\n\nIt was led by Kwame Nkrumah, who used strikes, boycotts and political organisation to pressure Britain into withdrawing. He became Ghana's first prime minister and later president.\n\nGhana's success was hugely significant: it inspired independence movements across Africa and made Nkrumah a champion of Pan-Africanism — the idea of African unity.", difficulty:2, category:"concept"},
+  {id:"h9fc-05-5-3", islandId:"h9i-05-5", front:"What was the Mau Mau uprising in Kenya?",
+   back:"The Mau Mau uprising (1952–60) was an armed rebellion against British rule in Kenya, fought mainly by the Kikuyu people.\n\nThe main grievance was the loss of fertile African land to white settlers. Britain declared a state of emergency and used harsh methods to crush the revolt, including mass detention camps in which thousands of Kenyans died.\n\nAlthough the Mau Mau were militarily defeated, the uprising showed Britain that colonial rule was too costly to maintain. Kenya gained independence in 1963 under Jomo Kenyatta.", difficulty:2, category:"concept"},
+  {id:"h9fc-05-5-4", islandId:"h9i-05-5", front:"Why did the British and other European empires in Africa end so rapidly around 1960?",
+   back:"Several factors caused the rapid end of empire in Africa:\n\n• European powers were weakened and impoverished after the Second World War.\n• Strong nationalist movements demanded self-rule across the continent.\n• Britain accepted the change after the 'Wind of Change' speech, deciding the empire was too costly to defend.\n• The Cold War superpowers (USA and USSR) both opposed old-style colonialism.\n\n1960 became known as the 'Year of Africa' because 17 African nations gained independence in that single year.", difficulty:3, category:"application"},
+  {id:"h9fc-05-5-5", islandId:"h9i-05-5", front:"Who was Kwame Nkrumah?",
+   back:"Kwame Nkrumah (1909–1972) was the leader of Ghana's independence movement and its first head of government.\n\nHe campaigned through strikes, boycotts and mass political organisation to win independence from Britain in 1957. As Ghana's first prime minister and later president, he became one of Africa's most influential leaders.\n\nNkrumah was a leading voice of Pan-Africanism, believing that African nations should unite and cooperate to overcome the legacy of colonialism.", difficulty:2, category:"definition"}
+);
+Object.assign(QUESTIONS, {
+  "h9i-05-5": [
+    {q:"Who gave the 'Wind of Change' speech in 1960, and where?",
+     opts:["Harold Macmillan, to the South African parliament in Cape Town","Winston Churchill, to the House of Commons","Kwame Nkrumah, in Ghana","Jomo Kenyatta, in Kenya"], c:0,
+     e:"British Prime Minister Harold Macmillan delivered the 'Wind of Change' speech to the South African parliament in Cape Town in February 1960, acknowledging the rise of African nationalism."},
+    {q:"Which was the first sub-Saharan African colony to gain independence?",
+     opts:["Ghana (1957)","Kenya (1963)","Nigeria (1960)","Egypt (1922)"], c:0,
+     e:"Ghana, formerly the Gold Coast, became independent on 6 March 1957 under Kwame Nkrumah, making it the first sub-Saharan African colony to gain independence."},
+    {q:"Who led Ghana to independence?",
+     opts:["Kwame Nkrumah","Jomo Kenyatta","Harold Macmillan","Nelson Mandela"], c:0,
+     e:"Kwame Nkrumah led Ghana's independence movement and became its first prime minister, later championing Pan-Africanism."},
+    {q:"What was the main grievance behind the Mau Mau uprising in Kenya?",
+     opts:["The loss of African land to white settlers","A dispute over religious freedom","Opposition to new school fees","Anger at a ban on trade unions"], c:0,
+     e:"The Mau Mau, mainly Kikuyu, rebelled chiefly over the seizure of their fertile land by white settlers in Kenya's highlands."},
+    {q:"Why is 1960 sometimes called the 'Year of Africa'?",
+     opts:["17 African nations gained independence in that single year","All of Africa was colonised that year","The first African was elected to the UN","Apartheid ended in South Africa"], c:0,
+     e:"In 1960 alone, 17 African countries became independent, marking the rapid collapse of European empires across the continent."}
+  ]
+});
+Object.assign(LESSONS, {
+  "h9i-05-5": `<h2>Decolonisation in Africa</h2>
+<p>Around 1960, European empires in Africa collapsed with astonishing speed. Within a few years, dozens of colonies became independent nations, transforming the political map of the continent.</p>
+<h3>The 'Wind of Change'</h3>
+<p>In February 1960, British Prime Minister <strong>Harold Macmillan</strong> gave his famous <strong>'Wind of Change'</strong> speech to the South African parliament in Cape Town. He declared that 'the wind of change is blowing through this continent', accepting that African nationalism was unstoppable and that British rule in Africa was coming to an end. The speech marked a major shift in British policy and also criticised South Africa's apartheid system.</p>
+<h3>Ghana leads the way</h3>
+<p>The first sub-Saharan colony to gain independence was <strong>Ghana</strong> (formerly the Gold Coast) on 6 March 1957. Led by <strong>Kwame Nkrumah</strong>, who used strikes, boycotts and mass organisation, Ghana's success inspired independence movements across Africa. Nkrumah became a leading champion of Pan-Africanism.</p>
+<h3>Kenya and the Mau Mau</h3>
+<p>Not all transitions were peaceful. In <strong>Kenya</strong>, the <strong>Mau Mau uprising</strong> (1952–60), fought mainly by the Kikuyu over the loss of land to white settlers, was brutally suppressed by the British. Yet it showed that colonial rule was too costly to maintain, and Kenya became independent in 1963 under Jomo Kenyatta.</p>
+<h3>Worked example</h3>
+<p><strong>Q: Explain why European empires in Africa ended so rapidly around 1960.</strong></p>
+<p>European powers were <strong>weakened by the Second World War</strong> and could no longer afford to defend large empires. At the same time, <strong>nationalist movements</strong> grew strong across Africa, demanding self-rule. After Macmillan's <strong>'Wind of Change' speech</strong>, Britain accepted that holding on was too costly. So many colonies became free that <strong>1960 is called the 'Year of Africa'</strong>, when 17 nations gained independence in a single year.</p>
+<h3>Common mistake</h3>
+<p>Students sometimes assume decolonisation in Africa was always peaceful, like Ghana's. In fact, several countries, including Kenya with the Mau Mau uprising and Algeria's war against France, achieved independence only after violent and bloody struggles.</p>`
+});

@@ -57,7 +57,19 @@ FLASHCARDS.push(
   {id:"m9fc-09-4-5", islandId:"m9i-09-4", front:"Make a the subject of v = u + at.",
    back:"a = (v − u) ÷ t\n\nFirst subtract u from both sides: v − u = at. Then divide both sides by t: (v − u) ÷ t = a.", difficulty:3, category:"application"},
   {id:"m9fc-09-4-6", islandId:"m9i-09-4", front:"Why do inverse operations come in the reverse order?",
-   back:"To undo a formula you peel away operations from the outside in, like removing layers.\n\nIn u + at, the + u is the outermost layer, so undo it first, then undo the × t.", difficulty:3, category:"concept"}
+   back:"To undo a formula you peel away operations from the outside in, like removing layers.\n\nIn u + at, the + u is the outermost layer, so undo it first, then undo the × t.", difficulty:3, category:"concept"},
+
+  // m9i-09-5 — Indices in Algebra
+  {id:"m9fc-09-5-1", islandId:"m9i-09-5", front:"What is the rule for multiplying powers of the same letter?",
+   back:"Add the powers: aᵐ × aⁿ = aᵐ⁺ⁿ.\n\nFor example x³ × x⁴ = x⁷, because you have 3 x's multiplied by 4 more x's, giving 7 x's altogether.", difficulty:1, category:"definition"},
+  {id:"m9fc-09-5-2", islandId:"m9i-09-5", front:"What is the rule for dividing powers of the same letter?",
+   back:"Subtract the powers: aᵐ ÷ aⁿ = aᵐ⁻ⁿ.\n\nFor example x⁵ ÷ x² = x³, because dividing cancels x's: five x's on top, two cancel from the bottom, leaving three.", difficulty:1, category:"definition"},
+  {id:"m9fc-09-5-3", islandId:"m9i-09-5", front:"Simplify 2x³ × 3x⁴.",
+   back:"6x⁷\n\nMultiply the coefficients: 2 × 3 = 6. Add the powers: x³ × x⁴ = x⁷.", difficulty:2, category:"calculation"},
+  {id:"m9fc-09-5-4", islandId:"m9i-09-5", front:"What is the rule for a power of a power, like (aᵐ)ⁿ?",
+   back:"Multiply the powers: (aᵐ)ⁿ = aᵐⁿ.\n\nFor example (x³)² = x⁶, because you have x³ multiplied by itself: x³ × x³ = x⁶. Watch any coefficient too — (2x³)² = 4x⁶ since 2² = 4.", difficulty:2, category:"concept"},
+  {id:"m9fc-09-5-5", islandId:"m9i-09-5", front:"Simplify 6x⁵ ÷ 2x².",
+   back:"3x³\n\nDivide the coefficients: 6 ÷ 2 = 3. Subtract the powers: x⁵ ÷ x² = x⁵⁻² = x³.", difficulty:2, category:"calculation"}
 );
 
 Object.assign(QUESTIONS, {
@@ -108,6 +120,18 @@ Object.assign(QUESTIONS, {
      e:"w is multiplied by l, so divide both sides by l: w = A ÷ l."},
     {q:"Make y the subject of x = 3y.", opts:["y = x ÷ 3","y = 3x","y = x − 3","y = x + 3"], c:0,
      e:"y is multiplied by 3, so divide both sides by 3: y = x ÷ 3."}
+  ],
+  "m9i-09-5": [
+    {q:"Simplify x⁶ × x³.", opts:["x⁹","x¹⁸","x³","x²"], c:0,
+     e:"When multiplying powers of the same letter, add the indices: 6 + 3 = 9, giving x⁹."},
+    {q:"Simplify 2x³ × 3x⁴.", opts:["6x⁷","5x⁷","6x¹²","6x⁵"], c:0,
+     e:"Multiply the coefficients (2 × 3 = 6) and add the powers (3 + 4 = 7), giving 6x⁷."},
+    {q:"Simplify (2x³)².", opts:["4x⁶","2x⁶","4x⁵","4x⁹"], c:0,
+     e:"Square the coefficient (2² = 4) and multiply the powers ((x³)² = x⁶), giving 4x⁶."},
+    {q:"Simplify 6x⁵ ÷ 2x².", opts:["3x³","3x⁷","4x³","3x²·⁵"], c:0,
+     e:"Divide the coefficients (6 ÷ 2 = 3) and subtract the powers (5 − 2 = 3), giving 3x³."},
+    {q:"Simplify (x⁴)³.", opts:["x¹²","x⁷","x⁴³","x⁶⁴"], c:0,
+     e:"A power of a power multiplies the indices: 4 × 3 = 12, giving x¹²."}
   ]
 });
 
@@ -166,5 +190,23 @@ Object.assign(LESSONS, {
 <li>Answer: <strong>a = (v − u) ÷ t</strong>.</li>
 </ul>
 <h3>Common mistake</h3>
-<p>Undo operations in reverse order and apply them to the <em>whole</em> side. A frequent slip is writing a = v − u ÷ t — without brackets that only divides u by t. You must subtract u first, then divide everything by t, so brackets are needed: a = (v − u) ÷ t.</p>`
+<p>Undo operations in reverse order and apply them to the <em>whole</em> side. A frequent slip is writing a = v − u ÷ t — without brackets that only divides u by t. You must subtract u first, then divide everything by t, so brackets are needed: a = (v − u) ÷ t.</p>`,
+
+  "m9i-09-5": `<h2>Indices in Algebra</h2>
+<p>An <strong>index</strong> (or power) tells you how many times a letter is multiplied by itself, as in x³ = x × x × x. The <strong>laws of indices</strong> let you simplify algebraic terms quickly without writing everything out. Remember to deal with the <strong>coefficients</strong> (the numbers in front) separately from the powers.</p>
+<h3>Multiplying: add the powers</h3>
+<p>When you multiply powers of the same letter, <strong>add</strong> the indices: aᵐ × aⁿ = aᵐ⁺ⁿ. For example, 2x³ × 3x⁴: multiply the coefficients (2 × 3 = 6) and add the powers (3 + 4 = 7), giving <strong>6x⁷</strong>.</p>
+<h3>Dividing: subtract the powers</h3>
+<p>When you divide powers of the same letter, <strong>subtract</strong> the indices: aᵐ ÷ aⁿ = aᵐ⁻ⁿ. For example, 6x⁵ ÷ 2x²: divide the coefficients (6 ÷ 2 = 3) and subtract the powers (5 − 2 = 3), giving <strong>3x³</strong>.</p>
+<h3>Power of a power: multiply the powers</h3>
+<p>To raise a power to another power, <strong>multiply</strong> the indices: (aᵐ)ⁿ = aᵐⁿ. Do not forget the coefficient, which is raised to the outer power too. For example, (2x³)²: square the coefficient (2² = 4) and multiply the powers (3 × 2 = 6), giving <strong>4x⁶</strong>.</p>
+<h3>Worked example</h3>
+<p>Simplify 6x⁵ ÷ 2x².</p>
+<ul>
+<li>Divide the coefficients: 6 ÷ 2 = 3.</li>
+<li>Subtract the powers: x⁵ ÷ x² = x⁵⁻² = x³.</li>
+<li>Answer: <strong>3x³</strong>.</li>
+</ul>
+<h3>Common mistake</h3>
+<p>When multiplying, do not multiply the powers — add them. 2x³ × 3x⁴ = 6x⁷, not 6x¹². Also, in a power of a power such as (2x³)², the coefficient must be raised too: the answer is 4x⁶, not 2x⁶.</p>`
 });

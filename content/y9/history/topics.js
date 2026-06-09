@@ -118,7 +118,12 @@ CURRICULUM.push(
    topicId:"h9t-05", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
    description:"Explain post-war Commonwealth migration, the Windrush generation and its legacy.",
    learningOutcomes:["Explain post-war migration","Describe the Windrush generation","Explain migrants' contribution and the challenges"],
-   topics:["Post-war migration","Windrush","Contribution & challenges"], prerequisites:["h9i-05-1"]}
+   topics:["Post-war migration","Windrush","Contribution & challenges"], prerequisites:["h9i-05-1"]},
+  {id:"h9i-05-5", name:"Decolonisation in Africa", emoji:"🌍", subject:"History", subjectId:"history", color:"#a855f7",
+   topicId:"h9t-05", yearGroup:"Year 9", difficulty:2, estimatedHours:2,
+   description:"Trace the rapid end of European empire in Africa, from Ghana's independence to the Mau Mau uprising in Kenya.",
+   learningOutcomes:["Explain Macmillan's 'Wind of Change' speech (1960)","Describe Ghana's independence under Nkrumah (1957)","Explain the Mau Mau uprising and the path to Kenyan independence"],
+   topics:["Wind of Change","Ghana & Nkrumah","Kenya & the Mau Mau"], prerequisites:["h9i-05-1"]}
 );
 
 // ── Topic 6: Civil Rights & Equality (h9t-06) ─────────────────────────────

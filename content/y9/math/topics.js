@@ -246,7 +246,13 @@ CURRICULUM.push(
    description:"Change the subject of a formula using inverse operations.",
    learningOutcomes:["Use inverse operations on both sides","Rearrange one- and two-step formulae","Make a given variable the subject"],
    prerequisites:["m9i-09-3"],
-   topics:["Changing the subject","Inverse operations","Two-step rearranging"]}
+   topics:["Changing the subject","Inverse operations","Two-step rearranging"]},
+  {id:"m9i-09-5", subject:"Mathematics", subjectId:"math", topicId:"m9t-09", yearGroup:"Year 9",
+   name:"Indices in Algebra", emoji:"⬆️", difficulty:2, estimatedHours:2, color:"#3b82f6",
+   description:"Apply the laws of indices to algebraic terms, including coefficients and powers of powers.",
+   learningOutcomes:["Multiply terms by adding indices","Divide terms by subtracting indices","Apply the power-of-a-power rule with coefficients"],
+   prerequisites:["m9i-09-1"],
+   topics:["Multiplying & dividing indices","Power of a power","Handling coefficients"]}
 );
 
 // ── Topic 10: Sequences & nth Term (m9t-10) ─────────────────────────────────
