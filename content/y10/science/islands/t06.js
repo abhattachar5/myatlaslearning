@@ -50,7 +50,19 @@ FLASHCARDS.push(
   {id:"s10fc-06-4-4", islandId:"s10i-06-4", front:"What is atom economy and how is it calculated?",
    back:"Atom economy measures how much of the mass of the reactants ends up as the useful (desired) product.\n\natom economy = (Mr of desired product ÷ total Mr of all products) × 100\n\nA high atom economy means most of the atoms from the reactants are used in the desired product, with little waste.", difficulty:2, category:"definition"},
   {id:"s10fc-06-4-5", islandId:"s10i-06-4", front:"Why is a high atom economy more sustainable?",
-   back:"A reaction with high atom economy is more sustainable because:\n\n• Less waste is produced — fewer atoms end up in unwanted by-products\n• Raw materials are used more efficiently, so less is wasted\n• There are fewer waste products to dispose of, which can be costly and harmful\n• It is usually more profitable for industry\n\nHigh atom economy reactions make better use of finite resources.", difficulty:2, category:"concept"}
+   back:"A reaction with high atom economy is more sustainable because:\n\n• Less waste is produced — fewer atoms end up in unwanted by-products\n• Raw materials are used more efficiently, so less is wasted\n• There are fewer waste products to dispose of, which can be costly and harmful\n• It is usually more profitable for industry\n\nHigh atom economy reactions make better use of finite resources.", difficulty:2, category:"concept"},
+
+  // s10i-06-5 — Molar Gas Volume & Gas Calculations
+  {id:"s10fc-06-5-1", islandId:"s10i-06-5", front:"What is the molar gas volume at rtp?",
+   back:"At room temperature and pressure (rtp), one mole of ANY gas occupies the same volume:\n\n24 dm³ = 24 000 cm³\n\nThis is true for any gas because, at the same temperature and pressure, equal numbers of gas particles take up equal volumes — regardless of the type of gas.\n\nrtp means about 20 °C and 1 atmosphere pressure.", difficulty:1, category:"definition"},
+  {id:"s10fc-06-5-2", islandId:"s10i-06-5", front:"What are the formulae linking moles and gas volume at rtp?",
+   back:"volume (dm³) = moles × 24\n\nmoles = volume (dm³) ÷ 24\n\nRemember: 1 dm³ = 1000 cm³.\nIf a volume is given in cm³, divide by 1000 to convert to dm³ first (or use 24 000 cm³ per mole).", difficulty:1, category:"definition"},
+  {id:"s10fc-06-5-3", islandId:"s10i-06-5", front:"Calculate the volume of 0.5 mol of oxygen gas at rtp.",
+   back:"Use volume = moles × 24\n\nvolume = 0.5 × 24 = 12 dm³\n\nSo 0.5 mol of oxygen occupies 12 dm³ at rtp.\n\n(This is the same for 0.5 mol of any gas, because one mole of any gas occupies 24 dm³ at rtp.)", difficulty:2, category:"calculation"},
+  {id:"s10fc-06-5-4", islandId:"s10i-06-5", front:"How many moles are in 4800 cm³ of carbon dioxide at rtp?",
+   back:"Step 1: Convert volume to dm³\n4800 cm³ ÷ 1000 = 4.8 dm³\n\nStep 2: Use moles = volume ÷ 24\nmoles = 4.8 ÷ 24 = 0.2 mol\n\nThere are 0.2 mol of CO₂.\n\n(Alternatively: 4800 ÷ 24 000 = 0.2 mol.)", difficulty:2, category:"calculation"},
+  {id:"s10fc-06-5-5", islandId:"s10i-06-5", front:"Does the molar gas volume of 24 dm³ apply to solids and liquids?",
+   back:"No. The molar gas volume of 24 dm³ at rtp applies ONLY to gases.\n\nSolids and liquids are far more dense — their particles are packed close together — so one mole of a solid or liquid takes up far less volume than 24 dm³.\n\nOnly use volume = moles × 24 for substances that are gases at rtp.", difficulty:2, category:"concept"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -122,6 +134,23 @@ Object.assign(QUESTIONS, {
     {q:"Why is a reaction with a high atom economy more sustainable?",
      opts:["It always happens faster","Less waste is produced and raw materials are used efficiently","It uses a catalyst","It produces more by-products"], c:1,
      e:"High atom economy means most atoms from the reactants end up in the desired product, so less waste is made and finite raw materials are used efficiently — making the process more sustainable."}
+  ],
+  "s10i-06-5": [
+    {q:"What volume does one mole of any gas occupy at rtp?",
+     opts:["12 dm³","24 dm³","100 dm³","1 dm³"], c:1,
+     e:"At room temperature and pressure (rtp), one mole of any gas occupies 24 dm³ (24 000 cm³). This is the same for all gases because equal numbers of gas particles take up equal volumes at the same conditions."},
+    {q:"What is the volume of 2 mol of hydrogen gas at rtp?",
+     opts:["12 dm³","24 dm³","48 dm³","2 dm³"], c:2,
+     e:"volume = moles × 24 = 2 × 24 = 48 dm³. This works for any gas at rtp, since one mole always occupies 24 dm³."},
+    {q:"How many moles are in 12 dm³ of methane gas at rtp?",
+     opts:["0.5 mol","2 mol","24 mol","12 mol"], c:0,
+     e:"moles = volume ÷ 24 = 12 ÷ 24 = 0.5 mol. Rearrange volume = moles × 24 to get moles = volume ÷ 24."},
+    {q:"How many cm³ does 0.1 mol of carbon dioxide occupy at rtp?",
+     opts:["240 cm³","2400 cm³","24 cm³","24 000 cm³"], c:1,
+     e:"volume = 0.1 × 24 = 2.4 dm³. Converting to cm³: 2.4 × 1000 = 2400 cm³. (Or 0.1 × 24 000 = 2400 cm³.)"},
+    {q:"Why can you NOT use volume = moles × 24 for solid calcium carbonate?",
+     opts:["Calcium carbonate is a gas","The rule of 24 dm³ per mole applies only to gases","The Mr is too large","Solids have no volume"], c:1,
+     e:"The molar gas volume of 24 dm³ at rtp applies only to gases. Solids and liquids are much denser, so one mole takes up far less than 24 dm³. Only use the rule for substances that are gases at rtp."}
   ]
 });
 
@@ -264,6 +293,33 @@ atom economy = (2 &divide; 163) &times; 100 = <strong>1.2%</strong></p>
 
 <h3>Common Mistake</h3>
 <p>Students often confuse percentage yield with atom economy. Yield is about how much product you <em>actually collect</em> in an experiment; atom economy depends only on the <em>balanced equation</em> and the Mr values, not on how the experiment is carried out. A reaction can have a high yield but a low atom economy, or the other way round.</p>
+`,
+
+'s10i-06-5': `
+<h2>Molar Gas Volume &amp; Gas Calculations</h2>
+<p>One of the most useful ideas in quantitative chemistry is that gases behave in a very simple way. At the same temperature and pressure, equal numbers of gas particles always take up equal volumes &mdash; no matter which gas it is. This leads to the idea of the <strong>molar gas volume</strong>.</p>
+
+<h3>The Molar Gas Volume</h3>
+<p>At <strong>room temperature and pressure (rtp)</strong> &mdash; about 20 &deg;C and 1 atmosphere &mdash; <strong>one mole of any gas occupies 24 dm³ (24 000 cm³)</strong>. This single value works for hydrogen, oxygen, carbon dioxide or any other gas.</p>
+
+<h3>The Key Formulae</h3>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>volume (dm³) = moles &times; 24</strong><br><strong>moles = volume (dm³) &divide; 24</strong></p>
+<p>Combine this with <strong>moles = mass &divide; Mr</strong> to link the mass of a substance to the volume of gas involved. Remember: 1 dm³ = 1000 cm³.</p>
+
+<h3>Worked Example &mdash; Volume from Mass</h3>
+<p>Calculate the volume of CO₂ produced at rtp when 10 g of calcium carbonate decomposes.<br>
+Equation: CaCO₃ &rarr; CaO + CO₂ (Mr of CaCO₃ = 100)</p>
+<p>moles of CaCO₃ = mass &divide; Mr = 10 &divide; 100 = 0.1 mol<br>
+Ratio 1:1, so moles of CO₂ = 0.1 mol<br>
+volume of CO₂ = moles &times; 24 = 0.1 &times; 24 = <strong>2.4 dm³</strong></p>
+
+<h3>Worked Example &mdash; Moles from Volume</h3>
+<p>How many moles are there in 720 cm³ of oxygen at rtp?</p>
+<p>Convert: 720 cm³ &divide; 1000 = 0.72 dm³<br>
+moles = volume &divide; 24 = 0.72 &divide; 24 = <strong>0.03 mol</strong></p>
+
+<h3>Common Mistake</h3>
+<p>The two biggest errors are forgetting to convert between cm³ and dm³ (divide cm³ by 1000), and applying the 24 dm³ rule to a <em>solid</em> or <em>liquid</em>. The molar gas volume only works for gases &mdash; never calculate the &ldquo;volume&rdquo; of a solid reactant such as CaCO₃ using &times; 24.</p>
 `
 
 });

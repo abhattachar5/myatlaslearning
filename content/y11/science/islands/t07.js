@@ -53,6 +53,20 @@ FLASHCARDS.push(
    back:"Step-up transformers raise the potential difference to a very high value for transmission. This makes the current low.\n\nA low current means less energy is wasted heating the cables (less power loss), making transmission efficient.\n\nStep-down transformers then reduce the voltage to a safe level for use in homes and businesses.",difficulty:3,category:"application"}
 );
 
+FLASHCARDS.push(
+  // s11i-07-5 — The Generator Effect: Alternators, Microphones & Loudspeakers
+  {id:"s11fc-07-5-1",islandId:"s11i-07-5",front:"What is the generator effect?",
+   back:"The generator effect is the inducing of a potential difference (and a current, if there is a complete circuit) when a conductor moves in a magnetic field, or when the magnetic field around a conductor changes.\n\nIt is the reverse of the motor effect.",difficulty:1,category:"definition"},
+  {id:"s11fc-07-5-2",islandId:"s11i-07-5",front:"What is the difference between an alternator and a dynamo?",
+   back:"Both use the generator effect, but the connections differ:\n\n• An ALTERNATOR uses SLIP RINGS, so it produces alternating current (a.c.).\n• A DYNAMO uses a SPLIT-RING COMMUTATOR, so it produces direct current (d.c.).",difficulty:2,category:"concept"},
+  {id:"s11fc-07-5-3",islandId:"s11i-07-5",front:"How does a moving-coil microphone work?",
+   back:"A microphone uses the GENERATOR effect.\n\nSound waves make a diaphragm and an attached coil vibrate in a magnetic field. The movement induces a varying potential difference in the coil.\n\nThis varying p.d. is an electrical signal that represents the sound — so the microphone converts sound into an electrical signal.",difficulty:2,category:"concept"},
+  {id:"s11fc-07-5-4",islandId:"s11i-07-5",front:"How does a moving-coil loudspeaker work?",
+   back:"A loudspeaker uses the MOTOR effect (not the generator effect).\n\nA varying alternating current flows through a coil in a magnetic field. The motor effect makes the coil and the attached cone vibrate.\n\nThe vibrating cone makes the air vibrate, producing sound — so it converts an electrical signal into sound.",difficulty:2,category:"concept"},
+  {id:"s11fc-07-5-5",islandId:"s11i-07-5",front:"Which effect does a microphone use, and which does a loudspeaker use?",
+   back:"Microphone → GENERATOR effect (sound makes a coil move, inducing a p.d.): sound to electrical signal.\n\nLoudspeaker → MOTOR effect (a current in a coil makes it move): electrical signal to sound.\n\nThey are essentially reverse processes of one another.",difficulty:2,category:"application"}
+);
+
 // ── TEST QUESTIONS ────────────────────────────────────────────────────────────
 Object.assign(QUESTIONS, {
   "s11i-07-1":[
@@ -82,6 +96,13 @@ Object.assign(QUESTIONS, {
     {q:"For a 100% efficient transformer with Vp = 240 V, Ip = 5 A and Vs = 1200 V, what is the secondary current Is?",opts:["1 A","5 A","25 A","0.5 A"],c:0,e:"Vp × Ip = Vs × Is → 240 × 5 = 1200 × Is → Is = 1200/1200 = 1 A. Stepping the voltage up steps the current down."},
     {q:"Why is electricity transmitted across the National Grid at a very high voltage?",opts:["To make the current high","So the current is low and less energy is wasted heating the cables","To make the cables thicker","Because high voltage is safer in homes"],c:1,e:"A high transmission voltage means a low current. Lower current reduces the energy wasted as heat in the cables, making transmission more efficient. The voltage is stepped down before reaching homes."},
     {q:"A transformer will NOT work with which of the following?",opts:["Alternating current","A steady direct current","Mains electricity","A changing magnetic field"],c:1,e:"A transformer needs a changing magnetic field to induce a voltage in the secondary coil. A steady direct current produces a constant field, so no voltage is induced."}
+  ],
+  "s11i-07-5":[
+    {q:"An alternator produces alternating current (a.c.) because it uses:",opts:["A split-ring commutator","Slip rings","A soft iron core","A permanent battery"],c:1,e:"An alternator uses slip rings, which keep each end of the coil connected to the same output terminal, so the induced current alternates direction — producing a.c. A split-ring commutator (used in a dynamo) gives d.c."},
+    {q:"What is the key difference between a dynamo and an alternator?",opts:["A dynamo uses slip rings; an alternator uses a commutator","A dynamo produces d.c. using a split-ring commutator; an alternator produces a.c. using slip rings","A dynamo has no magnetic field","An alternator produces d.c. and a dynamo produces a.c."],c:1,e:"A dynamo uses a split-ring commutator so its output is direct current (d.c.). An alternator uses slip rings so its output is alternating current (a.c.). Both rely on the generator effect."},
+    {q:"A moving-coil microphone converts sound into an electrical signal using the:",opts:["Motor effect","Generator effect","Photoelectric effect","Transformer effect"],c:1,e:"In a microphone, sound waves move a diaphragm and attached coil in a magnetic field. This movement induces a varying potential difference — the generator effect — turning sound into an electrical signal."},
+    {q:"A moving-coil loudspeaker produces sound from an electrical signal using the:",opts:["Generator effect","Motor effect","Greenhouse effect","Induced magnetism"],c:1,e:"A loudspeaker uses the motor effect: a varying a.c. in the coil sits in a magnetic field, so the coil and cone experience a force and vibrate, producing sound. It is the reverse of a microphone."},
+    {q:"In a moving-coil microphone, the varying potential difference produced represents:",opts:["The brightness of light hitting the coil","The temperature of the diaphragm","The pressure variations of the sound wave","The resistance of the wire"],c:2,e:"As the sound wave's pressure variations move the diaphragm and coil, the induced p.d. varies in step with them. So the electrical signal represents the original sound wave."}
   ]
 });
 
@@ -213,6 +234,32 @@ Vs = 400 × (200 / 4000) = 400 × 0.05 = <strong>20 V</strong>.</p>
 Vs = 11000 × (25000 / 1000) = 11000 × 25 = <strong>275 000 V</strong>.</p>
 
 <h3>Common mistake</h3>
-<p>Students invert the equation. Remember the ratio of <strong>voltages</strong> equals the ratio of <strong>turns</strong> on the matching coils: Vp / Vs = np / ns. A larger secondary coil (more turns) always means a larger secondary voltage.</p>`
+<p>Students invert the equation. Remember the ratio of <strong>voltages</strong> equals the ratio of <strong>turns</strong> on the matching coils: Vp / Vs = np / ns. A larger secondary coil (more turns) always means a larger secondary voltage.</p>`,
+
+'s11i-07-5': `
+<h2>The Generator Effect: Alternators, Microphones &amp; Loudspeakers</h2>
+<div class="lesson-diagram" data-diagram="electromagnet"><p class="diagram-caption">A coil in a magnetic field — the basis of generators, microphones and loudspeakers</p></div>
+<p>The <strong>generator effect</strong> is the inducing of a potential difference (and a current, if there is a complete circuit) when a conductor <strong>moves</strong> in a magnetic field, or when the magnetic field around a conductor <strong>changes</strong>. It is the reverse of the motor effect, and it is used in generators, microphones and electric guitars.</p>
+
+<h3>Alternators and dynamos</h3>
+<p>A generator has a coil that spins in a magnetic field, inducing a potential difference. How the coil connects to the circuit decides the kind of current:</p>
+<ul>
+<li>An <strong>alternator</strong> uses <strong>slip rings</strong>, so it produces <strong>alternating current (a.c.)</strong>. Its output trace is a wave that swings above and below zero.</li>
+<li>A <strong>dynamo</strong> uses a <strong>split-ring commutator</strong>, so it produces <strong>direct current (d.c.)</strong>. Its output trace stays on one side of zero, rising and falling but never reversing.</li>
+</ul>
+
+<h3>The moving-coil microphone</h3>
+<p>A microphone uses the <strong>generator effect</strong>. Sound waves make a <strong>diaphragm</strong> and an attached <strong>coil</strong> vibrate within a magnetic field. The moving coil induces a <strong>varying potential difference</strong> that matches the pressure variations of the sound. So a microphone <strong>converts sound into an electrical signal</strong>.</p>
+
+<h3>The moving-coil loudspeaker</h3>
+<p>A loudspeaker uses the <strong>motor effect</strong>. A varying <strong>alternating current</strong> flows through a coil sitting in a magnetic field, so the coil and the attached <strong>cone</strong> experience a force and vibrate. The vibrating cone makes the air vibrate, producing sound. So a loudspeaker <strong>converts an electrical signal into sound</strong> — the reverse of a microphone.</p>
+
+<h3>Worked example</h3>
+<p><strong>Q:</strong> Explain how a moving-coil microphone produces an electrical signal from someone speaking into it.</p>
+<p><strong>A:</strong> The sound waves cause pressure changes that move the diaphragm back and forth. The coil attached to the diaphragm moves within the magnetic field, so by the generator effect a potential difference is induced across it. As the diaphragm follows the sound, the induced p.d. varies in the same pattern, giving an electrical signal that represents the sound.</p>
+
+<h3>Common mistake</h3>
+<p>Students often say a loudspeaker uses the generator effect — it does not. A <strong>loudspeaker uses the motor effect</strong> (current in; movement out), while a <strong>microphone uses the generator effect</strong> (movement in; p.d. out). They are reverse processes.</p>
+`
 
 });

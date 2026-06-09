@@ -304,3 +304,125 @@ Vectors are represented by arrows &mdash; the length is drawn to scale to show t
 `
 
 });
+
+// ════════════════════════════════════════════════════════════════════════════
+// APPENDED ISLANDS: s10i-14-6, s10i-14-7
+// ════════════════════════════════════════════════════════════════════════════
+
+// ── FLASHCARDS ──────────────────────────────────────────────────────────────
+FLASHCARDS.push(
+  // s10i-14-6 — Levers & Gears
+  {id:"s10fc-14-6-1", islandId:"s10i-14-6", front:"How does a lever act as a force multiplier?",
+   back:"A lever lets a small effort balance a large load by using distances from the pivot.\n\nUsing the principle of moments:\neffort × effort-arm = load × load-arm\n\nIf the effort is applied a long way from the pivot and the load is close to the pivot, only a small effort is needed to move a large load. The lever multiplies the force.", difficulty:2, category:"concept"},
+  {id:"s10fc-14-6-2", islandId:"s10i-14-6", front:"In a lever, what does it mean if the effort arm is longer than the load arm?",
+   back:"The effort arm is the distance from the pivot to where the effort is applied; the load arm is the distance from the pivot to the load.\n\nIf the effort arm is longer than the load arm, the effort needed is smaller than the load — the lever is a force multiplier.\n\nExamples: crowbars, spanners, wheelbarrows and bottle openers all use a long effort arm to make a job easier.", difficulty:2, category:"concept"},
+  {id:"s10fc-14-6-3", islandId:"s10i-14-6", front:"A crowbar has an effort arm of 1.2 m and a load arm of 0.2 m. What effort is needed to lift a 600 N load?",
+   back:"Using effort × effort-arm = load × load-arm:\n\neffort × 1.2 = 600 × 0.2\neffort × 1.2 = 120\neffort = 120 ÷ 1.2\neffort = 100 N\n\nOnly 100 N of effort is needed to lift a 600 N load, because the effort arm is six times longer than the load arm.", difficulty:3, category:"calculation"},
+  {id:"s10fc-14-6-4", islandId:"s10i-14-6", front:"How do gears transmit the turning effect of a force?",
+   back:"Gears are toothed wheels that interlock so that one turns the other. They transmit the rotational effect (moment) of a force.\n\n• A small gear driving a larger gear: the larger gear turns more slowly but produces a larger moment (bigger turning force).\n• A large gear driving a smaller gear: the smaller gear turns faster but produces a smaller moment.\n\nGears trade off turning force against speed of rotation.", difficulty:2, category:"concept"},
+  {id:"s10fc-14-6-5", islandId:"s10i-14-6", front:"A small gear drives a larger gear. What happens to the turning force and the speed?",
+   back:"When a small gear drives a larger gear:\n\n• The larger gear produces a LARGER moment (more turning force) because the force acts at a greater distance from its centre.\n• The larger gear turns MORE SLOWLY than the small gear.\n\nSo you gain turning force but lose rotational speed. (Driving a smaller gear from a larger one does the opposite: faster but weaker.)", difficulty:2, category:"concept"},
+
+  // s10i-14-7 — Floating, Sinking & Upthrust
+  {id:"s10fc-14-7-1", islandId:"s10i-14-7", front:"What is upthrust?",
+   back:"Upthrust is the upward force that a fluid (liquid or gas) exerts on an object that is partly or fully submerged in it.\n\nUpthrust is equal to the weight of the fluid that the object displaces (pushes out of the way).\n\nIt acts upwards, opposing the object's weight, which acts downwards.", difficulty:1, category:"definition"},
+  {id:"s10fc-14-7-2", islandId:"s10i-14-7", front:"Why does an object float or sink?",
+   back:"Compare the object's weight with the maximum upthrust:\n\n• FLOATS: if the object can displace enough fluid to make the upthrust equal to its weight before it is fully submerged, the forces balance and it floats.\n• SINKS: if the object's weight is greater than the maximum possible upthrust (even when fully submerged), it sinks.\n\nAn object less dense than the fluid floats; an object more dense than the fluid sinks.", difficulty:2, category:"concept"},
+  {id:"s10fc-14-7-3", islandId:"s10i-14-7", front:"An object weighs 5 N and displaces water weighing 6 N when fully submerged. Will it float or sink?",
+   back:"The maximum upthrust equals the weight of water displaced = 6 N.\n\nThe object's weight = 5 N.\n\nUpthrust (6 N) is greater than the weight (5 N), so the object is pushed back up. It does not need to be fully submerged to balance — it FLOATS, displacing only enough water for the upthrust to equal its 5 N weight.", difficulty:2, category:"calculation"},
+  {id:"s10fc-14-7-4", islandId:"s10i-14-7", front:"How does pressure in a fluid cause upthrust?",
+   back:"Pressure in a fluid increases with depth (P = h ρ g). The bottom of a submerged object is deeper than the top.\n\n• The pressure on the bottom surface is greater than the pressure on the top surface.\n• This produces a larger upward force on the bottom than the downward force on the top.\n• The difference between these forces is the upthrust, which acts upwards.", difficulty:3, category:"concept"},
+  {id:"s10fc-14-7-5", islandId:"s10i-14-7", front:"Does a heavy object always sink? Explain.",
+   back:"No. Whether an object floats or sinks depends on its DENSITY (and the weight of fluid it can displace), not just its weight.\n\nA large steel ship is very heavy but floats, because its shape lets it displace a huge weight of water, giving enough upthrust to balance its weight.\n\nAn object floats if it is less dense than the fluid, or if it can displace its own weight of fluid.", difficulty:2, category:"concept"}
+);
+
+// ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
+Object.assign(QUESTIONS, {
+  "s10i-14-6": [
+    {q:"Why is a crowbar described as a force multiplier?",
+     opts:["It increases the distance the load moves","A small effort at a long distance from the pivot balances a large load close to the pivot","It removes the need for a pivot","It makes the load lighter"], c:1,
+     e:"A lever such as a crowbar uses a long effort arm and a short load arm. Because effort × effort-arm = load × load-arm, a small effort far from the pivot can balance a large load close to it."},
+    {q:"A lever is used to lift a 400 N load with a load arm of 0.3 m. The effort arm is 1.2 m. What effort is needed?",
+     opts:["100 N","1600 N","160 N","120 N"], c:0,
+     e:"effort × effort-arm = load × load-arm → effort × 1.2 = 400 × 0.3 = 120 → effort = 120 ÷ 1.2 = 100 N."},
+    {q:"A small gear drives a larger gear. What happens to the larger gear?",
+     opts:["It turns faster with a smaller moment","It turns more slowly with a larger moment","It turns faster with a larger moment","It does not turn at all"], c:1,
+     e:"When a small gear drives a larger one, the larger gear produces a larger moment (more turning force) but turns more slowly. Gears trade turning force against speed of rotation."},
+    {q:"What is the main purpose of gears in a machine?",
+     opts:["To store elastic energy","To transmit the rotational effect (moment) of a force","To reduce the weight of the machine","To measure distance"], c:1,
+     e:"Gears are toothed wheels that interlock and transmit the rotational effect of a force from one wheel to another, changing the size of the moment and the speed of rotation."},
+    {q:"To get the greatest turning force (largest moment) from a gear system, you should:",
+     opts:["Drive a smaller gear from a larger gear","Drive a larger gear from a smaller gear","Use two gears of exactly equal size","Remove the pivot"], c:1,
+     e:"Driving a larger gear from a smaller gear produces a larger moment on the bigger gear (more turning force), although it turns more slowly. This is how low gears give more turning force."}
+  ],
+  "s10i-14-7": [
+    {q:"Upthrust on a submerged object is equal to:",
+     opts:["The weight of the object","The weight of fluid displaced by the object","The atmospheric pressure","The density of the object"], c:1,
+     e:"Upthrust equals the weight of the fluid displaced by the object. This is why an object that displaces a large weight of fluid experiences a large upthrust."},
+    {q:"An object floats when:",
+     opts:["Its weight is greater than the upthrust","The upthrust equals its weight","It is fully submerged","Its density is greater than the fluid's"], c:1,
+     e:"An object floats when the upthrust equals its weight, so the forces are balanced. It can displace enough fluid to do this before becoming fully submerged."},
+    {q:"An object weighs 8 N. When fully submerged it displaces water weighing 5 N. What happens?",
+     opts:["It floats because upthrust is greater","It sinks because its weight is greater than the maximum upthrust","It stays exactly halfway down","It floats with most of it above the surface"], c:1,
+     e:"The maximum upthrust is the weight of water displaced when fully submerged = 5 N. The object's weight (8 N) is greater than 5 N, so it sinks."},
+    {q:"Why is the upthrust on a submerged object directed upwards?",
+     opts:["Because fluids only push upwards","Because pressure increases with depth, so the upward force on the bottom is greater than the downward force on the top","Because the object is lighter than air","Because gravity acts upwards in fluids"], c:1,
+     e:"Pressure in a fluid increases with depth (P = hρg). The deeper bottom surface experiences greater pressure than the top, so the net force — the upthrust — acts upwards."},
+    {q:"A steel ship floats even though steel is denser than water. Why?",
+     opts:["Steel becomes less dense in water","Its shape lets it displace a large enough weight of water for the upthrust to equal its weight","Ships are not really made of steel","Water pushes harder on heavy objects"], c:1,
+     e:"Floating depends on density and displaced weight, not weight alone. The ship's hollow shape displaces a large weight of water, giving an upthrust equal to the ship's weight, so it floats."}
+  ]
+});
+
+// ── LESSONS ─────────────────────────────────────────────────────────────────
+Object.assign(LESSONS, {
+
+'s10i-14-6': `
+<h2>Levers &amp; Gears</h2>
+<p>Levers and gears both use the turning effect of a force &mdash; the <strong>moment</strong> &mdash; to make jobs easier. Remember that a moment is force &times; perpendicular distance from the pivot (M = F d).</p>
+
+<h3>Levers as Force Multipliers</h3>
+<p>A lever turns about a pivot. Using the principle of moments, a balanced lever obeys:</p>
+<p style="font-size:1.1em;text-align:center;padding:0.5em;background:#ecfdf5;border-radius:6px"><strong>effort &times; effort-arm = load &times; load-arm</strong></p>
+<p>If the <strong>effort arm</strong> (distance from pivot to the effort) is long and the <strong>load arm</strong> (distance from pivot to the load) is short, a <em>small</em> effort can balance a <em>large</em> load. The lever multiplies the force. Crowbars, spanners and wheelbarrows all work this way.</p>
+
+<h3>Gears</h3>
+<p>Gears are interlocking toothed wheels that <strong>transmit the rotational effect</strong> of a force from one wheel to another. When a <strong>small gear drives a larger gear</strong>, the larger gear produces a <em>larger moment</em> (more turning force) but turns <em>more slowly</em>. When a large gear drives a small gear, the small one turns faster but with a smaller moment. Gears let us trade turning force against speed.</p>
+
+<h3>Why the Larger Gear Has a Bigger Moment</h3>
+<p>The force acts at the edge of the gear, so a bigger wheel means the force acts at a greater distance from the centre. Since moment = force &times; distance, a larger radius gives a larger moment.</p>
+
+<h3>Worked Example</h3>
+<p>A crowbar has an effort arm of 1.2 m and a load arm of 0.2 m. What effort is needed to lift a 600 N load?</p>
+<p>effort &times; 1.2 = 600 &times; 0.2<br>
+effort &times; 1.2 = 120<br>
+effort = 120 &divide; 1.2 = <strong>100 N</strong></p>
+<p>Just 100 N lifts a 600 N load, because the effort arm is six times the load arm.</p>
+
+<h3>Common Mistake</h3>
+<p>Always measure distances <em>to the pivot</em>, not between the load and the effort. Students also mix up which gear turns faster: the <strong>larger</strong> gear turns more slowly but gives a bigger turning force; the smaller gear turns faster but with less force.</p>
+`,
+
+'s10i-14-7': `
+<h2>Floating, Sinking &amp; Upthrust</h2>
+<p>When an object is placed in a fluid, the fluid pushes up on it with a force called <strong>upthrust</strong>. Whether the object floats or sinks depends on how this upthrust compares with the object&rsquo;s weight.</p>
+
+<h3>What is Upthrust?</h3>
+<p>Upthrust is the <strong>upward force</strong> a fluid exerts on a partly or fully submerged object. It is equal to the <strong>weight of the fluid displaced</strong> (pushed out of the way) by the object. The more fluid an object displaces, the greater the upthrust.</p>
+
+<h3>Why Upthrust Happens</h3>
+<p>Pressure in a fluid increases with depth (P = h&rho;g). The bottom of a submerged object is deeper than its top, so the pressure pushing up on the bottom is greater than the pressure pushing down on the top. This <strong>pressure difference</strong> produces a net upward force &mdash; the upthrust.</p>
+
+<h3>Floating and Sinking</h3>
+<p>An object <strong>floats</strong> when it can displace enough fluid for the upthrust to equal its weight before it is fully submerged &mdash; the forces balance. It <strong>sinks</strong> when its weight is greater than the maximum possible upthrust (when fully submerged). In terms of density: an object <strong>less dense</strong> than the fluid floats, and one <strong>more dense</strong> than the fluid sinks.</p>
+
+<h3>Worked Example</h3>
+<p>An object weighs 5 N. When fully submerged it would displace water weighing 6 N.</p>
+<p>Maximum upthrust = weight of water displaced = 6 N.<br>
+The object&rsquo;s weight is only 5 N, which is <em>less</em> than 6 N. So the upthrust pushes it back up, and it <strong>floats</strong>, sinking only far enough to displace 5 N of water.</p>
+
+<h3>Common Mistake</h3>
+<p>Do not confuse upthrust with water pressure &mdash; upthrust is the <em>overall</em> upward force from the pressure difference, not the pressure itself. Also, heavy objects do not always sink: a steel ship floats because its shape displaces a large weight of water. What matters is <strong>density</strong> and the weight of fluid displaced.</p>
+`
+
+});

@@ -69,6 +69,20 @@ FLASHCARDS.push(
    back:"Recycling materials rather than dumping waste in landfill reduces land use and pollution.\n\nIt also means fewer raw materials need to be extracted (e.g. by quarrying), protecting more habitats from destruction.",difficulty:1,category:"application"}
 );
 
+FLASHCARDS.push(
+  // s11i-03-6 — Decay, Anaerobic Decay & Biogas
+  {id:"s11fc-03-6-1",islandId:"s11i-03-6",front:"What carries out decay, and which three factors speed it up?",
+   back:"Decay is carried out by microorganisms called decomposers (bacteria and fungi).\n\nThe rate of decay is faster with:\n1. Higher temperature (up to an optimum)\n2. More water (moisture)\n3. More oxygen / air (for aerobic decay)\n\nGardeners use these conditions to make compost quickly.",difficulty:1,category:"definition"},
+  {id:"s11fc-03-6-2",islandId:"s11i-03-6",front:"Why does decay slow down at very high temperatures?",
+   back:"Decay is fastest at an optimum temperature.\n\nUp to the optimum, warmth makes decomposers more active and their enzymes work faster.\n\nAbove the optimum, the decomposers' enzymes are denatured (their active sites change shape), so the rate of decay falls.",difficulty:2,category:"concept"},
+  {id:"s11fc-03-6-3",islandId:"s11i-03-6",front:"What is anaerobic decay and what does it produce?",
+   back:"Anaerobic decay is decay carried out by microorganisms WITHOUT oxygen.\n\nIt produces methane gas — this mixture is called biogas.\n\nIt also produces a sludge that can be used as a fertiliser.",difficulty:2,category:"concept"},
+  {id:"s11fc-03-6-4",islandId:"s11i-03-6",front:"What is a biogas generator and what conditions does it need?",
+   back:"A biogas generator produces biogas (mainly methane) by the anaerobic decay of waste material such as plant matter or animal slurry.\n\nIt needs a warm temperature to keep the microorganisms active.\n\nGenerators can be batch (filled, then emptied) or continuous (waste added all the time).",difficulty:2,category:"application"},
+  {id:"s11fc-03-6-5",islandId:"s11i-03-6",front:"How do you calculate a rate of decay from data?",
+   back:"Rate = change ÷ time.\n\nFor example, if the pH of decaying milk falls by 1.2 over 6 days:\nrate = 1.2 ÷ 6 = 0.2 pH units per day.\n\nA larger change in the same time (or the same change in less time) means a faster rate of decay.",difficulty:2,category:"calculation"}
+);
+
 // ── TEST QUESTIONS ────────────────────────────────────────────────────────────
 Object.assign(QUESTIONS, {
   "s11i-03-1":[
@@ -105,6 +119,13 @@ Object.assign(QUESTIONS, {
     {q:"Which measure helps maintain biodiversity by protecting habitats?",opts:["Draining wetlands for farming","Regenerating damaged habitats such as replanting forests","Increasing landfill dumping","Quarrying more land for stone"],c:1,e:"Regenerating habitats, for example replanting forests or restoring peat bogs, allows species to return and helps maintain biodiversity."},
     {q:"How does reducing deforestation help limit global warming?",opts:["It increases the burning of fossil fuels","It keeps trees that absorb carbon dioxide and reduces CO₂ release","It removes all carbon from the atmosphere","It stops plants from respiring"],c:1,e:"Reducing deforestation keeps trees that absorb CO₂ and avoids the CO₂ released when forests are burned, helping to limit global warming as well as protecting habitats."},
     {q:"How does recycling resources help maintain biodiversity?",opts:["It increases the demand for raw materials","It reduces waste dumping and the need to extract new raw materials","It requires more land to be quarried","It releases more carbon dioxide than landfill"],c:1,e:"Recycling reduces waste sent to landfill and means fewer raw materials need to be extracted by quarrying, protecting more habitats from destruction."}
+  ],
+  "s11i-03-6":[
+    {q:"Which organisms carry out the decay of dead material?",opts:["Producers","Decomposers (microorganisms)","Primary consumers","Top predators"],c:1,e:"Decay is carried out by decomposers — microorganisms such as bacteria and fungi. They break down dead organisms and waste, recycling nutrients back into the environment."},
+    {q:"Which set of conditions gives the FASTEST rate of aerobic decay?",opts:["Cold, dry and no air","Warm, moist and plenty of oxygen","Hot enough to denature enzymes","Cold and waterlogged with no oxygen"],c:1,e:"Aerobic decay is fastest when it is warm (up to the optimum), moist and well supplied with oxygen. These conditions keep decomposers active, which is why gardeners use them to make compost quickly."},
+    {q:"Anaerobic decay is different from aerobic decay because it:",opts:["Needs more oxygen","Happens without oxygen and produces methane","Cannot occur in living material","Only happens at very low temperatures"],c:1,e:"Anaerobic decay takes place without oxygen. The microorganisms produce methane gas (biogas) rather than carbon dioxide and water, which is why it is used in biogas generators."},
+    {q:"What is the main useful gas produced in a biogas generator?",opts:["Oxygen","Methane","Nitrogen","Chlorine"],c:1,e:"Biogas is mainly methane, produced by the anaerobic decay of waste material. The methane can be burned as a fuel for heating, cooking or generating electricity."},
+    {q:"Fresh milk has a pH of 6.8. After decaying for 5 days its pH is 4.8. What is the mean rate of decay in pH units per day?",opts:["0.2","0.4","1.0","2.0"],c:1,e:"Change in pH = 6.8 − 4.8 = 2.0. Rate = change ÷ time = 2.0 ÷ 5 = 0.4 pH units per day. The acids made by microorganisms lower the pH as the milk decays."}
   ]
 });
 
@@ -232,6 +253,33 @@ Object.assign(LESSONS, {
 <p><strong>A:</strong> Hedgerows provide habitats, shelter and food for many species of insects, birds and small mammals. This supports a wider variety of organisms than a single crop grown to the edge of every field, so the biodiversity of the farmland increases.</p>
 
 <h3>Common mistake</h3>
-<p>Students sometimes assume conservation always means leaving land untouched. In fact, active measures — like replanting forests, breeding programmes and reintroducing hedgerows — are often needed to <strong>restore</strong> biodiversity, not just protect what remains.</p>`
+<p>Students sometimes assume conservation always means leaving land untouched. In fact, active measures — like replanting forests, breeding programmes and reintroducing hedgerows — are often needed to <strong>restore</strong> biodiversity, not just protect what remains.</p>`,
+
+'s11i-03-6': `
+<h2>Decay, Anaerobic Decay &amp; Biogas</h2>
+<p>Dead organisms and waste do not pile up forever — they are broken down by <strong>decay</strong>. Decay is carried out by <strong>microorganisms</strong> called <strong>decomposers</strong> (bacteria and fungi), which recycle nutrients back into the environment.</p>
+
+<h3>Factors affecting the rate of decay</h3>
+<p>The rate of decay is faster when there is:</p>
+<ul>
+<li><strong>Higher temperature</strong> — up to an optimum, warmth makes decomposers more active and their enzymes work faster. Above the optimum, the enzymes are denatured and decay slows.</li>
+<li><strong>More water (moisture)</strong> — decomposers need water for their reactions.</li>
+<li><strong>More oxygen / air</strong> — needed for aerobic decay.</li>
+</ul>
+<p>Gardeners make use of all three to turn waste into <strong>compost</strong> quickly, which is then used to enrich the soil.</p>
+
+<h3>Required practical idea</h3>
+<p>You can investigate the effect of <strong>temperature</strong> on the rate of decay — for example by measuring the fall in <strong>pH</strong> as fresh milk decays at different temperatures. The faster the pH falls, the faster the decay. From the data you can calculate a <strong>rate of decay</strong> using rate = change ÷ time.</p>
+
+<h3>Anaerobic decay and biogas</h3>
+<p><strong>Anaerobic decay</strong> happens <strong>without oxygen</strong>. Instead of carbon dioxide and water, it produces <strong>methane</strong> — a gas mixture called <strong>biogas</strong>. <strong>Biogas generators</strong> produce this fuel from waste such as plant material and animal slurry. They need a <strong>warm temperature</strong> to keep the microorganisms active, and can be run as <strong>batch</strong> generators (filled then emptied) or <strong>continuous</strong> generators (waste added all the time).</p>
+
+<h3>Worked example</h3>
+<p><strong>Q:</strong> A sample of decaying material loses 30 g of mass over 6 days. Calculate the mean rate of decay.</p>
+<p><strong>A:</strong> Rate = change ÷ time = 30 g ÷ 6 days = <strong>5 g per day</strong>. A larger mass change in the same time, or the same change in fewer days, would mean a faster rate of decay.</p>
+
+<h3>Common mistake</h3>
+<p>Students often assume decay always needs oxygen. In fact, decay can also happen <strong>without</strong> oxygen — this is <strong>anaerobic</strong> decay, and it usefully produces methane (biogas). Remember the factors that speed up <em>aerobic</em> decay: warmth, moisture and oxygen.</p>
+`
 
 });

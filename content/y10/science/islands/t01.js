@@ -41,6 +41,20 @@ FLASHCARDS.push(
    back:"To make the results valid and allow fair comparison:\n\n• Same volume of food solution in each test tube\n• Same volume of reagent added\n• Same temperature and time for heating (Benedict's test)\n• Same method of observation (e.g. comparing to a colour chart)\n\nControl variables ensure that any difference in result is due to the food sample, not the experimental conditions.", difficulty:2, category:"concept"}
 );
 
+FLASHCARDS.push(
+  // s10i-01-4 — Transport in Plants: Xylem, Phloem & Transpiration
+  {id:"s10fc-01-4-1", islandId:"s10i-01-4", front:"What is xylem and what does it transport?",
+   back:"Xylem is a plant transport tissue made of dead, hollow cells strengthened with lignin.\n\nIt carries water and dissolved mineral ions in ONE direction: UP from the roots to the stem and leaves.\n\nThis flow of water up the plant is called the transpiration stream.", difficulty:1, category:"definition"},
+  {id:"s10fc-01-4-2", islandId:"s10i-01-4", front:"What is phloem and what does it transport?",
+   back:"Phloem is a plant transport tissue made of LIVING cells called sieve tubes.\n\nIt transports dissolved sugars (mainly sucrose) made in photosynthesis to the rest of the plant — to growing regions and storage organs.\n\nThis is called translocation, and it can occur in BOTH directions.", difficulty:1, category:"definition"},
+  {id:"s10fc-01-4-3", islandId:"s10i-01-4", front:"What is transpiration?",
+   back:"Transpiration is the loss of water vapour from the leaves.\n\nWater evaporates from the surfaces of cells inside the leaf and then diffuses out through the stomata.\n\nThis loss pulls water up through the xylem (the transpiration stream). Stomata are opened and closed by guard cells.", difficulty:2, category:"concept"},
+  {id:"s10fc-01-4-4", islandId:"s10i-01-4", front:"Which four factors increase the rate of transpiration?",
+   back:"1. Higher temperature — water evaporates and diffuses faster.\n2. Lower humidity — a steeper concentration gradient out of the leaf.\n3. More air movement (wind) — removes water vapour from around the leaf.\n4. Higher light intensity — stomata open wider for photosynthesis.", difficulty:2, category:"application"},
+  {id:"s10fc-01-4-5", islandId:"s10i-01-4", front:"What is a potometer used for?",
+   back:"A potometer measures the rate of water uptake by a plant shoot, which is used to estimate the rate of transpiration.\n\nAs water is taken up, an air bubble moves along a capillary tube. The distance the bubble travels in a set time gives the rate.\n\nChanging temperature, humidity, wind or light lets you investigate each factor.", difficulty:2, category:"application"}
+);
+
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
 Object.assign(QUESTIONS, {
   "s10i-01-1": [
@@ -93,6 +107,23 @@ Object.assign(QUESTIONS, {
     {q:"In the Sudan III test, a positive result for lipids is shown by:",
      opts:["A blue-black colour","A brick-red precipitate","A red/orange layer floating on the surface","A purple colour"], c:2,
      e:"When Sudan III stain is added to a sample containing lipids, a distinct red or orange layer forms on top of the liquid. Lipids are less dense than water and float, carrying the dissolved stain with them."}
+  ],
+  "s10i-01-4": [
+    {q:"What does xylem tissue transport, and in which direction?",
+     opts:["Sugars, in both directions","Water and mineral ions, upwards from roots to leaves","Water, downwards from leaves to roots","Amino acids, upwards only"], c:1,
+     e:"Xylem carries water and dissolved mineral ions in one direction only: up from the roots to the leaves (the transpiration stream). Phloem, not xylem, transports sugars and can move them in both directions."},
+    {q:"Which feature correctly describes phloem tissue?",
+     opts:["Made of dead, lignified cells","Carries only water upwards","Made of living sieve-tube cells that transport sucrose","Cannot move substances in two directions"], c:2,
+     e:"Phloem is made of living sieve-tube cells and transports dissolved sugars (sucrose) made in photosynthesis around the plant. This is translocation, and it can occur in both directions. Xylem is the dead, lignified tissue."},
+    {q:"Transpiration is best defined as:",
+     opts:["The transport of sugars in the phloem","The loss of water vapour from leaves by evaporation and diffusion through stomata","The uptake of mineral ions by root hair cells","The movement of sucrose to growing roots"], c:1,
+     e:"Transpiration is the loss of water vapour from the leaves, by evaporation and then diffusion through the stomata. It creates the transpiration stream that pulls water up the xylem. Movement of sugars is translocation, not transpiration."},
+    {q:"Which change would INCREASE the rate of transpiration?",
+     opts:["Lower temperature","Higher humidity","Increased air movement (wind)","Lower light intensity"], c:2,
+     e:"More air movement (wind) blows away water vapour from around the leaf, maintaining a steep concentration gradient so water diffuses out faster. Higher humidity, lower temperature and lower light intensity all slow transpiration."},
+    {q:"What does a potometer measure?",
+     opts:["The rate of photosynthesis","The rate of water uptake by a plant","The concentration of sugar in phloem","The mass of mineral ions absorbed"], c:1,
+     e:"A potometer measures the rate of water uptake by a cut shoot (used as an estimate of transpiration rate). You track how far an air bubble moves along a capillary tube in a set time. It does not measure sugar or photosynthesis directly."}
   ]
 });
 
@@ -202,6 +233,28 @@ Object.assign(LESSONS, {
 
 <h3>Common Mistake</h3>
 <p>Students sometimes forget that Benedict's test requires <em>heating</em>. Without heating the sample in a water bath, no colour change will occur even if sugar is present. Also remember that Benedict's tests for <em>reducing</em> sugars (such as glucose) — sucrose is a non-reducing sugar and will give a negative result.</p>
+`,
+
+'s10i-01-4': `
+<h2>Transport in Plants: Xylem, Phloem &amp; Transpiration</h2>
+<div class="lesson-diagram" data-diagram="leaf-structure"><p class="diagram-caption">A leaf, showing the stomata through which water vapour is lost</p></div>
+<p>Plants are multicellular, so they cannot rely on diffusion alone to move substances around. Instead they have two specialised <strong>transport tissues</strong> running through the roots, stem and leaves: <strong>xylem</strong> and <strong>phloem</strong>.</p>
+
+<h3>Xylem: carrying water upwards</h3>
+<p>Xylem is made of <strong>dead, hollow cells</strong> whose walls are strengthened with <strong>lignin</strong>. These cells join end to end to form long, continuous tubes. Xylem carries <strong>water and dissolved mineral ions</strong> in <strong>one direction only</strong>: up from the roots to the stem and leaves. This continuous flow of water up the plant is called the <strong>transpiration stream</strong>.</p>
+
+<h3>Phloem: carrying sugars</h3>
+<p>Phloem is made of <strong>living cells</strong> called sieve tubes. It transports dissolved <strong>sugars (mainly sucrose)</strong> made in photosynthesis to the rest of the plant — to growing tips, to storage organs and to roots. This movement is called <strong>translocation</strong>, and unlike the xylem stream it can flow in <strong>both directions</strong>.</p>
+
+<h3>Transpiration</h3>
+<p><strong>Transpiration</strong> is the loss of water vapour from the leaves. Water evaporates from the surfaces of cells inside the leaf and then <strong>diffuses out through the stomata</strong>, tiny pores opened and closed by <strong>guard cells</strong>. As water leaves, more is pulled up the xylem to replace it. The rate of transpiration increases with <strong>higher temperature</strong>, <strong>lower humidity</strong>, <strong>more air movement (wind)</strong> and <strong>higher light intensity</strong>.</p>
+
+<h3>Worked example</h3>
+<p><strong>Q:</strong> In a potometer experiment, an air bubble moves 60 mm in 5 minutes. A fan is then switched on and the bubble moves 60 mm in just 2 minutes. Explain the change.</p>
+<p><strong>A:</strong> The potometer measures water uptake, which estimates transpiration rate. With the fan on, moving air carries water vapour away from the leaf, keeping the concentration gradient steep so water diffuses out faster. More water is lost, so more is taken up — the bubble moves the same distance in less time, showing a higher rate.</p>
+
+<h3>Common mistake</h3>
+<p>Students mix up xylem and phloem. Remember: <strong>xylem</strong> carries <em>water</em> <em>up</em> only; <strong>phloem</strong> carries <em>sugars</em> in <em>both</em> directions. Also do not confuse <strong>transpiration</strong> (loss of water vapour) with <strong>translocation</strong> (transport of sugars in the phloem).</p>
 `
 
 });

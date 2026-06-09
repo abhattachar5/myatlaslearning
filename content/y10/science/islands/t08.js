@@ -123,3 +123,73 @@ Bonds made: 2 &times; H&ndash;Cl = 2 &times; 431 = <strong>862 kJ</strong><br>
 `
 
 });
+
+// ════════════════════════════════════════════════════════════════════════════
+// APPENDED ISLAND: s10i-08-3
+// ════════════════════════════════════════════════════════════════════════════
+
+// ── FLASHCARDS ──────────────────────────────────────────────────────────────
+FLASHCARDS.push(
+  // s10i-08-3 — Cells, Batteries & Fuel Cells
+  {id:"s10fc-08-3-1", islandId:"s10i-08-3", front:"How is a simple cell made, and what affects its voltage?",
+   back:"A simple cell is made by connecting two different metals (the electrodes) and dipping them into an electrolyte (a conducting solution).\n\nThe two metals have different reactivities. The bigger the difference in reactivity between the two metals, the bigger the voltage (potential difference) produced.\n\nFor example, a magnesium–copper cell gives a larger voltage than a zinc–copper cell, because magnesium and copper are further apart in the reactivity series.", difficulty:2, category:"concept"},
+  {id:"s10fc-08-3-2", islandId:"s10i-08-3", front:"What is a battery?",
+   back:"A battery is two or more cells connected together in series.\n\nWhen cells are connected in series, their voltages add together.\n\nFor example, three 1.5 V cells in series give a total of 1.5 + 1.5 + 1.5 = 4.5 V.\n\nA single 'cell' is strictly just one unit; everyday 'batteries' are often single cells, but a true battery contains several.", difficulty:1, category:"definition"},
+  {id:"s10fc-08-3-3", islandId:"s10i-08-3", front:"What is the difference between non-rechargeable and rechargeable cells?",
+   back:"Non-rechargeable cells (e.g. alkaline batteries):\n• The chemical reactions happen in one direction only.\n• Once one of the reactants is used up, the reaction stops and the cell goes flat.\n• They cannot be recharged.\n\nRechargeable cells:\n• The chemical reactions can be reversed by applying an external electric current.\n• This restores the original reactants so the cell can be used again.", difficulty:2, category:"concept"},
+  {id:"s10fc-08-3-4", islandId:"s10i-08-3", front:"What happens in a hydrogen–oxygen fuel cell?",
+   back:"A fuel cell uses fuel and oxygen to produce a voltage by an electrochemical reaction (not by burning).\n\nHydrogen is supplied to one electrode and oxygen to the other. The overall reaction is:\n\n2H₂ + O₂ → 2H₂O\n\nThe only product is water. The cell produces a voltage continuously as long as hydrogen and oxygen are supplied, so it does not need recharging.", difficulty:2, category:"concept"},
+  {id:"s10fc-08-3-5", islandId:"s10i-08-3", front:"Give advantages and disadvantages of hydrogen fuel cells compared with rechargeable batteries.",
+   back:"Advantages:\n• They do not need to be recharged — just keep supplying hydrogen.\n• They are lighter for the same amount of energy.\n• The only product is water, so no polluting gases are released at the point of use.\n\nDisadvantages:\n• Hydrogen is difficult and expensive to store and transport.\n• Producing hydrogen often uses energy from fossil fuels.\n• Hydrogen is very flammable, so there are safety concerns.", difficulty:2, category:"application"}
+);
+
+// ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
+Object.assign(QUESTIONS, {
+  "s10i-08-3": [
+    {q:"Which pair of metals would produce the largest voltage in a simple cell?",
+     opts:["Zinc and iron","Magnesium and copper","Copper and silver","Iron and zinc"], c:1,
+     e:"The bigger the difference in reactivity between the two metals, the bigger the voltage. Magnesium and copper are furthest apart in the reactivity series of the options given, so they produce the largest voltage."},
+    {q:"Four 1.5 V cells are connected in series to make a battery. What is the total voltage?",
+     opts:["1.5 V","3.0 V","6.0 V","0.375 V"], c:2,
+     e:"In a battery the cells are connected in series, so the voltages add: 1.5 + 1.5 + 1.5 + 1.5 = 6.0 V."},
+    {q:"Why does a non-rechargeable alkaline cell eventually stop working?",
+     opts:["The electrolyte evaporates completely","One of the reactants is used up and the reaction stops","The metals melt","The voltage becomes too high"], c:1,
+     e:"In a non-rechargeable cell the reaction goes one way only. Once one of the reactants is used up, the reaction stops and the cell goes flat. It cannot be reversed."},
+    {q:"What is the overall reaction in a hydrogen–oxygen fuel cell?",
+     opts:["2H₂O → 2H₂ + O₂","H₂ + O₂ → H₂O₂","2H₂ + O₂ → 2H₂O","H₂ + O → H₂O"], c:2,
+     e:"In a hydrogen–oxygen fuel cell, hydrogen reacts with oxygen to form water: 2H₂ + O₂ → 2H₂O. Water is the only product."},
+    {q:"Which is an advantage of a hydrogen fuel cell compared with a rechargeable battery?",
+     opts:["Hydrogen is very easy to store","It is lighter for the same amount of energy and the only product is water","It never needs a supply of any chemicals","Hydrogen is not flammable"], c:1,
+     e:"Fuel cells are lighter for a given amount of energy and produce only water at the point of use, with no recharging needed. Storing hydrogen and its flammability are disadvantages, not advantages."}
+  ]
+});
+
+// ── LESSONS ─────────────────────────────────────────────────────────────────
+Object.assign(LESSONS, {
+
+'s10i-08-3': `
+<h2>Cells, Batteries &amp; Fuel Cells</h2>
+<div class="lesson-diagram" data-diagram="reactivity-series"><p class="diagram-caption">The further apart two metals are in the reactivity series, the bigger the voltage their cell produces.</p></div>
+<p>Chemical cells turn the energy from chemical reactions into electrical energy. The voltage they produce, and whether they can be reused, depends on the chemistry inside.</p>
+
+<h3>Simple Cells</h3>
+<p>A simple cell is made from <strong>two different metals</strong> (the electrodes) dipped into an <strong>electrolyte</strong> (a conducting solution). A reaction between the metals and the electrolyte produces a voltage. The <strong>bigger the difference in reactivity</strong> between the two metals, the bigger the voltage produced.</p>
+
+<h3>Cells and Batteries</h3>
+<p>A <strong>battery</strong> is two or more cells connected together in <strong>series</strong>. When cells are joined in series their voltages add up, so connecting more cells gives a higher total voltage.</p>
+
+<h3>Rechargeable and Non-Rechargeable Cells</h3>
+<p>In <strong>non-rechargeable</strong> cells (such as alkaline batteries), the reaction happens one way only and stops when a reactant is used up &mdash; the cell goes flat for good. In <strong>rechargeable</strong> cells, applying an external current <strong>reverses</strong> the reaction, restoring the original reactants so the cell can be used again.</p>
+
+<h3>Hydrogen Fuel Cells</h3>
+<p>A hydrogen&ndash;oxygen fuel cell produces a voltage from the electrochemical reaction <strong>2H&#8322; + O&#8322; &rarr; 2H&#8322;O</strong>. It keeps working as long as hydrogen and oxygen are supplied. Compared with rechargeable batteries it never needs recharging, is lighter for the energy stored, and produces only water. However, hydrogen is hard to store, often made using fossil fuels, and is very flammable.</p>
+
+<h3>Worked Example</h3>
+<p>A torch is powered by three identical cells connected in series, each providing 1.5 V. What is the total voltage?</p>
+<p>Cells in series add: total = 1.5 + 1.5 + 1.5 = <strong>4.5 V</strong>.</p>
+
+<h3>Common Mistake</h3>
+<p>Many students think a fuel cell &ldquo;burns&rdquo; the hydrogen. It does <em>not</em> &mdash; there is no flame or combustion. A fuel cell produces electricity through an <strong>electrochemical reaction</strong>, transferring chemical energy directly to electrical energy.</p>
+`
+
+});

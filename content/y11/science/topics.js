@@ -108,7 +108,12 @@ CURRICULUM.push(
    topicId:"s11t-03", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
    description:"Describe conservation measures used to protect and restore biodiversity.",
    learningOutcomes:["Describe breeding and habitat programmes","Explain field margins, hedgerows and reforestation","Link recycling to conservation"],
-   topics:["Conservation","Habitats","Recycling"], prerequisites:["s11i-03-1"]}
+   topics:["Conservation","Habitats","Recycling"], prerequisites:["s11i-03-1"]},
+  {id:"s11i-03-6", name:"Decay, Anaerobic Decay & Biogas", emoji:"🍂", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-03", yearGroup:"Year 11", difficulty:2, estimatedHours:2,
+   description:"Explain the factors affecting decay, the decay practical, and how anaerobic decay produces biogas (Triple).",
+   learningOutcomes:["Explain how temperature, water and oxygen affect rate of decay","Calculate a rate of decay from data","Describe anaerobic decay and biogas generators"],
+   topics:["Rate of decay","Decay practical","Anaerobic decay & biogas"], prerequisites:["s11i-03-1"]}
 );
 
 // ── Chemistry islands ────────────────────────────────────────────────────────
@@ -193,7 +198,12 @@ CURRICULUM.push(
    topicId:"s11t-07", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
    description:"Explain transformers, the transformer equation and their role in the National Grid (Triple).",
    learningOutcomes:["Explain step-up and step-down transformers","Use Vp/Vs = np/ns and Vp×Ip = Vs×Is","Explain transformers in the National Grid"],
-   topics:["Step-up & step-down","Transformer equation","National Grid"], prerequisites:["s11i-07-3"]}
+   topics:["Step-up & step-down","Transformer equation","National Grid"], prerequisites:["s11i-07-3"]},
+  {id:"s11i-07-5", name:"The Generator Effect: Alternators, Mics & Loudspeakers", emoji:"🎤", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s11t-07", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
+   description:"Compare alternators and dynamos and explain microphones and loudspeakers as generator/motor-effect devices (Triple).",
+   learningOutcomes:["Compare an alternator (a.c.) with a dynamo (d.c.)","Explain how a moving-coil microphone uses the generator effect","Explain how a loudspeaker uses the motor effect"],
+   topics:["Alternators vs dynamos","Microphones","Loudspeakers"], prerequisites:["s11i-07-3"]}
 );
 
 // Topic 8: Space Physics

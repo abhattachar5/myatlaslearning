@@ -59,7 +59,12 @@ CURRICULUM.push(
    topicId:"s10t-01", yearGroup:"Year 10", difficulty:2, estimatedHours:1,
    description:"Carry out and describe food tests for starch, protein, lipids and sugars.",
    learningOutcomes:["Describe the iodine, Biuret, Sudan III and Benedict's tests","Identify positive results","Evaluate food test results"],
-   topics:["Food tests","Positive results","Practical skills"], prerequisites:["s10i-01-1"]}
+   topics:["Food tests","Positive results","Practical skills"], prerequisites:["s10i-01-1"]},
+  {id:"s10i-01-4", name:"Transport in Plants: Xylem, Phloem & Transpiration", emoji:"🌿", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-01", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain how xylem and phloem transport water and sugars, and the factors affecting transpiration (Triple).",
+   learningOutcomes:["Compare the structure and function of xylem and phloem","Explain transpiration and translocation","Describe factors affecting transpiration rate and the potometer"],
+   topics:["Xylem & phloem","Transpiration","Factors & the potometer"], prerequisites:["s10i-01-1"]}
 );
 
 // Topic 2: Circulatory & Respiratory Systems
@@ -186,7 +191,12 @@ CURRICULUM.push(
    topicId:"s10t-06", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
    description:"Calculate percentage yield and atom economy and explain why they matter (Triple).",
    learningOutcomes:["Calculate percentage yield","Calculate atom economy","Explain why high atom economy is sustainable"],
-   topics:["Percentage yield","Atom economy","Sustainability"], prerequisites:["s10i-06-1"]}
+   topics:["Percentage yield","Atom economy","Sustainability"], prerequisites:["s10i-06-1"]},
+  {id:"s10i-06-5", name:"Molar Gas Volume & Gas Calculations", emoji:"🎈", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-06", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Use the molar gas volume (24 dm³/mol at rtp) to convert between moles, mass and gas volume (Triple).",
+   learningOutcomes:["Recall that one mole of any gas occupies 24 dm³ at rtp","Convert between moles and gas volume","Combine with Mr to find reacting gas volumes"],
+   topics:["Molar gas volume","Volume ↔ moles","Reacting gas volumes"], prerequisites:["s10i-06-1"]}
 );
 
 // Topic 7: Chemical Changes
@@ -229,7 +239,12 @@ CURRICULUM.push(
    topicId:"s10t-08", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
    description:"Calculate overall energy change using bond energies.",
    learningOutcomes:["Use bond energies to calculate energy in and energy out","Determine overall energy change","Link to exothermic/endothermic"],
-   topics:["Bonds broken (in)","Bonds made (out)","Overall energy change"], prerequisites:["s10i-08-1"]}
+   topics:["Bonds broken (in)","Bonds made (out)","Overall energy change"], prerequisites:["s10i-08-1"]},
+  {id:"s10i-08-3", name:"Cells, Batteries & Fuel Cells", emoji:"🔋", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-08", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain how simple cells, batteries and hydrogen–oxygen fuel cells produce a voltage (Triple).",
+   learningOutcomes:["Explain how a simple cell's voltage depends on the metals used","Compare rechargeable and non-rechargeable cells","Describe the hydrogen–oxygen fuel cell and its pros and cons"],
+   topics:["Simple cells & batteries","Rechargeable cells","Fuel cells"], prerequisites:["s10i-08-1"]}
 );
 
 // Topic 9: Rates of Reaction
@@ -277,7 +292,17 @@ CURRICULUM.push(
    topicId:"s10t-10", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
    description:"Compare addition and condensation polymerisation and natural polymers (Triple).",
    learningOutcomes:["Explain addition polymerisation","Explain condensation polymerisation","Identify natural polymers"],
-   topics:["Addition","Condensation","Natural polymers"], prerequisites:["s10i-10-2"]}
+   topics:["Addition","Condensation","Natural polymers"], prerequisites:["s10i-10-2"]},
+  {id:"s10i-10-5", name:"Reactions of Alkenes (Addition)", emoji:"⚗️", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-10", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Explain the addition reactions of alkenes with hydrogen, steam and halogens (Triple).",
+   learningOutcomes:["Explain why alkenes undergo addition reactions","Describe hydrogenation and hydration of alkenes","Explain the reaction with bromine and the test for unsaturation"],
+   topics:["Hydrogenation","Hydration (steam)","Halogen addition"], prerequisites:["s10i-10-2"]},
+  {id:"s10i-10-6", name:"Industrial Ethanol: Fermentation vs Hydration", emoji:"🍷", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-10", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
+   description:"Compare producing ethanol by fermentation and by hydration of ethene (Triple).",
+   learningOutcomes:["Describe fermentation of sugars to ethanol","Describe hydration of ethene to ethanol","Compare the two routes for sustainability and purity"],
+   topics:["Fermentation","Hydration of ethene","Comparing the routes"], prerequisites:["s10i-10-3"]}
 );
 
 // ── Physics islands ──────────────────────────────────────────────────────────
@@ -385,7 +410,17 @@ CURRICULUM.push(
    topicId:"s10t-14", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
    description:"Distinguish scalars and vectors and find resultant forces using diagrams.",
    learningOutcomes:["Distinguish scalar and vector quantities","Draw free-body diagrams","Find resultant forces and resolve perpendicular forces"],
-   topics:["Scalars vs vectors","Free-body diagrams","Resultant forces"], prerequisites:["s10i-14-1"]}
+   topics:["Scalars vs vectors","Free-body diagrams","Resultant forces"], prerequisites:["s10i-14-1"]},
+  {id:"s10i-14-6", name:"Levers & Gears", emoji:"⚙️", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-14", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain how levers and gears act as force multipliers and transmit turning effects (Triple).",
+   learningOutcomes:["Explain how a lever multiplies force using moments","Explain how gears transmit and change the turning effect","Apply the principle of moments to levers"],
+   topics:["Levers as multipliers","Gears","Moments in machines"], prerequisites:["s10i-14-1"]},
+  {id:"s10i-14-7", name:"Floating, Sinking & Upthrust", emoji:"🛟", subject:"Science", subjectId:"science", color:"#10b981",
+   topicId:"s10t-14", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Explain upthrust and why objects float or sink in a fluid (Triple).",
+   learningOutcomes:["Explain that upthrust equals the weight of fluid displaced","Explain why an object floats or sinks","Link floating to density and pressure with depth"],
+   topics:["Upthrust","Floating & sinking","Density & depth"], prerequisites:["s10i-14-2"]}
 );
 
 // Topic 15: Transition Metals (Triple Chemistry)

@@ -50,7 +50,31 @@ FLASHCARDS.push(
   {id:"s10fc-10-4-4", islandId:"s10i-10-4", front:"Give three examples of naturally occurring polymers and their monomers.",
    back:"• DNA — made from monomers called nucleotides; two strands form a double helix\n• Proteins — made from amino acid monomers joined in a chain\n• Starch and cellulose — made from sugar (glucose) monomers\n\nThese are all natural polymers essential to living things.", difficulty:1, category:"definition"},
   {id:"s10fc-10-4-5", islandId:"s10i-10-4", front:"Why must monomers for condensation polymerisation have two functional groups?",
-   back:"Each monomer needs two functional groups (one at each end) so it can bond on both sides and form a long chain.\n\nIf a monomer had only one functional group, it could only join at one end, and the chain could not keep growing.\n\nFor a polyester: diols (two –OH groups) react with dicarboxylic acids (two –COOH groups), forming ester links and releasing water each time.", difficulty:3, category:"concept"}
+   back:"Each monomer needs two functional groups (one at each end) so it can bond on both sides and form a long chain.\n\nIf a monomer had only one functional group, it could only join at one end, and the chain could not keep growing.\n\nFor a polyester: diols (two –OH groups) react with dicarboxylic acids (two –COOH groups), forming ester links and releasing water each time.", difficulty:3, category:"concept"},
+
+  // s10i-10-5 — Reactions of Alkenes (Addition)
+  {id:"s10fc-10-5-1", islandId:"s10i-10-5", front:"Why do alkenes undergo addition reactions?",
+   back:"Alkenes are unsaturated — they contain a C=C double bond.\n\nIn an addition reaction, the double bond opens up: one of the two bonds breaks and new atoms add on to each carbon. This turns the C=C double bond into a C–C single bond.\n\nBecause the double bond is reactive, alkenes are much more reactive than alkanes (which only have single bonds and tend to undergo substitution instead).", difficulty:2, category:"concept"},
+  {id:"s10fc-10-5-2", islandId:"s10i-10-5", front:"Describe the hydrogenation of an alkene.",
+   back:"Hydrogenation adds hydrogen across the C=C double bond, turning an alkene into an alkane.\n\nalkene + hydrogen → alkane\n\nExample: ethene + hydrogen → ethane\nC₂H₄ + H₂ → C₂H₆\n\nConditions: a nickel catalyst at about 150 °C.\n\nThis reaction is used industrially to harden vegetable oils into margarine.", difficulty:2, category:"application"},
+  {id:"s10fc-10-5-3", islandId:"s10i-10-5", front:"How is an alcohol made from an alkene (reaction with steam)?",
+   back:"Alkenes react with steam (water) in an addition reaction called hydration, producing an alcohol.\n\nalkene + steam → alcohol\n\nExample: ethene + steam → ethanol\nC₂H₄ + H₂O → C₂H₅OH\n\nConditions: a phosphoric-acid catalyst, about 300 °C and 60–70 atm pressure.\n\nThe H and OH from water add across the double bond.", difficulty:2, category:"application"},
+  {id:"s10fc-10-5-4", islandId:"s10i-10-5", front:"What happens when an alkene reacts with bromine?",
+   back:"Bromine adds across the C=C double bond (addition), forming a colourless dibromo compound.\n\nExample: ethene + bromine → 1,2-dibromoethane\nC₂H₄ + Br₂ → C₂H₄Br₂\n\nOne bromine atom bonds to each of the two carbon atoms that were joined by the double bond.\n\nThis reaction is the basis of the bromine water test for unsaturation.", difficulty:2, category:"application"},
+  {id:"s10fc-10-5-5", islandId:"s10i-10-5", front:"Why does bromine water test for a C=C double bond?",
+   back:"Bromine water is orange. When shaken with an alkene, the bromine adds across the C=C double bond and the solution turns colourless (decolourises).\n\n• Alkene (unsaturated) → bromine water decolourises\n• Alkane (saturated) → bromine water stays orange (no double bond to react with)\n\nSo decolourising bromine water is the test for unsaturation (a C=C double bond).", difficulty:2, category:"concept"},
+
+  // s10i-10-6 — Industrial Ethanol: Fermentation vs Hydration
+  {id:"s10fc-10-6-1", islandId:"s10i-10-6", front:"How is ethanol made by fermentation?",
+   back:"Fermentation uses yeast to convert sugar (glucose) into ethanol and carbon dioxide:\n\nglucose → ethanol + carbon dioxide\nC₆H₁₂O₆ → 2C₂H₅OH + 2CO₂\n\nConditions: yeast, about 30–35 °C, and anaerobic (no oxygen) conditions.\n\nIt is a batch process using a renewable raw material (sugar from crops), but it produces a dilute, impure ethanol solution.", difficulty:2, category:"concept"},
+  {id:"s10fc-10-6-2", islandId:"s10i-10-6", front:"How is ethanol made by hydration of ethene?",
+   back:"Ethene (from cracking crude oil) reacts with steam in an addition reaction:\n\nethene + steam → ethanol\nC₂H₄ + H₂O → C₂H₅OH\n\nConditions: a phosphoric-acid catalyst, about 300 °C and high pressure.\n\nIt is a continuous process giving a high yield of pure ethanol, but it uses ethene from crude oil — a finite (non-renewable) resource.", difficulty:2, category:"concept"},
+  {id:"s10fc-10-6-3", islandId:"s10i-10-6", front:"Which ethanol route uses a renewable raw material?",
+   back:"Fermentation is the renewable route. It uses sugar from crops (e.g. sugar cane), which can be re-grown each year.\n\nHydration of ethene uses ethene obtained from crude oil, which is finite (non-renewable).\n\nSo fermentation is more sustainable in terms of raw materials, even though it is slower and gives a less pure product.", difficulty:2, category:"concept"},
+  {id:"s10fc-10-6-4", islandId:"s10i-10-6", front:"Compare the conditions and processes of the two ethanol routes.",
+   back:"Fermentation:\n• Renewable raw material (sugar from crops)\n• Low temperature (~30–35 °C), yeast, anaerobic\n• Batch process\n• Dilute, impure product (needs distilling)\n\nHydration of ethene:\n• Finite raw material (ethene from crude oil)\n• High temperature (~300 °C), high pressure, phosphoric-acid catalyst\n• Continuous process\n• High yield, pure product", difficulty:3, category:"concept"},
+  {id:"s10fc-10-6-5", islandId:"s10i-10-6", front:"Why must ethanol from fermentation be distilled?",
+   back:"Fermentation produces a dilute aqueous solution of ethanol (the ethanol is mixed with water and other substances). It is also impure.\n\nTo obtain concentrated, pure ethanol, the mixture is separated by fractional distillation. Ethanol has a lower boiling point (78 °C) than water, so it evaporates first and can be collected.\n\nHydration of ethene, by contrast, gives pure ethanol directly.", difficulty:2, category:"application"}
 );
 
 // ── STATIC QUESTION BANKS ───────────────────────────────────────────────────
@@ -122,6 +146,40 @@ Object.assign(QUESTIONS, {
     {q:"To make a polyester by condensation polymerisation, you need:",
      opts:["One alkene monomer with a C=C bond","Diols and dicarboxylic acids","Only amino acids","Nucleotides"], c:1,
      e:"A polyester is made by reacting diols (two –OH groups) with dicarboxylic acids (two –COOH groups). Each monomer has two functional groups so the chain can grow on both sides, releasing water each time a link forms."}
+  ],
+  "s10i-10-5": [
+    {q:"Why are alkenes able to undergo addition reactions?",
+     opts:["They contain only single bonds","They contain a reactive C=C double bond that can open up","They are saturated","They contain a –OH group"], c:1,
+     e:"Alkenes are unsaturated and contain a C=C double bond. In an addition reaction the double bond opens, with new atoms adding to each carbon, leaving a single bond. Alkanes have only single bonds and undergo substitution instead."},
+    {q:"What are the conditions for the hydrogenation of ethene to ethane?",
+     opts:["A nickel catalyst at about 150 °C","A phosphoric-acid catalyst at 300 °C","Concentrated sulfuric acid","UV light"], c:0,
+     e:"Hydrogenation adds H₂ across the C=C bond using a nickel catalyst at about 150 °C: ethene + hydrogen → ethane (C₂H₄ + H₂ → C₂H₆). The phosphoric-acid catalyst is used for hydration to make ethanol."},
+    {q:"What is formed when ethene reacts with steam?",
+     opts:["Ethane","Ethanol","1,2-dibromoethane","Carbon dioxide"], c:1,
+     e:"Ethene reacts with steam (hydration) to form ethanol: C₂H₄ + H₂O → C₂H₅OH, using a phosphoric-acid catalyst at about 300 °C and high pressure. The H and OH add across the double bond."},
+    {q:"What is the product when ethene reacts with bromine?",
+     opts:["Bromoethane","1,2-dibromoethane","Ethanol","Ethane"], c:1,
+     e:"Bromine adds across the C=C double bond, with one bromine atom bonding to each carbon: C₂H₄ + Br₂ → C₂H₄Br₂ (1,2-dibromoethane). This addition reaction causes bromine water to decolourise."},
+    {q:"A gas decolourises bromine water. What does this tell you?",
+     opts:["The gas is a saturated alkane","The gas contains a C=C double bond (it is unsaturated)","The gas is hydrogen","The gas contains a –COOH group"], c:1,
+     e:"Decolourising bromine water (orange to colourless) is the test for unsaturation — it shows a C=C double bond, so the gas is an alkene. A saturated alkane would leave bromine water orange."}
+  ],
+  "s10i-10-6": [
+    {q:"Which raw material is used to make ethanol by fermentation?",
+     opts:["Ethene from crude oil","Sugar (glucose) from crops","Methane","Limestone"], c:1,
+     e:"Fermentation uses sugar (glucose) from crops, a renewable raw material: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂. Hydration uses ethene from crude oil, which is finite."},
+    {q:"What conditions are needed for fermentation?",
+     opts:["High temperature, high pressure and a catalyst","Yeast, about 30–35 °C and anaerobic conditions","A nickel catalyst at 150 °C","Ultraviolet light"], c:1,
+     e:"Fermentation needs yeast, a warm temperature (about 30–35 °C) and anaerobic (no oxygen) conditions. Too hot and the yeast is killed; oxygen would let the ethanol oxidise to ethanoic acid."},
+    {q:"Which statement about hydration of ethene is correct?",
+     opts:["It uses a renewable raw material","It is a continuous process giving pure ethanol","It produces carbon dioxide as a by-product","It requires yeast"], c:1,
+     e:"Hydration (C₂H₄ + H₂O → C₂H₅OH) is a continuous process that gives a high yield of pure ethanol. However, its raw material (ethene from crude oil) is finite, not renewable, and no yeast or CO₂ is involved."},
+    {q:"Why is fermentation considered more sustainable than hydration of ethene?",
+     opts:["It is faster","It uses a renewable raw material (sugar from crops)","It gives purer ethanol","It needs no separation step"], c:1,
+     e:"Fermentation uses sugar from crops, which can be re-grown, making it more sustainable. Hydration relies on ethene from finite crude oil. (Fermentation is actually slower and gives a less pure, dilute product.)"},
+    {q:"Why must ethanol made by fermentation be distilled afterwards?",
+     opts:["To remove the yeast catalyst only","Because it is produced as a dilute, impure aqueous solution","To convert it back into glucose","To add water to it"], c:1,
+     e:"Fermentation gives a dilute, impure solution of ethanol in water. Fractional distillation separates the ethanol (boiling point 78 °C) from the water to give concentrated, pure ethanol."}
   ]
 });
 
@@ -250,6 +308,66 @@ Word equation: ethanol + ethanoic acid &rarr; ethyl ethanoate + water</p>
 
 <h3>Common Mistake</h3>
 <p>Students often forget that condensation polymerisation makes a <em>second</em> product (the small molecule, usually water), and wrongly say only the polymer forms. Remember: addition makes one product (just the polymer), condensation makes two (the polymer + a small molecule).</p>
+`,
+
+'s10i-10-5': `
+<h2>Reactions of Alkenes (Addition)</h2>
+<p>Alkenes are <strong>unsaturated</strong> hydrocarbons: they contain a carbon&ndash;carbon <strong>double bond (C=C)</strong>. This double bond is the reactive part of the molecule. In an <strong>addition reaction</strong>, the double bond opens up &mdash; one of the two bonds breaks and new atoms add on to each carbon, leaving a single C&ndash;C bond. This makes alkenes far more reactive than alkanes.</p>
+
+<h3>Hydrogenation: Making Alkanes</h3>
+<p>Hydrogen adds across the double bond to turn an alkene into an alkane:</p>
+<p style="text-align:center"><strong>alkene + hydrogen &rarr; alkane</strong><br>ethene + hydrogen &rarr; ethane (C₂H₄ + H₂ &rarr; C₂H₆)</p>
+<p>Conditions: a <strong>nickel catalyst</strong> at about <strong>150 &deg;C</strong>. This is used industrially to harden vegetable oils into margarine.</p>
+
+<h3>Reaction with Steam: Making Alcohols</h3>
+<p>Alkenes react with steam (water) in a reaction called hydration to make an alcohol:</p>
+<p style="text-align:center"><strong>alkene + steam &rarr; alcohol</strong><br>ethene + steam &rarr; ethanol (C₂H₄ + H₂O &rarr; C₂H₅OH)</p>
+<p>Conditions: a <strong>phosphoric-acid catalyst</strong>, about <strong>300 &deg;C</strong> and <strong>60&ndash;70 atm</strong> pressure.</p>
+
+<h3>Reaction with Halogens: The Test for Unsaturation</h3>
+<p>Alkenes react with bromine, which adds across the double bond. Orange <strong>bromine water decolourises</strong> (turns colourless) &mdash; this is the test for a C=C double bond. Alkanes leave bromine water orange.</p>
+
+<h3>Worked Example</h3>
+<p>Show what happens when ethene reacts with bromine.</p>
+<p>The C=C double bond opens. One bromine atom bonds to each of the two carbon atoms:<br>
+C₂H₄ + Br₂ &rarr; C₂H₄Br₂<br>
+The product is <strong>1,2-dibromoethane</strong> &mdash; a Br is added to carbon 1 and a Br to carbon 2. Because the bromine is used up, the orange colour disappears.</p>
+
+<h3>Common Mistake</h3>
+<p>Do not confuse <em>addition</em> (alkenes &mdash; the double bond opens) with <em>substitution</em> (alkanes &mdash; an atom is swapped). Also remember that alkanes do <strong>not</strong> decolourise bromine water; only alkenes, with their C=C double bond, do.</p>
+`,
+
+'s10i-10-6': `
+<h2>Industrial Ethanol: Fermentation vs Hydration</h2>
+<p>Ethanol (C₂H₅OH) is an important fuel, solvent and the alcohol in drinks. Industry makes it by two very different routes: <strong>fermentation</strong> of sugar, and <strong>hydration</strong> of ethene. Each has its own raw material, conditions and trade-offs.</p>
+
+<h3>Fermentation</h3>
+<p>Yeast converts sugar (glucose) into ethanol and carbon dioxide:</p>
+<p style="text-align:center"><strong>glucose &rarr; ethanol + carbon dioxide</strong><br>C₆H₁₂O₆ &rarr; 2C₂H₅OH + 2CO₂</p>
+<ul>
+  <li>Conditions: yeast, about <strong>30&ndash;35 &deg;C</strong>, <strong>anaerobic</strong> (no oxygen)</li>
+  <li>Raw material: sugar from crops &mdash; <strong>renewable</strong></li>
+  <li><strong>Batch</strong> process; produces a <strong>dilute, impure</strong> solution that must be distilled</li>
+</ul>
+
+<h3>Hydration of Ethene</h3>
+<p>Ethene (obtained by cracking crude oil) reacts with steam in an addition reaction:</p>
+<p style="text-align:center"><strong>ethene + steam &rarr; ethanol</strong><br>C₂H₄ + H₂O &rarr; C₂H₅OH</p>
+<ul>
+  <li>Conditions: <strong>phosphoric-acid catalyst</strong>, ~300 &deg;C, high pressure</li>
+  <li>Raw material: ethene from crude oil &mdash; <strong>finite</strong> (non-renewable)</li>
+  <li><strong>Continuous</strong> process; gives a <strong>high yield of pure</strong> ethanol</li>
+</ul>
+
+<h3>Comparing the Two Routes</h3>
+<p>Fermentation wins on sustainability (renewable sugar), but is slow, batch-run and gives impure ethanol. Hydration is fast, continuous and pure, but depends on finite crude oil.</p>
+
+<h3>Worked Example</h3>
+<p>Balance the fermentation equation and explain the products.</p>
+<p>C₆H₁₂O₆ &rarr; 2C₂H₅OH + 2CO₂. Check the atoms: carbon 6 = (2&times;2) + (2&times;1) = 6 &checkmark;; oxygen 6 = (2&times;1) + (2&times;2) = 6 &checkmark;. One glucose molecule yields two ethanol molecules and two carbon dioxide molecules. The CO₂ bubbles off, leaving ethanol dissolved in water.</p>
+
+<h3>Common Mistake</h3>
+<p>Students often mix up which route is renewable &mdash; it is <em>fermentation</em> (sugar from crops), not hydration. Another common error is forgetting that fermentation must be <strong>anaerobic</strong>: if oxygen is present, the ethanol is oxidised to ethanoic acid (vinegar) instead.</p>
 `
 
 });
