@@ -145,27 +145,32 @@
       }
     });
 
-    // Science: odd weeks (W1, W3, W5, …)
+    // Science: spread across the odd weeks (W1, W3, W5, …), packed evenly. When
+    // there are more islands than odd weeks (the usual case now), each odd week
+    // holds several islands instead of the overflow piling onto the final week.
     var oddWeeks = [];
     for (var w = 1; w <= totalWeeks; w += 2) oddWeeks.push(w);
+    if (!oddWeeks.length) oddWeeks = [1];
 
     var sciQ = queues.science;
     for (var i = 0; i < sciQ.length; i++) {
-      weekMap[sciQ[i]] = oddWeeks[i];
+      weekMap[sciQ[i]] = oddWeeks[Math.floor(i * oddWeeks.length / sciQ.length)];
     }
 
-    // History + Geography: even weeks (W2, W4, W6, …)
+    // History + Geography: spread across the even weeks (W2, W4, W6, …), each
+    // subject distributed independently and packed evenly (bounds-safe).
     var evenWeeks = [];
     for (var w = 2; w <= totalWeeks; w += 2) evenWeeks.push(w);
+    if (!evenWeeks.length) evenWeeks = oddWeeks;   // 1-week plans: no even week
 
     var hisQ = queues.history;
     for (var i = 0; i < hisQ.length; i++) {
-      weekMap[hisQ[i]] = evenWeeks[i];
+      weekMap[hisQ[i]] = evenWeeks[Math.floor(i * evenWeeks.length / hisQ.length)];
     }
 
     var geoQ = queues.geography;
     for (var i = 0; i < geoQ.length; i++) {
-      weekMap[geoQ[i]] = evenWeeks[i];
+      weekMap[geoQ[i]] = evenWeeks[Math.floor(i * evenWeeks.length / geoQ.length)];
     }
 
     return weekMap;
