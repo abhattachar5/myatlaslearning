@@ -23,6 +23,74 @@ var Atlas = (function () {
   var TOPICS = {};   // TOPICS[year][subject] = [ topic tiles ]
   var ready = false;
 
+  // ── GCSE tier (Foundation / Higher) ───────────────────────────────────────
+  // Maths only for now. Content that is examined on the HIGHER tier ONLY is
+  // listed here in ONE place (rather than tagging every island object), so the
+  // mapping is easy to audit and adjust. An island is Higher-only if its id is
+  // in HIGHER_ONLY_ISLANDS or its topicId is in HIGHER_ONLY_TOPICS.
+  // NB: profile.tier is the BILLING tier (free/paid) — the exam tier is a
+  // separate field, profile.examTier ('foundation' | 'higher'), default 'higher'
+  // so nothing is ever hidden until a student/parent opts into Foundation.
+  var HIGHER_ONLY_TOPICS = {
+    'm9t-01': 1,                                   // Surds (Year 9)
+    'm11t-01': 1,                                  // Quadratic formula & completing the square
+    'm11t-03': 1,                                  // Simultaneous (linear & quadratic)
+    'm11t-04': 1,                                  // Algebraic fractions & manipulation
+    'm11t-05': 1,                                  // Functions
+    'm11t-06': 1,                                  // Sequences: quadratic nth term & geometric
+    'm11t-07': 1,                                  // Circle theorems
+    'm11t-08': 1,                                  // Sine & cosine rules
+    'm11t-09': 1,                                  // Vectors
+    'm11t-10': 1,                                  // Trig graphs & transformations
+    'm11t-12': 1,                                  // Histograms & cumulative frequency
+    'm11t-13': 1,                                  // Conditional probability & set notation
+    'm11t-14': 1                                   // Gradients, areas under graphs & proof
+  };
+  var HIGHER_ONLY_ISLANDS = {
+    // Year 10 — Higher-only islands inside otherwise mixed-tier topics
+    'm10i-03-4': 1, 'm10i-03-5': 1,                // expanding 3 brackets; factorising ax²+bx+c
+    'm10i-08-3': 1, 'm10i-08-4': 1,                // exact trig values; 3D trigonometry
+    'm10i-07-3': 1,                                // 3D Pythagoras
+    'm10i-10-3': 1,                                // area & volume scale factors
+    'm10i-11-2': 1,                                // inverse proportion
+    'm10i-13-2': 1,                                // stratified sampling
+    'm10i-14-3': 1,                                // combined & conditional probability
+    // Year 11 — Higher-only islands inside mixed-tier topics
+    'm11i-02-2': 1, 'm11i-02-4': 1                 // cubic/reciprocal graphs; exponential graphs
+  };
+
+  function isHigherOnly(island) {
+    if (!island) return false;
+    var id = (typeof island === 'string') ? island : island.id;
+    var tid = (typeof island === 'object') ? island.topicId : null;
+    if (id && HIGHER_ONLY_ISLANDS[id]) return true;
+    if (tid && HIGHER_ONLY_TOPICS[tid]) return true;
+    // string form: also treat a topic id passed directly as Higher-only
+    if (id && HIGHER_ONLY_TOPICS[id]) return true;
+    return false;
+  }
+  function topicIsHigherOnly(topicId) { return !!HIGHER_ONLY_TOPICS[topicId]; }
+
+  // Read the student's chosen exam tier from the active profile (default higher).
+  function getExamTier() {
+    try {
+      var p = JSON.parse(localStorage.getItem('sm_active_profile') || 'null');
+      return (p && p.examTier === 'foundation') ? 'foundation' : 'higher';
+    } catch (e) { return 'higher'; }
+  }
+  function setExamTier(t) {
+    try {
+      var p = JSON.parse(localStorage.getItem('sm_active_profile') || 'null');
+      if (!p) return;
+      p.examTier = (t === 'foundation') ? 'foundation' : 'higher';
+      localStorage.setItem('sm_active_profile', JSON.stringify(p));
+    } catch (e) {}
+  }
+  // A Foundation student cannot access Higher-only islands; everyone else can.
+  function tierAllows(island) {
+    return getExamTier() === 'higher' || !isHigherOnly(island);
+  }
+
   function register(mod) {
     // mod: { year, subject, topics?, islands?, flashcards?, questions?, lessons?, generators? }
     if (mod.topics) {
@@ -38,6 +106,13 @@ var Atlas = (function () {
 
   return {
     register: register,
+    // ── GCSE tier helpers ─────────────────────────────────────────────────
+    isHigherOnly: isHigherOnly,
+    topicIsHigherOnly: topicIsHigherOnly,
+    getExamTier: getExamTier,
+    setExamTier: setExamTier,
+    tierAllows: tierAllows,
+
     topics: function (year, subject) { return (TOPICS[year] || {})[subject] || []; },
     allTopics: function () { return TOPICS; },
     isReady: function () { return ready; },

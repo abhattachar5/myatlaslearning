@@ -112,10 +112,18 @@
           <select class="form-input form-select" id="edit-year">
             <option value="Year 7">Year 7</option>
             <option value="Year 8">Year 8</option>
-            <option value="Year 9" disabled>Year 9 — Coming Soon</option>
-            <option value="Year 10" disabled>Year 10 — Coming Soon</option>
-            <option value="Year 11" disabled>Year 11 — Coming Soon</option>
+            <option value="Year 9">Year 9</option>
+            <option value="Year 10">Year 10</option>
+            <option value="Year 11">Year 11</option>
           </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Exam tier <span style="color:var(--text-muted);font-weight:400">(Maths)</span></label>
+          <div style="display:inline-flex;border:2px solid var(--border);border-radius:999px;overflow:hidden" id="edit-tier-seg">
+            <button type="button" id="tier-foundation" onclick="pickTier('foundation')" style="border:none;background:transparent;padding:8px 22px;font-family:inherit;font-size:.9rem;font-weight:700;color:var(--text-2);cursor:pointer">Foundation</button>
+            <button type="button" id="tier-higher" onclick="pickTier('higher')" style="border:none;background:transparent;padding:8px 22px;font-family:inherit;font-size:.9rem;font-weight:700;color:var(--text-2);cursor:pointer">Higher</button>
+          </div>
+          <p style="font-size:.75rem;color:var(--text-muted);margin:8px 0 0">Higher shows every Maths topic. Foundation hides Higher-only topics (surds, circle theorems, vectors and so on) and sets gentler test questions. You can change this any time.</p>
         </div>
         <div class="form-group">
           <label class="form-label" for="edit-school">School <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
@@ -1121,19 +1129,23 @@ function renderMathTopicCards() {
     const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
     const hasContent = topic.hasContent !== false;
     const testPassed = StudyPlanner.isTopicTestPassed(topic.id);
+    // GCSE tier: whole Higher-only Maths topics get a badge (and dim for Foundation).
+    const topicHigherOnly = (typeof Atlas !== 'undefined' && Atlas.topicIsHigherOnly) ? Atlas.topicIsHigherOnly(topic.id) : false;
+    const tierDim = topicHigherOnly && (typeof Atlas !== 'undefined' && Atlas.getExamTier && Atlas.getExamTier() === 'foundation');
 
-    return `<div class="island-card" style="border-top-color:#3b82f6;cursor:pointer"
+    return `<div class="island-card" style="border-top-color:#3b82f6;cursor:pointer${tierDim ? ';opacity:.6' : ''}"
         onclick="goToTopic('${topic.id}')"
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands completed${testPassed ? ', test passed' : ''}">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands completed${testPassed ? ', test passed' : ''}${topicHigherOnly ? ', Higher tier' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, '#3b82f6', 52)}
       </div>
       <div style="margin-bottom:6px">
         <span class="subject-pill" style="background:#3b82f6">Mathematics</span>
+        ${topicHigherOnly ? '<span class="subject-pill" style="background:#8b5cf6;font-size:.65rem;padding:2px 8px;margin-left:4px">Higher</span>' : ''}
         ${testPassed ? '<span class="badge" style="font-size:.65rem;background:#22c55e;color:white;padding:2px 6px;border-radius:4px;margin-left:4px">✓ Test</span>' : ''}
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
@@ -1415,6 +1427,7 @@ function openProfileModal() {
   document.getElementById('edit-name').value = user.name;
   document.getElementById('edit-year').value = user.year || 'Year 7';
   document.getElementById('edit-school').value = user.school || '';
+  pickTier(user.examTier === 'foundation' ? 'foundation' : 'higher');
   document.getElementById('dashboard-content').style.display = 'none';
   document.getElementById('profile-page').style.display = '';
   setNavActive('profile');
@@ -1446,19 +1459,33 @@ function goToDashboard() {
     window.scrollTo(0, 0);
   }
 }
+var _editTier = 'higher';
+function pickTier(t) {
+  _editTier = (t === 'foundation') ? 'foundation' : 'higher';
+  var f = document.getElementById('tier-foundation'), h = document.getElementById('tier-higher');
+  if (!f || !h) return;
+  f.style.background = _editTier === 'foundation' ? '#0ea5e9' : 'transparent';
+  f.style.color      = _editTier === 'foundation' ? '#fff' : 'var(--text-2)';
+  h.style.background = _editTier === 'higher' ? '#8b5cf6' : 'transparent';
+  h.style.color      = _editTier === 'higher' ? '#fff' : 'var(--text-2)';
+}
 function saveProfile() {
   const name   = document.getElementById('edit-name').value.trim();
   const year   = document.getElementById('edit-year').value;
   const school = document.getElementById('edit-school').value.trim();
   if (!name) return;
   const yearChanged = (year !== user.year);
-  user.name = name; user.year = year; user.school = school;
+  const tierChanged = (_editTier !== (user.examTier || 'higher'));
+  user.name = name; user.year = year; user.school = school; user.examTier = _editTier;
   setUser(user);
   recordYearHistory(year);
   syncProgressToServer();
-  if (yearChanged) {
-    // Year switched — reload so every section reflects the new curriculum cleanly.
-    showToast('Switched to ' + year + ' — your other year\'s progress is saved', 'success');
+  if (yearChanged || tierChanged) {
+    // Year or tier switched — reload so every section reflects the change cleanly.
+    var msg = yearChanged
+      ? 'Switched to ' + year + ' — your other year\'s progress is saved'
+      : 'Exam tier set to ' + (_editTier === 'foundation' ? 'Foundation' : 'Higher');
+    showToast(msg, 'success');
     setTimeout(function () { location.reload(); }, 600);
     return;
   }

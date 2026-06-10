@@ -206,28 +206,34 @@ function renderGrid() {
     const statusColor = STATUS_COLORS[statusIdx];
     const cardCount = FLASHCARDS.filter(f => f.islandId === island.id).length;
     const qCount = (QUESTIONS[island.id] || []).length;
+    // GCSE tier: Higher-only islands are locked for Foundation students.
+    const higherOnly = (typeof Atlas !== 'undefined' && Atlas.isHigherOnly) ? Atlas.isHigherOnly(island) : false;
+    const tierLocked = higherOnly && (typeof Atlas !== 'undefined' && Atlas.getExamTier && Atlas.getExamTier() === 'foundation');
+    const blocked = !unlocked || tierLocked;
+    const onActivate = tierLocked ? 'showTierMsg()' : (unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`);
+    const tierBadge = higherOnly ? '<span class="subject-pill" style="background:#8b5cf6">Higher tier</span>' : '';
 
-    return `<div class="island-card${unlocked ? '' : ' locked'}"
+    return `<div class="island-card${blocked ? ' locked' : ''}"
         style="border-top-color:${island.color || topicColor}"
-        onclick="${unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`}"
+        onclick="${onActivate}"
         role="link" tabindex="0"
-        aria-label="${island.name}, ${statusLabel}"
-        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();${unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`};}"
-        title="${unlocked ? island.name : 'Complete prerequisites first'}">
+        aria-label="${island.name}, ${tierLocked ? 'Higher tier only' : statusLabel}"
+        onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();${onActivate};}"
+        title="${tierLocked ? 'Higher tier only — switch to Higher to study this' : (unlocked ? island.name : 'Complete prerequisites first')}">
       <div class="island-card-top">
         <div class="island-emoji">${island.emoji}</div>
         ${createProgressRing(progress, (island.color || topicColor), 52)}
       </div>
-      <div style="margin-bottom:6px">
-        <span class="subject-pill" style="background:${island.color || topicColor}">${island.difficulty === 1 ? 'Foundation' : island.difficulty === 2 ? 'Higher' : 'Challenge'}</span>
-      </div>
+      ${tierBadge ? `<div style="margin-bottom:6px">${tierBadge}</div>` : ''}
       <div class="island-name">${island.name}</div>
       <div class="island-meta">⏱ ${island.estimatedHours}h · ${cardCount} cards · ${qCount} questions</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${statusColor}"></span>
         <span style="color:${statusColor}">${statusLabel}</span>
       </div>
-      ${!unlocked ? '<div class="lock-overlay" style="background:rgba(var(--bg-rgb),.4)">🔒</div>' : ''}
+      ${tierLocked
+        ? '<div class="lock-overlay" style="background:rgba(var(--bg-rgb),.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px">🔒<div style="font-size:.7rem;font-weight:700">Higher tier</div></div>'
+        : (!unlocked ? '<div class="lock-overlay" style="background:rgba(var(--bg-rgb),.4)">🔒</div>' : '')}
     </div>`;
   }).join('');
 }
@@ -238,7 +244,15 @@ function goToIsland(id) {
 
 function goToTest() {
   if (document.getElementById('test-cta-btn').disabled) return;
-  window.location.href = 'test.html?id=' + topicId;
+  var url = 'test.html?id=' + topicId;
+  // Maths only: Foundation students sit the gentler (all-medium) question mix;
+  // Higher students keep the realistic default mix. Tier governs coverage, not
+  // making every question maximally hard.
+  if (topicId.charAt(0) === 'm' && typeof Atlas !== 'undefined' && Atlas.getExamTier
+      && Atlas.getExamTier() === 'foundation') {
+    url += '&diff=foundation';
+  }
+  window.location.href = url;
 }
 
 function goToWritingTest() {
@@ -298,6 +312,10 @@ function showLockedMsg(id) {
     return p ? p.name : pid;
   }).join(', ');
   showToast(`🔒 Complete ${prereqNames} first`, 'error');
+}
+
+function showTierMsg() {
+  showToast('🔒 This is Higher tier content. Switch to the Higher tier in My Profile to study it.', 'error');
 }
 
 // ── Keyboard ──────────────────────────────────────────────────────────────
