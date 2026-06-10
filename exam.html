@@ -91,6 +91,20 @@
   <div class="ex-wrap">
     <div id="ex-error" style="display:none" class="card"><p>Exam not found. <a href="dashboard.html">Back to dashboard</a></p></div>
 
+    <!-- Self-serve mock subject picker -->
+    <div id="ex-pick" style="display:none">
+      <div class="br-banner">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.06em;opacity:.85">MOCK EXAM</div>
+        <h2 style="font-size:1.375rem;margin:4px 0">Sit a mock exam</h2>
+        <div style="opacity:.9">A timed paper for <b id="pick-year">your year</b> — finish to get an indicative grade.</div>
+      </div>
+      <div class="card">
+        <div class="lbl">Choose a subject</div>
+        <div id="pick-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:8px"></div>
+        <p style="text-align:center;margin-top:12px"><a class="muted" href="dashboard.html">← Back to dashboard</a></p>
+      </div>
+    </div>
+
     <!-- Briefing -->
     <div id="ex-brief" style="display:none">
       <div class="br-banner">
@@ -147,6 +161,7 @@
         <div style="font-size:.75rem;font-weight:700;letter-spacing:.06em;opacity:.85" id="rs-subject">MOCK EXAM</div>
         <div class="rs-score" id="rs-score">0%</div>
         <div class="rs-grade" id="rs-grade"></div>
+        <div id="rs-gradenote" style="font-size:.75rem;opacity:.8;margin-top:8px"></div>
       </div>
       <div class="rs-stats">
         <div class="rs-stat"><div class="v" id="rs-correct">0/0</div><div class="l">Correct</div></div>
@@ -244,6 +259,12 @@
     var params = new URLSearchParams(location.search);
     var aid = params.get('aid');
     var assignment = (typeof getAssignments === 'function' ? getAssignments() : []).find(function (a) { return a.id === aid; });
+
+    // Self-serve mock: synthesise an assignment from URL params when there is no
+    // assigned exam (exam.html?mock=1&subject=math). Assigned exams are unaffected.
+    var isLiveMock = !assignment && !!params.get('mock');
+    var pickSubject = params.get('subject');
+    if (isLiveMock && pickSubject) assignment = buildLiveMock(pickSubject);
 
     var questions = [], answers = [], cur = 0, total = 0;
     var timeLeft = 0, timerId = null, startedAt = 0;
@@ -359,10 +380,10 @@
 
       var readPct = totalMax ? Math.round(gained / totalMax * 100) : 0;
       document.getElementById('enrs-score').textContent = gained + ' / ' + totalMax;
-      document.getElementById('enrs-grade').textContent = 'Reading ' + readPct + '% · ' + gradeBand(readPct);
+      document.getElementById('enrs-grade').textContent = 'Reading ' + readPct + '% · ' + gradeBand(readPct, examYear(), 'english');
 
       var timeUsed = Math.round((Date.now() - enStartedAt) / 1000);
-      if (typeof updateAssignment === 'function') {
+      if (aid && typeof updateAssignment === 'function') {
         updateAssignment(aid, { status: 'done', result: { type: 'english', readingMarks: gained, readingMax: totalMax, readingPct: readPct, comprehension: compFb || null, writing: writeFb || null, timeUsedSec: timeUsed, takenAt: new Date().toISOString() } });
       }
       if (typeof addXP === 'function') addXP(Math.round(readPct / 2), 'Mock exam');
@@ -371,10 +392,12 @@
     function initBrief() {
       var mins = assignment.timeLimitMin || 60;
       var qn = assignment.numQuestions || Math.round(mins / 1.5);
+      // Foundation-tier Maths/Science mocks sit the gentler (all-medium) paper.
+      var diff = gcseTierFor(assignment.subjectId) === 'foundation' ? 'foundation' : 'mixed';
       questions = generateExam(assignment.subjectId, {
         topicIds: assignment.snapshotTopicIds || [],
         maxQuestions: qn,
-        difficulty: 'mixed'
+        difficulty: diff
       });
       total = questions.length;
       answers = new Array(total).fill(-1);
@@ -456,13 +479,16 @@
       });
       var pct = total ? Math.round(correct / total * 100) : 0;
       var timeUsed = Math.round((Date.now() - startedAt) / 1000);
-      var grade = gradeBand(pct);
+      var year = examYear();
+      var grade = gradeBand(pct, year, assignment.subjectId);
+      var note = gradeNote(year, assignment.subjectId);
       var perTopic = Object.keys(byTopic).map(function (tid) {
         var t = byTopic[tid];
         return { topicId: tid, name: t.name, pct: t.total ? Math.round(t.correct / t.total * 100) : 0 };
       });
 
-      if (typeof updateAssignment === 'function') {
+      // Persist only for a real assigned exam; a live (self-serve) mock has no assignment.
+      if (aid && typeof updateAssignment === 'function') {
         updateAssignment(aid, { status: 'done', result: { percent: pct, correct: correct, total: total, timeUsedSec: timeUsed, gradeBand: grade, perTopic: perTopic, takenAt: new Date().toISOString() } });
       }
       var xp = Math.round(pct / 2);
@@ -474,6 +500,8 @@
       document.getElementById('rs-subject').textContent = (SUBJECT_LABELS[assignment.subjectId] || assignment.subjectId).toUpperCase() + ' — MOCK EXAM';
       document.getElementById('rs-score').textContent = pct + '%';
       document.getElementById('rs-grade').textContent = grade;
+      var noteEl = document.getElementById('rs-gradenote');
+      if (noteEl) { noteEl.textContent = note; noteEl.style.display = note ? '' : 'none'; }
       document.getElementById('rs-correct').textContent = correct + '/' + total;
       document.getElementById('rs-time').textContent = Math.floor(timeUsed / 60) + ':' + (timeUsed % 60 < 10 ? '0' : '') + (timeUsed % 60);
       document.getElementById('rs-xp').textContent = '+' + xp;
@@ -485,11 +513,38 @@
       }).join('');
     }
 
-    function gradeBand(pct) {
-      if (pct >= 80) return 'Strong · Greater Depth';
-      if (pct >= 60) return 'Secure · Working at expected standard';
-      if (pct >= 40) return 'Developing';
-      return 'Emerging · needs support';
+    // Indicative grade. GCSE years (10 & 11) get a 9–1 grade scaled to the exam
+    // tier; earlier years keep the KS3 working-standard descriptor. Boundaries are
+    // indicative (real papers vary) and deliberately a touch generous on an MCQ mock.
+    function examYear() { return (typeof getUser === 'function' && getUser() || {}).year || 'Year 7'; }
+    function isGcseYear(y) { return y === 'Year 10' || y === 'Year 11'; }
+    function gcseTierFor(subjectId) {
+      // Only Maths & Science split into Foundation/Higher; others are single-tier.
+      if (['math', 'science'].indexOf(subjectId) !== -1 && typeof Atlas !== 'undefined' && Atlas.getExamTier) return Atlas.getExamTier();
+      return 'higher';
+    }
+    function gradeBand(pct, year, subjectId) {
+      year = year || examYear();
+      if (!isGcseYear(year)) {
+        if (pct >= 80) return 'Strong · Greater Depth';
+        if (pct >= 60) return 'Secure · Working at expected standard';
+        if (pct >= 40) return 'Developing';
+        return 'Emerging · needs support';
+      }
+      var g;
+      if (gcseTierFor(subjectId) === 'foundation') {
+        g = pct >= 85 ? 5 : pct >= 70 ? 4 : pct >= 55 ? 3 : pct >= 40 ? 2 : pct >= 25 ? 1 : 0;
+        return g ? 'Grade ' + g : 'Below Grade 1';
+      }
+      g = pct >= 88 ? 9 : pct >= 78 ? 8 : pct >= 68 ? 7 : pct >= 58 ? 6 : pct >= 48 ? 5 : pct >= 38 ? 4 : pct >= 28 ? 3 : 0;
+      return g ? 'Grade ' + g : 'Below Grade 3';
+    }
+    function gradeNote(year, subjectId) {
+      year = year || examYear();
+      if (!isGcseYear(year)) return '';
+      var tiered = (['math', 'science'].indexOf(subjectId) !== -1);
+      if (!tiered) return 'Indicative GCSE grade (grades 1–9)';
+      return 'Indicative GCSE grade · ' + (gcseTierFor(subjectId) === 'foundation' ? 'Foundation tier (1–5)' : 'Higher tier (4–9)');
     }
 
     // Abandon the exam without submitting: no result is recorded, the assignment stays
@@ -501,8 +556,42 @@
       window.location.href = 'dashboard.html';
     }
 
+    // ── Self-serve mock helpers ──────────────────────────────────────────────────
+    function buildLiveMock(subjectId) {
+      var u = (typeof getUser === 'function') ? getUser() : null;
+      var year = (u && u.year) || 'Year 7';
+      var topics = (typeof Atlas !== 'undefined' && Atlas.yearTopics) ? Atlas.yearTopics(subjectId, year) : [];
+      var foundationMaths = (subjectId === 'math' && gcseTierFor(subjectId) === 'foundation');
+      var topicIds = topics.filter(function (t) {
+        if (t.hasContent === false) return false;
+        // Foundation Maths mock excludes whole Higher-only topics.
+        if (foundationMaths && typeof Atlas !== 'undefined' && Atlas.topicIsHigherOnly && Atlas.topicIsHigherOnly(t.id)) return false;
+        return true;
+      }).map(function (t) { return t.id; });
+      return { id: null, type: 'exam', subjectId: subjectId, snapshotTopicIds: topicIds, timeLimitMin: 60, numQuestions: 40, _live: true };
+    }
+    function showMockPicker() {
+      var u = (typeof getUser === 'function') ? getUser() : null;
+      var year = (u && u.year) || 'Year 7';
+      var subs = ['math', 'english', 'science', 'history', 'geography'];
+      var avail = subs.filter(function (s) {
+        if (s === 'english') return (Atlas.yearPassages(year) || []).length > 0;
+        return (Atlas.yearTopics(s, year) || []).some(function (t) { return t.hasContent !== false; });
+      });
+      var emojis = { math: '📐', english: '✍️', science: '🔬', history: '📜', geography: '🌍' };
+      var grid = document.getElementById('pick-grid');
+      grid.innerHTML = avail.map(function (s) {
+        return '<button class="btn btn-secondary" style="padding:16px 12px;font-weight:700;height:auto" onclick="location.href=\'exam.html?mock=1&subject=' + s + '\'">' +
+          '<span style="font-size:1.6rem;display:block;margin-bottom:4px">' + emojis[s] + '</span>' + (SUBJECT_LABELS[s] || s) + '</button>';
+      }).join('') || '<p class="muted">No subjects available for ' + year + ' yet.</p>';
+      document.getElementById('pick-year').textContent = year;
+      document.getElementById('ex-pick').style.display = '';
+    }
+
     // ── Init (after all definitions) ─────────────────────────────────────────────
-    if (!assignment || assignment.type !== 'exam') {
+    if (isLiveMock && !pickSubject) {
+      showMockPicker();
+    } else if (!assignment || assignment.type !== 'exam') {
       document.getElementById('ex-error').style.display = '';
     } else if (assignment.subjectId === 'english') {
       initEnglish();
