@@ -1,0 +1,128 @@
+// content/y10/science/islands/x16.js — EXPANSION: Topic 16 extra flashcards + questions.
+// Loads AFTER t16.js. Authored by the atlas-content skill. All items original.
+
+FLASHCARDS.push(
+  // s10i-16-1 — Reflection & Refraction of Light
+  {id:"s10fc-16-1-6", islandId:"s10i-16-1", front:"Describe the image formed by a plane mirror.",
+   back:"The image in a plane (flat) mirror is:\n\n• VIRTUAL — the rays only appear to come from behind the mirror, so it cannot be projected onto a screen.\n• Upright (the same way up as the object).\n• The same size as the object.\n• The same distance behind the mirror as the object is in front.\n• Laterally inverted — left and right are swapped, which is why writing looks backwards in a mirror.", difficulty:2, category:"concept"},
+  {id:"s10fc-16-1-7", islandId:"s10i-16-1", front:"Outline the required practical for investigating refraction through a glass block.",
+   back:"1. Place a rectangular glass block on paper and draw round it.\n2. Use a RAY BOX with a slit to shine a narrow ray at one face.\n3. Mark the path of the ray with pencil dots, remove the block, and join the dots with a ruler.\n4. Draw the normal at 90° to the surface where the ray enters.\n5. Measure the angles of incidence and refraction from the NORMAL with a protractor.\n6. Repeat for several angles of incidence.\n\nA narrow ray and sharp pencil dots reduce uncertainty in the measured angles.", difficulty:2, category:"process"},
+  {id:"s10fc-16-1-8", islandId:"s10i-16-1", front:"Why does a swimming pool look shallower than it really is?",
+   back:"Light from the bottom of the pool refracts as it leaves the water and enters the air.\n\n• Passing from water (denser) into air (less dense), the light speeds up and bends AWAY from the normal.\n• Your brain assumes the light travelled in a straight line, so it traces the rays back to a point HIGHER than the true bottom.\n\nThe bottom therefore appears closer to the surface than it really is — the pool looks shallower. The same effect makes fish appear nearer the surface than they are.", difficulty:2, category:"application"},
+
+  // s10i-16-2 — Lenses: Convex & Concave
+  {id:"s10fc-16-2-6", islandId:"s10i-16-2", front:"How does the image from a convex lens change as the object moves closer to the lens?",
+   back:"• Object far beyond the principal focus (more than twice the focal length away): image is REAL, inverted and SMALLER than the object — this is how a camera works.\n• Object between one and two focal lengths away: image is REAL, inverted and LARGER than the object — this is how a projector works.\n• Object CLOSER to the lens than the principal focus: the rays never meet, so the image is VIRTUAL, upright and magnified — this is how a magnifying glass works.", difficulty:3, category:"concept"},
+  {id:"s10fc-16-2-7", islandId:"s10i-16-2", front:"Which two construction rays are drawn from the top of the object in a convex lens ray diagram?",
+   back:"Two standard rays locate the image:\n\n1. A ray PARALLEL to the principal axis, which refracts at the lens and passes through the principal focus on the far side.\n2. A ray through the CENTRE of the lens, which continues in a straight line without changing direction.\n\nWhere the two rays cross (or appear to cross when traced back) is the top of the image. In diagrams, a convex lens is drawn as a vertical line with outward-pointing arrowheads at each end.", difficulty:2, category:"process"},
+  {id:"s10fc-16-2-8", islandId:"s10i-16-2", front:"How must a magnifying glass be used, and why can its image not be put on a screen?",
+   back:"A magnifying glass is a convex lens used with the object CLOSER to the lens than the principal focus (inside the focal length).\n\n• The refracted rays diverge, so they never actually meet.\n• Tracing the rays backwards, they appear to come from a larger, upright image on the same side as the object.\n\nBecause the rays only APPEAR to come from the image, it is virtual: no light actually arrives there, so there is nothing to fall on a screen.", difficulty:3, category:"application"},
+
+  // s10i-16-3 — Visible Light & Colour
+  {id:"s10fc-16-3-6", islandId:"s10i-16-3", front:"How are the wavelength and frequency of visible light related across the spectrum?",
+   back:"Each colour of visible light corresponds to a narrow band of wavelength and frequency.\n\n• Wavelength and frequency are inversely related: the longer the wavelength, the lower the frequency.\n• RED light: longest wavelength, LOWEST frequency of visible light.\n• VIOLET light: shortest wavelength, HIGHEST frequency of visible light.\n\nAll colours of light travel at the same speed in a vacuum — only the wavelength and frequency differ.", difficulty:2, category:"concept"},
+  {id:"s10fc-16-3-7", islandId:"s10i-16-3", front:"What three things can happen to light when it hits a surface, and how does this give transparent objects their colour?",
+   back:"At any surface, light can be ABSORBED, TRANSMITTED (passed through) or REFLECTED — and different wavelengths can be treated differently.\n\n• An opaque object's colour comes from the wavelengths it REFLECTS.\n• A transparent or translucent object's colour comes from the wavelengths it TRANSMITS: blue glass transmits blue light and absorbs the other wavelengths.\n\nThis is why coloured glass acts exactly like a colour filter.", difficulty:2, category:"concept"},
+  {id:"s10fc-16-3-8", islandId:"s10i-16-3", front:"What colour does a white object appear under coloured light, and why?",
+   back:"A white object appears the SAME COLOUR as the light shining on it.\n\n• A white surface reflects ALL wavelengths of visible light.\n• Under pure red light, the only wavelength available to reflect is red, so the object reflects red and looks red.\n• Under green light it looks green, and so on.\n\nThis is why white clothes seem to change colour under coloured stage lighting, while a black object stays black — it absorbs every wavelength whatever the lighting.", difficulty:2, category:"application"}
+);
+
+// ── EXTRA QUESTIONS ─────────────────────────────────────────────────────────
+QUESTIONS["s10i-16-1"] = (QUESTIONS["s10i-16-1"] || []).concat([
+  {q:"Which list correctly describes the image formed by a plane mirror?",
+   opts:["Virtual, upright, same size as the object","Real, upright, same size as the object","Virtual, inverted, magnified","Real, inverted, diminished"], c:0,
+   e:"A plane mirror forms a virtual, upright image the same size as the object, the same distance behind the mirror as the object is in front. It is not real — the rays only appear to come from behind the mirror, so it cannot be projected onto a screen."},
+  {q:"A ray of light strikes a mirror at 30° to the SURFACE of the mirror. What is the angle of reflection?",
+   opts:["30°","15°","90°","60°"], c:3,
+   e:"Angles are measured from the normal, not the surface. A ray at 30° to the surface is at 90° − 30° = 60° to the normal, so the angle of incidence is 60° and the angle of reflection is also 60°. Answering 30° means you forgot to convert to the normal."},
+  {q:"A ray of light passes from glass into air. What happens to it?",
+   opts:["It slows down and bends towards the normal","It speeds up and bends away from the normal","It speeds up and bends towards the normal","It slows down and bends away from the normal"], c:1,
+   e:"Leaving a denser medium, light speeds up and bends away from the normal, so the angle of refraction is larger than the angle of incidence. Bending towards the normal happens in the opposite direction, when light enters a denser medium."},
+  {q:"A ray of light meets a glass block travelling exactly along the normal. What happens?",
+   opts:["It is totally reflected back","It bends towards the normal","It bends away from the normal","It passes straight through without changing direction"], c:3,
+   e:"A ray travelling along the normal hits the boundary at an angle of incidence of 0°. Its speed still changes inside the glass, but because it crosses the boundary head-on there is no change of direction. Bending only happens when the ray meets the boundary at an angle."},
+  {q:"In the refraction required practical, why are the angles measured with a protractor from a line drawn at 90° to the glass block's surface?",
+   opts:["Because angles of incidence and refraction are defined from the normal","Because the protractor cannot measure from the surface","Because the ray box only works at right angles","Because the glass block would melt otherwise"], c:0,
+   e:"The angles of incidence and refraction are defined between each ray and the normal — the line at 90° to the surface — so that is the line you must measure from. A protractor could physically measure from the surface, but that would give the wrong angle (the complement of the true one)."},
+  {q:"You can read a page of a book from almost any direction. Which statement explains why?",
+   opts:["Paper does not obey the law of reflection","The page emits its own light in all directions","The rough paper surface reflects light diffusely, scattering it in many directions","The ink focuses light towards your eyes"], c:2,
+   e:"Paper is rough on a microscopic scale, so its surface normals point in many directions and incident light is scattered everywhere — diffuse reflection. The law of reflection is still obeyed at each individual point, so the first option is wrong."},
+  {q:"A periscope uses two plane mirrors, each fixed at 45° to the vertical tube. What happens to light from a distant object at each mirror?",
+   opts:["It is refracted by 45°","It is turned through 90° by reflection","It is absorbed and re-emitted","It is turned through 45° by reflection"], c:1,
+   e:"Light hits each mirror at an angle of incidence of 45° to the normal and reflects at 45° on the other side, so its direction changes by 45° + 45° = 90°. After both mirrors the light has been turned through 180° in total, travelling down the tube and then out to the viewer's eye. It is reflection, not refraction — the light never enters a new medium at the mirror."},
+  {q:"A coin lies on the bottom of a pond. Why does it appear to be higher in the water than it really is?",
+   opts:["Light from the coin bends away from the normal as it leaves the water, and the brain traces the rays straight back","The water magnifies the coin","Light from the coin slows down as it leaves the water","The coin reflects more light underwater"], c:0,
+   e:"Light from the coin speeds up and bends away from the normal as it passes from water into air. The eye assumes light travels in straight lines, so it traces the refracted rays back to a point above the coin's true position. Light speeds up (not slows down) on leaving water, so the third option has the change backwards."},
+  {q:"The angle between an incident ray and its reflected ray at a plane mirror is 80°. What is the angle of incidence?",
+   opts:["80°","20°","40°","10°"], c:2,
+   e:"The normal lies exactly halfway between the incident and reflected rays, so the 80° is split equally: angle of incidence = angle of reflection = 40°. Choosing 80° treats the whole angle between the rays as the angle of incidence, which double-counts it."},
+  {q:"A ray enters a transparent material at an angle of incidence of 50° and refracts to 30° from the normal. What can you conclude?",
+   opts:["The light sped up as it entered the material","The material is less dense than air","The light slowed down and the material is optically denser than air","The law of reflection has been broken"], c:2,
+   e:"The ray bent towards the normal (50° down to 30°), which happens when light slows down on entering an optically denser medium. If the material were less dense, the ray would have bent away from the normal and the angle would have increased instead."}
+]);
+
+QUESTIONS["s10i-16-2"] = (QUESTIONS["s10i-16-2"] || []).concat([
+  {q:"To use a convex lens as a magnifying glass, where must the object be placed?",
+   opts:["Exactly at the principal focus","Closer to the lens than the principal focus","More than two focal lengths from the lens","On the other side of the lens from the eye, at any distance"], c:1,
+   e:"Inside the focal length, the refracted rays diverge and never meet, so they appear to come from a magnified, upright, virtual image behind the object. Beyond two focal lengths the lens gives a small, inverted, real image — the opposite of magnification."},
+  {q:"Which lens is thinner in the middle than at the edges, and what does it do to light?",
+   opts:["Convex — it converges light","Concave — it converges light","Convex — it diverges light","Concave — it diverges light"], c:3,
+   e:"A concave lens is thinner in the middle and spreads (diverges) parallel rays so they appear to come from a virtual focus behind the lens. A convex lens is the opposite: thicker in the middle and converging."},
+  {q:"Two convex lenses are made of the same glass, but lens A has more strongly curved surfaces than lens B. Which statement is correct?",
+   opts:["Lens A has a shorter focal length because it refracts light more strongly","Lens A has a longer focal length because it is thicker","Both lenses have the same focal length because they are the same glass","Lens B is more powerful because it is flatter"], c:0,
+   e:"More strongly curved surfaces bend light through larger angles, so the rays converge sooner — a shorter focal length and a more powerful lens. Being made of the same glass does not make the focal lengths equal; the curvature matters too."},
+  {q:"In a ray diagram, what happens to a ray that passes through the exact centre of a thin lens?",
+   opts:["It refracts through the principal focus","It continues in a straight line without changing direction","It reflects back the way it came","It bends away from the principal axis"], c:1,
+   e:"A ray through the optical centre of a thin lens is undeviated — it carries straight on. This is one of the two standard construction rays; it is the ray arriving parallel to the axis that refracts through the principal focus."},
+  {q:"A camera uses a convex lens to photograph a distant tree. What kind of image forms on the sensor?",
+   opts:["Virtual, upright and magnified","Real, upright and the same size","Real, inverted and smaller than the tree","Virtual, inverted and smaller than the tree"], c:2,
+   e:"A distant object is far beyond the principal focus, so the convex lens forms a real, inverted, diminished image just beyond the focus on the other side — exactly where the sensor sits. The image must be real, otherwise no light would actually reach the sensor; virtual images cannot be captured this way."},
+  {q:"Why can the image formed by a concave lens never be projected onto a screen?",
+   opts:["The image is too small to see","The rays diverge and never actually meet, so the image is virtual","Concave lenses absorb most of the light","The image forms inside the glass of the lens"], c:1,
+   e:"A concave lens always spreads rays apart; they only appear to come from a point when traced backwards, so the image is virtual. No light actually converges at the image position, so there is nothing to fall on a screen. The image being small is irrelevant — small real images project perfectly well."},
+  {q:"An object 6 cm tall forms an image 1.5 cm tall through a lens. What is the magnification?",
+   opts:["4","0.25","4.5","7.5"], c:1,
+   e:"Magnification = image height ÷ object height = 1.5 ÷ 6 = 0.25. The image is a quarter of the object's height, so it is diminished. Choosing 4 divides the heights the wrong way round (object ÷ image)."},
+  {q:"A lens produces a magnification of 2.5. The object is 4 cm tall. How tall is the image?",
+   opts:["1.6 cm","6.5 cm","10 cm","0.625 cm"], c:2,
+   e:"Rearranging magnification = image height ÷ object height gives image height = magnification × object height = 2.5 × 4 = 10 cm. Dividing instead of multiplying gives 1.6 cm, which would be a diminished image — impossible with a magnification greater than 1."},
+  {q:"An object is placed more than twice the focal length away from a convex lens. Compared with the object, the image is...",
+   opts:["real, inverted and smaller","real, inverted and larger","virtual, upright and larger","virtual, upright and smaller"], c:0,
+   e:"With the object beyond twice the focal length, the construction rays cross close to the far focus, giving a real, inverted image smaller than the object — the camera arrangement. The real, inverted, LARGER image happens when the object sits between one and two focal lengths away (the projector arrangement)."},
+  {q:"An object 1.5 cm tall produces an image 30 mm tall. What is the magnification?",
+   opts:["20","2","0.05","31.5"], c:1,
+   e:"Convert to the same unit first: 30 mm = 3 cm. Magnification = 3 ÷ 1.5 = 2. Forgetting to convert and calculating 30 ÷ 1.5 gives 20, which is wrong because the heights were in different units. Magnification is a ratio with no unit."}
+]);
+
+QUESTIONS["s10i-16-3"] = (QUESTIONS["s10i-16-3"] || []).concat([
+  {q:"Which colour of visible light has the shortest wavelength?",
+   opts:["Red","Orange","Green","Violet"], c:3,
+   e:"Violet sits at the short-wavelength end of the visible spectrum; red sits at the long-wavelength end. Green is roughly in the middle, so it is a tempting but incorrect choice."},
+  {q:"A black object appears black because it...",
+   opts:["reflects all wavelengths of visible light","absorbs all wavelengths of visible light","transmits all wavelengths of visible light","only reflects black light"], c:1,
+   e:"A black surface absorbs every wavelength of visible light and reflects almost none, so very little light reaches the eye. There is no such thing as 'black light' to reflect — black is the absence of reflected light. Reflecting all wavelengths is what a WHITE object does."},
+  {q:"A sheet of clear glass and a sheet of frosted glass are compared. Which row is correct?",
+   opts:["Clear glass is translucent; frosted glass is transparent","Both are opaque","Clear glass is transparent; frosted glass is translucent","Both are translucent"], c:2,
+   e:"Clear glass transmits light without scattering it, so you see through it sharply — transparent. Frosted glass transmits some light but scatters it, blurring whatever is behind — translucent. Neither is opaque, since both let light through."},
+  {q:"White light passes through a red filter and then a blue filter. What emerges from the blue filter?",
+   opts:["Purple light","Red light","Blue light","No light (or almost none)"], c:3,
+   e:"The red filter transmits only red light. The blue filter absorbs everything except blue — including red — so the red light is absorbed and essentially nothing gets through. The filters do not mix their colours to make purple; each one only removes wavelengths."},
+  {q:"White light shines through a blue filter onto a white screen. What does the screen look like?",
+   opts:["White","Blue","Black","Yellow"], c:1,
+   e:"The blue filter transmits only blue light, and a white screen reflects whatever light falls on it. Only blue light arrives, so only blue is reflected and the screen appears blue. The screen would look white only if all wavelengths were reaching it."},
+  {q:"A white T-shirt is viewed under pure red stage lighting. What colour does it appear?",
+   opts:["White","Black","Red","Pink"], c:2,
+   e:"A white surface reflects all wavelengths, but under pure red light the only wavelength available is red — so it reflects red and appears red. It cannot look white, because the other wavelengths needed to make white are simply not there."},
+  {q:"White light passes through a red filter and then shines on a green leaf. What colour does the leaf appear?",
+   opts:["Black","Green","Red","Yellow"], c:0,
+   e:"Only red light leaves the filter. The green leaf reflects only green light and absorbs the rest — including red. With no green light to reflect, almost nothing reaches the eye, so the leaf appears black. It cannot look green, because there is no green light anywhere in the beam."},
+  {q:"A blue car is parked under a streetlamp that gives out pure red light. How does the car's bodywork appear?",
+   opts:["Blue, because the paint contains its own colour","Red, because it reflects the lamp's light","Purple, because red and blue mix","Black, because the blue paint absorbs the red light"], c:3,
+   e:"Blue paint reflects blue wavelengths and absorbs the others. Under pure red light there is no blue to reflect, and the red is absorbed, so the car looks black. The idea that paint 'contains' a colour that shows under any light is the classic misconception — the apparent colour always depends on the light available."},
+  {q:"Which statement comparing red and violet light is correct?",
+   opts:["Red light has a higher frequency than violet light","Red light has a lower frequency and a longer wavelength than violet light","Red and violet light have the same wavelength but different speeds in a vacuum","Violet light travels faster than red light in a vacuum"], c:1,
+   e:"Wavelength and frequency are inversely related: red has the longest wavelength of visible light and therefore the lowest frequency, while violet has the shortest wavelength and highest frequency. All colours travel at the same speed in a vacuum, so the options about different speeds are wrong."},
+  {q:"A stage spotlight is fitted with a green filter and shines on an actor wearing a white shirt and a red scarf. What does the audience see?",
+   opts:["A green shirt and a black scarf","A white shirt and a red scarf","A green shirt and a red scarf","A black shirt and a green scarf"], c:0,
+   e:"Only green light reaches the actor. The white shirt reflects whatever falls on it, so it looks green. The red scarf reflects only red light, and there is none, so it absorbs the green and looks black. The scarf cannot stay red, because no red light is present to be reflected."}
+]);

@@ -1,0 +1,172 @@
+// content/y10/science/islands/x04.js — EXPANSION: Topic 4 extra flashcards + questions.
+// Loads AFTER t04.js. Authored by the atlas-content skill. All items original.
+
+FLASHCARDS.push(
+  // s10i-04-1 — Homeostasis (continues from s10fc-04-1-5)
+  {id:"s10fc-04-1-6", islandId:"s10i-04-1", front:"Why must the body control the water level of the blood?",
+   back:"Water moves into and out of cells by osmosis, so the concentration of the blood directly affects every cell.\n\n• If the blood is too dilute, water moves INTO cells — they swell and may burst\n• If the blood is too concentrated, water moves OUT of cells — they shrink and shrivel\n\nIn either case the cells cannot function normally, so water levels must be kept within a narrow range.", difficulty:2, category:"concept"},
+  {id:"s10fc-04-1-7", islandId:"s10i-04-1", front:"What is a stimulus? Give three examples.",
+   back:"A stimulus is a change in the internal or external environment that can be detected by a receptor.\n\nExamples:\n• A rise or fall in body temperature\n• A change in light intensity\n• Pressure or pain on the skin\n• A change in blood glucose concentration\n\nEach type of stimulus is detected by a specific type of receptor.", difficulty:1, category:"definition"},
+  {id:"s10fc-04-1-8", islandId:"s10i-04-1", front:"Name two coordination centres in the body and a condition each helps control.",
+   back:"Coordination centres receive information from receptors and organise a response:\n\n• The brain (hypothalamus) — monitors and controls body temperature\n• The pancreas — monitors and controls blood glucose concentration\n• The spinal cord — coordinates many reflex responses\n\nA coordination centre does not carry out the response itself; it sends instructions to effectors (muscles or glands), which do.", difficulty:2, category:"concept"},
+
+  // s10i-04-2 — The Nervous System & Reflexes (continues from s10fc-04-2-5)
+  {id:"s10fc-04-2-6", islandId:"s10i-04-2", front:"Outline the required practical for measuring human reaction time.",
+   back:"Ruler-drop method:\n\n1. Person A holds a ruler vertically; person B places thumb and finger level with the 0 cm mark, not touching it\n2. Person A drops the ruler without warning; person B catches it as fast as possible\n3. The distance the ruler fell is recorded and converted to a reaction time using a conversion table\n4. Repeat several times and calculate a mean to reduce the effect of random variation\n\nA factor such as caffeine, practice or distraction can then be changed, keeping everything else (same hand, same people, same starting position) the same.", difficulty:2, category:"application"},
+  {id:"s10fc-04-2-7", islandId:"s10i-04-2", front:"How does a voluntary response differ from a reflex response?",
+   back:"Voluntary response:\n• Involves a conscious decision made by the brain\n• Slower, because the information is processed before a response is chosen\n• Example: deciding to pick up a pen\n\nReflex response:\n• Automatic — no conscious decision involved\n• Usually coordinated by the spinal cord, bypassing conscious parts of the brain\n• Much faster, which protects the body from harm\n• Example: dropping a hot plate before you feel the pain", difficulty:2, category:"concept"},
+  {id:"s10fc-04-2-8", islandId:"s10i-04-2", front:"Give examples of receptors in the body and the stimuli they detect.",
+   back:"Receptors are cells that detect a specific type of stimulus:\n\n• Skin — receptors for touch, pressure, pain and temperature\n• Eye — light receptors (rods and cones) in the retina\n• Ear — receptors for sound and for balance\n• Tongue and nose — chemical receptors for taste and smell\n\nWhen stimulated, a receptor generates electrical impulses that travel along a sensory neurone towards the CNS.", difficulty:1, category:"definition"},
+
+  // s10i-04-3 — The Eye & Brain (continues from s10fc-04-3-5)
+  {id:"s10fc-04-3-6", islandId:"s10i-04-3", front:"How does the iris respond to changes in light intensity, and why?",
+   back:"The iris controls the size of the pupil in a reflex action:\n\n• Bright light — the pupil constricts (becomes smaller), reducing the amount of light entering and protecting the light-sensitive retina from damage\n• Dim light — the pupil dilates (becomes wider), letting in more light so the retina receives enough to form an image\n\nThis is automatic — it happens without conscious thought.", difficulty:2, category:"concept"},
+  {id:"s10fc-04-3-7", islandId:"s10i-04-3", front:"Name the three main regions of the brain and state what each controls.",
+   back:"• Cerebral cortex — the folded outer layer; responsible for consciousness, intelligence, memory and language\n• Cerebellum — at the back of the brain; coordinates movement and balance\n• Medulla — in the brain stem; controls unconscious activities such as heart rate and breathing\n\nDamage to each region produces different effects, which is one way scientists have mapped brain function.", difficulty:1, category:"definition"},
+  {id:"s10fc-04-3-8", islandId:"s10i-04-3", front:"Why is it difficult to investigate and treat brain damage and disease?",
+   back:"• The brain is extremely complex — billions of interconnected neurones, and the role of each region is not fully understood\n• It is delicate — surgery can easily damage healthy tissue and cause new problems\n• It is hard to access, being enclosed and protected by the skull\n• Many drugs cannot reach the brain easily\n\nMethods that avoid surgery, such as MRI scanning, are therefore very valuable for studying brain function safely.", difficulty:2, category:"concept"},
+
+  // s10i-04-4 — The Kidneys & Water Balance (continues from s10fc-04-4-5)
+  {id:"s10fc-04-4-6", islandId:"s10i-04-4", front:"State three ways the body loses water. Which can the body control?",
+   back:"Water is lost:\n\n1. From the lungs — in exhaled breath (cannot be controlled)\n2. From the skin — in sweat, which also carries ions and urea (cannot be controlled; sweating is driven by temperature regulation)\n3. From the kidneys — in urine (CAN be controlled)\n\nBecause losses from the lungs and skin are unavoidable, the kidneys must adjust the volume and concentration of urine to balance the body's water level.", difficulty:2, category:"concept"},
+  {id:"s10fc-04-4-7", islandId:"s10i-04-4", front:"What might it mean if glucose is found in a person's urine?",
+   back:"Normally ALL glucose is selectively reabsorbed back into the blood, so healthy urine contains none.\n\nGlucose in the urine suggests:\n• Diabetes — blood glucose is so high that the kidney cannot reabsorb all of it, so the excess overflows into the urine\n• Or possible damage to the kidney's reabsorption mechanism\n\nThis is why a simple urine test is used to help screen for diabetes.", difficulty:2, category:"application"},
+  {id:"s10fc-04-4-8", islandId:"s10i-04-4", front:"Why does a patient on dialysis need treatment several times every week?",
+   back:"A dialysis machine only removes urea and excess substances while the patient is connected to it.\n\n• Healthy kidneys work continuously, 24 hours a day\n• Between dialysis sessions, urea and excess ions build up in the blood again\n• If the level of urea became too high it would be toxic\n\nSo patients typically need around three sessions a week, each lasting several hours, and must also control their diet (e.g. limiting protein and salt) between sessions.", difficulty:2, category:"concept"}
+);
+
+// ── s10i-04-1 — Homeostasis: 10 new questions ───────────────────────────────
+QUESTIONS["s10i-04-1"] = (QUESTIONS["s10i-04-1"] || []).concat([
+  {q:"What is the role of a receptor in a control system?",
+   opts:["To carry out the response","To detect a change in the environment","To release hormones into the blood","To connect the brain to the muscles"], c:1,
+   e:"Receptors are cells that detect stimuli — changes in the internal or external environment — and generate impulses. Carrying out the response is the job of the effector, not the receptor."},
+  {q:"Which of these acts as a coordination centre in homeostasis?",
+   opts:["A sweat gland","A muscle in the arm","The pancreas","A temperature receptor in the skin"], c:2,
+   e:"The pancreas is a coordination centre: it monitors blood glucose and coordinates the response by releasing hormones. Sweat glands and muscles are effectors — they carry out responses rather than coordinate them."},
+  {q:"A red blood cell is placed in water that is much more dilute than blood plasma. What happens to it?",
+   opts:["Water enters the cell by osmosis and it may swell and burst","Water leaves the cell by osmosis and it shrivels","Glucose leaves the cell until it bursts","Nothing, because cell membranes block water"], c:0,
+   e:"Water moves by osmosis from the dilute surroundings into the more concentrated cell, making it swell and potentially burst. The cell would shrivel only if the surroundings were MORE concentrated than the cell — the opposite situation."},
+  {q:"What does 'negative' mean in negative feedback?",
+   opts:["The response is harmful to the body","The system switches off permanently","The receptors send negative electrical charges","The response acts in the opposite direction to the change"], c:3,
+   e:"In negative feedback, the response opposes (reverses) the original change, returning the condition to its set point. It does not mean the response is harmful — negative feedback is what keeps internal conditions stable."},
+  {q:"Effectors in homeostatic control systems are always which of the following?",
+   opts:["Neurones or receptors","The brain or spinal cord","Hormones or enzymes","Muscles or glands"], c:3,
+   e:"Effectors are muscles (which contract) or glands (which secrete substances such as hormones or sweat). Hormones are chemical messengers carried to effectors, not effectors themselves — a common mix-up."},
+  {q:"Which of these is an example of a stimulus?",
+   opts:["A drop in body temperature on a cold day","A muscle contracting to move the arm","A gland releasing a hormone","An impulse travelling along a motor neurone"], c:0,
+   e:"A stimulus is a change in the environment that a receptor can detect — a fall in body temperature is exactly that. A muscle contracting and a gland secreting are responses, the end of the control loop rather than its trigger."},
+  {q:"A student records their body temperature every hour: 37.1, 36.8, 37.2, 36.9, 37.0 °C. What do these results show about homeostasis?",
+   opts:["Homeostasis is failing because the values are not identical","The temperature fluctuates slightly around a set point as the body continuously corrects changes","The student's enzymes have denatured","Body temperature only changes during exercise"], c:1,
+   e:"Homeostasis keeps conditions within a narrow range, not perfectly fixed — small fluctuations around 37 °C show the feedback system repeatedly detecting and correcting drift. Identical readings are not expected, so the system is working, not failing."},
+  {q:"During a marathon on a hot day, a runner sweats heavily. Which internal conditions does this disturb?",
+   opts:["Water and ion levels, as well as helping to lower body temperature","Only body temperature","Blood glucose concentration only","None — sweating has no effect on internal conditions"], c:0,
+   e:"Sweat is mostly water with dissolved ions, so heavy sweating lowers the body's water and ion levels while its evaporation cools the body. Saying it affects only temperature misses the significant loss of water and ions that the kidneys must then compensate for."},
+  {q:"A person walks from a warm house into freezing air and begins to shiver. In this control system, what are the shivering muscles?",
+   opts:["The receptor","The stimulus","The coordination centre","The effector"], c:3,
+   e:"The muscles carry out the response — contracting rapidly to release heat from respiration — so they are the effector. The stimulus is the fall in temperature, detected by receptors, with the brain acting as the coordination centre."},
+  {q:"A faulty receptor stops detecting rises in body temperature. What is the most likely consequence?",
+   opts:["The effectors respond more strongly than usual","The coordination centre detects the change instead","The change is not detected, so no cooling response is triggered and temperature keeps rising","Body temperature falls rapidly"], c:2,
+   e:"Every control loop starts with detection: if the receptor fails, the coordination centre never receives the information and no corrective response occurs, so the temperature continues to rise. The coordination centre cannot detect stimuli itself — it relies entirely on receptors."}
+]);
+
+// ── s10i-04-2 — The Nervous System & Reflexes: 10 new questions ─────────────
+QUESTIONS["s10i-04-2"] = (QUESTIONS["s10i-04-2"] || []).concat([
+  {q:"What is an effector in the nervous system?",
+   opts:["A cell that detects stimuli","A chemical that crosses a synapse","The junction between two neurones","A muscle or gland that carries out a response"], c:3,
+   e:"Effectors are muscles, which respond by contracting, or glands, which respond by secreting substances. Cells that detect stimuli are receptors — the opposite end of the pathway."},
+  {q:"Where in the body are relay neurones found?",
+   opts:["In the skin","In muscles","Within the central nervous system","Inside the bloodstream"], c:2,
+   e:"Relay neurones are located within the CNS (for reflexes, usually the spinal cord) where they pass impulses from sensory neurones to motor neurones. They are not found in the skin — that is where receptors and the endings of sensory neurones are."},
+  {q:"Why can a nerve impulse cross a synapse in one direction only?",
+   opts:["Neurotransmitter is released from one side only, and only the next neurone has the receptors for it","Electrical impulses can only jump one way","The synaptic gap is too wide for impulses to return","Relay neurones block impulses travelling backwards"], c:0,
+   e:"Only the first (pre-synaptic) neurone releases neurotransmitter, and only the membrane of the second neurone carries the matching receptor molecules — so transmission is one-way by design. No electrical impulse jumps the gap at all; the signal crosses chemically."},
+  {q:"Which of these is a reflex action?",
+   opts:["Catching a ball thrown to you","Writing your name","Your pupil constricting when a bright light shines in your eye","Choosing to stand up from a chair"], c:2,
+   e:"Pupil constriction is rapid and automatic — it happens without any conscious decision, which is the defining feature of a reflex. Catching a ball feels fast but involves the brain consciously tracking the ball and deciding to move, so it is a voluntary response."},
+  {q:"A synapse makes the transmission of a signal slightly slower than along a neurone. Why?",
+   opts:["The impulse must wait for the neurone to recharge","Chemical neurotransmitters take time to be released and diffuse across the gap","The impulse travels backwards first","Synapses convert the impulse into a hormone"], c:1,
+   e:"At a synapse the fast electrical impulse stops and the signal continues only after neurotransmitter is released and diffuses across the gap — diffusion of chemicals is slower than electrical conduction. Synapses do not produce hormones; neurotransmitters act locally, not in the blood."},
+  {q:"A person treads on a sharp object and their leg lifts before they feel pain. Why do they feel the pain slightly afterwards?",
+   opts:["Pain receptors take minutes to respond","The motor neurone carries the pain sensation","Pain is only felt once the muscle relaxes again","The reflex is coordinated by the spinal cord, while conscious awareness requires impulses to reach the brain, which takes longer"], c:3,
+   e:"The reflex arc runs through the spinal cord, so the leg moves before the brain is involved; impulses also travel up to the brain, but conscious processing happens after the reflex is complete. The motor neurone carries instructions to the muscle — it does not carry pain sensation."},
+  {q:"In the ruler-drop reaction time practical, a student catches the ruler at 10 cm, 12 cm and 14 cm. What is the mean catch distance?",
+   opts:["36 cm","10 cm","12 cm","14 cm"], c:2,
+   e:"Mean = (10 + 12 + 14) divided by 3 = 36 divided by 3 = 12 cm. Choosing 36 cm is the classic slip of adding the values but forgetting to divide by the number of repeats."},
+  {q:"In the reaction time practical, a student's mean catch distance falls from 15 cm to 9 cm after drinking a caffeinated drink. What does this suggest?",
+   opts:["Caffeine shortened the student's reaction time, since the ruler fell a smaller distance before being caught","Caffeine slowed the student's reaction time","Caffeine had no measurable effect","The ruler was dropped from a lower height"], c:0,
+   e:"A smaller catch distance means the ruler fell for less time before being caught, so the reaction was faster — caffeine is a stimulant. Be careful with the direction: shorter distance means a SHORTER (better) reaction time, not a slower one."},
+  {q:"In the ruler-drop practical, which variable must be kept the same to make a fair comparison between two conditions?",
+   opts:["The distance the ruler falls before being caught","The starting position of the catching hand relative to the 0 cm mark","The reaction time of the person catching","The time of day the experiment is reported"], c:1,
+   e:"The hand must start in the same place (level with 0 cm, not touching the ruler) every trial, otherwise the measured distance is meaningless. The fall distance and the reaction time cannot be controlled — they are the results being measured."},
+  {q:"Why do students repeat the ruler-drop test several times and calculate a mean, rather than taking a single reading?",
+   opts:["To reduce the effect of random variation and make anomalous results easier to spot","To change more than one variable at once","Because the first attempt never counts","To make the reaction time longer"], c:0,
+   e:"Reaction time naturally varies from trial to trial, so repeating and averaging gives a more representative value and lets obvious anomalies be identified and excluded. Repetition does not exist to discard the first attempt — every valid reading contributes to the mean."}
+]);
+
+// ── s10i-04-3 — The Eye & Brain: 10 new questions ───────────────────────────
+QUESTIONS["s10i-04-3"] = (QUESTIONS["s10i-04-3"] || []).concat([
+  {q:"Which structure carries out most of the refraction (bending) of light entering the eye?",
+   opts:["The cornea","The lens","The pupil","The retina"], c:0,
+   e:"The curved, transparent cornea does most of the bending of incoming light; the lens then makes the fine adjustments needed to focus the image precisely on the retina. The lens is the common wrong answer — it fine-tunes the focus rather than doing most of the work."},
+  {q:"What is the difference between rod cells and cone cells in the retina?",
+   opts:["Rods detect colour; cones work in dim light","Rods are found in the iris; cones are in the lens","Rods detect sound; cones detect light","Rods work well in dim light; cones detect colour"], c:3,
+   e:"Rods are very sensitive and allow vision in low light but only in shades of grey, while cones detect colour and need brighter light. The reverse pairing is the classic mix-up — remember Cones for Colour."},
+  {q:"What happens to the pupil when a person moves into a dimly lit room?",
+   opts:["It constricts to protect the retina","It dilates so that more light reaches the retina","It stays exactly the same size","It changes colour"], c:1,
+   e:"In dim light the iris widens the pupil (dilation) so enough light reaches the retina to form an image. Constriction is the response to BRIGHT light, where the retina needs protecting from excess light."},
+  {q:"Which region of the brain controls unconscious activities such as heart rate and breathing?",
+   opts:["The cerebral cortex","The cerebellum","The medulla","The retina"], c:2,
+   e:"The medulla, in the brain stem, controls vital unconscious processes like heartbeat and breathing. The cerebellum is tempting but its role is the coordination of movement and balance, not life-support functions."},
+  {q:"A person develops long-sightedness as the lens of their eye stiffens with age. Why do they struggle to read a book held close?",
+   opts:["The lens can no longer become thick enough, so light from near objects is focused behind the retina","The lens becomes too thick, focusing light in front of the retina","The pupil becomes too small to let light in","The optic nerve weakens with age"], c:0,
+   e:"A stiff lens cannot spring into the thick, curved shape needed to strongly refract light from near objects, so the focus point falls behind the retina and close objects blur — corrected with a convex lens. Light focused IN FRONT of the retina describes short-sightedness, the opposite defect."},
+  {q:"What is the function of the suspensory ligaments?",
+   opts:["To detect light entering the eye","To carry impulses to the brain","To connect the ciliary muscles to the lens and transmit their pull, altering lens shape","To produce tears"], c:2,
+   e:"The suspensory ligaments link the ring of ciliary muscle to the lens: when the muscle relaxes the ligaments are pulled taut and flatten the lens, and when it contracts they slacken so the lens thickens. They do not detect light — that is the job of receptor cells in the retina."},
+  {q:"A diagram shows light rays from a distant object meeting in front of the retina. Which defect is this, and what could cause it?",
+   opts:["Long-sightedness, caused by an eyeball that is too short","Colour blindness, caused by missing cone cells","Long-sightedness, caused by a lens that is too thin","Short-sightedness, caused by an eyeball that is too long or a lens that is too curved"], c:3,
+   e:"Rays converging before they reach the retina means the eye refracts light too strongly or is too long — the definition of short-sightedness (myopia), corrected with a concave lens. In long-sightedness the rays would meet BEHIND the retina, not in front."},
+  {q:"An MRI scan shows that a particular brain region becomes very active when a volunteer speaks. What can scientists reasonably conclude?",
+   opts:["That region is the only part of the brain involved in all behaviour","That region is involved in producing speech","The volunteer has brain damage","MRI scans measure intelligence directly"], c:1,
+   e:"Increased activity during a specific task is evidence that the region is involved in that function — this is how scientists map the brain without surgery. It does not prove the region acts alone; complex functions usually involve several regions working together."},
+  {q:"After an accident, a patient has normal intelligence and senses but jerky, poorly coordinated movements and trouble balancing. Which brain region was most likely damaged?",
+   opts:["The cerebral cortex","The medulla","The cerebellum","The optic nerve"], c:2,
+   e:"The cerebellum coordinates movement and balance, so damage there produces clumsy, uncoordinated motion while intelligence and consciousness (cerebral cortex) remain intact. Damage to the medulla would be far more serious, disrupting heart rate and breathing."},
+  {q:"Why might a surgeon decide not to remove a small tumour deep inside a patient's brain?",
+   opts:["Brain tumours always disappear on their own","Reaching the tumour could damage surrounding healthy tissue with vital functions","The skull cannot be opened safely under any circumstances","Tumours cannot be detected deep in the brain"], c:1,
+   e:"The brain is delicate and densely packed with regions controlling vital functions, so cutting through healthy tissue to reach a deep tumour risks causing severe permanent harm — sometimes a greater risk than the tumour itself. Modern scanning can detect deep tumours easily; the difficulty is treating them safely."}
+]);
+
+// ── s10i-04-4 — The Kidneys & Water Balance: 10 new questions ───────────────
+QUESTIONS["s10i-04-4"] = (QUESTIONS["s10i-04-4"] || []).concat([
+  {q:"A urine test shows protein in a patient's urine. Why is this a sign of kidney damage?",
+   opts:["Protein molecules are normally too large to pass through the filter, so their presence suggests the filter is damaged","Protein is normally added to urine by healthy kidneys","Protein in urine shows the patient has eaten too much sugar","All urine naturally contains large amounts of protein"], c:0,
+   e:"In a healthy kidney, large molecules such as proteins stay in the blood during filtration because they cannot pass through the filtering membrane. Protein leaking into urine therefore suggests the filter itself is damaged — unlike glucose in urine, which usually points to diabetes."},
+  {q:"Which water loss from the body can be regulated?",
+   opts:["Water lost from the lungs when breathing out","Water lost from the skin as sweat","Water lost from the kidneys as urine","All water losses are equally controllable"], c:2,
+   e:"Only the kidneys can adjust how much water leaves the body, by varying the volume and concentration of urine. Losses via the lungs and sweat cannot be controlled for water balance — sweating is driven by temperature regulation, so the kidneys must compensate for it."},
+  {q:"Which gland releases ADH into the blood?",
+   opts:["The pancreas","The pituitary gland","The thyroid gland","The adrenal gland"], c:1,
+   e:"ADH is released by the pituitary gland when the blood becomes too concentrated, telling the kidneys to reabsorb more water. The pancreas is the tempting wrong answer, but its hormones (insulin and glucagon) control blood glucose, not water."},
+  {q:"A person drinks a large volume of water. What happens to their ADH level and urine?",
+   opts:["More ADH is released; urine becomes small in volume and concentrated","More ADH is released; a large volume of dilute urine is produced","ADH has no effect on urine volume","Less ADH is released; a large volume of dilute urine is produced"], c:3,
+   e:"Dilute blood causes the pituitary to release LESS ADH, so the kidneys reabsorb less water and the excess leaves the body as a large volume of dilute urine. Remember ADH is anti-diuretic: more ADH always means less urine, so option three contradicts itself."},
+  {q:"Why is ammonia converted to urea in the liver rather than being excreted directly?",
+   opts:["Ammonia is highly toxic, so it is immediately converted to the safer compound urea for transport to the kidneys","Ammonia is too useful to excrete","Ammonia is too large to pass through the kidney filter","Urea provides the body with energy"], c:0,
+   e:"Ammonia produced by deamination of excess amino acids is very toxic, so the liver converts it straight into urea, which is much less harmful and can travel safely in the blood to the kidneys. Urea is a waste product — it is not used by the body for energy."},
+  {q:"Why is it important that the kidneys control the ion concentration of the blood?",
+   opts:["Ions are the body's main energy source","Wrong ion levels alter how water moves into and out of cells by osmosis, which can damage them","Ions are needed to make urea","Ions keep urine sterile"], c:1,
+   e:"Ion concentration affects the osmotic balance between cells and the blood: if it is wrong, too much water may enter or leave cells, stopping them working properly. Energy comes from glucose, not ions — that distractor confuses two different blood components the body regulates."},
+  {q:"On a hot day an athlete produces 300 cm3 of dark, concentrated urine; on a cool day they produce 1500 cm3 of pale urine. Explain the difference.",
+   opts:["On the hot day the kidneys stopped working","On the hot day less ADH was released","Urine volume is not related to sweating","On the hot day heavy sweating concentrated the blood, so more ADH was released and more water was reabsorbed, leaving less, more concentrated urine"], c:3,
+   e:"Sweating on the hot day removed water from the blood, making it more concentrated; receptors detected this and more ADH was released, so the kidneys reabsorbed extra water and produced a small volume of concentrated urine. The kidneys were working harder, not failing — and a fall in ADH would have produced MORE urine, not less."},
+  {q:"During dialysis, why is the dialysis fluid continually refreshed rather than left to circulate?",
+   opts:["To keep the fluid warm","To add urea to the blood","To maintain a steep concentration gradient so urea keeps diffusing out of the blood","Because the fluid evaporates quickly"], c:2,
+   e:"As urea diffuses into the dialysis fluid, its concentration there rises and the gradient flattens, slowing diffusion. Replacing the fluid keeps the urea concentration outside the membrane near zero, so removal stays fast — the same principle as maintaining gradients in any exchange system."},
+  {q:"A kidney filters about 180 litres of fluid from the blood each day, but only about 1.5 litres of urine are produced. Approximately what percentage of the filtered fluid is reabsorbed?",
+   opts:["About 1%","About 50%","About 99%","About 180%"], c:2,
+   e:"Reabsorbed volume = 180 minus 1.5 = 178.5 litres; (178.5 divided by 180) multiplied by 100 gives roughly 99%. Choosing about 1% reverses the calculation — that is the small fraction lost as urine, not the fraction reabsorbed."},
+  {q:"A patient must choose between continuing dialysis (three 4-hour hospital sessions a week) and having a transplant. Which statement best supports choosing the transplant?",
+   opts:["A transplant never carries any medical risk","A working transplant frees the patient from regular sessions and dietary limits, though immunosuppressant drugs are needed","Dialysis machines remove glucose from the blood, which is dangerous","Transplanted kidneys only last a few days"], c:1,
+   e:"A successful transplant works continuously like a natural kidney, removing the need for time-consuming sessions and strict diet control — at the cost of surgery risk and lifelong immunosuppressants to prevent rejection. The claim that a transplant carries no risk is false, which is exactly why this is a genuine evaluation rather than an obvious choice."}
+]);

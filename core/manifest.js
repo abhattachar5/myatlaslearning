@@ -18,6 +18,7 @@ var MANIFEST = (function () {
   function nFiles(base, a, b) { var o = []; for (var i = a; i <= b; i++) o.push(base + i + '.js'); return o; }
   function pad2(n) { return (n < 10 ? '0' : '') + n; }
   function tFiles(base, a, b, extra) { var o = []; for (var i = a; i <= b; i++) o.push(base + 't' + pad2(i) + '.js'); return o.concat(extra || []); }
+  function xFiles(base, a, b) { var o = []; for (var i = a; i <= b; i++) o.push(base + 'x' + pad2(i) + '.js'); return o; }   // expansion banks — load AFTER the matching tNN.js
 
   var engine   = ['engine/test-generator.js'];                                // test-only (declares TEST_GENERATORS)
   var diagrams = ['diagrams/science.js', 'diagrams/math.js', 'diagrams/geography.js', 'diagrams/y7-math.js', 'diagrams/y9-math.js', 'diagrams/y10-math.js', 'diagrams/y11-math.js'];
@@ -115,14 +116,17 @@ var MANIFEST = (function () {
       history: {
         topics:  'content/y10/history/topics.js',
         islands: tFiles('content/y10/history/islands/', 1, 8)       // t01–t08
+                   .concat(xFiles('content/y10/history/islands/', 1, 8))     // x01–x08 expansion banks
       },
       geography: {
         topics:  'content/y10/geography/topics.js',
         islands: tFiles('content/y10/geography/islands/', 1, 8)     // t01–t08
+                   .concat(xFiles('content/y10/geography/islands/', 1, 8))   // x01–x08 expansion banks
       },
       science: {
         topics:  'content/y10/science/topics.js',
         islands: tFiles('content/y10/science/islands/', 1, 16)      // t01–t16 (t15 Transition Metals, t16 Optics & Lenses)
+                   .concat(xFiles('content/y10/science/islands/', 1, 16))   // x01–x16 expansion banks
       },
       english: {
         topics:  'content/y10/english/topics.js',
@@ -130,7 +134,12 @@ var MANIFEST = (function () {
                   'content/y10/english/islands/t03.js','content/y10/english/islands/t05.js',
                   'content/y10/english/islands/t06.js','content/y10/english/islands/t07.js',
                   'content/y10/english/islands/t08.js','content/y10/english/islands/t09.js',
-                  'content/y10/english/islands/t10.js'],
+                  'content/y10/english/islands/t10.js',
+                  'content/y10/english/islands/x01.js','content/y10/english/islands/x02.js',
+                  'content/y10/english/islands/x03.js','content/y10/english/islands/x05.js',
+                  'content/y10/english/islands/x06.js','content/y10/english/islands/x07.js',
+                  'content/y10/english/islands/x08.js','content/y10/english/islands/x09.js',
+                  'content/y10/english/islands/x10.js'],
         writing: ['content/y10/english/writing.js']
       },
       comprehension: { passages: nFiles('content/y10/comprehension/passages/', 1, 15) },  // e10t-04 (passages-only): 8 fiction + 7 paired Paper-2
@@ -139,6 +148,8 @@ var MANIFEST = (function () {
         islands:    tFiles('content/y10/math/islands/', 1, 14),      // t01–t14
         generators: ['content/y10/math/generators/gen-1.js',
                      'content/y10/math/generators/gen-2.js',
+                     'content/y10/math/generators/gen-3.js',
+                     'content/y10/math/generators/gen-4.js',
                      'content/y10/math/generators/gen-5.js',
                      'content/y10/math/generators/gen-6.js',
                      'content/y10/math/generators/gen-7.js',
@@ -154,15 +165,20 @@ var MANIFEST = (function () {
     y11: {
       history: {
         topics:  'content/y11/history/topics.js',
-        islands: tFiles('content/y11/history/islands/', 1, 7)       // t01–t07
+        islands: tFiles('content/y11/history/islands/', 1, 7)       // t01–t07 (t03 = de-duplicated stub)
+                   .concat(['content/y11/history/islands/x01.js','content/y11/history/islands/x02.js',
+                            'content/y11/history/islands/x04.js','content/y11/history/islands/x05.js',
+                            'content/y11/history/islands/x06.js','content/y11/history/islands/x07.js'])  // x-banks (no x03: stub topic)
       },
       geography: {
         topics:  'content/y11/geography/topics.js',
         islands: tFiles('content/y11/geography/islands/', 1, 7)     // t01–t07
+                   .concat(xFiles('content/y11/geography/islands/', 1, 7))   // x01–x07 expansion banks
       },
       science: {
         topics:  'content/y11/science/topics.js',
         islands: tFiles('content/y11/science/islands/', 1, 14)      // t01–t14
+                   .concat(xFiles('content/y11/science/islands/', 1, 14))   // x01–x14 expansion banks
       },
       english: {
         topics:  'content/y11/english/topics.js',
@@ -170,20 +186,32 @@ var MANIFEST = (function () {
                   'content/y11/english/islands/t05.js','content/y11/english/islands/t06.js',
                   'content/y11/english/islands/t07.js','content/y11/english/islands/t08.js',
                   'content/y11/english/islands/t09.js','content/y11/english/islands/t10.js',
-                  'content/y11/english/islands/t11.js'],
+                  'content/y11/english/islands/t11.js',
+                  'content/y11/english/islands/x01.js','content/y11/english/islands/x02.js',
+                  'content/y11/english/islands/x05.js','content/y11/english/islands/x06.js',
+                  'content/y11/english/islands/x07.js','content/y11/english/islands/x08.js',
+                  'content/y11/english/islands/x09.js','content/y11/english/islands/x10.js',
+                  'content/y11/english/islands/x11.js'],
         writing: ['content/y11/english/writing.js']
       },
       comprehension: { passages: nFiles('content/y11/comprehension/passages/', 1, 15) },  // e11t-04 (passages-only): 8 fiction + 7 paired Paper-2
       math: {
         topics:     'content/y11/math/topics.js',
         islands:    tFiles('content/y11/math/islands/', 1, 14),      // t01–t14
-        generators: ['content/y11/math/generators/gen-5.js',
+        generators: ['content/y11/math/generators/gen-1.js',
+                     'content/y11/math/generators/gen-2.js',
+                     'content/y11/math/generators/gen-3.js',
+                     'content/y11/math/generators/gen-4.js',
+                     'content/y11/math/generators/gen-5.js',
                      'content/y11/math/generators/gen-6.js',
+                     'content/y11/math/generators/gen-7.js',
                      'content/y11/math/generators/gen-8.js',
                      'content/y11/math/generators/gen-9.js',
+                     'content/y11/math/generators/gen-10.js',
                      'content/y11/math/generators/gen-11.js',
                      'content/y11/math/generators/gen-12.js',
-                     'content/y11/math/generators/gen-13.js']
+                     'content/y11/math/generators/gen-13.js',
+                     'content/y11/math/generators/gen-14.js']
       }
     }
   };
