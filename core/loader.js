@@ -40,7 +40,13 @@
     var frag = document.createDocumentFragment();
     list.forEach(function (src) {
       var s = document.createElement('script');
-      s.src = base + src; s.async = false; s.onload = tick; s.onerror = tick;
+      s.src = base + src; s.async = false; s.onload = tick;
+      // DEF-013: a failed load must not be counted as a silent success — log the
+      // offending file, then still tick() so the loader doesn't hang on it.
+      s.onerror = function () {
+        if (typeof console !== 'undefined' && console.error) console.error('Atlas loader: failed to load ' + this.src);
+        tick();
+      };
       frag.appendChild(s);
     });
     document.head.appendChild(frag);

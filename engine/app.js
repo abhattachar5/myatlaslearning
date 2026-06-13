@@ -398,8 +398,11 @@ function getIslandStatus(islandId) {
 
   if (quizPassed && allCardsLearned && p.lessonViewed) return 4; // Mastered
   if (allCardsLearned && p.lessonViewed) return 3;              // Proficient
-  if (p.lessonViewed) return 1;                                 // Explored
+  // DEF-012: check flashcards (Learning = 2) BEFORE lesson-only (Explored = 1)
+  // so the scale is monotonic — starting flashcards never reports a lower status
+  // than only viewing the lesson.
   if (p.flashcardsLearned.length > 0) return 2;                // Learning
+  if (p.lessonViewed) return 1;                                // Explored
   return 0;                                                     // Not Started
 }
 
