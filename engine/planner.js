@@ -76,6 +76,19 @@
       });
     }
 
+    // DEF-007: a prerequisite cycle leaves some islands with inDeg > 0 forever,
+    // so Kahn's algorithm drops them. Append any unsorted islands at the end as a
+    // safe fallback (and warn) rather than silently losing them from the plan.
+    if (sorted.length < islands.length) {
+      var inSorted = {};
+      sorted.forEach(function (id) { inSorted[id] = true; });
+      var dropped = 0;
+      islands.forEach(function (i) { if (!inSorted[i.id]) { sorted.push(i.id); dropped++; } });
+      if (typeof console !== 'undefined' && console.warn) {
+        console.warn('topoSortIslands: prerequisite cycle detected; ' + dropped + ' island(s) appended unsorted.');
+      }
+    }
+
     var idMap = {};
     islands.forEach(function (i) { idMap[i.id] = i; });
     return sorted.map(function (id) { return idMap[id]; }).filter(Boolean);

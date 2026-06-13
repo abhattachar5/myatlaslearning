@@ -24,8 +24,13 @@ function getIdentityUser() {
   return typeof netlifyIdentity !== 'undefined' ? netlifyIdentity.currentUser() : null;
 }
 function getUser() {
-  return JSON.parse(localStorage.getItem('sm_active_profile') || 'null');
+  // DEF-001: tolerate corrupt profile JSON — return null (→ redirect to login)
+  // and drop the bad key rather than letting a SyntaxError blank the page.
+  try { return JSON.parse(localStorage.getItem('sm_active_profile') || 'null'); }
+  catch (e) { localStorage.removeItem('sm_active_profile'); return null; }
 }
+// Safe localStorage JSON read: returns the fallback on missing/corrupt data.
+function _safeLS(key, fb) { try { var v = localStorage.getItem(key); return v == null ? fb : JSON.parse(v); } catch (e) { return fb; } }
 function setUser(user) {
   localStorage.setItem('sm_active_profile', JSON.stringify(user));
 }
@@ -110,7 +115,7 @@ function buildSyncPayload() {
     parentPin: profile.parentPin || '',
     assignments: assignments,
     activeDays: getActiveDays(),
-    studyPlan: JSON.parse(localStorage.getItem('sm_study_plan') || 'null')
+    studyPlan: _safeLS('sm_study_plan', null)   // DEF-002
   };
 }
 
@@ -172,8 +177,8 @@ async function loadProgressFromServer() {
 }
 
 async function migrateLocalProgress() {
-  var oldUser = JSON.parse(localStorage.getItem('sm_user') || 'null');
-  var oldProgress = JSON.parse(localStorage.getItem('sm_progress') || 'null');
+  var oldUser = _safeLS('sm_user', null);          // DEF-009
+  var oldProgress = _safeLS('sm_progress', null);  // DEF-009
   if (!oldUser && !oldProgress) return null;
 
   var payload = {
@@ -209,7 +214,7 @@ async function migrateLocalProgress() {
 
 // ── Progress ──────────────────────────────────────────────────────────────────
 function getAllProgress() {
-  return JSON.parse(localStorage.getItem('sm_progress') || '{}');
+  return _safeLS('sm_progress', {});   // DEF-009 (same corrupt-JSON risk)
 }
 function saveAllProgress(progress) {
   localStorage.setItem('sm_progress', JSON.stringify(progress));
@@ -359,17 +364,21 @@ function calcIslandProgress(islandId) {
   // Step 1 — Lesson viewed (33 pts, binary)
   if (p.lessonViewed) score += 33;
 
-  // Step 2 — Flashcards (33 pts, proportional to cards marked learned)
-  if (cards.length > 0) {
+  // Step 2 — Flashcards (33 pts, proportional). DEF-006: an island with no
+  // flashcards has nothing to learn here, so award the points automatically.
+  if (cards.length === 0) {
+    score += 33;
+  } else {
     var learned = cards.filter(function(c) {
       return p.flashcardsLearned.includes(c.id);
     }).length;
     score += Math.round((learned / cards.length) * 33);
   }
 
-  // Step 3 — Quiz passed: ≥ 70% correct (34 pts, binary)
+  // Step 3 — Quiz passed: ≥ 70% correct (34 pts). DEF-006: an island with no
+  // questions has no quiz to pass, so award the points automatically.
   var passMark = qs.length > 0 ? Math.ceil(qs.length * 0.7) : 0;
-  if (qs.length > 0 && p.quizBestScore >= passMark) score += 34;
+  if (qs.length === 0 || p.quizBestScore >= passMark) score += 34;
 
   return Math.min(100, score);
 }
@@ -381,9 +390,11 @@ function getIslandStatus(islandId) {
   const qs = typeof QUESTIONS !== 'undefined'
     ? (QUESTIONS[islandId] || []) : [];
 
-  const allCardsLearned = cards.length > 0 &&
+  // DEF-006: treat an empty dimension as auto-satisfied (nothing to do there),
+  // so lesson-only / no-flashcard islands can still reach Mastered.
+  const allCardsLearned = cards.length === 0 ||
     cards.every(c => p.flashcardsLearned.includes(c.id));
-  const quizPassed = qs.length > 0 && p.quizBestScore >= Math.ceil(qs.length * 0.7);
+  const quizPassed = qs.length === 0 || p.quizBestScore >= Math.ceil(qs.length * 0.7);
 
   if (quizPassed && allCardsLearned && p.lessonViewed) return 4; // Mastered
   if (allCardsLearned && p.lessonViewed) return 3;              // Proficient

@@ -143,8 +143,8 @@ Object.assign(LESSONS, {
 </div>
 <div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Convert MCMLXXXIV to a number:</strong><br>
-  M=1000, CM=900, L=50, XXX=30, IV=4<br>
-  1000 + 900 + 50 + 30 + 4 = <strong>1984</strong>
+  M=1000, CM=900, LXXX=80, IV=4<br>
+  1000 + 900 + 80 + 4 = <strong>1984</strong>
 </div>`,
 
 // ── mi-01-4: Add & Subtract Whole Numbers ────────────────────────────────────

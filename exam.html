@@ -267,6 +267,7 @@
     if (isLiveMock && pickSubject) assignment = buildLiveMock(pickSubject);
 
     var questions = [], answers = [], cur = 0, total = 0;
+    var _examSubmitted = false;   // DEF-008: guard against double submission (button + timer race)
     var timeLeft = 0, timerId = null, startedAt = 0;
 
     // Init runs at the END of this script (see bottom) so all vars/functions are defined first.
@@ -322,6 +323,7 @@
       enTimeLeft--;
     }
     function submitEnglish() {
+      if (_examSubmitted) return; _examSubmitted = true;   // DEF-008
       if (enTimerId) { clearInterval(enTimerId); enTimerId = null; }
       var btn = document.getElementById('en-submit'); btn.disabled = true;
       document.getElementById('en-marking').style.display = '';
@@ -466,6 +468,7 @@
     }
 
     function finish() {
+      if (_examSubmitted) return; _examSubmitted = true;   // DEF-008
       if (timerId) { clearInterval(timerId); timerId = null; }
       var correct = 0;
       var byTopic = {};
@@ -619,6 +622,7 @@
       _mcqTick(); _mcqTimer = setInterval(_mcqTick, 1000);
     }
     function submitMcqComp() {
+      if (_examSubmitted) return; _examSubmitted = true;   // DEF-008
       if (_mcqTimer) { clearInterval(_mcqTimer); _mcqTimer = null; }
       var correct = 0;
       _mcqQs.forEach(function (q, i) { if (_mcqAns[i] === q.c) correct++; });
