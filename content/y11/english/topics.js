@@ -219,7 +219,12 @@ CURRICULUM.push(
    topicId:"e11t-10", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
    description:"Memorise and deploy essential quotations grouped by idea, ready for the closed-book Literature exam.",
    learningOutcomes:["Memorise key quotations by idea","Attribute each line to the right character","Embed and analyse quotations precisely"],
-   topics:["Quotations by idea","Speaker & purpose","Embedding evidence"], prerequisites:["e11i-10-2","e11i-10-4"]}
+   topics:["Quotations by idea","Speaker & purpose","Embedding evidence"], prerequisites:["e11i-10-2","e11i-10-4"]},
+  {id:"e11i-10-7", name:"Answering the Modern-Text Essay", emoji:"✍️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-10", yearGroup:"Year 11", difficulty:3, estimatedHours:3,
+   description:"Exam skill: the modern-text essay (no extract). Build a thesis, range across the whole play, analyse Priestley's methods (AO2) and weave context (AO3) — then practise on AI-marked essay questions.",
+   learningOutcomes:["Build a thesis-led, whole-text argument","Analyse Priestley's dramatic methods (AO2)","Weave context and structure the essay under time"],
+   topics:["Whole-text argument","Method analysis (AO2)","Essay structure & timing"], prerequisites:["e11i-10-2","e11i-10-4"]}
 );
 
 // ── Topic 11: Power & Conflict Anthology — AQA set text (e11t-11) ────────────
@@ -253,5 +258,10 @@ CURRICULUM.push(
    topicId:"e11t-11", yearGroup:"Year 11", difficulty:3, estimatedHours:2,
    description:"Master the anthology comparison question — reliable pairings, planning by idea, and a key quotations bank.",
    learningOutcomes:["Plan a comparison by idea","Choose apt poem pairings quickly","Deploy key quotations across the cluster"],
-   topics:["Comparison method","Reliable pairings","Quotations bank"], prerequisites:["e11i-11-1","e11i-11-2","e11i-11-3","e11i-11-4","e11i-11-5"]}
+   topics:["Comparison method","Reliable pairings","Quotations bank"], prerequisites:["e11i-11-1","e11i-11-2","e11i-11-3","e11i-11-4","e11i-11-5"]},
+  {id:"e11i-11-7", name:"Comparing Poems in the Exam", emoji:"✍️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e11t-11", yearGroup:"Year 11", difficulty:3, estimatedHours:3,
+   description:"Exam skill: the anthology comparison essay. Plan around a shared idea, analyse and compare each poet's methods (AO2), sustain a comparative argument with discourse markers, and weave context (AO3) — then practise on AI-marked comparison questions.",
+   learningOutcomes:["Plan a comparison around a shared idea","Analyse and compare poets' methods (AO2)","Sustain a comparative argument with apt quotations"],
+   topics:["Comparison essay method","Comparing methods (AO2)","Comparative argument"], prerequisites:["e11i-11-6"]}
 );

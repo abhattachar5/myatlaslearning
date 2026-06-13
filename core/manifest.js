@@ -141,7 +141,9 @@ var MANIFEST = (function () {
                   'content/y10/english/islands/x08.js','content/y10/english/islands/x09.js',
                   'content/y10/english/islands/x10.js',
                   'content/y10/english/islands/m09-characters.js',   // Macbeth: Witches + Banquo/Macduff islands
-                  'content/y10/english/islands/m09-skills.js'],      // Macbeth: exam-technique island
+                  'content/y10/english/islands/m09-skills.js',       // Macbeth: exam-technique island
+                  'content/y10/english/islands/m10-spirits.js',      // A Christmas Carol: Marley & the Three Spirits
+                  'content/y10/english/islands/m10-skills.js'],      // A Christmas Carol: exam-technique island
         writing: ['content/y10/english/writing.js']
       },
       comprehension: { passages: nFiles('content/y10/comprehension/passages/', 1, 15) },  // e10t-04 (passages-only): 8 fiction + 7 paired Paper-2
@@ -193,7 +195,9 @@ var MANIFEST = (function () {
                   'content/y11/english/islands/x05.js','content/y11/english/islands/x06.js',
                   'content/y11/english/islands/x07.js','content/y11/english/islands/x08.js',
                   'content/y11/english/islands/x09.js','content/y11/english/islands/x10.js',
-                  'content/y11/english/islands/x11.js'],
+                  'content/y11/english/islands/x11.js',
+                  'content/y11/english/islands/m11-aic-skills.js',   // An Inspector Calls: exam-technique island
+                  'content/y11/english/islands/m11-pc-skills.js'],   // Power & Conflict: comparison-essay island
         writing: ['content/y11/english/writing.js']
       },
       comprehension: { passages: nFiles('content/y11/comprehension/passages/', 1, 15) },  // e11t-04 (passages-only): 8 fiction + 7 paired Paper-2

@@ -279,5 +279,15 @@ CURRICULUM.push(
    topicId:"e10t-10", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
    description:"Memorise and deploy essential quotations grouped by idea, ready for the closed-book Literature exam.",
    learningOutcomes:["Memorise key quotations by idea","Know speaker and context for each","Embed and analyse quotations precisely"],
-   topics:["Quotations by idea","Speaker & context","Embedding evidence"], prerequisites:["e10i-10-2","e10i-10-4"]}
+   topics:["Quotations by idea","Speaker & context","Embedding evidence"], prerequisites:["e10i-10-2","e10i-10-4"]},
+  {id:"e10i-10-7", name:"Marley & the Three Spirits", emoji:"👻", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-10", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Analyse Marley's warning and the three Ghosts (Past, Present and Future) as Dickens's agents of Scrooge's transformation, and what each symbolises.",
+   learningOutcomes:["Analyse each spirit's role and symbolism","Explain how the Ghosts drive Scrooge's change","Use the supernatural as evidence of Dickens's message"],
+   topics:["Marley's Ghost","The Three Spirits","Symbolism & redemption"], prerequisites:["e10i-10-1"]},
+  {id:"e10i-10-8", name:"Answering the Novel Question", emoji:"✍️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-10", yearGroup:"Year 10", difficulty:3, estimatedHours:3,
+   description:"Exam skill: the 19th-century novel question. Read the printed extract, analyse Dickens's methods (AO2), weave context (AO3), and write a thesis-led extract-to-whole-novel essay — then practise on AI-marked extract questions.",
+   learningOutcomes:["Plan a thesis-led answer to the extract question","Analyse Dickens's methods and link extract to whole novel","Embed quotations and weave context for AO2/AO3"],
+   topics:["Reading the extract","Method analysis (AO2)","Extract → whole novel"], prerequisites:["e10i-10-2","e10i-10-4"]}
 );
