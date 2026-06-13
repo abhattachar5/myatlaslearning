@@ -22,9 +22,8 @@ html { font-size: 16px; }                 /* give the marketing scale a touch mo
 /* Nav */
 .nav { position: sticky; top: 0; z-index: 100; background: rgba(251,251,254,.82); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
 .nav-inner { display: flex; align-items: center; gap: 24px; height: 72px; }
-.brand { display: flex; align-items: center; gap: 9px; }
-.brand .brand-mark { height: 32px; width: auto; }
-.brand .brand-word { height: 17px; width: auto; }
+.brand { display: flex; align-items: center; }
+.brand .brand-logo { height: 34px; width: auto; display: block; }
 .nav-links { display: flex; align-items: center; gap: 28px; margin-left: 18px; }
 .nav-links a { font-size: .96rem; font-weight: 600; color: var(--text-2); }
 .nav-links a:hover { color: var(--text); }
@@ -147,11 +146,11 @@ html { font-size: 16px; }                 /* give the marketing scale a touch mo
 .welcome-atlas-text { font-family: var(--font-display); font-weight: 800; color: var(--brand); font-style: normal; }
 
 /* Footer */
-.footer { background: var(--text); color: #b7b9c6; padding: 48px 0 36px; }
-.footer-top { display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-.footer .brand-word-text { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: #fff; }
-.footer .subs { display: flex; flex-wrap: wrap; gap: 8px 18px; font-weight: 600; font-size: .92rem; }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 22px; font-size: .84rem; line-height: 1.7; }
+.footer { background: var(--surface2); color: var(--text-muted); padding: 44px 0 36px; border-top: 1px solid var(--border); }
+.footer-top { display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+.footer .brand-logo { height: 38px; width: auto; display: block; }
+.footer .subs { display: flex; flex-wrap: wrap; gap: 8px 18px; font-weight: 600; font-size: .92rem; color: var(--text-2); }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; font-size: .84rem; line-height: 1.7; }
 
 /* Reveal animation — gated behind .js so content is visible with no JS */
 .js [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
@@ -177,8 +176,7 @@ html { font-size: 16px; }                 /* give the marketing scale a touch mo
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top" aria-label="Atlas home">
-      <img class="brand-mark" src="atlas-logo.png" alt="">
-      <img class="brand-word" src="atlas-text.png" alt="Atlas">
+      <img class="brand-logo" src="atlas-wordmark.png" alt="Atlas">
     </a>
     <nav class="nav-links" data-nav-links>
       <a href="#how">How it works</a>
@@ -456,8 +454,7 @@ html { font-size: 16px; }                 /* give the marketing scale a touch mo
     <div class="wrap">
       <div class="footer-top">
         <a class="brand" href="#top" aria-label="Atlas home">
-          <img class="brand-mark" src="atlas-logo.png" alt="">
-          <span class="brand-word-text">Atlas</span>
+          <img class="brand-logo" src="atlas-wordmark.png" alt="Atlas">
         </a>
         <div class="subs">
           <span>Maths</span><span>English</span><span>Science</span><span>History</span><span>Geography</span>
