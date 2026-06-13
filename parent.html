@@ -561,20 +561,36 @@
           + '<span class="gs-name">' + s.label + '</span></div>'
           + '<div class="gs-empty">Not enough yet — a topic test or mock will place ' + s.label + ' on the scale.</div></div>';
       }
-      var scale = Atlas.gradeScale(s.id);
-      var grade = Atlas.gradeNumber(pct, year, s.id);
-      var label = Atlas.gradeBand(pct, year, s.id);
-      var note = Atlas.gradeNote(year, s.id);
-      var idx = scale.indexOf(grade);
-      var segs = scale.map(function (g) {
-        var cls = (g === grade) ? ' cur' : (idx > -1 && g < grade ? ' on' : '');
-        return '<div class="gs-seg' + cls + '">' + g + '</div>';
-      }).join('');
-      var marker = (idx > -1) ? '<span class="gs-marker" style="left:' + ((idx + 0.5) / scale.length * 100).toFixed(1) + '%">▲</span>' : '';
+      var isGcse = Atlas.isGcseYear(year);
+      var label, note, idx, scaleLen, segs, ks3 = false;
+      if (isGcse) {
+        var scale = Atlas.gradeScale(s.id);
+        var grade = Atlas.gradeNumber(pct, year, s.id);
+        label = Atlas.gradeBand(pct, year, s.id);
+        note = Atlas.gradeNote(year, s.id);
+        idx = scale.indexOf(grade);
+        scaleLen = scale.length;
+        segs = scale.map(function (g) {
+          var cls = (g === grade) ? ' cur' : (idx > -1 && g < grade ? ' on' : '');
+          return '<div class="gs-seg' + cls + '">' + g + '</div>';
+        }).join('');
+      } else {
+        ks3 = true;
+        var bands = Atlas.ks3Scale();
+        idx = Atlas.ks3Index(pct);
+        label = bands[idx];
+        note = 'Key Stage 3 working standard';
+        scaleLen = bands.length;
+        segs = bands.map(function (b, i) {
+          var cls = (i === idx) ? ' cur' : (i < idx ? ' on' : '');
+          return '<div class="gs-seg' + cls + '">' + b + '</div>';
+        }).join('');
+      }
+      var marker = (idx > -1) ? '<span class="gs-marker" style="left:' + ((idx + 0.5) / scaleLen * 100).toFixed(1) + '%">▲</span>' : '';
       return '<div class="gs-card">'
         + '<div class="gs-head"><span class="gs-emoji">' + s.emoji + '</span><span class="gs-name">' + s.label + '</span>'
-        + '<span class="gs-grade' + (idx > -1 ? '' : ' gs-below') + '">' + label + '</span></div>'
-        + '<div class="gs-scalewrap">' + marker + '<div class="gs-scale">' + segs + '</div></div>'
+        + '<span class="gs-grade' + (idx > -1 ? '' : ' gs-below') + (ks3 ? ' gs-ks3grade' : '') + '">' + label + '</span></div>'
+        + '<div class="gs-scalewrap">' + marker + '<div class="gs-scale' + (ks3 ? ' gs-scale-ks3' : '') + '">' + segs + '</div></div>'
         + '<div class="gs-note">' + note + ' · ' + basis + '</div>'
         + '</div>';
     }
@@ -584,13 +600,11 @@
       var prof = getUser() || {};
       var year = prof.year || 'Year 7';
       var name = prof.name || 'Your child';
-      var head = '<div class="lbl" style="margin-bottom:4px">📊 Indicative GCSE standing</div>';
-
-      if (!Atlas.isGcseYear(year)) {
-        host.innerHTML = '<div class="card">' + head
-          + '<p class="muted" style="margin:0">Indicative GCSE grades appear from Year 10. ' + name + '\'s Year 7–9 work builds the foundations.</p></div>';
-        return;
-      }
+      var isGcse = Atlas.isGcseYear(year);
+      var head = '<div class="lbl" style="margin-bottom:4px">📊 ' + (isGcse ? 'Indicative GCSE standing' : 'Working standard (Key Stage 3)') + '</div>';
+      var sub = isGcse
+        ? 'Where ' + name + ' currently sits on the GCSE 9–1 scale, from their Atlas tests and mocks. Indicative only — not an official grade.'
+        : 'Where ' + name + ' currently sits on the Key Stage 3 working-standard scale, from their Atlas tests — building towards GCSE. Indicative only.';
       var subjects = [
         { id: 'math', label: 'Mathematics', emoji: '📐' },
         { id: 'english', label: 'English', emoji: '📖' },
@@ -600,7 +614,7 @@
       ];
       var cards = subjects.map(function (s) { return _gsCard(s, year); }).join('');
       host.innerHTML = '<div class="card">' + head
-        + '<p class="muted" style="margin:0 0 14px">Where ' + name + ' currently sits on the GCSE 9–1 scale, from their Atlas tests and mocks. Indicative only — not an official grade.</p>'
+        + '<p class="muted" style="margin:0 0 14px">' + sub + '</p>'
         + '<div class="gcse-standing-grid">' + cards + '</div></div>';
     }
 

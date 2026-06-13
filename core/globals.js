@@ -129,6 +129,9 @@ var Atlas = (function () {
     }
     return [1, 2, 3, 4, 5, 6, 7, 8, 9];
   }
+  // Key Stage 3 (Years 7–9) working-standard scale — used before GCSE grades apply.
+  function ks3Scale() { return ['Emerging', 'Developing', 'Secure', 'Greater Depth']; }
+  function ks3Index(pct) { return pct >= 80 ? 3 : pct >= 60 ? 2 : pct >= 40 ? 1 : 0; }
   function gradeNote(year, subjectId) {
     year = _gradeYear(year);
     if (!isGcseYear(year)) return '';
@@ -172,6 +175,8 @@ var Atlas = (function () {
     gradeBand: gradeBand,
     gradeNumber: gradeNumber,
     gradeScale: gradeScale,
+    ks3Scale: ks3Scale,
+    ks3Index: ks3Index,
     gradeNote: gradeNote,
     subjectOfTopic: subjectOfTopic,
 
