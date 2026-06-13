@@ -2403,15 +2403,8 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   font-size: .75rem;
 }
 
-/* ── GCSE standing (indicative 9–1 scale placement) ────────────────────────── */
-.gcse-standing-head { display: flex; align-items: center; gap: 10px; margin: 4px 0 4px; }
-.gcse-standing-head h2 { font-size: 1.15rem; }
-.gcse-standing-head .gs-tag { font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em;
-  color: var(--amber); background: var(--amber-soft); padding: 2px 9px; border-radius: 999px; }
-.gcse-standing-sub { font-size: .8rem; color: var(--text-muted); margin: 0 0 16px; line-height: 1.5; max-width: 640px; }
-.gcse-standing-empty { font-size: .875rem; color: var(--text-2); background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 16px; margin-bottom: 8px; }
-.gcse-standing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; margin-bottom: 8px; }
+/* ── GCSE standing (indicative 9–1 scale placement; Parent Zone) ────────────── */
+.gcse-standing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 4px; }
 .gs-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
 .gs-head { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
 .gs-emoji { font-size: 1.15rem; }

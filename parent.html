@@ -218,6 +218,7 @@
       <!-- Performance -->
       <div class="pz-panel" id="panel-perf">
         <div id="perf-activedays"></div>
+        <div id="perf-gcse"></div>
         <div class="pz-subj" id="perf-subjects"></div>
         <div class="muted" id="perf-overall" style="margin-bottom:18px"></div>
         <div id="perf-revisit"></div>
@@ -460,6 +461,7 @@
 
     function renderPerformance() {
       renderActiveDays();
+      renderGcseStanding();
       if (!window.StudyPlanner || !StudyPlanner.getTopicProgress) return;
       var tp = StudyPlanner.getTopicProgress();
       var C = StudyPlanner.SUBJECT_COLORS, host = document.getElementById('perf-subjects');
@@ -508,6 +510,98 @@
         '<div class="lbl" style="margin:0">🎯 Areas to revisit</div>' +
         (list.length ? '<button class="btn btn-primary" style="margin-left:auto;padding:8px 14px" onclick="openPracticeBuilder()">Assign practice →</button>' : '') +
         '</div>' + rows + '</div>';
+    }
+
+    // ── Indicative GCSE standing (SAT-style 9–1 scale placement, per subject) ───
+    // Parent-facing. Blended signal: most recent mock for a subject if present,
+    // else the average of best topic-test scores. Mapped via the shared Atlas
+    // grade helpers (same bands as the mock-exam results). Indicative only.
+    function _gsRecentMockPct(subjectId) {
+      var best = null;
+      try {
+        var mr = (JSON.parse(localStorage.getItem('sm_mock_results') || '{}')[subjectId]) || [];
+        mr.forEach(function (r) { var t = r.takenAt || ''; if (!best || t > best.t) best = { pct: r.percent, t: t }; });
+      } catch (e) {}
+      try {
+        var as = JSON.parse(localStorage.getItem('sm_assignments') || '[]');
+        as.forEach(function (a) {
+          if (a && a.type === 'exam' && a.subjectId === subjectId && a.status === 'done' && a.result && a.result.percent != null) {
+            var t = (a.result.takenAt) || ''; if (!best || t > best.t) best = { pct: a.result.percent, t: t };
+          }
+        });
+      } catch (e) {}
+      return best ? best.pct : null;
+    }
+    function _gsTopicBest(topicId) {
+      try {
+        var arr = (JSON.parse(localStorage.getItem('sm_test_results') || '{}')[topicId]) || [];
+        var best = null;
+        arr.forEach(function (r) {
+          var p = (r.pct != null) ? r.pct : (r.total ? Math.round(r.score / r.total * 100) : null);
+          if (p != null && (best == null || p > best)) best = p;
+        });
+        return best;
+      } catch (e) { return null; }
+    }
+    function _gsTopicAvg(subjectId, year) {
+      var topics = Atlas.yearTopics(subjectId, year) || [];
+      var vals = [];
+      topics.forEach(function (t) { var b = _gsTopicBest(t.id); if (b != null) vals.push(b); });
+      if (!vals.length) return null;
+      return { pct: Math.round(vals.reduce(function (a, b) { return a + b; }, 0) / vals.length), count: vals.length };
+    }
+    function _gsCard(s, year) {
+      var pct, basis, isMock = false, count = 0;
+      var mock = _gsRecentMockPct(s.id);
+      if (mock != null) { pct = mock; isMock = true; basis = 'latest mock'; }
+      else { var tt = _gsTopicAvg(s.id, year); if (tt) { pct = tt.pct; count = tt.count; basis = count + ' topic test' + (count === 1 ? '' : 's'); } }
+
+      if (!(isMock || count >= 2)) {
+        return '<div class="gs-card"><div class="gs-head"><span class="gs-emoji">' + s.emoji + '</span>'
+          + '<span class="gs-name">' + s.label + '</span></div>'
+          + '<div class="gs-empty">Not enough yet — a topic test or mock will place ' + s.label + ' on the scale.</div></div>';
+      }
+      var scale = Atlas.gradeScale(s.id);
+      var grade = Atlas.gradeNumber(pct, year, s.id);
+      var label = Atlas.gradeBand(pct, year, s.id);
+      var note = Atlas.gradeNote(year, s.id);
+      var idx = scale.indexOf(grade);
+      var segs = scale.map(function (g) {
+        var cls = (g === grade) ? ' cur' : (idx > -1 && g < grade ? ' on' : '');
+        return '<div class="gs-seg' + cls + '">' + g + '</div>';
+      }).join('');
+      var marker = (idx > -1) ? '<span class="gs-marker" style="left:' + ((idx + 0.5) / scale.length * 100).toFixed(1) + '%">▲</span>' : '';
+      return '<div class="gs-card">'
+        + '<div class="gs-head"><span class="gs-emoji">' + s.emoji + '</span><span class="gs-name">' + s.label + '</span>'
+        + '<span class="gs-grade' + (idx > -1 ? '' : ' gs-below') + '">' + label + '</span></div>'
+        + '<div class="gs-scalewrap">' + marker + '<div class="gs-scale">' + segs + '</div></div>'
+        + '<div class="gs-note">' + note + ' · ' + basis + '</div>'
+        + '</div>';
+    }
+    function renderGcseStanding() {
+      var host = document.getElementById('perf-gcse');
+      if (!host || typeof Atlas === 'undefined' || !Atlas.gradeScale) return;
+      var prof = getUser() || {};
+      var year = prof.year || 'Year 7';
+      var name = prof.name || 'Your child';
+      var head = '<div class="lbl" style="margin-bottom:4px">📊 Indicative GCSE standing</div>';
+
+      if (!Atlas.isGcseYear(year)) {
+        host.innerHTML = '<div class="card">' + head
+          + '<p class="muted" style="margin:0">Indicative GCSE grades appear from Year 10. ' + name + '\'s Year 7–9 work builds the foundations.</p></div>';
+        return;
+      }
+      var subjects = [
+        { id: 'math', label: 'Mathematics', emoji: '📐' },
+        { id: 'english', label: 'English', emoji: '📖' },
+        { id: 'science', label: 'Science', emoji: '🧪' },
+        { id: 'history', label: 'History', emoji: '📜' },
+        { id: 'geography', label: 'Geography', emoji: '🌍' }
+      ];
+      var cards = subjects.map(function (s) { return _gsCard(s, year); }).join('');
+      host.innerHTML = '<div class="card">' + head
+        + '<p class="muted" style="margin:0 0 14px">Where ' + name + ' currently sits on the GCSE 9–1 scale, from their Atlas tests and mocks. Indicative only — not an official grade.</p>'
+        + '<div class="gcse-standing-grid">' + cards + '</div></div>';
     }
 
     function renderRoadAhead() {
