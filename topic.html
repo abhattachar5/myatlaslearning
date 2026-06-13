@@ -300,15 +300,34 @@ function goToWritingTest() {
 })();
 
 function updateTestLock() {
-  // TEMP: lock check disabled for testing
   var btn = document.getElementById('test-cta-btn');
   var desc = document.getElementById('test-cta-desc');
   var box = document.getElementById('test-cta-box');
-  btn.disabled = false;
-  btn.style.opacity = '';
-  btn.style.cursor = '';
-  desc.textContent = 'Test yourself across all subtopics — fresh questions every time.';
-  box.style.opacity = '';
+  // Gating is opt-in via CONFIG.enforcePrerequisites (default off). When on, the
+  // topic test locks until every accessible subtopic is completed (Proficient+).
+  var locked = false;
+  if (typeof CONFIG !== 'undefined' && CONFIG.enforcePrerequisites) {
+    var islands = (typeof CURRICULUM !== 'undefined')
+      ? CURRICULUM.filter(function (i) { return i.topicId === topicId; }) : [];
+    locked = islands.some(function (i) {
+      // A Higher-only island a Foundation student can't reach shouldn't block them.
+      if (typeof Atlas !== 'undefined' && Atlas.tierAllows && !Atlas.tierAllows(i)) return false;
+      return getIslandStatus(i.id) < 3;
+    });
+  }
+  if (locked) {
+    btn.disabled = true;
+    btn.style.opacity = '.5';
+    btn.style.cursor = 'not-allowed';
+    desc.textContent = 'Complete all the subtopics above to unlock the topic test.';
+    box.style.opacity = '.7';
+  } else {
+    btn.disabled = false;
+    btn.style.opacity = '';
+    btn.style.cursor = '';
+    desc.textContent = 'Test yourself across all subtopics — fresh questions every time.';
+    box.style.opacity = '';
+  }
 }
 
 function showLockedMsg(id) {

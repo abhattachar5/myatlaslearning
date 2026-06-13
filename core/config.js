@@ -5,6 +5,12 @@ var CONFIG = {
   active:   ['y7', 'y8', 'y9', 'y10', 'y11'],   // all five years live (every subject); Y7 loads first so Y8 reuse resolves
   subjects: ['math', 'english', 'science', 'history', 'geography', 'comprehension'],
 
+  // Prerequisite gating (DEF-004/005). When true, an island stays locked until
+  // its prerequisites are completed (Proficient or better) and a topic test stays
+  // locked until every subtopic in the topic is done. Default OFF — free
+  // navigation, the current behaviour. Flip to true to enforce ordered study.
+  enforcePrerequisites: false,
+
   // Human-friendly labels
   yearLabel:    { y7: 'Year 7', y8: 'Year 8', y9: 'Year 9', y10: 'Year 10', y11: 'Year 11' },
   subjectLabel: { math: 'Mathematics', english: 'English', science: 'Science',

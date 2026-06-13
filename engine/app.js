@@ -404,7 +404,15 @@ function getIslandStatus(islandId) {
 }
 
 function isIslandUnlocked(island, allProgress) {
-  return true; // TEMP: prerequisites check disabled for testing
+  // Prerequisite gating is opt-in via CONFIG.enforcePrerequisites (default off,
+  // i.e. everything unlocked). When on, an island unlocks only once every
+  // prerequisite is Proficient (status >= 3) or better.
+  if (typeof CONFIG === 'undefined' || !CONFIG.enforcePrerequisites) return true;
+  var prereqs = (island && island.prerequisites) || [];
+  for (var i = 0; i < prereqs.length; i++) {
+    if (getIslandStatus(prereqs[i]) < 3) return false;
+  }
+  return true;
 }
 
 // ── Progress Ring SVG ─────────────────────────────────────────────────────────
