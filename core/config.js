@@ -11,6 +11,13 @@ var CONFIG = {
   // navigation, the current behaviour. Flip to true to enforce ordered study.
   enforcePrerequisites: false,
 
+  // Adaptive topic tests. When true, the test setup screen offers an "Adaptive
+  // difficulty" toggle: questions are served on the fly, escalating to greater-
+  // depth items after a correct streak and easing back after a wrong streak,
+  // instead of a fixed pre-generated paper. Foundation-tier students are capped
+  // at the medium band. Default ON (the toggle still defaults off per-test).
+  adaptiveTests: true,
+
   // Human-friendly labels
   yearLabel:    { y7: 'Year 7', y8: 'Year 8', y9: 'Year 9', y10: 'Year 10', y11: 'Year 11' },
   subjectLabel: { math: 'Mathematics', english: 'English', science: 'Science',

@@ -146,6 +146,16 @@
           <input type="range" id="time-slider" min="5" max="60" step="5" value="30" oninput="updateTimeDisplay()">
           <span class="time-display" id="time-display">30 min</span>
         </div>
+        <div class="timer-toggle" id="adaptive-row" style="display:none;margin-top:14px">
+          <label for="adaptive-toggle">Adaptive difficulty</label>
+          <div class="toggle-switch">
+            <input type="checkbox" id="adaptive-toggle">
+            <span class="toggle-slider"></span>
+          </div>
+        </div>
+        <p id="adaptive-help" style="display:none;font-size:.8125rem;color:var(--text-muted);margin-top:8px;line-height:1.5">
+          Questions get harder after a correct streak and ease off after a couple of mistakes — so the test meets your child where they are. Foundation tier stays at the standard level.
+        </p>
       </div>
 
       <button class="btn btn-primary" style="font-size:1rem;padding:14px 32px" onclick="startTest()">Start Test</button>
@@ -154,7 +164,10 @@
     <!-- TEST IN PROGRESS -->
     <div id="test-active" style="display:none">
       <div class="test-header">
-        <div class="test-progress-text" id="test-progress-text">Question 1 of 20</div>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <div class="test-progress-text" id="test-progress-text">Question 1 of 20</div>
+          <span id="adaptive-band-cue" style="display:none;font-size:.7rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px"></span>
+        </div>
         <div class="test-timer" id="test-timer" style="display:none">
           <span>⏱</span> <span id="timer-value">30:00</span>
         </div>
@@ -190,6 +203,7 @@
 <script src="core/loader.js"></script>
 <script src="engine/auth-shim.js"></script>
 <script src="engine/app.js"></script>
+<script src="engine/adaptive.js"></script>
 <script>
 // ── Init ──────────────────────────────────────────────────────────────────
 let user = requireAuth();
@@ -287,17 +301,51 @@ let timerInterval = null;
 let timeRemaining = 0;
 let isTimed = false;
 
+// Adaptive mode state
+let isAdaptive = false;
+let aState = null;
+let adaptiveTarget = 0;
+let adaptiveGraded = [];
+
+// Reveal the adaptive toggle when the feature is enabled.
+if (typeof CONFIG !== 'undefined' && CONFIG.adaptiveTests && window.AtlasAdaptive) {
+  var _ar = document.getElementById('adaptive-row'); if (_ar) _ar.style.display = '';
+  var _ah = document.getElementById('adaptive-help'); if (_ah) _ah.style.display = '';
+}
+
 function startTest() {
   isTimed = document.getElementById('timed-toggle').checked;
   var timeMins = parseInt(document.getElementById('time-slider').value);
+  var _adaptToggle = document.getElementById('adaptive-toggle');
+  isAdaptive = !!(_adaptToggle && _adaptToggle.checked && typeof CONFIG !== 'undefined' && CONFIG.adaptiveTests && window.AtlasAdaptive);
+  var _islands = isCheckpoint ? checkpointIslands : topicIslands;
 
-  testQuestions = generateTopicTest(topicId, isCheckpoint ? checkpointIslands : topicIslands, examOpts);
-  if (!testQuestions.length) {
-    alert('No test questions are available for this topic yet.');
-    window.location.href = 'topic.html?id=' + topicId;
-    return;
+  if (isAdaptive) {
+    var pools = AtlasAdaptive.buildPools(_islands, examOpts);
+    var poolTotal = pools.med.length + pools.gd.length;
+    if (!poolTotal) {
+      alert('No test questions are available for this topic yet.');
+      window.location.href = 'topic.html?id=' + topicId;
+      return;
+    }
+    // Foundation cap applies only to tiered subjects (maths/science).
+    var _tieredSubject = (subjectId === 'math' || subjectId === 'science');
+    var _tier = (typeof Atlas !== 'undefined' && Atlas.getExamTier) ? Atlas.getExamTier() : 'higher';
+    adaptiveTarget = Math.min(_qShown, poolTotal);
+    aState = AtlasAdaptive.createState(pools, { tier: _tieredSubject ? _tier : 'higher', target: adaptiveTarget });
+    var first = AtlasAdaptive.next(aState);
+    testQuestions = first ? [first] : [];
+    answers = [-1];
+    adaptiveGraded = [];
+  } else {
+    testQuestions = generateTopicTest(topicId, _islands, examOpts);
+    if (!testQuestions.length) {
+      alert('No test questions are available for this topic yet.');
+      window.location.href = 'topic.html?id=' + topicId;
+      return;
+    }
+    answers = new Array(testQuestions.length).fill(-1);
   }
-  answers = new Array(testQuestions.length).fill(-1);
   currentQ = 0;
 
   document.getElementById('test-setup').style.display = 'none';
@@ -338,7 +386,7 @@ function updateTimerDisplay() {
 
 function renderQuestion() {
   var q = testQuestions[currentQ];
-  var total = testQuestions.length;
+  var total = isAdaptive ? adaptiveTarget : testQuestions.length;
   document.getElementById('test-progress-text').textContent = 'Question ' + (currentQ + 1) + ' of ' + total;
   document.getElementById('test-bar').style.width = ((currentQ + 1) / total * 100) + '%';
 
@@ -362,11 +410,34 @@ function renderQuestion() {
   document.getElementById('question-area').innerHTML = html;
 
   // Nav buttons
-  document.getElementById('prev-btn').style.visibility = currentQ === 0 ? 'hidden' : 'visible';
-  document.getElementById('next-btn').textContent = currentQ === total - 1 ? 'Review' : 'Next →';
-  document.getElementById('submit-btn').style.display = currentQ === total - 1 ? '' : 'none';
+  if (isAdaptive) {
+    var atLast = testQuestions.length >= adaptiveTarget && currentQ === testQuestions.length - 1;
+    document.getElementById('prev-btn').style.visibility = 'hidden';   // forward-only in adaptive mode
+    document.getElementById('next-btn').style.display = atLast ? 'none' : '';
+    document.getElementById('next-btn').textContent = 'Next →';
+    document.getElementById('submit-btn').style.display = atLast ? '' : 'none';
+  } else {
+    document.getElementById('prev-btn').style.visibility = currentQ === 0 ? 'hidden' : 'visible';
+    document.getElementById('next-btn').style.display = '';
+    document.getElementById('next-btn').textContent = currentQ === total - 1 ? 'Review' : 'Next →';
+    document.getElementById('submit-btn').style.display = currentQ === total - 1 ? '' : 'none';
+  }
 
   updateNavDots();
+  updateBandCue();
+}
+
+// Live difficulty indicator (adaptive mode only).
+function updateBandCue() {
+  var cue = document.getElementById('adaptive-band-cue');
+  if (!cue) return;
+  if (!isAdaptive) { cue.style.display = 'none'; return; }
+  var q = testQuestions[currentQ];
+  var gd = q && q.depth === 'greater-depth';
+  cue.style.display = '';
+  cue.textContent = gd ? '⬆ Greater depth' : 'Standard level';
+  cue.style.background = gd ? '#f3e8ff' : 'var(--surface2)';
+  cue.style.color = gd ? '#7c3aed' : 'var(--text-muted)';
 }
 
 function selectAnswer(idx) {
@@ -387,6 +458,22 @@ function selectAnswer(idx) {
 }
 
 function nextQuestion() {
+  if (isAdaptive) {
+    // Grade the question we're leaving (once) and let it steer the difficulty.
+    if (adaptiveGraded.indexOf(currentQ) === -1) {
+      adaptiveGraded.push(currentQ);
+      AtlasAdaptive.record(aState, AtlasAdaptive.grade(testQuestions[currentQ], answers[currentQ]));
+    }
+    if (testQuestions.length >= adaptiveTarget) { renderQuestion(); return; }  // reached the end
+    var nq = AtlasAdaptive.next(aState);
+    if (!nq) { adaptiveTarget = testQuestions.length; renderQuestion(); return; }  // pools exhausted early
+    testQuestions.push(nq);
+    answers.push(-1);
+    currentQ++;
+    renderNavDots();
+    renderQuestion();
+    return;
+  }
   if (currentQ < testQuestions.length - 1) {
     currentQ++;
     renderQuestion();
@@ -401,9 +488,15 @@ function prevQuestion() {
 }
 
 function renderNavDots() {
+  var n = isAdaptive ? adaptiveTarget : testQuestions.length;
   var html = '';
-  for (var i = 0; i < testQuestions.length; i++) {
-    html += '<button class="test-nav-dot" onclick="goToQuestion(' + i + ')" title="Question ' + (i + 1) + '" aria-label="Go to question ' + (i + 1) + '"></button>';
+  for (var i = 0; i < n; i++) {
+    if (isAdaptive) {
+      // Forward-only: dots are progress indicators, not jump targets.
+      html += '<span class="test-nav-dot" title="Question ' + (i + 1) + '" aria-hidden="true"></span>';
+    } else {
+      html += '<button class="test-nav-dot" onclick="goToQuestion(' + i + ')" title="Question ' + (i + 1) + '" aria-label="Go to question ' + (i + 1) + '"></button>';
+    }
   }
   document.getElementById('nav-dots').innerHTML = html;
 }
@@ -411,7 +504,9 @@ function renderNavDots() {
 function updateNavDots() {
   var dots = document.querySelectorAll('.test-nav-dot');
   for (var i = 0; i < dots.length; i++) {
-    dots[i].classList.toggle('answered', Array.isArray(answers[i]) ? answers[i].length > 0 : answers[i] !== -1);
+    var served = i < testQuestions.length;
+    var ans = served && (Array.isArray(answers[i]) ? answers[i].length > 0 : (answers[i] != null && answers[i] !== -1));
+    dots[i].classList.toggle('answered', !!ans);
     dots[i].classList.toggle('current', i === currentQ);
     if (i === currentQ) dots[i].setAttribute('aria-current', 'true'); else dots[i].removeAttribute('aria-current');   // UX-A11y-017
   }
@@ -543,6 +638,7 @@ function submitTest() {
   html += '<div class="results-score' + scoreClass + '">' + pct + '%</div>';
   html += '<div style="font-weight:700;font-size:1.05rem;margin:-2px 0 6px;color:var(--text)">' + bandLabel + '</div>';
   html += '<p style="color:var(--text-2);margin-bottom:8px">' + correct + ' out of ' + testQuestions.length + ' correct</p>';
+  if (isAdaptive) html += '<p style="color:var(--text-muted);font-size:.8125rem;margin-bottom:8px">⚙ Adaptive test — difficulty adjusted to your answers' + (aState && aState.peakBand === 'greater-depth' ? ', reaching greater-depth questions' : '') + '.</p>';
 
   var medPct = medTotal > 0 ? Math.round((medCorrect / medTotal) * 100) : 0;
   var gdPct = gdTotal > 0 ? Math.round((gdCorrect / gdTotal) * 100) : 0;
