@@ -495,9 +495,20 @@
         return { topicId: tid, name: t.name, pct: t.total ? Math.round(t.correct / t.total * 100) : 0 };
       });
 
-      // Persist only for a real assigned exam; a live (self-serve) mock has no assignment.
+      // Persist the result. Assigned exams update the assignment; self-serve
+      // (live) mocks record a lightweight per-subject result so the dashboard
+      // "GCSE standing" card can blend in the most recent mock.
       if (aid && typeof updateAssignment === 'function') {
         updateAssignment(aid, { status: 'done', result: { percent: pct, correct: correct, total: total, timeUsedSec: timeUsed, gradeBand: grade, perTopic: perTopic, takenAt: new Date().toISOString() } });
+      } else if (assignment && assignment.subjectId) {
+        try {
+          var _mr = JSON.parse(localStorage.getItem('sm_mock_results') || '{}');
+          if (!_mr[assignment.subjectId]) _mr[assignment.subjectId] = [];
+          _mr[assignment.subjectId].push({ percent: pct, gradeBand: grade, takenAt: new Date().toISOString() });
+          if (_mr[assignment.subjectId].length > 10) _mr[assignment.subjectId] = _mr[assignment.subjectId].slice(-10);
+          localStorage.setItem('sm_mock_results', JSON.stringify(_mr));
+          if (typeof syncProgressToServer === 'function') syncProgressToServer();
+        } catch (e) {}
       }
       var xp = Math.round(pct / 2);
       if (typeof addXP === 'function') addXP(xp, 'Mock exam');

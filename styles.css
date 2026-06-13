@@ -2403,6 +2403,32 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   font-size: .75rem;
 }
 
+/* ── GCSE standing (indicative 9–1 scale placement) ────────────────────────── */
+.gcse-standing-head { display: flex; align-items: center; gap: 10px; margin: 4px 0 4px; }
+.gcse-standing-head h2 { font-size: 1.15rem; }
+.gcse-standing-head .gs-tag { font-size: .62rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--amber); background: var(--amber-soft); padding: 2px 9px; border-radius: 999px; }
+.gcse-standing-sub { font-size: .8rem; color: var(--text-muted); margin: 0 0 16px; line-height: 1.5; max-width: 640px; }
+.gcse-standing-empty { font-size: .875rem; color: var(--text-2); background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px; margin-bottom: 8px; }
+.gcse-standing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; margin-bottom: 8px; }
+.gs-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+.gs-head { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.gs-emoji { font-size: 1.15rem; }
+.gs-name { font-weight: 700; font-size: .95rem; }
+.gs-grade { margin-left: auto; font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; color: var(--blue); }
+.gs-grade.gs-below { font-family: var(--font); font-weight: 700; font-size: .8rem; color: var(--text-muted); }
+.gs-scalewrap { position: relative; padding-top: 16px; }
+.gs-scale { display: flex; gap: 3px; }
+.gs-seg { flex: 1; height: 28px; display: grid; place-items: center; font-size: .8rem; font-weight: 700;
+  background: var(--surface2); color: var(--text-muted); border-radius: 6px; }
+.gs-seg.on { background: var(--brand-soft); color: var(--brand-strong); }
+.gs-seg.cur { background: var(--blue); color: #fff; box-shadow: 0 4px 12px -4px var(--blue); }
+.gs-marker { position: absolute; top: 0; transform: translateX(-50%); font-size: .62rem; font-weight: 800;
+  color: var(--blue); white-space: nowrap; letter-spacing: .02em; }
+.gs-note { font-size: .7rem; color: var(--text-muted); margin-top: 11px; line-height: 1.45; }
+.gs-empty { font-size: .8125rem; color: var(--text-muted); padding: 6px 0 2px; line-height: 1.5; }
+
 .week-plan-empty {
   padding: 24px;
   text-align: center;

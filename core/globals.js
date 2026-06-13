@@ -91,6 +91,59 @@ var Atlas = (function () {
     return getExamTier() === 'higher' || !isHigherOnly(island);
   }
 
+  // ── GCSE grade banding ──────────────────────────────────────────────────
+  // Shared, indicative %→grade mapping. Mirrors the logic in exam.html so the
+  // dashboard "GCSE standing" card and the mock-exam results use the SAME bands.
+  // Boundaries are indicative (real papers vary); only Year 10/11 yield a 9–1
+  // grade — earlier years return KS3 working-standard descriptors.
+  function _gradeYear(year) { return year || ((typeof getUser === 'function' && getUser() || {}).year) || 'Year 7'; }
+  function isGcseYear(y) { return y === 'Year 10' || y === 'Year 11'; }
+  function gcseTierFor(subjectId) {
+    return (['math', 'science'].indexOf(subjectId) !== -1) ? getExamTier() : 'higher';
+  }
+  function gradeBand(pct, year, subjectId) {
+    year = _gradeYear(year);
+    if (!isGcseYear(year)) {
+      if (pct >= 80) return 'Strong · Greater Depth';
+      if (pct >= 60) return 'Secure · Working at expected standard';
+      if (pct >= 40) return 'Developing';
+      return 'Emerging · needs support';
+    }
+    if (gcseTierFor(subjectId) === 'foundation') {
+      var gf = pct >= 85 ? 5 : pct >= 70 ? 4 : pct >= 55 ? 3 : pct >= 40 ? 2 : pct >= 25 ? 1 : 0;
+      return gf ? 'Grade ' + gf : 'Below Grade 1';
+    }
+    var g = pct >= 88 ? 9 : pct >= 78 ? 8 : pct >= 68 ? 7 : pct >= 58 ? 6 : pct >= 48 ? 5 : pct >= 38 ? 4 : pct >= 28 ? 3 : 0;
+    return g ? 'Grade ' + g : 'Below Grade 3';
+  }
+  // Numeric grade (0 = below the reported scale); null when not a GCSE year.
+  function gradeNumber(pct, year, subjectId) {
+    if (!isGcseYear(_gradeYear(year))) return null;
+    if (gcseTierFor(subjectId) === 'foundation') return pct >= 85 ? 5 : pct >= 70 ? 4 : pct >= 55 ? 3 : pct >= 40 ? 2 : pct >= 25 ? 1 : 0;
+    return pct >= 88 ? 9 : pct >= 78 ? 8 : pct >= 68 ? 7 : pct >= 58 ? 6 : pct >= 48 ? 5 : pct >= 38 ? 4 : pct >= 28 ? 3 : 0;
+  }
+  // The grade numbers that make up the visible scale for a subject/tier.
+  function gradeScale(subjectId) {
+    if (['math', 'science'].indexOf(subjectId) !== -1) {
+      return gcseTierFor(subjectId) === 'foundation' ? [1, 2, 3, 4, 5] : [4, 5, 6, 7, 8, 9];
+    }
+    return [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  }
+  function gradeNote(year, subjectId) {
+    year = _gradeYear(year);
+    if (!isGcseYear(year)) return '';
+    var tiered = (['math', 'science'].indexOf(subjectId) !== -1);
+    if (!tiered) return 'Indicative GCSE grade (grades 1–9)';
+    return 'Indicative GCSE grade · ' + (gcseTierFor(subjectId) === 'foundation' ? 'Foundation tier (1–5)' : 'Higher tier (4–9)');
+  }
+  // Resolve a topic id to its subject (math/english/science/history/geography).
+  function subjectOfTopic(topicId) {
+    var isl = (typeof CURRICULUM !== 'undefined') ? CURRICULUM.filter(function (i) { return i.topicId === topicId; }) : [];
+    if (isl.length && isl[0].subjectId) return isl[0].subjectId;
+    var c = topicId ? topicId.charAt(0) : 'm';
+    return { e: 'english', s: 'science', h: 'history', g: 'geography' }[c] || 'math';
+  }
+
   function register(mod) {
     // mod: { year, subject, topics?, islands?, flashcards?, questions?, lessons?, generators? }
     if (mod.topics) {
@@ -112,6 +165,15 @@ var Atlas = (function () {
     getExamTier: getExamTier,
     setExamTier: setExamTier,
     tierAllows: tierAllows,
+
+    // ── GCSE grade banding (shared with exam.html) ────────────────────────
+    isGcseYear: isGcseYear,
+    gcseTierFor: gcseTierFor,
+    gradeBand: gradeBand,
+    gradeNumber: gradeNumber,
+    gradeScale: gradeScale,
+    gradeNote: gradeNote,
+    subjectOfTopic: subjectOfTopic,
 
     topics: function (year, subject) { return (TOPICS[year] || {})[subject] || []; },
     allTopics: function () { return TOPICS; },
