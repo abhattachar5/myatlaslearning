@@ -1,450 +1,483 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atlas — GCSE Learning</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas — GCSE revision your child will actually do</title>
+<meta name="description" content="Atlas turns the UK curriculum into short daily lessons, flashcards and AI-marked mock exams across Maths, English, Science, History and Geography — Years 7 to GCSE. Free to start, parent-managed, aligned to AQA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className += ' js';</script>
+<style>
+/* ═══ Landing layout — uses shared design tokens from styles.css ═══════════ */
+html { font-size: 16px; }                 /* give the marketing scale a touch more room */
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.eyebrow { font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-strong); }
+.section { padding: 88px 0; }
+.section-head { max-width: 680px; margin: 0 auto 52px; text-align: center; }
+.section-head h2 { font-size: clamp(2rem,3.6vw,2.9rem); margin: 14px 0; }
+.section-head p { color: var(--text-2); font-size: 1.08rem; }
+
+/* Nav */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(251,251,254,.82); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+.nav-inner { display: flex; align-items: center; gap: 24px; height: 72px; }
+.brand { display: flex; align-items: center; gap: 9px; }
+.brand .brand-mark { height: 32px; width: auto; }
+.brand .brand-word { height: 17px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 28px; margin-left: 18px; }
+.nav-links a { font-size: .96rem; font-weight: 600; color: var(--text-2); }
+.nav-links a:hover { color: var(--text); }
+.nav-cta { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+.nav-toggle { display: none; margin-left: auto; background: none; border: none; cursor: pointer; width: 44px; height: 44px; border-radius: 10px; }
+.nav-toggle span { display: block; width: 20px; height: 2px; background: var(--text); margin: 4px auto; border-radius: 2px; }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; top: -30%; right: -10%; width: 60%; height: 120%;
+  background: radial-gradient(closest-side,var(--brand-soft),transparent 70%); z-index: 0; }
+.hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; position: relative; z-index: 1; padding: 64px 0 84px; }
+.hero h1 { font-size: clamp(2.4rem,5vw,3.8rem); line-height: 1.08; margin: 20px 0 26px; }
+.hero .lead { font-size: 1.18rem; color: var(--text-2); max-width: 540px; margin-bottom: 30px; line-height: 1.6; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 22px; }
+.trust-mini { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: .92rem; font-weight: 600; color: var(--text-2); }
+.trust-mini span { display: inline-flex; align-items: center; gap: 7px; }
+.trust-mini .tick { width: 18px; height: 18px; border-radius: 50%; background: var(--ok-soft); color: var(--ok); display: grid; place-items: center; font-size: .7rem; font-weight: 800; }
+.badge-pill { display: inline-flex; align-items: center; gap: 9px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 999px; padding: 7px 16px 7px 8px; font-size: .86rem; font-weight: 600; box-shadow: var(--shadow-sm); color: var(--text-2); }
+.badge-pill b { background: var(--amber-soft); color: var(--amber); border-radius: 999px; padding: 2px 9px; font-size: .78rem; font-weight: 800; }
+
+/* Hero art — layered product cards */
+.hero-art { position: relative; min-height: 440px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+.hero-dash { padding: 20px; position: relative; z-index: 2; }
+.dash-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.dash-head .who { font-weight: 700; font-size: 1rem; font-family: var(--font-display); }
+.dash-head .who small { display: block; font-weight: 500; color: var(--text-muted); font-size: .78rem; font-family: var(--font); }
+.streak { display: inline-flex; align-items: center; gap: 6px; background: var(--amber-soft); color: var(--amber); font-weight: 800; font-size: .84rem; padding: 6px 12px; border-radius: 999px; }
+.subj { display: flex; align-items: center; gap: 13px; padding: 12px; border-radius: 14px; background: var(--surface2); margin-bottom: 10px; }
+.subj:last-child { margin-bottom: 0; }
+.subj .ic { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; font-size: 1.3rem; background: var(--surface); box-shadow: var(--shadow-sm); flex-shrink: 0; }
+.subj .nm { font-weight: 700; font-size: .94rem; }
+.subj .mt { font-size: .76rem; color: var(--text-muted); }
+.ring { width: 48px; height: 48px; border-radius: 50%; margin-left: auto; flex-shrink: 0; display: grid; place-items: center;
+  background: conic-gradient(var(--brand) var(--deg,0deg),var(--surface3) 0); }
+.ring i { width: 36px; height: 36px; border-radius: 50%; background: var(--surface); display: grid; place-items: center; font-style: normal; font-weight: 800; font-size: .72rem; }
+.float-grade { position: absolute; right: -12px; bottom: 14px; z-index: 3; background: var(--surface); border-radius: 16px; padding: 14px 18px;
+  box-shadow: var(--shadow-lg); text-align: center; border: 1px solid var(--border); }
+.float-grade .g { font-family: var(--font-display); font-weight: 800; font-size: 1.9rem; color: var(--ok); line-height: 1; }
+.float-grade small { font-size: .7rem; color: var(--text-muted); font-weight: 600; display: block; margin-top: 2px; }
+.float-xp { position: absolute; left: -16px; bottom: 96px; z-index: 3; background: var(--brand); color: #fff; border-radius: 14px; padding: 11px 15px;
+  box-shadow: var(--shadow-lg); font-weight: 800; font-size: .9rem; display: flex; align-items: center; gap: 8px; }
+
+/* Curriculum strip */
+.strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); }
+.strip-inner { padding: 26px 0; text-align: center; }
+.strip-inner .lbl { font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px 14px; justify-content: center; }
+.chip { font-weight: 700; font-size: .92rem; color: var(--text-2); background: var(--surface2); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; }
+
+/* Steps */
+.steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+.step { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 26px; }
+.step .n { width: 42px; height: 42px; border-radius: 13px; background: var(--brand-soft); color: var(--brand-strong);
+  font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; display: grid; place-items: center; margin-bottom: 18px; }
+.step h3 { font-size: 1.22rem; margin-bottom: 8px; }
+.step p { color: var(--text-2); font-size: .98rem; }
+
+/* Product preview grid */
+.preview-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 22px; }
+.preview-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px; box-shadow: var(--shadow-sm); }
+.preview-card .cap { display: flex; align-items: center; gap: 9px; font-size: .84rem; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--brand-strong); margin-bottom: 18px; }
+.q { font-weight: 700; font-size: 1.05rem; margin-bottom: 14px; font-family: var(--font-display); }
+.opt { display: flex; align-items: center; gap: 11px; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 12px; font-size: .96rem; margin-bottom: 9px; font-weight: 500; }
+.opt .dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--border2); flex-shrink: 0; }
+.opt.ok { border-color: var(--ok); background: var(--ok-soft); font-weight: 700; }
+.opt.ok .dot { border-color: var(--ok); background: var(--ok); }
+.expl { font-size: .9rem; color: var(--text-2); background: var(--ok-soft); border-radius: 12px; padding: 12px 14px; margin-top: 4px; }
+.expl b { color: var(--ok); }
+.grade-big { text-align: center; padding: 14px 0; }
+.grade-big .pill { display: inline-block; background: var(--ok); color: #fff; font-weight: 800; font-size: .8rem; border-radius: 999px; padding: 4px 14px; }
+.grade-big .v { font-family: var(--font-display); font-weight: 800; font-size: 3.2rem; color: var(--ok); line-height: 1; margin: 12px 0 4px; }
+.grade-big .m { font-size: .86rem; color: var(--text-muted); }
+
+/* Flashcard (interactive) */
+.flash { perspective: 1200px; cursor: pointer; outline: none; border-radius: 14px; }
+.flash:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.flash-inner { position: relative; transform-style: preserve-3d; transition: transform .55s cubic-bezier(.4,.1,.2,1); min-height: 148px; }
+.flash.is-flipped .flash-inner { transform: rotateY(180deg); }
+.flash-face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 14px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center; padding: 18px; border: 1.5px solid var(--border); background: var(--surface2); }
+.flash-face .tag { font-size: .7rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+.flash-face .txt { font-weight: 700; font-size: 1.08rem; line-height: 1.35; }
+.flash-back { transform: rotateY(180deg); background: var(--brand); border-color: var(--brand); }
+.flash-back .tag, .flash-back .txt { color: #fff; }
+.flash-hint { text-align: center; font-size: .84rem; color: var(--text-muted); font-weight: 600; margin-top: 12px; }
+
+/* Features */
+.feat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.feat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; }
+.feat .ic { width: 46px; height: 46px; border-radius: 13px; background: var(--brand-soft); display: grid; place-items: center; font-size: 1.4rem; margin-bottom: 16px; }
+.feat h3 { font-size: 1.1rem; margin-bottom: 7px; }
+.feat p { color: var(--text-2); font-size: .95rem; }
+.stats { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin-top: 40px; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 30px; text-align: center; min-width: 150px; }
+.stat .v { font-family: var(--font-display); font-weight: 800; font-size: 2.2rem; color: var(--brand-strong); line-height: 1; }
+.stat .l { font-size: .76rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--text-muted); margin-top: 6px; }
+
+/* Early-access band (in place of paid pricing) */
+.ea { background: var(--surface2); }
+.ea-card { max-width: 460px; margin: 0 auto; background: var(--surface); border: 1.5px solid var(--brand); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow); padding: 34px 30px; text-align: center; }
+.ea-card .ea-amt { font-family: var(--font-display); font-weight: 800; font-size: 3rem; line-height: 1; }
+.ea-card .ea-amt small { font-size: 1rem; font-weight: 600; color: var(--text-muted); }
+.ea-list { list-style: none; padding: 0; margin: 22px 0 26px; display: grid; gap: 11px; text-align: left; }
+.ea-list li { display: flex; gap: 10px; font-size: .96rem; color: var(--text-2); }
+.ea-list li::before { content: "✓"; color: var(--ok); font-weight: 800; flex-shrink: 0; }
+
+/* Final CTA + auth */
+.final { background: linear-gradient(135deg,var(--brand) 0%,var(--brand-strong) 100%); color: #fff; }
+.final .section-head h2 { color: #fff; font-size: clamp(2rem,4vw,3rem); }
+.final .section-head p { color: rgba(255,255,255,.86); }
+.auth-wrap { max-width: 480px; margin: 0 auto; }
+.auth-wrap .auth-form-panel { width: 100%; display: block; padding: 36px 34px; background: var(--surface); color: var(--text);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+.auth-wrap .auth-form-panel h2 { font-size: 1.5rem; }
+.welcome-atlas-text { font-family: var(--font-display); font-weight: 800; color: var(--brand); font-style: normal; }
+
+/* Footer */
+.footer { background: var(--text); color: #b7b9c6; padding: 48px 0 36px; }
+.footer-top { display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.footer .brand-word-text { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: #fff; }
+.footer .subs { display: flex; flex-wrap: wrap; gap: 8px 18px; font-weight: 600; font-size: .92rem; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 22px; font-size: .84rem; line-height: 1.7; }
+
+/* Reveal animation — gated behind .js so content is visible with no JS */
+.js [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+.js [data-reveal].in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js [data-reveal] { opacity: 1; transform: none; transition: none; } .flash-inner { transition: none; } }
+
+@media (max-width: 920px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; padding: 48px 0 64px; }
+  .hero-art { min-height: 380px; max-width: 440px; }
+  .steps, .feat-grid, .preview-grid { grid-template-columns: 1fr; }
+  .nav-links, .nav-cta .btn-secondary { display: none; }
+  .nav-links.open { display: flex; position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; background: var(--surface);
+    border-bottom: 1px solid var(--border); padding: 18px 24px; gap: 16px; margin: 0; }
+  .nav-toggle { display: block; }
+  .feat-grid { gap: 14px; }
+}
+</style>
 </head>
-<body class="auth-page">
+<body data-theme="light">
+<a class="skip-link" href="#signup">Skip to sign up</a>
 
-<a class="skip-link" href="#auth-form-panel">Skip to sign in</a>
-
-<div class="auth-brand">
-  <div class="auth-brand-logo">
-    <img src="atlas-logo.png" alt="Atlas" class="auth-logo-img">
+<!-- ── Nav ─────────────────────────────────────────────────────────────── -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Atlas home">
+      <img class="brand-mark" src="atlas-logo.png" alt="">
+      <img class="brand-word" src="atlas-text.png" alt="Atlas">
+    </a>
+    <nav class="nav-links" data-nav-links>
+      <a href="#how">How it works</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-secondary btn-sm" type="button" onclick="goAuth('login')">Sign in</button>
+      <button class="btn btn-primary btn-sm" type="button" onclick="goAuth('signup')">Start free</button>
+    </div>
+    <button class="nav-toggle" data-nav-toggle aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-  <h1>Your GCSE journey starts here.</h1>
-  <p>Bite-sized lessons, flashcards and quizzes across Maths, English, Science, History and Geography — building confidence from Year 7 to GCSE.</p>
-  <div class="auth-brand-features">
-    <div class="auth-feature">
-      <div class="auth-feature-icon">📚</div>
-      Topics across Maths, English, Science, History & Geography
-    </div>
-    <div class="auth-feature">
-      <div class="auth-feature-icon">🃏</div>
-      Flashcards with instant flip answers
-    </div>
-    <div class="auth-feature">
-      <div class="auth-feature-icon">🤖</div>
-      AI-powered lessons tailored to each year group
-    </div>
-    <div class="auth-feature">
-      <div class="auth-feature-icon">🏆</div>
-      Earn XP and level up as you learn
-    </div>
-  </div>
-</div>
+</header>
 
-<div class="auth-form-panel" id="auth-form-panel">
+<main id="top">
 
-  <!-- ── Sign In / Sign Up tabs ───────────────────────────────────────────── -->
-  <div id="auth-forms-view">
-    <h2>Welcome to <img src="atlas-text.png" alt="ATLAS" class="welcome-atlas-text"></h2>
-    <p id="auth-subtitle">Sign in or create an account to track your learning progress.</p>
-
-    <div class="auth-tab-bar" role="tablist" aria-label="Account access">
-      <button class="auth-tab-btn active" id="tab-login" role="tab" aria-selected="true" aria-controls="form-login" onclick="switchTab('login')">Sign In</button>
-      <button class="auth-tab-btn" id="tab-signup" role="tab" aria-selected="false" aria-controls="form-signup" onclick="switchTab('signup')">Sign Up</button>
-    </div>
-
-    <!-- Sign In form -->
-    <form id="form-login" role="tabpanel" aria-labelledby="tab-login" onsubmit="handleLogin(event)">
-      <div class="form-group">
-        <label class="form-label" for="login-email">Email</label>
-        <input class="form-input" id="login-email" type="email" placeholder="parent@example.com" required autocomplete="email">
+  <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div data-reveal>
+        <span class="badge-pill"><b>NEW</b> AI-marked mock exams for every subject</span>
+        <h1>GCSE revision your child will&nbsp;actually do.</h1>
+        <p class="lead">Atlas turns the UK curriculum into short daily lessons, flashcards and AI-marked mocks — across five subjects, from Year&nbsp;7 to GCSE. You set it up in a minute; they build the habit.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg" type="button" onclick="goAuth('signup')">Start learning free</button>
+          <a class="btn btn-secondary btn-lg" href="#how">See how it works</a>
+        </div>
+        <div class="trust-mini">
+          <span><span class="tick">✓</span> No card needed</span>
+          <span><span class="tick">✓</span> Aligned to AQA</span>
+          <span><span class="tick">✓</span> Parent-managed</span>
+        </div>
       </div>
-      <div class="form-group">
-        <label class="form-label" for="login-password">Password</label>
-        <input class="form-input" id="login-password" type="password" placeholder="Your password" required autocomplete="current-password">
+      <div class="hero-art" data-reveal aria-hidden="true">
+        <div class="card hero-dash">
+          <div class="dash-head">
+            <div class="who">Emma's week<small>Year 11 · Higher</small></div>
+            <span class="streak">🔥 12-day streak</span>
+          </div>
+          <div class="subj"><div class="ic">📐</div><div><div class="nm">Mathematics</div><div class="mt">Quadratic equations</div></div><div class="ring" style="--deg:266deg"><i>74%</i></div></div>
+          <div class="subj"><div class="ic">🧪</div><div><div class="nm">Science</div><div class="mt">Rates of reaction</div></div><div class="ring" style="--deg:144deg"><i>40%</i></div></div>
+          <div class="subj"><div class="ic">🎭</div><div><div class="nm">English Lit</div><div class="mt">Macbeth — themes</div></div><div class="ring" style="--deg:360deg"><i>100%</i></div></div>
+        </div>
+        <div class="float-xp">⚡ +120 XP today</div>
+        <div class="float-grade"><div class="g">7</div><small>Mock grade</small></div>
       </div>
-      <div class="form-error" id="login-error" aria-live="polite"></div>
-      <button class="btn btn-primary btn-lg" type="submit" id="login-btn" style="width:100%;margin-top:8px">Sign In</button>
-      <p class="auth-switch">New here? <a onclick="switchTab('signup')" style="cursor:pointer">Create an account</a></p>
-      <p class="auth-switch"><a onclick="handleForgotPassword()" style="cursor:pointer;color:var(--blue)">Forgot password?</a></p>
-    </form>
-
-    <!-- Sign Up form -->
-    <form id="form-signup" role="tabpanel" aria-labelledby="tab-signup" onsubmit="handleSignup(event)" style="display:none">
-      <div class="form-group">
-        <label class="form-label" for="signup-email">Email</label>
-        <input class="form-input" id="signup-email" type="email" placeholder="parent@example.com" required autocomplete="email">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="signup-password">Password</label>
-        <input class="form-input" id="signup-password" type="password" placeholder="At least 6 characters" required autocomplete="new-password" minlength="6">
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="signup-name">Parent/guardian name</label>
-        <input class="form-input" id="signup-name" type="text" placeholder="e.g. Sarah Thompson" required autocomplete="name">
-      </div>
-      <div class="form-error" id="signup-error" aria-live="polite"></div>
-      <button class="btn btn-primary btn-lg" type="submit" id="signup-btn" style="width:100%;margin-top:8px">Create Account</button>
-      <p class="auth-switch">Already have an account? <a onclick="switchTab('login')" style="cursor:pointer">Sign in</a></p>
-    </form>
-
-    <!-- Confirmation message (shown after signup) -->
-    <div id="confirm-message" style="display:none;text-align:center;padding:20px 0">
-      <div style="font-size:2rem;margin-bottom:12px">📧</div>
-      <h3 style="margin-bottom:8px">Check your email</h3>
-      <p style="color:var(--text-muted)">We've sent a confirmation link to <strong id="confirm-email"></strong>. Click it to activate your account, then come back and sign in.</p>
-      <button class="btn btn-secondary" style="margin-top:16px" onclick="showView('forms'); switchTab('login')">Back to Sign In</button>
     </div>
+  </section>
 
-    <p style="margin-top:16px;font-size:.8125rem;color:var(--text-muted);text-align:center">Parents: create an account with your email to set up your child's learning profile.</p>
+  <!-- ── Curriculum strip ──────────────────────────────────────────────── -->
+  <div class="strip" id="subjects">
+    <div class="wrap strip-inner">
+      <div class="lbl">Built around the UK curriculum · Years 7–11</div>
+      <div class="chips">
+        <span class="chip">📐 Maths</span>
+        <span class="chip">📖 English</span>
+        <span class="chip">🧪 Science</span>
+        <span class="chip">📜 History</span>
+        <span class="chip">🌍 Geography</span>
+        <span class="chip">Aligned to AQA</span>
+      </div>
+    </div>
   </div>
 
-  <!-- ── Loading ──────────────────────────────────────────────────────────── -->
-  <div id="auth-loading-view" style="display:none;text-align:center;padding:40px 0">
-    <div style="font-size:1.5rem;margin-bottom:12px">Loading your profile...</div>
-    <div style="color:var(--text-muted)">Please wait while we fetch your data.</div>
-  </div>
-
-  <!-- ── Profile Setup (new user after login) ─────────────────────────────── -->
-  <div id="profile-setup-view" style="display:none">
-    <h2>Set Up Your Child's Profile</h2>
-    <p>Tell us about your child so we can personalise their learning experience.</p>
-
-    <form id="form-profile-setup" onsubmit="handleProfileSetup(event)">
-      <div class="form-group">
-        <label class="form-label" for="setup-name">Child's first name</label>
-        <input class="form-input" id="setup-name" type="text" placeholder="e.g. Emma" required autocomplete="off">
+  <!-- ── How it works ──────────────────────────────────────────────────── -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">How Atlas works</span>
+        <h2>Set up once. Learn a little every day.</h2>
+        <p>Three steps to turn revision from a weekend battle into a daily habit.</p>
       </div>
-      <div class="form-group">
-        <label class="form-label" for="setup-year">Year group</label>
-        <select class="form-input form-select" id="setup-year" required>
-          <option value="" disabled selected>Select year group</option>
-          <option value="Year 7">Year 7 (age 11-12)</option>
-          <option value="Year 8">Year 8 (age 12-13)</option>
-          <option value="Year 9">Year 9 (age 13-14)</option>
-          <option value="Year 10">Year 10 (age 14-15)</option>
-          <option value="Year 11">Year 11 (age 15-16)</option>
-        </select>
+      <div class="steps">
+        <div class="step" data-reveal><div class="n">1</div><h3>Create a free account</h3><p>Sign up as a parent and set your child's year group. Under a minute, no card required.</p></div>
+        <div class="step" data-reveal><div class="n">2</div><h3>Learn in bite-sized steps</h3><p>Short lessons, flashcards and quizzes with fresh questions each time — and every answer is explained, not just marked.</p></div>
+        <div class="step" data-reveal><div class="n">3</div><h3>Track progress &amp; sit mocks</h3><p>Build streaks, watch topics turn from "Learning" to "Mastered", and sit GCSE-style mocks with an indicative grade.</p></div>
       </div>
-      <div class="form-group">
-        <label class="form-label" for="setup-school">School <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
-        <input class="form-input" id="setup-school" type="text" placeholder="e.g. Oakwood Academy" autocomplete="organization">
+    </div>
+  </section>
+
+  <!-- ── Product preview ───────────────────────────────────────────────── -->
+  <section class="section" style="background:var(--surface2)">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Inside Atlas</span>
+        <h2>See exactly what your child will use</h2>
+        <p>A clear dashboard, flip-to-reveal flashcards, explained quizzes and real mock grades. Try the flashcard below.</p>
       </div>
-      <div class="form-error" id="setup-error" aria-live="polite"></div>
-      <button class="btn btn-primary btn-lg" type="submit" style="width:100%;margin-top:8px">Start Learning</button>
-    </form>
-  </div>
+      <div class="preview-grid">
+        <div class="preview-card" data-reveal>
+          <div class="cap">📊 Dashboard &amp; progress</div>
+          <div class="subj"><div class="ic">📐</div><div><div class="nm">Mathematics</div><div class="mt">6 / 14 topics mastered</div></div><div class="ring" style="--deg:154deg"><i>43%</i></div></div>
+          <div class="subj"><div class="ic">🌍</div><div><div class="nm">Geography</div><div class="mt">3 / 8 topics mastered</div></div><div class="ring" style="--deg:135deg"><i>38%</i></div></div>
+          <div class="subj"><div class="ic">📜</div><div><div class="nm">History</div><div class="mt">5 / 8 topics mastered</div></div><div class="ring" style="--deg:225deg"><i>63%</i></div></div>
+        </div>
+        <div class="preview-card" data-reveal>
+          <div class="cap">🃏 Flashcards — tap to flip</div>
+          <div class="flash" data-flip aria-label="Flashcard, activate to reveal the answer">
+            <div class="flash-inner">
+              <div class="flash-face"><div class="tag">Question</div><div class="txt">What does the prefix "sub-" most often mean?</div></div>
+              <div class="flash-face flash-back"><div class="tag">Answer</div><div class="txt">"Under" or "below" — as in submarine or subsoil.</div></div>
+            </div>
+          </div>
+          <div class="flash-hint">↻ Tap the card to reveal the answer</div>
+        </div>
+        <div class="preview-card" data-reveal>
+          <div class="cap">✅ Quizzes — every answer explained</div>
+          <div class="q">Simplify √50.</div>
+          <div class="opt"><span class="dot"></span>25√2</div>
+          <div class="opt ok"><span class="dot"></span>5√2</div>
+          <div class="opt"><span class="dot"></span>2√5</div>
+          <div class="expl"><b>Correct.</b> 50 = 25 × 2, and √25 = 5, so √50 = 5√2.</div>
+        </div>
+        <div class="preview-card" data-reveal>
+          <div class="cap">🎓 Mock exams &amp; indicative grades</div>
+          <div class="grade-big">
+            <span class="pill">Grade 7</span>
+            <div class="v">72%</div>
+            <div class="m">Year 11 Higher · Mathematics mock</div>
+            <div class="m" style="margin-top:6px">Indicative GCSE grade · Higher tier (4–9)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- ── Why parents choose Atlas ──────────────────────────────────────── -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Why parents choose Atlas</span>
+        <h2>Real curriculum coverage you can check</h2>
+        <p>Not vague promises — content mapped to the specifications, with the safeguards parents want.</p>
+      </div>
+      <div class="feat-grid">
+        <div class="feat" data-reveal><div class="ic">🇬🇧</div><h3>Made for the UK curriculum</h3><p>Content mirrors the GCSE specifications, with Foundation and Higher tiers for Maths.</p></div>
+        <div class="feat" data-reveal><div class="ic">📋</div><h3>Aligned to AQA</h3><p>Mapped to AQA specs for Science (8464), History (8145), Geography (8035) and English.</p></div>
+        <div class="feat" data-reveal><div class="ic">🤖</div><h3>AI-marked written answers</h3><p>Essays and exam questions marked against the real assessment objectives, with feedback.</p></div>
+        <div class="feat" data-reveal><div class="ic">💡</div><h3>Every answer explained</h3><p>Quizzes don't just mark — they teach, with a worked explanation on every question.</p></div>
+        <div class="feat" data-reveal><div class="ic">👪</div><h3>Parent-managed accounts</h3><p>You create and control the account from a PIN-protected Parent Zone.</p></div>
+        <div class="feat" data-reveal><div class="ic">📚</div><h3>Five subjects, Years 7–11</h3><p>A smooth path from Key Stage 3 right through to GCSE, all in one place.</p></div>
+      </div>
+      <div class="stats">
+        <div class="stat" data-reveal><div class="v">5</div><div class="l">Subjects</div></div>
+        <div class="stat" data-reveal><div class="v">950+</div><div class="l">Topics &amp; subtopics</div></div>
+        <div class="stat" data-reveal><div class="v">5,500+</div><div class="l">Flashcards</div></div>
+        <div class="stat" data-reveal><div class="v">∞</div><div class="l">Auto-generated maths Qs</div></div>
+      </div>
+    </div>
+  </section>
 
-<!-- ATLAS auth bootstrap (login/parent page — no lesson content needed) -->
+  <!-- ── Pricing → Early-access (free) ─────────────────────────────────── -->
+  <section class="section ea" id="pricing">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Simple pricing</span>
+        <h2>Free while we're in early access</h2>
+        <p>Every subject, every year group, no card required. Atlas is completely free during early access — we'll give you plenty of notice before any paid plans arrive.</p>
+      </div>
+      <div class="ea-card" data-reveal>
+        <div class="ea-amt">£0<small> / forever-free to start</small></div>
+        <ul class="ea-list">
+          <li>All five subjects, Years 7–11</li>
+          <li>Daily lessons, flashcards &amp; explained quizzes</li>
+          <li>AI-marked mock exams &amp; indicative grades</li>
+          <li>Progress tracking, streaks &amp; Parent Zone</li>
+        </ul>
+        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="goAuth('signup')">Start learning free</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA + Auth ──────────────────────────────────────────────── -->
+  <section class="section final" id="signup">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2>Ready to build GCSE confidence?</h2>
+        <p>Free to start · progress tracking · personalised by year group. Create your parent account below.</p>
+      </div>
+      <div class="auth-wrap" data-reveal>
+        <div class="auth-form-panel" id="auth-form-panel">
+
+          <div id="auth-forms-view">
+            <h2>Welcome to <span class="welcome-atlas-text">Atlas</span></h2>
+            <p id="auth-subtitle">Sign in or create an account to track your child's progress.</p>
+
+            <div class="auth-tab-bar" role="tablist" aria-label="Account access">
+              <button class="auth-tab-btn active" id="tab-login" role="tab" aria-selected="true" aria-controls="form-login" onclick="switchTab('login')">Sign In</button>
+              <button class="auth-tab-btn" id="tab-signup" role="tab" aria-selected="false" aria-controls="form-signup" onclick="switchTab('signup')">Sign Up</button>
+            </div>
+
+            <form id="form-login" role="tabpanel" aria-labelledby="tab-login" onsubmit="handleLogin(event)">
+              <div class="form-group">
+                <label class="form-label" for="login-email">Email</label>
+                <input class="form-input" id="login-email" type="email" placeholder="parent@example.com" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="login-password">Password</label>
+                <input class="form-input" id="login-password" type="password" placeholder="Your password" required autocomplete="current-password">
+              </div>
+              <div class="form-error" id="login-error" aria-live="polite"></div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit" id="login-btn" style="margin-top:8px">Sign in</button>
+              <p class="auth-switch">New here? <a onclick="switchTab('signup')">Create an account</a></p>
+              <p class="auth-switch"><a onclick="handleForgotPassword()" style="color:var(--brand-strong)">Forgot password?</a></p>
+            </form>
+
+            <form id="form-signup" role="tabpanel" aria-labelledby="tab-signup" onsubmit="handleSignup(event)" style="display:none">
+              <div class="form-group">
+                <label class="form-label" for="signup-email">Email</label>
+                <input class="form-input" id="signup-email" type="email" placeholder="parent@example.com" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="signup-password">Password</label>
+                <input class="form-input" id="signup-password" type="password" placeholder="At least 6 characters" required autocomplete="new-password" minlength="6">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="signup-name">Parent/guardian name</label>
+                <input class="form-input" id="signup-name" type="text" placeholder="e.g. Sarah Thompson" required autocomplete="name">
+              </div>
+              <div class="form-error" id="signup-error" aria-live="polite"></div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit" id="signup-btn" style="margin-top:8px">Create account</button>
+              <p class="auth-switch">Already have an account? <a onclick="switchTab('login')">Sign in</a></p>
+            </form>
+
+            <div id="confirm-message" style="display:none;text-align:center;padding:20px 0">
+              <div style="font-size:2rem;margin-bottom:12px">📧</div>
+              <h3 style="margin-bottom:8px">Check your email</h3>
+              <p style="color:var(--text-muted)">We've sent a confirmation link to <strong id="confirm-email"></strong>. Click it to activate your account, then come back and sign in.</p>
+              <button class="btn btn-secondary" style="margin-top:16px" onclick="showView('forms'); switchTab('login')">Back to Sign In</button>
+            </div>
+
+            <p style="margin-top:16px;font-size:.84rem;color:var(--text-muted);text-align:center">Parents: create an account with your email to set up your child's learning profile.</p>
+          </div>
+
+          <div id="auth-loading-view" style="display:none;text-align:center;padding:40px 0">
+            <div style="font-size:1.3rem;margin-bottom:12px;font-weight:700">Loading your profile…</div>
+            <div style="color:var(--text-muted)">Please wait while we fetch your data.</div>
+          </div>
+
+          <div id="profile-setup-view" style="display:none">
+            <h2>Set up your child's profile</h2>
+            <p>Tell us about your child so we can personalise their learning.</p>
+            <form id="form-profile-setup" onsubmit="handleProfileSetup(event)">
+              <div class="form-group">
+                <label class="form-label" for="setup-name">Child's first name</label>
+                <input class="form-input" id="setup-name" type="text" placeholder="e.g. Emma" required autocomplete="off">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="setup-year">Year group</label>
+                <select class="form-input form-select" id="setup-year" required>
+                  <option value="" disabled selected>Select year group</option>
+                  <option value="Year 7">Year 7 (age 11–12)</option>
+                  <option value="Year 8">Year 8 (age 12–13)</option>
+                  <option value="Year 9">Year 9 (age 13–14)</option>
+                  <option value="Year 10">Year 10 (age 14–15)</option>
+                  <option value="Year 11">Year 11 (age 15–16)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="setup-school">School <span style="color:var(--text-muted);font-weight:400">(optional)</span></label>
+                <input class="form-input" id="setup-school" type="text" placeholder="e.g. Oakwood Academy" autocomplete="organization">
+              </div>
+              <div class="form-error" id="setup-error" aria-live="polite"></div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit" style="margin-top:8px">Start learning</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand" href="#top" aria-label="Atlas home">
+          <img class="brand-mark" src="atlas-logo.png" alt="">
+          <span class="brand-word-text">Atlas</span>
+        </a>
+        <div class="subs">
+          <span>Maths</span><span>English</span><span>Science</span><span>History</span><span>Geography</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Atlas is an independent revision tool aligned to the AQA GCSE specifications, for students in Years 7–11.<br>
+        © 2026 Atlas Learning
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Atlas engine (present in the live app) -->
+<script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
 <script src="core/globals.js"></script>
 <script src="engine/auth-shim.js"></script>
 <script src="engine/app.js"></script>
-<script>
-  (function () {
-    initTheme();
-
-    // Handle confirmation/recovery tokens from URL hash (email link redirects here)
-    var hash = window.location.hash;
-    if (hash) {
-      var tokenMatch = hash.match(/confirmation_token=([^&]+)/);
-      var recoveryMatch = hash.match(/recovery_token=([^&]+)/);
-      if (tokenMatch) {
-        gotrueAuth.confirm(tokenMatch[1]).then(function() {
-          window.location.hash = '';
-          showView('forms');
-          switchTab('login');
-          var errEl = document.getElementById('login-error');
-          errEl.textContent = 'Email confirmed! You can now sign in.';
-          errEl.classList.add('show');
-          errEl.style.color = 'var(--green, #22c55e)';
-        }).catch(function(err) {
-          console.error('Confirmation error:', err);
-        });
-        return;
-      }
-      if (recoveryMatch) {
-        gotrueAuth.recover(recoveryMatch[1]).then(function(user) {
-          window.location.hash = '';
-          handlePostLogin(user);
-        }).catch(function(err) {
-          console.error('Recovery error:', err);
-        });
-        return;
-      }
-    }
-
-    var identity = gotrueAuth.currentUser();
-    var profile = JSON.parse(localStorage.getItem('sm_active_profile') || 'null');
-    if (identity && profile) {
-      window.location.href = 'dashboard.html';
-      return;
-    }
-
-    if (identity && !profile) {
-      handlePostLogin(identity);
-    }
-  })();
-
-  // ── View switching ────────────────────────────────────────────────────────
-  function showView(name) {
-    document.getElementById('auth-forms-view').style.display = (name === 'forms' || name === 'confirm') ? '' : 'none';
-    document.getElementById('auth-loading-view').style.display = name === 'loading' ? '' : 'none';
-    document.getElementById('profile-setup-view').style.display = name === 'setup' ? '' : 'none';
-
-    // Within forms view, toggle forms vs confirmation
-    if (name === 'confirm') {
-      document.getElementById('form-login').style.display = 'none';
-      document.getElementById('form-signup').style.display = 'none';
-      document.getElementById('confirm-message').style.display = '';
-      document.querySelector('.auth-tab-bar').style.display = 'none';
-    } else if (name === 'forms') {
-      document.getElementById('confirm-message').style.display = 'none';
-      document.querySelector('.auth-tab-bar').style.display = '';
-    }
-  }
-
-  function switchTab(tab) {
-    var isLogin = tab === 'login';
-    document.getElementById('tab-login').classList.toggle('active', isLogin);
-    document.getElementById('tab-login').setAttribute('aria-selected', isLogin);
-    document.getElementById('tab-signup').classList.toggle('active', !isLogin);
-    document.getElementById('tab-signup').setAttribute('aria-selected', !isLogin);
-    document.getElementById('form-login').style.display = isLogin ? '' : 'none';
-    document.getElementById('form-signup').style.display = isLogin ? 'none' : '';
-    document.getElementById('confirm-message').style.display = 'none';
-    document.querySelectorAll('.form-error').forEach(function(el) { el.classList.remove('show'); });
-    var focusEl = document.getElementById(isLogin ? 'login-email' : 'signup-email');
-    if (focusEl) focusEl.focus();
-  }
-
-  // ── Sign Up ───────────────────────────────────────────────────────────────
-  async function handleSignup(e) {
-    e.preventDefault();
-    var emailEl = document.getElementById('signup-email');
-    var passEl  = document.getElementById('signup-password');
-    var nameEl  = document.getElementById('signup-name');
-    var errEl   = document.getElementById('signup-error');
-    var btn     = document.getElementById('signup-btn');
-    errEl.classList.remove('show');
-
-    var email = emailEl.value.trim();
-    var password = passEl.value;
-    var fullName = nameEl.value.trim();
-
-    btn.disabled = true;
-    btn.textContent = 'Creating account...';
-
-    try {
-      await gotrueAuth.signup(email, password, { full_name: fullName });
-      document.getElementById('confirm-email').textContent = email;
-      showView('confirm');
-    } catch (err) {
-      errEl.textContent = err.message || 'Signup failed. Please try again.';
-      errEl.classList.add('show');
-    } finally {
-      btn.disabled = false;
-      btn.textContent = 'Create Account';
-    }
-  }
-
-  // ── Sign In ───────────────────────────────────────────────────────────────
-  async function handleLogin(e) {
-    e.preventDefault();
-    var emailEl = document.getElementById('login-email');
-    var passEl  = document.getElementById('login-password');
-    var errEl   = document.getElementById('login-error');
-    var btn     = document.getElementById('login-btn');
-    errEl.classList.remove('show');
-
-    var email = emailEl.value.trim();
-    var password = passEl.value;
-
-    btn.disabled = true;
-    btn.textContent = 'Signing in...';
-
-    try {
-      var user = await gotrueAuth.login(email, password, true);
-      handlePostLogin(user);
-    } catch (err) {
-      var msg = err.message || 'Login failed.';
-      if (msg.includes('not confirmed')) {
-        msg = 'Please confirm your email first. Check your inbox for a confirmation link.';
-      } else if (msg.includes('credentials') || msg.includes('invalid_grant')) {
-        msg = 'Invalid email or password. Please try again.';
-      }
-      errEl.textContent = msg;
-      errEl.classList.add('show');
-    } finally {
-      btn.disabled = false;
-      btn.textContent = 'Sign In';
-    }
-  }
-
-  // ── Forgot Password ──────────────────────────────────────────────────────
-  async function handleForgotPassword() {
-    var email = document.getElementById('login-email').value.trim();
-    if (!email) {
-      var errEl = document.getElementById('login-error');
-      errEl.textContent = 'Enter your email above, then click "Forgot password?".';
-      errEl.classList.add('show');
-      document.getElementById('login-email').focus();
-      return;
-    }
-    try {
-      await gotrueAuth.requestPasswordRecovery(email);
-      var errEl = document.getElementById('login-error');
-      errEl.textContent = 'Password reset email sent! Check your inbox.';
-      errEl.classList.add('show');
-      errEl.style.color = 'var(--green, #22c55e)';
-    } catch (err) {
-      var errEl = document.getElementById('login-error');
-      errEl.textContent = err.message || 'Could not send reset email.';
-      errEl.classList.add('show');
-      errEl.style.color = '';
-    }
-  }
-
-  // ── Post-login flow ───────────────────────────────────────────────────────
-  async function handlePostLogin(identityUser) {
-    showView('loading');
-
-    try {
-      // Refresh token
-      await identityUser.jwt();
-
-      // Check for old localStorage data to migrate
-      var oldUser = JSON.parse(localStorage.getItem('sm_user') || 'null');
-      var oldProgress = JSON.parse(localStorage.getItem('sm_progress') || 'null');
-      var serverData = null;
-
-      if (oldUser || oldProgress) {
-        serverData = await migrateLocalProgress();
-      }
-
-      if (!serverData) {
-        serverData = await loadProgressFromServer();
-      }
-
-      if (serverData && serverData.name) {
-        // Returning user — the server copy is the single source of truth. Wipe any
-        // stale local data first (left by a previous account/device on this
-        // browser) so nothing bleeds in, then restore everything UNCONDITIONALLY.
-        if (typeof clearAccountData === 'function') clearAccountData();
-
-        var parentName = serverData.parentName || '';
-        // Fallback: get parent name from identity metadata if not in blob
-        if (!parentName) {
-          var meta = identityUser.user_metadata;
-          parentName = (meta && meta.full_name) ? meta.full_name : '';
-        }
-        var profile = {
-          name: serverData.name,
-          parentName: parentName,
-          year: serverData.year || '',
-          school: serverData.school || '',
-          tier: serverData.tier || 'free',
-          xp: serverData.xp || 0,
-          joinDate: serverData.joinDate || new Date().toISOString(),
-          yearHistory: serverData.yearHistory || [],
-          parentPin: serverData.parentPin || ''
-        };
-        localStorage.setItem('sm_active_profile', JSON.stringify(profile));
-        localStorage.setItem('sm_progress', JSON.stringify(serverData.progress || {}));
-        localStorage.setItem('sm_streak', String(serverData.streak || 0));
-        if (serverData.lastStudy) localStorage.setItem('sm_last_study', serverData.lastStudy);
-        localStorage.setItem('sm_test_results', JSON.stringify(serverData.testResults || {}));
-        localStorage.setItem('sm_revision_done', JSON.stringify(serverData.revisionDone || {}));
-        localStorage.setItem('sm_assignments', JSON.stringify(serverData.assignments || []));
-        localStorage.setItem('sm_active_days', JSON.stringify(serverData.activeDays || []));
-        if (serverData.studyPlan) localStorage.setItem('sm_study_plan', JSON.stringify(serverData.studyPlan));
-        if (serverData.comprehension && typeof restoreComprehension === 'function') {
-          restoreComprehension(serverData.comprehension);
-        }
-        if (serverData.preferences && serverData.preferences.theme) {
-          localStorage.setItem('sm_theme', serverData.preferences.theme);
-          document.documentElement.setAttribute('data-theme', serverData.preferences.theme);
-        }
-
-        window.location.href = 'dashboard.html';
-        return;
-      }
-
-      // New user — show profile setup for the child (don't pre-fill with parent name)
-      showView('setup');
-
-    } catch (err) {
-      console.error('Post-login error:', err);
-      showView('setup');
-    }
-  }
-
-  // ── Profile setup form submission ─────────────────────────────────────────
-  async function handleProfileSetup(e) {
-    e.preventDefault();
-    var nameEl = document.getElementById('setup-name');
-    var yearEl = document.getElementById('setup-year');
-    var schoolEl = document.getElementById('setup-school');
-    var errEl = document.getElementById('setup-error');
-    errEl.classList.remove('show');
-
-    var name = nameEl.value.trim();
-    var year = yearEl.value;
-    var school = schoolEl.value.trim();
-
-    if (!name) {
-      errEl.textContent = 'Please enter your child\'s name.';
-      errEl.classList.add('show');
-      nameEl.focus();
-      return;
-    }
-    if (!year) {
-      errEl.textContent = 'Please select a year group.';
-      errEl.classList.add('show');
-      yearEl.focus();
-      return;
-    }
-
-    // Get parent name from identity user metadata (set during signup)
-    var identityUser = gotrueAuth.currentUser();
-    var parentName = '';
-    if (identityUser && identityUser.user_metadata && identityUser.user_metadata.full_name) {
-      parentName = identityUser.user_metadata.full_name;
-    }
-
-    var profile = {
-      name: name,
-      parentName: parentName,
-      year: year,
-      school: school,
-      tier: 'free',
-      xp: 0,
-      joinDate: new Date().toISOString()
-    };
-
-    localStorage.setItem('sm_active_profile', JSON.stringify(profile));
-
-    try {
-      await fetchWithAuth('/.netlify/functions/save-progress', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: profile.name,
-          parentName: profile.parentName,
-          year: profile.year,
-          school: profile.school,
-          tier: profile.tier,
-          xp: profile.xp,
-          streak: 0,
-          lastStudy: null,
-          joinDate: profile.joinDate,
-          preferences: { theme: localStorage.getItem('sm_theme') || 'light' },
-          progress: {}
-        })
-      });
-    } catch (err) {
-      console.warn('Failed to save profile to server (will sync later):', err.message);
-    }
-
-    window.location.href = 'dashboard.html';
-  }
-</script>
+<!-- Marketing behaviour + guarded auth handlers -->
+<script src="atlas-marketing.js"></script>
 </body>
 </html>
