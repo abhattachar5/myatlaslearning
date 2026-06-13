@@ -83,5 +83,8 @@ Object.assign(LESSONS, {
 <p>Plan for a couple of minutes, write for about 45, and leave a few minutes to check <strong>spelling, punctuation and grammar</strong> and your subject terminology - that is 4 marks of SPaG. The top band rewards a sustained, <strong>conceptualised</strong> argument with methods analysed in detail.</p>
 <h3>Common mistake</h3>
 <p>Retelling the plot or treating the Inspector as a real detective. Argue an idea, and analyse Priestley's <em>methods</em>.</p>
-<p><em>Practise full essay questions with instant marking in Exam Practice.</em></p>`
+<div style="border:1px solid var(--border);border-left:4px solid #8b5cf6;border-radius:6px;padding:14px 16px;margin:18px 0">
+<p style="margin:0 0 8px"><strong>The questions in this island are quick technique checks.</strong> The real GCSE exam is an <strong>essay</strong> — there is no multiple choice in English Literature.</p>
+<p style="margin:0"><a href="extended.html?subject=english-literature&amp;topic=An%20Inspector%20Calls" style="font-weight:700;color:#8b5cf6">Write a full An Inspector Calls essay and get it marked in Exam Practice &rarr;</a></p>
+</div>`
 });

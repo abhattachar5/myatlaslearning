@@ -68,5 +68,8 @@ Object.assign(LESSONS, {
 <p><em>Woven context:</em> 'That movement from isolation to fellowship dramatises the social responsibility the 1834 Poor Law denied, as Dickens urges his middle-class readers to reconnect with the poor they had shut out.'</p>
 <h3>Common mistake</h3>
 <p>Spotting devices without explaining their effect, or bolting context on as a fact. Always finish with effect and purpose, and tie context into meaning.</p>
-<p>Practise full extract questions with instant marking in <strong>Exam Practice</strong>.</p>`
+<div style="border:1px solid var(--border);border-left:4px solid #8b5cf6;border-radius:6px;padding:14px 16px;margin:18px 0">
+<p style="margin:0 0 8px"><strong>The questions in this island are quick technique checks.</strong> The real GCSE exam is an <strong>essay</strong> — there is no multiple choice in English Literature.</p>
+<p style="margin:0"><a href="extended.html?subject=english-literature&amp;topic=A%20Christmas%20Carol" style="font-weight:700;color:#8b5cf6">Write a full A Christmas Carol essay and get it marked in Exam Practice &rarr;</a></p>
+</div>`
 });

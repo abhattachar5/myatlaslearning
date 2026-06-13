@@ -87,5 +87,8 @@ Object.assign(LESSONS, {
 <p>Notice the marks of the top band: every sentence holds <strong>both</strong> poems together, methods are <strong>compared</strong> (irony versus dramatic monologue) rather than merely named, and context illuminates the point instead of sitting in its own paragraph.</p>
 <h3>Common mistake</h3>
 <p>Writing all about poem A, then all about poem B, and adding a comparison at the end. This is the biggest cause of mid-band marks. Plan by <strong>idea</strong>, and make sure every paragraph compares both poems and their methods.</p>
-<p><strong>Practise full comparison questions with instant marking in Exam Practice.</strong></p>`
+<div style="border:1px solid var(--border);border-left:4px solid #8b5cf6;border-radius:6px;padding:14px 16px;margin:18px 0">
+<p style="margin:0 0 8px"><strong>The questions in this island are quick technique checks.</strong> The real GCSE exam is a comparison <strong>essay</strong> — there is no multiple choice in English Literature.</p>
+<p style="margin:0"><a href="extended.html?subject=english-literature&amp;topic=Power%20and%20Conflict" style="font-weight:700;color:#8b5cf6">Write a full comparison essay and get it marked in Exam Practice &rarr;</a></p>
+</div>`
 });

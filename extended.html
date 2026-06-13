@@ -161,6 +161,8 @@ var user = requireAuth();
 var SUBJECT_COLOR = { science:'#10b981', history:'#f59e0b', geography:'#06b6d4', 'english-literature':'#8b5cf6' };
 var SUBJECT_LABEL = { science:'Science', history:'History', geography:'Geography', 'english-literature':'Literature' };
 var current = null;
+var _curTopic = null;                       // when deep-linked to one text, keep "Another" within it
+var _params = new URLSearchParams(location.search);
 
 (function() { initTheme(); updateThemeBtn(); })();
 function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
@@ -172,13 +174,18 @@ function updateThemeBtn() {
   btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
 }
 
-function pool(subject) {
+function pool(subject, topic) {
   var all = window.EXTENDED_QUESTIONS || [];
-  return subject === 'any' ? all.slice() : all.filter(function(q){ return q.subject === subject; });
+  var list = subject === 'any' ? all.slice() : all.filter(function(q){ return q.subject === subject; });
+  if (topic) list = list.filter(function(q){ return q.topic === topic; });
+  return list;
 }
 
-function start(subject) {
-  var qs = pool(subject);
+function again() { if (current) start(current.subject, _curTopic); }
+
+function start(subject, topic) {
+  _curTopic = topic || null;
+  var qs = pool(subject, _curTopic);
   if (!qs.length) { showToast('No questions available yet for that subject.', 'error'); return; }
   // Avoid immediately repeating the same question where possible.
   var pick = qs[Math.floor(Math.random() * qs.length)];
@@ -281,8 +288,8 @@ function showResults(fb, studentText) {
   html += '<div class="er-your"><h4>Your Answer</h4><p>' + escapeHtml(studentText) + '</p></div>';
 
   html += '<div class="er-actions" style="margin-top:8px">';
-  html += '<button class="btn btn-secondary" onclick="start(\'' + current.subject + '\')">↺ Another ' +
-    (SUBJECT_LABEL[current.subject] || '') + ' question</button>';
+  html += '<button class="btn btn-secondary" onclick="again()">↺ Another ' +
+    (_curTopic || SUBJECT_LABEL[current.subject] || '') + ' question</button>';
   html += '<button class="btn btn-primary" onclick="backToSetup()">Choose a subject</button>';
   html += '</div>';
 
@@ -326,6 +333,13 @@ document.addEventListener('keydown', function(e){
     if (document.getElementById('er-active').style.display !== 'none') confirmAbandon();
   }
 });
+
+// Deep link: extended.html?subject=english-literature[&topic=Macbeth] jumps
+// straight into that subject (optionally one text), e.g. from a skills-island lesson.
+(function(){
+  var sp = _params.get('subject');
+  if (sp && (SUBJECT_COLOR[sp] || sp === 'any')) start(sp, _params.get('topic'));
+})();
 </script>
 </body>
 </html>
