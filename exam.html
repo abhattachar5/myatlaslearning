@@ -211,7 +211,7 @@
         <div class="passage" id="en-passage"></div>
         <div id="en-questions"></div>
       </div>
-      <div class="card">
+      <div class="card" id="en-section-b">
         <div class="sec-h">Section B · Writing</div>
         <div class="wprompt" id="en-wprompt"></div>
         <textarea class="wbox" id="en-writing" placeholder="Write your response here…"></textarea>
@@ -570,6 +570,86 @@
       }).map(function (t) { return t.id; });
       return { id: null, type: 'exam', subjectId: subjectId, snapshotTopicIds: topicIds, timeLimitMin: 60, numQuestions: 40, _live: true };
     }
+    // The English mock is a WRITTEN comprehension + writing paper (AI-marked), so it
+    // only fits years whose comprehension questions are written (marks/guidance),
+    // i.e. Year 8+. Year 7 comprehension is multiple-choice (opts) and belongs in the
+    // dedicated Comprehension page, not this written mock.
+    function writtenComprehensionYear(year) {
+      var ps = (typeof Atlas !== 'undefined' && Atlas.yearPassages) ? Atlas.yearPassages(year) : [];
+      var q0 = ps[0] && ps[0].questions && ps[0].questions[0];
+      return !!(q0 && typeof q0.marks !== 'undefined' && !q0.opts);
+    }
+    // ── MCQ reading mock (Year 7: multiple-choice comprehension, auto-marked) ────
+    var _mcqP = null, _mcqQs = [], _mcqAns = [], _mcqStart = 0, _mcqTimer = null, _mcqLeft = 0;
+    function _mcqPick(i, j) { _mcqAns[i] = j; }
+    function _mcqTick() {
+      var m = Math.floor(_mcqLeft / 60), s = _mcqLeft % 60;
+      var el = document.getElementById('en-timer');
+      el.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+      el.classList.toggle('danger', _mcqLeft <= 60);
+      if (_mcqLeft <= 0) { submitMcqComp(); return; }
+      _mcqLeft--;
+    }
+    function initMcqComp() {
+      var u = (typeof getUser === 'function') ? getUser() : null;
+      var year = (u && u.year) || 'Year 7';
+      var passages = (typeof Atlas !== 'undefined' && Atlas.yearPassages) ? Atlas.yearPassages(year) : [];
+      _mcqP = passages.length ? passages[Math.floor(Math.random() * passages.length)] : null;
+      _mcqQs = _mcqP ? (_mcqP.questions || []).filter(function (q) { return Array.isArray(q.opts); }) : [];
+      if (!_mcqQs.length) { document.getElementById('ex-error').style.display = ''; return; }
+      _mcqAns = _mcqQs.map(function () { return -1; });
+
+      var secB = document.getElementById('en-section-b'); if (secB) secB.style.display = 'none';   // no writing task
+      var prog = document.querySelector('#en-active .ie-prog .t'); if (prog) prog.textContent = '📖 Reading — answer every question, then submit';
+
+      document.getElementById('en-passage').innerHTML = '<h4>' + escapeHtmlX(_mcqP.title) + '</h4>' +
+        String(_mcqP.text || '').split('\n\n').map(function (p) { return '<p>' + escapeHtmlX(p) + '</p>'; }).join('');
+      document.getElementById('en-questions').innerHTML = _mcqQs.map(function (q, i) {
+        var opts = q.opts.map(function (opt, j) {
+          return '<label style="display:block;padding:9px 12px;border:1px solid var(--border);border-radius:8px;margin:6px 0;cursor:pointer">' +
+            '<input type="radio" name="mcq' + i + '" value="' + j + '" onchange="_mcqPick(' + i + ',' + j + ')" style="margin-right:8px">' + escapeHtmlX(opt) + '</label>';
+        }).join('');
+        return '<div class="cq"><div class="cq-head"><span class="cq-q">' + (i + 1) + '. ' + escapeHtmlX(q.q) + '</span></div>' + opts + '</div>';
+      }).join('');
+
+      document.getElementById('en-submit').onclick = function () { if (confirm('Submit your answers?')) submitMcqComp(); };
+      document.getElementById('en-active').style.display = '';
+      _mcqStart = Date.now();
+      _mcqLeft = Math.min(30, Math.max(15, Math.round(_mcqQs.length * 1.5))) * 60;
+      _mcqTick(); _mcqTimer = setInterval(_mcqTick, 1000);
+    }
+    function submitMcqComp() {
+      if (_mcqTimer) { clearInterval(_mcqTimer); _mcqTimer = null; }
+      var correct = 0;
+      _mcqQs.forEach(function (q, i) { if (_mcqAns[i] === q.c) correct++; });
+      var total = _mcqQs.length, pct = total ? Math.round(correct / total * 100) : 0;
+      var timeUsed = Math.round((Date.now() - _mcqStart) / 1000);
+      var year = examYear();
+      var grade = gradeBand(pct, year, 'english');
+      var note = gradeNote(year, 'english');
+      if (aid && typeof updateAssignment === 'function') {
+        updateAssignment(aid, { status: 'done', result: { percent: pct, correct: correct, total: total, timeUsedSec: timeUsed, gradeBand: grade, takenAt: new Date().toISOString() } });
+      }
+      var xp = Math.round(pct / 2);
+      if (typeof addXP === 'function') addXP(xp, 'Mock exam');
+
+      document.getElementById('en-active').style.display = 'none';
+      document.getElementById('ex-results').style.display = '';
+      document.getElementById('rs-subject').textContent = 'ENGLISH READING — MOCK';
+      document.getElementById('rs-score').textContent = pct + '%';
+      document.getElementById('rs-grade').textContent = grade;
+      var noteEl = document.getElementById('rs-gradenote'); if (noteEl) { noteEl.textContent = note; noteEl.style.display = note ? '' : 'none'; }
+      document.getElementById('rs-correct').textContent = correct + '/' + total;
+      document.getElementById('rs-time').textContent = Math.floor(timeUsed / 60) + ':' + (timeUsed % 60 < 10 ? '0' : '') + (timeUsed % 60);
+      document.getElementById('rs-xp').textContent = '+' + xp;
+      document.getElementById('rs-topics').innerHTML = _mcqQs.map(function (q, i) {
+        var ok = _mcqAns[i] === q.c;
+        return '<div class="rs-topic"><span class="nm">' + (i + 1) + '. ' + escapeHtmlX(q.skill || 'Question') + '</span>' +
+          '<span class="rs-tag ' + (ok ? 't-strong' : 't-revisit') + '">' + (ok ? 'Correct' : 'Review') + '</span></div>';
+      }).join('');
+      window.scrollTo(0, 0);
+    }
+
     function showMockPicker() {
       var u = (typeof getUser === 'function') ? getUser() : null;
       var year = (u && u.year) || 'Year 7';
@@ -594,7 +674,10 @@
     } else if (!assignment || assignment.type !== 'exam') {
       document.getElementById('ex-error').style.display = '';
     } else if (assignment.subjectId === 'english') {
-      initEnglish();
+      // Year 8+ comprehension is written (AI-marked); Year 7 is multiple-choice,
+      // so it sits an auto-marked MCQ reading paper instead.
+      if (writtenComprehensionYear(examYear())) initEnglish();
+      else initMcqComp();
     } else {
       initBrief();
     }
