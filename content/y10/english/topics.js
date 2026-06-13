@@ -216,6 +216,16 @@ CURRICULUM.push(
    description:"Analyse Lady Macbeth's ambition, manipulation and guilt, and how Shakespeare uses her to explore gender and conscience.",
    learningOutcomes:["Trace Lady Macbeth's inverted arc","Analyse 'unsex me here' and her guilt","Link her to the theme of gender"],
    topics:["Ambition & manipulation","Gender","Guilt & collapse"], prerequisites:["e10i-09-1"]},
+  {id:"e10i-09-7", name:"The Witches & the Supernatural", emoji:"🔮", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-09", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Analyse the witches as agents of chaos and equivocation, and how the supernatural drives the plot and Macbeth's psychology.",
+   learningOutcomes:["Analyse the witches' language and dramatic role","Explain equivocation and the Act 4 apparitions","Link the supernatural to fate versus free will"],
+   topics:["The witches","Equivocation & prophecy","Fate vs free will"], prerequisites:["e10i-09-1"]},
+  {id:"e10i-09-8", name:"Banquo, Macduff & Kingship", emoji:"🛡️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-09", yearGroup:"Year 10", difficulty:2, estimatedHours:2,
+   description:"Analyse Banquo and Macduff as foils to Macbeth, and how Duncan, Malcolm and Macduff embody good kingship against tyranny.",
+   learningOutcomes:["Analyse Banquo and Macduff as foils to Macbeth","Contrast tyranny with rightful kingship","Use minor characters as evidence in an essay"],
+   topics:["Banquo as foil","Macduff & loyalty","Kingship & order"], prerequisites:["e10i-09-1"]},
   {id:"e10i-09-4", name:"Themes", emoji:"🎯", subject:"English", subjectId:"english", color:"#f59e0b",
    topicId:"e10t-09", yearGroup:"Year 10", difficulty:2, estimatedHours:3,
    description:"Explore ambition, guilt, appearance vs reality, the supernatural and kingship — each anchored to key quotations.",
@@ -230,7 +240,12 @@ CURRICULUM.push(
    topicId:"e10t-09", yearGroup:"Year 10", difficulty:3, estimatedHours:2,
    description:"Memorise and deploy essential quotations grouped by theme, ready for the closed-book Literature exam.",
    learningOutcomes:["Memorise key quotations by theme","Know speaker and context for each","Embed and analyse quotations precisely"],
-   topics:["Quotations by theme","Speaker & context","Embedding evidence"], prerequisites:["e10i-09-2","e10i-09-4"]}
+   topics:["Quotations by theme","Speaker & context","Embedding evidence"], prerequisites:["e10i-09-2","e10i-09-4"]},
+  {id:"e10i-09-9", name:"Answering the Shakespeare Question", emoji:"✍️", subject:"English", subjectId:"english", color:"#f59e0b",
+   topicId:"e10t-09", yearGroup:"Year 10", difficulty:3, estimatedHours:3,
+   description:"Exam skill: turn knowledge into marks. Read the printed extract, analyse the writer's methods (AO2), weave context (AO3), and write a thesis-led extract-to-whole-play essay — then practise on AI-marked extract questions.",
+   learningOutcomes:["Plan a thesis-led answer to the extract question","Analyse methods and link the extract to the whole play","Embed quotations and weave context for AO2/AO3"],
+   topics:["Reading the extract","Method analysis (AO2)","Extract → whole play"], prerequisites:["e10i-09-2","e10i-09-4"]}
 );
 
 // ── Topic 10: A Christmas Carol — AQA set text (e10t-10) ─────────────────────

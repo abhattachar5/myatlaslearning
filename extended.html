@@ -101,6 +101,10 @@
           <span class="er-sub-emoji">🌍</span><span class="er-sub-name">Geography</span>
           <div class="er-sub-meta">9-mark responses</div>
         </button>
+        <button class="er-subject-btn" style="border-color:#8b5cf6" onclick="start('english-literature')">
+          <span class="er-sub-emoji">🎭</span><span class="er-sub-name">English Literature</span>
+          <div class="er-sub-meta">Macbeth extract essays</div>
+        </button>
       </div>
       <button class="btn btn-secondary" onclick="start('any')">Surprise me (any subject)</button>
     </div>
@@ -148,9 +152,11 @@
 <script src="engine/app.js"></script>
 <!-- Extended-response question bank (page-only; not in the global manifest) -->
 <script src="content/extended/questions.js"></script>
+<script src="content/extended/english-lit.js"></script>
 <script>
 var user = requireAuth();
-var SUBJECT_COLOR = { science:'#10b981', history:'#f59e0b', geography:'#06b6d4' };
+var SUBJECT_COLOR = { science:'#10b981', history:'#f59e0b', geography:'#06b6d4', 'english-literature':'#8b5cf6' };
+var SUBJECT_LABEL = { science:'Science', history:'History', geography:'Geography', 'english-literature':'Literature' };
 var current = null;
 
 (function() { initTheme(); updateThemeBtn(); })();
@@ -202,7 +208,7 @@ function updateCount() {
   var text = document.getElementById('er-text').value.trim();
   var n = text ? text.split(/\s+/).length : 0;
   // Soft word target scales with the mark tier.
-  var target = current ? Math.round(current.marks * 25) : 150;
+  var target = current ? Math.min(Math.round(current.marks * 25), 500) : 150;
   var el = document.getElementById('er-count');
   el.textContent = n + ' word' + (n !== 1 ? 's' : '') + ' · aim for roughly ' + target;
   document.getElementById('er-submit').disabled = n < 40;
@@ -273,7 +279,7 @@ function showResults(fb, studentText) {
 
   html += '<div class="er-actions" style="margin-top:8px">';
   html += '<button class="btn btn-secondary" onclick="start(\'' + current.subject + '\')">↺ Another ' +
-    (SUBJECT_COLOR[current.subject] ? current.subject.charAt(0).toUpperCase() + current.subject.slice(1) : '') + ' question</button>';
+    (SUBJECT_LABEL[current.subject] || '') + ' question</button>';
   html += '<button class="btn btn-primary" onclick="backToSetup()">Choose a subject</button>';
   html += '</div>';
 

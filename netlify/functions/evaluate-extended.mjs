@@ -26,6 +26,19 @@ Reward correct use of key terms and cause-and-effect chains. A correct but very 
 - 12-mark "Explain why / Explain two ..." — assess explanation and supported reasoning (AO1 knowledge + AO2 explanation): Level 4 (10-12) analytical, well-supported, sustained explanation; Level 3 (7-9) developed explanation with accurate detail; Level 2 (4-6) some explanation, limited support; Level 1 (1-3) basic, general, little accurate detail.
 - 16-mark essay ("How far do you agree?") — assess a sustained, balanced argument reaching a justified judgement (AO1 + AO2): Level 4 (13-16) sustained, well-supported, evaluative judgement considering both sides; Level 3 (9-12) developed analysis of more than one factor with some judgement; Level 2 (5-8) some analysis, mostly description; Level 1 (1-4) basic, descriptive, unsupported.
 Reward SPECIFIC, accurate historical detail (names, dates, events). Generic assertion without evidence stays in the lower levels. Credit a clear line of argument and a supported judgement.`,
+  "english-literature": `SUBJECT: GCSE English Literature (AQA), Paper 1 Section A — the Shakespeare question (30 marks). The student answers "Starting with this extract, explore how Shakespeare presents [X]" and must write about BOTH the printed extract AND the play as a whole.
+Mark holistically against three objectives, using a 6-level scale:
+- AO1: an informed personal response, with well-chosen textual references (the WHAT — ideas and interpretation).
+- AO2: analysis of Shakespeare's METHODS (language, structure, form, dramatic devices) using subject terminology, and the EFFECT on the audience (the HOW).
+- AO3: relevant links between the play and its Jacobean CONTEXT (Divine Right, the Gunpowder Plot, witchcraft, the Great Chain of Being) — relevant, not bolted-on.
+Levels (out of 30):
+- Level 6 (26-30): a critical, exploratory thesis-led response; precise references; perceptive analysis of methods with apt terminology; convincing, integrated context.
+- Level 5 (21-25): thoughtful, developed; a clear line of argument; examines methods and their effects; context well used.
+- Level 4 (16-20): clear understanding; relevant references; clear explanation of methods; clear, relevant context.
+- Level 3 (11-15): some explained comments; some references; identifies some methods; some awareness of context.
+- Level 2 (6-10): supported, relevant comments; a little textual support; simple awareness of method/context.
+- Level 1 (1-5): simple, explicit comments; little support.
+Reward genuine analysis of HOW Shakespeare writes (not feature-spotting), engagement with BOTH the extract and the whole play, and context that deepens meaning. A response that retells the plot, or only covers the extract, cannot reach the top levels.`,
   geography: `SUBJECT: GCSE Geography (AQA 8035). This is an extended-response question (usually 9 marks), assessing AO1 knowledge, AO2 application/understanding and AO3 evaluation.
 Mark using LEVELS OF RESPONSE:
 - Level 3 (7-9): detailed, accurate knowledge applied to the question with clear evaluation/conclusion; named place/case-study detail used to support; balanced and well-developed.
@@ -35,7 +48,7 @@ Mark using LEVELS OF RESPONSE:
 For 9-mark questions reward SPECIFIC named-example/case-study evidence and a clear judgement that answers the command word (assess / evaluate / "to what extent"). SPaG is also assessed — note clarity and accuracy in feedback.`,
 };
 
-const SUBJECT_LABEL = { science: "Science", history: "History", geography: "Geography" };
+const SUBJECT_LABEL = { science: "Science", history: "History", geography: "Geography", "english-literature": "English Literature" };
 
 export default async (req) => {
   if (req.method === "OPTIONS") {
@@ -67,7 +80,7 @@ export default async (req) => {
   if (!rules || !question || !response) {
     return Response.json({ error: "Missing subject, question or response" }, { status: 400, headers: CORS_HEADERS });
   }
-  const max = Math.max(1, Math.min(20, parseInt(marks, 10) || 6));
+  const max = Math.max(1, Math.min(40, parseInt(marks, 10) || 6));   // up to 40 (Lit Shakespeare = 30)
   if (response.length > 6000) {
     return Response.json({ error: "Response too long (max 6000 characters)" }, { status: 400, headers: CORS_HEADERS });
   }

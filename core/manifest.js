@@ -139,7 +139,9 @@ var MANIFEST = (function () {
                   'content/y10/english/islands/x03.js','content/y10/english/islands/x05.js',
                   'content/y10/english/islands/x06.js','content/y10/english/islands/x07.js',
                   'content/y10/english/islands/x08.js','content/y10/english/islands/x09.js',
-                  'content/y10/english/islands/x10.js'],
+                  'content/y10/english/islands/x10.js',
+                  'content/y10/english/islands/m09-characters.js',   // Macbeth: Witches + Banquo/Macduff islands
+                  'content/y10/english/islands/m09-skills.js'],      // Macbeth: exam-technique island
         writing: ['content/y10/english/writing.js']
       },
       comprehension: { passages: nFiles('content/y10/comprehension/passages/', 1, 15) },  // e10t-04 (passages-only): 8 fiction + 7 paired Paper-2

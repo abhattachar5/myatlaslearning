@@ -103,13 +103,20 @@ let user = requireAuth();
 const params = new URLSearchParams(location.search);
 const topicId = params.get('id');
 let topic = Atlas.findTopic(topicId);
-const isEnglishTopic = topic && topic.id && (topic.id.startsWith('et-') || topic.id.startsWith('e8t-'));
-const isScienceTopic = topic && topic.id && (topic.id.startsWith('st7-') || topic.id.startsWith('s8t-'));
-const isHistoryTopic = topic && topic.id && (topic.id.startsWith('ht-') || topic.id.startsWith('h8t-'));
-const isGeographyTopic = topic && topic.id && (topic.id.startsWith('gt-') || topic.id.startsWith('g8t-'));
-const topicColor = isEnglishTopic ? '#f59e0b' : isScienceTopic ? '#6366f1' : isHistoryTopic ? '#a855f7' : isGeographyTopic ? '#0d9488' : '#3b82f6';
-const topicSubject = isEnglishTopic ? 'English' : isScienceTopic ? 'Science' : isHistoryTopic ? 'History' : isGeographyTopic ? 'Geography' : 'Mathematics';
-const subjectId = isEnglishTopic ? 'english' : isScienceTopic ? 'science' : isHistoryTopic ? 'history' : isGeographyTopic ? 'geography' : 'math';
+// Resolve the subject from the topic's own islands (reliable across all years);
+// fall back to the topic-id's first letter (m/e/s/h/g) for island-less topics.
+const subjectId = (function () {
+  const isl = topic ? CURRICULUM.filter(function (i) { return i.topicId === topic.id; }) : [];
+  if (isl.length && isl[0].subjectId) return isl[0].subjectId;
+  const c = (topic && topic.id ? topic.id.charAt(0) : 'm');
+  return { e: 'english', s: 'science', h: 'history', g: 'geography' }[c] || 'math';
+})();
+const isEnglishTopic = subjectId === 'english';
+const isScienceTopic = subjectId === 'science';
+const isHistoryTopic = subjectId === 'history';
+const isGeographyTopic = subjectId === 'geography';
+const topicColor = { english: '#f59e0b', science: '#6366f1', history: '#a855f7', geography: '#0d9488', math: '#3b82f6' }[subjectId];
+const topicSubject = { english: 'English', science: 'Science', history: 'History', geography: 'Geography', math: 'Mathematics' }[subjectId];
 const dashboardUrl = 'dashboard.html?subject=' + subjectId;
 
 if (!topic) {
