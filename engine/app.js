@@ -544,6 +544,43 @@ function showToast(message, type = 'info') {
   }, 2500);
 }
 
+// UX-A11y-014: accessible replacement for window.confirm(). Builds a focus-trapped
+// role="dialog" modal; runs onConfirm only if confirmed; Esc / overlay-click / Cancel
+// dismiss; focus returns to the triggering element on close.
+function atlasConfirm(message, onConfirm, opts) {
+  opts = opts || {};
+  var prev = document.activeElement;
+  var overlay = document.createElement('div');
+  overlay.className = 'atlas-modal-overlay';
+  overlay.innerHTML =
+    '<div class="atlas-modal" role="dialog" aria-modal="true" aria-labelledby="atlas-dlg-msg">' +
+      '<p id="atlas-dlg-msg" class="atlas-modal-msg"></p>' +
+      '<div class="atlas-modal-actions">' +
+        '<button type="button" class="btn btn-secondary" data-act="cancel"></button>' +
+        '<button type="button" class="btn btn-primary" data-act="ok"></button>' +
+      '</div></div>';
+  overlay.querySelector('.atlas-modal-msg').textContent = message;
+  var cancelBtn = overlay.querySelector('[data-act="cancel"]');
+  var okBtn = overlay.querySelector('[data-act="ok"]');
+  cancelBtn.textContent = opts.cancelText || 'Cancel';
+  okBtn.textContent = opts.confirmText || 'Confirm';
+  document.body.appendChild(overlay);
+  function close() {
+    if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+    document.removeEventListener('keydown', onKey, true);
+    if (prev && prev.focus) prev.focus();
+  }
+  function onKey(e) {
+    if (e.key === 'Escape') { e.preventDefault(); close(); }
+    else if (e.key === 'Tab') { e.preventDefault(); (document.activeElement === okBtn ? cancelBtn : okBtn).focus(); }
+  }
+  cancelBtn.onclick = close;
+  okBtn.onclick = function () { close(); if (typeof onConfirm === 'function') onConfirm(); };
+  overlay.addEventListener('mousedown', function (e) { if (e.target === overlay) close(); });
+  document.addEventListener('keydown', onKey, true);
+  okBtn.focus();
+}
+
 // ── Utility ───────────────────────────────────────────────────────────────────
 function formatDate(iso) {
   if (!iso) return 'Never';

@@ -88,7 +88,9 @@
   </style>
 </head>
 <body>
-  <div class="ex-wrap">
+  <a class="skip-link" href="#exam-main">Skip to exam content</a>
+  <div class="ex-wrap" id="exam-main" role="main">
+    <h1 class="sr-only">Mock exam</h1>
     <div id="ex-error" style="display:none" class="card"><p>Exam not found. <a href="dashboard.html">Back to dashboard</a></p></div>
 
     <!-- Self-serve mock subject picker -->
@@ -283,6 +285,7 @@
     var enPassage = null, enPrompt = '', enTimeLeft = 0, enTimerId = null, enStartedAt = 0;
 
     function initEnglish() {
+      document.title = 'Atlas — ' + examYear() + ' English Mock Exam';   // UX-A11y-013
       var mins = assignment.timeLimitMin || 60;
       // Year-aware: pick the passage set for the student's year (not whichever is loaded).
       var examUser = (typeof getUser === 'function') ? getUser() : null;
@@ -311,7 +314,7 @@
       document.getElementById('en-wprompt').innerHTML = '<b>Writing task:</b> ' + escapeHtmlX(enPrompt);
       var wbox = document.getElementById('en-writing');
       wbox.oninput = function () { var w = wbox.value.trim() ? wbox.value.trim().split(/\s+/).length : 0; document.getElementById('en-wcount').textContent = w + ' words'; };
-      document.getElementById('en-submit').onclick = function () { if (confirm('Submit your paper for marking?')) submitEnglish(); };
+      document.getElementById('en-submit').onclick = function () { atlasConfirm('Submit your paper for marking?', submitEnglish, { confirmText: 'Submit' }); };
       enTick(); enTimerId = setInterval(enTick, 1000);
     }
     function enTick() {
@@ -409,6 +412,7 @@
       var topicList = Object.keys(topicNames);
 
       document.getElementById('br-title').textContent = (SUBJECT_LABELS[assignment.subjectId] || assignment.subjectId) + ' — Mock Exam';
+      document.title = 'Atlas — ' + examYear() + ' ' + (SUBJECT_LABELS[assignment.subjectId] || assignment.subjectId) + ' Mock Exam';   // UX-A11y-013
       document.getElementById('br-time').textContent = mins + ':00';
       document.getElementById('br-qn').textContent = total;
       document.getElementById('br-topics').textContent = topicList.length;
@@ -428,9 +432,9 @@
       renderQ();
       tick();
       timerId = setInterval(tick, 1000);
-      document.getElementById('ex-submit').onclick = function () { if (confirm('Submit your exam now?')) finish(); };
+      document.getElementById('ex-submit').onclick = function () { atlasConfirm('Submit your exam now?', finish, { confirmText: 'Submit' }); };
       document.getElementById('ex-prev').onclick = function () { if (cur > 0) { cur--; renderQ(); } };
-      document.getElementById('ex-next').onclick = function () { if (cur < total - 1) { cur++; renderQ(); } else if (confirm('That was the last question. Submit?')) finish(); };
+      document.getElementById('ex-next').onclick = function () { if (cur < total - 1) { cur++; renderQ(); } else atlasConfirm('That was the last question. Submit?', finish, { confirmText: 'Submit' }); };
     }
 
     function tick() {
@@ -554,10 +558,11 @@
     // Abandon the exam without submitting: no result is recorded, the assignment stays
     // "to do", and reopening it later starts a fresh paper.
     function exitExam() {
-      if (!confirm("Leave the exam? Your answers won't be saved and this attempt won't count.")) return;
-      if (typeof timerId !== 'undefined' && timerId) { clearInterval(timerId); timerId = null; }
-      if (typeof enTimerId !== 'undefined' && enTimerId) { clearInterval(enTimerId); enTimerId = null; }
-      window.location.href = 'dashboard.html';
+      atlasConfirm("Leave the exam? Your answers won't be saved and this attempt won't count.", function () {
+        if (typeof timerId !== 'undefined' && timerId) { clearInterval(timerId); timerId = null; }
+        if (typeof enTimerId !== 'undefined' && enTimerId) { clearInterval(enTimerId); enTimerId = null; }
+        window.location.href = 'dashboard.html';
+      }, { confirmText: 'Leave' });
     }
 
     // ── Self-serve mock helpers ──────────────────────────────────────────────────
@@ -597,6 +602,7 @@
     function initMcqComp() {
       var u = (typeof getUser === 'function') ? getUser() : null;
       var year = (u && u.year) || 'Year 7';
+      document.title = 'Atlas — ' + year + ' English Reading Mock';   // UX-A11y-013
       var passages = (typeof Atlas !== 'undefined' && Atlas.yearPassages) ? Atlas.yearPassages(year) : [];
       _mcqP = passages.length ? passages[Math.floor(Math.random() * passages.length)] : null;
       _mcqQs = _mcqP ? (_mcqP.questions || []).filter(function (q) { return Array.isArray(q.opts); }) : [];
@@ -616,7 +622,7 @@
         return '<div class="cq"><div class="cq-head"><span class="cq-q">' + (i + 1) + '. ' + escapeHtmlX(q.q) + '</span></div>' + opts + '</div>';
       }).join('');
 
-      document.getElementById('en-submit').onclick = function () { if (confirm('Submit your answers?')) submitMcqComp(); };
+      document.getElementById('en-submit').onclick = function () { atlasConfirm('Submit your answers?', submitMcqComp, { confirmText: 'Submit' }); };
       document.getElementById('en-active').style.display = '';
       _mcqStart = Date.now();
       _mcqLeft = Math.min(30, Math.max(15, Math.round(_mcqQs.length * 1.5))) * 60;

@@ -234,6 +234,7 @@ const examOpts = {
 
 document.getElementById('back-btn').href = 'topic.html?id=' + topicId;
 document.getElementById('hdr-name').textContent = testLabel;
+document.title = 'Atlas — ' + testLabel;   // UX-A11y-013
 document.getElementById('hdr-emoji').textContent = topic.emoji;
 var _hdrN = (isCheckpoint ? checkpointIslands.length : topicIslands.length);
 document.getElementById('hdr-count').textContent = _hdrN + (_hdrN === 1 ? ' subtopic' : ' subtopics');
@@ -425,22 +426,25 @@ function confirmSubmit() {
     if (Array.isArray(a)) { if (!a.length) un++; }
     else if (a == null || a < 0) un++;
   }
-  if (un > 0 && !confirm(un + (un === 1 ? ' question is' : ' questions are') +
-      ' still unanswered and will be marked incorrect. Submit anyway?')) return;
-  submitTest();
+  if (un > 0) {
+    atlasConfirm(un + (un === 1 ? ' question is' : ' questions are') +
+      ' still unanswered and will be marked incorrect. Submit anyway?', submitTest, { confirmText: 'Submit' });
+  } else {
+    submitTest();
+  }
 }
 
 // Leaving via the header arrow. Confirm only while a test is in progress (answers
 // aren't saved). Assigned practices return to the dashboard; topic tests to the topic.
 function exitTest(e) {
-  var active = document.getElementById('test-active').style.display !== 'none';
-  if (active && !confirm("Leave this test? Your answers won't be saved.")) {
-    if (e) e.preventDefault();
-    return false;
-  }
-  if (timerInterval) clearInterval(timerInterval);
   if (e) e.preventDefault();
-  window.location.href = _assignmentId ? 'dashboard.html' : ('topic.html?id=' + topicId);
+  var active = document.getElementById('test-active').style.display !== 'none';
+  var go = function () {
+    if (timerInterval) clearInterval(timerInterval);
+    window.location.href = _assignmentId ? 'dashboard.html' : ('topic.html?id=' + topicId);
+  };
+  if (active) atlasConfirm("Leave this test? Your answers won't be saved.", go, { confirmText: 'Leave' });
+  else go();
   return false;
 }
 
@@ -517,6 +521,7 @@ function submitTest() {
   }
 
   var scoreClass = pct >= 70 ? '' : pct >= 50 ? ' medium' : ' low';
+  var bandLabel = pct >= 70 ? 'Excellent' : pct >= 50 ? 'Good' : 'Keep practising';   // UX-A11y-015: text cue, not colour alone
   var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '🌟' : pct >= 50 ? '👍' : '📚';
 
   var timeTaken = '';
@@ -531,6 +536,7 @@ function submitTest() {
   var html = '<div style="font-size:3.5rem;margin-bottom:16px">' + emoji + '</div>';
   html += '<h2>Test Complete!</h2>';
   html += '<div class="results-score' + scoreClass + '">' + pct + '%</div>';
+  html += '<div style="font-weight:700;font-size:1.05rem;margin:-2px 0 6px;color:var(--text)">' + bandLabel + '</div>';
   html += '<p style="color:var(--text-2);margin-bottom:8px">' + correct + ' out of ' + testQuestions.length + ' correct</p>';
 
   var medPct = medTotal > 0 ? Math.round((medCorrect / medTotal) * 100) : 0;
