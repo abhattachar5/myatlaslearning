@@ -61,6 +61,9 @@ export default async (req, context) => {
         revisionDone: body.revisionDone || {},
         comprehension: body.comprehension || {},
         yearHistory: body.yearHistory || [],
+        parentPin: body.parentPin || "",
+        assignments: Array.isArray(body.assignments) ? body.assignments : [],
+        activeDays: Array.isArray(body.activeDays) ? body.activeDays : [],
         studyPlan: body.studyPlan || null,
         updatedAt: new Date().toISOString(),
       };
@@ -81,6 +84,11 @@ export default async (req, context) => {
         revisionDone: { ...(body.revisionDone || {}), ...(existing.revisionDone || {}) },
         comprehension: { ...(body.comprehension || {}), ...(existing.comprehension || {}) },
         yearHistory: (existing.yearHistory && existing.yearHistory.length) ? existing.yearHistory : (body.yearHistory || []),
+        // Preserve account-level fields the migrate payload doesn't carry, so a
+        // returning-user login (which runs this merge) can't wipe them.
+        parentPin: existing.parentPin || body.parentPin || "",
+        assignments: Array.isArray(existing.assignments) ? existing.assignments : (Array.isArray(body.assignments) ? body.assignments : []),
+        activeDays: [...new Set([...(existing.activeDays || []), ...(body.activeDays || [])])],
         studyPlan: existing.studyPlan || body.studyPlan || null,
         updatedAt: new Date().toISOString(),
       };
