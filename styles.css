@@ -6,10 +6,11 @@
 :root {
   --font: 'Plus Jakarta Sans', system-ui, sans-serif;
 
-  --blue:      #6366f1;
-  --green:     #3b82f6;
-  --amber:     #f59e0b;
-  --red:       #ef4444;
+  --blue:      #4f46e5;   /* a11y: darkened for WCAG AA contrast on white (UX-A11y-004) */
+  --green:     #3b82f6;   /* NB: this is the brand indigo-blue, NOT a green hue (UX-A11y-016) */
+  --primary:   #3b82f6;   /* correctly-named alias for the brand blue on the line above */
+  --amber:     #b45309;   /* a11y: darkened amber for AA text contrast (UX-A11y-003) */
+  --red:       #dc2626;   /* a11y: darkened red for AA contrast (UX-A11y-004) */
   --darkgreen: #3b82f6;
 
   --bg:        #faf7ff;
@@ -20,7 +21,7 @@
 
   --text:      #1e1b4b;
   --text-2:    #4c4578;
-  --text-muted:#7c72a0;
+  --text-muted:#6b608f;   /* a11y: darkened for AA contrast (UX-A11y-004) */
 
   --shadow-sm: 0 1px 4px rgba(99,102,241,.08), 0 1px 2px rgba(99,102,241,.04);
   --shadow:    0 4px 16px rgba(99,102,241,.10), 0 1px 4px rgba(99,102,241,.06);
@@ -41,6 +42,8 @@
   --border:    #352d4a;
   --ring-track:#352d4a;
   --amber:     #fbbf24;
+  --blue:      #6366f1;   /* keep the brighter brand blue/red on dark backgrounds */
+  --red:       #ef4444;
   --text:      #f1eef9;
   --text-2:    #a89ec4;
   --text-muted:#8b80aa;
@@ -211,7 +214,7 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   font-size: .8125rem; font-weight: 600; color: var(--amber);
 }
 .theme-toggle {
-  width: 34px; height: 34px;
+  width: 44px; height: 44px;   /* a11y: 44px min touch target (UX-A11y-012) */
   border-radius: 8px;
   background: var(--surface2);
   border: 1px solid var(--border);
@@ -588,7 +591,7 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 .btn-warning:hover { filter: brightness(1.08); }
 .btn-danger { background: #ef4444; color: white; }
 .btn-lg { padding: 13px 28px; font-size: 1rem; border-radius: 12px; }
-.btn-sm { padding: 6px 14px; font-size: .8125rem; border-radius: 8px; }
+.btn-sm { padding: 6px 14px; font-size: .8125rem; border-radius: 8px; min-height: 44px; }   /* a11y: 44px min touch target (UX-A11y-012) */
 .btn-icon { padding: 8px; border-radius: 8px; }
 .btn:disabled { opacity: .45; cursor: not-allowed; pointer-events: none; }
 
@@ -2448,4 +2451,16 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   .wp-grid { font-size: .72rem; }
   .wp-grid th, .wp-grid td { padding: 5px 8px; }
   .week-plan-footer { flex-direction: column; align-items: flex-end; }
+}
+
+/* a11y: honour the OS "reduce motion" preference — near-instant animations and
+   transitions for users who request it (UX-A11y-011). Covers spin, bubbleIn,
+   micPulse, typingBounce, planSlideIn and any future animation/transition. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

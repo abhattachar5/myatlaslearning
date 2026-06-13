@@ -425,7 +425,10 @@ function createProgressRing(progress, color, size = 56) {
   const circ = 2 * Math.PI * r;
   const offset = circ * (1 - Math.max(0, Math.min(100, progress)) / 100);
   const pct = Math.round(progress);
-  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" aria-hidden="true">
+  // UX-A11y-010: expose as a progressbar with its value to screen readers.
+  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}"
+    role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"
+    aria-label="Progress: ${pct}%">
     <circle cx="${cx}" cy="${cx}" r="${r}" fill="none" stroke="var(--ring-track)" stroke-width="5"/>
     <circle cx="${cx}" cy="${cx}" r="${r}" fill="none" stroke="${color}" stroke-width="5"
       stroke-dasharray="${circ.toFixed(2)}" stroke-dashoffset="${offset.toFixed(2)}"
@@ -527,8 +530,10 @@ function showXPToast(amount, reason = '') {
 function showToast(message, type = 'info') {
   const toast = document.createElement('div');
   toast.className = `toast toast--${type}`;
-  toast.setAttribute('role', 'status');
-  toast.setAttribute('aria-live', 'polite');
+  // UX-A11y-009: errors/warnings interrupt (assertive); other toasts are polite.
+  const assertive = (type === 'error' || type === 'warning');
+  toast.setAttribute('role', assertive ? 'alert' : 'status');
+  toast.setAttribute('aria-live', assertive ? 'assertive' : 'polite');
   toast.setAttribute('aria-atomic', 'true');
   toast.textContent = message;
   document.body.appendChild(toast);

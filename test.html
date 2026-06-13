@@ -48,7 +48,7 @@
     .test-q-difficulty.greater-depth { background: #fce7f3; color: #9d174d; }
     .test-q-text { font-size: 1.0625rem; font-weight: 600; margin-bottom: 16px; line-height: 1.5; }
     .test-options { display: flex; flex-direction: column; gap: 8px; }
-    .test-option { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--surface2); border: 2px solid var(--border); border-radius: var(--radius-sm); cursor: pointer; transition: border-color .15s, background .15s; font-size: .9375rem; }
+    .test-option { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--surface2); border: 2px solid var(--border); border-radius: var(--radius-sm); cursor: pointer; transition: border-color .15s, background .15s; font-size: .9375rem; width: 100%; text-align: left; font-family: inherit; color: var(--text); }
     .test-option:hover { border-color: var(--green); background: rgba(63,111,0,.04); }
     .test-option.selected { border-color: var(--green); background: rgba(63,111,0,.08); }
     .test-option .radio { width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: border-color .15s; }
@@ -61,10 +61,12 @@
 
     .test-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
     .test-nav-dots { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; }
-    .test-nav-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ring-track); border: none; cursor: pointer; transition: background .15s; }
-    .test-nav-dot.answered { background: var(--green); }
-    .test-nav-dot.current { box-shadow: 0 0 0 2px var(--green); }
-    .test-nav-dot.flagged { background: var(--amber); }
+    /* a11y: 44px touch target wrapping a small 10px visual dot (UX-A11y-008) */
+    .test-nav-dot { width: 44px; height: 44px; padding: 0; border: none; background: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+    .test-nav-dot::after { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--ring-track); transition: background .15s, box-shadow .15s; }
+    .test-nav-dot.answered::after { background: var(--green); }
+    .test-nav-dot.current::after { box-shadow: 0 0 0 2px var(--green); }
+    .test-nav-dot.flagged::after { background: var(--amber); }
 
     .test-results { text-align: center; padding: 48px 20px; }
     .test-results h2 { margin-bottom: 8px; }
@@ -95,7 +97,8 @@
       .test-option { padding: 10px 12px; font-size: .875rem; gap: 10px; }
       .test-nav-dots { gap: 3px; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; max-width: 100%; }
       .test-nav-dots::-webkit-scrollbar { display: none; }
-      .test-nav-dot { width: 8px; height: 8px; flex-shrink: 0; }
+      .test-nav-dot { flex-shrink: 0; }
+      .test-nav-dot::after { width: 8px; height: 8px; }
       .results-score { font-size: 2.25rem; }
     }
   </style>
@@ -338,15 +341,16 @@ function renderQuestion() {
   html += '<div class="test-q-num">Question ' + (currentQ + 1) + '</div>';
   html += '<div class="test-q-text">' + q.q + '</div>';
   if (isMulti) html += '<div class="multi-hint">Select all that apply</div>';
-  html += '<div class="test-options">';
+  // UX-A11y-001: real buttons with radio/checkbox semantics — keyboard + SR accessible.
+  html += '<div class="test-options" role="' + (isMulti ? 'group' : 'radiogroup') + '" aria-label="Answer options">';
   for (var i = 0; i < q.opts.length; i++) {
     var selected = isMulti
       ? (Array.isArray(answers[currentQ]) && answers[currentQ].indexOf(i) !== -1 ? ' selected' : '')
       : (answers[currentQ] === i ? ' selected' : '');
-    html += '<div class="test-option' + selected + '" onclick="selectAnswer(' + i + ')">';
-    html += isMulti ? '<div class="checkbox"></div>' : '<div class="radio"></div>';
+    html += '<button type="button" class="test-option' + selected + '" role="' + (isMulti ? 'checkbox' : 'radio') + '" aria-checked="' + (selected ? 'true' : 'false') + '" onclick="selectAnswer(' + i + ')">';
+    html += isMulti ? '<span class="checkbox" aria-hidden="true"></span>' : '<span class="radio" aria-hidden="true"></span>';
     html += '<span>' + q.opts[i] + '</span>';
-    html += '</div>';
+    html += '</button>';
   }
   html += '</div></div>';
   document.getElementById('question-area').innerHTML = html;
@@ -393,7 +397,7 @@ function prevQuestion() {
 function renderNavDots() {
   var html = '';
   for (var i = 0; i < testQuestions.length; i++) {
-    html += '<button class="test-nav-dot" onclick="goToQuestion(' + i + ')" title="Question ' + (i + 1) + '"></button>';
+    html += '<button class="test-nav-dot" onclick="goToQuestion(' + i + ')" title="Question ' + (i + 1) + '" aria-label="Go to question ' + (i + 1) + '"></button>';
   }
   document.getElementById('nav-dots').innerHTML = html;
 }
@@ -403,6 +407,7 @@ function updateNavDots() {
   for (var i = 0; i < dots.length; i++) {
     dots[i].classList.toggle('answered', Array.isArray(answers[i]) ? answers[i].length > 0 : answers[i] !== -1);
     dots[i].classList.toggle('current', i === currentQ);
+    if (i === currentQ) dots[i].setAttribute('aria-current', 'true'); else dots[i].removeAttribute('aria-current');   // UX-A11y-017
   }
 }
 

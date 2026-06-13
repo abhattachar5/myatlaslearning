@@ -70,7 +70,9 @@
 
       <!-- Card -->
       <div class="flashcard-viewport">
-        <div class="flashcard-scene" id="fc-scene" onclick="flipCard()">
+        <div class="flashcard-scene" id="fc-scene" onclick="flipCard()"
+             role="button" tabindex="0" aria-label="Flip flashcard"
+             onkeydown="if(event.key==='Enter'){event.preventDefault();flipCard();}">
           <div class="flashcard-face">
             <div class="flashcard-label" aria-hidden="true">Question — click to reveal answer</div>
             <div class="flashcard-text" id="fc-front-text" aria-live="polite"></div>
