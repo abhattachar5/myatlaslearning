@@ -196,12 +196,17 @@ let user = requireAuth();
 const params = new URLSearchParams(location.search);
 const topicId = params.get('id');
 const topic = Atlas.findTopic(topicId);
-const isScienceTopic = topicId && (topicId.startsWith('st7-') || topicId.startsWith('s8t-'));
-const isEnglishTopic = topicId && (topicId.startsWith('et-') || topicId.startsWith('e8t-'));
-const isHistoryTopic = topicId && (topicId.startsWith('ht-') || topicId.startsWith('h8t-'));
-const isGeographyTopic = topicId && (topicId.startsWith('gt-') || topicId.startsWith('g8t-'));
-const topicColor = isScienceTopic ? '#6366f1' : isEnglishTopic ? '#f59e0b' : isHistoryTopic ? '#a855f7' : isGeographyTopic ? '#0d9488' : '#3b82f6';
-const topicSubjectLabel = isScienceTopic ? 'Science' : isEnglishTopic ? 'English' : isHistoryTopic ? 'History' : isGeographyTopic ? 'Geography' : 'Mathematics';
+// Resolve the subject from the topic's own islands (reliable across all years);
+// fall back to the topic-id's first letter (m/e/s/h/g) for island-less topics.
+// (Previously only recognised Year 7/8 prefixes, so Y9-Y11 tests mis-read as Maths.)
+const subjectId = (function () {
+  const isl = (typeof CURRICULUM !== 'undefined') ? CURRICULUM.filter(function (i) { return i.topicId === topicId; }) : [];
+  if (isl.length && isl[0].subjectId) return isl[0].subjectId;
+  const c = (topicId ? topicId.charAt(0) : 'm');
+  return { e: 'english', s: 'science', h: 'history', g: 'geography' }[c] || 'math';
+})();
+const topicColor = { english: '#f59e0b', science: '#6366f1', history: '#a855f7', geography: '#0d9488', math: '#3b82f6' }[subjectId];
+const topicSubjectLabel = { english: 'English', science: 'Science', history: 'History', geography: 'Geography', math: 'Mathematics' }[subjectId];
 
 if (!topic) {
   alert('Topic not found');
