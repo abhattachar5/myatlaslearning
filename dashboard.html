@@ -53,11 +53,8 @@
       <button class="nav-item" id="nav-profile" onclick="openProfileModal(); closeSidebar()">
         <span class="nav-icon" aria-hidden="true">👤</span> My Profile
       </button>
-      <button class="nav-item" id="nav-exam-practice" onclick="window.location.href='extended.html'">
-        <span class="nav-icon" aria-hidden="true">📝</span> Exam Practice
-      </button>
-      <button class="nav-item" id="nav-mock-exam" onclick="window.location.href='exam.html?mock=1'">
-        <span class="nav-icon" aria-hidden="true">📄</span> Mock Exam
+      <button class="nav-item" id="nav-practice" onclick="window.location.href='practice.html'">
+        <span class="nav-icon" aria-hidden="true">📝</span> Practice
       </button>
       <button class="nav-item" id="nav-parent" onclick="window.location.href='parent.html'">
         <span class="nav-icon" aria-hidden="true">👪</span> Parent Zone
@@ -329,10 +326,6 @@ function getYearGeographyTopics() { return Atlas.yearTopics('geography', getUser
   if (!user) return;
   touchStreak();
   renderSidebar();
-  // Exam Practice (extended GCSE essays, AI-marked) is Year 10/11 only — hide for KS3.
-  if (typeof Atlas !== 'undefined' && Atlas.isGcseYear && !Atlas.isGcseYear(getUserYear())) {
-    var _ep = document.getElementById('nav-exam-practice'); if (_ep) _ep.style.display = 'none';
-  }
   renderHeroBanner();
   renderWeekPlan();
   renderStats();

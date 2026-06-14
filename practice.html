@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas — Practice</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/gotrue-js@1.0.1/browser/gotrue.js"></script>
+  <style>
+    .pr-wrap { max-width: 900px; margin: 0 auto; padding: 8px 0 40px; }
+    .pr-modes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+    @media (max-width: 640px) { .pr-modes { grid-template-columns: 1fr; } }
+    .pr-mode-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 22px; cursor: pointer;
+      transition: border-color .15s, box-shadow .15s, transform .1s; }
+    .pr-mode-card:hover { border-color: var(--blue); box-shadow: var(--shadow); }
+    .pr-mode-card.locked { cursor: default; opacity: .85; }
+    .pr-mode-card.locked:hover { border-color: var(--border); box-shadow: none; }
+    .pr-mode-emoji { font-size: 1.6rem; }
+    .pr-mode-title { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; margin: 8px 0 4px; }
+    .pr-mode-desc { color: var(--text-2); font-size: .9rem; line-height: 1.5; }
+    .pr-mode-tag { display: inline-block; font-size: .65rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em;
+      padding: 2px 9px; border-radius: 999px; margin-left: 8px; vertical-align: middle; }
+    .pr-tag-gcse { color: var(--brand-strong); background: var(--brand-soft); }
+    .pr-tag-locked { color: var(--text-muted); background: var(--surface2); }
+    .pr-section-head { font-size: 1.05rem; font-family: var(--font-display); font-weight: 800; margin: 6px 0 4px; }
+    .pr-section-sub { color: var(--text-muted); font-size: .85rem; margin-bottom: 16px; }
+    .pr-subj { margin-bottom: 18px; }
+    .pr-subj-name { font-size: .8rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); margin-bottom: 8px; }
+    .pr-topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+    .pr-topic-btn { display: flex; align-items: center; gap: 8px; text-align: left; background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 11px 13px; font-size: .9rem; font-weight: 600; color: var(--text); cursor: pointer; transition: border-color .15s, background .15s; }
+    .pr-topic-btn:hover { border-color: var(--blue); background: var(--surface2); }
+    .pr-empty { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; color: var(--text-2); font-size: .9rem; line-height: 1.55; }
+  </style>
+</head>
+<body data-theme="light">
+
+<header class="island-header" style="background:var(--surface)">
+  <a href="dashboard.html" class="island-header-back" aria-label="Back to dashboard">←</a>
+  <div class="island-header-emoji">📝</div>
+  <div class="island-header-info">
+    <h2 id="hdr-name">Practice</h2>
+    <div class="island-header-meta"><span class="badge">Revise &amp; test yourself</span></div>
+  </div>
+  <div style="display:flex;align-items:center;gap:6px">
+    <button class="theme-toggle" onclick="handleThemeToggle()" id="theme-btn" aria-label="Toggle colour theme">🌙</button>
+  </div>
+</header>
+
+<main class="page-main">
+  <div class="pr-wrap">
+
+    <div class="pr-modes">
+      <div class="pr-mode-card" onclick="document.getElementById('pr-topics').scrollIntoView({behavior:'smooth'})">
+        <div class="pr-mode-emoji">🎯</div>
+        <div class="pr-mode-title">Topic Practice</div>
+        <div class="pr-mode-desc">Quick question rounds on any topic you've studied. Great for revision and the adaptive mode.</div>
+      </div>
+      <div class="pr-mode-card" id="pr-exam-card" onclick="goExamPractice()">
+        <div class="pr-mode-emoji">✍️</div>
+        <div class="pr-mode-title">Exam Practice <span class="pr-mode-tag pr-tag-gcse" id="pr-exam-tag">Year 10–11</span></div>
+        <div class="pr-mode-desc" id="pr-exam-desc">Write full exam answers and get them AI-marked against the real mark scheme. Choose a topic you've covered.</div>
+      </div>
+    </div>
+
+    <div id="pr-topics">
+      <div class="pr-section-head">🎯 Topic Practice — revise what you've studied</div>
+      <div class="pr-section-sub">Pick a topic you've started to practise it. New topics appear here as your child works through them.</div>
+      <div id="pr-topic-list"></div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ATLAS bootstrap (content needed to resolve studied topics) -->
+<script src="core/globals.js"></script>
+<script src="core/config.js"></script>
+<script src="core/manifest.js"></script>
+<script src="core/loader.js"></script>
+<script src="engine/auth-shim.js"></script>
+<script src="engine/app.js"></script>
+<script>
+  var user = requireAuth();
+  var _year = (user && user.year) || 'Year 7';
+  var _isGcse = (typeof Atlas !== 'undefined' && Atlas.isGcseYear) ? Atlas.isGcseYear(_year) : (_year === 'Year 10' || _year === 'Year 11');
+
+  (function () { initTheme(); updateThemeBtn(); })();
+  function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
+  function updateThemeBtn() {
+    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    var btn = document.getElementById('theme-btn');
+    btn.textContent = dark ? '☀️' : '🌙';
+    btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+  }
+
+  // ── Exam Practice card: GCSE-only ─────────────────────────────────────────
+  function goExamPractice() {
+    if (!_isGcse) return;   // locked card is a no-op
+    window.location.href = 'extended.html';
+  }
+  if (!_isGcse) {
+    var card = document.getElementById('pr-exam-card');
+    card.classList.add('locked');
+    document.getElementById('pr-exam-tag').textContent = 'From Year 10';
+    document.getElementById('pr-exam-tag').className = 'pr-mode-tag pr-tag-locked';
+    document.getElementById('pr-exam-desc').textContent = 'Full written exam answers with AI marking. This unlocks in Year 10 — for now, keep building with Topic Practice.';
+  }
+
+  // ── Topic Practice: list the student's STARTED topics, grouped by subject ──
+  var SUBJECTS = [
+    { id: 'math', label: 'Mathematics', emoji: '📐' },
+    { id: 'english', label: 'English', emoji: '📖' },
+    { id: 'science', label: 'Science', emoji: '🧪' },
+    { id: 'history', label: 'History', emoji: '📜' },
+    { id: 'geography', label: 'Geography', emoji: '🌍' }
+  ];
+  function topicStarted(topicId) {
+    var islands = (typeof CURRICULUM !== 'undefined') ? CURRICULUM.filter(function (i) { return i.topicId === topicId; }) : [];
+    if (!islands.length) return false;
+    return islands.some(function (i) { return (typeof getIslandStatus === 'function' ? getIslandStatus(i.id) : 0) >= 1; });
+  }
+  function renderTopicPractice() {
+    var host = document.getElementById('pr-topic-list');
+    var html = '';
+    SUBJECTS.forEach(function (s) {
+      var topics = (Atlas.yearTopics(s.id, _year) || []).filter(function (t) { return topicStarted(t.id); });
+      if (!topics.length) return;
+      html += '<div class="pr-subj"><div class="pr-subj-name">' + s.emoji + ' ' + s.label + '</div><div class="pr-topic-grid">';
+      topics.forEach(function (t) {
+        html += '<button class="pr-topic-btn" onclick="window.location.href=\'test.html?id=' + encodeURIComponent(t.id) + '\'">'
+          + (t.emoji ? '<span aria-hidden="true">' + t.emoji + '</span>' : '') + '<span>' + (t.name || t.id) + '</span></button>';
+      });
+      html += '</div></div>';
+    });
+    host.innerHTML = html || '<div class="pr-empty">No topics started yet. Open a subject from your <a href="dashboard.html" style="color:var(--blue);font-weight:700">dashboard</a>, work through a topic, then come back here to revise it.</div>';
+  }
+  renderTopicPractice();
+</script>
+</body>
+</html>

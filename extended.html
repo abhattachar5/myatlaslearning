@@ -87,26 +87,9 @@
     <!-- SETUP -->
     <div id="er-setup" class="er-setup">
       <h2>Exam Answer Practice</h2>
-      <p>Practise the long-answer questions that GCSE papers actually ask — and get them marked against the real levels of response, with a mark, what went well, and how to move up a level. Choose a subject to begin.</p>
-      <div class="er-subjects">
-        <button class="er-subject-btn" style="border-color:#10b981" onclick="start('science')">
-          <span class="er-sub-emoji">🔬</span><span class="er-sub-name">Science</span>
-          <div class="er-sub-meta">6-mark explanations</div>
-        </button>
-        <button class="er-subject-btn" style="border-color:#f59e0b" onclick="start('history')">
-          <span class="er-sub-emoji">📜</span><span class="er-sub-name">History</span>
-          <div class="er-sub-meta">12 &amp; 16-mark essays</div>
-        </button>
-        <button class="er-subject-btn" style="border-color:#06b6d4" onclick="start('geography')">
-          <span class="er-sub-emoji">🌍</span><span class="er-sub-name">Geography</span>
-          <div class="er-sub-meta">9-mark responses</div>
-        </button>
-        <button class="er-subject-btn" style="border-color:#8b5cf6" onclick="start('english-literature')">
-          <span class="er-sub-emoji">🎭</span><span class="er-sub-name">English Literature</span>
-          <div class="er-sub-meta">Set-text &amp; poetry essays</div>
-        </button>
-      </div>
-      <button class="btn btn-secondary" onclick="start('any')">Surprise me (any subject)</button>
+      <p>Practise the long-answer questions GCSE papers actually ask — marked against the real levels of response, with a mark, what went well, and how to move up a level. Pick a topic you've covered to begin.</p>
+      <div id="er-topic-picker" style="text-align:left;margin:20px 0 18px"></div>
+      <button class="btn btn-secondary" onclick="start('any')">Surprise me (any topic)</button>
     </div>
 
     <!-- WRITING -->
@@ -350,15 +333,63 @@ document.addEventListener('keydown', function(e){
   }
 });
 
+// ── Topic picker (replaces the old random-on-subject flow) ──────────────────
+function _esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function _startedTopicNames(){
+  var names = {};
+  if (typeof CURRICULUM === 'undefined') return names;
+  var byTopic = {};
+  CURRICULUM.forEach(function(i){ (byTopic[i.topicId] = byTopic[i.topicId] || []).push(i); });
+  Object.keys(byTopic).forEach(function(tid){
+    var started = byTopic[tid].some(function(i){ return (typeof getIslandStatus === 'function' ? getIslandStatus(i.id) : 0) >= 1; });
+    if (started) { var t = (typeof Atlas !== 'undefined' && Atlas.findTopic) ? Atlas.findTopic(tid) : null; if (t && t.name) names[t.name.toLowerCase()] = true; }
+  });
+  return names;
+}
+function _isStudied(name, studied){
+  var n = String(name).toLowerCase();
+  return Object.keys(studied).some(function(s){ return s === n || s.indexOf(n) > -1 || n.indexOf(s) > -1; });
+}
+function renderExtendedTopics(){
+  var host = document.getElementById('er-topic-picker');
+  if (!host) return;
+  var all = window.EXTENDED_QUESTIONS || [];
+  var bySubject = {};
+  all.forEach(function(q){ if (q.subject && q.topic) { (bySubject[q.subject] = bySubject[q.subject] || {})[q.topic] = true; } });
+  var studied = _startedTopicNames();
+  var order = ['english-literature','science','history','geography'];
+  var html = '';
+  order.forEach(function(subj){
+    if (!bySubject[subj]) return;
+    var color = SUBJECT_COLOR[subj] || '#6366f1';
+    var topics = Object.keys(bySubject[subj]).sort(function(a,b){
+      var da = _isStudied(a, studied) ? 0 : 1, db = _isStudied(b, studied) ? 0 : 1;
+      return da - db || a.localeCompare(b);
+    });
+    html += '<div style="margin-bottom:16px"><div style="font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:' + color + ';margin-bottom:8px">' + SUBJECT_LABEL[subj] + '</div>';
+    html += '<div style="display:flex;flex-wrap:wrap;gap:8px">';
+    topics.forEach(function(t){
+      var done = _isStudied(t, studied);
+      html += '<button class="btn btn-secondary er-pick" style="font-size:.875rem" data-subject="' + _esc(subj) + '" data-topic="' + _esc(t) + '">' + _esc(t) + (done ? ' <span style="color:var(--ok);font-weight:800">✓</span>' : '') + '</button>';
+    });
+    html += '</div></div>';
+  });
+  host.innerHTML = html || '<p style="color:var(--text-muted)">No topics available yet.</p>';
+  host.querySelectorAll('.er-pick').forEach(function(b){
+    b.addEventListener('click', function(){ start(b.getAttribute('data-subject'), b.getAttribute('data-topic')); });
+  });
+}
+
 // Deep link: extended.html?subject=english-literature[&topic=Macbeth] jumps
-// straight into that subject (optionally one text), e.g. from a skills-island lesson.
+// straight in (e.g. from a skills-island lesson).
 (function(){
   var sp = _params.get('subject');
   if (sp && (SUBJECT_COLOR[sp] || sp === 'any')) start(sp, _params.get('topic'));
 })();
 
-// KS3 years never reach the GCSE essay bank — show the year gate on load.
+// On load: KS3 → year gate; GCSE without a deep-link → show the topic picker.
 if (!_isGcse) showYearGate();
+else if (!_params.get('subject')) renderExtendedTopics();
 </script>
 </body>
 </html>
