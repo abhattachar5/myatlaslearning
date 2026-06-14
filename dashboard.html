@@ -50,25 +50,28 @@
       <button class="nav-item active" id="nav-dashboard" onclick="goToDashboard(); closeSidebar()">
         <span class="nav-icon" aria-hidden="true">🏠</span> Dashboard
       </button>
-      <button class="nav-item" id="nav-profile" onclick="openProfileModal(); closeSidebar()">
-        <span class="nav-icon" aria-hidden="true">👤</span> My Profile
-      </button>
       <button class="nav-item" id="nav-practice" onclick="window.location.href='practice.html'">
         <span class="nav-icon" aria-hidden="true">📝</span> Practice Hub
       </button>
       <button class="nav-item" id="nav-parent" onclick="window.location.href='parent.html'">
         <span class="nav-icon" aria-hidden="true">👪</span> Parent Zone
       </button>
-      <button class="nav-item" onclick="logout()">
-        <span class="nav-icon" aria-hidden="true">🚪</span> Sign Out
-      </button>
     </nav>
 
     <div class="sidebar-user">
-      <div class="user-card">
-        <div class="user-name" id="sidebar-name">—</div>
-        <div class="year-switch-wrap" id="year-switch-wrap" style="display:none"></div>
+      <div class="account-card" role="button" tabindex="0" aria-label="My profile"
+           onclick="openProfileModal(); closeSidebar()"
+           onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); openProfileModal(); closeSidebar();}">
+        <span class="account-avatar" id="sidebar-avatar" aria-hidden="true">—</span>
+        <span class="account-info">
+          <span class="user-name" id="sidebar-name">—</span>
+          <span class="account-year" id="year-switch-wrap" style="display:none"></span>
+        </span>
+        <span class="account-gear" aria-hidden="true">⚙️</span>
       </div>
+      <button class="account-signout" onclick="logout()">
+        <span class="nav-icon" aria-hidden="true">🚪</span> Sign out
+      </button>
     </div>
 
     <div class="sidebar-footer">
@@ -307,8 +310,7 @@ function renderYearSwitcher() {
   const wrap = document.getElementById('year-switch-wrap');
   if (!wrap) return;
   wrap.style.display = '';
-  wrap.innerHTML =
-    '<div style="font-size:.8125rem;color:var(--text-muted);margin-top:2px">' + getUserYear() + '</div>';
+  wrap.textContent = getUserYear();
 }
 
 // Year-aware topic lists — resolved via the central CONFIG.byYear map (Atlas.yearTopics),
@@ -920,6 +922,8 @@ function activateStudyPlan() {
 // ── Sidebar ──────────────────────────────────────────────────────────────────
 function renderSidebar() {
   document.getElementById('sidebar-name').textContent = user.name;
+  var _av = document.getElementById('sidebar-avatar');
+  if (_av) _av.textContent = (user.name || '?').trim().charAt(0).toUpperCase() || '?';
   const streak = getStreak();
   document.getElementById('streak-display').textContent = `🔥 ${streak} day${streak !== 1 ? 's' : ''}`;
   const mobileStreak = document.getElementById('mobile-streak-label');

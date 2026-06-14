@@ -225,6 +225,22 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 }
 .xp-label { font-size: .6875rem; color: var(--text-muted); margin-top: 4px; display: flex; justify-content: space-between; }
 
+/* Account block (sidebar bottom): avatar + name → profile, with sign out */
+.account-card { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
+  background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 10px 12px; cursor: pointer; transition: border-color .15s, background .15s; }
+.account-card:hover { border-color: var(--blue); background: var(--surface); }
+.account-avatar { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--blue); color: #fff;
+  font-family: var(--font-display); font-weight: 800; font-size: .95rem; display: grid; place-items: center; }
+.account-info { display: flex; flex-direction: column; min-width: 0; flex: 1 1 auto; }
+.account-info .user-name { margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.account-year { font-size: .75rem; color: var(--text-muted); }
+.account-gear { flex-shrink: 0; font-size: .85rem; opacity: .55; }
+.account-signout { display: flex; align-items: center; gap: 8px; width: 100%; margin-top: 8px; padding: 9px 12px;
+  border-radius: var(--radius-sm); font-size: .875rem; font-weight: 600; color: var(--text-muted);
+  background: none; border: 1px solid transparent; cursor: pointer; transition: background .15s, color .15s; min-height: 44px; }
+.account-signout:hover { background: var(--surface2); color: var(--text); }
+
 .sidebar-footer {
   padding: 12px 16px;
   display: flex;
