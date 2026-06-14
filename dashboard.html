@@ -329,6 +329,10 @@ function getYearGeographyTopics() { return Atlas.yearTopics('geography', getUser
   if (!user) return;
   touchStreak();
   renderSidebar();
+  // Exam Practice (extended GCSE essays, AI-marked) is Year 10/11 only — hide for KS3.
+  if (typeof Atlas !== 'undefined' && Atlas.isGcseYear && !Atlas.isGcseYear(getUserYear())) {
+    var _ep = document.getElementById('nav-exam-practice'); if (_ep) _ep.style.display = 'none';
+  }
   renderHeroBanner();
   renderWeekPlan();
   renderStats();

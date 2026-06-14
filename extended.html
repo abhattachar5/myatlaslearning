@@ -163,6 +163,21 @@ var SUBJECT_LABEL = { science:'Science', history:'History', geography:'Geography
 var current = null;
 var _curTopic = null;                       // when deep-linked to one text, keep "Another" within it
 var _params = new URLSearchParams(location.search);
+var _userYear = (user && user.year) || 'Year 7';
+var _isGcse = (typeof Atlas !== 'undefined' && Atlas.isGcseYear) ? Atlas.isGcseYear(_userYear) : (_userYear === 'Year 10' || _userYear === 'Year 11');
+
+// Exam Answer Practice is GCSE essay work (Year 10/11). For KS3 years, show a
+// friendly gate rather than handing a Year 7 a 16-mark GCSE essay.
+function showYearGate() {
+  ['er-active','er-results','er-loading','er-error'].forEach(function(id){ var e=document.getElementById(id); if(e) e.style.display='none'; });
+  var s = document.getElementById('er-setup');
+  if (!s) return;
+  s.style.display = '';
+  s.innerHTML = '<h2>Exam Answer Practice</h2>'
+    + '<p style="max-width:560px;margin:0 auto 8px">This is GCSE essay practice — the long written answers Year 10 and 11 papers ask for, marked against the real levels of response. It unlocks in <strong>Year 10</strong>.</p>'
+    + '<p style="color:var(--text-muted);max-width:560px;margin:0 auto 20px">For now (' + _userYear + '), keep building with lessons, flashcards and topic tests — that\'s exactly what gets you ready for these.</p>'
+    + '<a class="btn btn-primary" href="dashboard.html">← Back to dashboard</a>';
+}
 
 (function() { initTheme(); updateThemeBtn(); })();
 function handleThemeToggle() { toggleTheme(); updateThemeBtn(); }
@@ -184,6 +199,7 @@ function pool(subject, topic) {
 function again() { if (current) start(current.subject, _curTopic); }
 
 function start(subject, topic) {
+  if (!_isGcse) { showYearGate(); return; }
   _curTopic = topic || null;
   var qs = pool(subject, _curTopic);
   if (!qs.length) { showToast('No questions available yet for that subject.', 'error'); return; }
@@ -340,6 +356,9 @@ document.addEventListener('keydown', function(e){
   var sp = _params.get('subject');
   if (sp && (SUBJECT_COLOR[sp] || sp === 'any')) start(sp, _params.get('topic'));
 })();
+
+// KS3 years never reach the GCSE essay bank — show the year gate on load.
+if (!_isGcse) showYearGate();
 </script>
 </body>
 </html>
