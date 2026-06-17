@@ -639,7 +639,6 @@
             if (e.type === 'test') { var sc = (e.score != null) ? e.score + '%' : null;
               return e.passed ? '<span class="done">✓</span> Topic test · ' + (sc || 'passed')
                               : '📋 Topic test' + (sc ? ' (best ' + sc + ')' : ''); }
-            if (e.type === 'checkpoint') return '🚩 Checkpoint';
             return (e.mastered ? '<span class="done">✓</span> ' : '') + (e.island || e.name || '');
           });
           h += '<td>' + parts.join('<br>') + '</td>';

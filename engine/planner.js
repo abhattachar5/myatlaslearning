@@ -801,20 +801,12 @@
   }
 
   // ── Checkpoint splits for large topics ──────────────────────────────
-  // Topics with ≤5 islands: single final test.
-  // Larger topics: chunks of ~4-5 islands, each gets a checkpoint; final
-  // chunk gets the full topic test.  Returns array of cumulative counts,
-  // e.g. [5, 9] means checkpoint after island 5, topic test after island 9.
+  // One end-of-topic test per topic. (Mid-topic checkpoints were removed: they
+  // were never takeable and never appeared in the student's My Goals — only as
+  // un-clickable text in the parent Road Ahead — so they just confused.)
+  // Returns a single cumulative count: the full topic test after the last island.
   function _checkpointSplits(numIslands) {
-    if (numIslands <= 5) return [numIslands];
-    var numChunks = Math.ceil(numIslands / 5);
-    var chunkSize = Math.ceil(numIslands / numChunks);
-    var splits = [];
-    for (var i = chunkSize; i < numIslands; i += chunkSize) {
-      splits.push(i);
-    }
-    splits.push(numIslands);
-    return splits;
+    return [numIslands];
   }
 
   // ── Dynamic weekly grid: weeks as rows, subjects as columns ──────────
