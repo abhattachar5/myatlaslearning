@@ -120,6 +120,13 @@
     if (!islands.length) return false;
     return islands.some(function (i) { return (typeof getIslandStatus === 'function' ? getIslandStatus(i.id) : 0) >= 1; });
   }
+  function lastTestReview(topicId) {
+    try {
+      var arr = (JSON.parse(localStorage.getItem('sm_test_results') || '{}')[topicId]) || [];
+      var last = arr.length ? arr[arr.length - 1] : null;
+      return (last && last.reviewItems && last.reviewItems.length) ? last : null;
+    } catch (e) { return null; }
+  }
   function renderTopicPractice() {
     var host = document.getElementById('pr-topic-list');
     var html = '';
@@ -128,8 +135,14 @@
       if (!topics.length) return;
       html += '<div class="pr-subj"><div class="pr-subj-name">' + s.emoji + ' ' + s.label + '</div><div class="pr-topic-grid">';
       topics.forEach(function (t) {
-        html += '<button class="pr-topic-btn" onclick="window.location.href=\'test.html?id=' + encodeURIComponent(t.id) + '\'">'
+        var lastResult = lastTestReview(t.id);
+        html += '<div style="display:flex;align-items:center;gap:6px">';
+        html += '<button class="pr-topic-btn" style="flex:1" onclick="window.location.href=\'test.html?id=' + encodeURIComponent(t.id) + '\'">'
           + (t.emoji ? '<span aria-hidden="true">' + t.emoji + '</span>' : '') + '<span>' + (t.name || t.id) + '</span></button>';
+        if (lastResult) {
+          html += '<button class="pr-topic-btn" style="flex:0 0 auto;padding:11px 12px" title="View last result" aria-label="View last result for ' + (t.name || t.id) + '" onclick="window.location.href=\'test.html?id=' + encodeURIComponent(t.id) + '&review=1\'">🔎</button>';
+        }
+        html += '</div>';
       });
       html += '</div></div>';
     });

@@ -559,11 +559,15 @@ function renderHomework() {
         ? '<span style="margin-left:auto;color:#22c55e;font-weight:700;font-size:.8125rem">✓ Done</span>'
         : '<span style="margin-left:auto;background:' + bandBg(p) + ';color:' + bandColor(p) + ';font-weight:800;font-size:.75rem;padding:3px 10px;border-radius:20px;white-space:nowrap">' + p + '%' + (a.result && a.result.correct != null ? ' · ' + a.result.correct + '/' + a.result.total : '') + '</span>';
       var when = fmt(a.result && a.result.takenAt);
+      var reviewable = !!(a.result && ((a.result.reviewItems && a.result.reviewItems.length) || a.result.type === 'english'));
+      var reviewLink = reviewable
+        ? '<a href="' + assignmentLink(a) + '&review=1" title="View answers" aria-label="View answers for ' + nameOf(a) + '" style="margin-left:8px;font-size:1rem;text-decoration:none">🔎</a>'
+        : '';
       return '<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--border)">' +
         '<span style="font-size:1.05rem">' + (a.type === 'exam' ? '📄' : '📐') + '</span>' +
         '<div style="min-width:0"><div style="font-weight:600;color:var(--text);font-size:.9rem">' + nameOf(a) + '</div>' +
         (when ? '<div style="font-size:.72rem;color:var(--text-muted)">' + when + '</div>' : '') + '</div>' +
-        chip + '</div>';
+        chip + reviewLink + '</div>';
     }).join('');
     html += '<details style="margin-top:6px;padding:0 4px">' +
       '<summary style="cursor:pointer;font-weight:800;font-size:.8125rem;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted);padding:6px 0">🏅 Practice &amp; exam history <span style="font-weight:600;text-transform:none;letter-spacing:0">(' + done.length + ')</span></summary>' +

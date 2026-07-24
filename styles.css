@@ -839,6 +839,8 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
 }
 .quiz-option:hover:not(.answered) { border-color: var(--blue); background: #e8f0fa; }
 [data-theme="dark"] .quiz-option:hover:not(.answered) { background: rgba(24,95,165,.15); }
+.quiz-option.selected:not(.answered) { border-color: var(--blue); background: #e8f0fa; }
+[data-theme="dark"] .quiz-option.selected:not(.answered) { background: rgba(24,95,165,.15); }
 .quiz-option.correct  { border-color: #22c55e; background: #f0fdf4; color: #166534; }
 .quiz-option.wrong    { border-color: #ef4444; background: #fef2f2; color: #991b1b; }
 [data-theme="dark"] .quiz-option.correct { background: rgba(34,197,94,.12); color: #4ade80; }

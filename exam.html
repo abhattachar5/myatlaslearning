@@ -62,6 +62,16 @@
     .t-strong { background:rgba(34,197,94,.15); color:#15803d; }
     .t-revisit { background:rgba(245,158,11,.16); color:#b45309; }
 
+    .review-section { text-align: left; margin-top: 24px; }
+    .review-section h3 { margin-bottom: 16px; }
+    .review-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+    .review-item.correct { border-left: 4px solid #22c55e; }
+    .review-item.incorrect { border-left: 4px solid #ef4444; }
+    .review-q { font-weight: 600; margin-bottom: 8px; }
+    .review-answer { font-size: .875rem; color: var(--text-2); }
+    .review-answer .correct-ans { color: #15803d; font-weight: 600; }
+    .review-answer .wrong-ans { color: #b91c1c; text-decoration: line-through; }
+
     /* English paper */
     .passage { background:var(--surface2); border-radius:12px; padding:18px 20px; margin-bottom:18px; max-height:320px; overflow:auto; }
     .passage h4 { color:var(--text); margin-bottom:8px; }
@@ -171,8 +181,9 @@
         <div class="rs-stat"><div class="v" id="rs-xp">+0</div><div class="l">XP earned</div></div>
       </div>
       <div class="card">
-        <div class="lbl">By topic</div>
+        <div class="lbl" id="rs-topics-lbl">By topic</div>
         <div id="rs-topics"></div>
+        <div id="rs-review"></div>
         <button class="btn btn-primary" style="width:100%;margin-top:18px" onclick="window.location.href='dashboard.html'">Back to dashboard →</button>
       </div>
     </div>
@@ -260,6 +271,7 @@
 
     var params = new URLSearchParams(location.search);
     var aid = params.get('aid');
+    var _reviewOnly = params.get('review') === '1'; // reopen a past attempt's saved result instead of sitting a new exam
     var assignment = (typeof getAssignments === 'function' ? getAssignments() : []).find(function (a) { return a.id === aid; });
 
     // Self-serve mock: synthesise an assignment from URL params when there is no
@@ -348,15 +360,16 @@
         renderEnglishResults(items, null, null, e.message);
       });
     }
-    function renderEnglishResults(items, compFb, writeFb, errMsg) {
+    // Paints the AI-marked English results screen from stored feedback objects —
+    // used both right after live marking and when reopening a past attempt.
+    function paintEnglishResults(compFb, writeFb, errMsg, totalMax) {
       document.getElementById('en-active').style.display = 'none';
       document.getElementById('en-results').style.display = '';
-      var totalMax = items.reduce(function (s, it) { return s + (it.marks || 0); }, 0);
       var gained = 0, readHtml = '';
       if (compFb && compFb.results) {
         compFb.results.forEach(function (r, i) {
           gained += (r.marks || 0);
-          readHtml += '<div style="display:flex;align-items:center;gap:10px;margin:10px 0 6px"><span class="cq-q">Q' + (i + 1) + '</span><span class="mk-marks" style="margin-left:auto">' + (r.marks || 0) + ' / ' + (r.max || items[i].marks) + '</span></div>';
+          readHtml += '<div style="display:flex;align-items:center;gap:10px;margin:10px 0 6px"><span class="cq-q">Q' + (i + 1) + '</span><span class="mk-marks" style="margin-left:auto">' + (r.marks || 0) + ' / ' + (r.max != null ? r.max : '?') + '</span></div>';
           (r.www || []).forEach(function (w) { readHtml += '<div class="fb"><div class="www">✓ ' + escapeHtmlX(w) + '</div></div>'; });
           (r.ebi || []).forEach(function (e) { readHtml += '<div class="fb"><div class="ebi">→ ' + escapeHtmlX(e) + '</div></div>'; });
         });
@@ -386,12 +399,18 @@
       var readPct = totalMax ? Math.round(gained / totalMax * 100) : 0;
       document.getElementById('enrs-score').textContent = gained + ' / ' + totalMax;
       document.getElementById('enrs-grade').textContent = 'Reading ' + readPct + '% · ' + gradeBand(readPct, examYear(), 'english');
+      return { gained: gained, readPct: readPct };
+    }
+
+    function renderEnglishResults(items, compFb, writeFb, errMsg) {
+      var totalMax = items.reduce(function (s, it) { return s + (it.marks || 0); }, 0);
+      var res = paintEnglishResults(compFb, writeFb, errMsg, totalMax);
 
       var timeUsed = Math.round((Date.now() - enStartedAt) / 1000);
       if (aid && typeof updateAssignment === 'function') {
-        updateAssignment(aid, { status: 'done', result: { type: 'english', readingMarks: gained, readingMax: totalMax, readingPct: readPct, comprehension: compFb || null, writing: writeFb || null, timeUsedSec: timeUsed, takenAt: new Date().toISOString() } });
+        updateAssignment(aid, { status: 'done', result: { type: 'english', readingMarks: res.gained, readingMax: totalMax, readingPct: res.readPct, comprehension: compFb || null, writing: writeFb || null, timeUsedSec: timeUsed, takenAt: new Date().toISOString() } });
       }
-      if (typeof addXP === 'function') addXP(Math.round(readPct / 2), 'Mock exam');
+      if (typeof addXP === 'function') addXP(Math.round(res.readPct / 2), 'Mock exam');
     }
 
     function initBrief() {
@@ -472,11 +491,56 @@
       });
     }
 
+    function buildReviewHTML(reviewItems) {
+      var html = '';
+      for (var i = 0; i < reviewItems.length; i++) {
+        var r = reviewItems[i];
+        html += '<div class="review-item ' + (r.correct ? 'correct' : 'incorrect') + '">';
+        html += '<div class="review-q">' + (i + 1) + '. ' + escapeHtmlX(r.q) + '</div>';
+        html += '<div class="review-answer">';
+        if (r.correct) {
+          html += '<span class="correct-ans">✓ ' + escapeHtmlX(r.correctAnswer) + '</span>';
+        } else {
+          html += '<span class="wrong-ans">' + escapeHtmlX(r.userAnswer) + '</span> → <span class="correct-ans">' + escapeHtmlX(r.correctAnswer) + '</span>';
+        }
+        if (r.explanation) html += '<div style="margin-top:6px;font-size:.8125rem;color:var(--text-muted)">' + escapeHtmlX(r.explanation) + '</div>';
+        html += '</div></div>';
+      }
+      return html;
+    }
+
+    // Paints the MCQ results screen from a meta object — used both right after a
+    // live submission and when reopening a past attempt's saved result.
+    function paintMcqResults(meta) {
+      document.getElementById('ex-active').style.display = 'none';
+      document.getElementById('ex-results').style.display = '';
+      document.getElementById('rs-subject').textContent = meta.subjectText;
+      document.getElementById('rs-score').textContent = meta.pct + '%';
+      document.getElementById('rs-grade').textContent = meta.grade;
+      var noteEl = document.getElementById('rs-gradenote');
+      if (noteEl) { noteEl.textContent = meta.note || ''; noteEl.style.display = meta.note ? '' : 'none'; }
+      document.getElementById('rs-correct').textContent = meta.correct + '/' + meta.total;
+      document.getElementById('rs-time').textContent = meta.timeUsed != null ? (Math.floor(meta.timeUsed / 60) + ':' + (meta.timeUsed % 60 < 10 ? '0' : '') + (meta.timeUsed % 60)) : '–';
+      document.getElementById('rs-xp').textContent = meta.xp != null ? ('+' + meta.xp) : '–';
+      var topicsLbl = document.getElementById('rs-topics-lbl');
+      if (topicsLbl) topicsLbl.style.display = (meta.perTopic && meta.perTopic.length) ? '' : 'none';
+      document.getElementById('rs-topics').innerHTML = (meta.perTopic || []).map(function (t) {
+        var revisit = t.pct < 70;
+        var col = revisit ? '#f59e0b' : '#22c55e';
+        return '<div class="rs-topic"><span class="nm">' + t.name + '</span><div class="rs-tbar"><i style="width:' + t.pct + '%;background:' + col + '"></i></div>' +
+          '<span class="rs-tag ' + (revisit ? 't-revisit' : 't-strong') + '">' + t.pct + '%' + (revisit ? ' · revisit' : '') + '</span></div>';
+      }).join('');
+      document.getElementById('rs-review').innerHTML = (meta.reviewItems && meta.reviewItems.length)
+        ? '<div class="review-section"><h3>Review Answers</h3>' + buildReviewHTML(meta.reviewItems) + '</div>'
+        : '';
+    }
+
     function finish() {
       if (_examSubmitted) return; _examSubmitted = true;   // DEF-008
       if (timerId) { clearInterval(timerId); timerId = null; }
       var correct = 0;
       var byTopic = {};
+      var reviewItems = [];
       questions.forEach(function (q, i) {
         var tid = q.topicId || '_';
         if (!byTopic[tid]) byTopic[tid] = { name: q.topicName || tid, correct: 0, total: 0 };
@@ -484,6 +548,8 @@
         var ans = answers[i];
         var ok = Array.isArray(q.c) ? q.c.indexOf(ans) !== -1 : ans === q.c;
         if (ok) { correct++; byTopic[tid].correct++; }
+        var correctAnswer = Array.isArray(q.c) ? q.c.map(function (j) { return q.opts[j]; }).join(', ') : q.opts[q.c];
+        reviewItems.push({ q: q.q, correct: ok, userAnswer: ans >= 0 ? q.opts[ans] : 'Not answered', correctAnswer: correctAnswer, explanation: q.e || '' });
       });
       var pct = total ? Math.round(correct / total * 100) : 0;
       var timeUsed = Math.round((Date.now() - startedAt) / 1000);
@@ -494,42 +560,30 @@
         var t = byTopic[tid];
         return { topicId: tid, name: t.name, pct: t.total ? Math.round(t.correct / t.total * 100) : 0 };
       });
+      var xp = Math.round(pct / 2);
 
       // Persist the result. Assigned exams update the assignment; self-serve
       // (live) mocks record a lightweight per-subject result so the dashboard
       // "GCSE standing" card can blend in the most recent mock.
       if (aid && typeof updateAssignment === 'function') {
-        updateAssignment(aid, { status: 'done', result: { percent: pct, correct: correct, total: total, timeUsedSec: timeUsed, gradeBand: grade, perTopic: perTopic, takenAt: new Date().toISOString() } });
+        updateAssignment(aid, { status: 'done', result: { percent: pct, correct: correct, total: total, timeUsedSec: timeUsed, gradeBand: grade, perTopic: perTopic, takenAt: new Date().toISOString(), reviewItems: reviewItems } });
       } else if (assignment && assignment.subjectId) {
         try {
           var _mr = JSON.parse(localStorage.getItem('sm_mock_results') || '{}');
           if (!_mr[assignment.subjectId]) _mr[assignment.subjectId] = [];
-          _mr[assignment.subjectId].push({ percent: pct, gradeBand: grade, takenAt: new Date().toISOString() });
+          _mr[assignment.subjectId].push({ percent: pct, gradeBand: grade, takenAt: new Date().toISOString(), correct: correct, total: total, timeUsedSec: timeUsed, perTopic: perTopic, reviewItems: reviewItems });
           if (_mr[assignment.subjectId].length > 10) _mr[assignment.subjectId] = _mr[assignment.subjectId].slice(-10);
           localStorage.setItem('sm_mock_results', JSON.stringify(_mr));
           if (typeof syncProgressToServer === 'function') syncProgressToServer();
         } catch (e) {}
       }
-      var xp = Math.round(pct / 2);
       if (typeof addXP === 'function') addXP(xp, 'Mock exam');
 
-      // Render results
-      document.getElementById('ex-active').style.display = 'none';
-      document.getElementById('ex-results').style.display = '';
-      document.getElementById('rs-subject').textContent = (SUBJECT_LABELS[assignment.subjectId] || assignment.subjectId).toUpperCase() + ' — MOCK EXAM';
-      document.getElementById('rs-score').textContent = pct + '%';
-      document.getElementById('rs-grade').textContent = grade;
-      var noteEl = document.getElementById('rs-gradenote');
-      if (noteEl) { noteEl.textContent = note; noteEl.style.display = note ? '' : 'none'; }
-      document.getElementById('rs-correct').textContent = correct + '/' + total;
-      document.getElementById('rs-time').textContent = Math.floor(timeUsed / 60) + ':' + (timeUsed % 60 < 10 ? '0' : '') + (timeUsed % 60);
-      document.getElementById('rs-xp').textContent = '+' + xp;
-      document.getElementById('rs-topics').innerHTML = perTopic.map(function (t) {
-        var revisit = t.pct < 70;
-        var col = revisit ? '#f59e0b' : '#22c55e';
-        return '<div class="rs-topic"><span class="nm">' + t.name + '</span><div class="rs-tbar"><i style="width:' + t.pct + '%;background:' + col + '"></i></div>' +
-          '<span class="rs-tag ' + (revisit ? 't-revisit' : 't-strong') + '">' + t.pct + '%' + (revisit ? ' · revisit' : '') + '</span></div>';
-      }).join('');
+      paintMcqResults({
+        subjectText: (SUBJECT_LABELS[assignment.subjectId] || assignment.subjectId).toUpperCase() + ' — MOCK EXAM',
+        pct: pct, grade: grade, note: note, correct: correct, total: total,
+        timeUsed: timeUsed, xp: xp, perTopic: perTopic, reviewItems: reviewItems
+      });
     }
 
     // Indicative grade. GCSE years (10 & 11) get a 9–1 grade scaled to the exam
@@ -643,32 +697,28 @@
       if (_examSubmitted) return; _examSubmitted = true;   // DEF-008
       if (_mcqTimer) { clearInterval(_mcqTimer); _mcqTimer = null; }
       var correct = 0;
-      _mcqQs.forEach(function (q, i) { if (_mcqAns[i] === q.c) correct++; });
+      var reviewItems = _mcqQs.map(function (q, i) {
+        var ok = _mcqAns[i] === q.c;
+        if (ok) correct++;
+        var ans = _mcqAns[i];
+        return { q: q.q, correct: ok, userAnswer: ans >= 0 ? q.opts[ans] : 'Not answered', correctAnswer: q.opts[q.c], explanation: q.e || '' };
+      });
       var total = _mcqQs.length, pct = total ? Math.round(correct / total * 100) : 0;
       var timeUsed = Math.round((Date.now() - _mcqStart) / 1000);
       var year = examYear();
       var grade = gradeBand(pct, year, 'english');
       var note = gradeNote(year, 'english');
       if (aid && typeof updateAssignment === 'function') {
-        updateAssignment(aid, { status: 'done', result: { percent: pct, correct: correct, total: total, timeUsedSec: timeUsed, gradeBand: grade, takenAt: new Date().toISOString() } });
+        updateAssignment(aid, { status: 'done', result: { percent: pct, correct: correct, total: total, timeUsedSec: timeUsed, gradeBand: grade, takenAt: new Date().toISOString(), reviewItems: reviewItems } });
       }
       var xp = Math.round(pct / 2);
       if (typeof addXP === 'function') addXP(xp, 'Mock exam');
 
-      document.getElementById('en-active').style.display = 'none';
-      document.getElementById('ex-results').style.display = '';
-      document.getElementById('rs-subject').textContent = 'ENGLISH READING — MOCK';
-      document.getElementById('rs-score').textContent = pct + '%';
-      document.getElementById('rs-grade').textContent = grade;
-      var noteEl = document.getElementById('rs-gradenote'); if (noteEl) { noteEl.textContent = note; noteEl.style.display = note ? '' : 'none'; }
-      document.getElementById('rs-correct').textContent = correct + '/' + total;
-      document.getElementById('rs-time').textContent = Math.floor(timeUsed / 60) + ':' + (timeUsed % 60 < 10 ? '0' : '') + (timeUsed % 60);
-      document.getElementById('rs-xp').textContent = '+' + xp;
-      document.getElementById('rs-topics').innerHTML = _mcqQs.map(function (q, i) {
-        var ok = _mcqAns[i] === q.c;
-        return '<div class="rs-topic"><span class="nm">' + (i + 1) + '. ' + escapeHtmlX(q.skill || 'Question') + '</span>' +
-          '<span class="rs-tag ' + (ok ? 't-strong' : 't-revisit') + '">' + (ok ? 'Correct' : 'Review') + '</span></div>';
-      }).join('');
+      paintMcqResults({
+        subjectText: 'ENGLISH READING — MOCK',
+        pct: pct, grade: grade, note: note, correct: correct, total: total,
+        timeUsed: timeUsed, xp: xp, perTopic: [], reviewItems: reviewItems
+      });
       window.scrollTo(0, 0);
     }
 
@@ -690,8 +740,38 @@
       document.getElementById('ex-pick').style.display = '';
     }
 
+    // Reopen a past assigned exam's saved result instead of sitting a new paper.
+    // Self-serve mocks have no existing entry point to reach this, so review-reopen
+    // only supports assignment-linked attempts (aid).
+    function showStoredReview() {
+      if (!aid || !assignment || !assignment.result) {
+        document.getElementById('ex-error').style.display = '';
+        return;
+      }
+      var result = assignment.result;
+      if (result.type === 'english') {
+        document.getElementById('en-results').style.display = '';
+        paintEnglishResults(result.comprehension, result.writing, null, result.readingMax || 0);
+        return;
+      }
+      var subjectText = assignment.subjectId === 'english'
+        ? 'ENGLISH READING — MOCK'
+        : (SUBJECT_LABELS[assignment.subjectId] || assignment.subjectId).toUpperCase() + ' — MOCK EXAM';
+      paintMcqResults({
+        subjectText: subjectText,
+        pct: result.percent, grade: result.gradeBand, note: gradeNote(examYear(), assignment.subjectId),
+        correct: result.correct, total: result.total, timeUsed: result.timeUsedSec,
+        xp: null, perTopic: result.perTopic || [], reviewItems: result.reviewItems || []
+      });
+      if (!result.reviewItems || !result.reviewItems.length) {
+        document.getElementById('rs-review').innerHTML = '<p class="muted" style="margin-top:16px">No saved answer review for this attempt.</p>';
+      }
+    }
+
     // ── Init (after all definitions) ─────────────────────────────────────────────
-    if (isLiveMock && !pickSubject) {
+    if (_reviewOnly) {
+      showStoredReview();
+    } else if (isLiveMock && !pickSubject) {
       showMockPicker();
     } else if (!assignment || assignment.type !== 'exam') {
       document.getElementById('ex-error').style.display = '';

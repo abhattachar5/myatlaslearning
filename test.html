@@ -246,6 +246,7 @@ const setupLabel = isCheckpoint ? topic.name + ' Checkpoint' : topic.name + ' Te
 const _nParam = parseInt(params.get('n'), 10);
 const _diffParam = (params.get('diff') || '').toLowerCase();
 const _assignmentId = params.get('aid'); // set when launched from an assigned practice
+const _reviewOnly = params.get('review') === '1'; // reopen a past attempt's saved review instead of starting a new test
 const examOpts = {
   maxQuestions: (_nParam && _nParam > 0) ? _nParam : undefined,
   difficulty: ['foundation', 'mixed', 'higher'].indexOf(_diffParam) !== -1 ? _diffParam : undefined
@@ -271,6 +272,8 @@ var _qShown = (function(numIslands){ var per = Math.min(5, Math.floor(_cap/numIs
 infoGrid.innerHTML =
   '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + _qShown + '</div></div>'
   + (examOpts.difficulty ? '<div class="test-info-card"><div class="label">Difficulty</div><div class="value" style="font-size:1rem;text-transform:capitalize">' + examOpts.difficulty + '</div></div>' : '');
+
+if (_reviewOnly) { showStoredReview(); }
 
 // Theme
 (function() { initTheme(); updateThemeBtn(); })();
@@ -548,6 +551,69 @@ function exitTest(e) {
   return false;
 }
 
+function buildReviewHTML(reviewItems) {
+  var html = '';
+  for (var i = 0; i < reviewItems.length; i++) {
+    var r = reviewItems[i];
+    html += '<div class="review-item ' + (r.correct ? 'correct' : 'incorrect') + '">';
+    html += '<div class="review-q">' + (i + 1) + '. ' + r.q + '</div>';
+    html += '<div class="review-answer">';
+    if (r.correct) {
+      html += '<span class="correct-ans">✓ ' + r.correctAnswer + '</span>';
+    } else {
+      html += '<span class="wrong-ans">' + r.userAnswer + '</span> → <span class="correct-ans">' + r.correctAnswer + '</span>';
+    }
+    if (r.explanation) html += '<div style="margin-top:6px;font-size:.8125rem;color:var(--text-muted)">' + r.explanation + '</div>';
+    html += '</div></div>';
+  }
+  return html;
+}
+
+// Reopen a past attempt's saved review instead of starting a new test.
+function showStoredReview() {
+  document.getElementById('test-setup').style.display = 'none';
+  document.getElementById('test-active').style.display = 'none';
+  document.getElementById('test-results').style.display = '';
+
+  var stored = null, when = null;
+  if (_assignmentId) {
+    var a = (typeof getAssignments === 'function' ? getAssignments() : []).find(function (x) { return x.id === _assignmentId; });
+    if (a && a.result) { stored = a.result; when = a.result.takenAt; }
+  } else {
+    var arr = (JSON.parse(localStorage.getItem('sm_test_results') || '{}')[resultKey]) || [];
+    if (arr.length) { stored = arr[arr.length - 1]; when = stored.date; }
+  }
+
+  if (!stored || !stored.reviewItems || !stored.reviewItems.length) {
+    document.getElementById('test-results').innerHTML =
+      '<h2>No saved review</h2>' +
+      '<p style="color:var(--text-2);margin-bottom:24px">This attempt was taken before answer review was available.</p>' +
+      '<button class="btn btn-primary" onclick="window.location.href=\'topic.html?id=' + topicId + '\'">← Back to Topic</button>';
+    return;
+  }
+
+  var pct = stored.pct != null ? stored.pct : (stored.percent != null ? stored.percent : Math.round((stored.score || stored.correct || 0) / (stored.total || 1) * 100));
+  var correct = stored.score != null ? stored.score : stored.correct;
+  var total = stored.total;
+  var scoreClass = pct >= 70 ? '' : pct >= 50 ? ' medium' : ' low';
+  var bandLabel = pct >= 70 ? 'Excellent' : pct >= 50 ? 'Good' : 'Keep practising';
+  var emoji = pct >= 90 ? '🏆' : pct >= 70 ? '🌟' : pct >= 50 ? '👍' : '📚';
+  var whenTxt = (function () { if (!when) return ''; var d = new Date(when); return isNaN(d.getTime()) ? '' : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); })();
+
+  var html = '<div style="font-size:3.5rem;margin-bottom:16px">' + emoji + '</div>';
+  html += '<h2>Past Attempt' + (whenTxt ? ' — ' + whenTxt : '') + '</h2>';
+  html += '<div class="results-score' + scoreClass + '">' + pct + '%</div>';
+  html += '<div style="font-weight:700;font-size:1.05rem;margin:-2px 0 6px;color:var(--text)">' + bandLabel + '</div>';
+  html += '<p style="color:var(--text-2);margin-bottom:8px">' + correct + ' out of ' + total + ' correct</p>';
+  html += '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px">';
+  html += '<button class="btn btn-secondary" onclick="retakeTest()">↺ Retake Test</button>';
+  html += '<button class="btn btn-primary" onclick="window.location.href=\'topic.html?id=' + topicId + '\'">← Back to Topic</button>';
+  html += '</div>';
+  html += '<div class="review-section"><h3>Review Answers</h3>' + buildReviewHTML(stored.reviewItems) + '</div>';
+
+  document.getElementById('test-results').innerHTML = html;
+}
+
 function submitTest() {
   if (timerInterval) clearInterval(timerInterval);
 
@@ -616,7 +682,8 @@ function submitTest() {
     try { if (isTimed) _timeUsedSec = parseInt(document.getElementById('time-slider').value, 10) * 60 - timeRemaining; } catch (e) {}
     updateAssignment(_assignmentId, { status: 'done', result: {
       percent: pct, correct: correct, total: testQuestions.length,
-      timeUsedSec: _timeUsedSec, takenAt: new Date().toISOString(), perIsland: perIsland
+      timeUsedSec: _timeUsedSec, takenAt: new Date().toISOString(), perIsland: perIsland,
+      reviewItems: reviewItems
     } });
   }
 
@@ -665,21 +732,7 @@ function submitTest() {
   html += '</div>';
 
   // Review section
-  html += '<div class="review-section"><h3>Review Answers</h3>';
-  for (var i = 0; i < reviewItems.length; i++) {
-    var r = reviewItems[i];
-    html += '<div class="review-item ' + (r.correct ? 'correct' : 'incorrect') + '">';
-    html += '<div class="review-q">' + (i + 1) + '. ' + r.q + '</div>';
-    html += '<div class="review-answer">';
-    if (r.correct) {
-      html += '<span class="correct-ans">✓ ' + r.correctAnswer + '</span>';
-    } else {
-      html += '<span class="wrong-ans">' + r.userAnswer + '</span> → <span class="correct-ans">' + r.correctAnswer + '</span>';
-    }
-    if (r.explanation) html += '<div style="margin-top:6px;font-size:.8125rem;color:var(--text-muted)">' + r.explanation + '</div>';
-    html += '</div></div>';
-  }
-  html += '</div>';
+  html += '<div class="review-section"><h3>Review Answers</h3>' + buildReviewHTML(reviewItems) + '</div>';
 
   document.getElementById('test-active').style.display = 'none';
   document.getElementById('test-results').style.display = '';
@@ -690,7 +743,8 @@ function submitTest() {
     score: correct, total: testQuestions.length, pct: pct,
     subtopicScores: subtopicScores,
     date: new Date().toISOString(),
-    isCheckpoint: isCheckpoint
+    isCheckpoint: isCheckpoint,
+    reviewItems: reviewItems
   });
   // Clear any prior revision tracking for this topic (fresh after retake)
   // Only for full topic tests, not checkpoints
@@ -713,6 +767,7 @@ function saveTestResult(topicId, result) {
   var all = JSON.parse(localStorage.getItem(key) || '{}');
   if (!all[topicId]) all[topicId] = [];
   all[topicId].push(result);
+  if (all[topicId].length > 10) all[topicId] = all[topicId].slice(-10);
   localStorage.setItem(key, JSON.stringify(all));
   if (typeof syncProgressToServer === 'function') syncProgressToServer();
 }
