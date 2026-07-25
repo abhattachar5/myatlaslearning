@@ -466,46 +466,84 @@ Techniques used:<br>
 
 ,
 
-"island-11": `<h4>Introduction</h4>
-<p>Look at your own hand, a blade of grass, and a mushroom growing on a log — three completely different things, yet all three are built from exactly the same basic unit: the cell. Some living things are made of just a single cell; you are built from around 37 trillion of them, all working together without you ever noticing. In this lesson you'll open up a cell to see what's inside, learn the seven things every living thing must do to count as "alive", and see how individual cells combine to build something as complex as a human body. Almost everything else you study in biology — from digestion to reproduction — comes back to what's happening inside these tiny building blocks, so it's worth getting to know them well.</p>
-<h4>📌 Key Points</h4>
+"island-11": `<h2>Cells &amp; Life Processes</h2>
+<p>Look at your own hand, a blade of grass, and a mushroom growing on a log — three completely different things, yet all three are built from exactly the same basic unit: the cell. Some living things are made of just a single cell; you are built from around 37 trillion of them, all working together without you ever noticing. In this chapter you'll open up a cell to see what's inside, learn the seven things every living thing must do to count as "alive", and see how individual cells combine to build something as complex as a human body. Almost everything else you study in biology — from digestion to reproduction — comes back to what's happening inside these tiny building blocks.</p>
+
+<h3>What Is a Cell?</h3>
+<p>A <strong>cell</strong> is the smallest unit of a living thing that can carry out all the processes of life. Cells are far too small to see with your eyes alone — a typical human cell is roughly a hundredth of a millimetre across — so you need a microscope to look at one.</p>
+<p>Some organisms, such as bacteria, are <strong>unicellular</strong>: the entire living thing is a single cell doing every job at once. Most of the living things you see around you are <strong>multicellular</strong>, built from enormous numbers of cells that each specialise in one task and work as a team. Whichever kind you look at, much of the same basic machinery turns up inside — which is why studying one cell tells you so much about life in general.</p>
+
+<h3>Inside an Animal Cell</h3>
+<p>If you could look inside a cell, you would find a set of tiny working parts, each with its own job. These parts are called <strong>organelles</strong> — think of them as the different pieces of equipment inside a factory. Every animal cell contains the following:</p>
 <ul>
-<li><strong>Animal cells</strong> contain: a <strong>nucleus</strong> (the control centre — holds the DNA instructions for the whole cell), a <strong>cell membrane</strong> (a thin skin around the cell that controls what can enter and leave), <strong>cytoplasm</strong> (the jelly-like substance filling the cell, where chemical reactions happen), <strong>mitochondria</strong> (release energy from food — the cell's "power stations"), and <strong>ribosomes</strong> (build proteins).</li>
-<li><strong>Plant cells</strong> have everything animal cells have, PLUS: a <strong>cell wall</strong> (a rigid outer layer made of cellulose that gives the cell support and a fixed shape), <strong>chloroplasts</strong> (where photosynthesis happens, using sunlight to make food), and a large permanent <strong>vacuole</strong> (a fluid-filled sac that keeps the cell firm by pushing outward against the cell wall).</li>
-<li><strong>MRS GREN</strong> — the 7 life processes all living things must carry out: Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, Nutrition.</li>
-<li>Organisation: Cell → Tissue → Organ → Organ System → Organism.</li>
-<li><strong>Ribosomes</strong> are tiny structures in all cells where <strong>proteins are made</strong> (protein synthesis).</li>
-<li><strong>Specialised cells</strong> have adaptations for their function: <strong>red blood cells</strong> have no nucleus and a biconcave disc shape (more room for haemoglobin, larger surface area for gas exchange); <strong>root hair cells</strong> have a long hair-like extension giving a large surface area for absorbing water.</li>
-<li><strong>Diffusion</strong> is the net movement of particles from an area of <strong>high concentration</strong> to an area of <strong>low concentration</strong> (down the concentration gradient). It is a passive process — no energy is needed.</li>
-<li><strong>Excretion</strong> is the removal of waste products made by chemical reactions in cells (e.g. CO₂ from the lungs, urea from the kidneys). Do not confuse with <strong>egestion</strong> — the removal of undigested food from the body.</li>
+<li><strong>Nucleus</strong> — the control centre. It contains <strong>DNA</strong>, the chemical that carries the coded instructions for building and running the whole organism, and it uses those instructions to control everything the cell does.</li>
+<li><strong>Cell membrane</strong> — a thin, flexible skin around the outside of the cell. It holds the cell together and controls which substances are allowed in and out.</li>
+<li><strong>Cytoplasm</strong> — the clear, jelly-like substance that fills the cell. This is where most of the cell's chemical reactions actually take place, and where the other organelles sit.</li>
+<li><strong>Mitochondria</strong> — the cell's power stations. They carry out <strong>aerobic respiration</strong>, a reaction that uses oxygen to release energy from glucose (a sugar that comes from your food) so the cell can use it. Cells with high energy demands, such as muscle cells, contain very large numbers of mitochondria.</li>
+<li><strong>Ribosomes</strong> — tiny structures where the cell builds <strong>proteins</strong>, the molecules it needs for growth and repair. This job is called protein synthesis.</li>
+</ul>
+
+<h3>How Plant Cells Are Different</h3>
+<p>A plant cell contains everything an animal cell has — nucleus, cell membrane, cytoplasm, mitochondria and ribosomes — plus three extra structures that animal cells never have.</p>
+<ul>
+<li><strong>Cell wall</strong> — a rigid layer outside the cell membrane, made of a tough material called <strong>cellulose</strong>. It gives the cell a fixed shape and stops it bursting, which is how a plant holds itself upright without having a skeleton.</li>
+<li><strong>Chloroplasts</strong> — green organelles containing a pigment called <strong>chlorophyll</strong>, which absorbs sunlight. They carry out <strong>photosynthesis</strong>: using light energy to turn carbon dioxide and water into glucose. This is how plants make their own food — something no animal can do.</li>
+<li><strong>Permanent vacuole</strong> — a large sac filled with <strong>cell sap</strong>, a watery solution of sugars and salts. As it fills it presses outwards against the cell wall and keeps the cell firm. When a plant runs short of water these vacuoles shrink, and the plant wilts.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="cell-comparison"><p class="diagram-caption">Comparing animal and plant cell structures</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
-<div class="example-box">
-<p><strong>Example:</strong> Explain two ways a plant cell differs from an animal cell and why each difference matters.</p>
-<p><strong>Solution:</strong><br>
-1. <strong>Cell wall</strong> (plant only): made of cellulose; provides rigid support and shape. Animal cells rely on the skeleton for support — plant cells support themselves.<br>
-2. <strong>Chloroplasts</strong> (plant only): contain chlorophyll and carry out photosynthesis — converting light energy into glucose. Animal cells cannot make their own food and must consume it.</p>
-</div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Nucleus</dt><dd>The control centre of the cell; contains DNA with instructions for all cell activities.</dd>
-<dt>Cell membrane</dt><dd>The thin outer layer of a cell that controls which substances can enter and leave.</dd>
-<dt>Cytoplasm</dt><dd>The jelly-like substance filling a cell, where many of the cell's chemical reactions take place.</dd>
-<dt>Mitochondria</dt><dd>Organelles where aerobic respiration occurs — releasing energy from glucose for the cell to use.</dd>
-<dt>Chloroplast</dt><dd>Organelle in plant cells containing chlorophyll; the site of photosynthesis.</dd>
-<dt>Cell wall</dt><dd>A rigid layer surrounding a plant cell, made of cellulose, giving it support and a fixed shape.</dd>
-<dt>Vacuole</dt><dd>A large fluid-filled sac in a plant cell that stores water and cell sap, helping keep the cell firm.</dd>
-<dt>MRS GREN</dt><dd>Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, Nutrition — the 7 characteristics of living things.</dd>
-<dt>Diffusion</dt><dd>The net movement of particles from an area of high concentration to low concentration — a passive process requiring no energy.</dd>
-<dt>Ribosome</dt><dd>A tiny organelle found in all cells where proteins are assembled (protein synthesis).</dd>
-<dt>Excretion</dt><dd>Removal of metabolic waste products (e.g. CO₂ via the lungs, urea via the kidneys). Not the same as egestion (removing undigested food).</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>The Seven Life Processes: MRS GREN</h3>
+<p>How do you decide whether something is genuinely alive? Scientists use seven life processes, and a living thing must carry out <em>all seven</em> — miss even one and it does not count as alive. Their initials spell out the name <strong>MRS GREN</strong>:</p>
 <ul>
-<li>❌ Saying all plant cells have chloroplasts — ✅ Correct: only cells that carry out photosynthesis (e.g. leaf cells) have chloroplasts. Root cells do <strong>not</strong>.</li>
-<li>❌ Confusing cell membrane and cell wall — ✅ Correct: <strong>all</strong> cells have a membrane; only plant cells have a <strong>wall</strong>.</li>
-<li>❌ Thinking the vacuole stores food — ✅ Correct: the large vacuole in plant cells stores <strong>water and cell sap</strong>, maintaining pressure.</li>
+<li><strong>M — Movement</strong>: all living things move in some way. Animals move around; plants move slowly, turning their leaves towards the light.</li>
+<li><strong>R — Respiration</strong>: releasing energy from food inside cells — the job of the mitochondria you met above.</li>
+<li><strong>S — Sensitivity</strong>: detecting and responding to changes in the surroundings, such as light, sound or temperature.</li>
+<li><strong>G — Growth</strong>: getting larger and more complex over time.</li>
+<li><strong>R — Reproduction</strong>: producing offspring, so that the species continues.</li>
+<li><strong>E — Excretion</strong>: getting rid of waste substances made by chemical reactions inside cells — for example carbon dioxide breathed out by the lungs, or urea removed by the kidneys.</li>
+<li><strong>N — Nutrition</strong>: taking in the substances needed for energy, growth and repair. Animals eat food; plants make their own by photosynthesis.</li>
+</ul>
+<p>Take care with excretion. It means removing waste that your own cells have <em>made</em>. Getting rid of undigested food that never entered your cells is a different process called <strong>egestion</strong> — so going to the toilet is egestion, not excretion.</p>
+
+<h3>From Cells to Organisms</h3>
+<p>A single cell could never run a human being. In a multicellular organism, cells are organised into larger and larger structures, each one more complex than the last:</p>
+<ul>
+<li>A <strong>cell</strong> is the basic building block.</li>
+<li>A <strong>tissue</strong> is a group of similar cells working together on the same job — muscle tissue, for instance, is made of many muscle cells.</li>
+<li>An <strong>organ</strong> is several different tissues working together as a single unit, such as the heart.</li>
+<li>An <strong>organ system</strong> is a group of organs working together on one large task, such as the circulatory system.</li>
+<li>An <strong>organism</strong> is the complete living thing, built from all of its organ systems.</li>
+</ul>
+<p>Following one example the whole way up: a heart muscle cell → muscle tissue → the heart → the circulatory system → a human being.</p>
+<div class="lesson-diagram" data-diagram="cell-organisation"><p class="diagram-caption">Levels of organisation from a single cell to a whole organism</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Specialised Cells</h3>
+<p>In a multicellular organism most cells are <strong>specialised</strong>, meaning their shape and structure are adapted to do one particular job especially well.</p>
+<ul>
+<li><strong>Red blood cells</strong> carry oxygen around the body. They are packed with <strong>haemoglobin</strong>, the red protein that oxygen attaches to. They have no nucleus at all, which leaves more room for haemoglobin, and they are <strong>biconcave</strong> — dented inwards on both sides, like a squashed cushion — which increases their surface area so oxygen moves in and out more quickly.</li>
+<li><strong>Root hair cells</strong> absorb water from the soil. Each one has a long, thin, hair-like extension that reaches out between the soil particles, giving a very large surface area for taking in water.</li>
+</ul>
+<p>Notice the pattern: in both cases the structure of the cell is explained by the job it has to do. That idea — structure fits function — comes up again and again in biology.</p>
+
+<h3>Getting Substances In and Out: Diffusion</h3>
+<p>Cells constantly need to take in what they need and get rid of what they don't. One of the main ways this happens is <strong>diffusion</strong>: the net movement of particles from an area where they are <strong>highly concentrated</strong> to an area where they are <strong>less concentrated</strong>. The difference between those two areas is called the <strong>concentration gradient</strong>, and particles are said to move "down" it.</p>
+<p>Diffusion is a <strong>passive</strong> process, which means the cell spends no energy on it. The particles are moving about randomly anyway; the overall drift is simply from crowded towards less crowded. You meet the same effect when someone opens a bottle of perfume across the room and the smell gradually reaches you. Inside your body, oxygen moves from your lungs into your blood in exactly this way.</p>
+
+<h3>Worked Example</h3>
+<div class="example-box">
+<p><strong>Question:</strong> Explain two ways a plant cell differs from an animal cell, and why each difference matters.</p>
+<p><strong>Answer:</strong><br>
+1. <strong>Cell wall</strong> (plant only): made of cellulose, it provides rigid support and a fixed shape. An animal relies on its skeleton for support, whereas a plant cell supports itself.<br>
+2. <strong>Chloroplasts</strong> (plant only): they contain chlorophyll and carry out photosynthesis, converting light energy into glucose. Animal cells cannot make their own food, so an animal has to eat.</p>
+<p>Notice that a full answer does two things: it names the difference <em>and</em> says what that difference lets the cell do.</p>
+</div>
+
+<h3>Common Mistakes</h3>
+<ul>
+<li>Saying <em>all</em> plant cells have chloroplasts. Only cells that carry out photosynthesis have them — leaf cells do, but root cells do <strong>not</strong>, because no light reaches them underground.</li>
+<li>Mixing up the cell membrane and the cell wall. <strong>All</strong> cells have a membrane; only plant cells have a wall as well.</li>
+<li>Thinking the vacuole stores food. It stores <strong>water and cell sap</strong>, and its job is to keep the cell firm.</li>
+<li>Confusing excretion with egestion. Excretion removes waste made <em>by your cells</em>; egestion removes undigested food that never entered them.</li>
 </ul>
 <p class="lesson-next-hint">➡️ Next: now you know what makes something alive and how cells are built, you'll look at how scientists classify and group all of Earth's living things.</p>`,
 
@@ -667,41 +705,56 @@ Law of reflection: angle of reflection = angle of incidence = <strong>55°</stro
 <li>❌ Saying light "bounces off" a mirror — ✅ Correct: use precise language — light is <strong>reflected</strong> according to the law of reflection.</li>
 </ul>`,
 
-"island-28": `<h4>Introduction</h4>
-<p>You've now seen how the body keeps itself alive day to day, through digestion and its other systems — but for a species to survive in the long run, individual organisms also need a way to produce a new generation. That's what reproduction is for. <strong>Sexual reproduction</strong> — where two parents each contribute half the genetic instructions — creates offspring that are all slightly different from each other and from their parents, which turns out to be hugely important for a species' long-term survival. <strong>Asexual reproduction</strong>, used by many plants and bacteria, skips all that and simply produces identical copies, fast. In this lesson you'll compare the two strategies, follow a flower through pollination and fertilisation, and find out what's actually happening inside the human body during puberty and the menstrual cycle.</p>
-<h4>📌 Key Points</h4>
+"island-28": `<h2>Reproduction &amp; Life Cycles</h2>
+<p>You've now seen how the body keeps itself alive from day to day — but for a species to survive in the long run, organisms also need a way to produce the next generation. That is what reproduction is for. In this chapter you'll compare the two very different strategies living things use, follow a flower from pollination through to producing a seed, and find out what is actually happening inside the human body during puberty and the menstrual cycle.</p>
+
+<h3>Two Ways to Reproduce</h3>
+<p>In <strong>sexual reproduction</strong> two parents are involved. Each contributes a special sex cell called a <strong>gamete</strong>, and the two gametes join together in a process called <strong>fertilisation</strong>. Because each parent supplies half the genetic instructions, the offspring is genetically unique — not identical to either parent, or to its brothers and sisters.</p>
+<p>In <strong>asexual reproduction</strong> there is only one parent and no gametes at all. The parent simply makes copies of itself, so the offspring are genetically identical — they are <strong>clones</strong>. Strawberry plants send out runners, daffodils grow from bulbs, and bacteria split in two in a process called binary fission.</p>
+<p>Neither method is straightforwardly "better"; each has a real trade-off. Asexual reproduction is fast and needs no partner, which is ideal for spreading quickly in a place that already suits the organism. But every offspring is identical, so if a disease comes along that one of them cannot resist, none of them can — the whole population is vulnerable. Sexual reproduction is slower and needs a mate, but the <strong>variation</strong> it produces means some individuals will probably survive whatever the environment throws at them. That variation is the raw material evolution works with.</p>
+
+<h3>Reproduction in Flowering Plants</h3>
+<p>A flower is a plant's reproductive organ. The male part, the <strong>anther</strong>, produces pollen; the female part, the <strong>stigma</strong>, is where pollen must land.</p>
+<p><strong>Pollination</strong> is simply the transfer of pollen from an anther to a stigma. Plants cannot walk over to each other, so they rely on outside help, and this has produced two very different flower designs:</p>
 <ul>
-<li><strong>Sexual reproduction</strong>: two parents, gametes (sex cells) join at fertilisation → genetically unique offspring.</li>
-<li><strong>Asexual reproduction</strong>: one parent, no gametes → genetically identical offspring (clones). Examples: runners, bulbs, binary fission in bacteria.</li>
-<li><strong>Pollination</strong>: transfer of pollen from the <strong>anther</strong> (the male part of a flower, which produces pollen) to the <strong>stigma</strong> (the female part that receives it). Insect-pollinated flowers are bright with nectar; wind-pollinated flowers are small and dull with light pollen.</li>
-<li>After pollination, a pollen tube grows to the ovule — <strong>fertilisation</strong> occurs when the male gamete fuses with the female gamete (ovum). The ovule then develops into a <strong>seed</strong> and the ovary becomes the <strong>fruit</strong>.</li>
-<li><strong>Seed dispersal</strong> spreads seeds away from the parent plant, reducing competition. Methods: <strong>wind</strong> (dandelion, sycamore), <strong>animal</strong> (berries, burrs), <strong>water</strong> (coconut), <strong>explosive</strong> (pea pods).</li>
-<li>In humans, fertilisation occurs in the <strong>oviduct</strong> (fallopian tube). The fertilised egg (zygote) then travels to the uterus and implants in the lining to develop.</li>
-<li>The <strong>menstrual cycle</strong> lasts about 28 days. <strong>Ovulation</strong> (release of a mature egg from the ovary) occurs around day 14. If the egg is not fertilised, the uterus lining breaks down — this is menstruation.</li>
-<li><strong>Puberty</strong> is triggered by hormones: oestrogen (females) and testosterone (males), causing physical and emotional changes.</li>
+<li><strong>Insect-pollinated</strong> flowers must attract an animal courier, so they have brightly coloured petals, a strong scent, and <strong>nectar</strong> as a reward. Their pollen is sticky, so it clings to a visiting insect.</li>
+<li><strong>Wind-pollinated</strong> flowers have nobody to impress, so their petals are small and dull, or missing altogether. They make huge quantities of very light pollen and release it into the air, and their stigmas are feathery to catch grains floating past. Grasses, wheat and many trees work this way.</li>
 </ul>
-<h4>✏️ Worked Example</h4>
-<div class="example-box">
-<p><strong>Example:</strong> Compare insect pollination and wind pollination. Why do their flowers look different?</p>
-<p><strong>Solution:</strong><br>
-<strong>Insect-pollinated:</strong> Need to attract insects → bright petals, strong scent, nectar as reward. Pollen is sticky to attach to insects. Fewer pollen grains needed.<br>
-<strong>Wind-pollinated:</strong> No need to attract anything → small, dull petals (often none). Pollen is tiny and light — produced in vast quantities to maximise chance of reaching another flower. Stigmas are feathery to catch floating pollen.<br><br>
-Key principle: the <strong>method of pollination drives the flower's design</strong>.</p>
-</div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Gamete</dt><dd>A sex cell — in animals: sperm (male) and egg (female); in plants: pollen (male) and ovum (female).</dd>
-<dt>Fertilisation</dt><dd>The fusion of male and female gametes to form a zygote — the first cell of a new organism.</dd>
-<dt>Pollination</dt><dd>The transfer of pollen from the anther to the stigma of a flower — necessary before fertilisation can occur.</dd>
-<dt>Clone</dt><dd>A genetically identical copy of a parent organism, produced by asexual reproduction.</dd>
-<dt>Ovulation</dt><dd>The release of a mature egg from the ovary — occurs around day 14 of the menstrual cycle.</dd>
-<dt>Seed dispersal</dt><dd>The spreading of seeds away from the parent plant by wind, animals, water or explosive mechanisms to reduce competition.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<p>Pollination is only the delivery. Once a pollen grain lands on the stigma, it grows a <strong>pollen tube</strong> down into the <strong>ovule</strong>, and <strong>fertilisation</strong> happens when the male gamete fuses with the female gamete (the ovum) inside. Afterwards the fertilised ovule becomes a <strong>seed</strong>, and the ovary around it swells into a <strong>fruit</strong>.</p>
+<div class="lesson-diagram" data-diagram="pollination-diagram"><p class="diagram-caption">The parts of a flower and the process of pollination</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Seed Dispersal</h3>
+<p>If every seed simply dropped at the parent's feet, the seedlings would be crowded together competing with each other — and with their own parent — for light, water and minerals. <strong>Seed dispersal</strong> spreads them out, and plants have evolved several ways to manage it:</p>
 <ul>
-<li>❌ Confusing pollination and fertilisation — ✅ Correct: pollination is <strong>transfer of pollen</strong>; fertilisation is the <strong>joining of gametes</strong> inside the ovule.</li>
-<li>❌ Thinking asexual reproduction is "better" — ✅ Correct: asexual is faster but produces <strong>no variation</strong> — a disease can wipe out all identical offspring.</li>
-<li>❌ Saying all flowers are insect-pollinated — ✅ Correct: grasses, wheat and many trees are <strong>wind-pollinated</strong>.</li>
+<li><strong>Wind</strong> — dandelion seeds have parachutes and sycamore seeds have wings, so they drift away.</li>
+<li><strong>Animals</strong> — juicy berries are eaten and the seeds pass through unharmed; burrs have hooks that catch on fur.</li>
+<li><strong>Water</strong> — a coconut floats and can cross an ocean before washing up.</li>
+<li><strong>Explosive</strong> — pea and bean pods dry out and split open suddenly, flinging seeds away.</li>
+</ul>
+
+<h3>Human Reproduction</h3>
+<p>In humans the gametes are the <strong>sperm</strong> (male) and the <strong>egg</strong> or ovum (female). Fertilisation takes place in the <strong>oviduct</strong>, also called the fallopian tube, when a sperm fuses with an egg.</p>
+<p>The single cell formed at fertilisation is called a <strong>zygote</strong>. It travels onwards to the <strong>uterus</strong> (the womb), where it embeds itself in the thick, blood-rich lining — a step called implantation — and begins to develop.</p>
+
+<h3>Puberty and the Menstrual Cycle</h3>
+<p><strong>Puberty</strong> is the period when the body matures and becomes capable of reproduction. It is triggered by <strong>hormones</strong>, the chemical messengers you met in the previous chapter: mainly <strong>oestrogen</strong> in girls and <strong>testosterone</strong> in boys. These cause physical changes, such as growth spurts and body hair, alongside emotional changes — and they happen on a different timetable for everyone, which is completely normal.</p>
+<p>In females, hormones also drive the <strong>menstrual cycle</strong>, which takes roughly 28 days, though this varies from person to person. The uterus lining thickens in preparation for a possible pregnancy. Around day 14, <strong>ovulation</strong> occurs — an ovary releases a mature egg. If that egg is not fertilised, the thickened lining is no longer needed and breaks down, leaving the body as a monthly period, or <strong>menstruation</strong>. Then the cycle begins again.</p>
+
+<h3>Worked Example</h3>
+<div class="example-box">
+<p><strong>Question:</strong> Compare insect pollination and wind pollination. Why do their flowers look so different?</p>
+<p><strong>Answer:</strong><br>
+<strong>Insect-pollinated:</strong> the flower has to attract an insect, so it has bright petals, a strong scent and nectar as a reward. Its pollen is sticky so it attaches to the visiting insect, and because delivery is fairly reliable, relatively few pollen grains are needed.<br>
+<strong>Wind-pollinated:</strong> the flower has nothing to attract, so its petals are small and dull or absent. Its pollen is tiny and light and produced in vast quantities, because most grains will never land on a stigma. Its stigmas are feathery to catch pollen drifting past.</p>
+<p>The underlying principle is that the <strong>method of pollination shapes the flower's design</strong> — so if you are told how a flower is pollinated, you can predict what it looks like.</p>
+</div>
+
+<h3>Common Mistakes</h3>
+<ul>
+<li>Confusing pollination with fertilisation. Pollination is the <strong>transfer of pollen</strong> to the stigma; fertilisation is the later <strong>joining of the gametes</strong> inside the ovule. Pollination can happen without fertilisation following.</li>
+<li>Thinking asexual reproduction is simply "better" because it is faster. It produces <strong>no variation</strong>, so a single disease can wipe out every identical offspring.</li>
+<li>Assuming all flowers are insect-pollinated. Grasses, wheat and many trees are <strong>wind-pollinated</strong> — which is exactly why hay fever season involves so much airborne pollen.</li>
+<li>Thinking the ovule becomes the fruit. The <strong>ovule</strong> becomes the seed; the <strong>ovary</strong> around it becomes the fruit.</li>
 </ul>
 <p class="lesson-next-hint">➡️ Next: to finish this topic, you'll look at how outside substances — including legal ones like alcohol and tobacco — can affect the body systems you've just spent this topic getting to know.</p>`,
 
@@ -1696,92 +1749,163 @@ The wave travels at 300 metres per second.</p>
 <li>❌ Getting the EM spectrum order wrong — ✅ Remember: "Really Mighty Insects Vex Ugly X-ray Guns" (Radio, Micro, IR, Visible, UV, X, Gamma).</li>
 </ul>`,
 
-"island-41": `<h4>Introduction</h4>
-<p>You already know that cells are the building blocks of every living thing — but living things themselves come in an almost unbelievable variety, from bacteria too small to see to blue whales the length of a tennis court. With millions of different species out there, scientists needed a way to sort and name them, so that a biologist in Tokyo and one in London are always talking about exactly the same organism. In this lesson you'll meet the five kingdoms all life is sorted into, learn the naming system scientists use worldwide, and practise using a "dichotomous key" — a simple branching set of yes/no questions — to identify an unknown organism step by step.</p>
-<h4>📌 Key Points</h4>
+"island-41": `<h2>Classification of Living Things</h2>
+<p>You already know that cells are the building blocks of every living thing — but living things themselves come in an almost unbelievable variety, from bacteria too small to see to blue whales the length of a tennis court. With millions of different species out there, scientists needed a way to sort and name them all, so that a biologist in Tokyo and one in London can be certain they are talking about exactly the same organism. In this chapter you'll meet the five kingdoms that all life is sorted into, learn the naming system scientists use worldwide, and practise identifying an unknown organism step by step.</p>
+
+<h3>Why Scientists Classify</h3>
+<p><strong>Classification</strong> means sorting living things into groups based on features they share. It matters for a very practical reason: everyday names are unreliable. A "robin" in Britain is a completely different bird from a "robin" in America, and a single animal can have dozens of local names in different languages.</p>
+<p>Sorting organisms into agreed groups, and giving each one an agreed scientific name, removes that confusion entirely. It also does something more useful — organisms that end up grouped together turn out to be closely related, so the classification itself tells you something real about how life is connected.</p>
+
+<h3>The Five Kingdoms</h3>
+<p>At the broadest level, living things are sorted into five <strong>kingdoms</strong>:</p>
 <ul>
-<li>The <strong>five kingdoms</strong>: <strong>Animals</strong> (no cell wall, feed on other organisms), <strong>Plants</strong> (cell wall of cellulose, photosynthesise), <strong>Fungi</strong> (cell wall of chitin, feed by external digestion), <strong>Protists</strong> (mostly single-celled eukaryotes), <strong>Prokaryotes</strong> (bacteria — no membrane-bound nucleus, DNA floats in cytoplasm).</li>
-<li><strong>Prokaryotic</strong> cells (bacteria) have no nucleus — their DNA is free in the cytoplasm. <strong>Eukaryotic</strong> cells (animals, plants, fungi) have a true nucleus enclosed by a membrane.</li>
-<li><strong>Viruses</strong> are not classified as living organisms because they cannot reproduce on their own — they must invade a host cell and hijack its machinery.</li>
-<li>The classification hierarchy: <strong>Kingdom → Phylum → Class → Order → Family → Genus → Species</strong>. Memory aid: "King Philip Came Over For Good Soup."</li>
-<li><strong>Vertebrates</strong> (animals with backbones) are divided into: Fish, Amphibians, Reptiles, Birds, <strong>Mammals</strong> (warm-blooded, hair/fur, feed young on milk).</li>
-<li><strong>Invertebrates</strong> (no backbone) include <strong>arthropods</strong> (exoskeleton, jointed legs, segmented body) — such as insects (6 legs), arachnids (8 legs), crustaceans — plus molluscs and worms.</li>
-<li><strong>Binomial nomenclature</strong>: every species has a two-part Latin name — Genus (capital) + species (lowercase), always italicised. Example: <em>Homo sapiens</em>.</li>
-<li>A <strong>dichotomous key</strong> uses a series of yes/no questions to identify an unknown organism step by step.</li>
+<li><strong>Animals</strong> — multicellular, with no cell wall. They cannot make their own food, so they feed by eating other organisms.</li>
+<li><strong>Plants</strong> — multicellular, with a cell wall made of cellulose. They make their own food by photosynthesis.</li>
+<li><strong>Fungi</strong> — such as mushrooms, moulds and yeast. Their cell walls are made of <strong>chitin</strong> rather than cellulose. They cannot photosynthesise; instead they release enzymes onto their food to digest it <em>outside</em> the body, then absorb the results.</li>
+<li><strong>Protists</strong> — mostly single-celled organisms that don't fit the other groups, such as amoeba and algae.</li>
+<li><strong>Prokaryotes</strong> — single-celled organisms with no nucleus. This kingdom is the bacteria.</li>
 </ul>
-<h4>✏️ Worked Example</h4>
+<div class="lesson-diagram" data-diagram="five-kingdoms"><p class="diagram-caption">The five kingdoms of living things</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Prokaryotes and Eukaryotes</h3>
+<p>Cutting across those kingdoms is an even more fundamental split, based on something you met in the previous chapter — the nucleus.</p>
+<p>A <strong>eukaryote</strong> is an organism whose cells have a true nucleus, enclosed in its own membrane, keeping the DNA neatly packaged. Animals, plants, fungi and protists are all eukaryotes. A <strong>prokaryote</strong> has no nucleus at all — its DNA simply floats loose in the cytoplasm. Bacteria are prokaryotes, and they are far simpler and much smaller than eukaryotic cells.</p>
+<p>And what about <strong>viruses</strong>? Viruses are not placed in any kingdom, because most scientists do not count them as truly alive. A virus cannot reproduce by itself; it has to invade a living host cell and hijack that cell's machinery to make copies of itself. Since it cannot carry out the life processes on its own, it fails the test for being a living organism.</p>
+
+<h3>Sorting the Animal Kingdom</h3>
+<p>The animal kingdom is split into two enormous groups depending on one feature: whether the animal has a backbone.</p>
+<p><strong>Vertebrates</strong> are animals with an internal backbone, also called a vertebral column. There are five vertebrate groups: <strong>fish</strong>, <strong>amphibians</strong>, <strong>reptiles</strong>, <strong>birds</strong> and <strong>mammals</strong>. Mammals are warm-blooded, have hair or fur, and feed their young on milk — which is why you, a mouse and a whale are all mammals.</p>
+<p><strong>Invertebrates</strong> have no backbone, and they are by far the bigger group — around 95% of all animal species are invertebrates. The largest invertebrate group is the <strong>arthropods</strong>, which have an <strong>exoskeleton</strong> (a hard skeleton on the outside of the body), jointed legs and a body divided into segments. Arthropods include:</p>
+<ul>
+<li><strong>Insects</strong> — exactly 6 legs and three body parts (head, thorax, abdomen), usually with two pairs of wings.</li>
+<li><strong>Arachnids</strong> — 8 legs. Spiders, scorpions and ticks.</li>
+<li><strong>Crustaceans</strong> — crabs, lobsters and woodlice.</li>
+</ul>
+<p>Molluscs (snails, slugs, octopuses) and worms are invertebrates too, but they are not arthropods — they have no exoskeleton or jointed legs.</p>
+
+<h3>Naming a Species</h3>
+<p>A <strong>species</strong> is a group of organisms similar enough to breed together and produce offspring that can themselves have young. Every known species is given a two-part scientific name under a system called <strong>binomial nomenclature</strong> ("binomial" simply means "two names"), devised by the Swedish scientist <strong>Carl Linnaeus</strong> in the 1700s.</p>
+<p>The first word is the <strong>genus</strong> — a group of closely related species — and it always starts with a capital letter. The second word is the <strong>species</strong> itself, always lowercase. Both are written in italics. So humans are <em>Homo sapiens</em>, and the wolf is <em>Canis lupus</em>.</p>
+<p>This naming does more than label things. Lions are <em>Panthera leo</em>, tigers are <em>Panthera tigris</em> and leopards are <em>Panthera pardus</em> — the shared genus <em>Panthera</em> immediately tells you these big cats are close relatives.</p>
+<p>Kingdoms and species are actually the two ends of a longer ladder of ever-smaller groups: <strong>Kingdom → Phylum → Class → Order → Family → Genus → Species</strong>. A well-known way to remember the order is the sentence "King Philip Came Over For Good Soup."</p>
+
+<h3>Using a Dichotomous Key</h3>
+<p>Suppose you find an organism you cannot identify. A <strong>dichotomous key</strong> is a tool that gets you to the answer through a series of questions with only two possible answers each — "dichotomous" means splitting into two.</p>
+<p>You start at question 1, choose the option that matches your organism, and that choice sends you to the next question. You keep going until, instead of another question, you arrive at a name. The clever part is that it works even if you know nothing about the organism to begin with: you only ever need to look at it and answer one simple question at a time.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
-<p><strong>Example:</strong> Use this simple key to identify an organism:<br>
+<p><strong>Question:</strong> Use this key to identify an animal that has a backbone, is warm-blooded, and has no feathers.<br>
 1. Does it have a backbone? → Yes: go to 2 / No: Invertebrate<br>
 2. Is it warm-blooded? → Yes: go to 3 / No: Fish, Amphibian or Reptile<br>
 3. Does it have feathers? → Yes: Bird / No: Mammal</p>
-<p><strong>Solution:</strong> An animal that has a backbone, is warm-blooded, and has no feathers → <strong>Mammal</strong>.</p>
+<p><strong>Answer:</strong> Has a backbone, so go to question 2. Warm-blooded, so go to question 3. No feathers, so the answer is <strong>Mammal</strong>.</p>
+<p>Work through a key one step at a time and never skip ahead — each answer is what decides which question you face next.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Species</dt><dd>A group of organisms that can reproduce together to produce fertile offspring.</dd>
-<dt>Vertebrate</dt><dd>An animal with an internal backbone (spinal column).</dd>
-<dt>Binomial nomenclature</dt><dd>The two-part naming system: Genus + species (e.g. <em>Canis lupus</em> = wolf).</dd>
-<dt>Dichotomous key</dt><dd>A branching identification tool where each step has exactly two choices.</dd>
-<dt>Arthropod</dt><dd>An invertebrate with an exoskeleton, jointed legs and a segmented body — includes insects, arachnids and crustaceans.</dd>
-<dt>Prokaryote</dt><dd>A single-celled organism (bacterium) with no membrane-bound nucleus — DNA floats freely in the cytoplasm.</dd>
-<dt>Eukaryote</dt><dd>An organism whose cells have a true, membrane-bound nucleus — includes animals, plants and fungi.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Calling all small creatures "insects" — ✅ Correct: insects have exactly <strong>6 legs</strong>. Spiders (8 legs) are arachnids, woodlice (14 legs) are crustaceans.</li>
-<li>❌ Writing binomial names without italics or with both words capitalised — ✅ Correct: <em>Homo sapiens</em> (italics, genus capitalised, species lowercase).</li>
-<li>❌ Thinking fungi are plants — ✅ Correct: fungi have NO chlorophyll and cannot photosynthesise. They feed by decomposing dead organisms.</li>
+<li>Calling every small creature an "insect". Insects have exactly <strong>6 legs</strong>. Spiders have 8 and are arachnids; woodlice have 14 and are crustaceans.</li>
+<li>Writing scientific names incorrectly. It is <em>Homo sapiens</em> — in italics, genus capitalised, species lowercase — not "homo Sapiens" or "Homo Sapiens".</li>
+<li>Thinking fungi are plants. Fungi have <strong>no chlorophyll</strong> and cannot photosynthesise, so they cannot make their own food; they feed by digesting dead or living material instead.</li>
+<li>Assuming viruses belong to a kingdom. They are not classified as living things at all, because they cannot reproduce without a host cell.</li>
 </ul>
 <p class="lesson-next-hint">➡️ Next: now you can group living things by what they are, you'll zoom into the human body to see how our own cells organise into tissues, organs and systems.</p>`,
 
-"island-42": `<h4>Introduction</h4>
-<p>In the first lesson of this topic you saw that your body is built from trillions of individual cells — but a pile of cells on its own couldn't keep you alive. Groups of similar cells form tissues, tissues combine into organs like your heart and stomach, and organs work together in organ systems to keep the whole body running. In this lesson you'll follow blood on its journey around the body, trace food through the digestive system, and see how the nervous system lets you react to the world in a split second. Understanding how these systems fit together is the key to understanding your own health — and it sets you up for the next two lessons, which each look at one system in real depth.</p>
-<h4>📌 Key Points</h4>
+"island-42": `<h2>Human Body Systems</h2>
+<p>In the first chapter of this topic you saw that your body is built from trillions of individual cells — but a pile of cells on its own could not keep you alive. Groups of similar cells form tissues, tissues combine into organs like your heart and stomach, and organs work together in organ systems. In this chapter you'll follow blood on its journey around the body, watch oxygen cross into your bloodstream, trace food through the digestive system, and see how the nervous system lets you react to the world in a split second.</p>
+
+<h3>The Circulatory System</h3>
+<p>The circulatory system delivers oxygen and nutrients to every cell in your body and carries waste away. At its centre is the <strong>heart</strong>, a muscular pump that beats around 100,000 times a day without you thinking about it.</p>
+<p>The heart is really a <strong>double pump</strong>, with two separate sides doing two different jobs. The <strong>right side</strong> receives blood returning from the body, which has had its oxygen used up — this is called <strong>deoxygenated</strong> blood — and pumps it a short distance to the lungs to collect more. The <strong>left side</strong> receives that freshly <strong>oxygenated</strong> blood back from the lungs and pumps it all the way around the rest of the body. Because the left side has to push blood so much further, its muscular wall is noticeably thicker.</p>
+<div class="lesson-diagram" data-diagram="heart-diagram"><p class="diagram-caption">The structure of the heart and the flow of blood through it</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>The Three Types of Blood Vessel</h3>
+<p>Blood travels in three kinds of vessel, each built for its particular job:</p>
 <ul>
-<li>The <strong>heart</strong> is a double pump: the RIGHT side pumps blood to the lungs (pulmonary circuit); the LEFT side pumps oxygenated blood to the body (systemic circuit).</li>
-<li>Blood vessels: <strong>arteries</strong> (thick walls, away from heart), <strong>veins</strong> (thin walls + valves, towards heart), <strong>capillaries</strong> (one-cell thick, site of exchange).</li>
-<li>The <strong>digestive system</strong> path: Mouth → Oesophagus → Stomach → Small intestine (absorption) → Large intestine (water absorption) → Rectum.</li>
-<li>In the <strong>lungs</strong>, oxygen diffuses from alveoli into the blood, and CO₂ diffuses out — this is gas exchange.</li>
-<li>The <strong>nervous system</strong>: stimulus → receptor → sensory neurone → CNS (brain/spinal cord) → motor neurone → effector (muscle/gland) → response.</li>
-<li><strong>Reflex actions</strong> bypass the brain for speed — e.g. pulling your hand from a flame.</li>
-<li><strong>Red blood cells</strong> contain <strong>haemoglobin</strong> (binds oxygen), have no nucleus (more room for haemoglobin) and a <strong>biconcave shape</strong> (increases surface area for gas exchange).</li>
-<li>The small intestine lining is covered in <strong>villi</strong> — tiny finger-like projections that massively increase surface area for nutrient absorption into the blood.</li>
-<li><strong>Platelets</strong> are cell fragments that clump at wound sites, triggering a clotting cascade that forms a scab to prevent blood loss and infection.</li>
-<li>The <strong>skeleton</strong> provides: support &amp; shape, protection of organs (skull → brain, ribcage → heart/lungs), movement (with muscles), blood cell production (bone marrow), and mineral storage (calcium, phosphorus).</li>
-<li>Key digestive <strong>enzymes</strong>: <strong>amylase</strong> (starch → sugars, made in salivary glands &amp; pancreas), <strong>protease</strong> (proteins → amino acids), <strong>lipase</strong> (fats → fatty acids + glycerol). <strong>Bile</strong> (made in liver, stored in gall bladder) emulsifies fats but is NOT an enzyme.</li>
-<li>The <strong>hormonal (endocrine) system</strong> uses chemical messengers carried in the blood — slower but longer-lasting than the nervous system's fast electrical impulses.</li>
+<li><strong>Arteries</strong> carry blood <em>away</em> from the heart. Blood leaves the heart under high pressure, so arteries have thick, elastic, muscular walls to cope with it.</li>
+<li><strong>Veins</strong> carry blood <em>back towards</em> the heart. By this point the pressure is much lower, so the walls are thinner — and veins contain <strong>valves</strong>, little flaps that stop blood flowing backwards.</li>
+<li><strong>Capillaries</strong> are the tiny vessels that link the two. Their walls are only one cell thick, which is exactly what lets substances pass between the blood and the surrounding cells.</li>
 </ul>
-<div class="lesson-diagram" data-diagram="heart-diagram"><p class="diagram-caption">The structure of the heart and blood flow</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
-<div class="example-box">
-<p><strong>Example:</strong> Trace the path of blood from the body, through the heart and lungs, and back to the body.</p>
-<p><strong>Solution:</strong><br>
-1. Deoxygenated blood from the body enters the <strong>right atrium</strong> via the vena cava.<br>
-2. Flows through the tricuspid valve into the <strong>right ventricle</strong>.<br>
-3. Pumped to the <strong>lungs</strong> via the pulmonary artery (picks up O₂, drops off CO₂).<br>
-4. Oxygenated blood returns to the <strong>left atrium</strong> via the pulmonary vein.<br>
-5. Flows through the bicuspid valve into the <strong>left ventricle</strong>.<br>
-6. Pumped to the <strong>body</strong> via the aorta — delivers oxygen to cells.</p>
-</div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Artery</dt><dd>A blood vessel carrying blood AWAY from the heart, with thick elastic walls to withstand high pressure.</dd>
-<dt>Alveoli</dt><dd>Tiny air sacs in the lungs where gas exchange occurs. Large surface area, thin walls, rich blood supply.</dd>
-<dt>Enzyme</dt><dd>A biological catalyst that speeds up digestion by breaking down large food molecules (e.g. amylase breaks starch into sugars).</dd>
-<dt>Reflex arc</dt><dd>The nerve pathway for an automatic response: receptor → sensory neurone → relay neurone → motor neurone → effector.</dd>
-<dt>Haemoglobin</dt><dd>The iron-containing protein in red blood cells that binds to oxygen in the lungs and releases it in body tissues.</dd>
-<dt>Villi</dt><dd>Tiny finger-like projections lining the small intestine that increase surface area for absorbing digested nutrients into the blood.</dd>
-<dt>Platelets</dt><dd>Small cell fragments in the blood that clump together at wound sites to form clots, preventing blood loss.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<p>An easy way to keep the first two straight: <strong>A</strong>rteries carry blood <strong>A</strong>way.</p>
+
+<h3>What Blood Carries</h3>
+<p>Blood is not a single substance but a mixture of specialised parts:</p>
 <ul>
-<li>❌ Thinking arteries always carry oxygenated blood — ✅ Correct: the <strong>pulmonary artery</strong> carries deoxygenated blood to the lungs (arteries = AWAY from heart).</li>
-<li>❌ Confusing absorption with digestion — ✅ Correct: digestion <strong>breaks down</strong> food; absorption is where nutrients <strong>pass into the blood</strong> (mostly in the small intestine).</li>
-<li>❌ Saying the brain controls reflexes — ✅ Correct: reflexes use the <strong>spinal cord</strong> as the relay centre to save time.</li>
-<li>❌ Confusing platelets with white blood cells — ✅ Correct: <strong>platelets</strong> form clots; <strong>white blood cells</strong> fight infection.</li>
-<li>❌ Calling bile an enzyme — ✅ Correct: bile <strong>emulsifies</strong> (breaks into droplets) fat to increase surface area for lipase, but is NOT an enzyme itself.</li>
-<li>❌ Thinking the skeleton only supports the body — ✅ Correct: it also <strong>protects organs</strong>, produces blood cells in <strong>bone marrow</strong>, and stores minerals.</li>
+<li><strong>Red blood cells</strong> transport oxygen. They are full of <strong>haemoglobin</strong>, an iron-containing protein that oxygen attaches to in the lungs and is released from in the tissues. They have no nucleus, leaving more room for haemoglobin, and their <strong>biconcave</strong> shape — dented in on both sides — increases surface area for absorbing oxygen quickly.</li>
+<li><strong>White blood cells</strong> defend the body against infection.</li>
+<li><strong>Platelets</strong> are small fragments of cells that rush to a wound and clump together, triggering a chain of reactions that forms a clot and then a scab, sealing the cut against blood loss and infection.</li>
+</ul>
+
+<h3>The Respiratory System</h3>
+<p>Your cells need a constant oxygen supply for respiration, and they constantly produce carbon dioxide as waste. Swapping one for the other is the job of the respiratory system, and it happens in the lungs.</p>
+<p>Inside your lungs, the airways branch again and again, ending in millions of tiny air sacs called <strong>alveoli</strong>. This is where <strong>gas exchange</strong> takes place: oxygen diffuses out of the alveoli and into the blood, while carbon dioxide diffuses the other way, out of the blood and into the alveoli to be breathed out. (That is the same diffusion you met in the first chapter — particles moving from where they are more concentrated to where they are less concentrated.)</p>
+<p>Alveoli are superbly adapted for the task: there are millions of them, giving an enormous total surface area; their walls are just one cell thick, so the distance to travel is tiny; and each is wrapped in capillaries, so blood is always waiting to carry the oxygen away.</p>
+<div class="lesson-diagram" data-diagram="respiratory-system"><p class="diagram-caption">The respiratory system and gas exchange in the alveoli</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>The Digestive System</h3>
+<p>The food you eat is made of molecules far too large to get into your cells, so the digestive system breaks it down into pieces small enough to be absorbed. Food travels a one-way route:</p>
+<ul>
+<li><strong>Mouth</strong> — teeth break food into smaller pieces and saliva begins chemical breakdown.</li>
+<li><strong>Oesophagus</strong> — the tube carrying food down to the stomach.</li>
+<li><strong>Stomach</strong> — churns food and mixes it with acid and enzymes.</li>
+<li><strong>Small intestine</strong> — digestion is completed here, and the digested nutrients are <strong>absorbed</strong> into the blood.</li>
+<li><strong>Large intestine</strong> — absorbs water from what is left.</li>
+<li><strong>Rectum</strong> — stores the remaining waste until it leaves the body.</li>
+</ul>
+<p>The small intestine has a beautiful adaptation for absorbing nutrients. Its lining is covered in millions of tiny finger-like projections called <strong>villi</strong>, which hugely increase the surface area in contact with the food, so far more nutrients can pass into the blood than a smooth tube could ever manage.</p>
+<div class="lesson-diagram" data-diagram="digestive-system"><p class="diagram-caption">The organs of the human digestive system</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Enzymes and Bile</h3>
+<p>The chemical breakdown of food is carried out by <strong>enzymes</strong> — biological catalysts, meaning substances that speed up a reaction without being used up themselves. Different enzymes work on different types of food:</p>
+<ul>
+<li><strong>Amylase</strong> breaks down starch into sugars. It is made in the salivary glands and the pancreas.</li>
+<li><strong>Protease</strong> breaks down proteins into amino acids.</li>
+<li><strong>Lipase</strong> breaks down fats into fatty acids and glycerol.</li>
+</ul>
+<p>There is one more substance worth knowing: <strong>bile</strong>, made in the liver and stored in the gall bladder. Bile <strong>emulsifies</strong> fat, meaning it breaks large fat droplets into many small ones. That gives lipase far more surface area to work on — but bile is <em>not</em> an enzyme, because it does not chemically break the fat down itself.</p>
+
+<h3>The Nervous System</h3>
+<p>The nervous system lets you detect what is happening around you and respond to it, using electrical signals carried by nerve cells called <strong>neurones</strong>. The full pathway runs like this:</p>
+<p><strong>Stimulus</strong> (a change, such as heat) → <strong>receptor</strong> (detects it, e.g. in the skin) → <strong>sensory neurone</strong> (carries the signal in) → <strong>central nervous system</strong> or CNS, meaning the brain and spinal cord → <strong>motor neurone</strong> (carries the instruction out) → <strong>effector</strong> (a muscle or gland that acts) → <strong>response</strong>.</p>
+<p>Some responses are far too urgent to wait for the brain to think about them. A <strong>reflex action</strong> — snatching your hand back from a flame — takes a shortcut called the <strong>reflex arc</strong>, where the signal passes through a <strong>relay neurone</strong> in the spinal cord and straight back out to the muscle. Your hand has already moved before your brain has registered the pain, and that saved fraction of a second is what protects you from injury.</p>
+<div class="lesson-diagram" data-diagram="reflex-arc"><p class="diagram-caption">The reflex arc: a shortcut through the spinal cord</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>The Endocrine System</h3>
+<p>The body has a second, slower communication system as well. The <strong>endocrine</strong> (or hormonal) system sends chemical messengers called <strong>hormones</strong> through the bloodstream instead of electrical signals down nerves.</p>
+<p>The trade-off is speed against staying power. Nerve signals arrive almost instantly but their effect is brief; hormones take longer to arrive but their effects last much longer — which is why hormones control slow, long-running changes such as growth and puberty.</p>
+
+<h3>The Skeleton</h3>
+<p>It is easy to assume the skeleton just holds you up, but it does five distinct jobs:</p>
+<ul>
+<li><strong>Support</strong> — it gives the body its shape and holds it upright.</li>
+<li><strong>Protection</strong> — the skull shields the brain, and the ribcage shields the heart and lungs.</li>
+<li><strong>Movement</strong> — bones act as levers for muscles to pull against.</li>
+<li><strong>Making blood cells</strong> — these are produced in the <strong>bone marrow</strong> inside your larger bones.</li>
+<li><strong>Storing minerals</strong> — bones are a store of calcium and phosphorus.</li>
+</ul>
+
+<h3>Worked Example</h3>
+<div class="example-box">
+<p><strong>Question:</strong> Trace the path of blood from the body, through the heart and lungs, and back out to the body again.</p>
+<p><strong>Answer:</strong><br>
+1. Deoxygenated blood returns from the body and enters the <strong>right atrium</strong> through the vena cava.<br>
+2. It passes through the tricuspid valve into the <strong>right ventricle</strong>.<br>
+3. The right ventricle pumps it to the <strong>lungs</strong> through the pulmonary artery, where it picks up oxygen and gives up carbon dioxide.<br>
+4. Now oxygenated, it returns to the <strong>left atrium</strong> through the pulmonary vein.<br>
+5. It passes through the bicuspid valve into the <strong>left ventricle</strong>.<br>
+6. The left ventricle pumps it out to the whole <strong>body</strong> through the aorta, delivering oxygen to the cells.</p>
+<p>The two upper chambers are the <em>atria</em> (they receive blood) and the two lower ones are the <em>ventricles</em> (they pump it out) — getting those two straight makes the whole journey much easier to remember.</p>
+</div>
+
+<h3>Common Mistakes</h3>
+<ul>
+<li>Assuming arteries always carry oxygenated blood. They are defined by <em>direction</em>, not oxygen — the <strong>pulmonary artery</strong> carries deoxygenated blood, because it is heading away from the heart towards the lungs.</li>
+<li>Confusing digestion with absorption. Digestion <strong>breaks food down</strong>; absorption is when the digested nutrients <strong>pass into the blood</strong>, mostly in the small intestine.</li>
+<li>Saying the brain controls reflexes. A reflex is routed through the <strong>spinal cord</strong> precisely so it does not have to wait for the brain.</li>
+<li>Mixing up platelets and white blood cells. <strong>Platelets</strong> form clots to seal wounds; <strong>white blood cells</strong> fight infection.</li>
+<li>Calling bile an enzyme. Bile <strong>emulsifies</strong> fat into smaller droplets to help lipase work faster, but it does not break the fat down itself.</li>
+<li>Thinking the skeleton only supports the body. It also protects organs, makes blood cells in the <strong>bone marrow</strong>, and stores minerals.</li>
 </ul>
 <p class="lesson-next-hint">➡️ Next: you've met the digestive system briefly here — now you'll dig deeper into nutrition and exactly how the food you eat keeps your body running.</p>`,
 
@@ -2004,45 +2128,65 @@ It is NOT because Earth is closer to the Sun in summer — Earth's orbit is near
 <li>❌ Thinking a light year is a unit of time — ✅ Correct: a light year is a unit of <strong>distance</strong>.</li>
 </ul>`,
 
-"island-60": `<h4>Introduction</h4>
-<p>In the last lesson you traced food on its journey from mouth to large intestine — now it's time to look at exactly what's in that food, and why your body needs it so badly. Every one of your trillions of cells needs a steady supply of nutrients to function, grow and repair itself, and a <strong>balanced diet</strong> provides the right amounts of seven essential groups: carbohydrates, lipids, proteins, vitamins, minerals, fibre and water. Get the balance wrong in either direction — too much or too little — and the consequences show up as real health problems, from obesity to deficiency diseases. In this lesson you'll learn what each nutrient group actually does for you, and exactly how the digestive system and its enzymes break down a meal into something your cells can use.</p>
-<h4>📌 Key Points</h4>
+"island-60": `<h2>Nutrition &amp; Digestion</h2>
+<p>In the last chapter you traced food on its journey from mouth to large intestine — now it's time to look at exactly what is in that food, and why your body needs it so badly. Every one of your trillions of cells needs a steady supply of nutrients to function, grow and repair itself. Get the balance wrong in either direction, too much or too little, and the consequences show up as real health problems. In this chapter you'll learn what each nutrient group actually does for you, and how the digestive system turns a meal into something your cells can use.</p>
+
+<h3>The Seven Nutrient Groups</h3>
+<p>A <strong>balanced diet</strong> is one containing all seven nutrient groups in roughly the right proportions for what your body needs. Three of them are needed in large quantities:</p>
 <ul>
-<li><strong>Carbohydrates</strong> are the body's main source of energy. Found in bread, pasta, rice and potatoes, they are broken down into <strong>glucose</strong> during digestion.</li>
-<li><strong>Lipids</strong> (fats and oils) provide a concentrated energy store — more energy per gram than carbohydrates. They also insulate the body and protect organs.</li>
-<li><strong>Proteins</strong> are needed for <strong>growth and repair</strong> of cells and tissues. Good sources include meat, fish, eggs, beans and dairy.</li>
-<li><strong>Vitamins</strong> are needed in small amounts for specific functions. Vitamin C prevents scurvy; vitamin D helps absorb calcium for healthy bones.</li>
-<li><strong>Minerals</strong> are also needed in small amounts. Iron is needed for haemoglobin in red blood cells; calcium builds strong bones and teeth.</li>
-<li><strong>Fibre</strong> (roughage) keeps the digestive system healthy and prevents constipation. It cannot be digested but helps food move through the gut.</li>
-<li><strong>Water</strong> is essential for chemical reactions, transporting substances and regulating body temperature.</li>
-<li><strong>Obesity</strong> results from consuming more energy than the body uses over time. <strong>Starvation</strong> occurs when the body receives too little energy. <strong>Deficiency diseases</strong> result from lacking specific nutrients (e.g. scurvy from lack of vitamin C, rickets from lack of vitamin D).</li>
-<li>The <strong>digestive system</strong> breaks down large, insoluble food molecules into small, soluble ones that can be absorbed into the blood. The main organs are: <strong>mouth → oesophagus → stomach → small intestine → large intestine</strong>.</li>
-<li><strong>Enzymes</strong> are biological catalysts that speed up the chemical breakdown of food. Different enzymes work on different nutrients (e.g. amylase breaks down starch, protease breaks down proteins, lipase breaks down fats).</li>
-<li><strong>Bacteria</strong> in the large intestine help break down remaining food and produce some vitamins (e.g. vitamin K).</li>
+<li><strong>Carbohydrates</strong> are your body's main source of energy, found in bread, pasta, rice and potatoes. During digestion they are broken down into <strong>glucose</strong> — the sugar your mitochondria use in respiration.</li>
+<li><strong>Lipids</strong> (fats and oils) are a concentrated energy store, holding more energy per gram than carbohydrates do. They also insulate the body against heat loss and cushion delicate organs.</li>
+<li><strong>Proteins</strong> are needed for <strong>growth and repair</strong> of cells and tissues, which is why they matter so much while you are still growing. Good sources are meat, fish, eggs, beans and dairy.</li>
 </ul>
-<h4>✏️ Worked Example</h4>
-<div class="example-box">
-<p><strong>Example:</strong> A student's daily diet contains 10,500 kJ of energy, but their body only uses 8,400 kJ. Over several months, what is likely to happen and why?</p>
-<p><strong>Solution:</strong><br>
-1. The student is consuming <strong>more energy</strong> than their body uses each day (10,500 − 8,400 = 2,100 kJ excess).<br>
-2. The excess energy will be stored as <strong>fat</strong> in the body.<br>
-3. Over time, this will lead to <strong>weight gain</strong> and potentially <strong>obesity</strong>.<br>
-4. To balance their diet, the student could either <strong>reduce energy intake</strong> (eat less high-energy food) or <strong>increase energy use</strong> (exercise more).</p>
-</div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Balanced diet</dt><dd>A diet that contains all seven nutrient groups in the correct proportions for the body's needs.</dd>
-<dt>Enzyme</dt><dd>A biological catalyst that speeds up chemical reactions in the body, such as breaking down food molecules during digestion.</dd>
-<dt>Deficiency disease</dt><dd>An illness caused by a lack of a particular nutrient in the diet (e.g. scurvy from lack of vitamin C).</dd>
-<dt>Peristalsis</dt><dd>The wave-like muscle contractions that push food through the digestive system.</dd>
-<dt>Villi</dt><dd>Tiny finger-like projections lining the small intestine that increase the surface area for absorbing nutrients into the blood.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<p>The other four are needed in much smaller amounts, but doing without them is not an option:</p>
 <ul>
-<li>❌ Thinking fats are always bad — ✅ Correct: lipids are an <strong>essential</strong> part of a balanced diet. They provide energy, insulation and protect organs.</li>
-<li>❌ Saying digestion only happens in the stomach — ✅ Correct: digestion begins in the <strong>mouth</strong> (teeth and amylase) and continues through the stomach and <strong>small intestine</strong>.</li>
-<li>❌ Confusing absorption and digestion — ✅ Correct: <strong>digestion</strong> breaks food down; <strong>absorption</strong> is when nutrients pass into the blood (mainly in the small intestine).</li>
-<li>❌ Thinking fibre provides energy — ✅ Correct: fibre <strong>cannot be digested</strong> but it is essential for keeping the digestive system moving.</li>
+<li><strong>Vitamins</strong> each have their own specific job. Vitamin C keeps skin and gums healthy and prevents a disease called scurvy; vitamin D helps your body absorb calcium for strong bones.</li>
+<li><strong>Minerals</strong> are simple chemical elements the body needs. <strong>Iron</strong> is used to make the haemoglobin in your red blood cells, and <strong>calcium</strong> builds strong bones and teeth.</li>
+<li><strong>Fibre</strong> (sometimes called roughage) cannot be digested at all. Its job is to give the muscles of your gut something to push against, keeping food moving and preventing constipation.</li>
+<li><strong>Water</strong> makes up most of your body. Chemical reactions take place in it, it transports substances around the body, and it helps control your temperature.</li>
+</ul>
+
+<h3>Energy In, Energy Out</h3>
+<p>Food energy is measured in <strong>kilojoules (kJ)</strong>, and how many you need depends on your age, size and how active you are. What matters for your health is the balance between the energy you take in and the energy you use up.</p>
+<p>Take in more than you use, day after day, and the surplus is stored as fat, leading over time to <strong>obesity</strong>, which raises the risk of heart disease and other illnesses. Take in far less than you need and the body is forced to break down its own fat and muscle to survive — this is <strong>starvation</strong>.</p>
+<p>You can also be eating plenty of food and still be missing something. A <strong>deficiency disease</strong> is an illness caused by going without one particular nutrient: too little vitamin C causes <strong>scurvy</strong>, and too little vitamin D causes <strong>rickets</strong>, in which bones soften and bend. This is exactly why "balanced" matters as much as "enough".</p>
+
+<h3>Why Food Has to Be Digested</h3>
+<p>Here is the problem your digestive system exists to solve. The molecules in food are large and <strong>insoluble</strong> — they will not dissolve, and they are far too big to pass through cell membranes into your blood. Digestion breaks those large insoluble molecules into small <strong>soluble</strong> ones that can be absorbed and carried to your cells.</p>
+<p>Food is moved along the whole route by <strong>peristalsis</strong> — waves of muscle in the gut wall squeezing behind the food and pushing it onwards. It is not gravity doing this: peristalsis is why an astronaut can swallow perfectly well in zero gravity, and why you could drink a glass of water standing on your head.</p>
+
+<h3>The Journey of a Meal</h3>
+<p>The main organs of the digestive system, in order, are the <strong>mouth</strong>, <strong>oesophagus</strong>, <strong>stomach</strong>, <strong>small intestine</strong> and <strong>large intestine</strong>.</p>
+<p>Digestion starts in the <strong>mouth</strong>, where teeth cut and grind food into smaller pieces and saliva starts breaking down starch. The <strong>oesophagus</strong> carries it down to the <strong>stomach</strong>, which churns it with acid and enzymes into a soupy liquid. Most digestion is finished in the <strong>small intestine</strong>, and this is also where <strong>absorption</strong> happens — nutrients pass through the wall, helped by the millions of finger-like <strong>villi</strong> that give it a huge surface area, and into the blood.</p>
+<p>Whatever is left reaches the <strong>large intestine</strong>, where water is absorbed back into the body. Living here are enormous numbers of helpful <strong>bacteria</strong>, which break down some of the remaining material and even manufacture certain vitamins for you, such as vitamin K.</p>
+<div class="lesson-diagram" data-diagram="digestive-system"><p class="diagram-caption">The organs of the digestive system and the route food takes</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Enzymes: the Chemical Scissors</h3>
+<p>Grinding food with your teeth only makes the pieces smaller — it does not change what they are made of. The chemical breakdown is done by <strong>enzymes</strong>, biological catalysts that speed up reactions without being used up. Each enzyme works on one type of nutrient:</p>
+<ul>
+<li><strong>Amylase</strong> breaks down starch into simple sugars.</li>
+<li><strong>Protease</strong> breaks down proteins into amino acids.</li>
+<li><strong>Lipase</strong> breaks down lipids into fatty acids and glycerol.</li>
+</ul>
+<p>A helpful way to remember them: the ending "-ase" tells you it is an enzyme, and the start of the name usually tells you what it works on — amylase acts on starch (amylose), protease on protein, lipase on lipids.</p>
+
+<h3>Worked Example</h3>
+<div class="example-box">
+<p><strong>Question:</strong> A student's daily diet contains 10,500 kJ of energy, but their body only uses 8,400 kJ. Over several months, what is likely to happen, and why?</p>
+<p><strong>Answer:</strong><br>
+1. Work out the daily difference: 10,500 − 8,400 = <strong>2,100 kJ surplus</strong> every day.<br>
+2. Energy that is taken in but not used is stored by the body as <strong>fat</strong>.<br>
+3. Repeated over months, that steady surplus causes <strong>weight gain</strong> and could lead to <strong>obesity</strong>.<br>
+4. To restore the balance the student could reduce their energy intake by eating less high-energy food, or increase the energy they use by exercising more.</p>
+<p>Questions like this are really about one idea: compare energy in with energy out, then say which way the balance tips.</p>
+</div>
+
+<h3>Common Mistakes</h3>
+<ul>
+<li>Thinking fats are simply bad for you. Lipids are an <strong>essential</strong> nutrient group — they store energy, insulate the body and protect organs. It is eating far more than you use that causes problems.</li>
+<li>Saying digestion only happens in the stomach. It begins in the <strong>mouth</strong>, with the teeth and the enzymes in saliva, and most of it is completed in the <strong>small intestine</strong>.</li>
+<li>Confusing digestion with absorption. Digestion <strong>breaks food down</strong>; absorption is when the products <strong>pass into the blood</strong>, mainly through the villi of the small intestine.</li>
+<li>Thinking fibre is a source of energy. Fibre <strong>cannot be digested at all</strong> — its value is in keeping food moving through the gut.</li>
 </ul>
 <p class="lesson-next-hint">➡️ Next: you've seen how the body nourishes itself — now you'll look at reproduction, another vital body system, and how new life gets started.</p>`,
 
@@ -2207,46 +2351,57 @@ The spring constant is 250 N/m, meaning the spring needs 250 N of force for ever
 <li>❌ Confusing the limit of proportionality with breaking — ✅ Correct: the limit of proportionality is where the graph <strong>curves</strong> — the spring has not broken, but the relationship is no longer linear.</li>
 </ul>`,
 
-"island-65": `<h4>Introduction</h4>
-<p>Across this topic you've built up a picture of how the human body works — its cells, its systems, how it nourishes itself and reproduces. This final lesson asks a different question: what happens when something interferes with all of that? A <strong>drug</strong> is any substance that changes the way the body or mind works, and that definition is much wider than most people think — it includes medicines that save lives, but also everyday legal substances like caffeine, alcohol and tobacco. Some drugs help; others, taken carelessly, can seriously damage the very systems you've just spent this topic learning about — the heart, lungs, liver and brain. By the end of this lesson you'll understand how legal and illegal drugs affect the body differently, and why habits that seem harmless at first can be so hard to break.</p>
-<h4>📌 Key Points</h4>
+"island-65": `<h2>Health: Effects of Drugs</h2>
+<p>Across this topic you've built up a picture of how the human body works — its cells, its systems, how it feeds itself and reproduces. This final chapter asks a different question: what happens when something interferes with all of that? Some substances help enormously; others, taken carelessly, damage the very systems you have just spent this topic learning about — the heart, lungs, liver and brain. By the end you'll understand how different drugs affect the body, and why habits that seem harmless at first can become so hard to break.</p>
+
+<h3>What Counts as a Drug?</h3>
+<p>A <strong>drug</strong> is any substance that changes the way the body or mind works. That definition is far wider than most people expect, and it deliberately says nothing about whether the substance is legal, or whether it is good or bad for you.</p>
+<p>Medicines are drugs: painkillers change how you sense pain, and antibiotics kill bacteria. <strong>Recreational drugs</strong> are those taken for their effects rather than to treat illness, and they fall into two groups. <strong>Legal</strong> ones include alcohol, tobacco and the caffeine in tea, coffee and energy drinks. <strong>Illegal</strong> ones include cannabis, cocaine and ecstasy.</p>
+<p>One point is worth pausing on, because it is where people most often go wrong: <strong>legal does not mean safe</strong>. Whether a substance is legal is a decision made by governments, influenced by history and custom as much as by science. In the UK, alcohol and tobacco between them cause far more illness and death than all illegal drugs combined.</p>
+
+<h3>Stimulants and Depressants</h3>
+<p>Many drugs can be sorted by what they do to the nervous system.</p>
+<p>A <strong>stimulant</strong> speeds up brain activity, making you feel more alert and awake. Caffeine is a mild stimulant; nicotine is another. A <strong>depressant</strong> does the opposite, slowing brain activity and the nervous system down. Alcohol is the most familiar example.</p>
+<p>"Depressant" does not mean it makes you sad — it means it depresses, or slows, the activity of your nerves. That slowing is exactly why alcohol causes <strong>slower reaction times</strong>, poorer <strong>judgement</strong> and loss of <strong>coordination</strong>, and why drink-driving is so dangerous.</p>
+
+<h3>Alcohol</h3>
+<p>The short-term effects of alcohol come from that slowing of the nervous system. Longer-term, heavy drinking damages several organs at once.</p>
+<p>The <strong>liver</strong> suffers most, because it is the organ that has to break alcohol down. Years of heavy use scar it in a disease called <strong>cirrhosis</strong>, and scarred liver tissue cannot do its job. Alcohol also damages the brain, the heart and the stomach lining.</p>
+
+<h3>Tobacco</h3>
+<p>Tobacco smoke is a mixture of thousands of chemicals, and three of them matter most:</p>
 <ul>
-<li>A <strong>drug</strong> is any substance that changes how the body or mind works. This includes medicines (painkillers, antibiotics) and recreational drugs.</li>
-<li><strong>Legal recreational drugs</strong> include alcohol, tobacco and caffeine. <strong>Illegal recreational drugs</strong> include cannabis, cocaine and ecstasy. Legal does not mean safe.</li>
-<li><strong>Alcohol</strong> is a <strong>depressant</strong> — it slows down brain activity and the nervous system, leading to slower reactions, impaired judgement and loss of coordination.</li>
-<li>Long-term alcohol misuse damages the <strong>liver</strong> (cirrhosis), brain, heart and stomach.</li>
-<li><strong>Tobacco</strong> contains <strong>nicotine</strong> (highly addictive stimulant), <strong>tar</strong> (damages lungs and causes cancer) and <strong>carbon monoxide</strong> (reduces oxygen-carrying capacity of blood).</li>
-<li>Smoking increases the risk of <strong>lung cancer, heart disease, bronchitis and emphysema</strong>.</li>
-<li><strong>Passive smoking</strong> (breathing in other people's smoke) is also harmful to health.</li>
-<li><strong>Tolerance</strong> develops when the body adapts to a drug, so more is needed to get the same effect — this increases the risk of overdose.</li>
-<li><strong>Dependence</strong> (addiction) occurs when a person feels unable to function without a drug and experiences <strong>withdrawal symptoms</strong> when they stop.</li>
-<li>Substance misuse is especially dangerous for young people because the brain is still developing until the mid-20s, making it more vulnerable to lasting damage.</li>
+<li><strong>Nicotine</strong> — a stimulant, and the substance that makes smoking so <strong>addictive</strong>. Nicotine is what keeps people smoking; it is the other chemicals that do most of the physical damage.</li>
+<li><strong>Tar</strong> — a sticky brown substance that coats the airways and lungs and causes cancer.</li>
+<li><strong>Carbon monoxide</strong> — a gas that binds to the haemoglobin in red blood cells in place of oxygen, so the blood carries <strong>less oxygen</strong> around the body.</li>
 </ul>
-<h4>✏️ Worked Example</h4>
+<p>Smoking greatly increases the risk of <strong>lung cancer</strong>, <strong>heart disease</strong>, <strong>bronchitis</strong> and <strong>emphysema</strong>, a condition in which the alveoli are destroyed so gas exchange becomes steadily harder.</p>
+<p>The harm is not limited to the smoker. <strong>Passive smoking</strong> — breathing in someone else's smoke — exposes you to the same chemicals and is also damaging to health, which is why smoking indoors in public places is banned in the UK.</p>
+
+<h3>Tolerance, Dependence and Withdrawal</h3>
+<p>Three linked ideas explain why using a drug regularly can become so difficult to stop.</p>
+<p><strong>Tolerance</strong> develops as the body adapts to a drug that keeps arriving, so the same dose gradually produces less of an effect. The user then takes more to get the effect they are used to — which is dangerous, because it pushes them closer to an overdose.</p>
+<p><strong>Dependence</strong>, often called addiction, is when a person feels unable to function normally without the drug. If they stop, they suffer <strong>withdrawal symptoms</strong> — genuinely unpleasant physical and psychological effects such as anxiety, shaking and nausea, which push them towards taking the drug again just to feel normal.</p>
+<p>This matters especially for young people. The brain carries on developing into the mid-twenties, and a developing brain is more easily and more lastingly affected than an adult one.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
-<p><strong>Example:</strong> A student says: "Caffeine cannot be a drug because you can buy it in any shop." Explain why this statement is incorrect.</p>
-<p><strong>Solution:</strong><br>
+<p><strong>Question:</strong> A student says, "Caffeine can't be a drug — you can buy it in any shop." Explain why this statement is incorrect.</p>
+<p><strong>Answer:</strong><br>
 1. A drug is defined as any substance that <strong>changes how the body or mind works</strong>.<br>
-2. Caffeine is a <strong>stimulant</strong> — it speeds up brain activity and increases alertness.<br>
-3. Since caffeine changes how the nervous system works, it <strong>is a drug</strong> by definition.<br>
-4. Whether a drug is <strong>legal or illegal</strong> does not change whether it is a drug — it only affects whether you are allowed to buy it.<br>
-Therefore the student is wrong: caffeine is a legal drug.</p>
+2. Caffeine is a <strong>stimulant</strong>: it speeds up brain activity and makes you feel more alert.<br>
+3. Because it changes how the nervous system works, caffeine <strong>is a drug</strong> by that definition.<br>
+4. Being legal or illegal has no bearing on whether something is a drug — it only affects whether you are allowed to buy and use it.<br>
+So the student is wrong: caffeine is a drug, and a legal one.</p>
+<p>The trap in this question is the assumption that "drug" means "illegal substance". Always go back to the scientific definition.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Drug</dt><dd>Any substance that changes the way the body or mind works.</dd>
-<dt>Depressant</dt><dd>A drug that slows down brain activity and the nervous system (e.g. alcohol).</dd>
-<dt>Stimulant</dt><dd>A drug that speeds up brain activity and the nervous system (e.g. caffeine, nicotine).</dd>
-<dt>Tolerance</dt><dd>When the body adapts to a drug so that a larger dose is needed to produce the same effect.</dd>
-<dt>Dependence (addiction)</dt><dd>When a person feels unable to function normally without a drug and experiences withdrawal symptoms without it.</dd>
-<dt>Withdrawal symptoms</dt><dd>Unpleasant physical and psychological effects experienced when a person stops taking a drug they are dependent on (e.g. anxiety, shaking, nausea).</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking legal drugs are always safe — ✅ Correct: <strong>alcohol and tobacco</strong> cause more health damage in the UK than many illegal drugs. Legal does not mean harmless.</li>
-<li>❌ Saying only illegal substances are drugs — ✅ Correct: a drug is <strong>any substance that changes how the body works</strong>. Caffeine, alcohol and paracetamol are all drugs.</li>
-<li>❌ Confusing tolerance and dependence — ✅ Correct: <strong>tolerance</strong> means needing more to get the same effect; <strong>dependence</strong> means feeling unable to cope without the drug.</li>
-<li>❌ Thinking addiction is just a choice — ✅ Correct: dependence involves <strong>physical and chemical changes</strong> in the brain that make stopping extremely difficult. It is a medical condition, not simply a lack of willpower.</li>
+<li>Thinking legal drugs are automatically safe. <strong>Alcohol and tobacco</strong> cause more harm in the UK than many illegal drugs do.</li>
+<li>Saying only illegal substances count as drugs. A drug is <strong>any substance that changes how the body or mind works</strong> — caffeine, alcohol and paracetamol all qualify.</li>
+<li>Confusing tolerance with dependence. <strong>Tolerance</strong> means needing more for the same effect; <strong>dependence</strong> means being unable to cope without it.</li>
+<li>Treating addiction as simply a lack of willpower. Dependence involves real <strong>physical and chemical changes in the brain</strong>, which is why it is treated as a medical condition.</li>
 </ul>`,
 
 "island-66": `<h4>Introduction</h4>
