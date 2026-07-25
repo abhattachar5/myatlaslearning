@@ -547,82 +547,128 @@ Techniques used:<br>
 </ul>
 <p class="lesson-next-hint">➡️ Next: now you know what makes something alive and how cells are built, you'll look at how scientists classify and group all of Earth's living things.</p>`,
 
-"island-12": `<h4>Introduction</h4>
-<p>Ecosystems are communities of living organisms interacting with each other and their environment. Food chains and webs show how energy flows from producers through consumers — and understanding this helps explain how changes in one population affect the whole ecosystem.</p>
-<h4>📌 Key Points</h4>
+"island-12": `<h2>Ecosystems &amp; Food Webs</h2>
+<p>No living thing survives on its own. A rabbit needs grass, a fox needs rabbits, and all three depend on soil, water and sunlight. Follow those connections far enough and you find that every organism in a place is tied to every other one, often in ways that are not obvious until something changes. In this chapter you'll learn how to map those connections, follow energy as it passes from one organism to the next, and work out why removing a single species can send effects rippling through an entire habitat.</p>
+
+<h3>Habitats, Populations and Ecosystems</h3>
+<p>Ecology has a set of precise words for describing where things live, and they are easy to muddle, so it is worth pinning them down at the start. They fit inside one another, getting bigger each time:</p>
 <ul>
-<li><strong>Producers</strong> make their own food via photosynthesis (plants, algae). They always start a food chain.</li>
-<li>The <strong>arrow in a food chain</strong> shows the direction of energy transfer — it points FROM what is eaten TO what eats it.</li>
-<li><strong>Primary consumers</strong> eat producers (herbivores). <strong>Secondary consumers</strong> eat primary consumers. <strong>Tertiary consumers</strong> eat secondary consumers.</li>
-<li><strong>Decomposers</strong> (bacteria and fungi) break down dead organisms and waste, recycling nutrients back into the soil so producers can use them again.</li>
-<li><strong>Adaptations</strong> are inherited features that help an organism survive and reproduce in its environment.</li>
-<li>Energy is <strong>lost at each stage</strong> of a food chain (used for movement, respiration, heat) — only about <strong>10 %</strong> is passed to the next level. This is why food chains rarely have more than 4–5 levels.</li>
-<li>A <strong>pyramid of biomass</strong> shows the total mass of living organisms at each trophic level — it is widest at the bottom (producers) and narrows upwards.</li>
-<li>Key terms: a <strong>population</strong> is all organisms of one species in an area; a <strong>community</strong> is all species in that area; an <strong>ecosystem</strong> is the community plus its physical environment; a <strong>habitat</strong> is the place where an organism lives.</li>
+<li>A <strong>habitat</strong> is the place where an organism lives — a pond, a hedgerow, a rock pool.</li>
+<li>A <strong>population</strong> is all the organisms of <em>one species</em> living in an area at the same time — for example, all the frogs in that pond.</li>
+<li>A <strong>community</strong> is all the populations of <em>all the different species</em> living there together — the frogs, the fish, the pondweed, the insects.</li>
+<li>An <strong>ecosystem</strong> is the whole community <em>plus</em> the non-living physical surroundings it depends on: the water, the soil, the sunlight and the temperature.</li>
 </ul>
-<div class="lesson-diagram" data-diagram="food-chain"><p class="diagram-caption">Energy flow through a food chain</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
-<div class="example-box">
-<p><strong>Example:</strong> In the food chain: Grass → Rabbit → Fox → Eagle — what would happen if the rabbit population suddenly dropped by 80%?</p>
-<p><strong>Solution:</strong><br>
-• <strong>Grass</strong> population would likely <strong>increase</strong> — less being eaten.<br>
-• <strong>Fox</strong> population would <strong>decrease</strong> — less food available; some would starve.<br>
-• <strong>Eagle</strong> population would also <strong>decrease</strong> — foxes (their prey) are now scarcer.<br>
-This shows how a change in one species ripples through the entire food web.</p>
-</div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Producer</dt><dd>An organism that makes its own food through photosynthesis — always at the start of a food chain.</dd>
-<dt>Consumer</dt><dd>An organism that obtains energy by eating other organisms.</dd>
-<dt>Adaptation</dt><dd>An inherited feature that improves an organism's ability to survive and reproduce in its environment.</dd>
-<dt>Food web</dt><dd>A diagram showing the feeding relationships between multiple species in an ecosystem.</dd>
-<dt>Decomposer</dt><dd>An organism (bacterium or fungus) that breaks down dead material and recycles nutrients back into the soil.</dd>
-<dt>Population</dt><dd>All organisms of the same species living in the same area at the same time.</dd>
-<dt>Pyramid of biomass</dt><dd>A diagram showing the total mass of organisms at each level of a food chain — widest at the base (producers).</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Producers and Consumers</h3>
+<p>Almost all the energy in an ecosystem originally comes from the Sun, and getting it into living things is the job of <strong>producers</strong>. A producer makes its own food by photosynthesis, capturing light energy and storing it as glucose. Plants and algae are the producers, and because everything else ultimately depends on them, a producer always sits at the start of a food chain.</p>
+<p>A <strong>consumer</strong> cannot make its own food, so it has to eat other organisms to get energy. Consumers are labelled by their position in the chain:</p>
 <ul>
-<li>❌ Drawing arrows to show "what eats what" (pointing at the predator) — ✅ Correct: arrows show <strong>energy flow</strong>, pointing away from what is eaten.</li>
-<li>❌ Confusing adaptation with mutation — ✅ Correct: adaptations are <strong>inherited</strong> features; they develop over many generations, not in one lifetime.</li>
-<li>❌ Thinking producers are animals — ✅ Correct: producers are <strong>plants and algae</strong> that photosynthesise; they cannot move in search of food.</li>
+<li><strong>Primary consumers</strong> eat producers. These are the <strong>herbivores</strong> — plant-eaters such as rabbits and caterpillars.</li>
+<li><strong>Secondary consumers</strong> eat primary consumers.</li>
+<li><strong>Tertiary consumers</strong> eat secondary consumers.</li>
+</ul>
+<p>Each of these feeding positions is called a <strong>trophic level</strong>, which is just a scientific way of saying "step in the chain".</p>
+
+<h3>Reading a Food Chain</h3>
+<p>A <strong>food chain</strong> shows one route that energy takes through an ecosystem, for example: grass → rabbit → fox.</p>
+<p>The arrows are the part students most often get wrong. An arrow does <em>not</em> mean "eats". It shows the direction that <strong>energy flows</strong>, so it points <em>from</em> the organism being eaten <em>to</em> the organism eating it. Grass → rabbit means the energy stored in the grass passes into the rabbit. Say the arrow out loud as "is eaten by" and you will always get it the right way round.</p>
+<div class="lesson-diagram" data-diagram="food-chain"><p class="diagram-caption">Energy flowing along a food chain</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Food Webs</h3>
+<p>Real life is messier than a single chain. Most animals eat more than one thing and are eaten by more than one predator, so ecologists join many overlapping food chains together into a <strong>food web</strong> — a diagram of all the feeding relationships in an ecosystem at once.</p>
+<p>Food webs make it possible to predict knock-on effects. If one species disappears, you can trace the arrows outwards and see which other populations rise and which fall — and the answer is often several steps away from where the change began.</p>
+
+<h3>Decomposers and Recycling</h3>
+<p>Something has to deal with dead organisms and waste, or nutrients would be locked up in them forever. That is the work of <strong>decomposers</strong> — bacteria and fungi that break dead material down.</p>
+<p>As they feed, decomposers release the nutrients locked inside back into the soil, where producers can absorb and reuse them. This is what makes an ecosystem sustainable: the <em>energy</em> flows through and is eventually lost, but the <em>nutrients</em> go round and round indefinitely.</p>
+
+<h3>Why Energy Runs Out: the 10% Rule</h3>
+<p>Energy does not pass along a food chain intact. At every step, most of it is lost — used up in movement, released as heat during respiration, or leaving the body in waste. Only about <strong>10%</strong> of the energy at one level ends up stored in the next level up.</p>
+<p>This single fact explains something you can check for yourself: food chains almost never have more than four or five levels. After a few steps there is simply not enough energy left to support another population of predators. It also explains why big predators are rare compared with the animals they hunt.</p>
+
+<h3>Pyramids of Biomass</h3>
+<p><strong>Biomass</strong> means the total mass of living material. A <strong>pyramid of biomass</strong> is a diagram in which each trophic level is drawn as a horizontal bar, with the bar's width showing how much biomass that level holds.</p>
+<p>Because so much energy is lost at each step, the bars get narrower as you go up: producers form a wide base, and the top predator makes the narrow tip. That characteristic pyramid shape is a direct visual consequence of the 10% rule.</p>
+
+<h3>Adaptations</h3>
+<p>An <strong>adaptation</strong> is an inherited feature that makes an organism better at surviving and reproducing where it lives. A polar bear's thick fur and white coat, or a cactus's spines and water-storing stem, are adaptations.</p>
+<p>The word "inherited" is doing important work there. An adaptation is passed down through generations in an organism's genes; it is not something an individual develops during its own lifetime because it needs it. A polar bear does not grow thicker fur by wanting to be warmer — bears born with thicker fur simply survived better and had more cubs, over very many generations.</p>
+
+<h3>Worked Example</h3>
+<div class="example-box">
+<p><strong>Question:</strong> In the food chain grass → rabbit → fox → eagle, what would happen if the rabbit population suddenly fell by 80%?</p>
+<p><strong>Answer:</strong><br>
+• The <strong>grass</strong> population would <strong>increase</strong>, because far less of it is now being eaten.<br>
+• The <strong>fox</strong> population would <strong>decrease</strong>, because foxes have lost most of their food supply and some would starve.<br>
+• The <strong>eagle</strong> population would also <strong>decrease</strong>, because foxes — their prey — have become scarcer.</p>
+<p>The method is always the same: work <em>down</em> the chain from the change (less eaten, so that population grows) and <em>up</em> the chain (less food, so those populations shrink). Notice the effect reaches the eagles even though eagles never eat rabbits.</p>
+</div>
+
+<h3>Common Mistakes</h3>
+<ul>
+<li>Drawing food-chain arrows pointing at the prey, as though they meant "eats". Arrows show <strong>energy flow</strong>, so they point away from the organism that is eaten.</li>
+<li>Confusing adaptation with a change during one lifetime. Adaptations are <strong>inherited</strong> and appear across many generations.</li>
+<li>Thinking producers can be animals. Producers are <strong>plants and algae</strong>, because they are the ones that photosynthesise.</li>
+<li>Mixing up population and community. A <strong>population</strong> is one species; a <strong>community</strong> is all the species together.</li>
 </ul>`,
 
-"island-13": `<h4>Introduction</h4>
-<p>Everything around you is made of particles — tiny pieces of matter in constant motion. The particle model explains why solids keep their shape, why gases fill any container, and what happens when substances heat up or change state. It is one of the most powerful explanatory models in science.</p>
-<h4>📌 Key Points</h4>
+"island-13": `<h2>Particles &amp; States of Matter</h2>
+<p>Why does a puddle dry up on a warm day? Why can you squash the air in a bicycle pump but not the water in a bottle? Why does ice take up more room than the water it came from? All of these have the same answer, and it comes from one powerful idea: everything around you is built from tiny particles that are never quite still. This chapter introduces that idea — the particle model — and shows how much of the everyday world it explains.</p>
+
+<h3>The Particle Model</h3>
+<p>The <strong>particle model</strong> states that all matter is made of extremely small particles, far too small to see, which are in constant motion and which attract one another. Everything that follows in this chapter comes out of those few simple statements.</p>
+<p>The particles are always moving, and the hotter something is, the faster they move. That movement energy has a name: <strong>kinetic energy</strong>, meaning the energy something has because it is moving. Heating a substance gives its particles more kinetic energy.</p>
+
+<h3>Solids, Liquids and Gases</h3>
+<p>The three states of matter differ only in how the particles are arranged and how freely they move.</p>
 <ul>
-<li><strong>Solid</strong>: particles close together in a fixed, regular arrangement — vibrate in place only. Definite shape and volume.</li>
-<li><strong>Liquid</strong>: particles close together but can slide past each other. Definite volume, no fixed shape.</li>
-<li><strong>Gas</strong>: particles far apart, moving quickly in all directions. No fixed shape or volume — fills any container.</li>
-<li><strong>Changes of state</strong>: melting (solid → liquid), evaporation (liquid → gas), condensation (gas → liquid), freezing (liquid → solid), <strong>sublimation</strong> (solid → gas directly, e.g. dry ice). All are reversible physical changes.</li>
-<li><strong>Evaporation vs boiling</strong>: evaporation happens at the <strong>surface</strong> of a liquid at any temperature; boiling happens <strong>throughout</strong> the liquid at a fixed boiling point (e.g. 100 °C for water).</li>
-<li>A <strong>pure substance</strong> has a single, sharp melting and boiling point. <strong>Impurities</strong> lower the melting point and broaden the range — useful for testing purity.</li>
-<li>Gases can be <strong>compressed</strong> because there are large spaces between the particles; solids and liquids cannot because their particles are already tightly packed.</li>
-<li><strong>Diffusion</strong>: particles spread from areas of high concentration to low concentration until evenly spread (e.g. a smell spreading through a room).</li>
+<li>In a <strong>solid</strong>, particles are packed closely together in a fixed, regular arrangement. They cannot move around — they only vibrate on the spot. This is why a solid keeps a <strong>definite shape and volume</strong>.</li>
+<li>In a <strong>liquid</strong>, particles are still close together but they can slide past one another. So a liquid has a <strong>definite volume</strong> but no fixed shape — it takes the shape of whatever contains it.</li>
+<li>In a <strong>gas</strong>, particles are far apart and move quickly in all directions. A gas has <strong>no fixed shape or volume</strong> and spreads out to fill any container completely.</li>
 </ul>
+<p>That arrangement also explains something you can test yourself: gases can be <strong>compressed</strong> into a smaller space because there is so much empty room between their particles, whereas solids and liquids cannot, because their particles are already touching.</p>
 <div class="lesson-diagram" data-diagram="particle-states"><p class="diagram-caption">Particle arrangement in solids, liquids and gases</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
-<div class="example-box">
-<p><strong>Example:</strong> Explain, using particle theory, what happens when ice is heated until it becomes steam.</p>
-<p><strong>Solution:</strong><br>
-1. Ice (solid): particles vibrate in fixed positions. As heat is added, particles gain kinetic energy.<br>
-2. At 0°C — <strong>melting</strong>: particles have enough energy to break free of fixed positions → liquid water. Particles still close but can move.<br>
-3. At 100°C — <strong>boiling/evaporation</strong>: particles gain enough energy to overcome attractions entirely → steam (gas). Particles move fast and far apart.</p>
-</div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Particle model</dt><dd>The theory that all matter is made of tiny particles in constant motion, explaining properties of solids, liquids and gases.</dd>
-<dt>Diffusion</dt><dd>The net movement of particles from a region of high concentration to low concentration.</dd>
-<dt>Change of state</dt><dd>A physical change between solid, liquid and gas — reversible, with no new substance formed.</dd>
-<dt>Kinetic energy</dt><dd>The energy of movement. Heating particles gives them more kinetic energy, making them move faster.</dd>
-<dt>Sublimation</dt><dd>A change of state directly from solid to gas without passing through the liquid state (e.g. dry ice). The reverse is called deposition.</dd>
-<dt>Pure substance</dt><dd>A substance made of only one element or compound, with a single sharp melting point and boiling point.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Changing State</h3>
+<p>A <strong>change of state</strong> happens when a substance moves between solid, liquid and gas. Each direction has its own name:</p>
 <ul>
-<li>❌ Saying particles "get bigger" when heated — ✅ Correct: particles stay the same size; they just <strong>move faster and spread further apart</strong>.</li>
-<li>❌ Confusing melting and dissolving — ✅ Correct: melting is a change of state (solid → liquid via heat); dissolving is a solid mixing into a liquid — <strong>different processes</strong>.</li>
-<li>❌ Saying evaporation only happens at 100°C — ✅ Correct: evaporation happens at <strong>any temperature</strong> from the surface of a liquid; boiling happens throughout.</li>
+<li><strong>Melting</strong> — solid to liquid.</li>
+<li><strong>Freezing</strong> — liquid to solid.</li>
+<li><strong>Evaporation</strong> (or boiling) — liquid to gas.</li>
+<li><strong>Condensation</strong> — gas to liquid.</li>
+<li><strong>Sublimation</strong> — solid straight to gas, skipping the liquid stage entirely. Dry ice does this. The reverse, gas straight to solid, is called <strong>deposition</strong>.</li>
+</ul>
+<p>Every one of these is a <strong>physical change</strong>: reversible, and producing no new substance. Melting ice gives you water, which you can freeze straight back into ice — the particles themselves are completely unchanged, only their arrangement is different.</p>
+
+<h3>Evaporation and Boiling Are Not the Same</h3>
+<p>Both turn a liquid into a gas, but they are different processes, and this is a favourite exam question.</p>
+<p><strong>Evaporation</strong> happens only at the <strong>surface</strong> of a liquid, and it happens at <em>any</em> temperature. Particles at the surface that happen to be moving fastest can escape, which is exactly why a puddle dries up on a cool day and why washing dries on the line.</p>
+<p><strong>Boiling</strong> happens <strong>throughout</strong> the whole liquid, not just at the surface, and only at one particular temperature — the boiling point, which is 100 °C for water. Those bubbles rising through boiling water are gas forming deep inside the liquid, which is something evaporation never does.</p>
+
+<h3>Pure Substances and Melting Points</h3>
+<p>A <strong>pure substance</strong> contains only one element or compound. Purity shows up very clearly in melting and boiling behaviour: a pure substance melts at a single, sharp temperature.</p>
+<p>Add <strong>impurities</strong> and two things happen — the melting point drops, and instead of a sharp temperature you get a range over which it gradually melts. Chemists use this to check purity, and it is also why salt is scattered on icy roads: the salt lowers the melting point so the ice turns to water below 0 °C.</p>
+
+<h3>Diffusion</h3>
+<p>Because particles are constantly moving, they spread out on their own. <strong>Diffusion</strong> is the movement of particles from an area of <strong>high concentration</strong> to an area of <strong>low concentration</strong>, until they are evenly spread. ("Concentration" simply means how tightly packed the particles are in a given space.)</p>
+<p>Nobody has to stir or push them; their random motion does it. When someone cooks in the kitchen and you smell it from another room, that is diffusion carrying the particles to you. It happens fastest in gases, where particles move quickest and have the most room, and it does not happen in solids at all, because the particles cannot travel.</p>
+
+<h3>Worked Example</h3>
+<div class="example-box">
+<p><strong>Question:</strong> Explain, using the particle model, what happens when ice is heated until it becomes steam.</p>
+<p><strong>Answer:</strong><br>
+1. <strong>Ice (solid):</strong> the particles are in fixed positions, vibrating on the spot. As heat is supplied they gain kinetic energy and vibrate more strongly.<br>
+2. <strong>At 0 °C — melting:</strong> the particles now have enough energy to break out of their fixed positions and slide past each other, so the ice becomes liquid water. The particles are still close together.<br>
+3. <strong>At 100 °C — boiling:</strong> the particles gain enough energy to overcome the forces attracting them to each other completely, and escape as a gas. In steam they move rapidly and are far apart.</p>
+<p>For any question like this, describe the particles at each stage: how they are arranged, how they are moving, and what the added energy lets them do next.</p>
+</div>
+
+<h3>Common Mistakes</h3>
+<ul>
+<li>Saying particles "get bigger" when heated. The particles stay exactly the same size — they simply <strong>move faster and spread further apart</strong>, which is what makes the substance expand.</li>
+<li>Confusing melting with dissolving. <strong>Melting</strong> is a change of state caused by heating; <strong>dissolving</strong> is a solid mixing into a liquid to form a solution. Quite different processes.</li>
+<li>Thinking evaporation only happens at 100 °C. Evaporation happens at <strong>any temperature</strong>, from the surface only. Boiling is what happens at 100 °C, throughout the liquid.</li>
+<li>Believing a change of state makes a new substance. It does not — melting, boiling and freezing are all <strong>reversible physical changes</strong>.</li>
 </ul>`,
 
 "island-14": `<h4>Introduction</h4>
@@ -758,19 +804,14 @@ Law of reflection: angle of reflection = angle of incidence = <strong>55°</stro
 </ul>
 <p class="lesson-next-hint">➡️ Next: to finish this topic, you'll look at how outside substances — including legal ones like alcohol and tobacco — can affect the body systems you've just spent this topic getting to know.</p>`,
 
-"island-29": `<h4>Introduction</h4>
-<p>Chemistry begins with understanding what matter is made of. Atoms combine to form elements and compounds, the Periodic Table organises all known elements, and chemical reactions produce new substances with new properties. These ideas underpin all of chemistry.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Element</strong>: one type of atom only. Cannot be broken down by chemical means. Found in the Periodic Table (e.g. O, Fe, Cu).</li>
-<li><strong>Compound</strong>: two or more different elements <em>chemically</em> bonded together (e.g. H₂O, NaCl). Has different properties from its elements.</li>
-<li><strong>Mixture</strong>: substances physically combined — not chemically bonded. Each keeps its own properties. Separable by physical means.</li>
-<li>The <strong>Periodic Table</strong>: elements arranged by atomic number. Groups (columns) = similar properties (same number of outer-shell electrons). Periods (rows) = new electron shell. <strong>Metals</strong> are on the left and centre; <strong>non-metals</strong> are on the right.</li>
-<li>In a chemical reaction, <strong>reactants</strong> (on the left of the arrow) change into <strong>products</strong> (on the right). A <strong>chemical change</strong> produces new substances and is hard to reverse (e.g. burning). A <strong>physical change</strong> (e.g. dissolving, melting) is reversible and no new substance is formed.</li>
-<li>Separation techniques: filtration (insoluble solids), evaporation (dissolved solids), distillation (liquids), chromatography (dissolved dyes) — choose based on what you're separating.</li>
-</ul>
-<h4>🔤 Common Element Symbols</h4>
-<p>Every element has a <strong>chemical symbol</strong> — one or two letters. The first letter is always a <strong>capital</strong>; the second (if there is one) is always <strong>lowercase</strong>.</p>
+"island-29": `<h2>Elements, Compounds &amp; Reactions</h2>
+<p>There are only about a hundred different kinds of atom in the entire universe — and yet from those hundred come water, salt, steel, sugar, DNA and everything else that exists. This chapter is about how that works: what the basic building blocks are, how they join together, and what happens when they rearrange into something new.</p>
+
+<h3>Atoms and Elements</h3>
+<p>An <strong>atom</strong> is the smallest particle of a substance that still behaves like that substance. An <strong>element</strong> is a substance made of only <em>one</em> type of atom, and because of that it cannot be broken down into anything simpler by chemical means. Oxygen, iron and copper are all elements, and every known element has its place in the Periodic Table.</p>
+
+<h3>Chemical Symbols</h3>
+<p>Every element has a <strong>chemical symbol</strong> — one or two letters. The first letter is always a <strong>capital</strong>; the second (if there is one) is always <strong>lowercase</strong>. That rule matters more than it looks: <strong>Co</strong> is the element cobalt, but <strong>CO</strong> is carbon monoxide, a compound of two different elements.</p>
 <table style="border-collapse:collapse;width:100%;font-size:.85rem;margin:10px 0;">
 <tr style="background:var(--surface);"><th style="padding:6px 10px;border:1px solid var(--border);text-align:left;">Element</th><th style="padding:6px 10px;border:1px solid var(--border);text-align:center;">Symbol</th><th style="padding:6px 10px;border:1px solid var(--border);text-align:left;">Note</th></tr>
 <tr><td style="padding:5px 10px;border:1px solid var(--border);">Hydrogen</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>H</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">Lightest element</td></tr>
@@ -788,7 +829,12 @@ Law of reflection: angle of reflection = angle of incidence = <strong>55°</stro
 <tr><td style="padding:5px 10px;border:1px solid var(--border);">Potassium</td><td style="padding:5px 10px;border:1px solid var(--border);text-align:center;"><strong>K</strong></td><td style="padding:5px 10px;border:1px solid var(--border);">From Latin <em>kalium</em></td></tr>
 </table>
 <p><strong>Tricky ones to remember:</strong> Na, Fe, Cu, and K don't match their English names — they come from Latin!</p>
-<h4>🧪 Reading Chemical Formulae</h4>
+
+<h3>Compounds</h3>
+<p>A <strong>compound</strong> is formed when two or more <em>different</em> elements are <strong>chemically bonded</strong> together in fixed proportions. Water (H₂O) and sodium chloride (NaCl) are compounds.</p>
+<p>The crucial point is that a compound has <strong>completely different properties</strong> from the elements it was made from. Sodium is a soft metal that reacts violently with water; chlorine is a poisonous green gas. Bond them together and you get table salt, which you sprinkle on your chips. Once elements have chemically bonded, they cannot be separated again by physical means — it takes another chemical reaction.</p>
+
+<h3>Reading a Chemical Formula</h3>
 <p>A <strong>chemical formula</strong> tells you which elements are in a substance and <strong>how many atoms</strong> of each. The small number written below and to the right (a <em>subscript</em>) tells you the count. No number means just 1.</p>
 <ul>
 <li><strong>O₂</strong> — two oxygen atoms bonded together. This is oxygen gas (the gas we breathe).</li>
@@ -798,35 +844,52 @@ Law of reflection: angle of reflection = angle of incidence = <strong>55°</stro
 <li><strong>MgO</strong> — one magnesium + one oxygen = <strong>magnesium oxide</strong>.</li>
 <li><strong>HCl</strong> — one hydrogen + one chlorine = <strong>hydrochloric acid</strong>.</li>
 </ul>
-<p><strong>Tip:</strong> Some elements naturally exist in pairs — H₂, O₂, N₂, Cl₂. These are called <em>diatomic</em> molecules.</p>
-<h4>✏️ Worked Example</h4>
-<div class="example-box">
-<p><strong>Example:</strong> Write a word equation for the reaction between magnesium and oxygen. Is this a physical or chemical change?</p>
-<p><strong>Solution:</strong><br>
-Word equation: <strong>Magnesium + Oxygen → Magnesium oxide</strong><br>
-This is a <strong>chemical change</strong> because:<br>
-• A new substance is formed (magnesium oxide) with different properties<br>
-• The change is <strong>irreversible</strong> — you cannot easily get magnesium back from magnesium oxide<br>
-• Energy is released (bright white light and heat — this is why magnesium burns so brightly)<br><br>
-Compare with melting ice (physical change) — no new substance, fully reversible.</p>
-</div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Atom</dt><dd>The smallest particle of an element that retains the chemical properties of that element.</dd>
-<dt>Compound</dt><dd>A substance formed when two or more elements are chemically bonded in fixed proportions.</dd>
-<dt>Periodic Table</dt><dd>A table of all known elements arranged in order of atomic number, revealing patterns in properties.</dd>
-<dt>Chemical symbol</dt><dd>A one- or two-letter shorthand for an element (e.g. O = oxygen, Fe = iron). The first letter is always a capital.</dd>
-<dt>Chemical formula</dt><dd>A combination of symbols and subscript numbers that shows which elements are in a substance and how many atoms of each (e.g. CO₂ = 1 carbon + 2 oxygens).</dd>
-<dt>Diatomic molecule</dt><dd>A molecule made of exactly two atoms bonded together. Some elements naturally exist as pairs: H₂, O₂, N₂, Cl₂.</dd>
-<dt>Chromatography</dt><dd>A separation technique that uses a solvent to separate dissolved substances by how far they travel up paper.</dd>
-<dt>Reactant</dt><dd>A substance that takes part in a chemical reaction — written on the left side of a word equation.</dd>
-<dt>Product</dt><dd>A new substance formed during a chemical reaction — written on the right side of a word equation.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<p><strong>Tip:</strong> Some elements naturally exist in pairs — H₂, O₂, N₂, Cl₂. These are called <strong>diatomic</strong> molecules.</p>
+
+<h3>Mixtures — and How to Separate Them</h3>
+<p>A <strong>mixture</strong> is different again. Here substances are only <em>physically</em> mixed together, with no chemical bonds formed. Each substance keeps all its own properties, and because nothing has chemically joined, a mixture can be separated by physical means. Air, sea water and sand mixed with salt are all mixtures.</p>
+<p>Which separation technique you use depends entirely on what you are trying to separate:</p>
 <ul>
-<li>❌ Thinking a mixture and a compound are the same — ✅ Correct: in a compound elements are <strong>chemically bonded</strong>; in a mixture they are just <strong>physically mixed</strong>.</li>
-<li>❌ Using filtration to separate a dissolved solid — ✅ Correct: filtration only separates <strong>insoluble</strong> solids. Use <strong>evaporation</strong> for dissolved solids like salt.</li>
-<li>❌ Writing word equations with formulae (H₂O) — ✅ Correct: <strong>word</strong> equations use names only; formulae are for <strong>symbol</strong> equations.</li>
+<li><strong>Filtration</strong> — separates an <em>insoluble</em> solid from a liquid. The solid is trapped by the filter paper while the liquid runs through. Use it for sand in water.</li>
+<li><strong>Evaporation</strong> — recovers a <em>dissolved</em> solid from its solution. The liquid evaporates away and leaves the solid behind. Use it for salt in water.</li>
+<li><strong>Distillation</strong> — separates liquids, or recovers the <em>liquid</em> itself from a solution, by boiling it off and then condensing the vapour back.</li>
+<li><strong>Chromatography</strong> — separates dissolved substances such as the dyes in an ink, using a solvent that carries each dye a different distance up the paper.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="separation-techniques"><p class="diagram-caption">Techniques for separating mixtures</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>The Periodic Table at a Glance</h3>
+<p>The <strong>Periodic Table</strong> lists every known element, arranged in order of <strong>atomic number</strong>. Its layout is not decorative — the position of an element tells you about its behaviour.</p>
+<p>The vertical columns are called <strong>groups</strong>. Elements in the same group have the same number of electrons in their outer shell, which is why they have <strong>similar chemical properties</strong>. The horizontal rows are <strong>periods</strong>, and each new period means the atoms have gained another electron shell.</p>
+<p>The table also divides broadly into <strong>metals</strong>, on the left and in the centre, and <strong>non-metals</strong>, over on the right.</p>
+
+<h3>Chemical Changes and Physical Changes</h3>
+<p>In a chemical reaction, the starting substances are called the <strong>reactants</strong> and are written on the left of the arrow; the new substances formed are the <strong>products</strong>, written on the right.</p>
+<p>Telling the two kinds of change apart is one of the most useful skills in chemistry:</p>
+<ul>
+<li>A <strong>chemical change</strong> makes one or more <em>new substances</em> with different properties, and it is difficult or impossible to reverse. Burning, rusting and cooking an egg are chemical changes. There are often clues: a colour change, a gas given off, or heat and light released.</li>
+<li>A <strong>physical change</strong> makes <em>no new substance</em> and is usually easy to reverse. Melting, boiling and dissolving are physical changes — the particles are rearranged but they are still the same particles.</li>
+</ul>
+
+<h3>Worked Example</h3>
+<div class="example-box">
+<p><strong>Question:</strong> Write a word equation for the reaction between magnesium and oxygen. Is this a physical or a chemical change?</p>
+<p><strong>Answer:</strong><br>
+Word equation: <strong>Magnesium + Oxygen → Magnesium oxide</strong><br>
+The reactants are magnesium and oxygen; the product is magnesium oxide.<br><br>
+This is a <strong>chemical change</strong>, for three reasons:<br>
+• A <strong>new substance</strong> is formed — magnesium oxide is a white powder, quite unlike the shiny grey metal it came from.<br>
+• The change is <strong>irreversible</strong>: you cannot get the magnesium back by any simple physical method.<br>
+• <strong>Energy is released</strong> as the brilliant white light and heat that make burning magnesium so striking.<br><br>
+Compare that with melting ice, a physical change: no new substance, and fully reversible.</p>
+<p>Remember that a <em>word</em> equation uses names only. Save the formulae for symbol equations.</p>
+</div>
+
+<h3>Common Mistakes</h3>
+<ul>
+<li>Treating a mixture and a compound as the same thing. In a <strong>compound</strong> the elements are chemically bonded and their properties change; in a <strong>mixture</strong> they are only physically mixed and keep their own properties.</li>
+<li>Trying to use filtration on a dissolved solid. Filtration only catches <strong>insoluble</strong> solids — salt water runs straight through the paper. Use <strong>evaporation</strong> instead.</li>
+<li>Putting formulae into a word equation. Write "water", not "H₂O", unless you have been asked for a symbol equation.</li>
+<li>Assuming anything that looks dramatic is a chemical change. The real test is whether a <strong>new substance</strong> has been made — boiling a kettle is vigorous but entirely physical.</li>
 </ul>`,
 
 "island-16": `<h4>Introduction</h4>
@@ -1909,101 +1972,151 @@ The wave travels at 300 metres per second.</p>
 </ul>
 <p class="lesson-next-hint">➡️ Next: you've met the digestive system briefly here — now you'll dig deeper into nutrition and exactly how the food you eat keeps your body running.</p>`,
 
-"island-43": `<h4>Introduction</h4>
-<p>Genetics explains how characteristics are passed from parents to offspring through DNA. Genes are instructions for making proteins, and different versions of a gene (alleles) create variation. Natural selection then acts on this variation — organisms best suited to their environment survive and reproduce more, gradually changing populations over time.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>DNA</strong> is found in the nucleus, organised into <strong>chromosomes</strong>. Humans have 46 chromosomes (23 pairs). A <strong>gene</strong> is a section of DNA that codes for a protein.</li>
-<li><strong>Alleles</strong> are different versions of the same gene. You inherit one allele from each parent.</li>
-<li><strong>Dominant</strong> alleles (capital letter, e.g. B) show their effect even if only one copy is present. <strong>Recessive</strong> alleles (lowercase, e.g. b) only show when two copies are present (bb).</li>
-<li><strong>Genotype</strong> = the alleles you have (e.g. Bb). <strong>Phenotype</strong> = the physical characteristic you display (e.g. brown eyes).</li>
-<li>A <strong>Punnett square</strong> predicts the probability of offspring genotypes by crossing parent alleles.</li>
-<li><strong>Natural selection</strong>: variation → competition → survival of the fittest → reproduction → beneficial traits passed on → population changes over time.</li>
-<li><strong>Variation</strong> can be <strong>continuous</strong> (smooth range, e.g. height, mass) or <strong>discontinuous</strong> (distinct categories, e.g. blood group, tongue rolling).</li>
-<li>A <strong>mutation</strong> is a random change in the DNA sequence. Most are neutral or harmful; occasionally one is beneficial and may be favoured by natural selection.</li>
-<li><strong>Sex determination</strong>: females are XX, males are XY. All eggs carry X; sperm carry either X or Y — so the <strong>sperm determines biological sex</strong>.</li>
-<li>Evidence for evolution includes the <strong>fossil record</strong> (gradual change over time), DNA similarities between species, comparative anatomy (e.g. pentadactyl limb), and observed antibiotic resistance.</li>
-</ul>
+"island-43": `<h2>Genetics &amp; Natural Selection</h2>
+<p>Children often look something like their parents, but never exactly like them — and no two people on Earth, apart from identical twins, are the same. This chapter explains where that mixture of similarity and difference comes from, and then shows you something remarkable: that the same small differences between individuals, given enough time, are what turn one species into another.</p>
+
+<h3>DNA, Chromosomes and Genes</h3>
+<p>Inside the nucleus of nearly every one of your cells is <strong>DNA</strong>, a long molecule that carries coded instructions for building and running your body. That DNA is not left loose — it is packaged into structures called <strong>chromosomes</strong>. Humans have <strong>46 chromosomes</strong>, arranged as 23 pairs, with one of each pair inherited from each parent.</p>
+<p>A <strong>gene</strong> is a short section of DNA that codes for one particular protein, and so for one characteristic. Think of the chromosome as a book and each gene as a single instruction inside it.</p>
+
+<h3>Alleles, Dominant and Recessive</h3>
+<p>Because chromosomes come in pairs, you carry two copies of every gene — one from each parent. The two copies need not be identical, and the different versions of a gene are called <strong>alleles</strong>.</p>
+<p>When the two alleles disagree, one usually wins. A <strong>dominant</strong> allele shows its effect even if you have only one copy, and is written as a capital letter (B). A <strong>recessive</strong> allele only shows if you have two copies of it, and is written lowercase (b). So with brown eyes dominant over blue, both <strong>BB</strong> and <strong>Bb</strong> give brown eyes; only <strong>bb</strong> gives blue.</p>
+<p>Two more words describe those combinations: <strong>homozygous</strong> means both alleles are the same (BB or bb), and <strong>heterozygous</strong> means they differ (Bb).</p>
+
+<h3>Genotype and Phenotype</h3>
+<p>These two terms are constantly confused, so keep them clearly apart. Your <strong>genotype</strong> is the set of alleles you actually carry — the letters, such as Bb. Your <strong>phenotype</strong> is the characteristic you can physically observe, such as brown eyes.</p>
+<p>The reason both words are needed is that different genotypes can produce the same phenotype: BB and Bb both look brown-eyed. You cannot always tell someone's genotype by looking at them.</p>
+
+<h3>Predicting Inheritance with a Punnett Square</h3>
+<p>A <strong>Punnett square</strong> is a simple grid for working out which allele combinations two parents could produce, and how likely each one is. You write one parent's alleles along the top and the other's down the side, then fill each box by combining the allele from its row with the allele from its column.</p>
+<p>The finished grid shows every possible combination. Counting the boxes gives you the probability of each genotype — and remember it <em>is</em> only probability, in the same way that four coin tosses need not give exactly two heads.</p>
 <div class="lesson-diagram" data-diagram="punnett-square"><p class="diagram-caption">Using a Punnett square to predict offspring genotypes</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>What Decides Biological Sex</h3>
+<p>One of the 23 pairs of chromosomes determines biological sex. Females have two X chromosomes (<strong>XX</strong>) and males have an X and a Y (<strong>XY</strong>).</p>
+<p>Since a mother is XX, every egg she produces carries an X. A father is XY, so half his sperm carry X and half carry Y. Whichever sperm arrives first therefore decides the outcome — which means it is the <strong>father's sperm</strong>, not the mother, that determines a baby's sex, and the odds are close to 50:50.</p>
+
+<h3>Variation</h3>
+<p><strong>Variation</strong> means the differences between individuals of the same species, and it comes in two distinct patterns.</p>
+<ul>
+<li><strong>Continuous variation</strong> covers a smooth range with every value possible in between, such as height or mass. These features are influenced by many genes together <em>and</em> by the environment — your height depends partly on your genes and partly on your diet.</li>
+<li><strong>Discontinuous variation</strong> falls into separate categories with nothing in between, such as blood group or whether you can roll your tongue. These are usually controlled by a single gene.</li>
+</ul>
+<p>Variation also has a second source. A <strong>mutation</strong> is a random change in the DNA sequence, which can alter the protein that gene makes. Most mutations are neutral and make no real difference; some are harmful; and just occasionally one is beneficial. Those rare useful mutations matter enormously, because they are where genuinely new characteristics come from.</p>
+
+<h3>Natural Selection</h3>
+<p>Put variation together with competition and you get the process Charles Darwin described. It runs in a repeating cycle:</p>
+<ul>
+<li>Individuals in a population <strong>vary</strong> — they are not all identical.</li>
+<li>More offspring are produced than can survive, so there is <strong>competition</strong> for food, space and mates.</li>
+<li>Individuals whose variations suit the environment are more likely to <strong>survive</strong>.</li>
+<li>Survivors <strong>reproduce</strong> and pass those helpful alleles to their offspring.</li>
+<li>Over many generations the helpful alleles become more common, and the <strong>population changes</strong>.</li>
+</ul>
+<p>This is often summarised as "survival of the fittest", which is a genuinely misleading phrase. In biology, <strong>fittest means best suited to the environment</strong> — not strongest or fastest. A well-camouflaged moth is fitter than a stronger but more visible one.</p>
+<p>Notice too that no individual ever evolves. A single moth does not change colour during its life; what changes is the <em>proportion</em> of pale and dark moths in the population across generations.</p>
+
+<h3>Evidence for Evolution</h3>
+<p>Several independent lines of evidence support all this:</p>
+<ul>
+<li>The <strong>fossil record</strong> shows organisms changing gradually through layers of rock laid down over millions of years.</li>
+<li><strong>DNA similarities</strong> between species reveal how closely related they are — the more shared DNA, the more recent the common ancestor.</li>
+<li><strong>Comparative anatomy</strong>: the same underlying bone pattern, the <strong>pentadactyl limb</strong>, appears in a human arm, a bat's wing, a whale's flipper and a cat's leg, which makes sense only if all four inherited it from a shared ancestor.</li>
+<li><strong>Antibiotic resistance</strong> in bacteria is natural selection happening fast enough for us to watch: resistant individuals survive treatment and multiply.</li>
+</ul>
+
+<h3>Worked Example</h3>
 <div class="example-box">
-<p><strong>Example:</strong> Brown eyes (B) are dominant over blue eyes (b). Both parents are heterozygous (Bb). What are the possible offspring genotypes?</p>
-<p><strong>Solution:</strong><br>
-Punnett square:<br>
+<p><strong>Question:</strong> Brown eyes (B) are dominant over blue eyes (b). Both parents are heterozygous (Bb). What offspring are possible, and in what proportions?</p>
+<p><strong>Answer:</strong><br>
+Draw the Punnett square with one parent's alleles across the top and the other's down the side:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;b<br>
 B&nbsp;&nbsp;BB&nbsp;&nbsp;Bb<br>
 b&nbsp;&nbsp;Bb&nbsp;&nbsp;bb<br><br>
-Offspring: 1 BB : 2 Bb : 1 bb<br>
-Phenotype ratio: <strong>3 brown eyes : 1 blue eyes</strong> (75% brown, 25% blue)</p>
+Genotype ratio: <strong>1 BB : 2 Bb : 1 bb</strong>.<br>
+Now convert to phenotypes. BB and Bb both show brown eyes; only bb shows blue.<br>
+Phenotype ratio: <strong>3 brown : 1 blue</strong> — a 75% chance of brown eyes and 25% of blue.</p>
+<p>Always finish by translating genotypes into phenotypes — the question usually asks what the children will <em>look</em> like, not which letters they carry.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Gene</dt><dd>A short section of DNA on a chromosome that codes for a specific protein or characteristic.</dd>
-<dt>Allele</dt><dd>A version of a gene. Different alleles produce different variations of a characteristic.</dd>
-<dt>Homozygous</dt><dd>Having two identical alleles for a gene (BB or bb).</dd>
-<dt>Heterozygous</dt><dd>Having two different alleles for a gene (Bb). The dominant allele determines the phenotype.</dd>
-<dt>Natural selection</dt><dd>The process by which organisms with advantageous traits survive and reproduce more, passing those traits to the next generation.</dd>
-<dt>Mutation</dt><dd>A random change in the DNA nucleotide sequence of a gene, which may alter the protein produced.</dd>
-<dt>Continuous variation</dt><dd>Features that show a smooth range of values (e.g. height, mass) — influenced by many genes and the environment.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Confusing genotype and phenotype — ✅ Correct: genotype is the <strong>alleles</strong> (letters); phenotype is the <strong>physical feature</strong> you can observe.</li>
-<li>❌ Thinking evolution happens to individuals — ✅ Correct: individuals do not evolve; <strong>populations</strong> change over many generations through natural selection.</li>
-<li>❌ Saying "survival of the fittest" means strongest — ✅ Correct: "fittest" means <strong>best adapted to the environment</strong>, not physically strongest.</li>
-<li>❌ Thinking all mutations are harmful — ✅ Correct: most are <strong>neutral</strong>; some are harmful, and rarely one is <strong>beneficial</strong> and can drive evolution.</li>
-<li>❌ Saying the mother determines the baby's sex — ✅ Correct: all eggs are X; the <strong>father's sperm</strong> (X or Y) determines sex.</li>
+<li>Confusing genotype with phenotype. The <strong>genotype</strong> is the alleles (the letters); the <strong>phenotype</strong> is the feature you can actually see.</li>
+<li>Thinking individuals evolve. Individuals do not change — <strong>populations</strong> change across many generations.</li>
+<li>Reading "survival of the fittest" as "strongest". Fittest means <strong>best adapted to the environment</strong>.</li>
+<li>Assuming every mutation is harmful. Most are <strong>neutral</strong>, some are harmful, and occasionally one is <strong>beneficial</strong> — which is what drives evolution.</li>
+<li>Saying the mother determines a baby's sex. All eggs carry X, so it is the <strong>father's sperm</strong> that decides.</li>
 </ul>`,
 
-"island-44": `<h4>Introduction</h4>
-<p>Photosynthesis and respiration are two of the most important chemical processes in biology. Plants use photosynthesis to convert light energy into glucose (food), and all living things use respiration to release energy from that glucose. Together they form a cycle — each process uses the other's waste products.</p>
+"island-44": `<h2>Photosynthesis &amp; Respiration</h2>
+<p>Every scrap of energy in your body arrived there, at some point, as sunlight. Plants capture that sunlight and lock it into food; you eat the food and release the energy again. These two processes — photosynthesis and respiration — are the pair of reactions that power very nearly all life on Earth, and this chapter looks at how each one works and how they fit together.</p>
+
 <div class="example-box" style="background:#f0f9ff;border-left:4px solid #3b82f6;">
 <p><strong>🔤 Quick formula reminder</strong><br>
-This topic uses chemical formulae — here's what the symbols mean:<br>
+This chapter uses chemical formulae — here is what the symbols mean:<br>
 <strong>CO₂</strong> = carbon dioxide (1 carbon + 2 oxygen atoms) — the gas we breathe out<br>
 <strong>H₂O</strong> = water (2 hydrogen + 1 oxygen)<br>
-<strong>O₂</strong> = oxygen gas (2 oxygen atoms bonded) — the gas we breathe in<br>
-<strong>C₆H₁₂O₆</strong> = glucose (a sugar — 6 carbon, 12 hydrogen, 6 oxygen atoms)<br>
-The small numbers (subscripts) tell you how many atoms of each element are present.</p>
+<strong>O₂</strong> = oxygen gas (2 oxygen atoms bonded together) — the gas we breathe in<br>
+<strong>C₆H₁₂O₆</strong> = glucose, a sugar (6 carbon, 12 hydrogen, 6 oxygen atoms)<br>
+The small numbers below the line (subscripts) tell you how many atoms of each element are present.</p>
 </div>
-<h4>📌 Key Points</h4>
+
+<h3>Photosynthesis: Making Food from Light</h3>
+<p><strong>Photosynthesis</strong> is how a plant makes its own food. It takes in carbon dioxide from the air and water from the soil, and uses light energy to combine them into glucose, releasing oxygen as a by-product:</p>
+<p style="font-size:1.05em;text-align:center;padding:0.5em;background:var(--surface2);border-radius:6px"><strong>Carbon dioxide + Water → Glucose + Oxygen</strong><br>6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</p>
+<p>The reaction happens inside the <strong>chloroplasts</strong> of leaf cells, and it depends on <strong>chlorophyll</strong>, the green pigment that actually absorbs the light. Notice what this means: the oxygen in the air you are breathing right now was released by a plant as a waste product.</p>
+<div class="lesson-diagram" data-diagram="photosynthesis-diagram"><p class="diagram-caption">Photosynthesis: what goes in and what comes out</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>What Controls the Rate: Limiting Factors</h3>
+<p>Three things affect how fast a plant can photosynthesise: <strong>light intensity</strong>, <strong>carbon dioxide concentration</strong> and <strong>temperature</strong>.</p>
+<p>At any moment, whichever of these is in shortest supply is holding the whole process back, and that one is called the <strong>limiting factor</strong>. Increase it and the rate rises; increase any of the others and nothing happens, because they were not what was restricting things. It works rather like a queue — speeding up the tills does not help if the real hold-up is at the door.</p>
+<p>Temperature is a special case, because photosynthesis is controlled by enzymes. Warming things up speeds the reaction, but only to a point: above roughly <strong>40 °C</strong> enzymes begin to <strong>denature</strong>, meaning their shape is permanently changed so they no longer work, and the rate falls away sharply.</p>
+
+<h3>Storing the Glucose</h3>
+<p>A plant does not use all its glucose immediately, so it converts the surplus into <strong>starch</strong> for storage. There is a neat reason for choosing starch: glucose is soluble and starch is not.</p>
+<p>Dissolved glucose sitting in a cell would change the concentration inside it and pull water in by <strong>osmosis</strong> — the movement of water across a membrane from a weaker to a stronger solution — potentially damaging the cell. Insoluble starch simply sits there, taking up no part in that balance.</p>
+<p>This gives you a way to test whether photosynthesis has actually taken place, by testing a leaf for starch:</p>
 <ul>
-<li><strong>Photosynthesis equation</strong>: Carbon dioxide + Water → (light energy, chlorophyll) → Glucose + Oxygen<br>6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</li>
-<li>Photosynthesis happens in <strong>chloroplasts</strong> (which contain green chlorophyll) in leaf cells.</li>
-<li>Three factors affect rate: <strong>light intensity</strong>, <strong>CO₂ concentration</strong>, and <strong>temperature</strong>. Each can be a limiting factor.</li>
-<li><strong>Aerobic respiration</strong>: Glucose + Oxygen → Carbon dioxide + Water + ENERGY<br>C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy</li>
-<li><strong>Anaerobic respiration</strong> (without oxygen): Glucose → Lactic acid + some energy (in animals) or Glucose → Ethanol + CO₂ + some energy (in yeast).</li>
-<li>Aerobic releases <strong>much more energy</strong> than anaerobic. All living cells respire 24/7 — it never stops.</li>
-<li>Enzymes control photosynthesis and respiration rates. Above about <strong>40 °C</strong>, enzymes <strong>denature</strong> (lose their shape) and the reaction rate drops sharply.</li>
-<li>Plants convert soluble glucose into <strong>insoluble starch</strong> for storage — because starch does not dissolve, it won't affect <strong>osmosis</strong> in cells.</li>
-<li>To test a leaf for starch: boil → remove chlorophyll in ethanol → rinse → add <strong>iodine solution</strong>. Blue-black = starch present (photosynthesis occurred). Yellow-brown = no starch.</li>
-<li>A leaf kept in the <strong>dark for 48 hours</strong> becomes de-starched — without light, photosynthesis stops and existing starch is used up by respiration.</li>
+<li>Boil the leaf to kill it and break down the cell membranes.</li>
+<li>Warm it in ethanol to remove the chlorophyll, so the green colour will not mask the result.</li>
+<li>Rinse the leaf in water to soften it.</li>
+<li>Add <strong>iodine solution</strong>. It turns <strong>blue-black</strong> where starch is present, and stays yellow-brown where there is none.</li>
 </ul>
-<div class="lesson-diagram" data-diagram="photosynthesis-diagram"><p class="diagram-caption">Photosynthesis: inputs and outputs</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
-<div class="example-box">
-<p><strong>Example:</strong> A student increases light intensity on a plant and measures the rate of photosynthesis. At first it rises, then it levels off. Explain why.</p>
-<p><strong>Solution:</strong><br>
-1. At low light, light is the <strong>limiting factor</strong> — increasing it speeds up photosynthesis.<br>
-2. As light increases, the rate rises proportionally.<br>
-3. Eventually the rate <strong>plateaus</strong> because another factor (e.g. CO₂ or temperature) becomes the new limiting factor.<br>
-4. The plant cannot photosynthesise faster until THAT factor is also increased.</p>
-</div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Photosynthesis</dt><dd>The process by which plants convert light energy, CO₂ and water into glucose and oxygen in chloroplasts.</dd>
-<dt>Chlorophyll</dt><dd>The green pigment in chloroplasts that absorbs light energy for photosynthesis.</dd>
-<dt>Aerobic respiration</dt><dd>Releasing energy from glucose using oxygen — happens in mitochondria, produces CO₂ + water + lots of energy.</dd>
-<dt>Limiting factor</dt><dd>The factor in shortest supply that restricts the rate of a process (e.g. light intensity limiting photosynthesis).</dd>
-<dt>Starch</dt><dd>An insoluble storage molecule made from glucose. Plants store glucose as starch so it does not affect osmosis.</dd>
-<dt>Denature</dt><dd>When an enzyme's shape is permanently altered (e.g. by high temperature), so the substrate can no longer fit — the reaction stops.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<p>To be sure any starch you find was made during the experiment, the plant is first left in the <strong>dark for 48 hours</strong>. With no light there is no photosynthesis, and the plant gradually uses up its existing starch in respiration — it becomes de-starched, giving you a fair starting point.</p>
+
+<h3>Respiration: Releasing the Energy Again</h3>
+<p>Food is only useful once the energy stored in it is released, and that is <strong>respiration</strong>. It is worth being clear that respiration is not the same thing as breathing: it is a chemical reaction happening inside every cell, all the time.</p>
+<p><strong>Aerobic respiration</strong> is respiration using oxygen. It takes place in the mitochondria and releases a great deal of energy:</p>
+<p style="font-size:1.05em;text-align:center;padding:0.5em;background:var(--surface2);border-radius:6px"><strong>Glucose + Oxygen → Carbon dioxide + Water + Energy</strong><br>C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy</p>
+<p>Sometimes cells cannot get oxygen fast enough, and then they fall back on <strong>anaerobic respiration</strong> — respiration without oxygen. What it produces depends on the organism:</p>
 <ul>
-<li>❌ Thinking plants only photosynthesise (not respire) — ✅ Correct: plants do <strong>both</strong>. They respire all the time; they photosynthesise only in light.</li>
-<li>❌ Saying photosynthesis is the reverse of respiration — ✅ Correct: the equations look opposite, but they are completely different processes in different organelles.</li>
-<li>❌ Thinking anaerobic respiration only happens during exercise — ✅ Correct: it happens whenever cells <strong>lack sufficient oxygen</strong>, e.g. waterlogged roots, yeast in bread dough.</li>
-<li>❌ Forgetting the iodine test — ✅ Correct: <strong>iodine solution</strong> turns blue-black with starch. Remove chlorophyll first (ethanol) or you won't see the colour change.</li>
+<li>In <strong>animals</strong>: glucose → <strong>lactic acid</strong> + a little energy. The lactic acid build-up is what makes muscles ache during hard exercise.</li>
+<li>In <strong>yeast</strong>: glucose → <strong>ethanol</strong> + carbon dioxide + a little energy. This reaction, called fermentation, is what makes bread rise and produces alcohol in brewing.</li>
+</ul>
+<p>Anaerobic respiration releases <em>far</em> less energy than aerobic, because the glucose is only partly broken down — which is exactly why you cannot sprint for very long.</p>
+
+<h3>How the Two Processes Fit Together</h3>
+<p>Look at the two equations side by side and you will see that each one's products are the other's raw materials. Photosynthesis takes in carbon dioxide and water and gives out glucose and oxygen; respiration takes in glucose and oxygen and gives out carbon dioxide and water. Together they keep the gases of the atmosphere in balance.</p>
+<p>One thing to be careful about: <strong>plants respire too</strong>, constantly, day and night, exactly like animals. In daylight they photosynthesise faster than they respire, so overall they release oxygen; in darkness photosynthesis stops but respiration carries on.</p>
+
+<h3>Worked Example</h3>
+<div class="example-box">
+<p><strong>Question:</strong> A student steadily increases the light intensity shining on a plant and measures the rate of photosynthesis. The rate rises at first, then levels off. Explain why.</p>
+<p><strong>Answer:</strong><br>
+1. At low light intensity, light is the <strong>limiting factor</strong> — it is the thing in shortest supply.<br>
+2. So as light intensity increases, the rate of photosynthesis rises with it.<br>
+3. Eventually the rate <strong>levels off</strong>, because light is no longer what is holding the process back. Some other factor — carbon dioxide concentration or temperature — has become the new limiting factor.<br>
+4. From that point on, adding more light changes nothing. The rate will only rise again if the new limiting factor is increased instead.</p>
+<p>Whenever a rate graph rises and then plateaus, the plateau is the examiner asking you to name the factor that has taken over as limiting.</p>
+</div>
+
+<h3>Common Mistakes</h3>
+<ul>
+<li>Thinking plants photosynthesise instead of respiring. Plants do <strong>both</strong>: they respire constantly, and photosynthesise only when there is light.</li>
+<li>Calling photosynthesis "the reverse of respiration". The equations mirror each other, but they are different reactions, in different organelles, with different steps.</li>
+<li>Assuming anaerobic respiration only happens during exercise. It happens whenever cells are short of oxygen — in waterlogged plant roots, or in yeast in bread dough.</li>
+<li>Rushing the starch test. You must remove the chlorophyll with ethanol first, or the leaf's green colour hides the blue-black result.</li>
 </ul>`,
 
 "island-45": `<h4>Introduction</h4>
