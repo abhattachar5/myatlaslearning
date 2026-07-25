@@ -470,8 +470,8 @@ Techniques used:<br>
 <p>Look at your own hand, a blade of grass, and a mushroom growing on a log — three completely different things, yet all three are built from exactly the same basic unit: the cell. Some living things are made of just a single cell; you are built from around 37 trillion of them, all working together without you ever noticing. In this lesson you'll open up a cell to see what's inside, learn the seven things every living thing must do to count as "alive", and see how individual cells combine to build something as complex as a human body. Almost everything else you study in biology — from digestion to reproduction — comes back to what's happening inside these tiny building blocks, so it's worth getting to know them well.</p>
 <h4>📌 Key Points</h4>
 <ul>
-<li><strong>Animal cells</strong> contain: nucleus, cell membrane, cytoplasm, mitochondria, ribosomes.</li>
-<li><strong>Plant cells</strong> have everything animal cells have, PLUS: cell wall (cellulose), chloroplasts, large permanent vacuole.</li>
+<li><strong>Animal cells</strong> contain: a <strong>nucleus</strong> (the control centre — holds the DNA instructions for the whole cell), a <strong>cell membrane</strong> (a thin skin around the cell that controls what can enter and leave), <strong>cytoplasm</strong> (the jelly-like substance filling the cell, where chemical reactions happen), <strong>mitochondria</strong> (release energy from food — the cell's "power stations"), and <strong>ribosomes</strong> (build proteins).</li>
+<li><strong>Plant cells</strong> have everything animal cells have, PLUS: a <strong>cell wall</strong> (a rigid outer layer made of cellulose that gives the cell support and a fixed shape), <strong>chloroplasts</strong> (where photosynthesis happens, using sunlight to make food), and a large permanent <strong>vacuole</strong> (a fluid-filled sac that keeps the cell firm by pushing outward against the cell wall).</li>
 <li><strong>MRS GREN</strong> — the 7 life processes all living things must carry out: Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, Nutrition.</li>
 <li>Organisation: Cell → Tissue → Organ → Organ System → Organism.</li>
 <li><strong>Ribosomes</strong> are tiny structures in all cells where <strong>proteins are made</strong> (protein synthesis).</li>
@@ -490,8 +490,12 @@ Techniques used:<br>
 <h4>📖 Key Vocabulary</h4>
 <dl>
 <dt>Nucleus</dt><dd>The control centre of the cell; contains DNA with instructions for all cell activities.</dd>
+<dt>Cell membrane</dt><dd>The thin outer layer of a cell that controls which substances can enter and leave.</dd>
+<dt>Cytoplasm</dt><dd>The jelly-like substance filling a cell, where many of the cell's chemical reactions take place.</dd>
 <dt>Mitochondria</dt><dd>Organelles where aerobic respiration occurs — releasing energy from glucose for the cell to use.</dd>
 <dt>Chloroplast</dt><dd>Organelle in plant cells containing chlorophyll; the site of photosynthesis.</dd>
+<dt>Cell wall</dt><dd>A rigid layer surrounding a plant cell, made of cellulose, giving it support and a fixed shape.</dd>
+<dt>Vacuole</dt><dd>A large fluid-filled sac in a plant cell that stores water and cell sap, helping keep the cell firm.</dd>
 <dt>MRS GREN</dt><dd>Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion, Nutrition — the 7 characteristics of living things.</dd>
 <dt>Diffusion</dt><dd>The net movement of particles from an area of high concentration to low concentration — a passive process requiring no energy.</dd>
 <dt>Ribosome</dt><dd>A tiny organelle found in all cells where proteins are assembled (protein synthesis).</dd>
@@ -669,7 +673,7 @@ Law of reflection: angle of reflection = angle of incidence = <strong>55°</stro
 <ul>
 <li><strong>Sexual reproduction</strong>: two parents, gametes (sex cells) join at fertilisation → genetically unique offspring.</li>
 <li><strong>Asexual reproduction</strong>: one parent, no gametes → genetically identical offspring (clones). Examples: runners, bulbs, binary fission in bacteria.</li>
-<li><strong>Pollination</strong>: transfer of pollen from anther to stigma. Insect-pollinated flowers are bright with nectar; wind-pollinated flowers are small and dull with light pollen.</li>
+<li><strong>Pollination</strong>: transfer of pollen from the <strong>anther</strong> (the male part of a flower, which produces pollen) to the <strong>stigma</strong> (the female part that receives it). Insect-pollinated flowers are bright with nectar; wind-pollinated flowers are small and dull with light pollen.</li>
 <li>After pollination, a pollen tube grows to the ovule — <strong>fertilisation</strong> occurs when the male gamete fuses with the female gamete (ovum). The ovule then develops into a <strong>seed</strong> and the ovary becomes the <strong>fruit</strong>.</li>
 <li><strong>Seed dispersal</strong> spreads seeds away from the parent plant, reducing competition. Methods: <strong>wind</strong> (dandelion, sycamore), <strong>animal</strong> (berries, burrs), <strong>water</strong> (coconut), <strong>explosive</strong> (pea pods).</li>
 <li>In humans, fertilisation occurs in the <strong>oviduct</strong> (fallopian tube). The fertilised egg (zygote) then travels to the uterus and implants in the lining to develop.</li>
@@ -1721,6 +1725,7 @@ The wave travels at 300 metres per second.</p>
 <dt>Dichotomous key</dt><dd>A branching identification tool where each step has exactly two choices.</dd>
 <dt>Arthropod</dt><dd>An invertebrate with an exoskeleton, jointed legs and a segmented body — includes insects, arachnids and crustaceans.</dd>
 <dt>Prokaryote</dt><dd>A single-celled organism (bacterium) with no membrane-bound nucleus — DNA floats freely in the cytoplasm.</dd>
+<dt>Eukaryote</dt><dd>An organism whose cells have a true, membrane-bound nucleus — includes animals, plants and fungi.</dd>
 </dl>
 <h4>⚠️ Common Mistakes to Avoid</h4>
 <ul>
