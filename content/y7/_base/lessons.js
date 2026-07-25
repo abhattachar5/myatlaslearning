@@ -467,7 +467,7 @@ Techniques used:<br>
 ,
 
 "island-11": `<h4>Introduction</h4>
-<p>All living things are made of cells — the basic building blocks of life. Understanding cell structure and the seven life processes gives you the foundation for all of biology. Every organism, from a bacterium to a blue whale, must carry out the same essential functions to stay alive.</p>
+<p>Look at your own hand, a blade of grass, and a mushroom growing on a log — three completely different things, yet all three are built from exactly the same basic unit: the cell. Some living things are made of just a single cell; you are built from around 37 trillion of them, all working together without you ever noticing. In this lesson you'll open up a cell to see what's inside, learn the seven things every living thing must do to count as "alive", and see how individual cells combine to build something as complex as a human body. Almost everything else you study in biology — from digestion to reproduction — comes back to what's happening inside these tiny building blocks, so it's worth getting to know them well.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li><strong>Animal cells</strong> contain: nucleus, cell membrane, cytoplasm, mitochondria, ribosomes.</li>
@@ -502,7 +502,8 @@ Techniques used:<br>
 <li>❌ Saying all plant cells have chloroplasts — ✅ Correct: only cells that carry out photosynthesis (e.g. leaf cells) have chloroplasts. Root cells do <strong>not</strong>.</li>
 <li>❌ Confusing cell membrane and cell wall — ✅ Correct: <strong>all</strong> cells have a membrane; only plant cells have a <strong>wall</strong>.</li>
 <li>❌ Thinking the vacuole stores food — ✅ Correct: the large vacuole in plant cells stores <strong>water and cell sap</strong>, maintaining pressure.</li>
-</ul>`,
+</ul>
+<p class="lesson-next-hint">➡️ Next: now you know what makes something alive and how cells are built, you'll look at how scientists classify and group all of Earth's living things.</p>`,
 
 "island-12": `<h4>Introduction</h4>
 <p>Ecosystems are communities of living organisms interacting with each other and their environment. Food chains and webs show how energy flows from producers through consumers — and understanding this helps explain how changes in one population affect the whole ecosystem.</p>
@@ -663,7 +664,7 @@ Law of reflection: angle of reflection = angle of incidence = <strong>55°</stro
 </ul>`,
 
 "island-28": `<h4>Introduction</h4>
-<p>Reproduction ensures the continuation of species. Sexual reproduction creates genetic variation — vital for evolution — while asexual reproduction produces identical offspring quickly. In plants, pollination and fertilisation are the key steps; in humans, puberty prepares the body for the possibility of reproduction.</p>
+<p>You've now seen how the body keeps itself alive day to day, through digestion and its other systems — but for a species to survive in the long run, individual organisms also need a way to produce a new generation. That's what reproduction is for. <strong>Sexual reproduction</strong> — where two parents each contribute half the genetic instructions — creates offspring that are all slightly different from each other and from their parents, which turns out to be hugely important for a species' long-term survival. <strong>Asexual reproduction</strong>, used by many plants and bacteria, skips all that and simply produces identical copies, fast. In this lesson you'll compare the two strategies, follow a flower through pollination and fertilisation, and find out what's actually happening inside the human body during puberty and the menstrual cycle.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li><strong>Sexual reproduction</strong>: two parents, gametes (sex cells) join at fertilisation → genetically unique offspring.</li>
@@ -697,7 +698,8 @@ Key principle: the <strong>method of pollination drives the flower's design</str
 <li>❌ Confusing pollination and fertilisation — ✅ Correct: pollination is <strong>transfer of pollen</strong>; fertilisation is the <strong>joining of gametes</strong> inside the ovule.</li>
 <li>❌ Thinking asexual reproduction is "better" — ✅ Correct: asexual is faster but produces <strong>no variation</strong> — a disease can wipe out all identical offspring.</li>
 <li>❌ Saying all flowers are insect-pollinated — ✅ Correct: grasses, wheat and many trees are <strong>wind-pollinated</strong>.</li>
-</ul>`,
+</ul>
+<p class="lesson-next-hint">➡️ Next: to finish this topic, you'll look at how outside substances — including legal ones like alcohol and tobacco — can affect the body systems you've just spent this topic getting to know.</p>`,
 
 "island-29": `<h4>Introduction</h4>
 <p>Chemistry begins with understanding what matter is made of. Atoms combine to form elements and compounds, the Periodic Table organises all known elements, and chemical reactions produce new substances with new properties. These ideas underpin all of chemistry.</p>
@@ -1691,7 +1693,7 @@ The wave travels at 300 metres per second.</p>
 </ul>`,
 
 "island-41": `<h4>Introduction</h4>
-<p>With millions of species on Earth, scientists need a system to organise and name them. Classification groups organisms by shared characteristics — from broad kingdoms down to individual species. This system, pioneered by Carl Linnaeus, allows scientists worldwide to communicate clearly about living things.</p>
+<p>You already know that cells are the building blocks of every living thing — but living things themselves come in an almost unbelievable variety, from bacteria too small to see to blue whales the length of a tennis court. With millions of different species out there, scientists needed a way to sort and name them, so that a biologist in Tokyo and one in London are always talking about exactly the same organism. In this lesson you'll meet the five kingdoms all life is sorted into, learn the naming system scientists use worldwide, and practise using a "dichotomous key" — a simple branching set of yes/no questions — to identify an unknown organism step by step.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li>The <strong>five kingdoms</strong>: <strong>Animals</strong> (no cell wall, feed on other organisms), <strong>Plants</strong> (cell wall of cellulose, photosynthesise), <strong>Fungi</strong> (cell wall of chitin, feed by external digestion), <strong>Protists</strong> (mostly single-celled eukaryotes), <strong>Prokaryotes</strong> (bacteria — no membrane-bound nucleus, DNA floats in cytoplasm).</li>
@@ -1725,10 +1727,11 @@ The wave travels at 300 metres per second.</p>
 <li>❌ Calling all small creatures "insects" — ✅ Correct: insects have exactly <strong>6 legs</strong>. Spiders (8 legs) are arachnids, woodlice (14 legs) are crustaceans.</li>
 <li>❌ Writing binomial names without italics or with both words capitalised — ✅ Correct: <em>Homo sapiens</em> (italics, genus capitalised, species lowercase).</li>
 <li>❌ Thinking fungi are plants — ✅ Correct: fungi have NO chlorophyll and cannot photosynthesise. They feed by decomposing dead organisms.</li>
-</ul>`,
+</ul>
+<p class="lesson-next-hint">➡️ Next: now you can group living things by what they are, you'll zoom into the human body to see how our own cells organise into tissues, organs and systems.</p>`,
 
 "island-42": `<h4>Introduction</h4>
-<p>Your body is a remarkable machine made of organ systems that work together to keep you alive. The circulatory system transports blood, the digestive system breaks down food, the respiratory system handles gas exchange, and the nervous system coordinates everything. Understanding these systems helps you make sense of your own health.</p>
+<p>In the first lesson of this topic you saw that your body is built from trillions of individual cells — but a pile of cells on its own couldn't keep you alive. Groups of similar cells form tissues, tissues combine into organs like your heart and stomach, and organs work together in organ systems to keep the whole body running. In this lesson you'll follow blood on its journey around the body, trace food through the digestive system, and see how the nervous system lets you react to the world in a split second. Understanding how these systems fit together is the key to understanding your own health — and it sets you up for the next two lessons, which each look at one system in real depth.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li>The <strong>heart</strong> is a double pump: the RIGHT side pumps blood to the lungs (pulmonary circuit); the LEFT side pumps oxygenated blood to the body (systemic circuit).</li>
@@ -1774,7 +1777,8 @@ The wave travels at 300 metres per second.</p>
 <li>❌ Confusing platelets with white blood cells — ✅ Correct: <strong>platelets</strong> form clots; <strong>white blood cells</strong> fight infection.</li>
 <li>❌ Calling bile an enzyme — ✅ Correct: bile <strong>emulsifies</strong> (breaks into droplets) fat to increase surface area for lipase, but is NOT an enzyme itself.</li>
 <li>❌ Thinking the skeleton only supports the body — ✅ Correct: it also <strong>protects organs</strong>, produces blood cells in <strong>bone marrow</strong>, and stores minerals.</li>
-</ul>`,
+</ul>
+<p class="lesson-next-hint">➡️ Next: you've met the digestive system briefly here — now you'll dig deeper into nutrition and exactly how the food you eat keeps your body running.</p>`,
 
 "island-43": `<h4>Introduction</h4>
 <p>Genetics explains how characteristics are passed from parents to offspring through DNA. Genes are instructions for making proteins, and different versions of a gene (alleles) create variation. Natural selection then acts on this variation — organisms best suited to their environment survive and reproduce more, gradually changing populations over time.</p>
@@ -1996,7 +2000,7 @@ It is NOT because Earth is closer to the Sun in summer — Earth's orbit is near
 </ul>`,
 
 "island-60": `<h4>Introduction</h4>
-<p>Every cell in your body needs nutrients to function, grow and repair itself. A <strong>balanced diet</strong> provides the right amounts of seven essential nutrient groups — carbohydrates, lipids, proteins, vitamins, minerals, fibre and water. Understanding what these nutrients do and how the digestive system breaks food down is key to understanding human health.</p>
+<p>In the last lesson you traced food on its journey from mouth to large intestine — now it's time to look at exactly what's in that food, and why your body needs it so badly. Every one of your trillions of cells needs a steady supply of nutrients to function, grow and repair itself, and a <strong>balanced diet</strong> provides the right amounts of seven essential groups: carbohydrates, lipids, proteins, vitamins, minerals, fibre and water. Get the balance wrong in either direction — too much or too little — and the consequences show up as real health problems, from obesity to deficiency diseases. In this lesson you'll learn what each nutrient group actually does for you, and exactly how the digestive system and its enzymes break down a meal into something your cells can use.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li><strong>Carbohydrates</strong> are the body's main source of energy. Found in bread, pasta, rice and potatoes, they are broken down into <strong>glucose</strong> during digestion.</li>
@@ -2034,7 +2038,8 @@ It is NOT because Earth is closer to the Sun in summer — Earth's orbit is near
 <li>❌ Saying digestion only happens in the stomach — ✅ Correct: digestion begins in the <strong>mouth</strong> (teeth and amylase) and continues through the stomach and <strong>small intestine</strong>.</li>
 <li>❌ Confusing absorption and digestion — ✅ Correct: <strong>digestion</strong> breaks food down; <strong>absorption</strong> is when nutrients pass into the blood (mainly in the small intestine).</li>
 <li>❌ Thinking fibre provides energy — ✅ Correct: fibre <strong>cannot be digested</strong> but it is essential for keeping the digestive system moving.</li>
-</ul>`,
+</ul>
+<p class="lesson-next-hint">➡️ Next: you've seen how the body nourishes itself — now you'll look at reproduction, another vital body system, and how new life gets started.</p>`,
 
 "island-61": `<h4>Introduction</h4>
 <p>Pressure is all about how a force is spread over an area. A small force on a tiny area (like the point of a drawing pin) creates enormous pressure, while a large force spread over a big area (like a snowshoe) creates very little pressure. Understanding pressure helps explain everything from why knives cut to why deep-sea creatures need special adaptations.</p>
@@ -2198,7 +2203,7 @@ The spring constant is 250 N/m, meaning the spring needs 250 N of force for ever
 </ul>`,
 
 "island-65": `<h4>Introduction</h4>
-<p>A <strong>drug</strong> is any substance that changes the way the body or mind works. Some drugs are medicines that save lives, but others — including legal drugs like alcohol and tobacco — can cause serious harm to health. Understanding how drugs affect the body helps you make informed decisions and understand why substance misuse is dangerous.</p>
+<p>Across this topic you've built up a picture of how the human body works — its cells, its systems, how it nourishes itself and reproduces. This final lesson asks a different question: what happens when something interferes with all of that? A <strong>drug</strong> is any substance that changes the way the body or mind works, and that definition is much wider than most people think — it includes medicines that save lives, but also everyday legal substances like caffeine, alcohol and tobacco. Some drugs help; others, taken carelessly, can seriously damage the very systems you've just spent this topic learning about — the heart, lungs, liver and brain. By the end of this lesson you'll understand how legal and illegal drugs affect the body differently, and why habits that seem harmless at first can be so hard to break.</p>
 <h4>📌 Key Points</h4>
 <ul>
 <li>A <strong>drug</strong> is any substance that changes how the body or mind works. This includes medicines (painkillers, antibiotics) and recreational drugs.</li>

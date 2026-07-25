@@ -418,6 +418,20 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   flex-shrink: 0;
 }
 .island-name { font-size: .9375rem; font-weight: 700; margin-bottom: 4px; line-height: 1.3; }
+.island-order-chip {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--surface2); color: var(--text-muted);
+  font-size: .6875rem; font-weight: 800;
+  margin-right: 6px; vertical-align: middle;
+}
+.start-here-badge {
+  display: inline-flex; align-items: center;
+  padding: 2px 8px; border-radius: 99px;
+  font-size: .6875rem; font-weight: 700;
+  color: white; background: var(--green);
+  margin-bottom: 8px;
+}
 .subject-pill {
   display: inline-flex; align-items: center;
   padding: 2px 8px;
@@ -935,6 +949,12 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   margin: 10px 0;
 }
 .example-box p { font-size: .9375rem; margin-bottom: 6px; }
+.lesson-next-hint {
+  font-size: .8125rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 20px;
+}
 .lesson-loading {
   display: flex; align-items: center; gap: 12px;
   padding: 32px 0;

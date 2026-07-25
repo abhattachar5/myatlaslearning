@@ -205,7 +205,12 @@ function renderGrid() {
     return;
   }
 
-  grid.innerHTML = topicIslands.map(island => {
+  // Islands with a curated `learnOrder` (a display-only sequencing hint — does
+  // NOT feed the Study Plan's weekly scheduling, which reads a separate field)
+  // render in that recommended order; topics without it keep today's order.
+  const orderedIslands = topicIslands.slice().sort((a, b) => (a.learnOrder ?? 999) - (b.learnOrder ?? 999));
+
+  grid.innerHTML = orderedIslands.map(island => {
     const unlocked = isIslandUnlocked(island, allProgress);
     const progress = calcIslandProgress(island.id);
     const statusIdx = getIslandStatus(island.id);
@@ -219,6 +224,8 @@ function renderGrid() {
     const blocked = !unlocked || tierLocked;
     const onActivate = tierLocked ? 'showTierMsg()' : (unlocked ? `goToIsland('${island.id}')` : `showLockedMsg('${island.id}')`);
     const tierBadge = higherOnly ? '<span class="subject-pill" style="background:#8b5cf6">Higher tier</span>' : '';
+    const orderChip = island.learnOrder != null ? `<span class="island-order-chip">${island.learnOrder}</span>` : '';
+    const startHereBadge = island.learnOrder === 1 ? '<span class="start-here-badge">▶ Start here</span>' : '';
 
     return `<div class="island-card${blocked ? ' locked' : ''}"
         style="border-top-color:${island.color || topicColor}"
@@ -231,8 +238,8 @@ function renderGrid() {
         <div class="island-emoji">${island.emoji}</div>
         ${createProgressRing(progress, (island.color || topicColor), 52)}
       </div>
-      ${tierBadge ? `<div style="margin-bottom:6px">${tierBadge}</div>` : ''}
-      <div class="island-name">${island.name}</div>
+      ${(tierBadge || startHereBadge) ? `<div style="margin-bottom:6px">${tierBadge}${startHereBadge}</div>` : ''}
+      <div class="island-name">${orderChip}${island.name}</div>
       <div class="island-meta">⏱ ${island.estimatedHours}h · ${cardCount} cards · ${qCount} questions</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${statusColor}"></span>
