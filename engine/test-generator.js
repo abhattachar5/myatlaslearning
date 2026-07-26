@@ -83,77 +83,118 @@ function _genDistinctQ(gp) {
   return _dedupeQ(q);
 }
 
+// Build a medium / greater-depth question pool for every subtopic that has questions.
+//
+// Generators are CYCLED, not called once each. Most maths banks randomise on every
+// call, so cycling yields genuinely fresh questions and a subtopic can supply far
+// more than it has generators. Fixed-content generators (much of science, and the
+// static-bank fallback used by English/History/Geography) start repeating themselves
+// immediately; duplicates are dropped and cycling stops once a full pass adds
+// nothing new, which caps those subtopics at their true distinct supply. One rule,
+// no per-subject special-casing.
+//
+// `want` is the most questions any single subtopic could be asked for.
+function _buildIslandPools(topicIslands, want) {
+  var pools = [];
+  for (var i = 0; i < topicIslands.length; i++) {
+    var island = topicIslands[i];
+    var generators = _islandGenerators(island.id);
+    if (!generators || !generators.length) continue;
+
+    var med = [], gd = [], seen = {};
+    var stale = 0;                                   // consecutive calls adding nothing new
+    var maxCalls = generators.length * (want + 2);   // guard against a pathological generator
+    for (var c = 0; (med.length + gd.length) < want && stale < generators.length && c < maxCalls; c++) {
+      var gen = generators[c % generators.length];
+      var q = _genDistinctQ(gen);
+      if (!q || !q.q || seen[q.q]) { stale++; continue; }
+      seen[q.q] = true;
+      stale = 0;
+      q.depth = gen.depth;
+      q.subtopic = island.name;
+      q.islandId = island.id;
+      if (q.depth === 'greater-depth') gd.push(q); else med.push(q);
+    }
+    if (!med.length && !gd.length) continue;
+    shuffle(med);
+    shuffle(gd);
+    pools.push({ med: med, gd: gd, size: med.length + gd.length });
+  }
+  return pools;
+}
+
+// Total distinct questions a topic can serve, up to `want`. The test setup screen
+// uses this so it never advertises more questions than the topic can actually give.
+function topicQuestionSupply(topicIslands, want) {
+  var pools = _buildIslandPools(topicIslands, want || 25);
+  var total = 0;
+  for (var i = 0; i < pools.length; i++) total += pools[i].size;
+  return total;
+}
+
 function generateTopicTest(topicId, topicIslands, opts) {
   opts = opts || {};
   var MAX_QUESTIONS = (opts.maxQuestions && opts.maxQuestions > 0) ? opts.maxQuestions : 25;
   var difficulty = opts.difficulty || 'mixed';   // 'foundation' | 'mixed' | 'higher'
   var allQuestions = [];
 
-  // Count islands that have questions (dedicated generators or a static bank)
-  var islandsWithGens = [];
-  for (var i = 0; i < topicIslands.length; i++) {
-    if (_islandGenerators(topicIslands[i].id)) islandsWithGens.push(topicIslands[i]);
-  }
-  var numIslands = islandsWithGens.length;
-  if (numIslands === 0) return allQuestions;
+  // ── Phase 1: a medium / greater-depth pool per subtopic, so the allocation
+  // below knows every subtopic's real capacity.
+  //
+  // Callers may pass pools they built earlier via opts.pools. That matters for
+  // the test setup screen: several banks randomise from a small finite set, so
+  // rebuilding gives a slightly different distinct-question count each time.
+  // Reusing the pool the screen measured keeps the advertised question count and
+  // the delivered test exactly in step.
+  var pools = (opts.pools && opts.pools.length)
+    ? opts.pools
+    : _buildIslandPools(topicIslands, MAX_QUESTIONS);
+  if (!pools.length) return allQuestions;
 
-  // Distribute questions evenly across islands, capped at MAX_QUESTIONS
-  var perIsland = Math.min(5, Math.floor(MAX_QUESTIONS / numIslands));
-  if (perIsland < 1) perIsland = 1;
-  var totalBase = numIslands * perIsland;
-  var remainder = totalBase < MAX_QUESTIONS
-    ? Math.min(numIslands, MAX_QUESTIONS - totalBase) : 0;
-
-  for (var i = 0; i < numIslands; i++) {
-    var island = islandsWithGens[i];
-    var generators = _islandGenerators(island.id);
-
-    var medQuestions = [];
-    var gdQuestions = [];
-
-    for (var g = 0; g < generators.length; g++) {
-      var q = _genDistinctQ(generators[g]);
-      q.depth = generators[g].depth;
-      q.subtopic = island.name;
-      q.islandId = island.id;
-      if (q.depth === 'greater-depth') {
-        gdQuestions.push(q);
-      } else {
-        medQuestions.push(q);
-      }
+  // ── Phase 2: hand out slots one at a time, cycling through the subtopics.
+  // There is deliberately NO fixed per-subtopic ceiling: a subtopic stops
+  // receiving slots once its pool is exhausted and its spare capacity flows to
+  // the others, so a test reaches MAX_QUESTIONS whenever the topic can supply
+  // them while still spreading as evenly as the pools allow.
+  var quotas = [];
+  for (var z = 0; z < pools.length; z++) quotas.push(0);
+  var assigned = 0, idx = 0;
+  var maxSpins = MAX_QUESTIONS * pools.length + pools.length;   // belt-and-braces guard
+  for (var spin = 0; spin < maxSpins && assigned < MAX_QUESTIONS; spin++) {
+    if (quotas[idx] < pools[idx].size) { quotas[idx]++; assigned++; }
+    idx = (idx + 1) % pools.length;
+    var anyLeft = false;
+    for (var k = 0; k < pools.length; k++) {
+      if (quotas[k] < pools[k].size) { anyLeft = true; break; }
     }
+    if (!anyLeft) break;   // every subtopic is exhausted
+  }
 
-    var quota = perIsland + (i < remainder ? 1 : 0);
-    var medFrac = difficulty === 'foundation' ? 1 : (difficulty === 'higher' ? 0 : 0.6);
+  // ── Phase 3: draw each subtopic's share, honouring the difficulty mix and
+  // topping up from the other band when one runs short.
+  var medFrac = difficulty === 'foundation' ? 1 : (difficulty === 'higher' ? 0 : 0.6);
+  for (var n = 0; n < pools.length; n++) {
+    var pool = pools[n];
+    var quota = quotas[n];
+    if (!quota) continue;
+
     var medTarget = Math.round(quota * medFrac);
     var gdTarget = quota - medTarget;
+    var medCount = Math.min(medTarget, pool.med.length);
+    var gdCount = Math.min(gdTarget, pool.gd.length);
+    if (medCount < medTarget && pool.gd.length > gdCount) {
+      gdCount = Math.min(quota - medCount, pool.gd.length);
+    }
+    if (gdCount < gdTarget && pool.med.length > medCount) {
+      medCount = Math.min(quota - gdCount, pool.med.length);
+    }
 
     var picked = [];
-    shuffle(medQuestions);
-    shuffle(gdQuestions);
+    for (var m = 0; m < medCount; m++) picked.push(pool.med[m]);
+    for (var d = 0; d < gdCount; d++) picked.push(pool.gd[d]);
 
-    var medCount = Math.min(medTarget, medQuestions.length);
-    var gdCount = Math.min(gdTarget, gdQuestions.length);
-
-    // If one pool is short, fill from the other
-    if (medCount < medTarget && gdQuestions.length > gdCount) {
-      gdCount = Math.min(quota - medCount, gdQuestions.length);
-    }
-    if (gdCount < gdTarget && medQuestions.length > medCount) {
-      medCount = Math.min(quota - gdCount, medQuestions.length);
-    }
-
-    for (var m = 0; m < medCount; m++) picked.push(medQuestions[m]);
-    for (var d = 0; d < gdCount; d++) picked.push(gdQuestions[d]);
-
-    // Shuffle the picked questions
     shuffle(picked);
-
-    // Shuffle options for each question (keeping correct answer tracked)
-    for (var p = 0; p < picked.length; p++) {
-      picked[p] = shuffleOptions(picked[p]);
-    }
-
+    for (var p = 0; p < picked.length; p++) picked[p] = shuffleOptions(picked[p]);
     allQuestions = allQuestions.concat(picked);
   }
 

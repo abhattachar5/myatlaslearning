@@ -134,6 +134,14 @@
 
       <div class="timer-setup">
         <h4>Test Settings</h4>
+        <div id="qcount-row">
+          <div class="time-select visible" style="margin-top:0;margin-bottom:12px">
+            <label for="qcount-slider">Questions:</label>
+            <input type="range" id="qcount-slider" min="5" max="25" step="5" value="25" oninput="updateQCount()">
+            <span class="time-display" id="qcount-display">25</span>
+          </div>
+          <p id="qcount-note" style="display:none;font-size:.8125rem;color:var(--text-muted);margin:-6px 0 12px;line-height:1.5"></p>
+        </div>
         <div class="timer-toggle">
           <label for="timed-toggle">Timed test</label>
           <div class="toggle-switch">
@@ -267,11 +275,64 @@ document.querySelector('.test-progress-fill').style.background = topicColor;
 // Show info cards
 const infoGrid = document.getElementById('setup-info');
 var qIslands = isCheckpoint ? checkpointIslands : topicIslands;
+
+// Question supply for this topic. generateTopicTest() spreads the requested count
+// across subtopics round-robin with no per-subtopic ceiling, so a test reaches the
+// requested number unless the topic runs out of distinct questions altogether.
+//
+// The pool is built ONCE here, against the largest count the slider offers, and the
+// very same pool is handed to generateTopicTest() when the test starts. That matters
+// because several banks randomise from a small finite set — rebuilding would give a
+// slightly different count, and the screen would end up advertising a number the
+// test does not deliver. Building once also avoids doing the work twice.
+var _pools = null;
+var _topicSupply = 25;
+function rebuildPools() {
+  if (typeof _buildIslandPools !== 'function') { _pools = null; _topicSupply = 25; return; }
+  _pools = _buildIslandPools(qIslands, 25);
+  _topicSupply = 0;
+  for (var i = 0; i < _pools.length; i++) _topicSupply += _pools[i].size;
+}
+rebuildPools();
+function questionsForCap(cap) {
+  return Math.min(cap, _topicSupply);
+}
+
+// A parent-assigned practice fixes the question count, so the learner can't change it.
+var _countLocked = !!(_nParam && _nParam > 0);
 var _cap = examOpts.maxQuestions || 25;
-var _qShown = (function(numIslands){ var per = Math.min(5, Math.floor(_cap/numIslands)); if (per < 1) per = 1; var base = numIslands*per; var rem = base < _cap ? Math.min(numIslands, _cap-base) : 0; return Math.min(_cap, base+rem); })(qIslands.length);
-infoGrid.innerHTML =
-  '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + _qShown + '</div></div>'
-  + (examOpts.difficulty ? '<div class="test-info-card"><div class="label">Difficulty</div><div class="value" style="font-size:1rem;text-transform:capitalize">' + examOpts.difficulty + '</div></div>' : '');
+var _qShown = questionsForCap(_cap);
+
+function updateQCount() {
+  var slider = document.getElementById('qcount-slider');
+  _cap = parseInt(slider.value, 10);
+  _qShown = questionsForCap(_cap);
+  document.getElementById('qcount-display').textContent = _cap;
+  var note = document.getElementById('qcount-note');
+  // Be honest when the topic cannot supply the requested number.
+  if (_qShown < _cap) {
+    note.textContent = 'This topic only has enough questions for a ' + _qShown + '-question test.';
+    note.style.display = '';
+  } else {
+    note.style.display = 'none';
+  }
+  renderInfoCards();
+}
+
+function renderInfoCards() {
+  infoGrid.innerHTML =
+    '<div class="test-info-card"><div class="label">Questions</div><div class="value">' + _qShown + '</div></div>'
+    + (examOpts.difficulty ? '<div class="test-info-card"><div class="label">Difficulty</div><div class="value" style="font-size:1rem;text-transform:capitalize">' + examOpts.difficulty + '</div></div>' : '');
+}
+
+if (_countLocked) {
+  // Assigned practice: hide the control and keep the count the parent chose.
+  document.getElementById('qcount-row').style.display = 'none';
+  renderInfoCards();
+} else {
+  document.getElementById('qcount-slider').value = _cap;
+  updateQCount();
+}
 
 if (_reviewOnly) { showStoredReview(); }
 
@@ -317,6 +378,14 @@ if (typeof CONFIG !== 'undefined' && CONFIG.adaptiveTests && window.AtlasAdaptiv
 }
 
 function startTest() {
+  // Learner-chosen question count (assigned practices keep the parent's fixed count).
+  if (!_countLocked) {
+    var _qs = document.getElementById('qcount-slider');
+    if (_qs) { examOpts.maxQuestions = parseInt(_qs.value, 10); _cap = examOpts.maxQuestions; _qShown = questionsForCap(_cap); }
+  }
+  // Hand over the pool the setup screen measured, so the test serves exactly the
+  // number of questions it advertised.
+  examOpts.pools = _pools;
   isTimed = document.getElementById('timed-toggle').checked;
   var timeMins = parseInt(document.getElementById('time-slider').value);
   var _adaptToggle = document.getElementById('adaptive-toggle');
@@ -760,6 +829,11 @@ function submitTest() {
 function retakeTest() {
   document.getElementById('test-results').style.display = 'none';
   document.getElementById('test-setup').style.display = '';
+  // Fresh pool for a fresh attempt — randomising banks give different questions,
+  // and the advertised count is re-measured from that new pool.
+  rebuildPools();
+  if (_countLocked) { _qShown = questionsForCap(_cap); renderInfoCards(); }
+  else updateQCount();
 }
 
 function saveTestResult(topicId, result) {
