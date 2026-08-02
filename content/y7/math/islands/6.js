@@ -516,9 +516,9 @@ Object.assign(QUESTIONS, {
         };
     }},
     { gen: function() {
-        var a = randInt(70, 95), b = randInt(70, 95), c = randInt(100, 130);
-        var ans = 360 - a - b - c;
-        while (ans <= 0) { c = randInt(100, 115); ans = 360 - a - b - c; }
+        var a = randInt(70, 95), c = randInt(100, 130);
+        var ans = 360 - 2 * a - c;
+        while (ans <= 0) { c = randInt(100, 115); ans = 360 - 2 * a - c; }
         var opts = buildOpts(ans + '°', [(ans + 10) + '°', (ans + 20) + '°', (ans - 10) + '°']);
         return {
             q: 'A quadrilateral has two angles of ' + a + '° each and one angle of ' + c + '°. Find the fourth.',

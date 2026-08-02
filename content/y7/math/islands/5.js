@@ -401,7 +401,7 @@ Object.assign(QUESTIONS, {
                  e: '£' + total + ' ÷ ' + divisor + ' = £' + each.toFixed(2) + '.' };
     }},
     { question:'Sam has only 20p coins. He needs exactly £1.40. How many 20p coins does he need?', options:['7','6','8','14'], answer:0, explanation:'£1.40 = 140p. 140 ÷ 20 = 7 coins.' },
-    { question:'A bag of 8 apples costs £2.40. What is the cost per apple?', options:['30p','£0.30','Both A and B','24p'], answer:2, explanation:'£2.40 ÷ 8 = £0.30 = 30p.' },
+    { question:'A bag of 8 apples costs £2.40. What is the cost per apple?', options:['30p','£0.30','Both — 30p = £0.30','24p'], answer:2, explanation:'£2.40 ÷ 8 = £0.30 = 30p.' },
     { question:'You buy 5 items at £2.75 each and pay with a £20 note. What change do you get?', options:['£6.25','£7.25','£5.75','£6.75'], answer:0, explanation:'Total = 5 × £2.75 = £13.75. Change = £20 − £13.75 = £6.25.' },
     { question:'Which combination makes exactly £1? (A) 2×50p (B) 5×20p (C) 10×10p (D) All of these', options:['All of these','Only A','Only B','Only C'], answer:0, explanation:'A: 2×50=100p ✓. B: 5×20=100p ✓. C: 10×10=100p ✓.' },
     { question:'£27.50 is divided equally among 5 people. How much each?', options:['£5.50','£5.00','£6.50','£4.50'], answer:0, explanation:'£27.50 ÷ 5 = £5.50.' }

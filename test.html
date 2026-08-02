@@ -298,6 +298,18 @@ function questionsForCap(cap) {
   return Math.min(cap, _topicSupply);
 }
 
+// Only offer counts this topic can actually deliver, so an unreachable number
+// can't be chosen in the first place. The slider moves in fives, so round the
+// supply down to a whole step (never below one step of 5 — if a topic has less
+// than that, the note under the slider explains what it can really serve).
+function applySupplyToSlider() {
+  var slider = document.getElementById('qcount-slider');
+  if (!slider) return;
+  var max = Math.min(25, Math.max(5, Math.floor(_topicSupply / 5) * 5));
+  slider.max = max;
+  if (parseInt(slider.value, 10) > max) slider.value = max;
+}
+
 // A parent-assigned practice fixes the question count, so the learner can't change it.
 var _countLocked = !!(_nParam && _nParam > 0);
 var _cap = examOpts.maxQuestions || 25;
@@ -330,7 +342,9 @@ if (_countLocked) {
   document.getElementById('qcount-row').style.display = 'none';
   renderInfoCards();
 } else {
-  document.getElementById('qcount-slider').value = _cap;
+  applySupplyToSlider();
+  var _slider = document.getElementById('qcount-slider');
+  _slider.value = Math.min(_cap, parseInt(_slider.max, 10));
   updateQCount();
 }
 
@@ -833,7 +847,7 @@ function retakeTest() {
   // and the advertised count is re-measured from that new pool.
   rebuildPools();
   if (_countLocked) { _qShown = questionsForCap(_cap); renderInfoCards(); }
-  else updateQCount();
+  else { applySupplyToSlider(); updateQCount(); }
 }
 
 function saveTestResult(topicId, result) {

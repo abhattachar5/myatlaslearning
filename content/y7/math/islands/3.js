@@ -888,7 +888,7 @@ Object.assign(QUESTIONS, {
                  e: a + ' × ' + b + ' + ' + a + ' × ' + c + ' = ' + (a*b) + ' + ' + (a*c) + ' = ' + ans + '.' };
     }},
     { question:'Which property explains why 0 × 458 = 0?', options:['Zero property of multiplication','Identity property','Commutative property','Associative property'], answer:0, explanation:'Any number multiplied by 0 equals 0. This is the zero property.' },
-    { question:'Rewrite 3 × 8 × 5 to make it easier to calculate mentally.', options:['3 × 5 × 8 = 15 × 8 = 120','8 × 5 × 3 = 40 × 3 = 120','Both A and B','Neither'], answer:2, explanation:'Both use the commutative property to reorder. Grouping 3×5=15 or 5×8=40 first makes the mental maths easier.' },
+    { question:'Rewrite 3 × 8 × 5 to make it easier to calculate mentally.', options:['3 × 5 × 8 = 15 × 8 = 120','8 × 5 × 3 = 40 × 3 = 120','Both reorderings are valid','Neither'], answer:2, explanation:'Both use the commutative property to reorder. Grouping 3×5=15 or 5×8=40 first makes the mental maths easier.' },
     { question:'If a × b = 0 and a ≠ 0, what must b equal?', options:['0','1','a','Cannot tell'], answer:0, explanation:'By the zero property, if a product is 0 and one factor is not 0, the other must be 0.' },
     { gen: function() {
         var a = randInt(2, 8), b = randInt(2, 8);
@@ -934,7 +934,7 @@ Object.assign(QUESTIONS, {
         var a = randInt(2,8);
         var ans = randInt(2,9);
         var rhs = ans*a;
-        var opts = buildOpts(ans, [ans+1, ans-1, a]);
+        var opts = buildOpts(rhs, [rhs+a, rhs-a, ans]);
         return { q: 'Solve: n/'+a+' = '+ans,
                  opts: opts, c: 0,
                  e: 'n = '+ans+'×'+a+' = '+rhs+'.' };
@@ -1052,11 +1052,11 @@ Object.assign(QUESTIONS, {
     { gen: function() {
         var a = randInt(2,6), b = randInt(1,8);
         var ans = randInt(2,8);
-        var rhs = a*ans + b;
-        var opts = buildOpts(ans, [ans+1, ans-1, rhs-b]);
+        var x = a*ans;
+        var opts = buildOpts(x, [x+a, x-a, ans]);
         return { q: 'Solve: x/'+a+' + '+b+' = '+(ans+b),
                  opts: opts, c: 0,
-                 e: 'x/'+a+' = '+ans+'. x = '+ans+'×'+a+' = '+a*ans+'.' };
+                 e: 'x/'+a+' = '+ans+'. x = '+ans+'×'+a+' = '+x+'.' };
     }},
     { question:'Why do we do the same operation to both sides of an equation?', options:['To keep the equation balanced — like a set of scales','To make the numbers smaller','To remove all variables','Because the rules say so'], answer:0, explanation:'Doing the same to both sides keeps the equation balanced.' },
     { gen: function() {

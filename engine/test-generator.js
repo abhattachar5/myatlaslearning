@@ -101,10 +101,16 @@ function _buildIslandPools(topicIslands, want) {
     var generators = _islandGenerators(island.id);
     if (!generators || !generators.length) continue;
 
+    // Give up only after TWO full fruitless passes. Many banks are a generator
+    // wrapping _pickFrom over a small hard-coded set, so a single unlucky pass of
+    // duplicates would abandon questions that are really there. Measured: two
+    // passes reach the theoretical maximum on every Year 7 topic, and going
+    // further gains nothing — so this is the cheapest point that is also complete.
     var med = [], gd = [], seen = {};
-    var stale = 0;                                   // consecutive calls adding nothing new
-    var maxCalls = generators.length * (want + 2);   // guard against a pathological generator
-    for (var c = 0; (med.length + gd.length) < want && stale < generators.length && c < maxCalls; c++) {
+    var stale = 0;                                           // consecutive calls adding nothing new
+    var patience = generators.length * 2;
+    var maxCalls = generators.length * (want + 2) * 2;       // guard against a pathological generator
+    for (var c = 0; (med.length + gd.length) < want && stale < patience && c < maxCalls; c++) {
       var gen = generators[c % generators.length];
       var q = _genDistinctQ(gen);
       if (!q || !q.q || seen[q.q]) { stale++; continue; }
@@ -8564,6 +8570,125 @@ TEST_GENERATORS["mi-28-3"] = [
        '£' + income + ' needs, £0 wants, £0 savings']);
     return { q: 'Apply the 50/30/20 rule to £' + income + ' income. How much for needs, wants, savings?', opts: opts, c: 0,
              e: '50% needs = £' + rule50 + '. 30% wants = £' + rule30 + '. 20% savings = £' + rule20 + '.' };
+  }}
+];
+
+// ── mt-29: Pythagoras' Theorem (mi-29-1 .. mi-29-3) ─────────────────────────
+// Previously this topic had no generators, so topic tests fell back to its static
+// bank of 24 fixed questions and could never fill a 25-question test. Pythagoras is
+// the most naturally generative topic in the curriculum, so the calculation
+// questions are built from randomly chosen Pythagorean triples (scaled, and with
+// the legs swapped) while the conceptual questions rotate through a small set.
+var _PYTH_TRIPLES = [[3,4,5],[5,12,13],[8,15,17],[7,24,25],[20,21,29],[9,40,41],[12,35,37],[28,45,53]];
+function _pythTriple(maxScale) {
+  var t = _pickFrom(_PYTH_TRIPLES);
+  var k = _randInt(1, maxScale || 1);
+  var a = t[0] * k, b = t[1] * k, c = t[2] * k;
+  if (_randInt(0, 1)) { var s = a; a = b; b = s; }   // swap the legs
+  return { a: a, b: b, c: c };
+}
+
+TEST_GENERATORS["mi-29-1"] = [
+  { depth: 'medium', gen: function() {
+    var t = _pythTriple(2);
+    var opts = _buildOpts(t.c + ' cm', [t.a + ' cm', t.b + ' cm', (t.a + t.b) + ' cm']);
+    return { q: 'In a right-angled triangle with sides ' + t.a + ' cm, ' + t.b + ' cm and ' + t.c + ' cm, which is the hypotenuse?', opts: opts, c: 0,
+             e: 'The hypotenuse is always the longest side, and it is opposite the right angle. Here that is ' + t.c + ' cm.' };
+  }},
+  { depth: 'medium', gen: function() {
+    return _normaliseTestQ(_pickFrom([
+      { q: 'What is the hypotenuse of a right-angled triangle?', opts: ['The longest side, opposite the right angle', 'The shortest side', 'The side next to the right angle', 'Any side of the triangle'], c: 0, e: 'The hypotenuse is the longest side and always sits opposite the right angle.' },
+      { q: 'What symbol shows that a triangle has a right angle?', opts: ['A small square in the corner', 'A double arrow', 'A dashed line', 'A small circle'], c: 0, e: 'A small square drawn in a corner marks a 90 degree (right) angle.' },
+      { q: 'Can the hypotenuse ever be the same length as one of the other sides?', opts: ['No — it must always be the longest side', 'Yes — in an isosceles triangle', 'Yes — in an equilateral triangle', 'Only in special cases'], c: 0, e: 'The hypotenuse is always strictly longer than either of the other two sides.' }
+    ]));
+  }},
+  { depth: 'medium', gen: function() {
+    var t = _pythTriple(1);
+    var opts = _buildOpts('Yes — ' + t.a + '² + ' + t.b + '² = ' + (t.c * t.c) + ' = ' + t.c + '²', ['No — the numbers are too big', 'No — ' + t.a + ' + ' + t.b + ' is not ' + t.c, 'You cannot tell without the angles']);
+    return { q: 'A triangle has sides ' + t.a + ', ' + t.b + ' and ' + t.c + '. Is it right-angled?', opts: opts, c: 0,
+             e: t.a + '² + ' + t.b + '² = ' + (t.a * t.a) + ' + ' + (t.b * t.b) + ' = ' + (t.c * t.c) + ' = ' + t.c + '². Since a² + b² = c², it is right-angled.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var t = _pythTriple(1);
+    var wrong = t.c + _randInt(1, 3);
+    var opts = _buildOpts('No — ' + t.a + '² + ' + t.b + '² = ' + (t.c * t.c) + ', not ' + (wrong * wrong), ['Yes — all triangles obey Pythagoras', 'Yes — the sides get bigger', 'You cannot tell without measuring']);
+    return { q: 'A triangle has sides ' + t.a + ', ' + t.b + ' and ' + wrong + '. Is it right-angled?', opts: opts, c: 0,
+             e: t.a + '² + ' + t.b + '² = ' + (t.c * t.c) + ', but ' + wrong + '² = ' + (wrong * wrong) + '. They are not equal, so it is NOT right-angled.' };
+  }}
+];
+
+TEST_GENERATORS["mi-29-2"] = [
+  { depth: 'medium', gen: function() {
+    var t = _pythTriple(2);
+    var opts = _buildOpts(t.c + ' cm', [(t.a + t.b) + ' cm', (t.c * t.c) + ' cm', (t.a * t.b) + ' cm']);
+    return { q: 'A right-angled triangle has shorter sides ' + t.a + ' cm and ' + t.b + ' cm. Find the hypotenuse.', opts: opts, c: 0,
+             e: 'c² = ' + t.a + '² + ' + t.b + '² = ' + (t.a * t.a) + ' + ' + (t.b * t.b) + ' = ' + (t.c * t.c) + '. c = √' + (t.c * t.c) + ' = ' + t.c + ' cm.' };
+  }},
+  { depth: 'medium', gen: function() {
+    var t = _pythTriple(3);
+    var opts = _buildOpts(t.c + ' cm', [(t.a + t.b) + ' cm', (t.c + 2) + ' cm', (t.c - 2) + ' cm']);
+    return { q: 'A right-angled triangle has legs of ' + t.a + ' cm and ' + t.b + ' cm. Find the hypotenuse.', opts: opts, c: 0,
+             e: 'c² = ' + (t.a * t.a) + ' + ' + (t.b * t.b) + ' = ' + (t.c * t.c) + ', so c = ' + t.c + ' cm.' };
+  }},
+  { depth: 'medium', gen: function() {
+    return _normaliseTestQ(_pickFrom([
+      { q: 'What is the first step when finding the hypotenuse using Pythagoras\' theorem?', opts: ['Square both shorter sides and add them', 'Add the two shorter sides', 'Subtract the shorter sides', 'Multiply the shorter sides'], c: 0, e: 'Square each shorter side, add them, then square root the total: c² = a² + b².' },
+      { q: 'State Pythagoras\' theorem.', opts: ['a² + b² = c², where c is the hypotenuse', 'a + b = c', 'a² − b² = c²', 'a × b = c²'], c: 0, e: 'In a right-angled triangle the squares of the two shorter sides add to the square of the hypotenuse.' }
+    ]));
+  }},
+  { depth: 'medium', gen: function() {
+    var t = _pythTriple(1);
+    var d1 = [t.a + 1, t.b + 1, t.c + 1], d2 = [t.a, t.b + 2, t.c];
+    var opts = _buildOpts(t.a + ', ' + t.b + ', ' + t.c, [d1.join(', '), d2.join(', '), (t.a + 1) + ', ' + (t.b + 2) + ', ' + (t.c + 4)]);
+    return { q: 'Which of these is a Pythagorean triple?', opts: opts, c: 0,
+             e: t.a + '² + ' + t.b + '² = ' + (t.a * t.a) + ' + ' + (t.b * t.b) + ' = ' + (t.c * t.c) + ' = ' + t.c + '². The others do not satisfy a² + b² = c².' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var t = _pythTriple(2);
+    var opts = _buildOpts(t.c + ' m', [(t.a + t.b) + ' m', (t.c * t.c) + ' m', (t.a * t.b) + ' m']);
+    return { q: 'A ladder leans against a wall. Its foot is ' + t.a + ' m from the wall and the top reaches ' + t.b + ' m up. How long is the ladder?', opts: opts, c: 0,
+             e: 'The ladder is the hypotenuse. c² = ' + (t.a * t.a) + ' + ' + (t.b * t.b) + ' = ' + (t.c * t.c) + ', so the ladder is ' + t.c + ' m.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var base = _pickFrom(_PYTH_TRIPLES);
+    var k = _randInt(2, 5);
+    var scaled = [base[0] * k, base[1] * k, base[2] * k];
+    var opts = _buildOpts(scaled.join(', '), [(base[0] + k) + ', ' + (base[1] + k) + ', ' + (base[2] + k), base.join(', '), (base[0] * k) + ', ' + base[1] + ', ' + (base[2] * k)]);
+    return { q: 'If ' + base.join('-') + ' is a Pythagorean triple, what is the triple when multiplied by ' + k + '?', opts: opts, c: 0,
+             e: 'Multiply each number by ' + k + ': ' + base.map(function(n){ return n + '×' + k + '=' + (n * k); }).join(', ') + '. Check: ' + (scaled[0] * scaled[0]) + ' + ' + (scaled[1] * scaled[1]) + ' = ' + (scaled[2] * scaled[2] ) + ' ✓' };
+  }}
+];
+
+TEST_GENERATORS["mi-29-3"] = [
+  { depth: 'medium', gen: function() {
+    var t = _pythTriple(2);
+    var opts = _buildOpts(t.b + ' cm', [(t.c - t.a) + ' cm', (t.c + t.a) + ' cm', (t.b * t.b) + ' cm']);
+    return { q: 'A right-angled triangle has hypotenuse ' + t.c + ' cm and one side ' + t.a + ' cm. Find the other side.', opts: opts, c: 0,
+             e: 'a² = ' + t.c + '² − ' + t.a + '² = ' + (t.c * t.c) + ' − ' + (t.a * t.a) + ' = ' + (t.b * t.b) + '. a = √' + (t.b * t.b) + ' = ' + t.b + ' cm.' };
+  }},
+  { depth: 'medium', gen: function() {
+    return _normaliseTestQ(_pickFrom([
+      { q: 'When finding a shorter side, do you ADD or SUBTRACT the squares?', opts: ['Subtract — a² = c² − b²', 'Add — a² = c² + b²', 'Multiply — a² = c² × b²', 'Divide — a² = c² ÷ b²'], c: 0, e: 'To find a shorter side, subtract: a² = c² − b². You only add when finding the hypotenuse.' },
+      { q: 'Which side must you know to find a shorter side with Pythagoras?', opts: ['The hypotenuse and one shorter side', 'Both shorter sides', 'Only the hypotenuse', 'Only one shorter side'], c: 0, e: 'Rearranging a² = c² − b² needs the hypotenuse c and the other shorter side b.' }
+    ]));
+  }},
+  { depth: 'medium', gen: function() {
+    var t = _pythTriple(3);
+    var opts = _buildOpts(t.a + ' cm', [(t.c - t.b) + ' cm', (t.a + 4) + ' cm', (t.a * t.a) + ' cm']);
+    return { q: 'A right-angled triangle has hypotenuse ' + t.c + ' cm and one side ' + t.b + ' cm. Find the other side.', opts: opts, c: 0,
+             e: 'a² = ' + (t.c * t.c) + ' − ' + (t.b * t.b) + ' = ' + (t.a * t.a) + ', so a = ' + t.a + ' cm.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var t = _pythTriple(2);
+    var opts = _buildOpts(t.a + ' m', [(t.c - t.b) + ' m', (t.a + 2) + ' m', (t.c + t.b) + ' m']);
+    return { q: 'A ' + t.c + ' m ladder reaches ' + t.b + ' m up a wall. How far is its base from the wall?', opts: opts, c: 0,
+             e: 'The ladder is the hypotenuse. a² = ' + (t.c * t.c) + ' − ' + (t.b * t.b) + ' = ' + (t.a * t.a) + ', so the base is ' + t.a + ' m from the wall.' };
+  }},
+  { depth: 'greater-depth', gen: function() {
+    var t = _pythTriple(2);
+    var opts = _buildOpts(t.b + ' cm', [(t.c - t.a) + ' cm', (t.b + 3) + ' cm', (t.c * t.c) + ' cm']);
+    return { q: 'A rectangle has a diagonal of ' + t.c + ' cm and a width of ' + t.a + ' cm. What is its length?', opts: opts, c: 0,
+             e: 'The diagonal splits the rectangle into two right-angled triangles. length² = ' + (t.c * t.c) + ' − ' + (t.a * t.a) + ' = ' + (t.b * t.b) + ', so the length is ' + t.b + ' cm.' };
   }}
 ];
 
