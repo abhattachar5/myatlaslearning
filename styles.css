@@ -894,6 +894,18 @@ p { font-size: .9375rem; color: var(--text-2); line-height: 1.7; }
   pointer-events: none; /* let clicks pass through the gradient area */
 }
 .quiz-next-wrap .btn { pointer-events: all; }
+.quiz-report-wrap { text-align: center; margin-top: 4px; }
+.quiz-report-link {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: .8125rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  text-decoration: none;
+}
+.quiz-report-link:hover, .quiz-report-link:focus-visible { color: var(--text-2); text-decoration: underline; }
+textarea.form-input { resize: vertical; min-height: 90px; font-family: inherit; }
 @media (max-width: 900px) {
   /* on mobile the fixed nav bar is ~60 px tall — keep the button above it */
   .quiz-next-wrap { bottom: 76px; }

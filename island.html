@@ -127,6 +127,9 @@
         <button class="btn btn-primary" id="quiz-check-btn" onclick="checkAnswer()" disabled>Check answer</button>
         <button class="btn btn-primary" id="quiz-next-btn" onclick="nextQuestion()" style="display:none">Next question →</button>
       </div>
+      <div class="quiz-report-wrap">
+        <button class="quiz-report-link" id="quiz-report-btn" onclick="openReportModal()">🚩 Report a problem with this question</button>
+      </div>
     </div>
 
     <!-- Score screen -->
@@ -854,6 +857,24 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
+<!-- ── Report Bug Modal ───────────────────────────────────────────────────── -->
+<div class="modal-overlay" id="report-modal" role="dialog" aria-modal="true" aria-labelledby="report-modal-title" onclick="closeReportModal(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="report-modal-title">Report a problem</h3>
+      <button class="modal-close" onclick="closeReportModal()" aria-label="Close report modal">✕</button>
+    </div>
+    <p style="margin:0 0 10px;font-size:.8125rem;color:var(--text-muted)">What's wrong with this question? This is sent straight to the team — no need to explain which island or question, we capture that automatically.</p>
+    <div class="form-group">
+      <label class="form-label" for="report-description">Description</label>
+      <textarea class="form-input" id="report-description" rows="4" placeholder="e.g. The marked answer doesn't match the explanation..."></textarea>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:8px">
+      <button class="btn btn-primary" style="flex:1" id="report-submit-btn" onclick="submitBugReport()">Submit report</button>
+    </div>
+  </div>
+</div>
+
 <!-- ── Profile Modal ──────────────────────────────────────────────────────── -->
 <div class="modal-overlay" id="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title" onclick="closeProfileModal(event)">
   <div class="modal">
@@ -939,6 +960,72 @@ document.getElementById('profile-modal').addEventListener('keydown', function(e)
     if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
   }
 });
+// ── Report Bug Modal Logic ────────────────────────────────────────────────
+let _reportModalTrigger = null;
+function openReportModal() {
+  _reportModalTrigger = document.activeElement;
+  document.getElementById('report-description').value = '';
+  document.getElementById('report-modal').classList.add('show');
+  setTimeout(() => document.getElementById('report-description').focus(), 50);
+}
+function closeReportModal(e) {
+  if (e && e.target !== document.getElementById('report-modal')) return;
+  document.getElementById('report-modal').classList.remove('show');
+  if (_reportModalTrigger) { _reportModalTrigger.focus(); _reportModalTrigger = null; }
+}
+document.getElementById('report-modal').addEventListener('keydown', function(e) {
+  if (!this.classList.contains('show')) return;
+  if (e.key === 'Escape') { closeReportModal(); return; }
+  if (e.key !== 'Tab') return;
+  const focusable = this.querySelector('.modal').querySelectorAll(
+    'button:not([disabled]), textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  const first = focusable[0];
+  const last  = focusable[focusable.length - 1];
+  if (e.shiftKey) {
+    if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+  } else {
+    if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+  }
+});
+async function submitBugReport() {
+  const description = document.getElementById('report-description').value.trim();
+  if (!description) { showToast('Please describe the problem first.', 'warning'); return; }
+
+  const btn = document.getElementById('report-submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  const q = (typeof shuffledQuestions !== 'undefined' && shuffledQuestions[qIndex]) ? shuffledQuestions[qIndex] : {};
+  const optionEls = document.querySelectorAll('.quiz-option');
+  const selectedText = (selectedIdx !== null && optionEls[selectedIdx]) ? optionEls[selectedIdx].textContent.trim() : '';
+  const correctText = (q.opts && q.c !== undefined) ? q.opts[q.c] : '';
+
+  try {
+    const res = await fetchWithAuth('/.netlify/functions/report-bug', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        page: location.href,
+        islandId: islandId,
+        questionText: q.q || '',
+        selectedOption: selectedText,
+        correctOption: correctText,
+        explanation: q.e || '',
+        description: description
+      })
+    });
+    if (!res.ok) throw new Error('request failed');
+    closeReportModal();
+    showToast('Thanks — this has been reported!', 'success');
+  } catch (err) {
+    showToast('Could not send report. Please try again.', 'error');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Submit report';
+  }
+}
+
 function saveProfile() {
   const name   = document.getElementById('edit-name').value.trim();
   const year   = document.getElementById('edit-year').value;
