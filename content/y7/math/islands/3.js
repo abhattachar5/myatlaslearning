@@ -1,6 +1,7 @@
 // math-content-3.js — Flashcards & Questions for Topics 9-13
 // Topic 9: Ratio & Rates | Topic 10: Percentages | Topic 11: Algebra Expressions
-// Topic 12: Algebra Equations & Sequences | Topic 13: Statistics & Probability
+// Topic 12: Algebra Equations | Topic 13: Statistics & Data (probability islands
+// mi-13-4 / mi-13-7 / mi-13-9 now belong to Topic 30: Probability)
 
 // ─── TOPIC 9: RATIO & RATES ──────────────────────────────────────────────────
 
