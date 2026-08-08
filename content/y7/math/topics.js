@@ -37,6 +37,16 @@ const MATH_TOPICS = [
    description:"Write and evaluate variable expressions, collect like terms, apply the distributive property, factorise simple linear expressions, and use properties of addition and multiplication to write equivalent expressions."},
   {id:"mt-12",name:"Algebra: Equations",emoji:"⚖️",hasContent:true,
    description:"Solve one-step and two-step equations using inverse operations, distinguish expressions from equations, and model and solve equations with algebra tiles. (Sequences live in Number Sequences; inequalities in Algebra: Inequalities.)"},
+  // The rest of the algebra family. These were authored later and originally sat
+  // down at positions 22-24, far from Expressions/Equations; they are grouped here
+  // so the whole algebra strand reads as one run on the dashboard. This array only
+  // controls tile display order — island prerequisites drive the study plan.
+  {id:"mt-22",name:"Algebra: Inequalities",emoji:"↔️",hasContent:true,
+   description:"Write, graph and solve one-step inequalities, interpret solutions on a number line, and apply inequalities to word problems."},
+  {id:"mt-23",name:"Two-Variable Equations & Formulae",emoji:"📈",hasContent:true,
+   description:"Substitute into formulae and function machines, find values using two-variable equations, rearrange to change the subject, complete tables of values, and graph linear relationships on a coordinate plane."},
+  {id:"mt-21",name:"Number Sequences",emoji:"🔢",hasContent:true,
+   description:"Identify and continue arithmetic and geometric sequences, find the nth term, and write variable expressions for sequences."},
   {id:"mt-13",name:"Statistics & Data",emoji:"📊",hasContent:true,
    description:"Calculate mean, median, mode and range, read and draw statistical graphs including pictograms and double bar/line graphs, plot scatter graphs and lines of best fit, understand sampling and bias, and identify outliers and distributions."},
   {id:"mt-30",name:"Probability",emoji:"🎲",hasContent:true,
@@ -56,12 +66,8 @@ const MATH_TOPICS = [
    description:"Calculate elapsed time, convert between 12-hour and 24-hour time, read timetables, and work with time zones."},
   {id:"mt-20",name:"Coordinate Plane",emoji:"📍",hasContent:true,
    description:"Plot and read points in all four quadrants, identify quadrant positions, and use coordinates to describe maps and paths."},
-  {id:"mt-21",name:"Number Sequences",emoji:"🔢",hasContent:true,
-   description:"Identify and continue arithmetic and geometric sequences, find the nth term, and write variable expressions for sequences."},
-  {id:"mt-22",name:"Algebra: Inequalities",emoji:"↔️",hasContent:true,
-   description:"Write, graph and solve one-step inequalities, interpret solutions on a number line, and apply inequalities to word problems."},
-  {id:"mt-23",name:"Two-Variable Equations & Formulae",emoji:"📈",hasContent:true,
-   description:"Substitute into formulae and function machines, find values using two-variable equations, rearrange to change the subject, complete tables of values, and graph linear relationships on a coordinate plane."},
+  // (mt-21 Number Sequences, mt-22 Algebra: Inequalities and mt-23 Two-Variable
+  //  Equations & Formulae now sit with the algebra strand further up.)
   {id:"mt-24",name:"2D Shapes & Angles",emoji:"📐",hasContent:true,
    description:"Classify triangles and quadrilaterals, measure and estimate angles, find missing angles using parallel line rules, identify vertical and supplementary angles, name angles, understand lines/segments/rays, and explore parts of circles."},
   {id:"mt-25",name:"Symmetry & Transformations",emoji:"🔀",hasContent:true,
