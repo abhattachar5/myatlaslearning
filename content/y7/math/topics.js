@@ -33,6 +33,12 @@ const MATH_TOPICS = [
    description:"Write and simplify ratios, find equivalent ratios, calculate unit rates, solve proportions, apply ratio to scale drawings, and use bar diagrams to solve ratio word problems."},
   {id:"mt-10",name:"Percentages",emoji:"💯",hasContent:true,
    description:"Convert fluently between percentages, fractions and decimals, find percentages of amounts, solve percentage increase and decrease problems, and use grid/bar models to estimate percents."},
+  // Coordinate Plane sits here (ahead of the algebra strand) because Two-Variable
+  // Equations & Formulae (mt-23) needs it — plotting points before graphing lines.
+  // Also originally authored later and stranded at position 24; moved up so it's
+  // taught right before it's needed instead of after.
+  {id:"mt-20",name:"Coordinate Plane",emoji:"📍",hasContent:true,
+   description:"Plot and read points in all four quadrants, identify quadrant positions, and use coordinates to describe maps and paths."},
   {id:"mt-11",name:"Algebra: Expressions",emoji:"📝",hasContent:true,
    description:"Write and evaluate variable expressions, collect like terms, apply the distributive property, factorise simple linear expressions, and use properties of addition and multiplication to write equivalent expressions."},
   {id:"mt-12",name:"Algebra: Equations",emoji:"⚖️",hasContent:true,
@@ -64,10 +70,9 @@ const MATH_TOPICS = [
    description:"Add, subtract, multiply and divide money amounts; calculate sale prices, unit prices, VAT and tips; find combinations of coins; and solve money multiplication and division problems."},
   {id:"mt-19",name:"Time",emoji:"🕐",hasContent:true,
    description:"Calculate elapsed time, convert between 12-hour and 24-hour time, read timetables, and work with time zones."},
-  {id:"mt-20",name:"Coordinate Plane",emoji:"📍",hasContent:true,
-   description:"Plot and read points in all four quadrants, identify quadrant positions, and use coordinates to describe maps and paths."},
-  // (mt-21 Number Sequences, mt-22 Algebra: Inequalities and mt-23 Two-Variable
-  //  Equations & Formulae now sit with the algebra strand further up.)
+  // (mt-20 Coordinate Plane, mt-21 Number Sequences, mt-22 Algebra: Inequalities
+  //  and mt-23 Two-Variable Equations & Formulae now sit with the algebra strand
+  //  further up.)
   {id:"mt-24",name:"2D Shapes & Angles",emoji:"📐",hasContent:true,
    description:"Classify triangles and quadrilaterals, measure and estimate angles, find missing angles using parallel line rules, identify vertical and supplementary angles, name angles, understand lines/segments/rays, and explore parts of circles."},
   {id:"mt-25",name:"Symmetry & Transformations",emoji:"🔀",hasContent:true,

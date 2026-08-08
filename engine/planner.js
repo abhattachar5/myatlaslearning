@@ -23,30 +23,6 @@
   };
   var SUBJECT_IDS = ['math', 'english', 'science', 'history', 'geography'];
 
-  // ── TEMPORARY: Year 7 maths plan-order experiment ─────────────────────────
-  // Year 7 maths is the only subject whose study plan does NOT follow the topic
-  // tile order (geography and Year 8+ maths already do). This flag previews what
-  // it would look like if it did, so the ordering can be judged in the real app
-  // before committing to it.
-  //
-  //   Turn ON  : open any page with  ?planorder=tiles
-  //   Turn OFF : open any page with  ?planorder=legacy      (default)
-  //
-  // The choice is remembered per browser profile. 'legacy' reproduces today's
-  // behaviour exactly — nothing below runs unless the flag is 'tiles'.
-  //
-  // TO REMOVE once a decision is made: delete this block, the PLAN_ORDER_KEY
-  // branch inside buildSubjectQueues(), and the badge at the bottom of the file.
-  var PLAN_ORDER_KEY = 'sm_plan_order';
-  function planOrderMode() {
-    try {
-      var q = (typeof location !== 'undefined' && location.search)
-        ? new URLSearchParams(location.search).get('planorder') : null;
-      if (q === 'tiles' || q === 'legacy') localStorage.setItem(PLAN_ORDER_KEY, q);
-      return localStorage.getItem(PLAN_ORDER_KEY) === 'tiles' ? 'tiles' : 'legacy';
-    } catch (e) { return 'legacy'; }
-  }
-
   // ── Topological Sort (Kahn's algorithm, topic-clustered) ─────────────────
   // Returns islands in prerequisite-safe order within a subject.
   // When choosing the next ready island, same-topic islands are preferred
@@ -138,25 +114,16 @@
         sorted = sorted.slice().sort(function (a, b) {
           return ((a && a.planOrder != null ? a.planOrder : 999)) - ((b && b.planOrder != null ? b.planOrder : 999));
         });
-      } else if (sid === 'geography' || (sid === 'math' && year !== 'Year 7')
-                 || (sid === 'math' && year === 'Year 7' && planOrderMode() === 'tiles')) {
+      } else if (sid === 'geography' || sid === 'math') {
         // Follow the curriculum's TOPIC sequence (the tile order) rather than the raw
         // prerequisite topo order. For geography this stops "Map Skills" leading; for
-        // Year 8 maths it keeps tiles in their intended order (e.g. Rounding right after
-        // Decimals, Trigonometry right after Pythagoras). Prerequisite-safe: no topic's
-        // prerequisite points to a later topic.
+        // maths it keeps tiles in their intended order (e.g. Rounding right after
+        // Decimals, Trigonometry right after Pythagoras, the algebra topics run as one
+        // block). Prerequisite-safe: no topic's prerequisite points to a later topic —
+        // e.g. Coordinate Plane is deliberately positioned ahead of the algebra strand
+        // in the Year 7 tile array because Two-Variable Equations needs it.
         var topicPos = {};
         getAllTopics().forEach(function (t, idx) { if (topicPos[t.id] === undefined) topicPos[t.id] = idx; });
-        // TEMPORARY (plan-order experiment): Year 7 maths only. Graphing a linear
-        // equation (mi-23-2) needs plotting points (mi-20-1), but Coordinate Plane's
-        // tile sits after Two-Variable Equations. Slot it just ahead of the algebra
-        // strand so the tile order stays prerequisite-safe. Done with a fractional
-        // position rather than by moving the tile, so the dashboard's browse order
-        // and every other year/subject are untouched.
-        if (sid === 'math' && year === 'Year 7'
-            && topicPos['mt-20'] != null && topicPos['mt-11'] != null) {
-          topicPos['mt-20'] = topicPos['mt-11'] - 0.5;
-        }
         sorted = sorted.slice().sort(function (a, b) {
           var pa = (a && topicPos[a.topicId] != null) ? topicPos[a.topicId] : 9999;
           var pb = (b && topicPos[b.topicId] != null) ? topicPos[b.topicId] : 9999;
@@ -1129,33 +1096,7 @@
     SUBJECT_COLORS: SUBJECT_COLORS,
     SUBJECT_EMOJIS: SUBJECT_EMOJIS,
     SUBJECT_NAMES: SUBJECT_NAMES,
-    SUBJECT_IDS: SUBJECT_IDS,
-
-    // TEMPORARY (plan-order experiment) — remove with the rest of the flag.
-    planOrderMode: planOrderMode
+    SUBJECT_IDS: SUBJECT_IDS
   };
-
-  // ── TEMPORARY: preview badge ──────────────────────────────────────────────
-  // Only rendered while the experiment is ON, so the preview can never be left
-  // running unnoticed. Clicking it reverts to the normal plan order.
-  // TO REMOVE: delete this whole block.
-  (function planOrderBadge() {
-    if (typeof document === 'undefined') return;
-    function draw() {
-      if (!document.body) return;                       // nothing to attach to yet
-      if (planOrderMode() !== 'tiles') return;
-      if (document.getElementById('plan-order-badge')) return;
-      var a = document.createElement('a');
-      a.id = 'plan-order-badge';
-      a.href = '?planorder=legacy';
-      a.textContent = '🧪 Plan preview: tile order — tap to revert';
-      a.style.cssText = 'position:fixed;left:12px;bottom:12px;z-index:9999;' +
-        'background:#b45309;color:#fff;font:600 12px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;' +
-        'padding:8px 12px;border-radius:999px;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25);';
-      document.body.appendChild(a);
-    }
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', draw);
-    else draw();
-  })();
 
 })();
