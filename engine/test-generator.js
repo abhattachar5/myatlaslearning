@@ -4295,78 +4295,8 @@ TEST_GENERATORS["mi-11-5"] = [
 // ALGEBRA: EQUATIONS & SEQUENCES (mt-12) — 5 subtopics
 // ══════════════════════════════════════════════════════════════════════════
 
-// ── mi-12-1: Number Sequences ────────────────────────────────────────────
+// ── mi-12-1: Solve One-Step Equations ────────────────────────────────────
 TEST_GENERATORS["mi-12-1"] = [
-  { depth: 'medium', gen: function() {
-    var start = _randInt(2, 20);
-    var d = _randInt(2, 9);
-    var seq = [start, start + d, start + 2*d, start + 3*d];
-    var ans = start + 4*d;
-    var opts = _buildOpts(ans, [start + 5*d, ans + 1, start + 3*d + 1]);
-    return { q: 'Find the next term: ' + seq.join(', ') + ', …', opts: opts, c: 0,
-             e: 'Common difference = ' + d + '. Next term = ' + seq[3] + ' + ' + d + ' = ' + ans + '.' };
-  }},
-  { depth: 'medium', gen: function() {
-    var start = _randInt(50, 100);
-    var d = _randInt(3, 12);
-    var seq = [start, start - d, start - 2*d, start - 3*d];
-    var ans = start - 4*d;
-    var opts = _buildOpts(ans, [start - 5*d, ans - 1, start - 3*d - 1]);
-    return { q: 'Find the next term: ' + seq.join(', ') + ', …', opts: opts, c: 0,
-             e: 'Common difference = −' + d + '. Next term = ' + seq[3] + ' − ' + d + ' = ' + ans + '.' };
-  }},
-  { depth: 'medium', gen: function() {
-    var start = _randInt(1, 5);
-    var d = _randInt(2, 7);
-    var n = _randInt(8, 15);
-    var ans = start + (n - 1) * d;
-    var opts = _buildOpts(ans, [start + n * d, ans + d, start * n]);
-    return { q: 'A sequence starts at ' + start + ' with common difference ' + d + '. What is the ' + n + 'th term?', opts: opts, c: 0,
-             e: 'nth term = ' + start + ' + (' + n + '−1)×' + d + ' = ' + start + ' + ' + ((n-1)*d) + ' = ' + ans + '.' };
-  }},
-  { depth: 'medium', gen: function() {
-    var a = _randInt(1, 4);
-    var r = _pickFrom([2, 3, 5, 10]);
-    var seq = [a, a*r, a*r*r, a*r*r*r];
-    var ans = a*r*r*r*r;
-    var opts = _buildOpts(ans, [seq[3] + r, seq[3] * 2, ans + r]);
-    return { q: 'Find the next term: ' + seq.join(', ') + ', …', opts: opts, c: 0,
-             e: 'Common ratio = ' + r + '. Next term = ' + seq[3] + ' × ' + r + ' = ' + ans + '.' };
-  }},
-  { depth: 'greater-depth', gen: function() {
-    var a = _randInt(1, 5);
-    var d = _randInt(2, 8);
-    var rule = d + 'n + ' + (a - d);
-    if (a - d === 0) rule = d + 'n';
-    if (a - d < 0) rule = d + 'n − ' + Math.abs(a - d);
-    var opts = [rule, d + 'n + ' + a, a + 'n + ' + d, (d + a) + 'n'];
-    return { q: 'Find the nth-term rule for: ' + a + ', ' + (a+d) + ', ' + (a+2*d) + ', ' + (a+3*d) + ', …', opts: opts, c: 0,
-             e: 'Common difference = ' + d + '. nth term = ' + d + 'n + (' + a + '−' + d + ') = ' + rule + '.' };
-  }},
-  { depth: 'greater-depth', gen: function() {
-    var d = _randInt(2, 6);
-    var c = _randInt(-3, 5);
-    var target = _randInt(30, 60);
-    var n = (target - c) / d;
-    while (n !== Math.floor(n) || n < 5) { target++; n = (target - c) / d; }
-    var opts = _buildOpts(n, [n + 1, n - 1, target / d]);
-    var rule = c >= 0 ? d + 'n + ' + c : d + 'n − ' + Math.abs(c);
-    return { q: 'The nth term is ' + rule + '. Which term has value ' + target + '?', opts: opts, c: 0,
-             e: target + ' = ' + rule + '. ' + d + 'n = ' + (target - c) + '. n = ' + n + '.' };
-  }},
-  { depth: 'greater-depth', gen: function() {
-    var a = _randInt(1, 3);
-    var r = _pickFrom([2, 3]);
-    var n = _randInt(5, 7);
-    var ans = a * Math.pow(r, n - 1);
-    var opts = _buildOpts(ans, [a * Math.pow(r, n), ans + r, a * r * n]);
-    return { q: 'A geometric sequence starts ' + a + ', ' + (a*r) + ', ' + (a*r*r) + ', … What is the ' + n + 'th term?', opts: opts, c: 0,
-             e: 'nth term = ' + a + ' × ' + r + '^(' + n + '−1) = ' + a + ' × ' + Math.pow(r, n-1) + ' = ' + ans + '.' };
-  }}
-];
-
-// ── mi-12-2: Solve One-Step Equations ────────────────────────────────────
-TEST_GENERATORS["mi-12-2"] = [
   { depth: 'medium', gen: function() {
     var x = _randInt(3, 20);
     var b = _randInt(2, 15);
@@ -4430,8 +4360,8 @@ TEST_GENERATORS["mi-12-2"] = [
   }}
 ];
 
-// ── mi-12-3: Solve Two-Step Equations ────────────────────────────────────
-TEST_GENERATORS["mi-12-3"] = [
+// ── mi-12-2: Solve Two-Step Equations ────────────────────────────────────
+TEST_GENERATORS["mi-12-2"] = [
   { depth: 'medium', gen: function() {
     var x = _randInt(2, 10);
     var a = _randInt(2, 7), b = _randInt(1, 10);
@@ -4492,70 +4422,6 @@ TEST_GENERATORS["mi-12-3"] = [
     var opts = _buildOpts(x, [total / a, total - b, x + a]);
     return { q: 'I think of a number, multiply by ' + a + ', add ' + b + ', and get ' + total + '. What was my number?', opts: opts, c: 0,
              e: a + 'n + ' + b + ' = ' + total + '. ' + a + 'n = ' + (total - b) + '. n = ' + x + '.' };
-  }}
-];
-
-// ── mi-12-4: Inequalities ────────────────────────────────────────────────
-TEST_GENERATORS["mi-12-4"] = [
-  { depth: 'medium', gen: function() {
-    var b = _randInt(3, 15);
-    var rhs = _randInt(b + 2, 25);
-    var ans = rhs - b;
-    var opts = ['x < ' + ans, 'x > ' + ans, 'x < ' + rhs, 'x > ' + b];
-    return { q: 'Solve: x + ' + b + ' < ' + rhs, opts: opts, c: 0,
-             e: 'x < ' + rhs + ' − ' + b + '. x < ' + ans + '.' };
-  }},
-  { depth: 'medium', gen: function() {
-    var a = _randInt(2, 7);
-    var rhs = a * _randInt(2, 8);
-    var ans = rhs / a;
-    var opts = ['x > ' + ans, 'x < ' + ans, 'x > ' + rhs, 'x > ' + a];
-    return { q: 'Solve: ' + a + 'x > ' + rhs, opts: opts, c: 0,
-             e: 'x > ' + rhs + ' ÷ ' + a + '. x > ' + ans + '.' };
-  }},
-  { depth: 'medium', gen: function() {
-    var b = _randInt(2, 10);
-    var rhs = _randInt(b + 3, 20);
-    var ans = rhs + b;
-    var opts = ['x ≥ ' + ans, 'x ≤ ' + ans, 'x ≥ ' + rhs, 'x ≥ ' + (ans - 1)];
-    return { q: 'Solve: x − ' + b + ' ≥ ' + rhs, opts: opts, c: 0,
-             e: 'x ≥ ' + rhs + ' + ' + b + '. x ≥ ' + ans + '.' };
-  }},
-  { depth: 'medium', gen: function() {
-    var a = _randInt(2, 5);
-    var rhs = a * _randInt(3, 9);
-    var ans = rhs / a;
-    var opts = ['x ≤ ' + ans, 'x ≥ ' + ans, 'x < ' + ans, 'x ≤ ' + rhs];
-    return { q: 'Solve: ' + a + 'x ≤ ' + rhs, opts: opts, c: 0,
-             e: 'x ≤ ' + rhs + ' ÷ ' + a + '. x ≤ ' + ans + '.' };
-  }},
-  { depth: 'greater-depth', gen: function() {
-    var a = _randInt(2, 5), b = _randInt(1, 8);
-    var rhs = a * _randInt(3, 8) + b;
-    var ans = (rhs - b) / a;
-    while (ans !== Math.floor(ans)) { rhs++; ans = (rhs - b) / a; }
-    var opts = ['x > ' + ans, 'x < ' + ans, 'x > ' + (rhs - b), 'x > ' + rhs];
-    return { q: 'Solve: ' + a + 'x + ' + b + ' > ' + rhs, opts: opts, c: 0,
-             e: a + 'x > ' + (rhs - b) + '. x > ' + ans + '.' };
-  }},
-  { depth: 'greater-depth', gen: function() {
-    var a = _randInt(2, 5), b = _randInt(1, 6);
-    var rhs = a * _randInt(2, 7) - b;
-    var ans = (rhs + b) / a;
-    while (ans !== Math.floor(ans)) { rhs++; ans = (rhs + b) / a; }
-    var opts = ['x ≤ ' + ans, 'x ≥ ' + ans, 'x < ' + ans, 'x ≤ ' + (rhs + b)];
-    return { q: 'Solve: ' + a + 'x − ' + b + ' ≤ ' + rhs, opts: opts, c: 0,
-             e: a + 'x ≤ ' + (rhs + b) + '. x ≤ ' + ans + '.' };
-  }},
-  { depth: 'greater-depth', gen: function() {
-    var low = _randInt(1, 5);
-    var high = low + _randInt(3, 8);
-    var b = _randInt(1, 6);
-    var ansLow = low + b;
-    var ansHigh = high + b;
-    var opts = [ansLow + ' ≤ x ≤ ' + ansHigh, ansLow + ' < x < ' + ansHigh, low + ' ≤ x ≤ ' + high, (ansLow - 1) + ' ≤ x ≤ ' + (ansHigh + 1)];
-    return { q: 'Solve: ' + low + ' ≤ x − ' + b + ' ≤ ' + high, opts: opts, c: 0,
-             e: 'Add ' + b + ' to all parts: ' + ansLow + ' ≤ x ≤ ' + ansHigh + '.' };
   }}
 ];
 
@@ -4621,7 +4487,8 @@ TEST_GENERATORS["mi-12-5"] = [
 ];
 
 // ══════════════════════════════════════════════════════════════════════════
-// STATISTICS & PROBABILITY (mt-13) — 7 subtopics
+// STATISTICS & DATA (mt-13) + PROBABILITY (mt-30)
+// mi-13-4, mi-13-7 and mi-13-9 belong to mt-30; the rest to mt-13.
 // ══════════════════════════════════════════════════════════════════════════
 
 // ── mi-13-1: Mean, Median, Mode & Range ──────────────────────────────────
@@ -7200,6 +7067,18 @@ TEST_GENERATORS["mi-22-2"] = [
     var opts = ['x > ' + ans, 'x < ' + ans, 'x ≥ ' + ans, 'x > ' + (rhs - b)];
     return { q: 'Solve: ' + a + 'x + ' + b + ' > ' + rhs, opts: opts, c: 0,
              e: a + 'x > ' + (rhs - b) + '. x > ' + ans + '.' };
+  }},
+  // Compound (double) inequalities — the one skill the retired mt-12 inequality
+  // island covered that mt-22 did not, so it moved here rather than being lost.
+  { depth: 'greater-depth', gen: function() {
+    var low = _randInt(1, 5);
+    var high = low + _randInt(3, 8);
+    var b = _randInt(1, 6);
+    var ansLow = low + b;
+    var ansHigh = high + b;
+    var opts = [ansLow + ' ≤ x ≤ ' + ansHigh, ansLow + ' < x < ' + ansHigh, low + ' ≤ x ≤ ' + high, (ansLow - 1) + ' ≤ x ≤ ' + (ansHigh + 1)];
+    return { q: 'Solve: ' + low + ' ≤ x − ' + b + ' ≤ ' + high, opts: opts, c: 0,
+             e: 'Add ' + b + ' to all parts: ' + ansLow + ' ≤ x ≤ ' + ansHigh + '.' };
   }}
 ];
 

@@ -35,10 +35,12 @@ const MATH_TOPICS = [
    description:"Convert fluently between percentages, fractions and decimals, find percentages of amounts, solve percentage increase and decrease problems, and use grid/bar models to estimate percents."},
   {id:"mt-11",name:"Algebra: Expressions",emoji:"📝",hasContent:true,
    description:"Write and evaluate variable expressions, collect like terms, apply the distributive property, factorise simple linear expressions, and use properties of addition and multiplication to write equivalent expressions."},
-  {id:"mt-12",name:"Algebra: Equations & Sequences",emoji:"🔄",hasContent:true,
-   description:"Identify arithmetic and geometric sequences, solve one-step and two-step equations, write and solve simple inequalities, distinguish expressions from equations, and model equations with algebra tiles."},
-  {id:"mt-13",name:"Statistics & Probability",emoji:"📊",hasContent:true,
-   description:"Calculate mean, median, mode and range, read and draw statistical graphs including pictograms and double bar/line graphs, understand sampling and bias, identify outliers and distributions, and find probability of simple, combined, mutually exclusive and overlapping events."},
+  {id:"mt-12",name:"Algebra: Equations",emoji:"⚖️",hasContent:true,
+   description:"Solve one-step and two-step equations using inverse operations, distinguish expressions from equations, and model and solve equations with algebra tiles. (Sequences live in Number Sequences; inequalities in Algebra: Inequalities.)"},
+  {id:"mt-13",name:"Statistics & Data",emoji:"📊",hasContent:true,
+   description:"Calculate mean, median, mode and range, read and draw statistical graphs including pictograms and double bar/line graphs, plot scatter graphs and lines of best fit, understand sampling and bias, and identify outliers and distributions."},
+  {id:"mt-30",name:"Probability",emoji:"🎲",hasContent:true,
+   description:"Find the probability of simple events on the 0–1 scale, work with complementary, mutually exclusive and overlapping events, make predictions from theoretical and experimental probability, and use Venn diagrams to sort outcomes."},
   // ── Coming soon ──────────────────────────────────────────────────────
   {id:"mt-14",name:"Order of Operations",emoji:"📋",hasContent:true,
    description:"Apply BODMAS/BIDMAS rules to evaluate numerical expressions involving whole numbers, decimals, fractions and integers."},
@@ -58,8 +60,8 @@ const MATH_TOPICS = [
    description:"Identify and continue arithmetic and geometric sequences, find the nth term, and write variable expressions for sequences."},
   {id:"mt-22",name:"Algebra: Inequalities",emoji:"↔️",hasContent:true,
    description:"Write, graph and solve one-step inequalities, interpret solutions on a number line, and apply inequalities to word problems."},
-  {id:"mt-23",name:"Two-Variable Equations",emoji:"📈",hasContent:true,
-   description:"Find values using two-variable equations, complete tables of values, and graph linear relationships on a coordinate plane."},
+  {id:"mt-23",name:"Two-Variable Equations & Formulae",emoji:"📈",hasContent:true,
+   description:"Substitute into formulae and function machines, find values using two-variable equations, rearrange to change the subject, complete tables of values, and graph linear relationships on a coordinate plane."},
   {id:"mt-24",name:"2D Shapes & Angles",emoji:"📐",hasContent:true,
    description:"Classify triangles and quadrilaterals, measure and estimate angles, find missing angles using parallel line rules, identify vertical and supplementary angles, name angles, understand lines/segments/rays, and explore parts of circles."},
   {id:"mt-25",name:"Symmetry & Transformations",emoji:"🔀",hasContent:true,
@@ -489,35 +491,25 @@ CURRICULUM.push(
    topics:["Commutative property","Associative property","Identity and zero properties","Writing equivalent expressions"]},
 
   // ══════════════════════════════════════════════════════════════════════
-  // TOPIC 12 — ALGEBRA: EQUATIONS & SEQUENCES (mt-12)
+  // TOPIC 12 — ALGEBRA: EQUATIONS (mt-12)
   // ══════════════════════════════════════════════════════════════════════
+  // Scope note: this topic is equations only. Sequences are taught in mt-21
+  // (Number Sequences) and inequalities in mt-22 (Algebra: Inequalities) —
+  // both of which have their own full lessons, flashcards, banks and
+  // generators, so duplicating them here served no purpose.
   {id:"mi-12-1",subject:"Mathematics",subjectId:"math",topicId:"mt-12",
-   name:"Number Sequences",emoji:"🔄",difficulty:1,estimatedHours:2,color:"#3b82f6",
-   description:"Identify, continue and generate arithmetic and geometric sequences, and find nth-term rules.",
-   learningOutcomes:["Identify arithmetic and geometric sequences","Find the nth term of an arithmetic sequence","Generate terms from a given nth-term rule"],
-   prerequisites:[],
-   topics:["Arithmetic sequences (common difference)","Geometric sequences (common ratio)","Finding the nth term","Term-to-term and position-to-term rules"]},
-
-  {id:"mi-12-2",subject:"Mathematics",subjectId:"math",topicId:"mt-12",
    name:"Solve One-Step Equations",emoji:"⚖️",difficulty:1,estimatedHours:2,color:"#3b82f6",
    description:"Solve one-step equations involving all four operations, including with negative numbers.",
    learningOutcomes:["Solve one-step equations by inverse operations","Check solutions by substitution","Write and solve equations from word problems"],
    prerequisites:["mi-11-1"],
    topics:["Addition and subtraction equations","Multiplication and division equations","Equations with negatives","Equation word problems"]},
 
-  {id:"mi-12-3",subject:"Mathematics",subjectId:"math",topicId:"mt-12",
+  {id:"mi-12-2",subject:"Mathematics",subjectId:"math",topicId:"mt-12",
    name:"Solve Two-Step Equations",emoji:"⚡",difficulty:2,estimatedHours:2,color:"#3b82f6",
    description:"Solve two-step equations using inverse operations in the correct order.",
    learningOutcomes:["Identify the correct order of inverse operations","Solve two-step equations","Set up and solve two-step equations from word problems"],
-   prerequisites:["mi-12-2"],
+   prerequisites:["mi-12-1"],
    topics:["Two inverse steps","Equations with brackets","Building and solving equations","Word problem equations"]},
-
-  {id:"mi-12-4",subject:"Mathematics",subjectId:"math",topicId:"mt-12",
-   name:"Inequalities",emoji:"↔️",difficulty:2,estimatedHours:2,color:"#3b82f6",
-   description:"Write, graph and solve one-step inequalities, representing solutions on a number line.",
-   learningOutcomes:["Write an inequality from a description or number line","Graph an inequality on a number line","Solve a one-step inequality"],
-   prerequisites:["mi-12-2"],
-   topics:["Inequality symbols (<, >, ≤, ≥)","Graphing inequalities","Solving one-step inequalities","Inequality word problems"]},
 
   {id:"mi-12-5",subject:"Mathematics",subjectId:"math",topicId:"mt-12",
    name:"Expressions vs Equations & Tiles",emoji:"🧱",difficulty:1,estimatedHours:2,color:"#3b82f6",
@@ -527,8 +519,12 @@ CURRICULUM.push(
    topics:["Expression vs equation","Modelling with algebra tiles","Solving with tiles","Word problem to equation matching"]},
 
   // ══════════════════════════════════════════════════════════════════════
-  // TOPIC 13 — STATISTICS & PROBABILITY (mt-13)
+  // TOPIC 13 — STATISTICS & DATA (mt-13)  +  TOPIC 30 — PROBABILITY (mt-30)
   // ══════════════════════════════════════════════════════════════════════
+  // These were one 9-island topic. The data-handling islands stay on mt-13;
+  // the three probability islands (mi-13-4, mi-13-7, mi-13-9) now belong to
+  // mt-30 and are marked below. Island IDs are deliberately unchanged so
+  // existing pupil progress carries over.
   {id:"mi-13-1",subject:"Mathematics",subjectId:"math",topicId:"mt-13",
    name:"Mean, Median, Mode & Range",emoji:"📊",difficulty:1,estimatedHours:2,color:"#3b82f6",
    description:"Calculate and interpret the four measures of central tendency and spread for a data set.",
@@ -550,7 +546,8 @@ CURRICULUM.push(
    prerequisites:["mi-13-1"],
    topics:["Stem-and-leaf structure","Reading and drawing line graphs","Trends and predictions","Back-to-back stem-and-leaf"]},
 
-  {id:"mi-13-4",subject:"Mathematics",subjectId:"math",topicId:"mt-13",
+  // → mt-30 Probability
+  {id:"mi-13-4",subject:"Mathematics",subjectId:"math",topicId:"mt-30",
    name:"Probability of Events",emoji:"🎲",difficulty:2,estimatedHours:2,color:"#3b82f6",
    description:"Find and compare probabilities of simple and combined events using fractions, decimals and percentages.",
    learningOutcomes:["Express probability as a fraction between 0 and 1","Find the probability of a complementary event","Use experimental data to estimate probability"],
@@ -568,10 +565,11 @@ CURRICULUM.push(
    name:"Sampling, Bias & Distributions",emoji:"🔍",difficulty:2,estimatedHours:2,color:"#3b82f6",
    description:"Identify statistical questions, understand populations vs samples, recognise biased samples, find outliers, and describe data distributions.",
    learningOutcomes:["Distinguish statistical from non-statistical questions","Explain the difference between a population and a sample","Identify sources of bias in sampling","Recognise outliers and describe the shape of a distribution"],
-   prerequisites:["mi-13-1","mi-13-4"],
+   prerequisites:["mi-13-1"],
    topics:["Statistical vs non-statistical questions","Populations and samples","Biased and unbiased samples","Outliers","Data distributions"]},
 
-  {id:"mi-13-7",subject:"Mathematics",subjectId:"math",topicId:"mt-13",
+  // → mt-30 Probability
+  {id:"mi-13-7",subject:"Mathematics",subjectId:"math",topicId:"mt-30",
    name:"Combined & Predicted Probability",emoji:"🎯",difficulty:3,estimatedHours:2,color:"#3b82f6",
    description:"Identify mutually exclusive and overlapping events, make predictions using theoretical and experimental probability.",
    learningOutcomes:["Distinguish mutually exclusive from overlapping events","Calculate P(A or B) for mutually exclusive events","Use theoretical probability to make predictions","Use experimental probability to estimate outcomes"],
@@ -585,7 +583,8 @@ CURRICULUM.push(
    prerequisites:["mi-13-1"],
    topics:["Plotting scatter graphs","Positive and negative correlation","No correlation","Lines of best fit"]},
 
-  {id:"mi-13-9",subject:"Mathematics",subjectId:"math",topicId:"mt-13",
+  // → mt-30 Probability
+  {id:"mi-13-9",subject:"Mathematics",subjectId:"math",topicId:"mt-30",
    name:"Venn Diagrams for Probability",emoji:"⭕",difficulty:2,estimatedHours:2,color:"#3b82f6",
    description:"Draw and interpret Venn diagrams to sort data into sets and calculate probabilities.",
    learningOutcomes:["Draw and label a Venn diagram with two sets","List elements in unions, intersections and complements","Use Venn diagrams to calculate probabilities"],
@@ -803,13 +802,15 @@ CURRICULUM.push(
    prerequisites:["mi-22-2"],topics:["Writing inequalities from words","Solving word problem inequalities","Interpreting solutions","Real-life inequality contexts"]},
 
   // ══════════════════════════════════════════════════════════════════════
-  // TOPIC 23 — TWO-VARIABLE EQUATIONS (mt-23) — coming soon
+  // TOPIC 23 — TWO-VARIABLE EQUATIONS & FORMULAE (mt-23)
+  // mi-23-1 also owns the formulae / function-machine content that used to sit
+  // (mislabelled as "Inequalities") on the retired mt-12 island.
   // ══════════════════════════════════════════════════════════════════════
   {id:"mi-23-1",subject:"Mathematics",subjectId:"math",topicId:"mt-23",
-   name:"Two-Variable Equations",emoji:"📈",difficulty:2,estimatedHours:2,color:"#3b82f6",
-   description:"Understand two-variable equations and check whether a given pair (x, y) is a solution.",
-   learningOutcomes:["Determine if (x, y) satisfies an equation","Find values using two-variable equations","Identify independent and dependent variables"],
-   prerequisites:["mi-12-2"],topics:["Substituting (x, y) pairs","Finding missing values","Independent/dependent variables","Two-variable word problems"]},
+   name:"Formulae & Two-Variable Equations",emoji:"📈",difficulty:2,estimatedHours:2,color:"#3b82f6",
+   description:"Substitute values into formulae and function machines, check whether a pair (x, y) solves a two-variable equation, and rearrange a simple formula to change the subject.",
+   learningOutcomes:["Substitute values into a formula such as F = ma or A = πr²","Determine if (x, y) satisfies an equation and find missing values","Rearrange a simple formula to make a given letter the subject","Identify independent and dependent variables"],
+   prerequisites:["mi-12-2"],topics:["Substituting into formulae","Function machines","Rearranging to change the subject","Substituting (x, y) pairs","Independent/dependent variables","Two-variable word problems"]},
 
   {id:"mi-23-2",subject:"Mathematics",subjectId:"math",topicId:"mt-23",
    name:"Tables & Graphs of Linear Equations",emoji:"📊",difficulty:2,estimatedHours:2,color:"#3b82f6",

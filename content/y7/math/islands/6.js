@@ -21,13 +21,16 @@ FLASHCARDS.push(
   { islandId:'mi-22-3', front:'Solve: 3x + 4 ≤ 19. Interpret the solution in context.', back:'3x ≤ 15 → x ≤ 5. Any value of x up to and including 5 satisfies the condition.' }
 );
 
-// ─── TOPIC 23: TWO-VARIABLE EQUATIONS ────────────────────────────────────────
+// ─── TOPIC 23: TWO-VARIABLE EQUATIONS & FORMULAE ─────────────────────────────
 
 FLASHCARDS.push(
-  // mi-23-1: Two-Variable Equations
+  // mi-23-1: Formulae & Two-Variable Equations
   { islandId:'mi-23-1', front:'Is (2, 5) a solution to y = 2x + 1?', back:'Substitute: y = 2(2)+1 = 5. The result equals y = 5. Yes, (2, 5) is a solution.' },
   { islandId:'mi-23-1', front:'What does "independent variable" mean in a two-variable equation?', back:'The independent variable (usually x) is the input you choose. The dependent variable (y) depends on x.' },
   { islandId:'mi-23-1', front:'For y = 3x − 2, find y when x = −1.', back:'y = 3(−1)−2 = −3−2 = −5. So the solution pair is (−1, −5).' },
+  { islandId:'mi-23-1', front:'Using F=ma, find F when m=5 and a=3', back:'F = 5×3 = 15 (Newtons)' },
+  { islandId:'mi-23-1', front:'Rearrange y = 3x − 2 to make x the subject', back:'y+2 = 3x → x = (y+2)/3' },
+  { islandId:'mi-23-1', front:'A function machine: input → ×3 → −5 → output. Input=4, find output.', back:'4×3=12. 12−5=7. Output = 7.' },
 
   // mi-23-2: Tables & Graphs of Linear Equations
   { islandId:'mi-23-2', front:'Complete the table for y = 2x + 1 at x = 0, 1, 2, 3.', back:'x=0: y=1. x=1: y=3. x=2: y=5. x=3: y=7. Pairs: (0,1),(1,3),(2,5),(3,7).' },
@@ -306,7 +309,20 @@ Object.assign(QUESTIONS, {
             opts: opts, c: 0,
             e: 'y = ' + c + ' − ' + m + '(' + x + ') = ' + c + ' + ' + (-m * x) + ' = ' + ans + '.'
         };
-    }}
+    }},
+    // ── Formulae & function machines (re-homed from the retired mt-12 island;
+    //    substituting into a formula is the same skill as substituting into a
+    //    two-variable equation, and rearranging extends "find x given y"). ──
+    { question:'Using F = ma, find F when m = 8 and a = 4.', options:['12','24','32','2'], answer:2, explanation:'F = 8×4 = 32.' },
+    { question:'A function machine: ×2 then +3. Input = 5. Find the output.', options:['10','11','13','16'], answer:2, explanation:'5×2=10. 10+3=13.' },
+    { question:'Rearrange to make r the subject: P = 4r', options:['r = 4P','r = P/4','r = P+4','r = P−4'], answer:1, explanation:'Divide both sides by 4: r = P/4.' },
+    { question:'The formula for speed is v = d/t. Rearrange for t.', options:['t = v/d','t = dv','t = d/v','t = d−v'], answer:2, explanation:'t = d/v (multiply both sides by t then divide by v).' },
+    { question:'A function machine output is 11, rule is ×3 −1. What was the input?', options:['3','4','5','6'], answer:1, explanation:'Reverse: 11+1=12. 12÷3=4.' },
+    { question:'Area of a circle: A = πr². Find A when r = 7. (Use π ≈ 3.14)', options:['21.98','43.96','153.86','49'], answer:2, explanation:'A = πr² = 3.14 × 7² = 3.14 × 49 = 153.86.' },
+    { question:'Make x the subject: y = 5x + 3', options:['x = (y−3)/5','x = y/5+3','x = 5y−3','x = (y+3)/5'], answer:0, explanation:'y−3=5x → x=(y−3)/5.' },
+    { question:'Perimeter of a rectangle: P = 2(l + w). If P=36 and l=11, find w.', options:['w=7','w=8','w=9','w=14'], answer:0, explanation:'36=2(11+w) → 18=11+w → w=7.' },
+    { question:'Using E = ½mv², find E when m=10 and v=6.', options:['30','60','180','360'], answer:2, explanation:'E = ½×10×36 = 5×36 = 180.' },
+    { question:'A machine converts Celsius to Fahrenheit: F = 9C/5 + 32. Body temperature is 37°C. What is this in °F?', options:['95°F','98.6°F','100°F','104°F'], answer:1, explanation:'F = 9(37)/5 + 32 = 333/5 + 32 = 66.6+32 = 98.6°F.' }
   ],
 
   // ── mi-23-2: Tables & Graphs of Linear Equations ──────────────────────────

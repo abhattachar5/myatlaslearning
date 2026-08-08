@@ -110,8 +110,8 @@
   reuse('m8i-15-4', ['mi-11-5']);                       // properties / equivalent expressions
 
   // ── Topic 16 — Solving Equations ─────────────────────────────────────────
-  reuse('m8i-16-1', ['mi-12-2']);                       // one-step equations
-  reuse('m8i-16-2', ['mi-12-3']);                       // two-step equations
+  reuse('m8i-16-1', ['mi-12-1']);                       // one-step equations
+  reuse('m8i-16-2', ['mi-12-2']);                       // two-step equations
   // m8i-16-3 (like terms/brackets), m8i-16-4 (multi-step) → static
 
   // ── Topic 17 — Inequalities ──────────────────────────────────────────────

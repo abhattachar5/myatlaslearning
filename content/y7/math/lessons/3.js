@@ -516,41 +516,8 @@ Object.assign(LESSONS, {
   n = 56 ÷ 8 = <strong>7</strong> (using the multiplicative inverse)
 </div>`,
 
-// ── mi-12-1: Number Sequences ────────────────────────────────────────────────
+// ── mi-12-1: Solve One-Step Equations ────────────────────────────────────────
 'mi-12-1': `
-<h2>Number Sequences</h2>
-
-<h3>Arithmetic Sequences</h3>
-<p>A sequence with a constant <strong>common difference</strong> between consecutive terms — the same amount is added (or subtracted) each time.</p>
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:1em 0;font-size:0.9em">
-  <div style="background:#e8f5e9;padding:8px;border-radius:8px">5, 9, 13, 17…<br><strong>d = +4</strong></div>
-  <div style="background:#e3f2fd;padding:8px;border-radius:8px">−2, 1, 4, 7…<br><strong>d = +3</strong></div>
-  <div style="background:#fff3e0;padding:8px;border-radius:8px">20, 15, 10, 5…<br><strong>d = −5</strong></div>
-</div>
-
-<h3>Finding the nth Term</h3>
-<ol>
-  <li>Find the common difference <em>d</em>.</li>
-  <li>Write <em>dn</em> — this is the "skeleton" formula.</li>
-  <li>Substitute n=1 and compare to the first term to find the constant c.</li>
-  <li>nth term = <em>dn + c</em></li>
-</ol>
-<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
-  <strong>Sequence: 7, 10, 13, 16…</strong> (d = 3)<br>
-  Skeleton: 3n. At n=1: 3(1)=3, but first term is 7. So c = 7 − 3 = 4.<br>
-  nth term = <strong>3n + 4</strong>. &nbsp; Check n=3: 9+4=13 ✓
-</div>
-
-<h3>Is a Value in the Sequence?</h3>
-<div style="background:#fff3e0;padding:1em;border-radius:8px;margin:1em 0">
-  Is 55 in the sequence with nth term 4n+3?<br>
-  4n + 3 = 55 → 4n = 52 → n = 13 (whole number → <strong>Yes, 55 is the 13th term</strong>).<br><br>
-  Is 60 in the same sequence?<br>
-  4n + 3 = 60 → 4n = 57 → n = 14.25 (not whole → <strong>No</strong>).
-</div>`,
-
-// ── mi-12-2: Solve One-Step Equations ────────────────────────────────────────
-'mi-12-2': `
 <h2>Solve One-Step Equations</h2>
 <p>An equation is balanced — like a set of scales. Whatever operation you apply to one side, you must apply to the other to keep the balance.</p>
 
@@ -579,8 +546,8 @@ Object.assign(LESSONS, {
   Check x = 8 in x + 7 = 15: &nbsp; 8 + 7 = 15 ✓
 </div>`,
 
-// ── mi-12-3: Solve Two-Step Equations ────────────────────────────────────────
-'mi-12-3': `
+// ── mi-12-2: Solve Two-Step Equations ────────────────────────────────────────
+'mi-12-2': `
 <h2>Solve Two-Step Equations</h2>
 <p>Undo operations in <strong>reverse BIDMAS order</strong>: deal with + and − first, then × and ÷. Think of "undoing" what was done to x, in reverse order.</p>
 
@@ -614,44 +581,6 @@ Object.assign(LESSONS, {
   Subtract 3x: 2x + 2 = 10<br>
   Subtract 2: 2x = 8 → <strong>x = 4</strong><br>
   Check: 5(4)+2 = 22, 3(4)+10 = 22 ✓
-</div>`,
-
-// ── mi-12-4: Inequalities ─────────────────────────────────────────────────────
-'mi-12-4': `
-<h2>Inequalities</h2>
-<p>An inequality says that two expressions are not equal — one is greater or smaller than the other. Unlike equations, the solution is usually a range of values, not a single answer.</p>
-
-<h3>Inequality Symbols</h3>
-<table style="width:100%;border-collapse:collapse;margin:1em 0;font-size:0.9em">
-  <tr style="background:#e8f5e9">
-    <th style="padding:8px;border:1px solid #ccc">Symbol</th>
-    <th style="padding:8px;border:1px solid #ccc">Meaning</th>
-    <th style="padding:8px;border:1px solid #ccc">Includes boundary?</th>
-    <th style="padding:8px;border:1px solid #ccc">Example</th>
-  </tr>
-  <tr><td style="padding:8px;border:1px solid #ccc;text-align:center;font-size:1.2em"><strong>&gt;</strong></td><td style="padding:8px;border:1px solid #ccc">Greater than</td><td style="padding:8px;border:1px solid #ccc;color:#c62828">No</td><td style="padding:8px;border:1px solid #ccc">x &gt; 3 (x is more than 3)</td></tr>
-  <tr style="background:#f9f9f9"><td style="padding:8px;border:1px solid #ccc;text-align:center;font-size:1.2em"><strong>&lt;</strong></td><td style="padding:8px;border:1px solid #ccc">Less than</td><td style="padding:8px;border:1px solid #ccc;color:#c62828">No</td><td style="padding:8px;border:1px solid #ccc">x &lt; 7</td></tr>
-  <tr><td style="padding:8px;border:1px solid #ccc;text-align:center;font-size:1.2em"><strong>≥</strong></td><td style="padding:8px;border:1px solid #ccc">Greater than or equal to</td><td style="padding:8px;border:1px solid #ccc;color:#2e7d32">Yes</td><td style="padding:8px;border:1px solid #ccc">x ≥ 5</td></tr>
-  <tr style="background:#f9f9f9"><td style="padding:8px;border:1px solid #ccc;text-align:center;font-size:1.2em"><strong>≤</strong></td><td style="padding:8px;border:1px solid #ccc">Less than or equal to</td><td style="padding:8px;border:1px solid #ccc;color:#2e7d32">Yes</td><td style="padding:8px;border:1px solid #ccc">x ≤ 10</td></tr>
-</table>
-
-<h3>Solving Inequalities</h3>
-<p>Solve exactly like equations — with one critical exception:</p>
-<div style="background:#fce4ec;padding:1em;border-radius:8px;margin:1em 0;border-left:4px solid #c62828">
-  <strong>⚠️ When you multiply or divide both sides by a negative number, FLIP the inequality sign.</strong>
-</div>
-
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:1em 0">
-  <div style="background:#f1f8e9;padding:10px;border-radius:8px">
-    <strong>3x + 1 &gt; 10</strong><br>
-    3x &gt; 9<br>
-    <strong>x &gt; 3</strong> (no flip — ÷ positive)
-  </div>
-  <div style="background:#f1f8e9;padding:10px;border-radius:8px">
-    <strong>−2x ≤ 8</strong><br>
-    ÷ −2 — sign flips!<br>
-    <strong>x ≥ −4</strong>
-  </div>
 </div>`,
 
 // ── mi-12-5: Expressions vs Equations & Tiles ───────────────────────────────

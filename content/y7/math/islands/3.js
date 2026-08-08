@@ -89,7 +89,7 @@ FLASHCARDS.push(
   { islandId:'mi-11-5', front:'What are the identity and zero properties?', back:'Additive identity: a + 0 = a (adding 0 changes nothing)\nMultiplicative identity: a × 1 = a (multiplying by 1 changes nothing)\nZero property: a × 0 = 0 (anything times 0 is 0)' }
 );
 
-// ─── TOPIC 12: ALGEBRA EQUATIONS & SEQUENCES ────────────────────────────────
+// ─── TOPIC 12: ALGEBRA — EQUATIONS ──────────────────────────────────────────
 
 FLASHCARDS.push(
   // mi-12-1: Solving One-Step Equations
@@ -102,15 +102,8 @@ FLASHCARDS.push(
   { islandId:'mi-12-2', front:'Solve: (x/2) + 3 = 9', back:'x/2 = 6, x = 12' },
   { islandId:'mi-12-2', front:'Why do we do the same operation to both sides of an equation?', back:'To keep the equation balanced — like a set of scales.' },
 
-  // mi-12-3: Number Sequences
-  { islandId:'mi-12-3', front:'What is the nth term of the sequence 3, 5, 7, 9, …?', back:'Common difference = 2. nth term = 2n + 1.' },
-  { islandId:'mi-12-3', front:'Find the 10th term of: 4n − 3', back:'4(10)−3 = 37' },
-  { islandId:'mi-12-3', front:'Is 50 a term in the sequence 3n + 2?', back:'3n+2=50 → 3n=48 → n=16. Yes, it is the 16th term.' },
-
-  // mi-12-4: Formulae & Function Machines
-  { islandId:'mi-12-4', front:'Using F=ma, find F when m=5 and a=3', back:'F = 5×3 = 15 (Newtons)' },
-  { islandId:'mi-12-4', front:'Rearrange y = 3x − 2 to make x the subject', back:'y+2 = 3x → x = (y+2)/3' },
-  { islandId:'mi-12-4', front:'A function machine: input → ×3 → −5 → output. Input=4, find output.', back:'4×3=12. 12−5=7. Output = 7.' },
+  // (Sequence cards live with mt-21 Number Sequences; the formulae/function-machine
+  //  cards moved to mi-23-1 in islands/6.js alongside the rest of that island.)
 
   // mi-12-5: Expressions vs Equations & Tiles
   { islandId:'mi-12-5', front:'What is the difference between an expression and an equation?', back:'Expression: a mathematical phrase with numbers, variables, and operations (no equals sign).\nExample: 3x + 5\n\nEquation: a statement that two expressions are equal (HAS an equals sign).\nExample: 3x + 5 = 20' },
@@ -1079,62 +1072,8 @@ Object.assign(QUESTIONS, {
     }}
   ],
 
-  // ── mi-12-3: Number Sequences ──────────────────────────────────────────────
-  'mi-12-3': [
-    { gen: function() {
-        var start = randInt(2,10), diff = pickFrom([3,4,5,6,7,8]);
-        var terms = [start, start+diff, start+2*diff, start+3*diff];
-        var next = start + 4*diff;
-        var opts = buildOpts(next, [next+diff, next-diff, next+1]);
-        return { q: 'Find the next term: ' + terms.join(', ') + ', ___',
-                 opts: opts, c: 0,
-                 e: 'Common difference: +'+diff+'. Next: '+(start+3*diff)+' + '+diff+' = '+next+'.' };
-    }},
-    { gen: function() {
-        var a = randInt(2,6), b = randInt(1,8), n = randInt(3,8);
-        var ans = a*n + b;
-        var opts = buildOpts(ans, [a*n, a*(n+1)+b, a*n+b+1]);
-        return { q: 'The nth term of a sequence is '+a+'n + '+b+'. What is the '+n+'th term?',
-                 opts: opts, c: 0,
-                 e: a+'×'+n+' + '+b+' = '+a*n+' + '+b+' = '+ans+'.' };
-    }},
-    { question:'Find the nth term of: 5, 8, 11, 14, …', options:['3n+2','3n+5','2n+3','n+4'], answer:0, explanation:'First term=5, d=3. nth term = 3n+(5−3) = 3n+2.' },
-    { question:'Is 100 in the sequence 4n + 1?', options:['Yes, 25th term','Yes, 33rd term','No','Yes, 100th term'], answer:2, explanation:'4n+1=100 → 4n=99 → n=24.75. Not a whole number, so 100 is NOT in the sequence.' },
-    { gen: function() {
-        var a = randInt(2,6), b = randInt(1,8), n = randInt(3,8);
-        var ans = a*n + b;
-        var opts = buildOpts(ans, [a*n, a*(n+1)+b, a*n+b+1]);
-        return { q: 'The nth term of a sequence is '+a+'n + '+b+'. What is the '+n+'th term?',
-                 opts: opts, c: 0,
-                 e: a+'×'+n+' + '+b+' = '+a*n+' + '+b+' = '+ans+'.' };
-    }},
-    { question:'The sequence 2, 5, 10, 17, 26… What is the pattern?', options:['Add 3 each time','Square numbers + 1','n² +1','Odd numbers'], answer:2, explanation:'1²+1=2, 2²+1=5, 3²+1=10, 4²+1=17. Pattern: n²+1.' },
-    { gen: function() {
-        var a = randInt(2,6), b = randInt(1,8), n = randInt(3,8);
-        var ans = a*n + b;
-        var opts = buildOpts(ans, [a*n, a*(n+1)+b, a*n+b+1]);
-        return { q: 'The nth term of a sequence is '+a+'n + '+b+'. What is the '+n+'th term?',
-                 opts: opts, c: 0,
-                 e: a+'×'+n+' + '+b+' = '+a*n+' + '+b+' = '+ans+'.' };
-    }},
-    { question:'A sequence starts 3, 9, 27, 81… What is the rule?', options:['Add 6','Multiply by 2','Multiply by 3','Add 18'], answer:2, explanation:'Each term is multiplied by 3. Geometric sequence.' },
-    { question:'The nth term of a sequence is 100 − 7n. Which term is the first negative term?', options:['Term 14','Term 15','Term 16','Term 13'], answer:1, explanation:'100−7n<0 → n>100/7≈14.3. First whole number is n=15. Check: term 14=100−98=2 (positive), term 15=100−105=−5 (negative). First negative term is Term 15.' },
-    { question:'Two sequences: A: 3n+1 and B: 4n−2. For what value of n are both sequences equal?', options:['n=1','n=2','n=3','n=4'], answer:2, explanation:'3n+1=4n−2 → n=3. Check: A=10, B=10 ✓.' }
-  ],
-
-  // ── mi-12-4: Formulae & Function Machines ──────────────────────────────────
-  'mi-12-4': [
-    { question:'Using F = ma, find F when m = 8 and a = 4.', options:['12','24','32','2'], answer:2, explanation:'F = 8×4 = 32.' },
-    { question:'A function machine: ×2 then +3. Input = 5. Find the output.', options:['10','11','13','16'], answer:2, explanation:'5×2=10. 10+3=13.' },
-    { question:'Rearrange to make r the subject: P = 4r', options:['r = 4P','r = P/4','r = P+4','r = P−4'], answer:1, explanation:'Divide both sides by 4: r = P/4.' },
-    { question:'The formula for speed is v = d/t. Rearrange for t.', options:['t = v/d','t = dv','t = d/v','t = d−v'], answer:2, explanation:'t = d/v (multiply both sides by t then divide by v).' },
-    { question:'A function machine output is 11, rule is ×3 −1. What was the input?', options:['3','4','5','6'], answer:1, explanation:'Reverse: 11+1=12. 12÷3=4.' },
-    { question:'Area of a circle: A = πr². Find A when r = 7. (Use π ≈ 3.14)', options:['21.98','43.96','153.86','49'], answer:2, explanation:'A = πr² = 3.14 × 7² = 3.14 × 49 = 153.86.' },
-    { question:'Make x the subject: y = 5x + 3', options:['x = (y−3)/5','x = y/5+3','x = 5y−3','x = (y+3)/5'], answer:0, explanation:'y−3=5x → x=(y−3)/5.' },
-    { question:'Perimeter of a rectangle: P = 2(l + w). If P=36 and l=11, find w.', options:['w=7','w=8','w=9','w=14'], answer:0, explanation:'36=2(11+w) → 18=11+w → w=7.' },
-    { question:'Using E = ½mv², find E when m=10 and v=6.', options:['30','60','180','360'], answer:2, explanation:'E = ½×10×36 = 5×36 = 180.' },
-    { question:'A machine converts Celsius to Fahrenheit: F = 9C/5 + 32. Body temperature is 37°C. What is this in °F?', options:['95°F','98.6°F','100°F','104°F'], answer:1, explanation:'F = 9(37)/5 + 32 = 333/5 + 32 = 66.6+32 = 98.6°F.' }
-  ],
+  // (mi-12-3 sequences bank retired — mt-21 Number Sequences owns that skill.
+  //  mi-12-4 formulae bank moved to mi-23-1 in islands/6.js.)
 
   // ── mi-12-5: Expressions vs Equations & Tiles ─────────────────────────────
   'mi-12-5': [
