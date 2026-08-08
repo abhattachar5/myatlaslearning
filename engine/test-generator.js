@@ -1292,7 +1292,7 @@ TEST_GENERATORS["mi-04-1"] = [
   { depth: 'greater-depth', gen: function() {
     var start = _randInt(30, 70);
     var primes = [];
-    for (var i = start; i < start + 20 && primes.length < 3; i++) {
+    for (var i = start; i < start + 20; i++) {
       var isPrime = i > 1;
       for (var d = 2; d * d <= i; d++) { if (i % d === 0) { isPrime = false; break; } }
       if (isPrime) primes.push(i);
