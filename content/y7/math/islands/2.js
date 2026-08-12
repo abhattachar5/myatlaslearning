@@ -1274,7 +1274,7 @@ Object.assign(QUESTIONS, {
              opts: opts, c: 0,
              e: w+' '+fn+'/'+fd+'='+imp+'/'+fd+'. ('+imp+'×'+n2+')/('+fd+'×'+d2+')='+imp*n2+'/'+fd*d2+(imp*n2!==rn*g?'='+ans:'')+'. Answer: '+ans+'.' };
   }},
-  {q:"A garden is 3/4 km long and 2/5 km wide. What is the area?",opts:["3/10 km²","6/9 km²","5/9 km²","6/20 km²"],c:0,
+  {q:"A garden is 3/4 km long and 2/5 km wide. What is the area?",opts:["3/10 km²","6/9 km²","5/9 km²","3/9 km²"],c:0,
    e:"Area = 3/4 × 2/5 = 6/20 = 3/10 km²."},
   { gen: function() {
     function gcd(a,b){return b?gcd(b,a%b):a;}
