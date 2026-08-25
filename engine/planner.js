@@ -254,10 +254,24 @@
     return Math.max(1, Math.floor(diff / (7 * 24 * 60 * 60 * 1000)) + 1);
   }
 
+  // A student who finishes a week's tasks before its 7 calendar days are up
+  // should not be stuck staring at a "done" week until the clock catches up —
+  // so once the calendar-derived week is fully complete, keep advancing to
+  // the next week (and the next, if they raced through several at once).
+  // Recomputed fresh every call from persisted island/test/homework progress,
+  // so it stays correct across reloads without needing its own stored pointer.
   function getCurrentWeekNumber() {
     var plan = getStudyPlan();
     if (!plan) return 1;
-    return getWeekNumber(new Date(), plan.startDate);
+    var totalWeeks = getTotalStudyWeeks(plan);
+    var week = getWeekNumber(new Date(), plan.startDate);
+    if (week > totalWeeks) week = totalWeeks;
+    while (week < totalWeeks) {
+      var checklist = getWeekChecklist(week);
+      if (!checklist || !checklist.allDone) break;
+      week++;
+    }
+    return week;
   }
 
   // ── Total study weeks from start to target ─────────────────────────────────

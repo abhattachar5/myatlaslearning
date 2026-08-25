@@ -204,10 +204,24 @@
       </div>
     </div>
 
+    <!-- ── Week Complete Congratulations Modal ────────────────────────────── -->
+    <div class="modal-overlay" id="week-complete-modal" role="dialog" aria-modal="true" aria-labelledby="week-complete-title" onclick="closeWeekCompleteModal(event)">
+      <div class="modal week-complete-modal-inner">
+        <button class="modal-close" onclick="closeWeekCompleteModal()" aria-label="Close">✕</button>
+        <div class="week-complete-icon">🎉</div>
+        <h2 class="week-complete-title" id="week-complete-title">Week <span id="week-complete-num"></span> complete!</h2>
+        <p class="week-complete-desc" id="week-complete-desc">You finished every task this week — nice work!</p>
+        <button class="btn btn-primary week-complete-go" onclick="closeWeekCompleteModal()">
+          Onward to Week <span id="week-complete-next"></span> →
+        </button>
+      </div>
+    </div>
+
     <!-- ── My Goals Card (shown when plan is active) ────────────────────── -->
     <div class="week-plan" id="week-plan" style="display:none">
       <div class="goals-header">
         <span class="goals-label">My Goals</span>
+        <span class="goals-week" id="goals-week"></span>
         <div class="goals-segments" id="goals-segments"></div>
         <span class="goals-count" id="week-count">0 of 0 tasks</span>
         <button class="goals-toggle" id="goals-toggle" onclick="toggleWeekPlanCollapse()">
@@ -330,6 +344,7 @@ function getYearGeographyTopics() { return Atlas.yearTopics('geography', getUser
   renderSidebar();
   renderHeroBanner();
   renderWeekPlan();
+  checkWeekAdvance();
   renderStats();
   renderFilters();
   renderGrid();
@@ -465,6 +480,42 @@ function setWelcome() {
 function closePlanSetupModal(e) {
   if (e && e.target !== e.currentTarget) return;
   document.getElementById('plan-setup-modal').classList.remove('show');
+}
+
+// ── Week-complete congratulations ─────────────────────────────────────────
+// getCurrentWeekNumber() already advances past any fully-completed week (see
+// engine/planner.js), including a student racing ahead of the calendar. This
+// just detects that a NEW week has come into view since the last time this
+// device saw one, and celebrates the week(s) that got finished to get there.
+// Keyed by plan start date so starting a new plan doesn't replay old state.
+function checkWeekAdvance() {
+  const plan = StudyPlanner.getStudyPlan();
+  if (!plan) return;
+
+  let seen = null;
+  try { seen = JSON.parse(localStorage.getItem('sm_week_last_seen') || 'null'); } catch (e) {}
+  if (!seen || seen.planStart !== plan.startDate) seen = { planStart: plan.startDate, week: 1 };
+
+  const newWeek = StudyPlanner.getCurrentWeekNumber();
+  if (newWeek > seen.week) {
+    const completedWeek = newWeek - 1;
+    const finished = StudyPlanner.getWeekChecklist(completedWeek);
+    if (finished && finished.allDone) {
+      showWeekCompleteModal(completedWeek, newWeek);
+    }
+  }
+  localStorage.setItem('sm_week_last_seen', JSON.stringify({ planStart: plan.startDate, week: newWeek }));
+}
+
+function showWeekCompleteModal(completedWeek, nextWeek) {
+  document.getElementById('week-complete-num').textContent = completedWeek;
+  document.getElementById('week-complete-next').textContent = nextWeek;
+  document.getElementById('week-complete-modal').classList.add('show');
+}
+
+function closeWeekCompleteModal(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById('week-complete-modal').classList.remove('show');
 }
 
 function renderWeekPlan() {
@@ -628,6 +679,9 @@ function renderThisWeekTab() {
   const weekNum = StudyPlanner.getCurrentWeekNumber();
   const data = StudyPlanner.getWeekChecklist(weekNum);
   if (!data) return;
+
+  const weekBadge = document.getElementById('goals-week');
+  if (weekBadge) weekBadge.textContent = `Week ${weekNum} of ${data.totalWeeks}`;
 
   // Parent-assigned homework & exams are first-class weekly goals: each one adds
   // to the task count and progress bar, and the week only reads "All done" once
