@@ -6,7 +6,19 @@ const CORS_HEADERS = {
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
-const SYSTEM_PROMPT = `You are a fair, encouraging GCSE English examiner marking a UK Year 8 student's WRITTEN reading-comprehension answers.
+// UK secondary year groups, in the ages a marker should calibrate expectations to.
+const YEAR_AGES = {
+  "Year 7": "11–12",
+  "Year 8": "12–13",
+  "Year 9": "13–14",
+  "Year 10": "14–15",
+  "Year 11": "15–16",
+};
+
+function buildSystemPrompt(yearGroup) {
+  const year = YEAR_AGES[yearGroup] ? yearGroup : "Year 8"; // unknown/missing → safe default
+  const age = YEAR_AGES[year];
+  return `You are a fair, encouraging GCSE English examiner marking a UK ${year} student's WRITTEN reading-comprehension answers.
 
 You will receive:
 - The PASSAGE the questions are based on.
@@ -16,7 +28,7 @@ For EACH question, award a whole-number mark from 0 to its maximum, using the ma
 - Reward what the student HAS done; never penalise for missing content beyond the max.
 - Short retrieval questions: award a mark per valid point, capped at the max.
 - Language/structure/evaluation questions: use a levels-based judgement — reference to the text + identification of method + explanation of effect earns higher marks; vague or unsupported answers earn lower marks. A blank or off-topic answer scores 0.
-- Be realistic for a 12–13 year old. Be generous within reason but accurate.
+- Be realistic for a ${age} year old in ${year}. Be generous within reason but accurate.
 
 For each question give:
 - "marks": the whole-number mark awarded (0..max)
@@ -31,6 +43,7 @@ Respond ONLY with valid JSON in EXACTLY this shape (results array in the SAME OR
   ],
   "overall": "<2-3 sentence encouraging summary with one key next step>"
 }`;
+}
 
 export default async (req, context) => {
   if (req.method === "OPTIONS") {
@@ -57,7 +70,7 @@ export default async (req, context) => {
     return Response.json({ error: "Invalid JSON" }, { status: 400, headers: CORS_HEADERS });
   }
 
-  const { passageTitle, passageText, items } = body;
+  const { passageTitle, passageText, items, yearGroup } = body;
   if (!passageText || !Array.isArray(items) || items.length === 0) {
     return Response.json({ error: "Missing passage or items" }, { status: 400, headers: CORS_HEADERS });
   }
@@ -91,7 +104,7 @@ export default async (req, context) => {
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
         max_tokens: 2048,
-        system: SYSTEM_PROMPT,
+        system: buildSystemPrompt(yearGroup),
         messages: [{ role: "user", content: userMessage }],
       }),
     });

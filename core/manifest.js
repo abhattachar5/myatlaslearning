@@ -34,6 +34,9 @@ var MANIFEST = (function () {
       ], nFiles('content/y7/math/islands/', 1, 7),                          // maths flashcards + questions
         ['content/y7/english/topics.js'],                                  // ENGLISH_TOPICS + english islands
         nFiles('content/y7/english/islands/', 1, 8),                        // english flashcards + questions
+        nFiles('content/y7/comprehension/passages/', 1, 40),                // NEW written+AI-marked comprehension (appends
+                                                                             // to COMPREHENSION_PASSAGES; must load AFTER
+                                                                             // islands/4.js, which declares the array)
         ['content/y7/science/topics.js',                                   // topic tiles only (islands live in _base)
          'content/y7/history/topics.js',
          'content/y7/geography/topics.js',

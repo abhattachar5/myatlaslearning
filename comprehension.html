@@ -746,6 +746,26 @@ function isPassageComplete(passage) {
   return progress !== null;
 }
 
+// ── Written-companion visibility ─────────────────────────────────────────────
+// Some MCQ passages have a written (AI-marked) companion — same story, new
+// open-response questions — added as a separate entry whose id is the
+// original id + 'W' (e.g. F01 → F01W), so existing completions on the
+// original are never disturbed. Once that companion exists, the old MCQ
+// version is hidden from the browse grid/stats UNLESS the student already
+// completed it — so a student who already finished F01 keeps seeing that
+// result exactly as before, but anyone who hasn't started it yet is shown
+// only F01W. As more of the 40 are converted, fewer MCQ cards remain; once
+// all 40 have a companion, only the written versions are visible to new
+// attempts.
+function hasWrittenCompanion(p) {
+  if (isWrittenPassage(p)) return false; // only ever applies to the MCQ original
+  var companionId = p.id + 'W';
+  return passages.some(function (other) { return other.id === companionId && isWrittenPassage(other); });
+}
+function getVisiblePassages() {
+  return passages.filter(function (p) { return !(hasWrittenCompanion(p) && !isPassageComplete(p)); });
+}
+
 // ── Draft autosave (written passages only) ──────────────────────────────────
 // Written comprehension answers are long; losing them on accidental close is
 // painful. We autosave them locally under a SEPARATE key (sm_compdraft_<id>) so
@@ -790,9 +810,10 @@ function getScoreMessage(score, total) {
 
 // ── Filter counts ─────────────────────────────────────────────────────────────
 function updateFilterCounts() {
-  var allCount = passages.length;
-  var fictionCount = passages.filter(function(p) { return p.type === 'fiction'; }).length;
-  var nonfictionCount = passages.filter(function(p) { return p.type === 'nonfiction'; }).length;
+  var visible = getVisiblePassages();
+  var allCount = visible.length;
+  var fictionCount = visible.filter(function(p) { return p.type === 'fiction'; }).length;
+  var nonfictionCount = visible.filter(function(p) { return p.type === 'nonfiction'; }).length;
   document.getElementById('count-all').textContent = allCount;
   document.getElementById('count-fiction').textContent = fictionCount;
   document.getElementById('count-nonfiction').textContent = nonfictionCount;
@@ -812,11 +833,12 @@ function setFilter(filter) {
 
 // ── Stats bar ─────────────────────────────────────────────────────────────────
 function updateStats() {
+  var visible = getVisiblePassages();
   var completed = 0;
-  passages.forEach(function(p) {
+  visible.forEach(function(p) {
     if (isPassageComplete(p)) completed++;
   });
-  var total = passages.length;
+  var total = visible.length;
   var pct = total > 0 ? Math.round((completed / total) * 100) : 0;
   document.getElementById('stats-label').textContent = completed + ' / ' + total + ' passages completed';
   document.getElementById('stats-fill').style.width = pct + '%';
@@ -828,7 +850,8 @@ function updateStats() {
 // ── Render passage cards ──────────────────────────────────────────────────────
 function renderCards() {
   var grid = document.getElementById('passage-grid');
-  var filtered = currentFilter === 'all' ? passages : passages.filter(function(p) {
+  var visible = getVisiblePassages();
+  var filtered = currentFilter === 'all' ? visible : visible.filter(function(p) {
     return p.type === currentFilter;
   });
 
@@ -1197,7 +1220,7 @@ function submitWritten() {
   fetchWithAuth('/.netlify/functions/evaluate-comprehension', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ passageTitle: passage.title, passageText: passage.text, items: items })
+    body: JSON.stringify({ passageTitle: passage.title, passageText: passage.text, items: items, yearGroup: (user && user.year) || 'Year 8' })
   })
   .then(function(r) { return r.json(); })
   .then(function(data) {
