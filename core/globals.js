@@ -204,6 +204,32 @@ var Atlas = (function () {
       var arr = (y && typeof y.passages === 'function') ? y.passages() : null;
       return Array.isArray(arr) ? arr : [];
     },
+    isPassageComplete: function (passageId) {
+      try { return localStorage.getItem('sm_comp_' + passageId) !== null; }
+      catch (e) { return false; }
+    },
+    // Passages actually visible to a student: an MCQ original whose written
+    // (AI-marked) companion exists is hidden once that companion takes over,
+    // unless the student already completed the MCQ version — mirrors the
+    // visibility rule in comprehension.html so progress counts agree.
+    visiblePassages: function (year) {
+      var all = this.yearPassages(year);
+      var self = this;
+      var writtenIds = {};
+      all.forEach(function (p) { if (p.questions && p.questions.length && p.questions[0].marks !== undefined && !p.questions[0].opts) writtenIds[p.id] = true; });
+      return all.filter(function (p) {
+        var isWritten = !!(p.questions && p.questions.length && p.questions[0].marks !== undefined && !p.questions[0].opts);
+        if (isWritten) return true;
+        var hasCompanion = writtenIds[p.id + 'W'];
+        return !(hasCompanion && !self.isPassageComplete(p.id));
+      });
+    },
+    passageCompletionStats: function (year) {
+      var visible = this.visiblePassages(year);
+      var self = this;
+      var completed = visible.filter(function (p) { return self.isPassageComplete(p.id); }).length;
+      return { completed: completed, total: visible.length };
+    },
     // Flat list of every topic across all configured years × subjects.
     everyTopic: function () {
       var by = (typeof CONFIG !== 'undefined' && CONFIG.byYear) ? CONFIG.byYear : {};

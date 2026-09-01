@@ -1232,14 +1232,21 @@ function renderEnglishTopics(grid) {
 
 function renderEnglishTopicCards() {
   return getYearEnglishTopics().map(topic => {
+    const isComprehension = Atlas.isComprehensionTopic(topic.id);
     const topicIslands = CURRICULUM.filter(i => i.topicId === topic.id);
-    let mastered = 0, started = 0;
-    topicIslands.forEach(island => {
-      const s = getIslandStatus(island.id);
-      if (s > 0) started++;
-      if (s === 4) mastered++;
-    });
-    const totalIslands = topicIslands.length;
+    let mastered = 0, started = 0, totalIslands = topicIslands.length;
+    if (isComprehension) {
+      const stats = Atlas.passageCompletionStats(getUserYear());
+      mastered = stats.completed;
+      totalIslands = stats.total;
+      started = mastered;
+    } else {
+      topicIslands.forEach(island => {
+        const s = getIslandStatus(island.id);
+        if (s > 0) started++;
+        if (s === 4) mastered++;
+      });
+    }
     const progress = totalIslands > 0 ? Math.round((mastered / totalIslands) * 100) : 0;
     const hasContent = topic.hasContent !== false;
     const testPassed = StudyPlanner.isTopicTestPassed(topic.id);
@@ -1249,7 +1256,7 @@ function renderEnglishTopicCards() {
         onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();goToTopic('${topic.id}')}"
         role="link"
         tabindex="0"
-        aria-label="${topic.name}, ${mastered} of ${totalIslands} islands completed${testPassed ? ', test passed' : ''}">
+        aria-label="${topic.name}, ${mastered} of ${totalIslands} ${isComprehension ? 'passages' : 'islands'} completed${testPassed ? ', test passed' : ''}">
       <div class="island-card-top">
         <div class="island-emoji">${topic.emoji}</div>
         ${createProgressRing(progress, '#f59e0b', 52)}
@@ -1260,7 +1267,7 @@ function renderEnglishTopicCards() {
         ${!hasContent ? '<span class="badge" style="font-size:.65rem;opacity:.7">Soon</span>' : ''}
       </div>
       <div class="island-name">${topic.name}</div>
-      <div class="island-meta">${Atlas.isComprehensionTopic(topic.id) ? ((function(){ var n = Atlas.yearPassages(getUserYear()).length; return n + ' passage' + (n !== 1 ? 's' : ''); })()) : (totalIslands > 0 ? totalIslands + ' subtopic' + (totalIslands !== 1 ? 's' : '') : 'Coming soon')}</div>
+      <div class="island-meta">${isComprehension ? totalIslands + ' passage' + (totalIslands !== 1 ? 's' : '') : (totalIslands > 0 ? totalIslands + ' subtopic' + (totalIslands !== 1 ? 's' : '') : 'Coming soon')}</div>
       <div class="status-chip">
         <span class="status-dot" style="background:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}"></span>
         <span style="color:${mastered > 0 ? '#22c55e' : started > 0 ? '#3b82f6' : '#9ca3af'}">${mastered > 0 ? `${mastered}/${totalIslands} completed` : started > 0 ? `${started} started` : 'Not started'}</span>
