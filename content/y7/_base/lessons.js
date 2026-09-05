@@ -577,6 +577,7 @@ Techniques used:<br>
 <h3>Food Webs</h3>
 <p>Real life is messier than a single chain. Most animals eat more than one thing and are eaten by more than one predator, so ecologists join many overlapping food chains together into a <strong>food web</strong> — a diagram of all the feeding relationships in an ecosystem at once.</p>
 <p>Food webs make it possible to predict knock-on effects. If one species disappears, you can trace the arrows outwards and see which other populations rise and which fall — and the answer is often several steps away from where the change began.</p>
+<div class="lesson-diagram" data-diagram="food-web"><p class="diagram-caption">Overlapping food chains combine into a food web</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>Decomposers and Recycling</h3>
 <p>Something has to deal with dead organisms and waste, or nutrients would be locked up in them forever. That is the work of <strong>decomposers</strong> — bacteria and fungi that break dead material down.</p>
@@ -725,6 +726,9 @@ On the Moon: Weight = 5 × 1.6 = <strong>8 N</strong> — but the mass is still 
 <li><strong>Pitch</strong> depends on <strong>frequency</strong> (vibrations per second, measured in Hz) — high frequency = high pitch. <strong>Loudness</strong> depends on <strong>amplitude</strong> — bigger vibrations = louder sound.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="law-of-reflection"><p class="diagram-caption">The law of reflection: angle of incidence = angle of reflection</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="refraction"><p class="diagram-caption">Refraction: light changes direction as it crosses into a different material</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="colour-mixing"><p class="diagram-caption">A filter absorbs every colour of light except its own — the same idea that makes objects look coloured</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="longitudinal-wave"><p class="diagram-caption">Sound as a longitudinal wave: compressions and rarefactions travelling through a medium</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> A ray of light hits a flat mirror. The angle between the ray and the mirror surface is 35°. Find the angle of reflection.</p>
@@ -869,6 +873,7 @@ Law of reflection: angle of reflection = angle of incidence = <strong>55°</stro
 <li>A <strong>chemical change</strong> makes one or more <em>new substances</em> with different properties, and it is difficult or impossible to reverse. Burning, rusting and cooking an egg are chemical changes. There are often clues: a colour change, a gas given off, or heat and light released.</li>
 <li>A <strong>physical change</strong> makes <em>no new substance</em> and is usually easy to reverse. Melting, boiling and dissolving are physical changes — the particles are rearranged but they are still the same particles.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="changes-of-state"><p class="diagram-caption">Changes of state are physical changes — the same particles, just rearranged</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>Worked Example</h3>
 <div class="example-box">
@@ -883,6 +888,7 @@ This is a <strong>chemical change</strong>, for three reasons:<br>
 Compare that with melting ice, a physical change: no new substance, and fully reversible.</p>
 <p>Remember that a <em>word</em> equation uses names only. Save the formulae for symbol equations.</p>
 </div>
+<div class="lesson-diagram" data-diagram="conservation-of-mass"><p class="diagram-caption">Mass is conserved: the atoms in magnesium and oxygen are just rearranged into magnesium oxide</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>Common Mistakes</h3>
 <ul>
@@ -1297,6 +1303,7 @@ Combining aerial photos with OS maps gives both a <strong>visual overview</stron
 <div class="lesson-diagram" data-diagram="relief-rainfall"><p class="diagram-caption">How relief rainfall forms — windward rain and leeward rain shadow</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="weather-fronts-depression"><p class="diagram-caption">Depression cross-section — warm and cold fronts</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="greenhouse-effect"><p class="diagram-caption">The enhanced greenhouse effect — how trapped heat warms the Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="climate-evidence"><p class="diagram-caption">How ice cores, tree rings and historical records reveal past climate change</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example 1:</strong> Why is Manchester wetter than London, even though both are in England?</p>
@@ -1431,6 +1438,8 @@ Stage 1: High birth rate, high death rate → low population. Stage 2: Death rat
 </ul>
 <div class="lesson-diagram" data-diagram="population-pyramid"><p class="diagram-caption">Population pyramids — comparing HIC (UK) and LIC (Nigeria) shapes</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="dtm-model"><p class="diagram-caption">The Demographic Transition Model — five stages of population change</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="push-pull-factors"><p class="diagram-caption">Push and pull factors driving migration and urbanisation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="burgess-model"><p class="diagram-caption">The Burgess model of urban land use</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example 1:</strong> Country A has a population of 8,000,000 and an area of 400 km². Country B has a population of 2,000,000 and an area of 500 km². Which is more densely populated?</p>
@@ -1494,6 +1503,7 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 </ul>
 <div class="lesson-diagram" data-diagram="rainforest-layers"><p class="diagram-caption">The four layers of the tropical rainforest — emergent, canopy, under-storey and forest floor</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="gersmehl-model"><p class="diagram-caption">The Gersmehl nutrient cycle — how nutrients flow between biomass, litter and soil</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="xerophyte-adaptations"><p class="diagram-caption">Xerophyte adaptations: how cacti and other desert plants conserve water</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example 1:</strong> Explain how the drip-tip leaf and buttress roots are adaptations to the tropical rainforest.</p>
@@ -1674,6 +1684,9 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 <li><strong>Efficiency</strong> = (useful energy output ÷ total energy input) × 100 %. No device is 100 % efficient — some energy is always "wasted" as heat.</li>
 <li>A <strong>Sankey diagram</strong> uses arrows whose width represents energy — showing how input energy splits into useful output and wasted energy.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="energy-stores"><p class="diagram-caption">The main energy stores</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="heat-transfer-methods"><p class="diagram-caption">Conduction, convection and radiation compared</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="sankey-diagram"><p class="diagram-caption">A Sankey diagram: arrow width shows how input energy splits into useful output and waste</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> Describe the energy transfers when a ball is dropped from a height and bounces.</p>
@@ -1754,6 +1767,9 @@ This makes it a fair test — any change in dissolving time must be due to tempe
 <li>An <strong>electromagnet</strong> is made by wrapping wire around an iron core and passing current through it — it can be switched on and off. Increase its strength by: increasing the <strong>current</strong>, adding more <strong>coils</strong> of wire, or using an <strong>iron core</strong>.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="circuit-comparison"><p class="diagram-caption">Series vs parallel circuit layout</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="circuit-symbols"><p class="diagram-caption">Common circuit symbols, including the ammeter and voltmeter</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="magnetic-field"><p class="diagram-caption">Magnetic field lines run from north to south, closest together at the poles</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="electromagnet"><p class="diagram-caption">An electromagnet: current through a coiled wire around an iron core</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> A 6 V battery is connected to a bulb with a resistance of 3 Ω. Calculate the current flowing.</p>
@@ -1905,6 +1921,7 @@ The wave travels at 300 metres per second.</p>
 <p>Inside your lungs, the airways branch again and again, ending in millions of tiny air sacs called <strong>alveoli</strong>. This is where <strong>gas exchange</strong> takes place: oxygen diffuses out of the alveoli and into the blood, while carbon dioxide diffuses the other way, out of the blood and into the alveoli to be breathed out. (That is the same diffusion you met in the first chapter — particles moving from where they are more concentrated to where they are less concentrated.)</p>
 <p>Alveoli are superbly adapted for the task: there are millions of them, giving an enormous total surface area; their walls are just one cell thick, so the distance to travel is tiny; and each is wrapped in capillaries, so blood is always waiting to carry the oxygen away.</p>
 <div class="lesson-diagram" data-diagram="respiratory-system"><p class="diagram-caption">The respiratory system and gas exchange in the alveoli</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="alveolus-gas-exchange"><p class="diagram-caption">Zooming into one alveolus: oxygen and carbon dioxide diffuse in opposite directions</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>The Digestive System</h3>
 <p>The food you eat is made of molecules far too large to get into your cells, so the digestive system breaks it down into pieces small enough to be absorbed. Food travels a one-way route:</p>
@@ -1978,6 +1995,7 @@ The wave travels at 300 metres per second.</p>
 <h3>DNA, Chromosomes and Genes</h3>
 <p>Inside the nucleus of nearly every one of your cells is <strong>DNA</strong>, a long molecule that carries coded instructions for building and running your body. That DNA is not left loose — it is packaged into structures called <strong>chromosomes</strong>. Humans have <strong>46 chromosomes</strong>, arranged as 23 pairs, with one of each pair inherited from each parent.</p>
 <p>A <strong>gene</strong> is a short section of DNA that codes for one particular protein, and so for one characteristic. Think of the chromosome as a book and each gene as a single instruction inside it.</p>
+<div class="lesson-diagram" data-diagram="dna-genes-chromosomes"><p class="diagram-caption">How DNA, genes and chromosomes relate to each other</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>Alleles, Dominant and Recessive</h3>
 <p>Because chromosomes come in pairs, you carry two copies of every gene — one from each parent. The two copies need not be identical, and the different versions of a gene are called <strong>alleles</strong>.</p>
@@ -2067,11 +2085,13 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 <p style="font-size:1.05em;text-align:center;padding:0.5em;background:var(--surface2);border-radius:6px"><strong>Carbon dioxide + Water → Glucose + Oxygen</strong><br>6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</p>
 <p>The reaction happens inside the <strong>chloroplasts</strong> of leaf cells, and it depends on <strong>chlorophyll</strong>, the green pigment that actually absorbs the light. Notice what this means: the oxygen in the air you are breathing right now was released by a plant as a waste product.</p>
 <div class="lesson-diagram" data-diagram="photosynthesis-diagram"><p class="diagram-caption">Photosynthesis: what goes in and what comes out</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="leaf-structure"><p class="diagram-caption">Inside a leaf: most chloroplasts sit in the palisade mesophyll, and stomata let gases in and out</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>What Controls the Rate: Limiting Factors</h3>
 <p>Three things affect how fast a plant can photosynthesise: <strong>light intensity</strong>, <strong>carbon dioxide concentration</strong> and <strong>temperature</strong>.</p>
 <p>At any moment, whichever of these is in shortest supply is holding the whole process back, and that one is called the <strong>limiting factor</strong>. Increase it and the rate rises; increase any of the others and nothing happens, because they were not what was restricting things. It works rather like a queue — speeding up the tills does not help if the real hold-up is at the door.</p>
 <p>Temperature is a special case, because photosynthesis is controlled by enzymes. Warming things up speeds the reaction, but only to a point: above roughly <strong>40 °C</strong> enzymes begin to <strong>denature</strong>, meaning their shape is permanently changed so they no longer work, and the rate falls away sharply.</p>
+<div class="lesson-diagram" data-diagram="photosynthesis-rate"><p class="diagram-caption">The rate rises while a factor is limiting, then levels off once another factor takes over</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>Storing the Glucose</h3>
 <p>A plant does not use all its glucose immediately, so it converts the surplus into <strong>starch</strong> for storage. There is a neat reason for choosing starch: glucose is soluble and starch is not.</p>
@@ -2095,6 +2115,7 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 <li>In <strong>yeast</strong>: glucose → <strong>ethanol</strong> + carbon dioxide + a little energy. This reaction, called fermentation, is what makes bread rise and produces alcohol in brewing.</li>
 </ul>
 <p>Anaerobic respiration releases <em>far</em> less energy than aerobic, because the glucose is only partly broken down — which is exactly why you cannot sprint for very long.</p>
+<div class="lesson-diagram" data-diagram="respiration-comparison"><p class="diagram-caption">Aerobic vs anaerobic respiration compared</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>How the Two Processes Fit Together</h3>
 <p>Look at the two equations side by side and you will see that each one's products are the other's raw materials. Photosynthesis takes in carbon dioxide and water and gives out glucose and oxygen; respiration takes in glucose and oxygen and gives out carbon dioxide and water. Together they keep the gases of the atmosphere in balance.</p>
@@ -2173,6 +2194,7 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 <li><strong>Acid rain</strong> forms when <strong>sulfur dioxide (SO₂)</strong> and <strong>nitrogen oxides (NOₓ)</strong> from burning fossil fuels dissolve in atmospheric water → sulfuric acid and nitric acid. Damages trees, lakes, and stone buildings.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="water-cycle"><p class="diagram-caption">The water cycle: evaporation, condensation and precipitation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="carbon-cycle"><p class="diagram-caption">The carbon cycle: how carbon moves between living things, the atmosphere, oceans and rocks</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> Explain how cutting down and burning a forest increases the greenhouse effect.</p>
@@ -2398,6 +2420,8 @@ Therefore, reactivity <strong>increases</strong> going down Group 1.</p>
 <li><strong>Composites</strong> (e.g. fibreglass, reinforced concrete, carbon fibre) combine two or more materials to get properties better than either alone.</li>
 <li>The choice of material for a specific purpose depends on properties such as <strong>strength, weight, cost, flexibility, conductivity</strong> and resistance to corrosion.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="reactivity-series"><p class="diagram-caption">The reactivity series, from most to least reactive</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="displacement-reaction"><p class="diagram-caption">A more reactive metal displaces a less reactive one from its compound</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> A student places a piece of iron into copper sulfate solution. The iron becomes coated in a reddish-brown layer. Explain what has happened.</p>
@@ -2530,6 +2554,7 @@ So the student is wrong: caffeine is a drug, and a legal one.</p>
 <li>To compare journeys, look at the <strong>gradient</strong> of each section — a steeper section represents a faster speed.</li>
 <li><strong>Average speed</strong> for a whole journey = total distance ÷ total time.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="distance-time-graph"><p class="diagram-caption">Reading a distance–time graph: flat, diagonal and curved sections</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> A distance–time graph shows a straight line from (0 s, 0 m) to (20 s, 80 m), then a flat line from (20 s, 80 m) to (30 s, 80 m). Describe the journey and calculate the speed during the first section.</p>
