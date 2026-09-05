@@ -672,22 +672,26 @@ Techniques used:<br>
 <li>Believing a change of state makes a new substance. It does not — melting, boiling and freezing are all <strong>reversible physical changes</strong>.</li>
 </ul>`,
 
-"island-14": `<h4>Introduction</h4>
-<p>Forces are pushes or pulls that can change the speed, direction or shape of an object. Understanding balanced and unbalanced forces, gravity, friction and how to calculate speed gives you the tools to explain almost every moving object in the physical world.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>Forces are measured in <strong>Newtons (N)</strong>. They have both size and direction.</li>
-<li><strong>Balanced forces</strong> (net force = 0) → no change in motion. Object stays still or moves at constant speed.</li>
-<li><strong>Unbalanced forces</strong> (net force ≠ 0) → object speeds up, slows down, or changes direction.</li>
-<li><strong>Newton's First Law</strong> (Law of Inertia): an object stays still or moves at constant speed in a straight line unless an unbalanced force acts on it.</li>
-<li>Forces can be <strong>contact</strong> (friction, air resistance, tension — objects touching) or <strong>non-contact</strong> (gravity, magnetism — act at a distance).</li>
-<li><strong>Mass</strong> (kg) = amount of matter — never changes. <strong>Weight</strong> (N) = gravitational force on that mass — changes with gravity. Weight = mass × gravitational field strength (W = mg). On Earth, g = 10 N/kg; on the Moon, g = 1.6 N/kg.</li>
-<li><strong>Speed = Distance ÷ Time</strong> (S = D ÷ T). If distance is in metres and time in seconds, speed is in m/s.</li>
-<li><strong>Air resistance</strong> increases as an object moves faster. A falling skydiver reaches <strong>terminal velocity</strong> when air resistance equals weight — the forces are balanced and speed becomes constant.</li>
-<li><strong>Pressure = Force ÷ Area</strong> (measured in Pascals, Pa). A larger area means lower pressure for the same force.</li>
-</ul>
+"island-14": `<h2>Forces and Motion</h2>
+<p>A <strong>force</strong> is simply a push or a pull — but that simple idea explains why a parked car stays put, why a thrown ball curves back to Earth, and why a skydiver eventually stops accelerating no matter how far they fall. This chapter builds up the rules that let you predict what any force, or combination of forces, will do to an object.</p>
+
+<h3>Balanced and Unbalanced Forces</h3>
+<p>Forces are measured in <strong>Newtons (N)</strong> and have both a size and a direction, which is why they are usually drawn as arrows. Most objects have more than one force acting on them at once, so what matters is the <strong>net force</strong> — all the forces added together, taking direction into account.</p>
+<p>When the forces on an object cancel out exactly, the net force is zero and the forces are <strong>balanced</strong>: the object simply carries on doing whatever it was already doing, whether that is staying still or moving at a constant speed in a straight line. This is exactly what <strong>Newton's First Law</strong> (the Law of Inertia) describes. When the forces do not cancel out, they are <strong>unbalanced</strong>, and the object speeds up, slows down, or changes direction.</p>
+<p>Forces also split into two kinds by how they act. <strong>Contact forces</strong> — friction, air resistance, tension — need the objects to be touching. <strong>Non-contact forces</strong> — gravity, magnetism — act at a distance, with nothing needing to touch at all.</p>
 <div class="lesson-diagram" data-diagram="force-arrows"><p class="diagram-caption">Balanced vs unbalanced forces on an object</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Mass, Weight and Gravity</h3>
+<p>These two words are used interchangeably in everyday speech, but in physics they mean different things. <strong>Mass</strong> (measured in kg) is the amount of matter in an object, and it never changes no matter where that object is. <strong>Weight</strong> (measured in Newtons, because it is a force) is the pull of gravity on that mass, and it changes depending on where you are: <strong>Weight = mass × gravitational field strength</strong> (W = mg). On Earth, g = 10 N/kg; on the Moon, where gravity is much weaker, g = 1.6 N/kg — so the same object weighs far less there, even though its mass has not changed at all.</p>
+
+<h3>Speed, Air Resistance and Terminal Velocity</h3>
+<p>Speed tells you how quickly something covers distance: <strong>Speed = Distance ÷ Time</strong> (S = D ÷ T). If distance is measured in metres and time in seconds, speed comes out in metres per second (m/s).</p>
+<p>Air resistance is a contact force that increases the faster an object moves through the air. This produces a neat result for a falling object such as a skydiver: as they speed up, air resistance grows, gradually reducing the unbalanced force pulling them down. Eventually air resistance grows large enough to exactly equal their weight — at that point the forces are balanced, there is no net force left, and the skydiver falls at a constant maximum speed called <strong>terminal velocity</strong>.</p>
+
+<h3>Pressure</h3>
+<p>Pressure describes how concentrated a force is over a surface: <strong>Pressure = Force ÷ Area</strong>, measured in Pascals (Pa). The same force spread over a larger area produces lower pressure, which is why a wide surface (skis, snowshoes, a tank's caterpillar tracks) sinks into soft ground far less than a narrow one carrying the same weight.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A 5 kg object sits on a table. What is its weight on Earth? Are the forces on it balanced?</p>
 <p><strong>Solution:</strong><br>
@@ -696,20 +700,12 @@ The table pushes up with a <strong>normal reaction force of 50 N</strong>.<br>
 Forces are <strong>balanced</strong> (50 N up = 50 N down) → the object stays still. ✓<br>
 On the Moon: Weight = 5 × 1.6 = <strong>8 N</strong> — but the mass is still 5 kg.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Force</dt><dd>A push or pull acting on an object, measured in Newtons (N). Forces can change speed, direction or shape.</dd>
-<dt>Friction</dt><dd>A force opposing motion between two surfaces in contact. Can be useful (grip) or unhelpful (energy loss).</dd>
-<dt>Mass</dt><dd>The amount of matter in an object, measured in kg. Constant everywhere in the universe.</dd>
-<dt>Weight</dt><dd>The gravitational force on an object, measured in Newtons. Depends on local gravitational field strength.</dd>
-<dt>Terminal velocity</dt><dd>The constant maximum speed reached when air resistance equals weight — the net force is zero and the object stops accelerating.</dd>
-<dt>Newton's First Law</dt><dd>An object remains at rest or moves at constant speed in a straight line unless acted on by an unbalanced force.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Using kg as the unit for weight — ✅ Correct: weight is a <strong>force</strong>, measured in <strong>Newtons</strong>. Mass is in kg.</li>
-<li>❌ Thinking balanced forces mean no forces — ✅ Correct: balanced means forces <strong>cancel out</strong> — they are still present, just equal and opposite.</li>
-<li>❌ Thinking friction is always bad — ✅ Correct: friction is <strong>essential</strong> for walking, driving and gripping — it's only unhelpful in machines where it wastes energy.</li>
+<li>Using kg as the unit for weight. Weight is a <strong>force</strong>, measured in <strong>Newtons</strong>; mass is measured in kg.</li>
+<li>Thinking balanced forces mean no forces are acting. Balanced means the forces <strong>cancel out</strong> — they are still present, just equal and opposite.</li>
+<li>Assuming friction is always unwanted. Friction is <strong>essential</strong> for walking, driving and gripping — it is only unhelpful inside machines, where it wastes energy as heat.</li>
 </ul>`,
 
 "island-15": `<h4>Introduction</h4>
@@ -1724,21 +1720,23 @@ Each bounce is lower — total energy is <strong>conserved</strong> but some is 
 <li>Assuming a more powerful device is automatically more efficient. Power tells you how fast energy is transferred; efficiency tells you what proportion of it ends up useful — a powerful device can still waste most of its energy.</li>
 </ul>`,
 
-"island-38": `<h4>Introduction</h4>
+"island-38": `<h2>Scientific Enquiry</h2>
 <p>Science is not just a body of facts — it is a method of finding things out. Scientific enquiry uses careful observation, measurement and testing to build reliable explanations. Before you can draw meaningful conclusions, you need to know how to plan a fair test, identify variables, and record results properly.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>Every experiment has three types of variable: <strong>independent</strong> (what you change), <strong>dependent</strong> (what you measure), and <strong>control</strong> (what you keep the same).</li>
-<li>A <strong>fair test</strong> changes only ONE independent variable at a time — everything else must stay the same.</li>
-<li>A <strong>hypothesis</strong> is a testable prediction that explains WHY you expect a particular outcome.</li>
-<li><strong>Repeating</strong> measurements and calculating a <strong>mean</strong> makes results more reliable. Discard obvious anomalies first.</li>
-<li>Results can be <strong>displayed</strong> in tables, bar charts (categoric data) or line graphs (continuous data). On a graph, plot the <strong>independent variable on the x-axis</strong> and the <strong>dependent variable on the y-axis</strong>. Always label axes with name and units.</li>
-<li><strong>Accuracy</strong> = how close a measurement is to the true value. <strong>Precision</strong> = how consistent repeated measurements are. You can be precise but inaccurate (consistent but wrong).</li>
-<li><strong>Hazard symbols</strong> warn about dangers: 🔥 flame = flammable, ☠ skull = toxic, ⚗ corrosion symbol = corrosive (damages skin), ⚠ exclamation mark = harmful/irritant.</li>
-<li>Key lab safety rules: wear goggles for chemicals, tie back hair, never run, report spills, know where the fire extinguisher is.</li>
-</ul>
+
+<h3>Variables and Fair Tests</h3>
+<p>Every experiment involves three types of variable: the <strong>independent variable</strong> is what you deliberately change, the <strong>dependent variable</strong> is what you measure in response, and <strong>control variables</strong> are everything else you keep the same so they cannot affect the result. Together these define a <strong>fair test</strong>: one where only a single independent variable changes at a time, so any effect you observe can only be down to that one thing. Before running the test, a good investigation starts from a <strong>hypothesis</strong> — a testable prediction that also explains <em>why</em> you expect that particular outcome, not just a guess at the answer.</p>
 <div class="lesson-diagram" data-diagram="variables-diagram"><p class="diagram-caption">The three types of variable in an experiment</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Repeating, Recording and Displaying Results</h3>
+<p>A single measurement could easily be a fluke, so <strong>repeating</strong> measurements and calculating a <strong>mean</strong> makes results far more reliable — after first discarding any obvious <strong>anomalies</strong>, results that clearly do not fit the pattern and are likely due to error. Once collected, results are displayed in tables, bar charts for categoric data, or line graphs for continuous data. On any graph, the convention is fixed: the <strong>independent variable goes on the x-axis</strong> and the <strong>dependent variable on the y-axis</strong>, with every axis labelled with both its name and its units.</p>
+
+<h3>Accuracy and Precision</h3>
+<p>These two words sound similar but measure different things. <strong>Accuracy</strong> is how close a measurement is to the true value; <strong>precision</strong> is how consistent repeated measurements are with each other. The two can pull apart: it is entirely possible to be precise but inaccurate, getting the same wrong answer every time — consistency alone does not guarantee correctness.</p>
+
+<h3>Lab Safety</h3>
+<p>Hazard symbols give an instant warning of a substance's danger: a flame means <strong>flammable</strong>, a skull means <strong>toxic</strong>, the corrosion symbol means <strong>corrosive</strong> (it damages skin), and an exclamation mark means <strong>harmful or irritant</strong>. Alongside recognising these symbols, a handful of habits keep a lab safe: wearing goggles around chemicals, tying back hair, never running, reporting spills immediately, and knowing where the fire extinguisher is before you need it.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A student investigates how temperature affects how quickly sugar dissolves. Identify the three types of variable.</p>
 <p><strong>Solution:</strong><br>
@@ -1747,40 +1745,36 @@ Dependent variable (what you measure): <strong>time taken for sugar to dissolve<
 Control variables (keep the same): volume of water, amount of sugar, stirring speed, type of sugar.<br>
 This makes it a fair test — any change in dissolving time must be due to temperature.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Independent variable</dt><dd>The variable you deliberately change in an experiment.</dd>
-<dt>Dependent variable</dt><dd>The variable you observe or measure — it depends on the independent variable.</dd>
-<dt>Control variable</dt><dd>A variable kept constant to ensure the test is fair.</dd>
-<dt>Hypothesis</dt><dd>A testable, reasoned prediction (not just a guess) that can be supported or disproved by data.</dd>
-<dt>Anomaly</dt><dd>A result that does not fit the overall pattern and may be due to error.</dd>
-<dt>Accuracy</dt><dd>How close a measurement is to the true or accepted value.</dd>
-<dt>Precision</dt><dd>How consistent or close together repeated measurements are to each other.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Changing more than one variable at once — ✅ Correct: change ONLY the independent variable so you know what caused the effect.</li>
-<li>❌ Writing a hypothesis with no explanation — ✅ Correct: include a reason ("I predict X because…").</li>
-<li>❌ Drawing a line of best fit through every point including anomalies — ✅ Correct: ignore outliers and draw the line through the general trend.</li>
+<li>Changing more than one variable at once. Change <strong>only</strong> the independent variable, so you know exactly what caused the effect.</li>
+<li>Writing a hypothesis with no explanation. A good hypothesis includes a reason — "I predict X because…" — not just a guess.</li>
+<li>Drawing a line of best fit through every point, including anomalies. Ignore outliers and draw the line through the general trend instead.</li>
 </ul>`,
 
-"island-39": `<h4>Introduction</h4>
-<p>Electricity powers almost everything in modern life, and magnetism is closely linked to it. Understanding how current flows in circuits, how components affect that flow, and how magnets create invisible fields gives you the tools to explain everything from a torch to a maglev train.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Current</strong> (I) is the flow of charge, measured in Amps (A). <strong>Voltage</strong> (V) is the push from the battery, measured in Volts (V). <strong>Resistance</strong> (R) opposes current, measured in Ohms (Ω).</li>
-<li><strong>Ohm's Law</strong>: V = I × R — if voltage increases (and resistance stays the same), current increases.</li>
-<li>In a <strong>series circuit</strong>: one loop, same current everywhere, voltage is shared between components.</li>
-<li>In a <strong>parallel circuit</strong>: multiple branches, voltage the same across each branch, current splits between branches.</li>
-<li><strong>Magnets</strong> have north and south poles. Like poles repel, opposite poles attract. <strong>Magnetic field lines</strong> run from the north pole to the south pole and are closest together where the field is strongest (at the poles).</li>
-<li>Only certain materials are magnetic: <strong>iron</strong>, <strong>steel</strong>, <strong>nickel</strong> and <strong>cobalt</strong>. Most metals (copper, aluminium, gold) are NOT magnetic.</li>
-<li>An <strong>electromagnet</strong> is made by wrapping wire around an iron core and passing current through it — it can be switched on and off. Increase its strength by: increasing the <strong>current</strong>, adding more <strong>coils</strong> of wire, or using an <strong>iron core</strong>.</li>
-</ul>
-<div class="lesson-diagram" data-diagram="circuit-comparison"><p class="diagram-caption">Series vs parallel circuit layout</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+"island-39": `<h2>Electricity &amp; Magnetism</h2>
+<p>Electricity powers almost everything in modern life, and magnetism is closely linked to it — the two are, in fact, two faces of the same underlying force. Understanding how current flows in circuits, how components affect that flow, and how magnets create invisible fields gives you the tools to explain everything from a torch to a maglev train.</p>
+
+<h3>Current, Voltage and Resistance</h3>
+<p>Three quantities describe what is happening in a circuit. <strong>Current</strong> (I) is the flow of electric charge, measured in Amps (A). <strong>Voltage</strong> (V) is the push supplied by the battery that drives that charge around, measured in Volts (V). <strong>Resistance</strong> (R) is how much a component opposes the flow, measured in Ohms (Ω).</p>
+<p>These three are linked by <strong>Ohm's Law</strong>: V = I × R. Rearranged, this tells you that if the voltage increases while resistance stays the same, the current must increase too — a bigger push moves more charge.</p>
 <div class="lesson-diagram" data-diagram="circuit-symbols"><p class="diagram-caption">Common circuit symbols, including the ammeter and voltmeter</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Series and Parallel Circuits</h3>
+<p>How components are connected changes how current and voltage behave. In a <strong>series circuit</strong>, there is only one loop for the current to follow, so the same current flows through every component, while the voltage from the battery is shared out between them. In a <strong>parallel circuit</strong>, components sit on separate branches: the voltage across each branch is the same as the battery's, but the current splits up, with more current flowing through branches of lower resistance.</p>
+<div class="lesson-diagram" data-diagram="circuit-comparison"><p class="diagram-caption">Series vs parallel circuit layout</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Magnets and Magnetic Fields</h3>
+<p>Every magnet has a north and a south pole, and the rule for how they interact is simple: like poles repel, opposite poles attract. The invisible region around a magnet where this pulling and pushing can be felt is its <strong>magnetic field</strong>, usually drawn as field lines running from the north pole to the south pole. Field lines are drawn closer together where the field is strongest — which is always right at the poles.</p>
+<p>Only a small group of materials respond to a magnet: <strong>iron</strong>, <strong>steel</strong> (which contains iron), <strong>nickel</strong> and <strong>cobalt</strong>. Most metals you meet day to day — copper, aluminium, gold — are not magnetic at all.</p>
 <div class="lesson-diagram" data-diagram="magnetic-field"><p class="diagram-caption">Magnetic field lines run from north to south, closest together at the poles</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Electromagnets</h3>
+<p>An <strong>electromagnet</strong> is made by wrapping wire into a coil around an iron core and passing a current through it. Unlike a normal bar magnet, its magnetism only exists while the current flows, so it can be switched on and off — which is exactly what makes it so useful in devices like electric bells, cranes and motors. Its strength can be increased three ways: by increasing the <strong>current</strong>, by adding more <strong>coils</strong> of wire, or by using an <strong>iron core</strong>.</p>
 <div class="lesson-diagram" data-diagram="electromagnet"><p class="diagram-caption">An electromagnet: current through a coiled wire around an iron core</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A 6 V battery is connected to a bulb with a resistance of 3 Ω. Calculate the current flowing.</p>
 <p><strong>Solution:</strong><br>
@@ -1788,35 +1782,31 @@ V = I × R → rearrange → I = V ÷ R<br>
 I = 6 V ÷ 3 Ω = <strong>2 A</strong><br>
 A current of 2 Amps flows through the bulb.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Current (I)</dt><dd>The rate of flow of electric charge around a circuit. Measured in Amperes (A) using an ammeter in series.</dd>
-<dt>Voltage (V)</dt><dd>The energy given to each unit of charge by the power source. Measured in Volts (V) using a voltmeter in parallel.</dd>
-<dt>Resistance (R)</dt><dd>A measure of how much a component opposes the flow of current. Measured in Ohms (Ω).</dd>
-<dt>Electromagnet</dt><dd>A temporary magnet made by passing current through a coil of wire around an iron core.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking current is "used up" by bulbs — ✅ Correct: current is the SAME everywhere in a series circuit; energy is transferred, not current.</li>
-<li>❌ Connecting a voltmeter in series — ✅ Correct: voltmeters go in <strong>parallel</strong> across a component; ammeters go in <strong>series</strong>.</li>
-<li>❌ Thinking all metals are magnetic — ✅ Correct: only iron, cobalt, nickel (and steel, which contains iron) are magnetic.</li>
+<li>Thinking current is "used up" by bulbs. Current is the <strong>same everywhere</strong> in a series circuit — it is energy that gets transferred, not the current itself.</li>
+<li>Connecting a voltmeter in series. Voltmeters must go in <strong>parallel</strong> across a component; ammeters go in <strong>series</strong> with it.</li>
+<li>Assuming all metals are magnetic. Only iron, cobalt, nickel and steel (because it contains iron) respond to a magnet.</li>
 </ul>`,
 
-"island-40": `<h4>Introduction</h4>
-<p>Waves transfer energy from one place to another without transferring matter. They are everywhere — from the sound of your voice to the light from the Sun. The electromagnetic (EM) spectrum organises all types of EM radiation by frequency and wavelength, from radio waves to deadly gamma rays.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Transverse waves</strong>: vibrations are perpendicular to the direction of travel (e.g. light, water waves). <strong>Longitudinal waves</strong>: vibrations are parallel (e.g. sound).</li>
-<li><strong>Amplitude</strong> = height from rest to peak (relates to loudness/brightness). <strong>Wavelength</strong> = distance from one peak to the next. <strong>Frequency</strong> = number of waves per second (Hz).</li>
-<li>Wave speed equation: <strong>v = f × λ</strong> (speed = frequency × wavelength).</li>
-<li>The EM spectrum in order of increasing frequency: <strong>Radio → Microwave → Infrared → Visible → Ultraviolet → X-rays → Gamma rays</strong>.</li>
-<li>All EM waves travel at the <strong>speed of light</strong> (3 × 10⁸ m/s) in a vacuum and do NOT need a medium.</li>
-<li>Higher frequency = shorter wavelength = more energy = more dangerous. UV, X-rays and gamma rays are <strong>ionising</strong> — they can remove electrons from atoms and damage DNA, potentially causing cancer.</li>
-<li>Uses of EM waves: <strong>radio</strong> (TV, radio), <strong>microwaves</strong> (mobile phones, cooking), <strong>infrared</strong> (remote controls, thermal imaging), <strong>visible</strong> (seeing!), <strong>UV</strong> (sterilising, detecting forgeries), <strong>X-rays</strong> (medical imaging of bones), <strong>gamma</strong> (radiotherapy, sterilising food).</li>
-</ul>
+"island-40": `<h2>Waves &amp; the EM Spectrum</h2>
+<p>Waves transfer energy from one place to another without transferring any matter along with it. They are everywhere — from the sound of your voice to the light from the Sun, which arrives after crossing 150 million kilometres of empty space. This chapter looks at how waves are described, and at the family of waves that makes that empty-space journey possible: the electromagnetic spectrum.</p>
+
+<h3>Describing Waves</h3>
+<p>Waves come in two basic kinds, depending on which way the vibrations point relative to the direction of travel. In a <strong>transverse wave</strong>, the vibrations are perpendicular to the direction of travel — light and water waves are both transverse. In a <strong>longitudinal wave</strong>, the vibrations are parallel to the direction of travel instead — sound is the clearest example.</p>
+<p>Three measurements describe any wave. <strong>Amplitude</strong> is the height from the rest position to the peak, and it is what determines how much energy the wave carries — louder sound, brighter light. <strong>Wavelength</strong> is the distance from one point on a wave to the same point on the next one, such as peak to peak. <strong>Frequency</strong> is how many complete waves pass a point every second, measured in Hertz (Hz). These three are connected by the <strong>wave speed equation</strong>: v = f × λ (speed = frequency × wavelength).</p>
 <div class="lesson-diagram" data-diagram="wave-properties"><p class="diagram-caption">Transverse wave: amplitude, wavelength and frequency</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>The Electromagnetic Spectrum</h3>
+<p>The <strong>electromagnetic (EM) spectrum</strong> organises every type of EM radiation into one continuous family, ordered by increasing frequency: <strong>Radio → Microwave → Infrared → Visible → Ultraviolet → X-rays → Gamma rays</strong>. Despite looking so different from each other, every one of these waves travels at exactly the same speed — the <strong>speed of light</strong>, 3 × 10⁸ m/s — and none of them need a medium to travel through, which is exactly why sunlight can cross the vacuum of space to reach us.</p>
 <div class="lesson-diagram" data-diagram="em-spectrum"><p class="diagram-caption">The electromagnetic spectrum in order</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Ionising Radiation and Uses of EM Waves</h3>
+<p>Moving up the spectrum, frequency increases, wavelength shrinks, and the waves carry more energy — which also makes them more dangerous. UV, X-rays and gamma rays carry so much energy that they are <strong>ionising</strong>: they can knock electrons clean off atoms, damaging DNA and potentially causing cancer.</p>
+<p>Every part of the spectrum still has everyday uses, precisely because of how much energy it carries: <strong>radio</strong> waves for TV and radio broadcasting, <strong>microwaves</strong> for mobile phones and cooking, <strong>infrared</strong> for remote controls and thermal imaging, <strong>visible</strong> light for seeing, <strong>UV</strong> for sterilising and detecting forgeries, <strong>X-rays</strong> for medical imaging of bones, and <strong>gamma</strong> rays for radiotherapy and sterilising food.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A wave has a frequency of 500 Hz and a wavelength of 0.6 m. Calculate the wave speed.</p>
 <p><strong>Solution:</strong><br>
@@ -1824,18 +1814,12 @@ v = f × λ<br>
 v = 500 Hz × 0.6 m = <strong>300 m/s</strong><br>
 The wave travels at 300 metres per second.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Amplitude</dt><dd>The maximum displacement from the rest position — determines how much energy the wave carries.</dd>
-<dt>Frequency</dt><dd>The number of complete waves passing a point per second. Measured in Hertz (Hz).</dd>
-<dt>Wavelength (λ)</dt><dd>The distance from one point on a wave to the same point on the next wave (e.g. peak to peak).</dd>
-<dt>Electromagnetic spectrum</dt><dd>The complete range of EM waves arranged by frequency/wavelength, from radio waves to gamma rays.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Measuring amplitude from peak to trough — ✅ Correct: amplitude is from the <strong>rest position to ONE peak</strong> (half of peak-to-trough).</li>
-<li>❌ Thinking sound is an EM wave — ✅ Correct: sound is a <strong>longitudinal mechanical wave</strong> — it needs a medium and travels much slower than light.</li>
-<li>❌ Getting the EM spectrum order wrong — ✅ Remember: "Really Mighty Insects Vex Ugly X-ray Guns" (Radio, Micro, IR, Visible, UV, X, Gamma).</li>
+<li>Measuring amplitude from peak to trough. Amplitude is measured from the <strong>rest position to ONE peak</strong> — half of the full peak-to-trough height.</li>
+<li>Thinking sound is an EM wave. Sound is a <strong>longitudinal mechanical wave</strong> — it needs a medium to travel through and moves far slower than light.</li>
+<li>Getting the EM spectrum order wrong. Remember it with "Really Mighty Insects Vex Ugly X-ray Guns" (Radio, Micro, IR, Visible, UV, X, Gamma).</li>
 </ul>`,
 
 "island-41": `<h2>Classification of Living Things</h2>
@@ -2150,22 +2134,22 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 <li>Rushing the starch test. You must remove the chlorophyll with ethanol first, or the leaf's green colour hides the blue-black result.</li>
 </ul>`,
 
-"island-45": `<h4>Introduction</h4>
-<p>Beneath your feet lies a dynamic planet. The Earth is made of layers — from a thin rocky crust to a super-hot iron core. Rocks are constantly being formed, broken down and reformed in the rock cycle. Understanding rock types and Earth's structure helps explain volcanoes, earthquakes, and the landscapes around us.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>Earth's four layers (outside to inside): <strong>Crust</strong> (thin, rocky, 5–70 km), <strong>Mantle</strong> (thick, semi-molten, convection currents), <strong>Outer core</strong> (liquid iron/nickel), <strong>Inner core</strong> (solid iron/nickel, ~5,500 °C).</li>
-<li><strong>Igneous rocks</strong> form when magma or lava cools and solidifies. Intrusive (slow cooling underground → large crystals, e.g. granite). Extrusive (fast cooling on surface → small crystals, e.g. basalt).</li>
-<li><strong>Sedimentary rocks</strong> form when layers of sediment are deposited, compacted and cemented over millions of years (e.g. sandstone, limestone). May contain fossils.</li>
-<li><strong>Metamorphic rocks</strong> form when existing rocks are changed by extreme heat and/or pressure (e.g. marble from limestone, slate from mudstone).</li>
-<li>The <strong>rock cycle</strong> shows how any rock type can become any other over geological time through weathering, erosion, deposition, heat, pressure, melting, and cooling.</li>
-<li><strong>Fossils</strong> form when dead organisms are buried in sediment before they decay — they provide evidence of past life and evolution.</li>
-<li><strong>Freeze-thaw weathering</strong> (physical): water enters cracks → freezes → expands (~9%) → widens the crack → thaws → repeats many cycles → rock fragments break off.</li>
-<li><strong>Oceanic crust</strong> is thin (~5–10 km), dense, and made mainly of basalt. <strong>Continental crust</strong> is thick (~30–70 km), less dense, and made mainly of granite. At destructive boundaries, denser oceanic crust <strong>subducts</strong> beneath lighter continental crust.</li>
-</ul>
+"island-45": `<h2>Earth's Structure &amp; Rocks</h2>
+<p>Beneath your feet lies a dynamic planet. The Earth is made of layers — from a thin rocky crust to a super-hot iron core — and the rocks that make up that crust are constantly being formed, broken down and reformed in an endless cycle. Understanding rock types and Earth's structure helps explain volcanoes, earthquakes, and the landscapes around us.</p>
+
+<h3>Earth's Layers</h3>
+<p>Earth is built from four layers, from the outside in: the <strong>crust</strong> (thin and rocky, 5–70 km deep), the <strong>mantle</strong> (thick and semi-molten, with slow convection currents), the <strong>outer core</strong> (liquid iron and nickel), and the <strong>inner core</strong> (solid iron and nickel, at around 5,500 °C).</p>
+<p>The crust itself is not uniform. <strong>Oceanic crust</strong> is thin (~5–10 km), dense, and made mainly of basalt; <strong>continental crust</strong> is much thicker (~30–70 km), less dense, and made mainly of granite. That density difference matters at destructive plate boundaries, where the denser oceanic crust <strong>subducts</strong> — is forced downward — beneath the lighter continental crust.</p>
 <div class="lesson-diagram" data-diagram="earth-layers"><p class="diagram-caption">The four layers of the Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>The Three Rock Types</h3>
+<p>Every rock on Earth belongs to one of three families, sorted by how it formed. <strong>Igneous rocks</strong> form when magma or lava cools and solidifies: cool slowly underground (intrusive) and large crystals have time to grow, as in granite; cool quickly at the surface (extrusive) and the crystals stay small, as in basalt. <strong>Sedimentary rocks</strong> form as layers of sediment are deposited, then compacted and cemented together over millions of years, as in sandstone or limestone — and because organisms can be buried within those layers, sedimentary rock is the only type that commonly contains <strong>fossils</strong>, formed when a dead organism is buried in sediment before it decays. <strong>Metamorphic rocks</strong> form when an existing rock is changed by extreme heat and/or pressure without fully melting — limestone becomes marble, mudstone becomes slate.</p>
+
+<h3>The Rock Cycle and Weathering</h3>
+<p>The <strong>rock cycle</strong> describes how, given enough geological time, any rock type can become any other — through weathering, erosion, deposition, heat, pressure, melting and cooling, in various combinations. One of the processes driving that cycle is <strong>freeze-thaw weathering</strong>: water seeps into a crack in a rock, freezes, and expands by around 9% as it does so, widening the crack; repeated freezing and thawing gradually forces fragments of rock to break away entirely.</p>
 <div class="lesson-diagram" data-diagram="rock-cycle"><p class="diagram-caption">The rock cycle: how rocks transform between types</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Explain how a piece of granite (igneous rock) could eventually become marble (metamorphic rock).</p>
 <p><strong>Solution:</strong><br>
@@ -2174,38 +2158,32 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 3. Layers build up; weight <strong>compacts and cements</strong> the sediment into limestone (sedimentary rock).<br>
 4. Tectonic forces push the limestone deep underground where <strong>intense heat and pressure</strong> change its structure → it becomes <strong>marble</strong> (metamorphic rock).</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Igneous</dt><dd>Rock formed from cooled magma or lava. "Igneous" comes from the Latin word for fire.</dd>
-<dt>Sedimentary</dt><dd>Rock formed from compressed layers of sediment, often containing fossils.</dd>
-<dt>Metamorphic</dt><dd>Rock that has been transformed by heat and/or pressure without melting completely.</dd>
-<dt>Rock cycle</dt><dd>The continuous process by which rocks are created, broken down, and transformed between the three rock types.</dd>
-<dt>Freeze-thaw weathering</dt><dd>Physical weathering where water in rock cracks repeatedly freezes and expands, breaking the rock apart over time.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking metamorphic rock involves melting — ✅ Correct: metamorphic rock changes structure under heat/pressure <strong>without fully melting</strong>. If it melts, it becomes magma → igneous.</li>
-<li>❌ Confusing weathering and erosion — ✅ Correct: weathering = <strong>breaking down</strong> in place; erosion = <strong>transporting</strong> the broken pieces away.</li>
-<li>❌ Thinking the rock cycle is one-directional — ✅ Correct: any rock type can become <strong>any other</strong> type — the cycle has multiple paths.</li>
+<li>Thinking metamorphic rock involves melting. It changes structure under heat and pressure <strong>without fully melting</strong> — if it melts, it becomes magma, and any rock that forms from that is igneous instead.</li>
+<li>Confusing weathering and erosion. Weathering <strong>breaks rock down</strong> where it sits; erosion <strong>transports</strong> the broken pieces away.</li>
+<li>Thinking the rock cycle only runs one way. Any rock type can become <strong>any other</strong> type — the cycle has multiple possible paths, not a single fixed order.</li>
 </ul>`,
 
-"island-46": `<h4>Introduction</h4>
-<p>Earth's natural cycles — particularly the water cycle and carbon cycle — keep our planet habitable. Water circulates between oceans, atmosphere and land; carbon moves between living things, atmosphere, oceans and rocks. Human activities are now disrupting the carbon cycle, leading to the enhanced greenhouse effect and climate change.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>The <strong>water cycle</strong>: Evaporation (liquid → gas) → Condensation (forms clouds) → Precipitation (rain/snow) → Collection (rivers/groundwater) → back to evaporation. Transpiration from plants also adds water vapour.</li>
-<li>The <strong>carbon cycle</strong>: Carbon moves via photosynthesis (removes CO₂), respiration (releases CO₂), combustion (burning fossil fuels), decomposition, and dissolving in oceans.</li>
-<li>The <strong>greenhouse effect</strong> is natural and essential — greenhouse gases (CO₂, methane, water vapour) trap heat and keep Earth warm enough for life.</li>
-<li>The <strong>enhanced greenhouse effect</strong>: humans are burning fossil fuels and deforesting → extra CO₂ → more heat trapped → global temperatures rising = <strong>climate change</strong>.</li>
-<li>Evidence for climate change: rising global temperatures, melting ice caps, rising sea levels, more extreme weather events, shifting ecosystems.</li>
-<li>Reducing climate change: use renewable energy, reduce fossil fuel use, plant trees, reduce meat consumption, improve energy efficiency.</li>
-<li>Earth's atmosphere composition: ~<strong>78% nitrogen</strong>, ~<strong>21% oxygen</strong>, ~1% argon, ~0.04% CO₂ and trace gases.</li>
-<li><strong>Transpiration</strong>: plants release water vapour through tiny pores called <strong>stomata</strong> on their leaves — this contributes significantly to the water cycle.</li>
-<li><strong>Acid rain</strong> forms when <strong>sulfur dioxide (SO₂)</strong> and <strong>nitrogen oxides (NOₓ)</strong> from burning fossil fuels dissolve in atmospheric water → sulfuric acid and nitric acid. Damages trees, lakes, and stone buildings.</li>
-</ul>
+"island-46": `<h2>Earth's Cycles &amp; Atmosphere</h2>
+<p>Earth's natural cycles — particularly the water cycle and the carbon cycle — keep our planet habitable, endlessly recycling the materials that life depends on. But those cycles are not immune to interference: human activity is now disrupting the carbon cycle, with consequences for the whole planet's climate.</p>
+
+<h3>The Water Cycle</h3>
+<p>Water moves through a continuous four-stage cycle: <strong>evaporation</strong> turns liquid water into vapour, which rises and cools to form clouds through <strong>condensation</strong>; the water then falls back down as <strong>precipitation</strong> (rain or snow) and is gathered up again through <strong>collection</strong> in rivers and groundwater, ready to evaporate once more. Plants add to this cycle too, through <strong>transpiration</strong> — releasing water vapour into the air through tiny pores on their leaves called <strong>stomata</strong>.</p>
 <div class="lesson-diagram" data-diagram="water-cycle"><p class="diagram-caption">The water cycle: evaporation, condensation and precipitation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>The Carbon Cycle and Earth's Atmosphere</h3>
+<p>Carbon moves between living things, the atmosphere, the oceans and rocks by several routes at once: <strong>photosynthesis</strong> removes CO₂ from the air, <strong>respiration</strong> and <strong>combustion</strong> (burning fossil fuels) release it back, <strong>decomposition</strong> returns carbon from dead organisms to the soil and air, and some carbon simply dissolves into the oceans. All of this happens against the backdrop of Earth's atmosphere, which is roughly <strong>78% nitrogen</strong>, <strong>21% oxygen</strong>, around 1% argon, and only about 0.04% CO₂ — a small percentage, but one that matters enormously for climate, as the next section explains.</p>
 <div class="lesson-diagram" data-diagram="carbon-cycle"><p class="diagram-caption">The carbon cycle: how carbon moves between living things, the atmosphere, oceans and rocks</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>The Greenhouse Effect and Climate Change</h3>
+<p>The <strong>greenhouse effect</strong> is natural and essential: greenhouse gases such as CO₂, methane and water vapour trap heat in the atmosphere, keeping Earth warm enough to support life. The problem is not the greenhouse effect itself but the <strong>enhanced</strong> version of it — humans burning fossil fuels and clearing forests adds extra CO₂ to the atmosphere, trapping more heat than the natural balance intended and driving global temperatures upward as <strong>climate change</strong>. The evidence is wide-ranging: rising global temperatures, melting ice caps, rising sea levels, more extreme weather events and shifting ecosystems all point the same way. Slowing it down means using renewable energy, cutting fossil fuel use, planting trees, reducing meat consumption and improving energy efficiency.</p>
+
+<h3>Acid Rain</h3>
+<p><strong>Acid rain</strong> forms when <strong>sulfur dioxide (SO₂)</strong> and <strong>nitrogen oxides (NOₓ)</strong>, both released by burning fossil fuels, dissolve into atmospheric water to form sulfuric and nitric acids. Once it falls, this acidified rain damages trees, acidifies lakes until aquatic life can no longer survive, and erodes stone buildings and statues over time.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Explain how cutting down and burning a forest increases the greenhouse effect.</p>
 <p><strong>Solution:</strong><br>
@@ -2214,39 +2192,33 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 3. More CO₂ in the atmosphere → more thermal energy (heat) is <strong>trapped</strong> by greenhouse gases → temperatures rise.<br>
 Both effects combine: more CO₂ released AND less CO₂ absorbed = <strong>double impact</strong>.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Evaporation</dt><dd>Liquid water gaining energy and becoming water vapour (gas) — happens at the surface, below boiling point.</dd>
-<dt>Condensation</dt><dd>Water vapour cooling and turning back into liquid water droplets — forms clouds.</dd>
-<dt>Greenhouse gas</dt><dd>A gas that traps thermal energy in the atmosphere (e.g. CO₂, methane, water vapour).</dd>
-<dt>Climate change</dt><dd>Long-term shifts in global temperatures and weather patterns, largely driven by increased greenhouse gas emissions from human activity.</dd>
-<dt>Transpiration</dt><dd>The loss of water vapour from plant leaves through stomata — drives water uptake from roots and contributes to the water cycle.</dd>
-<dt>Acid rain</dt><dd>Rain made acidic (pH below 5.6) by dissolved SO₂ and NOₓ from fossil fuel combustion, forming sulfuric and nitric acids.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying the greenhouse effect is bad — ✅ Correct: the NATURAL greenhouse effect is essential for life. It's the <strong>enhanced</strong> (extra) greenhouse effect that causes problems.</li>
-<li>❌ Confusing weather and climate — ✅ Correct: weather is short-term (today's conditions); climate is the <strong>long-term average</strong> over 30+ years.</li>
-<li>❌ Thinking only CO₂ is a greenhouse gas — ✅ Correct: methane, water vapour, and nitrous oxide are also greenhouse gases. Methane is actually more potent than CO₂ per molecule.</li>
+<li>Saying the greenhouse effect is bad. The <strong>natural</strong> greenhouse effect is essential for life — it is the <strong>enhanced</strong> (extra) greenhouse effect that causes problems.</li>
+<li>Confusing weather and climate. Weather is short-term (today's conditions); climate is the <strong>long-term average</strong> over 30+ years.</li>
+<li>Thinking only CO₂ is a greenhouse gas. Methane, water vapour and nitrous oxide are also greenhouse gases — methane is actually more potent than CO₂ per molecule.</li>
 </ul>`,
 
-"island-47": `<h4>Introduction</h4>
-<p>Our place in space is both humbling and fascinating. Earth is one of eight planets orbiting the Sun in our Solar System. Understanding why we have day and night, why the Moon changes shape, and why seasons exist comes down to how the Earth spins, tilts, and orbits — simple motions with profound effects.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>The eight planets in order from the Sun: <strong>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</strong>. Memory aid: "My Very Excited Mother Just Served Us Nachos."</li>
-<li><strong>Day and night</strong> are caused by Earth rotating on its axis once every 24 hours — the side facing the Sun has daytime.</li>
-<li><strong>Seasons</strong> are caused by Earth's <strong>axial tilt</strong> (23.5°). When the northern hemisphere tilts towards the Sun, it receives more direct sunlight → summer. When it tilts away → winter.</li>
-<li>The <strong>Moon's phases</strong> occur because we see different amounts of the Moon's sunlit side as it orbits Earth (about 28 days for a full cycle): New Moon → Crescent → Quarter → Gibbous → Full Moon → back again.</li>
-<li>A <strong>solar eclipse</strong> occurs when the Moon passes between Earth and Sun, blocking sunlight. A <strong>lunar eclipse</strong> occurs when Earth is between Sun and Moon, casting a shadow on the Moon.</li>
-<li><strong>Gravity</strong> keeps planets in orbit around the Sun and the Moon in orbit around Earth. Larger mass = stronger gravitational pull. Gravity acts as a <strong>centripetal force</strong>, continuously curving the planet's path inward.</li>
-<li>The <strong>Sun</strong> is a <strong>star</strong> — a massive ball of hot plasma (mainly hydrogen and helium) that generates energy by <strong>nuclear fusion</strong> in its core.</li>
-<li>A <strong>galaxy</strong> is a vast collection of billions of stars, gas, dust and dark matter held together by gravity. Our Solar System is in the <strong>Milky Way</strong> galaxy (~200 billion stars).</li>
-<li>A <strong>light year</strong> is a unit of <strong>distance</strong> (not time) — the distance light travels in one year (~9.5 trillion km). The nearest star (Proxima Centauri) is ~4.2 light years away.</li>
-</ul>
+"island-47": `<h2>Space and Earth's Motion</h2>
+<p>Our place in space is both humbling and fascinating. Earth is one of eight planets orbiting the Sun in our Solar System, which is itself just one tiny corner of a galaxy containing around 200 billion stars. Understanding why we have day and night, why the Moon changes shape, and why seasons exist comes down to how the Earth spins, tilts and orbits — simple motions with profound effects.</p>
+
+<h3>The Solar System</h3>
+<p>The eight planets orbit the Sun in this order: <strong>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</strong> — remembered with "My Very Excited Mother Just Served Us Nachos."</p>
 <div class="lesson-diagram" data-diagram="solar-system"><p class="diagram-caption">The eight planets of the Solar System in order</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Earth's Motion: Day, Night and Seasons</h3>
+<p><strong>Day and night</strong> happen because Earth rotates on its axis once every 24 hours — whichever side currently faces the Sun experiences daytime, while the far side experiences night. <strong>Seasons</strong> come from a different motion entirely: Earth's <strong>axial tilt</strong> of 23.5°. When the northern hemisphere tilts towards the Sun, it receives more direct sunlight and experiences summer; six months later, once Earth has moved round in its orbit, that same hemisphere tilts away from the Sun instead, and winter follows.</p>
+
+<h3>The Moon: Phases and Eclipses</h3>
+<p>The Moon does not produce any light of its own — it only reflects sunlight. Its <strong>phases</strong> occur because, as it orbits Earth over about 28 days, we see a changing amount of its sunlit side: New Moon → Crescent → Quarter → Gibbous → Full Moon → and back again. Occasionally the Sun, Earth and Moon line up closely enough to produce an eclipse: a <strong>solar eclipse</strong> happens when the Moon passes between Earth and the Sun, blocking sunlight from part of Earth's surface, while a <strong>lunar eclipse</strong> happens when Earth passes between the Sun and the Moon, casting Earth's own shadow onto the Moon.</p>
 <div class="lesson-diagram" data-diagram="moon-phases"><p class="diagram-caption">The phases of the Moon</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Gravity, Stars and Galaxies</h3>
+<p><strong>Gravity</strong> is what holds this entire system together: it keeps the planets in orbit around the Sun and the Moon in orbit around Earth, with a larger mass always producing a stronger pull. Rather than pulling an orbiting object straight in, gravity acts as a <strong>centripetal force</strong>, continuously curving its path inward just enough to keep it circling rather than flying off in a straight line or falling directly in.</p>
+<p>The <strong>Sun</strong> itself is a <strong>star</strong> — a massive ball of hot plasma, mostly hydrogen and helium, that generates its energy through <strong>nuclear fusion</strong> in its core. Our Solar System sits inside the <strong>Milky Way</strong>, a <strong>galaxy</strong>: a vast collection of billions of stars, gas, dust and dark matter, all held together by gravity. Distances at this scale get so large that a new unit is needed — a <strong>light year</strong>, the <em>distance</em> (not time) that light travels in one year, around 9.5 trillion km. Even so, the nearest star beyond our Sun, Proxima Centauri, is still about 4.2 light years away.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> In June, the UK has long days and warm weather. In December, days are short and cold. Explain why.</p>
 <p><strong>Solution:</strong><br>
@@ -2256,21 +2228,13 @@ Both effects combine: more CO₂ released AND less CO₂ absorbed = <strong>doub
 4. In December, the northern hemisphere tilts <strong>AWAY</strong> → sunlight is spread over a larger area (less intense) and days are shorter → colder.<br>
 It is NOT because Earth is closer to the Sun in summer — Earth's orbit is nearly circular.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Orbit</dt><dd>The curved path one object takes around another due to gravity (e.g. Earth orbits the Sun in about 365.25 days).</dd>
-<dt>Axis</dt><dd>An imaginary line through Earth from North Pole to South Pole, around which it rotates once per day.</dd>
-<dt>Axial tilt</dt><dd>Earth's axis is tilted at 23.5° from vertical — this causes the seasons.</dd>
-<dt>Solar eclipse</dt><dd>When the Moon passes directly between Earth and Sun, blocking sunlight from reaching part of Earth's surface.</dd>
-<dt>Light year</dt><dd>A unit of distance equal to how far light travels in one year (~9.5 trillion km). Used for measuring vast astronomical distances.</dd>
-<dt>Galaxy</dt><dd>A vast system of billions of stars, gas, dust and dark matter bound together by gravity. Our galaxy is the Milky Way.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking summer happens because Earth is closer to the Sun — ✅ Correct: seasons are caused by Earth's <strong>axial tilt</strong>, not distance. (Australia has summer when we have winter!)</li>
-<li>❌ Thinking the Moon produces its own light — ✅ Correct: the Moon <strong>reflects sunlight</strong>. Phases occur because we see different portions of its lit side.</li>
-<li>❌ Confusing rotation and revolution — ✅ Correct: Earth <strong>rotates</strong> on its axis (causes day/night); it <strong>revolves</strong> (orbits) around the Sun (causes years).</li>
-<li>❌ Thinking a light year is a unit of time — ✅ Correct: a light year is a unit of <strong>distance</strong>.</li>
+<li>Thinking summer happens because Earth is closer to the Sun. Seasons are caused by Earth's <strong>axial tilt</strong>, not distance — Australia has summer exactly when the UK has winter.</li>
+<li>Thinking the Moon produces its own light. The Moon <strong>reflects sunlight</strong>; its phases occur because we see different portions of its lit side.</li>
+<li>Confusing rotation and revolution. Earth <strong>rotates</strong> on its axis (causing day and night); it <strong>revolves</strong> — orbits — around the Sun (causing years).</li>
+<li>Thinking a light year is a unit of time. It is a unit of <strong>distance</strong>.</li>
 </ul>`,
 
 "island-60": `<h2>Nutrition &amp; Digestion</h2>
@@ -2335,19 +2299,20 @@ It is NOT because Earth is closer to the Sun in summer — Earth's orbit is near
 </ul>
 <p class="lesson-next-hint">➡️ Next: you've seen how the body nourishes itself — now you'll look at reproduction, another vital body system, and how new life gets started.</p>`,
 
-"island-61": `<h4>Introduction</h4>
-<p>Pressure is all about how a force is spread over an area. A small force on a tiny area (like the point of a drawing pin) creates enormous pressure, while a large force spread over a big area (like a snowshoe) creates very little pressure. Understanding pressure helps explain everything from why knives cut to why deep-sea creatures need special adaptations.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Pressure = force ÷ area</strong> (P = F/A). Pressure is measured in <strong>Pascals (Pa)</strong>, where 1 Pa = 1 N/m².</li>
-<li>The <strong>same force</strong> over a <strong>smaller area</strong> creates <strong>greater pressure</strong> (e.g. a sharp knife cuts better than a blunt one).</li>
-<li>The <strong>same force</strong> over a <strong>larger area</strong> creates <strong>less pressure</strong> (e.g. snowshoes stop you sinking into snow).</li>
-<li><strong>Atmospheric pressure</strong> is caused by the weight of air above a surface. At sea level it is about 101 kPa. It <strong>decreases</strong> with altitude because there is less air above.</li>
-<li><strong>Pressure in liquids</strong> increases with <strong>depth</strong> because there is more liquid above pushing down. It acts in <strong>all directions</strong> at any point.</li>
-<li><strong>Upthrust</strong> is the upward force a liquid exerts on an object placed in it. It is caused by the difference in pressure between the top and bottom of the object.</li>
-<li>An object <strong>floats</strong> when upthrust equals its weight. It <strong>sinks</strong> when its weight is greater than the upthrust.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+"island-61": `<h2>Pressure</h2>
+<p>Pressure is all about how a force is spread over an area — and the same force can feel completely different depending on how concentrated it is. A small force on a tiny area, like the point of a drawing pin, creates enormous pressure; a large force spread over a big area, like a snowshoe, creates very little. Understanding pressure explains everything from why knives cut to why a heavy steel ship floats.</p>
+
+<h3>What Is Pressure?</h3>
+<p><strong>Pressure = force ÷ area</strong> (P = F/A), measured in <strong>Pascals (Pa)</strong>, where 1 Pa = 1 N/m². Because area sits on the bottom of that fraction, shrinking the area concentrates the same force into a smaller space, producing far greater pressure — which is exactly why a sharp knife, with a very thin blade edge, cuts so much better than a blunt one. Spread that same force over a much larger area instead, and the pressure drops accordingly — which is how snowshoes stop you sinking into snow that a normal boot would break straight through.</p>
+
+<h3>Pressure in the Atmosphere and in Liquids</h3>
+<p><strong>Atmospheric pressure</strong> is caused by the weight of the whole column of air above a surface pressing down on it. At sea level it is about 101 kPa, and it <strong>decreases</strong> with altitude, because climbing higher leaves less air above you to add its weight.</p>
+<p><strong>Pressure in a liquid</strong> behaves similarly but the other way round: it increases with <strong>depth</strong>, because at any given point there is more liquid above pushing down. Unlike a solid pushing in one direction, pressure in a fluid acts equally in <strong>all directions</strong> at any point — which is why a submerged object is squeezed from every side at once, not just from above.</p>
+
+<h3>Upthrust and Floating</h3>
+<p>Because pressure increases with depth, the pressure pushing up on the <em>bottom</em> of a submerged object is always slightly greater than the pressure pushing down on its <em>top</em>. That pressure difference produces a net upward force called <strong>upthrust</strong>. Whether an object floats or sinks comes down to a straightforward comparison: it <strong>floats</strong> when upthrust equals its weight, and <strong>sinks</strong> when its weight is greater than the upthrust it can generate. A heavy steel ship floats not because it is light, but because its hollow shape displaces enough water to generate an upthrust equal to its full weight.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A box weighs 900 N and rests on the ground. The base of the box has an area of 3 m². Calculate the pressure the box exerts on the ground.</p>
 <p><strong>Solution:</strong><br>
@@ -2356,40 +2321,32 @@ P = 900 ÷ 3<br>
 P = <strong>300 Pa</strong><br>
 The box exerts a pressure of 300 Pascals (300 N/m²) on the ground.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Pressure</dt><dd>The force acting per unit area, measured in Pascals (Pa). P = F ÷ A.</dd>
-<dt>Pascal (Pa)</dt><dd>The SI unit of pressure. 1 Pa = 1 N/m² (one Newton per square metre).</dd>
-<dt>Atmospheric pressure</dt><dd>The pressure exerted by the weight of the atmosphere on a surface. It is about 101 kPa at sea level and decreases with altitude.</dd>
-<dt>Upthrust</dt><dd>The upward force exerted by a fluid on an object placed in it, caused by the pressure difference between the top and bottom of the object.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking a heavier object always exerts more pressure — ✅ Correct: pressure depends on <strong>both</strong> force and area. A lighter object with a tiny area can exert more pressure than a heavy one with a large area.</li>
-<li>❌ Forgetting the units — ✅ Correct: force must be in <strong>Newtons</strong>, area in <strong>m²</strong>, and pressure in <strong>Pascals (N/m²)</strong>.</li>
-<li>❌ Thinking atmospheric pressure only pushes downwards — ✅ Correct: atmospheric pressure acts in <strong>all directions</strong>.</li>
-<li>❌ Saying an object floats because it is light — ✅ Correct: an object floats when the <strong>upthrust equals its weight</strong>. A heavy steel ship floats because its shape displaces enough water.</li>
+<li>Thinking a heavier object always exerts more pressure. Pressure depends on <strong>both</strong> force and area — a lighter object concentrated onto a tiny area can exert more pressure than a heavy one spread over a large area.</li>
+<li>Forgetting the units. Force must be in <strong>Newtons</strong>, area in <strong>m²</strong>, and pressure in <strong>Pascals (N/m²)</strong>.</li>
+<li>Thinking atmospheric pressure only pushes downwards. It acts in <strong>all directions</strong>, just like pressure in any fluid.</li>
+<li>Saying an object floats because it is light. An object floats when the <strong>upthrust equals its weight</strong> — shape and displaced volume matter more than weight alone.</li>
 </ul>`,
 
-"island-62": `<h4>Introduction</h4>
-<p>The Periodic Table is one of the most important tools in science — a single chart that organises all known elements and reveals patterns in their properties. Dmitri Mendeleev first arranged elements so that those with similar properties fell into the same columns, and he was so confident in the pattern that he left gaps for elements that had not yet been discovered. Modern science has confirmed his brilliance.</p>
+"island-62": `<h2>The Periodic Table</h2>
+<p>The Periodic Table is one of the most important tools in science — a single chart that organises all known elements and reveals patterns in their properties. In 1869, Dmitri Mendeleev arranged the elements known at the time by atomic mass so that those with similar properties fell into the same columns, and he was so confident in the pattern that he left gaps for elements that had not yet been discovered — going as far as predicting their properties. When gallium and germanium were later isolated, they matched his predictions almost exactly, confirming both his brilliance and the pattern he had found.</p>
 <div class="lesson-diagram" data-diagram="periodic-table"><p class="diagram-caption">The Periodic Table of Elements — click to enlarge</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div style="text-align:center;margin:1em 0">
   <button onclick="downloadPeriodicTablePDF()" style="padding:0.6em 1.4em;font-size:0.95em;font-weight:600;color:#fff;background:linear-gradient(135deg,#6366f1,#8b5cf6);border:none;border-radius:8px;cursor:pointer;box-shadow:0 2px 8px rgba(99,102,241,0.25)">&#x1F4E5; Download Periodic Table as PDF</button>
 </div>
-<h4>📌 Key Points</h4>
-<ul>
-<li>The Periodic Table arranges elements in order of increasing <strong>atomic number</strong> (the number of protons).</li>
-<li><strong>Periods</strong> are horizontal rows. Elements in the same period have the same number of <strong>electron shells</strong>.</li>
-<li><strong>Groups</strong> are vertical columns. Elements in the same group have the same number of <strong>outer-shell electrons</strong>, giving them <strong>similar chemical properties</strong>.</li>
-<li><strong>Group 1 — Alkali metals</strong> (lithium, sodium, potassium): very reactive metals that react vigorously with water. Reactivity <strong>increases</strong> going down the group.</li>
-<li><strong>Group 7 — Halogens</strong> (fluorine, chlorine, bromine, iodine): reactive non-metals that form salts with metals. Reactivity <strong>decreases</strong> going down the group.</li>
-<li><strong>Group 0 — Noble gases</strong> (helium, neon, argon): very unreactive because they have a <strong>full outer electron shell</strong>.</li>
-<li><strong>Metals</strong> are found on the left and centre of the table. They are shiny, good conductors, malleable and ductile.</li>
-<li><strong>Non-metals</strong> are found on the right. They are dull, poor conductors and brittle when solid.</li>
-<li><strong>Mendeleev</strong> (1869) arranged elements by atomic mass and left gaps for undiscovered elements. He predicted their properties — and was proved right when gallium and germanium were discovered.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>Periods and Groups</h3>
+<p>Elements are arranged in order of increasing <strong>atomic number</strong> — the number of protons in the nucleus. <strong>Periods</strong> are the horizontal rows, and moving along a period means gaining another <strong>electron shell</strong>. <strong>Groups</strong> are the vertical columns, and the reason the table works at all is that elements in the same group share the same number of <strong>outer-shell electrons</strong> — which is what actually controls how an element reacts, giving every element in a group <strong>similar chemical properties</strong>.</p>
+
+<h3>Group 1, Group 7 and Group 0</h3>
+<p>Three groups show the clearest patterns. <strong>Group 1 — the alkali metals</strong> (lithium, sodium, potassium) are very reactive metals that react vigorously with water, and reactivity <strong>increases</strong> going down the group as the single outer electron sits further from the nucleus and becomes easier to lose. <strong>Group 7 — the halogens</strong> (fluorine, chlorine, bromine, iodine) are reactive non-metals that form salts with metals, but here reactivity <strong>decreases</strong> going down the group, because gaining an extra electron gets harder the further the outer shell sits from the nucleus. <strong>Group 0 — the noble gases</strong> (helium, neon, argon) sit at the opposite extreme: they are almost completely unreactive, because their outer electron shell is already <strong>full</strong> and has no tendency to lose or gain electrons at all.</p>
+
+<h3>Metals and Non-Metals</h3>
+<p>The table also splits broadly in two. <strong>Metals</strong>, found on the left and in the centre, are shiny, good conductors of heat and electricity, and both malleable (can be hammered into shape) and ductile (can be drawn into wires). <strong>Non-metals</strong>, over on the right, tend to be dull, poor conductors, and brittle when solid.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Lithium reacts gently with water. Sodium reacts more vigorously. Potassium reacts violently with a lilac flame. These are all in Group 1. Explain the pattern.</p>
 <p><strong>Solution:</strong><br>
@@ -2399,40 +2356,30 @@ The box exerts a pressure of 300 Pascals (300 N/m²) on the ground.</p>
 4. Losing the outer electron more easily means the metal reacts <strong>more vigorously</strong>.<br>
 Therefore, reactivity <strong>increases</strong> going down Group 1.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Atomic number</dt><dd>The number of protons in the nucleus of an atom. Elements in the Periodic Table are arranged in order of increasing atomic number.</dd>
-<dt>Period</dt><dd>A horizontal row in the Periodic Table. Elements in the same period have the same number of electron shells.</dd>
-<dt>Group</dt><dd>A vertical column in the Periodic Table. Elements in the same group have the same number of outer-shell electrons and similar chemical properties.</dd>
-<dt>Alkali metals</dt><dd>The elements in Group 1 (lithium, sodium, potassium, etc.). Very reactive metals that react with water to produce hydrogen gas and an alkaline solution.</dd>
-<dt>Halogens</dt><dd>The elements in Group 7 (fluorine, chlorine, bromine, iodine). Reactive non-metals that form salts when they react with metals.</dd>
-<dt>Noble gases</dt><dd>The elements in Group 0 (helium, neon, argon, etc.). Very unreactive because they have a full outer electron shell.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Confusing groups and periods — ✅ Correct: <strong>groups</strong> are vertical columns (similar properties); <strong>periods</strong> are horizontal rows (same number of shells).</li>
-<li>❌ Thinking all elements are metals — ✅ Correct: about 80% are metals, but <strong>non-metals</strong> (on the right) and noble gases are equally important.</li>
-<li>❌ Thinking reactivity always increases going down a group — ✅ Correct: reactivity increases down Group 1 (metals lose electrons more easily), but <strong>decreases</strong> down Group 7 (non-metals gain electrons less easily).</li>
-<li>❌ Saying noble gases have no electrons — ✅ Correct: noble gases have electrons, but their outer shell is <strong>full</strong>, making them very stable and unreactive.</li>
+<li>Confusing groups and periods. <strong>Groups</strong> are vertical columns (similar properties); <strong>periods</strong> are horizontal rows (same number of shells).</li>
+<li>Thinking all elements are metals. About 80% are metals, but <strong>non-metals</strong> and noble gases are just as important to the table's patterns.</li>
+<li>Assuming reactivity always increases going down a group. It increases down Group 1 (metals lose electrons more easily), but <strong>decreases</strong> down Group 7 (non-metals gain electrons less easily).</li>
+<li>Saying noble gases have no electrons. They have electrons like any other element — theirs is simply a <strong>full</strong> outer shell, which is what makes them so stable and unreactive.</li>
 </ul>`,
 
-"island-63": `<h4>Introduction</h4>
-<p>Not all metals are the same — some react violently with water while others barely react at all. The <strong>reactivity series</strong> ranks metals from most to least reactive, and this ranking determines how metals are extracted from their ores. Meanwhile, modern materials such as ceramics, polymers and composites have been developed to meet specific needs that metals alone cannot fulfil.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>The <strong>reactivity series</strong> ranks metals from most reactive (potassium) to least reactive (platinum): K, Na, Ca, Mg, Al, <em>C</em>, Zn, Fe, Cu, Ag, Au, Pt.</li>
-<li>A <strong>more reactive</strong> metal can <strong>displace</strong> a less reactive metal from its compound. For example: zinc + copper sulfate → zinc sulfate + copper.</li>
-<li><strong>Carbon</strong> is placed in the reactivity series (between aluminium and zinc). Metals <strong>below</strong> carbon can be extracted by heating their ores with carbon (e.g. iron from iron oxide in a blast furnace).</li>
-<li>Metals <strong>above</strong> carbon (e.g. aluminium) must be extracted by <strong>electrolysis</strong>, which is more expensive.</li>
-<li>Very unreactive metals (gold, silver, platinum) are found <strong>native</strong> (as pure metal) in the ground because they do not easily form compounds.</li>
-<li><strong>Ceramics</strong> (e.g. clay, glass, porcelain) are hard, brittle, heat-resistant and electrically insulating.</li>
-<li><strong>Polymers</strong> (e.g. polythene, PVC, nylon) are long-chain molecules that are lightweight, flexible and good electrical insulators.</li>
-<li><strong>Composites</strong> (e.g. fibreglass, reinforced concrete, carbon fibre) combine two or more materials to get properties better than either alone.</li>
-<li>The choice of material for a specific purpose depends on properties such as <strong>strength, weight, cost, flexibility, conductivity</strong> and resistance to corrosion.</li>
-</ul>
+"island-63": `<h2>Materials &amp; Reactivity</h2>
+<p>Not all metals are the same — some react violently with water while others barely react at all. The <strong>reactivity series</strong> ranks metals from most to least reactive, and, as you'll see, that single ranking explains both which metal can steal another's place in a compound and which method is needed to extract a metal from its ore in the first place. Meanwhile, modern materials such as ceramics, polymers and composites have been developed to meet needs that metals alone cannot fulfil.</p>
+
+<h3>The Reactivity Series and Displacement</h3>
+<p>The <strong>reactivity series</strong> ranks metals from most reactive (potassium) to least reactive (platinum): K, Na, Ca, Mg, Al, <em>C</em>, Zn, Fe, Cu, Ag, Au, Pt. Its usefulness comes from a simple rule: a <strong>more reactive</strong> metal can <strong>displace</strong> a less reactive one from its compound, taking its place. For example: zinc + copper sulfate → zinc sulfate + copper — zinc, being more reactive, pushes copper out of the compound and takes its place instead.</p>
 <div class="lesson-diagram" data-diagram="reactivity-series"><p class="diagram-caption">The reactivity series, from most to least reactive</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="displacement-reaction"><p class="diagram-caption">A more reactive metal displaces a less reactive one from its compound</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Extracting Metals from Ores</h3>
+<p><strong>Carbon</strong> is deliberately placed inside the reactivity series itself (between aluminium and zinc), because its position decides how a metal is extracted from its ore. Metals <strong>below</strong> carbon are less reactive than it, so carbon can be used to pull them out of their compound — this is why iron is extracted by heating iron oxide with carbon in a blast furnace. Metals <strong>above</strong> carbon, such as aluminium, are more reactive than carbon, so carbon cannot displace them; instead they must be extracted by <strong>electrolysis</strong>, which uses electrical energy and is considerably more expensive. At the very bottom of the series, metals such as gold, silver and platinum are so unreactive that they barely form compounds at all, which is why they are often found <strong>native</strong> — as the pure metal — straight in the ground.</p>
+
+<h3>Modern Materials: Ceramics, Polymers and Composites</h3>
+<p>Not every material used today is a metal. <strong>Ceramics</strong> (clay, glass, porcelain) are hard, brittle, heat-resistant and electrically insulating. <strong>Polymers</strong> (polythene, PVC, nylon) are long-chain molecules that are lightweight, flexible and good electrical insulators. <strong>Composites</strong> (fibreglass, reinforced concrete, carbon fibre) combine two or more materials to get properties better than either could achieve alone. Choosing between them for a real product comes down to matching the material's <strong>strength, weight, cost, flexibility, conductivity</strong> and resistance to corrosion to the job it needs to do.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A student places a piece of iron into copper sulfate solution. The iron becomes coated in a reddish-brown layer. Explain what has happened.</p>
 <p><strong>Solution:</strong><br>
@@ -2442,37 +2389,29 @@ Therefore, reactivity <strong>increases</strong> going down Group 1.</p>
 4. Word equation: iron + copper sulfate → iron sulfate + copper.<br>
 This is a <strong>displacement reaction</strong> — the more reactive metal takes the place of the less reactive one.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Reactivity series</dt><dd>A list of metals ranked in order of their reactivity, from most reactive (potassium) to least reactive (platinum).</dd>
-<dt>Displacement reaction</dt><dd>A reaction in which a more reactive element takes the place of a less reactive element in a compound.</dd>
-<dt>Ore</dt><dd>A rock that contains enough metal or metal compound to make it worthwhile to extract the metal.</dd>
-<dt>Ceramic</dt><dd>A hard, brittle, heat-resistant material made by heating natural substances (e.g. clay) to high temperatures.</dd>
-<dt>Polymer</dt><dd>A very long molecule made of many small repeating units (monomers) joined together. Plastics are examples of polymers.</dd>
-<dt>Composite</dt><dd>A material made by combining two or more different materials to produce improved properties.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking carbon is a metal — ✅ Correct: carbon is a <strong>non-metal</strong>, but it is placed in the reactivity series because it is used to extract metals from their ores.</li>
-<li>❌ Saying all metals are extracted using carbon — ✅ Correct: only metals <strong>below carbon</strong> in the reactivity series can be extracted this way. Metals above carbon require <strong>electrolysis</strong>.</li>
-<li>❌ Confusing composite and compound — ✅ Correct: a <strong>composite</strong> is a physical combination of materials (not chemically bonded); a <strong>compound</strong> is a chemical combination of elements.</li>
-<li>❌ Thinking a displacement reaction can happen either way — ✅ Correct: only the <strong>more reactive</strong> metal can displace the less reactive one, never the other way round.</li>
+<li>Thinking carbon is a metal. Carbon is a <strong>non-metal</strong>, but it is placed in the reactivity series because it is used to extract metals from their ores.</li>
+<li>Saying all metals are extracted using carbon. Only metals <strong>below carbon</strong> in the reactivity series can be extracted this way — metals above carbon require <strong>electrolysis</strong>.</li>
+<li>Confusing composite and compound. A <strong>composite</strong> is a physical combination of materials (not chemically bonded); a <strong>compound</strong> is a chemical combination of elements.</li>
+<li>Thinking a displacement reaction can happen either way round. Only the <strong>more reactive</strong> metal can displace the less reactive one — never the other way round.</li>
 </ul>`,
 
-"island-64": `<h4>Introduction</h4>
+"island-64": `<h2>Hooke's Law</h2>
 <p>Springs are everywhere — in mattresses, car suspensions, trampolines and pens. Robert Hooke discovered that when you stretch a spring with a force, the amount it extends is directly proportional to the force — as long as you do not stretch it too far. This beautifully simple relationship is known as <strong>Hooke's Law</strong>.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Hooke's Law:</strong> F = k × e, where F is the force applied (N), k is the spring constant (N/m), and e is the extension (m).</li>
-<li><strong>Extension</strong> = stretched length − original (natural) length.</li>
-<li>The <strong>spring constant (k)</strong> measures stiffness. A higher k means a stiffer spring that needs more force to stretch it.</li>
-<li>On a <strong>force–extension graph</strong>, Hooke's Law produces a <strong>straight line through the origin</strong>. The gradient equals the spring constant (k).</li>
-<li>The <strong>limit of proportionality</strong> is the point beyond which force and extension are no longer directly proportional — the graph starts to curve.</li>
-<li><strong>Elastic deformation</strong>: the object returns to its original shape when the force is removed (like gently stretching an elastic band).</li>
-<li><strong>Plastic deformation</strong>: the object is permanently deformed and does not return to its original shape (like bending a paperclip).</li>
-<li>If you <strong>double the force</strong> (within the limit of proportionality), the extension <strong>doubles</strong> — this is what "directly proportional" means.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>Hooke's Law</h3>
+<p>Hooke's Law is written <strong>F = k × e</strong>, where F is the force applied (N), e is the <strong>extension</strong> — the stretched length minus the original, natural length — and k is the <strong>spring constant</strong> (N/m), a measure of the spring's stiffness. A higher spring constant means a stiffer spring, needing more force to produce the same extension.</p>
+<p>The phrase "directly proportional" has a precise meaning here: if you double the force applied (while still within the limit of proportionality, below), the extension doubles too. Halve the force, and the extension halves. The two quantities always change by the same factor.</p>
+
+<h3>The Force–Extension Graph and Limit of Proportionality</h3>
+<p>Plotting force against extension while Hooke's Law holds produces a <strong>straight line through the origin</strong>, and the gradient of that line is exactly the spring constant, k. This stays true only up to a certain point, called the <strong>limit of proportionality</strong> — stretch the spring beyond it and the line starts to <strong>curve</strong>, because force and extension are no longer changing in the same fixed ratio.</p>
+
+<h3>Elastic and Plastic Deformation</h3>
+<p>What happens after the force is removed depends on whether that limit was crossed. <strong>Elastic deformation</strong> is reversible: the object returns to its original shape once the force is gone, the way a gently stretched elastic band snaps back. <strong>Plastic deformation</strong> is permanent: the object stays deformed even after the force is removed, the way a bent paperclip stays bent. Crossing the limit of proportionality is what pushes a spring from elastic into plastic behaviour.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A spring has a natural length of 12 cm. When a force of 10 N is applied, it stretches to 16 cm. Calculate the spring constant.</p>
 <p><strong>Solution:</strong><br>
@@ -2481,21 +2420,13 @@ Step 2 — Rearrange Hooke's Law: k = F ÷ e<br>
 Step 3 — Substitute: k = 10 ÷ 0.04 = <strong>250 N/m</strong><br>
 The spring constant is 250 N/m, meaning the spring needs 250 N of force for every 1 m of extension.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Hooke's Law</dt><dd>The extension of a spring is directly proportional to the force applied, provided the limit of proportionality is not exceeded. F = k × e.</dd>
-<dt>Spring constant (k)</dt><dd>A measure of the stiffness of a spring, in N/m. Higher k = stiffer spring.</dd>
-<dt>Extension (e)</dt><dd>The amount a spring has been stretched beyond its natural (unstretched) length, in metres.</dd>
-<dt>Limit of proportionality</dt><dd>The point beyond which the relationship between force and extension is no longer linear (Hooke's Law stops applying).</dd>
-<dt>Elastic deformation</dt><dd>Deformation that is reversed when the force is removed — the object returns to its original shape.</dd>
-<dt>Plastic deformation</dt><dd>Permanent deformation — the object does not return to its original shape when the force is removed.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Using the total length instead of the extension — ✅ Correct: extension = stretched length − <strong>original length</strong>. Always subtract the natural length first.</li>
-<li>❌ Forgetting to convert cm to m — ✅ Correct: the equation F = k × e requires extension in <strong>metres</strong>. 4 cm = 0.04 m.</li>
-<li>❌ Thinking Hooke's Law always applies — ✅ Correct: Hooke's Law only works up to the <strong>limit of proportionality</strong>. Beyond that, the spring may deform permanently.</li>
-<li>❌ Confusing the limit of proportionality with breaking — ✅ Correct: the limit of proportionality is where the graph <strong>curves</strong> — the spring has not broken, but the relationship is no longer linear.</li>
+<li>Using the total length instead of the extension. Extension = stretched length − <strong>original length</strong> — always subtract the natural length first.</li>
+<li>Forgetting to convert cm to m. The equation F = k × e needs extension in <strong>metres</strong>: 4 cm = 0.04 m.</li>
+<li>Thinking Hooke's Law always applies. It only holds up to the <strong>limit of proportionality</strong> — beyond that, the spring may deform permanently.</li>
+<li>Confusing the limit of proportionality with breaking. It is simply where the graph <strong>curves</strong> — the spring has not broken, but the relationship is no longer linear.</li>
 </ul>`,
 
 "island-65": `<h2>Health: Effects of Drugs</h2>
@@ -2551,21 +2482,17 @@ So the student is wrong: caffeine is a drug, and a legal one.</p>
 <li>Treating addiction as simply a lack of willpower. Dependence involves real <strong>physical and chemical changes in the brain</strong>, which is why it is treated as a medical condition.</li>
 </ul>`,
 
-"island-66": `<h4>Introduction</h4>
-<p>A <strong>distance–time graph</strong> is one of the most useful tools in physics for describing motion. By looking at the shape of the line, you can tell whether an object is stationary, moving at a constant speed, speeding up or slowing down — and by calculating the gradient, you can work out exactly how fast it is going.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>On a distance–time graph, the <strong>x-axis</strong> shows time and the <strong>y-axis</strong> shows the distance from the starting point.</li>
-<li>A <strong>horizontal (flat) line</strong> means the object is <strong>stationary</strong> — time passes but the distance does not change.</li>
-<li>A <strong>straight diagonal line</strong> going upwards means the object is moving at <strong>constant speed</strong>.</li>
-<li>The <strong>steeper</strong> the line, the <strong>faster</strong> the object is moving (more distance covered per unit time).</li>
-<li><strong>Speed = gradient</strong> of the line = distance ÷ time.</li>
-<li>A <strong>curve getting steeper</strong> means the object is <strong>accelerating</strong> (speeding up). A curve getting shallower means it is <strong>decelerating</strong> (slowing down).</li>
-<li>To compare journeys, look at the <strong>gradient</strong> of each section — a steeper section represents a faster speed.</li>
-<li><strong>Average speed</strong> for a whole journey = total distance ÷ total time.</li>
-</ul>
+"island-66": `<h2>Distance–Time Graphs</h2>
+<p>A <strong>distance–time graph</strong> is one of the most useful tools in physics for describing motion. By looking at the shape of the line alone, you can tell whether an object is stationary, moving at a constant speed, speeding up or slowing down — and by calculating the gradient, you can work out exactly how fast it is going.</p>
+
+<h3>Reading the Shape of the Graph</h3>
+<p>On a distance–time graph, the <strong>x-axis</strong> shows time and the <strong>y-axis</strong> shows distance from the starting point. The shape of the line tells the whole story of the journey. A <strong>horizontal (flat) line</strong> means the object is <strong>stationary</strong> — time is passing but the distance is not changing. A <strong>straight diagonal line</strong> means the object is moving at <strong>constant speed</strong>, and the steeper that line, the faster it is going, because more distance is being covered in the same amount of time. A <strong>curve that gets steeper</strong> means the object is <strong>accelerating</strong> (speeding up), while a curve that gets shallower means it is <strong>decelerating</strong> (slowing down).</p>
 <div class="lesson-diagram" data-diagram="distance-time-graph"><p class="diagram-caption">Reading a distance–time graph: flat, diagonal and curved sections</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Calculating Speed from a Graph</h3>
+<p>Because speed is distance divided by time, and gradient is exactly "how much the y-axis changes for a given change in the x-axis," the two turn out to be the same calculation: <strong>speed = gradient</strong> of the line = distance ÷ time. This is why comparing two sections of a journey is just a matter of comparing gradients — whichever section has the steeper line was the faster one. For a whole journey made up of several sections, the <strong>average speed</strong> is total distance ÷ total time, which is not the same as the speed of any one section.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A distance–time graph shows a straight line from (0 s, 0 m) to (20 s, 80 m), then a flat line from (20 s, 80 m) to (30 s, 80 m). Describe the journey and calculate the speed during the first section.</p>
 <p><strong>Solution:</strong><br>
@@ -2575,20 +2502,13 @@ So the student is wrong: caffeine is a drug, and a legal one.</p>
 3. The object travelled 80 m at 4 m/s, then stopped for 10 seconds.<br>
 4. Average speed for the whole journey = total distance ÷ total time = 80 ÷ 30 = <strong>2.67 m/s</strong>.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Distance–time graph</dt><dd>A graph that shows how the distance of an object from a starting point changes over time. Time is on the x-axis; distance on the y-axis.</dd>
-<dt>Gradient</dt><dd>The steepness of a line on a graph. On a distance–time graph, the gradient equals the speed.</dd>
-<dt>Constant speed</dt><dd>Moving at the same speed throughout — shown by a straight diagonal line on a distance–time graph.</dd>
-<dt>Stationary</dt><dd>Not moving — shown by a horizontal (flat) line on a distance–time graph.</dd>
-<dt>Average speed</dt><dd>The total distance travelled divided by the total time taken for the whole journey.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Confusing a flat line with constant speed — ✅ Correct: a <strong>flat line</strong> means the object is <strong>stationary</strong> (not moving). A <strong>diagonal</strong> line means constant speed.</li>
-<li>❌ Forgetting that the gradient gives speed — ✅ Correct: speed = <strong>distance ÷ time</strong> = the gradient of the line. Steeper = faster.</li>
-<li>❌ Reading off total distance instead of calculating each section separately — ✅ Correct: for a journey with different sections, calculate the <strong>speed of each section</strong> using that section's distance and time.</li>
-<li>❌ Confusing distance–time graphs with speed–time graphs — ✅ Correct: on a distance–time graph, the gradient gives <strong>speed</strong>. On a speed–time graph, the gradient gives <strong>acceleration</strong> (a different concept).</li>
+<li>Confusing a flat line with constant speed. A <strong>flat line</strong> means the object is <strong>stationary</strong> (not moving); a <strong>diagonal</strong> line means constant speed.</li>
+<li>Forgetting that the gradient gives speed. Speed = <strong>distance ÷ time</strong>, which is exactly the gradient of the line — steeper means faster.</li>
+<li>Reading off total distance instead of calculating each section separately. For a journey with different sections, calculate the <strong>speed of each section</strong> from that section's own distance and time.</li>
+<li>Confusing distance–time graphs with speed–time graphs. On a distance–time graph, the gradient gives <strong>speed</strong>; on a speed–time graph, the gradient gives <strong>acceleration</strong> instead — a different concept entirely.</li>
 </ul>`,
 
 "island-48": `<h4>Introduction</h4>
