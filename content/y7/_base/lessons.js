@@ -1671,23 +1671,42 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 <li>❌ Ignoring colonial history when discussing development — ✅ Correct: colonialism extracted resources, created artificial borders and left weak institutions — it is a <strong>significant historical factor</strong> in today's development gap.</li>
 </ul>`,
 
-"island-30": `<h4>Introduction</h4>
-<p>Energy is the ability to do work — and it exists in many different stores. The crucial principle is that energy is never created or destroyed, only transferred between stores. Understanding how this works explains everything from a bouncing ball to a power station.</p>
-<h4>📌 Key Points</h4>
+"island-30": `<h2>Energy Stores &amp; Transfers</h2>
+<p>Every time you switch on a kettle, kick a football or drop your phone, energy is on the move. It never appears from nowhere and never vanishes into nothing — it just changes which store it is sitting in, over and over, until eventually it ends up spread out as heat in the surroundings. This chapter is about learning to follow that energy: naming the stores it can sit in, tracking how it moves between them, and working out how much of it actually ends up doing something useful.</p>
+
+<h3>Energy Stores</h3>
+<p>Physicists describe energy as sitting in one of several <strong>stores</strong> at any given moment. Six stores cover almost everything you will meet at this level:</p>
 <ul>
-<li>Key energy stores: <strong>kinetic</strong> (moving), <strong>thermal</strong> (heat), <strong>chemical</strong> (food/fuel), <strong>gravitational potential</strong> (height), <strong>elastic potential</strong> (stretched/compressed), <strong>nuclear</strong>.</li>
-<li><strong>Law of Conservation of Energy</strong>: energy cannot be created or destroyed — only transferred from one store to another.</li>
-<li>Energy is transferred by: <strong>heating</strong>, <strong>forces doing work</strong>, <strong>electricity</strong>, and <strong>waves</strong> (light, sound).</li>
-<li>Energy is measured in <strong>Joules (J)</strong>. Power (energy transferred per second) is measured in <strong>Watts (W)</strong>. 1 W = 1 J/s.</li>
-<li><strong>Conduction</strong> (solids — vibrating particles), <strong>convection</strong> (fluids — hot fluid rises, cool sinks) and <strong>radiation</strong> (infrared electromagnetic waves — no medium needed, travels through a vacuum) are the three methods of heat transfer.</li>
-<li><strong>GPE = mass × g × height</strong> (gravitational potential energy formula). On Earth, g = 10 N/kg.</li>
-<li><strong>Efficiency</strong> = (useful energy output ÷ total energy input) × 100 %. No device is 100 % efficient — some energy is always "wasted" as heat.</li>
-<li>A <strong>Sankey diagram</strong> uses arrows whose width represents energy — showing how input energy splits into useful output and wasted energy.</li>
+<li><strong>Kinetic</strong> — the store of anything that is moving, from a falling ball to a spinning turbine.</li>
+<li><strong>Thermal</strong> — the store associated with an object's temperature; the hotter something is, the more energy it holds here.</li>
+<li><strong>Chemical</strong> — energy locked inside the bonds of substances such as food and fuel, released when those bonds are broken in a reaction.</li>
+<li><strong>Gravitational potential</strong> — the store of anything raised up against gravity. Its size can be calculated directly: <strong>GPE = mass × g × height</strong>, where g is the gravitational field strength — on Earth, g = 10 N/kg.</li>
+<li><strong>Elastic potential</strong> — the store of anything stretched or squashed, such as a spring or an elastic band.</li>
+<li><strong>Nuclear</strong> — energy held inside the nucleus of an atom, released in nuclear reactions.</li>
 </ul>
+<p>Whichever store is involved, one law never breaks: the <strong>Law of Conservation of Energy</strong> states that energy cannot be created or destroyed, only transferred from one store to another. Nothing is ever truly "used up" — it just moves somewhere else, often somewhere less useful.</p>
 <div class="lesson-diagram" data-diagram="energy-stores"><p class="diagram-caption">The main energy stores</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Transferring Energy and Measuring It</h3>
+<p>Energy can move between stores in four ways: by <strong>heating</strong>, by a <strong>force doing work</strong> (pushing, lifting or stretching something), through <strong>electricity</strong> flowing round a circuit, or by <strong>waves</strong> such as light and sound carrying it across space.</p>
+<p>However it moves, energy is always measured in <strong>joules (J)</strong>. When you want to know how quickly it is being transferred, you use <strong>power</strong>, measured in <strong>watts (W)</strong> — one watt is one joule transferred every second (1 W = 1 J/s). A more powerful device is not necessarily better at its job; it just transfers energy faster, which is a different thing from transferring it efficiently.</p>
+
+<h3>The Three Methods of Heat Transfer</h3>
+<p>Heat moves from a hotter place to a cooler one by three distinct methods, and each one depends on a different physical mechanism.</p>
+<ul>
+<li><strong>Conduction</strong> happens mainly in solids. Particles that gain energy vibrate more and collide with their neighbours, passing that extra vibration — and the energy that comes with it — along the material particle by particle, without any particle itself travelling anywhere.</li>
+<li><strong>Convection</strong> happens in fluids (liquids and gases). When part of a fluid is heated, its particles spread further apart, making that region less dense than the fluid around it. The warmer, less dense fluid rises while cooler, denser fluid sinks to take its place, setting up a circulating current.</li>
+<li><strong>Radiation</strong> is different again: it is infrared electromagnetic radiation, emitted by every object, and — unlike conduction or convection — it needs no medium to travel through at all. That is how the Sun's energy crosses the vacuum of space to reach Earth.</li>
+</ul>
 <div class="lesson-diagram" data-diagram="heat-transfer-methods"><p class="diagram-caption">Conduction, convection and radiation compared</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Efficiency and Wasted Energy</h3>
+<p>No device transfers all of its input energy to somewhere useful — some is always lost, usually as thermal energy spreading into the surroundings by the heat-transfer methods above. The proportion that ends up useful is called a device's <strong>efficiency</strong>:</p>
+<p style="font-size:1.05em;text-align:center;padding:0.5em;background:var(--surface2);border-radius:6px"><strong>Efficiency = (useful energy output ÷ total energy input) × 100 %</strong></p>
+<p>No device is 100 % efficient. A <strong>Sankey diagram</strong> shows this visually: it uses arrows whose width represents an amount of energy, branching from a single input arrow into a narrower "useful" arrow and one or more "wasted" arrows — the wider the wasted branch, the less efficient the device.</p>
 <div class="lesson-diagram" data-diagram="sankey-diagram"><p class="diagram-caption">A Sankey diagram: arrow width shows how input energy splits into useful output and waste</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Describe the energy transfers when a ball is dropped from a height and bounces.</p>
 <p><strong>Solution:</strong><br>
@@ -1697,21 +1716,12 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 4. Ball bounces up → elastic PE transfers back to KE, then to GPE — but less than before (energy lost as heat/sound).<br>
 Each bounce is lower — total energy is <strong>conserved</strong> but some is in less useful forms.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Energy store</dt><dd>A way of holding energy — kinetic, thermal, chemical, gravitational potential, elastic potential, nuclear.</dd>
-<dt>Conservation of energy</dt><dd>The principle that the total energy in a closed system remains constant — energy is never created or destroyed.</dd>
-<dt>Conduction</dt><dd>Heat transfer through a solid by vibrating particles passing energy along the material.</dd>
-<dt>Convection</dt><dd>Heat transfer in a fluid (liquid or gas) by the movement of currents — hot fluid rises, cool fluid sinks.</dd>
-<dt>Radiation</dt><dd>Heat transfer by infrared electromagnetic waves — requires no medium and can travel through a vacuum.</dd>
-<dt>Efficiency</dt><dd>The proportion of input energy that is usefully transferred: (useful output ÷ total input) × 100 %.</dd>
-<dt>Sankey diagram</dt><dd>A branching arrow diagram whose widths show how energy is split between useful output and waste — wider = more energy.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying energy "disappears" or is "used up" — ✅ Correct: energy is always <strong>transferred</strong> — it never vanishes, it just moves to a less useful store.</li>
-<li>❌ Confusing heat transfer methods — ✅ Correct: conduction needs a <strong>solid</strong>; convection needs a <strong>fluid</strong>; radiation needs <strong>nothing</strong>.</li>
-<li>❌ Thinking a more powerful device is more efficient — ✅ Correct: efficiency is about the <strong>proportion</strong> of useful output energy, not the total power.</li>
+<li>Saying energy "disappears" or is "used up". Energy is always <strong>transferred</strong> to another store — it never vanishes, it just often ends up somewhere less useful, such as spread out as heat.</li>
+<li>Mixing up the three heat transfer methods. <strong>Conduction</strong> needs a solid; <strong>convection</strong> needs a fluid that can circulate; <strong>radiation</strong> needs no medium at all.</li>
+<li>Assuming a more powerful device is automatically more efficient. Power tells you how fast energy is transferred; efficiency tells you what proportion of it ends up useful — a powerful device can still waste most of its energy.</li>
 </ul>`,
 
 "island-38": `<h4>Introduction</h4>
