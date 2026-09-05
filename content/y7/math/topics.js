@@ -57,7 +57,6 @@ const MATH_TOPICS = [
    description:"Calculate mean, median, mode and range, read and draw statistical graphs including pictograms and double bar/line graphs, plot scatter graphs and lines of best fit, understand sampling and bias, and identify outliers and distributions."},
   {id:"mt-30",name:"Probability",emoji:"🎲",hasContent:true,
    description:"Find the probability of simple events on the 0–1 scale, work with complementary, mutually exclusive and overlapping events, make predictions from theoretical and experimental probability, and use Venn diagrams to sort outcomes."},
-  // ── Coming soon ──────────────────────────────────────────────────────
   {id:"mt-14",name:"Order of Operations",emoji:"📋",hasContent:true,
    description:"Apply BODMAS/BIDMAS rules to evaluate numerical expressions involving whole numbers, decimals, fractions and integers."},
   {id:"mt-15",name:"Rational Numbers",emoji:"🔢",hasContent:true,
