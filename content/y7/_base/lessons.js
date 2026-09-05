@@ -1221,28 +1221,30 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 <li>❌ Thinking racism is natural or inevitable — ✅ Correct: racism as an ideology was <strong>constructed to justify slavery and colonialism</strong> — it is a product of history, not biology.</li>
 </ul>`,
 
-"island-20": `<h4>Introduction</h4>
-<p>Maps are geographers' most powerful tool — they communicate enormous amounts of information in a compact, visual form. Being able to read grid references, interpret contour lines, use map scale, analyse aerial photographs and understand GIS are skills you'll use in geography exams, fieldwork and everyday navigation.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>4-figure grid reference</strong>: go along the eastings first, then up the northings. Memory aid: "along the corridor and up the stairs."</li>
-<li><strong>6-figure grid reference</strong>: more precise — estimate tenths within each grid square (e.g. 273456).</li>
-<li><strong>Contour lines</strong> join points of equal height. Close together = steep slope. Far apart = gentle slope. Circles closing in = hilltop.</li>
-<li><strong>Contour patterns for landforms</strong>: V-shaped contours pointing <em>uphill</em> (towards higher numbers) indicate a <strong>valley</strong> — rivers flow down the centre of the V. V-shaped contours pointing <em>downhill</em> (towards lower numbers) indicate a <strong>spur</strong> — a ridge of high ground jutting out from a hill. Remember: "V points to the source."</li>
-<li><strong>Compass directions</strong>: there are eight main compass points — <strong>N, NE, E, SE, S, SW, W, NW</strong>. North = 0° (or 360°), East = 90°, South = 180°, West = 270°. The four cardinal points (N, E, S, W) are joined by four intercardinal points (NE, SE, SW, NW). Compass bearings are always measured clockwise from North.</li>
-<li><strong>Common OS map symbols</strong>: blue lines = rivers/streams; blue 'P' in a box = parking; cross on a square = church with a tower; cross on a circle = church with a spire; green dashed line = footpath; tent symbol = campsite; 'PH' = public house. Learning these symbols is essential for map reading and fieldwork.</li>
-<li><strong>Map scale</strong>: 1:25,000 means 1 cm on map = 25,000 cm = 250 m in real life. 1:50,000 means 1 cm = 500 m. <strong>OS Explorer</strong> maps use 1:25,000 scale (ideal for walking — show field boundaries and individual buildings). <strong>OS Landranger</strong> maps use 1:50,000 scale (better for driving/cycling — cover larger areas with less detail).</li>
-<li><strong>Large scale</strong> maps show small areas in great detail. <strong>Small scale</strong> maps show large areas with little detail.</li>
-<li><strong>Aerial photographs</strong> show the landscape from above — either vertical (directly overhead) or oblique (taken at an angle). Compare them with OS maps to identify features like settlements, roads, rivers and land use.</li>
-<li><strong>GIS (Geographical Information Systems)</strong>: computer software that layers different types of geographical data on a digital map — used for planning, flood risk mapping, transport routes and environmental monitoring.</li>
-<li><strong>Cross-sections</strong>: a side-on view of the landscape drawn from contour lines. Plot the height at each contour where it crosses a straight line between two points, then join the dots to reveal the shape of the land.</li>
-<li><strong>Field sketches</strong>: quick, labelled drawings made in the field to record key features of a landscape. They should include a title, labels, direction and key features annotated.</li>
-</ul>
+"island-20": `<h2>Map Skills</h2>
+<p>Maps are geographers' most powerful tool — they communicate enormous amounts of information in a compact, visual form. Being able to read grid references, interpret contour lines, use map scale, analyse aerial photographs and understand GIS are skills you will use in geography exams, fieldwork and everyday navigation.</p>
+
+<h3>Grid References</h3>
+<p>A <strong>4-figure grid reference</strong> is read by going along the <strong>eastings</strong> first, then up the <strong>northings</strong> — remembered as "along the corridor and up the stairs." A <strong>6-figure grid reference</strong> is more precise still: it estimates tenths within each grid square, for example 273456, pinning a location down to within 100 metres rather than a whole square.</p>
 <div class="lesson-diagram" data-diagram="grid-reference"><p class="diagram-caption">How to read 4-figure and 6-figure grid references</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Contour Lines and Landforms</h3>
+<p><strong>Contour lines</strong> join points of equal height, so their spacing tells you about slope: close together means a <strong>steep</strong> slope, far apart means a <strong>gentle</strong> one, and a set of circles closing inward marks a hilltop. The <em>shape</em> of the contours reveals specific landforms too — a V pointing <em>uphill</em>, towards higher numbers, marks a <strong>valley</strong> with a river running down its centre, while a V pointing <em>downhill</em>, towards lower numbers, marks a <strong>spur</strong>, a ridge of high ground jutting outward. Remember it as "V points to the source."</p>
+<p>A <strong>cross-section</strong> turns this height information into a side-on profile of the land: plot the height at each contour crossing a straight line drawn between two points, then join the dots to reveal the true shape of the ground between them.</p>
 <div class="lesson-diagram" data-diagram="contour-cross-section"><p class="diagram-caption">Contour lines and how to draw a cross-section</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="contour-valley-spur"><p class="diagram-caption">How contour patterns show valleys and spurs</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Compass Directions and Map Symbols</h3>
+<p>The compass has eight main points — <strong>N, NE, E, SE, S, SW, W, NW</strong> — with the four cardinal points (N, E, S, W) joined by four intercardinal points in between. Bearings are always measured clockwise from North, so North = 0° (or 360°), East = 90°, South = 180° and West = 270°. Ordnance Survey maps also use a standard set of symbols worth learning by sight: blue lines for rivers and streams, a blue 'P' in a box for parking, a cross on a square for a church with a tower, a cross on a circle for a church with a spire, a green dashed line for a footpath, a tent for a campsite, and 'PH' for a public house.</p>
 <div class="lesson-diagram" data-diagram="compass-rose"><p class="diagram-caption">The eight-point compass and bearings</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Map Scale</h3>
+<p><strong>Map scale</strong> is the ratio between distance on the map and distance in real life: 1:25,000 means 1 cm on the map equals 25,000 cm, or 250 m, on the ground; 1:50,000 means 1 cm equals 500 m. The two most common UK series follow this split — <strong>OS Explorer</strong> maps use 1:25,000, ideal for walking since they show field boundaries and individual buildings, while <strong>OS Landranger</strong> maps use 1:50,000, better suited to driving or cycling since they cover a larger area with less fine detail. This gives the general rule: a <strong>large scale</strong> map shows a small area in great detail, while a <strong>small scale</strong> map shows a large area with much less.</p>
+
+<h3>Aerial Photographs, GIS and Field Sketches</h3>
+<p><strong>Aerial photographs</strong> show the landscape from above, either <strong>vertical</strong> (taken directly overhead) or <strong>oblique</strong> (taken at an angle), and comparing them against an OS map helps identify features such as settlements, roads, rivers and land use. <strong>GIS</strong> (Geographical Information Systems) takes this further with computer software that layers many different types of geographical data onto a single digital map — used for planning, flood risk mapping, transport routes and environmental monitoring. In the field itself, a <strong>field sketch</strong> — a quick, labelled drawing recording the key features of a landscape, with a title, labels, direction and annotations — remains one of the simplest ways to capture what a photograph might miss.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> On a 1:50,000 map, two points are 6 cm apart. What is the real-life distance? What does it mean if the contour lines between them are very close together?</p>
 <p><strong>Solution:</strong><br>
@@ -1258,49 +1260,41 @@ Close contour lines between the two points indicate a <strong>steep slope</stron
 4. The town can be identified on the OS map by its <strong>settlement symbols</strong> (roads, buildings, churches).<br>
 Combining aerial photos with OS maps gives both a <strong>visual overview</strong> and <strong>precise locational data</strong>.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Easting</dt><dd>The vertical grid lines on a map — numbered left to right. Read first in a grid reference.</dd>
-<dt>Northing</dt><dd>The horizontal grid lines on a map — numbered bottom to top. Read second in a grid reference.</dd>
-<dt>Contour line</dt><dd>A line on a map connecting all points of equal height above sea level.</dd>
-<dt>Map scale</dt><dd>The ratio between a distance on a map and the corresponding real-life distance.</dd>
-<dt>GIS</dt><dd>Geographical Information Systems — computer software that stores, analyses and displays layers of geographical data on digital maps.</dd>
-<dt>Cross-section</dt><dd>A side-on diagram showing the shape of the land between two points, drawn using contour line data from a map.</dd>
-<dt>Aerial photograph</dt><dd>A photograph taken from above — vertical (straight down) or oblique (at an angle) — used alongside maps to interpret landscape features.</dd>
-<dt>Field sketch</dt><dd>A labelled drawing made during fieldwork to record key landscape features from a particular viewpoint.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Reading northings before eastings — ✅ Correct: <strong>eastings first</strong> (left-right), then northings (up-down). "Along the corridor, then up the stairs."</li>
-<li>❌ Thinking close contours mean a valley — ✅ Correct: close contours mean a <strong>steep slope</strong> — they could be a hill or a valley; look at the numbers to tell which way the ground rises.</li>
-<li>❌ Confusing large scale with showing a large area — ✅ Correct: large scale = <strong>zoomed in</strong>, lots of detail, small area. Small scale = zoomed out, large area, less detail.</li>
-<li>❌ Thinking GIS is just a digital map — ✅ Correct: GIS <strong>layers multiple datasets</strong> (population, flood risk, land use) together for analysis, not just navigation.</li>
-<li>❌ Drawing a cross-section without checking contour heights — ✅ Correct: always read the <strong>exact height value</strong> of each contour line; don't assume equal spacing means equal height change.</li>
+<li>Reading northings before eastings. Read <strong>eastings first</strong> (left-right), then northings (up-down) — "along the corridor, then up the stairs."</li>
+<li>Thinking close contours always mean a valley. Close contours simply mean a <strong>steep slope</strong> — it could be a hill or a valley; check the height numbers to see which way the ground actually rises.</li>
+<li>Confusing large scale with showing a large area. Large scale means <strong>zoomed in</strong> — lots of detail, small area. Small scale means zoomed out — large area, less detail.</li>
+<li>Thinking GIS is just a digital map. GIS <strong>layers multiple datasets</strong> together — population, flood risk, land use — for analysis, not just navigation.</li>
+<li>Drawing a cross-section without checking contour heights. Always read the <strong>exact height value</strong> of each contour line; do not assume equal spacing means equal height change.</li>
 </ul>`,
 
-"island-21": `<h4>Introduction</h4>
+"island-21": `<h2>Weather &amp; Climate</h2>
 <p>Weather affects our daily lives, but climate shapes civilisations. The UK's temperate maritime climate — mild, wet and changeable — is the result of its island location, prevailing winds and warm ocean currents. But climate is not fixed: it has changed dramatically over thousands of years, from the Ice Age to the present, and human activity is now accelerating that change.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Weather</strong>: short-term atmospheric conditions (today's temperature, rain). <strong>Climate</strong>: average weather over 30+ years for a region.</li>
-<li>Key weather instruments: thermometer (temperature), rain gauge (rainfall/mm), anemometer (wind speed), barometer (air pressure), wind vane (wind direction). <strong>Cloud cover</strong> is measured in <strong>oktas</strong> — eighths of the sky covered by cloud. 0 oktas = clear sky, 4 = half covered, 8 = completely overcast.</li>
-<li><strong>Three main cloud types</strong>: <strong>cumulus</strong> — fluffy, heaped clouds (fair weather, but can grow into cumulonimbus thunderstorm clouds); <strong>stratus</strong> — flat, grey, layered clouds that can bring drizzle or light rain; <strong>cirrus</strong> — high, thin, wispy clouds made of ice crystals, usually indicating fair weather.</li>
-<li>The UK's climate is shaped by: <strong>prevailing south-westerly winds</strong> from the Atlantic; the <strong>North Atlantic Drift</strong> (warm ocean current); island location; relief (western uplands cause relief rainfall).</li>
-<li><strong>Air masses</strong>: large bodies of air with uniform temperature and moisture. Five main air masses affect the UK — <strong>Tropical Maritime</strong> (warm, wet — from the Atlantic), <strong>Tropical Continental</strong> (hot, dry — from North Africa/southern Europe), <strong>Polar Maritime</strong> (cold, wet — from the north-west Atlantic), <strong>Polar Continental</strong> (cold, dry — from Scandinavia/Russia), and <strong>Arctic Maritime</strong> (very cold — from the Arctic). The type arriving determines our weather.</li>
-<li><strong>Air pressure and weather systems</strong>: <strong>high pressure (anticyclone)</strong> — air sinks, preventing cloud formation → brings dry, settled weather (hot and sunny in summer; cold, clear and frosty in winter). <strong>Low pressure (depression)</strong> — air rises, cools and condenses → brings cloud, wind and rain. Depressions are responsible for the UK's typical unsettled weather.</li>
-<li><strong>Weather fronts</strong>: the boundary where two different air masses meet. A <strong>warm front</strong> (shown on maps with red semicircles) occurs when warm air rises gently over cold air → wide band of cloud and steady rain. A <strong>cold front</strong> (blue triangles) occurs when cold air undercuts warm air, pushing it up sharply → heavy rain and cumulonimbus clouds, followed by clearer skies.</li>
-<li><strong>Three types of rainfall</strong>: <strong>Relief (orographic)</strong> — moist air is forced to rise over hills → cools → condenses → rains on the windward side; the leeward side gets a rain shadow. <strong>Convectional</strong> — the sun heats the ground → warm air rises rapidly → cools and condenses → produces heavy showers and thunderstorms (common in summer). <strong>Frontal</strong> — warm and cold air masses meet at a front → warm air is forced upward → cools and condenses → prolonged rain.</li>
-<li><strong>Climate change since the Ice Age</strong>: the last glacial period ended ~11,700 years ago. Temperatures have fluctuated since — the Medieval Warm Period (~900–1300 AD) allowed vineyards in England, while the Little Ice Age (~1300–1850 AD) froze the Thames. Current warming is far more rapid than any natural cycle.</li>
-<li><strong>Evidence for past climate change</strong>: ice cores (trapped air bubbles show CO₂ levels and temperature over 800,000 years); tree rings (wider rings = warmer, wetter years); historical records (harvest dates, paintings of frozen rivers); fossils and pollen analysis.</li>
-<li><strong>The enhanced greenhouse effect</strong>: burning fossil fuels increases CO₂ and methane in the atmosphere → these gases trap more heat → global temperatures rise. This is different from the natural greenhouse effect which keeps Earth habitable.</li>
-<li><strong>Microclimates</strong>: small-scale variations in climate within a local area. Caused by shelter, aspect (direction a slope faces), surface type (tarmac absorbs heat) and proximity to water. Urban areas are often warmer than surrounding countryside (the urban heat island effect).</li>
-<li><strong>Extreme weather in the UK</strong>: heatwaves, storms, flooding and cold snaps are becoming more frequent and intense. Examples include the 2022 UK heatwave (40°C recorded for the first time) and increased winter flooding.</li>
-</ul>
+
+<h3>Weather and Climate</h3>
+<p><strong>Weather</strong> is the short-term state of the atmosphere — today's temperature, today's rain — while <strong>climate</strong> is the average weather for a region over 30 or more years. Weather itself is measured with a specific instrument for each variable: a thermometer for temperature, a rain gauge for rainfall (in mm), an anemometer for wind speed, a barometer for air pressure, and a wind vane for wind direction. Cloud cover gets its own unit, the <strong>okta</strong> — one eighth of the sky — running from 0 oktas (clear sky) to 8 (completely overcast). The clouds themselves fall into three main types: <strong>cumulus</strong> are fluffy, heaped clouds associated with fair weather, though they can grow into thunderstorm-producing cumulonimbus; <strong>stratus</strong> are flat, grey, layered clouds that bring drizzle or light rain; and <strong>cirrus</strong> are high, thin, wispy clouds made of ice crystals, usually a sign of fair weather ahead.</p>
+
+<h3>What Shapes the UK's Climate</h3>
+<p>Four factors combine to give the UK its distinctive climate: <strong>prevailing south-westerly winds</strong> arriving off the Atlantic, the <strong>North Atlantic Drift</strong> — a warm ocean current originating in the Gulf of Mexico that keeps the UK far warmer than its latitude (50–60°N) would otherwise suggest, the country's island location, and its relief, since the western uplands force incoming air to rise and produce relief rainfall. Which weather actually arrives on a given day depends on the <strong>air mass</strong> in charge — a large body of air with roughly uniform temperature and moisture, carrying the characteristics of wherever it formed. Five air masses affect the UK: <strong>Tropical Maritime</strong> (warm, wet, from the Atlantic), <strong>Tropical Continental</strong> (hot, dry, from North Africa or southern Europe), <strong>Polar Maritime</strong> (cold, wet, from the north-west Atlantic), <strong>Polar Continental</strong> (cold, dry, from Scandinavia or Russia), and <strong>Arctic Maritime</strong> (very cold, from the Arctic).</p>
+
+<h3>Weather Systems and Rainfall</h3>
+<p>Air pressure decides whether a day is settled or unsettled. In an <strong>anticyclone</strong> (high pressure), air sinks and prevents cloud from forming, bringing dry, settled weather — hot and sunny in summer, cold, clear and frosty in winter. In a <strong>depression</strong> (low pressure), air rises, cools and condenses, bringing cloud, wind and rain; depressions are responsible for the UK's characteristically unsettled weather. Depressions form around <strong>weather fronts</strong>, the boundary where two air masses of different temperatures meet: a <strong>warm front</strong> (drawn as red semicircles) forms where warm air rises gently over cold air, producing a wide band of cloud and steady rain, while a <strong>cold front</strong> (blue triangles) forms where cold air undercuts warm air more sharply, producing heavier rain and cumulonimbus cloud followed by clearer skies.</p>
+<p>Rainfall itself has three distinct causes. <strong>Relief (orographic)</strong> rainfall happens when moist air is forced to rise over hills, cooling and condensing on the windward side while the leeward side is left in a dry <strong>rain shadow</strong>. <strong>Convectional</strong> rainfall happens when the sun heats the ground directly, causing warm air to rise rapidly and produce the heavy showers and thunderstorms typical of summer. <strong>Frontal</strong> rainfall happens where warm and cold air masses meet, with the warm air forced upward over the front to cool and condense into prolonged rain.</p>
 <div class="lesson-diagram" data-diagram="relief-rainfall"><p class="diagram-caption">How relief rainfall forms — windward rain and leeward rain shadow</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="weather-fronts-depression"><p class="diagram-caption">Depression cross-section — warm and cold fronts</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Climate Change: Past and Present</h3>
+<p>Climate has always changed. The last glacial period ended around 11,700 years ago, and temperatures have fluctuated since — the Medieval Warm Period (roughly 900–1300 AD) was mild enough to support vineyards in England, while the Little Ice Age (roughly 1300–1850 AD) was cold enough to freeze the Thames. Scientists reconstruct this history from several sources of evidence: ice cores, where trapped air bubbles reveal CO₂ levels and temperature going back 800,000 years; tree rings, where wider rings indicate warmer, wetter years; historical records such as harvest dates and paintings of frozen rivers; and fossil and pollen analysis.</p>
+<p>What makes current warming different is its cause and its speed. The <strong>enhanced greenhouse effect</strong> describes how burning fossil fuels adds extra CO₂ and methane to the atmosphere, trapping more heat than the natural greenhouse effect alone — and today's warming is happening far faster than any of the natural cycles in that historical record.</p>
 <div class="lesson-diagram" data-diagram="greenhouse-effect"><p class="diagram-caption">The enhanced greenhouse effect — how trapped heat warms the Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="climate-evidence"><p class="diagram-caption">How ice cores, tree rings and historical records reveal past climate change</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Microclimates and Extreme Weather</h3>
+<p>Climate can vary sharply even within a single local area, creating a <strong>microclimate</strong> — caused by shelter, aspect (the direction a slope faces), surface type (tarmac absorbs far more heat than grass), and proximity to water. Cities take this to an extreme with the <strong>urban heat island</strong> effect, where heat-absorbing surfaces, less vegetation and waste heat from buildings and vehicles leave urban areas noticeably warmer than the surrounding countryside. Extreme weather in the UK — heatwaves, storms, flooding and cold snaps — is becoming more frequent and more intense, illustrated by the 2022 UK heatwave, which recorded 40°C for the first time, and by increasingly severe winter flooding.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Why is Manchester wetter than London, even though both are in England?</p>
 <p><strong>Solution:</strong><br>
@@ -1318,57 +1312,37 @@ Combining aerial photos with OS maps gives both a <strong>visual overview</stron
 4. By analysing these bubbles, scientists can measure <strong>CO₂ levels and temperature</strong> going back over 800,000 years.<br>
 5. The data shows a clear correlation: when CO₂ levels were high, temperatures were high — and current CO₂ levels are <strong>far higher</strong> than at any point in this record.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Prevailing wind</dt><dd>The most common wind direction for a given location — in the UK, this is south-westerly.</dd>
-<dt>North Atlantic Drift</dt><dd>A warm ocean current from the Gulf of Mexico that keeps the UK warmer than its latitude would suggest.</dd>
-<dt>Relief rainfall</dt><dd>Rain caused when moist air is forced to rise over hills, cools and condenses.</dd>
-<dt>Rain shadow</dt><dd>The dry area on the leeward (sheltered) side of a hill or mountain range.</dd>
-<dt>Ice core</dt><dd>A cylinder of ice drilled from an ice sheet, containing trapped air bubbles that reveal past atmospheric conditions over hundreds of thousands of years.</dd>
-<dt>Enhanced greenhouse effect</dt><dd>The additional warming caused by human-produced greenhouse gases (CO₂, methane) trapping extra heat in the atmosphere beyond the natural level.</dd>
-<dt>Microclimate</dt><dd>A small area where the climate differs from the surrounding region — caused by shelter, aspect, surface type or proximity to water.</dd>
-<dt>Urban heat island</dt><dd>The phenomenon where urban areas are warmer than surrounding rural areas due to heat-absorbing surfaces, less vegetation and waste heat from buildings and vehicles.</dd>
-<dt>Okta</dt><dd>A unit for measuring cloud cover — one okta equals one-eighth of the sky covered by cloud. Measured on a scale of 0 (clear) to 8 (overcast).</dd>
-<dt>Air mass</dt><dd>A large body of air with roughly uniform temperature and humidity, formed over a particular region (e.g. ocean or continent) and carrying that region's characteristics.</dd>
-<dt>Depression</dt><dd>A low-pressure weather system where air rises, cools, and condenses — bringing cloud, wind and rain. Common across the UK, especially in autumn and winter.</dd>
-<dt>Anticyclone</dt><dd>A high-pressure weather system where air sinks — bringing dry, settled weather. Sunny in summer; cold and frosty in winter.</dd>
-<dt>Weather front</dt><dd>The boundary where two air masses of different temperatures meet. Warm fronts bring steady rain; cold fronts bring heavier, shorter bursts of rain.</dd>
-<dt>Convectional rainfall</dt><dd>Rain caused when the sun heats the ground, warm air rises rapidly, cools and condenses — producing heavy showers and thunderstorms.</dd>
-<dt>Frontal rainfall</dt><dd>Rain caused when warm and cold air masses meet at a front — warm air is forced upward over the denser cold air, cools and condenses.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying "weather and climate are the same thing" — ✅ Correct: weather is <strong>day-to-day</strong>; climate is the <strong>long-term average</strong> (30+ years).</li>
-<li>❌ Thinking the UK is warm because it's close to the equator — ✅ Correct: the UK is at ~50–60°N; it's warm for its latitude thanks to the <strong>North Atlantic Drift</strong>.</li>
-<li>❌ Confusing rain gauge and barometer — ✅ Correct: rain gauge measures <strong>rainfall (mm)</strong>; barometer measures <strong>air pressure (millibars)</strong>.</li>
-<li>❌ Confusing high and low pressure — ✅ Correct: <strong>high pressure (anticyclone)</strong> = dry, settled; <strong>low pressure (depression)</strong> = cloud, wind, rain.</li>
-<li>❌ Thinking all rainfall is the same — ✅ Correct: there are three types — <strong>relief</strong> (hills), <strong>convectional</strong> (sun heating ground), <strong>frontal</strong> (air masses meeting).</li>
-<li>❌ Saying "climate has always changed so current change is natural" — ✅ Correct: climate has changed naturally, but current warming is <strong>far faster</strong> than any natural cycle and is driven by <strong>human CO₂ emissions</strong>.</li>
-<li>❌ Confusing the greenhouse effect with the enhanced greenhouse effect — ✅ Correct: the natural greenhouse effect keeps Earth warm enough for life; the <strong>enhanced</strong> effect is the extra warming from human-added gases.</li>
+<li>Saying weather and climate are the same thing. Weather is <strong>day-to-day</strong>; climate is the <strong>long-term average</strong> over 30+ years.</li>
+<li>Thinking the UK is warm because it is close to the equator. The UK sits at roughly 50–60°N — it is warm for its latitude thanks to the <strong>North Atlantic Drift</strong>, not its position.</li>
+<li>Confusing a rain gauge and a barometer. A rain gauge measures <strong>rainfall (mm)</strong>; a barometer measures <strong>air pressure (millibars)</strong>.</li>
+<li>Confusing high and low pressure. <strong>High pressure (anticyclone)</strong> means dry, settled weather; <strong>low pressure (depression)</strong> means cloud, wind and rain.</li>
+<li>Thinking all rainfall forms the same way. There are three types — <strong>relief</strong> (hills), <strong>convectional</strong> (sun heating the ground), and <strong>frontal</strong> (air masses meeting).</li>
+<li>Assuming climate has always changed, so current change must be natural too. Climate has changed naturally before, but current warming is <strong>far faster</strong> than any natural cycle and is driven by <strong>human CO₂ emissions</strong>.</li>
+<li>Confusing the greenhouse effect with the enhanced greenhouse effect. The natural greenhouse effect keeps Earth warm enough for life; the <strong>enhanced</strong> effect is the extra warming added by human greenhouse gas emissions.</li>
 </ul>`,
 
-"island-22": `<h4>Introduction</h4>
-<p>Rivers are among the most powerful forces shaping the landscape. They are part of the water cycle — the continuous movement of water between the atmosphere, land and sea. From the steep, fast-flowing upper course to the wide, meandering lower course, rivers constantly erode, transport and deposit material — creating distinctive landforms at each stage of their journey.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>The water cycle (hydrological cycle)</strong>: evaporation (water turns to vapour) → condensation (vapour cools into clouds) → precipitation (rain, snow, hail falls) → collection (water gathers in rivers, lakes, oceans) → the cycle repeats. Also includes infiltration (water soaking into soil) and transpiration (water released by plants).</li>
-<li><strong>Drainage basin</strong>: the area of land drained by a river and its tributaries. The boundary is called the <strong>watershed</strong> — a ridge of high land separating one drainage basin from another. Water within the basin flows into the main river via tributaries, surface runoff, throughflow and groundwater flow.</li>
-<li><strong>River source and mouth</strong>: the <strong>source</strong> is where a river begins — usually a spring, marsh or area of rainfall in upland hills or mountains. The <strong>mouth</strong> is where it flows into the sea or a lake.</li>
-<li><strong>Three river processes</strong>: Erosion (wearing away), Transportation (carrying material), Deposition (dropping material when energy decreases).</li>
-<li>Types of erosion: hydraulic action (force of water), abrasion (sediment scraping), solution (dissolving rock), attrition (particles wearing each other down).</li>
-<li><strong>Four types of river transportation</strong>: <strong>Traction</strong> — large boulders rolling along the river bed; <strong>Saltation</strong> — smaller pebbles bouncing along the bed; <strong>Suspension</strong> — fine particles (silt, clay) carried within the water, making it look brown; <strong>Solution</strong> — dissolved minerals carried invisibly in the water (especially from limestone).</li>
-<li>Upper course: steep, fast, narrow — dominant erosion. <strong>V-shaped valleys</strong> and waterfalls. A waterfall retreats upstream over time as the soft rock beneath the hard cap rock is eroded, creating an overhang that collapses — leaving a steep-sided <strong>gorge</strong> behind.</li>
-<li>Middle/lower course: gentle gradient, wide — dominant deposition. <strong>Meanders</strong>, floodplains, oxbow lakes.</li>
-<li><strong>Meander formation</strong>: faster water on outside of bend erodes (river cliff); slower water inside deposits (slip-off slope). Over time the loop is cut off → oxbow lake.</li>
-<li><strong>Flooding</strong>: caused by prolonged rainfall, rapid snowmelt, impermeable rock, urbanisation (less infiltration), or deforestation (less interception). Effects include damage to property, loss of life, disruption to transport, and loss of farmland.</li>
-<li><strong>Hard engineering</strong>: man-made structures to control flooding — e.g. dams and reservoirs, embankments (levees), channel straightening, flood walls. Effective but expensive and can cause problems downstream.</li>
-<li><strong>Soft engineering</strong>: working with natural processes — e.g. flood plain zoning (not building on floodplains), afforestation (planting trees to slow runoff), managed flooding, river restoration. Cheaper and more sustainable but may not prevent major floods.</li>
-<li><strong>Case study — River Tees</strong>: rises in the Pennines (upper course — High Force waterfall, V-shaped valley at Teesdale); middle course shows clear meanders near Yarm; lower course — wide floodplain at the mouth near Middlesbrough. The Tees Barrage controls flooding and water levels in the lower course.</li>
-</ul>
+"island-22": `<h2>Rivers &amp; Drainage Basins</h2>
+<p>Rivers are among the most powerful forces shaping the landscape. They are part of the water cycle — the continuous movement of water between the atmosphere, land and sea. From the steep, fast-flowing upper course to the wide, meandering lower course, rivers constantly erode, transport and deposit material, creating distinctive landforms at each stage of their journey.</p>
+
+<h3>The Water Cycle and Drainage Basins</h3>
+<p>The <strong>water cycle (hydrological cycle)</strong> feeds every river: evaporation turns water to vapour, condensation cools that vapour into clouds, precipitation brings it back down as rain, snow or hail, and collection gathers it into rivers, lakes and oceans before the cycle repeats — with infiltration (water soaking into soil) and transpiration (water released by plants) adding further routes into and out of it. All the water falling within a <strong>drainage basin</strong> — the area of land drained by a river and its tributaries — reaches the main channel via tributaries, surface runoff, throughflow and groundwater flow, until it eventually crosses the <strong>watershed</strong>, the ridge of high land marking the boundary with the next basin. Every river begins at a <strong>source</strong>, typically a spring, marsh or area of high rainfall in the hills, and ends at its <strong>mouth</strong>, where it flows into the sea or a lake.</p>
 <div class="lesson-diagram" data-diagram="drainage-basin"><p class="diagram-caption">A drainage basin — source, tributaries, confluence, watershed and mouth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>River Processes: Erosion, Transportation and Deposition</h3>
+<p>Rivers reshape the land through three processes: <strong>erosion</strong> wears material away, <strong>transportation</strong> carries it onward, and <strong>deposition</strong> drops it once the river's energy falls too low to carry it further. Erosion itself happens four ways: hydraulic action (the sheer force of moving water), abrasion (sediment scraping against the bank and bed), solution (rock dissolving directly into the water), and attrition (particles carried by the river wearing each other down as they collide). Once eroded, material is transported in whichever of four ways suits its size: <strong>traction</strong> rolls large boulders along the riverbed, <strong>saltation</strong> bounces smaller pebbles along it, <strong>suspension</strong> carries fine silt and clay within the water itself — giving many rivers their brown, murky colour — and <strong>solution</strong> carries dissolved minerals, particularly from limestone, completely invisibly.</p>
+
+<h3>How Rivers Change Along Their Course</h3>
+<p>A river's character changes dramatically from source to mouth, because erosion and deposition are not equally dominant throughout. In the <strong>upper course</strong>, where the channel is steep, fast and narrow, erosion dominates, cutting <strong>V-shaped valleys</strong> and waterfalls; a waterfall retreats upstream over time as the river erodes the soft rock beneath a hard cap rock, undermining it until the overhang collapses and leaves behind a steep-sided <strong>gorge</strong>. Further downstream, in the <strong>middle and lower course</strong>, the gradient eases and the channel widens, so deposition takes over, producing <strong>meanders</strong>, floodplains and oxbow lakes. A meander forms because water flows faster on the outside of a bend, eroding a <strong>river cliff</strong>, while slower water on the inside deposits sediment as a <strong>slip-off slope</strong>; given enough time, the loop is cut off entirely, leaving an isolated <strong>oxbow lake</strong>. The <strong>River Tees</strong> shows this whole progression in one system: it rises in the Pennines with the V-shaped valley and waterfall of High Force in its upper course, develops clear meanders near Yarm in its middle course, and reaches a wide floodplain at its mouth near Middlesbrough, where the Tees Barrage now controls flooding and water levels.</p>
 <div class="lesson-diagram" data-diagram="river-long-profile"><p class="diagram-caption">River long profile and cross-sections: upper, middle and lower course</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="meander-formation"><p class="diagram-caption">How a meander develops into an oxbow lake — four stages</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Flooding and River Management</h3>
+<p>Flooding can be triggered by prolonged rainfall, rapid snowmelt, impermeable rock, urbanisation (which reduces infiltration by covering ground with tarmac and concrete), or deforestation (which reduces interception by removing the trees that would otherwise catch rainfall) — with consequences ranging from property damage and loss of life to disrupted transport and lost farmland. Managing that risk splits into two contrasting approaches. <strong>Hard engineering</strong> uses man-made structures such as dams, reservoirs, embankments and flood walls; it is effective but expensive, and can simply push the flooding problem further downstream. <strong>Soft engineering</strong> works with natural processes instead — floodplain zoning that avoids building on the most flood-prone land, afforestation that slows runoff, and managed flooding or river restoration — and while cheaper and more sustainable, it may not hold back a truly major flood on its own.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Describe how an oxbow lake forms from a meander.</p>
 <p><strong>Solution:</strong><br>
@@ -1387,56 +1361,36 @@ Raised banks built along the river channel to contain higher water levels. They 
 Planting trees in the upper catchment area. Tree roots increase infiltration (water soaks into soil instead of running off), and leaves intercept rainfall, slowing the water's journey to the river. This is cheaper, creates wildlife habitats and is sustainable — but it takes years for trees to mature and may not prevent major floods.<br><br>
 <strong>Judgement:</strong> Most flood management schemes use a <strong>combination</strong> of hard and soft engineering for the best balance of cost, effectiveness and environmental impact.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Water cycle</dt><dd>The continuous movement of water between the atmosphere, land and oceans through evaporation, condensation, precipitation and collection.</dd>
-<dt>Drainage basin</dt><dd>The area of land drained by a river and all its tributaries — bounded by the watershed.</dd>
-<dt>Watershed</dt><dd>The ridge of high land forming the boundary between two adjacent drainage basins.</dd>
-<dt>Erosion</dt><dd>The wearing away and removal of material by the river — greatest in the upper course where the river has most energy.</dd>
-<dt>Deposition</dt><dd>The dropping of material when a river loses energy — greatest in the lower course on flat land.</dd>
-<dt>Meander</dt><dd>A large bend in a river, formed by differential erosion and deposition on opposite banks.</dd>
-<dt>Oxbow lake</dt><dd>A curved lake formed when a meander loop is cut off from the main river channel.</dd>
-<dt>Hard engineering</dt><dd>Man-made structures used to control natural processes — e.g. dams, embankments, flood walls.</dd>
-<dt>Soft engineering</dt><dd>Approaches that work with natural processes to reduce flood risk — e.g. afforestation, flood plain zoning.</dd>
-<dt>Traction</dt><dd>Large boulders and rocks rolling along the river bed — the heaviest form of transportation, found mainly in the upper course.</dd>
-<dt>Saltation</dt><dd>Smaller pebbles bouncing along the river bed in a hopping motion — common in the middle course.</dd>
-<dt>Suspension</dt><dd>Fine particles of silt and clay carried within the water itself — gives rivers their brown, murky appearance.</dd>
-<dt>Gorge</dt><dd>A narrow, steep-sided valley left behind as a waterfall retreats upstream over time.</dd>
-<dt>Source</dt><dd>The starting point of a river — usually a spring, marsh, or area of high rainfall in upland hills or mountains.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying erosion happens on the inside of a meander — ✅ Correct: erosion (and river cliffs) form on the <strong>outside</strong>; deposition on the <strong>inside</strong>.</li>
-<li>❌ Thinking rivers always flow straight — ✅ Correct: rivers naturally develop meanders due to variations in <strong>flow speed and erosion</strong>.</li>
-<li>❌ Confusing transportation and deposition — ✅ Correct: transportation is <strong>carrying</strong> material; deposition is <strong>dropping</strong> it when the river slows down.</li>
-<li>❌ Thinking hard engineering is always better because it's stronger — ✅ Correct: hard engineering is expensive and can cause problems elsewhere; <strong>soft engineering</strong> is often more sustainable and cost-effective.</li>
-<li>❌ Forgetting the water cycle when explaining rivers — ✅ Correct: rivers are part of the <strong>hydrological cycle</strong> — precipitation, infiltration, runoff and evaporation all feed into how rivers behave.</li>
+<li>Saying erosion happens on the inside of a meander. Erosion — and river cliffs — form on the <strong>outside</strong> of a bend; deposition happens on the <strong>inside</strong>.</li>
+<li>Thinking rivers always flow in a straight line. Rivers naturally develop meanders because of variations in <strong>flow speed and erosion</strong> across the channel.</li>
+<li>Confusing transportation and deposition. Transportation is <strong>carrying</strong> material; deposition is <strong>dropping</strong> it once the river slows down.</li>
+<li>Assuming hard engineering is always better because it is stronger. It is expensive and can cause problems elsewhere downstream; <strong>soft engineering</strong> is often more sustainable and cost-effective.</li>
+<li>Forgetting the water cycle when explaining rivers. Rivers are part of the <strong>hydrological cycle</strong> — precipitation, infiltration, runoff and evaporation all feed into how a river behaves.</li>
 </ul>`,
 
-"island-23": `<h4>Introduction</h4>
+"island-23": `<h2>Population &amp; Settlement</h2>
 <p>Where people choose to live is not random — it is shaped by physical geography, economic opportunity and historical patterns. Today, over half the world's population lives in urban areas, and this proportion is growing rapidly. Understanding population structure, migration and the growth of megacities helps explain the human geography of the entire planet.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Population density</strong> = total population ÷ area (km²). High density = many people per km²; low density = few people per km².</li>
-<li><strong>Population distribution</strong>: describes how people are spread across an area — where they are concentrated (densely populated) and where few people live (sparsely populated). Population distribution is uneven — influenced by climate, relief, resources, jobs and transport links. Population density data can be misleading because it gives an average that hides local variation.</li>
-<li><strong>Census</strong>: an official count of a country's population, usually conducted every 10 years. In the UK, a census has been held every decade since 1801 (except 1941 during WWII). It collects data on age, occupation, housing, ethnicity and more — essential for planning services like schools, hospitals and transport.</li>
-<li><strong>Physical factors</strong> encouraging settlement: flat land, fertile soil, near fresh water, sheltered from wind, mild climate.</li>
-<li><strong>Human factors</strong>: transport links, employment, existing services (schools, hospitals), trade routes.</li>
-<li><strong>Urbanisation</strong> = increasing proportion of population living in cities. Driven by pull factors (jobs, services) and push factors (rural poverty, mechanisation of farming).</li>
-<li><strong>Settlement hierarchy</strong>: hamlet → village → town → city → conurbation (a large urban area formed when neighbouring towns and cities merge, e.g. Greater Manchester). Higher up = more services, larger population, greater sphere of influence.</li>
-<li><strong>Counter-urbanisation</strong>: the movement of people from cities back to rural areas or small towns. Driven by cheaper housing, less congestion, a quieter lifestyle, and improved transport/remote working. This reverses the traditional rural-to-urban pattern and can change the character of rural villages (rising house prices, more commuters).</li>
-<li><strong>Population pyramids</strong>: bar charts showing the age and sex structure of a population. Wide base = high birth rate (typical of LICs). Narrow base with wider top = ageing population (typical of HICs). Comparing pyramids reveals a country's stage of development.</li>
-<li><strong>The Demographic Transition Model (DTM)</strong>: a five-stage model showing how population changes as a country develops.<br>
-Stage 1: High birth rate, high death rate → low population. Stage 2: Death rate falls (better healthcare/sanitation) → rapid growth. Stage 3: Birth rate falls (contraception, education, urbanisation) → growth slows. Stage 4: Low birth rate, low death rate → stable/high population. Stage 5: Birth rate below death rate → population decline (e.g. Japan, Germany).</li>
-<li><strong>Migration</strong>: the movement of people from one place to another. Types include rural-to-urban (within a country), international (between countries), voluntary (by choice) and forced (refugees, conflict). Push factors drive people away; pull factors attract them to a new location.</li>
-<li><strong>Megacity case study — Lagos, Nigeria</strong>: population ~21 million and growing rapidly. Opportunities: employment in industry and services, better healthcare and education, cultural diversity. Challenges: rapid growth of informal settlements (slums like Makoko), traffic congestion, pollution, strain on water supply and sanitation, waste management issues.</li>
-<li><strong>Land-use patterns (Burgess model)</strong>: a simple model of urban land use — CBD (Central Business District) at the centre, surrounded by rings of inner city, inner suburbs, outer suburbs and rural-urban fringe. In reality, cities are more complex but the model helps explain general patterns.</li>
-</ul>
+
+<h3>Population Density, Distribution and the Census</h3>
+<p><strong>Population density</strong> is total population divided by area (km²): a high figure means many people packed into each km², a low figure means few. But density on its own can mislead, because it is only an average that hides local variation — the real picture is <strong>population distribution</strong>, how unevenly people are actually spread across an area, concentrated in some places and sparse in others. That unevenness comes down to physical and human factors working together: flat land, fertile soil, fresh water, shelter from wind and a mild climate all encourage settlement physically, while transport links, employment, existing services and trade routes draw people for human reasons. Governments track all of this through a <strong>census</strong>, an official population count — in the UK held every decade since 1801 (except in 1941, during WWII) — that gathers data on age, occupation, housing and ethnicity, essential for planning schools, hospitals and transport.</p>
+
+<h3>Urbanisation, Settlement Hierarchy and Land Use</h3>
+<p><strong>Urbanisation</strong> is the rising proportion of a population living in cities, driven by pull factors such as jobs and services drawing people in, and push factors such as rural poverty and the mechanisation of farming pushing them out. As places grow, they move up a <strong>settlement hierarchy</strong> — hamlet, village, town, city, and finally <strong>conurbation</strong>, a large urban area formed when neighbouring towns and cities merge, such as Greater Manchester — with each step up bringing more services, a larger population and a wider sphere of influence. The trend can also run in reverse: <strong>counter-urbanisation</strong> is the movement of people from cities back to rural areas or small towns, driven by cheaper housing, less congestion, a quieter lifestyle and remote working, and it can noticeably change the character of the villages it reaches through rising house prices and more commuters. Within a growing city, the <strong>Burgess model</strong> offers a simplified picture of how land use organises itself: a Central Business District (CBD) at the centre, surrounded by rings of inner city, inner suburbs, outer suburbs and finally the rural-urban fringe. Real cities are messier than the model suggests, but it remains a useful starting point for explaining the general pattern.</p>
+<div class="lesson-diagram" data-diagram="burgess-model"><p class="diagram-caption">The Burgess model of urban land use</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Population Structure: Pyramids and the DTM</h3>
+<p>A <strong>population pyramid</strong> is a bar chart of a population's age and sex structure, and its shape alone reveals a great deal: a wide base signals a high birth rate, typical of a low-income country, while a narrow base with a wider top signals an ageing population, typical of a high-income one. That connection between shape and development is formalised in the <strong>Demographic Transition Model (DTM)</strong>, a five-stage sequence: Stage 1 has high birth and death rates, keeping the population low; Stage 2 sees death rates fall as healthcare and sanitation improve, so population grows rapidly; Stage 3 sees birth rates fall too, thanks to contraception, education and urbanisation, so growth slows; Stage 4 settles into low birth and death rates and a stable, high population; and Stage 5 sees birth rates drop below death rates, so population actually declines, as in Japan and Germany today.</p>
 <div class="lesson-diagram" data-diagram="population-pyramid"><p class="diagram-caption">Population pyramids — comparing HIC (UK) and LIC (Nigeria) shapes</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="dtm-model"><p class="diagram-caption">The Demographic Transition Model — five stages of population change</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Migration and Megacities</h3>
+<p><strong>Migration</strong> is the movement of people from one place to another — it can be rural-to-urban within a country or international between countries, and it can be voluntary, by choice, or forced, as with refugees fleeing conflict. Whatever the type, it is shaped by the same push-and-pull logic as urbanisation: push factors drive people away from a place, pull factors draw them towards a new one. <strong>Lagos, Nigeria</strong> shows where that migration can lead: a <strong>megacity</strong> of roughly 21 million people and still growing rapidly, it offers real opportunities in industry, services, healthcare, education and cultural diversity, but also faces serious challenges — the rapid growth of informal settlements such as Makoko, traffic congestion, pollution, and strain on water supply, sanitation and waste management.</p>
 <div class="lesson-diagram" data-diagram="push-pull-factors"><p class="diagram-caption">Push and pull factors driving migration and urbanisation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<div class="lesson-diagram" data-diagram="burgess-model"><p class="diagram-caption">The Burgess model of urban land use</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Country A has a population of 8,000,000 and an area of 400 km². Country B has a population of 2,000,000 and an area of 500 km². Which is more densely populated?</p>
 <p><strong>Solution:</strong><br>
@@ -1453,54 +1407,36 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 4. The country likely faces challenges such as <strong>providing education, healthcare and jobs</strong> for a young, rapidly growing population.<br>
 5. Compare with a Stage 4 country (e.g. UK): narrow base, wider top — low birth rate, ageing population, different challenges (pensions, elderly care).</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Population density</dt><dd>The number of people per square kilometre — a measure of how crowded an area is.</dd>
-<dt>Urbanisation</dt><dd>The process by which an increasing proportion of a country's population lives in urban (city/town) areas.</dd>
-<dt>Push factors</dt><dd>Reasons that drive people away from an area — e.g. lack of jobs, poverty, natural disasters.</dd>
-<dt>Pull factors</dt><dd>Reasons that attract people to an area — e.g. employment, better services, higher wages.</dd>
-<dt>Population pyramid</dt><dd>A bar chart showing the age and sex distribution of a country's population — its shape reveals birth rate, death rate and life expectancy.</dd>
-<dt>Demographic Transition Model</dt><dd>A five-stage model showing how birth rates, death rates and total population change as a country develops economically.</dd>
-<dt>Migration</dt><dd>The movement of people from one place to another — can be voluntary or forced, internal or international.</dd>
-<dt>Megacity</dt><dd>A city with a population of over 10 million people — e.g. Lagos, Mumbai, Tokyo, São Paulo.</dd>
-<dt>CBD</dt><dd>Central Business District — the commercial and business centre of a city, typically with the tallest buildings and highest land values.</dd>
-<dt>Census</dt><dd>An official count and survey of a country's entire population, conducted every 10 years in the UK — collects data on age, occupation, housing and ethnicity.</dd>
-<dt>Population distribution</dt><dd>The pattern of where people live across an area — showing areas of dense and sparse population.</dd>
-<dt>Counter-urbanisation</dt><dd>The movement of people from cities to rural areas or small towns — the reverse of urbanisation.</dd>
-<dt>Conurbation</dt><dd>A large continuous urban area formed when several towns and cities expand and merge together — e.g. Greater Manchester, West Midlands.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Dividing area by population — ✅ Correct: population density = <strong>population ÷ area</strong>, not the other way round.</li>
-<li>❌ Thinking high population density always means a city — ✅ Correct: some <strong>rural</strong> areas (e.g. river deltas used for farming) can have very high density.</li>
-<li>❌ Confusing urbanisation with urban growth — ✅ Correct: urbanisation is about the <strong>proportion</strong> living in cities; urban growth is about the <strong>size</strong> of cities growing.</li>
-<li>❌ Confusing urbanisation with counter-urbanisation — ✅ Correct: urbanisation = people moving <strong>to</strong> cities; counter-urbanisation = people moving <strong>away</strong> from cities to rural areas.</li>
-<li>❌ Reading a population pyramid the wrong way — ✅ Correct: the <strong>base</strong> shows the youngest (0–4); the <strong>top</strong> shows the oldest. Males are usually on the left, females on the right.</li>
-<li>❌ Thinking the DTM predicts the future — ✅ Correct: the DTM is a <strong>model based on past patterns</strong> (mainly European). Not all countries follow the same path.</li>
+<li>Dividing area by population. Population density = <strong>population ÷ area</strong>, not the other way round.</li>
+<li>Thinking high population density always means a city. Some <strong>rural</strong> areas, such as farmed river deltas, can have very high density too.</li>
+<li>Confusing urbanisation with urban growth. Urbanisation is about the <strong>proportion</strong> of people living in cities; urban growth is about the <strong>size</strong> of cities increasing.</li>
+<li>Confusing urbanisation with counter-urbanisation. Urbanisation means people moving <strong>to</strong> cities; counter-urbanisation means people moving <strong>away</strong> from cities to rural areas.</li>
+<li>Reading a population pyramid the wrong way round. The <strong>base</strong> shows the youngest ages; the <strong>top</strong> shows the oldest — males are usually shown on the left, females on the right.</li>
+<li>Thinking the DTM predicts the future. It is a <strong>model based on past patterns</strong>, mainly from Europe — not every country follows the same path.</li>
 </ul>`,
 
-"island-35": `<h4>Introduction</h4>
-<p>Biomes are the world's major ecosystems, each defined by its climate, vegetation and wildlife. From the dense tropical rainforest to the parched Sahara to the frozen Arctic tundra, biomes follow predictable patterns across the globe — and human activity is threatening many of them at an alarming rate.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>A <strong>biome</strong> is a large-scale ecosystem defined by climate and dominant vegetation type. Distribution follows latitude and climate zones.</li>
-<li><strong>Tropical rainforest</strong>: near the Equator; hot (~27°C) and wet (2,000mm+ rainfall/year) all year. Four layers: emergent, canopy, understorey, forest floor.</li>
-<li><strong>Nutrient cycling in the rainforest (Gersmehl model)</strong>: most nutrients are stored in the <strong>biomass</strong> (living plants), not the soil. Rapid decomposition returns nutrients to the soil, but they are immediately taken up by plant roots. If trees are removed, the nutrient cycle breaks — rain washes nutrients away, leaving infertile soil. This is why deforested rainforest land quickly becomes unproductive.</li>
-<li><strong>Indigenous peoples</strong>: groups such as the Yanomami (Amazon) have lived sustainably in the rainforest for thousands of years. They use shifting cultivation (clearing small areas, farming briefly, then moving on to let forest regrow), hunt sustainably, and have deep knowledge of medicinal plants. Deforestation threatens their land, culture and survival.</li>
-<li><strong>Case study — the Amazon rainforest</strong>: the world's largest tropical rainforest, covering ~5.5 million km² across nine countries. Contains roughly 10% of all species on Earth. Deforestation rate has increased dramatically — driven by cattle ranching (80% of cleared land), soy farming, logging and mining. Brazil's deforestation policies have fluctuated between enforcement and relaxation.</li>
-<li><strong>Latitude and biome distribution</strong>: biomes follow a pattern linked to latitude. Near the Equator (low latitude) — intense direct sunlight → hot → tropical rainforest. Moving towards the poles — less direct sunlight → cooler → savanna grassland → deciduous forest → coniferous forest (taiga) → tundra → ice cap. Altitude has a similar effect — higher mountains are colder.</li>
-<li><strong>Temperate deciduous forest</strong>: the UK's natural biome. Found in mid-latitudes with mild, wet climates and four distinct seasons. Trees include oak, beech, ash and birch — they lose their leaves in autumn to conserve water during winter (<em>deciduous</em> = leaf-shedding). Rich biodiversity but much of the original forest has been cleared for farming and settlement.</li>
-<li><strong>Coniferous forest (taiga/boreal forest)</strong>: the largest land biome on Earth, stretching across northern Russia, Scandinavia and Canada (~50–70°N). Evergreen conifers (pine, spruce, fir) have needle-like leaves to reduce water loss and a conical shape to shed snow. Cold, long winters and short summers. Soil is acidic and thin.</li>
-<li><strong>Grassland (savanna and temperate prairie)</strong>: biomes dominated by grasses with few or no trees, found where rainfall is too low to support forest but enough to prevent desert. <strong>Tropical savanna</strong> (e.g. African Serengeti) has distinct wet and dry seasons. <strong>Temperate grassland</strong> (e.g. North American prairie) has hot summers and cold winters.</li>
-<li><strong>Hot desert</strong>: very hot days, cold nights; minimal rainfall (&lt;250mm/year); found 20–30° north and south of Equator. <strong>Desert adaptations</strong>: cacti store water in thick fleshy stems, have spines instead of leaves to reduce water loss, and long/shallow roots to collect water quickly. Camels store fat (not water) in their humps for energy, have wide feet for walking on sand, and thick eyelashes to keep out sand.</li>
-<li><strong>Polar regions and cold environments</strong>: the Arctic (north) and Antarctic (south) have extremely cold temperatures (−30°C to −50°C in winter), low precipitation and continuous daylight or darkness depending on season. Vegetation is limited to mosses, lichens and tough grasses (tundra). Animals adapt with thick fur/blubber (polar bears, seals), white camouflage, compact body shapes to reduce heat loss, and migration or hibernation. Polar ice is melting due to climate change, threatening habitats and raising sea levels globally.</li>
-<li><strong>Coral reefs</strong>: found in warm, shallow, clear tropical oceans (typically 25–29°C). Often called the "rainforests of the sea" due to their extraordinary biodiversity. Threatened by coral bleaching (caused by rising sea temperatures), ocean acidification, pollution and overfishing.</li>
-<li>Adaptations are critical — every organism in a biome has specific features allowing it to survive the local conditions.</li>
-</ul>
+"island-35": `<h2>Biomes &amp; Climate Zones</h2>
+<p>Biomes are the world's major ecosystems, each defined by its climate, vegetation and wildlife. From the dense tropical rainforest to the parched Sahara to the frozen Arctic tundra, biomes follow predictable patterns across the globe — and human activity is now threatening many of them at an alarming rate.</p>
+
+<h3>Biomes and Latitude</h3>
+<p>A <strong>biome</strong> is a large-scale ecosystem defined by its climate and dominant vegetation type, and where a biome appears is not random — it follows latitude closely. Near the Equator, where sunlight is most direct and intense, conditions are hot enough for tropical rainforest; moving towards the poles, sunlight becomes progressively less direct and temperatures fall, producing a predictable sequence: savanna grassland, deciduous forest, coniferous forest (taiga), tundra, and finally ice cap. Altitude produces the same cooling effect as latitude, which is why high mountains are cold even near the Equator.</p>
+
+<h3>The Tropical Rainforest</h3>
+<p>The <strong>tropical rainforest</strong> sits near the Equator, hot (around 27°C) and wet (2,000mm+ of rainfall) all year round, and is structured into four distinct layers — emergent, canopy, understorey and forest floor. Its soil hides a surprising fact, explained by the <strong>Gersmehl model</strong> of nutrient cycling: most nutrients are stored in the <strong>biomass</strong> — the living plants themselves — rather than the soil, because rapid decomposition returns nutrients to the ground only for them to be immediately reabsorbed by tree roots. Remove the trees, and that fast, efficient cycle breaks down entirely: with no roots left to absorb them, nutrients are simply washed away by the heavy rain, leaving the exposed soil infertile within just a few years — which is exactly why deforested rainforest land so quickly becomes unproductive. Indigenous peoples such as the <strong>Yanomami</strong> of the Amazon have lived within these limits sustainably for thousands of years, using shifting cultivation — clearing small areas, farming them briefly, then moving on to let the forest regrow — alongside sustainable hunting and deep knowledge of medicinal plants; deforestation now threatens their land, culture and survival directly. The <strong>Amazon rainforest</strong> itself is the world's largest, covering roughly 5.5 million km² across nine countries and containing around 10% of all species on Earth, yet its deforestation rate has increased dramatically, driven above all by cattle ranching (accounting for about 80% of cleared land), along with soy farming, logging and mining.</p>
 <div class="lesson-diagram" data-diagram="rainforest-layers"><p class="diagram-caption">The four layers of the tropical rainforest — emergent, canopy, under-storey and forest floor</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="gersmehl-model"><p class="diagram-caption">The Gersmehl nutrient cycle — how nutrients flow between biomass, litter and soil</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Temperate and Coniferous Forests, and Grasslands</h3>
+<p>The UK's own natural biome is <strong>temperate deciduous forest</strong>, found in mid-latitudes with mild, wet climates and four distinct seasons; trees such as oak, beech, ash and birch shed their leaves in autumn — <em>deciduous</em> literally means leaf-shedding — to conserve water through winter, though much of the UK's original forest has long since been cleared for farming and settlement. Further north, across northern Russia, Scandinavia and Canada (roughly 50–70°N), lies <strong>coniferous forest</strong> (taiga or boreal forest), the largest land biome on Earth, where evergreen conifers like pine, spruce and fir cope with cold, long winters using needle-like leaves that reduce water loss and a conical shape that sheds snow. Between forest and desert sit the <strong>grasslands</strong>, found wherever rainfall is too low to support trees but still high enough to prevent true desert: tropical savanna, such as the African Serengeti, has distinct wet and dry seasons, while temperate grassland, such as the North American prairie, swings between hot summers and cold winters instead.</p>
+
+<h3>Deserts, Polar Regions and Coral Reefs</h3>
+<p><strong>Hot deserts</strong>, found 20–30° north and south of the Equator, combine very hot days with cold nights and minimal rainfall (under 250mm a year), forcing plants and animals into specialised <strong>adaptations</strong>: cacti store water in thick, fleshy stems, replace leaves with spines to cut water loss, and grow long, shallow roots to collect water quickly after rare rainfall, while camels store fat rather than water in their humps, have wide feet for walking on sand, and thick eyelashes to keep sand out of their eyes. At the opposite extreme, the <strong>polar regions</strong> — Arctic and Antarctic — endure temperatures of −30°C to −50°C in winter, minimal precipitation, and months of continuous daylight or darkness depending on the season; vegetation is limited to mosses, lichens and tough tundra grasses, while animals such as polar bears and seals rely on thick fur or blubber, white camouflage, compact body shapes that reduce heat loss, and migration or hibernation to survive — a biome now under direct threat as polar ice melts due to climate change, endangering habitats and raising sea levels worldwide. Finally, <strong>coral reefs</strong>, found in warm, shallow, clear tropical waters (typically 25–29°C), are often called the "rainforests of the sea" for their extraordinary biodiversity, but face their own mounting threats from coral bleaching, ocean acidification, pollution and overfishing.</p>
 <div class="lesson-diagram" data-diagram="xerophyte-adaptations"><p class="diagram-caption">Xerophyte adaptations: how cacti and other desert plants conserve water</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Explain how the drip-tip leaf and buttress roots are adaptations to the tropical rainforest.</p>
 <p><strong>Solution:</strong><br>
@@ -1517,49 +1453,35 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 5. Heavy tropical rainfall <strong>leaches</strong> (washes away) nutrients from the exposed soil within just a few years.<br>
 6. Result: the land becomes <strong>infertile</strong> — farmers move on and clear more forest, creating a destructive cycle.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Biome</dt><dd>A large global ecosystem defined by its climate, characteristic vegetation and wildlife.</dd>
-<dt>Biodiversity</dt><dd>The variety of living species in an area — the tropical rainforest has the highest biodiversity on Earth.</dd>
-<dt>Deforestation</dt><dd>The large-scale clearing of forest, typically for agriculture, logging or development.</dd>
-<dt>Adaptation</dt><dd>An inherited feature that helps an organism survive in its specific environment.</dd>
-<dt>Gersmehl model</dt><dd>A diagram showing how nutrients cycle between biomass, litter and soil in an ecosystem — in the rainforest, the largest store is the biomass.</dd>
-<dt>Biomass</dt><dd>The total mass of living organisms in an area — in the rainforest, the trees and plants store the majority of nutrients.</dd>
-<dt>Tundra</dt><dd>A cold, treeless biome found in polar regions, characterised by permafrost, mosses, lichens and low temperatures.</dd>
-<dt>Deciduous</dt><dd>Trees that shed their leaves in autumn to conserve water during winter — e.g. oak, beech, birch. The UK's natural biome is temperate deciduous forest.</dd>
-<dt>Coniferous (taiga)</dt><dd>Evergreen trees with needle-like leaves and conical shapes, found in the boreal forest biome across northern latitudes — e.g. pine, spruce, fir.</dd>
-<dt>Savanna</dt><dd>A tropical grassland biome with distinct wet and dry seasons, scattered trees, and large herds of grazing animals — e.g. the African Serengeti.</dd>
-<dt>Coral bleaching</dt><dd>The loss of colour in corals caused by stress (usually rising sea temperatures), which expels the algae living inside them and can lead to coral death.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking all of Africa is hot desert — ✅ Correct: Africa contains <strong>multiple biomes</strong> — rainforest, savanna, desert, Mediterranean and more.</li>
-<li>❌ Saying deforestation only affects local wildlife — ✅ Correct: deforestation releases stored carbon, contributing to <strong>global</strong> climate change.</li>
-<li>❌ Confusing climate zone with biome — ✅ Correct: climate zone refers to temperature and rainfall patterns; biome includes the <strong>living organisms</strong> adapted to those conditions.</li>
-<li>❌ Thinking rainforest soil is rich and fertile — ✅ Correct: most nutrients are in the <strong>biomass</strong>, not the soil. Without trees, the thin soil loses fertility rapidly (Gersmehl model).</li>
-<li>❌ Forgetting polar regions when listing biomes — ✅ Correct: polar/tundra is a <strong>major global biome</strong> covering large areas and is specifically required by the curriculum.</li>
+<li>Thinking all of Africa is hot desert. Africa contains <strong>multiple biomes</strong> — rainforest, savanna, desert, Mediterranean and more.</li>
+<li>Saying deforestation only affects local wildlife. Deforestation releases stored carbon, contributing to <strong>global</strong> climate change too.</li>
+<li>Confusing climate zone with biome. Climate zone refers only to temperature and rainfall patterns; biome also includes the <strong>living organisms</strong> adapted to those conditions.</li>
+<li>Thinking rainforest soil is rich and fertile. Most nutrients are in the <strong>biomass</strong>, not the soil — without trees, the thin soil loses fertility rapidly, exactly as the Gersmehl model predicts.</li>
+<li>Forgetting polar regions when listing biomes. Polar/tundra is a <strong>major global biome</strong> covering large areas, not an afterthought.</li>
 </ul>`,
 
-"island-36": `<h4>Introduction</h4>
+"island-36": `<h2>Tectonic Activity</h2>
 <p>The ground beneath your feet is constantly moving — just too slowly to notice. The Earth's tectonic plates shift on convection currents in the mantle, and where they meet, they produce the planet's most dramatic and dangerous events: volcanoes, earthquakes and tsunamis. These processes have shaped the Earth over billions of years of geological time.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Earth's structure</strong> (outside → in): crust → mantle → outer core (liquid) → inner core (solid).</li>
-<li><strong>Convection currents</strong> in the mantle are the driving mechanism for plate movement. Radioactive decay in the core heats the mantle → hot, semi-molten rock rises → spreads out near the crust, dragging tectonic plates with it → cools → sinks back down → cycle repeats. These slow circular currents are why plates move a few centimetres per year.</li>
-<li><strong>Constructive boundary</strong>: plates move apart → magma rises → new crust → volcanoes and rift valleys (e.g. Iceland on the Mid-Atlantic Ridge).</li>
-<li><strong>Destructive boundary</strong>: oceanic plate subducts under continental → melts → volcanoes and fold mountains → earthquakes (e.g. Japan, Andes). Where two continental plates collide, fold mountains form without volcanic activity (e.g. the Himalayas).</li>
-<li><strong>Conservative boundary</strong>: plates slide past each other → no volcanoes → massive earthquakes (e.g. San Andreas Fault, California).</li>
-<li><strong>Earthquakes</strong>: caused by sudden release of stored energy when tectonic plates move. The <strong>focus</strong> (hypocentre) is the point underground where the rock fractures. The <strong>epicentre</strong> is the point on the surface directly above the focus — usually where shaking is most intense. The <strong>Richter scale</strong> measures earthquake magnitude (energy released) — it is logarithmic: each whole number increase = ~32 times more energy. Shallow-focus earthquakes (less than 70 km deep) cause the most surface damage.</li>
-<li><strong>Earthquake preparation</strong>: scientists cannot predict exactly when an earthquake will strike — they can only identify high-risk areas near plate boundaries. Preparation saves far more lives than prediction: earthquake-resistant buildings (flexible steel frames, deep foundations), emergency kits, evacuation drills, early warning systems, and public education.</li>
-<li><strong>Why people live near volcanoes</strong>: volcanic soil is extremely fertile for farming; volcanoes provide geothermal energy (cheap electricity); tourism creates jobs; minerals and building materials are available. Cultural ties, poverty, and the rarity of major eruptions mean daily benefits often outweigh occasional risks.</li>
-<li><strong>Tsunamis</strong>: formed when an earthquake or volcanic eruption occurs under the ocean, displacing a massive volume of water. The wave is barely noticeable in deep water but as it reaches shallow coastal areas it slows, builds in height and can devastate coastlines. The 2004 Indian Ocean tsunami killed over 230,000 people across 14 countries.</li>
-<li><strong>Geological timescales</strong>: the Earth is approximately 4.6 billion years old. Geologists divide this into eons, eras and periods. The movement of tectonic plates has completely rearranged continents over hundreds of millions of years — e.g. the supercontinent Pangaea began breaking apart ~200 million years ago. Human existence represents a tiny fraction of geological time.</li>
-<li><strong>HIC vs LIC response</strong>: the same magnitude earthquake causes very different impacts depending on a country's wealth. HICs (e.g. Japan) have earthquake-proof buildings, early warning systems, trained emergency services, and insurance. LICs (e.g. Nepal, Haiti) often have weaker infrastructure, limited emergency response, and less access to aid — leading to far higher death tolls and slower recovery.</li>
-</ul>
+
+<h3>Earth's Structure and Plate Movement</h3>
+<p>Earth is built from four layers, from the outside in: the crust, the mantle, the liquid outer core, and the solid inner core. What actually moves the tectonic plates riding on top of the crust is <strong>convection currents</strong> deep in the mantle: radioactive decay in the core heats the mantle from below, hot semi-molten rock rises and spreads out near the crust — dragging the plates above it along for the ride — before cooling and sinking back down to repeat the cycle. These slow, circular currents are the entire reason plates creep along at only a few centimetres a year.</p>
 <div class="lesson-diagram" data-diagram="earth-structure-geo"><p class="diagram-caption">The layers of the Earth — from the thin crust to the solid inner core</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Plate Boundaries</h3>
+<p>What happens where two plates meet depends entirely on which way they are moving relative to each other. At a <strong>constructive boundary</strong>, plates move apart, letting magma rise to form new crust — producing volcanoes and rift valleys, as in Iceland on the Mid-Atlantic Ridge. At a <strong>destructive boundary</strong>, an oceanic plate is forced (subducted) beneath a continental one and melts, producing both volcanoes and earthquakes, as in Japan or the Andes; where two continental plates collide instead, neither can subduct, so the collision simply crumples the crust upward into fold mountains without any volcanic activity, as with the Himalayas. At a <strong>conservative boundary</strong>, plates slide past each other without any melting at all — so no volcanoes form, but the friction of sliding plates still produces massive earthquakes, as along the San Andreas Fault in California.</p>
 <div class="lesson-diagram" data-diagram="plate-boundaries"><p class="diagram-caption">The three types of plate boundary: constructive, destructive and conservative</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="volcano-cross-section"><p class="diagram-caption">Cross-section of a volcano showing magma chamber, vent and crater</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Earthquakes: Causes, Measurement and Preparation</h3>
+<p>An <strong>earthquake</strong> happens when stress built up between moving plates is suddenly released. The <strong>focus</strong> (or hypocentre) is the point underground where the rock actually fractures, while the <strong>epicentre</strong> is the point directly above it on the surface, usually where shaking is most intense — and the shallower the focus (under 70 km deep), the more damage reaches the surface. The <strong>Richter scale</strong> measures how much energy was released, but it is <strong>logarithmic</strong> rather than linear, so each whole-number increase represents roughly 32 times more energy — meaning a "small" jump on the scale hides an enormous difference in destructive power. Because scientists cannot predict exactly when an earthquake will strike — only identify the high-risk areas near plate boundaries — preparation saves far more lives than prediction ever could: earthquake-resistant buildings with flexible steel frames and deep foundations, emergency kits, evacuation drills, early warning systems and public education all matter more than trying to forecast the exact moment. That preparation gap is also why the same magnitude earthquake causes wildly different outcomes depending on where it strikes: high-income countries such as Japan combine earthquake-proof buildings, early warning systems, trained emergency services and insurance, while lower-income countries such as Nepal or Haiti often have weaker infrastructure and less access to aid, leading to far higher death tolls and much slower recovery from a comparable quake.</p>
+
+<h3>Volcanoes, Tsunamis and Geological Time</h3>
+<p>Given the danger, it can seem strange that people choose to live near volcanoes at all — but volcanic soil is extremely fertile for farming, volcanoes can provide cheap geothermal electricity, tourism creates jobs, and useful minerals and building materials are often close at hand; combined with cultural ties, poverty limiting other options, and the simple rarity of major eruptions, the everyday benefits frequently outweigh the occasional risk. A related but distinct hazard is the <strong>tsunami</strong>, formed when an earthquake or volcanic eruption under the ocean displaces a huge volume of water; the resulting wave is barely noticeable out in deep water, but as it reaches shallow coastal areas it slows down and builds dramatically in height, with the potential to devastate entire coastlines — the 2004 Indian Ocean tsunami alone killed over 230,000 people across 14 countries. Set against Earth's full <strong>geological timescale</strong> — roughly 4.6 billion years, divided by geologists into eons, eras and periods — these events are just the latest chapter in a much longer story of shifting continents: the supercontinent Pangaea only began breaking apart around 200 million years ago, and human existence represents a vanishingly small fraction of that history.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Japan experiences frequent earthquakes and volcanic eruptions. Using plate tectonics, explain why.</p>
 <p><strong>Solution:</strong><br>
@@ -1581,45 +1503,30 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 • Nepal relied heavily on international aid — limited domestic resources for recovery.<br><br>
 <strong>Key insight:</strong> Wealth and preparation significantly affect the <strong>impact</strong> of a natural hazard. The hazard itself is natural; the <strong>disaster</strong> is often shaped by human factors.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Tectonic plate</dt><dd>A large, rigid segment of the Earth's crust and upper mantle that moves on convection currents in the mantle.</dd>
-<dt>Convection current</dt><dd>A circular movement of heat in the mantle — hot rock rises, spreads, cools and sinks — driving tectonic plate movement.</dd>
-<dt>Subduction</dt><dd>The process where a denser oceanic plate is forced under a lighter continental plate at a destructive boundary.</dd>
-<dt>Focus</dt><dd>The point underground where an earthquake's energy is first released — also called the hypocentre. Shallow-focus earthquakes cause the most surface damage.</dd>
-<dt>Epicentre</dt><dd>The point on the Earth's surface directly above the focus (origin) of an earthquake — usually where shaking is most intense.</dd>
-<dt>Richter scale</dt><dd>A logarithmic scale measuring earthquake magnitude — each step represents roughly 32 times more energy released.</dd>
-<dt>Seismic waves</dt><dd>Waves of energy released by an earthquake that travel through the Earth, causing the ground to shake.</dd>
-<dt>Tsunami</dt><dd>A series of massive ocean waves caused by an underwater earthquake or volcanic eruption displacing water.</dd>
-<dt>Geological timescale</dt><dd>The division of Earth's 4.6-billion-year history into eons, eras and periods based on major geological and biological events.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying volcanoes form at all plate boundaries — ✅ Correct: <strong>no volcanoes</strong> form at conservative boundaries — only earthquakes.</li>
-<li>❌ Confusing focus and epicentre — ✅ Correct: the <strong>focus</strong> is underground where the earthquake originates; the <strong>epicentre</strong> is on the surface above it.</li>
-<li>❌ Thinking the Richter scale is linear — ✅ Correct: it is <strong>logarithmic</strong> — a magnitude 7 earthquake releases 10× more energy than a magnitude 6.</li>
-<li>❌ Assuming higher magnitude always means more deaths — ✅ Correct: the <strong>impact</strong> depends on population density, building quality, warning systems and wealth — not just magnitude.</li>
-<li>❌ Thinking tectonic plates move quickly — ✅ Correct: plates move only a few <strong>centimetres per year</strong> — continental rearrangement takes hundreds of millions of years.</li>
+<li>Saying volcanoes form at all plate boundaries. <strong>No volcanoes</strong> form at conservative boundaries — only earthquakes.</li>
+<li>Confusing focus and epicentre. The <strong>focus</strong> is underground where the earthquake originates; the <strong>epicentre</strong> is on the surface directly above it.</li>
+<li>Thinking the Richter scale is linear. It is <strong>logarithmic</strong> — a magnitude 7 earthquake releases roughly 32 times more energy than a magnitude 6.</li>
+<li>Assuming higher magnitude always means more deaths. The <strong>impact</strong> depends on population density, building quality, warning systems and wealth, not just magnitude.</li>
+<li>Thinking tectonic plates move quickly. Plates move only a few <strong>centimetres per year</strong> — continental rearrangement takes hundreds of millions of years.</li>
 </ul>`,
 
-"island-37": `<h4>Introduction</h4>
+"island-37": `<h2>Africa: Development &amp; Diversity</h2>
 <p>Africa is not a country — it is a vast, diverse continent of 54 nations, thousands of languages and extraordinary geographical variety. Understanding development, the legacy of colonialism, the role of aid and Fairtrade, and how different regions compare helps build a nuanced picture far removed from common stereotypes.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>Africa has 54 countries, over 2,000 languages, and contains every type of landscape: desert, rainforest, savanna, mountains and coastlines.</li>
-<li><strong>GDP (Gross Domestic Product)</strong>: the total value of all goods and services produced in a country in one year. GDP per capita (per person) is a common economic indicator — but it is an average that hides inequality (a few wealthy people can raise it while most remain poor).</li>
-<li><strong>HDI (Human Development Index)</strong> measures development using three indicators: life expectancy, education, and income per person (GNI per capita). HDI gives a more complete picture than GDP alone because it includes health and education, not just wealth.</li>
-<li><strong>Development indicators</strong>: <em>economic</em> indicators include GDP per capita, employment rates, and trade balance. <em>Social</em> indicators include literacy rate, life expectancy, infant mortality, access to clean water, and doctors per 1,000 people. Using multiple indicators gives a more accurate picture of development.</li>
-<li>Africa's development varies enormously: some countries (e.g. Seychelles, South Africa) have high HDI; others (e.g. Niger, South Sudan) face severe challenges.</li>
-<li><strong>Tourism</strong> brings foreign exchange, jobs and conservation funding — but can also cause "leakage" (profits leaving the local economy), environmental damage and cultural erosion.</li>
-<li><strong>Sustainable development</strong>: meeting present needs without compromising future generations' ability to meet theirs — tourism and resource use must balance economic, social and environmental goals.</li>
-<li><strong>Fairtrade</strong>: a system that guarantees farmers and producers in developing countries a fair minimum price for their goods (e.g. coffee, cocoa, bananas). It also provides a Fairtrade Premium — extra money invested in community projects like schools, wells or healthcare. Critics argue it only helps a small number of farmers and that the premium doesn't always reach those who need it most.</li>
-<li><strong>Types of aid</strong>: <strong>Bilateral</strong> (government to government — e.g. UK to Kenya); <strong>Multilateral</strong> (through organisations like the World Bank or UN); <strong>Short-term/emergency</strong> (immediate disaster relief — food, water, shelter); <strong>Long-term/development</strong> (building infrastructure, education, training). <strong>Tied aid</strong> = aid with conditions requiring the receiving country to spend money on goods/services from the donor country — critics argue this benefits the donor more than the recipient. Arguments for aid: saves lives, builds capacity. Arguments against: can create dependency, may be tied to political conditions, corruption can divert funds.</li>
-<li><strong>Colonial history and the development gap</strong>: European countries colonised most of Africa from the late 19th century, extracting resources (minerals, crops, people through slavery) and creating borders that ignored ethnic and cultural groups. When countries gained independence (mostly 1950s–1960s), they inherited weak institutions, economies dependent on exporting raw materials, and ethnic divisions. This history is a significant factor in understanding current development challenges — though Africa's story is also one of resilience, growth and innovation.</li>
-<li><strong>Comparative place study</strong>: the curriculum requires comparing regions within Africa. For example, comparing Lagos (Nigeria's commercial capital — rapid urbanisation, emerging tech industry, but severe inequality and infrastructure strain) with a rural area in sub-Saharan Africa (e.g. rural Kenya — subsistence farming, limited services, but strong community structures and growing mobile banking via M-Pesa).</li>
-</ul>
+
+<h3>Africa: Diversity and Measuring Development</h3>
+<p>Africa contains 54 countries, over 2,000 languages, and every type of landscape from desert and rainforest to savanna, mountains and coastline — which is exactly why generalising about "Africa" as a single place is almost always misleading. Measuring how developed a country is turns out to need more than one number. <strong>GDP (Gross Domestic Product)</strong> — the total value of goods and services a country produces in a year — is often expressed per capita as a simple economic indicator, but being an average, it can hide serious inequality: a small wealthy elite can pull the figure up while most of the population stays poor. The <strong>HDI (Human Development Index)</strong> gives a fuller picture by combining three measures — life expectancy, education, and income per person (GNI per capita) — so it captures health and education alongside wealth rather than wealth alone. Beyond these headline measures, economic indicators such as employment rates and trade balance, and social indicators such as literacy rate, infant mortality, access to clean water and doctors per 1,000 people, all add detail that a single number cannot. Applying these measures across Africa reveals just how much development varies: Seychelles and South Africa post high HDI scores, while Niger and South Sudan face severe ongoing challenges — a contrast that shows up just as sharply within a single country, comparing rapidly urbanising Lagos, with its emerging tech industry and severe inequality, against rural Kenya, where subsistence farming and limited services coexist with strong community structures and fast-growing mobile banking through M-Pesa.</p>
+
+<h3>Tourism, Sustainable Development and Fairtrade</h3>
+<p><strong>Tourism</strong> brings foreign exchange, jobs and conservation funding into a country, but it comes with real costs too: "leakage" describes profits flowing straight back out to foreign-owned hotels and airlines instead of staying in the local economy, alongside environmental damage and the erosion of local culture. Managing that trade-off well means aiming for <strong>sustainable development</strong> — meeting today's needs without compromising future generations' ability to meet theirs — balancing economic, social and environmental goals rather than chasing tourist income alone. <strong>Fairtrade</strong> tackles a related problem from the trade side: it guarantees farmers and producers a fair minimum price for goods such as coffee, cocoa and bananas, plus a Fairtrade Premium invested in community projects like schools, wells or healthcare — though critics point out it only reaches a limited number of farmers, and the premium does not always end up with those who need it most.</p>
+
+<h3>Aid and the Legacy of Colonialism</h3>
+<p>International aid takes several distinct forms: <strong>bilateral</strong> aid passes directly from one government to another, <strong>multilateral</strong> aid flows through organisations like the World Bank or the UN, and aid can also be split by timescale into short-term emergency relief (food, water, shelter after a disaster) versus long-term development aid (infrastructure, education, training). One particular form, <strong>tied aid</strong>, comes with conditions requiring the recipient to spend the money on goods or services from the donor country — a structure critics argue benefits the donor more than the country receiving it. Aid's case rests on saving lives and building capacity; the case against it points to the risk of <strong>dependency</strong>, political strings, and corruption diverting funds from those they were meant to help. Much of today's development gap has a longer history behind it: European powers colonised most of Africa from the late 19th century, extracting minerals, crops and — through the slave trade — people, while drawing borders that ignored existing ethnic and cultural groups entirely. When countries gained independence, mostly through the 1950s and 60s, they inherited weak institutions, economies still dependent on exporting raw materials, and the ethnic divisions those colonial borders had created — a significant factor in today's development challenges, even as Africa's ongoing story is equally one of resilience, growth and innovation.</p>
 <div class="lesson-diagram" data-diagram="types-of-aid"><p class="diagram-caption">Types of international aid — bilateral, multilateral, short-term and long-term</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Assess the benefits and costs of tourism in Kenya.</p>
 <p><strong>Solution:</strong><br>
@@ -1647,24 +1554,14 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 <strong>Alternatives:</strong> Fairtrade, investment in local businesses, debt relief, improving governance.<br>
 <strong>Judgement:</strong> Aid is most effective when it is <strong>long-term, locally led</strong> and combined with trade and investment — not as a replacement for them.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>HDI</dt><dd>Human Development Index — a composite score (0–1) measuring a country's development through life expectancy, education and income.</dd>
-<dt>Leakage</dt><dd>The proportion of tourism income that flows out of the local economy to foreign companies or imported goods.</dd>
-<dt>Sustainable development</dt><dd>Development that meets present needs without compromising the ability of future generations to meet theirs.</dd>
-<dt>GNI per capita</dt><dd>Gross National Income per person — a measure of average income used in the HDI calculation.</dd>
-<dt>Fairtrade</dt><dd>A certification system guaranteeing producers in developing countries a fair minimum price and a social premium for community investment.</dd>
-<dt>Bilateral aid</dt><dd>Aid given directly from one government to another — may come with conditions or political expectations.</dd>
-<dt>Tied aid</dt><dd>Aid that requires the recipient to spend the money on goods or services from the donor country.</dd>
-<dt>Colonialism</dt><dd>The practice of one country taking political and economic control of another territory — European colonialism in Africa lasted from the late 19th century to the mid-20th century.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Treating Africa as one country with one culture — ✅ Correct: Africa is a <strong>continent of 54 diverse nations</strong>. Generalisations are almost always wrong.</li>
-<li>❌ Saying tourism is always good for development — ✅ Correct: without careful management, leakage means most profit <strong>leaves</strong> the local economy.</li>
-<li>❌ Confusing GDP and HDI — ✅ Correct: GDP measures only <strong>economic output</strong>; HDI measures health and education <strong>as well as</strong> income.</li>
-<li>❌ Thinking aid is always helpful — ✅ Correct: aid can create <strong>dependency</strong> and may come with political strings. It works best when <strong>long-term and locally led</strong>.</li>
-<li>❌ Ignoring colonial history when discussing development — ✅ Correct: colonialism extracted resources, created artificial borders and left weak institutions — it is a <strong>significant historical factor</strong> in today's development gap.</li>
+<li>Treating Africa as one country with one culture. Africa is a <strong>continent of 54 diverse nations</strong> — generalisations are almost always wrong.</li>
+<li>Saying tourism is always good for development. Without careful management, leakage means most of the profit <strong>leaves</strong> the local economy.</li>
+<li>Confusing GDP and HDI. GDP measures only <strong>economic output</strong>; HDI measures health and education <strong>as well as</strong> income.</li>
+<li>Thinking aid is always helpful. Aid can create <strong>dependency</strong> and may come with political strings — it works best when <strong>long-term and locally led</strong>.</li>
+<li>Ignoring colonial history when discussing development. Colonialism extracted resources, created artificial borders and left weak institutions — it remains a <strong>significant historical factor</strong> in today's development gap.</li>
 </ul>`,
 
 "island-30": `<h2>Energy Stores &amp; Transfers</h2>
@@ -2511,24 +2408,20 @@ So the student is wrong: caffeine is a drug, and a legal one.</p>
 <li>Confusing distance–time graphs with speed–time graphs. On a distance–time graph, the gradient gives <strong>speed</strong>; on a speed–time graph, the gradient gives <strong>acceleration</strong> instead — a different concept entirely.</li>
 </ul>`,
 
-"island-48": `<h4>Introduction</h4>
-<p>Geography is the study of the world around us — its landscapes, people, places and environments. It asks big questions like "Why do people live where they do?" and "How is our planet changing?" Geography is split into two main branches: <strong>physical geography</strong> (natural features like rivers, mountains and weather) and <strong>human geography</strong> (people, cities, trade and culture). Understanding geography helps you make sense of the news, the environment and your own neighbourhood.</p>
+"island-48": `<h2>Introduction to Geography</h2>
+<p>Geography is the study of the world around us — its landscapes, people, places and environments. It asks big questions like "Why do people live where they do?" and "How is our planet changing?" Understanding geography helps you make sense of the news, the environment and your own neighbourhood.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Physical geography</strong> studies natural features and processes — rivers, volcanoes, weather, ecosystems, rocks and coasts.</li>
-<li><strong>Human geography</strong> studies people and how they interact with the world — cities, migration, trade, culture and development.</li>
-<li><strong>Place</strong> refers to a specific location and the characteristics that make it unique (e.g. London is a capital city on the River Thames).</li>
-<li><strong>Space</strong> describes the gap or area between places and how things are distributed across the Earth's surface.</li>
-<li><strong>Scale</strong> means studying geography at different levels — local (your town), national (the UK), or global (the whole world). On a map, <strong>map scale</strong> shows the relationship between distance on the map and real distance on the ground (e.g. 1:25,000 means 1 cm on the map = 250 m in reality).</li>
-<li>The UK is made up of four countries: <strong>England</strong> (London), <strong>Scotland</strong> (Edinburgh), <strong>Wales</strong> (Cardiff) and <strong>Northern Ireland</strong> (Belfast).</li>
-<li>There are <strong>7 continents</strong> (Africa, Antarctica, Asia, Australia/Oceania, Europe, North America, South America) and <strong>5 oceans</strong> (Atlantic, Pacific, Indian, Southern, Arctic). <strong>Asia</strong> is the largest continent by area and population; the <strong>Pacific</strong> is the largest ocean.</li>
-<li><strong>Latitude</strong> lines run east–west and measure how far north or south of the Equator you are. <strong>Longitude</strong> lines run north–south and measure how far east or west of the Prime Meridian you are.</li>
-<li>Latitude is the main factor affecting temperature, but <strong>altitude</strong> (higher = colder), <strong>ocean currents</strong>, <strong>distance from the sea</strong> and <strong>prevailing winds</strong> also affect climate — so two places at the same latitude can have very different weather.</li>
-</ul>
+<h3>Physical and Human Geography</h3>
+<p>Geography splits into two main branches. <strong>Physical geography</strong> studies natural features and processes — rivers, volcanoes, weather, ecosystems, rocks and coasts. <strong>Human geography</strong> studies people and how they interact with the world — cities, migration, trade, culture and development. Both branches share a common set of ideas for thinking about the world: <strong>place</strong> is a specific location and the characteristics that make it unique (London, for instance, is a capital city on the River Thames); <strong>space</strong> describes the gaps between places and how things are distributed across the Earth's surface; and <strong>scale</strong> means studying geography at different levels, from your own town, to the whole UK, to the entire globe. On a map, that same idea of scale becomes <strong>map scale</strong> — the relationship between distance on the map and real distance on the ground, so that 1:25,000 means 1 cm on the map equals 250 m in reality.</p>
+
+<h3>The World: Continents, Countries and Oceans</h3>
+<p>Closer to home, the UK is made up of four countries: <strong>England</strong> (capital London), <strong>Scotland</strong> (Edinburgh), <strong>Wales</strong> (Cardiff) and <strong>Northern Ireland</strong> (Belfast). Zooming out, the world is divided into <strong>7 continents</strong> — Africa, Antarctica, Asia, Australia/Oceania, Europe, North America and South America — and <strong>5 oceans</strong> — Atlantic, Pacific, Indian, Southern and Arctic. Asia is both the largest continent by area and by population, while the Pacific is the largest ocean by far.</p>
+
+<h3>Latitude, Longitude and Climate</h3>
+<p>Any point on Earth can be pinned down using two sets of lines. <strong>Latitude</strong> lines run east–west and measure how far north or south of the Equator you are; <strong>longitude</strong> lines run north–south and measure how far east or west of the Prime Meridian you are. Latitude is the single biggest factor determining temperature, since it controls how directly sunlight hits a given point — but it is not the only one: <strong>altitude</strong> (higher means colder), <strong>ocean currents</strong>, <strong>distance from the sea</strong> and <strong>prevailing winds</strong> all shape climate too, which is why two places at exactly the same latitude can still have very different weather.</p>
 <div class="lesson-diagram" data-diagram="lat-long-globe"><p class="diagram-caption">Lines of latitude and longitude on a globe — the grid system for locating any point on Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
-<h4>✏️ Worked Example</h4>
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A student says "Geography is just about colouring in maps." Explain why this view is wrong, using examples from physical and human geography.</p>
 <p><strong>Solution:</strong><br>
@@ -2538,45 +2431,28 @@ So the student is wrong: caffeine is a drug, and a legal one.</p>
 4. Maps are <strong>one tool</strong> geographers use, but so are satellite images, data analysis, fieldwork and interviews.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Geography</dt><dd>The study of the Earth's landscapes, environments, places and the relationship between people and their surroundings.</dd>
-<dt>Physical geography</dt><dd>The branch of geography that studies natural features and processes such as rivers, weather, rocks and ecosystems.</dd>
-<dt>Human geography</dt><dd>The branch of geography that studies people, settlements, trade, migration and culture.</dd>
-<dt>Latitude</dt><dd>Imaginary lines running east–west around the Earth, measuring distance north or south of the Equator (0°). Measured in degrees up to 90°N or 90°S.</dd>
-<dt>Longitude</dt><dd>Imaginary lines running north–south, measuring distance east or west of the Prime Meridian (0°). Measured in degrees up to 180°E or 180°W.</dd>
-<dt>Equator</dt><dd>The imaginary line at 0° latitude that divides the Earth into the Northern and Southern Hemispheres.</dd>
-<dt>Tropics</dt><dd>The Tropic of Cancer (23.5°N) and Tropic of Capricorn (23.5°S) — the boundaries of the tropical zone where the Sun can be directly overhead.</dd>
-<dt>Map scale</dt><dd>The ratio between a distance on a map and the corresponding real-world distance (e.g. 1:25,000 means 1 cm on the map equals 25,000 cm or 250 m on the ground).</dd>
-<dt>Hemisphere</dt><dd>Half of the Earth. The Equator divides the globe into Northern and Southern Hemispheres; the Prime Meridian divides it into Eastern and Western Hemispheres.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking geography is only about maps — ✅ Correct: geography uses maps as one tool, but it studies <strong>processes, patterns and people</strong> too.</li>
-<li>❌ Mixing up latitude and longitude — ✅ Correct: <strong>lat</strong>itude is <strong>flat</strong> (runs east–west); longitude runs north–south.</li>
-<li>❌ Forgetting Northern Ireland is part of the UK — ✅ Correct: the UK has <strong>four</strong> countries: England, Scotland, Wales and Northern Ireland.</li>
-<li>❌ Saying there are 4 oceans — ✅ Correct: there are <strong>5 oceans</strong> (the Southern Ocean around Antarctica is the fifth).</li>
+<li>Thinking geography is only about maps. Geography uses maps as one tool among many, but it studies <strong>processes, patterns and people</strong> too.</li>
+<li>Mixing up latitude and longitude. Remember it as "<strong>lat</strong>itude is <strong>flat</strong>" — it runs east–west; longitude runs north–south.</li>
+<li>Forgetting Northern Ireland is part of the UK. The UK has <strong>four</strong> countries: England, Scotland, Wales and Northern Ireland.</li>
+<li>Saying there are only 4 oceans. There are <strong>5 oceans</strong> — the Southern Ocean around Antarctica is the fifth.</li>
 </ul>`,
 
-"island-49": `<h4>Introduction</h4>
+"island-49": `<h2>UK Physical &amp; Human Geography</h2>
 <p>The United Kingdom may be a small island nation, but its geography is remarkably varied. From the rugged Scottish Highlands to the flat Fens of East Anglia, and from dramatic coastlines to bustling cities, Britain packs an incredible range of landscapes into a compact space. Understanding UK geography means knowing its physical features — mountains, rivers and coasts — as well as how people have shaped the land through farming, industry and settlement.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li>The UK's physical landscape is broadly divided into <strong>uplands</strong> (north and west — older, harder rocks) and <strong>lowlands</strong> (south and east — younger, softer rocks).</li>
-<li>Key upland areas include the <strong>Scottish Highlands</strong> (Ben Nevis, 1,345 m — the UK's highest peak), the <strong>Lake District</strong> (Scafell Pike, 978 m — England's highest), the <strong>Pennines</strong> (the "backbone of England") and <strong>Snowdonia</strong> in Wales (Snowdon, 1,085 m). The <strong>Central Lowlands</strong> of Scotland lie between the Highlands and Southern Uplands — a flatter, more fertile region containing Edinburgh and Glasgow.</li>
-<li>Major rivers: the <strong>Severn</strong> (longest, 354 km), the <strong>Thames</strong> (flows through London), the <strong>Trent</strong> (drains the Midlands) and the <strong>Tyne</strong> (flows through Newcastle).</li>
-<li>The UK has over <strong>19,000 miles of coastline</strong>, with features such as cliffs (e.g. White Cliffs of Dover), beaches, estuaries and spits. The <strong>Holderness Coast</strong> in East Yorkshire is one of Europe's fastest-eroding coastlines (up to 2 m/year) because its soft boulder clay cliffs are easily worn away by waves.</li>
-<li>Major cities include London (capital, 9 million+), Birmingham, Manchester, Leeds, Glasgow and Edinburgh, mostly located near rivers or coasts.</li>
-<li>The UK economy is dominated by the <strong>tertiary (service) sector</strong> (retail, education, healthcare — about 80 % of jobs). The <strong>primary sector</strong> (farming, fishing, mining), <strong>secondary sector</strong> (manufacturing) and growing <strong>quaternary sector</strong> (research, IT) make up the rest.</li>
-<li>The <strong>North-South divide</strong> describes economic differences — the South East tends to be wealthier with more service-sector jobs, while parts of the North have faced decline in traditional industries like mining and steel.</li>
-<li><strong>Rural areas</strong> have lower population density, more farming and often fewer services. <strong>Urban areas</strong> are built-up, densely populated and have more jobs and facilities.</li>
-<li>The UK has <strong>15 National Parks</strong> (e.g. Lake District, Peak District, Snowdonia) — protected areas valued for their landscape, wildlife and recreation.</li>
-</ul>
+<h3>UK Physical Landscape: Uplands and Lowlands</h3>
+<p>The UK's landscape splits broadly into <strong>uplands</strong> in the north and west, built from older, harder rocks, and <strong>lowlands</strong> in the south and east, built from younger, softer rocks. The uplands include some of the UK's best-known landscapes: the <strong>Scottish Highlands</strong>, home to Ben Nevis (1,345 m, the UK's highest peak), the <strong>Lake District</strong>, home to Scafell Pike (978 m, England's highest), the <strong>Pennines</strong> — often called the "backbone of England" — and <strong>Snowdonia</strong> in Wales, home to Snowdon (1,085 m). Between the Highlands and the Southern Uplands sits Scotland's <strong>Central Lowlands</strong>, a flatter, more fertile region containing both Edinburgh and Glasgow. Many of the most valued upland landscapes are protected as one of the UK's <strong>15 National Parks</strong>, including the Lake District, the Peak District and Snowdonia, safeguarding them for their landscape, wildlife and recreational value.</p>
 <div class="lesson-diagram" data-diagram="uk-physical-regions"><p class="diagram-caption">The UK's physical regions — uplands in the north and west, lowlands in the south and east</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
-<h4>✏️ Worked Example</h4>
+<h3>Rivers, Coastlines and Cities</h3>
+<p>The UK's major rivers include the <strong>Severn</strong>, its longest at 354 km, the <strong>Thames</strong>, which flows through London, the <strong>Trent</strong>, draining much of the Midlands, and the <strong>Tyne</strong>, flowing through Newcastle. Surrounding all of this is over 19,000 miles of coastline, featuring cliffs such as the White Cliffs of Dover, beaches, estuaries and spits — though not all of it is equally stable: the <strong>Holderness Coast</strong> in East Yorkshire, made of soft boulder clay, is one of Europe's fastest-eroding coastlines, retreating by up to 2 m a year. It is no coincidence that the UK's major cities — London, Birmingham, Manchester, Leeds, Glasgow, Edinburgh — cluster near rivers or coasts, since water has always meant fresh supply, trade routes and, later, power for industry.</p>
+
+<h3>The UK Economy and Regional Divides</h3>
+<p>Today's UK economy is dominated by the <strong>tertiary (service) sector</strong> — retail, education, healthcare — which accounts for around 80% of jobs, with the <strong>primary sector</strong> (farming, fishing, mining), <strong>secondary sector</strong> (manufacturing) and the growing <strong>quaternary sector</strong> (research, IT) making up the rest. That economic shift has not been felt evenly across the country: the <strong>North-South divide</strong> describes how the South East tends to be wealthier, with more service-sector jobs, while parts of the North have faced real decline in traditional industries such as mining and steel. A related but separate distinction is between <strong>rural</strong> areas, with lower population density, more farming and often fewer services, and <strong>urban</strong> areas, which are built-up, densely populated and rich in jobs and facilities.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Using your knowledge of UK geography, explain why most major cities in the UK are located near rivers.</p>
 <p><strong>Solution:</strong><br>
@@ -2587,46 +2463,29 @@ So the student is wrong: caffeine is a drug, and a legal one.</p>
 Therefore, rivers offered water, food, transport and power — the key ingredients for city growth.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Uplands</dt><dd>Higher ground with rugged terrain, usually found in the north and west of the UK, made of older, harder rocks (e.g. Scottish Highlands, Pennines).</dd>
-<dt>Lowlands</dt><dd>Flatter, lower-lying areas mainly in the south and east of the UK, made of younger, softer rocks (e.g. the Fens, Thames Valley).</dd>
-<dt>Floodplain</dt><dd>The flat area of land on either side of a river that is naturally prone to flooding, often used for farming due to its fertile soil.</dd>
-<dt>Estuary</dt><dd>The wide mouth of a river where it meets the sea, where freshwater and saltwater mix (e.g. the Thames Estuary).</dd>
-<dt>National Park</dt><dd>A protected area of countryside valued for its landscape, wildlife and recreation. Planning rules limit development to preserve the environment.</dd>
-<dt>North-South divide</dt><dd>The economic and social differences between the wealthier South East of England and the relatively less prosperous North and Midlands.</dd>
-<dt>Coastal erosion</dt><dd>The wearing away of land by the sea through wave action, especially on soft-rock coastlines such as the Holderness Coast.</dd>
-<dt>Tertiary sector</dt><dd>The service sector of the economy — jobs in retail, education, healthcare, finance and tourism. It employs about 80 % of UK workers.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying Ben Nevis is in England — ✅ Correct: Ben Nevis (1,345 m) is in <strong>Scotland</strong> and is the UK's highest mountain.</li>
-<li>❌ Thinking the Thames is the UK's longest river — ✅ Correct: the <strong>Severn</strong> (354 km) is the longest; the Thames (346 km) is the second longest.</li>
-<li>❌ Confusing "Great Britain" with "the United Kingdom" — ✅ Correct: Great Britain = England + Scotland + Wales. The UK also includes <strong>Northern Ireland</strong>.</li>
-<li>❌ Thinking all of northern England is poor and all of southern England is rich — ✅ Correct: the North-South divide is a <strong>general trend</strong>, not a rule — there is poverty in London and wealth in the North.</li>
+<li>Saying Ben Nevis is in England. Ben Nevis (1,345 m) is in <strong>Scotland</strong> and is the UK's highest mountain.</li>
+<li>Thinking the Thames is the UK's longest river. The <strong>Severn</strong> (354 km) is the longest; the Thames (346 km) is the second longest.</li>
+<li>Confusing "Great Britain" with "the United Kingdom". Great Britain is England + Scotland + Wales; the UK also includes <strong>Northern Ireland</strong>.</li>
+<li>Thinking all of northern England is poor and all of southern England is rich. The North-South divide is a <strong>general trend</strong>, not a rule — there is poverty in London and wealth in the North.</li>
 </ul>`,
 
-"island-50": `<h4>Introduction</h4>
+"island-50": `<h2>Rocks, Weathering &amp; Soils</h2>
 <p>The ground beneath your feet tells a story millions — even billions — of years old. Rocks are the solid building blocks of the Earth and they are constantly being formed, broken down and reformed in a never-ending process called the <strong>rock cycle</strong>. Understanding rocks, weathering and soils helps geographers explain landscapes: why some hills are jagged and some are smooth, why caves form in limestone, and why soil is different from place to place.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Igneous rocks</strong> form when hot magma or lava cools and solidifies. <strong>Intrusive</strong> igneous rocks (e.g. <strong>granite</strong>) cool slowly underground and have large crystals. <strong>Extrusive</strong> igneous rocks (e.g. <strong>basalt</strong>) cool quickly on the surface and have small crystals.</li>
-<li><strong>Sedimentary rocks</strong> form when layers of sediment (sand, mud, shells) are compacted and cemented over millions of years. Examples: <strong>limestone</strong> (made from shells/skeletons), <strong>sandstone</strong> (made from sand grains) and <strong>chalk</strong>. Sedimentary rocks are the only type likely to contain <strong>fossils</strong> because organisms are buried in sediment before it hardens.</li>
-<li><strong>Metamorphic rocks</strong> form when existing rocks are changed by extreme heat and/or pressure deep underground. Examples: <strong>marble</strong> (from limestone) and <strong>slate</strong> (from mudstone/shale).</li>
-<li>The <strong>rock cycle</strong> shows how rocks are continuously transformed: igneous → weathered into sediment → sedimentary → heated/pressured into metamorphic → melted back into magma → igneous again.</li>
-<li><strong>Freeze-thaw weathering</strong> (physical): water enters cracks in rock, freezes and expands by about 9%, widening the crack. Repeated cycles break the rock apart.</li>
-<li><strong>Chemical weathering</strong>: slightly acidic rainwater (containing dissolved CO₂) reacts with minerals in rock, dissolving them. This is especially effective on limestone (forming caves and pavements).</li>
-<li><strong>Biological weathering</strong>: plant roots grow into cracks and widen them; burrowing animals disturb rock; lichens produce acids that attack rock surfaces.</li>
-<li><strong>Soil</strong> forms from weathered rock mixed with decomposed organic matter (humus), water and air. It takes hundreds of years to form just a few centimetres of soil.</li>
-<li>The type of underlying rock shapes the landscape: <strong>limestone</strong> creates karst features (caves, gorges, pavements); <strong>clay</strong> produces flat, poorly drained lowlands; <strong>granite</strong> forms rugged upland moors.</li>
-<li>Human activity can accelerate weathering — burning fossil fuels creates <strong>acid rain</strong> that speeds chemical weathering of buildings and rocks; construction and quarrying expose fresh rock to freeze-thaw; deforestation removes roots that bind soil.</li>
-</ul>
+<h3>The Three Rock Types and the Rock Cycle</h3>
+<p><strong>Igneous rocks</strong> form when hot magma or lava cools and solidifies: <strong>intrusive</strong> igneous rocks such as granite cool slowly underground, giving crystals time to grow large, while <strong>extrusive</strong> igneous rocks such as basalt cool quickly at the surface, leaving crystals small. <strong>Sedimentary rocks</strong> form as layers of sediment — sand, mud, shells — are compacted and cemented together over millions of years, producing rocks such as limestone (from shells and skeletons), sandstone (from sand grains) and chalk; because organisms can be buried within these layers before they harden, sedimentary rock is the only type likely to contain <strong>fossils</strong>. <strong>Metamorphic rocks</strong> form when an existing rock is transformed by extreme heat and/or pressure deep underground without fully melting — limestone becomes marble, mudstone or shale becomes slate. These three types are not fixed destinations but stages in the <strong>rock cycle</strong>: igneous rock weathers into sediment, sediment compacts into sedimentary rock, heat and pressure turn that into metamorphic rock, and if it melts completely it becomes magma again, ready to cool into igneous rock once more — a cycle with no fixed starting point, where any rock type can eventually become any other.</p>
 <div class="lesson-diagram" data-diagram="rock-cycle"><p class="diagram-caption">The rock cycle — showing how igneous, sedimentary and metamorphic rocks transform into each other</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="igneous-comparison"><p class="diagram-caption">Intrusive vs extrusive igneous rock — how cooling speed affects crystal size</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
-<h4>✏️ Worked Example</h4>
+<h3>Weathering</h3>
+<p>Rock does not need to be moved to be broken down — that is the whole point of <strong>weathering</strong>, which acts on rock in place, in three distinct ways. <strong>Freeze-thaw weathering</strong> is physical: water enters a crack, freezes and expands by around 9%, widening the crack a little more with every cycle until fragments break off entirely. <strong>Chemical weathering</strong> happens because rainwater is naturally slightly acidic, thanks to dissolved CO₂, and that mild acid reacts with and dissolves minerals in the rock — an effect especially powerful on limestone, where it carves out caves and limestone pavements. <strong>Biological weathering</strong> comes from living things: plant roots force their way into cracks and widen them, burrowing animals disturb the rock, and lichens produce their own weak acids that attack the rock surface directly.</p>
+
+<h3>Soils and Landscapes</h3>
+<p><strong>Soil</strong> itself forms from weathered rock mixed with decomposed organic matter (<strong>humus</strong>), water and air — a slow process, taking hundreds of years to build just a few centimetres. The type of rock beneath a landscape shapes its surface features directly: limestone produces karst features such as caves, gorges and pavements; clay produces flat, poorly drained lowlands; granite forms rugged upland moors. Human activity now speeds up weathering in several ways too: burning fossil fuels produces <strong>acid rain</strong>, which accelerates the chemical weathering of buildings and rock; construction and quarrying expose fresh rock surfaces to freeze-thaw that would otherwise have stayed protected; and deforestation removes the roots that would otherwise hold soil together.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Explain how freeze-thaw weathering can break apart a rock face in a mountainous area like the Lake District.</p>
 <p><strong>Solution:</strong><br>
@@ -2638,48 +2497,32 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 6. Broken fragments collect at the base of the rock face, forming a <strong>scree slope</strong>.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Igneous rock</dt><dd>Rock formed from cooled magma or lava. "Igneous" comes from the Latin word for fire.</dd>
-<dt>Sedimentary rock</dt><dd>Rock formed from layers of sediment (fragments of other rocks, shells, or organic material) compacted and cemented together over time.</dd>
-<dt>Metamorphic rock</dt><dd>Rock that has been changed from its original form by intense heat and/or pressure without melting completely.</dd>
-<dt>Rock cycle</dt><dd>The continuous process by which rocks are created, broken down, and reformed into different types over millions of years.</dd>
-<dt>Weathering</dt><dd>The breakdown of rocks in situ (in their original position) by physical, chemical or biological processes. Unlike erosion, weathering does not involve movement.</dd>
-<dt>Scree</dt><dd>A slope of loose, angular rock fragments that have collected at the base of a cliff or mountain face, usually produced by freeze-thaw weathering.</dd>
-<dt>Humus</dt><dd>Dark, nutrient-rich organic material in soil, formed from the decomposition of dead plants and animals.</dd>
-<dt>Intrusive igneous rock</dt><dd>Igneous rock (e.g. granite) that cooled slowly from magma deep underground, producing large crystals.</dd>
-<dt>Extrusive igneous rock</dt><dd>Igneous rock (e.g. basalt) that cooled quickly from lava on the Earth's surface, producing small crystals.</dd>
-<dt>Fossil</dt><dd>The preserved remains or traces of a once-living organism, found almost exclusively in sedimentary rocks.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Confusing weathering and erosion — ✅ Correct: <strong>weathering</strong> breaks rock down in place; <strong>erosion</strong> involves the movement of broken material by water, wind or ice.</li>
-<li>❌ Thinking metamorphic rocks have melted — ✅ Correct: metamorphic rocks are changed by heat and pressure but do <strong>not fully melt</strong>. If they melted, they would form igneous rock.</li>
-<li>❌ Saying granite has small crystals — ✅ Correct: granite cooled <strong>slowly underground</strong>, so its crystals had time to grow large. Basalt cooled quickly and has small crystals.</li>
-<li>❌ Thinking the rock cycle has a fixed starting point — ✅ Correct: the rock cycle is <strong>continuous</strong> with no set beginning or end; any rock type can become any other.</li>
+<li>Confusing weathering and erosion. <strong>Weathering</strong> breaks rock down in place; <strong>erosion</strong> involves the movement of broken material by water, wind or ice.</li>
+<li>Thinking metamorphic rocks have melted. They are changed by heat and pressure but do <strong>not fully melt</strong> — if they melted, they would form igneous rock instead.</li>
+<li>Saying granite has small crystals. Granite cooled <strong>slowly underground</strong>, so its crystals had time to grow large; basalt cooled quickly and has small crystals.</li>
+<li>Thinking the rock cycle has a fixed starting point. It is <strong>continuous</strong>, with no set beginning or end — any rock type can become any other.</li>
 </ul>`,
 
-"island-51": `<h4>Introduction</h4>
+"island-51": `<h2>Geographical Skills</h2>
 <p>Geographers don't just learn facts about places — they go out and <strong>investigate</strong> the world using a range of practical skills. From reading maps and using GIS (Geographical Information Systems) to collecting data in the field and presenting it in graphs and charts, geographical skills help you answer real questions about the world. These skills are essential for fieldwork — and for your exams!</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>GIS</strong> (Geographical Information Systems) are computer systems that collect, store, analyse and display geographical data on digital maps. Examples: Google Earth, flood-risk mapping by the Environment Agency.</li>
-<li><strong>Satellite imagery</strong> shows large-scale features (land use, deforestation, urban growth) while <strong>aerial photographs</strong> give more detail of smaller areas.</li>
-<li><strong>Primary data</strong> is information you collect yourself first-hand through fieldwork (e.g. temperature readings, pedestrian counts, questionnaire responses). <strong>Secondary data</strong> is information collected by someone else (e.g. census data, OS maps, climate records) — useful for context and comparison.</li>
-<li>Data can be collected using <strong>questionnaires</strong> (asking people), <strong>sampling</strong> (random, systematic or stratified) and <strong>measurements</strong> (river width, temperature, pedestrian counts). A <strong>transect</strong> is a line along which data is collected at regular intervals.</li>
-<li><strong>Bar charts</strong> compare categories; <strong>line graphs</strong> show change over time; <strong>pie charts</strong> show proportions of a whole; <strong>scatter graphs</strong> show the relationship (<strong>correlation</strong>) between two variables; <strong>choropleth maps</strong> use shading to show values across areas.</li>
-<li>An <strong>Environmental Quality Index (EQI)</strong> is a scoring system used to measure the quality of a place by rating factors like litter, noise, green space and building condition.</li>
-<li><strong>Mean</strong> = total ÷ number of values; <strong>median</strong> = middle value when ordered; <strong>mode</strong> = most common value; <strong>range</strong> = highest − lowest.</li>
-<li>Good fieldwork follows a clear process: <strong>question → hypothesis → method → data collection → presentation → analysis → conclusion → evaluation</strong>.</li>
-<li>When drawing conclusions, link your findings back to your original <strong>question or hypothesis</strong> and use data as evidence.</li>
-<li>When evaluating, consider <strong>reliability</strong> (would you get similar results if you repeated it?), <strong>accuracy</strong> (how close to the true value?) and <strong>limitations</strong> (what could be improved?).</li>
-</ul>
-<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">The geographical enquiry process — from question to evaluation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h3>Maps, GIS and Photographs</h3>
+<p><strong>GIS</strong> (Geographical Information Systems) are computer systems that collect, store, analyse and display geographical data on digital maps — Google Earth and the Environment Agency's flood-risk mapping are both everyday examples. Imagery adds another layer of evidence: <strong>satellite imagery</strong> reveals large-scale features such as land use, deforestation and urban growth, while <strong>aerial photographs</strong>, taken closer to the ground, give far more detail of a smaller area.</p>
+
+<h3>Collecting Data: Primary, Secondary and Sampling</h3>
+<p>Fieldwork data splits into two categories depending on where it comes from. <strong>Primary data</strong> is collected first-hand — temperature readings, pedestrian counts, questionnaire responses — while <strong>secondary data</strong> was collected by someone else for a different purpose, such as census data, OS maps or climate records, and is useful for context and comparison. Primary data can be gathered through questionnaires, through measurements such as river width or pedestrian counts, or along a <strong>transect</strong> — a line along which data is collected at regular intervals. Since collecting data from an entire population is rarely practical, geographers use <strong>sampling</strong> instead, selecting a smaller group to represent it: random sampling relies on chance, systematic sampling takes measurements at regular intervals, and stratified sampling deliberately splits the area into sub-groups and samples each in proportion to its size, so that every part of a varied area gets fair representation.</p>
+
+<h3>Displaying and Analysing Data</h3>
+<p>Choosing the right way to display data matters as much as collecting it. Bar charts compare categories against each other; line graphs show change over time; pie charts show how a whole splits into proportions; scatter graphs reveal the <strong>correlation</strong> between two variables — positive, negative or none; and choropleth maps use shading to show how a value varies across different areas. A more specialised tool, the <strong>Environmental Quality Index (EQI)</strong>, scores the quality of a place by rating factors such as litter, noise, green space and building condition. Once collected, data is usually summarised using four measures: the <strong>mean</strong> (total divided by the number of values), the <strong>median</strong> (the middle value once data is ordered), the <strong>mode</strong> (the most common value), and the <strong>range</strong> (the highest value minus the lowest).</p>
 <div class="lesson-diagram" data-diagram="correlation-types"><p class="diagram-caption">Types of correlation on scatter graphs — positive, negative and none</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
-<h4>✏️ Worked Example</h4>
+<h3>The Geographical Enquiry Process</h3>
+<p>Good fieldwork follows a clear sequence: question, hypothesis, method, data collection, presentation, analysis, conclusion, and finally evaluation. A conclusion is only convincing if it links directly back to the original question or hypothesis and uses the actual data as evidence, rather than just restating what was expected. The evaluation step is just as important as the conclusion, asking three separate questions: is the result <strong>reliable</strong> (would repeating the investigation give similar results?), is it <strong>accurate</strong> (how close is it to the true value?), and what <strong>limitations</strong> could be improved next time?</p>
+<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">The geographical enquiry process — from question to evaluation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A student counted pedestrians at five locations along a high street and recorded: 12, 8, 15, 8, 22. Calculate the mean, median, mode and range.</p>
 <p><strong>Solution:</strong><br>
@@ -2697,49 +2540,29 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 3. This ensures that all <strong>different parts</strong> of the town are represented in the data, making the results more <strong>representative</strong> of the whole town than random sampling alone.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>GIS</dt><dd>Geographical Information Systems — computer software that layers different types of geographical data onto maps for analysis and display.</dd>
-<dt>Choropleth map</dt><dd>A map that uses different shades of colour to represent different values across areas (e.g. darker shading = higher population density).</dd>
-<dt>Sampling</dt><dd>Selecting a smaller group to represent a larger population. Types include random (chance), systematic (regular intervals) and stratified (proportional sub-groups).</dd>
-<dt>Hypothesis</dt><dd>A testable prediction or statement that can be investigated through fieldwork (e.g. "Environmental quality decreases with distance from the town centre").</dd>
-<dt>Reliability</dt><dd>How consistent results are — if the investigation were repeated, would similar results be obtained?</dd>
-<dt>Mean</dt><dd>The average: the total of all values divided by the number of values.</dd>
-<dt>Primary data</dt><dd>Information collected first-hand by the researcher through fieldwork — e.g. measurements, questionnaire responses, field sketches.</dd>
-<dt>Secondary data</dt><dd>Information collected by someone else for a different purpose — e.g. census data, OS maps, published statistics, satellite images.</dd>
-<dt>Scatter graph</dt><dd>A graph that plots two variables against each other to reveal correlation — positive (both rise), negative (one rises as the other falls) or none.</dd>
-<dt>Correlation</dt><dd>A relationship between two variables. Correlation does not prove causation — just because two things change together does not mean one causes the other.</dd>
-<dt>Transect</dt><dd>A line along which data is collected at regular intervals, used to see how a variable changes across an area (e.g. from city centre to suburbs).</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Confusing mean and median — ✅ Correct: the <strong>mean</strong> is the total divided by the count; the <strong>median</strong> is the middle value when data is in order.</li>
-<li>❌ Using a pie chart when you should use a bar chart — ✅ Correct: use pie charts for <strong>proportions of a whole</strong>; use bar charts to <strong>compare different categories</strong>.</li>
-<li>❌ Writing a conclusion without using data — ✅ Correct: always <strong>quote specific figures</strong> from your results to support your conclusion.</li>
-<li>❌ Thinking one survey is enough to be reliable — ✅ Correct: reliability improves with <strong>larger sample sizes</strong> and <strong>repeated measurements</strong>.</li>
-<li>❌ Assuming correlation means causation — ✅ Correct: just because two variables change together does <strong>not</strong> prove one causes the other; there may be a third factor involved.</li>
+<li>Confusing mean and median. The <strong>mean</strong> is the total divided by the count; the <strong>median</strong> is the middle value once data is in order.</li>
+<li>Using a pie chart when a bar chart is needed. Use pie charts for <strong>proportions of a whole</strong>; use bar charts to <strong>compare different categories</strong>.</li>
+<li>Writing a conclusion without using data. Always <strong>quote specific figures</strong> from the results to support the conclusion.</li>
+<li>Thinking one survey is automatically reliable. Reliability improves with <strong>larger sample sizes</strong> and <strong>repeated measurements</strong>.</li>
+<li>Assuming correlation means causation. Just because two variables change together does <strong>not</strong> prove one causes the other — a third factor may be involved.</li>
 </ul>`,
 
-"island-52": `<h4>Introduction</h4>
+"island-52": `<h2>Globalisation</h2>
 <p><strong>Globalisation</strong> is the process by which the world is becoming more interconnected through trade, travel, communication and culture. Thanks to faster transport, the internet and multinational companies, goods, people and ideas now flow across borders more quickly than ever. The UK is one of the most globally connected countries in the world — the food you eat, the clothes you wear and the entertainment you enjoy are all shaped by globalisation.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Globalisation</strong> means the growing interconnection of the world's economies, cultures and populations, driven by trade, technology, transport and migration.</li>
-<li>Key causes include: <strong>cheaper, faster transport</strong> (container ships, air freight), <strong>improved communication</strong> (internet, smartphones) and the growth of <strong>TNCs</strong> (transnational corporations like Apple, Unilever, Nike).</li>
-<li>The UK <strong>imports</strong> many goods (electronics from China, fruit from Spain, oil from Norway) and <strong>exports</strong> services (finance, insurance), machinery, cars and pharmaceuticals. The UK's main trading partners are the <strong>EU</strong> (especially Germany, France, Netherlands), the <strong>USA</strong> and <strong>China</strong>.</li>
-<li><strong>Migration</strong> has shaped the UK — people have moved to the UK for work, study and safety, bringing skills, culture and diversity (e.g. NHS workers, tech professionals, cuisine). Migrants also send <strong>remittances</strong> (money) home, strengthening links between countries.</li>
-<li><strong>Cultural globalisation</strong> means ideas, music, food and fashion spread worldwide — UK culture goes global (e.g. Premier League, BBC) while global culture comes to the UK (e.g. sushi, K-pop, Bollywood). A risk is <strong>cultural homogenisation</strong> — global brands replacing local traditions.</li>
-<li><strong>Food miles</strong> = the distance food travels from farm to plate. High food miles mean more transport emissions, but importing food can support farmers in developing countries.</li>
-<li><strong>Supply chains</strong> are the networks of people, businesses and countries involved in making and delivering a product. A single smartphone may involve materials and labour from 30+ countries.</li>
-<li>Globalisation has <strong>benefits</strong> (more choice, lower prices, economic growth, cultural exchange) and <strong>costs</strong> (job losses in some sectors, environmental damage, exploitation of workers, loss of local culture).</li>
-<li>Countries are classified by wealth: <strong>HICs</strong> (High Income Countries, e.g. UK, USA), <strong>LICs</strong> (Low Income Countries, e.g. Mali) and <strong>NEEs</strong> (Newly Emerging Economies, e.g. China, India). Globalisation creates <strong>interdependence</strong> — countries relying on each other for goods, services and resources.</li>
-<li><strong>Fairtrade</strong> is a scheme that guarantees producers in developing countries a fair minimum price and better working conditions, helping reduce some of the negative effects of globalisation.</li>
-</ul>
+<h3>What Drives Globalisation</h3>
+<p>Globalisation means the growing interconnection of the world's economies, cultures and populations, and three forces drive it above all: <strong>cheaper, faster transport</strong> such as container ships and air freight, <strong>improved communication</strong> through the internet and smartphones, and the growth of <strong>TNCs</strong> (transnational corporations) such as Apple, Unilever and Nike, which organise production across many countries at once.</p>
+
+<h3>Trade, Migration and Culture</h3>
+<p>The UK <strong>imports</strong> a huge range of goods — electronics from China, fruit from Spain, oil from Norway — while <strong>exporting</strong> services such as finance and insurance, along with machinery, cars and pharmaceuticals, with the EU, USA and China as its main trading partners. Trade is only one strand of the connection, though: <strong>migration</strong> has reshaped the UK too, as people move here for work, study and safety, bringing skills, culture and diversity — NHS workers and tech professionals among them — while sending <strong>remittances</strong> back home, strengthening the economic link between countries in both directions. That two-way flow extends to culture as well: UK exports such as the Premier League and the BBC go global, while global culture — sushi, K-pop, Bollywood — arrives in the UK, though the same process carries the risk of <strong>cultural homogenisation</strong>, where global brands gradually crowd out local traditions.</p>
+
+<h3>Supply Chains, Food Miles and Interdependence</h3>
+<p>A <strong>supply chain</strong> is the network of people, businesses and countries involved in making and delivering a single product — a smartphone alone can involve materials and labour from over 30 countries. Food shows a related idea in <strong>food miles</strong>, the distance food travels from farm to plate: high food miles mean more transport emissions, though importing food can also support farmers in developing countries who would otherwise have no market for it. All of this connects countries into <strong>interdependence</strong>, relying on each other for goods, services and resources — countries are commonly grouped by wealth into <strong>HICs</strong> (High Income Countries, such as the UK and USA), <strong>LICs</strong> (Low Income Countries, such as Mali) and <strong>NEEs</strong> (Newly Emerging Economies, such as China and India), and interdependence runs across all three groups. <strong>Fairtrade</strong> exists specifically to soften one of globalisation's sharper edges, guaranteeing producers in developing countries a fair minimum price and better working conditions. Taken together, globalisation brings real <strong>benefits</strong> — more choice, lower prices, economic growth, cultural exchange — alongside real <strong>costs</strong> — job losses in some sectors, environmental damage, exploitation of workers, and loss of local culture — and both sides of that balance are worth weighing before calling globalisation simply good or bad.</p>
 <div class="lesson-diagram" data-diagram="supply-chain-map"><p class="diagram-caption">A global supply chain — how a single product involves multiple countries</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
-<h4>✏️ Worked Example</h4>
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A cotton T-shirt is designed in the UK, made from cotton grown in India, sewn in Bangladesh and sold in shops across Europe. Explain how this shows globalisation.</p>
 <p><strong>Solution:</strong><br>
@@ -2750,26 +2573,12 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 5. This example shows both benefits (jobs in Bangladesh, cheap clothes for consumers) and costs (low wages for garment workers, high food miles/carbon emissions).</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Globalisation</dt><dd>The process by which the world's economies, cultures and populations are becoming increasingly interconnected and interdependent.</dd>
-<dt>TNC</dt><dd>Transnational Corporation — a large company that operates in more than one country (e.g. Nike designs in the USA but manufactures in Vietnam).</dd>
-<dt>Imports</dt><dd>Goods or services bought from another country and brought into the UK.</dd>
-<dt>Exports</dt><dd>Goods or services produced in the UK and sold to another country.</dd>
-<dt>Food miles</dt><dd>The distance food travels from where it is produced to where it is consumed. Higher food miles generally mean greater carbon emissions from transport.</dd>
-<dt>Supply chain</dt><dd>The network of organisations, people, activities and resources involved in creating and delivering a product from raw material to the consumer.</dd>
-<dt>Interdependence</dt><dd>When countries depend on each other for goods, services, labour and resources — a disruption in one country can affect supply chains worldwide.</dd>
-<dt>HIC / LIC / NEE</dt><dd>High Income Country, Low Income Country, Newly Emerging Economy — categories used to classify countries by their level of economic development.</dd>
-<dt>Fairtrade</dt><dd>A certification scheme ensuring producers in developing countries receive a fair price and decent working conditions for their products.</dd>
-<dt>Remittances</dt><dd>Money sent home by migrants working in another country, providing income for families and contributing to the economy of their home country.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking globalisation is only about trade — ✅ Correct: globalisation also involves <strong>migration, culture, technology and communication</strong>.</li>
-<li>❌ Saying globalisation is entirely good or entirely bad — ✅ Correct: it has both <strong>benefits and costs</strong>, and these are experienced differently by different people and countries.</li>
-<li>❌ Confusing imports and exports — ✅ Correct: <strong>imports</strong> come IN to a country; <strong>exports</strong> go OUT of a country.</li>
-<li>❌ Thinking food miles are the only environmental issue — ✅ Correct: food grown locally in heated greenhouses may produce <strong>more</strong> emissions than food imported from a warmer climate.</li>
+<li>Thinking globalisation is only about trade. It also involves <strong>migration, culture, technology and communication</strong>.</li>
+<li>Saying globalisation is entirely good or entirely bad. It has both <strong>benefits and costs</strong>, experienced differently by different people and countries.</li>
+<li>Confusing imports and exports. <strong>Imports</strong> come IN to a country; <strong>exports</strong> go OUT of a country.</li>
+<li>Thinking food miles are the only environmental issue. Food grown locally in heated greenhouses can produce <strong>more</strong> emissions than food imported from a naturally warm climate.</li>
 </ul>`,
 
 "island-53": `<h4>Introduction</h4>
