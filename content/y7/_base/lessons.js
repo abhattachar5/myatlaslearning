@@ -577,6 +577,7 @@ Techniques used:<br>
 <h3>Food Webs</h3>
 <p>Real life is messier than a single chain. Most animals eat more than one thing and are eaten by more than one predator, so ecologists join many overlapping food chains together into a <strong>food web</strong> — a diagram of all the feeding relationships in an ecosystem at once.</p>
 <p>Food webs make it possible to predict knock-on effects. If one species disappears, you can trace the arrows outwards and see which other populations rise and which fall — and the answer is often several steps away from where the change began.</p>
+<div class="lesson-diagram" data-diagram="food-web"><p class="diagram-caption">Overlapping food chains combine into a food web</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>Decomposers and Recycling</h3>
 <p>Something has to deal with dead organisms and waste, or nutrients would be locked up in them forever. That is the work of <strong>decomposers</strong> — bacteria and fungi that break dead material down.</p>
@@ -671,22 +672,26 @@ Techniques used:<br>
 <li>Believing a change of state makes a new substance. It does not — melting, boiling and freezing are all <strong>reversible physical changes</strong>.</li>
 </ul>`,
 
-"island-14": `<h4>Introduction</h4>
-<p>Forces are pushes or pulls that can change the speed, direction or shape of an object. Understanding balanced and unbalanced forces, gravity, friction and how to calculate speed gives you the tools to explain almost every moving object in the physical world.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>Forces are measured in <strong>Newtons (N)</strong>. They have both size and direction.</li>
-<li><strong>Balanced forces</strong> (net force = 0) → no change in motion. Object stays still or moves at constant speed.</li>
-<li><strong>Unbalanced forces</strong> (net force ≠ 0) → object speeds up, slows down, or changes direction.</li>
-<li><strong>Newton's First Law</strong> (Law of Inertia): an object stays still or moves at constant speed in a straight line unless an unbalanced force acts on it.</li>
-<li>Forces can be <strong>contact</strong> (friction, air resistance, tension — objects touching) or <strong>non-contact</strong> (gravity, magnetism — act at a distance).</li>
-<li><strong>Mass</strong> (kg) = amount of matter — never changes. <strong>Weight</strong> (N) = gravitational force on that mass — changes with gravity. Weight = mass × gravitational field strength (W = mg). On Earth, g = 10 N/kg; on the Moon, g = 1.6 N/kg.</li>
-<li><strong>Speed = Distance ÷ Time</strong> (S = D ÷ T). If distance is in metres and time in seconds, speed is in m/s.</li>
-<li><strong>Air resistance</strong> increases as an object moves faster. A falling skydiver reaches <strong>terminal velocity</strong> when air resistance equals weight — the forces are balanced and speed becomes constant.</li>
-<li><strong>Pressure = Force ÷ Area</strong> (measured in Pascals, Pa). A larger area means lower pressure for the same force.</li>
-</ul>
+"island-14": `<h2>Forces and Motion</h2>
+<p>A <strong>force</strong> is simply a push or a pull — but that simple idea explains why a parked car stays put, why a thrown ball curves back to Earth, and why a skydiver eventually stops accelerating no matter how far they fall. This chapter builds up the rules that let you predict what any force, or combination of forces, will do to an object.</p>
+
+<h3>Balanced and Unbalanced Forces</h3>
+<p>Forces are measured in <strong>Newtons (N)</strong> and have both a size and a direction, which is why they are usually drawn as arrows. Most objects have more than one force acting on them at once, so what matters is the <strong>net force</strong> — all the forces added together, taking direction into account.</p>
+<p>When the forces on an object cancel out exactly, the net force is zero and the forces are <strong>balanced</strong>: the object simply carries on doing whatever it was already doing, whether that is staying still or moving at a constant speed in a straight line. This is exactly what <strong>Newton's First Law</strong> (the Law of Inertia) describes. When the forces do not cancel out, they are <strong>unbalanced</strong>, and the object speeds up, slows down, or changes direction.</p>
+<p>Forces also split into two kinds by how they act. <strong>Contact forces</strong> — friction, air resistance, tension — need the objects to be touching. <strong>Non-contact forces</strong> — gravity, magnetism — act at a distance, with nothing needing to touch at all.</p>
 <div class="lesson-diagram" data-diagram="force-arrows"><p class="diagram-caption">Balanced vs unbalanced forces on an object</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Mass, Weight and Gravity</h3>
+<p>These two words are used interchangeably in everyday speech, but in physics they mean different things. <strong>Mass</strong> (measured in kg) is the amount of matter in an object, and it never changes no matter where that object is. <strong>Weight</strong> (measured in Newtons, because it is a force) is the pull of gravity on that mass, and it changes depending on where you are: <strong>Weight = mass × gravitational field strength</strong> (W = mg). On Earth, g = 10 N/kg; on the Moon, where gravity is much weaker, g = 1.6 N/kg — so the same object weighs far less there, even though its mass has not changed at all.</p>
+
+<h3>Speed, Air Resistance and Terminal Velocity</h3>
+<p>Speed tells you how quickly something covers distance: <strong>Speed = Distance ÷ Time</strong> (S = D ÷ T). If distance is measured in metres and time in seconds, speed comes out in metres per second (m/s).</p>
+<p>Air resistance is a contact force that increases the faster an object moves through the air. This produces a neat result for a falling object such as a skydiver: as they speed up, air resistance grows, gradually reducing the unbalanced force pulling them down. Eventually air resistance grows large enough to exactly equal their weight — at that point the forces are balanced, there is no net force left, and the skydiver falls at a constant maximum speed called <strong>terminal velocity</strong>.</p>
+
+<h3>Pressure</h3>
+<p>Pressure describes how concentrated a force is over a surface: <strong>Pressure = Force ÷ Area</strong>, measured in Pascals (Pa). The same force spread over a larger area produces lower pressure, which is why a wide surface (skis, snowshoes, a tank's caterpillar tracks) sinks into soft ground far less than a narrow one carrying the same weight.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A 5 kg object sits on a table. What is its weight on Earth? Are the forces on it balanced?</p>
 <p><strong>Solution:</strong><br>
@@ -695,20 +700,12 @@ The table pushes up with a <strong>normal reaction force of 50 N</strong>.<br>
 Forces are <strong>balanced</strong> (50 N up = 50 N down) → the object stays still. ✓<br>
 On the Moon: Weight = 5 × 1.6 = <strong>8 N</strong> — but the mass is still 5 kg.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Force</dt><dd>A push or pull acting on an object, measured in Newtons (N). Forces can change speed, direction or shape.</dd>
-<dt>Friction</dt><dd>A force opposing motion between two surfaces in contact. Can be useful (grip) or unhelpful (energy loss).</dd>
-<dt>Mass</dt><dd>The amount of matter in an object, measured in kg. Constant everywhere in the universe.</dd>
-<dt>Weight</dt><dd>The gravitational force on an object, measured in Newtons. Depends on local gravitational field strength.</dd>
-<dt>Terminal velocity</dt><dd>The constant maximum speed reached when air resistance equals weight — the net force is zero and the object stops accelerating.</dd>
-<dt>Newton's First Law</dt><dd>An object remains at rest or moves at constant speed in a straight line unless acted on by an unbalanced force.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Using kg as the unit for weight — ✅ Correct: weight is a <strong>force</strong>, measured in <strong>Newtons</strong>. Mass is in kg.</li>
-<li>❌ Thinking balanced forces mean no forces — ✅ Correct: balanced means forces <strong>cancel out</strong> — they are still present, just equal and opposite.</li>
-<li>❌ Thinking friction is always bad — ✅ Correct: friction is <strong>essential</strong> for walking, driving and gripping — it's only unhelpful in machines where it wastes energy.</li>
+<li>Using kg as the unit for weight. Weight is a <strong>force</strong>, measured in <strong>Newtons</strong>; mass is measured in kg.</li>
+<li>Thinking balanced forces mean no forces are acting. Balanced means the forces <strong>cancel out</strong> — they are still present, just equal and opposite.</li>
+<li>Assuming friction is always unwanted. Friction is <strong>essential</strong> for walking, driving and gripping — it is only unhelpful inside machines, where it wastes energy as heat.</li>
 </ul>`,
 
 "island-15": `<h4>Introduction</h4>
@@ -725,6 +722,9 @@ On the Moon: Weight = 5 × 1.6 = <strong>8 N</strong> — but the mass is still 
 <li><strong>Pitch</strong> depends on <strong>frequency</strong> (vibrations per second, measured in Hz) — high frequency = high pitch. <strong>Loudness</strong> depends on <strong>amplitude</strong> — bigger vibrations = louder sound.</li>
 </ul>
 <div class="lesson-diagram" data-diagram="law-of-reflection"><p class="diagram-caption">The law of reflection: angle of incidence = angle of reflection</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="refraction"><p class="diagram-caption">Refraction: light changes direction as it crosses into a different material</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="colour-mixing"><p class="diagram-caption">A filter absorbs every colour of light except its own — the same idea that makes objects look coloured</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="longitudinal-wave"><p class="diagram-caption">Sound as a longitudinal wave: compressions and rarefactions travelling through a medium</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <h4>✏️ Worked Example</h4>
 <div class="example-box">
 <p><strong>Example:</strong> A ray of light hits a flat mirror. The angle between the ray and the mirror surface is 35°. Find the angle of reflection.</p>
@@ -869,6 +869,7 @@ Law of reflection: angle of reflection = angle of incidence = <strong>55°</stro
 <li>A <strong>chemical change</strong> makes one or more <em>new substances</em> with different properties, and it is difficult or impossible to reverse. Burning, rusting and cooking an egg are chemical changes. There are often clues: a colour change, a gas given off, or heat and light released.</li>
 <li>A <strong>physical change</strong> makes <em>no new substance</em> and is usually easy to reverse. Melting, boiling and dissolving are physical changes — the particles are rearranged but they are still the same particles.</li>
 </ul>
+<div class="lesson-diagram" data-diagram="changes-of-state"><p class="diagram-caption">Changes of state are physical changes — the same particles, just rearranged</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>Worked Example</h3>
 <div class="example-box">
@@ -883,6 +884,7 @@ This is a <strong>chemical change</strong>, for three reasons:<br>
 Compare that with melting ice, a physical change: no new substance, and fully reversible.</p>
 <p>Remember that a <em>word</em> equation uses names only. Save the formulae for symbol equations.</p>
 </div>
+<div class="lesson-diagram" data-diagram="conservation-of-mass"><p class="diagram-caption">Mass is conserved: the atoms in magnesium and oxygen are just rearranged into magnesium oxide</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>Common Mistakes</h3>
 <ul>
@@ -1219,28 +1221,30 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 <li>❌ Thinking racism is natural or inevitable — ✅ Correct: racism as an ideology was <strong>constructed to justify slavery and colonialism</strong> — it is a product of history, not biology.</li>
 </ul>`,
 
-"island-20": `<h4>Introduction</h4>
-<p>Maps are geographers' most powerful tool — they communicate enormous amounts of information in a compact, visual form. Being able to read grid references, interpret contour lines, use map scale, analyse aerial photographs and understand GIS are skills you'll use in geography exams, fieldwork and everyday navigation.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>4-figure grid reference</strong>: go along the eastings first, then up the northings. Memory aid: "along the corridor and up the stairs."</li>
-<li><strong>6-figure grid reference</strong>: more precise — estimate tenths within each grid square (e.g. 273456).</li>
-<li><strong>Contour lines</strong> join points of equal height. Close together = steep slope. Far apart = gentle slope. Circles closing in = hilltop.</li>
-<li><strong>Contour patterns for landforms</strong>: V-shaped contours pointing <em>uphill</em> (towards higher numbers) indicate a <strong>valley</strong> — rivers flow down the centre of the V. V-shaped contours pointing <em>downhill</em> (towards lower numbers) indicate a <strong>spur</strong> — a ridge of high ground jutting out from a hill. Remember: "V points to the source."</li>
-<li><strong>Compass directions</strong>: there are eight main compass points — <strong>N, NE, E, SE, S, SW, W, NW</strong>. North = 0° (or 360°), East = 90°, South = 180°, West = 270°. The four cardinal points (N, E, S, W) are joined by four intercardinal points (NE, SE, SW, NW). Compass bearings are always measured clockwise from North.</li>
-<li><strong>Common OS map symbols</strong>: blue lines = rivers/streams; blue 'P' in a box = parking; cross on a square = church with a tower; cross on a circle = church with a spire; green dashed line = footpath; tent symbol = campsite; 'PH' = public house. Learning these symbols is essential for map reading and fieldwork.</li>
-<li><strong>Map scale</strong>: 1:25,000 means 1 cm on map = 25,000 cm = 250 m in real life. 1:50,000 means 1 cm = 500 m. <strong>OS Explorer</strong> maps use 1:25,000 scale (ideal for walking — show field boundaries and individual buildings). <strong>OS Landranger</strong> maps use 1:50,000 scale (better for driving/cycling — cover larger areas with less detail).</li>
-<li><strong>Large scale</strong> maps show small areas in great detail. <strong>Small scale</strong> maps show large areas with little detail.</li>
-<li><strong>Aerial photographs</strong> show the landscape from above — either vertical (directly overhead) or oblique (taken at an angle). Compare them with OS maps to identify features like settlements, roads, rivers and land use.</li>
-<li><strong>GIS (Geographical Information Systems)</strong>: computer software that layers different types of geographical data on a digital map — used for planning, flood risk mapping, transport routes and environmental monitoring.</li>
-<li><strong>Cross-sections</strong>: a side-on view of the landscape drawn from contour lines. Plot the height at each contour where it crosses a straight line between two points, then join the dots to reveal the shape of the land.</li>
-<li><strong>Field sketches</strong>: quick, labelled drawings made in the field to record key features of a landscape. They should include a title, labels, direction and key features annotated.</li>
-</ul>
+"island-20": `<h2>Map Skills</h2>
+<p>Maps are geographers' most powerful tool — they communicate enormous amounts of information in a compact, visual form. Being able to read grid references, interpret contour lines, use map scale, analyse aerial photographs and understand GIS are skills you will use in geography exams, fieldwork and everyday navigation.</p>
+
+<h3>Grid References</h3>
+<p>A <strong>4-figure grid reference</strong> is read by going along the <strong>eastings</strong> first, then up the <strong>northings</strong> — remembered as "along the corridor and up the stairs." A <strong>6-figure grid reference</strong> is more precise still: it estimates tenths within each grid square, for example 273456, pinning a location down to within 100 metres rather than a whole square.</p>
 <div class="lesson-diagram" data-diagram="grid-reference"><p class="diagram-caption">How to read 4-figure and 6-figure grid references</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Contour Lines and Landforms</h3>
+<p><strong>Contour lines</strong> join points of equal height, so their spacing tells you about slope: close together means a <strong>steep</strong> slope, far apart means a <strong>gentle</strong> one, and a set of circles closing inward marks a hilltop. The <em>shape</em> of the contours reveals specific landforms too — a V pointing <em>uphill</em>, towards higher numbers, marks a <strong>valley</strong> with a river running down its centre, while a V pointing <em>downhill</em>, towards lower numbers, marks a <strong>spur</strong>, a ridge of high ground jutting outward. Remember it as "V points to the source."</p>
+<p>A <strong>cross-section</strong> turns this height information into a side-on profile of the land: plot the height at each contour crossing a straight line drawn between two points, then join the dots to reveal the true shape of the ground between them.</p>
 <div class="lesson-diagram" data-diagram="contour-cross-section"><p class="diagram-caption">Contour lines and how to draw a cross-section</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="contour-valley-spur"><p class="diagram-caption">How contour patterns show valleys and spurs</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Compass Directions and Map Symbols</h3>
+<p>The compass has eight main points — <strong>N, NE, E, SE, S, SW, W, NW</strong> — with the four cardinal points (N, E, S, W) joined by four intercardinal points in between. Bearings are always measured clockwise from North, so North = 0° (or 360°), East = 90°, South = 180° and West = 270°. Ordnance Survey maps also use a standard set of symbols worth learning by sight: blue lines for rivers and streams, a blue 'P' in a box for parking, a cross on a square for a church with a tower, a cross on a circle for a church with a spire, a green dashed line for a footpath, a tent for a campsite, and 'PH' for a public house.</p>
 <div class="lesson-diagram" data-diagram="compass-rose"><p class="diagram-caption">The eight-point compass and bearings</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Map Scale</h3>
+<p><strong>Map scale</strong> is the ratio between distance on the map and distance in real life: 1:25,000 means 1 cm on the map equals 25,000 cm, or 250 m, on the ground; 1:50,000 means 1 cm equals 500 m. The two most common UK series follow this split — <strong>OS Explorer</strong> maps use 1:25,000, ideal for walking since they show field boundaries and individual buildings, while <strong>OS Landranger</strong> maps use 1:50,000, better suited to driving or cycling since they cover a larger area with less fine detail. This gives the general rule: a <strong>large scale</strong> map shows a small area in great detail, while a <strong>small scale</strong> map shows a large area with much less.</p>
+
+<h3>Aerial Photographs, GIS and Field Sketches</h3>
+<p><strong>Aerial photographs</strong> show the landscape from above, either <strong>vertical</strong> (taken directly overhead) or <strong>oblique</strong> (taken at an angle), and comparing them against an OS map helps identify features such as settlements, roads, rivers and land use. <strong>GIS</strong> (Geographical Information Systems) takes this further with computer software that layers many different types of geographical data onto a single digital map — used for planning, flood risk mapping, transport routes and environmental monitoring. In the field itself, a <strong>field sketch</strong> — a quick, labelled drawing recording the key features of a landscape, with a title, labels, direction and annotations — remains one of the simplest ways to capture what a photograph might miss.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> On a 1:50,000 map, two points are 6 cm apart. What is the real-life distance? What does it mean if the contour lines between them are very close together?</p>
 <p><strong>Solution:</strong><br>
@@ -1256,48 +1260,41 @@ Close contour lines between the two points indicate a <strong>steep slope</stron
 4. The town can be identified on the OS map by its <strong>settlement symbols</strong> (roads, buildings, churches).<br>
 Combining aerial photos with OS maps gives both a <strong>visual overview</strong> and <strong>precise locational data</strong>.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Easting</dt><dd>The vertical grid lines on a map — numbered left to right. Read first in a grid reference.</dd>
-<dt>Northing</dt><dd>The horizontal grid lines on a map — numbered bottom to top. Read second in a grid reference.</dd>
-<dt>Contour line</dt><dd>A line on a map connecting all points of equal height above sea level.</dd>
-<dt>Map scale</dt><dd>The ratio between a distance on a map and the corresponding real-life distance.</dd>
-<dt>GIS</dt><dd>Geographical Information Systems — computer software that stores, analyses and displays layers of geographical data on digital maps.</dd>
-<dt>Cross-section</dt><dd>A side-on diagram showing the shape of the land between two points, drawn using contour line data from a map.</dd>
-<dt>Aerial photograph</dt><dd>A photograph taken from above — vertical (straight down) or oblique (at an angle) — used alongside maps to interpret landscape features.</dd>
-<dt>Field sketch</dt><dd>A labelled drawing made during fieldwork to record key landscape features from a particular viewpoint.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Reading northings before eastings — ✅ Correct: <strong>eastings first</strong> (left-right), then northings (up-down). "Along the corridor, then up the stairs."</li>
-<li>❌ Thinking close contours mean a valley — ✅ Correct: close contours mean a <strong>steep slope</strong> — they could be a hill or a valley; look at the numbers to tell which way the ground rises.</li>
-<li>❌ Confusing large scale with showing a large area — ✅ Correct: large scale = <strong>zoomed in</strong>, lots of detail, small area. Small scale = zoomed out, large area, less detail.</li>
-<li>❌ Thinking GIS is just a digital map — ✅ Correct: GIS <strong>layers multiple datasets</strong> (population, flood risk, land use) together for analysis, not just navigation.</li>
-<li>❌ Drawing a cross-section without checking contour heights — ✅ Correct: always read the <strong>exact height value</strong> of each contour line; don't assume equal spacing means equal height change.</li>
+<li>Reading northings before eastings. Read <strong>eastings first</strong> (left-right), then northings (up-down) — "along the corridor, then up the stairs."</li>
+<li>Thinking close contours always mean a valley. Close contours simply mean a <strong>steep slope</strong> — it could be a hill or a valley; check the height numbers to see which way the ground actually rises.</li>
+<li>Confusing large scale with showing a large area. Large scale means <strong>zoomed in</strong> — lots of detail, small area. Small scale means zoomed out — large area, less detail.</li>
+<li>Thinking GIS is just a digital map. GIS <strong>layers multiple datasets</strong> together — population, flood risk, land use — for analysis, not just navigation.</li>
+<li>Drawing a cross-section without checking contour heights. Always read the <strong>exact height value</strong> of each contour line; do not assume equal spacing means equal height change.</li>
 </ul>`,
 
-"island-21": `<h4>Introduction</h4>
+"island-21": `<h2>Weather &amp; Climate</h2>
 <p>Weather affects our daily lives, but climate shapes civilisations. The UK's temperate maritime climate — mild, wet and changeable — is the result of its island location, prevailing winds and warm ocean currents. But climate is not fixed: it has changed dramatically over thousands of years, from the Ice Age to the present, and human activity is now accelerating that change.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Weather</strong>: short-term atmospheric conditions (today's temperature, rain). <strong>Climate</strong>: average weather over 30+ years for a region.</li>
-<li>Key weather instruments: thermometer (temperature), rain gauge (rainfall/mm), anemometer (wind speed), barometer (air pressure), wind vane (wind direction). <strong>Cloud cover</strong> is measured in <strong>oktas</strong> — eighths of the sky covered by cloud. 0 oktas = clear sky, 4 = half covered, 8 = completely overcast.</li>
-<li><strong>Three main cloud types</strong>: <strong>cumulus</strong> — fluffy, heaped clouds (fair weather, but can grow into cumulonimbus thunderstorm clouds); <strong>stratus</strong> — flat, grey, layered clouds that can bring drizzle or light rain; <strong>cirrus</strong> — high, thin, wispy clouds made of ice crystals, usually indicating fair weather.</li>
-<li>The UK's climate is shaped by: <strong>prevailing south-westerly winds</strong> from the Atlantic; the <strong>North Atlantic Drift</strong> (warm ocean current); island location; relief (western uplands cause relief rainfall).</li>
-<li><strong>Air masses</strong>: large bodies of air with uniform temperature and moisture. Five main air masses affect the UK — <strong>Tropical Maritime</strong> (warm, wet — from the Atlantic), <strong>Tropical Continental</strong> (hot, dry — from North Africa/southern Europe), <strong>Polar Maritime</strong> (cold, wet — from the north-west Atlantic), <strong>Polar Continental</strong> (cold, dry — from Scandinavia/Russia), and <strong>Arctic Maritime</strong> (very cold — from the Arctic). The type arriving determines our weather.</li>
-<li><strong>Air pressure and weather systems</strong>: <strong>high pressure (anticyclone)</strong> — air sinks, preventing cloud formation → brings dry, settled weather (hot and sunny in summer; cold, clear and frosty in winter). <strong>Low pressure (depression)</strong> — air rises, cools and condenses → brings cloud, wind and rain. Depressions are responsible for the UK's typical unsettled weather.</li>
-<li><strong>Weather fronts</strong>: the boundary where two different air masses meet. A <strong>warm front</strong> (shown on maps with red semicircles) occurs when warm air rises gently over cold air → wide band of cloud and steady rain. A <strong>cold front</strong> (blue triangles) occurs when cold air undercuts warm air, pushing it up sharply → heavy rain and cumulonimbus clouds, followed by clearer skies.</li>
-<li><strong>Three types of rainfall</strong>: <strong>Relief (orographic)</strong> — moist air is forced to rise over hills → cools → condenses → rains on the windward side; the leeward side gets a rain shadow. <strong>Convectional</strong> — the sun heats the ground → warm air rises rapidly → cools and condenses → produces heavy showers and thunderstorms (common in summer). <strong>Frontal</strong> — warm and cold air masses meet at a front → warm air is forced upward → cools and condenses → prolonged rain.</li>
-<li><strong>Climate change since the Ice Age</strong>: the last glacial period ended ~11,700 years ago. Temperatures have fluctuated since — the Medieval Warm Period (~900–1300 AD) allowed vineyards in England, while the Little Ice Age (~1300–1850 AD) froze the Thames. Current warming is far more rapid than any natural cycle.</li>
-<li><strong>Evidence for past climate change</strong>: ice cores (trapped air bubbles show CO₂ levels and temperature over 800,000 years); tree rings (wider rings = warmer, wetter years); historical records (harvest dates, paintings of frozen rivers); fossils and pollen analysis.</li>
-<li><strong>The enhanced greenhouse effect</strong>: burning fossil fuels increases CO₂ and methane in the atmosphere → these gases trap more heat → global temperatures rise. This is different from the natural greenhouse effect which keeps Earth habitable.</li>
-<li><strong>Microclimates</strong>: small-scale variations in climate within a local area. Caused by shelter, aspect (direction a slope faces), surface type (tarmac absorbs heat) and proximity to water. Urban areas are often warmer than surrounding countryside (the urban heat island effect).</li>
-<li><strong>Extreme weather in the UK</strong>: heatwaves, storms, flooding and cold snaps are becoming more frequent and intense. Examples include the 2022 UK heatwave (40°C recorded for the first time) and increased winter flooding.</li>
-</ul>
+
+<h3>Weather and Climate</h3>
+<p><strong>Weather</strong> is the short-term state of the atmosphere — today's temperature, today's rain — while <strong>climate</strong> is the average weather for a region over 30 or more years. Weather itself is measured with a specific instrument for each variable: a thermometer for temperature, a rain gauge for rainfall (in mm), an anemometer for wind speed, a barometer for air pressure, and a wind vane for wind direction. Cloud cover gets its own unit, the <strong>okta</strong> — one eighth of the sky — running from 0 oktas (clear sky) to 8 (completely overcast). The clouds themselves fall into three main types: <strong>cumulus</strong> are fluffy, heaped clouds associated with fair weather, though they can grow into thunderstorm-producing cumulonimbus; <strong>stratus</strong> are flat, grey, layered clouds that bring drizzle or light rain; and <strong>cirrus</strong> are high, thin, wispy clouds made of ice crystals, usually a sign of fair weather ahead.</p>
+
+<h3>What Shapes the UK's Climate</h3>
+<p>Four factors combine to give the UK its distinctive climate: <strong>prevailing south-westerly winds</strong> arriving off the Atlantic, the <strong>North Atlantic Drift</strong> — a warm ocean current originating in the Gulf of Mexico that keeps the UK far warmer than its latitude (50–60°N) would otherwise suggest, the country's island location, and its relief, since the western uplands force incoming air to rise and produce relief rainfall. Which weather actually arrives on a given day depends on the <strong>air mass</strong> in charge — a large body of air with roughly uniform temperature and moisture, carrying the characteristics of wherever it formed. Five air masses affect the UK: <strong>Tropical Maritime</strong> (warm, wet, from the Atlantic), <strong>Tropical Continental</strong> (hot, dry, from North Africa or southern Europe), <strong>Polar Maritime</strong> (cold, wet, from the north-west Atlantic), <strong>Polar Continental</strong> (cold, dry, from Scandinavia or Russia), and <strong>Arctic Maritime</strong> (very cold, from the Arctic).</p>
+
+<h3>Weather Systems and Rainfall</h3>
+<p>Air pressure decides whether a day is settled or unsettled. In an <strong>anticyclone</strong> (high pressure), air sinks and prevents cloud from forming, bringing dry, settled weather — hot and sunny in summer, cold, clear and frosty in winter. In a <strong>depression</strong> (low pressure), air rises, cools and condenses, bringing cloud, wind and rain; depressions are responsible for the UK's characteristically unsettled weather. Depressions form around <strong>weather fronts</strong>, the boundary where two air masses of different temperatures meet: a <strong>warm front</strong> (drawn as red semicircles) forms where warm air rises gently over cold air, producing a wide band of cloud and steady rain, while a <strong>cold front</strong> (blue triangles) forms where cold air undercuts warm air more sharply, producing heavier rain and cumulonimbus cloud followed by clearer skies.</p>
+<p>Rainfall itself has three distinct causes. <strong>Relief (orographic)</strong> rainfall happens when moist air is forced to rise over hills, cooling and condensing on the windward side while the leeward side is left in a dry <strong>rain shadow</strong>. <strong>Convectional</strong> rainfall happens when the sun heats the ground directly, causing warm air to rise rapidly and produce the heavy showers and thunderstorms typical of summer. <strong>Frontal</strong> rainfall happens where warm and cold air masses meet, with the warm air forced upward over the front to cool and condense into prolonged rain.</p>
 <div class="lesson-diagram" data-diagram="relief-rainfall"><p class="diagram-caption">How relief rainfall forms — windward rain and leeward rain shadow</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="weather-fronts-depression"><p class="diagram-caption">Depression cross-section — warm and cold fronts</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Climate Change: Past and Present</h3>
+<p>Climate has always changed. The last glacial period ended around 11,700 years ago, and temperatures have fluctuated since — the Medieval Warm Period (roughly 900–1300 AD) was mild enough to support vineyards in England, while the Little Ice Age (roughly 1300–1850 AD) was cold enough to freeze the Thames. Scientists reconstruct this history from several sources of evidence: ice cores, where trapped air bubbles reveal CO₂ levels and temperature going back 800,000 years; tree rings, where wider rings indicate warmer, wetter years; historical records such as harvest dates and paintings of frozen rivers; and fossil and pollen analysis.</p>
+<p>What makes current warming different is its cause and its speed. The <strong>enhanced greenhouse effect</strong> describes how burning fossil fuels adds extra CO₂ and methane to the atmosphere, trapping more heat than the natural greenhouse effect alone — and today's warming is happening far faster than any of the natural cycles in that historical record.</p>
 <div class="lesson-diagram" data-diagram="greenhouse-effect"><p class="diagram-caption">The enhanced greenhouse effect — how trapped heat warms the Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+<div class="lesson-diagram" data-diagram="climate-evidence"><p class="diagram-caption">How ice cores, tree rings and historical records reveal past climate change</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Microclimates and Extreme Weather</h3>
+<p>Climate can vary sharply even within a single local area, creating a <strong>microclimate</strong> — caused by shelter, aspect (the direction a slope faces), surface type (tarmac absorbs far more heat than grass), and proximity to water. Cities take this to an extreme with the <strong>urban heat island</strong> effect, where heat-absorbing surfaces, less vegetation and waste heat from buildings and vehicles leave urban areas noticeably warmer than the surrounding countryside. Extreme weather in the UK — heatwaves, storms, flooding and cold snaps — is becoming more frequent and more intense, illustrated by the 2022 UK heatwave, which recorded 40°C for the first time, and by increasingly severe winter flooding.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Why is Manchester wetter than London, even though both are in England?</p>
 <p><strong>Solution:</strong><br>
@@ -1315,57 +1312,37 @@ Combining aerial photos with OS maps gives both a <strong>visual overview</stron
 4. By analysing these bubbles, scientists can measure <strong>CO₂ levels and temperature</strong> going back over 800,000 years.<br>
 5. The data shows a clear correlation: when CO₂ levels were high, temperatures were high — and current CO₂ levels are <strong>far higher</strong> than at any point in this record.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Prevailing wind</dt><dd>The most common wind direction for a given location — in the UK, this is south-westerly.</dd>
-<dt>North Atlantic Drift</dt><dd>A warm ocean current from the Gulf of Mexico that keeps the UK warmer than its latitude would suggest.</dd>
-<dt>Relief rainfall</dt><dd>Rain caused when moist air is forced to rise over hills, cools and condenses.</dd>
-<dt>Rain shadow</dt><dd>The dry area on the leeward (sheltered) side of a hill or mountain range.</dd>
-<dt>Ice core</dt><dd>A cylinder of ice drilled from an ice sheet, containing trapped air bubbles that reveal past atmospheric conditions over hundreds of thousands of years.</dd>
-<dt>Enhanced greenhouse effect</dt><dd>The additional warming caused by human-produced greenhouse gases (CO₂, methane) trapping extra heat in the atmosphere beyond the natural level.</dd>
-<dt>Microclimate</dt><dd>A small area where the climate differs from the surrounding region — caused by shelter, aspect, surface type or proximity to water.</dd>
-<dt>Urban heat island</dt><dd>The phenomenon where urban areas are warmer than surrounding rural areas due to heat-absorbing surfaces, less vegetation and waste heat from buildings and vehicles.</dd>
-<dt>Okta</dt><dd>A unit for measuring cloud cover — one okta equals one-eighth of the sky covered by cloud. Measured on a scale of 0 (clear) to 8 (overcast).</dd>
-<dt>Air mass</dt><dd>A large body of air with roughly uniform temperature and humidity, formed over a particular region (e.g. ocean or continent) and carrying that region's characteristics.</dd>
-<dt>Depression</dt><dd>A low-pressure weather system where air rises, cools, and condenses — bringing cloud, wind and rain. Common across the UK, especially in autumn and winter.</dd>
-<dt>Anticyclone</dt><dd>A high-pressure weather system where air sinks — bringing dry, settled weather. Sunny in summer; cold and frosty in winter.</dd>
-<dt>Weather front</dt><dd>The boundary where two air masses of different temperatures meet. Warm fronts bring steady rain; cold fronts bring heavier, shorter bursts of rain.</dd>
-<dt>Convectional rainfall</dt><dd>Rain caused when the sun heats the ground, warm air rises rapidly, cools and condenses — producing heavy showers and thunderstorms.</dd>
-<dt>Frontal rainfall</dt><dd>Rain caused when warm and cold air masses meet at a front — warm air is forced upward over the denser cold air, cools and condenses.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying "weather and climate are the same thing" — ✅ Correct: weather is <strong>day-to-day</strong>; climate is the <strong>long-term average</strong> (30+ years).</li>
-<li>❌ Thinking the UK is warm because it's close to the equator — ✅ Correct: the UK is at ~50–60°N; it's warm for its latitude thanks to the <strong>North Atlantic Drift</strong>.</li>
-<li>❌ Confusing rain gauge and barometer — ✅ Correct: rain gauge measures <strong>rainfall (mm)</strong>; barometer measures <strong>air pressure (millibars)</strong>.</li>
-<li>❌ Confusing high and low pressure — ✅ Correct: <strong>high pressure (anticyclone)</strong> = dry, settled; <strong>low pressure (depression)</strong> = cloud, wind, rain.</li>
-<li>❌ Thinking all rainfall is the same — ✅ Correct: there are three types — <strong>relief</strong> (hills), <strong>convectional</strong> (sun heating ground), <strong>frontal</strong> (air masses meeting).</li>
-<li>❌ Saying "climate has always changed so current change is natural" — ✅ Correct: climate has changed naturally, but current warming is <strong>far faster</strong> than any natural cycle and is driven by <strong>human CO₂ emissions</strong>.</li>
-<li>❌ Confusing the greenhouse effect with the enhanced greenhouse effect — ✅ Correct: the natural greenhouse effect keeps Earth warm enough for life; the <strong>enhanced</strong> effect is the extra warming from human-added gases.</li>
+<li>Saying weather and climate are the same thing. Weather is <strong>day-to-day</strong>; climate is the <strong>long-term average</strong> over 30+ years.</li>
+<li>Thinking the UK is warm because it is close to the equator. The UK sits at roughly 50–60°N — it is warm for its latitude thanks to the <strong>North Atlantic Drift</strong>, not its position.</li>
+<li>Confusing a rain gauge and a barometer. A rain gauge measures <strong>rainfall (mm)</strong>; a barometer measures <strong>air pressure (millibars)</strong>.</li>
+<li>Confusing high and low pressure. <strong>High pressure (anticyclone)</strong> means dry, settled weather; <strong>low pressure (depression)</strong> means cloud, wind and rain.</li>
+<li>Thinking all rainfall forms the same way. There are three types — <strong>relief</strong> (hills), <strong>convectional</strong> (sun heating the ground), and <strong>frontal</strong> (air masses meeting).</li>
+<li>Assuming climate has always changed, so current change must be natural too. Climate has changed naturally before, but current warming is <strong>far faster</strong> than any natural cycle and is driven by <strong>human CO₂ emissions</strong>.</li>
+<li>Confusing the greenhouse effect with the enhanced greenhouse effect. The natural greenhouse effect keeps Earth warm enough for life; the <strong>enhanced</strong> effect is the extra warming added by human greenhouse gas emissions.</li>
 </ul>`,
 
-"island-22": `<h4>Introduction</h4>
-<p>Rivers are among the most powerful forces shaping the landscape. They are part of the water cycle — the continuous movement of water between the atmosphere, land and sea. From the steep, fast-flowing upper course to the wide, meandering lower course, rivers constantly erode, transport and deposit material — creating distinctive landforms at each stage of their journey.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>The water cycle (hydrological cycle)</strong>: evaporation (water turns to vapour) → condensation (vapour cools into clouds) → precipitation (rain, snow, hail falls) → collection (water gathers in rivers, lakes, oceans) → the cycle repeats. Also includes infiltration (water soaking into soil) and transpiration (water released by plants).</li>
-<li><strong>Drainage basin</strong>: the area of land drained by a river and its tributaries. The boundary is called the <strong>watershed</strong> — a ridge of high land separating one drainage basin from another. Water within the basin flows into the main river via tributaries, surface runoff, throughflow and groundwater flow.</li>
-<li><strong>River source and mouth</strong>: the <strong>source</strong> is where a river begins — usually a spring, marsh or area of rainfall in upland hills or mountains. The <strong>mouth</strong> is where it flows into the sea or a lake.</li>
-<li><strong>Three river processes</strong>: Erosion (wearing away), Transportation (carrying material), Deposition (dropping material when energy decreases).</li>
-<li>Types of erosion: hydraulic action (force of water), abrasion (sediment scraping), solution (dissolving rock), attrition (particles wearing each other down).</li>
-<li><strong>Four types of river transportation</strong>: <strong>Traction</strong> — large boulders rolling along the river bed; <strong>Saltation</strong> — smaller pebbles bouncing along the bed; <strong>Suspension</strong> — fine particles (silt, clay) carried within the water, making it look brown; <strong>Solution</strong> — dissolved minerals carried invisibly in the water (especially from limestone).</li>
-<li>Upper course: steep, fast, narrow — dominant erosion. <strong>V-shaped valleys</strong> and waterfalls. A waterfall retreats upstream over time as the soft rock beneath the hard cap rock is eroded, creating an overhang that collapses — leaving a steep-sided <strong>gorge</strong> behind.</li>
-<li>Middle/lower course: gentle gradient, wide — dominant deposition. <strong>Meanders</strong>, floodplains, oxbow lakes.</li>
-<li><strong>Meander formation</strong>: faster water on outside of bend erodes (river cliff); slower water inside deposits (slip-off slope). Over time the loop is cut off → oxbow lake.</li>
-<li><strong>Flooding</strong>: caused by prolonged rainfall, rapid snowmelt, impermeable rock, urbanisation (less infiltration), or deforestation (less interception). Effects include damage to property, loss of life, disruption to transport, and loss of farmland.</li>
-<li><strong>Hard engineering</strong>: man-made structures to control flooding — e.g. dams and reservoirs, embankments (levees), channel straightening, flood walls. Effective but expensive and can cause problems downstream.</li>
-<li><strong>Soft engineering</strong>: working with natural processes — e.g. flood plain zoning (not building on floodplains), afforestation (planting trees to slow runoff), managed flooding, river restoration. Cheaper and more sustainable but may not prevent major floods.</li>
-<li><strong>Case study — River Tees</strong>: rises in the Pennines (upper course — High Force waterfall, V-shaped valley at Teesdale); middle course shows clear meanders near Yarm; lower course — wide floodplain at the mouth near Middlesbrough. The Tees Barrage controls flooding and water levels in the lower course.</li>
-</ul>
+"island-22": `<h2>Rivers &amp; Drainage Basins</h2>
+<p>Rivers are among the most powerful forces shaping the landscape. They are part of the water cycle — the continuous movement of water between the atmosphere, land and sea. From the steep, fast-flowing upper course to the wide, meandering lower course, rivers constantly erode, transport and deposit material, creating distinctive landforms at each stage of their journey.</p>
+
+<h3>The Water Cycle and Drainage Basins</h3>
+<p>The <strong>water cycle (hydrological cycle)</strong> feeds every river: evaporation turns water to vapour, condensation cools that vapour into clouds, precipitation brings it back down as rain, snow or hail, and collection gathers it into rivers, lakes and oceans before the cycle repeats — with infiltration (water soaking into soil) and transpiration (water released by plants) adding further routes into and out of it. All the water falling within a <strong>drainage basin</strong> — the area of land drained by a river and its tributaries — reaches the main channel via tributaries, surface runoff, throughflow and groundwater flow, until it eventually crosses the <strong>watershed</strong>, the ridge of high land marking the boundary with the next basin. Every river begins at a <strong>source</strong>, typically a spring, marsh or area of high rainfall in the hills, and ends at its <strong>mouth</strong>, where it flows into the sea or a lake.</p>
 <div class="lesson-diagram" data-diagram="drainage-basin"><p class="diagram-caption">A drainage basin — source, tributaries, confluence, watershed and mouth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>River Processes: Erosion, Transportation and Deposition</h3>
+<p>Rivers reshape the land through three processes: <strong>erosion</strong> wears material away, <strong>transportation</strong> carries it onward, and <strong>deposition</strong> drops it once the river's energy falls too low to carry it further. Erosion itself happens four ways: hydraulic action (the sheer force of moving water), abrasion (sediment scraping against the bank and bed), solution (rock dissolving directly into the water), and attrition (particles carried by the river wearing each other down as they collide). Once eroded, material is transported in whichever of four ways suits its size: <strong>traction</strong> rolls large boulders along the riverbed, <strong>saltation</strong> bounces smaller pebbles along it, <strong>suspension</strong> carries fine silt and clay within the water itself — giving many rivers their brown, murky colour — and <strong>solution</strong> carries dissolved minerals, particularly from limestone, completely invisibly.</p>
+
+<h3>How Rivers Change Along Their Course</h3>
+<p>A river's character changes dramatically from source to mouth, because erosion and deposition are not equally dominant throughout. In the <strong>upper course</strong>, where the channel is steep, fast and narrow, erosion dominates, cutting <strong>V-shaped valleys</strong> and waterfalls; a waterfall retreats upstream over time as the river erodes the soft rock beneath a hard cap rock, undermining it until the overhang collapses and leaves behind a steep-sided <strong>gorge</strong>. Further downstream, in the <strong>middle and lower course</strong>, the gradient eases and the channel widens, so deposition takes over, producing <strong>meanders</strong>, floodplains and oxbow lakes. A meander forms because water flows faster on the outside of a bend, eroding a <strong>river cliff</strong>, while slower water on the inside deposits sediment as a <strong>slip-off slope</strong>; given enough time, the loop is cut off entirely, leaving an isolated <strong>oxbow lake</strong>. The <strong>River Tees</strong> shows this whole progression in one system: it rises in the Pennines with the V-shaped valley and waterfall of High Force in its upper course, develops clear meanders near Yarm in its middle course, and reaches a wide floodplain at its mouth near Middlesbrough, where the Tees Barrage now controls flooding and water levels.</p>
 <div class="lesson-diagram" data-diagram="river-long-profile"><p class="diagram-caption">River long profile and cross-sections: upper, middle and lower course</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="meander-formation"><p class="diagram-caption">How a meander develops into an oxbow lake — four stages</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Flooding and River Management</h3>
+<p>Flooding can be triggered by prolonged rainfall, rapid snowmelt, impermeable rock, urbanisation (which reduces infiltration by covering ground with tarmac and concrete), or deforestation (which reduces interception by removing the trees that would otherwise catch rainfall) — with consequences ranging from property damage and loss of life to disrupted transport and lost farmland. Managing that risk splits into two contrasting approaches. <strong>Hard engineering</strong> uses man-made structures such as dams, reservoirs, embankments and flood walls; it is effective but expensive, and can simply push the flooding problem further downstream. <strong>Soft engineering</strong> works with natural processes instead — floodplain zoning that avoids building on the most flood-prone land, afforestation that slows runoff, and managed flooding or river restoration — and while cheaper and more sustainable, it may not hold back a truly major flood on its own.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Describe how an oxbow lake forms from a meander.</p>
 <p><strong>Solution:</strong><br>
@@ -1384,54 +1361,36 @@ Raised banks built along the river channel to contain higher water levels. They 
 Planting trees in the upper catchment area. Tree roots increase infiltration (water soaks into soil instead of running off), and leaves intercept rainfall, slowing the water's journey to the river. This is cheaper, creates wildlife habitats and is sustainable — but it takes years for trees to mature and may not prevent major floods.<br><br>
 <strong>Judgement:</strong> Most flood management schemes use a <strong>combination</strong> of hard and soft engineering for the best balance of cost, effectiveness and environmental impact.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Water cycle</dt><dd>The continuous movement of water between the atmosphere, land and oceans through evaporation, condensation, precipitation and collection.</dd>
-<dt>Drainage basin</dt><dd>The area of land drained by a river and all its tributaries — bounded by the watershed.</dd>
-<dt>Watershed</dt><dd>The ridge of high land forming the boundary between two adjacent drainage basins.</dd>
-<dt>Erosion</dt><dd>The wearing away and removal of material by the river — greatest in the upper course where the river has most energy.</dd>
-<dt>Deposition</dt><dd>The dropping of material when a river loses energy — greatest in the lower course on flat land.</dd>
-<dt>Meander</dt><dd>A large bend in a river, formed by differential erosion and deposition on opposite banks.</dd>
-<dt>Oxbow lake</dt><dd>A curved lake formed when a meander loop is cut off from the main river channel.</dd>
-<dt>Hard engineering</dt><dd>Man-made structures used to control natural processes — e.g. dams, embankments, flood walls.</dd>
-<dt>Soft engineering</dt><dd>Approaches that work with natural processes to reduce flood risk — e.g. afforestation, flood plain zoning.</dd>
-<dt>Traction</dt><dd>Large boulders and rocks rolling along the river bed — the heaviest form of transportation, found mainly in the upper course.</dd>
-<dt>Saltation</dt><dd>Smaller pebbles bouncing along the river bed in a hopping motion — common in the middle course.</dd>
-<dt>Suspension</dt><dd>Fine particles of silt and clay carried within the water itself — gives rivers their brown, murky appearance.</dd>
-<dt>Gorge</dt><dd>A narrow, steep-sided valley left behind as a waterfall retreats upstream over time.</dd>
-<dt>Source</dt><dd>The starting point of a river — usually a spring, marsh, or area of high rainfall in upland hills or mountains.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying erosion happens on the inside of a meander — ✅ Correct: erosion (and river cliffs) form on the <strong>outside</strong>; deposition on the <strong>inside</strong>.</li>
-<li>❌ Thinking rivers always flow straight — ✅ Correct: rivers naturally develop meanders due to variations in <strong>flow speed and erosion</strong>.</li>
-<li>❌ Confusing transportation and deposition — ✅ Correct: transportation is <strong>carrying</strong> material; deposition is <strong>dropping</strong> it when the river slows down.</li>
-<li>❌ Thinking hard engineering is always better because it's stronger — ✅ Correct: hard engineering is expensive and can cause problems elsewhere; <strong>soft engineering</strong> is often more sustainable and cost-effective.</li>
-<li>❌ Forgetting the water cycle when explaining rivers — ✅ Correct: rivers are part of the <strong>hydrological cycle</strong> — precipitation, infiltration, runoff and evaporation all feed into how rivers behave.</li>
+<li>Saying erosion happens on the inside of a meander. Erosion — and river cliffs — form on the <strong>outside</strong> of a bend; deposition happens on the <strong>inside</strong>.</li>
+<li>Thinking rivers always flow in a straight line. Rivers naturally develop meanders because of variations in <strong>flow speed and erosion</strong> across the channel.</li>
+<li>Confusing transportation and deposition. Transportation is <strong>carrying</strong> material; deposition is <strong>dropping</strong> it once the river slows down.</li>
+<li>Assuming hard engineering is always better because it is stronger. It is expensive and can cause problems elsewhere downstream; <strong>soft engineering</strong> is often more sustainable and cost-effective.</li>
+<li>Forgetting the water cycle when explaining rivers. Rivers are part of the <strong>hydrological cycle</strong> — precipitation, infiltration, runoff and evaporation all feed into how a river behaves.</li>
 </ul>`,
 
-"island-23": `<h4>Introduction</h4>
+"island-23": `<h2>Population &amp; Settlement</h2>
 <p>Where people choose to live is not random — it is shaped by physical geography, economic opportunity and historical patterns. Today, over half the world's population lives in urban areas, and this proportion is growing rapidly. Understanding population structure, migration and the growth of megacities helps explain the human geography of the entire planet.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Population density</strong> = total population ÷ area (km²). High density = many people per km²; low density = few people per km².</li>
-<li><strong>Population distribution</strong>: describes how people are spread across an area — where they are concentrated (densely populated) and where few people live (sparsely populated). Population distribution is uneven — influenced by climate, relief, resources, jobs and transport links. Population density data can be misleading because it gives an average that hides local variation.</li>
-<li><strong>Census</strong>: an official count of a country's population, usually conducted every 10 years. In the UK, a census has been held every decade since 1801 (except 1941 during WWII). It collects data on age, occupation, housing, ethnicity and more — essential for planning services like schools, hospitals and transport.</li>
-<li><strong>Physical factors</strong> encouraging settlement: flat land, fertile soil, near fresh water, sheltered from wind, mild climate.</li>
-<li><strong>Human factors</strong>: transport links, employment, existing services (schools, hospitals), trade routes.</li>
-<li><strong>Urbanisation</strong> = increasing proportion of population living in cities. Driven by pull factors (jobs, services) and push factors (rural poverty, mechanisation of farming).</li>
-<li><strong>Settlement hierarchy</strong>: hamlet → village → town → city → conurbation (a large urban area formed when neighbouring towns and cities merge, e.g. Greater Manchester). Higher up = more services, larger population, greater sphere of influence.</li>
-<li><strong>Counter-urbanisation</strong>: the movement of people from cities back to rural areas or small towns. Driven by cheaper housing, less congestion, a quieter lifestyle, and improved transport/remote working. This reverses the traditional rural-to-urban pattern and can change the character of rural villages (rising house prices, more commuters).</li>
-<li><strong>Population pyramids</strong>: bar charts showing the age and sex structure of a population. Wide base = high birth rate (typical of LICs). Narrow base with wider top = ageing population (typical of HICs). Comparing pyramids reveals a country's stage of development.</li>
-<li><strong>The Demographic Transition Model (DTM)</strong>: a five-stage model showing how population changes as a country develops.<br>
-Stage 1: High birth rate, high death rate → low population. Stage 2: Death rate falls (better healthcare/sanitation) → rapid growth. Stage 3: Birth rate falls (contraception, education, urbanisation) → growth slows. Stage 4: Low birth rate, low death rate → stable/high population. Stage 5: Birth rate below death rate → population decline (e.g. Japan, Germany).</li>
-<li><strong>Migration</strong>: the movement of people from one place to another. Types include rural-to-urban (within a country), international (between countries), voluntary (by choice) and forced (refugees, conflict). Push factors drive people away; pull factors attract them to a new location.</li>
-<li><strong>Megacity case study — Lagos, Nigeria</strong>: population ~21 million and growing rapidly. Opportunities: employment in industry and services, better healthcare and education, cultural diversity. Challenges: rapid growth of informal settlements (slums like Makoko), traffic congestion, pollution, strain on water supply and sanitation, waste management issues.</li>
-<li><strong>Land-use patterns (Burgess model)</strong>: a simple model of urban land use — CBD (Central Business District) at the centre, surrounded by rings of inner city, inner suburbs, outer suburbs and rural-urban fringe. In reality, cities are more complex but the model helps explain general patterns.</li>
-</ul>
+
+<h3>Population Density, Distribution and the Census</h3>
+<p><strong>Population density</strong> is total population divided by area (km²): a high figure means many people packed into each km², a low figure means few. But density on its own can mislead, because it is only an average that hides local variation — the real picture is <strong>population distribution</strong>, how unevenly people are actually spread across an area, concentrated in some places and sparse in others. That unevenness comes down to physical and human factors working together: flat land, fertile soil, fresh water, shelter from wind and a mild climate all encourage settlement physically, while transport links, employment, existing services and trade routes draw people for human reasons. Governments track all of this through a <strong>census</strong>, an official population count — in the UK held every decade since 1801 (except in 1941, during WWII) — that gathers data on age, occupation, housing and ethnicity, essential for planning schools, hospitals and transport.</p>
+
+<h3>Urbanisation, Settlement Hierarchy and Land Use</h3>
+<p><strong>Urbanisation</strong> is the rising proportion of a population living in cities, driven by pull factors such as jobs and services drawing people in, and push factors such as rural poverty and the mechanisation of farming pushing them out. As places grow, they move up a <strong>settlement hierarchy</strong> — hamlet, village, town, city, and finally <strong>conurbation</strong>, a large urban area formed when neighbouring towns and cities merge, such as Greater Manchester — with each step up bringing more services, a larger population and a wider sphere of influence. The trend can also run in reverse: <strong>counter-urbanisation</strong> is the movement of people from cities back to rural areas or small towns, driven by cheaper housing, less congestion, a quieter lifestyle and remote working, and it can noticeably change the character of the villages it reaches through rising house prices and more commuters. Within a growing city, the <strong>Burgess model</strong> offers a simplified picture of how land use organises itself: a Central Business District (CBD) at the centre, surrounded by rings of inner city, inner suburbs, outer suburbs and finally the rural-urban fringe. Real cities are messier than the model suggests, but it remains a useful starting point for explaining the general pattern.</p>
+<div class="lesson-diagram" data-diagram="burgess-model"><p class="diagram-caption">The Burgess model of urban land use</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Population Structure: Pyramids and the DTM</h3>
+<p>A <strong>population pyramid</strong> is a bar chart of a population's age and sex structure, and its shape alone reveals a great deal: a wide base signals a high birth rate, typical of a low-income country, while a narrow base with a wider top signals an ageing population, typical of a high-income one. That connection between shape and development is formalised in the <strong>Demographic Transition Model (DTM)</strong>, a five-stage sequence: Stage 1 has high birth and death rates, keeping the population low; Stage 2 sees death rates fall as healthcare and sanitation improve, so population grows rapidly; Stage 3 sees birth rates fall too, thanks to contraception, education and urbanisation, so growth slows; Stage 4 settles into low birth and death rates and a stable, high population; and Stage 5 sees birth rates drop below death rates, so population actually declines, as in Japan and Germany today.</p>
 <div class="lesson-diagram" data-diagram="population-pyramid"><p class="diagram-caption">Population pyramids — comparing HIC (UK) and LIC (Nigeria) shapes</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="dtm-model"><p class="diagram-caption">The Demographic Transition Model — five stages of population change</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Migration and Megacities</h3>
+<p><strong>Migration</strong> is the movement of people from one place to another — it can be rural-to-urban within a country or international between countries, and it can be voluntary, by choice, or forced, as with refugees fleeing conflict. Whatever the type, it is shaped by the same push-and-pull logic as urbanisation: push factors drive people away from a place, pull factors draw them towards a new one. <strong>Lagos, Nigeria</strong> shows where that migration can lead: a <strong>megacity</strong> of roughly 21 million people and still growing rapidly, it offers real opportunities in industry, services, healthcare, education and cultural diversity, but also faces serious challenges — the rapid growth of informal settlements such as Makoko, traffic congestion, pollution, and strain on water supply, sanitation and waste management.</p>
+<div class="lesson-diagram" data-diagram="push-pull-factors"><p class="diagram-caption">Push and pull factors driving migration and urbanisation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Country A has a population of 8,000,000 and an area of 400 km². Country B has a population of 2,000,000 and an area of 500 km². Which is more densely populated?</p>
 <p><strong>Solution:</strong><br>
@@ -1448,53 +1407,36 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 4. The country likely faces challenges such as <strong>providing education, healthcare and jobs</strong> for a young, rapidly growing population.<br>
 5. Compare with a Stage 4 country (e.g. UK): narrow base, wider top — low birth rate, ageing population, different challenges (pensions, elderly care).</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Population density</dt><dd>The number of people per square kilometre — a measure of how crowded an area is.</dd>
-<dt>Urbanisation</dt><dd>The process by which an increasing proportion of a country's population lives in urban (city/town) areas.</dd>
-<dt>Push factors</dt><dd>Reasons that drive people away from an area — e.g. lack of jobs, poverty, natural disasters.</dd>
-<dt>Pull factors</dt><dd>Reasons that attract people to an area — e.g. employment, better services, higher wages.</dd>
-<dt>Population pyramid</dt><dd>A bar chart showing the age and sex distribution of a country's population — its shape reveals birth rate, death rate and life expectancy.</dd>
-<dt>Demographic Transition Model</dt><dd>A five-stage model showing how birth rates, death rates and total population change as a country develops economically.</dd>
-<dt>Migration</dt><dd>The movement of people from one place to another — can be voluntary or forced, internal or international.</dd>
-<dt>Megacity</dt><dd>A city with a population of over 10 million people — e.g. Lagos, Mumbai, Tokyo, São Paulo.</dd>
-<dt>CBD</dt><dd>Central Business District — the commercial and business centre of a city, typically with the tallest buildings and highest land values.</dd>
-<dt>Census</dt><dd>An official count and survey of a country's entire population, conducted every 10 years in the UK — collects data on age, occupation, housing and ethnicity.</dd>
-<dt>Population distribution</dt><dd>The pattern of where people live across an area — showing areas of dense and sparse population.</dd>
-<dt>Counter-urbanisation</dt><dd>The movement of people from cities to rural areas or small towns — the reverse of urbanisation.</dd>
-<dt>Conurbation</dt><dd>A large continuous urban area formed when several towns and cities expand and merge together — e.g. Greater Manchester, West Midlands.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Dividing area by population — ✅ Correct: population density = <strong>population ÷ area</strong>, not the other way round.</li>
-<li>❌ Thinking high population density always means a city — ✅ Correct: some <strong>rural</strong> areas (e.g. river deltas used for farming) can have very high density.</li>
-<li>❌ Confusing urbanisation with urban growth — ✅ Correct: urbanisation is about the <strong>proportion</strong> living in cities; urban growth is about the <strong>size</strong> of cities growing.</li>
-<li>❌ Confusing urbanisation with counter-urbanisation — ✅ Correct: urbanisation = people moving <strong>to</strong> cities; counter-urbanisation = people moving <strong>away</strong> from cities to rural areas.</li>
-<li>❌ Reading a population pyramid the wrong way — ✅ Correct: the <strong>base</strong> shows the youngest (0–4); the <strong>top</strong> shows the oldest. Males are usually on the left, females on the right.</li>
-<li>❌ Thinking the DTM predicts the future — ✅ Correct: the DTM is a <strong>model based on past patterns</strong> (mainly European). Not all countries follow the same path.</li>
+<li>Dividing area by population. Population density = <strong>population ÷ area</strong>, not the other way round.</li>
+<li>Thinking high population density always means a city. Some <strong>rural</strong> areas, such as farmed river deltas, can have very high density too.</li>
+<li>Confusing urbanisation with urban growth. Urbanisation is about the <strong>proportion</strong> of people living in cities; urban growth is about the <strong>size</strong> of cities increasing.</li>
+<li>Confusing urbanisation with counter-urbanisation. Urbanisation means people moving <strong>to</strong> cities; counter-urbanisation means people moving <strong>away</strong> from cities to rural areas.</li>
+<li>Reading a population pyramid the wrong way round. The <strong>base</strong> shows the youngest ages; the <strong>top</strong> shows the oldest — males are usually shown on the left, females on the right.</li>
+<li>Thinking the DTM predicts the future. It is a <strong>model based on past patterns</strong>, mainly from Europe — not every country follows the same path.</li>
 </ul>`,
 
-"island-35": `<h4>Introduction</h4>
-<p>Biomes are the world's major ecosystems, each defined by its climate, vegetation and wildlife. From the dense tropical rainforest to the parched Sahara to the frozen Arctic tundra, biomes follow predictable patterns across the globe — and human activity is threatening many of them at an alarming rate.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>A <strong>biome</strong> is a large-scale ecosystem defined by climate and dominant vegetation type. Distribution follows latitude and climate zones.</li>
-<li><strong>Tropical rainforest</strong>: near the Equator; hot (~27°C) and wet (2,000mm+ rainfall/year) all year. Four layers: emergent, canopy, understorey, forest floor.</li>
-<li><strong>Nutrient cycling in the rainforest (Gersmehl model)</strong>: most nutrients are stored in the <strong>biomass</strong> (living plants), not the soil. Rapid decomposition returns nutrients to the soil, but they are immediately taken up by plant roots. If trees are removed, the nutrient cycle breaks — rain washes nutrients away, leaving infertile soil. This is why deforested rainforest land quickly becomes unproductive.</li>
-<li><strong>Indigenous peoples</strong>: groups such as the Yanomami (Amazon) have lived sustainably in the rainforest for thousands of years. They use shifting cultivation (clearing small areas, farming briefly, then moving on to let forest regrow), hunt sustainably, and have deep knowledge of medicinal plants. Deforestation threatens their land, culture and survival.</li>
-<li><strong>Case study — the Amazon rainforest</strong>: the world's largest tropical rainforest, covering ~5.5 million km² across nine countries. Contains roughly 10% of all species on Earth. Deforestation rate has increased dramatically — driven by cattle ranching (80% of cleared land), soy farming, logging and mining. Brazil's deforestation policies have fluctuated between enforcement and relaxation.</li>
-<li><strong>Latitude and biome distribution</strong>: biomes follow a pattern linked to latitude. Near the Equator (low latitude) — intense direct sunlight → hot → tropical rainforest. Moving towards the poles — less direct sunlight → cooler → savanna grassland → deciduous forest → coniferous forest (taiga) → tundra → ice cap. Altitude has a similar effect — higher mountains are colder.</li>
-<li><strong>Temperate deciduous forest</strong>: the UK's natural biome. Found in mid-latitudes with mild, wet climates and four distinct seasons. Trees include oak, beech, ash and birch — they lose their leaves in autumn to conserve water during winter (<em>deciduous</em> = leaf-shedding). Rich biodiversity but much of the original forest has been cleared for farming and settlement.</li>
-<li><strong>Coniferous forest (taiga/boreal forest)</strong>: the largest land biome on Earth, stretching across northern Russia, Scandinavia and Canada (~50–70°N). Evergreen conifers (pine, spruce, fir) have needle-like leaves to reduce water loss and a conical shape to shed snow. Cold, long winters and short summers. Soil is acidic and thin.</li>
-<li><strong>Grassland (savanna and temperate prairie)</strong>: biomes dominated by grasses with few or no trees, found where rainfall is too low to support forest but enough to prevent desert. <strong>Tropical savanna</strong> (e.g. African Serengeti) has distinct wet and dry seasons. <strong>Temperate grassland</strong> (e.g. North American prairie) has hot summers and cold winters.</li>
-<li><strong>Hot desert</strong>: very hot days, cold nights; minimal rainfall (&lt;250mm/year); found 20–30° north and south of Equator. <strong>Desert adaptations</strong>: cacti store water in thick fleshy stems, have spines instead of leaves to reduce water loss, and long/shallow roots to collect water quickly. Camels store fat (not water) in their humps for energy, have wide feet for walking on sand, and thick eyelashes to keep out sand.</li>
-<li><strong>Polar regions and cold environments</strong>: the Arctic (north) and Antarctic (south) have extremely cold temperatures (−30°C to −50°C in winter), low precipitation and continuous daylight or darkness depending on season. Vegetation is limited to mosses, lichens and tough grasses (tundra). Animals adapt with thick fur/blubber (polar bears, seals), white camouflage, compact body shapes to reduce heat loss, and migration or hibernation. Polar ice is melting due to climate change, threatening habitats and raising sea levels globally.</li>
-<li><strong>Coral reefs</strong>: found in warm, shallow, clear tropical oceans (typically 25–29°C). Often called the "rainforests of the sea" due to their extraordinary biodiversity. Threatened by coral bleaching (caused by rising sea temperatures), ocean acidification, pollution and overfishing.</li>
-<li>Adaptations are critical — every organism in a biome has specific features allowing it to survive the local conditions.</li>
-</ul>
+"island-35": `<h2>Biomes &amp; Climate Zones</h2>
+<p>Biomes are the world's major ecosystems, each defined by its climate, vegetation and wildlife. From the dense tropical rainforest to the parched Sahara to the frozen Arctic tundra, biomes follow predictable patterns across the globe — and human activity is now threatening many of them at an alarming rate.</p>
+
+<h3>Biomes and Latitude</h3>
+<p>A <strong>biome</strong> is a large-scale ecosystem defined by its climate and dominant vegetation type, and where a biome appears is not random — it follows latitude closely. Near the Equator, where sunlight is most direct and intense, conditions are hot enough for tropical rainforest; moving towards the poles, sunlight becomes progressively less direct and temperatures fall, producing a predictable sequence: savanna grassland, deciduous forest, coniferous forest (taiga), tundra, and finally ice cap. Altitude produces the same cooling effect as latitude, which is why high mountains are cold even near the Equator.</p>
+
+<h3>The Tropical Rainforest</h3>
+<p>The <strong>tropical rainforest</strong> sits near the Equator, hot (around 27°C) and wet (2,000mm+ of rainfall) all year round, and is structured into four distinct layers — emergent, canopy, understorey and forest floor. Its soil hides a surprising fact, explained by the <strong>Gersmehl model</strong> of nutrient cycling: most nutrients are stored in the <strong>biomass</strong> — the living plants themselves — rather than the soil, because rapid decomposition returns nutrients to the ground only for them to be immediately reabsorbed by tree roots. Remove the trees, and that fast, efficient cycle breaks down entirely: with no roots left to absorb them, nutrients are simply washed away by the heavy rain, leaving the exposed soil infertile within just a few years — which is exactly why deforested rainforest land so quickly becomes unproductive. Indigenous peoples such as the <strong>Yanomami</strong> of the Amazon have lived within these limits sustainably for thousands of years, using shifting cultivation — clearing small areas, farming them briefly, then moving on to let the forest regrow — alongside sustainable hunting and deep knowledge of medicinal plants; deforestation now threatens their land, culture and survival directly. The <strong>Amazon rainforest</strong> itself is the world's largest, covering roughly 5.5 million km² across nine countries and containing around 10% of all species on Earth, yet its deforestation rate has increased dramatically, driven above all by cattle ranching (accounting for about 80% of cleared land), along with soy farming, logging and mining.</p>
 <div class="lesson-diagram" data-diagram="rainforest-layers"><p class="diagram-caption">The four layers of the tropical rainforest — emergent, canopy, under-storey and forest floor</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="gersmehl-model"><p class="diagram-caption">The Gersmehl nutrient cycle — how nutrients flow between biomass, litter and soil</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Temperate and Coniferous Forests, and Grasslands</h3>
+<p>The UK's own natural biome is <strong>temperate deciduous forest</strong>, found in mid-latitudes with mild, wet climates and four distinct seasons; trees such as oak, beech, ash and birch shed their leaves in autumn — <em>deciduous</em> literally means leaf-shedding — to conserve water through winter, though much of the UK's original forest has long since been cleared for farming and settlement. Further north, across northern Russia, Scandinavia and Canada (roughly 50–70°N), lies <strong>coniferous forest</strong> (taiga or boreal forest), the largest land biome on Earth, where evergreen conifers like pine, spruce and fir cope with cold, long winters using needle-like leaves that reduce water loss and a conical shape that sheds snow. Between forest and desert sit the <strong>grasslands</strong>, found wherever rainfall is too low to support trees but still high enough to prevent true desert: tropical savanna, such as the African Serengeti, has distinct wet and dry seasons, while temperate grassland, such as the North American prairie, swings between hot summers and cold winters instead.</p>
+
+<h3>Deserts, Polar Regions and Coral Reefs</h3>
+<p><strong>Hot deserts</strong>, found 20–30° north and south of the Equator, combine very hot days with cold nights and minimal rainfall (under 250mm a year), forcing plants and animals into specialised <strong>adaptations</strong>: cacti store water in thick, fleshy stems, replace leaves with spines to cut water loss, and grow long, shallow roots to collect water quickly after rare rainfall, while camels store fat rather than water in their humps, have wide feet for walking on sand, and thick eyelashes to keep sand out of their eyes. At the opposite extreme, the <strong>polar regions</strong> — Arctic and Antarctic — endure temperatures of −30°C to −50°C in winter, minimal precipitation, and months of continuous daylight or darkness depending on the season; vegetation is limited to mosses, lichens and tough tundra grasses, while animals such as polar bears and seals rely on thick fur or blubber, white camouflage, compact body shapes that reduce heat loss, and migration or hibernation to survive — a biome now under direct threat as polar ice melts due to climate change, endangering habitats and raising sea levels worldwide. Finally, <strong>coral reefs</strong>, found in warm, shallow, clear tropical waters (typically 25–29°C), are often called the "rainforests of the sea" for their extraordinary biodiversity, but face their own mounting threats from coral bleaching, ocean acidification, pollution and overfishing.</p>
+<div class="lesson-diagram" data-diagram="xerophyte-adaptations"><p class="diagram-caption">Xerophyte adaptations: how cacti and other desert plants conserve water</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Explain how the drip-tip leaf and buttress roots are adaptations to the tropical rainforest.</p>
 <p><strong>Solution:</strong><br>
@@ -1511,49 +1453,35 @@ Country A is <strong>5 times</strong> more densely populated. Despite having few
 5. Heavy tropical rainfall <strong>leaches</strong> (washes away) nutrients from the exposed soil within just a few years.<br>
 6. Result: the land becomes <strong>infertile</strong> — farmers move on and clear more forest, creating a destructive cycle.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Biome</dt><dd>A large global ecosystem defined by its climate, characteristic vegetation and wildlife.</dd>
-<dt>Biodiversity</dt><dd>The variety of living species in an area — the tropical rainforest has the highest biodiversity on Earth.</dd>
-<dt>Deforestation</dt><dd>The large-scale clearing of forest, typically for agriculture, logging or development.</dd>
-<dt>Adaptation</dt><dd>An inherited feature that helps an organism survive in its specific environment.</dd>
-<dt>Gersmehl model</dt><dd>A diagram showing how nutrients cycle between biomass, litter and soil in an ecosystem — in the rainforest, the largest store is the biomass.</dd>
-<dt>Biomass</dt><dd>The total mass of living organisms in an area — in the rainforest, the trees and plants store the majority of nutrients.</dd>
-<dt>Tundra</dt><dd>A cold, treeless biome found in polar regions, characterised by permafrost, mosses, lichens and low temperatures.</dd>
-<dt>Deciduous</dt><dd>Trees that shed their leaves in autumn to conserve water during winter — e.g. oak, beech, birch. The UK's natural biome is temperate deciduous forest.</dd>
-<dt>Coniferous (taiga)</dt><dd>Evergreen trees with needle-like leaves and conical shapes, found in the boreal forest biome across northern latitudes — e.g. pine, spruce, fir.</dd>
-<dt>Savanna</dt><dd>A tropical grassland biome with distinct wet and dry seasons, scattered trees, and large herds of grazing animals — e.g. the African Serengeti.</dd>
-<dt>Coral bleaching</dt><dd>The loss of colour in corals caused by stress (usually rising sea temperatures), which expels the algae living inside them and can lead to coral death.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking all of Africa is hot desert — ✅ Correct: Africa contains <strong>multiple biomes</strong> — rainforest, savanna, desert, Mediterranean and more.</li>
-<li>❌ Saying deforestation only affects local wildlife — ✅ Correct: deforestation releases stored carbon, contributing to <strong>global</strong> climate change.</li>
-<li>❌ Confusing climate zone with biome — ✅ Correct: climate zone refers to temperature and rainfall patterns; biome includes the <strong>living organisms</strong> adapted to those conditions.</li>
-<li>❌ Thinking rainforest soil is rich and fertile — ✅ Correct: most nutrients are in the <strong>biomass</strong>, not the soil. Without trees, the thin soil loses fertility rapidly (Gersmehl model).</li>
-<li>❌ Forgetting polar regions when listing biomes — ✅ Correct: polar/tundra is a <strong>major global biome</strong> covering large areas and is specifically required by the curriculum.</li>
+<li>Thinking all of Africa is hot desert. Africa contains <strong>multiple biomes</strong> — rainforest, savanna, desert, Mediterranean and more.</li>
+<li>Saying deforestation only affects local wildlife. Deforestation releases stored carbon, contributing to <strong>global</strong> climate change too.</li>
+<li>Confusing climate zone with biome. Climate zone refers only to temperature and rainfall patterns; biome also includes the <strong>living organisms</strong> adapted to those conditions.</li>
+<li>Thinking rainforest soil is rich and fertile. Most nutrients are in the <strong>biomass</strong>, not the soil — without trees, the thin soil loses fertility rapidly, exactly as the Gersmehl model predicts.</li>
+<li>Forgetting polar regions when listing biomes. Polar/tundra is a <strong>major global biome</strong> covering large areas, not an afterthought.</li>
 </ul>`,
 
-"island-36": `<h4>Introduction</h4>
+"island-36": `<h2>Tectonic Activity</h2>
 <p>The ground beneath your feet is constantly moving — just too slowly to notice. The Earth's tectonic plates shift on convection currents in the mantle, and where they meet, they produce the planet's most dramatic and dangerous events: volcanoes, earthquakes and tsunamis. These processes have shaped the Earth over billions of years of geological time.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Earth's structure</strong> (outside → in): crust → mantle → outer core (liquid) → inner core (solid).</li>
-<li><strong>Convection currents</strong> in the mantle are the driving mechanism for plate movement. Radioactive decay in the core heats the mantle → hot, semi-molten rock rises → spreads out near the crust, dragging tectonic plates with it → cools → sinks back down → cycle repeats. These slow circular currents are why plates move a few centimetres per year.</li>
-<li><strong>Constructive boundary</strong>: plates move apart → magma rises → new crust → volcanoes and rift valleys (e.g. Iceland on the Mid-Atlantic Ridge).</li>
-<li><strong>Destructive boundary</strong>: oceanic plate subducts under continental → melts → volcanoes and fold mountains → earthquakes (e.g. Japan, Andes). Where two continental plates collide, fold mountains form without volcanic activity (e.g. the Himalayas).</li>
-<li><strong>Conservative boundary</strong>: plates slide past each other → no volcanoes → massive earthquakes (e.g. San Andreas Fault, California).</li>
-<li><strong>Earthquakes</strong>: caused by sudden release of stored energy when tectonic plates move. The <strong>focus</strong> (hypocentre) is the point underground where the rock fractures. The <strong>epicentre</strong> is the point on the surface directly above the focus — usually where shaking is most intense. The <strong>Richter scale</strong> measures earthquake magnitude (energy released) — it is logarithmic: each whole number increase = ~32 times more energy. Shallow-focus earthquakes (less than 70 km deep) cause the most surface damage.</li>
-<li><strong>Earthquake preparation</strong>: scientists cannot predict exactly when an earthquake will strike — they can only identify high-risk areas near plate boundaries. Preparation saves far more lives than prediction: earthquake-resistant buildings (flexible steel frames, deep foundations), emergency kits, evacuation drills, early warning systems, and public education.</li>
-<li><strong>Why people live near volcanoes</strong>: volcanic soil is extremely fertile for farming; volcanoes provide geothermal energy (cheap electricity); tourism creates jobs; minerals and building materials are available. Cultural ties, poverty, and the rarity of major eruptions mean daily benefits often outweigh occasional risks.</li>
-<li><strong>Tsunamis</strong>: formed when an earthquake or volcanic eruption occurs under the ocean, displacing a massive volume of water. The wave is barely noticeable in deep water but as it reaches shallow coastal areas it slows, builds in height and can devastate coastlines. The 2004 Indian Ocean tsunami killed over 230,000 people across 14 countries.</li>
-<li><strong>Geological timescales</strong>: the Earth is approximately 4.6 billion years old. Geologists divide this into eons, eras and periods. The movement of tectonic plates has completely rearranged continents over hundreds of millions of years — e.g. the supercontinent Pangaea began breaking apart ~200 million years ago. Human existence represents a tiny fraction of geological time.</li>
-<li><strong>HIC vs LIC response</strong>: the same magnitude earthquake causes very different impacts depending on a country's wealth. HICs (e.g. Japan) have earthquake-proof buildings, early warning systems, trained emergency services, and insurance. LICs (e.g. Nepal, Haiti) often have weaker infrastructure, limited emergency response, and less access to aid — leading to far higher death tolls and slower recovery.</li>
-</ul>
+
+<h3>Earth's Structure and Plate Movement</h3>
+<p>Earth is built from four layers, from the outside in: the crust, the mantle, the liquid outer core, and the solid inner core. What actually moves the tectonic plates riding on top of the crust is <strong>convection currents</strong> deep in the mantle: radioactive decay in the core heats the mantle from below, hot semi-molten rock rises and spreads out near the crust — dragging the plates above it along for the ride — before cooling and sinking back down to repeat the cycle. These slow, circular currents are the entire reason plates creep along at only a few centimetres a year.</p>
 <div class="lesson-diagram" data-diagram="earth-structure-geo"><p class="diagram-caption">The layers of the Earth — from the thin crust to the solid inner core</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Plate Boundaries</h3>
+<p>What happens where two plates meet depends entirely on which way they are moving relative to each other. At a <strong>constructive boundary</strong>, plates move apart, letting magma rise to form new crust — producing volcanoes and rift valleys, as in Iceland on the Mid-Atlantic Ridge. At a <strong>destructive boundary</strong>, an oceanic plate is forced (subducted) beneath a continental one and melts, producing both volcanoes and earthquakes, as in Japan or the Andes; where two continental plates collide instead, neither can subduct, so the collision simply crumples the crust upward into fold mountains without any volcanic activity, as with the Himalayas. At a <strong>conservative boundary</strong>, plates slide past each other without any melting at all — so no volcanoes form, but the friction of sliding plates still produces massive earthquakes, as along the San Andreas Fault in California.</p>
 <div class="lesson-diagram" data-diagram="plate-boundaries"><p class="diagram-caption">The three types of plate boundary: constructive, destructive and conservative</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="volcano-cross-section"><p class="diagram-caption">Cross-section of a volcano showing magma chamber, vent and crater</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Earthquakes: Causes, Measurement and Preparation</h3>
+<p>An <strong>earthquake</strong> happens when stress built up between moving plates is suddenly released. The <strong>focus</strong> (or hypocentre) is the point underground where the rock actually fractures, while the <strong>epicentre</strong> is the point directly above it on the surface, usually where shaking is most intense — and the shallower the focus (under 70 km deep), the more damage reaches the surface. The <strong>Richter scale</strong> measures how much energy was released, but it is <strong>logarithmic</strong> rather than linear, so each whole-number increase represents roughly 32 times more energy — meaning a "small" jump on the scale hides an enormous difference in destructive power. Because scientists cannot predict exactly when an earthquake will strike — only identify the high-risk areas near plate boundaries — preparation saves far more lives than prediction ever could: earthquake-resistant buildings with flexible steel frames and deep foundations, emergency kits, evacuation drills, early warning systems and public education all matter more than trying to forecast the exact moment. That preparation gap is also why the same magnitude earthquake causes wildly different outcomes depending on where it strikes: high-income countries such as Japan combine earthquake-proof buildings, early warning systems, trained emergency services and insurance, while lower-income countries such as Nepal or Haiti often have weaker infrastructure and less access to aid, leading to far higher death tolls and much slower recovery from a comparable quake.</p>
+
+<h3>Volcanoes, Tsunamis and Geological Time</h3>
+<p>Given the danger, it can seem strange that people choose to live near volcanoes at all — but volcanic soil is extremely fertile for farming, volcanoes can provide cheap geothermal electricity, tourism creates jobs, and useful minerals and building materials are often close at hand; combined with cultural ties, poverty limiting other options, and the simple rarity of major eruptions, the everyday benefits frequently outweigh the occasional risk. A related but distinct hazard is the <strong>tsunami</strong>, formed when an earthquake or volcanic eruption under the ocean displaces a huge volume of water; the resulting wave is barely noticeable out in deep water, but as it reaches shallow coastal areas it slows down and builds dramatically in height, with the potential to devastate entire coastlines — the 2004 Indian Ocean tsunami alone killed over 230,000 people across 14 countries. Set against Earth's full <strong>geological timescale</strong> — roughly 4.6 billion years, divided by geologists into eons, eras and periods — these events are just the latest chapter in a much longer story of shifting continents: the supercontinent Pangaea only began breaking apart around 200 million years ago, and human existence represents a vanishingly small fraction of that history.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Japan experiences frequent earthquakes and volcanic eruptions. Using plate tectonics, explain why.</p>
 <p><strong>Solution:</strong><br>
@@ -1575,45 +1503,30 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 • Nepal relied heavily on international aid — limited domestic resources for recovery.<br><br>
 <strong>Key insight:</strong> Wealth and preparation significantly affect the <strong>impact</strong> of a natural hazard. The hazard itself is natural; the <strong>disaster</strong> is often shaped by human factors.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Tectonic plate</dt><dd>A large, rigid segment of the Earth's crust and upper mantle that moves on convection currents in the mantle.</dd>
-<dt>Convection current</dt><dd>A circular movement of heat in the mantle — hot rock rises, spreads, cools and sinks — driving tectonic plate movement.</dd>
-<dt>Subduction</dt><dd>The process where a denser oceanic plate is forced under a lighter continental plate at a destructive boundary.</dd>
-<dt>Focus</dt><dd>The point underground where an earthquake's energy is first released — also called the hypocentre. Shallow-focus earthquakes cause the most surface damage.</dd>
-<dt>Epicentre</dt><dd>The point on the Earth's surface directly above the focus (origin) of an earthquake — usually where shaking is most intense.</dd>
-<dt>Richter scale</dt><dd>A logarithmic scale measuring earthquake magnitude — each step represents roughly 32 times more energy released.</dd>
-<dt>Seismic waves</dt><dd>Waves of energy released by an earthquake that travel through the Earth, causing the ground to shake.</dd>
-<dt>Tsunami</dt><dd>A series of massive ocean waves caused by an underwater earthquake or volcanic eruption displacing water.</dd>
-<dt>Geological timescale</dt><dd>The division of Earth's 4.6-billion-year history into eons, eras and periods based on major geological and biological events.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying volcanoes form at all plate boundaries — ✅ Correct: <strong>no volcanoes</strong> form at conservative boundaries — only earthquakes.</li>
-<li>❌ Confusing focus and epicentre — ✅ Correct: the <strong>focus</strong> is underground where the earthquake originates; the <strong>epicentre</strong> is on the surface above it.</li>
-<li>❌ Thinking the Richter scale is linear — ✅ Correct: it is <strong>logarithmic</strong> — a magnitude 7 earthquake releases 10× more energy than a magnitude 6.</li>
-<li>❌ Assuming higher magnitude always means more deaths — ✅ Correct: the <strong>impact</strong> depends on population density, building quality, warning systems and wealth — not just magnitude.</li>
-<li>❌ Thinking tectonic plates move quickly — ✅ Correct: plates move only a few <strong>centimetres per year</strong> — continental rearrangement takes hundreds of millions of years.</li>
+<li>Saying volcanoes form at all plate boundaries. <strong>No volcanoes</strong> form at conservative boundaries — only earthquakes.</li>
+<li>Confusing focus and epicentre. The <strong>focus</strong> is underground where the earthquake originates; the <strong>epicentre</strong> is on the surface directly above it.</li>
+<li>Thinking the Richter scale is linear. It is <strong>logarithmic</strong> — a magnitude 7 earthquake releases roughly 32 times more energy than a magnitude 6.</li>
+<li>Assuming higher magnitude always means more deaths. The <strong>impact</strong> depends on population density, building quality, warning systems and wealth, not just magnitude.</li>
+<li>Thinking tectonic plates move quickly. Plates move only a few <strong>centimetres per year</strong> — continental rearrangement takes hundreds of millions of years.</li>
 </ul>`,
 
-"island-37": `<h4>Introduction</h4>
+"island-37": `<h2>Africa: Development &amp; Diversity</h2>
 <p>Africa is not a country — it is a vast, diverse continent of 54 nations, thousands of languages and extraordinary geographical variety. Understanding development, the legacy of colonialism, the role of aid and Fairtrade, and how different regions compare helps build a nuanced picture far removed from common stereotypes.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>Africa has 54 countries, over 2,000 languages, and contains every type of landscape: desert, rainforest, savanna, mountains and coastlines.</li>
-<li><strong>GDP (Gross Domestic Product)</strong>: the total value of all goods and services produced in a country in one year. GDP per capita (per person) is a common economic indicator — but it is an average that hides inequality (a few wealthy people can raise it while most remain poor).</li>
-<li><strong>HDI (Human Development Index)</strong> measures development using three indicators: life expectancy, education, and income per person (GNI per capita). HDI gives a more complete picture than GDP alone because it includes health and education, not just wealth.</li>
-<li><strong>Development indicators</strong>: <em>economic</em> indicators include GDP per capita, employment rates, and trade balance. <em>Social</em> indicators include literacy rate, life expectancy, infant mortality, access to clean water, and doctors per 1,000 people. Using multiple indicators gives a more accurate picture of development.</li>
-<li>Africa's development varies enormously: some countries (e.g. Seychelles, South Africa) have high HDI; others (e.g. Niger, South Sudan) face severe challenges.</li>
-<li><strong>Tourism</strong> brings foreign exchange, jobs and conservation funding — but can also cause "leakage" (profits leaving the local economy), environmental damage and cultural erosion.</li>
-<li><strong>Sustainable development</strong>: meeting present needs without compromising future generations' ability to meet theirs — tourism and resource use must balance economic, social and environmental goals.</li>
-<li><strong>Fairtrade</strong>: a system that guarantees farmers and producers in developing countries a fair minimum price for their goods (e.g. coffee, cocoa, bananas). It also provides a Fairtrade Premium — extra money invested in community projects like schools, wells or healthcare. Critics argue it only helps a small number of farmers and that the premium doesn't always reach those who need it most.</li>
-<li><strong>Types of aid</strong>: <strong>Bilateral</strong> (government to government — e.g. UK to Kenya); <strong>Multilateral</strong> (through organisations like the World Bank or UN); <strong>Short-term/emergency</strong> (immediate disaster relief — food, water, shelter); <strong>Long-term/development</strong> (building infrastructure, education, training). <strong>Tied aid</strong> = aid with conditions requiring the receiving country to spend money on goods/services from the donor country — critics argue this benefits the donor more than the recipient. Arguments for aid: saves lives, builds capacity. Arguments against: can create dependency, may be tied to political conditions, corruption can divert funds.</li>
-<li><strong>Colonial history and the development gap</strong>: European countries colonised most of Africa from the late 19th century, extracting resources (minerals, crops, people through slavery) and creating borders that ignored ethnic and cultural groups. When countries gained independence (mostly 1950s–1960s), they inherited weak institutions, economies dependent on exporting raw materials, and ethnic divisions. This history is a significant factor in understanding current development challenges — though Africa's story is also one of resilience, growth and innovation.</li>
-<li><strong>Comparative place study</strong>: the curriculum requires comparing regions within Africa. For example, comparing Lagos (Nigeria's commercial capital — rapid urbanisation, emerging tech industry, but severe inequality and infrastructure strain) with a rural area in sub-Saharan Africa (e.g. rural Kenya — subsistence farming, limited services, but strong community structures and growing mobile banking via M-Pesa).</li>
-</ul>
+
+<h3>Africa: Diversity and Measuring Development</h3>
+<p>Africa contains 54 countries, over 2,000 languages, and every type of landscape from desert and rainforest to savanna, mountains and coastline — which is exactly why generalising about "Africa" as a single place is almost always misleading. Measuring how developed a country is turns out to need more than one number. <strong>GDP (Gross Domestic Product)</strong> — the total value of goods and services a country produces in a year — is often expressed per capita as a simple economic indicator, but being an average, it can hide serious inequality: a small wealthy elite can pull the figure up while most of the population stays poor. The <strong>HDI (Human Development Index)</strong> gives a fuller picture by combining three measures — life expectancy, education, and income per person (GNI per capita) — so it captures health and education alongside wealth rather than wealth alone. Beyond these headline measures, economic indicators such as employment rates and trade balance, and social indicators such as literacy rate, infant mortality, access to clean water and doctors per 1,000 people, all add detail that a single number cannot. Applying these measures across Africa reveals just how much development varies: Seychelles and South Africa post high HDI scores, while Niger and South Sudan face severe ongoing challenges — a contrast that shows up just as sharply within a single country, comparing rapidly urbanising Lagos, with its emerging tech industry and severe inequality, against rural Kenya, where subsistence farming and limited services coexist with strong community structures and fast-growing mobile banking through M-Pesa.</p>
+
+<h3>Tourism, Sustainable Development and Fairtrade</h3>
+<p><strong>Tourism</strong> brings foreign exchange, jobs and conservation funding into a country, but it comes with real costs too: "leakage" describes profits flowing straight back out to foreign-owned hotels and airlines instead of staying in the local economy, alongside environmental damage and the erosion of local culture. Managing that trade-off well means aiming for <strong>sustainable development</strong> — meeting today's needs without compromising future generations' ability to meet theirs — balancing economic, social and environmental goals rather than chasing tourist income alone. <strong>Fairtrade</strong> tackles a related problem from the trade side: it guarantees farmers and producers a fair minimum price for goods such as coffee, cocoa and bananas, plus a Fairtrade Premium invested in community projects like schools, wells or healthcare — though critics point out it only reaches a limited number of farmers, and the premium does not always end up with those who need it most.</p>
+
+<h3>Aid and the Legacy of Colonialism</h3>
+<p>International aid takes several distinct forms: <strong>bilateral</strong> aid passes directly from one government to another, <strong>multilateral</strong> aid flows through organisations like the World Bank or the UN, and aid can also be split by timescale into short-term emergency relief (food, water, shelter after a disaster) versus long-term development aid (infrastructure, education, training). One particular form, <strong>tied aid</strong>, comes with conditions requiring the recipient to spend the money on goods or services from the donor country — a structure critics argue benefits the donor more than the country receiving it. Aid's case rests on saving lives and building capacity; the case against it points to the risk of <strong>dependency</strong>, political strings, and corruption diverting funds from those they were meant to help. Much of today's development gap has a longer history behind it: European powers colonised most of Africa from the late 19th century, extracting minerals, crops and — through the slave trade — people, while drawing borders that ignored existing ethnic and cultural groups entirely. When countries gained independence, mostly through the 1950s and 60s, they inherited weak institutions, economies still dependent on exporting raw materials, and the ethnic divisions those colonial borders had created — a significant factor in today's development challenges, even as Africa's ongoing story is equally one of resilience, growth and innovation.</p>
 <div class="lesson-diagram" data-diagram="types-of-aid"><p class="diagram-caption">Types of international aid — bilateral, multilateral, short-term and long-term</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example 1:</strong> Assess the benefits and costs of tourism in Kenya.</p>
 <p><strong>Solution:</strong><br>
@@ -1641,40 +1554,52 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 <strong>Alternatives:</strong> Fairtrade, investment in local businesses, debt relief, improving governance.<br>
 <strong>Judgement:</strong> Aid is most effective when it is <strong>long-term, locally led</strong> and combined with trade and investment — not as a replacement for them.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>HDI</dt><dd>Human Development Index — a composite score (0–1) measuring a country's development through life expectancy, education and income.</dd>
-<dt>Leakage</dt><dd>The proportion of tourism income that flows out of the local economy to foreign companies or imported goods.</dd>
-<dt>Sustainable development</dt><dd>Development that meets present needs without compromising the ability of future generations to meet theirs.</dd>
-<dt>GNI per capita</dt><dd>Gross National Income per person — a measure of average income used in the HDI calculation.</dd>
-<dt>Fairtrade</dt><dd>A certification system guaranteeing producers in developing countries a fair minimum price and a social premium for community investment.</dd>
-<dt>Bilateral aid</dt><dd>Aid given directly from one government to another — may come with conditions or political expectations.</dd>
-<dt>Tied aid</dt><dd>Aid that requires the recipient to spend the money on goods or services from the donor country.</dd>
-<dt>Colonialism</dt><dd>The practice of one country taking political and economic control of another territory — European colonialism in Africa lasted from the late 19th century to the mid-20th century.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Treating Africa as one country with one culture — ✅ Correct: Africa is a <strong>continent of 54 diverse nations</strong>. Generalisations are almost always wrong.</li>
-<li>❌ Saying tourism is always good for development — ✅ Correct: without careful management, leakage means most profit <strong>leaves</strong> the local economy.</li>
-<li>❌ Confusing GDP and HDI — ✅ Correct: GDP measures only <strong>economic output</strong>; HDI measures health and education <strong>as well as</strong> income.</li>
-<li>❌ Thinking aid is always helpful — ✅ Correct: aid can create <strong>dependency</strong> and may come with political strings. It works best when <strong>long-term and locally led</strong>.</li>
-<li>❌ Ignoring colonial history when discussing development — ✅ Correct: colonialism extracted resources, created artificial borders and left weak institutions — it is a <strong>significant historical factor</strong> in today's development gap.</li>
+<li>Treating Africa as one country with one culture. Africa is a <strong>continent of 54 diverse nations</strong> — generalisations are almost always wrong.</li>
+<li>Saying tourism is always good for development. Without careful management, leakage means most of the profit <strong>leaves</strong> the local economy.</li>
+<li>Confusing GDP and HDI. GDP measures only <strong>economic output</strong>; HDI measures health and education <strong>as well as</strong> income.</li>
+<li>Thinking aid is always helpful. Aid can create <strong>dependency</strong> and may come with political strings — it works best when <strong>long-term and locally led</strong>.</li>
+<li>Ignoring colonial history when discussing development. Colonialism extracted resources, created artificial borders and left weak institutions — it remains a <strong>significant historical factor</strong> in today's development gap.</li>
 </ul>`,
 
-"island-30": `<h4>Introduction</h4>
-<p>Energy is the ability to do work — and it exists in many different stores. The crucial principle is that energy is never created or destroyed, only transferred between stores. Understanding how this works explains everything from a bouncing ball to a power station.</p>
-<h4>📌 Key Points</h4>
+"island-30": `<h2>Energy Stores &amp; Transfers</h2>
+<p>Every time you switch on a kettle, kick a football or drop your phone, energy is on the move. It never appears from nowhere and never vanishes into nothing — it just changes which store it is sitting in, over and over, until eventually it ends up spread out as heat in the surroundings. This chapter is about learning to follow that energy: naming the stores it can sit in, tracking how it moves between them, and working out how much of it actually ends up doing something useful.</p>
+
+<h3>Energy Stores</h3>
+<p>Physicists describe energy as sitting in one of several <strong>stores</strong> at any given moment. Six stores cover almost everything you will meet at this level:</p>
 <ul>
-<li>Key energy stores: <strong>kinetic</strong> (moving), <strong>thermal</strong> (heat), <strong>chemical</strong> (food/fuel), <strong>gravitational potential</strong> (height), <strong>elastic potential</strong> (stretched/compressed), <strong>nuclear</strong>.</li>
-<li><strong>Law of Conservation of Energy</strong>: energy cannot be created or destroyed — only transferred from one store to another.</li>
-<li>Energy is transferred by: <strong>heating</strong>, <strong>forces doing work</strong>, <strong>electricity</strong>, and <strong>waves</strong> (light, sound).</li>
-<li>Energy is measured in <strong>Joules (J)</strong>. Power (energy transferred per second) is measured in <strong>Watts (W)</strong>. 1 W = 1 J/s.</li>
-<li><strong>Conduction</strong> (solids — vibrating particles), <strong>convection</strong> (fluids — hot fluid rises, cool sinks) and <strong>radiation</strong> (infrared electromagnetic waves — no medium needed, travels through a vacuum) are the three methods of heat transfer.</li>
-<li><strong>GPE = mass × g × height</strong> (gravitational potential energy formula). On Earth, g = 10 N/kg.</li>
-<li><strong>Efficiency</strong> = (useful energy output ÷ total energy input) × 100 %. No device is 100 % efficient — some energy is always "wasted" as heat.</li>
-<li>A <strong>Sankey diagram</strong> uses arrows whose width represents energy — showing how input energy splits into useful output and wasted energy.</li>
+<li><strong>Kinetic</strong> — the store of anything that is moving, from a falling ball to a spinning turbine.</li>
+<li><strong>Thermal</strong> — the store associated with an object's temperature; the hotter something is, the more energy it holds here.</li>
+<li><strong>Chemical</strong> — energy locked inside the bonds of substances such as food and fuel, released when those bonds are broken in a reaction.</li>
+<li><strong>Gravitational potential</strong> — the store of anything raised up against gravity. Its size can be calculated directly: <strong>GPE = mass × g × height</strong>, where g is the gravitational field strength — on Earth, g = 10 N/kg.</li>
+<li><strong>Elastic potential</strong> — the store of anything stretched or squashed, such as a spring or an elastic band.</li>
+<li><strong>Nuclear</strong> — energy held inside the nucleus of an atom, released in nuclear reactions.</li>
 </ul>
-<h4>✏️ Worked Example</h4>
+<p>Whichever store is involved, one law never breaks: the <strong>Law of Conservation of Energy</strong> states that energy cannot be created or destroyed, only transferred from one store to another. Nothing is ever truly "used up" — it just moves somewhere else, often somewhere less useful.</p>
+<div class="lesson-diagram" data-diagram="energy-stores"><p class="diagram-caption">The main energy stores</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Transferring Energy and Measuring It</h3>
+<p>Energy can move between stores in four ways: by <strong>heating</strong>, by a <strong>force doing work</strong> (pushing, lifting or stretching something), through <strong>electricity</strong> flowing round a circuit, or by <strong>waves</strong> such as light and sound carrying it across space.</p>
+<p>However it moves, energy is always measured in <strong>joules (J)</strong>. When you want to know how quickly it is being transferred, you use <strong>power</strong>, measured in <strong>watts (W)</strong> — one watt is one joule transferred every second (1 W = 1 J/s). A more powerful device is not necessarily better at its job; it just transfers energy faster, which is a different thing from transferring it efficiently.</p>
+
+<h3>The Three Methods of Heat Transfer</h3>
+<p>Heat moves from a hotter place to a cooler one by three distinct methods, and each one depends on a different physical mechanism.</p>
+<ul>
+<li><strong>Conduction</strong> happens mainly in solids. Particles that gain energy vibrate more and collide with their neighbours, passing that extra vibration — and the energy that comes with it — along the material particle by particle, without any particle itself travelling anywhere.</li>
+<li><strong>Convection</strong> happens in fluids (liquids and gases). When part of a fluid is heated, its particles spread further apart, making that region less dense than the fluid around it. The warmer, less dense fluid rises while cooler, denser fluid sinks to take its place, setting up a circulating current.</li>
+<li><strong>Radiation</strong> is different again: it is infrared electromagnetic radiation, emitted by every object, and — unlike conduction or convection — it needs no medium to travel through at all. That is how the Sun's energy crosses the vacuum of space to reach Earth.</li>
+</ul>
+<div class="lesson-diagram" data-diagram="heat-transfer-methods"><p class="diagram-caption">Conduction, convection and radiation compared</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Efficiency and Wasted Energy</h3>
+<p>No device transfers all of its input energy to somewhere useful — some is always lost, usually as thermal energy spreading into the surroundings by the heat-transfer methods above. The proportion that ends up useful is called a device's <strong>efficiency</strong>:</p>
+<p style="font-size:1.05em;text-align:center;padding:0.5em;background:var(--surface2);border-radius:6px"><strong>Efficiency = (useful energy output ÷ total energy input) × 100 %</strong></p>
+<p>No device is 100 % efficient. A <strong>Sankey diagram</strong> shows this visually: it uses arrows whose width represents an amount of energy, branching from a single input arrow into a narrower "useful" arrow and one or more "wasted" arrows — the wider the wasted branch, the less efficient the device.</p>
+<div class="lesson-diagram" data-diagram="sankey-diagram"><p class="diagram-caption">A Sankey diagram: arrow width shows how input energy splits into useful output and waste</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Describe the energy transfers when a ball is dropped from a height and bounces.</p>
 <p><strong>Solution:</strong><br>
@@ -1684,38 +1609,31 @@ Japan's location above this boundary makes both hazards <strong>frequent and sev
 4. Ball bounces up → elastic PE transfers back to KE, then to GPE — but less than before (energy lost as heat/sound).<br>
 Each bounce is lower — total energy is <strong>conserved</strong> but some is in less useful forms.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Energy store</dt><dd>A way of holding energy — kinetic, thermal, chemical, gravitational potential, elastic potential, nuclear.</dd>
-<dt>Conservation of energy</dt><dd>The principle that the total energy in a closed system remains constant — energy is never created or destroyed.</dd>
-<dt>Conduction</dt><dd>Heat transfer through a solid by vibrating particles passing energy along the material.</dd>
-<dt>Convection</dt><dd>Heat transfer in a fluid (liquid or gas) by the movement of currents — hot fluid rises, cool fluid sinks.</dd>
-<dt>Radiation</dt><dd>Heat transfer by infrared electromagnetic waves — requires no medium and can travel through a vacuum.</dd>
-<dt>Efficiency</dt><dd>The proportion of input energy that is usefully transferred: (useful output ÷ total input) × 100 %.</dd>
-<dt>Sankey diagram</dt><dd>A branching arrow diagram whose widths show how energy is split between useful output and waste — wider = more energy.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying energy "disappears" or is "used up" — ✅ Correct: energy is always <strong>transferred</strong> — it never vanishes, it just moves to a less useful store.</li>
-<li>❌ Confusing heat transfer methods — ✅ Correct: conduction needs a <strong>solid</strong>; convection needs a <strong>fluid</strong>; radiation needs <strong>nothing</strong>.</li>
-<li>❌ Thinking a more powerful device is more efficient — ✅ Correct: efficiency is about the <strong>proportion</strong> of useful output energy, not the total power.</li>
+<li>Saying energy "disappears" or is "used up". Energy is always <strong>transferred</strong> to another store — it never vanishes, it just often ends up somewhere less useful, such as spread out as heat.</li>
+<li>Mixing up the three heat transfer methods. <strong>Conduction</strong> needs a solid; <strong>convection</strong> needs a fluid that can circulate; <strong>radiation</strong> needs no medium at all.</li>
+<li>Assuming a more powerful device is automatically more efficient. Power tells you how fast energy is transferred; efficiency tells you what proportion of it ends up useful — a powerful device can still waste most of its energy.</li>
 </ul>`,
 
-"island-38": `<h4>Introduction</h4>
+"island-38": `<h2>Scientific Enquiry</h2>
 <p>Science is not just a body of facts — it is a method of finding things out. Scientific enquiry uses careful observation, measurement and testing to build reliable explanations. Before you can draw meaningful conclusions, you need to know how to plan a fair test, identify variables, and record results properly.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>Every experiment has three types of variable: <strong>independent</strong> (what you change), <strong>dependent</strong> (what you measure), and <strong>control</strong> (what you keep the same).</li>
-<li>A <strong>fair test</strong> changes only ONE independent variable at a time — everything else must stay the same.</li>
-<li>A <strong>hypothesis</strong> is a testable prediction that explains WHY you expect a particular outcome.</li>
-<li><strong>Repeating</strong> measurements and calculating a <strong>mean</strong> makes results more reliable. Discard obvious anomalies first.</li>
-<li>Results can be <strong>displayed</strong> in tables, bar charts (categoric data) or line graphs (continuous data). On a graph, plot the <strong>independent variable on the x-axis</strong> and the <strong>dependent variable on the y-axis</strong>. Always label axes with name and units.</li>
-<li><strong>Accuracy</strong> = how close a measurement is to the true value. <strong>Precision</strong> = how consistent repeated measurements are. You can be precise but inaccurate (consistent but wrong).</li>
-<li><strong>Hazard symbols</strong> warn about dangers: 🔥 flame = flammable, ☠ skull = toxic, ⚗ corrosion symbol = corrosive (damages skin), ⚠ exclamation mark = harmful/irritant.</li>
-<li>Key lab safety rules: wear goggles for chemicals, tie back hair, never run, report spills, know where the fire extinguisher is.</li>
-</ul>
+
+<h3>Variables and Fair Tests</h3>
+<p>Every experiment involves three types of variable: the <strong>independent variable</strong> is what you deliberately change, the <strong>dependent variable</strong> is what you measure in response, and <strong>control variables</strong> are everything else you keep the same so they cannot affect the result. Together these define a <strong>fair test</strong>: one where only a single independent variable changes at a time, so any effect you observe can only be down to that one thing. Before running the test, a good investigation starts from a <strong>hypothesis</strong> — a testable prediction that also explains <em>why</em> you expect that particular outcome, not just a guess at the answer.</p>
 <div class="lesson-diagram" data-diagram="variables-diagram"><p class="diagram-caption">The three types of variable in an experiment</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Repeating, Recording and Displaying Results</h3>
+<p>A single measurement could easily be a fluke, so <strong>repeating</strong> measurements and calculating a <strong>mean</strong> makes results far more reliable — after first discarding any obvious <strong>anomalies</strong>, results that clearly do not fit the pattern and are likely due to error. Once collected, results are displayed in tables, bar charts for categoric data, or line graphs for continuous data. On any graph, the convention is fixed: the <strong>independent variable goes on the x-axis</strong> and the <strong>dependent variable on the y-axis</strong>, with every axis labelled with both its name and its units.</p>
+
+<h3>Accuracy and Precision</h3>
+<p>These two words sound similar but measure different things. <strong>Accuracy</strong> is how close a measurement is to the true value; <strong>precision</strong> is how consistent repeated measurements are with each other. The two can pull apart: it is entirely possible to be precise but inaccurate, getting the same wrong answer every time — consistency alone does not guarantee correctness.</p>
+
+<h3>Lab Safety</h3>
+<p>Hazard symbols give an instant warning of a substance's danger: a flame means <strong>flammable</strong>, a skull means <strong>toxic</strong>, the corrosion symbol means <strong>corrosive</strong> (it damages skin), and an exclamation mark means <strong>harmful or irritant</strong>. Alongside recognising these symbols, a handful of habits keep a lab safe: wearing goggles around chemicals, tying back hair, never running, reporting spills immediately, and knowing where the fire extinguisher is before you need it.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A student investigates how temperature affects how quickly sugar dissolves. Identify the three types of variable.</p>
 <p><strong>Solution:</strong><br>
@@ -1724,37 +1642,36 @@ Dependent variable (what you measure): <strong>time taken for sugar to dissolve<
 Control variables (keep the same): volume of water, amount of sugar, stirring speed, type of sugar.<br>
 This makes it a fair test — any change in dissolving time must be due to temperature.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Independent variable</dt><dd>The variable you deliberately change in an experiment.</dd>
-<dt>Dependent variable</dt><dd>The variable you observe or measure — it depends on the independent variable.</dd>
-<dt>Control variable</dt><dd>A variable kept constant to ensure the test is fair.</dd>
-<dt>Hypothesis</dt><dd>A testable, reasoned prediction (not just a guess) that can be supported or disproved by data.</dd>
-<dt>Anomaly</dt><dd>A result that does not fit the overall pattern and may be due to error.</dd>
-<dt>Accuracy</dt><dd>How close a measurement is to the true or accepted value.</dd>
-<dt>Precision</dt><dd>How consistent or close together repeated measurements are to each other.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Changing more than one variable at once — ✅ Correct: change ONLY the independent variable so you know what caused the effect.</li>
-<li>❌ Writing a hypothesis with no explanation — ✅ Correct: include a reason ("I predict X because…").</li>
-<li>❌ Drawing a line of best fit through every point including anomalies — ✅ Correct: ignore outliers and draw the line through the general trend.</li>
+<li>Changing more than one variable at once. Change <strong>only</strong> the independent variable, so you know exactly what caused the effect.</li>
+<li>Writing a hypothesis with no explanation. A good hypothesis includes a reason — "I predict X because…" — not just a guess.</li>
+<li>Drawing a line of best fit through every point, including anomalies. Ignore outliers and draw the line through the general trend instead.</li>
 </ul>`,
 
-"island-39": `<h4>Introduction</h4>
-<p>Electricity powers almost everything in modern life, and magnetism is closely linked to it. Understanding how current flows in circuits, how components affect that flow, and how magnets create invisible fields gives you the tools to explain everything from a torch to a maglev train.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Current</strong> (I) is the flow of charge, measured in Amps (A). <strong>Voltage</strong> (V) is the push from the battery, measured in Volts (V). <strong>Resistance</strong> (R) opposes current, measured in Ohms (Ω).</li>
-<li><strong>Ohm's Law</strong>: V = I × R — if voltage increases (and resistance stays the same), current increases.</li>
-<li>In a <strong>series circuit</strong>: one loop, same current everywhere, voltage is shared between components.</li>
-<li>In a <strong>parallel circuit</strong>: multiple branches, voltage the same across each branch, current splits between branches.</li>
-<li><strong>Magnets</strong> have north and south poles. Like poles repel, opposite poles attract. <strong>Magnetic field lines</strong> run from the north pole to the south pole and are closest together where the field is strongest (at the poles).</li>
-<li>Only certain materials are magnetic: <strong>iron</strong>, <strong>steel</strong>, <strong>nickel</strong> and <strong>cobalt</strong>. Most metals (copper, aluminium, gold) are NOT magnetic.</li>
-<li>An <strong>electromagnet</strong> is made by wrapping wire around an iron core and passing current through it — it can be switched on and off. Increase its strength by: increasing the <strong>current</strong>, adding more <strong>coils</strong> of wire, or using an <strong>iron core</strong>.</li>
-</ul>
+"island-39": `<h2>Electricity &amp; Magnetism</h2>
+<p>Electricity powers almost everything in modern life, and magnetism is closely linked to it — the two are, in fact, two faces of the same underlying force. Understanding how current flows in circuits, how components affect that flow, and how magnets create invisible fields gives you the tools to explain everything from a torch to a maglev train.</p>
+
+<h3>Current, Voltage and Resistance</h3>
+<p>Three quantities describe what is happening in a circuit. <strong>Current</strong> (I) is the flow of electric charge, measured in Amps (A). <strong>Voltage</strong> (V) is the push supplied by the battery that drives that charge around, measured in Volts (V). <strong>Resistance</strong> (R) is how much a component opposes the flow, measured in Ohms (Ω).</p>
+<p>These three are linked by <strong>Ohm's Law</strong>: V = I × R. Rearranged, this tells you that if the voltage increases while resistance stays the same, the current must increase too — a bigger push moves more charge.</p>
+<div class="lesson-diagram" data-diagram="circuit-symbols"><p class="diagram-caption">Common circuit symbols, including the ammeter and voltmeter</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Series and Parallel Circuits</h3>
+<p>How components are connected changes how current and voltage behave. In a <strong>series circuit</strong>, there is only one loop for the current to follow, so the same current flows through every component, while the voltage from the battery is shared out between them. In a <strong>parallel circuit</strong>, components sit on separate branches: the voltage across each branch is the same as the battery's, but the current splits up, with more current flowing through branches of lower resistance.</p>
 <div class="lesson-diagram" data-diagram="circuit-comparison"><p class="diagram-caption">Series vs parallel circuit layout</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Magnets and Magnetic Fields</h3>
+<p>Every magnet has a north and a south pole, and the rule for how they interact is simple: like poles repel, opposite poles attract. The invisible region around a magnet where this pulling and pushing can be felt is its <strong>magnetic field</strong>, usually drawn as field lines running from the north pole to the south pole. Field lines are drawn closer together where the field is strongest — which is always right at the poles.</p>
+<p>Only a small group of materials respond to a magnet: <strong>iron</strong>, <strong>steel</strong> (which contains iron), <strong>nickel</strong> and <strong>cobalt</strong>. Most metals you meet day to day — copper, aluminium, gold — are not magnetic at all.</p>
+<div class="lesson-diagram" data-diagram="magnetic-field"><p class="diagram-caption">Magnetic field lines run from north to south, closest together at the poles</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Electromagnets</h3>
+<p>An <strong>electromagnet</strong> is made by wrapping wire into a coil around an iron core and passing a current through it. Unlike a normal bar magnet, its magnetism only exists while the current flows, so it can be switched on and off — which is exactly what makes it so useful in devices like electric bells, cranes and motors. Its strength can be increased three ways: by increasing the <strong>current</strong>, by adding more <strong>coils</strong> of wire, or by using an <strong>iron core</strong>.</p>
+<div class="lesson-diagram" data-diagram="electromagnet"><p class="diagram-caption">An electromagnet: current through a coiled wire around an iron core</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A 6 V battery is connected to a bulb with a resistance of 3 Ω. Calculate the current flowing.</p>
 <p><strong>Solution:</strong><br>
@@ -1762,35 +1679,31 @@ V = I × R → rearrange → I = V ÷ R<br>
 I = 6 V ÷ 3 Ω = <strong>2 A</strong><br>
 A current of 2 Amps flows through the bulb.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Current (I)</dt><dd>The rate of flow of electric charge around a circuit. Measured in Amperes (A) using an ammeter in series.</dd>
-<dt>Voltage (V)</dt><dd>The energy given to each unit of charge by the power source. Measured in Volts (V) using a voltmeter in parallel.</dd>
-<dt>Resistance (R)</dt><dd>A measure of how much a component opposes the flow of current. Measured in Ohms (Ω).</dd>
-<dt>Electromagnet</dt><dd>A temporary magnet made by passing current through a coil of wire around an iron core.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking current is "used up" by bulbs — ✅ Correct: current is the SAME everywhere in a series circuit; energy is transferred, not current.</li>
-<li>❌ Connecting a voltmeter in series — ✅ Correct: voltmeters go in <strong>parallel</strong> across a component; ammeters go in <strong>series</strong>.</li>
-<li>❌ Thinking all metals are magnetic — ✅ Correct: only iron, cobalt, nickel (and steel, which contains iron) are magnetic.</li>
+<li>Thinking current is "used up" by bulbs. Current is the <strong>same everywhere</strong> in a series circuit — it is energy that gets transferred, not the current itself.</li>
+<li>Connecting a voltmeter in series. Voltmeters must go in <strong>parallel</strong> across a component; ammeters go in <strong>series</strong> with it.</li>
+<li>Assuming all metals are magnetic. Only iron, cobalt, nickel and steel (because it contains iron) respond to a magnet.</li>
 </ul>`,
 
-"island-40": `<h4>Introduction</h4>
-<p>Waves transfer energy from one place to another without transferring matter. They are everywhere — from the sound of your voice to the light from the Sun. The electromagnetic (EM) spectrum organises all types of EM radiation by frequency and wavelength, from radio waves to deadly gamma rays.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Transverse waves</strong>: vibrations are perpendicular to the direction of travel (e.g. light, water waves). <strong>Longitudinal waves</strong>: vibrations are parallel (e.g. sound).</li>
-<li><strong>Amplitude</strong> = height from rest to peak (relates to loudness/brightness). <strong>Wavelength</strong> = distance from one peak to the next. <strong>Frequency</strong> = number of waves per second (Hz).</li>
-<li>Wave speed equation: <strong>v = f × λ</strong> (speed = frequency × wavelength).</li>
-<li>The EM spectrum in order of increasing frequency: <strong>Radio → Microwave → Infrared → Visible → Ultraviolet → X-rays → Gamma rays</strong>.</li>
-<li>All EM waves travel at the <strong>speed of light</strong> (3 × 10⁸ m/s) in a vacuum and do NOT need a medium.</li>
-<li>Higher frequency = shorter wavelength = more energy = more dangerous. UV, X-rays and gamma rays are <strong>ionising</strong> — they can remove electrons from atoms and damage DNA, potentially causing cancer.</li>
-<li>Uses of EM waves: <strong>radio</strong> (TV, radio), <strong>microwaves</strong> (mobile phones, cooking), <strong>infrared</strong> (remote controls, thermal imaging), <strong>visible</strong> (seeing!), <strong>UV</strong> (sterilising, detecting forgeries), <strong>X-rays</strong> (medical imaging of bones), <strong>gamma</strong> (radiotherapy, sterilising food).</li>
-</ul>
+"island-40": `<h2>Waves &amp; the EM Spectrum</h2>
+<p>Waves transfer energy from one place to another without transferring any matter along with it. They are everywhere — from the sound of your voice to the light from the Sun, which arrives after crossing 150 million kilometres of empty space. This chapter looks at how waves are described, and at the family of waves that makes that empty-space journey possible: the electromagnetic spectrum.</p>
+
+<h3>Describing Waves</h3>
+<p>Waves come in two basic kinds, depending on which way the vibrations point relative to the direction of travel. In a <strong>transverse wave</strong>, the vibrations are perpendicular to the direction of travel — light and water waves are both transverse. In a <strong>longitudinal wave</strong>, the vibrations are parallel to the direction of travel instead — sound is the clearest example.</p>
+<p>Three measurements describe any wave. <strong>Amplitude</strong> is the height from the rest position to the peak, and it is what determines how much energy the wave carries — louder sound, brighter light. <strong>Wavelength</strong> is the distance from one point on a wave to the same point on the next one, such as peak to peak. <strong>Frequency</strong> is how many complete waves pass a point every second, measured in Hertz (Hz). These three are connected by the <strong>wave speed equation</strong>: v = f × λ (speed = frequency × wavelength).</p>
 <div class="lesson-diagram" data-diagram="wave-properties"><p class="diagram-caption">Transverse wave: amplitude, wavelength and frequency</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>The Electromagnetic Spectrum</h3>
+<p>The <strong>electromagnetic (EM) spectrum</strong> organises every type of EM radiation into one continuous family, ordered by increasing frequency: <strong>Radio → Microwave → Infrared → Visible → Ultraviolet → X-rays → Gamma rays</strong>. Despite looking so different from each other, every one of these waves travels at exactly the same speed — the <strong>speed of light</strong>, 3 × 10⁸ m/s — and none of them need a medium to travel through, which is exactly why sunlight can cross the vacuum of space to reach us.</p>
 <div class="lesson-diagram" data-diagram="em-spectrum"><p class="diagram-caption">The electromagnetic spectrum in order</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Ionising Radiation and Uses of EM Waves</h3>
+<p>Moving up the spectrum, frequency increases, wavelength shrinks, and the waves carry more energy — which also makes them more dangerous. UV, X-rays and gamma rays carry so much energy that they are <strong>ionising</strong>: they can knock electrons clean off atoms, damaging DNA and potentially causing cancer.</p>
+<p>Every part of the spectrum still has everyday uses, precisely because of how much energy it carries: <strong>radio</strong> waves for TV and radio broadcasting, <strong>microwaves</strong> for mobile phones and cooking, <strong>infrared</strong> for remote controls and thermal imaging, <strong>visible</strong> light for seeing, <strong>UV</strong> for sterilising and detecting forgeries, <strong>X-rays</strong> for medical imaging of bones, and <strong>gamma</strong> rays for radiotherapy and sterilising food.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A wave has a frequency of 500 Hz and a wavelength of 0.6 m. Calculate the wave speed.</p>
 <p><strong>Solution:</strong><br>
@@ -1798,18 +1711,12 @@ v = f × λ<br>
 v = 500 Hz × 0.6 m = <strong>300 m/s</strong><br>
 The wave travels at 300 metres per second.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Amplitude</dt><dd>The maximum displacement from the rest position — determines how much energy the wave carries.</dd>
-<dt>Frequency</dt><dd>The number of complete waves passing a point per second. Measured in Hertz (Hz).</dd>
-<dt>Wavelength (λ)</dt><dd>The distance from one point on a wave to the same point on the next wave (e.g. peak to peak).</dd>
-<dt>Electromagnetic spectrum</dt><dd>The complete range of EM waves arranged by frequency/wavelength, from radio waves to gamma rays.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Measuring amplitude from peak to trough — ✅ Correct: amplitude is from the <strong>rest position to ONE peak</strong> (half of peak-to-trough).</li>
-<li>❌ Thinking sound is an EM wave — ✅ Correct: sound is a <strong>longitudinal mechanical wave</strong> — it needs a medium and travels much slower than light.</li>
-<li>❌ Getting the EM spectrum order wrong — ✅ Remember: "Really Mighty Insects Vex Ugly X-ray Guns" (Radio, Micro, IR, Visible, UV, X, Gamma).</li>
+<li>Measuring amplitude from peak to trough. Amplitude is measured from the <strong>rest position to ONE peak</strong> — half of the full peak-to-trough height.</li>
+<li>Thinking sound is an EM wave. Sound is a <strong>longitudinal mechanical wave</strong> — it needs a medium to travel through and moves far slower than light.</li>
+<li>Getting the EM spectrum order wrong. Remember it with "Really Mighty Insects Vex Ugly X-ray Guns" (Radio, Micro, IR, Visible, UV, X, Gamma).</li>
 </ul>`,
 
 "island-41": `<h2>Classification of Living Things</h2>
@@ -1905,6 +1812,7 @@ The wave travels at 300 metres per second.</p>
 <p>Inside your lungs, the airways branch again and again, ending in millions of tiny air sacs called <strong>alveoli</strong>. This is where <strong>gas exchange</strong> takes place: oxygen diffuses out of the alveoli and into the blood, while carbon dioxide diffuses the other way, out of the blood and into the alveoli to be breathed out. (That is the same diffusion you met in the first chapter — particles moving from where they are more concentrated to where they are less concentrated.)</p>
 <p>Alveoli are superbly adapted for the task: there are millions of them, giving an enormous total surface area; their walls are just one cell thick, so the distance to travel is tiny; and each is wrapped in capillaries, so blood is always waiting to carry the oxygen away.</p>
 <div class="lesson-diagram" data-diagram="respiratory-system"><p class="diagram-caption">The respiratory system and gas exchange in the alveoli</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="alveolus-gas-exchange"><p class="diagram-caption">Zooming into one alveolus: oxygen and carbon dioxide diffuse in opposite directions</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>The Digestive System</h3>
 <p>The food you eat is made of molecules far too large to get into your cells, so the digestive system breaks it down into pieces small enough to be absorbed. Food travels a one-way route:</p>
@@ -1978,6 +1886,7 @@ The wave travels at 300 metres per second.</p>
 <h3>DNA, Chromosomes and Genes</h3>
 <p>Inside the nucleus of nearly every one of your cells is <strong>DNA</strong>, a long molecule that carries coded instructions for building and running your body. That DNA is not left loose — it is packaged into structures called <strong>chromosomes</strong>. Humans have <strong>46 chromosomes</strong>, arranged as 23 pairs, with one of each pair inherited from each parent.</p>
 <p>A <strong>gene</strong> is a short section of DNA that codes for one particular protein, and so for one characteristic. Think of the chromosome as a book and each gene as a single instruction inside it.</p>
+<div class="lesson-diagram" data-diagram="dna-genes-chromosomes"><p class="diagram-caption">How DNA, genes and chromosomes relate to each other</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>Alleles, Dominant and Recessive</h3>
 <p>Because chromosomes come in pairs, you carry two copies of every gene — one from each parent. The two copies need not be identical, and the different versions of a gene are called <strong>alleles</strong>.</p>
@@ -2067,11 +1976,13 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 <p style="font-size:1.05em;text-align:center;padding:0.5em;background:var(--surface2);border-radius:6px"><strong>Carbon dioxide + Water → Glucose + Oxygen</strong><br>6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</p>
 <p>The reaction happens inside the <strong>chloroplasts</strong> of leaf cells, and it depends on <strong>chlorophyll</strong>, the green pigment that actually absorbs the light. Notice what this means: the oxygen in the air you are breathing right now was released by a plant as a waste product.</p>
 <div class="lesson-diagram" data-diagram="photosynthesis-diagram"><p class="diagram-caption">Photosynthesis: what goes in and what comes out</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="leaf-structure"><p class="diagram-caption">Inside a leaf: most chloroplasts sit in the palisade mesophyll, and stomata let gases in and out</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>What Controls the Rate: Limiting Factors</h3>
 <p>Three things affect how fast a plant can photosynthesise: <strong>light intensity</strong>, <strong>carbon dioxide concentration</strong> and <strong>temperature</strong>.</p>
 <p>At any moment, whichever of these is in shortest supply is holding the whole process back, and that one is called the <strong>limiting factor</strong>. Increase it and the rate rises; increase any of the others and nothing happens, because they were not what was restricting things. It works rather like a queue — speeding up the tills does not help if the real hold-up is at the door.</p>
 <p>Temperature is a special case, because photosynthesis is controlled by enzymes. Warming things up speeds the reaction, but only to a point: above roughly <strong>40 °C</strong> enzymes begin to <strong>denature</strong>, meaning their shape is permanently changed so they no longer work, and the rate falls away sharply.</p>
+<div class="lesson-diagram" data-diagram="photosynthesis-rate"><p class="diagram-caption">The rate rises while a factor is limiting, then levels off once another factor takes over</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>Storing the Glucose</h3>
 <p>A plant does not use all its glucose immediately, so it converts the surplus into <strong>starch</strong> for storage. There is a neat reason for choosing starch: glucose is soluble and starch is not.</p>
@@ -2095,6 +2006,7 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 <li>In <strong>yeast</strong>: glucose → <strong>ethanol</strong> + carbon dioxide + a little energy. This reaction, called fermentation, is what makes bread rise and produces alcohol in brewing.</li>
 </ul>
 <p>Anaerobic respiration releases <em>far</em> less energy than aerobic, because the glucose is only partly broken down — which is exactly why you cannot sprint for very long.</p>
+<div class="lesson-diagram" data-diagram="respiration-comparison"><p class="diagram-caption">Aerobic vs anaerobic respiration compared</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
 <h3>How the Two Processes Fit Together</h3>
 <p>Look at the two equations side by side and you will see that each one's products are the other's raw materials. Photosynthesis takes in carbon dioxide and water and gives out glucose and oxygen; respiration takes in glucose and oxygen and gives out carbon dioxide and water. Together they keep the gases of the atmosphere in balance.</p>
@@ -2119,22 +2031,22 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 <li>Rushing the starch test. You must remove the chlorophyll with ethanol first, or the leaf's green colour hides the blue-black result.</li>
 </ul>`,
 
-"island-45": `<h4>Introduction</h4>
-<p>Beneath your feet lies a dynamic planet. The Earth is made of layers — from a thin rocky crust to a super-hot iron core. Rocks are constantly being formed, broken down and reformed in the rock cycle. Understanding rock types and Earth's structure helps explain volcanoes, earthquakes, and the landscapes around us.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>Earth's four layers (outside to inside): <strong>Crust</strong> (thin, rocky, 5–70 km), <strong>Mantle</strong> (thick, semi-molten, convection currents), <strong>Outer core</strong> (liquid iron/nickel), <strong>Inner core</strong> (solid iron/nickel, ~5,500 °C).</li>
-<li><strong>Igneous rocks</strong> form when magma or lava cools and solidifies. Intrusive (slow cooling underground → large crystals, e.g. granite). Extrusive (fast cooling on surface → small crystals, e.g. basalt).</li>
-<li><strong>Sedimentary rocks</strong> form when layers of sediment are deposited, compacted and cemented over millions of years (e.g. sandstone, limestone). May contain fossils.</li>
-<li><strong>Metamorphic rocks</strong> form when existing rocks are changed by extreme heat and/or pressure (e.g. marble from limestone, slate from mudstone).</li>
-<li>The <strong>rock cycle</strong> shows how any rock type can become any other over geological time through weathering, erosion, deposition, heat, pressure, melting, and cooling.</li>
-<li><strong>Fossils</strong> form when dead organisms are buried in sediment before they decay — they provide evidence of past life and evolution.</li>
-<li><strong>Freeze-thaw weathering</strong> (physical): water enters cracks → freezes → expands (~9%) → widens the crack → thaws → repeats many cycles → rock fragments break off.</li>
-<li><strong>Oceanic crust</strong> is thin (~5–10 km), dense, and made mainly of basalt. <strong>Continental crust</strong> is thick (~30–70 km), less dense, and made mainly of granite. At destructive boundaries, denser oceanic crust <strong>subducts</strong> beneath lighter continental crust.</li>
-</ul>
+"island-45": `<h2>Earth's Structure &amp; Rocks</h2>
+<p>Beneath your feet lies a dynamic planet. The Earth is made of layers — from a thin rocky crust to a super-hot iron core — and the rocks that make up that crust are constantly being formed, broken down and reformed in an endless cycle. Understanding rock types and Earth's structure helps explain volcanoes, earthquakes, and the landscapes around us.</p>
+
+<h3>Earth's Layers</h3>
+<p>Earth is built from four layers, from the outside in: the <strong>crust</strong> (thin and rocky, 5–70 km deep), the <strong>mantle</strong> (thick and semi-molten, with slow convection currents), the <strong>outer core</strong> (liquid iron and nickel), and the <strong>inner core</strong> (solid iron and nickel, at around 5,500 °C).</p>
+<p>The crust itself is not uniform. <strong>Oceanic crust</strong> is thin (~5–10 km), dense, and made mainly of basalt; <strong>continental crust</strong> is much thicker (~30–70 km), less dense, and made mainly of granite. That density difference matters at destructive plate boundaries, where the denser oceanic crust <strong>subducts</strong> — is forced downward — beneath the lighter continental crust.</p>
 <div class="lesson-diagram" data-diagram="earth-layers"><p class="diagram-caption">The four layers of the Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>The Three Rock Types</h3>
+<p>Every rock on Earth belongs to one of three families, sorted by how it formed. <strong>Igneous rocks</strong> form when magma or lava cools and solidifies: cool slowly underground (intrusive) and large crystals have time to grow, as in granite; cool quickly at the surface (extrusive) and the crystals stay small, as in basalt. <strong>Sedimentary rocks</strong> form as layers of sediment are deposited, then compacted and cemented together over millions of years, as in sandstone or limestone — and because organisms can be buried within those layers, sedimentary rock is the only type that commonly contains <strong>fossils</strong>, formed when a dead organism is buried in sediment before it decays. <strong>Metamorphic rocks</strong> form when an existing rock is changed by extreme heat and/or pressure without fully melting — limestone becomes marble, mudstone becomes slate.</p>
+
+<h3>The Rock Cycle and Weathering</h3>
+<p>The <strong>rock cycle</strong> describes how, given enough geological time, any rock type can become any other — through weathering, erosion, deposition, heat, pressure, melting and cooling, in various combinations. One of the processes driving that cycle is <strong>freeze-thaw weathering</strong>: water seeps into a crack in a rock, freezes, and expands by around 9% as it does so, widening the crack; repeated freezing and thawing gradually forces fragments of rock to break away entirely.</p>
 <div class="lesson-diagram" data-diagram="rock-cycle"><p class="diagram-caption">The rock cycle: how rocks transform between types</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Explain how a piece of granite (igneous rock) could eventually become marble (metamorphic rock).</p>
 <p><strong>Solution:</strong><br>
@@ -2143,37 +2055,32 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 3. Layers build up; weight <strong>compacts and cements</strong> the sediment into limestone (sedimentary rock).<br>
 4. Tectonic forces push the limestone deep underground where <strong>intense heat and pressure</strong> change its structure → it becomes <strong>marble</strong> (metamorphic rock).</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Igneous</dt><dd>Rock formed from cooled magma or lava. "Igneous" comes from the Latin word for fire.</dd>
-<dt>Sedimentary</dt><dd>Rock formed from compressed layers of sediment, often containing fossils.</dd>
-<dt>Metamorphic</dt><dd>Rock that has been transformed by heat and/or pressure without melting completely.</dd>
-<dt>Rock cycle</dt><dd>The continuous process by which rocks are created, broken down, and transformed between the three rock types.</dd>
-<dt>Freeze-thaw weathering</dt><dd>Physical weathering where water in rock cracks repeatedly freezes and expands, breaking the rock apart over time.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking metamorphic rock involves melting — ✅ Correct: metamorphic rock changes structure under heat/pressure <strong>without fully melting</strong>. If it melts, it becomes magma → igneous.</li>
-<li>❌ Confusing weathering and erosion — ✅ Correct: weathering = <strong>breaking down</strong> in place; erosion = <strong>transporting</strong> the broken pieces away.</li>
-<li>❌ Thinking the rock cycle is one-directional — ✅ Correct: any rock type can become <strong>any other</strong> type — the cycle has multiple paths.</li>
+<li>Thinking metamorphic rock involves melting. It changes structure under heat and pressure <strong>without fully melting</strong> — if it melts, it becomes magma, and any rock that forms from that is igneous instead.</li>
+<li>Confusing weathering and erosion. Weathering <strong>breaks rock down</strong> where it sits; erosion <strong>transports</strong> the broken pieces away.</li>
+<li>Thinking the rock cycle only runs one way. Any rock type can become <strong>any other</strong> type — the cycle has multiple possible paths, not a single fixed order.</li>
 </ul>`,
 
-"island-46": `<h4>Introduction</h4>
-<p>Earth's natural cycles — particularly the water cycle and carbon cycle — keep our planet habitable. Water circulates between oceans, atmosphere and land; carbon moves between living things, atmosphere, oceans and rocks. Human activities are now disrupting the carbon cycle, leading to the enhanced greenhouse effect and climate change.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>The <strong>water cycle</strong>: Evaporation (liquid → gas) → Condensation (forms clouds) → Precipitation (rain/snow) → Collection (rivers/groundwater) → back to evaporation. Transpiration from plants also adds water vapour.</li>
-<li>The <strong>carbon cycle</strong>: Carbon moves via photosynthesis (removes CO₂), respiration (releases CO₂), combustion (burning fossil fuels), decomposition, and dissolving in oceans.</li>
-<li>The <strong>greenhouse effect</strong> is natural and essential — greenhouse gases (CO₂, methane, water vapour) trap heat and keep Earth warm enough for life.</li>
-<li>The <strong>enhanced greenhouse effect</strong>: humans are burning fossil fuels and deforesting → extra CO₂ → more heat trapped → global temperatures rising = <strong>climate change</strong>.</li>
-<li>Evidence for climate change: rising global temperatures, melting ice caps, rising sea levels, more extreme weather events, shifting ecosystems.</li>
-<li>Reducing climate change: use renewable energy, reduce fossil fuel use, plant trees, reduce meat consumption, improve energy efficiency.</li>
-<li>Earth's atmosphere composition: ~<strong>78% nitrogen</strong>, ~<strong>21% oxygen</strong>, ~1% argon, ~0.04% CO₂ and trace gases.</li>
-<li><strong>Transpiration</strong>: plants release water vapour through tiny pores called <strong>stomata</strong> on their leaves — this contributes significantly to the water cycle.</li>
-<li><strong>Acid rain</strong> forms when <strong>sulfur dioxide (SO₂)</strong> and <strong>nitrogen oxides (NOₓ)</strong> from burning fossil fuels dissolve in atmospheric water → sulfuric acid and nitric acid. Damages trees, lakes, and stone buildings.</li>
-</ul>
+"island-46": `<h2>Earth's Cycles &amp; Atmosphere</h2>
+<p>Earth's natural cycles — particularly the water cycle and the carbon cycle — keep our planet habitable, endlessly recycling the materials that life depends on. But those cycles are not immune to interference: human activity is now disrupting the carbon cycle, with consequences for the whole planet's climate.</p>
+
+<h3>The Water Cycle</h3>
+<p>Water moves through a continuous four-stage cycle: <strong>evaporation</strong> turns liquid water into vapour, which rises and cools to form clouds through <strong>condensation</strong>; the water then falls back down as <strong>precipitation</strong> (rain or snow) and is gathered up again through <strong>collection</strong> in rivers and groundwater, ready to evaporate once more. Plants add to this cycle too, through <strong>transpiration</strong> — releasing water vapour into the air through tiny pores on their leaves called <strong>stomata</strong>.</p>
 <div class="lesson-diagram" data-diagram="water-cycle"><p class="diagram-caption">The water cycle: evaporation, condensation and precipitation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>The Carbon Cycle and Earth's Atmosphere</h3>
+<p>Carbon moves between living things, the atmosphere, the oceans and rocks by several routes at once: <strong>photosynthesis</strong> removes CO₂ from the air, <strong>respiration</strong> and <strong>combustion</strong> (burning fossil fuels) release it back, <strong>decomposition</strong> returns carbon from dead organisms to the soil and air, and some carbon simply dissolves into the oceans. All of this happens against the backdrop of Earth's atmosphere, which is roughly <strong>78% nitrogen</strong>, <strong>21% oxygen</strong>, around 1% argon, and only about 0.04% CO₂ — a small percentage, but one that matters enormously for climate, as the next section explains.</p>
+<div class="lesson-diagram" data-diagram="carbon-cycle"><p class="diagram-caption">The carbon cycle: how carbon moves between living things, the atmosphere, oceans and rocks</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>The Greenhouse Effect and Climate Change</h3>
+<p>The <strong>greenhouse effect</strong> is natural and essential: greenhouse gases such as CO₂, methane and water vapour trap heat in the atmosphere, keeping Earth warm enough to support life. The problem is not the greenhouse effect itself but the <strong>enhanced</strong> version of it — humans burning fossil fuels and clearing forests adds extra CO₂ to the atmosphere, trapping more heat than the natural balance intended and driving global temperatures upward as <strong>climate change</strong>. The evidence is wide-ranging: rising global temperatures, melting ice caps, rising sea levels, more extreme weather events and shifting ecosystems all point the same way. Slowing it down means using renewable energy, cutting fossil fuel use, planting trees, reducing meat consumption and improving energy efficiency.</p>
+
+<h3>Acid Rain</h3>
+<p><strong>Acid rain</strong> forms when <strong>sulfur dioxide (SO₂)</strong> and <strong>nitrogen oxides (NOₓ)</strong>, both released by burning fossil fuels, dissolve into atmospheric water to form sulfuric and nitric acids. Once it falls, this acidified rain damages trees, acidifies lakes until aquatic life can no longer survive, and erodes stone buildings and statues over time.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Explain how cutting down and burning a forest increases the greenhouse effect.</p>
 <p><strong>Solution:</strong><br>
@@ -2182,39 +2089,33 @@ The small numbers below the line (subscripts) tell you how many atoms of each el
 3. More CO₂ in the atmosphere → more thermal energy (heat) is <strong>trapped</strong> by greenhouse gases → temperatures rise.<br>
 Both effects combine: more CO₂ released AND less CO₂ absorbed = <strong>double impact</strong>.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Evaporation</dt><dd>Liquid water gaining energy and becoming water vapour (gas) — happens at the surface, below boiling point.</dd>
-<dt>Condensation</dt><dd>Water vapour cooling and turning back into liquid water droplets — forms clouds.</dd>
-<dt>Greenhouse gas</dt><dd>A gas that traps thermal energy in the atmosphere (e.g. CO₂, methane, water vapour).</dd>
-<dt>Climate change</dt><dd>Long-term shifts in global temperatures and weather patterns, largely driven by increased greenhouse gas emissions from human activity.</dd>
-<dt>Transpiration</dt><dd>The loss of water vapour from plant leaves through stomata — drives water uptake from roots and contributes to the water cycle.</dd>
-<dt>Acid rain</dt><dd>Rain made acidic (pH below 5.6) by dissolved SO₂ and NOₓ from fossil fuel combustion, forming sulfuric and nitric acids.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying the greenhouse effect is bad — ✅ Correct: the NATURAL greenhouse effect is essential for life. It's the <strong>enhanced</strong> (extra) greenhouse effect that causes problems.</li>
-<li>❌ Confusing weather and climate — ✅ Correct: weather is short-term (today's conditions); climate is the <strong>long-term average</strong> over 30+ years.</li>
-<li>❌ Thinking only CO₂ is a greenhouse gas — ✅ Correct: methane, water vapour, and nitrous oxide are also greenhouse gases. Methane is actually more potent than CO₂ per molecule.</li>
+<li>Saying the greenhouse effect is bad. The <strong>natural</strong> greenhouse effect is essential for life — it is the <strong>enhanced</strong> (extra) greenhouse effect that causes problems.</li>
+<li>Confusing weather and climate. Weather is short-term (today's conditions); climate is the <strong>long-term average</strong> over 30+ years.</li>
+<li>Thinking only CO₂ is a greenhouse gas. Methane, water vapour and nitrous oxide are also greenhouse gases — methane is actually more potent than CO₂ per molecule.</li>
 </ul>`,
 
-"island-47": `<h4>Introduction</h4>
-<p>Our place in space is both humbling and fascinating. Earth is one of eight planets orbiting the Sun in our Solar System. Understanding why we have day and night, why the Moon changes shape, and why seasons exist comes down to how the Earth spins, tilts, and orbits — simple motions with profound effects.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>The eight planets in order from the Sun: <strong>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</strong>. Memory aid: "My Very Excited Mother Just Served Us Nachos."</li>
-<li><strong>Day and night</strong> are caused by Earth rotating on its axis once every 24 hours — the side facing the Sun has daytime.</li>
-<li><strong>Seasons</strong> are caused by Earth's <strong>axial tilt</strong> (23.5°). When the northern hemisphere tilts towards the Sun, it receives more direct sunlight → summer. When it tilts away → winter.</li>
-<li>The <strong>Moon's phases</strong> occur because we see different amounts of the Moon's sunlit side as it orbits Earth (about 28 days for a full cycle): New Moon → Crescent → Quarter → Gibbous → Full Moon → back again.</li>
-<li>A <strong>solar eclipse</strong> occurs when the Moon passes between Earth and Sun, blocking sunlight. A <strong>lunar eclipse</strong> occurs when Earth is between Sun and Moon, casting a shadow on the Moon.</li>
-<li><strong>Gravity</strong> keeps planets in orbit around the Sun and the Moon in orbit around Earth. Larger mass = stronger gravitational pull. Gravity acts as a <strong>centripetal force</strong>, continuously curving the planet's path inward.</li>
-<li>The <strong>Sun</strong> is a <strong>star</strong> — a massive ball of hot plasma (mainly hydrogen and helium) that generates energy by <strong>nuclear fusion</strong> in its core.</li>
-<li>A <strong>galaxy</strong> is a vast collection of billions of stars, gas, dust and dark matter held together by gravity. Our Solar System is in the <strong>Milky Way</strong> galaxy (~200 billion stars).</li>
-<li>A <strong>light year</strong> is a unit of <strong>distance</strong> (not time) — the distance light travels in one year (~9.5 trillion km). The nearest star (Proxima Centauri) is ~4.2 light years away.</li>
-</ul>
+"island-47": `<h2>Space and Earth's Motion</h2>
+<p>Our place in space is both humbling and fascinating. Earth is one of eight planets orbiting the Sun in our Solar System, which is itself just one tiny corner of a galaxy containing around 200 billion stars. Understanding why we have day and night, why the Moon changes shape, and why seasons exist comes down to how the Earth spins, tilts and orbits — simple motions with profound effects.</p>
+
+<h3>The Solar System</h3>
+<p>The eight planets orbit the Sun in this order: <strong>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</strong> — remembered with "My Very Excited Mother Just Served Us Nachos."</p>
 <div class="lesson-diagram" data-diagram="solar-system"><p class="diagram-caption">The eight planets of the Solar System in order</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Earth's Motion: Day, Night and Seasons</h3>
+<p><strong>Day and night</strong> happen because Earth rotates on its axis once every 24 hours — whichever side currently faces the Sun experiences daytime, while the far side experiences night. <strong>Seasons</strong> come from a different motion entirely: Earth's <strong>axial tilt</strong> of 23.5°. When the northern hemisphere tilts towards the Sun, it receives more direct sunlight and experiences summer; six months later, once Earth has moved round in its orbit, that same hemisphere tilts away from the Sun instead, and winter follows.</p>
+
+<h3>The Moon: Phases and Eclipses</h3>
+<p>The Moon does not produce any light of its own — it only reflects sunlight. Its <strong>phases</strong> occur because, as it orbits Earth over about 28 days, we see a changing amount of its sunlit side: New Moon → Crescent → Quarter → Gibbous → Full Moon → and back again. Occasionally the Sun, Earth and Moon line up closely enough to produce an eclipse: a <strong>solar eclipse</strong> happens when the Moon passes between Earth and the Sun, blocking sunlight from part of Earth's surface, while a <strong>lunar eclipse</strong> happens when Earth passes between the Sun and the Moon, casting Earth's own shadow onto the Moon.</p>
 <div class="lesson-diagram" data-diagram="moon-phases"><p class="diagram-caption">The phases of the Moon</p><p class="diagram-expand-hint">Click to enlarge</p></div>
-<h4>✏️ Worked Example</h4>
+
+<h3>Gravity, Stars and Galaxies</h3>
+<p><strong>Gravity</strong> is what holds this entire system together: it keeps the planets in orbit around the Sun and the Moon in orbit around Earth, with a larger mass always producing a stronger pull. Rather than pulling an orbiting object straight in, gravity acts as a <strong>centripetal force</strong>, continuously curving its path inward just enough to keep it circling rather than flying off in a straight line or falling directly in.</p>
+<p>The <strong>Sun</strong> itself is a <strong>star</strong> — a massive ball of hot plasma, mostly hydrogen and helium, that generates its energy through <strong>nuclear fusion</strong> in its core. Our Solar System sits inside the <strong>Milky Way</strong>, a <strong>galaxy</strong>: a vast collection of billions of stars, gas, dust and dark matter, all held together by gravity. Distances at this scale get so large that a new unit is needed — a <strong>light year</strong>, the <em>distance</em> (not time) that light travels in one year, around 9.5 trillion km. Even so, the nearest star beyond our Sun, Proxima Centauri, is still about 4.2 light years away.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> In June, the UK has long days and warm weather. In December, days are short and cold. Explain why.</p>
 <p><strong>Solution:</strong><br>
@@ -2224,21 +2125,13 @@ Both effects combine: more CO₂ released AND less CO₂ absorbed = <strong>doub
 4. In December, the northern hemisphere tilts <strong>AWAY</strong> → sunlight is spread over a larger area (less intense) and days are shorter → colder.<br>
 It is NOT because Earth is closer to the Sun in summer — Earth's orbit is nearly circular.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Orbit</dt><dd>The curved path one object takes around another due to gravity (e.g. Earth orbits the Sun in about 365.25 days).</dd>
-<dt>Axis</dt><dd>An imaginary line through Earth from North Pole to South Pole, around which it rotates once per day.</dd>
-<dt>Axial tilt</dt><dd>Earth's axis is tilted at 23.5° from vertical — this causes the seasons.</dd>
-<dt>Solar eclipse</dt><dd>When the Moon passes directly between Earth and Sun, blocking sunlight from reaching part of Earth's surface.</dd>
-<dt>Light year</dt><dd>A unit of distance equal to how far light travels in one year (~9.5 trillion km). Used for measuring vast astronomical distances.</dd>
-<dt>Galaxy</dt><dd>A vast system of billions of stars, gas, dust and dark matter bound together by gravity. Our galaxy is the Milky Way.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking summer happens because Earth is closer to the Sun — ✅ Correct: seasons are caused by Earth's <strong>axial tilt</strong>, not distance. (Australia has summer when we have winter!)</li>
-<li>❌ Thinking the Moon produces its own light — ✅ Correct: the Moon <strong>reflects sunlight</strong>. Phases occur because we see different portions of its lit side.</li>
-<li>❌ Confusing rotation and revolution — ✅ Correct: Earth <strong>rotates</strong> on its axis (causes day/night); it <strong>revolves</strong> (orbits) around the Sun (causes years).</li>
-<li>❌ Thinking a light year is a unit of time — ✅ Correct: a light year is a unit of <strong>distance</strong>.</li>
+<li>Thinking summer happens because Earth is closer to the Sun. Seasons are caused by Earth's <strong>axial tilt</strong>, not distance — Australia has summer exactly when the UK has winter.</li>
+<li>Thinking the Moon produces its own light. The Moon <strong>reflects sunlight</strong>; its phases occur because we see different portions of its lit side.</li>
+<li>Confusing rotation and revolution. Earth <strong>rotates</strong> on its axis (causing day and night); it <strong>revolves</strong> — orbits — around the Sun (causing years).</li>
+<li>Thinking a light year is a unit of time. It is a unit of <strong>distance</strong>.</li>
 </ul>`,
 
 "island-60": `<h2>Nutrition &amp; Digestion</h2>
@@ -2303,19 +2196,20 @@ It is NOT because Earth is closer to the Sun in summer — Earth's orbit is near
 </ul>
 <p class="lesson-next-hint">➡️ Next: you've seen how the body nourishes itself — now you'll look at reproduction, another vital body system, and how new life gets started.</p>`,
 
-"island-61": `<h4>Introduction</h4>
-<p>Pressure is all about how a force is spread over an area. A small force on a tiny area (like the point of a drawing pin) creates enormous pressure, while a large force spread over a big area (like a snowshoe) creates very little pressure. Understanding pressure helps explain everything from why knives cut to why deep-sea creatures need special adaptations.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Pressure = force ÷ area</strong> (P = F/A). Pressure is measured in <strong>Pascals (Pa)</strong>, where 1 Pa = 1 N/m².</li>
-<li>The <strong>same force</strong> over a <strong>smaller area</strong> creates <strong>greater pressure</strong> (e.g. a sharp knife cuts better than a blunt one).</li>
-<li>The <strong>same force</strong> over a <strong>larger area</strong> creates <strong>less pressure</strong> (e.g. snowshoes stop you sinking into snow).</li>
-<li><strong>Atmospheric pressure</strong> is caused by the weight of air above a surface. At sea level it is about 101 kPa. It <strong>decreases</strong> with altitude because there is less air above.</li>
-<li><strong>Pressure in liquids</strong> increases with <strong>depth</strong> because there is more liquid above pushing down. It acts in <strong>all directions</strong> at any point.</li>
-<li><strong>Upthrust</strong> is the upward force a liquid exerts on an object placed in it. It is caused by the difference in pressure between the top and bottom of the object.</li>
-<li>An object <strong>floats</strong> when upthrust equals its weight. It <strong>sinks</strong> when its weight is greater than the upthrust.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+"island-61": `<h2>Pressure</h2>
+<p>Pressure is all about how a force is spread over an area — and the same force can feel completely different depending on how concentrated it is. A small force on a tiny area, like the point of a drawing pin, creates enormous pressure; a large force spread over a big area, like a snowshoe, creates very little. Understanding pressure explains everything from why knives cut to why a heavy steel ship floats.</p>
+
+<h3>What Is Pressure?</h3>
+<p><strong>Pressure = force ÷ area</strong> (P = F/A), measured in <strong>Pascals (Pa)</strong>, where 1 Pa = 1 N/m². Because area sits on the bottom of that fraction, shrinking the area concentrates the same force into a smaller space, producing far greater pressure — which is exactly why a sharp knife, with a very thin blade edge, cuts so much better than a blunt one. Spread that same force over a much larger area instead, and the pressure drops accordingly — which is how snowshoes stop you sinking into snow that a normal boot would break straight through.</p>
+
+<h3>Pressure in the Atmosphere and in Liquids</h3>
+<p><strong>Atmospheric pressure</strong> is caused by the weight of the whole column of air above a surface pressing down on it. At sea level it is about 101 kPa, and it <strong>decreases</strong> with altitude, because climbing higher leaves less air above you to add its weight.</p>
+<p><strong>Pressure in a liquid</strong> behaves similarly but the other way round: it increases with <strong>depth</strong>, because at any given point there is more liquid above pushing down. Unlike a solid pushing in one direction, pressure in a fluid acts equally in <strong>all directions</strong> at any point — which is why a submerged object is squeezed from every side at once, not just from above.</p>
+
+<h3>Upthrust and Floating</h3>
+<p>Because pressure increases with depth, the pressure pushing up on the <em>bottom</em> of a submerged object is always slightly greater than the pressure pushing down on its <em>top</em>. That pressure difference produces a net upward force called <strong>upthrust</strong>. Whether an object floats or sinks comes down to a straightforward comparison: it <strong>floats</strong> when upthrust equals its weight, and <strong>sinks</strong> when its weight is greater than the upthrust it can generate. A heavy steel ship floats not because it is light, but because its hollow shape displaces enough water to generate an upthrust equal to its full weight.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A box weighs 900 N and rests on the ground. The base of the box has an area of 3 m². Calculate the pressure the box exerts on the ground.</p>
 <p><strong>Solution:</strong><br>
@@ -2324,40 +2218,32 @@ P = 900 ÷ 3<br>
 P = <strong>300 Pa</strong><br>
 The box exerts a pressure of 300 Pascals (300 N/m²) on the ground.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Pressure</dt><dd>The force acting per unit area, measured in Pascals (Pa). P = F ÷ A.</dd>
-<dt>Pascal (Pa)</dt><dd>The SI unit of pressure. 1 Pa = 1 N/m² (one Newton per square metre).</dd>
-<dt>Atmospheric pressure</dt><dd>The pressure exerted by the weight of the atmosphere on a surface. It is about 101 kPa at sea level and decreases with altitude.</dd>
-<dt>Upthrust</dt><dd>The upward force exerted by a fluid on an object placed in it, caused by the pressure difference between the top and bottom of the object.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking a heavier object always exerts more pressure — ✅ Correct: pressure depends on <strong>both</strong> force and area. A lighter object with a tiny area can exert more pressure than a heavy one with a large area.</li>
-<li>❌ Forgetting the units — ✅ Correct: force must be in <strong>Newtons</strong>, area in <strong>m²</strong>, and pressure in <strong>Pascals (N/m²)</strong>.</li>
-<li>❌ Thinking atmospheric pressure only pushes downwards — ✅ Correct: atmospheric pressure acts in <strong>all directions</strong>.</li>
-<li>❌ Saying an object floats because it is light — ✅ Correct: an object floats when the <strong>upthrust equals its weight</strong>. A heavy steel ship floats because its shape displaces enough water.</li>
+<li>Thinking a heavier object always exerts more pressure. Pressure depends on <strong>both</strong> force and area — a lighter object concentrated onto a tiny area can exert more pressure than a heavy one spread over a large area.</li>
+<li>Forgetting the units. Force must be in <strong>Newtons</strong>, area in <strong>m²</strong>, and pressure in <strong>Pascals (N/m²)</strong>.</li>
+<li>Thinking atmospheric pressure only pushes downwards. It acts in <strong>all directions</strong>, just like pressure in any fluid.</li>
+<li>Saying an object floats because it is light. An object floats when the <strong>upthrust equals its weight</strong> — shape and displaced volume matter more than weight alone.</li>
 </ul>`,
 
-"island-62": `<h4>Introduction</h4>
-<p>The Periodic Table is one of the most important tools in science — a single chart that organises all known elements and reveals patterns in their properties. Dmitri Mendeleev first arranged elements so that those with similar properties fell into the same columns, and he was so confident in the pattern that he left gaps for elements that had not yet been discovered. Modern science has confirmed his brilliance.</p>
+"island-62": `<h2>The Periodic Table</h2>
+<p>The Periodic Table is one of the most important tools in science — a single chart that organises all known elements and reveals patterns in their properties. In 1869, Dmitri Mendeleev arranged the elements known at the time by atomic mass so that those with similar properties fell into the same columns, and he was so confident in the pattern that he left gaps for elements that had not yet been discovered — going as far as predicting their properties. When gallium and germanium were later isolated, they matched his predictions almost exactly, confirming both his brilliance and the pattern he had found.</p>
 <div class="lesson-diagram" data-diagram="periodic-table"><p class="diagram-caption">The Periodic Table of Elements — click to enlarge</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div style="text-align:center;margin:1em 0">
   <button onclick="downloadPeriodicTablePDF()" style="padding:0.6em 1.4em;font-size:0.95em;font-weight:600;color:#fff;background:linear-gradient(135deg,#6366f1,#8b5cf6);border:none;border-radius:8px;cursor:pointer;box-shadow:0 2px 8px rgba(99,102,241,0.25)">&#x1F4E5; Download Periodic Table as PDF</button>
 </div>
-<h4>📌 Key Points</h4>
-<ul>
-<li>The Periodic Table arranges elements in order of increasing <strong>atomic number</strong> (the number of protons).</li>
-<li><strong>Periods</strong> are horizontal rows. Elements in the same period have the same number of <strong>electron shells</strong>.</li>
-<li><strong>Groups</strong> are vertical columns. Elements in the same group have the same number of <strong>outer-shell electrons</strong>, giving them <strong>similar chemical properties</strong>.</li>
-<li><strong>Group 1 — Alkali metals</strong> (lithium, sodium, potassium): very reactive metals that react vigorously with water. Reactivity <strong>increases</strong> going down the group.</li>
-<li><strong>Group 7 — Halogens</strong> (fluorine, chlorine, bromine, iodine): reactive non-metals that form salts with metals. Reactivity <strong>decreases</strong> going down the group.</li>
-<li><strong>Group 0 — Noble gases</strong> (helium, neon, argon): very unreactive because they have a <strong>full outer electron shell</strong>.</li>
-<li><strong>Metals</strong> are found on the left and centre of the table. They are shiny, good conductors, malleable and ductile.</li>
-<li><strong>Non-metals</strong> are found on the right. They are dull, poor conductors and brittle when solid.</li>
-<li><strong>Mendeleev</strong> (1869) arranged elements by atomic mass and left gaps for undiscovered elements. He predicted their properties — and was proved right when gallium and germanium were discovered.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>Periods and Groups</h3>
+<p>Elements are arranged in order of increasing <strong>atomic number</strong> — the number of protons in the nucleus. <strong>Periods</strong> are the horizontal rows, and moving along a period means gaining another <strong>electron shell</strong>. <strong>Groups</strong> are the vertical columns, and the reason the table works at all is that elements in the same group share the same number of <strong>outer-shell electrons</strong> — which is what actually controls how an element reacts, giving every element in a group <strong>similar chemical properties</strong>.</p>
+
+<h3>Group 1, Group 7 and Group 0</h3>
+<p>Three groups show the clearest patterns. <strong>Group 1 — the alkali metals</strong> (lithium, sodium, potassium) are very reactive metals that react vigorously with water, and reactivity <strong>increases</strong> going down the group as the single outer electron sits further from the nucleus and becomes easier to lose. <strong>Group 7 — the halogens</strong> (fluorine, chlorine, bromine, iodine) are reactive non-metals that form salts with metals, but here reactivity <strong>decreases</strong> going down the group, because gaining an extra electron gets harder the further the outer shell sits from the nucleus. <strong>Group 0 — the noble gases</strong> (helium, neon, argon) sit at the opposite extreme: they are almost completely unreactive, because their outer electron shell is already <strong>full</strong> and has no tendency to lose or gain electrons at all.</p>
+
+<h3>Metals and Non-Metals</h3>
+<p>The table also splits broadly in two. <strong>Metals</strong>, found on the left and in the centre, are shiny, good conductors of heat and electricity, and both malleable (can be hammered into shape) and ductile (can be drawn into wires). <strong>Non-metals</strong>, over on the right, tend to be dull, poor conductors, and brittle when solid.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Lithium reacts gently with water. Sodium reacts more vigorously. Potassium reacts violently with a lilac flame. These are all in Group 1. Explain the pattern.</p>
 <p><strong>Solution:</strong><br>
@@ -2367,38 +2253,30 @@ The box exerts a pressure of 300 Pascals (300 N/m²) on the ground.</p>
 4. Losing the outer electron more easily means the metal reacts <strong>more vigorously</strong>.<br>
 Therefore, reactivity <strong>increases</strong> going down Group 1.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Atomic number</dt><dd>The number of protons in the nucleus of an atom. Elements in the Periodic Table are arranged in order of increasing atomic number.</dd>
-<dt>Period</dt><dd>A horizontal row in the Periodic Table. Elements in the same period have the same number of electron shells.</dd>
-<dt>Group</dt><dd>A vertical column in the Periodic Table. Elements in the same group have the same number of outer-shell electrons and similar chemical properties.</dd>
-<dt>Alkali metals</dt><dd>The elements in Group 1 (lithium, sodium, potassium, etc.). Very reactive metals that react with water to produce hydrogen gas and an alkaline solution.</dd>
-<dt>Halogens</dt><dd>The elements in Group 7 (fluorine, chlorine, bromine, iodine). Reactive non-metals that form salts when they react with metals.</dd>
-<dt>Noble gases</dt><dd>The elements in Group 0 (helium, neon, argon, etc.). Very unreactive because they have a full outer electron shell.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Confusing groups and periods — ✅ Correct: <strong>groups</strong> are vertical columns (similar properties); <strong>periods</strong> are horizontal rows (same number of shells).</li>
-<li>❌ Thinking all elements are metals — ✅ Correct: about 80% are metals, but <strong>non-metals</strong> (on the right) and noble gases are equally important.</li>
-<li>❌ Thinking reactivity always increases going down a group — ✅ Correct: reactivity increases down Group 1 (metals lose electrons more easily), but <strong>decreases</strong> down Group 7 (non-metals gain electrons less easily).</li>
-<li>❌ Saying noble gases have no electrons — ✅ Correct: noble gases have electrons, but their outer shell is <strong>full</strong>, making them very stable and unreactive.</li>
+<li>Confusing groups and periods. <strong>Groups</strong> are vertical columns (similar properties); <strong>periods</strong> are horizontal rows (same number of shells).</li>
+<li>Thinking all elements are metals. About 80% are metals, but <strong>non-metals</strong> and noble gases are just as important to the table's patterns.</li>
+<li>Assuming reactivity always increases going down a group. It increases down Group 1 (metals lose electrons more easily), but <strong>decreases</strong> down Group 7 (non-metals gain electrons less easily).</li>
+<li>Saying noble gases have no electrons. They have electrons like any other element — theirs is simply a <strong>full</strong> outer shell, which is what makes them so stable and unreactive.</li>
 </ul>`,
 
-"island-63": `<h4>Introduction</h4>
-<p>Not all metals are the same — some react violently with water while others barely react at all. The <strong>reactivity series</strong> ranks metals from most to least reactive, and this ranking determines how metals are extracted from their ores. Meanwhile, modern materials such as ceramics, polymers and composites have been developed to meet specific needs that metals alone cannot fulfil.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>The <strong>reactivity series</strong> ranks metals from most reactive (potassium) to least reactive (platinum): K, Na, Ca, Mg, Al, <em>C</em>, Zn, Fe, Cu, Ag, Au, Pt.</li>
-<li>A <strong>more reactive</strong> metal can <strong>displace</strong> a less reactive metal from its compound. For example: zinc + copper sulfate → zinc sulfate + copper.</li>
-<li><strong>Carbon</strong> is placed in the reactivity series (between aluminium and zinc). Metals <strong>below</strong> carbon can be extracted by heating their ores with carbon (e.g. iron from iron oxide in a blast furnace).</li>
-<li>Metals <strong>above</strong> carbon (e.g. aluminium) must be extracted by <strong>electrolysis</strong>, which is more expensive.</li>
-<li>Very unreactive metals (gold, silver, platinum) are found <strong>native</strong> (as pure metal) in the ground because they do not easily form compounds.</li>
-<li><strong>Ceramics</strong> (e.g. clay, glass, porcelain) are hard, brittle, heat-resistant and electrically insulating.</li>
-<li><strong>Polymers</strong> (e.g. polythene, PVC, nylon) are long-chain molecules that are lightweight, flexible and good electrical insulators.</li>
-<li><strong>Composites</strong> (e.g. fibreglass, reinforced concrete, carbon fibre) combine two or more materials to get properties better than either alone.</li>
-<li>The choice of material for a specific purpose depends on properties such as <strong>strength, weight, cost, flexibility, conductivity</strong> and resistance to corrosion.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+"island-63": `<h2>Materials &amp; Reactivity</h2>
+<p>Not all metals are the same — some react violently with water while others barely react at all. The <strong>reactivity series</strong> ranks metals from most to least reactive, and, as you'll see, that single ranking explains both which metal can steal another's place in a compound and which method is needed to extract a metal from its ore in the first place. Meanwhile, modern materials such as ceramics, polymers and composites have been developed to meet needs that metals alone cannot fulfil.</p>
+
+<h3>The Reactivity Series and Displacement</h3>
+<p>The <strong>reactivity series</strong> ranks metals from most reactive (potassium) to least reactive (platinum): K, Na, Ca, Mg, Al, <em>C</em>, Zn, Fe, Cu, Ag, Au, Pt. Its usefulness comes from a simple rule: a <strong>more reactive</strong> metal can <strong>displace</strong> a less reactive one from its compound, taking its place. For example: zinc + copper sulfate → zinc sulfate + copper — zinc, being more reactive, pushes copper out of the compound and takes its place instead.</p>
+<div class="lesson-diagram" data-diagram="reactivity-series"><p class="diagram-caption">The reactivity series, from most to least reactive</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<div class="lesson-diagram" data-diagram="displacement-reaction"><p class="diagram-caption">A more reactive metal displaces a less reactive one from its compound</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Extracting Metals from Ores</h3>
+<p><strong>Carbon</strong> is deliberately placed inside the reactivity series itself (between aluminium and zinc), because its position decides how a metal is extracted from its ore. Metals <strong>below</strong> carbon are less reactive than it, so carbon can be used to pull them out of their compound — this is why iron is extracted by heating iron oxide with carbon in a blast furnace. Metals <strong>above</strong> carbon, such as aluminium, are more reactive than carbon, so carbon cannot displace them; instead they must be extracted by <strong>electrolysis</strong>, which uses electrical energy and is considerably more expensive. At the very bottom of the series, metals such as gold, silver and platinum are so unreactive that they barely form compounds at all, which is why they are often found <strong>native</strong> — as the pure metal — straight in the ground.</p>
+
+<h3>Modern Materials: Ceramics, Polymers and Composites</h3>
+<p>Not every material used today is a metal. <strong>Ceramics</strong> (clay, glass, porcelain) are hard, brittle, heat-resistant and electrically insulating. <strong>Polymers</strong> (polythene, PVC, nylon) are long-chain molecules that are lightweight, flexible and good electrical insulators. <strong>Composites</strong> (fibreglass, reinforced concrete, carbon fibre) combine two or more materials to get properties better than either could achieve alone. Choosing between them for a real product comes down to matching the material's <strong>strength, weight, cost, flexibility, conductivity</strong> and resistance to corrosion to the job it needs to do.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A student places a piece of iron into copper sulfate solution. The iron becomes coated in a reddish-brown layer. Explain what has happened.</p>
 <p><strong>Solution:</strong><br>
@@ -2408,37 +2286,29 @@ Therefore, reactivity <strong>increases</strong> going down Group 1.</p>
 4. Word equation: iron + copper sulfate → iron sulfate + copper.<br>
 This is a <strong>displacement reaction</strong> — the more reactive metal takes the place of the less reactive one.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Reactivity series</dt><dd>A list of metals ranked in order of their reactivity, from most reactive (potassium) to least reactive (platinum).</dd>
-<dt>Displacement reaction</dt><dd>A reaction in which a more reactive element takes the place of a less reactive element in a compound.</dd>
-<dt>Ore</dt><dd>A rock that contains enough metal or metal compound to make it worthwhile to extract the metal.</dd>
-<dt>Ceramic</dt><dd>A hard, brittle, heat-resistant material made by heating natural substances (e.g. clay) to high temperatures.</dd>
-<dt>Polymer</dt><dd>A very long molecule made of many small repeating units (monomers) joined together. Plastics are examples of polymers.</dd>
-<dt>Composite</dt><dd>A material made by combining two or more different materials to produce improved properties.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking carbon is a metal — ✅ Correct: carbon is a <strong>non-metal</strong>, but it is placed in the reactivity series because it is used to extract metals from their ores.</li>
-<li>❌ Saying all metals are extracted using carbon — ✅ Correct: only metals <strong>below carbon</strong> in the reactivity series can be extracted this way. Metals above carbon require <strong>electrolysis</strong>.</li>
-<li>❌ Confusing composite and compound — ✅ Correct: a <strong>composite</strong> is a physical combination of materials (not chemically bonded); a <strong>compound</strong> is a chemical combination of elements.</li>
-<li>❌ Thinking a displacement reaction can happen either way — ✅ Correct: only the <strong>more reactive</strong> metal can displace the less reactive one, never the other way round.</li>
+<li>Thinking carbon is a metal. Carbon is a <strong>non-metal</strong>, but it is placed in the reactivity series because it is used to extract metals from their ores.</li>
+<li>Saying all metals are extracted using carbon. Only metals <strong>below carbon</strong> in the reactivity series can be extracted this way — metals above carbon require <strong>electrolysis</strong>.</li>
+<li>Confusing composite and compound. A <strong>composite</strong> is a physical combination of materials (not chemically bonded); a <strong>compound</strong> is a chemical combination of elements.</li>
+<li>Thinking a displacement reaction can happen either way round. Only the <strong>more reactive</strong> metal can displace the less reactive one — never the other way round.</li>
 </ul>`,
 
-"island-64": `<h4>Introduction</h4>
+"island-64": `<h2>Hooke's Law</h2>
 <p>Springs are everywhere — in mattresses, car suspensions, trampolines and pens. Robert Hooke discovered that when you stretch a spring with a force, the amount it extends is directly proportional to the force — as long as you do not stretch it too far. This beautifully simple relationship is known as <strong>Hooke's Law</strong>.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Hooke's Law:</strong> F = k × e, where F is the force applied (N), k is the spring constant (N/m), and e is the extension (m).</li>
-<li><strong>Extension</strong> = stretched length − original (natural) length.</li>
-<li>The <strong>spring constant (k)</strong> measures stiffness. A higher k means a stiffer spring that needs more force to stretch it.</li>
-<li>On a <strong>force–extension graph</strong>, Hooke's Law produces a <strong>straight line through the origin</strong>. The gradient equals the spring constant (k).</li>
-<li>The <strong>limit of proportionality</strong> is the point beyond which force and extension are no longer directly proportional — the graph starts to curve.</li>
-<li><strong>Elastic deformation</strong>: the object returns to its original shape when the force is removed (like gently stretching an elastic band).</li>
-<li><strong>Plastic deformation</strong>: the object is permanently deformed and does not return to its original shape (like bending a paperclip).</li>
-<li>If you <strong>double the force</strong> (within the limit of proportionality), the extension <strong>doubles</strong> — this is what "directly proportional" means.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>Hooke's Law</h3>
+<p>Hooke's Law is written <strong>F = k × e</strong>, where F is the force applied (N), e is the <strong>extension</strong> — the stretched length minus the original, natural length — and k is the <strong>spring constant</strong> (N/m), a measure of the spring's stiffness. A higher spring constant means a stiffer spring, needing more force to produce the same extension.</p>
+<p>The phrase "directly proportional" has a precise meaning here: if you double the force applied (while still within the limit of proportionality, below), the extension doubles too. Halve the force, and the extension halves. The two quantities always change by the same factor.</p>
+
+<h3>The Force–Extension Graph and Limit of Proportionality</h3>
+<p>Plotting force against extension while Hooke's Law holds produces a <strong>straight line through the origin</strong>, and the gradient of that line is exactly the spring constant, k. This stays true only up to a certain point, called the <strong>limit of proportionality</strong> — stretch the spring beyond it and the line starts to <strong>curve</strong>, because force and extension are no longer changing in the same fixed ratio.</p>
+
+<h3>Elastic and Plastic Deformation</h3>
+<p>What happens after the force is removed depends on whether that limit was crossed. <strong>Elastic deformation</strong> is reversible: the object returns to its original shape once the force is gone, the way a gently stretched elastic band snaps back. <strong>Plastic deformation</strong> is permanent: the object stays deformed even after the force is removed, the way a bent paperclip stays bent. Crossing the limit of proportionality is what pushes a spring from elastic into plastic behaviour.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A spring has a natural length of 12 cm. When a force of 10 N is applied, it stretches to 16 cm. Calculate the spring constant.</p>
 <p><strong>Solution:</strong><br>
@@ -2447,21 +2317,13 @@ Step 2 — Rearrange Hooke's Law: k = F ÷ e<br>
 Step 3 — Substitute: k = 10 ÷ 0.04 = <strong>250 N/m</strong><br>
 The spring constant is 250 N/m, meaning the spring needs 250 N of force for every 1 m of extension.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Hooke's Law</dt><dd>The extension of a spring is directly proportional to the force applied, provided the limit of proportionality is not exceeded. F = k × e.</dd>
-<dt>Spring constant (k)</dt><dd>A measure of the stiffness of a spring, in N/m. Higher k = stiffer spring.</dd>
-<dt>Extension (e)</dt><dd>The amount a spring has been stretched beyond its natural (unstretched) length, in metres.</dd>
-<dt>Limit of proportionality</dt><dd>The point beyond which the relationship between force and extension is no longer linear (Hooke's Law stops applying).</dd>
-<dt>Elastic deformation</dt><dd>Deformation that is reversed when the force is removed — the object returns to its original shape.</dd>
-<dt>Plastic deformation</dt><dd>Permanent deformation — the object does not return to its original shape when the force is removed.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Using the total length instead of the extension — ✅ Correct: extension = stretched length − <strong>original length</strong>. Always subtract the natural length first.</li>
-<li>❌ Forgetting to convert cm to m — ✅ Correct: the equation F = k × e requires extension in <strong>metres</strong>. 4 cm = 0.04 m.</li>
-<li>❌ Thinking Hooke's Law always applies — ✅ Correct: Hooke's Law only works up to the <strong>limit of proportionality</strong>. Beyond that, the spring may deform permanently.</li>
-<li>❌ Confusing the limit of proportionality with breaking — ✅ Correct: the limit of proportionality is where the graph <strong>curves</strong> — the spring has not broken, but the relationship is no longer linear.</li>
+<li>Using the total length instead of the extension. Extension = stretched length − <strong>original length</strong> — always subtract the natural length first.</li>
+<li>Forgetting to convert cm to m. The equation F = k × e needs extension in <strong>metres</strong>: 4 cm = 0.04 m.</li>
+<li>Thinking Hooke's Law always applies. It only holds up to the <strong>limit of proportionality</strong> — beyond that, the spring may deform permanently.</li>
+<li>Confusing the limit of proportionality with breaking. It is simply where the graph <strong>curves</strong> — the spring has not broken, but the relationship is no longer linear.</li>
 </ul>`,
 
 "island-65": `<h2>Health: Effects of Drugs</h2>
@@ -2517,20 +2379,17 @@ So the student is wrong: caffeine is a drug, and a legal one.</p>
 <li>Treating addiction as simply a lack of willpower. Dependence involves real <strong>physical and chemical changes in the brain</strong>, which is why it is treated as a medical condition.</li>
 </ul>`,
 
-"island-66": `<h4>Introduction</h4>
-<p>A <strong>distance–time graph</strong> is one of the most useful tools in physics for describing motion. By looking at the shape of the line, you can tell whether an object is stationary, moving at a constant speed, speeding up or slowing down — and by calculating the gradient, you can work out exactly how fast it is going.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>On a distance–time graph, the <strong>x-axis</strong> shows time and the <strong>y-axis</strong> shows the distance from the starting point.</li>
-<li>A <strong>horizontal (flat) line</strong> means the object is <strong>stationary</strong> — time passes but the distance does not change.</li>
-<li>A <strong>straight diagonal line</strong> going upwards means the object is moving at <strong>constant speed</strong>.</li>
-<li>The <strong>steeper</strong> the line, the <strong>faster</strong> the object is moving (more distance covered per unit time).</li>
-<li><strong>Speed = gradient</strong> of the line = distance ÷ time.</li>
-<li>A <strong>curve getting steeper</strong> means the object is <strong>accelerating</strong> (speeding up). A curve getting shallower means it is <strong>decelerating</strong> (slowing down).</li>
-<li>To compare journeys, look at the <strong>gradient</strong> of each section — a steeper section represents a faster speed.</li>
-<li><strong>Average speed</strong> for a whole journey = total distance ÷ total time.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+"island-66": `<h2>Distance–Time Graphs</h2>
+<p>A <strong>distance–time graph</strong> is one of the most useful tools in physics for describing motion. By looking at the shape of the line alone, you can tell whether an object is stationary, moving at a constant speed, speeding up or slowing down — and by calculating the gradient, you can work out exactly how fast it is going.</p>
+
+<h3>Reading the Shape of the Graph</h3>
+<p>On a distance–time graph, the <strong>x-axis</strong> shows time and the <strong>y-axis</strong> shows distance from the starting point. The shape of the line tells the whole story of the journey. A <strong>horizontal (flat) line</strong> means the object is <strong>stationary</strong> — time is passing but the distance is not changing. A <strong>straight diagonal line</strong> means the object is moving at <strong>constant speed</strong>, and the steeper that line, the faster it is going, because more distance is being covered in the same amount of time. A <strong>curve that gets steeper</strong> means the object is <strong>accelerating</strong> (speeding up), while a curve that gets shallower means it is <strong>decelerating</strong> (slowing down).</p>
+<div class="lesson-diagram" data-diagram="distance-time-graph"><p class="diagram-caption">Reading a distance–time graph: flat, diagonal and curved sections</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Calculating Speed from a Graph</h3>
+<p>Because speed is distance divided by time, and gradient is exactly "how much the y-axis changes for a given change in the x-axis," the two turn out to be the same calculation: <strong>speed = gradient</strong> of the line = distance ÷ time. This is why comparing two sections of a journey is just a matter of comparing gradients — whichever section has the steeper line was the faster one. For a whole journey made up of several sections, the <strong>average speed</strong> is total distance ÷ total time, which is not the same as the speed of any one section.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A distance–time graph shows a straight line from (0 s, 0 m) to (20 s, 80 m), then a flat line from (20 s, 80 m) to (30 s, 80 m). Describe the journey and calculate the speed during the first section.</p>
 <p><strong>Solution:</strong><br>
@@ -2540,40 +2399,29 @@ So the student is wrong: caffeine is a drug, and a legal one.</p>
 3. The object travelled 80 m at 4 m/s, then stopped for 10 seconds.<br>
 4. Average speed for the whole journey = total distance ÷ total time = 80 ÷ 30 = <strong>2.67 m/s</strong>.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Distance–time graph</dt><dd>A graph that shows how the distance of an object from a starting point changes over time. Time is on the x-axis; distance on the y-axis.</dd>
-<dt>Gradient</dt><dd>The steepness of a line on a graph. On a distance–time graph, the gradient equals the speed.</dd>
-<dt>Constant speed</dt><dd>Moving at the same speed throughout — shown by a straight diagonal line on a distance–time graph.</dd>
-<dt>Stationary</dt><dd>Not moving — shown by a horizontal (flat) line on a distance–time graph.</dd>
-<dt>Average speed</dt><dd>The total distance travelled divided by the total time taken for the whole journey.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Confusing a flat line with constant speed — ✅ Correct: a <strong>flat line</strong> means the object is <strong>stationary</strong> (not moving). A <strong>diagonal</strong> line means constant speed.</li>
-<li>❌ Forgetting that the gradient gives speed — ✅ Correct: speed = <strong>distance ÷ time</strong> = the gradient of the line. Steeper = faster.</li>
-<li>❌ Reading off total distance instead of calculating each section separately — ✅ Correct: for a journey with different sections, calculate the <strong>speed of each section</strong> using that section's distance and time.</li>
-<li>❌ Confusing distance–time graphs with speed–time graphs — ✅ Correct: on a distance–time graph, the gradient gives <strong>speed</strong>. On a speed–time graph, the gradient gives <strong>acceleration</strong> (a different concept).</li>
+<li>Confusing a flat line with constant speed. A <strong>flat line</strong> means the object is <strong>stationary</strong> (not moving); a <strong>diagonal</strong> line means constant speed.</li>
+<li>Forgetting that the gradient gives speed. Speed = <strong>distance ÷ time</strong>, which is exactly the gradient of the line — steeper means faster.</li>
+<li>Reading off total distance instead of calculating each section separately. For a journey with different sections, calculate the <strong>speed of each section</strong> from that section's own distance and time.</li>
+<li>Confusing distance–time graphs with speed–time graphs. On a distance–time graph, the gradient gives <strong>speed</strong>; on a speed–time graph, the gradient gives <strong>acceleration</strong> instead — a different concept entirely.</li>
 </ul>`,
 
-"island-48": `<h4>Introduction</h4>
-<p>Geography is the study of the world around us — its landscapes, people, places and environments. It asks big questions like "Why do people live where they do?" and "How is our planet changing?" Geography is split into two main branches: <strong>physical geography</strong> (natural features like rivers, mountains and weather) and <strong>human geography</strong> (people, cities, trade and culture). Understanding geography helps you make sense of the news, the environment and your own neighbourhood.</p>
+"island-48": `<h2>Introduction to Geography</h2>
+<p>Geography is the study of the world around us — its landscapes, people, places and environments. It asks big questions like "Why do people live where they do?" and "How is our planet changing?" Understanding geography helps you make sense of the news, the environment and your own neighbourhood.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Physical geography</strong> studies natural features and processes — rivers, volcanoes, weather, ecosystems, rocks and coasts.</li>
-<li><strong>Human geography</strong> studies people and how they interact with the world — cities, migration, trade, culture and development.</li>
-<li><strong>Place</strong> refers to a specific location and the characteristics that make it unique (e.g. London is a capital city on the River Thames).</li>
-<li><strong>Space</strong> describes the gap or area between places and how things are distributed across the Earth's surface.</li>
-<li><strong>Scale</strong> means studying geography at different levels — local (your town), national (the UK), or global (the whole world). On a map, <strong>map scale</strong> shows the relationship between distance on the map and real distance on the ground (e.g. 1:25,000 means 1 cm on the map = 250 m in reality).</li>
-<li>The UK is made up of four countries: <strong>England</strong> (London), <strong>Scotland</strong> (Edinburgh), <strong>Wales</strong> (Cardiff) and <strong>Northern Ireland</strong> (Belfast).</li>
-<li>There are <strong>7 continents</strong> (Africa, Antarctica, Asia, Australia/Oceania, Europe, North America, South America) and <strong>5 oceans</strong> (Atlantic, Pacific, Indian, Southern, Arctic). <strong>Asia</strong> is the largest continent by area and population; the <strong>Pacific</strong> is the largest ocean.</li>
-<li><strong>Latitude</strong> lines run east–west and measure how far north or south of the Equator you are. <strong>Longitude</strong> lines run north–south and measure how far east or west of the Prime Meridian you are.</li>
-<li>Latitude is the main factor affecting temperature, but <strong>altitude</strong> (higher = colder), <strong>ocean currents</strong>, <strong>distance from the sea</strong> and <strong>prevailing winds</strong> also affect climate — so two places at the same latitude can have very different weather.</li>
-</ul>
+<h3>Physical and Human Geography</h3>
+<p>Geography splits into two main branches. <strong>Physical geography</strong> studies natural features and processes — rivers, volcanoes, weather, ecosystems, rocks and coasts. <strong>Human geography</strong> studies people and how they interact with the world — cities, migration, trade, culture and development. Both branches share a common set of ideas for thinking about the world: <strong>place</strong> is a specific location and the characteristics that make it unique (London, for instance, is a capital city on the River Thames); <strong>space</strong> describes the gaps between places and how things are distributed across the Earth's surface; and <strong>scale</strong> means studying geography at different levels, from your own town, to the whole UK, to the entire globe. On a map, that same idea of scale becomes <strong>map scale</strong> — the relationship between distance on the map and real distance on the ground, so that 1:25,000 means 1 cm on the map equals 250 m in reality.</p>
+
+<h3>The World: Continents, Countries and Oceans</h3>
+<p>Closer to home, the UK is made up of four countries: <strong>England</strong> (capital London), <strong>Scotland</strong> (Edinburgh), <strong>Wales</strong> (Cardiff) and <strong>Northern Ireland</strong> (Belfast). Zooming out, the world is divided into <strong>7 continents</strong> — Africa, Antarctica, Asia, Australia/Oceania, Europe, North America and South America — and <strong>5 oceans</strong> — Atlantic, Pacific, Indian, Southern and Arctic. Asia is both the largest continent by area and by population, while the Pacific is the largest ocean by far.</p>
+
+<h3>Latitude, Longitude and Climate</h3>
+<p>Any point on Earth can be pinned down using two sets of lines. <strong>Latitude</strong> lines run east–west and measure how far north or south of the Equator you are; <strong>longitude</strong> lines run north–south and measure how far east or west of the Prime Meridian you are. Latitude is the single biggest factor determining temperature, since it controls how directly sunlight hits a given point — but it is not the only one: <strong>altitude</strong> (higher means colder), <strong>ocean currents</strong>, <strong>distance from the sea</strong> and <strong>prevailing winds</strong> all shape climate too, which is why two places at exactly the same latitude can still have very different weather.</p>
 <div class="lesson-diagram" data-diagram="lat-long-globe"><p class="diagram-caption">Lines of latitude and longitude on a globe — the grid system for locating any point on Earth</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
-<h4>✏️ Worked Example</h4>
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A student says "Geography is just about colouring in maps." Explain why this view is wrong, using examples from physical and human geography.</p>
 <p><strong>Solution:</strong><br>
@@ -2583,45 +2431,28 @@ So the student is wrong: caffeine is a drug, and a legal one.</p>
 4. Maps are <strong>one tool</strong> geographers use, but so are satellite images, data analysis, fieldwork and interviews.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Geography</dt><dd>The study of the Earth's landscapes, environments, places and the relationship between people and their surroundings.</dd>
-<dt>Physical geography</dt><dd>The branch of geography that studies natural features and processes such as rivers, weather, rocks and ecosystems.</dd>
-<dt>Human geography</dt><dd>The branch of geography that studies people, settlements, trade, migration and culture.</dd>
-<dt>Latitude</dt><dd>Imaginary lines running east–west around the Earth, measuring distance north or south of the Equator (0°). Measured in degrees up to 90°N or 90°S.</dd>
-<dt>Longitude</dt><dd>Imaginary lines running north–south, measuring distance east or west of the Prime Meridian (0°). Measured in degrees up to 180°E or 180°W.</dd>
-<dt>Equator</dt><dd>The imaginary line at 0° latitude that divides the Earth into the Northern and Southern Hemispheres.</dd>
-<dt>Tropics</dt><dd>The Tropic of Cancer (23.5°N) and Tropic of Capricorn (23.5°S) — the boundaries of the tropical zone where the Sun can be directly overhead.</dd>
-<dt>Map scale</dt><dd>The ratio between a distance on a map and the corresponding real-world distance (e.g. 1:25,000 means 1 cm on the map equals 25,000 cm or 250 m on the ground).</dd>
-<dt>Hemisphere</dt><dd>Half of the Earth. The Equator divides the globe into Northern and Southern Hemispheres; the Prime Meridian divides it into Eastern and Western Hemispheres.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking geography is only about maps — ✅ Correct: geography uses maps as one tool, but it studies <strong>processes, patterns and people</strong> too.</li>
-<li>❌ Mixing up latitude and longitude — ✅ Correct: <strong>lat</strong>itude is <strong>flat</strong> (runs east–west); longitude runs north–south.</li>
-<li>❌ Forgetting Northern Ireland is part of the UK — ✅ Correct: the UK has <strong>four</strong> countries: England, Scotland, Wales and Northern Ireland.</li>
-<li>❌ Saying there are 4 oceans — ✅ Correct: there are <strong>5 oceans</strong> (the Southern Ocean around Antarctica is the fifth).</li>
+<li>Thinking geography is only about maps. Geography uses maps as one tool among many, but it studies <strong>processes, patterns and people</strong> too.</li>
+<li>Mixing up latitude and longitude. Remember it as "<strong>lat</strong>itude is <strong>flat</strong>" — it runs east–west; longitude runs north–south.</li>
+<li>Forgetting Northern Ireland is part of the UK. The UK has <strong>four</strong> countries: England, Scotland, Wales and Northern Ireland.</li>
+<li>Saying there are only 4 oceans. There are <strong>5 oceans</strong> — the Southern Ocean around Antarctica is the fifth.</li>
 </ul>`,
 
-"island-49": `<h4>Introduction</h4>
+"island-49": `<h2>UK Physical &amp; Human Geography</h2>
 <p>The United Kingdom may be a small island nation, but its geography is remarkably varied. From the rugged Scottish Highlands to the flat Fens of East Anglia, and from dramatic coastlines to bustling cities, Britain packs an incredible range of landscapes into a compact space. Understanding UK geography means knowing its physical features — mountains, rivers and coasts — as well as how people have shaped the land through farming, industry and settlement.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li>The UK's physical landscape is broadly divided into <strong>uplands</strong> (north and west — older, harder rocks) and <strong>lowlands</strong> (south and east — younger, softer rocks).</li>
-<li>Key upland areas include the <strong>Scottish Highlands</strong> (Ben Nevis, 1,345 m — the UK's highest peak), the <strong>Lake District</strong> (Scafell Pike, 978 m — England's highest), the <strong>Pennines</strong> (the "backbone of England") and <strong>Snowdonia</strong> in Wales (Snowdon, 1,085 m). The <strong>Central Lowlands</strong> of Scotland lie between the Highlands and Southern Uplands — a flatter, more fertile region containing Edinburgh and Glasgow.</li>
-<li>Major rivers: the <strong>Severn</strong> (longest, 354 km), the <strong>Thames</strong> (flows through London), the <strong>Trent</strong> (drains the Midlands) and the <strong>Tyne</strong> (flows through Newcastle).</li>
-<li>The UK has over <strong>19,000 miles of coastline</strong>, with features such as cliffs (e.g. White Cliffs of Dover), beaches, estuaries and spits. The <strong>Holderness Coast</strong> in East Yorkshire is one of Europe's fastest-eroding coastlines (up to 2 m/year) because its soft boulder clay cliffs are easily worn away by waves.</li>
-<li>Major cities include London (capital, 9 million+), Birmingham, Manchester, Leeds, Glasgow and Edinburgh, mostly located near rivers or coasts.</li>
-<li>The UK economy is dominated by the <strong>tertiary (service) sector</strong> (retail, education, healthcare — about 80 % of jobs). The <strong>primary sector</strong> (farming, fishing, mining), <strong>secondary sector</strong> (manufacturing) and growing <strong>quaternary sector</strong> (research, IT) make up the rest.</li>
-<li>The <strong>North-South divide</strong> describes economic differences — the South East tends to be wealthier with more service-sector jobs, while parts of the North have faced decline in traditional industries like mining and steel.</li>
-<li><strong>Rural areas</strong> have lower population density, more farming and often fewer services. <strong>Urban areas</strong> are built-up, densely populated and have more jobs and facilities.</li>
-<li>The UK has <strong>15 National Parks</strong> (e.g. Lake District, Peak District, Snowdonia) — protected areas valued for their landscape, wildlife and recreation.</li>
-</ul>
+<h3>UK Physical Landscape: Uplands and Lowlands</h3>
+<p>The UK's landscape splits broadly into <strong>uplands</strong> in the north and west, built from older, harder rocks, and <strong>lowlands</strong> in the south and east, built from younger, softer rocks. The uplands include some of the UK's best-known landscapes: the <strong>Scottish Highlands</strong>, home to Ben Nevis (1,345 m, the UK's highest peak), the <strong>Lake District</strong>, home to Scafell Pike (978 m, England's highest), the <strong>Pennines</strong> — often called the "backbone of England" — and <strong>Snowdonia</strong> in Wales, home to Snowdon (1,085 m). Between the Highlands and the Southern Uplands sits Scotland's <strong>Central Lowlands</strong>, a flatter, more fertile region containing both Edinburgh and Glasgow. Many of the most valued upland landscapes are protected as one of the UK's <strong>15 National Parks</strong>, including the Lake District, the Peak District and Snowdonia, safeguarding them for their landscape, wildlife and recreational value.</p>
 <div class="lesson-diagram" data-diagram="uk-physical-regions"><p class="diagram-caption">The UK's physical regions — uplands in the north and west, lowlands in the south and east</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
-<h4>✏️ Worked Example</h4>
+<h3>Rivers, Coastlines and Cities</h3>
+<p>The UK's major rivers include the <strong>Severn</strong>, its longest at 354 km, the <strong>Thames</strong>, which flows through London, the <strong>Trent</strong>, draining much of the Midlands, and the <strong>Tyne</strong>, flowing through Newcastle. Surrounding all of this is over 19,000 miles of coastline, featuring cliffs such as the White Cliffs of Dover, beaches, estuaries and spits — though not all of it is equally stable: the <strong>Holderness Coast</strong> in East Yorkshire, made of soft boulder clay, is one of Europe's fastest-eroding coastlines, retreating by up to 2 m a year. It is no coincidence that the UK's major cities — London, Birmingham, Manchester, Leeds, Glasgow, Edinburgh — cluster near rivers or coasts, since water has always meant fresh supply, trade routes and, later, power for industry.</p>
+
+<h3>The UK Economy and Regional Divides</h3>
+<p>Today's UK economy is dominated by the <strong>tertiary (service) sector</strong> — retail, education, healthcare — which accounts for around 80% of jobs, with the <strong>primary sector</strong> (farming, fishing, mining), <strong>secondary sector</strong> (manufacturing) and the growing <strong>quaternary sector</strong> (research, IT) making up the rest. That economic shift has not been felt evenly across the country: the <strong>North-South divide</strong> describes how the South East tends to be wealthier, with more service-sector jobs, while parts of the North have faced real decline in traditional industries such as mining and steel. A related but separate distinction is between <strong>rural</strong> areas, with lower population density, more farming and often fewer services, and <strong>urban</strong> areas, which are built-up, densely populated and rich in jobs and facilities.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Using your knowledge of UK geography, explain why most major cities in the UK are located near rivers.</p>
 <p><strong>Solution:</strong><br>
@@ -2632,46 +2463,29 @@ So the student is wrong: caffeine is a drug, and a legal one.</p>
 Therefore, rivers offered water, food, transport and power — the key ingredients for city growth.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Uplands</dt><dd>Higher ground with rugged terrain, usually found in the north and west of the UK, made of older, harder rocks (e.g. Scottish Highlands, Pennines).</dd>
-<dt>Lowlands</dt><dd>Flatter, lower-lying areas mainly in the south and east of the UK, made of younger, softer rocks (e.g. the Fens, Thames Valley).</dd>
-<dt>Floodplain</dt><dd>The flat area of land on either side of a river that is naturally prone to flooding, often used for farming due to its fertile soil.</dd>
-<dt>Estuary</dt><dd>The wide mouth of a river where it meets the sea, where freshwater and saltwater mix (e.g. the Thames Estuary).</dd>
-<dt>National Park</dt><dd>A protected area of countryside valued for its landscape, wildlife and recreation. Planning rules limit development to preserve the environment.</dd>
-<dt>North-South divide</dt><dd>The economic and social differences between the wealthier South East of England and the relatively less prosperous North and Midlands.</dd>
-<dt>Coastal erosion</dt><dd>The wearing away of land by the sea through wave action, especially on soft-rock coastlines such as the Holderness Coast.</dd>
-<dt>Tertiary sector</dt><dd>The service sector of the economy — jobs in retail, education, healthcare, finance and tourism. It employs about 80 % of UK workers.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying Ben Nevis is in England — ✅ Correct: Ben Nevis (1,345 m) is in <strong>Scotland</strong> and is the UK's highest mountain.</li>
-<li>❌ Thinking the Thames is the UK's longest river — ✅ Correct: the <strong>Severn</strong> (354 km) is the longest; the Thames (346 km) is the second longest.</li>
-<li>❌ Confusing "Great Britain" with "the United Kingdom" — ✅ Correct: Great Britain = England + Scotland + Wales. The UK also includes <strong>Northern Ireland</strong>.</li>
-<li>❌ Thinking all of northern England is poor and all of southern England is rich — ✅ Correct: the North-South divide is a <strong>general trend</strong>, not a rule — there is poverty in London and wealth in the North.</li>
+<li>Saying Ben Nevis is in England. Ben Nevis (1,345 m) is in <strong>Scotland</strong> and is the UK's highest mountain.</li>
+<li>Thinking the Thames is the UK's longest river. The <strong>Severn</strong> (354 km) is the longest; the Thames (346 km) is the second longest.</li>
+<li>Confusing "Great Britain" with "the United Kingdom". Great Britain is England + Scotland + Wales; the UK also includes <strong>Northern Ireland</strong>.</li>
+<li>Thinking all of northern England is poor and all of southern England is rich. The North-South divide is a <strong>general trend</strong>, not a rule — there is poverty in London and wealth in the North.</li>
 </ul>`,
 
-"island-50": `<h4>Introduction</h4>
+"island-50": `<h2>Rocks, Weathering &amp; Soils</h2>
 <p>The ground beneath your feet tells a story millions — even billions — of years old. Rocks are the solid building blocks of the Earth and they are constantly being formed, broken down and reformed in a never-ending process called the <strong>rock cycle</strong>. Understanding rocks, weathering and soils helps geographers explain landscapes: why some hills are jagged and some are smooth, why caves form in limestone, and why soil is different from place to place.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Igneous rocks</strong> form when hot magma or lava cools and solidifies. <strong>Intrusive</strong> igneous rocks (e.g. <strong>granite</strong>) cool slowly underground and have large crystals. <strong>Extrusive</strong> igneous rocks (e.g. <strong>basalt</strong>) cool quickly on the surface and have small crystals.</li>
-<li><strong>Sedimentary rocks</strong> form when layers of sediment (sand, mud, shells) are compacted and cemented over millions of years. Examples: <strong>limestone</strong> (made from shells/skeletons), <strong>sandstone</strong> (made from sand grains) and <strong>chalk</strong>. Sedimentary rocks are the only type likely to contain <strong>fossils</strong> because organisms are buried in sediment before it hardens.</li>
-<li><strong>Metamorphic rocks</strong> form when existing rocks are changed by extreme heat and/or pressure deep underground. Examples: <strong>marble</strong> (from limestone) and <strong>slate</strong> (from mudstone/shale).</li>
-<li>The <strong>rock cycle</strong> shows how rocks are continuously transformed: igneous → weathered into sediment → sedimentary → heated/pressured into metamorphic → melted back into magma → igneous again.</li>
-<li><strong>Freeze-thaw weathering</strong> (physical): water enters cracks in rock, freezes and expands by about 9%, widening the crack. Repeated cycles break the rock apart.</li>
-<li><strong>Chemical weathering</strong>: slightly acidic rainwater (containing dissolved CO₂) reacts with minerals in rock, dissolving them. This is especially effective on limestone (forming caves and pavements).</li>
-<li><strong>Biological weathering</strong>: plant roots grow into cracks and widen them; burrowing animals disturb rock; lichens produce acids that attack rock surfaces.</li>
-<li><strong>Soil</strong> forms from weathered rock mixed with decomposed organic matter (humus), water and air. It takes hundreds of years to form just a few centimetres of soil.</li>
-<li>The type of underlying rock shapes the landscape: <strong>limestone</strong> creates karst features (caves, gorges, pavements); <strong>clay</strong> produces flat, poorly drained lowlands; <strong>granite</strong> forms rugged upland moors.</li>
-<li>Human activity can accelerate weathering — burning fossil fuels creates <strong>acid rain</strong> that speeds chemical weathering of buildings and rocks; construction and quarrying expose fresh rock to freeze-thaw; deforestation removes roots that bind soil.</li>
-</ul>
+<h3>The Three Rock Types and the Rock Cycle</h3>
+<p><strong>Igneous rocks</strong> form when hot magma or lava cools and solidifies: <strong>intrusive</strong> igneous rocks such as granite cool slowly underground, giving crystals time to grow large, while <strong>extrusive</strong> igneous rocks such as basalt cool quickly at the surface, leaving crystals small. <strong>Sedimentary rocks</strong> form as layers of sediment — sand, mud, shells — are compacted and cemented together over millions of years, producing rocks such as limestone (from shells and skeletons), sandstone (from sand grains) and chalk; because organisms can be buried within these layers before they harden, sedimentary rock is the only type likely to contain <strong>fossils</strong>. <strong>Metamorphic rocks</strong> form when an existing rock is transformed by extreme heat and/or pressure deep underground without fully melting — limestone becomes marble, mudstone or shale becomes slate. These three types are not fixed destinations but stages in the <strong>rock cycle</strong>: igneous rock weathers into sediment, sediment compacts into sedimentary rock, heat and pressure turn that into metamorphic rock, and if it melts completely it becomes magma again, ready to cool into igneous rock once more — a cycle with no fixed starting point, where any rock type can eventually become any other.</p>
 <div class="lesson-diagram" data-diagram="rock-cycle"><p class="diagram-caption">The rock cycle — showing how igneous, sedimentary and metamorphic rocks transform into each other</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 <div class="lesson-diagram" data-diagram="igneous-comparison"><p class="diagram-caption">Intrusive vs extrusive igneous rock — how cooling speed affects crystal size</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
-<h4>✏️ Worked Example</h4>
+<h3>Weathering</h3>
+<p>Rock does not need to be moved to be broken down — that is the whole point of <strong>weathering</strong>, which acts on rock in place, in three distinct ways. <strong>Freeze-thaw weathering</strong> is physical: water enters a crack, freezes and expands by around 9%, widening the crack a little more with every cycle until fragments break off entirely. <strong>Chemical weathering</strong> happens because rainwater is naturally slightly acidic, thanks to dissolved CO₂, and that mild acid reacts with and dissolves minerals in the rock — an effect especially powerful on limestone, where it carves out caves and limestone pavements. <strong>Biological weathering</strong> comes from living things: plant roots force their way into cracks and widen them, burrowing animals disturb the rock, and lichens produce their own weak acids that attack the rock surface directly.</p>
+
+<h3>Soils and Landscapes</h3>
+<p><strong>Soil</strong> itself forms from weathered rock mixed with decomposed organic matter (<strong>humus</strong>), water and air — a slow process, taking hundreds of years to build just a few centimetres. The type of rock beneath a landscape shapes its surface features directly: limestone produces karst features such as caves, gorges and pavements; clay produces flat, poorly drained lowlands; granite forms rugged upland moors. Human activity now speeds up weathering in several ways too: burning fossil fuels produces <strong>acid rain</strong>, which accelerates the chemical weathering of buildings and rock; construction and quarrying expose fresh rock surfaces to freeze-thaw that would otherwise have stayed protected; and deforestation removes the roots that would otherwise hold soil together.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Explain how freeze-thaw weathering can break apart a rock face in a mountainous area like the Lake District.</p>
 <p><strong>Solution:</strong><br>
@@ -2683,48 +2497,32 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 6. Broken fragments collect at the base of the rock face, forming a <strong>scree slope</strong>.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Igneous rock</dt><dd>Rock formed from cooled magma or lava. "Igneous" comes from the Latin word for fire.</dd>
-<dt>Sedimentary rock</dt><dd>Rock formed from layers of sediment (fragments of other rocks, shells, or organic material) compacted and cemented together over time.</dd>
-<dt>Metamorphic rock</dt><dd>Rock that has been changed from its original form by intense heat and/or pressure without melting completely.</dd>
-<dt>Rock cycle</dt><dd>The continuous process by which rocks are created, broken down, and reformed into different types over millions of years.</dd>
-<dt>Weathering</dt><dd>The breakdown of rocks in situ (in their original position) by physical, chemical or biological processes. Unlike erosion, weathering does not involve movement.</dd>
-<dt>Scree</dt><dd>A slope of loose, angular rock fragments that have collected at the base of a cliff or mountain face, usually produced by freeze-thaw weathering.</dd>
-<dt>Humus</dt><dd>Dark, nutrient-rich organic material in soil, formed from the decomposition of dead plants and animals.</dd>
-<dt>Intrusive igneous rock</dt><dd>Igneous rock (e.g. granite) that cooled slowly from magma deep underground, producing large crystals.</dd>
-<dt>Extrusive igneous rock</dt><dd>Igneous rock (e.g. basalt) that cooled quickly from lava on the Earth's surface, producing small crystals.</dd>
-<dt>Fossil</dt><dd>The preserved remains or traces of a once-living organism, found almost exclusively in sedimentary rocks.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Confusing weathering and erosion — ✅ Correct: <strong>weathering</strong> breaks rock down in place; <strong>erosion</strong> involves the movement of broken material by water, wind or ice.</li>
-<li>❌ Thinking metamorphic rocks have melted — ✅ Correct: metamorphic rocks are changed by heat and pressure but do <strong>not fully melt</strong>. If they melted, they would form igneous rock.</li>
-<li>❌ Saying granite has small crystals — ✅ Correct: granite cooled <strong>slowly underground</strong>, so its crystals had time to grow large. Basalt cooled quickly and has small crystals.</li>
-<li>❌ Thinking the rock cycle has a fixed starting point — ✅ Correct: the rock cycle is <strong>continuous</strong> with no set beginning or end; any rock type can become any other.</li>
+<li>Confusing weathering and erosion. <strong>Weathering</strong> breaks rock down in place; <strong>erosion</strong> involves the movement of broken material by water, wind or ice.</li>
+<li>Thinking metamorphic rocks have melted. They are changed by heat and pressure but do <strong>not fully melt</strong> — if they melted, they would form igneous rock instead.</li>
+<li>Saying granite has small crystals. Granite cooled <strong>slowly underground</strong>, so its crystals had time to grow large; basalt cooled quickly and has small crystals.</li>
+<li>Thinking the rock cycle has a fixed starting point. It is <strong>continuous</strong>, with no set beginning or end — any rock type can become any other.</li>
 </ul>`,
 
-"island-51": `<h4>Introduction</h4>
+"island-51": `<h2>Geographical Skills</h2>
 <p>Geographers don't just learn facts about places — they go out and <strong>investigate</strong> the world using a range of practical skills. From reading maps and using GIS (Geographical Information Systems) to collecting data in the field and presenting it in graphs and charts, geographical skills help you answer real questions about the world. These skills are essential for fieldwork — and for your exams!</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>GIS</strong> (Geographical Information Systems) are computer systems that collect, store, analyse and display geographical data on digital maps. Examples: Google Earth, flood-risk mapping by the Environment Agency.</li>
-<li><strong>Satellite imagery</strong> shows large-scale features (land use, deforestation, urban growth) while <strong>aerial photographs</strong> give more detail of smaller areas.</li>
-<li><strong>Primary data</strong> is information you collect yourself first-hand through fieldwork (e.g. temperature readings, pedestrian counts, questionnaire responses). <strong>Secondary data</strong> is information collected by someone else (e.g. census data, OS maps, climate records) — useful for context and comparison.</li>
-<li>Data can be collected using <strong>questionnaires</strong> (asking people), <strong>sampling</strong> (random, systematic or stratified) and <strong>measurements</strong> (river width, temperature, pedestrian counts). A <strong>transect</strong> is a line along which data is collected at regular intervals.</li>
-<li><strong>Bar charts</strong> compare categories; <strong>line graphs</strong> show change over time; <strong>pie charts</strong> show proportions of a whole; <strong>scatter graphs</strong> show the relationship (<strong>correlation</strong>) between two variables; <strong>choropleth maps</strong> use shading to show values across areas.</li>
-<li>An <strong>Environmental Quality Index (EQI)</strong> is a scoring system used to measure the quality of a place by rating factors like litter, noise, green space and building condition.</li>
-<li><strong>Mean</strong> = total ÷ number of values; <strong>median</strong> = middle value when ordered; <strong>mode</strong> = most common value; <strong>range</strong> = highest − lowest.</li>
-<li>Good fieldwork follows a clear process: <strong>question → hypothesis → method → data collection → presentation → analysis → conclusion → evaluation</strong>.</li>
-<li>When drawing conclusions, link your findings back to your original <strong>question or hypothesis</strong> and use data as evidence.</li>
-<li>When evaluating, consider <strong>reliability</strong> (would you get similar results if you repeated it?), <strong>accuracy</strong> (how close to the true value?) and <strong>limitations</strong> (what could be improved?).</li>
-</ul>
-<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">The geographical enquiry process — from question to evaluation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+<h3>Maps, GIS and Photographs</h3>
+<p><strong>GIS</strong> (Geographical Information Systems) are computer systems that collect, store, analyse and display geographical data on digital maps — Google Earth and the Environment Agency's flood-risk mapping are both everyday examples. Imagery adds another layer of evidence: <strong>satellite imagery</strong> reveals large-scale features such as land use, deforestation and urban growth, while <strong>aerial photographs</strong>, taken closer to the ground, give far more detail of a smaller area.</p>
+
+<h3>Collecting Data: Primary, Secondary and Sampling</h3>
+<p>Fieldwork data splits into two categories depending on where it comes from. <strong>Primary data</strong> is collected first-hand — temperature readings, pedestrian counts, questionnaire responses — while <strong>secondary data</strong> was collected by someone else for a different purpose, such as census data, OS maps or climate records, and is useful for context and comparison. Primary data can be gathered through questionnaires, through measurements such as river width or pedestrian counts, or along a <strong>transect</strong> — a line along which data is collected at regular intervals. Since collecting data from an entire population is rarely practical, geographers use <strong>sampling</strong> instead, selecting a smaller group to represent it: random sampling relies on chance, systematic sampling takes measurements at regular intervals, and stratified sampling deliberately splits the area into sub-groups and samples each in proportion to its size, so that every part of a varied area gets fair representation.</p>
+
+<h3>Displaying and Analysing Data</h3>
+<p>Choosing the right way to display data matters as much as collecting it. Bar charts compare categories against each other; line graphs show change over time; pie charts show how a whole splits into proportions; scatter graphs reveal the <strong>correlation</strong> between two variables — positive, negative or none; and choropleth maps use shading to show how a value varies across different areas. A more specialised tool, the <strong>Environmental Quality Index (EQI)</strong>, scores the quality of a place by rating factors such as litter, noise, green space and building condition. Once collected, data is usually summarised using four measures: the <strong>mean</strong> (total divided by the number of values), the <strong>median</strong> (the middle value once data is ordered), the <strong>mode</strong> (the most common value), and the <strong>range</strong> (the highest value minus the lowest).</p>
 <div class="lesson-diagram" data-diagram="correlation-types"><p class="diagram-caption">Types of correlation on scatter graphs — positive, negative and none</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
-<h4>✏️ Worked Example</h4>
+<h3>The Geographical Enquiry Process</h3>
+<p>Good fieldwork follows a clear sequence: question, hypothesis, method, data collection, presentation, analysis, conclusion, and finally evaluation. A conclusion is only convincing if it links directly back to the original question or hypothesis and uses the actual data as evidence, rather than just restating what was expected. The evaluation step is just as important as the conclusion, asking three separate questions: is the result <strong>reliable</strong> (would repeating the investigation give similar results?), is it <strong>accurate</strong> (how close is it to the true value?), and what <strong>limitations</strong> could be improved next time?</p>
+<div class="lesson-diagram" data-diagram="fieldwork-enquiry"><p class="diagram-caption">The geographical enquiry process — from question to evaluation</p><p class="diagram-expand-hint">Click to enlarge</p></div>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A student counted pedestrians at five locations along a high street and recorded: 12, 8, 15, 8, 22. Calculate the mean, median, mode and range.</p>
 <p><strong>Solution:</strong><br>
@@ -2742,49 +2540,29 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 3. This ensures that all <strong>different parts</strong> of the town are represented in the data, making the results more <strong>representative</strong> of the whole town than random sampling alone.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>GIS</dt><dd>Geographical Information Systems — computer software that layers different types of geographical data onto maps for analysis and display.</dd>
-<dt>Choropleth map</dt><dd>A map that uses different shades of colour to represent different values across areas (e.g. darker shading = higher population density).</dd>
-<dt>Sampling</dt><dd>Selecting a smaller group to represent a larger population. Types include random (chance), systematic (regular intervals) and stratified (proportional sub-groups).</dd>
-<dt>Hypothesis</dt><dd>A testable prediction or statement that can be investigated through fieldwork (e.g. "Environmental quality decreases with distance from the town centre").</dd>
-<dt>Reliability</dt><dd>How consistent results are — if the investigation were repeated, would similar results be obtained?</dd>
-<dt>Mean</dt><dd>The average: the total of all values divided by the number of values.</dd>
-<dt>Primary data</dt><dd>Information collected first-hand by the researcher through fieldwork — e.g. measurements, questionnaire responses, field sketches.</dd>
-<dt>Secondary data</dt><dd>Information collected by someone else for a different purpose — e.g. census data, OS maps, published statistics, satellite images.</dd>
-<dt>Scatter graph</dt><dd>A graph that plots two variables against each other to reveal correlation — positive (both rise), negative (one rises as the other falls) or none.</dd>
-<dt>Correlation</dt><dd>A relationship between two variables. Correlation does not prove causation — just because two things change together does not mean one causes the other.</dd>
-<dt>Transect</dt><dd>A line along which data is collected at regular intervals, used to see how a variable changes across an area (e.g. from city centre to suburbs).</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Confusing mean and median — ✅ Correct: the <strong>mean</strong> is the total divided by the count; the <strong>median</strong> is the middle value when data is in order.</li>
-<li>❌ Using a pie chart when you should use a bar chart — ✅ Correct: use pie charts for <strong>proportions of a whole</strong>; use bar charts to <strong>compare different categories</strong>.</li>
-<li>❌ Writing a conclusion without using data — ✅ Correct: always <strong>quote specific figures</strong> from your results to support your conclusion.</li>
-<li>❌ Thinking one survey is enough to be reliable — ✅ Correct: reliability improves with <strong>larger sample sizes</strong> and <strong>repeated measurements</strong>.</li>
-<li>❌ Assuming correlation means causation — ✅ Correct: just because two variables change together does <strong>not</strong> prove one causes the other; there may be a third factor involved.</li>
+<li>Confusing mean and median. The <strong>mean</strong> is the total divided by the count; the <strong>median</strong> is the middle value once data is in order.</li>
+<li>Using a pie chart when a bar chart is needed. Use pie charts for <strong>proportions of a whole</strong>; use bar charts to <strong>compare different categories</strong>.</li>
+<li>Writing a conclusion without using data. Always <strong>quote specific figures</strong> from the results to support the conclusion.</li>
+<li>Thinking one survey is automatically reliable. Reliability improves with <strong>larger sample sizes</strong> and <strong>repeated measurements</strong>.</li>
+<li>Assuming correlation means causation. Just because two variables change together does <strong>not</strong> prove one causes the other — a third factor may be involved.</li>
 </ul>`,
 
-"island-52": `<h4>Introduction</h4>
+"island-52": `<h2>Globalisation</h2>
 <p><strong>Globalisation</strong> is the process by which the world is becoming more interconnected through trade, travel, communication and culture. Thanks to faster transport, the internet and multinational companies, goods, people and ideas now flow across borders more quickly than ever. The UK is one of the most globally connected countries in the world — the food you eat, the clothes you wear and the entertainment you enjoy are all shaped by globalisation.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Globalisation</strong> means the growing interconnection of the world's economies, cultures and populations, driven by trade, technology, transport and migration.</li>
-<li>Key causes include: <strong>cheaper, faster transport</strong> (container ships, air freight), <strong>improved communication</strong> (internet, smartphones) and the growth of <strong>TNCs</strong> (transnational corporations like Apple, Unilever, Nike).</li>
-<li>The UK <strong>imports</strong> many goods (electronics from China, fruit from Spain, oil from Norway) and <strong>exports</strong> services (finance, insurance), machinery, cars and pharmaceuticals. The UK's main trading partners are the <strong>EU</strong> (especially Germany, France, Netherlands), the <strong>USA</strong> and <strong>China</strong>.</li>
-<li><strong>Migration</strong> has shaped the UK — people have moved to the UK for work, study and safety, bringing skills, culture and diversity (e.g. NHS workers, tech professionals, cuisine). Migrants also send <strong>remittances</strong> (money) home, strengthening links between countries.</li>
-<li><strong>Cultural globalisation</strong> means ideas, music, food and fashion spread worldwide — UK culture goes global (e.g. Premier League, BBC) while global culture comes to the UK (e.g. sushi, K-pop, Bollywood). A risk is <strong>cultural homogenisation</strong> — global brands replacing local traditions.</li>
-<li><strong>Food miles</strong> = the distance food travels from farm to plate. High food miles mean more transport emissions, but importing food can support farmers in developing countries.</li>
-<li><strong>Supply chains</strong> are the networks of people, businesses and countries involved in making and delivering a product. A single smartphone may involve materials and labour from 30+ countries.</li>
-<li>Globalisation has <strong>benefits</strong> (more choice, lower prices, economic growth, cultural exchange) and <strong>costs</strong> (job losses in some sectors, environmental damage, exploitation of workers, loss of local culture).</li>
-<li>Countries are classified by wealth: <strong>HICs</strong> (High Income Countries, e.g. UK, USA), <strong>LICs</strong> (Low Income Countries, e.g. Mali) and <strong>NEEs</strong> (Newly Emerging Economies, e.g. China, India). Globalisation creates <strong>interdependence</strong> — countries relying on each other for goods, services and resources.</li>
-<li><strong>Fairtrade</strong> is a scheme that guarantees producers in developing countries a fair minimum price and better working conditions, helping reduce some of the negative effects of globalisation.</li>
-</ul>
+<h3>What Drives Globalisation</h3>
+<p>Globalisation means the growing interconnection of the world's economies, cultures and populations, and three forces drive it above all: <strong>cheaper, faster transport</strong> such as container ships and air freight, <strong>improved communication</strong> through the internet and smartphones, and the growth of <strong>TNCs</strong> (transnational corporations) such as Apple, Unilever and Nike, which organise production across many countries at once.</p>
+
+<h3>Trade, Migration and Culture</h3>
+<p>The UK <strong>imports</strong> a huge range of goods — electronics from China, fruit from Spain, oil from Norway — while <strong>exporting</strong> services such as finance and insurance, along with machinery, cars and pharmaceuticals, with the EU, USA and China as its main trading partners. Trade is only one strand of the connection, though: <strong>migration</strong> has reshaped the UK too, as people move here for work, study and safety, bringing skills, culture and diversity — NHS workers and tech professionals among them — while sending <strong>remittances</strong> back home, strengthening the economic link between countries in both directions. That two-way flow extends to culture as well: UK exports such as the Premier League and the BBC go global, while global culture — sushi, K-pop, Bollywood — arrives in the UK, though the same process carries the risk of <strong>cultural homogenisation</strong>, where global brands gradually crowd out local traditions.</p>
+
+<h3>Supply Chains, Food Miles and Interdependence</h3>
+<p>A <strong>supply chain</strong> is the network of people, businesses and countries involved in making and delivering a single product — a smartphone alone can involve materials and labour from over 30 countries. Food shows a related idea in <strong>food miles</strong>, the distance food travels from farm to plate: high food miles mean more transport emissions, though importing food can also support farmers in developing countries who would otherwise have no market for it. All of this connects countries into <strong>interdependence</strong>, relying on each other for goods, services and resources — countries are commonly grouped by wealth into <strong>HICs</strong> (High Income Countries, such as the UK and USA), <strong>LICs</strong> (Low Income Countries, such as Mali) and <strong>NEEs</strong> (Newly Emerging Economies, such as China and India), and interdependence runs across all three groups. <strong>Fairtrade</strong> exists specifically to soften one of globalisation's sharper edges, guaranteeing producers in developing countries a fair minimum price and better working conditions. Taken together, globalisation brings real <strong>benefits</strong> — more choice, lower prices, economic growth, cultural exchange — alongside real <strong>costs</strong> — job losses in some sectors, environmental damage, exploitation of workers, and loss of local culture — and both sides of that balance are worth weighing before calling globalisation simply good or bad.</p>
 <div class="lesson-diagram" data-diagram="supply-chain-map"><p class="diagram-caption">A global supply chain — how a single product involves multiple countries</p><p class="diagram-expand-hint">Click to enlarge</p></div>
 
-<h4>✏️ Worked Example</h4>
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> A cotton T-shirt is designed in the UK, made from cotton grown in India, sewn in Bangladesh and sold in shops across Europe. Explain how this shows globalisation.</p>
 <p><strong>Solution:</strong><br>
@@ -2795,26 +2573,12 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 5. This example shows both benefits (jobs in Bangladesh, cheap clothes for consumers) and costs (low wages for garment workers, high food miles/carbon emissions).</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Globalisation</dt><dd>The process by which the world's economies, cultures and populations are becoming increasingly interconnected and interdependent.</dd>
-<dt>TNC</dt><dd>Transnational Corporation — a large company that operates in more than one country (e.g. Nike designs in the USA but manufactures in Vietnam).</dd>
-<dt>Imports</dt><dd>Goods or services bought from another country and brought into the UK.</dd>
-<dt>Exports</dt><dd>Goods or services produced in the UK and sold to another country.</dd>
-<dt>Food miles</dt><dd>The distance food travels from where it is produced to where it is consumed. Higher food miles generally mean greater carbon emissions from transport.</dd>
-<dt>Supply chain</dt><dd>The network of organisations, people, activities and resources involved in creating and delivering a product from raw material to the consumer.</dd>
-<dt>Interdependence</dt><dd>When countries depend on each other for goods, services, labour and resources — a disruption in one country can affect supply chains worldwide.</dd>
-<dt>HIC / LIC / NEE</dt><dd>High Income Country, Low Income Country, Newly Emerging Economy — categories used to classify countries by their level of economic development.</dd>
-<dt>Fairtrade</dt><dd>A certification scheme ensuring producers in developing countries receive a fair price and decent working conditions for their products.</dd>
-<dt>Remittances</dt><dd>Money sent home by migrants working in another country, providing income for families and contributing to the economy of their home country.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking globalisation is only about trade — ✅ Correct: globalisation also involves <strong>migration, culture, technology and communication</strong>.</li>
-<li>❌ Saying globalisation is entirely good or entirely bad — ✅ Correct: it has both <strong>benefits and costs</strong>, and these are experienced differently by different people and countries.</li>
-<li>❌ Confusing imports and exports — ✅ Correct: <strong>imports</strong> come IN to a country; <strong>exports</strong> go OUT of a country.</li>
-<li>❌ Thinking food miles are the only environmental issue — ✅ Correct: food grown locally in heated greenhouses may produce <strong>more</strong> emissions than food imported from a warmer climate.</li>
+<li>Thinking globalisation is only about trade. It also involves <strong>migration, culture, technology and communication</strong>.</li>
+<li>Saying globalisation is entirely good or entirely bad. It has both <strong>benefits and costs</strong>, experienced differently by different people and countries.</li>
+<li>Confusing imports and exports. <strong>Imports</strong> come IN to a country; <strong>exports</strong> go OUT of a country.</li>
+<li>Thinking food miles are the only environmental issue. Food grown locally in heated greenhouses can produce <strong>more</strong> emissions than food imported from a naturally warm climate.</li>
 </ul>`,
 
 "island-53": `<h4>Introduction</h4>
