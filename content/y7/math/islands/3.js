@@ -990,8 +990,8 @@ Object.assign(QUESTIONS, {
   // ── mi-12-2: Solving Two-Step Equations ────────────────────────────────────
   'mi-12-2': [
     { gen: function() {
-        var ans = randInt(2,8), a = randInt(3,7), b = randInt(1,a-1), c = randInt(1,6);
-        var rhs = b*ans + c;
+        var ans = randInt(2,8), a = randInt(3,7), b = randInt(1,a-1);
+        var c = (a-b)*ans;
         var lhs_str = a+'x', rhs_str = b+'x + '+c;
         var opts = buildOpts(ans, [ans+1, ans-1, c]);
         return { q: 'Solve: ' + lhs_str + ' = ' + rhs_str,
@@ -1054,7 +1054,8 @@ Object.assign(QUESTIONS, {
     }},
     { question:'Why do we do the same operation to both sides of an equation?', options:['To keep the equation balanced — like a set of scales','To make the numbers smaller','To remove all variables','Because the rules say so'], answer:0, explanation:'Doing the same to both sides keeps the equation balanced.' },
     { gen: function() {
-        var ans = randInt(2,8), a = randInt(3,7), b = randInt(1,a-1), c = randInt(1,6);
+        var ans = randInt(2,8), a = randInt(3,7), b = randInt(1,a-1);
+        var c = (a-b)*ans;
         var rhs_str = b+'x + '+c;
         var opts = buildOpts(ans, [ans+1, ans-1, c]);
         return { q: 'Solve: '+a+'x = ' + rhs_str,
