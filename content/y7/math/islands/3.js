@@ -373,7 +373,7 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: n+'÷'+d+'='+parseFloat((n/d).toFixed(4))+'. ×100 = '+ans+'%.' };
     }},
-    { question:'Which is largest: 0.6, 58%, or 3/5?', options:['0.6','58%','3/5','All equal'], answer:0, explanation:'0.6=60%, 3/5=60%, 58%=58%. 0.6 and 3/5 are both 60%, which is larger than 58%. 0.6 is one of the largest values.' },
+    { question:'Which is largest: 0.6, 58%, or 11/20?', options:['0.6','58%','11/20','All equal'], answer:0, explanation:'0.6=60%, 11/20=55%, 58%=58%. 60% is the largest, so 0.6 is the largest value.' },
     { question:'Write 130% as a decimal.', options:['1.3','13','0.13','130'], answer:0, explanation:'130÷100=1.3.' },
     { gen: function() {
         var denoms = [4,5,8,10,20,25]; var d = pickFrom(denoms);
