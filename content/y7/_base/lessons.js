@@ -894,22 +894,19 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 <li>Assuming anything that looks dramatic is a chemical change. The real test is whether a <strong>new substance</strong> has been made — boiling a kettle is vigorous but entirely physical.</li>
 </ul>`,
 
-"island-16": `<h4>Introduction</h4>
+"island-16": `<h2>The Norman Conquest</h2>
 <p>The Norman Conquest of 1066 was one of the most dramatic turning points in English history. Within a single year, England had three different kings and was transformed by a foreign ruling class. The effects on language, culture, law and power lasted for centuries — and are still visible in England today.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>When Edward the Confessor died in January 1066, three men claimed the throne: <strong>Harold Godwinson</strong> (English earl, claimed Edward promised him the throne), <strong>William of Normandy</strong> (claimed Edward and Harold both promised him the throne) and <strong>Harald Hardrada</strong> (King of Norway, claimed the throne through a previous agreement).</li>
-<li><strong>Battle of Stamford Bridge</strong> (25 Sept 1066): Harold marched his army 300 km north in just 4 days to surprise Hardrada's Viking force near York. The Vikings were completely defeated and Hardrada was killed. This was a stunning victory — but it left Harold's army exhausted and far from the south coast.</li>
-<li>At the <strong>Battle of Hastings</strong> (14 Oct 1066): Harold rushed south to meet William's invading Norman army. The English held the high ground at Senlac Hill with their shield wall, but the Norman feigned retreat tricked English soldiers into breaking formation. Norman cavalry and archers then overwhelmed them. Harold was killed.</li>
-<li><strong>The Harrying of the North (1069–70)</strong>: after repeated Anglo-Saxon rebellions in the north, William ordered the systematic destruction of villages, crops, livestock and farmland across Yorkshire and the north of England. Thousands died from starvation. It was a deliberately brutal act of punishment that left the region devastated for years — and is one of the key reasons some historians view William as a tyrant.</li>
-<li>William used <strong>castles</strong> to control the population — motte-and-bailey designs were quick to build and were constructed across England (over 500 by 1086). Key examples include the Tower of London, Windsor Castle and Warwick Castle. They served as military bases, administrative centres and symbols of Norman dominance.</li>
-<li>The <strong>Domesday Book</strong> (1086) surveyed all land and wealth in England for taxation — and proved William owned everything.</li>
-<li>William rewarded his followers by granting them <strong>large estates of English land</strong>. By 1086, only about 5% of land was still held by English owners — a massive transfer of wealth.</li>
-<li>The <strong>Bayeux Tapestry</strong> is an embroidered cloth (~70 m long) depicting events from 1064 to the Battle of Hastings. It is a key <strong>primary source</strong>, though it tells the Norman version of events.</li>
-<li><strong>Impact on language and culture</strong>: the Normans spoke French, and hundreds of French words entered English (e.g. "castle", "government", "justice", "parliament", "beef", "pork"). Latin became the language of the Church and law. English remained the language of ordinary people — modern English is a blend of Anglo-Saxon and Norman French.</li>
-<li><strong>Historical interpretations</strong>: was William a great king or a tyrant? Some historians emphasise his effective government, legal reforms and the Domesday Book. Others focus on the Harrying of the North, the crushing of rebellions, and the replacement of the entire Anglo-Saxon ruling class with Normans. Evaluating different interpretations is a key historical skill.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>The Succession Crisis and 1066</h3>
+<p>When Edward the Confessor died in January 1066 without a clear heir, three men claimed the English throne at once: <strong>Harold Godwinson</strong>, an English earl who claimed Edward had promised it to him on his deathbed; <strong>William of Normandy</strong>, who claimed both Edward and Harold had separately promised it to him; and <strong>Harald Hardrada</strong>, King of Norway, who claimed it through an older agreement. Harold was crowned first, but he then had to fight off the other two claimants within months of each other. At the <strong>Battle of Stamford Bridge</strong> (25 September), Harold marched his army 300 km north in just four days to surprise Hardrada's Viking force near York, winning a stunning and complete victory — but leaving his own army exhausted and far from the south coast, exactly where William's invasion force was about to land. At the <strong>Battle of Hastings</strong> (14 October), Harold rushed south to meet William's army. The English held the high ground at Senlac Hill behind their <strong>shield wall</strong>, but a Norman <strong>feigned retreat</strong> — troops pretending to flee, then turning to attack — tricked English soldiers into breaking formation and abandoning that strong position; Norman cavalry and archers then overwhelmed them, and Harold was killed.</p>
+
+<h3>Controlling England: Castles, the Domesday Book and Land</h3>
+<p>Winning the battle was not the same as winning the country. Anglo-Saxon rebellions continued for years, and William's response in the north was deliberately brutal: the <strong>Harrying of the North (1069–70)</strong> systematically destroyed villages, crops, livestock and farmland across Yorkshire, leaving thousands dead of starvation — a punishment severe enough that it remains one of the main reasons some historians judge William a tyrant. Alongside outright destruction, William secured the country by building <strong>castles</strong>: quick-to-build <strong>motte-and-bailey</strong> designs — a wooden keep on a raised mound next to an enclosed courtyard — went up across England, over 500 of them by 1086, including the Tower of London, Windsor Castle and Warwick Castle, serving as military bases, administrative centres and visible symbols of Norman dominance all at once. To know exactly what he now controlled, William commissioned the <strong>Domesday Book</strong> (1086), a survey of all land and wealth in England for taxation purposes — and the results proved just how thoroughly ownership had changed hands: William rewarded his followers with large estates of English land, and by 1086 only about 5% of England was still held by English owners.</p>
+
+<h3>Sources and Legacy</h3>
+<p>Much of what we know about 1066 comes from the <strong>Bayeux Tapestry</strong>, an embroidered cloth roughly 70 m long depicting events from 1064 through to the Battle of Hastings — a valuable <strong>primary source</strong>, though one that tells the Norman version of events and should be read with that bias in mind. The Conquest's effects reached far beyond the battlefield and into everyday language: the Normans spoke French, and hundreds of French words entered English as a result — "castle", "government", "justice", "parliament", "beef", "pork" among them — while Latin became the language of the Church and law, and ordinary people carried on speaking English regardless. Modern English is, in a real sense, a blend of Anglo-Saxon and Norman French. That mixed legacy feeds directly into one of history's recurring debates: was William a great king or a tyrant? Some historians emphasise his effective government, legal reforms and the administrative achievement of the Domesday Book; others point to the Harrying of the North, the brutal crushing of rebellions, and the wholesale replacement of the Anglo-Saxon ruling class with Normans. Weighing those competing interpretations against each other is itself one of the key skills of studying history.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> "The Battle of Hastings was won mainly because of Harold's mistakes." How far do you agree?</p>
 <p><strong>Solution (how to structure your argument):</strong><br>
@@ -917,38 +914,35 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 <strong>Evidence against:</strong> William's tactical brilliance — the feigned retreat was a deliberate, skilled manoeuvre that exploited English discipline. Norman cavalry and archers gave a clear tactical advantage that Harold's infantry-heavy army could not match. William had also prepared carefully with papal support and a purpose-built fleet.<br>
 <strong>Conclusion:</strong> Both sides' actions mattered. William's tactics were decisive, but Harold's tired army, lack of archers and poor positioning at Senlac Hill made his defeat more likely. The battle could have gone either way — it was close.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Conquest</dt><dd>The taking of a territory by military force.</dd>
-<dt>Shield wall</dt><dd>The Anglo-Saxon defensive tactic of soldiers standing shoulder-to-shoulder with overlapping shields.</dd>
-<dt>Harrying of the North</dt><dd>William's deliberate destruction of the north of England (1069–70) to crush rebellion — villages burned, crops destroyed, thousands died of starvation.</dd>
-<dt>Domesday Book</dt><dd>William's survey of England (1086) recording land ownership, value and resources for taxation.</dd>
-<dt>Motte-and-bailey</dt><dd>An early Norman castle: a wooden tower (keep) on a raised mound (motte) next to an enclosed courtyard (bailey).</dd>
-<dt>Feigned retreat</dt><dd>A deliberate military tactic where troops pretend to flee to draw the enemy out of position, then turn and attack.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking William had an immediate, easy conquest — ✅ Correct: there were rebellions for years after 1066; William used the <strong>Harrying of the North</strong> (1069–70) to crush resistance brutally.</li>
-<li>❌ Saying Harold was definitely killed by an arrow to the eye — ✅ Correct: the Bayeux Tapestry is ambiguous — historians <strong>debate</strong> exactly how Harold died.</li>
-<li>❌ Confusing the Domesday Book with a census — ✅ Correct: it recorded <strong>land and wealth</strong> for taxation, not just population numbers.</li>
-<li>❌ Forgetting the Battle of Stamford Bridge — ✅ Correct: Harold fought <strong>two battles</strong> in quick succession. His victory at Stamford Bridge was impressive but left his army exhausted for Hastings.</li>
-<li>❌ Thinking the Normans replaced English entirely — ✅ Correct: French became the language of the ruling class, but ordinary people kept speaking English. <strong>Modern English is a blend</strong> of both.</li>
+<li>Thinking William had an immediate, easy conquest. There were rebellions for years after 1066; William used the <strong>Harrying of the North</strong> (1069–70) to crush resistance brutally.</li>
+<li>Saying Harold was definitely killed by an arrow to the eye. The Bayeux Tapestry is ambiguous — historians <strong>debate</strong> exactly how Harold died.</li>
+<li>Confusing the Domesday Book with a census. It recorded <strong>land and wealth</strong> for taxation, not just population numbers.</li>
+<li>Forgetting the Battle of Stamford Bridge. Harold fought <strong>two battles</strong> in quick succession — his victory at Stamford Bridge was impressive but left his army exhausted for Hastings.</li>
+<li>Thinking the Normans replaced English entirely. French became the language of the ruling class, but ordinary people kept speaking English — <strong>modern English is a blend</strong> of both.</li>
 </ul>`,
 
-"island-17": `<h4>Introduction</h4>
+"island-17": `<h2>Feudalism &amp; Medieval Life</h2>
 <p>After 1066, William needed to control England with a small Norman ruling class over a large English population. The feudal system provided the structure — a strict hierarchy of loyalty, land and obligation. The Catholic Church reinforced this order with spiritual as well as earthly power. Understanding medieval life means looking beyond kings and lords to everyday farming, the role of women, and how castles evolved over time.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>The <strong>feudal pyramid</strong> (top to bottom): King → Lords/Barons/Church → Knights → Peasants/Serfs. Everyone owed loyalty and service upward.</li>
-<li>The King owned all land — lords held it in exchange for military service; knights held it from lords in exchange for fighting.</li>
-<li><strong>Peasants</strong> (villagers/serfs) worked the land in exchange for protection and a small strip to farm. They could not leave without permission. <strong>Villeins</strong> were unfree peasants legally tied to the lord's manor, working his land several days a week.</li>
-<li>The <strong>Catholic Church</strong> collected tithes (10% of income), ran hospitals and schools, and could excommunicate even kings. The local <strong>parish priest</strong> led worship, performed baptisms, marriages and burials — the Church touched every aspect of life from birth to death.</li>
-<li><strong>Castle evolution</strong>: early Norman castles were <strong>motte-and-bailey</strong> (wooden tower on a mound, quick to build). From the late 11th century, these were replaced by <strong>stone keeps</strong> (e.g. the Tower of London) — stronger and more permanent. By the 13th century, <strong>concentric castles</strong> (castle within a castle, e.g. Caernarfon) with multiple rings of walls represented the most advanced medieval military engineering.</li>
-<li><strong>The open field system</strong>: most medieval villages used three large open fields, farmed in rotation. Each peasant had several narrow strips scattered across the fields. One field grew wheat, one grew barley or oats, and one lay fallow (resting) each year. This rotation prevented the soil from becoming exhausted. Farming was communal — villagers shared ploughs, oxen and labour.</li>
-<li><strong>The role of women</strong>: medieval women's lives varied by social class. Peasant women worked in the fields alongside men, brewed ale, raised children and managed the household. Noble women managed estates when their husbands were away at war, arranged marriages and could wield significant influence. However, women had few legal rights — they could not vote, hold most official positions or inherit land equally. Some women gained power through the Church as abbesses of convents.</li>
-<li><strong>Comparison with non-European societies</strong>: while feudal Europe was dominated by the Church and rigid hierarchy, the Islamic world (the "Golden Age" of Islam, ~8th–14th century) was far more advanced in science, medicine, mathematics and scholarship. Cities like Baghdad and Córdoba had universities, hospitals and libraries when most European towns had none. This comparison helps avoid a Eurocentric view of the medieval period.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>The Feudal Pyramid</h3>
+<p>Feudal society was organised as a strict pyramid: the King at the top, then Lords, Barons and the Church, then Knights, then Peasants and Serfs at the base — with loyalty and service owed upward at every level. The logic ran through land itself: the King technically owned all land in the kingdom, granting large estates to lords in exchange for military service, who in turn granted smaller parcels to knights in exchange for fighting when called upon. At the bottom of the pyramid, <strong>peasants</strong> worked the land in exchange for protection and a small strip to farm for themselves, and could not simply leave without their lord's permission; <strong>villeins</strong> were unfree peasants legally tied to the lord's manor, obliged to work his land several days a week on top of their own.</p>
+
+<h3>The Church's Power</h3>
+<p>The <strong>Catholic Church</strong> was a second, parallel hierarchy of power running alongside the feudal one. It collected <strong>tithes</strong> — a compulsory tenth of everyone's income or produce — ran hospitals and schools, and held a weapon no feudal lord possessed: <strong>excommunication</strong>, expulsion from the Church that was believed to cut a person off from salvation itself, a threat serious enough to bring even kings into line. At the local level, the <strong>parish priest</strong> led worship and performed baptisms, marriages and burials, meaning the Church touched every stage of an ordinary person's life from birth to death.</p>
+
+<h3>Castle Evolution</h3>
+<p>Castles evolved considerably over the medieval period as building techniques and military needs changed. The earliest Norman castles were <strong>motte-and-bailey</strong> designs — a wooden tower on a raised mound, quick to throw up in newly conquered territory. From the late 11th century, these were gradually replaced by <strong>stone keeps</strong>, such as the Tower of London, which were far stronger and more permanent than wood. By the 13th century, castle design had advanced further still into <strong>concentric castles</strong> — a castle within a castle, with multiple rings of defensive walls, as at Caernarfon — representing the peak of medieval military engineering.</p>
+
+<h3>Farming and Daily Life</h3>
+<p>Most medieval villages farmed using the <strong>open field system</strong>: three large shared fields, each peasant holding several narrow strips scattered across them, with the fields rotated each year — one growing wheat, one growing barley or oats, and one left <strong>fallow</strong> to rest and recover its fertility. This rotation kept the soil productive year after year, and farming itself was a communal effort, with villagers sharing ploughs, oxen and labour rather than working entirely alone. Women's lives within this system varied sharply by class: peasant women worked in the fields alongside men, brewed ale, raised children and ran the household, while noble women managed entire estates whenever their husbands were away at war and could wield real influence through arranged marriages and land. Legal rights remained narrow for women of any class — they could not vote, hold most official positions, or inherit land on equal terms with men — though some gained genuine power through the Church, rising to become abbesses of convents.</p>
+
+<h3>Looking Beyond Europe</h3>
+<p>It is easy to picture the medieval world as feudal Europe writ large, but that view is misleadingly narrow. While feudal Europe was dominated by the Church and a rigid social hierarchy, the Islamic world was living through its own "Golden Age" (roughly the 8th–14th century), far ahead of Europe in science, medicine, mathematics and scholarship — cities such as Baghdad and Córdoba had universities, hospitals and libraries at a time when most European towns had none of these at all. Keeping that comparison in view helps avoid a Eurocentric picture of what "medieval" actually meant around the world.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Why was the feudal system effective at keeping William in control of England?</p>
 <p><strong>Solution:</strong><br>
@@ -958,42 +952,29 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 4. <strong>Church support</strong>: the Church taught that the social order was God's will → rebellion was a <strong>sin</strong>, not just a crime.<br>
 5. <strong>Castle network</strong>: over 500 castles built by 1086 gave Normans fortified bases in every region — a constant physical reminder of who held power.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Feudalism</dt><dd>A hierarchical system where land is exchanged for loyalty and military service.</dd>
-<dt>Tithe</dt><dd>A compulsory tax of one-tenth of annual income or produce, paid to the local church.</dd>
-<dt>Serf</dt><dd>A peasant bound to work a lord's land; could not leave without the lord's permission.</dd>
-<dt>Villein</dt><dd>An unfree peasant legally tied to the land they worked on — could not leave without the lord's permission and owed labour services.</dd>
-<dt>Excommunication</dt><dd>Being expelled from the Catholic Church — cutting a person off from all religious sacraments and, it was believed, from God and heaven.</dd>
-<dt>Open field system</dt><dd>The medieval farming method where villagers worked strips of land across shared open fields, with one field left fallow each year.</dd>
-<dt>Fallow</dt><dd>A field left unplanted for a season to allow the soil to recover its fertility.</dd>
-<dt>Concentric castle</dt><dd>A castle design with multiple rings of defensive walls — a castle within a castle — representing the peak of medieval military architecture.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking all peasants were equally poor and powerless — ✅ Correct: there were different levels of peasant; some <strong>villeins</strong> had land and relative security.</li>
-<li>❌ Thinking the feudal system only existed in England — ✅ Correct: feudalism existed across <strong>most of medieval Europe</strong>.</li>
-<li>❌ Underestimating the Church's power — ✅ Correct: the Church was arguably <strong>more powerful</strong> than many kings — it controlled education, charity, and people's belief in salvation.</li>
-<li>❌ Thinking medieval women had no role beyond the home — ✅ Correct: peasant women worked in the fields; noble women <strong>managed estates</strong>; some women held power as abbesses.</li>
-<li>❌ Assuming medieval Europe was the most advanced civilisation — ✅ Correct: the <strong>Islamic world</strong> was far ahead in science, medicine and learning during this period.</li>
+<li>Thinking all peasants were equally poor and powerless. There were different levels of peasant; some <strong>villeins</strong> had land and relative security.</li>
+<li>Thinking the feudal system only existed in England. Feudalism existed across <strong>most of medieval Europe</strong>.</li>
+<li>Underestimating the Church's power. It was arguably <strong>more powerful</strong> than many kings — it controlled education, charity, and people's belief in salvation.</li>
+<li>Thinking medieval women had no role beyond the home. Peasant women worked in the fields; noble women <strong>managed estates</strong>; some women held power as abbesses.</li>
+<li>Assuming medieval Europe was the most advanced civilisation of its time. The <strong>Islamic world</strong> was far ahead in science, medicine and learning during this period.</li>
 </ul>`,
 
-"island-18": `<h4>Introduction</h4>
+"island-18": `<h2>The Black Death</h2>
 <p>The Black Death arrived in England in 1348 and killed roughly one third of the population within two years. No event in medieval history was more devastating — or more transformative. Its long-term effects cracked the foundations of the feudal system itself and set in motion social changes that culminated in the Peasants' Revolt of 1381.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>Caused by the bacterium <em>Yersinia pestis</em> — spread mainly by fleas on black rats biting humans. Medieval people had no idea of this.</li>
-<li>Arrived in England via trade ships landing in Dorset in 1348, having swept from Central Asia through Europe since 1347.</li>
-<li><strong>Symptoms</strong>: buboes (painful swellings in armpits/groin/neck), black skin patches, fever, vomiting blood. Most died within 1–5 days.</li>
-<li>Medieval explanations: God's punishment for sin, bad air (miasma), planetary alignment — all wrong.</li>
-<li><strong>Flagellants</strong>: groups of people who publicly whipped themselves in the streets, believing that self-inflicted pain would persuade God to end the plague. They travelled from town to town, attracting crowds. The Pope eventually condemned the movement, but it showed the depth of religious desperation.</li>
-<li>The plague spread rapidly in <strong>medieval towns</strong> because they were overcrowded with poor sanitation — rubbish and sewage filled the streets, attracting rats whose fleas carried the disease.</li>
-<li>The <strong>Church's authority was weakened</strong>: it could not explain or cure the plague. Many priests who stayed to tend the sick died; some fled their parishes. People's faith was shaken.</li>
-<li><strong>Jewish persecution and scapegoating</strong>: in many parts of Europe, Jewish communities were blamed for the plague — accused of poisoning wells. Thousands were attacked and killed, particularly in Germany, France and Spain. This persecution was driven by existing prejudice and the desperate need to find someone to blame. It is an important early example of scapegoating during a crisis.</li>
-<li><strong>Long-term effects and the road to the Peasants' Revolt</strong>: the labour shortage after the Black Death gave surviving peasants bargaining power for the first time — they could demand higher wages. The government responded with the <strong>Statute of Labourers (1351)</strong>, which tried to fix wages at pre-plague levels and prevent peasants from moving. This was deeply resented. When a <strong>poll tax</strong> (a flat tax on every adult) was introduced in 1380, it was the final provocation — the <strong>Peasants' Revolt of 1381</strong> erupted, led by Wat Tyler and John Ball, who marched on London demanding an end to serfdom.</li>
-<li><strong>Comparison with other pandemics</strong>: the Black Death killed ~30–60% of Europe's population. Compare with: the Spanish Flu (1918–19, ~50 million deaths worldwide), or the COVID-19 pandemic (2020–23). In each case, pandemics exposed social inequalities, changed working patterns, and had lasting economic effects. The key difference is that medieval people had no understanding of germ theory.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>What Was the Black Death?</h3>
+<p>The disease was caused by the bacterium <em>Yersinia pestis</em>, spread mainly by fleas living on black rats that then bit humans — though medieval people had no way of knowing this, since the germ theory of disease was still centuries away. It reached England via trade ships landing in Dorset in 1348, having already swept from Central Asia through Europe since 1347. Its <strong>symptoms</strong> were swift and brutal: painful swellings called buboes in the armpits, groin and neck, blackened patches of skin, fever and vomiting blood, with most victims dying within one to five days of falling ill. Lacking any real understanding of its cause, medieval explanations reached instead for God's punishment for sin, "bad air" (<strong>miasma theory</strong>), or the alignment of the planets — all wrong, but they were the best framework available at the time.</p>
+
+<h3>Responses: Flagellants, Towns and Scapegoating</h3>
+<p>Facing a disease no one understood, people responded in ways that reveal the depth of the fear it caused. <strong>Flagellants</strong> — groups who publicly whipped themselves through the streets, believing self-inflicted pain might persuade God to end the plague — travelled from town to town gathering crowds, until the Pope eventually condemned the movement. The plague spread fastest in <strong>medieval towns</strong>, which were overcrowded and poorly sanitised, their streets filled with rubbish and sewage that attracted exactly the rats whose fleas carried the disease. Unable to explain or cure the plague, the <strong>Church's authority was itself weakened</strong> — many priests who stayed to tend the sick died alongside their parishioners, others fled, and people's faith was visibly shaken by a crisis the Church could do nothing to stop. In the darkest response of all, many parts of Europe turned to <strong>scapegoating</strong>: Jewish communities were falsely blamed for the plague, accused of poisoning wells, and thousands were attacked and killed, particularly in Germany, France and Spain — driven by existing prejudice combined with a desperate need to find someone, anyone, to blame. It stands as one of history's clearest early examples of a pattern that has recurred in crisis after crisis since.</p>
+
+<h3>Long-Term Effects: The Road to the Peasants' Revolt</h3>
+<p>So many people died that the survivors found themselves, for the first time, in a position of real economic leverage: a <strong>labour shortage</strong> meant peasants could finally demand higher wages, since lords desperately needed workers. The government's response was the <strong>Statute of Labourers (1351)</strong>, an attempt to freeze wages at pre-plague levels and stop peasants moving to find better-paid work — deeply resented by the very people it targeted. That resentment finally boiled over when a <strong>poll tax</strong> (a flat tax charged on every adult regardless of income) was introduced in 1380: the <strong>Peasants' Revolt of 1381</strong> erupted almost immediately, led by Wat Tyler and John Ball, who marched on London demanding an end to serfdom itself. Seen against other pandemics — the Black Death killed an estimated 30–60% of Europe's population, comparable in scale to the Spanish Flu of 1918–19 (around 50 million deaths worldwide) or COVID-19 (2020–23) — a pattern emerges: pandemics repeatedly expose social inequalities, reshape working patterns, and leave lasting economic effects, with the key difference for medieval England being that nobody involved understood germ theory at all.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> "The Black Death was the most important cause of the decline of the feudal system." How far do you agree?</p>
 <p><strong>Solution (structured argument):</strong><br>
@@ -1001,39 +982,28 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 <strong>Against:</strong> The feudal system was already under strain from Magna Carta (1215) and growing trade. The Black Death <strong>accelerated</strong> change rather than causing it from scratch. Serfdom didn't end immediately after the Revolt — it took many more decades.<br>
 <strong>Judgement:</strong> The Black Death was the <strong>most dramatic single cause</strong>, but it worked alongside long-term trends already weakening the system. Without the plague, feudalism would still have declined — but much more slowly.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Bubonic plague</dt><dd>The most common form of plague, causing swollen lymph nodes (buboes); spread by flea bites.</dd>
-<dt>Miasma theory</dt><dd>The medieval belief that disease was caused by "bad air" from rotting matter — incorrect, but widely held until germ theory in the 19th century.</dd>
-<dt>Flagellants</dt><dd>Groups of people who publicly whipped themselves as penance, believing self-punishment would persuade God to end the plague.</dd>
-<dt>Scapegoating</dt><dd>Blaming an innocent group for a crisis — during the Black Death, Jewish communities were falsely accused of causing the plague.</dd>
-<dt>Statute of Labourers (1351)</dt><dd>A law attempting to fix wages at pre-plague levels and prevent peasants from moving — a direct response to the labour shortage after the Black Death.</dd>
-<dt>Labour shortage</dt><dd>A lack of workers — after the Black Death, so many people had died that the survivors had more economic power.</dd>
-<dt>Peasants' Revolt (1381)</dt><dd>An uprising by English peasants against continued serfdom, the Statute of Labourers and the poll tax — directly connected to the social upheaval caused by the Black Death.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Saying medieval people "ignored" the plague — ✅ Correct: they took it extremely seriously but used <strong>incorrect theories</strong> because germ theory didn't exist yet.</li>
-<li>❌ Thinking the plague only affected poor people — ✅ Correct: the plague killed across <strong>all social classes</strong> — even clergy and nobility died in large numbers.</li>
-<li>❌ Saying the plague "ended" feudalism overnight — ✅ Correct: the process was gradual and took <strong>over a century</strong> to fully transform medieval society.</li>
-<li>❌ Treating scapegoating as an isolated medieval event — ✅ Correct: scapegoating has occurred in <strong>many crises</strong> throughout history. Recognising the pattern helps us guard against it.</li>
+<li>Saying medieval people "ignored" the plague. They took it extremely seriously but used <strong>incorrect theories</strong> because germ theory didn't exist yet.</li>
+<li>Thinking the plague only affected poor people. It killed across <strong>all social classes</strong> — even clergy and nobility died in large numbers.</li>
+<li>Saying the plague "ended" feudalism overnight. The process was gradual and took <strong>over a century</strong> to fully transform medieval society.</li>
+<li>Treating scapegoating as an isolated medieval event. Scapegoating has occurred in <strong>many crises</strong> throughout history — recognising the pattern helps guard against it.</li>
 </ul>`,
 
-"island-19": `<h4>Introduction</h4>
+"island-19": `<h2>Magna Carta &amp; Early Parliament</h2>
 <p>Magna Carta — the "Great Charter" — was signed by King John in 1215 and is one of the most important documents in world history. For the first time, a king was made legally subject to the rule of law. Its principles — including habeas corpus and trial by jury — influenced the development of Parliament, the US Constitution and modern human rights.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>King John was deeply unpopular: he lost Normandy (1204), taxed barons heavily, quarrelled with the Pope, and ignored traditional rights.</li>
-<li>In 1215, barons marched on London and forced John to negotiate at <strong>Runnymede</strong>. He signed Magna Carta on 15 June 1215.</li>
-<li>Key principles: no imprisonment without fair trial (<strong>habeas corpus</strong>), the king must obey the law, taxes require baronial consent.</li>
-<li><strong>Trial by jury</strong>: Magna Carta helped establish the principle that a person should be judged by their peers, not solely by the king or his officers. This became the foundation of the jury system still used in English and American courts today.</li>
-<li><strong>Henry III and the Provisions of Oxford (1258)</strong>: John's son Henry III also clashed with his barons over heavy taxation and foreign favourites. The barons, led by <strong>Simon de Montfort</strong>, forced Henry to accept the Provisions of Oxford — a set of reforms requiring the king to consult a council of barons on major decisions. Henry later rejected these, leading to civil war.</li>
-<li><strong>Simon de Montfort's Parliament (1265)</strong>: after defeating Henry III in battle, de Montfort summoned a Parliament that included not just barons but also <strong>knights from each county</strong> and <strong>burgesses (representatives) from each town</strong>. This was the first time ordinary people beyond the nobility were represented — a crucial step towards the representative Parliament we know today. De Montfort was killed later that year, but his model of Parliament survived.</li>
-<li><strong>How Parliament evolved</strong>: from a feudal council advising the king → de Montfort's model of broader representation → the <strong>Model Parliament of 1295</strong> (Edward I summoned lords, clergy, knights and burgesses — the template for future parliaments) → over centuries, Parliament gradually gained more power.</li>
-<li>Magna Carta originally protected only <strong>barons and free men</strong> — villeins (unfree peasants) and women had no direct protection. Over centuries, its principles were reinterpreted to apply to everyone.</li>
-<li><strong>Magna Carta's lasting significance</strong>: the principle that no one — not even the king — is above the law. It influenced the English Bill of Rights (1689), the US Constitution and Bill of Rights (1787/1791), and the Universal Declaration of Human Rights (1948). Today, copies of Magna Carta are displayed in the British Library and the US National Archives.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>King John and Magna Carta</h3>
+<p>King John was deeply unpopular by 1215: he had lost Normandy in 1204, taxed his barons heavily, quarrelled repeatedly with the Pope, and ignored traditional rights whenever it suited him. Pushed too far, the barons marched on London and forced John to the negotiating table at <strong>Runnymede</strong>, where he signed Magna Carta on 15 June 1215. Its key principles read almost like a modern legal code in miniature: no imprisonment without a fair trial (<strong>habeas corpus</strong>), the king himself must obey the law, and taxes require the barons' consent before they can be raised. Alongside these, Magna Carta helped establish <strong>trial by jury</strong> — the principle that a person should be judged by their peers rather than solely by the king or his officers — which became the foundation of the jury system still used in English and American courts today.</p>
+
+<h3>From Magna Carta to Parliament</h3>
+<p>The tension Magna Carta was meant to resolve did not disappear with John's death. His son Henry III clashed with his own barons over heavy taxation and his reliance on foreign favourites, and in 1258 the barons, led by <strong>Simon de Montfort</strong>, forced Henry to accept the <strong>Provisions of Oxford</strong> — reforms requiring the king to consult a council of barons on major decisions. Henry later rejected these terms, triggering civil war. After defeating Henry in battle, de Montfort took a decisive further step in 1265: he summoned a Parliament that included not just barons but also <strong>knights from each county</strong> and <strong>burgesses</strong> — representatives — from each town, the first time ordinary people beyond the nobility had ever been represented in this way. De Montfort himself was killed later that year, but the model he had created survived him. Parliament kept evolving from there: from a feudal council that simply advised the king, through de Montfort's broader model of representation, to the <strong>Model Parliament of 1295</strong>, where Edward I summoned lords, clergy, knights and burgesses together as the template every future parliament would follow, gradually accumulating more power over the centuries that followed.</p>
+
+<h3>Limits and Legacy</h3>
+<p>It is worth being precise about who Magna Carta actually protected at the time: only <strong>barons and free men</strong> — villeins and women had no direct protection under it at all, and it took centuries of reinterpretation before its principles were understood to apply to everyone. What made it matter so much in the long run was a single idea: that no one, not even the king, is above the law. That idea rippled forward through the English Bill of Rights (1689), the US Constitution and Bill of Rights (1787/1791), and eventually the Universal Declaration of Human Rights (1948) — and copies of the original document are still displayed today in the British Library and the US National Archives.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> How significant was Magna Carta? Consider its short-term and long-term impact.</p>
 <p><strong>Solution:</strong><br>
@@ -1042,40 +1012,31 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 <strong>Long-term:</strong> Hugely significant. The principle that the king must obey the law became the foundation of the English constitution. It influenced the US Bill of Rights (1791) and the Universal Declaration of Human Rights (1948). The concept of habeas corpus and trial by jury remain cornerstones of legal systems worldwide.<br>
 <strong>Judgement:</strong> More significant <strong>in retrospect</strong> than at the time — later generations gave it its legendary status. But the principles it established were genuinely revolutionary.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Magna Carta</dt><dd>Latin for "Great Charter" — the 1215 document limiting royal power and establishing that the king must obey the law.</dd>
-<dt>Habeas corpus</dt><dd>The right not to be imprisoned without a fair trial — one of the key principles established by Magna Carta.</dd>
-<dt>Trial by jury</dt><dd>The right to be judged by a group of one's peers rather than by a single authority — rooted in Magna Carta's principles.</dd>
-<dt>Provisions of Oxford</dt><dd>Reforms imposed on Henry III in 1258 requiring him to consult a council of barons — led by Simon de Montfort.</dd>
-<dt>Parliament</dt><dd>A body of representatives that advises and later controls the king — began developing in the 13th century.</dd>
-<dt>Burgess</dt><dd>A representative of a town or borough in Parliament — their inclusion by de Montfort in 1265 was a turning point.</dd>
-<dt>Constitutional government</dt><dd>A system where a ruler's power is limited and defined by laws or a constitution.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking Magna Carta was democratic — ✅ Correct: it protected <strong>barons' rights</strong>, not ordinary people's. Democracy developed much later.</li>
-<li>❌ Saying John willingly signed Magna Carta — ✅ Correct: he was <strong>forced</strong> to sign under military pressure and tried to get the Pope to annul it almost immediately.</li>
-<li>❌ Confusing Magna Carta with Parliament — ✅ Correct: Magna Carta was a <strong>document</strong>; Parliament was a separate institution that developed gradually afterwards.</li>
-<li>❌ Thinking Simon de Montfort created modern democracy — ✅ Correct: his Parliament was a <strong>step towards</strong> representation, but full democracy took centuries more to develop.</li>
+<li>Thinking Magna Carta was democratic. It protected <strong>barons' rights</strong>, not ordinary people's — democracy developed much later.</li>
+<li>Saying John willingly signed Magna Carta. He was <strong>forced</strong> to sign under military pressure and tried to get the Pope to annul it almost immediately.</li>
+<li>Confusing Magna Carta with Parliament. Magna Carta was a <strong>document</strong>; Parliament was a separate institution that developed gradually afterwards.</li>
+<li>Thinking Simon de Montfort created modern democracy. His Parliament was a <strong>step towards</strong> representation, but full democracy took centuries more to develop.</li>
 </ul>`,
 
-"island-31": `<h4>Introduction</h4>
+"island-31": `<h2>The Crusades</h2>
 <p>The Crusades were a series of religious wars launched by Christian Europe to capture and defend the Holy Land. They lasted nearly 200 years, involved kings, knights and ordinary pilgrims, and had lasting consequences for relations between Christianity and Islam. Understanding the Crusades requires looking at both sides — the Islamic world was far more sophisticated than medieval Europe in many respects.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>Pope Urban II called the First Crusade in <strong>1095</strong>, promising forgiveness of sins to those who fought. Jerusalem was captured in 1099 — accompanied by a notorious massacre of the city's Muslim and Jewish inhabitants.</li>
-<li>Crusaders were motivated by <strong>religion</strong> (spiritual rewards), <strong>politics</strong> (land and power) and <strong>adventure</strong> — rarely just one motive.</li>
-<li><strong>The Islamic perspective</strong>: the Islamic world at this time was far more advanced than Europe in science, medicine, mathematics, architecture and philosophy. Cities like Baghdad, Cairo and Córdoba had hospitals, universities and libraries with hundreds of thousands of books. Muslim scholars preserved and extended the knowledge of ancient Greece and Rome. To the Islamic world, the Crusaders were often seen as brutal and uncivilised invaders.</li>
-<li><strong>Saladin</strong> recaptured Jerusalem in 1187. He was respected for his military skill and relatively merciful treatment of Christian civilians — in sharp contrast to the Crusader massacre of 1099.</li>
-<li><strong>The Third Crusade (1189–92)</strong>: led by Richard I of England, Philip II of France and Frederick Barbarossa. Richard won the Battle of Arsuf against Saladin and negotiated a treaty allowing Christian pilgrims access to Jerusalem — but the city itself remained under Muslim control. The mutual respect between Richard and Saladin became legendary.</li>
-<li><strong>The Children's Crusade (1212)</strong>: thousands of young people, mostly from France and Germany, set out to recapture the Holy Land believing their innocence would succeed where armies had failed. Most never reached the Holy Land — many died of hunger, disease or were sold into slavery. It illustrates the extraordinary power of religious fervour in the medieval period.</li>
-<li>The <strong>Knights Templar</strong> were a powerful military religious order (founded ~1119) that protected Christian pilgrims travelling to the Holy Land. They became enormously wealthy and influential before being suppressed in 1312.</li>
-<li>Later Crusades mostly <strong>failed</strong> because Muslim forces became more united under leaders like Saladin, Crusader states quarrelled among themselves, and supply lines from Europe were long. The last Crusader stronghold, <strong>Acre, fell in 1291</strong>.</li>
-<li><strong>Cultural exchange</strong>: despite the violence, the Crusades brought European contact with Islamic civilisation. Europe gained: Arabic numerals (0–9, far easier than Roman numerals), advances in medicine and surgery, algebra and astronomy, new foods (sugar, spices, citrus fruits), architectural techniques (pointed arches, domes), and superior textiles (silk, cotton). This cultural transfer helped spark the later Renaissance.</li>
-<li><strong>How the Crusades are interpreted today</strong>: Western historians have traditionally presented the Crusades as heroic Christian adventures. Islamic historians see them as aggressive invasions. Modern historians try to consider both perspectives. The Crusades remain a sensitive topic in Christian-Muslim relations — understanding multiple interpretations is essential.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>The First Crusade and the Islamic World</h3>
+<p>Pope Urban II called the First Crusade in <strong>1095</strong>, promising forgiveness of sins to anyone who fought, and Jerusalem was captured in 1099 — accompanied by a notorious massacre of the city's Muslim and Jewish inhabitants. Crusaders themselves were rarely driven by a single motive: <strong>religion</strong> promised spiritual reward, <strong>politics</strong> offered land and power, and simple <strong>adventure</strong> drew others in, usually in some combination. What the Crusades looked like from the other side is easy to lose sight of: the Islamic world at this time was far more advanced than Europe in science, medicine, mathematics, architecture and philosophy, with cities such as Baghdad, Cairo and Córdoba supporting hospitals, universities and libraries holding hundreds of thousands of books, and Muslim scholars preserving and extending the knowledge of ancient Greece and Rome that much of Europe had lost. Seen from that perspective, the Crusaders were often viewed as brutal and uncivilised invaders rather than holy warriors.</p>
+
+<h3>Saladin and the Third Crusade</h3>
+<p><strong>Saladin</strong> recaptured Jerusalem in 1187, and his conduct there stands in deliberate contrast to the Crusaders' own massacre of 1099: he was widely respected, even by his enemies, both for his military skill and for his relatively merciful treatment of Christian civilians. The <strong>Third Crusade (1189–92)</strong>, led by Richard I of England, Philip II of France and Frederick Barbarossa, was the direct response — Richard won the Battle of Arsuf against Saladin and eventually negotiated a treaty allowing Christian pilgrims access to Jerusalem, though the city itself stayed under Muslim control. Out of that campaign came a genuine, lasting mutual respect between Richard and Saladin that became legendary in its own right.</p>
+
+<h3>The Children's Crusade and the Knights Templar</h3>
+<p>Religious conviction during this period could run to extraordinary lengths. In the <strong>Children's Crusade (1212)</strong>, thousands of young people, mostly from France and Germany, set out to recapture the Holy Land believing their innocence alone would succeed where armies had failed; most never reached it, dying of hunger and disease along the way or being sold into slavery instead. Alongside this popular fervour, more formal institutions grew up around the Crusading effort — the <strong>Knights Templar</strong>, a military religious order founded around 1119 to protect Christian pilgrims travelling to the Holy Land, became enormously wealthy and influential in the process, before being suppressed in 1312.</p>
+
+<h3>Decline, Cultural Exchange and Legacy</h3>
+<p>Later Crusades mostly failed, for reasons that compounded over time: Muslim forces grew more unified under leaders like Saladin, the Crusader states in the Holy Land squabbled among themselves, and supply lines stretching all the way back to Europe were simply too long to sustain. The last Crusader stronghold, Acre, fell in 1291. Yet for all the violence, the Crusades brought genuine <strong>cultural exchange</strong>: Europe gained Arabic numerals (0–9, far easier to calculate with than Roman numerals), advances in medicine and surgery, algebra and astronomy, new foods such as sugar, spices and citrus fruits, architectural techniques including pointed arches and domes, and superior textiles like silk and cotton — a transfer of knowledge that helped spark the later Renaissance. How the Crusades are remembered still depends heavily on perspective: Western historians traditionally presented them as heroic Christian adventures, while Islamic historians have long seen them as aggressive invasions, and modern historians try to hold both views in mind at once — a reminder that the Crusades remain a genuinely sensitive topic in Christian-Muslim relations even today.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Were the Crusades primarily motivated by religion? Explain your answer.</p>
 <p><strong>Solution:</strong><br>
@@ -1083,36 +1044,32 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 <strong>Non-religious motives:</strong> Younger sons of nobles had no land to inherit — the Crusades offered wealth and territory. Kings used Crusades to rid themselves of troublesome knights. Italian merchants profited enormously from supplying Crusader armies and establishing trade routes.<br>
 <strong>Conclusion:</strong> Religion was the <strong>stated</strong> motive, but political and economic interests were often equally powerful — especially for leaders. For ordinary people, religious conviction was probably more genuine.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Crusade</dt><dd>A religious war fought by Christians to capture or defend the Holy Land (Jerusalem and surrounding area).</dd>
-<dt>Indulgence</dt><dd>A pardon granted by the Pope, reducing punishment for sins — offered to Crusaders as a spiritual reward.</dd>
-<dt>Holy Land</dt><dd>The region around Jerusalem, sacred to Christians, Muslims and Jews — the destination of the Crusades.</dd>
-<dt>Jihad</dt><dd>An Arabic term meaning "struggle" — in the context of the Crusades, the Muslim effort to defend or recapture the Holy Land.</dd>
-<dt>Cultural exchange</dt><dd>The transfer of ideas, knowledge, technology and goods between civilisations — the Crusades brought European contact with far more advanced Islamic learning.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking Crusaders were entirely motivated by religion — ✅ Correct: motives were <strong>mixed</strong> — land, wealth, adventure and status all played a role.</li>
-<li>❌ Thinking the Crusades were a clear Christian victory — ✅ Correct: the Crusades ultimately <strong>failed</strong> — Jerusalem was in Muslim hands by 1244 and never returned to Christian control.</li>
-<li>❌ Seeing Saladin as a villain — ✅ Correct: Saladin was widely respected even by his Christian enemies for his military genius and <strong>relatively merciful</strong> conduct.</li>
-<li>❌ Ignoring the Islamic perspective — ✅ Correct: the Crusaders were seen by the Islamic world as <strong>invaders</strong>. Good history considers <strong>multiple perspectives</strong>.</li>
-<li>❌ Thinking the Crusades only caused conflict — ✅ Correct: they also led to significant <strong>cultural exchange</strong> that enriched European knowledge of science, medicine and mathematics.</li>
+<li>Thinking Crusaders were entirely motivated by religion. Motives were <strong>mixed</strong> — land, wealth, adventure and status all played a role.</li>
+<li>Thinking the Crusades were a clear Christian victory. They ultimately <strong>failed</strong> — Jerusalem was in Muslim hands by 1244 and never returned to Christian control.</li>
+<li>Seeing Saladin as a villain. He was widely respected even by his Christian enemies for his military genius and <strong>relatively merciful</strong> conduct.</li>
+<li>Ignoring the Islamic perspective. The Crusaders were seen by the Islamic world as <strong>invaders</strong> — good history considers <strong>multiple perspectives</strong>.</li>
+<li>Thinking the Crusades only caused conflict. They also led to significant <strong>cultural exchange</strong> that enriched European knowledge of science, medicine and mathematics.</li>
 </ul>`,
 
-"island-32": `<h4>Introduction</h4>
+"island-32": `<h2>Renaissance &amp; Reformation</h2>
 <p>The Renaissance and Reformation transformed Europe between the 14th and 17th centuries. New ideas about human potential challenged the Church's authority; the Printing Press spread these ideas rapidly; and the religious unity of Western Christianity was permanently broken. England's Reformation was driven as much by royal politics as by theology — and the Catholic Church fought back with its own Counter-Reformation.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li>The <strong>Renaissance</strong> (meaning "rebirth") began in Italy — a revival of ancient Greek and Roman learning, focusing on human potential (<strong>humanism</strong>).</li>
-<li><strong>Key Renaissance figures</strong>: <strong>Leonardo da Vinci</strong> (artist, inventor, anatomist — the "Renaissance man"); <strong>Michelangelo</strong> (painter of the Sistine Chapel ceiling, sculptor of David); <strong>Copernicus</strong> (proposed the sun, not the Earth, was at the centre of the solar system — challenging Church teaching); <strong>Galileo</strong> (used a telescope to support Copernicus, was put on trial by the Church). These figures show the Renaissance spirit of questioning, observation and human achievement.</li>
-<li>The <strong>Printing Press</strong> (Gutenberg, c.1450) was one of the most transformative inventions in history. Before printing, books were hand-copied by monks — expensive and rare. The press made books affordable, spread literacy, and allowed new ideas (including Luther's) to reach millions. It was essential for both the Renaissance and the Reformation — and linked to later changes in education, science and democracy.</li>
-<li><strong>Martin Luther</strong> (1517): nailed his 95 Theses to a church door in Wittenberg, attacking the sale of indulgences and papal authority.</li>
-<li><strong>Henry VIII</strong> wanted to divorce Catherine of Aragon. The Pope refused. Henry broke from Rome, made himself Head of the Church of England (Act of Supremacy, 1534).</li>
-<li><strong>Dissolution of the Monasteries (1536–41)</strong>: Henry closed over 800 monasteries, priories and convents across England and seized their land and wealth. Social and economic impact was enormous: monks and nuns lost their homes and livelihoods; the poor lost access to charity, hospitals and education that monasteries had provided; monastery land was sold to loyal nobles, creating a new class of wealthy Protestant landowners with a stake in the Reformation's permanence; some of England's finest medieval buildings were demolished or fell into ruin.</li>
-<li><strong>The Counter-Reformation</strong>: the Catholic Church's response to the Protestant Reformation. The <strong>Council of Trent</strong> (1545–63) clarified Catholic doctrine, banned the sale of indulgences, improved training of priests, and established new religious orders like the Jesuits. The Counter-Reformation aimed to reform the Church from within and win back areas that had turned Protestant. It was partly successful — southern Europe remained Catholic.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>The Renaissance</h3>
+<p>The <strong>Renaissance</strong> — literally "rebirth" — began in Italy as a revival of ancient Greek and Roman learning, centred on <strong>humanism</strong>: a new focus on human potential, reason and achievement, alongside religious concerns rather than always beneath them. Its spirit of questioning, observation and achievement shows clearly in its leading figures: <strong>Leonardo da Vinci</strong>, an artist, inventor and anatomist often called the archetypal "Renaissance man"; <strong>Michelangelo</strong>, painter of the Sistine Chapel ceiling and sculptor of David; <strong>Copernicus</strong>, who proposed that the sun, not the Earth, sat at the centre of the solar system, directly challenging Church teaching; and <strong>Galileo</strong>, who used a telescope to support Copernicus's theory and was put on trial by the Church for it. None of these ideas could have spread as they did without the <strong>Printing Press</strong> (Gutenberg, c.1450), arguably one of the most transformative inventions in history: before it, books were hand-copied by monks, making them expensive and rare, but the press made books affordable, spread literacy, and let new ideas — Renaissance and, soon, Reformation alike — reach millions of people at once.</p>
+
+<h3>Luther and the Reformation</h3>
+<p>That same printing technology carried <strong>Martin Luther</strong>'s challenge to the Church far beyond where it began. In 1517, Luther nailed his 95 Theses to a church door in Wittenberg, attacking the sale of indulgences and papal authority — and, thanks to the press, his arguments spread across Europe rather than staying confined to one German town, launching the <strong>Reformation</strong> that would permanently split Western Christianity into Catholic and Protestant branches.</p>
+
+<h3>Henry VIII and the English Reformation</h3>
+<p>England's own break with Rome had a very different starting point. <strong>Henry VIII</strong> wanted to divorce Catherine of Aragon, and when the Pope refused, Henry broke from Rome entirely, making himself Head of the Church of England through the <strong>Act of Supremacy (1534)</strong>. What followed went far beyond one man's marriage: the <strong>Dissolution of the Monasteries (1536–41)</strong> saw Henry close over 800 monasteries, priories and convents across England and seize their land and wealth. The social and economic impact was enormous — monks and nuns lost their homes and livelihoods, the poor lost the charity, hospitals and education monasteries had long provided, monastery land was sold off to loyal nobles who thereby gained a direct financial stake in the Reformation's permanence, and some of England's finest medieval buildings were demolished or left to fall into ruin.</p>
+
+<h3>The Counter-Reformation</h3>
+<p>The Catholic Church did not simply absorb these losses passively. Its response, the <strong>Counter-Reformation</strong>, centred on the <strong>Council of Trent (1545–63)</strong>, which clarified Catholic doctrine, banned the sale of indulgences, improved the training of priests, and established new religious orders such as the Jesuits. The aim was twofold: reform the Church from within, and win back regions that had turned Protestant — and it was only partly successful, since southern Europe stayed Catholic while much of the north remained firmly Protestant.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Compare Luther's and Henry VIII's reasons for breaking with Rome. Were they similar?</p>
 <p><strong>Solution:</strong><br>
@@ -1121,39 +1078,31 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 <strong>Similarity:</strong> Both challenged papal authority and created permanent breaks from Rome.<br>
 <strong>Difference:</strong> Luther was a <strong>theological reformer</strong>; Henry was a <strong>political opportunist</strong> who remained Catholic in doctrine. Henry even executed Protestants who went too far in reforming.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Humanism</dt><dd>A Renaissance philosophy focusing on human potential, reason and achievement rather than purely religious concerns.</dd>
-<dt>Reformation</dt><dd>The 16th-century religious movement that challenged the Catholic Church and led to the creation of Protestant Christianity.</dd>
-<dt>Indulgence</dt><dd>A payment to the Church to reduce punishment for sins — Luther's central target in his 95 Theses.</dd>
-<dt>Act of Supremacy (1534)</dt><dd>The law making Henry VIII Supreme Head of the Church of England, replacing the Pope's authority.</dd>
-<dt>Dissolution of the Monasteries</dt><dd>Henry VIII's closure and seizure of over 800 monasteries (1536–41) — transferring enormous wealth from the Church to the Crown and loyal nobles.</dd>
-<dt>Counter-Reformation</dt><dd>The Catholic Church's response to Protestantism — including the Council of Trent, reformed practices and new religious orders like the Jesuits.</dd>
-<dt>Council of Trent</dt><dd>A series of Catholic Church meetings (1545–63) that clarified doctrine, banned indulgence sales and reformed priestly training.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Confusing Luther and Henry VIII as having the same reasons — ✅ Correct: Luther's break was <strong>theological</strong>; Henry's was primarily <strong>political and personal</strong>.</li>
-<li>❌ Thinking the Printing Press "caused" the Reformation — ✅ Correct: it was a crucial <strong>enabler</strong> that spread ideas — without it, Luther's Theses may not have spread beyond Wittenberg.</li>
-<li>❌ Saying Henry VIII became Protestant — ✅ Correct: Henry kept most Catholic practices — he just rejected <strong>papal authority</strong>, not Catholic theology.</li>
-<li>❌ Thinking the Catholic Church did nothing in response — ✅ Correct: the <strong>Counter-Reformation</strong> was a significant effort to reform, clarify and fight back against Protestantism.</li>
+<li>Confusing Luther and Henry VIII as having the same reasons. Luther's break was <strong>theological</strong>; Henry's was primarily <strong>political and personal</strong>.</li>
+<li>Thinking the Printing Press "caused" the Reformation. It was a crucial <strong>enabler</strong> that spread ideas — without it, Luther's Theses may not have spread beyond Wittenberg.</li>
+<li>Saying Henry VIII became Protestant. Henry kept most Catholic practices — he just rejected <strong>papal authority</strong>, not Catholic theology.</li>
+<li>Thinking the Catholic Church did nothing in response. The <strong>Counter-Reformation</strong> was a significant effort to reform, clarify and fight back against Protestantism.</li>
 </ul>`,
 
-"island-33": `<h4>Introduction</h4>
+"island-33": `<h2>The Tudors &amp; Elizabeth I</h2>
 <p>The Tudor dynasty produced some of England's most dramatic monarchs. Religious upheaval, political intrigue, a famous naval victory and one of England's greatest reigns all unfolded within a single family across little more than a century. Elizabeth I's reign saw a cultural golden age of theatre, exploration and growing global ambition.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Henry VIII</strong> had six wives: Catherine of Aragon, Anne Boleyn, Jane Seymour, Anne of Cleves, Catherine Howard, Catherine Parr. His desire for a male heir drove the English Reformation.</li>
-<li>After Henry VIII: <strong>Edward VI</strong> (Protestant, simplified Church) → <strong>Mary I</strong> (Catholic, burned ~300 Protestants) → <strong>Elizabeth I</strong> (Protestant "middle way").</li>
-<li><strong>The "Bloody Mary" debate</strong>: Mary I earned her nickname by burning approximately 300 Protestants at the stake. But was she really worse than other Tudor monarchs? Henry VIII executed far more people; Elizabeth I had over 100 Catholics executed. Mary was trying to restore what she believed was the true faith after her father's break from Rome. Her reputation was largely shaped by <strong>Protestant propaganda</strong> — particularly John Foxe's "Book of Martyrs." Considering different interpretations is a key historical skill.</li>
-<li>Elizabeth's <strong>religious settlement</strong> was deliberately moderate — Protestant in theology but retaining some Catholic ceremony to keep broad support. The <strong>Act of Uniformity (1559)</strong> made the Book of Common Prayer standard in all churches and required everyone to attend church on Sundays.</li>
-<li>The <strong>Spanish Armada</strong> (1588): Philip II of Spain sent 130 ships to invade. English fireships at Gravelines and violent storms destroyed the fleet.</li>
-<li><strong>Elizabethan Poor Laws</strong>: poverty was a major issue in Elizabethan England (rising population, inflation, enclosure of common land). The Poor Laws (1598 and 1601) distinguished between the "deserving poor" (sick, elderly, orphans — given relief) and the "undeserving poor" (able-bodied beggars — punished). Vagrants could be whipped, branded or imprisoned. The Poor Laws were the first systematic attempt by government to manage poverty — their principles lasted until the 19th century.</li>
-<li><strong>Shakespeare and Elizabethan theatre</strong>: William Shakespeare (1564–1616) was the greatest playwright of the age. The Globe Theatre (built 1599) was open to all social classes — groundlings stood in the yard for a penny, while the wealthy sat in the galleries. Theatre became a central part of English culture and entertainment. Shakespeare's plays explored themes still relevant today: power, love, ambition, justice and revenge.</li>
-<li><strong>Exploration and early colonisation</strong>: Sir Francis Drake circumnavigated the globe (1577–80), raiding Spanish ships along the way. Sir Walter Raleigh attempted to establish England's first colony in North America (Roanoke, 1585 — it failed). These voyages were driven by trade, national rivalry with Spain, and the beginnings of imperial ambition. They laid the foundations for the later British Empire.</li>
-<li><strong>The Gunpowder Plot (1605)</strong>: after Elizabeth's death, James I (a Stuart) became king. Catholic frustrations continued — a group led by Robert Catesby and including Guy Fawkes planned to blow up Parliament. The plot was discovered and the conspirators executed. It shows that religious tensions did not end with Elizabeth — and serves as a transition topic into the Stuart period.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>The Tudor Succession</h3>
+<p><strong>Henry VIII</strong>'s desire for a male heir drove far more of English history than his six marriages alone suggest — Catherine of Aragon, Anne Boleyn, Jane Seymour, Anne of Cleves, Catherine Howard and Catherine Parr — since it was that same desire that had triggered the English Reformation in the first place. After Henry, the throne passed through three very different rulers in quick succession: <strong>Edward VI</strong>, who pushed the Church further in a Protestant direction; <strong>Mary I</strong>, a committed Catholic who burned around 300 Protestants at the stake; and finally <strong>Elizabeth I</strong>, who steered a Protestant "middle way" between the two extremes. Mary's "Bloody Mary" nickname is worth examining carefully rather than simply accepting: Henry VIII executed far more people over his reign, and Elizabeth herself had over 100 Catholics executed, while Mary genuinely believed she was restoring the true faith after her father's break from Rome. Much of Mary's lasting reputation was shaped by <strong>Protestant propaganda</strong>, particularly John Foxe's "Book of Martyrs" — weighing that context against the raw death toll is exactly the kind of interpretation-checking good history demands.</p>
+
+<h3>Elizabeth's Religious Settlement and the Spanish Armada</h3>
+<p>Elizabeth's <strong>religious settlement</strong> was deliberately moderate: Protestant in theology, but retaining enough Catholic ceremony to keep broad support across a divided country. The <strong>Act of Uniformity (1559)</strong> made the Book of Common Prayer standard in every church and required attendance on Sundays, giving the settlement legal teeth. That relative stability was tested directly in 1588, when Philip II of Spain sent the <strong>Spanish Armada</strong> — 130 ships — to invade England; English fireships at Gravelines and violent storms afterward combined to destroy the fleet, a victory that did as much for English confidence as it did for English security.</p>
+
+<h3>Elizabethan Society: Poverty and Theatre</h3>
+<p>Beneath the naval glory, Elizabethan England faced a serious and growing poverty crisis, driven by rising population, inflation and the enclosure of common land. The <strong>Poor Laws (1598 and 1601)</strong> responded by drawing a sharp line between the "deserving poor" — the sick, elderly and orphaned, who received relief — and the "undeserving poor" — able-bodied beggars, who could be whipped, branded or imprisoned as <strong>vagrants</strong>. Crude as this distinction looks today, it was the first systematic attempt by any English government to manage poverty, and its principles lasted all the way through to the 19th century. Culture flourished alongside this hardship: <strong>William Shakespeare (1564–1616)</strong> was the greatest playwright of the age, and the Globe Theatre, built in 1599, was open to every social class at once — groundlings stood in the yard for a penny while the wealthy sat in the galleries — making theatre a genuinely shared part of English life rather than an elite pastime, exploring themes of power, love, ambition, justice and revenge that still resonate today.</p>
+
+<h3>Exploration and the Road to the Stuarts</h3>
+<p>Elizabethan ambition reached beyond England's shores too. Sir Francis Drake circumnavigated the globe (1577–80), raiding Spanish ships along the way, while Sir Walter Raleigh attempted to establish England's first colony in North America at Roanoke in 1585 — a failure, but one that pointed directly toward the later British Empire, driven by trade, rivalry with Spain, and the early stirrings of imperial ambition. Religious tension did not end with Elizabeth's death, either: when James I, a Stuart, took the throne, Catholic frustration boiled over into the <strong>Gunpowder Plot (1605)</strong> — a conspiracy led by Robert Catesby, with Guy Fawkes as its explosives expert, to blow up Parliament. The plot was discovered and its conspirators executed, a stark reminder that the religious divisions of the Tudor century carried straight on into the Stuart period that followed.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> "Elizabeth I was the greatest Tudor monarch." How far do you agree?</p>
 <p><strong>Solution:</strong><br>
@@ -1161,39 +1110,34 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 <strong>Against:</strong> She never resolved the succession — causing a crisis at her death. Poverty and failed harvests caused significant suffering despite the Poor Laws. The Irish rebellion was suppressed brutally. Religious tensions were managed, not solved — the Gunpowder Plot came just two years after her death.<br>
 <strong>Judgement:</strong> Elizabeth's achievements in stability, culture and national identity were remarkable, but her failure to provide an heir was a serious weakness. Her <strong>long-term legacy</strong> was largely positive for England's development.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Religious settlement</dt><dd>Elizabeth's compromise religious policy — Protestant but moderate enough to include most English people.</dd>
-<dt>Armada</dt><dd>The Spanish fleet of 130 ships sent to invade England in 1588, defeated by a combination of English tactics and violent storms.</dd>
-<dt>Poor Laws</dt><dd>Elizabethan legislation (1598/1601) creating the first systematic approach to managing poverty — distinguishing "deserving" from "undeserving" poor.</dd>
-<dt>Vagrant</dt><dd>A person without a home or job who wandered from place to place — treated harshly under Elizabethan law.</dd>
-<dt>Succession</dt><dd>The process of determining who will inherit a throne — Elizabeth's lack of an heir made this a political crisis.</dd>
-<dt>Gunpowder Plot</dt><dd>A 1605 Catholic conspiracy to blow up Parliament and kill James I — led by Robert Catesby with Guy Fawkes as the explosives expert.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Getting the order of monarchs wrong — ✅ Correct: Henry VIII → Edward VI → Mary I → Elizabeth I. Learn this sequence.</li>
-<li>❌ Saying England won the Armada purely through military skill — ✅ Correct: the <strong>storms</strong> were crucial — many historians argue England could not have won without them.</li>
-<li>❌ Thinking Elizabeth's reign was entirely peaceful — ✅ Correct: there were plots against her life, ongoing religious tension and brutal colonial violence in Ireland.</li>
-<li>❌ Accepting "Bloody Mary" without question — ✅ Correct: Mary's reputation was largely shaped by <strong>Protestant propaganda</strong>. Other Tudor monarchs also executed large numbers of people.</li>
+<li>Getting the order of monarchs wrong. It runs Henry VIII → Edward VI → Mary I → Elizabeth I — learn this sequence.</li>
+<li>Saying England won the Armada purely through military skill. The <strong>storms</strong> were crucial — many historians argue England could not have won without them.</li>
+<li>Thinking Elizabeth's reign was entirely peaceful. There were plots against her life, ongoing religious tension and brutal colonial violence in Ireland.</li>
+<li>Accepting "Bloody Mary" without question. Mary's reputation was largely shaped by <strong>Protestant propaganda</strong> — other Tudor monarchs also executed large numbers of people.</li>
 </ul>`,
 
-"island-34": `<h4>Introduction</h4>
+"island-34": `<h2>The Transatlantic Slave Trade</h2>
 <p>The Transatlantic Slave Trade was one of history's greatest crimes — a commercially organised system that enslaved an estimated 12 million Africans over 400 years. Britain was central to it. Understanding Africa before European contact, the operation of the trade, the resistance of enslaved people and slavery's lasting legacy is essential to understanding the modern world.</p>
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Africa before the slave trade</strong>: Africa was home to thriving kingdoms and civilisations long before European contact. The Kingdom of Mali (13th–16th century) was one of the wealthiest empires in the world — Mansa Musa's pilgrimage to Mecca (1324) was legendary for its extraordinary display of gold. The Kingdom of Benin (13th–19th century) was famous for its bronze sculptures, sophisticated governance and walled city. Great Zimbabwe was a major trading centre in southern Africa. Challenging the narrative that Africa had "no history" before Europeans is essential — it was used to justify enslavement.</li>
-<li>The <strong>triangular trade</strong>: Britain → West Africa (goods exchanged for enslaved people) → Americas (enslaved people sold, plantation goods bought) → Britain (sugar, tobacco, cotton sold for profit).</li>
-<li>The <strong>Middle Passage</strong>: the crossing from Africa to the Americas. Enslaved people were chained below decks in horrific conditions. Up to 20% died during the crossing.</li>
-<li><strong>The economic scale of slavery</strong>: the slave trade and plantation economy generated enormous wealth for Britain. Sugar from the Caribbean was the most profitable commodity in the world. Cotton from enslaved labour in America fuelled the Industrial Revolution in Lancashire. Cities including Bristol, Liverpool and Glasgow grew wealthy from the trade — profits funded banks (e.g. Barclays, Lloyds), insurance companies, stately homes and public buildings still standing today. When slavery was abolished in 1833, the British government paid £20 million in compensation — to the slaveholders, not the enslaved. This debt was not fully repaid until 2015.</li>
-<li>Life on <strong>plantations</strong> was brutal: enslaved people worked 18+ hours a day, faced violent punishments, could be separated from their families at any time, and were treated as property with no legal rights.</li>
-<li><strong>William Wilberforce</strong>, an MP, campaigned tirelessly in Parliament for nearly 20 years — introducing bill after bill — until the 1807 Slave Trade Act was finally passed.</li>
-<li>Enslaved people resisted in many ways: work slowdowns, escape, maintaining cultural practices, revolt. Key resistance figures include: <strong>Toussaint Louverture</strong> (led the Haitian Revolution, 1791–1804 — the only successful slave revolt to create an independent nation); <strong>Nanny of the Maroons</strong> (Jamaican freedom fighter who led a community of escaped enslaved people in the mountains, using guerrilla tactics against the British); <strong>Olaudah Equiano</strong> (formerly enslaved man who bought his freedom and wrote a powerful autobiography used in the abolition campaign).</li>
-<li><strong>Abolition</strong>: 1807 — Slave Trade Act (trade abolished); 1833 — Slavery Abolition Act (enslaved people freed in British territories). Slaveholders were compensated; enslaved people were not.</li>
-<li><strong>Legacy in modern Britain</strong>: slavery's history continues to affect communities today. Debates about statues (e.g. the Edward Colston statue in Bristol, toppled in 2020), calls for reparations, racial inequality, and the representation of Black history in the curriculum all connect to this history. Understanding the legacy helps explain ongoing social issues.</li>
-<li><strong>The development of racism as an ideology</strong>: racial prejudice existed before the slave trade, but the trade systematised and intensified it. To justify enslaving millions of people, Europeans developed pseudo-scientific theories claiming African people were inherently inferior. These ideas became deeply embedded in European culture and were used to justify not just slavery but also colonialism. Understanding that racism was <strong>constructed to justify exploitation</strong> — not a natural or inevitable belief — is crucial.</li>
-</ul>
-<h4>✏️ Worked Example</h4>
+
+<h3>Africa Before the Slave Trade</h3>
+<p>Africa was home to thriving kingdoms and civilisations long before European contact, and it matters to say so clearly, because the myth that Africa had "no history" before Europeans arrived was itself later used to help justify enslavement. The Kingdom of Mali (13th–16th century) was one of the wealthiest empires in the world — Mansa Musa's 1324 pilgrimage to Mecca became legendary for its extraordinary display of gold. The Kingdom of Benin (13th–19th century) was famous for its bronze sculptures, sophisticated governance and walled city, while Great Zimbabwe stood as a major trading centre in southern Africa. None of this sophistication prevented what followed.</p>
+
+<h3>The Triangular Trade and the Middle Passage</h3>
+<p>The system that emerged is usually described as the <strong>triangular trade</strong>: ships sailed from Britain to West Africa carrying goods to exchange for enslaved people, then across to the Americas where those enslaved people were sold and plantation goods bought in their place, then back to Britain where sugar, tobacco and cotton were sold for profit — completing the triangle and beginning it again. The crossing itself, known as the <strong>Middle Passage</strong>, was horrific: enslaved people were chained below decks for the journey from Africa to the Americas, and up to 20% died before ever reaching land.</p>
+
+<h3>The Economics of Slavery and Life on Plantations</h3>
+<p>The slave trade and the plantation economy it fed generated enormous wealth for Britain. Sugar from the Caribbean was, at the time, the most profitable commodity in the world, and cotton picked by enslaved labour in America went on to fuel the Industrial Revolution in Lancashire. Cities including Bristol, Liverpool and Glasgow grew wealthy directly from the trade, with its profits funding banks such as Barclays and Lloyds, insurance companies, and stately homes and public buildings that still stand today. Even abolition did not close this economic story cleanly: when slavery was finally abolished in 1833, the British government paid £20 million in compensation — to the slaveholders, not to the people they had enslaved — a debt the British taxpayer was still paying off until 2015. For those actually enslaved on the plantations this wealth was built on, life was brutal beyond what these figures alone convey: 18-hour working days, violent punishment, families separated at any moment without warning, and a total absence of legal rights, since enslaved people were treated in law as property rather than people.</p>
+
+<h3>Resistance and Abolition</h3>
+<p>Enslaved people resisted throughout, in ways ranging from deliberate work slowdowns and maintaining cultural practices to escape and outright revolt. <strong>Toussaint Louverture</strong> led the Haitian Revolution (1791–1804), the only slave revolt in history to succeed in creating an independent nation. <strong>Nanny of the Maroons</strong>, a Jamaican freedom fighter, led a community of escaped enslaved people in the mountains, using guerrilla tactics against the British. <strong>Olaudah Equiano</strong>, a formerly enslaved man who bought his own freedom, wrote a powerful autobiography that became a central text in the abolition campaign. Inside Parliament, <strong>William Wilberforce</strong> campaigned for nearly 20 years, introducing bill after bill, before the Slave Trade Act finally passed in 1807 — but it is worth being precise about what that Act actually achieved: it ended the trade itself, not slavery, which continued in British territories until the Slavery Abolition Act of 1833, and even then it was the slaveholders who were compensated, not the people who had been enslaved.</p>
+
+<h3>Legacy and the Construction of Racism</h3>
+<p>This history continues to shape modern Britain directly — in debates about statues, such as the Edward Colston statue in Bristol, toppled in 2020; in calls for reparations; in patterns of racial inequality; and in ongoing debates about how Black history is represented in the school curriculum. Underlying all of it is a fact worth stating plainly: while racial prejudice existed before the slave trade, the trade itself systematised and intensified it into something new. To justify enslaving millions of people, Europeans developed pseudo-scientific theories claiming African people were inherently inferior — ideas that became deeply embedded in European culture and were later used to justify colonialism as well as slavery. Racism, in other words, was <strong>constructed to justify exploitation</strong>, not a natural or inevitable belief — a product of a specific history, not of biology.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Why did abolition take so long despite widespread knowledge of conditions on the Middle Passage?</p>
 <p><strong>Solution:</strong><br>
@@ -1203,22 +1147,14 @@ Compare that with melting ice, a physical change: no new substance, and fully re
 4. <strong>Gradual change</strong>: public opinion shifted slowly through the work of abolitionists like Wilberforce and Equiano, sugar boycotts organised by women, and petitions signed by hundreds of thousands — change required sustained campaigning over decades.<br>
 5. <strong>Enslaved people's resistance</strong>: the Haitian Revolution (1791–1804) showed that enslaved people would fight for freedom, making the continuation of slavery increasingly dangerous and unstable.</p>
 </div>
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Triangular trade</dt><dd>The three-stage transatlantic trading system: goods to Africa, enslaved people to the Americas, plantation products back to Europe.</dd>
-<dt>Middle Passage</dt><dd>The sea crossing from West Africa to the Americas where enslaved Africans were transported in appalling conditions.</dd>
-<dt>Abolitionist</dt><dd>Someone who campaigned for the ending of slavery — key figures include William Wilberforce and Olaudah Equiano.</dd>
-<dt>Emancipation</dt><dd>The act of freeing enslaved people — achieved in British territories by the Slavery Abolition Act of 1833.</dd>
-<dt>Maroons</dt><dd>Communities of escaped enslaved people who established free settlements, often in mountainous or remote areas — fought for their independence using guerrilla warfare.</dd>
-<dt>Reparations</dt><dd>Compensation or payments made to address historical injustice — an ongoing debate about whether descendants of enslaved people should receive financial reparations.</dd>
-</dl>
-<h4>⚠️ Common Mistakes to Avoid</h4>
+
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking abolition was easy or quick — ✅ Correct: it took over <strong>20 years</strong> of sustained campaigning by abolitionists against powerful economic and political opposition.</li>
-<li>❌ Forgetting enslaved people's own resistance — ✅ Correct: enslaved people were <strong>active agents</strong> in their own liberation — revolts and resistance were constant.</li>
-<li>❌ Thinking the 1807 Act ended slavery — ✅ Correct: 1807 ended the <strong>trade</strong>; slavery itself continued until <strong>1833</strong> in British territories.</li>
-<li>❌ Assuming Africa had no civilisation before European contact — ✅ Correct: Africa had <strong>wealthy, sophisticated kingdoms</strong> (Mali, Benin, Great Zimbabwe) long before the slave trade. This myth was used to justify enslavement.</li>
-<li>❌ Thinking racism is natural or inevitable — ✅ Correct: racism as an ideology was <strong>constructed to justify slavery and colonialism</strong> — it is a product of history, not biology.</li>
+<li>Thinking abolition was easy or quick. It took over <strong>20 years</strong> of sustained campaigning by abolitionists against powerful economic and political opposition.</li>
+<li>Forgetting enslaved people's own resistance. Enslaved people were <strong>active agents</strong> in their own liberation — revolts and resistance were constant.</li>
+<li>Thinking the 1807 Act ended slavery. 1807 ended the <strong>trade</strong>; slavery itself continued until <strong>1833</strong> in British territories.</li>
+<li>Assuming Africa had no civilisation before European contact. Africa had <strong>wealthy, sophisticated kingdoms</strong> (Mali, Benin, Great Zimbabwe) long before the slave trade — this myth was used to justify enslavement.</li>
+<li>Thinking racism is natural or inevitable. Racism as an ideology was <strong>constructed to justify slavery and colonialism</strong> — it is a product of history, not biology.</li>
 </ul>`,
 
 "island-20": `<h2>Map Skills</h2>
@@ -2581,23 +2517,19 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 <li>Thinking food miles are the only environmental issue. Food grown locally in heated greenhouses can produce <strong>more</strong> emissions than food imported from a naturally warm climate.</li>
 </ul>`,
 
-"island-53": `<h4>Introduction</h4>
+"island-53": `<h2>Anglo-Saxons &amp; Vikings</h2>
 <p>After the Romans left Britain around AD 410, the island entered a dramatic new era. <strong>Anglo-Saxon</strong> tribes from northern Europe settled across England, creating kingdoms, laws and a culture that still shapes our country today. From the 8th century, <strong>Viking</strong> raiders from Scandinavia attacked, traded and eventually settled in large parts of England. The struggle between Anglo-Saxons and Vikings defined early medieval Britain — and the crisis of 1066 would change England forever.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li>After Rome withdrew (c. AD 410), <strong>Anglo-Saxon</strong> tribes (Angles, Saxons, Jutes) migrated from northern Germany and Denmark, establishing kingdoms across England.</li>
-<li>The main Anglo-Saxon kingdoms were <strong>Wessex</strong> (south), <strong>Mercia</strong> (midlands), <strong>Northumbria</strong> (north) and <strong>East Anglia</strong> (east) — together known as the Heptarchy.</li>
-<li>Anglo-Saxon society was hierarchical: the <strong>king</strong> at the top, then <strong>thegns</strong> (nobles/warriors who held land), <strong>ceorls</strong> (free peasant farmers) and <strong>thralls</strong> (enslaved people).</li>
-<li><strong>Christianity</strong> spread through Anglo-Saxon England from two directions: in AD 597, Pope Gregory I sent <strong>Augustine</strong> to convert King Æthelberht of Kent (from the south); meanwhile, <strong>Celtic monks</strong> from Iona (e.g. Aidan to Lindisfarne) converted the north.</li>
-<li><strong>Monasteries</strong> were the main centres of education, literacy and culture — monks hand-copied manuscripts, created illuminated texts like the <strong>Lindisfarne Gospels</strong>, and preserved knowledge.</li>
-<li><strong>Viking raids</strong> began in AD 793 with the attack on Lindisfarne monastery. Vikings came from Norway, Denmark and Sweden seeking wealth, land and trade.</li>
-<li>In AD 865, the <strong>Great Heathen Army</strong> invaded and conquered much of eastern and northern England, establishing the <strong>Danelaw</strong> — the area under Viking law and control.</li>
-<li><strong>Alfred the Great</strong> (King of Wessex, 871–899) resisted the Vikings, defeated them at the Battle of Edington (878) and agreed the boundary of the Danelaw. He also promoted education, law and literacy.</li>
-<li>After <strong>Edward the Confessor</strong> died in January 1066 without a clear heir, a <strong>succession crisis</strong> erupted — Harold Godwinson, Harald Hardrada and William of Normandy all claimed the English throne.</li>
-</ul>
+<h3>Anglo-Saxon England</h3>
+<p>Once Rome withdrew around AD 410, <strong>Anglo-Saxon</strong> tribes — Angles, Saxons and Jutes — migrated from northern Germany and Denmark and established kingdoms across England, settling alongside (and sometimes displacing) the Romano-British people already living there. Over time, four kingdoms came to dominate: <strong>Wessex</strong> in the south, <strong>Mercia</strong> in the midlands, <strong>Northumbria</strong> in the north and <strong>East Anglia</strong> in the east, together forming what is known as the Heptarchy. Anglo-Saxon society itself was strictly hierarchical: the <strong>king</strong> at the top, then <strong>thegns</strong> — noble warriors who held land in return for military service and loyalty — then <strong>ceorls</strong>, free peasant farmers, and finally <strong>thralls</strong>, enslaved people at the bottom.</p>
 
-<h4>✏️ Worked Example</h4>
+<h3>Christianity and Monasteries</h3>
+<p>Christianity reached Anglo-Saxon England from two directions at once. In AD 597, Pope Gregory I sent <strong>Augustine</strong> to convert King Æthelberht of Kent, spreading the faith northward from the south, while <strong>Celtic monks</strong> from Iona — Aidan travelling to Lindisfarne among them — converted the north independently. The <strong>monasteries</strong> that grew out of this conversion became the main centres of education, literacy and culture in Anglo-Saxon England: monks hand-copied manuscripts and created illuminated texts such as the <strong>Lindisfarne Gospels</strong>, preserving knowledge that might otherwise have been lost.</p>
+
+<h3>Viking Raids and Alfred the Great</h3>
+<p>That world of monastic learning was violently interrupted in AD 793, when Vikings from Norway, Denmark and Sweden — seeking wealth, land and trade — attacked Lindisfarne monastery, beginning a long era of raids. By AD 865, the <strong>Great Heathen Army</strong> had invaded and conquered much of eastern and northern England, establishing the <strong>Danelaw</strong>, the region living under Viking law and control. It was <strong>Alfred the Great</strong>, King of Wessex (871–899), who turned the tide: he defeated the Vikings at the Battle of Edington in 878, then negotiated the boundary of the Danelaw, buying England the time to recover — all while also promoting education, law and literacy at home. Even so, Alfred was King of Wessex alone, not of all England; it took his grandson Æthelstan, in AD 927, to first unite the country under one ruler. That unity would not last forever: when <strong>Edward the Confessor</strong> died in January 1066 without a clear heir, a <strong>succession crisis</strong> erupted between Harold Godwinson, Harald Hardrada and William of Normandy — the opening chapter of the story that ends at the Battle of Hastings.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Why is Alfred the Great considered one of the most important Anglo-Saxon kings? Explain at least three reasons.</p>
 <p><strong>Solution:</strong><br>
@@ -2608,41 +2540,27 @@ Therefore, rivers offered water, food, transport and power — the key ingredien
 Therefore, Alfred is remembered for saving England from total Viking conquest and promoting learning, law and defence.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Anglo-Saxons</dt><dd>Germanic tribes (Angles, Saxons, Jutes) who migrated to and settled in Britain from the 5th century, establishing kingdoms that became England.</dd>
-<dt>Thegn</dt><dd>An Anglo-Saxon nobleman who held land granted by the king in return for military service and loyalty.</dd>
-<dt>Danelaw</dt><dd>The area of England (mainly the north and east) controlled by the Vikings after the treaties with Alfred, where Danish laws and customs applied.</dd>
-<dt>Viking</dt><dd>Norse seafarers from Scandinavia (Denmark, Norway, Sweden) who raided, traded and settled across Europe from the 8th to 11th centuries.</dd>
-<dt>Heptarchy</dt><dd>The name given to the seven main Anglo-Saxon kingdoms of England (Wessex, Mercia, Northumbria, East Anglia, Essex, Sussex, Kent).</dd>
-<dt>Succession crisis</dt><dd>A dispute over who should become the next ruler, usually caused by the death of a king without a clear or agreed heir.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking the Anglo-Saxons invaded an empty land — ✅ Correct: <strong>Romano-British people</strong> already lived in Britain; the Anglo-Saxons settled alongside and sometimes displaced them.</li>
-<li>❌ Thinking all Vikings were just violent raiders — ✅ Correct: Vikings were also <strong>traders, farmers, craftspeople and settlers</strong> who established towns like York (Jorvik).</li>
-<li>❌ Saying Alfred the Great ruled all of England — ✅ Correct: Alfred was King of <strong>Wessex</strong>; it was his grandson Æthelstan who first united England in AD 927.</li>
-<li>❌ Confusing the 1066 succession crisis claimants — ✅ Correct: there were <strong>three main claimants</strong>: Harold Godwinson (English), Harald Hardrada (Norwegian) and William of Normandy (Norman/French).</li>
+<li>Thinking the Anglo-Saxons invaded an empty land. <strong>Romano-British people</strong> already lived in Britain; the Anglo-Saxons settled alongside and sometimes displaced them.</li>
+<li>Thinking all Vikings were just violent raiders. Vikings were also <strong>traders, farmers, craftspeople and settlers</strong> who established towns like York (Jorvik).</li>
+<li>Saying Alfred the Great ruled all of England. Alfred was King of <strong>Wessex</strong>; it was his grandson Æthelstan who first united England in AD 927.</li>
+<li>Confusing the 1066 succession crisis claimants. There were <strong>three main claimants</strong>: Harold Godwinson (English), Harald Hardrada (Norwegian) and William of Normandy (Norman/French).</li>
 </ul>`,
 
-"island-54": `<h4>Introduction</h4>
+"island-54": `<h2>The Peasants' Revolt of 1381</h2>
 <p>In June 1381, thousands of ordinary English peasants marched on London in one of the most dramatic uprisings in English history — the <strong>Peasants' Revolt</strong>. Angry about unfair taxes, harsh labour laws and years of exploitation, they demanded freedom and fairness from the young King Richard II. Although the revolt was crushed and its leaders killed, it sent shockwaves through medieval society and helped speed up the end of <strong>feudalism</strong> in England.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Long-term cause — the Black Death (1348–49):</strong> Killed about one-third of England's population, creating a severe <strong>labour shortage</strong>. Surviving peasants could demand higher wages because workers were scarce.</li>
-<li><strong>The Statute of Labourers (1351):</strong> Parliament froze wages at pre-plague levels and made it illegal for peasants to leave their manor to find better-paid work. Peasants saw this as deeply unfair.</li>
-<li><strong>Short-term cause — the Poll Tax (1380):</strong> A flat tax of 1 shilling per person (rich and poor paid the same amount). This was the <strong>third poll tax in four years</strong> and was seen as unjust.</li>
-<li>The <strong>immediate trigger</strong>: in May 1381, villagers in Essex attacked a tax collector enforcing the hated Poll Tax. The rebellion quickly spread to Kent.</li>
-<li><strong>Wat Tyler</strong> (from Kent) emerged as the main leader of the revolt. <strong>John Ball</strong>, a radical priest, inspired the rebels with ideas of equality — "When Adam delved and Eve span, who was then the gentleman?"</li>
-<li>In June 1381, rebels from Kent and Essex <strong>marched on London</strong>, burning <strong>John of Gaunt's Savoy Palace</strong>, opening prisons and killing the Archbishop of Canterbury and the Lord Treasurer.</li>
-<li>At <strong>Smithfield</strong>, the 14-year-old King Richard II met the rebels. During the meeting, Wat Tyler was <strong>killed</strong> by the Mayor of London. Richard calmed the crowd by promising to meet their demands.</li>
-<li>Richard II <strong>broke his promises</strong> — the charters of freedom were cancelled, rebel leaders were hunted down and executed, and the king declared "serfs you are and serfs you shall remain."</li>
-<li><strong>Consequences:</strong> No more poll taxes were introduced; wages gradually rose; serfdom slowly declined over the following century. Historians debate whether the revolt was a <strong>failure</strong> (immediate demands rejected) or a <strong>success</strong> (helped end feudalism in the long term).</li>
-</ul>
+<h3>Long-Term Causes: The Black Death and the Statute of Labourers</h3>
+<p>The roots of the revolt reach back over thirty years, to the <strong>Black Death (1348–49)</strong>, which killed about one-third of England's population and created a severe <strong>labour shortage</strong> — with workers suddenly scarce, surviving peasants found themselves able to demand higher wages for the first time. Parliament's response, the <strong>Statute of Labourers (1351)</strong>, tried to slam that door shut: it froze wages at pre-plague levels and made it illegal for peasants to leave their manor in search of better-paid work elsewhere, a law peasants experienced as a deeply unfair attempt to deny them the leverage the plague had accidentally handed them.</p>
 
-<h4>✏️ Worked Example</h4>
+<h3>The Poll Tax and the Uprising</h3>
+<p>Decades of that resentment finally found its spark in the <strong>Poll Tax (1380)</strong>, a flat tax of one shilling charged per person regardless of wealth — the third poll tax in just four years, and one that struck the poor exactly as hard as the rich. The <strong>immediate trigger</strong> came in May 1381, when villagers in Essex attacked a tax collector sent to enforce it; the rebellion spread to Kent within days. <strong>Wat Tyler</strong>, from Kent, emerged as the revolt's main leader, while <strong>John Ball</strong>, a radical priest, gave the uprising its ideological edge with the rhetorical question "When Adam delved and Eve span, who was then the gentleman?" — a direct challenge to the entire idea of inherited social rank. By June 1381, rebels from Kent and Essex had marched on London itself, burning John of Gaunt's Savoy Palace, opening the prisons, and killing both the Archbishop of Canterbury and the Lord Treasurer.</p>
+
+<h3>Smithfield and the Aftermath</h3>
+<p>The crisis reached its climax at <strong>Smithfield</strong>, where the 14-year-old King Richard II met the rebels face to face. During that meeting, Wat Tyler was killed by the Mayor of London, and Richard defused the immediate danger by promising the crowd everything they had demanded. He then broke every one of those promises: the charters of freedom were cancelled, rebel leaders were hunted down and executed, and the king declared, in words that still capture the revolt's ultimate fate, "serfs you are and serfs you shall remain." Yet the longer-term picture is more complicated than that brutal reversal suggests — no government ever dared introduce another poll tax, wages gradually rose as lords kept competing for scarce workers, and serfdom slowly declined over the following century. Whether the revolt should be judged a failure, since its immediate demands were crushed, or a success, since it helped accelerate the end of feudalism over time, remains a genuine debate among historians.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> "The Peasants' Revolt of 1381 was a complete failure." How far do you agree with this statement?</p>
 <p><strong>Solution:</strong><br>
@@ -2657,39 +2575,27 @@ Therefore, Alfred is remembered for saving England from total Viking conquest an
 <strong>Conclusion:</strong> In the short term the revolt failed — its leaders were killed and promises broken. However, in the long term it helped <strong>accelerate the decline of feudalism</strong> and showed that ordinary people could challenge authority.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Feudalism</dt><dd>The medieval social system in which peasants worked the land for a lord in exchange for protection and a place to live. The lord owed loyalty to the king.</dd>
-<dt>Poll Tax</dt><dd>A flat-rate tax charged per person (per "head"), regardless of wealth. The 1380 poll tax of 1 shilling per person was the trigger for the revolt.</dd>
-<dt>Statute of Labourers</dt><dd>A law passed in 1351 that froze wages at pre-Black Death levels and prevented peasants from leaving their manor to seek higher wages elsewhere.</dd>
-<dt>Serf / Villein</dt><dd>An unfree peasant tied to the land of a lord, required to work on the lord's land for a set number of days per week.</dd>
-<dt>Black Death</dt><dd>A devastating plague (1348–49) that killed roughly one-third of England's population, causing a labour shortage that changed the balance of power between lords and peasants.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking the Poll Tax was the only cause — ✅ Correct: the Poll Tax was the <strong>trigger</strong>, but long-term causes (Black Death, Statute of Labourers, resentment of feudalism) were equally important.</li>
-<li>❌ Saying the revolt immediately ended feudalism — ✅ Correct: feudalism declined <strong>gradually over the next century</strong>; the revolt accelerated the process but did not end it overnight.</li>
-<li>❌ Thinking Richard II was a powerful adult king — ✅ Correct: Richard was only <strong>14 years old</strong> in 1381 and was heavily influenced by his advisors.</li>
-<li>❌ Forgetting John Ball's role — ✅ Correct: John Ball was a key <strong>ideological leader</strong> who preached that all people were equal and inspired the rebels with radical ideas.</li>
+<li>Thinking the Poll Tax was the only cause. The Poll Tax was the <strong>trigger</strong>, but long-term causes (Black Death, Statute of Labourers, resentment of feudalism) were equally important.</li>
+<li>Saying the revolt immediately ended feudalism. Feudalism declined <strong>gradually over the next century</strong>; the revolt accelerated the process but did not end it overnight.</li>
+<li>Thinking Richard II was a powerful adult king. Richard was only <strong>14 years old</strong> in 1381 and was heavily influenced by his advisors.</li>
+<li>Forgetting John Ball's role. John Ball was a key <strong>ideological leader</strong> who preached that all people were equal and inspired the rebels with radical ideas.</li>
 </ul>`,
 
-"island-55": `<h4>Introduction</h4>
+"island-55": `<h2>The Medieval Church</h2>
 <p>In medieval England, the <strong>Church</strong> was not just a place of worship — it was the most powerful institution in the country, shaping every aspect of daily life from birth to death. The Pope in Rome was head of the entire Western Church, and local parish churches were the heart of every village. The Church controlled education, provided healthcare, collected taxes (tithes) and could even challenge kings. Understanding the medieval Church is key to understanding medieval society.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li>The <strong>parish church</strong> was the centre of village life — used for worship, baptisms, weddings, funerals and community gatherings. It was often the only stone building in the village.</li>
-<li>The Church had a clear <strong>hierarchy</strong>: the <strong>Pope</strong> (head of the Church in Rome) → <strong>archbishops</strong> → <strong>bishops</strong> → <strong>priests</strong> (who served local parishes).</li>
-<li>Everyone was expected to pay a <strong>tithe</strong> — one-tenth of their income or produce — to the Church. This made the Church extremely wealthy, owning about one-third of all land in England.</li>
-<li><strong>Monasteries and abbeys</strong> were communities of monks or nuns who devoted their lives to prayer, work and study. They ran hospitals, schools and provided charity to the poor.</li>
-<li><strong>Pilgrimages</strong> were journeys to holy sites (e.g. Canterbury Cathedral, the shrine of Thomas Becket) to seek forgiveness, healing or spiritual merit. <strong>Relics</strong> (bones, possessions of saints) were believed to have miraculous powers.</li>
-<li>The Pope had immense power: he could <strong>excommunicate</strong> individuals (ban them from the Church and, they believed, from Heaven) or place an <strong>interdict</strong> on an entire country (banning all Church services).</li>
-<li><strong>Thomas Becket</strong>, Archbishop of Canterbury, was murdered in 1170 by four of Henry II's knights after a dispute over Church vs royal power. Becket became a saint and Canterbury a major pilgrimage site.</li>
-<li>The Church controlled <strong>education</strong> (monasteries were the only schools) and <strong>medicine</strong> (illness was often seen as God's punishment; prayer and pilgrimages were common treatments).</li>
-</ul>
+<h3>The Church Hierarchy and Wealth</h3>
+<p>Every village revolved around its <strong>parish church</strong> — often the only stone building around — used for worship, baptisms, weddings, funerals and community gatherings alike. Behind that local church stood a clear chain of command: the <strong>Pope</strong> in Rome at the top, then <strong>archbishops</strong>, then <strong>bishops</strong>, then the <strong>priests</strong> who actually served each parish day to day. That hierarchy was funded by the <strong>tithe</strong>, a compulsory tenth of everyone's income or produce owed to the Church, which made it extraordinarily wealthy — owning around one-third of all land in England, richer in practice than many lords and sometimes richer than the king himself.</p>
 
-<h4>✏️ Worked Example</h4>
+<h3>Monasteries, Pilgrimages and Relics</h3>
+<p><strong>Monasteries and abbeys</strong> housed communities of monks or nuns devoted to prayer, work and study, and their role reached well beyond religion alone: they ran hospitals and schools and provided charity to the poor, making them the closest thing medieval England had to a welfare system. Ordinary devotion took a more physical form too, in <strong>pilgrimages</strong> — journeys to holy sites such as Canterbury Cathedral or the shrine of Thomas Becket, undertaken to seek forgiveness, healing or spiritual merit — often centred on <strong>relics</strong>, the bones or possessions of saints believed to hold genuinely miraculous power. Since monasteries were also the only schools available and illness was widely seen as God's punishment, education and medicine both effectively ran through the Church as well, with prayer and pilgrimage standing in for what we would now think of as treatment.</p>
+
+<h3>The Church's Power Over Kings</h3>
+<p>The Pope's authority reached all the way to the top of secular society. He could <strong>excommunicate</strong> an individual, banning them from the Church and, in the belief of the time, from Heaven itself, or go further still and place an <strong>interdict</strong> on an entire country, halting all Church services nationwide as a way of pressuring even a king into obedience. That power turned violent in 1170, when <strong>Thomas Becket</strong>, Archbishop of Canterbury, was murdered by four of Henry II's knights after a bitter dispute over Church versus royal power — Becket was made a saint soon afterward, and Canterbury became one of England's major pilgrimage sites as a direct result.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Explain why the medieval Church was so powerful in England. Give at least three reasons.</p>
 <p><strong>Solution:</strong><br>
@@ -2700,41 +2606,24 @@ Therefore, Alfred is remembered for saving England from total Viking conquest an
 Therefore, the Church's combination of wealth, spiritual fear, knowledge and daily presence made it the most powerful institution in medieval England.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Tithe</dt><dd>A tax of one-tenth of a person's income or produce, paid to the Church. Tithes were compulsory and made the Church very wealthy.</dd>
-<dt>Excommunication</dt><dd>The most severe Church punishment — banning a person from all Church services and sacraments. Medieval people believed this meant being sent to Hell.</dd>
-<dt>Interdict</dt><dd>A papal punishment placed on an entire country, banning all Church services (no marriages, baptisms or burials). Used to pressure kings into obedience.</dd>
-<dt>Pilgrimage</dt><dd>A journey to a holy place (such as Canterbury, Jerusalem or Rome) to show devotion, seek forgiveness or ask for healing.</dd>
-<dt>Relic</dt><dd>A physical object associated with a saint (e.g. bones, clothing), believed to have healing or miraculous powers.</dd>
-<dt>Monastery</dt><dd>A religious community where monks lived, worked and prayed according to a strict daily routine (the Rule of St Benedict).</dd>
-<dt>Parish</dt><dd>The local area served by a single church and priest. Every person in England belonged to a parish.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking medieval people could choose not to go to church — ✅ Correct: church attendance was <strong>expected of everyone</strong>; refusing could lead to punishment or social exclusion.</li>
-<li>❌ Saying the king was always more powerful than the Pope — ✅ Correct: the Pope could <strong>excommunicate kings</strong> and place interdicts on countries, giving him enormous leverage over rulers.</li>
-<li>❌ Thinking monasteries were only about prayer — ✅ Correct: monasteries also ran <strong>schools, hospitals, farms and libraries</strong> and were major economic and cultural centres.</li>
-<li>❌ Confusing tithes with ordinary taxes — ✅ Correct: tithes were paid <strong>to the Church</strong> (one-tenth of income); taxes were paid to the <strong>king or lord</strong>. People had to pay both.</li>
+<li>Thinking medieval people could choose not to go to church. Church attendance was <strong>expected of everyone</strong>; refusing could lead to punishment or social exclusion.</li>
+<li>Saying the king was always more powerful than the Pope. The Pope could <strong>excommunicate kings</strong> and place interdicts on countries, giving him enormous leverage over rulers.</li>
+<li>Thinking monasteries were only about prayer. They also ran <strong>schools, hospitals, farms and libraries</strong> and were major economic and cultural centres.</li>
+<li>Confusing tithes with ordinary taxes. Tithes were paid <strong>to the Church</strong> (one-tenth of income); taxes were paid to the <strong>king or lord</strong> — people had to pay both.</li>
 </ul>`,
 
-"island-56": `<h4>Introduction</h4>
+"island-56": `<h2>The Wars of the Roses</h2>
 <p>The <strong>Wars of the Roses</strong> (1455–1487) were a series of bloody civil wars fought between two rival branches of the royal Plantagenet family for control of the English throne: the <strong>House of Lancaster</strong> (red rose) and the <strong>House of York</strong> (white rose). These wars brought decades of instability, betrayal and dramatic battles — and ended with the surprise victory of Henry Tudor at Bosworth in 1485, founding the <strong>Tudor dynasty</strong> that would transform England.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li>The wars were caused by: the <strong>weak rule of Henry VI</strong> (Lancastrian), who suffered mental illness; rival claims to the throne; powerful nobles competing for influence; and defeat in the Hundred Years' War with France.</li>
-<li>The <strong>House of Lancaster</strong> (red rose) included Henry VI and later Henry VII. The <strong>House of York</strong> (white rose) included Edward IV and Richard III.</li>
-<li><strong>Henry VI</strong> (Lancaster) was a weak, pious king whose mental breakdowns allowed powerful nobles like Richard, Duke of York, to challenge for power.</li>
-<li><strong>Richard Neville, Earl of Warwick</strong> ("the Kingmaker") was the most powerful noble in England. He helped put <strong>Edward IV</strong> (York) on the throne in 1461 but later switched sides to Lancaster.</li>
-<li>The <strong>Battle of Towton (1461)</strong> was the bloodiest battle ever fought on English soil — an estimated 28,000 died. Edward IV won and became king.</li>
-<li><strong>Richard III</strong> (York) took the throne in 1483 after the death of Edward IV. The <strong>Princes in the Tower</strong> (Edward V and his brother) disappeared — many believe Richard had them murdered, though this remains debated.</li>
-<li>At the <strong>Battle of Bosworth (1485)</strong>, Henry Tudor (a distant Lancastrian claimant) defeated and killed Richard III. Henry became <strong>Henry VII</strong>, the first Tudor king.</li>
-<li>Henry VII united the houses by marrying <strong>Elizabeth of York</strong> and combining the red and white roses into the <strong>Tudor rose</strong>, ending the Wars of the Roses and beginning the Tudor dynasty.</li>
-</ul>
+<h3>Causes and the Rise of the Yorkists</h3>
+<p>The wars grew out of a combination of weaknesses at the top: the <strong>weak rule of Henry VI</strong>, a Lancastrian king who suffered repeated mental breakdowns, rival claims to the throne, powerful nobles competing for influence in the vacuum his weakness created, and the humiliation of defeat in the Hundred Years' War with France. Both rival houses — <strong>Lancaster</strong> (red rose), including Henry VI and later Henry VII, and <strong>York</strong> (white rose), including Edward IV and Richard III — were in fact branches of the same Plantagenet royal family, which is part of what made the conflict so bitter. Henry VI's breakdowns gave ambitious nobles like Richard, Duke of York, room to challenge directly for power, and none did so more effectively than <strong>Richard Neville, Earl of Warwick</strong> — nicknamed "the Kingmaker" for being powerful enough to decide who actually sat on the throne. Warwick helped put <strong>Edward IV</strong> (York) on the throne in 1461, at the <strong>Battle of Towton</strong>, the bloodiest battle ever fought on English soil, with an estimated 28,000 dead — before later switching sides back to Lancaster himself.</p>
 
-<h4>✏️ Worked Example</h4>
+<h3>Richard III, the Princes in the Tower, and Bosworth</h3>
+<p>The Yorkist line took a darker turn after Edward IV's death, when <strong>Richard III</strong> took the throne in 1483. Soon afterward, the <strong>Princes in the Tower</strong> — Edward V and his younger brother — disappeared entirely while in Richard's care; many believe Richard had them murdered to secure his claim, though the truth remains genuinely debated by historians to this day. Richard's reign did not last long: at the <strong>Battle of Bosworth (1485)</strong>, Henry Tudor, a distant Lancastrian claimant, defeated and killed Richard III, becoming <strong>Henry VII</strong>, the first Tudor king. Henry then sealed the peace in the most symbolic way available to him, marrying <strong>Elizabeth of York</strong> and combining the red and white roses into a single <strong>Tudor rose</strong> — formally ending the Wars of the Roses and beginning the Tudor dynasty that would go on to reshape England.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> "Richard III was a villain who murdered his way to the throne." How far do you agree?</p>
 <p><strong>Solution:</strong><br>
@@ -2749,40 +2638,24 @@ Therefore, the Church's combination of wealth, spiritual fear, knowledge and dai
 <strong>Conclusion:</strong> Much of the "villain" image comes from <strong>Tudor propaganda</strong>. While his seizure of the throne was ruthless, the truth about the Princes in the Tower remains uncertain.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Wars of the Roses</dt><dd>A series of civil wars (1455–1487) between the House of Lancaster (red rose) and the House of York (white rose) over the English throne.</dd>
-<dt>Plantagenet</dt><dd>The royal dynasty that ruled England from 1154 to 1485. Both Lancaster and York were branches of the Plantagenet family.</dd>
-<dt>Kingmaker</dt><dd>The nickname for Richard Neville, Earl of Warwick, who was so powerful he could decide who became king — first supporting Edward IV, then switching to Henry VI.</dd>
-<dt>Princes in the Tower</dt><dd>Edward V (aged 12) and his brother Richard (aged 9), who were placed in the Tower of London in 1483 and never seen again. Their fate remains one of history's greatest mysteries.</dd>
-<dt>Tudor dynasty</dt><dd>The royal family founded by Henry VII after the Battle of Bosworth (1485), which ruled England until 1603 (Henry VII → Henry VIII → Edward VI → Mary I → Elizabeth I).</dd>
-<dt>Tudor rose</dt><dd>The symbol combining the red rose of Lancaster and white rose of York, representing the unity of the two houses under Henry VII.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking the wars were between two completely separate families — ✅ Correct: Lancaster and York were both branches of the same <strong>Plantagenet</strong> royal family.</li>
-<li>❌ Believing Shakespeare's Richard III is historically accurate — ✅ Correct: Shakespeare wrote under the <strong>Tudors</strong>, so his play is heavily biased propaganda designed to justify Henry VII's claim.</li>
-<li>❌ Mixing up which rose belongs to which house — ✅ Correct: <strong>Lancaster = red rose</strong>; <strong>York = white rose</strong>.</li>
-<li>❌ Thinking Bosworth ended all conflict — ✅ Correct: there were further <strong>Yorkist rebellions</strong> after 1485 (e.g. Lambert Simnel in 1487), and it took Henry VII years to secure his position.</li>
+<li>Thinking the wars were between two completely separate families. Lancaster and York were both branches of the same <strong>Plantagenet</strong> royal family.</li>
+<li>Believing Shakespeare's Richard III is historically accurate. Shakespeare wrote under the <strong>Tudors</strong>, so his play is heavily biased propaganda designed to justify Henry VII's claim.</li>
+<li>Mixing up which rose belongs to which house. <strong>Lancaster = red rose</strong>; <strong>York = white rose</strong>.</li>
+<li>Thinking Bosworth ended all conflict. There were further <strong>Yorkist rebellions</strong> after 1485 (e.g. Lambert Simnel in 1487), and it took Henry VII years to secure his position.</li>
 </ul>`,
 
-"island-57": `<h4>Introduction</h4>
+"island-57": `<h2>Edward I: Wales and Scotland</h2>
 <p>In the late 13th and early 14th centuries, English kings — especially <strong>Edward I</strong> — launched military campaigns to bring Wales and Scotland under English control. Edward conquered Wales and built a ring of massive castles to enforce his rule, but Scotland proved far harder to subdue. Scottish heroes like <strong>William Wallace</strong> and <strong>Robert the Bruce</strong> fought back fiercely, and the Scottish victory at <strong>Bannockburn (1314)</strong> secured Scotland's independence for centuries. These campaigns shaped the identities of all three nations.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li><strong>Edward I</strong> (reigned 1272–1307) was a powerful warrior king nicknamed the "Hammer of the Scots." He aimed to bring both Wales and Scotland under direct English control.</li>
-<li><strong>Conquest of Wales (1277–1283):</strong> Edward invaded Wales twice. The Welsh prince <strong>Llywelyn ap Gruffudd</strong> was killed in 1282, and by 1283 Welsh resistance had been crushed.</li>
-<li>Edward built a ring of enormous <strong>castles</strong> across north Wales — including <strong>Caernarfon, Conwy, Harlech and Beaumaris</strong> — to intimidate the Welsh and enforce English rule. These are among the finest medieval castles in Europe.</li>
-<li>In Scotland, a succession crisis in 1290 led Edward I to intervene. He chose John Balliol as king but treated him as a puppet, leading to Scottish rebellion.</li>
-<li><strong>William Wallace</strong> led Scottish resistance and won a stunning victory at the <strong>Battle of Stirling Bridge (1297)</strong>, using the narrow bridge to defeat a much larger English army.</li>
-<li>Wallace was eventually captured, taken to London, and <strong>executed</strong> in 1305 by being hanged, drawn and quartered — the punishment for treason.</li>
-<li><strong>Robert the Bruce</strong> crowned himself King of Scotland in 1306 and defeated Edward II's army at the <strong>Battle of Bannockburn (1314)</strong>, the most important Scottish military victory.</li>
-<li>The <strong>Declaration of Arbroath (1320)</strong> was a letter from Scottish nobles to the Pope asserting Scotland's right to independence and the Scots' freedom to choose their own king.</li>
-</ul>
+<h3>The Conquest of Wales</h3>
+<p><strong>Edward I</strong> (reigned 1272–1307), a warrior king nicknamed the "Hammer of the Scots," set out to bring both Wales and Scotland under direct English control. Wales fell first: across two invasions between 1277 and 1283, Edward crushed Welsh resistance, killing the Welsh prince <strong>Llywelyn ap Gruffudd</strong> in 1282. To make that conquest permanent, Edward built a ring of enormous <strong>castles</strong> across north Wales — Caernarfon, Conwy, Harlech and Beaumaris among them — designed to intimidate the Welsh and enforce English rule so thoroughly that they still rank among the finest medieval castles in Europe.</p>
 
-<h4>✏️ Worked Example</h4>
+<h3>Wallace, Bruce and Scottish Independence</h3>
+<p>Scotland resisted far more successfully. A succession crisis in 1290 gave Edward the opening to intervene, and he installed John Balliol as king — but treated him so obviously as a puppet that it provoked open Scottish rebellion. <strong>William Wallace</strong> led that resistance to a stunning victory at the <strong>Battle of Stirling Bridge (1297)</strong>, using the bridge's narrow crossing to defeat a much larger English army piece by piece. Wallace was eventually captured, taken to London, and executed in 1305 by being hanged, drawn and quartered — the standard medieval punishment for treason. His cause outlived him: <strong>Robert the Bruce</strong> crowned himself King of Scotland in 1306 and went on to defeat Edward II's army at the <strong>Battle of Bannockburn (1314)</strong>, the single most important Scottish military victory of the period. Scotland's case for independence was then set down formally in the <strong>Declaration of Arbroath (1320)</strong>, a letter from Scottish nobles to the Pope asserting both Scotland's right to independence and the Scots' own freedom to choose their king.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Why did Edward I build castles in Wales? Explain at least three reasons.</p>
 <p><strong>Solution:</strong><br>
@@ -2793,40 +2666,27 @@ Therefore, the Church's combination of wealth, spiritual fear, knowledge and dai
 Therefore, the castles served military, psychological, economic and symbolic purposes — they were tools of <strong>conquest and colonisation</strong>.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Concentric castle</dt><dd>A castle with two or more rings of walls, one inside the other (e.g. Beaumaris). Attackers who breached the outer wall still faced the higher inner wall.</dd>
-<dt>Garrison</dt><dd>A group of soldiers stationed in a castle or fort to defend it and control the surrounding area.</dd>
-<dt>Succession crisis</dt><dd>A dispute over who should become the next king, often caused by the death of a ruler without a clear heir (Scotland had one in 1290).</dd>
-<dt>Bannockburn</dt><dd>The battle in 1314 where Robert the Bruce's Scottish army defeated the much larger English army of Edward II, securing Scottish independence.</dd>
-<dt>Declaration of Arbroath</dt><dd>A letter written in 1320 by Scottish nobles to the Pope, asserting Scotland's independence and the right of the Scottish people to choose their own king.</dd>
-<dt>Treason</dt><dd>The crime of betraying one's king or country, punished in medieval England by hanging, drawing and quartering.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking Edward I conquered Scotland — ✅ Correct: Edward conquered <strong>Wales</strong> but ultimately <strong>failed to conquer Scotland</strong>, which remained independent after Bannockburn.</li>
-<li>❌ Confusing William Wallace and Robert the Bruce — ✅ Correct: <strong>Wallace</strong> won at Stirling Bridge (1297) but was executed in 1305; <strong>Bruce</strong> won at Bannockburn (1314) and became king.</li>
-<li>❌ Saying Bannockburn ended all conflict between England and Scotland — ✅ Correct: wars continued for years; Scottish independence was only formally recognised by England in the <strong>Treaty of Edinburgh-Northampton (1328)</strong>.</li>
-<li>❌ Thinking the Welsh accepted English rule peacefully — ✅ Correct: there were <strong>several Welsh rebellions</strong> after 1283, including the major revolt of Owain Glyndŵr in 1400.</li>
+<li>Thinking Edward I conquered Scotland. Edward conquered <strong>Wales</strong> but ultimately <strong>failed to conquer Scotland</strong>, which remained independent after Bannockburn.</li>
+<li>Confusing William Wallace and Robert the Bruce. <strong>Wallace</strong> won at Stirling Bridge (1297) but was executed in 1305; <strong>Bruce</strong> won at Bannockburn (1314) and became king.</li>
+<li>Saying Bannockburn ended all conflict between England and Scotland. Wars continued for years; Scottish independence was only formally recognised by England in the <strong>Treaty of Edinburgh-Northampton (1328)</strong>.</li>
+<li>Thinking the Welsh accepted English rule peacefully. There were <strong>several Welsh rebellions</strong> after 1283, including the major revolt of Owain Glyndŵr in 1400.</li>
 </ul>`,
 
-"island-58": `<h4>Introduction</h4>
+"island-58": `<h2>Medieval Towns &amp; Trade</h2>
 <p>Medieval towns were noisy, crowded, smelly — and full of opportunity. As England's population grew and trade expanded from the 11th century onwards, towns became increasingly important centres of <strong>commerce, craft and culture</strong>. Merchants and craftspeople organised themselves into powerful <strong>guilds</strong>, markets attracted traders from across Europe, and the wool trade made England rich. Towns also gave people a chance to escape the feudal system — a serf who lived in a town for a year and a day could become free.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li>Medieval towns grew as <strong>trade increased</strong> after the Norman Conquest. Lords granted <strong>town charters</strong> giving towns the right to hold markets, collect tolls and govern themselves.</li>
-<li><strong>Burgesses</strong> were townspeople who held special rights (voting, trading) granted by the charter. They paid rent to the lord rather than performing feudal labour.</li>
-<li><strong>Guilds</strong> were powerful organisations that controlled trade and craft in towns. <strong>Merchant guilds</strong> regulated buying and selling; <strong>craft guilds</strong> (e.g. weavers, blacksmiths, bakers) controlled the quality, price and production of goods.</li>
-<li>Young people learned trades through <strong>apprenticeships</strong> — typically lasting 7 years, during which an apprentice lived with a master craftsman, learned the trade, and eventually became a journeyman and then (if skilled enough) a master.</li>
-<li>The <strong>wool trade</strong> was medieval England's most important industry. English wool was exported across Europe, especially to Flanders (modern Belgium). Wool made towns like Norwich, York and Bristol wealthy.</li>
-<li><strong>Fairs</strong> (like the great Stourbridge Fair near Cambridge) were large annual trading events attracting merchants from across Europe, trading in wool, cloth, spices, wine and luxury goods.</li>
-<li>Conditions in medieval towns were often <strong>poor</strong>: overcrowding, lack of clean water, open sewers, animal waste in streets, and the constant risk of fire (most buildings were wooden). Disease spread easily.</li>
-<li>Towns played a key role in the <strong>decline of feudalism</strong>: they offered an alternative to serfdom, created a new <strong>middle class</strong> of merchants, and generated wealth independent of land ownership.</li>
-</ul>
+<h3>Town Charters and Guilds</h3>
+<p>Towns grew as trade increased after the Norman Conquest, and lords formalised that growth by granting <strong>town charters</strong>, official documents giving a town the right to hold markets, collect tolls and govern itself. Within that self-governing structure, <strong>burgesses</strong> were townspeople who held special rights — trading, voting — granted directly by the charter, paying rent to the lord rather than performing feudal labour like a rural peasant would. Trade itself was tightly controlled by <strong>guilds</strong>: merchant guilds regulated buying and selling generally, while craft guilds — weavers, blacksmiths, bakers and the like — controlled the quality, price and production of their specific goods. Entry into a craft ran through <strong>apprenticeship</strong>, typically seven years living with a master craftsman learning the trade, after which a successful apprentice became a journeyman and, eventually, if skilled enough, a master in their own right.</p>
 
-<h4>✏️ Worked Example</h4>
+<h3>The Wool Trade and Fairs</h3>
+<p>Of all medieval English industries, none mattered more than the <strong>wool trade</strong>: English wool was exported across Europe, above all to Flanders (modern Belgium), and it made towns such as Norwich, York and Bristol genuinely wealthy. That trade found its most dramatic expression at <strong>fairs</strong> — events like the great Stourbridge Fair near Cambridge drew merchants from across Europe once a year to trade wool, cloth, spices, wine and luxury goods all in one place.</p>
+
+<h3>Town Life and the Decline of Feudalism</h3>
+<p>None of this prosperity made medieval towns pleasant places to live. Overcrowding, a lack of clean water, open sewers, animal waste in the streets and the constant risk of fire — since most buildings were wooden — combined to let disease spread easily. Yet for all their squalor, towns played a genuinely important role in the <strong>decline of feudalism</strong>: they offered an alternative to serfdom, created an entirely new <strong>middle class</strong> of merchants, and generated wealth independent of land ownership for the first time — a structural challenge to the feudal system that no single revolt could match.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Explain how the guild system controlled the quality of goods in a medieval town.</p>
 <p><strong>Solution:</strong><br>
@@ -2837,41 +2697,27 @@ Therefore, the castles served military, psychological, economic and symbolic pur
 Therefore, guilds acted as a form of <strong>quality control and regulation</strong>, protecting both consumers and the reputation of the town's craftspeople.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Charter</dt><dd>An official document from the king or lord granting a town special rights, such as holding a market, collecting tolls and self-governance.</dd>
-<dt>Burgess</dt><dd>A freeman of a town who had special rights (including trading and voting) granted by the town's charter.</dd>
-<dt>Guild</dt><dd>An association of merchants or craftspeople that controlled trade, set prices, maintained quality standards and protected its members' interests.</dd>
-<dt>Apprentice</dt><dd>A young person (usually starting at age 12–14) who lived with a master craftsman for about 7 years, learning a trade in exchange for food, lodging and training.</dd>
-<dt>Journeyman</dt><dd>A trained craftsman who had completed an apprenticeship but was not yet a master. Journeymen were paid daily wages (from the French "journée" — day).</dd>
-<dt>Wool trade</dt><dd>Medieval England's most valuable export industry. Raw wool and finished cloth were shipped to Europe, especially Flanders, making many English towns wealthy.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking medieval towns were clean and pleasant — ✅ Correct: they were often <strong>dirty, overcrowded and smelly</strong>, with open sewers, animal waste and a constant risk of fire and disease.</li>
-<li>❌ Saying anyone could trade freely in a medieval town — ✅ Correct: <strong>guilds strictly controlled</strong> who could trade and what they could sell; non-members were banned or fined.</li>
-<li>❌ Thinking apprentices were paid — ✅ Correct: apprentices received <strong>no wages</strong>; they worked in exchange for training, food and lodging from their master.</li>
-<li>❌ Forgetting that towns helped end feudalism — ✅ Correct: towns created <strong>alternatives to serfdom</strong> — a serf who lived in a town for a year and a day could become legally free.</li>
+<li>Thinking medieval towns were clean and pleasant. They were often <strong>dirty, overcrowded and smelly</strong>, with open sewers, animal waste and a constant risk of fire and disease.</li>
+<li>Saying anyone could trade freely in a medieval town. <strong>Guilds strictly controlled</strong> who could trade and what they could sell; non-members were banned or fined.</li>
+<li>Thinking apprentices were paid. Apprentices received <strong>no wages</strong>; they worked in exchange for training, food and lodging from their master.</li>
+<li>Forgetting that towns helped end feudalism. Towns created <strong>alternatives to serfdom</strong> — a serf who lived in a town for a year and a day could become legally free.</li>
 </ul>`,
 
-"island-59": `<h4>Introduction</h4>
+"island-59": `<h2>The Islamic Golden Age</h2>
 <p>While medieval Europe was often struggling through the "Dark Ages," the <strong>Islamic world</strong> was experiencing a golden age of learning, science and culture (roughly AD 750–1258). Centred on great cities like <strong>Baghdad</strong>, scholars in the Islamic world preserved ancient Greek and Roman knowledge, made groundbreaking discoveries of their own, and laid foundations in mathematics, medicine and science that we still use today. Without the Islamic Golden Age, much of the knowledge that fuelled Europe's later Renaissance might have been lost forever.</p>
 
-<h4>📌 Key Points</h4>
-<ul>
-<li>The <strong>Islamic Golden Age</strong> (c. 750–1258) was a period of extraordinary achievement in science, medicine, mathematics, art and culture across the Islamic world, from Spain to Central Asia.</li>
-<li><strong>Baghdad</strong> was the centre of learning. The <strong>House of Wisdom</strong> (Bayt al-Hikma) was a great library and translation centre where scholars translated Greek, Persian and Indian texts into Arabic, preserving and building on ancient knowledge.</li>
-<li><strong>Al-Khwarizmi</strong> (c. 780–850) developed <strong>algebra</strong> (the word comes from his book "al-jabr") and helped introduce the Hindu-Arabic numeral system (1, 2, 3…) and the concept of <strong>zero</strong> to the wider world.</li>
-<li><strong>Ibn Sina</strong> (Avicenna, 980–1037) wrote the <strong>Canon of Medicine</strong>, a medical encyclopaedia used in European universities for over 500 years. He described contagious diseases, quarantine procedures and hundreds of drugs.</li>
-<li><strong>Al-Idrisi</strong> (1100–1165) created one of the most advanced world maps of the medieval period, combining knowledge from Greek, Arab and travellers' sources.</li>
-<li>Achievements in <strong>science</strong> included Ibn al-Haytham's work on <strong>optics</strong> (how the eye sees light), advanced <strong>astronomy</strong> (star catalogues, astrolabes) and early <strong>chemistry</strong> (distillation, acids).</li>
-<li>Achievements in <strong>medicine</strong> included the establishment of <strong>hospitals</strong> (bimaristans) with separate wards for different illnesses, and the development of <strong>surgical instruments</strong> by Al-Zahrawi (the "father of surgery").</li>
-<li>Compared with medieval Europe, the Islamic world was <strong>far more advanced</strong> in science, medicine and mathematics during this period. Islamic scholarship later helped spark the European <strong>Renaissance</strong> when translated texts reached Western Europe.</li>
-<li>The Golden Age ended largely with the <strong>Mongol invasion of 1258</strong> — Hulagu Khan's army sacked Baghdad, destroyed the House of Wisdom, burned libraries and killed the caliph. While scholarship continued elsewhere, this was a devastating blow.</li>
-</ul>
+<h3>The House of Wisdom and Mathematics</h3>
+<p>The <strong>Islamic Golden Age</strong> (c. 750–1258) spanned an enormous territory, stretching from Spain to Central Asia, but its intellectual centre was <strong>Baghdad</strong>, home to the <strong>House of Wisdom</strong> (Bayt al-Hikma) — a combined library, academy and translation centre where scholars translated Greek, Persian and Indian texts into Arabic, preserving and actively building on ancient knowledge rather than simply copying it. Mathematics advanced dramatically through <strong>Al-Khwarizmi</strong> (c. 780–850), who developed <strong>algebra</strong> — the word itself comes from his book "al-jabr" — and helped introduce the Hindu-Arabic numeral system (1, 2, 3…) and the concept of <strong>zero</strong> to the wider world, tools so fundamental that mathematics as taught today would be unrecognisable without them.</p>
 
-<h4>✏️ Worked Example</h4>
+<h3>Medicine and Surgery</h3>
+<p>Medicine advanced just as dramatically. <strong>Ibn Sina</strong> (Avicenna, 980–1037) wrote the <strong>Canon of Medicine</strong>, a medical encyclopaedia so thorough that European universities used it as a textbook for over 500 years, describing contagious diseases, quarantine procedures and hundreds of drugs at a level of detail Europe would not match for centuries. That knowledge was put into practice in purpose-built <strong>hospitals</strong> (bimaristans) with separate wards for different illnesses — an organisational leap far ahead of anything in medieval Europe — while <strong>Al-Zahrawi</strong>, often called the "father of surgery," developed the surgical instruments that made more advanced procedures possible in the first place.</p>
+
+<h3>Science, Cartography and Legacy</h3>
+<p>Beyond medicine and mathematics, the period produced <strong>Al-Idrisi</strong> (1100–1165), who created one of the most advanced world maps of the medieval period by combining Greek, Arab and travellers' knowledge into a single source; <strong>Ibn al-Haytham</strong>, whose work on <strong>optics</strong> explained how the eye actually sees light; and major advances in <strong>astronomy</strong> (star catalogues, astrolabes) and early <strong>chemistry</strong> (distillation, acids). Taken together, these achievements left the Islamic world far more advanced than medieval Europe across science, medicine and mathematics throughout this period — and it was precisely this body of scholarship, once translated texts began reaching Western Europe, that helped spark the European <strong>Renaissance</strong>. The Golden Age itself came to a violent end largely with the <strong>Mongol invasion of 1258</strong>, when Hulagu Khan's army sacked Baghdad, destroyed the House of Wisdom, burned its libraries and killed the caliph — scholarship continued elsewhere in the Islamic world afterward, but Baghdad's central role in it never fully recovered.</p>
+
+<h3>Worked Example</h3>
 <div class="example-box">
 <p><strong>Example:</strong> Explain how Islamic scholars contributed to the development of modern medicine. Give at least three examples.</p>
 <p><strong>Solution:</strong><br>
@@ -2882,23 +2728,12 @@ Therefore, guilds acted as a form of <strong>quality control and regulation</str
 Therefore, Islamic scholars advanced medicine through systematic study, practical hospital care, surgical innovation and early ideas about disease transmission.</p>
 </div>
 
-<h4>📖 Key Vocabulary</h4>
-<dl>
-<dt>Islamic Golden Age</dt><dd>The period from roughly AD 750 to 1258 when the Islamic world led the world in science, medicine, mathematics, art and culture.</dd>
-<dt>House of Wisdom</dt><dd>A major intellectual centre in Baghdad where scholars translated, studied and expanded upon Greek, Persian and Indian texts. It was a library, academy and translation centre.</dd>
-<dt>Algebra</dt><dd>A branch of mathematics dealing with equations and unknown values, developed by Al-Khwarizmi. The word comes from the Arabic "al-jabr" (meaning "reunion of broken parts").</dd>
-<dt>Canon of Medicine</dt><dd>A vast medical encyclopaedia written by Ibn Sina (Avicenna), covering diseases, anatomy, treatments and drugs. Used in Europe for over 500 years.</dd>
-<dt>Bimaristan</dt><dd>An Islamic hospital — far more advanced than anything in medieval Europe, with trained doctors, separate wards, pharmacies and medical training facilities.</dd>
-<dt>Renaissance</dt><dd>The European "rebirth" of learning (14th–17th centuries), heavily influenced by the rediscovery of ancient texts preserved and expanded by Islamic scholars.</dd>
-<dt>Astrolabe</dt><dd>A sophisticated astronomical instrument used by Islamic scholars to observe and calculate the positions of stars, determine direction (qibla) and tell the time.</dd>
-</dl>
-
-<h4>⚠️ Common Mistakes to Avoid</h4>
+<h3>Common Mistakes</h3>
 <ul>
-<li>❌ Thinking Islamic scholars only copied Greek knowledge — ✅ Correct: they <strong>preserved, corrected and significantly expanded</strong> upon Greek, Persian and Indian knowledge, making many original discoveries.</li>
-<li>❌ Saying medieval Europe was more advanced than the Islamic world — ✅ Correct: during this period (750–1258), the Islamic world was <strong>far ahead</strong> of Europe in science, medicine and mathematics.</li>
-<li>❌ Thinking the Islamic Golden Age only affected the Middle East — ✅ Correct: the Islamic world stretched from <strong>Spain to Central Asia</strong>, and its knowledge eventually reached Europe, helping spark the Renaissance.</li>
-<li>❌ Confusing Al-Khwarizmi with other scholars — ✅ Correct: <strong>Al-Khwarizmi</strong> = algebra and numerals; <strong>Ibn Sina</strong> = medicine; <strong>Al-Zahrawi</strong> = surgery; <strong>Ibn al-Haytham</strong> = optics.</li>
+<li>Thinking Islamic scholars only copied Greek knowledge. They <strong>preserved, corrected and significantly expanded</strong> upon Greek, Persian and Indian knowledge, making many original discoveries.</li>
+<li>Saying medieval Europe was more advanced than the Islamic world. During this period (750–1258), the Islamic world was <strong>far ahead</strong> of Europe in science, medicine and mathematics.</li>
+<li>Thinking the Islamic Golden Age only affected the Middle East. The Islamic world stretched from <strong>Spain to Central Asia</strong>, and its knowledge eventually reached Europe, helping spark the Renaissance.</li>
+<li>Confusing Al-Khwarizmi with other scholars. <strong>Al-Khwarizmi</strong> = algebra and numerals; <strong>Ibn Sina</strong> = medicine; <strong>Al-Zahrawi</strong> = surgery; <strong>Ibn al-Haytham</strong> = optics.</li>
 </ul>`
 
 });
