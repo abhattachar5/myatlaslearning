@@ -794,6 +794,10 @@ Object.assign(LESSONS, {
   <strong>⚠ Why this matters:</strong> every whole-number combination of 6x + 9y is automatically a multiple of 3 (their HCF), since both 6 and 9 are multiples of 3. 10 is not a multiple of 3, so no whole-number x and y can ever make 6x + 9y equal exactly 10 — no amount of trial and error will find one, because it genuinely does not exist.
 </div>
 
+<div style="background:#e3f2fd;padding:0.75em 1em;border-radius:8px;margin:1em 0">
+  <strong>What if the HCF is 1?</strong> The coin problem below uses 2p and 5p coins to make 19p — and HCF(2,5) = 1. That is not a coincidence or an exception to the rule; it is the rule doing something interesting. <strong>1 divides every whole number</strong>, so whenever two coefficients are <strong>coprime</strong> (their HCF is 1), the equation is <strong>always</strong> solvable, no matter what the target is. That is exactly why 2p and 5p coins can make almost any total, while 6 and 9 (HCF = 3) can only ever reach multiples of 3.
+</div>
+
 <h3>A Real-World Example: The Coin Problem</h3>
 <p>Diophantine equations show up naturally in counting problems. Suppose you have only 2p and 5p coins, and want to make exactly 19p.</p>
 <div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
