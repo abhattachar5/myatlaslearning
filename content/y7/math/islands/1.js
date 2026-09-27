@@ -133,7 +133,15 @@ FLASHCARDS.push(
   {id:"mfc-04-5-2",islandId:"mi-04-5",front:"What is the reciprocal of 3/4?",
    back:"4/3 (or 1⅓)\n\nTo find the reciprocal of a fraction, flip the numerator and denominator.\n\nCheck: 3/4 × 4/3 = 12/12 = 1 ✓",difficulty:1,category:"calculation"},
   {id:"mfc-04-5-3",islandId:"mi-04-5",front:"What is the reciprocal of 0.25? Why does 0 have no reciprocal?",
-   back:"Reciprocal of 0.25 = 4\n\n0.25 = 1/4, so its reciprocal = 4/1 = 4.\nCheck: 0.25 × 4 = 1 ✓\n\n0 has no reciprocal because no number multiplied by 0 gives 1 (0 × anything = 0).",difficulty:2,category:"concept"}
+   back:"Reciprocal of 0.25 = 4\n\n0.25 = 1/4, so its reciprocal = 4/1 = 4.\nCheck: 0.25 × 4 = 1 ✓\n\n0 has no reciprocal because no number multiplied by 0 gives 1 (0 × anything = 0).",difficulty:2,category:"concept"},
+
+  // ── Topic 4, Island 6: Diophantine Equations (Project) ────────────────
+  {id:"mfc-04-6-1",islandId:"mi-04-6",front:"What is a Diophantine equation?",
+   back:"An equation where only whole-number (integer) solutions count.\n\nNamed after Diophantus, a Greek mathematician who studied these problems around 1,800 years ago.\n\nUseful whenever the answer must be a count of real things — coins, tickets, people.",difficulty:1,category:"definition"},
+  {id:"mfc-04-6-2",islandId:"mi-04-6",front:"Does 6x + 9y = 10 have a whole-number solution? Why or why not?",
+   back:"No.\n\nThe HCF of 6 and 9 is 3, and every whole-number combination of 6x+9y is a multiple of 3.\n\n10 is not a multiple of 3, so no whole-number x and y can ever make 6x+9y = 10 — it is genuinely impossible, not just hard to find.",difficulty:2,category:"concept"},
+  {id:"mfc-04-6-3",islandId:"mi-04-6",front:"Give one whole-number solution to 3x + 2y = 16.",
+   back:"x = 2, y = 5 works: 3(2) + 2(5) = 6 + 10 = 16 ✓\n\nOther solutions exist too — e.g. x = 4, y = 2: 3(4)+2(2) = 12+4 = 16 ✓\n\nDiophantine equations often have more than one valid whole-number solution.",difficulty:2,category:"calculation"}
 );
 
 // ── QUESTIONS ─────────────────────────────────────────────────────────────
@@ -1179,6 +1187,33 @@ Object.assign(QUESTIONS, {
   {q:"If the reciprocal of a number is 5/8, what is the number?",
    opts:["8/5 (or 1.6)","5/8","3/8","8/3"],c:0,
    e:"If the reciprocal is 5/8, the original number is the reciprocal of 5/8, which is 8/5. Check: 8/5 × 5/8 = 40/40 = 1 ✓."}
+],
+
+"mi-04-6": [
+  {q:"A Diophantine equation is an equation for which we only accept solutions that are:",
+   opts:["Whole numbers (integers)","Decimals","Negative numbers only","Fractions"],c:0,
+   e:"Diophantine equations, named after the Greek mathematician Diophantus, only count whole-number solutions — ideal for real-world counting problems like coins or tickets, where a fraction of an answer makes no sense."},
+  {q:"Which pair (x, y) is a whole-number solution to 3x + 2y = 16?",
+   opts:["x=2, y=5","x=1, y=5","x=3, y=4","x=4, y=1"],c:0,
+   e:"Check each: 3(2)+2(5)=6+10=16 ✓. The others don't balance: 3(1)+2(5)=13, 3(3)+2(4)=17, 3(4)+2(1)=14."},
+  { gen: function() {
+      var a = randInt(2,6), b = randInt(2,6), x0 = randInt(1,6), y0 = randInt(1,6);
+      var c = a*x0 + b*y0;
+      var correct = 'x='+x0+', y='+y0;
+      var opts = buildOpts(correct, ['x='+(x0+1)+', y='+y0, 'x='+x0+', y='+(y0+1), 'x='+(x0>1?x0-1:x0+2)+', y='+y0]);
+      return { q: 'Which pair (x, y) is a whole-number solution to '+a+'x + '+b+'y = '+c+'?',
+               opts: opts, c: 0,
+               e: 'Check: '+a+'('+x0+')+'+b+'('+y0+') = '+(a*x0)+'+'+(b*y0)+' = '+c+' ✓. Substitute each option in to see that the others do not balance.' };
+  }},
+  {q:"Using only 2p and 5p coins, which combination makes exactly 19p?",
+   opts:["two 2p + three 5p","three 2p + two 5p","four 2p + one 5p","one 2p + four 5p"],c:0,
+   e:"Two 2p + three 5p = 4+15 = 19p ✓. Check the others: 3×2p+2×5p=16p, 4×2p+1×5p=13p, 1×2p+4×5p=22p — none of these make 19p."},
+  {q:"Which of these equations has NO whole-number solutions at all?",
+   opts:["6x + 9y = 10","6x + 9y = 12","4x + 6y = 8","5x + 3y = 11"],c:0,
+   e:"HCF(6,9)=3, and 3 does not divide 10 — so 6x+9y=10 is impossible. The others all work: 6x+9y=12 (x=2,y=0), 4x+6y=8 (x=2,y=0), 5x+3y=11 (x=1,y=2) — in each case the HCF of the two coefficients does divide the total."},
+  {q:"Why does a real-world coin or ticket problem need a Diophantine approach rather than just solving normally?",
+   opts:["Because the number of coins or tickets must be a whole number, not a fraction","Because coins and tickets don't have fixed values","Because addition doesn't work with money","Because you always need negative numbers"],c:0,
+   e:"You can't buy 'half a ticket' or pay with 'a third of a coin' — real counting problems need whole-number (integer) solutions, which is exactly what a Diophantine equation restricts you to."}
 ],
 
 "mi-03-5": [

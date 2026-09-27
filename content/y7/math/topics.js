@@ -227,6 +227,13 @@ CURRICULUM.push(
    prerequisites:["mi-04-1"],
    topics:["Reciprocal of a whole number","Reciprocal of a fraction","Reciprocal of a decimal","Product of a number and its inverse = 1"]},
 
+  {id:"mi-04-6",subject:"Mathematics",subjectId:"math",topicId:"mt-04",
+   name:"Diophantine Equations (Project)",emoji:"🧩",difficulty:3,estimatedHours:2,color:"#3b82f6",
+   description:"Explore equations that only accept whole-number solutions, connecting to HCF and real-world counting problems like coins and tickets.",
+   learningOutcomes:["Understand what makes an equation Diophantine","Test whether a pair of values is a whole-number solution","Use the HCF rule to tell whether whole-number solutions exist at all","Apply Diophantine thinking to real-world counting problems"],
+   prerequisites:["mi-04-3"],
+   topics:["What is a Diophantine equation?","Testing whole-number solutions","The HCF rule for solvability","Coin and real-world problems"]},
+
   // ══════════════════════════════════════════════════════════════════════
   // TOPIC 5 — DECIMALS (mt-05)
   // ══════════════════════════════════════════════════════════════════════

@@ -760,6 +760,52 @@ Object.assign(LESSONS, {
 
 <div style="background:#e8f5e9;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
   <strong>Remember:</strong> The reciprocal of 1 is 1 (since 1 × 1 = 1), and the reciprocal of −1 is −1 (since −1 × −1 = 1).
-</div>`
+</div>`,
+
+// ── mi-04-6: Diophantine Equations (Project) ──────────────────────────────────
+'mi-04-6': `
+<h2>Diophantine Equations (Project)</h2>
+<p>Most equations you have solved so far accept any answer — a fraction, a decimal, whatever comes out of the arithmetic. A <strong>Diophantine equation</strong> is different: it is an equation where <strong>only whole-number solutions count</strong>, named after <strong>Diophantus</strong>, a Greek mathematician who studied exactly this kind of problem around 1,800 years ago.</p>
+
+<div style="background:#e3f2fd;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center;font-size:1.1em">
+  <strong>Key idea:</strong> if the answer has to be a whole number of coins, people, or tickets, you are solving a Diophantine equation — whether you realise it or not.
+</div>
+
+<h3>Why Restrict to Whole Numbers?</h3>
+<p>Real life forces this restriction all the time. You cannot buy 2.5 tickets, pay with a third of a coin, or seat 4.7 people at a table. Whenever a problem is really about <strong>counting things</strong>, only whole-number answers make sense — and that changes how you search for a solution.</p>
+
+<h3>Testing Whether a Pair Is a Solution</h3>
+<p>The most basic skill is checking whether a given pair of whole numbers actually satisfies the equation — substitute both values in and see if it balances.</p>
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Example:</strong> Is x = 2, y = 5 a solution to 3x + 2y = 16?<br>
+  3(2) + 2(5) = 6 + 10 = <strong>16</strong> ✓ — yes, it is a solution.<br>
+  Is x = 1, y = 5 also a solution? 3(1) + 2(5) = 3 + 10 = 13 ✗ — no, that pair does not work.
+</div>
+<p>Notice that an equation like 3x + 2y = 16 can have <strong>more than one</strong> whole-number solution — x = 4, y = 2 also works (12 + 4 = 16). Diophantine equations are often about finding <em>one</em> valid combination, or listing <em>all</em> of them, rather than a single unique answer.</p>
+
+<h3>The HCF Rule: Does a Solution Even Exist?</h3>
+<p>Before hunting for a solution by trial and error, there is a shortcut that tells you whether one exists at all — and it connects directly to the <strong>HCF</strong> you already know. For an equation <strong>ax + by = c</strong>, whole-number solutions exist <strong>only if the HCF of a and b divides exactly into c</strong>.</p>
+<table style="width:100%;border-collapse:collapse;margin:1em 0">
+<tr style="background:#e8f5e9"><th style="padding:8px;border:1px solid #ccc">Equation</th><th style="padding:8px;border:1px solid #ccc">HCF of a, b</th><th style="padding:8px;border:1px solid #ccc">Does HCF divide c?</th><th style="padding:8px;border:1px solid #ccc">Solvable?</th></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">6x + 9y = 12</td><td style="padding:8px;border:1px solid #ccc">HCF(6,9) = 3</td><td style="padding:8px;border:1px solid #ccc">3 divides 12 ✓</td><td style="padding:8px;border:1px solid #ccc"><strong>Yes</strong> (e.g. x=2, y=0)</td></tr>
+<tr><td style="padding:8px;border:1px solid #ccc">6x + 9y = 10</td><td style="padding:8px;border:1px solid #ccc">HCF(6,9) = 3</td><td style="padding:8px;border:1px solid #ccc">3 does NOT divide 10 ✗</td><td style="padding:8px;border:1px solid #ccc"><strong>No</strong> — impossible</td></tr>
+</table>
+<div style="background:#ffebee;padding:0.75em 1em;border-radius:8px;margin:1em 0">
+  <strong>⚠ Why this matters:</strong> every whole-number combination of 6x + 9y is automatically a multiple of 3 (their HCF), since both 6 and 9 are multiples of 3. 10 is not a multiple of 3, so no whole-number x and y can ever make 6x + 9y equal exactly 10 — no amount of trial and error will find one, because it genuinely does not exist.
+</div>
+
+<h3>A Real-World Example: The Coin Problem</h3>
+<p>Diophantine equations show up naturally in counting problems. Suppose you have only 2p and 5p coins, and want to make exactly 19p.</p>
+<div style="background:#fff3e0;padding:0.75em 1em;border-radius:8px;margin:0.5em 0">
+  <strong>Set up the equation:</strong> 2x + 5y = 19, where x = number of 2p coins, y = number of 5p coins.<br>
+  Try y = 1: 2x + 5 = 19 → 2x = 14 → x = 7. Check: 2(7)+5(1) = 14+5 = <strong>19</strong> ✓<br>
+  Try y = 3: 2x + 15 = 19 → 2x = 4 → x = 2. Check: 2(2)+5(3) = 4+15 = <strong>19</strong> ✓<br>
+  Both (x=7, y=1) and (x=2, y=3) work — there can be more than one way to make the same total.
+</div>
+
+<div style="background:#e8f5e9;padding:0.75em 1em;border-radius:8px;margin:1em 0;text-align:center">
+  <strong>Project idea:</strong> pick your own target amount and two coin values, then find every whole-number combination that works. Use the HCF rule first to check a solution is even possible before you start searching.
+</div>
+`
 
 });
