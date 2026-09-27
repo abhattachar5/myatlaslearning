@@ -792,6 +792,17 @@ Object.assign(QUESTIONS, {
              opts: opts, c: 0,
              e: '(√' + ans2 + ')² = ' + ans2 + '. Square and square root are inverse operations — they cancel each other out.' };
   }},
+  { gen: function() {
+    var perfectCubes = [1,8,27,64,125];
+    var ans3 = pickFrom(perfectCubes);
+    var n = Math.cbrt(ans3);
+    var opts = buildOpts(n, [n+1, n-1, ans3/3]);
+    return { q: 'What is ∛' + ans3 + '?',
+             opts: opts, c: 0,
+             e: '∛' + ans3 + ' = ' + n + ' because ' + n + ' × ' + n + ' × ' + n + ' = ' + ans3 + '.' };
+  }},
+  {q:"Which of these numbers is a perfect cube?",opts:["64","49","50","100"],c:0,
+   e:"64 = 4³ (4×4×4=64), so 64 is a perfect cube. 49 and 100 are perfect squares, not cubes; 50 is neither."},
   // Greater Depth (Q8–10)
   {q:"Between which two consecutive whole numbers does √50 lie?",opts:["7 and 8","6 and 7","8 and 9","5 and 6"],c:0,
    e:"7² = 49 and 8² = 64. Since 49 < 50 < 64, we have 7 < √50 < 8."},

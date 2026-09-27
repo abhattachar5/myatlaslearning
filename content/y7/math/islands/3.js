@@ -69,20 +69,20 @@ FLASHCARDS.push(
   { islandId:'mi-11-1', front:'Difference between a term, expression, and equation', back:'Term: single part (3x). Expression: terms combined (3x+2). Equation: expression = value (3x+2=8).' },
   { islandId:'mi-11-1', front:'Simplify: a × a × a', back:'a³ (a cubed)' },
 
-  // mi-11-2: Simplifying Expressions
+  // mi-11-2: Like Terms & Simplifying
   { islandId:'mi-11-2', front:'Collect like terms: 5x + 3y − 2x + y', back:'(5x−2x) + (3y+y) = 3x + 4y' },
-  { islandId:'mi-11-2', front:'Expand: 3(2x − 5)', back:'3×2x − 3×5 = 6x − 15' },
-  { islandId:'mi-11-2', front:'Factorise: 12x + 8', back:'HCF of 12 and 8 is 4. Answer: 4(3x + 2).' },
+  { islandId:'mi-11-2', front:'Simplify: 2x² + 5x − x² + 3x', back:'(2x²−x²) + (5x+3x) = x² + 8x' },
+  { islandId:'mi-11-2', front:'Multiply: 3a × 4b', back:'Multiply coefficients (3×4=12) and join the variables: 12ab' },
 
-  // mi-11-3: Substitution
-  { islandId:'mi-11-3', front:'If x=3, find the value of 4x² − 1', back:'4(3²)−1 = 4(9)−1 = 36−1 = 35' },
-  { islandId:'mi-11-3', front:'Given a=2, b=−3: find 2a − b', back:'2(2)−(−3) = 4+3 = 7' },
-  { islandId:'mi-11-3', front:'Evaluate p + q² when p=5, q=4', back:'5 + 4² = 5 + 16 = 21' },
+  // mi-11-3: Distributive Property (expanding brackets)
+  { islandId:'mi-11-3', front:'Expand: 3(2x − 5)', back:'3×2x − 3×5 = 6x − 15' },
+  { islandId:'mi-11-3', front:'A rectangle has length (2x+3) and width 4. Write an expression for its perimeter.', back:'P = 2(2x+3+4) = 2(2x+7) = 4x+14' },
+  { islandId:'mi-11-3', front:'Expand and simplify: 3(x + 2) + 2(x − 1)', back:'3x+6+2x−2 = 5x+4' },
 
-  // mi-11-4: Writing & Using Expressions
-  { islandId:'mi-11-4', front:'Write an expression: "5 more than triple y"', back:'3y + 5' },
-  { islandId:'mi-11-4', front:'A rectangle has length (2x+3) and width 4. Write an expression for its perimeter.', back:'P = 2(2x+3+4) = 2(2x+7) = 4x+14' },
-  { islandId:'mi-11-4', front:'Simplify: 2x² + 5x − x² + 3x', back:'(2x²−x²) + (5x+3x) = x² + 8x' },
+  // mi-11-4: Factorise Linear Expressions
+  { islandId:'mi-11-4', front:'Factorise: 12x + 8', back:'HCF of 12 and 8 is 4. Answer: 4(3x + 2).' },
+  { islandId:'mi-11-4', front:'Factorise: 20a − 15', back:'HCF of 20 and 15 is 5. Answer: 5(4a − 3).' },
+  { islandId:'mi-11-4', front:'Factorise: x² + 7x', back:'HCF of x² and 7x is x. Answer: x(x + 7).' },
 
   // mi-11-5: Properties of Operations
   { islandId:'mi-11-5', front:'What are the commutative properties?', back:'Addition: a + b = b + a (order doesn\'t matter)\nMultiplication: a × b = b × a\n\nExamples: 3 + 7 = 7 + 3 = 10\n4 × 5 = 5 × 4 = 20\n\n⚠️ Subtraction and division are NOT commutative.' },
@@ -730,7 +730,9 @@ Object.assign(QUESTIONS, {
         return { q: 'Evaluate ' + a + 'n + ' + b + ' when n = ' + n + '.',
                  opts: opts, c: 0,
                  e: a+'×'+n+'+'+b+' = '+a*n+'+'+b+' = '+ans+'.' };
-    }}
+    }},
+    { question:'Tickets cost £t for adults and £c for children. A family of 2 adults and 3 children. Write the total cost.', options:['2t + 3c','5(t+c)','3t + 2c','6tc'], answer:0, explanation:'2 adult tickets + 3 child tickets = 2t + 3c.' },
+    { question:'The cost of printing: £15 setup + £0.30 per leaflet. Write an expression for n leaflets.', options:['15n+0.30','0.30n+15','15+30n','0.30+15n'], answer:1, explanation:'Fixed cost £15 plus £0.30 per leaflet: 0.30n + 15.' }
   ],
 
   // ── mi-11-2: Simplifying Expressions ──────────────────────────────────────
@@ -743,8 +745,6 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: 'Collect like terms: ('+a+'+'+b+')x + '+c+' = '+ans+'.' };
     }},
-    { question:'Expand: 5(3 − 2x)', options:['15 − 2x','15x − 10','15 − 10x','8 − 7x'], answer:2, explanation:'5×3 − 5×2x = 15 − 10x.' },
-    { question:'Factorise: 6x + 9', options:['6(x+3)','3(2x+3)','9(x+1)','2(3x+4)'], answer:1, explanation:'HCF of 6 and 9 is 3. 3(2x + 3).' },
     { gen: function() {
         var a = randInt(2,6), b = randInt(2,5), c = randInt(1,4), d = randInt(1,3);
         var coeff = a - b; var lin = c + d;
@@ -754,8 +754,6 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: '('+a+'x²−'+b+'x²) + ('+c+'x+'+d+'x) = '+ans+'.' };
     }},
-    { question:'Expand and simplify: 2(x + 3) + 4(x − 1)', options:['6x + 10','6x + 2','6x − 2','6x + 1'], answer:1, explanation:'2x+6+4x−4 = 6x+2.' },
-    { question:'Factorise fully: 15y − 10', options:['5(3y−2)','5(y−2)','10(y−1)','2(7y−5)'], answer:0, explanation:'HCF=5. 5(3y − 2).' },
     { gen: function() {
         var a = randInt(2,6), b = randInt(2,5), c = randInt(1,4);
         var ans = (a+b)+'x + '+c;
@@ -764,107 +762,67 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: 'Collect like terms: ('+a+'+'+b+')x + '+c+' = '+ans+'.' };
     }},
-    { question:'Expand: (x + 3)(x + 2)', options:['x² + 5x + 6','x² + 6x + 5','x² + 5x + 5','x² + 6x + 6'], answer:0, explanation:'x²+2x+3x+6 = x²+5x+6.' },
-    { question:'Factorise: x² + 5x', options:['x(x+5)','5(x+1)','x²(5)','(x+5)(x+1)'], answer:0, explanation:'HCF=x. x(x + 5).' },
+    { gen: function() {
+        var a = randInt(5,8), c = randInt(2,3), b = randInt(2,6), d = randInt(2,5);
+        var ansX = a - c, ansY = b + d;
+        var ans = ansX+'x + '+ansY+'y';
+        var opts = buildOpts(ans, [(ansX+1)+'x + '+ansY+'y', ansX+'x + '+(ansY+1)+'y', (a+c)+'x + '+(b+d)+'y']);
+        return { q: 'Simplify: ' + a + 'x + ' + b + 'y − ' + c + 'x + ' + d + 'y',
+                 opts: opts, c: 0,
+                 e: '('+a+'x−'+c+'x) + ('+b+'y+'+d+'y) = '+ans+'.' };
+    }},
+    { gen: function() {
+        var a = randInt(2,9), b = randInt(2,9);
+        var ans = (a*b)+'xy';
+        var opts = buildOpts(ans, [(a+b)+'xy', (a*b)+'x', a+'x'+b+'y']);
+        return { q: 'Multiply: ' + a + 'x × ' + b + 'y',
+                 opts: opts, c: 0,
+                 e: 'Multiply the coefficients ('+a+'×'+b+'='+(a*b)+') and join the variables: '+ans+'.' };
+    }},
     { question:'Simplify: (24a²b) ÷ (6ab)', options:['4ab','4a','18a','4a²'], answer:1, explanation:'24÷6=4. a²÷a=a. b÷b=1. Answer: 4a.' }
   ],
 
-  // ── mi-11-3: Substitution ──────────────────────────────────────────────────
+  // ── mi-11-3: Distributive Property (expanding brackets) ────────────────────
   'mi-11-3': [
     { gen: function() {
-        var a = randInt(2,5), b = randInt(1,6), x = randInt(2,6), y = randInt(1,5);
-        var ans = a*x + b*y;
-        var opts = buildOpts(ans, [a*x, a*y+b*x, ans+a]);
-        return { q: 'If x = '+x+' and y = '+y+', find '+a+'x + '+b+'y.',
+        var a = randInt(2,6), b = randInt(2,5), c = randInt(2,6);
+        var ans = (a*b)+'x − '+(a*c);
+        var opts = buildOpts(ans, [(a*b)+'x', a+'×'+b+'x', (a*b)+'x + '+(a*c)]);
+        return { q: 'Expand: '+a+'('+b+'x − '+c+')',
                  opts: opts, c: 0,
-                 e: a+'×'+x+' + '+b+'×'+y+' = '+a*x+' + '+b*y+' = '+ans+'.' };
+                 e: a+'×'+b+'x − '+a+'×'+c+' = '+(a*b)+'x − '+(a*c)+'.' };
     }},
+    { question:'Expand and simplify: 2(x + 3) + 4(x − 1)', options:['6x + 10','6x + 2','6x − 2','6x + 1'], answer:1, explanation:'2x+6+4x−4 = 6x+2.' },
     { gen: function() {
-        var a = randInt(2,5), x = randInt(2,6);
-        var ans = 2*a*x*x;
-        var opts = buildOpts(ans, [a*x*x, 2*a*x, ans+a]);
-        return { q: 'Find the value of 2ax² when a = '+a+' and x = '+x+'.',
+        var a = randInt(2,5), b = randInt(1,6), c = randInt(2,4), d = randInt(1,5);
+        var ans = (a+c)+'x + '+(b+c*d);
+        var opts = buildOpts(ans, [(a+c)+'x + '+d, a+'x + '+(b+c*d), (a+c)+'x + '+(b+d)]);
+        return { q: 'Expand and simplify: '+a+'x + '+b+' + '+c+'(x + '+d+')',
                  opts: opts, c: 0,
-                 e: '2×'+a+'×'+x+'² = 2×'+a+'×'+x*x+' = '+ans+'.' };
+                 e: 'Expand the bracket first: '+c+'x + '+(c*d)+'. Then collect: ('+a+'x+'+c+'x) + ('+b+'+'+(c*d)+') = '+ans+'.' };
     }},
-    { gen: function() {
-        var b = pickFrom([4,6,8,10,12]), h = pickFrom([3,4,5,6,8]);
-        var ans = b*h/2;
-        var opts = buildOpts(ans, [b*h, b+h, ans+b]);
-        return { q: 'The formula for the area of a triangle is A = ½bh. Find A when b = '+b+', h = '+h+'.',
-                 opts: opts, c: 0,
-                 e: 'A = ½×'+b+'×'+h+' = '+ans+'.' };
-    }},
-    { gen: function() {
-        var a = randInt(2,5), b = randInt(1,6), x = randInt(2,8);
-        var ans = a*x - b;
-        var opts = buildOpts(ans, [a*x+b, a*x, ans-a]);
-        return { q: 'Evaluate '+a+'x − '+b+' when x = '+x+'.',
-                 opts: opts, c: 0,
-                 e: a+'×'+x+' − '+b+' = '+a*x+' − '+b+' = '+ans+'.' };
-    }},
-    { gen: function() {
-        var a = randInt(2,5), x = randInt(2,6);
-        var ans = a*x*x;
-        var opts = buildOpts(ans, [a*x, 2*a*x, ans+x]);
-        return { q: 'Find '+a+'x² when x = '+x+'.',
-                 opts: opts, c: 0,
-                 e: a+'×'+x+'² = '+a+'×'+x*x+' = '+ans+'.' };
-    }},
-    { gen: function() {
-        var p = randInt(2,8), q = randInt(2,6);
-        var ans = p + q*q;
-        var opts = buildOpts(ans, [p+q, p*q*q, ans+1]);
-        return { q: 'Evaluate p + q² when p = '+p+' and q = '+q+'.',
-                 opts: opts, c: 0,
-                 e: p+' + '+q+'² = '+p+' + '+q*q+' = '+ans+'.' };
-    }},
-    { gen: function() {
-        var a = randInt(2,4), b = randInt(1,5), x = randInt(2,5);
-        var ans = a*x*x + b*x;
-        var opts = buildOpts(ans, [a*x+b*x, a*x*x, ans+a]);
-        return { q: 'Find '+a+'x² + '+b+'x when x = '+x+'.',
-                 opts: opts, c: 0,
-                 e: a+'×'+x*x+' + '+b+'×'+x+' = '+a*x*x+' + '+b*x+' = '+ans+'.' };
-    }},
-    { gen: function() {
-        var a = randInt(2,5), b = randInt(1,6), x = randInt(2,6), y = randInt(1,5);
-        var ans = a*x - b*y;
-        var opts = buildOpts(ans, [a*x+b*y, b*x-a*y, ans+b]);
-        return { q: 'If x = '+x+' and y = '+y+', find '+a+'x − '+b+'y.',
-                 opts: opts, c: 0,
-                 e: a+'×'+x+' − '+b+'×'+y+' = '+a*x+' − '+b*y+' = '+ans+'.' };
-    }},
-    { gen: function() {
-        var r = pickFrom([2,3,4,5,6,7]);
-        var ans = Math.round(3.14*r*r*10)/10;
-        var opts = buildOpts(ans, [2*3.14*r, 3.14*r, ans+3.14]);
-        return { q: 'Using A = πr² and π ≈ 3.14, find A when r = '+r+'. Give your answer to 1 d.p.',
-                 opts: opts, c: 0,
-                 e: '3.14 × '+r+'² = 3.14 × '+r*r+' = '+ans+'.' };
-    }},
-    { gen: function() {
-        var u = randInt(2,8), a = randInt(2,5), t = randInt(2,5);
-        var ans = u*t + a*t*t/2;
-        var opts = buildOpts(ans, [u*t, u+a*t, ans+t]);
-        return { q: 'Using s = ut + ½at², find s when u = '+u+', a = '+a+', t = '+t+'.',
-                 opts: opts, c: 0,
-                 e: 'ut = '+u*t+'. ½at² = ½×'+a+'×'+t*t+' = '+a*t*t/2+'. s = '+u*t+' + '+a*t*t/2+' = '+ans+'.' };
-    }}
+    { question:'Expand: (x + 3)(x + 2)', options:['x² + 5x + 6','x² + 6x + 5','x² + 5x + 5','x² + 6x + 6'], answer:0, explanation:'x²+2x+3x+6 = x²+5x+6.' },
+    { question:'A rectangle has length (x + 5) and width 3. Write an expression for its area.', options:['3x + 5','3x + 15','x + 8','15x'], answer:1, explanation:'Area = 3 × (x+5) = 3x + 15.' },
+    { question:'Find the perimeter of a regular pentagon with side (2x − 1).', options:['10x − 1','10x − 5','5x − 5','5(2x−5)'], answer:1, explanation:'P = 5(2x−1) = 10x − 5.' }
   ],
 
-  // ── mi-11-4: Writing & Using Expressions ───────────────────────────────────
+  // ── mi-11-4: Factorise Linear Expressions ──────────────────────────────────
   'mi-11-4': [
-    { question:'Write an expression: "7 more than four times n"', options:['7n + 4','4n + 7','4(n+7)','n + 28'], answer:1, explanation:'Four times n = 4n. Seven more: 4n + 7.' },
-    { question:'A rectangle has length (x + 5) and width 3. Write an expression for its area.', options:['3x + 5','3x + 15','x + 8','3(x+5)'], answer:3, explanation:'Area = 3(x+5) = 3x+15, but in factored form: 3(x+5). Both 3x+15 and 3(x+5) are correct — here 3(x+5) is listed.' },
-    { question:'Tickets cost £t for adults and £c for children. A family of 2 adults and 3 children. Write the total cost.', options:['2t + 3c','5(t+c)','3t + 2c','6tc'], answer:0, explanation:'2 adult tickets + 3 child tickets = 2t + 3c.' },
-    { question:'Simplify the perimeter of a regular pentagon with side (2x − 1).', options:['10x − 1','10x − 5','5x − 5','5(2x−5)'], answer:1, explanation:'P = 5(2x−1) = 10x − 5.' },
-    { question:'n consecutive integers starting from n. Write the sum of the first three.', options:['3n+3','3n','3n+6','n+3'], answer:0, explanation:'n + (n+1) + (n+2) = 3n + 3.' },
-    { question:'An expression has value 20 when n=4. It has value 35 when n=7. Which expression fits?', options:['5n','4n+4','3n+8','5n−1'], answer:0, explanation:'5×4=20 ✓ and 5×7=35 ✓. Answer: 5n.' },
-    { question:'The cost of printing: £15 setup + £0.30 per leaflet. Write an expression for n leaflets.', options:['15n+0.30','0.30n+15','15+30n','0.30+15n'], answer:1, explanation:'Fixed cost £15 plus £0.30 per leaflet: 0.30n + 15.' },
-    { question:'A square has perimeter (12x + 20). Write an expression for one side.', options:['3x + 5','6x + 10','4x + 5','3x + 20'], answer:0, explanation:'Side = perimeter÷4 = (12x+20)÷4 = 3x+5.' },
-    { question:'Two consecutive even numbers sum to 4n+2. What are they?', options:['2n and 2n+2','2n and 4n+2','n and 3n+2','4n and 2'], answer:0, explanation:'2n + (2n+2) = 4n+2. The numbers are 2n and 2n+2.' },
-    { question:'Prove that the sum of any three consecutive integers is divisible by 3.', options:['n+(n+1)+(n+2)=3n+3=3(n+1) ✓','n+(n+2)+(n+4)=3n+6 ✓','3n is always divisible by 3 ✓','Cannot be proven with algebra'], answer:0, explanation:'n+(n+1)+(n+2)=3n+3=3(n+1), which is always divisible by 3.' }
+    { question:'Factorise: 6x + 9', options:['6(x+3)','3(2x+3)','9(x+1)','2(3x+4)'], answer:1, explanation:'HCF of 6 and 9 is 3. 3(2x + 3).' },
+    { question:'Factorise fully: 15y − 10', options:['5(3y−2)','5(y−2)','10(y−1)','2(7y−5)'], answer:0, explanation:'HCF=5. 5(3y − 2).' },
+    { question:'Factorise: x² + 5x', options:['x(x+5)','5(x+1)','x²(5)','(x+5)(x+1)'], answer:0, explanation:'HCF=x. x(x + 5).' },
+    { gen: function() {
+        var h = randInt(2,9);
+        var pair = pickFrom([[2,3],[3,4],[2,5],[3,5],[4,5],[2,7],[3,7],[4,7],[5,6],[5,7]]);
+        var a = pair[0], b = pair[1];
+        var ans = h+'('+a+'x + '+b+')';
+        var opts = buildOpts(ans, [h+'('+a+'x)('+b+')', (h*a)+'(x + '+b+')', h+'x('+a+' + '+b+')']);
+        return { q: 'Factorise: '+(h*a)+'x + '+(h*b),
+                 opts: opts, c: 0,
+                 e: 'HCF of '+(h*a)+' and '+(h*b)+' is '+h+'. Answer: '+ans+'.' };
+    }},
+    { question:'A square has perimeter (12x + 20). Write an expression for one side.', options:['3x + 5','6x + 10','4x + 5','3x + 20'], answer:0, explanation:'Side = perimeter÷4 = (12x+20)÷4 = 3x+5. (This is the same skill as factorising: 12x+20 = 4(3x+5), so dividing by 4 gives one side.)' },
+    { question:'Prove that the sum of any three consecutive integers is divisible by 3.', options:['n+(n+1)+(n+2)=3n+3=3(n+1) ✓','n+(n+2)+(n+4)=3n+6 ✓','3n is always divisible by 3 ✓','Cannot be proven with algebra'], answer:0, explanation:'n+(n+1)+(n+2)=3n+3=3(n+1), which is always divisible by 3 because it is 3 times a whole number.' }
   ],
 
   // ── mi-11-5: Properties of Operations ─────────────────────────────────────
