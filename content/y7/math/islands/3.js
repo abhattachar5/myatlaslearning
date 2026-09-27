@@ -68,6 +68,7 @@ FLASHCARDS.push(
   { islandId:'mi-11-1', front:'What does 3n mean?', back:'3 multiplied by n. The number 3 is the coefficient of n.' },
   { islandId:'mi-11-1', front:'Difference between a term, expression, and equation', back:'Term: single part (3x). Expression: terms combined (3x+2). Equation: expression = value (3x+2=8).' },
   { islandId:'mi-11-1', front:'Simplify: a × a × a', back:'a³ (a cubed)' },
+  { islandId:'mi-11-1', front:'Evaluate 6x + 2 when x = 1/3', back:'6 × ⅓ = 2. Then 2 + 2 = 4.' },
 
   // mi-11-2: Like Terms & Simplifying
   { islandId:'mi-11-2', front:'Collect like terms: 5x + 3y − 2x + y', back:'(5x−2x) + (3y+y) = 3x + 4y' },
@@ -732,7 +733,19 @@ Object.assign(QUESTIONS, {
                  e: a+'×'+n+'+'+b+' = '+a*n+'+'+b+' = '+ans+'.' };
     }},
     { question:'Tickets cost £t for adults and £c for children. A family of 2 adults and 3 children. Write the total cost.', options:['2t + 3c','5(t+c)','3t + 2c','6tc'], answer:0, explanation:'2 adult tickets + 3 child tickets = 2t + 3c.' },
-    { question:'The cost of printing: £15 setup + £0.30 per leaflet. Write an expression for n leaflets.', options:['15n+0.30','0.30n+15','15+30n','0.30+15n'], answer:1, explanation:'Fixed cost £15 plus £0.30 per leaflet: 0.30n + 15.' }
+    { question:'The cost of printing: £15 setup + £0.30 per leaflet. Write an expression for n leaflets.', options:['15n+0.30','0.30n+15','15+30n','0.30+15n'], answer:1, explanation:'Fixed cost £15 plus £0.30 per leaflet: 0.30n + 15.' },
+    { question:'Evaluate 4x + 1 when x = 1/2.', options:['3','5','2','4.5'], answer:0, explanation:'4 × ½ = 2. Then 2 + 1 = 3. Substitute the fraction just like any other value.' },
+    { gen: function() {
+        var d = pickFrom([2,3,4]);
+        var n = d===2 ? 1 : pickFrom([1, d-1]);
+        var k = randInt(2,6);
+        var a = d*k, b = randInt(1,10);
+        var ans = k*n + b;
+        var opts = buildOpts(ans, [ans+1, ans-1, a+b]);
+        return { q: 'Evaluate ' + a + 'x + ' + b + ' when x = ' + n + '/' + d + '.',
+                 opts: opts, c: 0,
+                 e: a+' × '+n+'/'+d+' = '+(k*n)+'. Then '+(k*n)+' + '+b+' = '+ans+'.' };
+    }}
   ],
 
   // ── mi-11-2: Simplifying Expressions ──────────────────────────────────────
