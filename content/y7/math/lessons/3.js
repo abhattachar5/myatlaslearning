@@ -380,6 +380,32 @@ Object.assign(LESSONS, {
 <div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
   <strong>Find 4x² − 1 when x = 3</strong><br>
   = 4(3²) − 1 = 4 × 9 − 1 = 36 − 1 = <strong>35</strong>
+</div>
+
+<h3>Expressions, Equations, Formulae and Identities</h3>
+<p>These four words all describe things built from numbers and letters, but they behave very differently — and telling them apart is a skill in itself.</p>
+<table style="width:100%;border-collapse:collapse;margin:1em 0;font-size:0.9em">
+  <tr style="background:#e8f5e9">
+    <th style="padding:8px;border:1px solid #ccc">Type</th>
+    <th style="padding:8px;border:1px solid #ccc">Has an = sign?</th>
+    <th style="padding:8px;border:1px solid #ccc">True for...</th>
+    <th style="padding:8px;border:1px solid #ccc">Example</th>
+  </tr>
+  <tr><td style="padding:8px;border:1px solid #ccc"><strong>Expression</strong></td><td style="padding:8px;border:1px solid #ccc">No</td><td style="padding:8px;border:1px solid #ccc">Can't be "true" or "false" — it just has a value once you substitute</td><td style="padding:8px;border:1px solid #ccc">3x + 5</td></tr>
+  <tr style="background:#f9f9f9"><td style="padding:8px;border:1px solid #ccc"><strong>Equation</strong></td><td style="padding:8px;border:1px solid #ccc">Yes</td><td style="padding:8px;border:1px solid #ccc">One specific value of x (or a small set of values)</td><td style="padding:8px;border:1px solid #ccc">3x + 5 = 11 (only true when x = 2)</td></tr>
+  <tr><td style="padding:8px;border:1px solid #ccc"><strong>Formula</strong></td><td style="padding:8px;border:1px solid #ccc">Yes</td><td style="padding:8px;border:1px solid #ccc">Any values you substitute — it's a general rule connecting quantities</td><td style="padding:8px;border:1px solid #ccc">A = πr² (works for any radius r)</td></tr>
+  <tr style="background:#f9f9f9"><td style="padding:8px;border:1px solid #ccc"><strong>Identity</strong></td><td style="padding:8px;border:1px solid #ccc">Yes (written ≡)</td><td style="padding:8px;border:1px solid #ccc"><strong>Every</strong> possible value of the variable, with no exceptions</td><td style="padding:8px;border:1px solid #ccc">2(x + 3) ≡ 2x + 6</td></tr>
+</table>
+<p>The easiest way to tell an <strong>equation</strong> apart from an <strong>identity</strong> is to try more than one value. An equation like 3x + 5 = 11 is only true at x = 2 — try x = 1 and you get 8 = 11, which is false. An identity like 2(x + 3) ≡ 2x + 6 stays true no matter what you substitute, because both sides are really just two different ways of writing the <em>same</em> expression — expanding the bracket on the left gives you the right side exactly.</p>
+<div style="background:#f1f8e9;padding:1em;border-radius:8px;margin:1em 0">
+  <strong>Is 2(x + 3) = 2x + 6 an equation or an identity?</strong><br>
+  Test x = 1: LHS = 2(1+3) = 8. RHS = 2(1)+6 = 8. ✓ Equal.<br>
+  Test x = 5: LHS = 2(5+3) = 16. RHS = 2(5)+6 = 16. ✓ Equal.<br>
+  Both sides expand to the same expression for <strong>every</strong> value of x, so this is an <strong>identity</strong> — properly written 2(x + 3) ≡ 2x + 6.<br><br>
+  <strong>Compare with 2x + 3 = 11:</strong><br>
+  Test x = 1: LHS = 5, RHS = 11. ✗ Not equal.<br>
+  Test x = 4: LHS = 11, RHS = 11. ✓ Equal.<br>
+  This is only true for <strong>one</strong> value of x, so it is an <strong>equation</strong>, not an identity.
 </div>`,
 
 // ── mi-11-2: Like Terms & Simplifying ────────────────────────────────────────

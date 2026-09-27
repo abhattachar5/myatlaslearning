@@ -67,6 +67,7 @@ FLASHCARDS.push(
   // mi-11-1: Algebraic Notation
   { islandId:'mi-11-1', front:'What does 3n mean?', back:'3 multiplied by n. The number 3 is the coefficient of n.' },
   { islandId:'mi-11-1', front:'Difference between a term, expression, and equation', back:'Term: single part (3x). Expression: terms combined (3x+2). Equation: expression = value (3x+2=8).' },
+  { islandId:'mi-11-1', front:'Difference between an equation, a formula and an identity', back:'Equation: true for one value (3x+5=11, only x=2). Formula: a general rule for any values (A=πr²). Identity (≡): true for EVERY value (2(x+3)≡2x+6).' },
   { islandId:'mi-11-1', front:'Simplify: a × a × a', back:'a³ (a cubed)' },
   { islandId:'mi-11-1', front:'Evaluate 6x + 2 when x = 1/3', back:'6 × ⅓ = 2. Then 2 + 2 = 4.' },
 
@@ -745,7 +746,10 @@ Object.assign(QUESTIONS, {
         return { q: 'Evaluate ' + a + 'x + ' + b + ' when x = ' + n + '/' + d + '.',
                  opts: opts, c: 0,
                  e: a+' × '+n+'/'+d+' = '+(k*n)+'. Then '+(k*n)+' + '+b+' = '+ans+'.' };
-    }}
+    }},
+    { question:'Which of these is an identity — true for every value of x?', options:['2(x+3) ≡ 2x+6','2x+3 = 11','3x = 15','x/2 = 4'], answer:0, explanation:'2(x+3) expands to exactly 2x+6, so both sides are equal for every value of x — an identity. The others are equations, true for only one value of x.' },
+    { question:'Which of these is best described as a formula?', options:['A = lw (area of a rectangle)','2x + 3 = 9','5(x−1) ≡ 5x−5','7 − x'], answer:0, explanation:'A = lw is a general rule relating area to length and width for any rectangle — that makes it a formula. 2x+3=9 is an equation (true for one x); 5(x−1)≡5x−5 is an identity (true for all x); 7−x is an expression (no equals sign).' },
+    { question:'Which of these is an expression, not an equation, formula or identity?', options:['4x − 1','4x − 1 = 7','4(x−1) ≡ 4x−4','P = 2l + 2w'], answer:0, explanation:'4x−1 has no equals sign, so it is an expression — it just has a value once you substitute a number. The others all contain an equals sign: 4x−1=7 is an equation, 4(x−1)≡4x−4 is an identity, and P=2l+2w is a formula.' }
   ],
 
   // ── mi-11-2: Simplifying Expressions ──────────────────────────────────────
