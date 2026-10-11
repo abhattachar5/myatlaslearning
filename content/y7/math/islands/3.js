@@ -45,15 +45,16 @@ FLASHCARDS.push(
   { islandId:'mi-10-2', front:'What is 17.5% of 80?', back:'10% = 8, 5% = 4, 2.5% = 2. 17.5% = 8+4+2 = 14.' },
   { islandId:'mi-10-2', front:'Find 1% of a quantity. What is it useful for?', back:'1% = amount ÷ 100. Then multiply by any % needed.' },
 
-  // mi-10-3: Percentage Change
-  { islandId:'mi-10-3', front:'Formula for percentage increase/decrease', back:'% change = (change ÷ original) × 100' },
-  { islandId:'mi-10-3', front:'A price rises from £50 to £65. What is the % increase?', back:'Change = £15. % increase = (15÷50)×100 = 30%' },
-  { islandId:'mi-10-3', front:'Apply a 20% discount to £90', back:'Discount = 20% of £90 = £18. New price = £90−£18 = £72.' },
+  // mi-10-3: Find What % One Number Is of Another
+  { islandId:'mi-10-3', front:'How do you find what percentage one number is of another?', back:'% = (part ÷ whole) × 100' },
+  { islandId:'mi-10-3', front:'Express £18 as a % of £72', back:'(18÷72) × 100 = 25%' },
+  { islandId:'mi-10-3', front:'Which is larger: 3/8 or 37%?', back:'3/8 = 37.5%. So 3/8 > 37%.' },
 
-  // mi-10-4: Reverse Percentages & Comparison
+  // mi-10-4: Percentage Problems
+  { islandId:'mi-10-4', front:'Formula for percentage increase/decrease', back:'% change = (change ÷ original) × 100' },
+  { islandId:'mi-10-4', front:'A price rises from £50 to £65. What is the % increase?', back:'Change = £15. % increase = (15÷50)×100 = 30%' },
+  { islandId:'mi-10-4', front:'Apply a 20% discount to £90', back:'Discount = 20% of £90 = £18. New price = £90−£18 = £72.' },
   { islandId:'mi-10-4', front:'After 25% increase, price is £125. What was the original?', back:'125% → £125. 1% → £1. 100% → £100.' },
-  { islandId:'mi-10-4', front:'Which is larger: 3/8 or 37%?', back:'3/8 = 37.5%. So 3/8 > 37%.' },
-  { islandId:'mi-10-4', front:'Express £18 as a % of £72', back:'(18÷72) × 100 = 25%' },
 
   // mi-10-5: Percent Models & Estimation
   { islandId:'mi-10-5', front:'How does a 10×10 grid model represent percentages?', back:'A 10×10 grid has 100 small squares. Each square = 1%.\n\nShade 35 squares → 35%.\nShade 100 squares → 100% (the whole grid).\n\nUseful for visualising what a percentage looks like.' },
@@ -122,22 +123,24 @@ FLASHCARDS.push(
   { islandId:'mi-13-1', front:'Find the median of: 3, 7, 1, 9, 5', back:'Ordered: 1,3,5,7,9. Median = 5.' },
   { islandId:'mi-13-1', front:'What is the range and what does it measure?', back:'Range = largest − smallest. It measures the spread of the data.' },
 
-  // mi-13-2: Charts & Diagrams
+  // mi-13-2: Bar Charts & Pie Charts
   { islandId:'mi-13-2', front:'When is a bar chart more appropriate than a pie chart?', back:'Bar charts compare quantities across categories; pie charts show proportions of a whole.' },
   { islandId:'mi-13-2', front:'What does a frequency table show?', back:'How many times each value or category occurs in a data set.' },
-  { islandId:'mi-13-2', front:'What is a stem-and-leaf diagram used for?', back:'Displaying individual data values while also showing distribution and shape of data.' },
+  { islandId:'mi-13-2', front:'How do you find the angle for a sector of a pie chart?', back:'Angle = (frequency ÷ total) × 360°.\n\nExample: 12 out of 48 people → 12/48 × 360° = 90°.' },
 
-  // mi-13-3: Probability Basics
-  { islandId:'mi-13-3', front:'What is the probability scale?', back:'Runs from 0 (impossible) to 1 (certain). Probabilities are fractions, decimals, or percentages.' },
-  { islandId:'mi-13-3', front:'A bag has 3 red and 5 blue balls. P(red) = ?', back:'P(red) = 3/(3+5) = 3/8' },
-  { islandId:'mi-13-3', front:'What are complementary events?', back:'Two events where one must happen. P(A) + P(not A) = 1.' },
+  // mi-13-3: Stem-and-Leaf Plots & Line Graphs
+  { islandId:'mi-13-3', front:'What is a stem-and-leaf diagram used for?', back:'Displaying individual data values while also showing distribution and shape of data.' },
+  { islandId:'mi-13-3', front:'In a stem-and-leaf diagram, what does 3 | 4 7 represent (key: 3 | 4 = 34)?', back:'The values 34 and 37.\n\nThe stem is the tens digit; each leaf is a units digit. Always read the key.' },
+  { islandId:'mi-13-3', front:'What does a line graph show best, and what should you describe?', back:'How a quantity changes over time. Describe the trend (rising, falling, steady), any peaks or dips, and the overall pattern.' },
 
-  // mi-13-4: Data Analysis & Interpretation
-  { islandId:'mi-13-4', front:'What is the difference between primary and secondary data?', back:'Primary: collected by you (survey). Secondary: collected by others (census data).' },
-  { islandId:'mi-13-4', front:'What does an outlier do to the mean?', back:'An outlier pulls the mean towards it, making it less representative of the data.' },
-  { islandId:'mi-13-4', front:'What is a two-way table used for?', back:'Organising and comparing data across two variables at once.' },
+  // mi-13-4: Probability of Events
+  { islandId:'mi-13-4', front:'What is the probability scale?', back:'Runs from 0 (impossible) to 1 (certain). Probabilities are fractions, decimals, or percentages.' },
+  { islandId:'mi-13-4', front:'A bag has 3 red and 5 blue balls. P(red) = ?', back:'P(red) = 3/(3+5) = 3/8' },
+  { islandId:'mi-13-4', front:'What are complementary events?', back:'Two events where one must happen. P(A) + P(not A) = 1.' },
+  { islandId:'mi-13-4', front:'What is experimental probability (relative frequency)?', back:'P(event) ≈ number of times it happened ÷ number of trials.\n\nExample: 18 heads in 50 tosses → 18/50 = 0.36.' },
 
   // mi-13-5: Data Displays & Graph Types
+  { islandId:'mi-13-5', front:'What is a two-way table used for?', back:'Organising and comparing data across two variables at once.' },
   { islandId:'mi-13-5', front:'What must a pictogram always include?', back:'A key showing what each symbol represents (e.g. ★ = 4 items). Half symbols represent half the key value.' },
   { islandId:'mi-13-5', front:'When should you use a double bar graph?', back:'When comparing the same categories across two groups or time periods (e.g. boys vs girls in each sport).' },
   { islandId:'mi-13-5', front:'What is the class width in a grouped frequency table?', back:'The range of values each group covers. For 0–9, 10–19, 20–29 the class width is 10.' },
@@ -145,6 +148,8 @@ FLASHCARDS.push(
   // mi-13-6: Sampling, Bias & Distributions
   { islandId:'mi-13-6', front:'What is the difference between a statistical and a non-statistical question?', back:'A statistical question expects variability in the answers (e.g. "How tall are Year 7 students?"). A non-statistical question has one fixed answer (e.g. "How tall is the Eiffel Tower?").' },
   { islandId:'mi-13-6', front:'What makes a sample biased?', back:'A sample is biased if it does not fairly represent the whole population — e.g. surveying only your friends about a school policy.' },
+  { islandId:'mi-13-6', front:'What is the difference between primary and secondary data?', back:'Primary: collected by you (survey). Secondary: collected by others (census data).' },
+  { islandId:'mi-13-6', front:'What does an outlier do to the mean?', back:'An outlier pulls the mean towards it, making it less representative of the data.' },
   { islandId:'mi-13-6', front:'What is an outlier?', back:'A value that is much higher or much lower than the rest of the data. Outliers can distort the mean and increase the range.' },
 
   // mi-13-7: Combined & Predicted Probability
@@ -488,8 +493,36 @@ Object.assign(QUESTIONS, {
     }}
   ],
 
-  // ── mi-10-3: Percentage Change ─────────────────────────────────────────────
+  // ── mi-10-3: Find What % One Number Is of Another ──────────────────────────
   'mi-10-3': [
+    { gen: function() {
+        var total = pickFrom([20,25,40,50,80,200]);
+        var pct = pickFrom([10,20,25,40,50,60,75]);
+        var part = total*pct/100;
+        var opts = buildOpts(pct+'%', [(100-pct)+'%', part+'%', (pct+10)+'%']);
+        return { q: 'Express '+part+' as a percentage of '+total+'.',
+                 opts: opts, c: 0,
+                 e: '('+part+'÷'+total+')×100 = '+pct+'%.' };
+    }},
+    { gen: function() {
+        var total = pickFrom([20,25,40,50]);
+        var pct = pickFrom([20,40,60,80]);
+        var part = total*pct/100;
+        var opts = buildOpts(pct+'%', [(100-pct)+'%', part+'%', Math.round(total/part*100)+'%']);
+        return { q: 'In a class of '+total+', '+part+' walk to school. What percentage walk to school?',
+                 opts: opts, c: 0,
+                 e: part+'/'+total+' × 100 = '+pct+'%.' };
+    }},
+    { question:'What is 15 as a percentage of 60?', options:['15%','20%','25%','40%'], answer:2, explanation:'15 ÷ 60 = 0.25 = 25%.' },
+    { question:'Sam scores 18 out of 24 in a test. What percentage is this?', options:['18%','65%','75%','80%'], answer:2, explanation:'18 ÷ 24 = 0.75 = 75%.' },
+    { question:'Which is the best mark? 7/10, 68%, 0.71 or 17/25?', options:['7/10','68%','0.71','17/25'], answer:2, explanation:'7/10 = 70%, 0.71 = 71%, 17/25 = 68%. The best mark is 0.71 (71%).' },
+    { question:'Write 45 cm as a percentage of 1.5 m.', options:['3%','30%','45%','300%'], answer:1, explanation:'Same units first: 1.5 m = 150 cm. 45 ÷ 150 = 0.3 = 30%.' },
+    { question:'Which is larger: 5/8 or 60%?', options:['5/8','60%','They are equal','Cannot tell'], answer:0, explanation:'5/8 = 62.5%, which is greater than 60%.' },
+    { question:'A shop sold 36 of its 45 bags. What percentage were sold?', options:['36%','45%','80%','90%'], answer:2, explanation:'36 ÷ 45 = 0.8 = 80%.' }
+  ],
+
+  // ── mi-10-4: Percentage Problems ───────────────────────────────────────────
+  'mi-10-4': [
     { gen: function() {
         var orig = pickFrom([40,50,60,80,100,120,200]);
         var newVal = orig + pickFrom([5,8,10,12,15,20,25,30]);
@@ -571,11 +604,7 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: pct+'% of £'+orig+' = £'+change+'. New price = £'+orig+' − £'+change+' = £'+newVal+'.' };
     }},
-    { question:'Over two years, a house increased by 10% then by 10% again. What is the total % increase?', options:['20%','21%','22%','25%'], answer:1, explanation:'After yr1: ×1.1. After yr2: ×1.1 again. Total=1.21×original=21% increase.' }
-  ],
-
-  // ── mi-10-4: Reverse Percentages & Comparison ──────────────────────────────
-  'mi-10-4': [
+    { question:'Over two years, a house increased by 10% then by 10% again. What is the total % increase?', options:['20%','21%','22%','25%'], answer:1, explanation:'After yr1: ×1.1. After yr2: ×1.1 again. Total=1.21×original=21% increase.' },
     { gen: function() {
         var pct = pickFrom([10,20,25,50]); var result = pickFrom([80,90,100,120,150]);
         var orig = result*100/(100+pct);
@@ -1156,7 +1185,6 @@ Object.assign(QUESTIONS, {
 
   // ── mi-13-2: Charts & Diagrams ─────────────────────────────────────────────
   'mi-13-2': [
-    { question:'What type of graph is best for showing how a quantity changes over time?', options:['Bar chart','Pie chart','Line graph','Scatter graph'], answer:2, explanation:'Line graphs show trends and changes over time.' },
     { gen: function() {
         var angle = pickFrom([45,60,72,90,120,180]);
         var pct = parseFloat((angle/360*100).toFixed(1));
@@ -1166,7 +1194,6 @@ Object.assign(QUESTIONS, {
                  e: angle+'/360 = '+(angle/360).toFixed(4)+' = '+pct+'%.' };
     }},
     { question:'What does the height of a bar in a frequency bar chart represent?', options:['The category label','The range','The frequency (count)','The mean'], answer:2, explanation:'Height = frequency (how many in that group).' },
-    { question:'Data: 15, 23, 27, 31, 18. In a stem-and-leaf diagram, what stems are needed?', options:['1, 2, 3','1, 2, 3, 4','10, 20, 30','0, 1, 2, 3'], answer:0, explanation:'Tens digits: 1(5,8), 2(3,7), 3(1). Stems: 1, 2, 3.' },
     { gen: function() {
         var each = pickFrom([5,10,20,25]), whole = randInt(2,5), half = pickFrom([0,1]);
         var stars = whole + half*0.5;
@@ -1185,7 +1212,6 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: 'Tea only = '+tea+'−'+both+' = '+teaOnly+'.' };
     }},
-    { question:'Which diagram displays individual data values while showing the data\'s shape?', options:['Bar chart','Stem-and-leaf','Pie chart','Frequency polygon'], answer:1, explanation:'Stem-and-leaf plots preserve individual values.' },
     { gen: function() {
         var maths = randInt(20,50), eng = randInt(15,35), sci = randInt(10,30);
         var total = maths+eng+sci;
@@ -1195,12 +1221,24 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: 'Total='+total+'. Maths angle='+maths+'/'+total+'×360='+angle+'°.' };
     }},
-    { question:'What does a scatter graph show?', options:['How data changes over time','The relationship (correlation) between two variables','Frequency of categories','Individual values in order'], answer:1, explanation:'Scatter graphs show correlation between two variables.' },
-    { question:'Class results as a stem-and-leaf: stem 5 | leaves 2 4 7 9. What values does this represent?', options:['52, 54, 57, 59','5, 2, 4, 7, 9','25, 45, 75, 95','520, 540, 570, 590'], answer:0, explanation:'Stem 5 + leaf = 52, 54, 57, 59.' }
+    { question:'What does a scatter graph show?', options:['How data changes over time','The relationship (correlation) between two variables','Frequency of categories','Individual values in order'], answer:1, explanation:'Scatter graphs show correlation between two variables.' }
   ],
 
-  // ── mi-13-3: Probability Basics ────────────────────────────────────────────
+  // ── mi-13-3: Stem-and-Leaf Plots & Line Graphs ─────────────────────────────
   'mi-13-3': [
+    { question:'Data: 15, 23, 27, 31, 18. In a stem-and-leaf diagram, what stems are needed?', options:['1, 2, 3','1, 2, 3, 4','10, 20, 30','0, 1, 2, 3'], answer:0, explanation:'Tens digits: 1(5,8), 2(3,7), 3(1). Stems: 1, 2, 3.' },
+    { question:'Which diagram displays individual data values while showing the data\'s shape?', options:['Bar chart','Stem-and-leaf','Pie chart','Frequency polygon'], answer:1, explanation:'Stem-and-leaf plots preserve individual values.' },
+    { question:'Class results as a stem-and-leaf: stem 5 | leaves 2 4 7 9. What values does this represent?', options:['52, 54, 57, 59','5, 2, 4, 7, 9','25, 45, 75, 95','520, 540, 570, 590'], answer:0, explanation:'Stem 5 + leaf = 52, 54, 57, 59.' },
+    { question:'What type of graph is best for showing how a quantity changes over time?', options:['Bar chart','Pie chart','Line graph','Scatter graph'], answer:2, explanation:'Line graphs show trends and changes over time.' },
+    { question:'Stem-and-leaf data: 1 | 2 5 8, 2 | 0 3 3, 3 | 1 (key: 1 | 2 = 12). What is the median?', options:['20','23','25','30'], answer:0, explanation:'7 values in order: 12, 15, 18, 20, 23, 23, 31. The middle (4th) value is 20.' },
+    { question:'In a stem-and-leaf diagram, why is a key needed?', options:['To show the number of values','To explain what the stems and leaves stand for','To mark the median','To show the mode'], answer:1, explanation:'The key tells you how to read a stem and leaf (e.g. 2 | 3 means 23).' },
+    { question:'A line graph of temperature over a day rises steeply, peaks at 3pm, then falls. What does the peak show?', options:['The lowest temperature','The highest temperature','The mean temperature','The temperature at midnight'], answer:1, explanation:'The highest point of the line is the maximum value, here the hottest time of day.' },
+    { question:'A line graph shows plant height each week: 5, 8, 12, 15 cm. What trend does it show?', options:['Decreasing','Constant','Steady increase','No pattern'], answer:2, explanation:'Each week the height is greater than the week before, so the trend is increasing.' },
+    { question:'Why should the points on a line graph usually be joined?', options:['To show change over time and the trend','To make the graph look neat','To find the mode','Because points are never allowed alone'], answer:0, explanation:'Joining the points makes the trend between readings easy to see (for continuous data over time).' }
+  ],
+
+  // ── mi-13-4: Probability of Events ─────────────────────────────────────────
+  'mi-13-4': [
     { question:'A fair coin is tossed. P(Heads) = ?', options:['0','1/4','1/2','1'], answer:2, explanation:'Two equally likely outcomes. P(H) = 1/2.' },
     { gen: function() {
         var total = pickFrom([6,8,10,12,15,20]);
@@ -1218,7 +1256,6 @@ Object.assign(QUESTIONS, {
     { question:'Which event has probability 0?', options:['Rolling a 7 on a standard die','Getting a tail on a coin','Drawing a red card from a deck','Rolling a 6'], answer:0, explanation:'A standard die has faces 1–6. Rolling 7 is impossible: P = 0.' },
     { question:'A spinner has 5 equal sections: 1 red, 2 blue, 2 green. P(not red) = ?', options:['1/5','2/5','3/5','4/5'], answer:3, explanation:'P(red)=1/5. P(not red)=1−1/5=4/5.' },
     { question:'Letters of MATHEMATICS are put in a bag. P(picking M) = ?', options:['1/11','2/11','3/11','2/10'], answer:1, explanation:'MATHEMATICS has 11 letters. M appears twice. P(M)=2/11.' },
-    { question:'P(A) = 0.4, P(B) = 0.35. A and B cannot both happen. P(A or B) = ?', options:['0.04','0.14','0.75','1.0'], answer:2, explanation:'Mutually exclusive: P(A or B) = 0.4+0.35 = 0.75.' },
     { gen: function() {
         var total = pickFrom([6,8,10,12,15,20]);
         var fav = randInt(1,total-1);
@@ -1230,39 +1267,18 @@ Object.assign(QUESTIONS, {
                  opts: opts, c: 0,
                  e: 'P(red) = favourable ÷ total = '+fav+'/'+total+(g>1?' = '+ans:'')+'.' };
     }},
-    { question:'A student says "there are 3 outcomes so each has probability 1/3". Is this correct for rolling 1, 2, or other on a fair die?', options:['Yes, 3 outcomes means 1/3 each','No, outcomes must be equally likely','Yes, probability always divides evenly','No, it should be 1/6'], answer:1, explanation:'Equally likely only if outcomes are symmetric. "Other" covers 4 numbers, not 1: P(other)=4/6, not 1/3.' }
-  ],
-
-  // ── mi-13-4: Data Analysis & Interpretation ────────────────────────────────
-  'mi-13-4': [
-    { question:'What is the difference between a sample and a population?', options:['A sample is larger','A population is a subset of a sample','A sample is a subset of the population','They are the same'], answer:2, explanation:'A population is the whole group; a sample is a selected part of it.' },
-    { question:'A set of data: 2, 3, 3, 4, 100. Which average best represents the data?', options:['Mean','Median','Mode','Range'], answer:1, explanation:'Mean=22.4 (distorted by 100). Median=3 is more representative.' },
-    { question:'Which type of data is "favourite colour"?', options:['Continuous','Discrete','Categorical','Ordinal'], answer:2, explanation:'Favourite colour is qualitative/categorical data — no numerical value.' },
     { gen: function() {
-        var total = pickFrom([20,25,30,40,50]);
-        var freq = randInt(2,total/2);
+        var trials = pickFrom([20,25,40,50,100]);
+        var hits = randInt(2,Math.floor(trials/2));
         function gcd(a,b){return b?gcd(b,a%b):a;}
-        var g=gcd(freq,total); var sn=freq/g, sd=total/g;
+        var g=gcd(hits,trials), sn=hits/g, sd=trials/g;
         var ans = sn+'/'+sd;
-        var opts = buildOpts(ans, [freq+'/'+total === ans ? (freq+1)+'/'+total : freq+'/'+total, freq+'%', '1/'+total]);
-        return { q: total+' people were surveyed. '+freq+' gave a particular answer. What is the relative frequency?',
+        var opts = buildOpts(ans, [hits+'/'+trials === ans ? (hits+1)+'/'+trials : hits+'/'+trials, (trials-hits)+'/'+trials, '1/'+trials]);
+        return { q: 'A spinner is spun '+trials+' times and lands on green '+hits+' times. What is the experimental probability of green?',
                  opts: opts, c: 0,
-                 e: 'Relative frequency = '+freq+'/'+total+(g>1?' = '+ans:'')+'.' };
+                 e: 'Experimental probability = successes ÷ trials = '+hits+'/'+trials+(g>1?' = '+ans:'')+'.' };
     }},
-    { question:'What is a biased sample?', options:['A sample that is very large','A sample that does not fairly represent the population','A sample with no outliers','A sample taken randomly'], answer:1, explanation:'A biased sample systematically over- or under-represents certain groups.' },
-    { question:'A two-way table shows 40 boys and 60 girls. 25 boys and 45 girls prefer maths. What fraction of girls prefer maths?', options:['3/4','5/8','45/60','45/100'], answer:2, explanation:'Fraction of girls = 45/60 = 3/4.' },
-    { question:'The mean of a data set is 12 and the range is 10. A new value of 4 is added. What effect does this have?', options:['Mean increases, range decreases','Mean decreases, range increases','Mean stays same, range increases','Mean decreases, range stays same'], answer:1, explanation:'4 < current mean, so mean decreases. If original range was [lowest, highest], new value 4 may extend range downward.' },
-    { question:'Which graph would you use to show whether taller students have larger shoe sizes?', options:['Bar chart','Pie chart','Scatter graph','Line graph'], answer:2, explanation:'Scatter graphs show correlation between two variables.' },
-    { gen: function() {
-        var pct = pickFrom([10,20,25,40,50]);
-        var surveyed = pickFrom([100,200,300,400,500]);
-        var ans = pct*surveyed/100;
-        var opts = buildOpts(ans, [ans+pct, ans/2, surveyed]);
-        return { q: 'In a survey of '+surveyed+' people, '+pct+'% said they exercise. How many people is that?',
-                 opts: opts, c: 0,
-                 e: pct+'% of '+surveyed+' = '+pct+'/100 × '+surveyed+' = '+ans+'.' };
-    }},
-    { question:'A frequency polygon is drawn by plotting points at the midpoint of class intervals. Why midpoints?', options:['To make the line straight','To represent the whole class interval fairly','To find the mode','Because the data is continuous'], answer:1, explanation:'The midpoint represents the class interval as a whole — we assume data is evenly spread within each class.' }
+    { question:'A student says "there are 3 outcomes so each has probability 1/3". Is this correct for rolling 1, 2, or other on a fair die?', options:['Yes, 3 outcomes means 1/3 each','No, outcomes must be equally likely','Yes, probability always divides evenly','No, it should be 1/6'], answer:1, explanation:'Equally likely only if outcomes are symmetric. "Other" covers 4 numbers, not 1: P(other)=4/6, not 1/3.' }
   ],
 
   // ── mi-13-5: Data Displays & Graph Types ────────────────────────────────
