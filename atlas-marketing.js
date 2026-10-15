@@ -213,6 +213,7 @@
         localStorage.setItem('sm_active_days', JSON.stringify(serverData.activeDays || []));
         if (serverData.studyPlan) localStorage.setItem('sm_study_plan', JSON.stringify(serverData.studyPlan));
         if (serverData.comprehension && typeof restoreComprehension === 'function') restoreComprehension(serverData.comprehension);
+        if (serverData.updatedAt) localStorage.setItem('sm_sync_base', serverData.updatedAt);
         if (serverData.preferences && serverData.preferences.theme) {
           localStorage.setItem('sm_theme', serverData.preferences.theme);
           document.documentElement.setAttribute('data-theme', serverData.preferences.theme);

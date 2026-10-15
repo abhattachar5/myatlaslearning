@@ -71,7 +71,8 @@ async function fetchWithAuth(url, options = {}) {
 // and before a clean restore, so one account/device can never bleed its data
 // into another. (sm_theme is a per-browser UI preference and is left alone.)
 var ACCOUNT_KEYS = ['sm_active_profile','sm_progress','sm_assignments','sm_test_results',
-  'sm_revision_done','sm_active_days','sm_study_plan','sm_streak','sm_last_study'];
+  'sm_revision_done','sm_active_days','sm_study_plan','sm_streak','sm_last_study',
+  'sm_sync_base','sm_sync_dirty'];
 function clearAccountData() {
   ACCOUNT_KEYS.forEach(function (k) { try { localStorage.removeItem(k); } catch (e) {} });
   // Comprehension keys are dynamic (sm_comp_<id> / sm_compdraft_<id>) — sweep them.
@@ -119,24 +120,111 @@ function buildSyncPayload() {
   };
 }
 
+// ── Multi-device sync ───────────────────────────────────────────────────────
+// sm_sync_base  = the server `updatedAt` this device last synced with. Sent with
+//                 every save; if the server has moved on since, it MERGES rather
+//                 than overwrites (see netlify/lib/merge.mjs), so a stale device
+//                 (e.g. a parent's laptop) can't wipe progress made elsewhere.
+// sm_sync_dirty = local changes not yet confirmed by the server.
+var SYNC_BASE_KEY = 'sm_sync_base', SYNC_DIRTY_KEY = 'sm_sync_dirty';
+var _syncSeq = 0;          // bumps on every local change
+var _forceMerge = false;   // after a mid-session merge, in-memory page state may be stale
+
+function _syncBase() { return _forceMerge ? null : localStorage.getItem(SYNC_BASE_KEY); }
+
+// Write a server blob into localStorage (login restore, pull-on-load, merged saves).
+function applyServerData(d) {
+  if (!d) return;
+  var prev = getUser() || {};
+  setUser(Object.assign({}, prev, {
+    name: d.name, parentName: d.parentName || prev.parentName || '', year: d.year || '',
+    school: d.school || '', tier: d.tier || 'free', xp: d.xp || 0,
+    joinDate: d.joinDate || prev.joinDate || new Date().toISOString(),
+    yearHistory: d.yearHistory || [], parentPin: d.parentPin || ''
+  }));
+  localStorage.setItem('sm_progress', JSON.stringify(d.progress || {}));
+  localStorage.setItem('sm_streak', String(d.streak || 0));
+  if (d.lastStudy) localStorage.setItem('sm_last_study', d.lastStudy);
+  localStorage.setItem('sm_test_results', JSON.stringify(d.testResults || {}));
+  localStorage.setItem('sm_revision_done', JSON.stringify(d.revisionDone || {}));
+  localStorage.setItem('sm_assignments', JSON.stringify(d.assignments || []));
+  localStorage.setItem('sm_active_days', JSON.stringify(d.activeDays || []));
+  if (d.studyPlan) localStorage.setItem('sm_study_plan', JSON.stringify(d.studyPlan));
+  restoreComprehension(d.comprehension);
+  if (d.updatedAt) localStorage.setItem(SYNC_BASE_KEY, d.updatedAt);
+}
+
+// Push local state now. Returns the server response ({ merged, data }) or null.
+async function _pushNow() {
+  var seq = _syncSeq;
+  var payload = buildSyncPayload();
+  if (!payload) return null;
+  payload.baseUpdatedAt = _syncBase();
+  var res = await fetchWithAuth('/.netlify/functions/save-progress', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  var out = await res.json();
+  if (out && out.data && getUser()) {   // getUser() null => logged out meanwhile
+    if (out.merged) {
+      applyServerData(out.data);
+      _forceMerge = true;   // the open page may hold pre-merge state in memory
+    }
+    localStorage.setItem(SYNC_BASE_KEY, out.data.updatedAt);
+    if (seq === _syncSeq) localStorage.removeItem(SYNC_DIRTY_KEY);
+  }
+  return out;
+}
+
 var _syncTimer = null;
 function syncProgressToServer() {
+  _syncSeq++;
+  try { localStorage.setItem(SYNC_DIRTY_KEY, '1'); } catch (e) {}
   if (_syncTimer) clearTimeout(_syncTimer);
   _syncTimer = setTimeout(async function() {
     _syncTimer = null;
-    try {
-      const payload = buildSyncPayload();
-      if (!payload) return;
-      await fetchWithAuth('/.netlify/functions/save-progress', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-    } catch (err) {
+    try { await _pushNow(); }
+    catch (err) {
       console.warn('Sync to server failed (will retry on next change):', err.message);
     }
   }, 2000);
 }
+
+// On every app page load, bring this device up to date BEFORE the learner works:
+// push any unsynced local changes (server merges them), or pull if the server has
+// newer data from another device. If local data changed, reload once so the page
+// renders the fresh state instead of the stale copy.
+async function syncOnLoad() {
+  if (!getIdentityUser() || !getUser()) return;
+  if (/(^|\/)(index\.html)?$/.test(location.pathname)) return;   // login page handles its own restore
+  var seq = _syncSeq, changed = false;
+  try {
+    if (!localStorage.getItem(SYNC_DIRTY_KEY)) {
+      var d = await loadProgressFromServer();
+      if (!d || !d.updatedAt || d.updatedAt === localStorage.getItem(SYNC_BASE_KEY)) return;
+      if (seq === _syncSeq) { applyServerData(d); changed = true; }
+    }
+    if (!changed) {
+      // Unsynced local changes (from earlier, or made while we were pulling):
+      // push them now and let the server merge with the newer copy.
+      if (_syncTimer) { clearTimeout(_syncTimer); _syncTimer = null; }
+      seq = _syncSeq;
+      var out = await _pushNow();
+      changed = !!(out && out.merged);
+    }
+  } catch (e) { console.warn('Sync on load failed:', e.message); return; }
+  // Reload only while the page is fresh and untouched, never mid-activity.
+  if (changed && seq === _syncSeq && performance.now() < 8000) {
+    var last = +sessionStorage.getItem('sm_sync_reload') || 0;
+    if (Date.now() - last > 10000) {
+      sessionStorage.setItem('sm_sync_reload', String(Date.now()));
+      location.reload();
+    }
+  }
+}
+if (typeof window !== 'undefined') syncOnLoad();
 
 // Flush the latest state immediately (no debounce), using a keepalive request so
 // it completes even while the tab is closing or backgrounding. Without this, work
@@ -146,9 +234,12 @@ function flushSyncNow() {
   try {
     const identity = getIdentityUser();
     if (!identity || !identity.token || !identity.token.access_token) return;
+    if (!localStorage.getItem(SYNC_DIRTY_KEY)) return;   // nothing unsynced — don't rewrite the server copy
     const payload = buildSyncPayload();
     if (!payload) return;
+    payload.baseUpdatedAt = _syncBase();
     if (_syncTimer) { clearTimeout(_syncTimer); _syncTimer = null; }
+    var seq = _syncSeq;
     fetch('/.netlify/functions/save-progress', {
       method: 'PUT',
       keepalive: true,
@@ -157,7 +248,13 @@ function flushSyncNow() {
         'Authorization': 'Bearer ' + identity.token.access_token
       },
       body: JSON.stringify(payload)
-    });
+    }).then(function (res) { return res.ok ? res.json() : null; }).then(function (out) {
+      // Only reached if the page survives (tab switch, not close).
+      if (!out || !out.data || !getUser()) return;
+      if (out.merged) { applyServerData(out.data); _forceMerge = true; }
+      localStorage.setItem(SYNC_BASE_KEY, out.data.updatedAt);
+      if (seq === _syncSeq) localStorage.removeItem(SYNC_DIRTY_KEY);
+    }).catch(function () {});
   } catch (e) { /* best-effort */ }
 }
 if (typeof window !== 'undefined') {

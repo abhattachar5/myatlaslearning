@@ -1009,6 +1009,7 @@
       if (rawKeys.length && typeof data.version === 'undefined') {
         if (typeof clearAccountData === 'function') clearAccountData();
         rawKeys.forEach(function (k) { try { localStorage.setItem(k, data[k]); } catch (e) {} });
+        localStorage.setItem('sm_sync_dirty', '1');   // flushSyncNow only pushes dirty state
         if (typeof flushSyncNow === 'function') flushSyncNow(); else syncProgressToServer();
         return { success: true, message: 'Full backup restored (' + rawKeys.length + ' items) and pushed to the server.' };
       }
@@ -1022,6 +1023,7 @@
       if (data.lastStudy)   localStorage.setItem('sm_last_study', data.lastStudy);
       if (data.theme)       localStorage.setItem('sm_theme',     data.theme);
       if (data.assignments) localStorage.setItem('sm_assignments', JSON.stringify(data.assignments));
+      localStorage.setItem('sm_sync_dirty', '1');
       if (typeof flushSyncNow === 'function') flushSyncNow(); else syncProgressToServer();
 
       return { success: true, message: 'Progress imported successfully.' };

@@ -1,5 +1,6 @@
 import { getStore } from "@netlify/blobs";
 import { verifyUserId } from "../lib/auth.mjs";
+import { mergeBlobs } from "../lib/merge.mjs";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -20,8 +21,9 @@ export default async (req, context) => {
   try {
     const body = await req.json();
     const store = getStore("user-progress");
+    const key = `user_${userId}`;
 
-    const data = {
+    let data = {
       name: body.name || "",
       parentName: body.parentName || "",
       year: body.year || "",
@@ -41,12 +43,19 @@ export default async (req, context) => {
       assignments: Array.isArray(body.assignments) ? body.assignments : [],
       activeDays: Array.isArray(body.activeDays) ? body.activeDays : [],
       studyPlan: body.studyPlan || null,
-      updatedAt: new Date().toISOString(),
     };
 
-    await store.setJSON(`user_${userId}`, data);
+    // A device whose last-seen version doesn't match the server's is stale —
+    // merge instead of overwriting, so it can't wipe newer progress made on
+    // another device. (Old clients send no baseUpdatedAt and always merge.)
+    const existing = await store.get(key, { type: "json" });
+    const merged = !!(existing && existing.updatedAt && body.baseUpdatedAt !== existing.updatedAt);
+    if (merged) data = mergeBlobs(existing, data);
+    data.updatedAt = new Date().toISOString();
 
-    return Response.json({ success: true, data }, { headers: CORS_HEADERS });
+    await store.setJSON(key, data);
+
+    return Response.json({ success: true, merged, data }, { headers: CORS_HEADERS });
   } catch (err) {
     console.error("save-progress error:", err);
     return Response.json({ error: "Internal server error" }, { status: 500, headers: CORS_HEADERS });
